@@ -1841,3 +1841,30 @@ body.theme-dark .site-page .career-row {
   border-color: rgba(127,127,127,.22);
   border-radius: 18px;
 }
+
+/* ===== USER FIX: calculator result blocks + profession borders ===== */
+.site-page .calc-result {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(127,127,127,.22) !important;
+}
+.site-page .calc-result-label,
+.site-page .calc-result-value,
+.site-page .calc-result-hint {
+  color: #ffffff !important;
+}
+
+/* Карточки профессий и их содержимое используют тот же серый цвет рамки,
+   что и календарь/остальные карточки сайта. */
+.site-page .eng-card,
+.site-page .eng-card:hover,
+.modal,
+.modal .info-item,
+.modal .salary-grid > div,
+.modal .region-row,
+.modal .day-row,
+.modal .career-row,
+.modal .career-number,
+.modal .tag-list span {
+  border-color: rgba(127,127,127,.22) !important;
+}
