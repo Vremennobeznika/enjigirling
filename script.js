@@ -111,7 +111,6 @@ document.addEventListener("DOMContentLoaded", () => {
     card.setAttribute("aria-label", `Открыть профессию: ${profession.title}`);
 
     card.innerHTML = `
-      <div class="eng-icon" aria-hidden="true">${escapeHTML(profession.icon || "⚙️")}</div>
       <h3 class="eng-title">${escapeHTML(profession.title)}</h3>
     `;
 
@@ -163,7 +162,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     modalContent.innerHTML = `
       <div class="modal-header">
-        <div class="modal-icon" aria-hidden="true">${escapeHTML(profession.icon || "⚙️")}</div>
         <div>
           <div class="modal-category">${escapeHTML(getCategory(profession))}</div>
           <h2>${escapeHTML(profession.title)}</h2>

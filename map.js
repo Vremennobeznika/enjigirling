@@ -42,6 +42,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         <span class="map-detail-label">Поступление</span>
                         <span class="map-detail-value">${u.admission}</span>
                     </div>
+                    ${u.site ? `
+                    <div class="map-detail">
+                        <span class="map-detail-label">Сайт</span>
+                        <span class="map-detail-value"><a class="map-uni-site" href="${u.site}" target="_blank" rel="noopener noreferrer">${u.site}</a></span>
+                    </div>` : ''}
                 </div>
             </div>
         `;

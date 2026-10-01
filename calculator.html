@@ -65,6 +65,109 @@
                     </div>
                 </div>
             </div>
+
+            <div class="calc-section">
+                <hr class="eng-divider">
+                <h3 class="calc-heading">Калькулятор зарплаты по профессии и региону</h3>
+                <p class="calc-subtitle">Выберите инженерную профессию и федеральный округ — покажем зарплатную вилку по региону.</p>
+
+                <div class="calc-layout">
+                    <div class="calc-controls">
+                        <div class="calc-field">
+                            <label for="salaryProfession">Профессия</label>
+                            <select id="salaryProfession"></select>
+                        </div>
+                        <div class="calc-field">
+                            <label for="salaryRegion">Регион</label>
+                            <select id="salaryRegion"></select>
+                        </div>
+                        <div class="calc-result">
+                            <p class="calc-result-label">Зарплата в регионе</p>
+                            <p class="calc-result-value" id="salaryResultValue">—</p>
+                            <p class="calc-result-hint" id="salaryResultHint"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calc-section">
+                <hr class="eng-divider">
+                <h3 class="calc-heading">Инженерный конвертер единиц</h3>
+                <p class="calc-subtitle">Перевод длины, массы, давления, мощности и температуры: мм↔дюймы, кВт↔л.с., МПа↔кгс/см² и другие.</p>
+
+                <div class="calc-layout">
+                    <div class="calc-controls">
+                        <div class="calc-field">
+                            <label for="convCategory">Величина</label>
+                            <select id="convCategory">
+                                <option value="length">Длина</option>
+                                <option value="mass">Масса</option>
+                                <option value="pressure">Давление</option>
+                                <option value="power">Мощность</option>
+                                <option value="temperature">Температура</option>
+                            </select>
+                        </div>
+                        <div class="calc-field">
+                            <label for="convInput">Значение</label>
+                            <input id="convInput" type="text" inputmode="decimal" placeholder="Например: 25.4" autocomplete="off">
+                        </div>
+                        <div class="calc-field">
+                            <label for="convFrom">Из</label>
+                            <select id="convFrom"></select>
+                        </div>
+                        <div class="calc-field">
+                            <label for="convTo">В</label>
+                            <select id="convTo"></select>
+                        </div>
+                        <div class="calc-result">
+                            <p class="calc-result-label">Результат</p>
+                            <p class="calc-result-value" id="convResultValue">—</p>
+                            <p class="calc-result-hint" id="convResultHint"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calc-section">
+                <hr class="eng-divider">
+                <h3 class="calc-heading">Перевод систем счисления</h3>
+                <p class="calc-subtitle">Введите число в выбранной системе — получите его в двоичной, восьмеричной, десятичной и шестнадцатеричной.</p>
+
+                <div class="calc-layout">
+                    <div class="calc-controls">
+                        <div class="calc-field">
+                            <label for="numBase">Система счисления</label>
+                            <select id="numBase">
+                                <option value="2">Двоичная (2)</option>
+                                <option value="8">Восьмеричная (8)</option>
+                                <option value="10" selected>Десятичная (10)</option>
+                                <option value="16">Шестнадцатеричная (16)</option>
+                            </select>
+                        </div>
+                        <div class="calc-field">
+                            <label for="numInput">Число</label>
+                            <input id="numInput" type="text" placeholder="Например: 255" autocomplete="off">
+                        </div>
+                        <div class="calc-result">
+                            <p class="calc-result-label">Результат</p>
+                            <p class="calc-result-value" id="numDec">—</p>
+                            <p class="calc-result-hint" id="numResultHint"></p>
+                        </div>
+                        <div class="calc-result">
+                            <p class="calc-result-label">Двоичная (2)</p>
+                            <p class="calc-result-value" id="numBin">—</p>
+                        </div>
+                        <div class="calc-result">
+                            <p class="calc-result-label">Восьмеричная (8)</p>
+                            <p class="calc-result-value" id="numOct">—</p>
+                        </div>
+                        <div class="calc-result">
+                            <p class="calc-result-label">Шестнадцатеричная (16)</p>
+                            <p class="calc-result-value" id="numHex">—</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
     </div>
 
@@ -89,7 +192,9 @@
         </div>
     </footer>
 
+    <script src="data.js"></script>
     <script src="map-calc.js"></script>
+    <script src="engineer-calculators.js"></script>
     <script src="theme.js"></script>
 </body>
 </html>

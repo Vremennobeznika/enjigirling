@@ -170,12 +170,6 @@ body {
   border-color: var(--text-primary);
 }
 
-.eng-icon {
-  font-size: 2.2rem;
-  text-align: center;
-  line-height: 1;
-}
-
 .eng-title {
   font-family: var(--font-heading);
   font-size: 19px;
@@ -661,6 +655,16 @@ footer {
 .map-detail-value.ok {
   font-weight: 600;
 }
+.map-uni-site {
+  color: var(--text-primary);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.map-uni-site:hover {
+  border-bottom-color: transparent;
+}
 .map-placeholder {
   text-align: center;
   padding: 32px 8px;
@@ -812,6 +816,23 @@ footer {
   color: var(--text-body);
 }
 
+.course-link {
+  margin: 12px 0 0;
+}
+.course-link a {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.course-link a:hover {
+  border-bottom-color: transparent;
+}
+
 @media (max-width: 900px) {
   .map-layout {
     grid-template-columns: 1fr;
@@ -854,11 +875,6 @@ body.modal-open { overflow: hidden; }
 .eng-card:focus-visible {
   outline: 3px solid var(--text-primary);
   outline-offset: 3px;
-}
-
-.eng-card .eng-icon {
-  font-size: 2.6rem;
-  margin-bottom: 4px;
 }
 
 .eng-card .eng-title {
@@ -909,12 +925,6 @@ body.modal-open { overflow: hidden; }
   gap: 16px;
   padding: 0 42px 22px 0;
   margin-bottom: 0;
-}
-
-.modal-icon {
-  flex: 0 0 auto;
-  font-size: 2.8rem;
-  line-height: 1;
 }
 
 .modal-header h2 {
