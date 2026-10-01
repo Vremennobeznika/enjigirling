@@ -1757,3 +1757,87 @@ body.theme-dark .site-page .career-row {
     margin-top: 2px;
   }
 }
+
+
+/* ===== Единый календарный стиль для всех внутренних страниц ===== */
+.site-page .eng-card,
+.site-page .benefit-card,
+.site-page .map-panel,
+.site-page .map-canvas,
+.site-page .map-sidebar,
+.site-page .calc-layout,
+.site-page .calc-controls,
+.site-page .calc-result,
+.site-page .dictionary-card,
+.site-page .table-wrap,
+.site-page .info-panel,
+.site-page .section-card {
+  border-color: rgba(127,127,127,.22);
+  border-radius: 18px;
+  background: var(--card-bg, var(--bg));
+}
+
+.site-page .map-sidebar,
+.site-page .map-panel,
+.site-page .map-canvas {
+  box-shadow: 0 5px 20px rgba(0,0,0,.05);
+}
+
+.site-page .map-uni-card,
+.site-page .map-explain,
+.site-page .benefits-note {
+  border-color: rgba(127,127,127,.22);
+  border-radius: 12px;
+}
+
+.site-page .eng-filter-btn,
+.site-page select,
+.site-page input,
+.site-page textarea,
+.site-page .eng-btn,
+.site-page .map-reset {
+  border-color: rgba(127,127,127,.28);
+  border-radius: 12px;
+}
+
+.site-page .eng-filter-btn.active {
+  border-color: var(--btn-bg);
+}
+
+.site-page .calc-layout {
+  box-shadow: 0 5px 20px rgba(0,0,0,.05);
+}
+
+.site-page .calc-field select,
+.site-page .calc-field input {
+  width: 100%;
+  min-height: 46px;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border: 1px solid rgba(127,127,127,.28);
+  border-radius: 12px;
+  background: var(--card-bg, var(--bg));
+  color: var(--text-primary);
+  font: inherit;
+  outline: none;
+}
+
+.site-page .calc-field input:focus,
+.site-page .calc-field select:focus {
+  border-color: var(--text-primary);
+}
+
+.site-page .calc-result {
+  border: 1px solid rgba(127,127,127,.22);
+}
+
+.site-page .resource-search {
+  border-color: rgba(127,127,127,.28);
+  border-radius: 12px;
+  background: var(--card-bg, var(--bg));
+}
+
+.site-page .resource-card {
+  border-color: rgba(127,127,127,.22);
+  border-radius: 18px;
+}

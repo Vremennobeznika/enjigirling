@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const salaryHint = document.getElementById('salaryResultHint');
 
     if (profSelect && regionSelect && salaryValue && salaryHint) {
-        const profs = Array.isArray(window.professionsData) ? window.professionsData : [];
+        const profs = Array.isArray(window.professionsData) ? window.professionsData : (typeof professionsData !== 'undefined' && Array.isArray(professionsData) ? professionsData : []);
         profs.forEach(p => {
             const o = document.createElement('option');
             o.value = p.id;

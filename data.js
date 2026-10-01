@@ -1,4 +1,4 @@
-const professionsData = [
+window.professionsData = [
     // ===== СТРОИТЕЛЬСТВО =====
     {
         id: "civil-engineer",
