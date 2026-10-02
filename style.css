@@ -1868,3 +1868,43 @@ body.theme-dark .site-page .career-row {
 .modal .tag-list span {
   border-color: rgba(127,127,127,.22) !important;
 }
+
+/* ===== FINAL FIX: dark calendar readability + professions page parity ===== */
+html.theme-dark .calendar-page,
+html.theme-dark .calendar-page .calendar-head h1,
+html.theme-dark .calendar-page .calendar-head p,
+html.theme-dark .calendar-page .calendar-summary,
+html.theme-dark .calendar-page .calendar-control label,
+html.theme-dark .calendar-page .holiday-card,
+html.theme-dark .calendar-page .holiday-title,
+html.theme-dark .calendar-page .holiday-note,
+html.theme-dark .calendar-page .holiday-date,
+html.theme-dark .calendar-page .prof-chip {
+  color: var(--card-text);
+}
+html.theme-dark .calendar-page .holiday-card {
+  background: var(--card-bg);
+  border-color: var(--soft-border);
+}
+html.theme-dark .calendar-page .calendar-control input,
+html.theme-dark .calendar-page .calendar-control select {
+  background: var(--card-bg);
+  color: var(--card-text);
+  border-color: var(--soft-border);
+}
+html.theme-dark .calendar-page .month-btn,
+html.theme-dark .calendar-page .calendar-reset {
+  color: var(--card-text);
+  border-color: var(--soft-border);
+}
+html.theme-dark .calendar-page .prof-chip {
+  background: var(--soft-bg);
+}
+
+/* The professions landing page uses exactly the same page/card layer as the other sections. */
+.site-page > .eng-tabs { margin-bottom: 32px; }
+.site-page > .eng-grid .eng-card {
+  background: var(--card-bg);
+  color: var(--card-text);
+  border-color: var(--soft-border);
+}
