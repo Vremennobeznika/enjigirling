@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Карта обучения — База данных профессий инженеров</title>
+    <title>Обучение — База данных профессий инженеров</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,8 +13,8 @@
             <a href="calendar.html" class="eng-tab">Календарь праздников</a>
             <a href="resources.html" class="eng-tab">Ресурсы сообщества<span class="age-badge">18+</span></a>
             <a href="dictionary.html" class="eng-tab">Словарь инженера</a>
-            <a href="map.html" class="eng-tab active">Карта обучения</a>
-            <a href="calculator.html" class="eng-tab">Калькуляторы</a>
+            <a href="map.html" class="eng-tab active">Обучение</a>
+            <a href="calculator.html" class="eng-tab">Калькуляторы инженера</a>
         </nav>
 
         <main class="site-page">
@@ -22,6 +22,47 @@
                 <h2 class="map-title">Интерактивная карта инженерного образования</h2>
                 <p class="map-subtitle">Нажмите на федеральный округ, чтобы узнать ведущие инженерные вузы региона и направления подготовки.</p>
             </div>
+
+            <section class="calc-section training-calc-section">
+                <hr class="eng-divider">
+                <h3 class="calc-heading">Калькуляторы обучения и зарплаты</h3>
+                <p class="calc-subtitle">Расчёт срока до первой работы и зарплатной вилки по инженерной профессии и федеральному округу.</p>
+
+                <div class="calc-layout training-calc-block">
+                    <div class="calc-controls">
+                        <div class="calc-field">
+                            <label for="calcPath">Путь</label>
+                            <select id="calcPath">
+                                <option value="college9">Техникум после 9 классов</option>
+                                <option value="college11">Техникум после 11 классов</option>
+                                <option value="college9_uni">Техникум → вуз</option>
+                                <option value="unibach">Вуз: бакалавриат (после 11 классов)</option>
+                                <option value="unispec">Вуз: специалитет (после 11 классов)</option>
+                                <option value="unimaster">Вуз: бакалавриат + магистратура</option>
+                            </select>
+                        </div>
+                        <div class="calc-field">
+                            <label for="calcAge">Сколько лет уже прошло после школы / начала пути</label>
+                            <select id="calcAge">
+                                <option value="0">Нисколько, только начинаю</option><option value="1">1 год</option><option value="2">2 года</option><option value="3">3 года</option><option value="4">4 года</option><option value="5">5 лет</option><option value="6">6 лет и больше</option>
+                            </select>
+                        </div>
+                        <div class="calc-field">
+                            <label for="calcWork">Когда планируете начать работать</label>
+                            <select id="calcWork"><option value="after">После выпуска</option><option value="during">Во время учёбы (совмещать)</option></select>
+                        </div>
+                        <div class="calc-result"><p class="calc-result-label">До первой зарплаты</p><p class="calc-result-value" id="calcResultValue">—</p><p class="calc-result-hint" id="calcResultHint"></p></div>
+                    </div>
+                </div>
+
+                <div class="calc-layout training-calc-block salary-training-block">
+                    <div class="calc-controls">
+                        <div class="calc-field"><label for="salaryProfession">Профессия</label><select id="salaryProfession"></select></div>
+                        <div class="calc-field"><label for="salaryRegion">Регион</label><select id="salaryRegion"></select></div>
+                        <div class="calc-result"><p class="calc-result-label">Зарплата в регионе</p><p class="calc-result-value" id="salaryResultValue">—</p><p class="calc-result-hint" id="salaryResultHint"></p></div>
+                    </div>
+                </div>
+            </section>
 
             <div class="map-layout">
                 <div class="map-canvas">
@@ -230,7 +271,7 @@
                 <a href="https://pay.cloudtips.ru/p/72472d16" class="footer-btn footer-btn--donate" target="_blank" rel="noopener noreferrer">Поддержать (CloudTips)</a>
             </div>
             <div class="footer-theme">
-                <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">🌙</button>
+                <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">☾</button>
             </div>
             <p class="footer-copy">© 2026 — База данных профессий инженеров</p>
         </div>
@@ -238,6 +279,8 @@
 
     <script src="map-data.js"></script>
     <script src="map.js"></script>
+    <script src="map-calc.js"></script>
+    <script src="engineer-calculators.js"></script>
     <script src="theme.js"></script>
 </body>
 </html>

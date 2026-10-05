@@ -14,8 +14,8 @@
     <a href="calendar.html" class="eng-tab">Календарь праздников</a>
     <a href="resources.html" class="eng-tab">Ресурсы сообщества<span class="age-badge">18+</span></a>
     <a href="dictionary.html" class="eng-tab">Словарь инженера</a>
-    <a href="map.html" class="eng-tab">Карта обучения</a>
-    <a href="calculator.html" class="eng-tab">Калькуляторы</a>
+    <a href="map.html" class="eng-tab">Обучение</a>
+    <a href="calculator.html" class="eng-tab">Калькуляторы инженера</a>
   </nav>
 
   <header class="page-header">
@@ -23,7 +23,16 @@
     <p>Открой карточку, чтобы посмотреть подробности о профессии.</p>
   </header>
 
+  <div class="eng-filters professions-tools" aria-label="Поиск и сортировка профессий">
+    <input id="professionSearch" type="search" placeholder="Поиск по профессиям" autocomplete="off">
+    <select id="professionSort" aria-label="Сортировка">
+      <option value="default">Порядок по разделам</option>
+      <option value="az">По алфавиту А–Я</option>
+      <option value="za">По алфавиту Я–А</option>
+    </select>
+  </div>
   <div class="eng-filters" id="categories" aria-label="Фильтр по категориям"></div>
+  <div class="eng-filters asu-subfilters" id="asuSubcategories" aria-label="Подразделы АСУ ТП"></div>
   <div class="eng-grid" id="professionsGrid"></div>
 </main>
 
@@ -36,7 +45,7 @@
 
 <footer>
   <p>© 2026 — База данных профессий инженеров</p>
-  <button class="theme-toggle" id="themeToggle" type="button" aria-label="Переключить тему">🌙</button>
+  <button class="theme-toggle" id="themeToggle" type="button" aria-label="Переключить тему">☾</button>
 </footer>
 
 <script src="data.js"></script>

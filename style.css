@@ -1908,3 +1908,84 @@ html.theme-dark .calendar-page .prof-chip {
   color: var(--card-text);
   border-color: var(--soft-border);
 }
+
+
+/* ===== Professions search / ASU TP subcategories ===== */
+.professions-tools {
+  margin-top: 4px;
+}
+.professions-tools input,
+.professions-tools select {
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 14px;
+  border-radius: 12px;
+  outline: none;
+}
+.professions-tools input {
+  min-width: min(420px, 100%);
+}
+.professions-tools input:focus,
+.professions-tools select:focus {
+  border-color: var(--text-primary);
+}
+.asu-subfilters[hidden] { display: none; }
+.empty-search {
+  grid-column: 1 / -1;
+  padding: 28px;
+  border: 1px solid var(--soft-border);
+  border-radius: 18px;
+  text-align: center;
+  color: var(--card-text);
+  background: var(--card-bg);
+}
+.float-converter-card {
+  max-width: 640px;
+}
+.float-converter-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+.float-converter-note {
+  margin-bottom: 0;
+}
+.float-converter-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 18px;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  text-decoration: none;
+  border: 1px solid var(--btn-bg);
+}
+.training-calc-block {
+  max-width: 640px;
+  margin-bottom: 18px;
+}
+.salary-training-block {
+  margin-top: 18px;
+}
+
+.theme-toggle {
+  font-family: Arial, sans-serif;
+  font-size: 22px;
+  line-height: 1;
+  color: #000;
+  background: transparent;
+}
+.theme-dark .theme-toggle {
+  color: #fff;
+}
+@media (max-width: 640px) {
+  .professions-tools { flex-direction: column; align-items: stretch; }
+  .professions-tools input, .professions-tools select { width: 100%; min-width: 0; }
+}

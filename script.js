@@ -21,7 +21,10 @@ const PROFESSION_CATEGORIES = {
   "forest-engineer": "Экология и природные системы",
   "biomedical-engineer": "Биомедицина",
   "robotics-engineer": "Автоматизация и робототехника",
-  "instrumentation-engineer": "Автоматизация и робототехника",
+  "instrumentation-engineer": "Инженеры АСУ ТП",
+  "asu-tp-designer": "Инженеры АСУ ТП",
+  "asu-tp-programmer": "Инженеры АСУ ТП",
+  "asu-tp-commissioning": "Инженеры АСУ ТП",
   "lighting-engineer": "Электротехника и светотехника",
   "food-engineer": "Промышленное производство",
   "textile-engineer": "Промышленное производство",
@@ -76,10 +79,28 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalOverlay = document.getElementById("modalOverlay");
   const modalContent = document.getElementById("modalContent");
   const modalClose = document.getElementById("modalClose");
+  const searchInput = document.getElementById("professionSearch");
+  const sortSelect = document.getElementById("professionSort");
+  const asuSubcategories = document.getElementById("asuSubcategories");
 
   if (!grid || !categoriesEl || !modalOverlay || !modalContent) return;
 
   let activeCategory = "Все";
+  let activeAsuSubcategory = "Все";
+
+  const ASU_SUBCATEGORIES = {
+    "Все": null,
+    "Проектировщик АСУ ТП": "asu-tp-designer",
+    "Программист АСУ ТП": "asu-tp-programmer",
+    "Пуско-наладчик АСУ ТП": "asu-tp-commissioning"
+  };
+  const getSubcategory = (profession) => {
+    if (profession.id === "instrumentation-engineer") return "Инженер АСУ ТП";
+    if (profession.id === "asu-tp-designer") return "Проектировщик АСУ ТП";
+    if (profession.id === "asu-tp-programmer") return "Программист АСУ ТП";
+    if (profession.id === "asu-tp-commissioning") return "Пуско-наладчик АСУ ТП";
+    return "";
+  };
 
   const getCategory = (profession) => PROFESSION_CATEGORIES[profession.id] || "Прочее";
 
@@ -96,7 +117,9 @@ document.addEventListener("DOMContentLoaded", () => {
       button.textContent = category;
       button.addEventListener("click", () => {
         activeCategory = category;
+        activeAsuSubcategory = "Все";
         renderFilters();
+        renderSubcategories();
         renderGrid();
       });
       categoriesEl.appendChild(button);
@@ -126,12 +149,51 @@ document.addEventListener("DOMContentLoaded", () => {
     return card;
   }
 
+  function renderSubcategories() {
+    if (!asuSubcategories) return;
+    asuSubcategories.innerHTML = "";
+    const visible = activeCategory === "Инженеры АСУ ТП";
+    asuSubcategories.hidden = !visible;
+    if (!visible) return;
+    Object.keys(ASU_SUBCATEGORIES).forEach((name) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = `eng-filter-btn${name === activeAsuSubcategory ? " active" : ""}`;
+      button.textContent = name;
+      button.addEventListener("click", () => {
+        activeAsuSubcategory = name;
+        renderSubcategories();
+        renderGrid();
+      });
+      asuSubcategories.appendChild(button);
+    });
+  }
+
   function renderGrid() {
-    const items = activeCategory === "Все"
-      ? professionsData
+    const query = (searchInput?.value || "").trim().toLocaleLowerCase("ru-RU");
+    let items = activeCategory === "Все"
+      ? [...professionsData]
       : professionsData.filter((profession) => getCategory(profession) === activeCategory);
 
+    if (activeCategory === "Инженеры АСУ ТП" && activeAsuSubcategory !== "Все") {
+      const wantedId = ASU_SUBCATEGORIES[activeAsuSubcategory];
+      items = items.filter((profession) => profession.id === wantedId);
+    }
+    if (query) {
+      items = items.filter((profession) => {
+        const haystack = [profession.title, profession.shortDesc, getCategory(profession), getSubcategory(profession)]
+          .filter(Boolean).join(" ").toLocaleLowerCase("ru-RU");
+        return haystack.includes(query);
+      });
+    }
+    if (sortSelect?.value === "az") items.sort((a, b) => a.title.localeCompare(b.title, "ru"));
+    if (sortSelect?.value === "za") items.sort((a, b) => b.title.localeCompare(a.title, "ru"));
+
     grid.innerHTML = "";
+    if (!items.length) {
+      grid.innerHTML = '<p class="empty-search">Ничего не найдено.</p>';
+      return;
+    }
     items.forEach((profession) => grid.appendChild(buildCard(profession)));
   }
 
@@ -244,19 +306,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (event.key === "Escape" && modalOverlay.classList.contains("active")) closeModal();
   });
 
-  const themeToggle = document.getElementById("themeToggle");
-  if (themeToggle) {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") document.body.classList.add("theme-dark");
-    themeToggle.textContent = document.body.classList.contains("theme-dark") ? "☀️" : "🌙";
-
-    themeToggle.addEventListener("click", () => {
-      const isDark = document.body.classList.toggle("theme-dark");
-      themeToggle.textContent = isDark ? "☀️" : "🌙";
-      localStorage.setItem("theme", isDark ? "dark" : "light");
-    });
-  }
-
+  searchInput?.addEventListener("input", renderGrid);
+  sortSelect?.addEventListener("change", renderGrid);
   renderFilters();
+  renderSubcategories();
   renderGrid();
 });
