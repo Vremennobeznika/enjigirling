@@ -18,7 +18,7 @@ const profHolidays = {
     "robotics-engineer": { name: "День робототехники", date: "7 февраля" },
     "railway-engineer": { name: "День железнодорожника", date: "2 августа" },
     "shipbuilding-engineer": { name: "День кораблестроителя", date: "29 июня" },
-    "instrumentation-engineer": { name: "Всемирный день метрологии", date: "20 мая" },
+    "asu-tp-designer": { name: "Всемирный день метрологии", date: "20 мая" },
     "telecom-engineer": { name: "День радио", date: "7 мая" },
     "food-engineer": { name: "День работников пищевой промышленности", date: "18 октября" },
     "textile-engineer": { name: "День работников лёгкой промышленности", date: "20 октября" },

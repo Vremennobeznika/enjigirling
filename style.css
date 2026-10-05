@@ -1910,82 +1910,17 @@ html.theme-dark .calendar-page .prof-chip {
 }
 
 
-/* ===== Professions search / ASU TP subcategories ===== */
-.professions-tools {
-  margin-top: 4px;
-}
-.professions-tools input,
-.professions-tools select {
-  min-height: 44px;
-  padding: 10px 12px;
-  border: 1px solid var(--border);
-  background: var(--bg);
-  color: var(--text-primary);
-  font-family: var(--font-body);
-  font-size: 14px;
-  border-radius: 12px;
-  outline: none;
-}
-.professions-tools input {
-  min-width: min(420px, 100%);
-}
-.professions-tools input:focus,
-.professions-tools select:focus {
-  border-color: var(--text-primary);
-}
-.asu-subfilters[hidden] { display: none; }
-.empty-search {
-  grid-column: 1 / -1;
-  padding: 28px;
-  border: 1px solid var(--soft-border);
-  border-radius: 18px;
-  text-align: center;
-  color: var(--card-text);
-  background: var(--card-bg);
-}
-.float-converter-card {
-  max-width: 640px;
-}
-.float-converter-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  text-align: center;
-}
-.float-converter-note {
-  margin-bottom: 0;
-}
-.float-converter-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 44px;
-  padding: 10px 18px;
-  background: var(--btn-bg);
-  color: var(--btn-text);
-  text-decoration: none;
-  border: 1px solid var(--btn-bg);
-}
-.training-calc-block {
-  max-width: 640px;
-  margin-bottom: 18px;
-}
-.salary-training-block {
-  margin-top: 18px;
-}
-
-.theme-toggle {
-  font-family: Arial, sans-serif;
-  font-size: 22px;
-  line-height: 1;
-  color: #000;
-  background: transparent;
-}
-.theme-dark .theme-toggle {
-  color: #fff;
-}
-@media (max-width: 640px) {
-  .professions-tools { flex-direction: column; align-items: stretch; }
-  .professions-tools input, .professions-tools select { width: 100%; min-width: 0; }
-}
+/* Профессии: поиск, сортировка и подкатегории */
+.profession-tools { display:flex; gap:12px; align-items:end; flex-wrap:wrap; margin:20px 0 12px; }
+.profession-search-wrap { flex:1 1 280px; }
+.profession-search-wrap input, .profession-sort-wrap select { width:100%; box-sizing:border-box; }
+.profession-sort-wrap { flex:0 1 230px; }
+.profession-sort-wrap label { display:block; margin-bottom:6px; font-size:13px; color:var(--text-body); }
+.profession-search-wrap input { min-height:44px; padding:10px 14px; border:1px solid var(--border); border-radius:12px; background:var(--bg-card); color:var(--text-primary); font:inherit; }
+.profession-sort-wrap select { min-height:44px; padding:10px 14px; border:1px solid var(--border); border-radius:12px; background:var(--bg-card); color:var(--text-primary); font:inherit; }
+.profession-search-wrap input:focus, .profession-sort-wrap select:focus { outline:2px solid var(--text-primary); outline-offset:1px; }
+.eng-subfilters { display:flex; gap:8px; flex-wrap:wrap; margin:0 0 18px; }
+.eng-subfilters[hidden] { display:none; }
+.profession-empty { grid-column:1 / -1; padding:28px; border:1px solid var(--border); border-radius:16px; text-align:center; color:var(--text-body); }
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+@media (max-width:768px) { .profession-tools { align-items:stretch; } .profession-sort-wrap { flex:1 1 100%; } }
