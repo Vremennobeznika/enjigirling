@@ -1,10 +1,21 @@
+// Раздел «Ресурсы сообщества»: фильтр по типу и поиск.
+// Данные лежат в resources-data.js (const resources).
 document.addEventListener('DOMContentLoaded', () => {
     const grid = document.getElementById('resourcesGrid');
     const filter = document.getElementById('resourcesFilter');
-    if (!grid || !filter || !Array.isArray(window.resources || resources)) return;
-    const data = window.resources || resources;
-    const types = ['Все', ...Array.from(new Set(data.map(r => r.type).filter(Boolean)))];
-    let activeType = 'Все';
+
+    const ALL = 'Все';
+    // Короткие подписи для кнопок фильтра; остальные типы показываются как есть
+    const FILTER_LABELS = {
+        'Дружественные каналы': 'Каналы',
+        'Чаты в Telegram': 'Чаты',
+        'Платформы для разработок': 'Платформы'
+    };
+    const HTML_ESCAPES = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
+    const escapeHTML = (value) => String(value ?? '').replace(/[&<>"']/g, (char) => HTML_ESCAPES[char]);
+
+    const types = [ALL, ...new Set(resources.map((item) => item.type).filter(Boolean))];
+    let activeType = ALL;
     let query = '';
 
     filter.innerHTML = `
@@ -15,42 +26,39 @@ document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.getElementById('resourceTypeButtons');
     const search = document.getElementById('resourceSearch');
 
-    types.forEach(type => {
-        const btn = document.createElement('button');
-        btn.className = 'eng-filter-btn' + (type === 'Все' ? ' active' : '');
-        const filterLabels = {
-            'Дружественные каналы': 'Каналы',
-            'Чаты в Telegram': 'Чаты',
-            'Платформы для разработок': 'Платформы'
-        };
-        btn.textContent = filterLabels[type] || type;
-        btn.addEventListener('click', () => {
+    function render() {
+        const items = resources.filter((item) => {
+            const text = [item.name, item.desc, item.type].join(' ').toLocaleLowerCase('ru-RU');
+            return (activeType === ALL || item.type === activeType) && text.includes(query);
+        });
+        grid.innerHTML = items.length
+            ? items.map((item) => `
+          <a class="eng-card eng-card--link resource-card" href="${escapeHTML(item.link)}" target="_blank" rel="noopener noreferrer">
+            <div class="resource-type">${escapeHTML(item.type || 'Ресурс')}</div>
+            <h3 class="eng-title">${escapeHTML(item.name)}</h3>
+            <p class="eng-desc">${escapeHTML(item.desc)}</p>
+            <span class="eng-resource-link">Перейти →</span>
+          </a>`).join('')
+            : '<p class="eng-empty">Ничего не найдено.</p>';
+    }
+
+    types.forEach((type) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'eng-filter-btn' + (type === activeType ? ' active' : '');
+        button.textContent = FILTER_LABELS[type] || type;
+        button.addEventListener('click', () => {
             activeType = type;
-            buttons.querySelectorAll('button').forEach(b => b.classList.toggle('active', b === btn));
+            buttons.querySelectorAll('button').forEach((other) => other.classList.toggle('active', other === button));
             render();
         });
-        buttons.appendChild(btn);
+        buttons.appendChild(button);
     });
 
-    search.addEventListener('input', () => { query = search.value.trim().toLocaleLowerCase('ru-RU'); render(); });
+    search.addEventListener('input', () => {
+        query = search.value.trim().toLocaleLowerCase('ru-RU');
+        render();
+    });
 
-    function esc(value) {
-        return String(value ?? '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
-    }
-    function render() {
-        const items = data.filter(item => {
-            const typeOk = activeType === 'Все' || item.type === activeType;
-            const hay = `${item.name || ''} ${item.desc || ''} ${item.type || ''}`.toLocaleLowerCase('ru-RU');
-            return typeOk && (!query || hay.includes(query));
-        });
-        grid.innerHTML = items.map(item => `
-          <a class="eng-card eng-card--link resource-card" href="${esc(item.link)}" target="_blank" rel="noopener noreferrer">
-            <div class="resource-type">${esc(item.type || 'Ресурс')}</div>
-            <h3 class="eng-title">${esc(item.name)}</h3>
-            <p class="eng-desc">${esc(item.desc)}</p>
-            <span class="eng-resource-link">Перейти →</span>
-          </a>`).join('');
-        if (!items.length) grid.innerHTML = '<p class="eng-empty">Ничего не найдено.</p>';
-    }
     render();
 });

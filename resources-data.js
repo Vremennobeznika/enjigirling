@@ -417,84 +417,84 @@ const resources = [
     {
         id: "fr-you-engineer-asu",
         type: "Дружественные каналы",
-        name: "You_engineer_asu",
+        name: "Ты же инженер АСУ ТП",
         desc: "Канал о жизни инженера АСУ ТП без приукрашиваний. Там же большой чат для обмена опытом.",
         link: "https://t.me/you_engineer_asu"
     },
     {
         id: "fr-forodirch-news",
         type: "Дружественные каналы",
-        name: "ForodirchNEWS",
+        name: "Кофейный теоретик",
         desc: "Канал доктора физико-математических наук: много непопулярной политики, занимательных вещей и путешествий.",
         link: "https://t.me/forodirchNEWS"
     },
     {
         id: "fr-mathrocknroll",
         type: "Дружественные каналы",
-        name: "Mathrocknroll",
+        name: "Математический рок-н-ролл",
         desc: "Красота математики, пригодной для быта.",
         link: "https://t.me/mathrocknroll"
     },
     {
         id: "fr-nachertillicome",
         type: "Дружественные каналы",
-        name: "Nachertilicome",
+        name: "Крен по колено",
         desc: "Корабел шутит и объясняет сложное на пальцах под музыку.",
         link: "https://t.me/Nachertilicome"
     },
     {
         id: "fr-catin-asutp",
         type: "Дружественные каналы",
-        name: "CatinAsuTp",
+        name: "КОТЭ в АСУ ТП",
         desc: "Канал инженера АСУ ТП и его аккуратных проектов с юмором.",
         link: "https://t.me/catinAsuTp"
     },
     {
         id: "fr-pro-asutp",
         type: "Дружественные каналы",
-        name: "Pro_asutp",
-        desc: "Роботы на зарплате. Оптимизация по высшему разряду.",
+        name: "Роботы на зарплате",
+        desc: "Оптимизация по высшему разряду.",
         link: "https://t.me/pro_asutp"
     },
     {
         id: "fr-dragon-logic",
         type: "Дружественные каналы",
-        name: "Dragon_logic",
+        name: "ЯП ДРАКОН++",
         desc: "Новые инструментальные средства для программирования ПЛК (ООП).",
         link: "https://t.me/dragon_logic"
     },
     {
         id: "fr-whyisitso",
         type: "Дружественные каналы",
-        name: "Whyisitso",
+        name: "Почему оно такое?",
         desc: "Проблемы людей, железок, людей с железками и железок с людьми.",
         link: "https://t.me/whyisitso"
     },
     {
         id: "fr-cerreradark-official",
         type: "Дружественные каналы",
-        name: "Cerreradarkofficial",
+        name: "Cerrera D'Ark",
         desc: "Канал, где делают самый лучший фонк.",
         link: "https://t.me/cerreradarkofficial/763"
     },
     {
         id: "fr-aiunusov",
         type: "Дружественные каналы",
-        name: "Aiunusov",
+        name: "Artur's Channel",
         desc: "Канал философа-практика, режиссёра и эзотерика.",
         link: "https://t.me/aiunusov"
     },
     {
         id: "fr-popyachsa",
         type: "Дружественные каналы",
-        name: "Popyachsa",
+        name: "Попячечная",
         desc: "Агрегатор хорошего настроения от иностранного агента. Разработка, мемы, много непопулярной политики и науки.",
         link: "https://t.me/popyachsa"
     },
     {
         id: "fr-prlshrlinlove",
         type: "Дружественные каналы",
-        name: "Prlshrlinlove",
+        name: "Погранично-шизоидные отношения",
         desc: "Психологический канал о людях с расстройствами личности.",
         link: "https://t.me/prlshrlinlove"
     }

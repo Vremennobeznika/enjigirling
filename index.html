@@ -24,16 +24,27 @@
   </header>
 
   <div class="profession-tools">
-    <div class="profession-search-wrap"><label for="professionSearch" class="sr-only">Поиск по профессиям</label><input id="professionSearch" type="search" placeholder="Поиск по профессиям" autocomplete="off"></div>
-    <div class="profession-sort-wrap"><label for="professionSort">Сортировка</label><select id="professionSort"><option value="default">По разделам</option><option value="az">По алфавиту А–Я</option><option value="za">По алфавиту Я–А</option></select></div>
-</div>
-<div class="eng-filters" id="categories" aria-label="Разделы профессий"></div>
-<div class="eng-subfilters" id="asuSubcategories" hidden aria-label="Профессии АСУ ТП"></div>
+    <div class="profession-search-wrap">
+      <label for="professionSearch" class="sr-only">Поиск по профессиям</label>
+      <input id="professionSearch" type="search" placeholder="Поиск по профессиям" autocomplete="off">
+    </div>
+    <div class="profession-sort-wrap">
+      <label for="professionSort">Сортировка</label>
+      <select id="professionSort">
+        <option value="default">По разделам</option>
+        <option value="az">По алфавиту А–Я</option>
+        <option value="za">По алфавиту Я–А</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="eng-filters" id="categories" aria-label="Разделы профессий"></div>
+  <div class="eng-subfilters" id="asuSubcategories" hidden aria-label="Профессии АСУ ТП"></div>
   <div class="eng-grid" id="professionsGrid"></div>
 </main>
 
 <div class="modal-overlay" id="modalOverlay" aria-hidden="true">
-  <article class="modal" role="dialog" aria-modal="true" aria-labelledby="modalContent">
+  <article class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <button class="modal-close" id="modalClose" type="button" aria-label="Закрыть">&times;</button>
     <div class="modal-content" id="modalContent"></div>
   </article>
@@ -41,10 +52,11 @@
 
 <footer>
   <p>© 2026 — База данных профессий инженеров</p>
-  <button class="theme-toggle" id="themeToggle" type="button" aria-label="Переключить тему">☾</button>
+  <button class="theme-toggle" id="themeToggle" type="button" aria-label="Переключить тему">🌙</button>
 </footer>
 
 <script src="data.js"></script>
 <script src="script.js"></script>
+<script src="theme.js"></script>
 </body>
 </html>
