@@ -1,7 +1,9 @@
 /* Стили сайта «Профессии инженеров».
    Порядок правил важен: более поздние блоки уточняют и переопределяют ранние. */
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap');
-/* ===== Переменные и тёмная тема ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+/* ===== Переменные и тёмная тема =====
+   Шрифт один на весь сайт (--font). Размеры текста: xs 12 · sm 14 · md 16 · lg 18 · xl 20 · 2xl 24 · 3xl 32;
+   заголовки страниц — плавающие (--fs-h1, --fs-h2). Начертания: 400, 600, 700. */
 :root {
   --bg: #FFFFFF;
   --bg-block: #F5F5F5;
@@ -11,9 +13,16 @@
   --border: #000000;
   --btn-bg: #000000;
   --btn-text: #FFFFFF;
-  --font-heading: 'Manrope', sans-serif;
-  --font-body: 'Inter', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --fs-xs: 12px;
+  --fs-sm: 14px;
+  --fs-md: 16px;
+  --fs-lg: 18px;
+  --fs-xl: 20px;
+  --fs-2xl: 24px;
+  --fs-3xl: 32px;
+  --fs-h1: clamp(28px, 4vw, 42px);
+  --fs-h2: clamp(24px, 4vw, 32px);
   --gap: 24px;
   --container: 1200px;
   --radius: 18px;
@@ -38,11 +47,17 @@
 /* ===== Базовые стили ===== */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-  font-family: var(--font-body);
+  font-family: var(--font);
   color: var(--text-body);
   background: var(--bg);
   line-height: 1.6;
   transition: background 0.2s, color 0.2s;
+}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
 }
 .eng-calendar-root { max-width: var(--container); margin: 0 auto; padding: 0 16px; }
 /* ===== Вкладки навигации ===== */
@@ -60,8 +75,7 @@ body {
   border: none;
   padding: 12px 16px;
   color: var(--text-secondary);
-  font-family: var(--font-heading);
-  font-size: 16px;
+  font-size: var(--fs-md);
   font-weight: 600;
   cursor: pointer;
   border-bottom: 2px solid transparent;
@@ -75,8 +89,7 @@ body {
   padding: 0 6px;
   border: 1px solid currentColor;
   color: inherit;
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   font-weight: 600;
   letter-spacing: 1px;
   line-height: 1.4;
@@ -95,8 +108,7 @@ body {
 .eng-filters input[type="text"] {
   padding: 10px 12px;
   border: 1px solid var(--border);
-  font-family: var(--font-body);
-  font-size: 14px;
+  font-size: var(--fs-md);
   border-radius: var(--radius);
   outline: none;
   transition: border-color 0.2s;
@@ -110,8 +122,7 @@ body {
   border: 1px solid var(--border);
   background: var(--bg);
   color: var(--text-primary);
-  font-family: var(--font-heading);
-  font-size: 14px;
+  font-size: var(--fs-sm);
   font-weight: 600;
   cursor: pointer;
   border-radius: var(--radius);
@@ -137,27 +148,20 @@ body {
 }
 .eng-card:hover { transform: scale(1.02); border-color: var(--text-primary); }
 .eng-title {
-  font-family: var(--font-heading);
-  font-size: 19px;
+  font-size: var(--fs-xl);
   font-weight: 700;
   color: var(--text-primary);
   margin: 0;
   word-wrap: break-word;
 }
-.eng-desc {
-  font-family: var(--font-body);
-  font-size: 14px;
-  word-wrap: break-word;
-  -webkit-box-orient: vertical;
-}
+.eng-desc { font-size: var(--fs-sm); word-wrap: break-word; -webkit-box-orient: vertical; }
 .eng-resource-link {
-  font-family: var(--font-heading);
   color: var(--text-primary);
   border-bottom: 1px solid var(--text-primary);
   display: inline-block;
   padding-top: 6px;
   margin-top: 14px;
-  font-size: 13px;
+  font-size: var(--fs-sm);
   font-weight: 700;
 }
 /* ===== Разделитель, кнопка, пустое состояние ===== */
@@ -168,8 +172,7 @@ body {
   color: var(--btn-text);
   padding: 14px 24px;
   border: none;
-  font-family: var(--font-heading);
-  font-size: 16px;
+  font-size: var(--fs-md);
   font-weight: 600;
   cursor: pointer;
   transition: background 0.2s;
@@ -178,7 +181,7 @@ body {
   text-align: center;
   padding: 64px 16px;
   color: var(--text-secondary);
-  font-size: 16px;
+  font-size: var(--fs-md);
   border: 1px dashed var(--border);
 }
 /* ===== Окно с подробностями: основа ===== */
@@ -215,7 +218,7 @@ body {
   right: 16px;
   background: none;
   border: none;
-  font-size: 1.8rem;
+  font-size: 28px; /* значок «×», а не текст — вне шкалы размеров */
   cursor: pointer;
   color: var(--text-secondary);
   line-height: 1;
@@ -252,14 +255,13 @@ footer {
 }
 .footer-mission { max-width: 560px; margin: 0 auto 24px; padding: 0 10px; }
 .footer-mission-text {
-  font-family: var(--font-body);
-  font-size: 0.95rem;
+  font-size: var(--fs-md);
   line-height: 1.6;
   color: var(--text-body);
   margin-bottom: 8px;
   font-style: italic;
 }
-.footer-mission-contact { font-family: var(--font-mono); font-size: 0.9rem; color: var(--text-secondary); }
+.footer-mission-contact { font-size: var(--fs-sm); color: var(--text-secondary); }
 .footer-contact-link {
   color: var(--text-primary);
   text-decoration: none;
@@ -281,16 +283,15 @@ footer {
   padding: 8px 24px;
   color: var(--text-primary);
   text-decoration: none;
-  font-family: var(--font-heading);
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: var(--fs-sm);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   transition: all 0.2s;
 }
 .footer-btn:hover { background: var(--btn-bg); color: var(--btn-text); border-color: var(--btn-bg); }
 .footer-btn--donate { background: var(--bg); }
-.footer-copy { font-family: var(--font-mono); font-size: 0.8rem; opacity: 0.5; }
+.footer-copy { font-size: var(--fs-xs); opacity: 0.5; }
 @keyframes eng-fade-in {
   from {
     opacity: 0;
@@ -304,20 +305,18 @@ footer {
 /* ===== Появление карточек ===== */
 @media (max-width: 768px) {
   .eng-grid { gap: 16px; grid-template-columns: 1fr; }
-  .eng-title { font-size: 17px; }
+  .eng-title { font-size: var(--fs-lg); }
 }
 /* ===== Страница «Обучение»: карта и список вузов ===== */
 .map-intro { text-align: center; margin-bottom: 32px; }
 .map-title {
-  font-family: var(--font-heading);
-  font-size: 28px;
-  font-weight: 800;
+  font-size: var(--fs-3xl);
+  font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 8px;
 }
 .map-subtitle {
-  font-family: var(--font-body);
-  font-size: 15px;
+  font-size: var(--fs-md);
   color: var(--text-body);
   max-width: 640px;
   margin: 0 auto;
@@ -350,7 +349,6 @@ footer {
   cursor: pointer;
 }
 .eng-district-label {
-  font-family: var(--font-mono);
   font-size: 13px;
   font-weight: 600;
   fill: var(--text-primary);
@@ -373,15 +371,13 @@ footer {
   margin-bottom: 20px;
 }
 .map-explain-title {
-  font-family: var(--font-heading);
-  font-size: 14px;
+  font-size: var(--fs-sm);
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 6px;
 }
 .map-explain p {
-  font-family: var(--font-body);
-  font-size: 13px;
+  font-size: var(--fs-sm);
   line-height: 1.55;
   color: var(--text-body);
   margin-bottom: 6px;
@@ -397,31 +393,19 @@ footer {
   border-bottom: 2px solid var(--text-primary);
   flex-wrap: wrap;
 }
-.map-count { font-family: var(--font-mono); font-size: 13px; color: var(--text-secondary); }
+.map-count { font-size: var(--fs-sm); color: var(--text-secondary); }
 .map-uni-list { display: flex; flex-direction: column; gap: 16px; }
 .map-uni-name {
-  font-family: var(--font-heading);
-  font-size: 16px;
+  font-size: var(--fs-md);
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 2px;
 }
-.map-uni-city {
-  font-family: var(--font-body);
-  font-size: 13px;
-  color: var(--text-secondary);
-  margin-bottom: 6px;
-}
-.map-uni-kind {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
+.map-uni-city { font-size: var(--fs-sm); color: var(--text-secondary); margin-bottom: 6px; }
+.map-uni-kind { font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 0.5px; }
 .map-uni-profile {
   display: inline-block;
-  font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: var(--fs-xs);
   font-weight: 600;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -430,12 +414,7 @@ footer {
   color: var(--text-primary);
   margin-bottom: 8px;
 }
-.map-uni-focus {
-  font-family: var(--font-body);
-  font-size: 14px;
-  color: var(--text-body);
-  margin-bottom: 10px;
-}
+.map-uni-focus { font-size: var(--fs-sm); color: var(--text-body); margin-bottom: 10px; }
 .map-detail-list { border-top: 1px solid var(--border); }
 .map-detail {
   display: grid;
@@ -446,19 +425,13 @@ footer {
 }
 .map-detail:last-child { border-bottom: none; }
 .map-detail-label {
-  font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: var(--fs-xs);
   font-weight: 600;
   color: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.3px;
 }
-.map-detail-value {
-  font-family: var(--font-body);
-  font-size: 13px;
-  line-height: 1.45;
-  color: var(--text-body);
-}
+.map-detail-value { font-size: var(--fs-sm); line-height: 1.45; color: var(--text-body); }
 .map-detail-value.ok { font-weight: 600; }
 .map-uni-site {
   color: var(--text-primary);
@@ -469,26 +442,19 @@ footer {
 }
 .map-uni-site:hover { border-bottom-color: transparent; }
 .map-placeholder { text-align: center; padding: 32px 8px; border: 1px dashed var(--border); }
-.map-placeholder-title {
-  font-family: var(--font-heading);
-  font-size: 17px;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-.map-placeholder-text { font-family: var(--font-body); font-size: 14px; }
+.map-placeholder-title { font-size: var(--fs-lg); font-weight: 700; margin-bottom: 8px; }
+.map-placeholder-text { font-size: var(--fs-sm); }
 /* ===== Калькуляторы ===== */
 .calc-section { margin-top: 16px; }
 .calc-heading {
-  font-family: var(--font-heading);
-  font-size: 24px;
-  font-weight: 800;
+  font-size: var(--fs-2xl);
+  font-weight: 700;
   color: var(--text-primary);
   text-align: center;
   margin-bottom: 8px;
 }
 .calc-subtitle {
-  font-family: var(--font-body);
-  font-size: 15px;
+  font-size: var(--fs-md);
   color: var(--text-body);
   text-align: center;
   margin-bottom: 24px;
@@ -508,8 +474,7 @@ footer {
   overflow: visible;
 }
 .calc-field label {
-  font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: var(--fs-sm);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -531,8 +496,7 @@ footer {
   text-align: center;
 }
 .calc-result-label {
-  font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: var(--fs-xs);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -541,25 +505,18 @@ footer {
   margin-bottom: 8px;
 }
 .calc-result-value {
-  font-family: var(--font-heading);
-  font-size: 32px;
-  font-weight: 800;
+  font-size: var(--fs-3xl);
+  font-weight: 700;
   color: var(--btn-text);
   line-height: 1.1;
   margin-bottom: 8px;
 }
-.calc-result-hint {
-  font-family: var(--font-body);
-  font-size: 14px;
-  line-height: 1.5;
-  opacity: 0.9;
-}
+.calc-result-hint { font-size: var(--fs-sm); line-height: 1.5; opacity: 0.9; }
 /* ===== Преимущества и ссылки на курсы ===== */
 .benefits-section { margin-top: 16px; }
 .benefits-heading {
-  font-family: var(--font-heading);
-  font-size: 24px;
-  font-weight: 800;
+  font-size: var(--fs-2xl);
+  font-weight: 700;
   color: var(--text-primary);
   text-align: center;
   margin-bottom: 24px;
@@ -570,26 +527,19 @@ footer {
   gap: var(--gap);
 }
 .benefit-card { border: 1px solid var(--border); padding: 20px; }
-.benefit-title {
-  font-family: var(--font-heading);
-  font-size: 17px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-.benefit-card p { font-family: var(--font-body); font-size: 14px; line-height: 1.55; }
+.benefit-title { font-size: var(--fs-lg); font-weight: 700; margin-bottom: 10px; }
+.benefit-card p { font-size: var(--fs-sm); line-height: 1.55; }
 .benefits-note {
   margin-top: 24px;
   padding: 14px;
   border: 1px dashed var(--border);
-  font-family: var(--font-body);
-  font-size: 13px;
+  font-size: var(--fs-sm);
   line-height: 1.5;
   color: var(--text-body);
 }
 .course-link { margin: 12px 0 0; }
 .course-link a {
-  font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: var(--fs-sm);
   font-weight: 600;
   color: var(--text-primary);
   text-decoration: none;
@@ -605,31 +555,29 @@ footer {
 body.modal-open { overflow: hidden; }
 .page-header { text-align: center; }
 .page-header h1 {
-  font-family: var(--font-heading);
-  font-size: clamp(28px, 4vw, 42px);
+  font-size: var(--fs-h1);
   line-height: 1.15;
   margin-bottom: 8px;
   color: var(--text-primary);
 }
-.page-header p { color: var(--text-secondary); font-size: 15px; }
+.page-header p { color: var(--text-secondary); font-size: var(--fs-md); }
 .eng-card:hover { transform: translateY(-3px); }
 .eng-card:focus-visible { outline: 3px solid var(--text-primary); outline-offset: 3px; }
-.eng-card .eng-title { font-size: 20px; line-height: 1.3; overflow-wrap: anywhere; }
+.eng-card .eng-title { font-size: var(--fs-xl); line-height: 1.3; overflow-wrap: anywhere; }
 .modal-overlay.active { display: flex; }
 .modal-content,
 .modal-content * {
   max-width: 100%;
 }
 .modal-header h2 {
-  font-family: var(--font-heading);
-  font-size: clamp(24px, 4vw, 34px);
+  font-size: var(--fs-h2);
   line-height: 1.2;
   overflow-wrap: anywhere;
   color: var(--text-primary);
 }
 .modal-category {
   margin-bottom: 5px;
-  font-size: 12px;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
   letter-spacing: .7px;
   color: var(--text-secondary);
@@ -642,14 +590,13 @@ body.modal-open { overflow: hidden; }
 }
 .profession-section:last-child { border-bottom: 0; }
 .profession-section h3 {
-  font-family: var(--font-heading);
-  font-size: 18px;
+  font-size: var(--fs-lg);
   line-height: 1.3;
   margin-bottom: 12px;
   color: var(--text-primary);
 }
 .profession-section p { margin: 0 0 9px; }
-.profession-intro p { font-size: 16px; line-height: 1.65; }
+.profession-intro p { font-size: var(--fs-md); line-height: 1.65; }
 .info-grid,
 .salary-grid {
   display: grid;
@@ -664,34 +611,29 @@ body.modal-open { overflow: hidden; }
 .region-row span,
 .day-row span {
   display: block;
-  font-size: 12px;
+  font-size: var(--fs-xs);
   color: var(--text-secondary);
   margin-bottom: 4px;
 }
 .info-item strong,
 .salary-grid strong {
   display: block;
-  font-size: 15px;
+  font-size: var(--fs-md);
 }
 .sub-label {
   margin-top: 16px !important;
-  font-size: 12px;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
   letter-spacing: .5px;
   font-weight: 700;
 }
 .tag-list { display: flex; flex-wrap: wrap; gap: 7px; }
-.tag-list span { padding: 6px 9px; font-size: 13px; }
+.tag-list span { padding: 6px 9px; font-size: var(--fs-sm); }
 .region-row,
 .day-row {
   gap: 14px;
 }
-.career-number {
-  display: grid;
-  place-items: center;
-  font-family: var(--font-mono);
-  font-size: 12px;
-}
+.career-number { display: grid; place-items: center; font-size: var(--fs-xs); }
 .career-row b { text-align: right; }
 .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .pros-cons > div + div { border-left: 1px solid var(--border); padding-left: 24px; }
@@ -746,7 +688,7 @@ body.modal-open { overflow: hidden; }
 .resource-card .eng-title { margin-top: 8px; margin-bottom: 10px; }
 .resource-card .eng-desc { flex: 1; }
 .resource-type {
-  font-size: 12px;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
   letter-spacing: .06em;
   opacity: .58;
@@ -928,13 +870,13 @@ body.theme-dark .site-page .career-row {
 .modal .region-row span,
 .modal .day-row span {
   margin: 0;
-  font-size: 13px;
+  font-size: var(--fs-sm);
   line-height: 1.35;
   white-space: normal;
 }
 .modal .region-row strong,
 .modal .day-row strong {
-  font-size: 14px;
+  font-size: var(--fs-sm);
   line-height: 1.45;
   text-align: left;
   white-space: normal;
@@ -1092,7 +1034,7 @@ html.theme-dark .calendar-page .prof-chip { background: var(--soft-bg); }
 .profession-sort-wrap label {
   display: block;
   margin-bottom: 6px;
-  font-size: 13px;
+  font-size: var(--fs-sm);
   color: var(--text-body);
 }
 /* Поиск и сортировка: одинаковая высота и серая рамка, как у остальных полей сайта */
