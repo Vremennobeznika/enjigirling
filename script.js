@@ -5,9 +5,9 @@
 // Название раздела → id его профессий.
 // Чтобы переместить профессию в другой раздел, перенесите её id в другой список.
 const CATEGORY_PROFESSIONS = {
-  "Строительство и инфраструктура": ["civil-engineer", "architect-engineer", "road-engineer"],
+  "Строительство и инфраструктура": ["civil-engineer", "pgs-designer", "architect-engineer", "road-engineer", "road-designer"],
   "Машиностроение и транспорт": ["mechanical-engineer", "automotive-engineer", "railway-engineer", "shipbuilding-engineer"],
-  "Энергетика": ["power-engineer", "electrical-engineer", "nuclear-engineer"],
+  "Энергетика": ["power-engineer", "electrical-engineer", "electrical-designer", "nuclear-engineer"],
   "Авиация и космос": ["aerospace-engineer", "space-engineer"],
   "Химия и нефтегаз": ["chemical-engineer", "oil-gas-engineer"],
   "Металлургия и добыча": ["metallurgical-engineer", "mining-engineer"],
@@ -56,6 +56,14 @@ function escapeHTML(value) {
 
 const valueOrDash = (value) => (value ? escapeHTML(value) : "—");
 
+// Склонение по числу: plural(42, ["год", "года", "лет"]) → «года»
+function plural(number, [one, few, many]) {
+  const last = number % 10, lastTwo = number % 100;
+  if (last === 1 && lastTwo !== 11) return one;
+  if (last >= 2 && last <= 4 && (lastTwo < 12 || lastTwo > 14)) return few;
+  return many;
+}
+
 // ─── Разметка карточки профессии ────────────────────────────────────────────
 // Блок показывается, только если в нём есть что показать.
 const section = (title, body, extraClass = "") =>
@@ -77,7 +85,7 @@ function renderRows(listClass, rowClass, labels, values) {
 function renderProfile({ specialists, avgAge, genderRatio } = {}) {
   const items = [
     specialists && labeled("Специалистов", Number(specialists).toLocaleString("ru-RU"), "info-item"),
-    avgAge && labeled("Средний возраст", `${escapeHTML(avgAge)} лет`, "info-item"),
+    avgAge && labeled("Средний возраст", `${escapeHTML(avgAge)} ${plural(Number(avgAge), ["год", "года", "лет"])}`, "info-item"),
     genderRatio && labeled("Соотношение", escapeHTML(genderRatio), "info-item")
   ].filter(Boolean).join("");
   return items && `<div class="info-grid">${items}</div>`;

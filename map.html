@@ -47,6 +47,28 @@
                         <div class="calc-result"><p class="calc-result-label">Зарплата в регионе</p><p class="calc-result-value" id="salaryResultValue">—</p><p class="calc-result-hint" id="salaryResultHint"></p></div>
                     </div></div>
                 </div>
+
+                <div class="calc-section-inner">
+                    <h4 class="calc-heading">Зарплата на руки</h4>
+                    <p class="calc-subtitle">Введите зарплату до вычета налога — посчитаем, сколько придёт на карту после НДФЛ (ставки 2026 года для резидентов РФ).</p>
+                    <div class="calc-layout"><div class="calc-controls">
+                        <div class="calc-field"><label for="netProfession">Подставить медиану профессии</label><select id="netProfession"><option value="">Ввести свою сумму</option></select></div>
+                        <div class="calc-field"><label for="netGross">Зарплата до вычета НДФЛ, ₽ в месяц</label><input id="netGross" type="text" inputmode="numeric" value="100000" autocomplete="off"></div>
+                        <div class="calc-result"><p class="calc-result-label">На руки в месяц</p><p class="calc-result-value" id="netResultValue">—</p><p class="calc-result-hint" id="netResultHint"></p></div>
+                    </div></div>
+                </div>
+
+                <div class="calc-section-inner">
+                    <h4 class="calc-heading">Окупаемость обучения</h4>
+                    <p class="calc-subtitle">Через сколько времени после выпуска потраченные на учёбу деньги вернутся за счёт более высокой зарплаты.</p>
+                    <div class="calc-layout"><div class="calc-controls">
+                        <div class="calc-field"><label for="roiCost">Стоимость обучения в год, ₽ (0 — бюджетное место)</label><input id="roiCost" type="text" inputmode="numeric" value="200000" autocomplete="off"></div>
+                        <div class="calc-field"><label for="roiYears">Срок обучения, лет</label><input id="roiYears" type="text" inputmode="decimal" value="4" autocomplete="off"></div>
+                        <div class="calc-field"><label for="roiBefore">Зарплата без этого образования, ₽ в месяц</label><input id="roiBefore" type="text" inputmode="numeric" value="50000" autocomplete="off"></div>
+                        <div class="calc-field"><label for="roiAfter">Ожидаемая зарплата после обучения, ₽ в месяц</label><input id="roiAfter" type="text" inputmode="numeric" value="100000" autocomplete="off"></div>
+                        <div class="calc-result"><p class="calc-result-label">Окупится через</p><p class="calc-result-value" id="roiResultValue">—</p><p class="calc-result-hint" id="roiResultHint"></p></div>
+                    </div></div>
+                </div>
             </section>
 
 

@@ -1,4 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Профессии из data.js (нужны калькуляторам зарплаты)
+    const professions = Array.isArray(window.professionsData) ? window.professionsData : [];
+
+    // Число из поля ввода: понимает пробелы и запятую («100 000», «2,5»)
+    const parseNumber = (text) => parseFloat(String(text).replace(/[\s\u00a0]/g, '').replace(',', '.'));
+    const formatNumber = (n, digits = 0) => new Intl.NumberFormat('ru-RU', { maximumFractionDigits: digits }).format(n);
+    const formatRub = (n) => `${formatNumber(Math.round(n))} ₽`;
+    // Склонение по числу: plural(3, ['год', 'года', 'лет']) → «года»
+    const plural = (n, [one, few, many]) => {
+        const last = n % 10, lastTwo = n % 100;
+        if (last === 1 && lastTwo !== 11) return one;
+        if (last >= 2 && last <= 4 && (lastTwo < 12 || lastTwo > 14)) return few;
+        return many;
+    };
+
     const REGION_OPTIONS = [
         { id: 'central', name: 'Центральный ФО' },
         { id: 'northwest', name: 'Северо-Западный ФО' },
@@ -17,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const salaryHint = document.getElementById('salaryResultHint');
 
     if (profSelect && regionSelect && salaryValue && salaryHint) {
-        const profs = Array.isArray(window.professionsData) ? window.professionsData : (typeof professionsData !== 'undefined' && Array.isArray(professionsData) ? professionsData : []);
+        const profs = professions;
         profs.forEach(p => {
             const o = document.createElement('option');
             o.value = p.id;
@@ -212,5 +227,164 @@ document.addEventListener('DOMContentLoaded', () => {
 
         numInput.addEventListener('input', renderNum);
         numBase.addEventListener('change', renderNum);
+    }
+
+    /* ===== Калькулятор 4: зарплата на руки (НДФЛ 2026) ===== */
+    const netGross = document.getElementById('netGross');
+    const netProfession = document.getElementById('netProfession');
+    const netValue = document.getElementById('netResultValue');
+    const netHint = document.getElementById('netResultHint');
+
+    if (netGross && netProfession && netValue && netHint) {
+        // Шкала НДФЛ для резидентов РФ (ст. 224 НК РФ, с 2025 года): ставка действует только на часть годового дохода внутри ступени
+        const NDFL_BRACKETS = [
+            { upTo: 2400000, rate: 0.13 },
+            { upTo: 5000000, rate: 0.15 },
+            { upTo: 20000000, rate: 0.18 },
+            { upTo: 50000000, rate: 0.20 },
+            { upTo: Infinity, rate: 0.22 }
+        ];
+        const yearlyTax = (income) => {
+            let tax = 0, from = 0;
+            for (const { upTo, rate } of NDFL_BRACKETS) {
+                if (income > from) tax += (Math.min(income, upTo) - from) * rate;
+                from = upTo;
+            }
+            return tax;
+        };
+
+        professions.filter(p => p.salary && p.salary.median).forEach(p => {
+            const o = document.createElement('option');
+            o.value = p.id;
+            o.textContent = p.title;
+            netProfession.appendChild(o);
+        });
+
+        function renderNet() {
+            const monthly = parseNumber(netGross.value);
+            if (!(monthly >= 0)) {
+                netValue.textContent = '—';
+                netHint.textContent = 'Введите сумму в рублях.';
+                return;
+            }
+            const yearly = monthly * 12;
+            const tax = yearlyTax(yearly);
+            const rate = yearly ? tax / yearly * 100 : 0;
+            netValue.textContent = formatRub((yearly - tax) / 12);
+            netHint.textContent = `НДФЛ за год: ${formatRub(tax)} (${formatNumber(rate, 1)} % дохода). На руки за год: ${formatRub(yearly - tax)}. Расчёт для резидента РФ, без вычетов; при доходе выше 2,4 млн ₽ в год повышенная ставка действует только на превышение.`;
+        }
+
+        netProfession.addEventListener('change', () => {
+            const p = professions.find(x => x.id === netProfession.value);
+            if (!p) return;
+            netGross.value = String(parseNumber(p.salary.median));
+            renderNet();
+        });
+        netGross.addEventListener('input', () => {
+            netProfession.value = '';
+            renderNet();
+        });
+        renderNet();
+    }
+
+    /* ===== Калькулятор 5: окупаемость обучения ===== */
+    const roiCost = document.getElementById('roiCost');
+    const roiYears = document.getElementById('roiYears');
+    const roiBefore = document.getElementById('roiBefore');
+    const roiAfter = document.getElementById('roiAfter');
+    const roiValue = document.getElementById('roiResultValue');
+    const roiHint = document.getElementById('roiResultHint');
+
+    if (roiCost && roiYears && roiBefore && roiAfter && roiValue && roiHint) {
+        function renderRoi() {
+            const [cost, years, before, after] = [roiCost, roiYears, roiBefore, roiAfter].map(el => parseNumber(el.value));
+            if ([cost, years, before, after].some(n => !(n >= 0))) {
+                roiValue.textContent = '—';
+                roiHint.textContent = 'Заполните все поля числами.';
+                return;
+            }
+            const total = cost * years;
+            const gain = after - before;
+            if (total === 0) {
+                roiValue.textContent = 'Сразу';
+                roiHint.textContent = 'Обучение бесплатное — затрат, которые нужно возвращать, нет.';
+                return;
+            }
+            if (gain <= 0) {
+                roiValue.textContent = 'Не окупится';
+                roiHint.textContent = `Затраты на обучение: ${formatRub(total)}. Ожидаемая зарплата не выше нынешней — прироста дохода нет.`;
+                return;
+            }
+            const months = Math.ceil(total / gain);
+            const y = Math.floor(months / 12), m = months % 12;
+            const parts = [];
+            if (y) parts.push(`${y} ${plural(y, ['год', 'года', 'лет'])}`);
+            if (m) parts.push(`${m} ${plural(m, ['месяц', 'месяца', 'месяцев'])}`);
+            roiValue.textContent = parts.join(' ');
+            roiHint.textContent = `Затраты на обучение: ${formatRub(total)}. Прирост дохода: +${formatRub(gain)} в месяц до налогов. Срок считается с момента выпуска и не учитывает доход, не заработанный за время учёбы.`;
+        }
+        [roiCost, roiYears, roiBefore, roiAfter].forEach(el => el.addEventListener('input', renderRoi));
+        renderRoi();
+    }
+
+    /* ===== Калькулятор 6: токовый сигнал 4–20 мА ===== */
+    const maMin = document.getElementById('maMin');
+    const maMax = document.getElementById('maMax');
+    const maCurrent = document.getElementById('maCurrent');
+    const maValue = document.getElementById('maValue');
+    const maResultValue = document.getElementById('maResultValue');
+    const maResultHint = document.getElementById('maResultHint');
+
+    if (maMin && maMax && maCurrent && maValue && maResultValue && maResultHint) {
+        let lastEdited = 'current';      // какое из двух полей вводил пользователь — второе пересчитывается
+        const toInput = (n) => String(+n.toFixed(3)).replace('.', ',');
+
+        // Состояние сигнала по NAMUR NE 43
+        function signalState(mA) {
+            if (mA < 3.6) return 'Сигнал отказа: ниже 3,6 мА — обрыв линии или неисправность датчика.';
+            if (mA < 3.8) return 'Ниже диапазона измерения (3,6–3,8 мА).';
+            if (mA <= 20.5) return 'Рабочий диапазон (3,8–20,5 мА по NAMUR NE 43).';
+            if (mA <= 21) return 'Выше диапазона измерения (20,5–21 мА).';
+            return 'Сигнал отказа: выше 21 мА — короткое замыкание или неисправность датчика.';
+        }
+
+        function renderMa() {
+            const min = parseNumber(maMin.value);
+            const max = parseNumber(maMax.value);
+            if (Number.isNaN(min) || Number.isNaN(max)) {
+                maResultValue.textContent = '—';
+                maResultHint.textContent = 'Введите начало и конец шкалы.';
+                return;
+            }
+            if (min === max) {
+                maResultValue.textContent = '—';
+                maResultHint.textContent = 'Начало и конец шкалы должны отличаться.';
+                return;
+            }
+            const span = max - min;
+            let mA, value;
+            if (lastEdited === 'current') {
+                mA = parseNumber(maCurrent.value);
+                if (Number.isNaN(mA)) { maValue.value = ''; maResultValue.textContent = '—'; maResultHint.textContent = 'Введите ток в миллиамперах.'; return; }
+                value = min + (mA - 4) / 16 * span;
+                maValue.value = toInput(value);
+            } else {
+                value = parseNumber(maValue.value);
+                if (Number.isNaN(value)) { maCurrent.value = ''; maResultValue.textContent = '—'; maResultHint.textContent = 'Введите значение процесса.'; return; }
+                mA = 4 + (value - min) / span * 16;
+                maCurrent.value = toInput(mA);
+            }
+            const percent = (mA - 4) / 16 * 100;
+            maResultValue.textContent = lastEdited === 'current'
+                ? `${formatNumber(mA, 3)} мА → ${formatNumber(value, 3)}`
+                : `${formatNumber(value, 3)} → ${formatNumber(mA, 3)} мА`;
+            maResultHint.textContent = `${formatNumber(percent, 1)} % диапазона. ${signalState(mA)}`;
+        }
+
+        maCurrent.addEventListener('input', () => { lastEdited = 'current'; renderMa(); });
+        maValue.addEventListener('input', () => { lastEdited = 'value'; renderMa(); });
+        maMin.addEventListener('input', renderMa);
+        maMax.addEventListener('input', renderMa);
+        renderMa();
     }
 });

@@ -697,6 +697,10 @@ body.modal-open { overflow: hidden; }
 @media(max-width:800px) {
   .site-page { padding-left: 14px; padding-right: 14px; }
   .resource-filter-row { flex-direction: column; }
+  /* в колонке flex-basis задаёт высоту, поэтому сбрасываем его, иначе кнопки и поиск раздуваются до 600 и 260 px */
+  .resource-buttons, .resource-search { flex: none; }
+  .resource-search { padding-top: 10px; padding-bottom: 10px; }
+  .resource-buttons .eng-filter-btn { padding: 8px 14px; }
   .resource-search { width: 100%; }
 }
 /* ===== Скругления кнопок и карточек на всех страницах ===== */

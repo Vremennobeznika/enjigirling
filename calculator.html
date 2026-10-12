@@ -96,6 +96,39 @@
                     </div>
                 </div>
             </div>
+
+            <div class="calc-section">
+                <hr class="eng-divider">
+                <h3 class="calc-heading">Токовый сигнал 4–20 мА</h3>
+                <p class="calc-subtitle">Перевод тока датчика в значение процесса и обратно по диапазону шкалы: давление, уровень, температура, расход.</p>
+
+                <div class="calc-layout">
+                    <div class="calc-controls">
+                        <div class="calc-field">
+                            <label for="maMin">Начало шкалы (при токе 4 миллиампера)</label>
+                            <input id="maMin" type="text" inputmode="decimal" value="0" autocomplete="off">
+                        </div>
+                        <div class="calc-field">
+                            <label for="maMax">Конец шкалы (при токе 20 миллиампер)</label>
+                            <input id="maMax" type="text" inputmode="decimal" value="10" autocomplete="off">
+                        </div>
+                        <div class="calc-field">
+                            <label for="maCurrent">Ток в миллиамперах</label>
+                            <input id="maCurrent" type="text" inputmode="decimal" value="12" autocomplete="off">
+                        </div>
+                        <div class="calc-field">
+                            <label for="maValue">Значение процесса (в единицах шкалы)</label>
+                            <input id="maValue" type="text" inputmode="decimal" autocomplete="off">
+                        </div>
+                        <div class="calc-result">
+                            <p class="calc-result-label">Результат</p>
+                            <p class="calc-result-value" id="maResultValue">—</p>
+                            <p class="calc-result-hint" id="maResultHint"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </main>
     </div>
 

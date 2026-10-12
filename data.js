@@ -3,19 +3,35 @@ window.professionsData = [
     {
         id: "civil-engineer",
         title: "Инженер-строитель (ПГС)",
-        shortDesc: "Проектирование и строительство зданий и сооружений",
+        shortDesc: "Организация и контроль строительства зданий и сооружений на объекте: ведение работ, исполнительная документация, сметы",
         stats: { specialists: 320000, avgAge: 42, genderRatio: "70% мужчин / 30% женщин" },
-        education: { duration: "4–5.5 лет (бакалавриат/специалитет)", requirements: "Глубокое знание строительной механики и сопротивления материалов.", courses: ["AutoCAD/Revit", "Главгосэкспертиза", "Сметное дело"] },
+        education: { duration: "4–5,5 лет (бакалавриат/специалитет)", requirements: "Знание технологии строительного производства, строительных материалов и конструкций.", courses: ["Гранд-Смета", "Строительный контроль", "Исполнительная документация"] },
         salary: { start: "60 000 ₽", peak: "250 000+ ₽", median: "110 000 ₽", regions: { central: "80 000–250 000 ₽", northwest: "70 000–200 000 ₽", south: "55 000–150 000 ₽", northcaucasus: "45 000–120 000 ₽", volga: "55 000–150 000 ₽", ural: "65 000–180 000 ₽", siberia: "55 000–160 000 ₽", fareast: "70 000–200 000 ₽" } },
         careerGrowth: [
             { title: "Инженер ПТО", period: "0–2 года", salary: "60 000–80 000 ₽" },
-            { title: "Ведущий инженер", period: "2–4 года", salary: "90 000–140 000 ₽" },
-            { title: "Главный инженер проекта", period: "4–7 лет", salary: "150 000–200 000 ₽" },
-            { title: "Руководитель стройки / ГИП", period: "7+ лет", salary: "200 000–300 000+ ₽" }
+            { title: "Производитель работ (прораб)", period: "2–4 года", salary: "90 000–140 000 ₽" },
+            { title: "Начальник участка", period: "4–7 лет", salary: "150 000–200 000 ₽" },
+            { title: "Руководитель строительства", period: "7+ лет", salary: "200 000–300 000+ ₽" }
         ],
-        typicalDay: { morning: "07:30 — Планёрка", midday: "09:00–13:00 — Контроль", afternoon: "13:00–14:00 — Обед", evening: "14:00–18:00 — Документация" },
+        typicalDay: { morning: "07:30 — Планёрка на объекте", midday: "09:00–13:00 — Контроль работ", afternoon: "13:00–14:00 — Обед", evening: "14:00–18:00 — Исполнительная документация" },
         easy: "Работа на свежем воздухе, видимый результат.",
-        hard: "Работа в любую погоду. Высокая ответственность."
+        hard: "Работа в любую погоду. Ответственность за сроки и безопасность."
+    },
+    {
+        id: "pgs-designer",
+        title: "Инженер-проектировщик (ПГС)",
+        shortDesc: "Проектирование конструкций и разделов проектной документации зданий и сооружений: расчёты, чертежи, BIM-модели",
+        education: { duration: "4–5,5 лет (бакалавриат/специалитет)", requirements: "Строительная механика, сопротивление материалов, железобетонные и металлические конструкции, нормы проектирования (СП).", courses: ["AutoCAD / Revit", "ЛИРА-САПР / SCAD", "Экспертиза проектов"] },
+        salary: { start: "55 000 ₽", peak: "250 000+ ₽", median: "100 000 ₽" },
+        careerGrowth: [
+            { title: "Инженер-проектировщик", period: "0–2 года", salary: "55 000–80 000 ₽" },
+            { title: "Ведущий инженер-проектировщик", period: "2–5 лет", salary: "90 000–130 000 ₽" },
+            { title: "Главный специалист", period: "5–8 лет", salary: "130 000–190 000 ₽" },
+            { title: "Главный инженер проекта (ГИП)", period: "8+ лет", salary: "190 000–300 000+ ₽" }
+        ],
+        typicalDay: { morning: "09:00 — Планёрка", midday: "10:00–13:00 — Расчёты и чертежи", afternoon: "13:00–14:00 — Обед", evening: "14:00–18:00 — Модель и согласования" },
+        easy: "Спокойная работа в офисе. Идея превращается в реальное здание.",
+        hard: "Ответственность за расчёты и чертежи. Много согласований и правок."
     },
     {
         id: "architect-engineer",
@@ -37,19 +53,35 @@ window.professionsData = [
     {
         id: "road-engineer",
         title: "Инженер-дорожник",
-        shortDesc: "Проектирование и строительство дорог и мостов",
+        shortDesc: "Строительство, ремонт и содержание автомобильных дорог и мостов: организация работ на участке, контроль качества",
         stats: { specialists: 95000, avgAge: 44, genderRatio: "75% мужчин / 25% женщин" },
-        education: { duration: "4–5 лет", requirements: "Знание проектирования дорог.", courses: ["AutoCAD Civil 3D", "IndorCAD"] },
+        education: { duration: "4–5 лет", requirements: "Знание технологии дорожного строительства и дорожных материалов.", courses: ["Дорожные материалы", "Геодезия", "Гранд-Смета"] },
         salary: { start: "55 000 ₽", peak: "220 000+ ₽", median: "100 000 ₽", regions: { central: "70 000–220 000 ₽", northwest: "60 000–180 000 ₽", south: "50 000–150 000 ₽", northcaucasus: "40 000–120 000 ₽", volga: "50 000–150 000 ₽", ural: "60 000–170 000 ₽", siberia: "55 000–160 000 ₽", fareast: "65 000–190 000 ₽" } },
         careerGrowth: [
             { title: "Инженер-дорожник", period: "0–2 года", salary: "55 000–80 000 ₽" },
-            { title: "Ведущий инженер", period: "2–4 года", salary: "85 000–130 000 ₽" },
-            { title: "Главный инженер участка", period: "4–7 лет", salary: "140 000–180 000 ₽" },
-            { title: "Начальник участка", period: "7+ лет", salary: "180 000–250 000+ ₽" }
+            { title: "Производитель работ", period: "2–4 года", salary: "85 000–130 000 ₽" },
+            { title: "Начальник участка", period: "4–7 лет", salary: "140 000–180 000 ₽" },
+            { title: "Главный инженер", period: "7+ лет", salary: "180 000–250 000+ ₽" }
         ],
         typicalDay: { morning: "07:00 — Выезд", midday: "08:30–13:00 — Контроль", afternoon: "13:00–14:00 — Обед", evening: "14:00–17:00 — Документы" },
         easy: "Работа на свежем воздухе. Видишь результат.",
         hard: "Вахтовый метод. Работа в любую погоду."
+    },
+    {
+        id: "road-designer",
+        title: "Инженер-проектировщик автомобильных дорог",
+        shortDesc: "Проектирование автомобильных дорог и транспортных развязок: трассирование, расчёты, чертежи",
+        education: { duration: "4–5 лет", requirements: "Знание проектирования дорог, дорожных конструкций и нормативов (СП).", courses: ["AutoCAD Civil 3D", "IndorCAD", "CREDO"] },
+        salary: { start: "50 000 ₽", peak: "230 000+ ₽", median: "95 000 ₽" },
+        careerGrowth: [
+            { title: "Инженер-проектировщик", period: "0–2 года", salary: "50 000–75 000 ₽" },
+            { title: "Ведущий инженер-проектировщик", period: "2–5 лет", salary: "85 000–125 000 ₽" },
+            { title: "Главный специалист", period: "5–8 лет", salary: "125 000–180 000 ₽" },
+            { title: "Главный инженер проекта (ГИП)", period: "8+ лет", salary: "180 000–260 000+ ₽" }
+        ],
+        typicalDay: { morning: "09:00 — Планёрка", midday: "10:00–13:00 — Трассирование и расчёты", afternoon: "13:00–14:00 — Обед", evening: "14:00–18:00 — Чертежи и согласования" },
+        easy: "Проект превращается в реальную дорогу. Понятные нормативы.",
+        hard: "Много согласований и правок. Выезды на изыскания."
     },
 
     // ===== МАШИНОСТРОЕНИЕ =====
@@ -58,12 +90,12 @@ window.professionsData = [
         title: "Инженер-механик",
         shortDesc: "Проектирование машин, механизмов и оборудования",
         stats: { specialists: 280000, avgAge: 45, genderRatio: "80% мужчин / 20% женщин" },
-        education: { duration: "4–5.5 лет", requirements: "Знание теоретической механики.", courses: ["Компас-3D / SolidWorks", "ANSYS"] },
-        salary: { start: "55 000 ₽", peak: "200 000+ ₽", median: "95 000 ₽", regions: { central: "70 000–200 000 ₽", northwest: "60 000–170 000 ₽", south: "50 000–140 000 ₽", northcaucasus: "40 000–110 000 ₽", volga: "50 000–140 000 ₽", ural: "60 000–170 000 ₽", siberia: "55 000–150 000 ₽", fareast: "65 000–180 000 ₽" } },
+        education: { duration: "4–5,5 лет", requirements: "Знание теоретической механики.", courses: ["Компас-3D / SolidWorks", "ANSYS"] },
+        salary: { start: "55 000 ₽", peak: "250 000+ ₽", median: "95 000 ₽", regions: { central: "70 000–200 000 ₽", northwest: "60 000–170 000 ₽", south: "50 000–140 000 ₽", northcaucasus: "40 000–110 000 ₽", volga: "50 000–140 000 ₽", ural: "60 000–170 000 ₽", siberia: "55 000–150 000 ₽", fareast: "65 000–180 000 ₽" } },
         careerGrowth: [
             { title: "Инженер-конструктор", period: "0–2 года", salary: "55 000–80 000 ₽" },
             { title: "Ведущий инженер-механик", period: "2–5 лет", salary: "85 000–130 000 ₽" },
-            { title: "Главный механик", period: "5–8 лет", salary: "140 000–180 000 ₽" },
+            { title: "Начальник конструкторского отдела", period: "5–8 лет", salary: "140 000–180 000 ₽" },
             { title: "Главный конструктор", period: "8+ лет", salary: "180 000–300 000+ ₽" }
         ],
         typicalDay: { morning: "08:00 — Планёрка", midday: "09:00–13:00 — Чертежи", afternoon: "13:00–14:00 — Обед", evening: "14:00–17:30 — Контроль" },
@@ -73,9 +105,9 @@ window.professionsData = [
     {
         id: "automotive-engineer",
         title: "Инженер-автомобилестроитель",
-        shortDesc: "Проектирование и производство автомобилей",
+        shortDesc: "Проектирование, расчёт и испытания автомобилей и их узлов",
         stats: { specialists: 65000, avgAge: 40, genderRatio: "78% мужчин / 22% женщин" },
-        education: { duration: "4–5.5 лет", requirements: "Знание автомобилей.", courses: ["CATIA", "ADAMS"] },
+        education: { duration: "4–5,5 лет", requirements: "Знание автомобилей.", courses: ["CATIA", "ADAMS"] },
         salary: { start: "60 000 ₽", peak: "250 000+ ₽", median: "110 000 ₽", regions: { central: "80 000–250 000 ₽", northwest: "70 000–200 000 ₽", south: "55 000–160 000 ₽", northcaucasus: "45 000–120 000 ₽", volga: "60 000–170 000 ₽", ural: "65 000–190 000 ₽", siberia: "55 000–170 000 ₽", fareast: "65 000–200 000 ₽" } },
         careerGrowth: [
             { title: "Инженер-конструктор", period: "0–2 года", salary: "60 000–90 000 ₽" },
@@ -92,9 +124,9 @@ window.professionsData = [
     {
         id: "power-engineer",
         title: "Инженер-энергетик",
-        shortDesc: "Проектирование и эксплуатация энергосистем",
+        shortDesc: "Эксплуатация и развитие энергосистем и энергооборудования: расчёт режимов, обходы, ремонты",
         stats: { specialists: 180000, avgAge: 44, genderRatio: "72% мужчин / 28% женщин" },
-        education: { duration: "4–5.5 лет", requirements: "Знание электротехники.", courses: ["RastrWin", "ANSYS"] },
+        education: { duration: "4–5,5 лет", requirements: "Знание электротехники.", courses: ["RastrWin", "ANSYS"] },
         salary: { start: "55 000 ₽", peak: "220 000+ ₽", median: "100 000 ₽", regions: { central: "70 000–220 000 ₽", northwest: "65 000–180 000 ₽", south: "50 000–150 000 ₽", northcaucasus: "40 000–120 000 ₽", volga: "55 000–150 000 ₽", ural: "65 000–180 000 ₽", siberia: "60 000–170 000 ₽", fareast: "70 000–200 000 ₽" } },
         careerGrowth: [
             { title: "Инженер-энергетик", period: "0–2 года", salary: "55 000–80 000 ₽" },
@@ -109,9 +141,9 @@ window.professionsData = [
     {
         id: "electrical-engineer",
         title: "Инженер-электрик",
-        shortDesc: "Проектирование и обслуживание электрических сетей",
+        shortDesc: "Монтаж, наладка и обслуживание электрооборудования и электрических сетей",
         stats: { specialists: 150000, avgAge: 43, genderRatio: "75% мужчин / 25% женщин" },
-        education: { duration: "4–5.5 лет", requirements: "Знание электротехники.", courses: ["AutoCAD"] },
+        education: { duration: "4–5,5 лет", requirements: "Знание электротехники.", courses: ["ПУЭ", "Электробезопасность", "Релейная защита"] },
         salary: { start: "60 000 ₽", peak: "220 000+ ₽", median: "105 000 ₽", regions: { central: "75 000–220 000 ₽", northwest: "65 000–180 000 ₽", south: "50 000–150 000 ₽", northcaucasus: "40 000–120 000 ₽", volga: "55 000–155 000 ₽", ural: "65 000–180 000 ₽", siberia: "60 000–170 000 ₽", fareast: "70 000–200 000 ₽" } },
         careerGrowth: [
             { title: "Инженер-электрик", period: "0–2 года", salary: "60 000–85 000 ₽" },
@@ -119,14 +151,30 @@ window.professionsData = [
             { title: "Главный электрик", period: "4–7 лет", salary: "140 000–185 000 ₽" },
             { title: "Директор по электрике", period: "7+ лет", salary: "185 000–300 000+ ₽" }
         ],
-        typicalDay: { morning: "08:00 — Щитовая", midday: "09:00–13:00 — Проектирование", afternoon: "13:00–14:00 — Обед", evening: "14:00–17:00 — Монтаж" },
+        typicalDay: { morning: "08:00 — Щитовая", midday: "09:00–13:00 — Обслуживание", afternoon: "13:00–14:00 — Обед", evening: "14:00–17:00 — Монтаж" },
         easy: "Стабильный спрос. Чёткие стандарты.",
         hard: "Аварийные вызовы. Работа с высоким напряжением."
     },
     {
+        id: "electrical-designer",
+        title: "Инженер-проектировщик электроснабжения",
+        shortDesc: "Проектирование систем электроснабжения и электроосвещения зданий и объектов: расчёт нагрузок, схемы, чертежи",
+        education: { duration: "4–5,5 лет", requirements: "Знание электротехники, расчёта электрических нагрузок и требований ПУЭ.", courses: ["AutoCAD", "nanoCAD Электро", "Расчёт нагрузок"] },
+        salary: { start: "55 000 ₽", peak: "240 000+ ₽", median: "100 000 ₽" },
+        careerGrowth: [
+            { title: "Инженер-проектировщик", period: "0–2 года", salary: "55 000–80 000 ₽" },
+            { title: "Ведущий инженер-проектировщик", period: "2–5 лет", salary: "90 000–130 000 ₽" },
+            { title: "Главный специалист", period: "5–8 лет", salary: "130 000–185 000 ₽" },
+            { title: "Главный инженер проекта (ГИП)", period: "8+ лет", salary: "185 000–270 000+ ₽" }
+        ],
+        typicalDay: { morning: "09:00 — Планёрка", midday: "10:00–13:00 — Расчёты и схемы", afternoon: "13:00–14:00 — Обед", evening: "14:00–18:00 — Чертежи и согласования" },
+        easy: "Спокойная работа в офисе. Чёткие нормы и стандарты.",
+        hard: "Ответственность за расчёты. Много согласований и правок."
+    },
+    {
         id: "nuclear-engineer",
         title: "Инженер-атомщик",
-        shortDesc: "Проектирование и эксплуатация АЭС",
+        shortDesc: "Эксплуатация и обслуживание АЭС и ядерных установок: контроль реактора, расчёты безопасности",
         stats: { specialists: 35000, avgAge: 43, genderRatio: "76% мужчин / 24% женщин" },
         education: { duration: "5–6 лет", requirements: "Знание ядерной физики.", courses: ["KORSAR", "MCNP"] },
         salary: { start: "70 000 ₽", peak: "300 000+ ₽", median: "130 000 ₽", regions: { central: "90 000–300 000 ₽", northwest: "80 000–250 000 ₽", south: "65 000–200 000 ₽", northcaucasus: "55 000–160 000 ₽", volga: "70 000–220 000 ₽", ural: "80 000–250 000 ₽", siberia: "75 000–230 000 ₽", fareast: "85 000–280 000 ₽" } },
@@ -145,7 +193,7 @@ window.professionsData = [
     {
         id: "aerospace-engineer",
         title: "Инженер-авиастроитель",
-        shortDesc: "Проектирование и производство летательных аппаратов",
+        shortDesc: "Проектирование, расчёт и испытания летательных аппаратов",
         stats: { specialists: 55000, avgAge: 44, genderRatio: "80% мужчин / 20% женщин" },
         education: { duration: "5–6 лет", requirements: "Знание аэродинамики.", courses: ["ANSYS Fluent", "CATIA"] },
         salary: { start: "65 000 ₽", peak: "300 000+ ₽", median: "120 000 ₽", regions: { central: "85 000–300 000 ₽", northwest: "75 000–250 000 ₽", south: "60 000–190 000 ₽", northcaucasus: "50 000–140 000 ₽", volga: "65 000–200 000 ₽", ural: "70 000–220 000 ₽", siberia: "65 000–210 000 ₽", fareast: "75 000–250 000 ₽" } },
@@ -183,7 +231,7 @@ window.professionsData = [
         title: "Инженер-химик-технолог",
         shortDesc: "Разработка и управление химическими производствами",
         stats: { specialists: 75000, avgAge: 41, genderRatio: "55% мужчин / 45% женщин" },
-        education: { duration: "4–5.5 лет", requirements: "Знание химии.", courses: ["HYSYS", "ChemCAD"] },
+        education: { duration: "4–5,5 лет", requirements: "Знание химии.", courses: ["HYSYS", "ChemCAD"] },
         salary: { start: "55 000 ₽", peak: "220 000+ ₽", median: "100 000 ₽", regions: { central: "75 000–220 000 ₽", northwest: "65 000–180 000 ₽", south: "55 000–150 000 ₽", northcaucasus: "45 000–120 000 ₽", volga: "60 000–170 000 ₽", ural: "65 000–190 000 ₽", siberia: "60 000–180 000 ₽", fareast: "70 000–210 000 ₽" } },
         careerGrowth: [
             { title: "Инженер-технолог", period: "0–2 года", salary: "55 000–80 000 ₽" },
@@ -200,7 +248,7 @@ window.professionsData = [
         title: "Инженер-нефтяник",
         shortDesc: "Разведка, бурение и добыча нефти и газа",
         stats: { specialists: 120000, avgAge: 40, genderRatio: "78% мужчин / 22% женщин" },
-        education: { duration: "4–5.5 лет", requirements: "Знание геологии.", courses: ["Petrel", "ROXAR"] },
+        education: { duration: "4–5,5 лет", requirements: "Знание геологии.", courses: ["Petrel", "ROXAR"] },
         salary: { start: "80 000 ₽", peak: "400 000+ ₽", median: "150 000 ₽", regions: { central: "100 000–400 000 ₽", northwest: "90 000–350 000 ₽", south: "75 000–280 000 ₽", northcaucasus: "60 000–220 000 ₽", volga: "85 000–320 000 ₽", ural: "100 000–380 000 ₽", siberia: "90 000–350 000 ₽", fareast: "95 000–370 000 ₽" } },
         careerGrowth: [
             { title: "Оператор", period: "0–2 года", salary: "80 000–120 000 ₽" },
@@ -219,7 +267,7 @@ window.professionsData = [
         title: "Инженер-металлург",
         shortDesc: "Производство и обработка металлов и сплавов",
         stats: { specialists: 60000, avgAge: 46, genderRatio: "82% мужчин / 18% женщин" },
-        education: { duration: "4–5.5 лет", requirements: "Знание металлургии.", courses: ["Thermo-Calc", "SolidWorks"] },
+        education: { duration: "4–5,5 лет", requirements: "Знание металлургии.", courses: ["Thermo-Calc", "SolidWorks"] },
         salary: { start: "55 000 ₽", peak: "200 000+ ₽", median: "95 000 ₽", regions: { central: "70 000–200 000 ₽", northwest: "60 000–170 000 ₽", south: "50 000–140 000 ₽", northcaucasus: "40 000–110 000 ₽", volga: "55 000–150 000 ₽", ural: "65 000–180 000 ₽", siberia: "60 000–170 000 ₽", fareast: "65 000–190 000 ₽" } },
         careerGrowth: [
             { title: "Инженер-металлург", period: "0–2 года", salary: "55 000–80 000 ₽" },
@@ -238,7 +286,7 @@ window.professionsData = [
         title: "Горный инженер",
         shortDesc: "Разработка месторождений полезных ископаемых",
         stats: { specialists: 45000, avgAge: 43, genderRatio: "85% мужчин / 15% женщин" },
-        education: { duration: "4–5.5 лет", requirements: "Знание геологии.", courses: ["MineFrame", "Blast-CAD"] },
+        education: { duration: "4–5,5 лет", requirements: "Знание геологии.", courses: ["MineFrame", "Blast-CAD"] },
         salary: { start: "70 000 ₽", peak: "300 000+ ₽", median: "130 000 ₽", regions: { central: "90 000–300 000 ₽", northwest: "80 000–250 000 ₽", south: "65 000–200 000 ₽", northcaucasus: "55 000–160 000 ₽", volga: "70 000–220 000 ₽", ural: "85 000–280 000 ₽", siberia: "80 000–260 000 ₽", fareast: "90 000–300 000 ₽" } },
         careerGrowth: [
             { title: "Горный мастер", period: "0–2 года", salary: "70 000–100 000 ₽" },
@@ -284,7 +332,7 @@ window.professionsData = [
             { title: "Руководитель разработки", period: "4–7 лет", salary: "160 000–220 000 ₽" },
             { title: "Технический директор", period: "7+ лет", salary: "220 000–350 000+ ₽" }
         ],
-        typicalDay: { morning: "09:00 — Прототип", midday: "10:30–13:00 — МК", afternoon: "13:00–14:00 — Обед", evening: "14:00–18:00 — Документация" },
+        typicalDay: { morning: "09:00 — Прототип", midday: "10:30–13:00 — Испытания", afternoon: "13:00–14:00 — Обед", evening: "14:00–18:00 — Документация" },
         easy: "Спасаешь жизни. Работа на стыке технологий и медицины.",
         hard: "Долгая сертификация. Высокая ответственность."
     },
@@ -312,9 +360,9 @@ window.professionsData = [
     {
         id: "railway-engineer",
         title: "Инженер-железнодорожник",
-        shortDesc: "Проектирование и эксплуатация железных дорог",
+        shortDesc: "Эксплуатация, содержание и ремонт железных дорог: путь, сооружения, безопасность движения",
         stats: { specialists: 85000, avgAge: 45, genderRatio: "78% мужчин / 22% женщин" },
-        education: { duration: "4–5 лет", requirements: "Знание ж/д.", courses: ["AutoCAD", "ЖАТ"] },
+        education: { duration: "4–5 лет", requirements: "Знание ж/д.", courses: ["Путевое хозяйство", "ЖАТ"] },
         salary: { start: "55 000 ₽", peak: "200 000+ ₽", median: "95 000 ₽", regions: { central: "70 000–200 000 ₽", northwest: "60 000–170 000 ₽", south: "50 000–140 000 ₽", northcaucasus: "40 000–110 000 ₽", volga: "55 000–150 000 ₽", ural: "60 000–170 000 ₽", siberia: "55 000–160 000 ₽", fareast: "65 000–190 000 ₽" } },
         careerGrowth: [
             { title: "Инженер пути", period: "0–2 года", salary: "55 000–80 000 ₽" },
@@ -322,7 +370,7 @@ window.professionsData = [
             { title: "Начальник дистанции", period: "4–7 лет", salary: "130 000–170 000 ₽" },
             { title: "Главный инженер дороги", period: "7+ лет", salary: "170 000–280 000+ ₽" }
         ],
-        typicalDay: { morning: "06:00 — Платёжка", midday: "07:30–13:00 — Осмотр", afternoon: "13:00–14:00 — Обед", evening: "14:00–17:00 — Документы" },
+        typicalDay: { morning: "06:00 — Планёрка", midday: "07:30–13:00 — Осмотр", afternoon: "13:00–14:00 — Обед", evening: "14:00–17:00 — Документы" },
         easy: "Стабильная работа в РЖД. Хороший соцпакет.",
         hard: "Работа в любую погоду. Ночные смены."
     },
@@ -331,9 +379,9 @@ window.professionsData = [
     {
         id: "shipbuilding-engineer",
         title: "Инженер-кораблестроитель",
-        shortDesc: "Проектирование и строительство судов",
+        shortDesc: "Проектирование судов и кораблей, сопровождение их постройки и испытаний",
         stats: { specialists: 30000, avgAge: 46, genderRatio: "82% мужчин / 18% женщин" },
-        education: { duration: "5–5.5 лет", requirements: "Знание корабля.", courses: ["SolidWorks", "ANSYS"] },
+        education: { duration: "5–5,5 лет", requirements: "Знание корабля.", courses: ["SolidWorks", "ANSYS"] },
         salary: { start: "60 000 ₽", peak: "250 000+ ₽", median: "110 000 ₽", regions: { central: "80 000–250 000 ₽", northwest: "70 000–220 000 ₽", south: "55 000–170 000 ₽", northcaucasus: "45 000–130 000 ₽", volga: "55 000–170 000 ₽", ural: "60 000–190 000 ₽", siberia: "55 000–180 000 ₽", fareast: "75 000–240 000 ₽" } },
         careerGrowth: [
             { title: "Инженер-конструктор", period: "0–2 года", salary: "60 000–90 000 ₽" },
@@ -474,7 +522,7 @@ window.professionsData = [
     {
         id: "telecom-engineer",
         title: "Инженер связи",
-        shortDesc: "Проектирование и обслуживание сетей связи",
+        shortDesc: "Построение, настройка и обслуживание сетей связи",
         stats: { specialists: 65000, avgAge: 38, genderRatio: "68% мужчин / 32% женщин" },
         education: { duration: "4–5 лет", requirements: "Знание сигналов.", courses: ["Cisco", "MikroTik"] },
         salary: { start: "50 000 ₽", peak: "200 000+ ₽", median: "90 000 ₽", regions: { central: "65 000–200 000 ₽", northwest: "55 000–170 000 ₽", south: "45 000–140 000 ₽", northcaucasus: "35 000–110 000 ₽", volga: "45 000–140 000 ₽", ural: "55 000–160 000 ₽", siberia: "50 000–150 000 ₽", fareast: "60 000–180 000 ₽" } },
@@ -492,18 +540,18 @@ window.professionsData = [
     // ===== ВОДОСНАБЖЕНИЕ =====
     {
         id: "water-engineer",
-        title: "Инженер-гидротехник",
-        shortDesc: "Водоснабжение, водоотведение и гидротехнические сооружения",
+        title: "Инженер водоснабжения и водоотведения",
+        shortDesc: "Водоснабжение и водоотведение: насосные станции, водопроводные и канализационные сети, очистные сооружения",
         stats: { specialists: 40000, avgAge: 44, genderRatio: "65% мужчин / 35% женщин" },
         education: { duration: "4–5 лет", requirements: "Знание гидравлики.", courses: ["Zulu", "AutoCAD Civil"] },
         salary: { start: "50 000 ₽", peak: "190 000+ ₽", median: "90 000 ₽", regions: { central: "65 000–190 000 ₽", northwest: "55 000–160 000 ₽", south: "45 000–130 000 ₽", northcaucasus: "35 000–100 000 ₽", volga: "45 000–130 000 ₽", ural: "55 000–150 000 ₽", siberia: "50 000–140 000 ₽", fareast: "60 000–170 000 ₽" } },
         careerGrowth: [
-            { title: "Инженер-гидротехник", period: "0–2 года", salary: "50 000–75 000 ₽" },
+            { title: "Инженер водоснабжения и водоотведения", period: "0–2 года", salary: "50 000–75 000 ₽" },
             { title: "Ведущий инженер", period: "2–4 года", salary: "80 000–120 000 ₽" },
             { title: "Начальник службы", period: "4–7 лет", salary: "130 000–170 000 ₽" },
             { title: "Главный инженер водоканала", period: "7+ лет", salary: "170 000–250 000+ ₽" }
         ],
-        typicalDay: { morning: "08:00 — Насосные", midday: "09:30–13:00 — Расчёты", afternoon: "13:00–14:00 — Обед", evening: "14:00–17:00 — Строительство" },
+        typicalDay: { morning: "08:00 — Насосные", midday: "09:30–13:00 — Расчёты", afternoon: "13:00–14:00 — Обед", evening: "14:00–17:00 — Ремонты" },
         easy: "Социально значимая работа. Стабильность.",
         hard: "Аварии на сетях. Износ сетей 70%."
     },
@@ -533,7 +581,7 @@ window.professionsData = [
         title: "Военный инженер",
         shortDesc: "Инженерное обеспечение войск и военной инфраструктуры",
         stats: { specialists: 50000, avgAge: 38, genderRatio: "95% мужчин / 5% женщин" },
-        education: { duration: "5–5.5 лет", requirements: "Военная подготовка.", courses: ["Фортификация", "Инженерные заграждения"] },
+        education: { duration: "5–5,5 лет", requirements: "Военная подготовка.", courses: ["Фортификация", "Инженерные заграждения"] },
         salary: { start: "55 000 ₽", peak: "180 000+ ₽", median: "95 000 ₽", regions: { central: "70 000–180 000 ₽", northwest: "60 000–150 000 ₽", south: "50 000–130 000 ₽", northcaucasus: "45 000–110 000 ₽", volga: "55 000–130 000 ₽", ural: "60 000–140 000 ₽", siberia: "55 000–140 000 ₽", fareast: "65 000–160 000 ₽" } },
         careerGrowth: [
             { title: "Лейтенант", period: "0–3 года", salary: "55 000–80 000 ₽" },
@@ -571,7 +619,7 @@ window.professionsData = [
         title: "Инженер-материаловед",
         shortDesc: "Разработка и исследование материалов и покрытий",
         stats: { specialists: 18000, avgAge: 41, genderRatio: "65% мужчин / 35% женщин" },
-        education: { duration: "4–5.5 лет", requirements: "Знание физики материалов.", courses: ["Материаловедение", "Металлография"] },
+        education: { duration: "4–5,5 лет", requirements: "Знание физики материалов.", courses: ["Материаловедение", "Металлография"] },
         salary: { start: "50 000 ₽", peak: "190 000+ ₽", median: "90 000 ₽", regions: { central: "65 000–190 000 ₽", northwest: "55 000–150 000 ₽", south: "45 000–120 000 ₽", northcaucasus: "35 000–95 000 ₽", volga: "45 000–120 000 ₽", ural: "55 000–140 000 ₽", siberia: "50 000–130 000 ₽", fareast: "60 000–160 000 ₽" } },
         careerGrowth: [
             { title: "Инженер-материаловед", period: "0–2 года", salary: "50 000–70 000 ₽" },
@@ -789,7 +837,7 @@ window.professionsData = [
         title: "Инженер встраиваемых систем (Embedded)",
         shortDesc: "Разработка ПО для микроконтроллеров и встраиваемых устройств",
         stats: { specialists: 20000, avgAge: 35, genderRatio: "80% мужчин / 20% женщин" },
-        education: { duration: "4–5.5 лет", requirements: "Знание C/C++.", courses: ["ARM", "RTOS"] },
+        education: { duration: "4–5,5 лет", requirements: "Знание C/C++.", courses: ["ARM", "RTOS"] },
         salary: { start: "90 000 ₽", peak: "350 000+ ₽", median: "180 000 ₽", regions: { central: "110 000–350 000 ₽", northwest: "100 000–300 000 ₽", south: "75 000–220 000 ₽", northcaucasus: "60 000–170 000 ₽", volga: "80 000–240 000 ₽", ural: "90 000–280 000 ₽", siberia: "85 000–260 000 ₽", fareast: "95 000–300 000 ₽" } },
         careerGrowth: [
             { title: "Junior Embedded", period: "0–1 год", salary: "90 000–120 000 ₽" },
@@ -831,7 +879,7 @@ window.professionsData = [
             { title: "Senior Backend", period: "3–5 лет", salary: "270 000–400 000 ₽" },
             { title: "Team Lead", period: "5+ лет", salary: "400 000–600 000+ ₽" }
         ],
-        typicalDay: { morning: "10:00 — Daily", midday: "10:30–14:00 — API", afternoon: "13:00–14:00 — Обед", evening: "15:00–19:00 — Оптимизация" },
+        typicalDay: { morning: "10:00 — Daily", midday: "10:30–14:00 — API", afternoon: "14:00–15:00 — Обед", evening: "15:00–19:00 — Оптимизация" },
         easy: "Высокий спрос. Чёткие задачи.",
         hard: "Легаси-код. Ночные дедлайны."
     },
@@ -865,7 +913,7 @@ window.professionsData = [
             { title: "Senior Mobile", period: "3–5 лет", salary: "260 000–380 000 ₽" },
             { title: "Lead Mobile", period: "5+ лет", salary: "380 000–550 000+ ₽" }
         ],
-        typicalDay: { morning: "10:00 — Daily", midday: "10:30–14:00 — Экраны", afternoon: "13:00–14:00 — Обед", evening: "15:00–19:00 — Тестирование" },
+        typicalDay: { morning: "10:00 — Daily", midday: "10:30–14:00 — Экраны", afternoon: "14:00–15:00 — Обед", evening: "15:00–19:00 — Тестирование" },
         easy: "Продукт в кармане. Быстрая обратная связь.",
         hard: "Фрагментация устройств. Модерация App Store."
     }
