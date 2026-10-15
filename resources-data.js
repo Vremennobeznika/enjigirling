@@ -436,13 +436,6 @@ const resources = [
         link: "https://t.me/mathrocknroll"
     },
     {
-        id: "fr-nachertillicome",
-        type: "Дружественные каналы",
-        name: "Крен по колено",
-        desc: "Корабел шутит и объясняет сложное на пальцах под музыку.",
-        link: "https://t.me/Nachertilicome"
-    },
-    {
         id: "fr-catin-asutp",
         type: "Дружественные каналы",
         name: "КОТЭ в АСУ ТП",
