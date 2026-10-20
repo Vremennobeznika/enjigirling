@@ -34,3 +34,15 @@ const referenced = Object.values(categories).flat();
 assert.equal(new Set(referenced).size, referenced.length, 'profession appears in multiple categories');
 for (const id of referenced) assert.ok(ids.includes(id), 'unknown profession in categories: ' + id);
 console.log('OK: ' + htmlFiles.length + ' HTML pages, ' + checked + ' local asset references, ' + professions.length + ' professions');
+
+const calculatorSource = fs.readFileSync('engineer-calculators.js', 'utf8');
+const parseBody = calculatorSource.match(/const parseNumber = \(text\) => \{([\s\S]*?)\n    \};/);
+assert.ok(parseBody, 'numeric parser missing');
+const parseNumber = vm.runInNewContext('(text) => {' + parseBody[1] + '}');
+assert.equal(parseNumber('100 000'), 100000, 'spaces in amounts');
+assert.equal(parseNumber('2,5'), 2.5, 'decimal comma');
+assert.equal(parseNumber('-273,15'), -273.15, 'negative temperature');
+for (const value of ['', '12abc', '1.2.3', 'Infinity', '1e309']) {
+  assert.ok(Number.isNaN(parseNumber(value)), 'invalid numeric input accepted: ' + value);
+}
+console.log('OK: numeric input validation scenarios');
