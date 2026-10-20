@@ -56,7 +56,8 @@ const salaryUi = fs.readFileSync('engineer-calculators.js', 'utf8');
 assert.match(salaryUi, /Неподтверждённые суммы скрыты/, 'salary calculator must hide unsourced figures');
 assert.match(salaryUi, /Фактическое удержание НДФЛ по месяцам может отличаться/, 'tax calculator lacks withholding caveat');
 assert.match(salaryUi, /не учитывает упущенный заработок/, 'ROI calculator lacks opportunity-cost caveat');
-console.log('OK: ' + salaryEntries.length + ' salary records with required fields and visible limitations');
+assert.equal(salaryEntries.length,0,'legacy unsourced salaries must not return');
+console.log('OK: legacy unsourced salary objects absent from all professions');
 
 const salaryContext = {window: {}};
 vm.runInNewContext(fs.readFileSync('salary-sources.js', 'utf8'), salaryContext);
@@ -230,7 +231,8 @@ for(const entry of salaryEvidenceRows){
  assert.ok(/^https?:\/\//.test(entry.sourceUrl),'missing salary source URL: '+entry.id);
  assert.ok(/^\d{4}-\d{2}-\d{2}$/.test(entry.checkedAt),'missing salary check date: '+entry.id);
  assert.ok(['source_page_checked','adjacent_occupation_checked','employer_vacancy_checked','source_linked_not_independently_verified'].includes(entry.validationStatus),'unknown salary evidence status: '+entry.id);
- assert.ok(Number.isFinite(entry.rangeMinRub)&&Number.isFinite(entry.rangeMaxRub)&&entry.rangeMinRub<=entry.rangeMaxRub,'invalid salary range: '+entry.id);
+ if(entry.status==='unverified')assert.ok(entry.rangeMinRub===null&&entry.rangeMaxRub===null,'unverified salary must not have numeric range: '+entry.id);
+ else assert.ok(Number.isFinite(entry.rangeMinRub)&&Number.isFinite(entry.rangeMaxRub)&&entry.rangeMinRub<=entry.rangeMaxRub,'invalid salary range: '+entry.id);
 }
 assert.ok(fs.readFileSync('compare.html','utf8').includes('src="salary-sources.js"'),'comparison salary source script missing');
 assert.ok(fs.readFileSync('compare.js','utf8').includes('salaryById'),'comparison must use audited salary data');
@@ -306,3 +308,12 @@ for(const p of professions)assert.ok(!Object.hasOwn(p,'salary'),'legacy unsource
 const salaryConsistency=fs.readFileSync('audit/salary-consistency-51-2026-10-20.md','utf8');
 assert.ok(salaryConsistency.includes('36 из 51'),'salary inconsistency report must preserve the measured result');
 console.log('OK: unsupported legacy salary data removed and discrepancies documented');
+
+const rejectedEvidence=salaryEvidenceRows.find(row=>row.id==='automotive-engineer');
+assert.equal(rejectedEvidence.status,'unverified','404 salary source must remain unverified');
+assert.equal(rejectedEvidence.rangeMinRub,null,'broken source cannot expose numeric salary');
+assert.ok(comparisonUi.includes("x.status!=='source_snapshot'"),'comparison must hide withdrawn salary ranges');
+assert.ok(fs.readFileSync('map.html','utf8').includes('src="salary-sources.js"'),'map salary calculator must load source evidence');
+assert.ok(!fs.readFileSync('map.html','utf8').includes('id="salaryRegion"'),'do not promise unsupported regional salary splits');
+assert.ok(!salaryUi.includes('!p.salary'),'salary calculator must not require removed legacy data');
+console.log('OK: confirmed 404 evidence quarantined and salary widgets remain accurate');
