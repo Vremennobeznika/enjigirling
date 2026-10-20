@@ -94,7 +94,7 @@ function renderProfile({ specialists, avgAge, genderRatio } = {}) {
 function renderEducation({ duration, requirements, courses } = {}) {
   const tags = courses?.length ? courses.map((course) => `<span>${escapeHTML(course)}</span>`).join("") : "";
   return [
-    duration && `<p><strong>Продолжительность программы (ориентир, не требование к должности):</strong> ${escapeHTML(duration)}</p>`,
+    `<p class="data-quality-note">Конкретную образовательную программу, её уровень и срок обучения необходимо проверять по учебному плану выбранного вуза. Универсального срока для должности нет.</p>`,
     requirements && `<p><strong>Рекомендуемые знания (не юридическое требование):</strong> ${escapeHTML(requirements)}</p>`,
     tags && `<p class="sub-label">Инструменты и направления</p><div class="tag-list">${tags}</div>`
   ].filter(Boolean).join("");
@@ -220,7 +220,7 @@ function renderProfession(profession, category) {
     <p class="data-quality-note">Численность специалистов, средний возраст и гендерное распределение не публикуются без проверяемых статистических источников.</p>
     ${section("Практика: задачи, знания и инструменты", renderPracticalGuide(profession))}
     ${section("Нормативные документы и профессиональные стандарты", renderNormativeReferences(profession))}
-    ${section("Образование и подготовка (ориентир)", renderEducation(profession.education))}
+    ${section("Образование и подготовка (направления, не квалификационные требования)", renderEducation(profession.education))}
     ${section("Зарплата", renderVerifiedSalarySource(profession))}
     ${section("Источники и ограничения данных", renderSourceMethodology(profession))}
     ${section("Возможные карьерные роли (без фиксированных сроков)", renderCareer(profession.careerGrowth))}
