@@ -200,3 +200,22 @@ for(const file of htmlFiles){
 }
 assert.deepEqual(linkIssues,[],'broken internal anchor links');
 console.log('OK: static internal page anchors resolve');
+
+const externalScript=fs.readFileSync('tests/external-links.cjs','utf8');
+assert.ok(externalScript.includes("result:'unverified'"),'network failures must not be called broken');
+assert.ok(externalScript.includes('status===404||status===410'),'broken links need confirmed HTTP status');
+const resourcesContext={};
+vm.runInNewContext(fs.readFileSync('resources-data.js','utf8')+'\nthis.resourceList=resources',resourcesContext,{timeout:5000});
+const resourceList=resourcesContext.resourceList;
+assert.equal(new Set(resourceList.map(x=>x.id)).size,resourceList.length,'duplicate resource IDs');
+assert.equal(new Set(resourceList.map(x=>x.link)).size,resourceList.length,'duplicate resource URLs');
+for(const resource of resourceList){
+ assert.ok(/^https:\/\//.test(resource.link),'resource needs secure URL: '+resource.id);
+ assert.ok(resource.name&&resource.type&&resource.desc,'resource metadata incomplete: '+resource.id);
+}
+assert.ok(fs.readFileSync('navigation.js','utf8').includes("aria-current"),'current page accessibility missing');
+for(const file of ['materials.js','processes.js']){
+ const js=fs.readFileSync(file,'utf8');
+ assert.ok(js.includes("addEventListener('hashchange'"),file+': linked card hash navigation missing');
+}
+console.log('OK: unique secure community links, external audit script and accessible deep links');
