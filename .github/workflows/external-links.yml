@@ -3,6 +3,7 @@ on:
   push:
     branches: [main]
     paths:
+      - '*.html'
       - 'resources-data.js'
       - 'tests/external-links.cjs'
       - '.github/workflows/external-links.yml'
