@@ -293,3 +293,11 @@ for(const p of professions){
  }
 }
 console.log('OK: all 51 records omit unsourced demographic and career estimates');
+
+const siteMatrix=fs.readFileSync('audit/site-verification-matrix-2026-10-20.md','utf8');
+const siteMatrixRows=siteMatrix.split('\n').filter(x=>/^\| \d+ \| /.test(x));
+assert.equal(siteMatrixRows.length,professions.length,'site verification matrix must cover all professions');
+for(const p of professions)assert.equal(siteMatrixRows.filter(x=>x.includes(' | '+p.id+' | ')).length,1,'site matrix must have exactly one row for '+p.id);
+for(const heading of ['Зарплатные источники','Профстандарты','Доступность','Производительность'])assert.ok(siteMatrix.includes(heading),'missing QA domain '+heading);
+assert.ok(siteMatrix.includes('NOT VERIFIED'),'unverified evidence must remain explicitly labeled');
+console.log('OK: site QA matrix covers all 51 professions and critical verification domains');
