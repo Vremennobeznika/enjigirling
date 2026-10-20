@@ -109,3 +109,19 @@ assert.match(fs.readFileSync('compare.js', 'utf8'), /chosen\.length>=4/, 'compar
 assert.match(fs.readFileSync('processes.js', 'utf8'), /Неразрушающий контроль/, 'process seed missing');
 assert.match(fs.readFileSync('materials.js', 'utf8'), /Технический текстиль/, 'materials seed missing');
 console.log('OK: comparison, processes, materials navigation and seed checks');
+
+const referenceContext={window:{}};
+vm.runInNewContext(fs.readFileSync('materials-data.js','utf8'),referenceContext,{timeout:5000});
+vm.runInNewContext(fs.readFileSync('processes-data.js','utf8'),referenceContext,{timeout:5000});
+const materials=referenceContext.window.engineeringMaterials;
+const processes=referenceContext.window.engineeringProcesses;
+assert.ok(materials.length>=12,'insufficient material entries');
+assert.ok(processes.length>=12,'insufficient process entries');
+const materialIds=new Set(materials.map(x=>x.id));
+const processIds=new Set(processes.map(x=>x.id));
+assert.equal(materialIds.size,materials.length,'duplicate material IDs');
+assert.equal(processIds.size,processes.length,'duplicate process IDs');
+for(const m of materials){assert.ok(m.name&&m.detail&&m.note,m.id+': missing material content');for(const id of m.process)assert.ok(processIds.has(id),m.id+': unknown process '+id);}
+for(const p of processes){assert.ok(p.name&&p.steps&&p.checks,p.id+': missing process content');for(const id of p.materials)assert.ok(materialIds.has(id),p.id+': unknown material '+id);assert.ok(ids.includes(p.profession),p.id+': unknown profession '+p.profession);}
+for(const page of ['materials.html','processes.html']){const html=fs.readFileSync(page,'utf8');assert.match(html,/Category|Category|Category|id="(?:material|process)Category"/,page+': category selector missing');}
+console.log('OK: '+materials.length+' material entries, '+processes.length+' process entries; cross-references validated');
