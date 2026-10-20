@@ -34,6 +34,5 @@
     const mq=window.matchMedia('(min-width: 861px)');
     if(mq.addEventListener) mq.addEventListener('change',close);
   }
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);
-  else init();
+  init();
 })();
