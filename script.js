@@ -94,8 +94,8 @@ function renderProfile({ specialists, avgAge, genderRatio } = {}) {
 function renderEducation({ duration, requirements, courses } = {}) {
   const tags = courses?.length ? courses.map((course) => `<span>${escapeHTML(course)}</span>`).join("") : "";
   return [
-    duration && `<p><strong>Срок обучения:</strong> ${escapeHTML(duration)}</p>`,
-    requirements && `<p><strong>База:</strong> ${escapeHTML(requirements)}</p>`,
+    duration && `<p><strong>Продолжительность программы (ориентир, не требование к должности):</strong> ${escapeHTML(duration)}</p>`,
+    requirements && `<p><strong>Рекомендуемые знания (не юридическое требование):</strong> ${escapeHTML(requirements)}</p>`,
     tags && `<p class="sub-label">Инструменты и направления</p><div class="tag-list">${tags}</div>`
   ].filter(Boolean).join("");
 }
@@ -148,7 +148,7 @@ function renderSourceMethodology(profession) {
   const kind = evidence[item.evidenceLevel] || 'Тип данных не определён';
   const verified = item.validationStatus === 'source_page_checked' || item.validationStatus === 'employer_vacancy_checked';
   return '<p><strong>Тип свидетельства:</strong> ' + escapeHTML(kind) + '</p>' +
-    '<p><strong>Проверка:</strong> ' + (verified ? 'Отмечена сверка источника' : 'Полного подтверждения нет') + '</p>' +
+    '<p><strong>Проверка:</strong> ' + (verified ? 'Отмечена сверка страницы источника; репрезентативность и соответствие профессии оцениваются отдельно' : 'Полного подтверждения нет') + '</p>' +
     (item.checkedAt ? '<p><strong>Дата записи:</strong> ' + escapeHTML(item.checkedAt) + '</p>' : '') +
     (item.notes ? '<p>' + escapeHTML(item.notes) + '</p>' : '') +
     (item.sourceUrl ? '<p><a href="' + escapeHTML(item.sourceUrl) + '" target="_blank" rel="noopener noreferrer">Открыть первоисточник ↗</a></p>' : '');
