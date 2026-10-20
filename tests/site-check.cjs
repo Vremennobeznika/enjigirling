@@ -127,7 +127,7 @@ for(const page of ['materials.html','processes.html']){const html=fs.readFileSyn
 console.log('OK: '+materials.length+' material entries, '+processes.length+' process entries; cross-references validated');
 
 const designCSS=fs.readFileSync('style.css','utf8');
-const hexColors=[...designCSS.matchAll(/#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})(?![0-9a-fA-F])/g)].map(x=>x[1]);
+const hexColors=[...designCSS.matchAll(/(?<![\\w-])#([0-9a-fA-F]{6}|[0-9a-fA-F]{3})(?![\\w-])/g)].map(x=>x[1]);
 for(const raw of hexColors){const rgb=raw.length===3?raw.split('').map(x=>parseInt(x+x,16)):[0,2,4].map(i=>parseInt(raw.slice(i,i+2),16));assert.ok(Math.max(...rgb)-Math.min(...rgb)<=8,'non-monochrome color in CSS: #'+raw);}
 const home=fs.readFileSync('index.html','utf8');
 for(const target of ['compare.html','processes.html','materials.html'])assert.equal(home.split('href="'+target+'"').length-1,1,'duplicate home navigation to '+target);
