@@ -4,7 +4,7 @@
 const fs=require('node:fs');
 const vm=require('node:vm');
 const path=require('node:path');
-const sources=['resources-data.js','data.js','map-data.js'];
+const sources=['resources-data.js','data.js','map-data.js','salary-sources.js'];
 const links=new Map();
 function add(url,source){
  if(typeof url!=='string'||!/^https?:\/\//i.test(url))return;
@@ -27,6 +27,9 @@ for(const file of sources){
    if(file==='resources-data.js')walk(vm.runInNewContext(code+'\nresources',{}, {timeout:3000}));
  }catch(e){console.error('Cannot parse '+file+': '+e.message);process.exitCode=1;}
 }
+// Professional-standard documents live in the UI script; collect literal URLs without executing DOM code.
+const normativeScript=fs.readFileSync('script.js','utf8');
+for(const match of normativeScript.matchAll(/\burl:\s*["'](https?:\/\/[^"']+)["']/g))add(match[1],'script.js');
 for(const file of fs.readdirSync('.').filter(x=>x.endsWith('.html'))){
  const html=fs.readFileSync(file,'utf8');
  for(const m of html.matchAll(/(?:href|src)\s*=\s*["'](https?:[^"']+)["']/g))add(m[1],file);
