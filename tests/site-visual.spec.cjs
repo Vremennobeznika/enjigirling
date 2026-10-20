@@ -24,3 +24,14 @@ for(const viewport of [{width:390,height:844},{width:768,height:1024},{width:144
   });
  }
 }
+
+test('engineer detail links use monochrome colors',async({page})=>{
+ await page.goto('http://127.0.0.1:8765/index.html',{waitUntil:'domcontentloaded'});
+ await page.locator('#professionsGrid .eng-card').first().click();
+ const links=page.locator('#modalContent a');
+ await expect(links.first()).toBeVisible();
+ const colors=await links.evaluateAll(nodes=>nodes.map(a=>getComputedStyle(a).color));
+ const expected=await page.evaluate(()=>getComputedStyle(document.documentElement).getPropertyValue('--text-primary').trim());
+ const resolved=await page.evaluate(()=>{const el=document.createElement('span');el.style.color='var(--text-primary)';document.body.appendChild(el);const c=getComputedStyle(el).color;el.remove();return c;});
+ for(const color of colors)expect(color).toBe(resolved);
+});
