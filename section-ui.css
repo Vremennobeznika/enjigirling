@@ -39,10 +39,3 @@
 
 /* Long Russian page headings must wrap even on 320px screens. */
 .site-page .page-header h1 {overflow-wrap:anywhere;hyphens:auto;min-width:0;}
-
-/* Defer paint/layout for off-screen catalog cards without removing entries. */
-#dictionaryGrid > .eng-card,
-#resourcesGrid > .resource-card {
-  content-visibility: auto;
-  contain-intrinsic-size: auto 185px;
-}
