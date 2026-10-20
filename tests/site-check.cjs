@@ -257,3 +257,9 @@ console.log('OK: unsupported education durations suppressed throughout professio
 assert.ok(educationUi.includes('По статье 195.3 ТК РФ'),'profession modal must explain statutory applicability');
 assert.ok(educationUi.includes('Совпадение названия профессии не доказывает применимость документа'),'profession modal must warn about matching names');
 console.log('OK: legal applicability of professional standards explained in every card');
+
+for(const id of ['civil-engineer','pgs-designer','railway-engineer']){
+ assert.ok(educationUi.includes('"'+id+'": [{'),'candidate normative document missing: '+id);
+}
+assert.ok(educationUi.includes('Документы-кандидаты для сопоставления трудовых функций'),'normative candidate labels must be qualified');
+console.log('OK: sourced normative candidates are clearly distinguished from binding standards');
