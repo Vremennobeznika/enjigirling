@@ -75,3 +75,5 @@ assert.match(fs.readFileSync('calculator.html', 'utf8'), /src="salary-sources\.j
 console.log('OK: ' + audits.filter(x => x.status === 'source_snapshot').length + ' sourced salary records / ' + audits.length + ' professions');
 
 assert.match(fs.readFileSync('script.js', 'utf8'), /Непроверенные цифры скрыты/, 'profession cards must hide unsourced salaries');
+
+assert.equal(audits.filter(x => x.status === 'source_snapshot').length, professions.length, 'every profession must have a salary source');
