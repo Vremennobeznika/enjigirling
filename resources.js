@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ? items.map((item) => `
           <a class="eng-card eng-card--link resource-card" href="${escapeHTML(item.link)}" target="_blank" rel="noopener noreferrer">
             <div class="resource-type">${escapeHTML(item.type || 'Ресурс')}</div>
-            <h3 class="eng-title">${escapeHTML(item.name)}</h3>
+            <h2 class="eng-title">${escapeHTML(item.name)}</h2>
             <p class="eng-desc">${escapeHTML(item.desc)}</p>
             <span class="eng-resource-link">Перейти →</span>
           </a>`).join('')
