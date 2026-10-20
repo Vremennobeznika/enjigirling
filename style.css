@@ -1387,11 +1387,13 @@ body,button,input,select,textarea {font-family:var(--font);}
 .modal-content a,
 .modal-content a:link,
 .modal-content a:visited,
+.modal-content a:active,
 .profession-section a,
 .profession-section a:link,
-.profession-section a:visited {
+.profession-section a:visited,
+.profession-section a:active {
   color:var(--text-primary)!important;
-  text-decoration-color:currentColor;
+  text-decoration-color:currentColor!important;
   overflow-wrap:anywhere;
 }
 .profession-modal a:hover,.modal-content a:hover,.profession-section a:hover {color:var(--text-primary)!important;text-decoration-thickness:2px;}
@@ -1400,7 +1402,6 @@ body,button,input,select,textarea {font-family:var(--font);}
 /* Keyboard navigation and readable engineer-detail links in both themes. */
 .skip-link{position:fixed;z-index:100000;top:12px;left:12px;padding:12px 16px;background:var(--btn-bg);color:var(--btn-text)!important;border:2px solid var(--text-primary);border-radius:8px;transform:translateY(-180%);transition:transform .15s ease;text-decoration:none;font-weight:700}
 .skip-link:focus,.skip-link:focus-visible{transform:translateY(0);outline:3px solid var(--text-primary);outline-offset:3px}
-.modal-content :is(a,a:link,a:visited,a:hover,a:active),.profession-section :is(a,a:link,a:visited,a:hover,a:active){color:var(--text-primary)!important;text-decoration-color:currentColor!important}
 @media(prefers-reduced-motion:reduce){.skip-link{transition:none}}
 
 /* Prevent long process descriptions and technical identifiers from widening 320px pages. */
