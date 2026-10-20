@@ -1235,3 +1235,17 @@ body,button,input,select,textarea {font-family:var(--font);}
   .site-page #addProfession {width:100%;}
   .site-page .atlas-card {padding:20px;}
 }
+
+/* Navigation and contextual actions use the same monochrome button language. */
+.site-page .eng-tabs {gap:8px;padding:12px 0;align-items:center;}
+.site-page .eng-tabs .eng-tab {
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:42px;padding:10px 14px;
+  border:1px solid var(--card-border);border-radius:var(--ui-radius);
+  background:var(--card-bg);color:var(--card-text);
+  font:600 var(--fs-sm)/1.35 var(--font);text-decoration:none;
+}
+.site-page .eng-tabs .eng-tab.active {background:var(--btn-bg);color:var(--btn-text);border-color:var(--btn-bg);}
+.site-page .eng-tabs .eng-tab:hover {border-color:var(--text-primary);}
+.site-page .eng-tabs .eng-tab.active:hover {color:var(--btn-text);}
+.site-page .atlas-card a,.site-page .standards-note a,.site-page .modal a[href] {max-width:100%;overflow-wrap:anywhere;}
