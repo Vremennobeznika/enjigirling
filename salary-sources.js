@@ -275,15 +275,15 @@ window.salarySourceAudit = [
   {
     "id": "shipbuilding-engineer",
     "title": "Инженер-кораблестроитель",
-    "status": "unverified",
-    "sourceTitle": null,
-    "sourceUrl": null,
-    "rangeMinRub": null,
-    "rangeMaxRub": null,
-    "region": "",
-    "metric": "",
+    "status": "source_snapshot",
+    "sourceTitle": "Инженер-кораблестроитель",
+    "sourceUrl": "https://sankt-peterburg.jobrun.ru/%D0%B8%D0%BD%D0%B6%D0%B5%D0%BD%D0%B5%D1%80-%D1%81%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D1%82%D0%B2%D0%BE-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%B8%D0%BD%D0%B6%D0%B5%D0%BD%D0%B5%D1%80%D0%BD%D1%8B%D0%B5-%D0%B8%D0%B7%D1%8B%D1%81%D0%BA%D0%B0%D0%BD%D0%B8%D1%8F-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0?company=%D1%84%D0%B3%D0%B1%D1%83-%D0%BD%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D0%B8%D1%81%D1%81%D0%BB%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C-%D1%86%D0%B5%D0%BD%D1%82%D1%80-%D1%81%D1%83%D0%B4%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%B8%D1%8F-%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8-%D0%B0%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D0%B8%D0%BA%D0%B0-%D0%B0-%D0%BD-%D0%BA%D1%80%D1%8B%D0%BB%D0%BE%D0%B2%D0%B0",
+    "rangeMinRub": 90000,
+    "rangeMaxRub": 90000,
+    "region": "Санкт-Петербург",
+    "metric": "Зарплата конкретной вакансии, НЕ рыночная медиана и НЕ типичный диапазон профессии",
     "checkedAt": "2026-10-20",
-    "notes": "Профильные значения в data.js пока без подтверждённого первоисточника."
+    "notes": "Сведения из конкретной опубликованной вакансии или агрегата вакансий; не переносить на другие регионы и уровни опыта."
   },
   {
     "id": "asu-tp-designer",
@@ -366,15 +366,15 @@ window.salarySourceAudit = [
   {
     "id": "forest-engineer",
     "title": "Инженер лесного хозяйства",
-    "status": "unverified",
-    "sourceTitle": null,
-    "sourceUrl": null,
-    "rangeMinRub": null,
-    "rangeMaxRub": null,
-    "region": "",
-    "metric": "",
+    "status": "source_snapshot",
+    "sourceTitle": "Инженер по лесному хозяйству",
+    "sourceUrl": "https://finder.work/vacancies/37183990",
+    "rangeMinRub": 100000,
+    "rangeMaxRub": 120000,
+    "region": "Вологда",
+    "metric": "Зарплата конкретной вакансии, НЕ рыночная медиана и НЕ типичный диапазон профессии",
     "checkedAt": "2026-10-20",
-    "notes": "Профильные значения в data.js пока без подтверждённого первоисточника."
+    "notes": "Сведения из конкретной опубликованной вакансии или агрегата вакансий; не переносить на другие регионы и уровни опыта."
   },
   {
     "id": "telecom-engineer",
@@ -392,28 +392,28 @@ window.salarySourceAudit = [
   {
     "id": "water-engineer",
     "title": "Инженер водоснабжения и водоотведения",
-    "status": "unverified",
-    "sourceTitle": null,
-    "sourceUrl": null,
-    "rangeMinRub": null,
-    "rangeMaxRub": null,
-    "region": "",
-    "metric": "",
+    "status": "source_snapshot",
+    "sourceTitle": "Инженер по водопроводно-канализационному хозяйству",
+    "sourceUrl": "https://dreamjob.ru/employers/26066/vakansii/136492524",
+    "rangeMinRub": 60000,
+    "rangeMaxRub": 71000,
+    "region": "Киров",
+    "metric": "Зарплата конкретной вакансии, НЕ рыночная медиана и НЕ типичный диапазон профессии",
     "checkedAt": "2026-10-20",
-    "notes": "Профильные значения в data.js пока без подтверждённого первоисточника."
+    "notes": "Сведения из конкретной опубликованной вакансии или агрегата вакансий; не переносить на другие регионы и уровни опыта."
   },
   {
     "id": "lighting-engineer",
     "title": "Инженер-светотехник",
-    "status": "unverified",
-    "sourceTitle": null,
-    "sourceUrl": null,
-    "rangeMinRub": null,
-    "rangeMaxRub": null,
-    "region": "",
-    "metric": "",
+    "status": "source_snapshot",
+    "sourceTitle": "Инженер-светотехник",
+    "sourceUrl": "https://nesiditsa.ru/vacancy/137958986",
+    "rangeMinRub": 150000,
+    "rangeMaxRub": 150000,
+    "region": "Москва",
+    "metric": "Зарплата конкретной вакансии, НЕ рыночная медиана и НЕ типичный диапазон профессии",
     "checkedAt": "2026-10-20",
-    "notes": "Профильные значения в data.js пока без подтверждённого первоисточника."
+    "notes": "Сведения из конкретной опубликованной вакансии или агрегата вакансий; не переносить на другие регионы и уровни опыта."
   },
   {
     "id": "military-engineer",
@@ -457,15 +457,15 @@ window.salarySourceAudit = [
   {
     "id": "civil-defense-engineer",
     "title": "Инженер ГО и ЧС",
-    "status": "unverified",
-    "sourceTitle": null,
-    "sourceUrl": null,
-    "rangeMinRub": null,
-    "rangeMaxRub": null,
-    "region": "",
-    "metric": "",
+    "status": "source_snapshot",
+    "sourceTitle": "Инженер по гражданской обороне и ЧС",
+    "sourceUrl": "https://xn----8sbdbp6brnfrl.xn--p1ai/professii/inzhener-po-go-i-chs/",
+    "rangeMinRub": 39239,
+    "rangeMaxRub": 65000,
+    "region": "Россия",
+    "metric": "Диапазон предложений по вакансиям, источник также публикует медиану 53 573 ₽ (сентябрь 2026, 120 вакансий)",
     "checkedAt": "2026-10-20",
-    "notes": "Профильные значения в data.js пока без подтверждённого первоисточника."
+    "notes": "Сведения из конкретной опубликованной вакансии или агрегата вакансий; не переносить на другие регионы и уровни опыта."
   },
   {
     "id": "geodetic-engineer",
