@@ -740,10 +740,11 @@ window.salarySourceAudit = [
     "region": "РФ и СНГ",
     "metric": "P25–P75 по 10 вакансиям на руки за 12 месяцев; медиана 430 410 ₽",
     "checkedAt": "2026-10-20",
-    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы.",
+    "notes": "Проверено по HireHi: 10 вакансий, РФ и СНГ, 327–473 тыс. ₽ на руки, P25–P75, обновлено 18.10.2026. Выборка очень мала.",
     "evidenceLevel": "aggregate_or_range",
     "salaryUnit": "RUB_per_month",
-    "validationStatus": "source_linked_not_independently_verified"
+    "validationStatus": "source_page_checked",
+    "verifiedAt": "2026-10-20"
   },
   {
     "id": "embedded-engineer",
@@ -773,10 +774,11 @@ window.salarySourceAudit = [
     "region": "Москва (предустановленный регион на странице источника)",
     "metric": "Диапазон, опубликованный hh Карьера; не медиана фактических доходов",
     "checkedAt": "2026-10-20",
-    "notes": "Срез динамический; зарплатные диапазоны иных регионов не подтверждены; не заменяет прежнюю медиану.",
+    "notes": "Проверено по открытой странице hh Карьера: Москва, 16 вакансий, 30 000–40 000 ₽. Важно: узкая выборка и зарплаты в вакансиях, не общерыночная зарплата.",
     "evidenceLevel": "aggregate_or_range",
     "salaryUnit": "RUB_per_month",
-    "validationStatus": "source_linked_not_independently_verified"
+    "validationStatus": "source_page_checked",
+    "verifiedAt": "2026-10-20"
   },
   {
     "id": "backend-engineer",
