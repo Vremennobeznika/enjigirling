@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const emptyMsg = document.getElementById('dictionaryEmpty');
     const searchInput = document.getElementById('searchInput');
 
-    const controls=searchInput.parentElement;
+    const searchable=dictionary.map(item=>({item,text:(item.term+' '+item.def).toLocaleLowerCase('ru-RU')}));
     const status=document.createElement('p');status.className='filter-status';status.setAttribute('role','status');status.setAttribute('aria-live','polite');
     const reset=document.createElement('button');reset.type='button';reset.className='eng-filter-btn filter-reset';reset.textContent='Сбросить поиск';
     searchInput.insertAdjacentElement('afterend',reset);reset.insertAdjacentElement('afterend',status);
@@ -29,9 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     searchInput.addEventListener('input', () => {
         const q = searchInput.value.trim().toLowerCase();
-        const items = dictionary.filter(item =>
-            item.term.toLowerCase().includes(q) || item.def.toLowerCase().includes(q)
-        );
+        const items = searchable.filter(entry=>entry.text.includes(q)).map(entry=>entry.item);
         renderTerms(items);
     });
 
