@@ -137,6 +137,7 @@ function renderProfession(profession, category) {
     </div>
     ${section("Чем занимается", `<p>${valueOrDash(profession.shortDesc)}</p>`, " profession-intro")}
     ${section("Профиль профессии", renderProfile(profession.stats))}
+    ${(profession.stats || profession.salary) ? '<p class="data-quality-note">Статистика специалистов и зарплат приведена справочно. Источники, методика расчёта и дата актуализации пока не подтверждены; не используйте значения как официальные данные рынка труда.</p>' : ""}
     ${section("Образование и подготовка", renderEducation(profession.education))}
     ${section("Зарплата", renderSalary(profession.salary))}
     ${section("Карьерный путь", renderCareer(profession.careerGrowth))}
