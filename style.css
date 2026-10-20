@@ -1407,3 +1407,6 @@ body,button,input,select,textarea {font-family:var(--font);}
 .site-page .atlas-grid {min-width:0;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));}
 .site-page .atlas-card, .site-page .atlas-card > * {min-width:0;max-width:100%;}
 .site-page .atlas-card :is(p,li,span,strong,code,a,h2,h3) {overflow-wrap:anywhere;word-break:normal;}
+
+/* Long Russian page headings must wrap even on 320px screens. */
+.site-page .page-header h1 {overflow-wrap:anywhere;hyphens:auto;min-width:0;}
