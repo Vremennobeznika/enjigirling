@@ -1,5 +1,11 @@
 name: External link audit
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'resources-data.js'
+      - 'tests/external-links.cjs'
+      - '.github/workflows/external-links.yml'
   workflow_dispatch:
   schedule:
     - cron: '0 7 * * 1'
