@@ -263,3 +263,7 @@ for(const id of ['civil-engineer','pgs-designer','railway-engineer']){
 }
 assert.ok(educationUi.includes('Документы-кандидаты для сопоставления трудовых функций'),'normative candidate labels must be qualified');
 console.log('OK: sourced normative candidates are clearly distinguished from binding standards');
+
+for(const id of ['power-engineer','electrical-engineer'])assert.ok(educationUi.includes('"'+id+'": [{'),'official source candidate missing: '+id);
+assert.ok(!educationUi.includes('"forest-engineer": [{'),'unrelated forestry production standard must not be linked to forestry engineer');
+console.log('OK: official standards have conservative occupation scope');
