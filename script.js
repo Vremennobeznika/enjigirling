@@ -135,6 +135,14 @@ function renderVerifiedSalarySource(profession) {
   return `<p class="data-quality-note"><strong>Опубликованный ориентир:</strong> ${entry.rangeMinRub === entry.rangeMaxRub ? `от ${fmt(entry.rangeMinRub)}` : `${fmt(entry.rangeMinRub)}–${fmt(entry.rangeMaxRub)}`} ₽/мес., ${escapeHTML(entry.region)}, ${escapeHTML(entry.checkedAt)}. ${escapeHTML(entry.metric)}. Статус сверки: ${entry.validationStatus === "source_linked_not_independently_verified" ? "ссылка добавлена, первоисточник ещё не перепроверен" : entry.validationStatus === "adjacent_occupation_checked" ? "источник проверен, профессия не совпадает" : "страница источника проверена"}. Тип данных: ${entry.evidenceLevel === "aggregate_or_range" ? "агрегированный диапазон / данные вакансий" : entry.evidenceLevel === "single_observation" ? "отдельная вакансия или оклад" : "смежная профессия либо слабая методика"}. Профессия в источнике: ${escapeHTML(entry.sourceTitle)}. <a href="${escapeHTML(entry.sourceUrl)}" target="_blank" rel="noopener noreferrer">Открыть источник зарплаты</a>. Другие зарплатные значения и региональные медианы не подтверждены и не отображаются.</p>`;
 }
 
+function renderRelatedProfessions(profession, category) {
+  const related = (window.professionsData || []).filter(item => item.id !== profession.id && categoryById[item.id] === category).slice(0, 5);
+  if (!related.length) return "";
+  return '<div class="related-professions">' + related.map(item =>
+    '<button type="button" class="related-profession-link" data-related-id="' + escapeHTML(item.id) + '">' + escapeHTML(item.title) + '</button>'
+  ).join("") + '</div>';
+}
+
 function renderProfession(profession, category) {
   return `
     <div class="modal-header">
@@ -149,7 +157,8 @@ function renderProfession(profession, category) {
     ${section("Зарплата", renderVerifiedSalarySource(profession))}
     ${section("Карьерный путь (ориентировочная последовательность должностей)", renderCareer(profession.careerGrowth))}
     ${section("Пример рабочего дня (иллюстрация, не исследование)", profession.typicalDay ? renderRows("day-list", "day-row", DAY_LABELS, profession.typicalDay) : "")}
-    ${renderProsCons(profession)}`;
+    ${renderProsCons(profession)}
+    ${section("Другие профессии направления", renderRelatedProfessions(profession, category))}`;
 }
 
 // ─── Страница ───────────────────────────────────────────────────────────────
@@ -284,6 +293,17 @@ document.addEventListener("DOMContentLoaded", () => {
     if (modalTrigger instanceof HTMLElement && modalTrigger.isConnected) modalTrigger.focus();
     modalTrigger = null;
   };
+
+  modalContent.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-related-id]");
+    if (!button) return;
+    const related = professionsData.find(item => item.id === button.dataset.relatedId);
+    if (!related) return;
+    modalContent.innerHTML = renderProfession(related, getCategory(related));
+    const modal = modalContent.closest(".modal");
+    if (modal) modal.scrollTop = 0;
+    modalClose.focus();
+  });
 
   modalClose.addEventListener("click", closeModal);
   modalOverlay.addEventListener("keydown", (event) => {
