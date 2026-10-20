@@ -1249,3 +1249,39 @@ body,button,input,select,textarea {font-family:var(--font);}
 .site-page .eng-tabs .eng-tab:hover {border-color:var(--text-primary);}
 .site-page .eng-tabs .eng-tab.active:hover {color:var(--btn-text);}
 .site-page .atlas-card a,.site-page .standards-note a,.site-page .modal a[href] {max-width:100%;overflow-wrap:anywhere;}
+
+/* Navigation is outside .site-page on legacy pages: share the exact same UI. */
+.eng-calendar-root > .eng-tabs {
+  display:flex;justify-content:flex-start;align-items:center;gap:8px;
+  flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin;
+  margin:16px 0 28px;padding:12px 0;
+  border-bottom:1px solid var(--card-border);
+}
+.eng-calendar-root > .eng-tabs .eng-tab {
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:42px;padding:10px 14px;white-space:nowrap;flex-shrink:0;
+  border:1px solid var(--card-border);border-radius:var(--ui-radius);
+  background:var(--card-bg);color:var(--card-text);
+  font:600 var(--fs-sm)/1.35 var(--font);text-decoration:none;
+}
+.eng-calendar-root > .eng-tabs .eng-tab.active {
+  background:var(--btn-bg);color:var(--btn-text);border-color:var(--btn-bg);
+}
+.eng-calendar-root > .eng-tabs .eng-tab:hover {border-color:var(--text-primary);}
+.eng-calendar-root > .eng-tabs .eng-tab.active:hover {color:var(--btn-text);}
+.eng-calendar-root .site-page {padding-left:0;padding-right:0;}
+/* Resource cards are already links: keep entire card clickable, not nested buttons. */
+.site-page a.eng-card--link,.site-page a.eng-card--link:link,
+.site-page a.eng-card--link:visited {
+  color:var(--card-text);text-decoration:none;
+  border:1px solid var(--card-border);background:var(--card-bg);
+}
+.site-page a.eng-card--link:hover {border-color:var(--text-primary);}
+.site-page a.eng-card--link :is(h2,h3,p,span) {color:inherit;}
+.site-page .resource-filter-row {width:100%;}
+.site-page .resource-search {min-height:var(--ui-control-height);height:var(--ui-control-height);}
+.site-page .resource-buttons button {min-height:42px;border-radius:var(--ui-radius);}
+@media(max-width:680px) {
+  .eng-calendar-root {padding:0 16px;}
+  .eng-calendar-root > .eng-tabs {margin-top:8px;}
+}
