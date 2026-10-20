@@ -119,15 +119,15 @@ window.salarySourceAudit = [
   {
     "id": "electrical-designer",
     "title": "Инженер-проектировщик электроснабжения",
-    "status": "unverified",
-    "sourceTitle": null,
-    "sourceUrl": null,
-    "rangeMinRub": null,
-    "rangeMaxRub": null,
-    "region": "",
-    "metric": "",
+    "status": "source_snapshot",
+    "sourceTitle": "Инженер-проектировщик систем электроснабжения",
+    "sourceUrl": "https://career.hh.ru/profession/218",
+    "rangeMinRub": 80000,
+    "rangeMaxRub": 176000,
+    "region": "Москва (регион на странице hh Карьера)",
+    "metric": "Диапазон зарплат в вакансиях hh Карьера; не медиана фактических доходов",
     "checkedAt": "2026-10-20",
-    "notes": "Профильные значения в data.js пока без подтверждённого первоисточника."
+    "notes": "Сопоставление профессий по названию и обязанностям; выборка вакансий динамическая; старые региональные значения не подтверждены."
   },
   {
     "id": "nuclear-engineer",
@@ -171,15 +171,15 @@ window.salarySourceAudit = [
   {
     "id": "chemical-engineer",
     "title": "Инженер-химик-технолог",
-    "status": "unverified",
-    "sourceTitle": null,
-    "sourceUrl": null,
-    "rangeMinRub": null,
-    "rangeMaxRub": null,
-    "region": "",
-    "metric": "",
+    "status": "source_snapshot",
+    "sourceTitle": "Инженер-химик",
+    "sourceUrl": "https://career.hh.ru/profession/221",
+    "rangeMinRub": 52200,
+    "rangeMaxRub": 65000,
+    "region": "Москва (регион на странице hh Карьера)",
+    "metric": "Диапазон зарплат в вакансиях hh Карьера; не медиана фактических доходов",
     "checkedAt": "2026-10-20",
-    "notes": "Профильные значения в data.js пока без подтверждённого первоисточника."
+    "notes": "Сопоставление профессий по названию и обязанностям; выборка вакансий динамическая; старые региональные значения не подтверждены."
   },
   {
     "id": "oil-gas-engineer",
@@ -379,15 +379,15 @@ window.salarySourceAudit = [
   {
     "id": "telecom-engineer",
     "title": "Инженер связи",
-    "status": "unverified",
-    "sourceTitle": null,
-    "sourceUrl": null,
-    "rangeMinRub": null,
-    "rangeMaxRub": null,
-    "region": "",
-    "metric": "",
+    "status": "source_snapshot",
+    "sourceTitle": "Инженер слаботочных систем/Инженер связи",
+    "sourceUrl": "https://career.hh.ru/profession/211",
+    "rangeMinRub": 55000,
+    "rangeMaxRub": 130000,
+    "region": "Москва (регион на странице hh Карьера)",
+    "metric": "Диапазон зарплат в вакансиях hh Карьера; не медиана фактических доходов",
     "checkedAt": "2026-10-20",
-    "notes": "Профильные значения в data.js пока без подтверждённого первоисточника."
+    "notes": "Сопоставление профессий по названию и обязанностям; выборка вакансий динамическая; старые региональные значения не подтверждены."
   },
   {
     "id": "water-engineer",
