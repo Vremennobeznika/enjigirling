@@ -133,3 +133,20 @@ test('processes link directly to a relevant profession without losing the catalo
  await page.keyboard.press('Escape');
  await expect(page.locator('#modalOverlay')).toHaveAttribute('aria-hidden','true');
 });
+
+
+test('unified search links to professions, materials, processes and dictionary without removing sections',async({page})=>{
+ await page.goto(base+'index.html');
+ await expect(page.locator('nav.eng-tabs a')).toHaveCount(9);
+ const input=page.locator('#globalSearch');
+ for(const [query,target] of [['металл','materials.html#'],['сварка','processes.html#'],['инженер','index.html#profession='],['квалификация','dictionary.html?q=']]){
+  await input.fill(query);
+  await expect(page.locator('#globalSearchResults a')).not.toHaveCount(0);
+  expect((await page.locator('#globalSearchResults a').evaluateAll(nodes=>nodes.map(a=>a.getAttribute('href')))).some(h=>h.startsWith(target)),query+' links to '+target).toBeTruthy();
+ }
+ await input.fill('zzzzzxq987');
+ await expect(page.locator('#globalSearchStatus')).toContainText('Ничего не найдено');
+ await expect(page.locator('#professionsGrid .eng-card')).toHaveCount(51);
+ await page.goto(base+'dictionary.html?q='+encodeURIComponent('квалификация'));
+ await expect(page.locator('#searchInput')).toHaveValue('квалификация');
+});
