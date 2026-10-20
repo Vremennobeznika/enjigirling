@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     filter.innerHTML = `
       <div class="resource-filter-row">
         <div class="resource-buttons" id="resourceTypeButtons"></div>
-        <input class="resource-search" id="resourceSearch" type="search" placeholder="Поиск по ресурсам" autocomplete="off">
+        <input class="resource-search" id="resourceSearch" aria-label="Поиск по ресурсам" type="search" placeholder="Поиск по ресурсам" autocomplete="off">
       </div>`;
     const buttons = document.getElementById('resourceTypeButtons');
     const search = document.getElementById('resourceSearch');

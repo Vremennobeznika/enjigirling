@@ -1,0 +1,38 @@
+name: Lighthouse quality report
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Lighthouse and Chromium
+        run: |
+          npm install --no-save lighthouse
+          sudo apt-get update -qq
+          sudo apt-get install -y chromium-browser || sudo apt-get install -y chromium
+      - name: Run local server
+        run: python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/lighthouse-server.log 2>&1 &
+      - name: Audit all sections
+        run: |
+          mkdir -p lighthouse-results
+          for page in index calendar resources dictionary map calculator compare processes materials; do
+            CHROME_PATH=$(command -v chromium-browser || command -v chromium)
+            CHROME_PATH="$CHROME_PATH" npx lighthouse "http://127.0.0.1:8765/$page.html" --quiet --chrome-flags="--headless --no-sandbox --disable-dev-shm-usage" --only-categories=performance,accessibility,best-practices,seo --output=json --output-path="lighthouse-results/$page.json"
+          done
+          node -e "const fs=require('fs');for(const file of fs.readdirSync('lighthouse-results')){const x=JSON.parse(fs.readFileSync('lighthouse-results/'+file));console.log(file,Object.fromEntries(Object.entries(x.categories).map(([k,v])=>[k,Math.round(v.score*100)])))}"
+      - name: Upload Lighthouse measurements
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-reports
+          path: lighthouse-results/
+          if-no-files-found: ignore
