@@ -154,6 +154,15 @@ function renderSourceMethodology(profession) {
     (item.sourceUrl ? '<p><a href="' + escapeHTML(item.sourceUrl) + '" target="_blank" rel="noopener noreferrer">Открыть первоисточник ↗</a></p>' : '');
 }
 
+// The legacy "courses" field mixes software, methods and training topics.
+// Conservative classification: ambiguous entries remain topics, never invented software.
+function classifyLearningItems(items = []) {
+  const software = /\\b(?:AutoCAD|Revit|SketchUp|3ds Max|ЛИРА-САПР|SCAD|КОМПАС|SolidWorks|CATIA|ANSYS|MATLAB|Simulink|Python|SQL|JavaScript|TypeScript|Java|Kotlin|Swift|C\\+\\+|Git|Docker|Kubernetes|Linux|Excel|1C|1С|ETAP|EPLAN|TIA Portal|WinCC|Codesys|AutoCAD Electrical|Civil 3D|ArcGIS|QGIS|Blender|Figma|React|Node\\.js|PostgreSQL|TensorFlow|PyTorch|NX|Creo|Inventor|Abaqus|LabVIEW|Altium|KiCad)\\b/i;
+  const tools = [], topics = [];
+  for (const item of items) (software.test(item) ? tools : topics).push(item);
+  return { tools, topics };
+}
+
 function renderPracticalGuide(profession) {
   const requirements = profession.education?.requirements;
   const tools = profession.education?.courses || [];
@@ -161,7 +170,9 @@ function renderPracticalGuide(profession) {
   const parts = [];
   if (tasks.length) parts.push('<h3>Основные задачи</h3><p>' + escapeHTML(tasks.join(". ")) + '</p>');
   if (requirements) parts.push('<h3>Что изучать</h3><p>' + escapeHTML(requirements) + '</p>');
-  if (tools.length) parts.push('<h3>Инструменты и темы для изучения</h3><div class="tag-list">' + tools.map(x => '<span>' + escapeHTML(x) + '</span>').join("") + '</div>');
+  const classified = classifyLearningItems(tools);
+  if (classified.tools.length) parts.push('<h3>Программные инструменты (ориентир)</h3><div class="tag-list">' + classified.tools.map(x => '<span>' + escapeHTML(x) + '</span>').join("") + '</div>');
+  if (classified.topics.length) parts.push('<h3>Методы, дисциплины и темы обучения</h3><div class="tag-list">' + classified.topics.map(x => '<span>' + escapeHTML(x) + '</span>').join("") + '</div>');
   if (!parts.length) return "";
   return '<p class="data-quality-note">Редакционная памятка по материалам каталога. Перечень не является исчерпывающим стандартом квалификации или требованием конкретного работодателя.</p>' + parts.join("");
 }
