@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         items.forEach(item => {
             const card = document.createElement('article');
             card.className = 'eng-card';
-            const title=document.createElement('h3');title.className='eng-title';title.textContent=item.term;
+            const title=document.createElement('h2');title.className='eng-title';title.textContent=item.term;
             const description=document.createElement('p');description.className='eng-desc';description.textContent=item.def;
             card.append(title,description);
             grid.appendChild(card);
