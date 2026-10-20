@@ -135,6 +135,19 @@ function renderVerifiedSalarySource(profession) {
   return `<p class="data-quality-note"><strong>Опубликованный ориентир:</strong> ${entry.rangeMinRub === entry.rangeMaxRub ? `от ${fmt(entry.rangeMinRub)}` : `${fmt(entry.rangeMinRub)}–${fmt(entry.rangeMaxRub)}`} ₽/мес., ${escapeHTML(entry.region)}, ${escapeHTML(entry.checkedAt)}. ${escapeHTML(entry.metric)}. Статус сверки: ${entry.validationStatus === "source_linked_not_independently_verified" ? "ссылка добавлена, первоисточник ещё не перепроверен" : entry.validationStatus === "adjacent_occupation_checked" ? "источник проверен, профессия не совпадает" : "страница источника проверена"}. Тип данных: ${entry.evidenceLevel === "aggregate_or_range" ? "агрегированный диапазон / данные вакансий" : entry.evidenceLevel === "single_observation" ? "отдельная вакансия или оклад" : "смежная профессия либо слабая методика"}. Профессия в источнике: ${escapeHTML(entry.sourceTitle)}. <a href="${escapeHTML(entry.sourceUrl)}" target="_blank" rel="noopener noreferrer">Открыть источник зарплаты</a>. Другие зарплатные значения и региональные медианы не подтверждены и не отображаются.</p>`;
 }
 
+// Editorial guide derived from existing profession descriptions; not a claim about a specific employer.
+function renderPracticalGuide(profession) {
+  const requirements = profession.education?.requirements;
+  const tools = profession.education?.courses || [];
+  const tasks = (profession.shortDesc || "").split(/[.;]/).map(x => x.trim()).filter(Boolean);
+  const parts = [];
+  if (tasks.length) parts.push('<h3>Основные задачи</h3><p>' + escapeHTML(tasks.join(". ")) + '</p>');
+  if (requirements) parts.push('<h3>Что изучать</h3><p>' + escapeHTML(requirements) + '</p>');
+  if (tools.length) parts.push('<h3>Инструменты и темы для изучения</h3><div class="tag-list">' + tools.map(x => '<span>' + escapeHTML(x) + '</span>').join("") + '</div>');
+  if (!parts.length) return "";
+  return '<p class="data-quality-note">Редакционная памятка по материалам каталога. Перечень не является исчерпывающим стандартом квалификации или требованием конкретного работодателя.</p>' + parts.join("");
+}
+
 function renderRelatedProfessions(profession, category) {
   const related = (window.professionsData || []).filter(item => item.id !== profession.id && categoryById[item.id] === category).slice(0, 5);
   if (!related.length) return "";
@@ -153,6 +166,7 @@ function renderProfession(profession, category) {
     </div>
     ${section("Чем занимается", `<p>${valueOrDash(profession.shortDesc)}</p>`, " profession-intro")}
     <p class="data-quality-note">Численность специалистов, средний возраст и гендерное распределение не публикуются без проверяемых статистических источников.</p>
+    ${section("Практика: задачи, знания и инструменты", renderPracticalGuide(profession))}
     ${section("Образование и подготовка (ориентир)", renderEducation(profession.education))}
     ${section("Зарплата", renderVerifiedSalarySource(profession))}
     ${section("Карьерный путь (ориентировочная последовательность должностей)", renderCareer(profession.careerGrowth))}
