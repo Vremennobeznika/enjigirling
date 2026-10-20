@@ -176,3 +176,7 @@ for(const page of ['resources.js','dictionary.js','materials.js','processes.js']
 }
 assert.ok(fs.readFileSync('dictionary.js','utf8').includes('title.textContent=item.term'),'dictionary term must be rendered as text');
 console.log('OK: resource, dictionary and atlas search counters and reset actions');
+
+assert.ok(fs.readFileSync('processes.html','utf8').includes('src="materials-data.js"'),'process cross-reference labels require material data');
+assert.ok(fs.readFileSync('processes.js','utf8').includes('materialNames[id]||id'),'process links should use material names');
+console.log('OK: process cross-links display material names instead of technical IDs');
