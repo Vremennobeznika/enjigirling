@@ -219,3 +219,19 @@ for(const file of ['materials.js','processes.js']){
  assert.ok(js.includes("addEventListener('hashchange'"),file+': linked card hash navigation missing');
 }
 console.log('OK: unique community links, external audit script and accessible deep links');
+
+const salaryCtx={window:{}};
+vm.runInNewContext(fs.readFileSync('salary-sources.js','utf8'),salaryCtx,{timeout:5000});
+const salaryEntries=salaryCtx.window.salarySourceAudit;
+assert.equal(salaryEntries.length,professions.length,'every profession must have salary evidence status');
+assert.equal(new Set(salaryEntries.map(x=>x.id)).size,professions.length,'duplicate or missing salary audit ID');
+for(const entry of salaryEntries){
+ assert.ok(ids.includes(entry.id),'unknown profession in salary audit: '+entry.id);
+ assert.ok(/^https?:\/\//.test(entry.sourceUrl),'missing salary source URL: '+entry.id);
+ assert.ok(/^\d{4}-\d{2}-\d{2}$/.test(entry.checkedAt),'missing salary check date: '+entry.id);
+ assert.ok(['source_page_checked','adjacent_occupation_checked','employer_vacancy_checked','source_linked_not_independently_verified'].includes(entry.validationStatus),'unknown salary evidence status: '+entry.id);
+ assert.ok(Number.isFinite(entry.rangeMinRub)&&Number.isFinite(entry.rangeMaxRub)&&entry.rangeMinRub<=entry.rangeMaxRub,'invalid salary range: '+entry.id);
+}
+assert.ok(fs.readFileSync('compare.html','utf8').includes('src="salary-sources.js"'),'comparison salary source script missing');
+assert.ok(fs.readFileSync('compare.js','utf8').includes('salaryById'),'comparison must use audited salary data');
+console.log('OK: all 51 salary evidence records matched and comparable-source warnings enabled');
