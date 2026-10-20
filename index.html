@@ -6,6 +6,7 @@
 <meta name="description" content="База данных инженерных профессий: обязанности, образование, зарплаты, карьерный путь и типичный рабочий день.">
 <title>Профессии инженеров</title>
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="global-search.css">
 </head>
 <body>
 <a class="skip-link" href="#main-content">Перейти к содержимому</a>
@@ -29,6 +30,15 @@
     <p>Изучай инженерные профессии, производственные процессы и материалы. Все девять разделов справочника доступны в навигации.</p>
     <div class="hero-stats"><span><strong>51</strong> профессия</span><span><strong>18</strong> направлений</span><span><strong>9</strong> разделов</span></div>
   </header>
+
+  <section class="global-search" aria-labelledby="globalSearchTitle">
+    <h2 id="globalSearchTitle">Поиск по инженерному справочнику</h2>
+    <p>Профессии, материалы, производственные процессы и термины словаря. Остальные разделы доступны в меню.</p>
+    <label for="globalSearch" class="sr-only">Поиск по всему справочнику</label>
+    <input id="globalSearch" type="search" placeholder="Например: сварка, сталь, КИП…" autocomplete="off">
+    <p id="globalSearchStatus" role="status" aria-live="polite"></p>
+    <div id="globalSearchResults" class="global-results" hidden></div>
+  </section>
 
   <div class="profession-tools">
     <div class="profession-search-wrap">
@@ -74,6 +84,10 @@
 <script src="data.js"></script>
 <script src="salary-sources.js"></script>
 <script src="script.js"></script>
+<script src="materials-data.js"></script>
+<script src="processes-data.js"></script>
+<script src="dictionary-data.js"></script>
+<script src="global-search.js"></script>
 <script src="theme.js"></script>
 <script src="site-shell.js"></script>
 <script src="navigation.js"></script>

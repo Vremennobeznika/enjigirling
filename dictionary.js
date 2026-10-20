@@ -35,5 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         renderTerms(items);
     });
 
-    renderTerms(dictionary);
+    const requested=new URLSearchParams(location.search).get('q');
+    if(requested){searchInput.value=requested;searchInput.dispatchEvent(new Event('input',{bubbles:true}));}
+    else renderTerms(dictionary);
 });
