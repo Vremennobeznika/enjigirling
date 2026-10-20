@@ -28,15 +28,15 @@ window.salarySourceAudit = [
   {
     "id": "architect-engineer",
     "title": "Инженер-архитектор",
-    "status": "unverified",
-    "sourceTitle": null,
-    "sourceUrl": null,
-    "rangeMinRub": null,
-    "rangeMaxRub": null,
-    "region": "",
-    "metric": "",
+    "status": "source_snapshot",
+    "sourceTitle": "Архитектор-проектировщик",
+    "sourceUrl": "https://career.hh.ru/profession/195",
+    "rangeMinRub": 62000,
+    "rangeMaxRub": 150000,
+    "region": "Москва (регион на странице hh Карьера)",
+    "metric": "Опубликованный диапазон зарплат в вакансиях; смежная категория может отличаться от специализации каталога",
     "checkedAt": "2026-10-20",
-    "notes": "Профильные значения в data.js пока без подтверждённого первоисточника."
+    "notes": "Сопоставление не является полным совпадением профессий. Значения не переносить на Россию или федеральные округа."
   },
   {
     "id": "road-engineer",
@@ -210,15 +210,15 @@ window.salarySourceAudit = [
   {
     "id": "mining-engineer",
     "title": "Горный инженер",
-    "status": "unverified",
-    "sourceTitle": null,
-    "sourceUrl": null,
-    "rangeMinRub": null,
-    "rangeMaxRub": null,
-    "region": "",
-    "metric": "",
+    "status": "source_snapshot",
+    "sourceTitle": "Геолог/горный инженер",
+    "sourceUrl": "https://career.hh.ru/profession/268",
+    "rangeMinRub": 90000,
+    "rangeMaxRub": 260000,
+    "region": "Москва (регион на странице hh Карьера)",
+    "metric": "Опубликованный диапазон зарплат в вакансиях; смежная категория может отличаться от специализации каталога",
     "checkedAt": "2026-10-20",
-    "notes": "Профильные значения в data.js пока без подтверждённого первоисточника."
+    "notes": "Сопоставление не является полным совпадением профессий. Значения не переносить на Россию или федеральные округа."
   },
   {
     "id": "environmental-engineer",
@@ -340,15 +340,15 @@ window.salarySourceAudit = [
   {
     "id": "food-engineer",
     "title": "Инженер-технолог пищевой промышленности",
-    "status": "unverified",
-    "sourceTitle": null,
-    "sourceUrl": null,
-    "rangeMinRub": null,
-    "rangeMaxRub": null,
-    "region": "",
-    "metric": "",
+    "status": "source_snapshot",
+    "sourceTitle": "Технолог (широкая категория, не только пищевая промышленность)",
+    "sourceUrl": "https://career.hh.ru/profession/253",
+    "rangeMinRub": 65250,
+    "rangeMaxRub": 70000,
+    "region": "Москва (регион на странице hh Карьера)",
+    "metric": "Опубликованный диапазон зарплат в вакансиях; смежная категория может отличаться от специализации каталога",
     "checkedAt": "2026-10-20",
-    "notes": "Профильные значения в data.js пока без подтверждённого первоисточника."
+    "notes": "Сопоставление не является полным совпадением профессий. Значения не переносить на Россию или федеральные округа."
   },
   {
     "id": "textile-engineer",
@@ -600,15 +600,15 @@ window.salarySourceAudit = [
   {
     "id": "embedded-engineer",
     "title": "Инженер встраиваемых систем (Embedded)",
-    "status": "unverified",
-    "sourceTitle": null,
-    "sourceUrl": null,
-    "rangeMinRub": null,
-    "rangeMaxRub": null,
-    "region": "",
-    "metric": "",
+    "status": "source_snapshot",
+    "sourceTitle": "Разработчик C++ (смежная профессия, не тождественна embedded)",
+    "sourceUrl": "https://career.hh.ru/profession/56",
+    "rangeMinRub": 210000,
+    "rangeMaxRub": 241425,
+    "region": "Москва (регион на странице hh Карьера)",
+    "metric": "Опубликованный диапазон зарплат в вакансиях; смежная категория может отличаться от специализации каталога",
     "checkedAt": "2026-10-20",
-    "notes": "Профильные значения в data.js пока без подтверждённого первоисточника."
+    "notes": "Сопоставление не является полным совпадением профессий. Значения не переносить на Россию или федеральные округа."
   },
   {
     "id": "frontend-engineer",
@@ -652,14 +652,14 @@ window.salarySourceAudit = [
   {
     "id": "mobile-engineer",
     "title": "Mobile-разработчик",
-    "status": "unverified",
-    "sourceTitle": null,
-    "sourceUrl": null,
-    "rangeMinRub": null,
-    "rangeMaxRub": null,
-    "region": "",
-    "metric": "",
+    "status": "source_snapshot",
+    "sourceTitle": "Android-разработчик (частный случай мобильной разработки)",
+    "sourceUrl": "https://career.hh.ru/profession/42",
+    "rangeMinRub": 70000,
+    "rangeMaxRub": 80000,
+    "region": "Москва (регион на странице hh Карьера)",
+    "metric": "Опубликованный диапазон зарплат в вакансиях; смежная категория может отличаться от специализации каталога",
     "checkedAt": "2026-10-20",
-    "notes": "Профильные значения в data.js пока без подтверждённого первоисточника."
+    "notes": "Сопоставление не является полным совпадением профессий. Значения не переносить на Россию или федеральные округа."
   }
 ];
