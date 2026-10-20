@@ -42,10 +42,11 @@ window.salarySourceAudit = [
     "region": "Москва (регион на странице hh Карьера)",
     "metric": "Опубликованный диапазон зарплат в вакансиях; смежная категория может отличаться от специализации каталога",
     "checkedAt": "2026-10-20",
-    "notes": "Сопоставление не является полным совпадением профессий. Значения не переносить на Россию или федеральные округа.",
+    "notes": "Проверено название профиля hh Карьера: «Архитектор-проектировщик» (62000–150000 ₽). Оно не полностью совпадает с профессией каталога. Зарплату нельзя выдавать за достоверную оценку указанной специализации.",
     "evidenceLevel": "adjacent_or_weak",
     "salaryUnit": "RUB_per_month",
-    "validationStatus": "source_linked_not_independently_verified"
+    "validationStatus": "adjacent_occupation_checked",
+    "verifiedAt": "2026-10-20"
   },
   {
     "id": "road-engineer",
@@ -268,10 +269,11 @@ window.salarySourceAudit = [
     "region": "Москва (регион на странице hh Карьера)",
     "metric": "Опубликованный диапазон зарплат в вакансиях; смежная категория может отличаться от специализации каталога",
     "checkedAt": "2026-10-20",
-    "notes": "Сопоставление не является полным совпадением профессий. Значения не переносить на Россию или федеральные округа.",
+    "notes": "Проверено название профиля hh Карьера: «Геолог» (90000–260000 ₽). Оно не полностью совпадает с профессией каталога. Зарплату нельзя выдавать за достоверную оценку указанной специализации.",
     "evidenceLevel": "adjacent_or_weak",
     "salaryUnit": "RUB_per_month",
-    "validationStatus": "source_linked_not_independently_verified"
+    "validationStatus": "adjacent_occupation_checked",
+    "verifiedAt": "2026-10-20"
   },
   {
     "id": "environmental-engineer",
@@ -431,10 +433,11 @@ window.salarySourceAudit = [
     "region": "Москва (регион на странице hh Карьера)",
     "metric": "Опубликованный диапазон зарплат в вакансиях; смежная категория может отличаться от специализации каталога",
     "checkedAt": "2026-10-20",
-    "notes": "Сопоставление не является полным совпадением профессий. Значения не переносить на Россию или федеральные округа.",
+    "notes": "Проверено название профиля hh Карьера: «Технолог» (65250–70000 ₽). Оно не полностью совпадает с профессией каталога. Зарплату нельзя выдавать за достоверную оценку указанной специализации.",
     "evidenceLevel": "adjacent_or_weak",
     "salaryUnit": "RUB_per_month",
-    "validationStatus": "source_linked_not_independently_verified"
+    "validationStatus": "adjacent_occupation_checked",
+    "verifiedAt": "2026-10-20"
   },
   {
     "id": "textile-engineer",
@@ -827,9 +830,10 @@ window.salarySourceAudit = [
     "region": "Москва (регион на странице hh Карьера)",
     "metric": "Опубликованный диапазон зарплат в вакансиях; смежная категория может отличаться от специализации каталога",
     "checkedAt": "2026-10-20",
-    "notes": "Сопоставление не является полным совпадением профессий. Значения не переносить на Россию или федеральные округа.",
+    "notes": "Проверено название профиля hh Карьера: «Android-разработчик» (70000–80000 ₽). Оно не полностью совпадает с профессией каталога. Зарплату нельзя выдавать за достоверную оценку указанной специализации.",
     "evidenceLevel": "adjacent_or_weak",
     "salaryUnit": "RUB_per_month",
-    "validationStatus": "source_linked_not_independently_verified"
+    "validationStatus": "adjacent_occupation_checked",
+    "verifiedAt": "2026-10-20"
   }
 ];
