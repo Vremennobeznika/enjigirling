@@ -43,6 +43,7 @@ async function worker(){while(cursor<rows.length){const i=cursor++;results[i]=aw
  const md=['# Salary source-content QA','',...Object.entries(summary).map(([k,v])=>'- '+k+': '+v),'','**A match only means both digit sequences occur somewhere in the downloaded HTML text. It does not validate the salary, methodology, occupation, date or source reliability.**','','| ID | Result | HTTP | Evidence class | Source |','|---|---|---|---|---|',...results.map(x=>`| ${x.id} | ${x.result} | ${x.status??'—'} | ${x.evidenceLevel} | ${x.sourceUrl} |`)];
  fs.writeFileSync('audit/salary-content-audit.md',md.join('\n')+'\n');
  console.log(JSON.stringify(summary));
+ for(const x of results.filter(x=>!['amounts_present','not_claimed'].includes(x.result))) console.warn('NEEDS MANUAL REVIEW:',x.id,x.result,x.status??'NETWORK',x.sourceUrl);
  for(const x of results.filter(x=>x.result==='broken'))console.error('BROKEN SALARY SOURCE',x.id,x.status,x.sourceUrl);
  if(summary.broken)process.exitCode=1;
 })().catch(e=>{console.error(e);process.exitCode=1;});
