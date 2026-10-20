@@ -86,3 +86,9 @@ for (const row of audits) {
 }
 assert.match(fs.readFileSync('script.js', 'utf8'), /Тип данных:/, 'profession card missing evidence quality');
 console.log('OK: evidence limitations classified for all professions');
+
+assert.match(fs.readFileSync('script.js', 'utf8'), /Практика: задачи, знания и инструменты/, 'profession cards should include practical guidance');
+assert.match(fs.readFileSync('script.js', 'utf8'), /Редакционная памятка/, 'practical guidance must be labelled as editorial');
+assert.match(fs.readFileSync('script.js', 'utf8'), /Зарплата не подтверждена/, 'unsourced career step salaries must be hidden');
+assert.doesNotMatch(fs.readFileSync('script.js', 'utf8'), /renderProfile\(profession\.stats\)/, 'unverified demographics must not be rendered');
+console.log('OK: practical editorial guidance and numeric-data safeguards');
