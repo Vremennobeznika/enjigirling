@@ -149,3 +149,13 @@ for(const page of allPages){
 }
 assert.ok(fs.readFileSync('index.html','utf8').includes('<strong>9</strong> разделов'),'homepage section count is stale');
 console.log('OK: all nine pages retain complete navigation, UTF-8 declarations and accurate section count');
+
+for(const page of allPages){
+  const html=fs.readFileSync(page,'utf8');
+  assert.equal(html.split('src="navigation.js"').length-1,1,page+': responsive navigation missing or duplicated');
+}
+const navigationJs=fs.readFileSync('navigation.js','utf8');
+assert.match(navigationJs,/aria-expanded/,'mobile menu needs expanded state');
+assert.match(navigationJs,/Escape/,'mobile menu needs Escape handling');
+assert.match(fs.readFileSync('style.css','utf8'),/site-nav-open/,'mobile menu styling missing');
+console.log('OK: responsive navigation enabled once on every page with keyboard handling');
