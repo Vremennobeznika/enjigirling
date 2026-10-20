@@ -222,10 +222,10 @@ console.log('OK: unique community links, external audit script and accessible de
 
 const salaryCtx={window:{}};
 vm.runInNewContext(fs.readFileSync('salary-sources.js','utf8'),salaryCtx,{timeout:5000});
-const salaryEntries=salaryCtx.window.salarySourceAudit;
-assert.equal(salaryEntries.length,professions.length,'every profession must have salary evidence status');
-assert.equal(new Set(salaryEntries.map(x=>x.id)).size,professions.length,'duplicate or missing salary audit ID');
-for(const entry of salaryEntries){
+const salaryEvidenceRows=salaryCtx.window.salarySourceAudit;
+assert.equal(salaryEvidenceRows.length,professions.length,'every profession must have salary evidence status');
+assert.equal(new Set(salaryEvidenceRows.map(x=>x.id)).size,professions.length,'duplicate or missing salary audit ID');
+for(const entry of salaryEvidenceRows){
  assert.ok(ids.includes(entry.id),'unknown profession in salary audit: '+entry.id);
  assert.ok(/^https?:\/\//.test(entry.sourceUrl),'missing salary source URL: '+entry.id);
  assert.ok(/^\d{4}-\d{2}-\d{2}$/.test(entry.checkedAt),'missing salary check date: '+entry.id);
