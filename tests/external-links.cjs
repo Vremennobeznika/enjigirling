@@ -54,5 +54,6 @@ async function worker(){while(cursor<urls.length){const i=cursor++;results[i]=aw
  const report=['# External link audit','',...Object.entries(summary).map(([k,v])=>'- '+k+': '+v),'','## Broken (HTTP 404 / 410)','',...results.filter(x=>x.result==='broken').map(x=>'- '+x.status+' '+x.url+' ('+x.sources.join(', ')+')'),'','## Unverified (network errors, anti-bot or other HTTP status)','',...results.filter(x=>x.result==='unverified').map(x=>'- '+(x.status||x.reason)+' '+x.url)];
  fs.writeFileSync('audit/external-links.md',report.join('\n')+'\n');
  console.log(JSON.stringify(summary));
+ for(const issue of results.filter(x=>x.result==='broken'))console.error('BROKEN LINK:',issue.status,issue.url,issue.sources.join(', '));
  if(summary.broken)process.exitCode=1;
 })().catch(e=>{console.error(e);process.exitCode=1;});
