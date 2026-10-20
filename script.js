@@ -127,6 +127,13 @@ function renderProsCons({ easy, hard }) {
   return parts && `<section class="profession-section pros-cons">${parts}</section>`;
 }
 
+function renderVerifiedSalarySource(profession) {
+  const entry = (window.salarySourceAudit || []).find(item => item.id === profession.id && item.status === 'source_snapshot');
+  if (!entry) return '<p class="data-quality-note">Подтверждённой зарплатной оценки для этой профессии пока нет. Приведённые ниже цифры не проверены.</p>';
+  const fmt = value => Number(value).toLocaleString('ru-RU');
+  return `<p class="data-quality-note"><strong>Проверяемый ориентир:</strong> ${fmt(entry.rangeMinRub)}–${fmt(entry.rangeMaxRub)} ₽/мес., ${escapeHTML(entry.region)}, ${escapeHTML(entry.checkedAt)}. ${escapeHTML(entry.metric)}. Профессия в источнике: ${escapeHTML(entry.sourceTitle)}. <a href="${escapeHTML(entry.sourceUrl)}" target="_blank" rel="noopener noreferrer">Источник: hh Карьера</a>. Остальные зарплатные значения ниже не подтверждены.</p>`;
+}
+
 function renderProfession(profession, category) {
   return `
     <div class="modal-header">
@@ -139,7 +146,7 @@ function renderProfession(profession, category) {
     ${section("Профиль профессии", renderProfile(profession.stats))}
     ${(profession.stats || profession.salary) ? '<p class="data-quality-note">Статистика специалистов и зарплат приведена справочно. Источники, методика расчёта и дата актуализации пока не подтверждены; не используйте значения как официальные данные рынка труда.</p>' : ""}
     ${section("Образование и подготовка", renderEducation(profession.education))}
-    ${section("Зарплата", renderSalary(profession.salary))}
+    ${section("Зарплата", renderVerifiedSalarySource(profession) + renderSalary(profession.salary))}
     ${section("Карьерный путь", renderCareer(profession.careerGrowth))}
     ${section("Типичный рабочий день", profession.typicalDay ? renderRows("day-list", "day-row", DAY_LABELS, profession.typicalDay) : "")}
     ${renderProsCons(profession)}`;
