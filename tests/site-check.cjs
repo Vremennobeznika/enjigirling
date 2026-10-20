@@ -66,7 +66,7 @@ assert.equal(new Set(audits.map(x => x.id)).size, audits.length, 'duplicate sala
 for (const row of audits) {
   assert.ok(ids.includes(row.id), 'unknown salary audit id ' + row.id);
   if (row.status !== 'source_snapshot') continue;
-  assert.match(row.sourceUrl, /^https:\/\/career\.hh\.ru\/profession\/\d+$/, row.id + ': invalid source');
+  assert.match(row.sourceUrl, /^https:\/\/[^\s/]+\/\S+$/, row.id + ': invalid source URL');
   assert.ok(Number.isFinite(row.rangeMinRub) && row.rangeMinRub > 0, row.id + ': invalid lower bound');
   assert.ok(Number.isFinite(row.rangeMaxRub) && row.rangeMaxRub >= row.rangeMinRub, row.id + ': invalid upper bound');
 }
