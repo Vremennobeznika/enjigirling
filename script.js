@@ -239,6 +239,14 @@ document.addEventListener("DOMContentLoaded", () => {
     title.className = "eng-title";
     title.textContent = profession.title;
     card.append(title);
+    const desc = document.createElement("p");
+    desc.className = "eng-card-summary";
+    desc.textContent = profession.shortDesc || "";
+    if (desc.textContent) card.append(desc);
+    const meta = document.createElement("div");
+    meta.className = "eng-card-meta";
+    meta.textContent = getCategory(profession) + "  ↗";
+    card.append(meta);
 
     const open = () => openModal(profession);
     card.addEventListener("click", open);
@@ -254,6 +262,8 @@ document.addEventListener("DOMContentLoaded", () => {
   function renderGrid() {
     const items = getVisibleProfessions();
     grid.replaceChildren(...items.map(buildCard));
+    const count = document.getElementById("professionCount");
+    if (count) count.textContent = `${items.length} из ${professionsData.length}`;
     if (!items.length) grid.innerHTML = '<p class="profession-empty">Ничего не найдено.</p>';
   }
 
