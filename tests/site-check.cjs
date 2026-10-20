@@ -92,3 +92,7 @@ assert.match(fs.readFileSync('script.js', 'utf8'), /Редакционная п�
 assert.match(fs.readFileSync('script.js', 'utf8'), /Зарплата не подтверждена/, 'unsourced career step salaries must be hidden');
 assert.doesNotMatch(fs.readFileSync('script.js', 'utf8'), /renderProfile\(profession\.stats\)/, 'unverified demographics must not be rendered');
 console.log('OK: practical editorial guidance and numeric-data safeguards');
+
+assert.match(fs.readFileSync('script.js', 'utf8'), /classifyLearningItems/, 'legacy learning items should be classified');
+assert.match(fs.readFileSync('script.js', 'utf8'), /Методы, дисциплины и темы обучения/, 'methods must not be labelled software');
+console.log('OK: software and learning topics distinguished');
