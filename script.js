@@ -155,6 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalContent = document.getElementById("modalContent");
   const modalClose = document.getElementById("modalClose");
 
+  let modalTrigger = null;
   let activeCategory = ALL;
   let activeProfessionId = ALL; // выбранная кнопка во второй строке (только для «АСУ ТП»)
   let searchQuery = "";
@@ -254,14 +255,27 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function openModal(profession) {
+    modalTrigger = document.activeElement;
     modalContent.innerHTML = renderProfession(profession, getCategory(profession));
     setModalOpen(true);
     modalClose.focus();
   }
 
-  const closeModal = () => setModalOpen(false);
+  const closeModal = () => {
+    setModalOpen(false);
+    if (modalTrigger instanceof HTMLElement && modalTrigger.isConnected) modalTrigger.focus();
+    modalTrigger = null;
+  };
 
   modalClose.addEventListener("click", closeModal);
+  modalOverlay.addEventListener("keydown", (event) => {
+    if (event.key !== "Tab" || !modalOverlay.classList.contains("active")) return;
+    const focusable = [...modalOverlay.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])')].filter((el) => el.getClientRects().length);
+    if (!focusable.length) { event.preventDefault(); modalClose.focus(); return; }
+    const first = focusable[0], last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+    else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+  });
   modalOverlay.addEventListener("click", (event) => {
     if (event.target === modalOverlay) closeModal();
   });
