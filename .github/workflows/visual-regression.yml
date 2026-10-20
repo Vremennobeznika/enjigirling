@@ -1,0 +1,37 @@
+name: Visual regression against main
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: baseline-site
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser and image comparison packages
+        run: |
+          npm install --no-save @playwright/test pngjs
+          npx playwright install --with-deps chromium
+      - name: Serve candidate and baseline
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/candidate-server.log 2>&1 &
+          python3 -m http.server 8766 --bind 127.0.0.1 --directory baseline-site >/tmp/baseline-server.log 2>&1 &
+      - name: Compare 36 screenshots to main
+        run: node tests/visual-diff.cjs
+      - name: Upload failed comparisons
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-differences
+          path: visual-diff/
+          if-no-files-found: ignore
