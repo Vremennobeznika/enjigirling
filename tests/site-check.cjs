@@ -235,3 +235,10 @@ for(const entry of salaryEvidenceRows){
 assert.ok(fs.readFileSync('compare.html','utf8').includes('src="salary-sources.js"'),'comparison salary source script missing');
 assert.ok(fs.readFileSync('compare.js','utf8').includes('salaryById'),'comparison must use audited salary data');
 console.log('OK: all 51 salary evidence records matched and comparable-source warnings enabled');
+
+const careerUi=fs.readFileSync('script.js','utf8');
+assert.ok(careerUi.includes('Последовательность условная; сроки зависят от работодателя'),'career timelines must not be presented as guaranteed');
+assert.ok(!careerUi.includes('<small>${escapeHTML(step.period)}</small>'),'unsupported career duration still visible');
+const comparisonUi=fs.readFileSync('compare.js','utf8');
+assert.ok(comparisonUi.includes('без гарантированной последовательности и сроков'),'comparison must qualify career progression');
+console.log('OK: unsupported career deadlines removed from all 51 engineer detail cards and comparisons');
