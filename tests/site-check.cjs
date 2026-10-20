@@ -101,7 +101,7 @@ console.log('OK: software and learning topics distinguished');
 for (const page of ['compare.html', 'processes.html', 'materials.html']) {
   const html = fs.readFileSync(page, 'utf8');
   assert.match(html, /theme\.js/, page + ': theme missing');
-  assert.match(html, /style(?:-core)?(?:\.min)?\.css/, page + ': stylesheet missing');
+  assert.match(html, /style(?:-(?:core|reference))?(?:\.min)?\.css/, page + ': stylesheet missing');
 }
 assert.match(fs.readFileSync('index.html', 'utf8'), /href="compare\.html"/, 'comparison link missing');
 assert.match(fs.readFileSync('index.html', 'utf8'), /href="processes\.html"/, 'processes link missing');
