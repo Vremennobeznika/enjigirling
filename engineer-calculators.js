@@ -3,7 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const professions = Array.isArray(window.professionsData) ? window.professionsData : [];
 
     // Число из поля ввода: понимает пробелы и запятую («100 000», «2,5»)
-    const parseNumber = (text) => parseFloat(String(text).replace(/[\s\u00a0]/g, '').replace(',', '.'));
+    const parseNumber = (text) => {
+        const normalized = String(text).replace(/[\\s\\u00a0]/g, '').replace(',', '.');
+        return /^[+-]?(?:\\d+(?:\\.\\d*)?|\\.\\d+)$/.test(normalized) ? Number(normalized) : NaN;
+    };
     const formatNumber = (n, digits = 0) => new Intl.NumberFormat('ru-RU', { maximumFractionDigits: digits }).format(n);
     const formatRub = (n) => `${formatNumber(Math.round(n))} ₽`;
     // Склонение по числу: plural(3, ['год', 'года', 'лет']) → «года»
@@ -152,10 +155,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const cat = CATEGORIES[convCategory.value];
             const from = cat.units.find(u => u.id === convFrom.value);
             const to = cat.units.find(u => u.id === convTo.value);
-            const raw = parseFloat(String(convInput.value).replace(',', '.'));
-            if (Number.isNaN(raw)) {
+            const raw = parseNumber(convInput.value);
+            if (!Number.isFinite(raw)) {
                 convValue.textContent = '—';
                 convHint.textContent = 'Введите число.';
+                return;
+            }
+            if (cat.name === 'Температура' && ((from.id === 'k' && raw < 0) || (from.id === 'c' && raw < -273.15) || (from.id === 'f' && raw < -459.67))) {
+                convValue.textContent = '—';
+                convHint.textContent = 'Температура ниже абсолютного нуля невозможна.';
                 return;
             }
             let result;
