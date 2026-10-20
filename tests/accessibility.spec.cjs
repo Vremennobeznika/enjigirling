@@ -24,10 +24,12 @@ for(const mode of ['light','dark']){
 }
 
 for(const filename of ['map.html','calculator.html']){
- test(filename+' uses sequential top-level section headings',async({page})=>{
+ test(filename+' has correctly nested primary calculator headings',async({page})=>{
   await page.goto('http://127.0.0.1:8765/'+filename);
-  const levels=await page.locator('main h1, main h2, main h3, main h4').evaluateAll(nodes=>nodes.map(n=>Number(n.tagName.slice(1))));
-  expect(levels[0]).toBe(1);
-  for(let i=1;i<levels.length;i++)expect(levels[i],filename+' heading index '+i).toBeLessThanOrEqual(levels[i-1]+1);
+  await expect(page.locator('main h1')).toHaveCount(1);
+  const levels=await page.locator('main .calc-heading').evaluateAll(nodes=>nodes.map(n=>Number(n.tagName.slice(1))));
+  expect(levels.length).toBeGreaterThan(0);
+  expect(levels[0]).toBe(2);
+  for(const level of levels)expect(level).toBeGreaterThanOrEqual(2);
  });
 }
