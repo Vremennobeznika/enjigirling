@@ -377,6 +377,9 @@ document.addEventListener("DOMContentLoaded", () => {
     modalOverlay.classList.toggle("active", isOpen);
     modalOverlay.setAttribute("aria-hidden", String(!isOpen));
     document.body.classList.toggle("modal-open", isOpen);
+    for (const element of [document.querySelector("main"), document.querySelector("footer")]) {
+      if (element) element.inert = isOpen;
+    }
   }
 
   function openModal(profession) {
@@ -393,7 +396,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   modalContent.addEventListener("click", (event) => {
-    const button = event.target.closest("[data-related-id]");
+    const button = event.target instanceof Element ? event.target.closest("[data-related-id]") : null;
     if (!button) return;
     const related = professionsData.find(item => item.id === button.dataset.relatedId);
     if (!related) return;
@@ -409,7 +412,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const focusable = [...modalOverlay.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])')].filter((el) => el.getClientRects().length);
     if (!focusable.length) { event.preventDefault(); modalClose.focus(); return; }
     const first = focusable[0], last = focusable[focusable.length - 1];
-    if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+    if (!modalOverlay.contains(document.activeElement)) { event.preventDefault(); first.focus(); }
+    else if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
     else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
   });
   modalOverlay.addEventListener("click", (event) => {
