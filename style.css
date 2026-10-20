@@ -1148,3 +1148,24 @@ html.theme-dark, body.theme-dark { --accent:#bdbdbd; }
 .standards-note-kicker,.hero-eyebrow {color:var(--text-secondary);}
 .site-page .eng-card:hover,.related-profession-link:hover {border-color:var(--text-primary)!important;}
 .site-page :is(a,button,input,select):focus-visible,.related-profession-link:focus-visible {outline-color:var(--text-primary);}
+
+/* Comparison and reference sections: monochrome, responsive, accessible. */
+.comparison-controls{padding:20px;border:1px solid var(--card-border);border-radius:12px;background:var(--card-bg);margin:20px 0}
+.comparison-controls label,.site-page>label{display:block;font-size:13px;font-weight:700;margin-bottom:10px}
+.comparison-picker{display:flex;gap:10px;flex-wrap:wrap}
+.comparison-picker select{flex:1;min-width:190px;padding:12px;background:var(--card-bg);color:var(--card-text);border:1px solid var(--control-border);border-radius:8px}
+.comparison-selected{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.comparison-selected:empty{display:none}
+.comparison-scroll{overflow-x:auto;max-width:100%;border:1px solid var(--card-border);border-radius:12px}
+.comparison-table{width:100%;min-width:660px;border-collapse:collapse;text-align:left;background:var(--card-bg);color:var(--card-text)}
+.comparison-table th,.comparison-table td{padding:16px;vertical-align:top;border-bottom:1px solid var(--card-border);font-size:13px;line-height:1.6;min-width:175px}
+.comparison-table thead th{font-size:14px;background:var(--soft-bg)}
+.comparison-table tbody th{min-width:145px;font-weight:700;background:var(--soft-bg)}
+.atlas-search{width:100%;padding:14px;margin:8px 0 24px;border:1px solid var(--control-border);border-radius:10px;background:var(--card-bg);color:var(--card-text);font:inherit}
+.atlas-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px;margin:0 0 24px}
+.atlas-card{padding:24px;border:1px solid var(--card-border);border-radius:12px;background:var(--card-bg);color:var(--card-text)}
+.atlas-card h2{font-size:20px;margin:0 0 10px}
+.atlas-card h3{font-size:12px;text-transform:uppercase;letter-spacing:.06em;margin:18px 0 6px;color:var(--card-muted)}
+.atlas-card p{font-size:14px;line-height:1.65}
+.atlas-card a{display:inline-block;margin-top:16px;color:var(--card-text);text-decoration:underline;text-underline-offset:3px}
+@media(max-width:680px){.comparison-controls{padding:14px}.comparison-table th,.comparison-table td{padding:12px}}
