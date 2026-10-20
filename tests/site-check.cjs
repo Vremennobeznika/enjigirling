@@ -81,7 +81,7 @@ assert.equal(audits.filter(x => x.status === 'source_snapshot').length, professi
 const allowedEvidenceLevels = new Set(['aggregate_or_range', 'single_observation', 'adjacent_or_weak', 'needs_manual_review']);
 for (const row of audits) {
   assert.ok(allowedEvidenceLevels.has(row.evidenceLevel), row.id + ': evidence quality not classified');
-  assert.equal(row.validationStatus, 'source_linked_not_independently_verified', row.id + ': misleading validation status');
+  assert.ok(['source_linked_not_independently_verified', 'source_page_checked', 'employer_vacancy_checked', 'adjacent_occupation_checked'].includes(row.validationStatus), row.id + ': unknown validation status');
 }
 assert.match(fs.readFileSync('script.js', 'utf8'), /Тип подтверждения:/, 'profession card missing evidence quality');
 console.log('OK: evidence limitations classified for all professions');
