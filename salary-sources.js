@@ -26,10 +26,10 @@ window.salarySourceAudit = [
     "region": "Москва (предустановленный регион на странице источника)",
     "metric": "Диапазон, опубликованный hh Карьера; не медиана фактических доходов",
     "checkedAt": "2026-10-20",
-    "notes": "Срез динамический; зарплатные диапазоны иных регионов не подтверждены; не заменяет прежнюю медиану.",
+    "notes": "Страница hh Карьера проверена 20.10.2026: 76 000–172 000 ₽; категория «инженер-проектировщик» шире ПГС. Не медиана по ПГС.",
     "evidenceLevel": "aggregate_or_range",
     "salaryUnit": "RUB_per_month",
-    "validationStatus": "source_linked_not_independently_verified"
+    "validationStatus": "source_page_checked"
   },
   {
     "id": "architect-engineer",
@@ -154,10 +154,10 @@ window.salarySourceAudit = [
     "region": "Москва (регион на странице hh Карьера)",
     "metric": "Диапазон зарплат в вакансиях hh Карьера; не медиана фактических доходов",
     "checkedAt": "2026-10-20",
-    "notes": "Сопоставление профессий по названию и обязанностям; выборка вакансий динамическая; старые региональные значения не подтверждены.",
+    "notes": "Страница hh Карьера проверена 20.10.2026: 80 000–176 000 ₽; название соответствует проектированию систем электроснабжения.",
     "evidenceLevel": "aggregate_or_range",
     "salaryUnit": "RUB_per_month",
-    "validationStatus": "source_linked_not_independently_verified"
+    "validationStatus": "source_page_checked"
   },
   {
     "id": "nuclear-engineer",
@@ -538,10 +538,10 @@ window.salarySourceAudit = [
     "region": "Россия, вакансия работодателя",
     "metric": "Вакансия работодателя: от 80 000 ₽/мес.; верхняя граница не опубликована; требует высшего полиграфического образования и опыта от 3 лет",
     "checkedAt": "2026-10-20",
-    "notes": "Конкретное предложение/оклад, не рыночная медиана. Для астроинженера использована смешанная должность младшего научного сотрудника и инженера-исследователя.",
+    "notes": "Страница работодателя проверена 20.10.2026: инженер-технолог, от 80 000 ₽, полиграфическое образование и стаж от 3 лет. Не медиана.",
     "evidenceLevel": "adjacent_or_weak",
     "salaryUnit": "RUB_per_month",
-    "validationStatus": "source_linked_not_independently_verified"
+    "validationStatus": "employer_vacancy_checked"
   },
   {
     "id": "materials-engineer",
@@ -595,17 +595,17 @@ window.salarySourceAudit = [
     "id": "astronomer-engineer",
     "title": "Инженер-астроном",
     "status": "source_snapshot",
-    "sourceTitle": "Младший научный сотрудник/инженер-исследователь лаборатории звёздной эволюции КрАО РАН",
+    "sourceTitle": "Младший научный сотрудник лаборатории звёздной эволюции (не инженер)",
     "sourceUrl": "https://www.crao.ru/ru/allcategories-ru-ru/13-vakansii/486-vakansiya-mns-lze-2026-05-13",
     "rangeMinRub": 31020,
     "rangeMaxRub": 31020,
     "region": "Крым, пгт Научный",
-    "metric": "Официальный оклад 31 020 ₽, возможны стимулирующие выплаты; конкурс 2026 года завершён; не рыночная зарплата",
+    "metric": "Оклад научного сотрудника, не инженера; смежный ориентир, не зарплата инженерной профессии",
     "checkedAt": "2026-10-20",
-    "notes": "Конкретное предложение/оклад, не рыночная медиана. Для астроинженера использована смешанная должность младшего научного сотрудника и инженера-исследователя.",
+    "notes": "Страница обсерватории проверена 20.10.2026: младший научный сотрудник по астрофизике, оклад 31 020 ₽. Это НЕ инженерная должность, не подтверждает зарплату инженера-астронома.",
     "evidenceLevel": "adjacent_or_weak",
     "salaryUnit": "RUB_per_month",
-    "validationStatus": "source_linked_not_independently_verified"
+    "validationStatus": "adjacent_occupation_checked"
   },
   {
     "id": "restoration-engineer",
