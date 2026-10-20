@@ -301,3 +301,8 @@ for(const p of professions)assert.equal(siteMatrixRows.filter(x=>x.includes(' | 
 for(const heading of ['Зарплатные источники','Профстандарты','Доступность','Производительность'])assert.ok(siteMatrix.includes(heading),'missing QA domain '+heading);
 assert.ok(siteMatrix.includes('NOT VERIFIED'),'unverified evidence must remain explicitly labeled');
 console.log('OK: site QA matrix covers all 51 professions and critical verification domains');
+
+for(const p of professions)assert.ok(!Object.hasOwn(p,'salary'),'legacy unsourced salary data must be removed: '+p.id);
+const salaryConsistency=fs.readFileSync('audit/salary-consistency-51-2026-10-20.md','utf8');
+assert.ok(salaryConsistency.includes('36 из 51'),'salary inconsistency report must preserve the measured result');
+console.log('OK: unsupported legacy salary data removed and discrepancies documented');
