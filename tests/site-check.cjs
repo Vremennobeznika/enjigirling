@@ -272,3 +272,7 @@ assert.ok(educationUi.includes('Статус нормативной провер
 assert.ok(educationUi.includes('CANDIDATE_PROFESSION_DOCUMENTS'),'normative mapping must not be called verified');
 assert.ok(educationUi.includes('применимость и действующая редакция не подтверждены'),'unverified normative candidates must be qualified');
 console.log('OK: all 51 cards disclose normative evidence limitations');
+
+assert.ok(educationUi.includes('"metallurgical-engineer": [{'),'thermal production source candidate missing');
+assert.ok(educationUi.includes('не является общим стандартом инженера-металлурга'),'metallurgy standard scope caveat missing');
+console.log('OK: metallurgy normative candidate scoped to thermal production');
