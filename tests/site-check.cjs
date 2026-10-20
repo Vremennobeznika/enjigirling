@@ -276,3 +276,10 @@ console.log('OK: all 51 cards disclose normative evidence limitations');
 assert.ok(educationUi.includes('"metallurgical-engineer": [{'),'thermal production source candidate missing');
 assert.ok(educationUi.includes('не является общим стандартом инженера-металлурга'),'metallurgy standard scope caveat missing');
 console.log('OK: metallurgy normative candidate scoped to thermal production');
+
+const matrix=fs.readFileSync('audit/full-51-evidence-matrix-2026-10-20.md','utf8');
+const matrixRows=matrix.split('\n').filter(line=>/^\d+ \| /.test(line));
+assert.equal(matrixRows.length,professions.length,'evidence matrix must cover all professions');
+for(const p of professions)assert.equal(matrixRows.filter(row=>row.includes(' | '+p.id+' | ')).length,1,'missing or duplicated evidence row: '+p.id);
+assert.ok(matrix.includes('Не проведены:'),'matrix must disclose unverified dimensions');
+console.log('OK: all 51 professions have one evidence matrix row with explicit limitations');
