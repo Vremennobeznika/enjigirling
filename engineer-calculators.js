@@ -28,48 +28,43 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 'fareast', name: 'Дальневосточный ФО' }
     ];
 
-    /* ===== Калькулятор 1: зарплата по профессии и региону ===== */
+    /* ===== Зарплатный ориентир: только источник, никакой выдуманной региональной статистики ===== */
     const profSelect = document.getElementById('salaryProfession');
-    const regionSelect = document.getElementById('salaryRegion');
     const salaryValue = document.getElementById('salaryResultValue');
     const salaryHint = document.getElementById('salaryResultHint');
+    const salaryById = new Map((window.salarySourceAudit || []).map(row => [row.id, row]));
 
-    if (profSelect && regionSelect && salaryValue && salaryHint) {
-        const profs = professions;
-        profs.forEach(p => {
-            const o = document.createElement('option');
-            o.value = p.id;
-            o.textContent = p.title;
-            profSelect.appendChild(o);
-        });
-
-        REGION_OPTIONS.forEach(r => {
-            const o = document.createElement('option');
-            o.value = r.id;
-            o.textContent = r.name;
-            regionSelect.appendChild(o);
+    if (profSelect && salaryValue && salaryHint) {
+        professions.forEach(p => {
+            const option = document.createElement('option');
+            option.value = p.id;
+            option.textContent = p.title;
+            profSelect.appendChild(option);
         });
 
         function renderSalary() {
-            const p = profs.find(x => x.id === profSelect.value);
-            if (!p || !p.salary) {
-                salaryValue.textContent = '—';
-                salaryHint.textContent = '';
-                return;
-            }
-            const evidence = (window.salarySourceAudit || []).find(item => item.id === p.id && item.status === 'source_snapshot');
-            if (!evidence) {
+            const entry = salaryById.get(profSelect.value);
+            if (!entry || entry.status !== 'source_snapshot' || !Number.isFinite(entry.rangeMinRub) || !Number.isFinite(entry.rangeMaxRub)) {
                 salaryValue.textContent = 'Нет подтверждённых данных';
-                salaryHint.textContent = 'Проверяемый источник зарплаты для этой профессии пока не найден. Неподтверждённые суммы скрыты.';
+                salaryHint.textContent = 'Проверяемого зарплатного диапазона нет. Неподтверждённые суммы скрыты.';
                 return;
             }
-            salaryValue.textContent = evidence.rangeMinRub === evidence.rangeMaxRub ? `от ${formatNumber(evidence.rangeMinRub)} ₽` : `${formatNumber(evidence.rangeMinRub)}–${formatNumber(evidence.rangeMaxRub)} ₽`;
-            salaryHint.textContent = `Источник: ${evidence.sourceTitle}; ${evidence.region}; срез ${evidence.checkedAt}. ${evidence.metric}. ${evidence.sourceUrl}. Значение не относится к выбранному федеральному округу; региональные данные не подтверждены.`;
+            if (entry.validationStatus === 'adjacent_occupation_checked') {
+                salaryValue.textContent = 'Нет сопоставимой оценки';
+                salaryHint.textContent = `Данные относятся к смежной профессии, не переносим суммы на выбранную должность. Источник: ${entry.sourceTitle}. ${entry.sourceUrl}`;
+                return;
+            }
+            salaryValue.textContent = entry.rangeMinRub === entry.rangeMaxRub
+                ? `от ${formatNumber(entry.rangeMinRub)} ₽`
+                : `${formatNumber(entry.rangeMinRub)}–${formatNumber(entry.rangeMaxRub)} ₽`;
+            const kind = entry.evidenceLevel === 'single_observation'
+                ? 'Отдельная вакансия, не рыночная медиана'
+                : 'Опубликованные данные источника, не универсальная зарплата профессии';
+            salaryHint.textContent = `${kind}. ${entry.region}; ${entry.metric}. Дата записи: ${entry.checkedAt}. Источник: ${entry.sourceTitle}. ${entry.sourceUrl}. Сопоставимость по должности, региону и дате требует отдельной проверки.`;
         }
 
         profSelect.addEventListener('change', renderSalary);
-        regionSelect.addEventListener('change', renderSalary);
-        if (profs.length) renderSalary();
+        if (professions.length) renderSalary();
     }
 
     /* ===== Калькулятор 2: инженерный конвертер единиц ===== */
