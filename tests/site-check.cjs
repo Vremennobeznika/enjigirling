@@ -96,3 +96,16 @@ console.log('OK: practical editorial guidance and numeric-data safeguards');
 assert.match(fs.readFileSync('script.js', 'utf8'), /classifyLearningItems/, 'legacy learning items should be classified');
 assert.match(fs.readFileSync('script.js', 'utf8'), /Методы, дисциплины и темы обучения/, 'methods must not be labelled software');
 console.log('OK: software and learning topics distinguished');
+
+for (const page of ['compare.html', 'processes.html', 'materials.html']) {
+  const html = fs.readFileSync(page, 'utf8');
+  assert.match(html, /theme\.js/, page + ': theme missing');
+  assert.match(html, /style\.css/, page + ': stylesheet missing');
+}
+assert.match(fs.readFileSync('index.html', 'utf8'), /href="compare\.html"/, 'comparison link missing');
+assert.match(fs.readFileSync('index.html', 'utf8'), /href="processes\.html"/, 'processes link missing');
+assert.match(fs.readFileSync('index.html', 'utf8'), /href="materials\.html"/, 'materials link missing');
+assert.match(fs.readFileSync('compare.js', 'utf8'), /chosen\.length>=4/, 'comparison limit missing');
+assert.match(fs.readFileSync('processes.js', 'utf8'), /Неразрушающий контроль/, 'process seed missing');
+assert.match(fs.readFileSync('materials.js', 'utf8'), /Технический текстиль/, 'materials seed missing');
+console.log('OK: comparison, processes, materials navigation and seed checks');
