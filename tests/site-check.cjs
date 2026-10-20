@@ -77,3 +77,11 @@ console.log('OK: ' + audits.filter(x => x.status === 'source_snapshot').length +
 assert.match(fs.readFileSync('script.js', 'utf8'), /Непроверенные цифры скрыты/, 'profession cards must hide unsourced salaries');
 
 assert.equal(audits.filter(x => x.status === 'source_snapshot').length, professions.length, 'every profession must have a salary source');
+
+const allowedEvidenceLevels = new Set(['aggregate_or_range', 'single_observation', 'adjacent_or_weak', 'needs_manual_review']);
+for (const row of audits) {
+  assert.ok(allowedEvidenceLevels.has(row.evidenceLevel), row.id + ': evidence quality not classified');
+  assert.equal(row.validationStatus, 'source_linked_not_independently_verified', row.id + ': misleading validation status');
+}
+assert.match(fs.readFileSync('script.js', 'utf8'), /Тип подтверждения:/, 'profession card missing evidence quality');
+console.log('OK: evidence limitations classified for all professions');
