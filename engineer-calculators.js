@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const regionValue = p.salary.regions && p.salary.regions[region] ? p.salary.regions[region] : '';
             const parts = [p.salary.start ? `старт ${p.salary.start}` : '', p.salary.median ? `медиана ${p.salary.median}` : ''].filter(Boolean).join(' · ');
             salaryValue.textContent = regionValue || p.salary.median || '—';
-            salaryHint.textContent = `${p.title} · ${REGION_OPTIONS.find(r => r.id === region).name}. ${parts}`;
+            salaryHint.textContent = `${p.title} · ${REGION_OPTIONS.find(r => r.id === region)?.name || 'Регион не выбран'}. ${parts}. Оценочные данные без подтверждённых источников, методики и даты актуализации — не официальная статистика.`;
         }
 
         profSelect.addEventListener('change', renderSalary);
@@ -269,7 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
         professions.filter(p => p.salary && p.salary.median).forEach(p => {
             const o = document.createElement('option');
             o.value = p.id;
-            o.textContent = p.title;
+            o.textContent = `${p.title} (оценка без подтверждённого источника)`;
             netProfession.appendChild(o);
         });
 
