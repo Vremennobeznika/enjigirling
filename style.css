@@ -511,7 +511,9 @@ footer {
   line-height: 1.1;
   margin-bottom: 8px;
 }
-.calc-result-hint { font-size: var(--fs-sm); line-height: 1.5; opacity: 0.9; }
+.calc-result-hint { font-size: var(--fs-sm); line-height: 1.5; opacity: 0.9; overflow-wrap: anywhere; word-break: break-word; }
+.calc-result { min-width: 0; }
+.calc-layout, .calc-controls { min-width: 0; }
 /* ===== Преимущества и ссылки на курсы ===== */
 .benefits-section { margin-top: 16px; }
 .benefits-heading {
