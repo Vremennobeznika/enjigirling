@@ -166,8 +166,8 @@ function classifyLearningItems(items = []) {
 // Reference directories are discovery aids, not proof that a standard applies to a given job.
 const PROFESSIONAL_REFERENCE_DIRECTORIES = [
   { label: "Реестр профстандартов ВНИИ труда", url: "https://vcot.info/standards" },
-  { label: "Официальный каталог ГОСТ Росстандарта", url: "https://protect.gost.ru/gost?month=0&year=0" },
-  { label: "Каталоги стандартов Российского института стандартизации", url: "https://new.gostinfo.ru/catalog/" }
+  { label: "Разъяснения Минтруда о применении профстандартов", url: "https://mintrud.gov.ru/ministry/programms/22/3" },
+  { label: "Профстандарты — ВНИИ труда", url: "https://nii-truda.ru/standards" }
 ];
 const VERIFIED_PROFESSION_DOCUMENTS = {
   "standardization-engineer": [{
