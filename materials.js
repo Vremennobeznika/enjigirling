@@ -17,4 +17,17 @@ root.innerHTML=list.map(x=>'<article class="atlas-card" id="'+esc(x.id)+'"><h2>'
 search.addEventListener('input',render);category.addEventListener('change',render);
 const hash=decodeURIComponent(location.hash.slice(1));if(hash&&entries.some(x=>x.id===hash)){const x=entries.find(x=>x.id===hash);category.value='all';search.value=x.name;}
 render();
+if(location.hash){
+ const id=decodeURIComponent(location.hash.slice(1));
+ const target=document.getElementById(id);
+ if(target){target.setAttribute('tabindex','-1');requestAnimationFrame(()=>{target.scrollIntoView({block:'start'});target.focus({preventScroll:true});});}
+}
+window.addEventListener('hashchange',()=>{
+ const id=decodeURIComponent(location.hash.slice(1));
+ const entry=entries.find(x=>x.id===id);
+ if(!entry)return;
+ category.value='all';search.value=entry.name;render();
+ const target=document.getElementById(id);
+ if(target){target.setAttribute('tabindex','-1');target.scrollIntoView({block:'start'});target.focus({preventScroll:true});}
+});
 })();
