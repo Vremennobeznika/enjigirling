@@ -136,6 +136,24 @@ function renderVerifiedSalarySource(profession) {
 }
 
 // Editorial guide derived from existing profession descriptions; not a claim about a specific employer.
+function renderSourceMethodology(profession) {
+  const item = (window.salarySourceAudit || []).find(x => x.id === profession.id);
+  if (!item) return '<p>Проверяемый источник для этой профессии пока не указан.</p>';
+  const evidence = {
+    aggregate_or_range: 'Агрегированный диапазон или статистика с ограничениями выборки',
+    single_observation: 'Одна опубликованная вакансия; не средняя зарплата рынка',
+    adjacent_or_weak: 'Смежная должность или слабое соответствие; сумма не подтверждает зарплату данной профессии',
+    needs_manual_review: 'Требуется дополнительная проверка'
+  };
+  const kind = evidence[item.evidenceLevel] || 'Тип данных не определён';
+  const verified = item.validationStatus === 'source_page_checked' || item.validationStatus === 'employer_vacancy_checked';
+  return '<p><strong>Тип свидетельства:</strong> ' + escapeHTML(kind) + '</p>' +
+    '<p><strong>Проверка:</strong> ' + (verified ? 'Отмечена сверка источника' : 'Полного подтверждения нет') + '</p>' +
+    (item.checkedAt ? '<p><strong>Дата записи:</strong> ' + escapeHTML(item.checkedAt) + '</p>' : '') +
+    (item.notes ? '<p>' + escapeHTML(item.notes) + '</p>' : '') +
+    (item.sourceUrl ? '<p><a href="' + escapeHTML(item.sourceUrl) + '" target="_blank" rel="noopener noreferrer">Открыть первоисточник ↗</a></p>' : '');
+}
+
 function renderPracticalGuide(profession) {
   const requirements = profession.education?.requirements;
   const tools = profession.education?.courses || [];
@@ -169,6 +187,7 @@ function renderProfession(profession, category) {
     ${section("Практика: задачи, знания и инструменты", renderPracticalGuide(profession))}
     ${section("Образование и подготовка (ориентир)", renderEducation(profession.education))}
     ${section("Зарплата", renderVerifiedSalarySource(profession))}
+    ${section("Источники и ограничения данных", renderSourceMethodology(profession))}
     ${section("Карьерный путь (ориентировочная последовательность должностей)", renderCareer(profession.careerGrowth))}
     ${section("Пример рабочего дня (иллюстрация, не исследование)", profession.typicalDay ? renderRows("day-list", "day-row", DAY_LABELS, profession.typicalDay) : "")}
     ${renderProsCons(profession)}
