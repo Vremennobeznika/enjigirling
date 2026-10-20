@@ -169,7 +169,7 @@ const PROFESSIONAL_REFERENCE_DIRECTORIES = [
   { label: "Разъяснения Минтруда о применении профстандартов", url: "https://mintrud.gov.ru/ministry/programms/22/3" },
   { label: "Профстандарты — ВНИИ труда", url: "https://nii-truda.ru/standards" }
 ];
-const VERIFIED_PROFESSION_DOCUMENTS = {
+const CANDIDATE_PROFESSION_DOCUMENTS = {
   "civil-engineer": [{
     label: "Профстандарт 16.025 «Специалист по организации строительства» — приказ Минтруда № 747н от 21.10.2021",
     url: "https://profstandart.rosmintrud.ru/upload/iblock/2bb/%D0%A0%D0%B5%D0%BA%D0%BE%D0%BC%D0%B5%D0%BD%D0%B4%D0%B0%D1%86%D0%B8%D0%B8-%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D1%8E-%D0%9F%D0%A1-%D0%B2-%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B8.pdf",
@@ -202,11 +202,11 @@ const VERIFIED_PROFESSION_DOCUMENTS = {
   }]
 };
 function renderNormativeReferences(profession) {
-  const docs = VERIFIED_PROFESSION_DOCUMENTS[profession.id] || [];
+  const docs = CANDIDATE_PROFESSION_DOCUMENTS[profession.id] || [];
   const links = docs.map(x => '<li><a href="' + escapeHTML(x.url) + '" target="_blank" rel="noopener noreferrer">' + escapeHTML(x.label) + '</a><p>' + escapeHTML(x.note) + '</p></li>').join("");
   const directories = PROFESSIONAL_REFERENCE_DIRECTORIES.map(x => '<li><a href="' + escapeHTML(x.url) + '" target="_blank" rel="noopener noreferrer">' + escapeHTML(x.label) + '</a></li>').join("");
-  return (docs.length ? '<p>Документы-кандидаты для сопоставления трудовых функций (не подтверждение обязательности):</p><ul>' + links + '</ul>' :
-    '<p class="data-quality-note">Привязка конкретных нормативных документов к этой профессии ещё не проверена.</p>') +
+  return '<p class="data-quality-note"><strong>Статус нормативной проверки:</strong> ' + (docs.length ? 'Есть документы-кандидаты; применимость и действующая редакция не подтверждены.' : 'Документы-кандидаты пока не установлены.') + '</p>' + (docs.length ? '<p>Найденные документы для проверки соответствия трудовым функциям (не подтверждение обязательности):</p><ul>' + links + '</ul>' :
+    '<p class="data-quality-note">Подтверждённого соответствия конкретного профстандарта трудовым функциям этой профессии в каталоге пока нет.</p>') +
     '<p>Реестры для поиска и проверки редакций:</p><ul>' + directories + '</ul>' +
     '<p class="data-quality-note">По статье 195.3 ТК РФ квалификационные требования профстандарта обязательны в случаях, установленных законом или иным нормативным правовым актом. В остальных случаях они служат основой для требований работодателя. Совпадение названия профессии не доказывает применимость документа; проверяйте трудовые функции, редакцию и дату вступления в силу. <a href="https://mintrud.gov.ru/ministry/programms/22/3" target="_blank" rel="noopener noreferrer">Разъяснения Минтруда</a>.</p>';
 }
