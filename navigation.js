@@ -16,6 +16,8 @@
     toggle.setAttribute('aria-expanded','false');
     toggle.textContent='Разделы сайта';
     nav.id='site-main-navigation';
+    const current=nav.querySelector('.eng-tab.active');
+    if(current)current.setAttribute('aria-current','page');
     nav.setAttribute('aria-label','Основная навигация');
     wrapper.insertBefore(toggle,nav);
     function close(){
