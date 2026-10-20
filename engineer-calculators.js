@@ -57,13 +57,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 salaryHint.textContent = '';
                 return;
             }
-            const region = regionSelect.value;
-            const regionValue = p.salary.regions && p.salary.regions[region] ? p.salary.regions[region] : '';
-            const parts = [p.salary.start ? `старт ${p.salary.start}` : '', p.salary.median ? `медиана ${p.salary.median}` : ''].filter(Boolean).join(' · ');
-            salaryValue.textContent = regionValue || p.salary.median || '—';
             const evidence = (window.salarySourceAudit || []).find(item => item.id === p.id && item.status === 'source_snapshot');
-            const sourceNote = evidence ? ` Проверяемый ориентир для Москвы: ${formatNumber(evidence.rangeMinRub)}–${formatNumber(evidence.rangeMaxRub)} ₽/мес. (${evidence.sourceTitle}, hh Карьера, ${evidence.checkedAt}): ${evidence.sourceUrl}. Не медиана по выбранному округу.` : ' Подтверждённого зарплатного ориентира для этой профессии пока нет.';
-            salaryHint.textContent = `${p.title} · ${REGION_OPTIONS.find(r => r.id === region)?.name || 'Регион не выбран'}. ${parts}. Основное значение — оценка без подтверждённой методики и даты актуализации.${sourceNote}`;
+            if (!evidence) {
+                salaryValue.textContent = 'Нет подтверждённых данных';
+                salaryHint.textContent = 'Проверяемый источник зарплаты для этой профессии пока не найден. Неподтверждённые суммы скрыты.';
+                return;
+            }
+            salaryValue.textContent = `${formatNumber(evidence.rangeMinRub)}–${formatNumber(evidence.rangeMaxRub)} ₽`;
+            salaryHint.textContent = `Источник: hh Карьера — ${evidence.sourceTitle}; ${evidence.region}; срез ${evidence.checkedAt}. ${evidence.metric}. ${evidence.sourceUrl}. Значение не относится к выбранному федеральному округу; региональные данные не подтверждены.`;
         }
 
         profSelect.addEventListener('change', renderSalary);
@@ -268,10 +269,10 @@ document.addEventListener('DOMContentLoaded', () => {
             return tax;
         };
 
-        professions.filter(p => p.salary && p.salary.median).forEach(p => {
+        professions.filter(p => p.salary && p.salary.median && (window.salarySourceAudit || []).some(item => item.id === p.id && item.status === 'source_snapshot')).forEach(p => {
             const o = document.createElement('option');
             o.value = p.id;
-            o.textContent = `${p.title} (оценка без подтверждённого источника)`;
+            o.textContent = `${p.title} (ввод зарплаты вручную; прежняя медиана не проверена)`;
             netProfession.appendChild(o);
         });
 
@@ -297,7 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
         netProfession.addEventListener('change', () => {
             const p = professions.find(x => x.id === netProfession.value);
             if (!p) return;
-            netGross.value = String(parseNumber(p.salary.median));
+            netGross.value = '';
             renderNet();
         });
         netGross.addEventListener('input', () => {
