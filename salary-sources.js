@@ -431,15 +431,15 @@ window.salarySourceAudit = [
   {
     "id": "polygraph-engineer",
     "title": "Инженер полиграфии",
-    "status": "unverified",
-    "sourceTitle": null,
-    "sourceUrl": null,
-    "rangeMinRub": null,
-    "rangeMaxRub": null,
-    "region": "",
-    "metric": "",
+    "status": "source_snapshot",
+    "sourceTitle": "Инженер-технолог типографии АО «Красная Звезда»",
+    "sourceUrl": "https://www.redstarprint.ru/vacancies/",
+    "rangeMinRub": 80000,
+    "rangeMaxRub": 80000,
+    "region": "Россия, вакансия работодателя",
+    "metric": "Вакансия работодателя: от 80 000 ₽/мес.; верхняя граница не опубликована; требует высшего полиграфического образования и опыта от 3 лет",
     "checkedAt": "2026-10-20",
-    "notes": "Профильные значения в data.js пока без подтверждённого первоисточника."
+    "notes": "Конкретное предложение/оклад, не рыночная медиана. Для астроинженера использована смешанная должность младшего научного сотрудника и инженера-исследователя."
   },
   {
     "id": "materials-engineer",
@@ -483,15 +483,15 @@ window.salarySourceAudit = [
   {
     "id": "astronomer-engineer",
     "title": "Инженер-астроном",
-    "status": "unverified",
-    "sourceTitle": null,
-    "sourceUrl": null,
-    "rangeMinRub": null,
-    "rangeMaxRub": null,
-    "region": "",
-    "metric": "",
+    "status": "source_snapshot",
+    "sourceTitle": "Младший научный сотрудник/инженер-исследователь лаборатории звёздной эволюции КрАО РАН",
+    "sourceUrl": "https://www.crao.ru/ru/allcategories-ru-ru/13-vakansii/486-vakansiya-mns-lze-2026-05-13",
+    "rangeMinRub": 31020,
+    "rangeMaxRub": 31020,
+    "region": "Крым, пгт Научный",
+    "metric": "Официальный оклад 31 020 ₽, возможны стимулирующие выплаты; конкурс 2026 года завершён; не рыночная зарплата",
     "checkedAt": "2026-10-20",
-    "notes": "Профильные значения в data.js пока без подтверждённого первоисточника."
+    "notes": "Конкретное предложение/оклад, не рыночная медиана. Для астроинженера использована смешанная должность младшего научного сотрудника и инженера-исследователя."
   },
   {
     "id": "restoration-engineer",
