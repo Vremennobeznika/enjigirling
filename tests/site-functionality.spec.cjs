@@ -139,7 +139,7 @@ test('unified search links to professions, materials, processes and dictionary w
  await page.goto(base+'index.html');
  await expect(page.locator('nav.eng-tabs a')).toHaveCount(9);
  const input=page.locator('#globalSearch');
- for(const [query,target] of [['металл','materials.html#'],['сварка','processes.html#'],['инженер','index.html#profession='],['квалификация','dictionary.html?q=']]){
+ for(const [query,target] of [['Сталь 20','materials.html#'],['Дуговая сварка','processes.html#'],['Инженер-механик','index.html#profession='],['квалификация','dictionary.html?q=']]){
   await input.fill(query);
   await expect(page.locator('#globalSearchResults a')).not.toHaveCount(0);
   expect((await page.locator('#globalSearchResults a').evaluateAll(nodes=>nodes.map(a=>a.getAttribute('href')))).some(h=>h.startsWith(target)),query+' links to '+target).toBeTruthy();
