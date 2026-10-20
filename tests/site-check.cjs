@@ -261,7 +261,7 @@ console.log('OK: legal applicability of professional standards explained in ever
 for(const id of ['civil-engineer','pgs-designer','railway-engineer']){
  assert.ok(educationUi.includes('"'+id+'": [{'),'candidate normative document missing: '+id);
 }
-assert.ok(educationUi.includes('Документы-кандидаты для сопоставления трудовых функций'),'normative candidate labels must be qualified');
+assert.ok(educationUi.includes('Найденные документы для проверки соответствия трудовым функциям'),'normative candidate labels must be qualified');
 console.log('OK: sourced normative candidates are clearly distinguished from binding standards');
 
 for(const id of ['power-engineer','electrical-engineer'])assert.ok(educationUi.includes('"'+id+'": [{'),'official source candidate missing: '+id);
