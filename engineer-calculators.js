@@ -289,7 +289,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const tax = yearlyTax(yearly);
             const rate = yearly ? tax / yearly * 100 : 0;
             netValue.textContent = formatRub((yearly - tax) / 12);
-            netHint.textContent = `НДФЛ за год: ${formatRub(tax)} (${formatNumber(rate, 1)} % дохода). На руки за год: ${formatRub(yearly - tax)}. Расчёт для резидента РФ, без вычетов; при доходе выше 2,4 млн ₽ в год повышенная ставка действует только на превышение.`;
+            netHint.textContent = `НДФЛ за год: ${formatRub(tax)} (${formatNumber(rate, 1)} % дохода). На руки за год: ${formatRub(yearly - tax)}. Оценка среднемесячной суммы при одинаковом доходе все 12 месяцев, для налогового резидента РФ, без вычетов и иных доходов. Фактическое удержание НДФЛ по месяцам может отличаться; повышенная ставка применяется только к превышению порога. Не учитываются особые категории доходов и налоговые статусы.`;
         }
 
         netProfession.addEventListener('change', () => {
@@ -339,12 +339,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
             const months = Math.ceil(total / gain);
+            if (!Number.isSafeInteger(months)) {
+                roiValue.textContent = '—';
+                roiHint.textContent = 'Срок окупаемости выходит за пределы допустимого расчёта.';
+                return;
+            }
             const y = Math.floor(months / 12), m = months % 12;
             const parts = [];
             if (y) parts.push(`${y} ${plural(y, ['год', 'года', 'лет'])}`);
             if (m) parts.push(`${m} ${plural(m, ['месяц', 'месяца', 'месяцев'])}`);
             roiValue.textContent = parts.join(' ');
-            roiHint.textContent = `Затраты на обучение: ${formatRub(total)}. Прирост дохода: +${formatRub(gain)} в месяц до налогов. Срок считается с момента выпуска и не учитывает доход, не заработанный за время учёбы.`;
+            roiHint.textContent = `Затраты на обучение: ${formatRub(total)}. Прирост дохода: +${formatRub(gain)} в месяц до налогов. Упрощённая модель: срок считается с момента выпуска, не учитывает упущенный заработок за время учёбы, налоги, инфляцию и изменение зарплаты.`;
         }
         [roiCost, roiYears, roiBefore, roiAfter].forEach(el => el.addEventListener('input', renderRoi));
         renderRoi();
