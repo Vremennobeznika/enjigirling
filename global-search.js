@@ -14,8 +14,10 @@ const items=[
 function search(){
  const q=normalize(input.value.trim());results.replaceChildren();
  if(q.length<2){status.textContent='Введите минимум 2 символа.';results.hidden=true;return;}
- const matches=items.filter(x=>normalize(x.title+' '+x.detail).includes(q)).sort((a,b)=>Number(normalize(b.title).startsWith(q))-Number(normalize(a.title).startsWith(q))).slice(0,18);
- status.textContent=matches.length?'Показано результатов: '+matches.length+(matches.length===18?' (не более 18)':''):'Ничего не найдено.';
+ const matching=items.filter(x=>normalize(x.title+' '+x.detail).includes(q)).sort((a,b)=>Number(normalize(b.title).startsWith(q))-Number(normalize(a.title).startsWith(q)));
+ const types=['Профессия','Материал','Процесс','Термин'];
+ const matches=types.flatMap(type=>matching.filter(item=>item.type===type).slice(0,5));
+ status.textContent=matches.length?'Показано результатов: '+matches.length+(matching.length>matches.length?' (показаны первые 5 в каждой категории)':''):'Ничего не найдено.';
  results.hidden=false;
  for(const item of matches){
   const a=document.createElement('a');a.href=item.url;a.className='global-result';
