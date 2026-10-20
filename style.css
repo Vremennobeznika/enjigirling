@@ -1377,3 +1377,20 @@ body,button,input,select,textarea {font-family:var(--font);}
 .site-page .eng-card,.site-page .atlas-card {overflow-wrap:anywhere;}
 .site-page .resource-card .eng-resource-link {display:inline-flex;border:1px solid var(--card-border);border-radius:var(--ui-radius);padding:8px 12px;margin-top:auto;background:var(--soft-bg);color:var(--card-text);font:600 var(--fs-sm)/1.4 var(--font);}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important;}}
+
+/* Profession detail dialogs are outside .site-page: normalize every link state. */
+.profession-modal a:not(.eng-tab),
+.profession-modal a:not(.eng-tab):link,
+.profession-modal a:not(.eng-tab):visited,
+.modal-content a,
+.modal-content a:link,
+.modal-content a:visited,
+.profession-section a,
+.profession-section a:link,
+.profession-section a:visited {
+  color:var(--text-primary)!important;
+  text-decoration-color:currentColor;
+  overflow-wrap:anywhere;
+}
+.profession-modal a:hover,.modal-content a:hover,.profession-section a:hover {color:var(--text-primary)!important;text-decoration-thickness:2px;}
+.profession-modal a:focus-visible,.modal-content a:focus-visible,.profession-section a:focus-visible {outline:2px solid var(--text-primary);outline-offset:3px;}
