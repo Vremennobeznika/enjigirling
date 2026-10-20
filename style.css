@@ -1402,3 +1402,8 @@ body,button,input,select,textarea {font-family:var(--font);}
 .skip-link:focus,.skip-link:focus-visible{transform:translateY(0);outline:3px solid var(--text-primary);outline-offset:3px}
 .modal-content :is(a,a:link,a:visited,a:hover,a:active),.profession-section :is(a,a:link,a:visited,a:hover,a:active){color:var(--text-primary)!important;text-decoration-color:currentColor!important}
 @media(prefers-reduced-motion:reduce){.skip-link{transition:none}}
+
+/* Prevent long process descriptions and technical identifiers from widening 320px pages. */
+.site-page .atlas-grid {min-width:0;grid-template-columns:repeat(auto-fit,minmax(0,1fr));}
+.site-page .atlas-card, .site-page .atlas-card > * {min-width:0;max-width:100%;}
+.site-page .atlas-card :is(p,li,span,strong,code,a,h2,h3) {overflow-wrap:anywhere;word-break:normal;}
