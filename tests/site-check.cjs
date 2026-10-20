@@ -242,3 +242,10 @@ assert.ok(!careerUi.includes('<small>${escapeHTML(step.period)}</small>'),'unsup
 const comparisonUi=fs.readFileSync('compare.js','utf8');
 assert.ok(comparisonUi.includes('без гарантированной последовательности и сроков'),'comparison must qualify career progression');
 console.log('OK: unsupported career deadlines removed from all 51 engineer detail cards and comparisons');
+
+const educationUi=fs.readFileSync('script.js','utf8');
+assert.ok(educationUi.includes('Продолжительность программы (ориентир, не требование к должности)'),'education durations must not be binding qualifications');
+assert.ok(educationUi.includes('Рекомендуемые знания (не юридическое требование)'),'editorial skills must not be binding requirements');
+const audit=fs.readFileSync('audit/professions-51-review-2026-10-20.md','utf8');
+for(const p of professions)assert.ok(audit.includes(p.title),'missing profession in editorial audit: '+p.id);
+console.log('OK: 51-profession editorial evidence inventory and educational qualification disclaimers');
