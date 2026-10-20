@@ -9,6 +9,7 @@
 </head>
 <body>
 <main class="site-page">
+  <div class="site-topbar"><a class="site-brand" href="index.html" aria-label="ENJIGIRLING — главная">ENJIGIRLING <span>/ ENGINEERING INDEX</span></a><button class="theme-toggle theme-toggle-top" id="themeToggle" type="button" aria-label="Переключить тему">☾</button></div>
   <nav class="eng-tabs" aria-label="Основная навигация">
     <a href="index.html" class="eng-tab active">Профессии</a>
     <a href="calendar.html" class="eng-tab">Календарь праздников</a>
@@ -19,14 +20,16 @@
   </nav>
 
   <header class="page-header">
-    <h1>Профессии инженеров</h1>
-    <p>Открой карточку, чтобы посмотреть подробности о профессии.</p>
+    <span class="hero-eyebrow">СПРАВОЧНИК ИНЖЕНЕРНЫХ ПРОФЕССИЙ / 2026</span>
+    <h1>Разберись, чем занимаются инженеры.</h1>
+    <p>Профессии, обязанности, образование, зарплаты и карьерные траектории — в одном месте.</p>
+    <div class="hero-stats"><span><strong>51</strong> профессия</span><span><strong>18</strong> направлений</span><span><strong>6</strong> разделов</span></div>
   </header>
 
   <div class="profession-tools">
     <div class="profession-search-wrap">
       <label for="professionSearch" class="sr-only">Поиск по профессиям</label>
-      <input id="professionSearch" type="search" placeholder="Поиск по профессиям" autocomplete="off">
+      <input id="professionSearch" type="search" placeholder="Название профессии или направление…" autocomplete="off">
     </div>
     <div class="profession-sort-wrap">
       <label for="professionSort">Сортировка</label>
@@ -38,8 +41,10 @@
     </div>
   </div>
 
+  <div class="catalog-section-heading"><h2>Направления</h2><span>Выбери область или воспользуйся поиском</span></div>
   <div class="eng-filters" id="categories" aria-label="Разделы профессий"></div>
   <div class="eng-subfilters" id="asuSubcategories" hidden aria-label="Профессии АСУ ТП"></div>
+  <div class="catalog-section-heading"><h2>Каталог профессий</h2><span id="professionCount" aria-live="polite"></span></div>
   <div class="eng-grid" id="professionsGrid"></div>
 </main>
 
@@ -52,7 +57,7 @@
 
 <footer>
   <p>© 2026 — База данных профессий инженеров</p>
-  <button class="theme-toggle" id="themeToggle" type="button" aria-label="Переключить тему">🌙</button>
+  
 </footer>
 
 <script src="data.js"></script>
