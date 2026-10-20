@@ -267,3 +267,8 @@ console.log('OK: sourced normative candidates are clearly distinguished from bin
 for(const id of ['power-engineer','electrical-engineer'])assert.ok(educationUi.includes('"'+id+'": [{'),'official source candidate missing: '+id);
 assert.ok(!educationUi.includes('"forest-engineer": [{'),'unrelated forestry production standard must not be linked to forestry engineer');
 console.log('OK: official standards have conservative occupation scope');
+
+assert.ok(educationUi.includes('Статус нормативной проверки:'),'normative evidence status must be visible');
+assert.ok(educationUi.includes('CANDIDATE_PROFESSION_DOCUMENTS'),'normative mapping must not be called verified');
+assert.ok(educationUi.includes('применимость и действующая редакция не подтверждены'),'unverified normative candidates must be qualified');
+console.log('OK: all 51 cards disclose normative evidence limitations');
