@@ -1091,8 +1091,8 @@ html.theme-dark .calendar-page .prof-chip { background: var(--soft-bg); }
 }
 
 /* ===== ENJIGIRLING editorial redesign / homepage ===== */
-:root { --accent:#e8a16d; --container:1240px; --gap:16px; }
-html.theme-dark,body.theme-dark { --bg:#121719;--bg-block:#192124;--text-primary:#f5f1e9;--text-body:#d9e0dd;--text-secondary:#b5c2bd;--border:#42504e;--btn-bg:#e8a16d;--btn-text:#171b1a;--card-bg:#1d282b;--card-text:#f5f1e9;--card-muted:#b8c6c2;--soft-bg:#263336;--soft-border:#485a59;--card-border:#435351;--control-border:#586966; }
+:root { --accent:#bdbdbd; --container:1240px; --gap:16px; }
+html.theme-dark,body.theme-dark { --accent:#bdbdbd;--bg:#101010;--bg-block:#191919;--text-primary:#f5f5f5;--text-body:#dedede;--text-secondary:#bcbcbc;--border:#505050;--btn-bg:#bdbdbd;--btn-text:#101010;--card-bg:#202020;--card-text:#f5f5f5;--card-muted:#c0c0c0;--soft-bg:#292929;--soft-border:#525252;--card-border:#474747;--control-border:#626262; }
 .site-page { max-width:var(--container);margin:0 auto;padding:0 24px 56px; }
 .site-topbar {display:flex;justify-content:space-between;align-items:center;gap:16px;padding:24px 0 14px;border-bottom:1px solid var(--card-border);}
 .site-brand {color:var(--text-primary);text-decoration:none;font-weight:700;letter-spacing:.07em;font-size:14px;}
@@ -1128,15 +1128,23 @@ html.theme-dark,body.theme-dark { --bg:#121719;--bg-block:#192124;--text-primary
 /* Cross-links between related professions */
 .related-professions {display:flex;flex-wrap:wrap;gap:9px;margin-top:10px}
 .related-profession-link {font:inherit;font-size:13px;padding:10px 13px;border:1px solid var(--card-border);border-radius:10px;background:var(--soft-bg);color:var(--card-text);cursor:pointer;text-align:left}
-.related-profession-link:hover {border-color:var(--accent,#d99863)}
-.related-profession-link:focus-visible {outline:2px solid var(--accent,#d99863);outline-offset:2px}
+.related-profession-link:hover {border-color:var(--accent,#a0a0a0)}
+.related-profession-link:focus-visible {outline:2px solid var(--accent,#a0a0a0);outline-offset:2px}
 .career-unverified {font-size:12px;font-weight:500;color:var(--card-muted);white-space:normal}
 
 /* Central legal clarification for professional standards */
-.standards-note{margin:28px 0 12px;padding:24px 28px;border:1px solid var(--card-border);border-left:3px solid var(--accent,#e8a16d);border-radius:12px;background:var(--card-bg);color:var(--card-text)}
-.standards-note-kicker{font-size:11px;letter-spacing:.12em;font-weight:700;color:var(--accent,#e8a16d);margin-bottom:8px}
+.standards-note{margin:28px 0 12px;padding:24px 28px;border:1px solid var(--card-border);border-left:3px solid var(--accent,#bdbdbd);border-radius:12px;background:var(--card-bg);color:var(--card-text)}
+.standards-note-kicker{font-size:11px;letter-spacing:.12em;font-weight:700;color:var(--accent,#bdbdbd);margin-bottom:8px}
 .standards-note h2{font-size:20px;line-height:1.35;margin:0 0 12px;letter-spacing:-.025em}
 .standards-note p{font-size:14px;line-height:1.75;margin:0 0 10px}
 .standards-note .standards-note-source{font-size:12px;color:var(--card-muted);margin-bottom:0}
 .standards-note a{color:inherit;text-decoration:underline;text-underline-offset:3px}
 @media(max-width:680px){.standards-note{padding:18px}.standards-note h2{font-size:18px}}
+
+/* Monochrome design contract: all interactive states use grayscale only. */
+:root { --accent:#555555; }
+html.theme-dark, body.theme-dark { --accent:#bdbdbd; }
+.standards-note {border-left-color:var(--text-primary);}
+.standards-note-kicker,.hero-eyebrow {color:var(--text-secondary);}
+.site-page .eng-card:hover,.related-profession-link:hover {border-color:var(--text-primary)!important;}
+.site-page :is(a,button,input,select):focus-visible,.related-profession-link:focus-visible {outline-color:var(--text-primary);}
