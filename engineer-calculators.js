@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Число из поля ввода: понимает пробелы и запятую («100 000», «2,5»)
     const parseNumber = (text) => {
-        const normalized = String(text).replace(/[\\s\\u00a0]/g, '').replace(',', '.');
-        return /^[+-]?(?:\\d+(?:\\.\\d*)?|\\.\\d+)$/.test(normalized) ? Number(normalized) : NaN;
+        const normalized = String(text).replace(/[\s\u00a0]/g, '').replace(',', '.');
+        return /^[+-]?(?:\d+(?:\.\d*)?|\.\d+)$/.test(normalized) ? Number(normalized) : NaN;
     };
     const formatNumber = (n, digits = 0) => new Intl.NumberFormat('ru-RU', { maximumFractionDigits: digits }).format(n);
     const formatRub = (n) => `${formatNumber(Math.round(n))} ₽`;
