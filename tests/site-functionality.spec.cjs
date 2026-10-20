@@ -150,3 +150,14 @@ test('unified search links to professions, materials, processes and dictionary w
  await page.goto(base+'dictionary.html?q='+encodeURIComponent('квалификация'));
  await expect(page.locator('#searchInput')).toHaveValue('квалификация');
 });
+
+
+test('material cards connect to existing engineer profiles', async ({page})=>{
+ await page.goto(base+'materials.html');
+ await expect(page.locator('nav.eng-tabs a')).toHaveCount(9);
+ const links=page.locator('#materialGrid a[href^="index.html#profession="]');
+ expect(await links.count()).toBeGreaterThan(0);
+ await links.first().click();
+ await expect(page.locator('#modalOverlay')).toHaveAttribute('aria-hidden','false');
+ await expect(page.locator('#professionsGrid .eng-card')).toHaveCount(51);
+});
