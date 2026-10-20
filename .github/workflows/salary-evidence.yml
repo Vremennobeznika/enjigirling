@@ -1,0 +1,33 @@
+name: Salary evidence content audit
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'salary-sources.js'
+      - 'tests/salary-source-content.cjs'
+      - '.github/workflows/salary-evidence.yml'
+  schedule:
+    - cron: '20 7 * * 1'
+permissions:
+  contents: read
+jobs:
+  evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check all 51 salary entries
+        run: node tests/salary-source-content.cjs
+      - name: Publish audit artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: salary-evidence-content
+          path: |
+            audit/salary-content-audit.json
+            audit/salary-content-audit.md
+          if-no-files-found: warn
