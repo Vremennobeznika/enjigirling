@@ -435,4 +435,14 @@ document.addEventListener("DOMContentLoaded", () => {
   renderFilters();
   renderSubfilters();
   renderGrid();
+
+  // A stable URL lets other reference sections open a specific profession.
+  function openProfessionFromHash() {
+    const match = location.hash.match(/^#profession=([a-z0-9-]+)$/);
+    if (!match) return;
+    const profession = professionsData.find(item => item.id === match[1]);
+    if (profession) openModal(profession);
+  }
+  openProfessionFromHash();
+  window.addEventListener('hashchange', openProfessionFromHash);
 });
