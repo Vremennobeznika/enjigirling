@@ -170,6 +170,21 @@ const PROFESSIONAL_REFERENCE_DIRECTORIES = [
   { label: "Профстандарты — ВНИИ труда", url: "https://nii-truda.ru/standards" }
 ];
 const VERIFIED_PROFESSION_DOCUMENTS = {
+  "civil-engineer": [{
+    label: "Профстандарт 16.025 «Специалист по организации строительства» — приказ Минтруда № 747н от 21.10.2021",
+    url: "https://profstandart.rosmintrud.ru/upload/iblock/2bb/%D0%A0%D0%B5%D0%BA%D0%BE%D0%BC%D0%B5%D0%BD%D0%B4%D0%B0%D1%86%D0%B8%D0%B8-%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D1%8E-%D0%9F%D0%A1-%D0%B2-%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B8.pdf",
+    note: "Упомянут в методических рекомендациях ВНИИ труда. Это кандидат по функции организации строительства, а не подтверждение применимости ко всем инженерам ПГС; актуальную редакцию проверить в реестре."
+  }],
+  "pgs-designer": [{
+    label: "Профстандарт 10.015 «Специалист по организации архитектурно-строительного проектирования» — приказ Минтруда № 257н от 19.04.2021",
+    url: "https://profstandart.rosmintrud.ru/upload/iblock/2bb/%D0%A0%D0%B5%D0%BA%D0%BE%D0%BC%D0%B5%D0%BD%D0%B4%D0%B0%D1%86%D0%B8%D0%B8-%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D1%8E-%D0%9F%D0%A1-%D0%B2-%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B8.pdf",
+    note: "Документ указан ВНИИ труда; соответствие трудовой функции проектировщика и актуальность стандарта требуют отдельной сверки."
+  }],
+  "railway-engineer": [{
+    label: "Профстандарт «Специалист по надзору и контролю за соблюдением норм содержания объектов железнодорожной инфраструктуры» — приказ № 204н от 16.04.2024",
+    url: "https://publication.pravo.gov.ru/document/0001202405240041",
+    note: "Официально опубликованный стандарт относится к надзору за железнодорожной инфраструктурой, а не ко всем инженерным профессиям железнодорожной отрасли; статус действующей редакции проверить отдельно."
+  }],
   "standardization-engineer": [{
     label: "Профстандарт «Специалист по стандартизации» — приказ Минтруда № 346н от 27.04.2023",
     url: "https://mintrud.gov.ru/docs/mintrud/orders/2673",
@@ -180,7 +195,7 @@ function renderNormativeReferences(profession) {
   const docs = VERIFIED_PROFESSION_DOCUMENTS[profession.id] || [];
   const links = docs.map(x => '<li><a href="' + escapeHTML(x.url) + '" target="_blank" rel="noopener noreferrer">' + escapeHTML(x.label) + '</a><p>' + escapeHTML(x.note) + '</p></li>').join("");
   const directories = PROFESSIONAL_REFERENCE_DIRECTORIES.map(x => '<li><a href="' + escapeHTML(x.url) + '" target="_blank" rel="noopener noreferrer">' + escapeHTML(x.label) + '</a></li>').join("");
-  return (docs.length ? '<p>Документы, найденные для этого направления:</p><ul>' + links + '</ul>' :
+  return (docs.length ? '<p>Документы-кандидаты для сопоставления трудовых функций (не подтверждение обязательности):</p><ul>' + links + '</ul>' :
     '<p class="data-quality-note">Привязка конкретных нормативных документов к этой профессии ещё не проверена.</p>') +
     '<p>Реестры для поиска и проверки редакций:</p><ul>' + directories + '</ul>' +
     '<p class="data-quality-note">По статье 195.3 ТК РФ квалификационные требования профстандарта обязательны в случаях, установленных законом или иным нормативным правовым актом. В остальных случаях они служат основой для требований работодателя. Совпадение названия профессии не доказывает применимость документа; проверяйте трудовые функции, редакцию и дату вступления в силу. <a href="https://mintrud.gov.ru/ministry/programms/22/3" target="_blank" rel="noopener noreferrer">Разъяснения Минтруда</a>.</p>';
