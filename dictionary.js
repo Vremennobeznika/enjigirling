@@ -1,4 +1,5 @@
-document.addEventListener('DOMContentLoaded', () => {
+// Script loads after page markup: render catalog during HTML parsing, before first paint.
+(() => {
     const grid = document.getElementById('dictionaryGrid');
     const emptyMsg = document.getElementById('dictionaryEmpty');
     const searchInput = document.getElementById('searchInput');
@@ -36,4 +37,4 @@ document.addEventListener('DOMContentLoaded', () => {
     const requested=new URLSearchParams(location.search).get('q');
     if(requested){searchInput.value=requested;searchInput.dispatchEvent(new Event('input',{bubbles:true}));}
     else renderTerms(dictionary);
-});
+})();
