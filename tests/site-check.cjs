@@ -159,3 +159,12 @@ assert.match(navigationJs,/aria-expanded/,'mobile menu needs expanded state');
 assert.match(navigationJs,/Escape/,'mobile menu needs Escape handling');
 assert.match(fs.readFileSync('style.css','utf8'),/site-nav-open/,'mobile menu styling missing');
 console.log('OK: responsive navigation enabled once on every page with keyboard handling');
+
+for(const page of allPages){
+ const html=fs.readFileSync(page,'utf8');
+ assert.equal(html.split('src="site-shell.js"').length-1,1,page+': shared shell missing or duplicated');
+}
+const shell=fs.readFileSync('site-shell.js','utf8');
+assert.ok(shell.includes('site-footer-links'),'shared footer links missing');
+assert.ok(shell.includes('footer-theme .theme-toggle'),'legacy theme control must be preserved');
+console.log('OK: shared header and footer script loaded on all nine pages');
