@@ -1,6 +1,6 @@
 const {test,expect}=require('@playwright/test');
 const pages=['index.html','calendar.html','resources.html','dictionary.html','map.html','calculator.html','compare.html','processes.html','materials.html'];
-for(const viewport of [{width:390,height:844},{width:768,height:1024},{width:1440,height:900}]){
+for(const viewport of [{width:320,height:720},{width:390,height:844},{width:768,height:1024},{width:1440,height:900}]){
  for(const pageName of pages){
   test(pageName+' at '+viewport.width+'px',async({page})=>{
    await page.setViewportSize(viewport);
@@ -34,4 +34,24 @@ test('engineer detail links use monochrome colors',async({page})=>{
  const expected=await page.evaluate(()=>getComputedStyle(document.documentElement).getPropertyValue('--text-primary').trim());
  const resolved=await page.evaluate(()=>{const el=document.createElement('span');el.style.color='var(--text-primary)';document.body.appendChild(el);const c=getComputedStyle(el).color;el.remove();return c;});
  for(const color of colors)expect(color).toBe(resolved);
+});
+
+for(const theme of ['light','dark']){
+ test('engineer modal links '+theme+' theme and visited state',async({page})=>{
+  await page.addInitScript(value=>localStorage.setItem('theme',value),theme);
+  await page.goto('http://127.0.0.1:8765/index.html');
+  await page.locator('#professionsGrid .eng-card').first().click();
+  const links=page.locator('#modalContent a');
+  await expect(links.first()).toBeVisible();
+  const expected=await page.evaluate(()=>{const span=document.createElement('span');span.style.color='var(--text-primary)';document.body.appendChild(span);const c=getComputedStyle(span).color;span.remove();return c;});
+  for(const color of await links.evaluateAll(nodes=>nodes.map(x=>getComputedStyle(x).color)))expect(color).toBe(expected);
+  await expect(page.locator('#modalOverlay')).toBeVisible();
+ });
+}
+test('skip link is available to keyboard users',async({page})=>{
+ await page.goto('http://127.0.0.1:8765/index.html');
+ await page.keyboard.press('Tab');
+ await expect(page.locator('.skip-link')).toBeFocused();
+ await page.keyboard.press('Enter');
+ await expect(page).toHaveURL(/#main-content$/);
 });
