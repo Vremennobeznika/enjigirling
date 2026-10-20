@@ -204,13 +204,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 numHint.textContent = '';
                 return;
             }
-            let decimal;
-            try {
-                decimal = parseInt(text, base);
-            } catch (e) {
-                decimal = NaN;
+            // Проверяем ВСЮ строку: parseInt('102', 2) ошибочно принимает её за 2.
+            // BigInt исключает потерю точности для больших инженерных значений.
+            const validDigits = { 2: /^[01]+$/i, 8: /^[0-7]+$/i, 10: /^[0-9]+$/i, 16: /^[0-9a-f]+$/i };
+            const valid = validDigits[base] && validDigits[base].test(text);
+            let decimal = null;
+            if (valid) {
+                try {
+                    const prefixes = { 2: '0b', 8: '0o', 10: '', 16: '0x' };
+                    decimal = BigInt(prefixes[base] + text);
+                } catch (e) { /* недопустимый ввод */ }
             }
-            if (Number.isNaN(decimal) || decimal < 0) {
+            if (decimal === null) {
                 numBin.textContent = '—';
                 numOct.textContent = '—';
                 numDec.textContent = '—';
