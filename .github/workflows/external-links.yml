@@ -5,6 +5,9 @@ on:
     paths:
       - '*.html'
       - 'resources-data.js'
+      - 'salary-sources.js'
+      - 'script.js'
+      - 'map-data.js'
       - 'tests/external-links.cjs'
       - '.github/workflows/external-links.yml'
   workflow_dispatch:
