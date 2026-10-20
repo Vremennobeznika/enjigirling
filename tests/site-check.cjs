@@ -180,3 +180,23 @@ console.log('OK: resource, dictionary and atlas search counters and reset action
 assert.ok(fs.readFileSync('processes.html','utf8').includes('src="materials-data.js"'),'process cross-reference labels require material data');
 assert.ok(fs.readFileSync('processes.js','utf8').includes('materialNames[id]||id'),'process links should use material names');
 console.log('OK: process cross-links display material names instead of technical IDs');
+
+const linkIssues=[];
+for(const file of htmlFiles){
+ const html=fs.readFileSync(file,'utf8');
+ for(const match of html.matchAll(/(?:href|src)\s*=\s*["']([^"']+)["']/g)){
+   const url=match[1];
+   if(!url||/^(?:https?:|mailto:|tel:|data:|\/\/|#)/i.test(url))continue;
+   const [relative,fragment]=url.split('#');
+   if(!fragment||!relative||!relative.endsWith('.html'))continue;
+   const target=path.resolve(path.dirname(file),relative.split('?')[0]);
+   if(!fs.existsSync(target)){linkIssues.push(file+': '+url+' missing target');continue;}
+   const targetHtml=fs.readFileSync(target,'utf8');
+   const id=decodeURIComponent(fragment);
+   if(!targetHtml.includes('id="'+id+'"')&&!targetHtml.includes("id='"+id+"'")){
+     if(!['materials.html','processes.html'].includes(relative))linkIssues.push(file+': '+url+' missing anchor');
+   }
+ }
+}
+assert.deepEqual(linkIssues,[],'broken internal anchor links');
+console.log('OK: static internal page anchors resolve');
