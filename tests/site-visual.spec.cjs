@@ -22,6 +22,7 @@ for(const viewport of [{width:320,height:720},{width:390,height:844},{width:768,
     await expect(toggle).toHaveAttribute('aria-expanded','false');
    }
    expect(errors,'uncaught browser exceptions').toEqual([]);
+   if([390,1440].includes(viewport.width)) await page.screenshot({path:'visual-review/'+pageName.replace('.html','')+'-'+viewport.width+'.png',fullPage:true,animations:'disabled'});
   });
  }
 }
