@@ -5,7 +5,6 @@ window.professionsData = [
         title: "Инженер-строитель (ПГС)",
         shortDesc: "Организация и контроль строительства зданий и сооружений на объекте: ведение работ, исполнительная документация, сметы",
         education: { requirements: "Знание технологии строительного производства, строительных материалов и конструкций.", courses: ["Гранд-Смета", "Строительный контроль", "Исполнительная документация"] },
-        salary: { start: "60 000 ₽", peak: "250 000+ ₽", median: "110 000 ₽", regions: { central: "80 000–250 000 ₽", northwest: "70 000–200 000 ₽", south: "55 000–150 000 ₽", northcaucasus: "45 000–120 000 ₽", volga: "55 000–150 000 ₽", ural: "65 000–180 000 ₽", siberia: "55 000–160 000 ₽", fareast: "70 000–200 000 ₽" } },
         careerGrowth: [
             { title: "Инженер ПТО" },
             { title: "Производитель работ (прораб)" },
@@ -21,7 +20,6 @@ window.professionsData = [
         title: "Инженер-проектировщик (ПГС)",
         shortDesc: "Проектирование конструкций и разделов проектной документации зданий и сооружений: расчёты, чертежи, BIM-модели",
         education: { requirements: "Строительная механика, сопротивление материалов, железобетонные и металлические конструкции, нормы проектирования (СП).", courses: ["AutoCAD / Revit", "ЛИРА-САПР / SCAD", "Экспертиза проектов"] },
-        salary: { start: "55 000 ₽", peak: "250 000+ ₽", median: "100 000 ₽" },
         careerGrowth: [
             { title: "Инженер-проектировщик" },
             { title: "Ведущий инженер-проектировщик" },
@@ -37,7 +35,6 @@ window.professionsData = [
         title: "Инженер-архитектор",
         shortDesc: "Архитектурное проектирование и планировка пространств",
         education: { requirements: "Знание архитектурной композиции.", courses: ["Revit", "SketchUp", "3ds Max"] },
-        salary: { start: "50 000 ₽", peak: "300 000+ ₽", median: "100 000 ₽", regions: { central: "70 000–300 000 ₽", northwest: "60 000–250 000 ₽", south: "50 000–180 000 ₽", northcaucasus: "40 000–130 000 ₽", volga: "50 000–170 000 ₽", ural: "55 000–200 000 ₽", siberia: "50 000–180 000 ₽", fareast: "60 000–220 000 ₽" } },
         careerGrowth: [
             { title: "Архитектор-стажёр" },
             { title: "Архитектор" },
@@ -53,7 +50,6 @@ window.professionsData = [
         title: "Инженер-дорожник",
         shortDesc: "Строительство, ремонт и содержание автомобильных дорог и мостов: организация работ на участке, контроль качества",
         education: { requirements: "Знание технологии дорожного строительства и дорожных материалов.", courses: ["Дорожные материалы", "Геодезия", "Гранд-Смета"] },
-        salary: { start: "55 000 ₽", peak: "220 000+ ₽", median: "100 000 ₽", regions: { central: "70 000–220 000 ₽", northwest: "60 000–180 000 ₽", south: "50 000–150 000 ₽", northcaucasus: "40 000–120 000 ₽", volga: "50 000–150 000 ₽", ural: "60 000–170 000 ₽", siberia: "55 000–160 000 ₽", fareast: "65 000–190 000 ₽" } },
         careerGrowth: [
             { title: "Инженер-дорожник" },
             { title: "Производитель работ" },
@@ -69,7 +65,6 @@ window.professionsData = [
         title: "Инженер-проектировщик автомобильных дорог",
         shortDesc: "Проектирование автомобильных дорог и транспортных развязок: трассирование, расчёты, чертежи",
         education: { requirements: "Знание проектирования дорог, дорожных конструкций и нормативов (СП).", courses: ["AutoCAD Civil 3D", "IndorCAD", "CREDO"] },
-        salary: { start: "50 000 ₽", peak: "230 000+ ₽", median: "95 000 ₽" },
         careerGrowth: [
             { title: "Инженер-проектировщик" },
             { title: "Ведущий инженер-проектировщик" },
@@ -87,7 +82,6 @@ window.professionsData = [
         title: "Инженер-механик",
         shortDesc: "Проектирование машин, механизмов и оборудования",
         education: { requirements: "Знание теоретической механики.", courses: ["Компас-3D / SolidWorks", "ANSYS"] },
-        salary: { start: "55 000 ₽", peak: "250 000+ ₽", median: "95 000 ₽", regions: { central: "70 000–200 000 ₽", northwest: "60 000–170 000 ₽", south: "50 000–140 000 ₽", northcaucasus: "40 000–110 000 ₽", volga: "50 000–140 000 ₽", ural: "60 000–170 000 ₽", siberia: "55 000–150 000 ₽", fareast: "65 000–180 000 ₽" } },
         careerGrowth: [
             { title: "Инженер-конструктор" },
             { title: "Ведущий инженер-механик" },
@@ -103,7 +97,6 @@ window.professionsData = [
         title: "Инженер-автомобилестроитель",
         shortDesc: "Проектирование, расчёт и испытания автомобилей и их узлов",
         education: { requirements: "Знание автомобилей.", courses: ["CATIA", "ADAMS"] },
-        salary: { start: "60 000 ₽", peak: "250 000+ ₽", median: "110 000 ₽", regions: { central: "80 000–250 000 ₽", northwest: "70 000–200 000 ₽", south: "55 000–160 000 ₽", northcaucasus: "45 000–120 000 ₽", volga: "60 000–170 000 ₽", ural: "65 000–190 000 ₽", siberia: "55 000–170 000 ₽", fareast: "65 000–200 000 ₽" } },
         careerGrowth: [
             { title: "Инженер-конструктор" },
             { title: "Ведущий конструктор" },
@@ -121,7 +114,6 @@ window.professionsData = [
         title: "Инженер-энергетик",
         shortDesc: "Эксплуатация и развитие энергосистем и энергооборудования: расчёт режимов, обходы, ремонты",
         education: { requirements: "Знание электротехники.", courses: ["RastrWin", "ANSYS"] },
-        salary: { start: "55 000 ₽", peak: "220 000+ ₽", median: "100 000 ₽", regions: { central: "70 000–220 000 ₽", northwest: "65 000–180 000 ₽", south: "50 000–150 000 ₽", northcaucasus: "40 000–120 000 ₽", volga: "55 000–150 000 ₽", ural: "65 000–180 000 ₽", siberia: "60 000–170 000 ₽", fareast: "70 000–200 000 ₽" } },
         careerGrowth: [
             { title: "Инженер-энергетик" },
             { title: "Ведущий инженер" },
@@ -137,7 +129,6 @@ window.professionsData = [
         title: "Инженер-электрик",
         shortDesc: "Монтаж, наладка и обслуживание электрооборудования и электрических сетей",
         education: { requirements: "Знание электротехники.", courses: ["ПУЭ", "Электробезопасность", "Релейная защита"] },
-        salary: { start: "60 000 ₽", peak: "220 000+ ₽", median: "105 000 ₽", regions: { central: "75 000–220 000 ₽", northwest: "65 000–180 000 ₽", south: "50 000–150 000 ₽", northcaucasus: "40 000–120 000 ₽", volga: "55 000–155 000 ₽", ural: "65 000–180 000 ₽", siberia: "60 000–170 000 ₽", fareast: "70 000–200 000 ₽" } },
         careerGrowth: [
             { title: "Инженер-электрик" },
             { title: "Ведущий инженер" },
@@ -153,7 +144,6 @@ window.professionsData = [
         title: "Инженер-проектировщик электроснабжения",
         shortDesc: "Проектирование систем электроснабжения и электроосвещения зданий и объектов: расчёт нагрузок, схемы, чертежи",
         education: { requirements: "Знание электротехники, расчёта электрических нагрузок и требований ПУЭ.", courses: ["AutoCAD", "nanoCAD Электро", "Расчёт нагрузок"] },
-        salary: { start: "55 000 ₽", peak: "240 000+ ₽", median: "100 000 ₽" },
         careerGrowth: [
             { title: "Инженер-проектировщик" },
             { title: "Ведущий инженер-проектировщик" },
@@ -169,7 +159,6 @@ window.professionsData = [
         title: "Инженер-атомщик",
         shortDesc: "Эксплуатация и обслуживание АЭС и ядерных установок: контроль реактора, расчёты безопасности",
         education: { requirements: "Знание ядерной физики.", courses: ["KORSAR", "MCNP"] },
-        salary: { start: "70 000 ₽", peak: "300 000+ ₽", median: "130 000 ₽", regions: { central: "90 000–300 000 ₽", northwest: "80 000–250 000 ₽", south: "65 000–200 000 ₽", northcaucasus: "55 000–160 000 ₽", volga: "70 000–220 000 ₽", ural: "80 000–250 000 ₽", siberia: "75 000–230 000 ₽", fareast: "85 000–280 000 ₽" } },
         careerGrowth: [
             { title: "Инженер АЭС" },
             { title: "Ведущий инженер" },
@@ -187,7 +176,6 @@ window.professionsData = [
         title: "Инженер-авиастроитель",
         shortDesc: "Проектирование, расчёт и испытания летательных аппаратов",
         education: { requirements: "Знание аэродинамики.", courses: ["ANSYS Fluent", "CATIA"] },
-        salary: { start: "65 000 ₽", peak: "300 000+ ₽", median: "120 000 ₽", regions: { central: "85 000–300 000 ₽", northwest: "75 000–250 000 ₽", south: "60 000–190 000 ₽", northcaucasus: "50 000–140 000 ₽", volga: "65 000–200 000 ₽", ural: "70 000–220 000 ₽", siberia: "65 000–210 000 ₽", fareast: "75 000–250 000 ₽" } },
         careerGrowth: [
             { title: "Инженер-конструктор" },
             { title: "Ведущий инженер" },
@@ -203,7 +191,6 @@ window.professionsData = [
         title: "Космический инженер (ракетостроитель)",
         shortDesc: "Проектирование и создание ракетно-космической техники",
         education: { requirements: "Знание баллистики.", courses: ["Баллистика", "Ракетные двигатели"] },
-        salary: { start: "70 000 ₽", peak: "300 000+ ₽", median: "130 000 ₽", regions: { central: "90 000–300 000 ₽", northwest: "80 000–250 000 ₽", south: "60 000–200 000 ₽", northcaucasus: "50 000–150 000 ₽", volga: "70 000–220 000 ₽", ural: "75 000–240 000 ₽", siberia: "70 000–230 000 ₽", fareast: "80 000–260 000 ₽" } },
         careerGrowth: [
             { title: "Инженер-конструктор" },
             { title: "Ведущий конструктор" },
@@ -221,7 +208,6 @@ window.professionsData = [
         title: "Инженер-химик-технолог",
         shortDesc: "Разработка и управление химическими производствами",
         education: { requirements: "Знание химии.", courses: ["HYSYS", "ChemCAD"] },
-        salary: { start: "55 000 ₽", peak: "220 000+ ₽", median: "100 000 ₽", regions: { central: "75 000–220 000 ₽", northwest: "65 000–180 000 ₽", south: "55 000–150 000 ₽", northcaucasus: "45 000–120 000 ₽", volga: "60 000–170 000 ₽", ural: "65 000–190 000 ₽", siberia: "60 000–180 000 ₽", fareast: "70 000–210 000 ₽" } },
         careerGrowth: [
             { title: "Инженер-технолог" },
             { title: "Ведущий технолог" },
@@ -237,7 +223,6 @@ window.professionsData = [
         title: "Инженер-нефтяник",
         shortDesc: "Разведка, бурение и добыча нефти и газа",
         education: { requirements: "Знание геологии.", courses: ["Petrel", "ROXAR"] },
-        salary: { start: "80 000 ₽", peak: "400 000+ ₽", median: "150 000 ₽", regions: { central: "100 000–400 000 ₽", northwest: "90 000–350 000 ₽", south: "75 000–280 000 ₽", northcaucasus: "60 000–220 000 ₽", volga: "85 000–320 000 ₽", ural: "100 000–380 000 ₽", siberia: "90 000–350 000 ₽", fareast: "95 000–370 000 ₽" } },
         careerGrowth: [
             { title: "Оператор" },
             { title: "Ведущий инженер" },
@@ -255,7 +240,6 @@ window.professionsData = [
         title: "Инженер-металлург",
         shortDesc: "Производство и обработка металлов и сплавов",
         education: { requirements: "Знание металлургии.", courses: ["Thermo-Calc", "SolidWorks"] },
-        salary: { start: "55 000 ₽", peak: "200 000+ ₽", median: "95 000 ₽", regions: { central: "70 000–200 000 ₽", northwest: "60 000–170 000 ₽", south: "50 000–140 000 ₽", northcaucasus: "40 000–110 000 ₽", volga: "55 000–150 000 ₽", ural: "65 000–180 000 ₽", siberia: "60 000–170 000 ₽", fareast: "65 000–190 000 ₽" } },
         careerGrowth: [
             { title: "Инженер-металлург" },
             { title: "Мастер участка" },
@@ -273,7 +257,6 @@ window.professionsData = [
         title: "Горный инженер",
         shortDesc: "Разработка месторождений полезных ископаемых",
         education: { requirements: "Знание геологии.", courses: ["MineFrame", "Blast-CAD"] },
-        salary: { start: "70 000 ₽", peak: "300 000+ ₽", median: "130 000 ₽", regions: { central: "90 000–300 000 ₽", northwest: "80 000–250 000 ₽", south: "65 000–200 000 ₽", northcaucasus: "55 000–160 000 ₽", volga: "70 000–220 000 ₽", ural: "85 000–280 000 ₽", siberia: "80 000–260 000 ₽", fareast: "90 000–300 000 ₽" } },
         careerGrowth: [
             { title: "Горный мастер" },
             { title: "Ведущий инженер" },
@@ -291,7 +274,6 @@ window.professionsData = [
         title: "Инженер-эколог",
         shortDesc: "Охрана окружающей среды и экологическая безопасность",
         education: { requirements: "Знание экологии.", courses: ["ОВОС", "Экологический аудит"] },
-        salary: { start: "50 000 ₽", peak: "180 000+ ₽", median: "85 000 ₽", regions: { central: "65 000–180 000 ₽", northwest: "55 000–150 000 ₽", south: "45 000–130 000 ₽", northcaucasus: "35 000–100 000 ₽", volga: "45 000–130 000 ₽", ural: "55 000–150 000 ₽", siberia: "50 000–140 000 ₽", fareast: "60 000–170 000 ₽" } },
         careerGrowth: [
             { title: "Инженер-эколог" },
             { title: "Ведущий эколог" },
@@ -309,7 +291,6 @@ window.professionsData = [
         title: "Инженер-биомедик",
         shortDesc: "Разработка медицинского оборудования и биопротезов",
         education: { requirements: "Знание анатомии.", courses: ["SolidWorks", "MATLAB"] },
-        salary: { start: "60 000 ₽", peak: "250 000+ ₽", median: "110 000 ₽", regions: { central: "80 000–250 000 ₽", northwest: "70 000–200 000 ₽", south: "55 000–160 000 ₽", northcaucasus: "45 000–120 000 ₽", volga: "55 000–160 000 ₽", ural: "65 000–190 000 ₽", siberia: "60 000–180 000 ₽", fareast: "70 000–210 000 ₽" } },
         careerGrowth: [
             { title: "Инженер-биомедик" },
             { title: "Ведущий инженер" },
@@ -327,7 +308,6 @@ window.professionsData = [
         title: "Инженер-робототехник",
         shortDesc: "Проектирование и программирование роботов",
         education: { requirements: "Знание автоматики.", courses: ["ROS", "OpenCV"] },
-        salary: { start: "80 000 ₽", peak: "350 000+ ₽", median: "150 000 ₽", regions: { central: "100 000–350 000 ₽", northwest: "90 000–300 000 ₽", south: "70 000–220 000 ₽", northcaucasus: "55 000–160 000 ₽", volga: "75 000–240 000 ₽", ural: "85 000–280 000 ₽", siberia: "80 000–260 000 ₽", fareast: "85 000–300 000 ₽" } },
         careerGrowth: [
             { title: "Инженер-робототехник" },
             { title: "Ведущий инженер" },
@@ -345,7 +325,6 @@ window.professionsData = [
         title: "Инженер-железнодорожник",
         shortDesc: "Эксплуатация, содержание и ремонт железных дорог: путь, сооружения, безопасность движения",
         education: { requirements: "Знание ж/д.", courses: ["Путевое хозяйство", "ЖАТ"] },
-        salary: { start: "55 000 ₽", peak: "200 000+ ₽", median: "95 000 ₽", regions: { central: "70 000–200 000 ₽", northwest: "60 000–170 000 ₽", south: "50 000–140 000 ₽", northcaucasus: "40 000–110 000 ₽", volga: "55 000–150 000 ₽", ural: "60 000–170 000 ₽", siberia: "55 000–160 000 ₽", fareast: "65 000–190 000 ₽" } },
         careerGrowth: [
             { title: "Инженер пути" },
             { title: "Ведущий инженер" },
@@ -363,7 +342,6 @@ window.professionsData = [
         title: "Инженер-кораблестроитель",
         shortDesc: "Проектирование судов и кораблей, сопровождение их постройки и испытаний",
         education: { requirements: "Знание корабля.", courses: ["SolidWorks", "ANSYS"] },
-        salary: { start: "60 000 ₽", peak: "250 000+ ₽", median: "110 000 ₽", regions: { central: "80 000–250 000 ₽", northwest: "70 000–220 000 ₽", south: "55 000–170 000 ₽", northcaucasus: "45 000–130 000 ₽", volga: "55 000–170 000 ₽", ural: "60 000–190 000 ₽", siberia: "55 000–180 000 ₽", fareast: "75 000–240 000 ₽" } },
         careerGrowth: [
             { title: "Инженер-конструктор" },
             { title: "Ведущий конструктор" },
@@ -381,7 +359,6 @@ window.professionsData = [
         title: "Проектировщик АСУ ТП",
         shortDesc: "Проектирование систем автоматизации технологических процессов",
         education: { requirements: "Знание автоматики.", courses: ["SCADA", "Siemens"] },
-        salary: { start: "55 000 ₽", peak: "200 000+ ₽", median: "95 000 ₽", regions: { central: "70 000–200 000 ₽", northwest: "60 000–170 000 ₽", south: "50 000–140 000 ₽", northcaucasus: "40 000–110 000 ₽", volga: "55 000–150 000 ₽", ural: "65 000–180 000 ₽", siberia: "55 000–160 000 ₽", fareast: "65 000–190 000 ₽" } },
         careerGrowth: [
             { title: "Проектировщик АСУ ТП" },
             { title: "Ведущий инженер" },
@@ -397,7 +374,6 @@ window.professionsData = [
         title: "Программист АСУ ТП",
         shortDesc: "Разработка программного обеспечения для ПЛК, SCADA и систем управления технологическими процессами",
         education: { requirements: "Автоматика, программирование, электротехника", courses: ["PLC", "SCADA", "IEC 61131-3"] },
-        salary: { start: "60 000 ₽", peak: "250 000+ ₽", median: "120 000 ₽" },
         careerGrowth: [
             { title: "Программист АСУ ТП" },
             { title: "Ведущий программист" },
@@ -413,7 +389,6 @@ window.professionsData = [
         title: "Пуско-наладчик АСУ ТП",
         shortDesc: "Пуск, наладка и проверка систем автоматизации на действующем объекте",
         education: { requirements: "Автоматика, электротехника, промышленное оборудование", courses: ["ПЛК", "SCADA", "КИПиА"] },
-        salary: { start: "65 000 ₽", peak: "280 000+ ₽", median: "125 000 ₽" },
         careerGrowth: [
             { title: "Пуско-наладчик АСУ ТП" },
             { title: "Ведущий пуско-наладчик" },
@@ -429,7 +404,6 @@ window.professionsData = [
         title: "Инженер КИПиА",
         shortDesc: "Обслуживание, наладка и поверка контрольно-измерительных приборов и средств автоматики на производстве",
         education: { requirements: "Автоматика, электротехника, метрология, приборостроение", courses: ["КИП", "ПЛК", "Метрология"] },
-        salary: { start: "55 000 ₽", peak: "220 000+ ₽", median: "100 000 ₽" },
         careerGrowth: [
             { title: "Инженер КИПиА" },
             { title: "Ведущий инженер КИПиА" },
@@ -447,7 +421,6 @@ window.professionsData = [
         title: "Инженер-технолог пищевой промышленности",
         shortDesc: "Разработка и производство продуктов питания",
         education: { requirements: "Знание биохимии.", courses: ["HACCP", "1С"] },
-        salary: { start: "45 000 ₽", peak: "170 000+ ₽", median: "80 000 ₽", regions: { central: "60 000–170 000 ₽", northwest: "50 000–140 000 ₽", south: "40 000–120 000 ₽", northcaucasus: "30 000–90 000 ₽", volga: "40 000–120 000 ₽", ural: "45 000–130 000 ₽", siberia: "40 000–120 000 ₽", fareast: "50 000–150 000 ₽" } },
         careerGrowth: [
             { title: "Технолог" },
             { title: "Ведущий технолог" },
@@ -465,7 +438,6 @@ window.professionsData = [
         title: "Инженер-текстильщик",
         shortDesc: "Производство тканей и текстильных материалов",
         education: { requirements: "Знание ткачества.", courses: ["NedGraphics"] },
-        salary: { start: "40 000 ₽", peak: "150 000+ ₽", median: "70 000 ₽", regions: { central: "55 000–150 000 ₽", northwest: "45 000–120 000 ₽", south: "35 000–100 000 ₽", northcaucasus: "25 000–80 000 ₽", volga: "35 000–100 000 ₽", ural: "40 000–110 000 ₽", siberia: "35 000–100 000 ₽", fareast: "45 000–130 000 ₽" } },
         careerGrowth: [
             { title: "Инженер-технолог" },
             { title: "Ведущий технолог" },
@@ -483,7 +455,6 @@ window.professionsData = [
         title: "Инженер лесного хозяйства",
         shortDesc: "Лесовосстановление, лесозаготовка и деревообработка",
         education: { requirements: "Знание лесоведения.", courses: ["ГИС", "Таксация"] },
-        salary: { start: "45 000 ₽", peak: "170 000+ ₽", median: "80 000 ₽", regions: { central: "60 000–170 000 ₽", northwest: "50 000–140 000 ₽", south: "40 000–120 000 ₽", northcaucasus: "30 000–90 000 ₽", volga: "40 000–120 000 ₽", ural: "50 000–140 000 ₽", siberia: "50 000–150 000 ₽", fareast: "55 000–160 000 ₽" } },
         careerGrowth: [
             { title: "Инженер лесного хозяйства" },
             { title: "Ведущий инженер" },
@@ -501,7 +472,6 @@ window.professionsData = [
         title: "Инженер связи",
         shortDesc: "Построение, настройка и обслуживание сетей связи",
         education: { requirements: "Знание сигналов.", courses: ["Cisco", "MikroTik"] },
-        salary: { start: "50 000 ₽", peak: "200 000+ ₽", median: "90 000 ₽", regions: { central: "65 000–200 000 ₽", northwest: "55 000–170 000 ₽", south: "45 000–140 000 ₽", northcaucasus: "35 000–110 000 ₽", volga: "45 000–140 000 ₽", ural: "55 000–160 000 ₽", siberia: "50 000–150 000 ₽", fareast: "60 000–180 000 ₽" } },
         careerGrowth: [
             { title: "Инженер связи" },
             { title: "Ведущий инженер" },
@@ -519,7 +489,6 @@ window.professionsData = [
         title: "Инженер водоснабжения и водоотведения",
         shortDesc: "Водоснабжение и водоотведение: насосные станции, водопроводные и канализационные сети, очистные сооружения",
         education: { requirements: "Знание гидравлики.", courses: ["Zulu", "AutoCAD Civil"] },
-        salary: { start: "50 000 ₽", peak: "190 000+ ₽", median: "90 000 ₽", regions: { central: "65 000–190 000 ₽", northwest: "55 000–160 000 ₽", south: "45 000–130 000 ₽", northcaucasus: "35 000–100 000 ₽", volga: "45 000–130 000 ₽", ural: "55 000–150 000 ₽", siberia: "50 000–140 000 ₽", fareast: "60 000–170 000 ₽" } },
         careerGrowth: [
             { title: "Инженер водоснабжения и водоотведения" },
             { title: "Ведущий инженер" },
@@ -537,7 +506,6 @@ window.professionsData = [
         title: "Инженер-светотехник",
         shortDesc: "Проектирование освещения зданий, улиц и объектов",
         education: { requirements: "Знание фотометрии.", courses: ["DIALux", "Relux"] },
-        salary: { start: "50 000 ₽", peak: "200 000+ ₽", median: "90 000 ₽", regions: { central: "65 000–200 000 ₽", northwest: "55 000–170 000 ₽", south: "45 000–140 000 ₽", northcaucasus: "35 000–110 000 ₽", volga: "45 000–140 000 ₽", ural: "55 000–160 000 ₽", siberia: "50 000–150 000 ₽", fareast: "60 000–180 000 ₽" } },
         careerGrowth: [
             { title: "Инженер-светотехник" },
             { title: "Ведущий инженер" },
@@ -555,7 +523,6 @@ window.professionsData = [
         title: "Военный инженер",
         shortDesc: "Инженерное обеспечение войск и военной инфраструктуры",
         education: { requirements: "Военная подготовка.", courses: ["Фортификация", "Инженерные заграждения"] },
-        salary: { start: "55 000 ₽", peak: "180 000+ ₽", median: "95 000 ₽", regions: { central: "70 000–180 000 ₽", northwest: "60 000–150 000 ₽", south: "50 000–130 000 ₽", northcaucasus: "45 000–110 000 ₽", volga: "55 000–130 000 ₽", ural: "60 000–140 000 ₽", siberia: "55 000–140 000 ₽", fareast: "65 000–160 000 ₽" } },
         careerGrowth: [
             { title: "Лейтенант" },
             { title: "Старший инженер" },
@@ -573,7 +540,6 @@ window.professionsData = [
         title: "Инженер полиграфии",
         shortDesc: "Печатные технологии и производство печатной продукции",
         education: { requirements: "Знание печати.", courses: ["Adobe InDesign", "Photoshop"] },
-        salary: { start: "45 000 ₽", peak: "160 000+ ₽", median: "80 000 ₽", regions: { central: "60 000–160 000 ₽", northwest: "50 000–130 000 ₽", south: "40 000–100 000 ₽", northcaucasus: "30 000–80 000 ₽", volga: "40 000–100 000 ₽", ural: "45 000–110 000 ₽", siberia: "40 000–110 000 ₽", fareast: "50 000–130 000 ₽" } },
         careerGrowth: [
             { title: "Инженер-технолог печати" },
             { title: "Ведущий технолог" },
@@ -591,7 +557,6 @@ window.professionsData = [
         title: "Инженер-материаловед",
         shortDesc: "Разработка и исследование материалов и покрытий",
         education: { requirements: "Знание физики материалов.", courses: ["Материаловедение", "Металлография"] },
-        salary: { start: "50 000 ₽", peak: "190 000+ ₽", median: "90 000 ₽", regions: { central: "65 000–190 000 ₽", northwest: "55 000–150 000 ₽", south: "45 000–120 000 ₽", northcaucasus: "35 000–95 000 ₽", volga: "45 000–120 000 ₽", ural: "55 000–140 000 ₽", siberia: "50 000–130 000 ₽", fareast: "60 000–160 000 ₽" } },
         careerGrowth: [
             { title: "Инженер-материаловед" },
             { title: "Ведущий материаловед" },
@@ -609,7 +574,6 @@ window.professionsData = [
         title: "Инженер ГО и ЧС",
         shortDesc: "Обеспечение гражданской обороны и защиты от чрезвычайных ситуаций",
         education: { requirements: "Знание защиты населения.", courses: ["БЖД", "Защита в ЧС"] },
-        salary: { start: "45 000 ₽", peak: "160 000+ ₽", median: "80 000 ₽", regions: { central: "60 000–160 000 ₽", northwest: "50 000–130 000 ₽", south: "40 000–100 000 ₽", northcaucasus: "30 000–80 000 ₽", volga: "40 000–100 000 ₽", ural: "45 000–110 000 ₽", siberia: "40 000–110 000 ₽", fareast: "50 000–130 000 ₽" } },
         careerGrowth: [
             { title: "Инженер ГО" },
             { title: "Ведущий специалист" },
@@ -627,7 +591,6 @@ window.professionsData = [
         title: "Инженер-геодезист",
         shortDesc: "Геодезические изыскания и топографическая съёмка",
         education: { requirements: "Знание геодезии.", courses: ["Геодезия", "ГНСС", "ГИС"] },
-        salary: { start: "50 000 ₽", peak: "180 000+ ₽", median: "90 000 ₽", regions: { central: "65 000–180 000 ₽", northwest: "55 000–150 000 ₽", south: "45 000–120 000 ₽", northcaucasus: "35 000–90 000 ₽", volga: "45 000–120 000 ₽", ural: "55 000–140 000 ₽", siberia: "50 000–130 000 ₽", fareast: "60 000–160 000 ₽" } },
         careerGrowth: [
             { title: "Геодезист" },
             { title: "Ведущий геодезист" },
@@ -645,7 +608,6 @@ window.professionsData = [
         title: "Инженер-астроном",
         shortDesc: "Разработка и эксплуатация астрономического оборудования",
         education: { requirements: "Знание астрофизики.", courses: ["Астрофизика", "Оптика"] },
-        salary: { start: "55 000 ₽", peak: "200 000+ ₽", median: "100 000 ₽", regions: { central: "70 000–200 000 ₽", northwest: "60 000–170 000 ₽", south: "50 000–140 000 ₽", northcaucasus: "40 000–110 000 ₽", volga: "50 000–140 000 ₽", ural: "55 000–150 000 ₽", siberia: "50 000–140 000 ₽", fareast: "60 000–170 000 ₽" } },
         careerGrowth: [
             { title: "Инженер-исследователь" },
             { title: "Ведущий инженер" },
@@ -663,7 +625,6 @@ window.professionsData = [
         title: "Инженер-реставратор",
         shortDesc: "Реставрация и сохранение памятников архитектуры",
         education: { requirements: "Знание истории архитектуры.", courses: ["История архитектуры", "Реставрационные технологии"] },
-        salary: { start: "50 000 ₽", peak: "180 000+ ₽", median: "90 000 ₽", regions: { central: "65 000–180 000 ₽", northwest: "55 000–150 000 ₽", south: "45 000–120 000 ₽", northcaucasus: "35 000–90 000 ₽", volga: "45 000–120 000 ₽", ural: "50 000–130 000 ₽", siberia: "45 000–120 000 ₽", fareast: "55 000–140 000 ₽" } },
         careerGrowth: [
             { title: "Инженер-реставратор" },
             { title: "Ведущий реставратор" },
@@ -681,7 +642,6 @@ window.professionsData = [
         title: "Инженер по стандартизации",
         shortDesc: "Разработка и контроль соблюдения стандартов и норм",
         education: { requirements: "Знание стандартизации.", courses: ["Стандартизация", "Метрология"] },
-        salary: { start: "45 000 ₽", peak: "160 000+ ₽", median: "80 000 ₽", regions: { central: "60 000–160 000 ₽", northwest: "50 000–130 000 ₽", south: "40 000–100 000 ₽", northcaucasus: "30 000–80 000 ₽", volga: "40 000–100 000 ₽", ural: "45 000–110 000 ₽", siberia: "40 000–110 000 ₽", fareast: "50 000–130 000 ₽" } },
         careerGrowth: [
             { title: "Инженер по стандартизации" },
             { title: "Ведущий специалист" },
@@ -699,7 +659,6 @@ window.professionsData = [
         title: "Инженер-патентовед",
         shortDesc: "Защита интеллектуальной собственности и патентование",
         education: { requirements: "Знание патентного права.", courses: ["Патентное право", "Патентные исследования"] },
-        salary: { start: "50 000 ₽", peak: "180 000+ ₽", median: "95 000 ₽", regions: { central: "65 000–180 000 ₽", northwest: "55 000–150 000 ₽", south: "45 000–120 000 ₽", northcaucasus: "35 000–90 000 ₽", volga: "45 000–120 000 ₽", ural: "50 000–130 000 ₽", siberia: "45 000–120 000 ₽", fareast: "55 000–140 000 ₽" } },
         careerGrowth: [
             { title: "Патентовед" },
             { title: "Ведущий патентовед" },
@@ -717,7 +676,6 @@ window.professionsData = [
         title: "Инженер данных (Data Engineer)",
         shortDesc: "Построение и поддержка инфраструктуры данных",
         education: { requirements: "Знание SQL.", courses: ["Spark", "Python"] },
-        salary: { start: "120 000 ₽", peak: "500 000+ ₽", median: "250 000 ₽", regions: { central: "150 000–500 000 ₽", northwest: "130 000–400 000 ₽", south: "100 000–300 000 ₽", northcaucasus: "80 000–220 000 ₽", volga: "110 000–320 000 ₽", ural: "120 000–350 000 ₽", siberia: "110 000–330 000 ₽", fareast: "120 000–380 000 ₽" } },
         careerGrowth: [
             { title: "Junior Data Engineer" },
             { title: "Data Engineer" },
@@ -733,7 +691,6 @@ window.professionsData = [
         title: "DevOps-инженер",
         shortDesc: "Автоматизация разработки и эксплуатации IT-систем",
         education: { requirements: "Знание Linux.", courses: ["Docker", "Kubernetes"] },
-        salary: { start: "130 000 ₽", peak: "550 000+ ₽", median: "270 000 ₽", regions: { central: "160 000–550 000 ₽", northwest: "140 000–450 000 ₽", south: "110 000–350 000 ₽", northcaucasus: "90 000–250 000 ₽", volga: "120 000–370 000 ₽", ural: "130 000–400 000 ₽", siberia: "120 000–380 000 ₽", fareast: "130 000–420 000 ₽" } },
         careerGrowth: [
             { title: "Junior DevOps" },
             { title: "DevOps-инженер" },
@@ -749,7 +706,6 @@ window.professionsData = [
         title: "Инженер машинного обучения (ML Engineer)",
         shortDesc: "Разработка и внедрение моделей машинного обучения",
         education: { requirements: "Знание математики.", courses: ["PyTorch", "TensorFlow"] },
-        salary: { start: "150 000 ₽", peak: "600 000+ ₽", median: "300 000 ₽", regions: { central: "180 000–600 000 ₽", northwest: "160 000–500 000 ₽", south: "130 000–400 000 ₽", northcaucasus: "100 000–300 000 ₽", volga: "140 000–420 000 ₽", ural: "150 000–450 000 ₽", siberia: "140 000–430 000 ₽", fareast: "150 000–480 000 ₽" } },
         careerGrowth: [
             { title: "Junior ML Engineer" },
             { title: "ML Engineer" },
@@ -765,7 +721,6 @@ window.professionsData = [
         title: "Инженер по информационной безопасности",
         shortDesc: "Защита IT-инфраструктуры от кибератак",
         education: { requirements: "Знание сетей.", courses: ["OSCP", "CEH"] },
-        salary: { start: "110 000 ₽", peak: "500 000+ ₽", median: "230 000 ₽", regions: { central: "140 000–500 000 ₽", northwest: "120 000–400 000 ₽", south: "90 000–300 000 ₽", northcaucasus: "70 000–220 000 ₽", volga: "100 000–320 000 ₽", ural: "110 000–350 000 ₽", siberia: "100 000–330 000 ₽", fareast: "110 000–380 000 ₽" } },
         careerGrowth: [
             { title: "Аналитик ИБ" },
             { title: "Инженер ИБ" },
@@ -781,7 +736,6 @@ window.professionsData = [
         title: "Cloud-инженер",
         shortDesc: "Проектирование и управление облачной инфраструктурой",
         education: { requirements: "Знание облаков.", courses: ["Yandex Cloud", "AWS"] },
-        salary: { start: "130 000 ₽", peak: "500 000+ ₽", median: "260 000 ₽", regions: { central: "160 000–500 000 ₽", northwest: "140 000–420 000 ₽", south: "110 000–330 000 ₽", northcaucasus: "90 000–240 000 ₽", volga: "120 000–350 000 ₽", ural: "130 000–380 000 ₽", siberia: "120 000–360 000 ₽", fareast: "130 000–400 000 ₽" } },
         careerGrowth: [
             { title: "Junior Cloud Engineer" },
             { title: "Cloud Engineer" },
@@ -797,7 +751,6 @@ window.professionsData = [
         title: "Инженер встраиваемых систем (Embedded)",
         shortDesc: "Разработка ПО для микроконтроллеров и встраиваемых устройств",
         education: { requirements: "Знание C/C++.", courses: ["ARM", "RTOS"] },
-        salary: { start: "90 000 ₽", peak: "350 000+ ₽", median: "180 000 ₽", regions: { central: "110 000–350 000 ₽", northwest: "100 000–300 000 ₽", south: "75 000–220 000 ₽", northcaucasus: "60 000–170 000 ₽", volga: "80 000–240 000 ₽", ural: "90 000–280 000 ₽", siberia: "85 000–260 000 ₽", fareast: "95 000–300 000 ₽" } },
         careerGrowth: [
             { title: "Junior Embedded" },
             { title: "Embedded Engineer" },
@@ -813,7 +766,6 @@ window.professionsData = [
         title: "Frontend-разработчик",
         shortDesc: "Разработка пользовательских интерфейсов веб-приложений",
         education: { requirements: "Знание JavaScript.", courses: ["React", "Vue", "Angular"] },
-        salary: { start: "100 000 ₽", peak: "450 000+ ₽", median: "220 000 ₽", regions: { central: "130 000–450 000 ₽", northwest: "110 000–380 000 ₽", south: "80 000–280 000 ₽", northcaucasus: "65 000–200 000 ₽", volga: "90 000–300 000 ₽", ural: "100 000–330 000 ₽", siberia: "95 000–310 000 ₽", fareast: "105 000–350 000 ₽" } },
         careerGrowth: [
             { title: "Junior Frontend" },
             { title: "Frontend-разработчик" },
@@ -829,7 +781,6 @@ window.professionsData = [
         title: "Backend-разработчик",
         shortDesc: "Разработка серверной логики и API веб-приложений",
         education: { requirements: "Знание Java/Go/Python.", courses: ["Spring", "PostgreSQL"] },
-        salary: { start: "110 000 ₽", peak: "500 000+ ₽", median: "240 000 ₽", regions: { central: "140 000–500 000 ₽", northwest: "120 000–420 000 ₽", south: "90 000–320 000 ₽", northcaucasus: "75 000–230 000 ₽", volga: "100 000–340 000 ₽", ural: "110 000–370 000 ₽", siberia: "105 000–350 000 ₽", fareast: "115 000–390 000 ₽" } },
         careerGrowth: [
             { title: "Junior Backend" },
             { title: "Backend-разработчик" },
@@ -845,7 +796,6 @@ window.professionsData = [
         title: "QA-инженер",
         shortDesc: "Обеспечение качества и тестирование программного обеспечения",
         education: { requirements: "Знание тестирования.", courses: ["Selenium", "Postman"] },
-        salary: { start: "80 000 ₽", peak: "350 000+ ₽", median: "170 000 ₽", regions: { central: "100 000–350 000 ₽", northwest: "90 000–300 000 ₽", south: "65 000–220 000 ₽", northcaucasus: "55 000–160 000 ₽", volga: "75 000–240 000 ₽", ural: "85 000–270 000 ₽", siberia: "80 000–250 000 ₽", fareast: "90 000–290 000 ₽" } },
         careerGrowth: [
             { title: "Junior QA" },
             { title: "QA Engineer" },
@@ -861,7 +811,6 @@ window.professionsData = [
         title: "Mobile-разработчик",
         shortDesc: "Разработка мобильных приложений для iOS и Android",
         education: { requirements: "Знание Kotlin/Swift.", courses: ["Kotlin", "Swift"] },
-        salary: { start: "110 000 ₽", peak: "450 000+ ₽", median: "230 000 ₽", regions: { central: "140 000–450 000 ₽", northwest: "120 000–380 000 ₽", south: "90 000–280 000 ₽", northcaucasus: "75 000–210 000 ₽", volga: "100 000–310 000 ₽", ural: "110 000–340 000 ₽", siberia: "105 000–320 000 ₽", fareast: "115 000–360 000 ₽" } },
         careerGrowth: [
             { title: "Junior Mobile" },
             { title: "Mobile-разработчик" },
