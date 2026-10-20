@@ -26,11 +26,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.getElementById('resourceTypeButtons');
     const search = document.getElementById('resourceSearch');
 
+    const status=document.createElement("p"); status.className="filter-status"; status.setAttribute("role","status"); status.setAttribute("aria-live","polite"); filter.appendChild(status);
+    const reset=document.createElement("button"); reset.type="button"; reset.className="eng-filter-btn filter-reset"; reset.textContent="Сбросить фильтры"; filter.appendChild(reset);
+    reset.addEventListener("click",()=>{activeType=ALL;query="";search.value="";buttons.querySelectorAll("button").forEach(b=>b.classList.toggle("active",b.textContent==="Все"));render();});
     function render() {
         const items = resources.filter((item) => {
             const text = [item.name, item.desc, item.type].join(' ').toLocaleLowerCase('ru-RU');
             return (activeType === ALL || item.type === activeType) && text.includes(query);
         });
+        status.textContent=`Найдено: ${items.length} из ${resources.length}`;
+        reset.hidden=activeType===ALL&&!query;
         grid.innerHTML = items.length
             ? items.map((item) => `
           <a class="eng-card eng-card--link resource-card" href="${escapeHTML(item.link)}" target="_blank" rel="noopener noreferrer">
