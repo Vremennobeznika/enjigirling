@@ -90,10 +90,11 @@ window.salarySourceAudit = [
     "region": "Москва (предустановленный регион на странице источника)",
     "metric": "Диапазон, опубликованный hh Карьера; не медиана фактических доходов",
     "checkedAt": "2026-10-20",
-    "notes": "Срез динамический; зарплатные диапазоны иных регионов не подтверждены; не заменяет прежнюю медиану.",
+    "notes": "Повторно сверены название профессии, Москва и диапазон на странице hh Карьера 20.10.2026; это зарплаты в вакансиях, не доходы всех работников.",
     "evidenceLevel": "aggregate_or_range",
     "salaryUnit": "RUB_per_month",
-    "validationStatus": "source_linked_not_independently_verified"
+    "validationStatus": "source_page_checked",
+    "verifiedAt": "2026-10-20"
   },
   {
     "id": "automotive-engineer",
@@ -410,10 +411,11 @@ window.salarySourceAudit = [
     "region": "Москва (предустановленный регион на странице источника)",
     "metric": "Диапазон, опубликованный hh Карьера; не медиана фактических доходов",
     "checkedAt": "2026-10-20",
-    "notes": "Срез динамический; зарплатные диапазоны иных регионов не подтверждены; не заменяет прежнюю медиану.",
+    "notes": "Повторно сверены название профессии, Москва и диапазон на странице hh Карьера 20.10.2026; это зарплаты в вакансиях, не доходы всех работников.",
     "evidenceLevel": "aggregate_or_range",
     "salaryUnit": "RUB_per_month",
-    "validationStatus": "source_linked_not_independently_verified"
+    "validationStatus": "source_page_checked",
+    "verifiedAt": "2026-10-20"
   },
   {
     "id": "food-engineer",
@@ -666,10 +668,11 @@ window.salarySourceAudit = [
     "region": "Москва (предустановленный регион на странице источника)",
     "metric": "Диапазон, опубликованный hh Карьера; не медиана фактических доходов",
     "checkedAt": "2026-10-20",
-    "notes": "Срез динамический; зарплатные диапазоны иных регионов не подтверждены; не заменяет прежнюю медиану.",
+    "notes": "Повторно сверены название профессии, Москва и диапазон на странице hh Карьера 20.10.2026; это зарплаты в вакансиях, не доходы всех работников.",
     "evidenceLevel": "aggregate_or_range",
     "salaryUnit": "RUB_per_month",
-    "validationStatus": "source_linked_not_independently_verified"
+    "validationStatus": "source_page_checked",
+    "verifiedAt": "2026-10-20"
   },
   {
     "id": "devops-engineer",
@@ -698,10 +701,11 @@ window.salarySourceAudit = [
     "region": "Москва (предустановленный регион на странице источника)",
     "metric": "Диапазон, опубликованный hh Карьера; не медиана фактических доходов",
     "checkedAt": "2026-10-20",
-    "notes": "Срез динамический; зарплатные диапазоны иных регионов не подтверждены; не заменяет прежнюю медиану.",
+    "notes": "Повторно сверены название профессии, Москва и диапазон на странице hh Карьера 20.10.2026; это зарплаты в вакансиях, не доходы всех работников.",
     "evidenceLevel": "aggregate_or_range",
     "salaryUnit": "RUB_per_month",
-    "validationStatus": "source_linked_not_independently_verified"
+    "validationStatus": "source_page_checked",
+    "verifiedAt": "2026-10-20"
   },
   {
     "id": "security-engineer",
