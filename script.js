@@ -339,10 +339,12 @@ document.addEventListener("DOMContentLoaded", () => {
     card.className = "eng-card";
     card.tabIndex = 0;
     card.setAttribute("role", "button");
-    card.setAttribute("aria-label", `${profession.title} — открыть описание профессии`);
+
 
     const title = document.createElement("h3");
     title.className = "eng-title";
+    title.id = `profession-card-title-${profession.id}`;
+    card.setAttribute("aria-labelledby", title.id);
     title.textContent = profession.title;
     card.append(title);
     const desc = document.createElement("p");
