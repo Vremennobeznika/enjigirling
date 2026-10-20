@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 salaryHint.textContent = 'Проверяемый источник зарплаты для этой профессии пока не найден. Неподтверждённые суммы скрыты.';
                 return;
             }
-            salaryValue.textContent = `${formatNumber(evidence.rangeMinRub)}–${formatNumber(evidence.rangeMaxRub)} ₽`;
+            salaryValue.textContent = evidence.rangeMinRub === evidence.rangeMaxRub ? `от ${formatNumber(evidence.rangeMinRub)} ₽` : `${formatNumber(evidence.rangeMinRub)}–${formatNumber(evidence.rangeMaxRub)} ₽`;
             salaryHint.textContent = `Источник: ${evidence.sourceTitle}; ${evidence.region}; срез ${evidence.checkedAt}. ${evidence.metric}. ${evidence.sourceUrl}. Значение не относится к выбранному федеральному округу; региональные данные не подтверждены.`;
         }
 
