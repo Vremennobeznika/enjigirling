@@ -61,7 +61,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const regionValue = p.salary.regions && p.salary.regions[region] ? p.salary.regions[region] : '';
             const parts = [p.salary.start ? `старт ${p.salary.start}` : '', p.salary.median ? `медиана ${p.salary.median}` : ''].filter(Boolean).join(' · ');
             salaryValue.textContent = regionValue || p.salary.median || '—';
-            salaryHint.textContent = `${p.title} · ${REGION_OPTIONS.find(r => r.id === region)?.name || 'Регион не выбран'}. ${parts}. Оценочные данные без подтверждённых источников, методики и даты актуализации — не официальная статистика.`;
+            const evidence = (window.salarySourceAudit || []).find(item => item.id === p.id && item.status === 'source_snapshot');
+            const sourceNote = evidence ? ` Проверяемый ориентир для Москвы: ${formatNumber(evidence.rangeMinRub)}–${formatNumber(evidence.rangeMaxRub)} ₽/мес. (${evidence.sourceTitle}, hh Карьера, ${evidence.checkedAt}): ${evidence.sourceUrl}. Не медиана по выбранному округу.` : ' Подтверждённого зарплатного ориентира для этой профессии пока нет.';
+            salaryHint.textContent = `${p.title} · ${REGION_OPTIONS.find(r => r.id === region)?.name || 'Регион не выбран'}. ${parts}. Основное значение — оценка без подтверждённой методики и даты актуализации.${sourceNote}`;
         }
 
         profSelect.addEventListener('change', renderSalary);
