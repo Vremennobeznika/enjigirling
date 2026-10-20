@@ -1285,3 +1285,48 @@ body,button,input,select,textarea {font-family:var(--font);}
   .eng-calendar-root {padding:0 16px;}
   .eng-calendar-root > .eng-tabs {margin-top:8px;}
 }
+
+/* Shared navigation shell and responsive mobile menu. */
+.site-nav-wrap {width:100%;max-width:var(--container);margin-inline:auto;min-width:0;}
+.site-nav-wrap>.eng-tabs {display:flex;gap:8px;flex-wrap:wrap;align-items:center;min-width:0;}
+.site-nav-wrap>.eng-tabs .eng-tab {
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:42px;padding:10px 14px;border-radius:var(--ui-radius);
+  border:1px solid var(--card-border);background:var(--card-bg);
+  color:var(--card-text);font:600 var(--fs-sm)/1.35 var(--font);
+  text-decoration:none;white-space:normal;text-align:center;
+}
+.site-nav-wrap>.eng-tabs .eng-tab.active {
+  background:var(--btn-bg);color:var(--btn-text);border-color:var(--btn-bg);
+}
+.site-nav-wrap>.eng-tabs .eng-tab:hover {border-color:var(--text-primary);}
+.site-nav-wrap>.eng-tabs .eng-tab.active:hover {color:var(--btn-text);}
+.site-nav-toggle {display:none;}
+.site-page .atlas-card a,.site-page .atlas-card a:visited,
+.site-page .footer-btn,.site-page .footer-btn:visited {color:var(--card-text);}
+.site-page .atlas-card a:hover {color:var(--text-primary);}
+.site-page :is(input,select,textarea,button) {font-family:var(--font);}
+.site-page :is(.atlas-search,.resource-search,.profession-tools input,.profession-tools select) {
+  min-height:var(--ui-control-height);font-size:var(--ui-font-size);
+}
+@media(max-width:860px){
+  .site-nav-wrap {padding:8px 0;}
+  .site-nav-toggle {
+    display:flex;align-items:center;justify-content:space-between;
+    width:100%;min-height:48px;padding:10px 16px;
+    background:var(--card-bg);color:var(--card-text);
+    border:1px solid var(--card-border);border-radius:var(--ui-radius);
+    font:600 15px/1.4 var(--font);cursor:pointer;
+  }
+  .site-nav-toggle::after {content:'+';font-size:22px;line-height:1;font-weight:400;}
+  .site-nav-open>.site-nav-toggle::after {content:'−';}
+  .site-nav-wrap>.eng-tabs,
+  .eng-calendar-root>.site-nav-wrap>.eng-tabs {
+    display:none;flex-direction:column;align-items:stretch;
+    overflow:visible;max-height:none;
+    padding:10px 0 4px;margin:0;border:0;
+  }
+  .site-nav-wrap.site-nav-open>.eng-tabs {display:flex;}
+  .site-nav-wrap>.eng-tabs .eng-tab {width:100%;justify-content:flex-start;text-align:left;min-height:44px;}
+  .eng-calendar-root>.site-nav-wrap {padding:8px 0;}
+}
