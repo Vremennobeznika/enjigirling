@@ -1,7 +1,6 @@
 // Раздел «Ресурсы сообщества»: фильтр по типу и поиск.
 // Данные лежат в resources-data.js (const resources).
-// Script loads after page markup: render catalog during HTML parsing, before first paint.
-(() => {
+document.addEventListener('DOMContentLoaded', () => {
     const grid = document.getElementById('resourcesGrid');
     const filter = document.getElementById('resourcesFilter');
 
@@ -65,4 +64,4 @@
     });
 
     render();
-})();
+});
