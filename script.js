@@ -339,7 +339,7 @@ document.addEventListener("DOMContentLoaded", () => {
     card.className = "eng-card";
     card.tabIndex = 0;
     card.setAttribute("role", "button");
-    card.setAttribute("aria-label", `Открыть профессию: ${profession.title}`);
+    card.setAttribute("aria-label", `${profession.title} — открыть описание профессии`);
 
     const title = document.createElement("h3");
     title.className = "eng-title";
