@@ -22,3 +22,14 @@ for(const mode of ['light','dark']){
   });
  }
 }
+
+for(const filename of ['map.html','calculator.html']){
+ test(filename+' has correctly nested primary calculator headings',async({page})=>{
+  await page.goto('http://127.0.0.1:8765/'+filename);
+  await expect(page.locator('main h1')).toHaveCount(1);
+  const levels=await page.locator('main .calc-heading').evaluateAll(nodes=>nodes.map(n=>Number(n.tagName.slice(1))));
+  expect(levels.length).toBeGreaterThan(0);
+  expect(levels[0]).toBe(2);
+  for(const level of levels)expect(level).toBeGreaterThanOrEqual(2);
+ });
+}
