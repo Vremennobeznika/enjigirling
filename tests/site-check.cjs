@@ -83,5 +83,5 @@ for (const row of audits) {
   assert.ok(allowedEvidenceLevels.has(row.evidenceLevel), row.id + ': evidence quality not classified');
   assert.ok(['source_linked_not_independently_verified', 'source_page_checked', 'employer_vacancy_checked', 'adjacent_occupation_checked'].includes(row.validationStatus), row.id + ': unknown validation status');
 }
-assert.match(fs.readFileSync('script.js', 'utf8'), /Тип подтверждения:/, 'profession card missing evidence quality');
+assert.match(fs.readFileSync('script.js', 'utf8'), /Тип данных:/, 'profession card missing evidence quality');
 console.log('OK: evidence limitations classified for all professions');
