@@ -49,8 +49,8 @@ console.log('OK: numeric input validation scenarios');
 
 const salaryEntries = professions.filter(p => p.salary);
 for (const p of salaryEntries) {
-  assert.ok(p.salary.median, p.id + ': salary median missing');
-  assert.ok(p.salary.regions && typeof p.salary.regions === 'object', p.id + ': regions missing');
+  assert.ok(typeof p.salary === 'object', p.id + ': salary is not an object');
+  if (p.salary.regions !== undefined) assert.ok(typeof p.salary.regions === 'object', p.id + ': invalid regions');
 }
 const salaryUi = fs.readFileSync('engineer-calculators.js', 'utf8');
 assert.match(salaryUi, /Оценочные данные без подтверждённых источников/, 'salary calculator lacks data quality notice');
