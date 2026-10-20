@@ -444,15 +444,15 @@ window.salarySourceAudit = [
   {
     "id": "materials-engineer",
     "title": "Инженер-материаловед",
-    "status": "unverified",
-    "sourceTitle": null,
-    "sourceUrl": null,
-    "rangeMinRub": null,
-    "rangeMaxRub": null,
-    "region": "",
-    "metric": "",
+    "status": "source_snapshot",
+    "sourceTitle": "Главный инженер-материаловед",
+    "sourceUrl": "https://hh.ru/vacancies/inzhener_po_svarke",
+    "rangeMinRub": 105000,
+    "rangeMaxRub": 110000,
+    "region": "Москва",
+    "metric": "Одна вакансия АО «Российские космические системы», на руки; не медиана профессии",
     "checkedAt": "2026-10-20",
-    "notes": "Профильные значения в data.js пока без подтверждённого первоисточника."
+    "notes": "Единичная вакансия, а не распределение зарплат; указаны условия и регион источника."
   },
   {
     "id": "civil-defense-engineer",
@@ -522,15 +522,15 @@ window.salarySourceAudit = [
   {
     "id": "patent-engineer",
     "title": "Инженер-патентовед",
-    "status": "unverified",
-    "sourceTitle": null,
-    "sourceUrl": null,
-    "rangeMinRub": null,
-    "rangeMaxRub": null,
-    "region": "",
-    "metric": "",
+    "status": "source_snapshot",
+    "sourceTitle": "Инженер-патентовед",
+    "sourceUrl": "https://finder.work/vacancies/36457189",
+    "rangeMinRub": 70000,
+    "rangeMaxRub": 70000,
+    "region": "Жуковский, Московская область",
+    "metric": "Одна вакансия АО НИИП им. Тихомирова, от 70 000 ₽ до вычета налогов; верхняя граница не опубликована",
     "checkedAt": "2026-10-20",
-    "notes": "Профильные значения в data.js пока без подтверждённого первоисточника."
+    "notes": "Единичная вакансия, а не распределение зарплат; указаны условия и регион источника."
   },
   {
     "id": "data-engineer",
