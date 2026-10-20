@@ -1,0 +1,36 @@
+const fs = require('node:fs');
+const path = require('node:path');
+const vm = require('node:vm');
+const assert = require('node:assert/strict');
+const htmlFiles = fs.readdirSync('.').filter(name => name.endsWith('.html'));
+let checked = 0;
+for (const file of htmlFiles) {
+  const html = fs.readFileSync(file, 'utf8');
+  assert.match(html, /<html\b/i, file + ': missing html tag');
+  assert.match(html, /<title>[^<]+<\/title>/i, file + ': missing title');
+  for (const match of html.matchAll(/(?:src|href)\s*=\s*["']([^"']+)["']/g)) {
+    const link = match[1].split(/[?#]/)[0];
+    if (!link || /^(?:https?:|mailto:|tel:|data:|\/\/|#)/i.test(link)) continue;
+    const resolved = path.resolve(path.dirname(file), decodeURIComponent(link));
+    assert.ok(fs.existsSync(resolved), file + ': missing local asset ' + link);
+    checked++;
+  }
+}
+const context = {window: {}};
+vm.runInNewContext(fs.readFileSync('data.js', 'utf8'), context, {timeout: 5000});
+const professions = context.window.professionsData;
+assert.ok(Array.isArray(professions) && professions.length > 0, 'profession data is empty');
+const ids = professions.map(item => item.id);
+assert.equal(new Set(ids).size, ids.length, 'duplicate profession IDs');
+for (const item of professions) {
+  assert.ok(typeof item.id === 'string' && item.id, 'profession missing id');
+  assert.ok(typeof item.title === 'string' && item.title, item.id + ': missing title');
+}
+const script = fs.readFileSync('script.js', 'utf8');
+const categoryPart = script.match(/const CATEGORY_PROFESSIONS = (\{[\s\S]*?\});/);
+assert.ok(categoryPart, 'category map missing');
+const categories = vm.runInNewContext('(' + categoryPart[1] + ')');
+const referenced = Object.values(categories).flat();
+assert.equal(new Set(referenced).size, referenced.length, 'profession appears in multiple categories');
+for (const id of referenced) assert.ok(ids.includes(id), 'unknown profession in categories: ' + id);
+console.log('OK: ' + htmlFiles.length + ' HTML pages, ' + checked + ' local asset references, ' + professions.length + ' professions');
