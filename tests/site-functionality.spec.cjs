@@ -120,3 +120,16 @@ test('modal isolates the background and traps keyboard focus',async({page})=>{
  await expect(page.locator('footer')).not.toHaveAttribute('inert','');
  await expect(trigger).toBeFocused();
 });
+
+
+test('processes link directly to a relevant profession without losing the catalog',async({page})=>{
+ await page.goto(base+'processes.html');
+ const links=page.locator('#processGrid a[href^="index.html#profession="]');
+ expect(await links.count()).toBeGreaterThan(0);
+ await links.first().click();
+ await expect(page).toHaveURL(/index.html#profession=/);
+ await expect(page.locator('#modalOverlay')).toHaveAttribute('aria-hidden','false');
+ await expect(page.locator('#professionsGrid .eng-card')).toHaveCount(51);
+ await page.keyboard.press('Escape');
+ await expect(page.locator('#modalOverlay')).toHaveAttribute('aria-hidden','true');
+});
