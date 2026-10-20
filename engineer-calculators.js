@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
             salaryValue.textContent = `${formatNumber(evidence.rangeMinRub)}–${formatNumber(evidence.rangeMaxRub)} ₽`;
-            salaryHint.textContent = `Источник: hh Карьера — ${evidence.sourceTitle}; ${evidence.region}; срез ${evidence.checkedAt}. ${evidence.metric}. ${evidence.sourceUrl}. Значение не относится к выбранному федеральному округу; региональные данные не подтверждены.`;
+            salaryHint.textContent = `Источник: ${evidence.sourceTitle}; ${evidence.region}; срез ${evidence.checkedAt}. ${evidence.metric}. ${evidence.sourceUrl}. Значение не относится к выбранному федеральному округу; региональные данные не подтверждены.`;
         }
 
         profSelect.addEventListener('change', renderSalary);
