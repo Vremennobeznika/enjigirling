@@ -100,3 +100,23 @@ test('holiday calendar search can be reset',async({page})=>{
   await page.locator('#resetFilters').click();
   await expect(page.locator('#calendarEmpty')).toBeHidden();
 });
+
+
+test('modal isolates the background and traps keyboard focus',async({page})=>{
+ await page.goto(base+'index.html');
+ const trigger=page.locator('#professionsGrid .eng-card').first();
+ await trigger.focus();
+ await page.keyboard.press('Enter');
+ await expect(page.locator('main')).toHaveAttribute('inert','');
+ await expect(page.locator('footer')).toHaveAttribute('inert','');
+ await expect(page.locator('#modalClose')).toBeFocused();
+ await page.keyboard.press('Shift+Tab');
+ const last=page.locator('#modalOverlay a[href], #modalOverlay button:not([disabled])').last();
+ await expect(last).toBeFocused();
+ await page.keyboard.press('Tab');
+ await expect(page.locator('#modalClose')).toBeFocused();
+ await page.keyboard.press('Escape');
+ await expect(page.locator('main')).not.toHaveAttribute('inert','');
+ await expect(page.locator('footer')).not.toHaveAttribute('inert','');
+ await expect(trigger).toBeFocused();
+});

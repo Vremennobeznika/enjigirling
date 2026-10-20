@@ -10,6 +10,7 @@ for(const viewport of [{width:320,height:720},{width:390,height:844},{width:768,
    await expect(page.locator('nav.eng-tabs a')).toHaveCount(9);
    await expect(page.locator('main')).toBeVisible();
    const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth+2);
+   if(overflow){const offenders=await page.evaluate(()=>[...document.querySelectorAll('*')].filter(el=>el.getBoundingClientRect().right>window.innerWidth+2).slice(0,12).map(el=>({tag:el.tagName,cls:el.className?.toString().slice(0,80),right:Math.round(el.getBoundingClientRect().right),width:Math.round(el.getBoundingClientRect().width)})));console.log('OVERFLOW DIAG',pageName,viewport.width,JSON.stringify(offenders),await page.evaluate(()=>({doc:document.documentElement.scrollWidth,body:document.body.scrollWidth,inner:innerWidth,wide:[...document.querySelectorAll('*')].filter(e=>e.scrollWidth>e.clientWidth+3&&getComputedStyle(e).overflowX==='visible').slice(0,12).map(e=>[e.tagName,e.className?.toString().slice(0,55),e.scrollWidth,e.clientWidth])})));}
    expect(overflow,'horizontal document overflow').toBeFalsy();
    if(viewport.width<=860){
     const toggle=page.locator('.site-nav-toggle');
