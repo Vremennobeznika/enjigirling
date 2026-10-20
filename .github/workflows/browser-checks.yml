@@ -1,0 +1,24 @@
+name: Browser smoke checks
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright and Chromium
+        run: |
+          npm install --no-save @playwright/test
+          npx playwright install --with-deps chromium
+      - name: Start local site
+        run: python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/site-server.log 2>&1 &
+      - name: Run responsive browser tests
+        run: npx playwright test tests/site-visual.spec.cjs --workers=2 --reporter=line
