@@ -219,10 +219,11 @@ window.salarySourceAudit = [
     "region": "Москва (регион на странице hh Карьера)",
     "metric": "Диапазон зарплат в вакансиях hh Карьера; не медиана фактических доходов",
     "checkedAt": "2026-10-20",
-    "notes": "Сопоставление профессий по названию и обязанностям; выборка вакансий динамическая; старые региональные значения не подтверждены.",
+    "notes": "Повторно сверены название и зарплатный диапазон на открытой странице hh Карьера 20.10.2026; вакансионная аналитика, не общероссийская медиана.",
     "evidenceLevel": "aggregate_or_range",
     "salaryUnit": "RUB_per_month",
-    "validationStatus": "source_linked_not_independently_verified"
+    "validationStatus": "source_page_checked",
+    "verifiedAt": "2026-10-20"
   },
   {
     "id": "oil-gas-engineer",
@@ -283,10 +284,11 @@ window.salarySourceAudit = [
     "region": "Москва (предустановленный регион на странице источника)",
     "metric": "Диапазон, опубликованный hh Карьера; не медиана фактических доходов",
     "checkedAt": "2026-10-20",
-    "notes": "Срез динамический; зарплатные диапазоны иных регионов не подтверждены; не заменяет прежнюю медиану.",
+    "notes": "Повторно сверены название и зарплатный диапазон на открытой странице hh Карьера 20.10.2026; вакансионная аналитика, не общероссийская медиана.",
     "evidenceLevel": "aggregate_or_range",
     "salaryUnit": "RUB_per_month",
-    "validationStatus": "source_linked_not_independently_verified"
+    "validationStatus": "source_page_checked",
+    "verifiedAt": "2026-10-20"
   },
   {
     "id": "biomedical-engineer",
@@ -476,10 +478,11 @@ window.salarySourceAudit = [
     "region": "Москва (регион на странице hh Карьера)",
     "metric": "Диапазон зарплат в вакансиях hh Карьера; не медиана фактических доходов",
     "checkedAt": "2026-10-20",
-    "notes": "Сопоставление профессий по названию и обязанностям; выборка вакансий динамическая; старые региональные значения не подтверждены.",
+    "notes": "Повторно сверены название и зарплатный диапазон на открытой странице hh Карьера 20.10.2026; вакансионная аналитика, не общероссийская медиана.",
     "evidenceLevel": "aggregate_or_range",
     "salaryUnit": "RUB_per_month",
-    "validationStatus": "source_linked_not_independently_verified"
+    "validationStatus": "source_page_checked",
+    "verifiedAt": "2026-10-20"
   },
   {
     "id": "water-engineer",
@@ -588,10 +591,11 @@ window.salarySourceAudit = [
     "region": "Москва (предустановленный регион на странице источника)",
     "metric": "Диапазон, опубликованный hh Карьера; не медиана фактических доходов",
     "checkedAt": "2026-10-20",
-    "notes": "Срез динамический; зарплатные диапазоны иных регионов не подтверждены; не заменяет прежнюю медиану.",
+    "notes": "Повторно сверены название и зарплатный диапазон на открытой странице hh Карьера 20.10.2026; вакансионная аналитика, не общероссийская медиана.",
     "evidenceLevel": "aggregate_or_range",
     "salaryUnit": "RUB_per_month",
-    "validationStatus": "source_linked_not_independently_verified"
+    "validationStatus": "source_page_checked",
+    "verifiedAt": "2026-10-20"
   },
   {
     "id": "astronomer-engineer",
