@@ -253,3 +253,7 @@ console.log('OK: 51-profession editorial evidence inventory and educational qual
 assert.ok(!educationUi.includes('${escapeHTML(duration)}</p>'),'unsourced education durations must not appear in cards');
 assert.ok(!comparisonUi.includes('p.education?.duration'),'unsourced education durations must not appear in comparisons');
 console.log('OK: unsupported education durations suppressed throughout profession UI');
+
+assert.ok(educationUi.includes('По статье 195.3 ТК РФ'),'profession modal must explain statutory applicability');
+assert.ok(educationUi.includes('Совпадение названия профессии не доказывает применимость документа'),'profession modal must warn about matching names');
+console.log('OK: legal applicability of professional standards explained in every card');
