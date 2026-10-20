@@ -168,3 +168,11 @@ const shell=fs.readFileSync('site-shell.js','utf8');
 assert.ok(shell.includes('site-footer-links'),'shared footer links missing');
 assert.ok(shell.includes('footer-theme .theme-toggle'),'legacy theme control must be preserved');
 console.log('OK: shared header and footer script loaded on all nine pages');
+
+for(const page of ['resources.js','dictionary.js','materials.js','processes.js']){
+ const js=fs.readFileSync(page,'utf8');
+ assert.ok(js.includes('filter-status'),page+': missing result counter');
+ assert.ok(js.includes('filter-reset'),page+': missing reset action');
+}
+assert.ok(fs.readFileSync('dictionary.js','utf8').includes('title.textContent=item.term'),'dictionary term must be rendered as text');
+console.log('OK: resource, dictionary and atlas search counters and reset actions');
