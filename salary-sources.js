@@ -10,7 +10,10 @@ window.salarySourceAudit = [
     "region": "Россия",
     "metric": "P25–P75 вакансий до НДФЛ, медиана 77 575 ₽, 120 вакансий, сентябрь 2026",
     "checkedAt": "2026-10-20",
-    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы."
+    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы.",
+    "evidenceLevel": "aggregate_or_range",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "pgs-designer",
@@ -23,7 +26,10 @@ window.salarySourceAudit = [
     "region": "Москва (предустановленный регион на странице источника)",
     "metric": "Диапазон, опубликованный hh Карьера; не медиана фактических доходов",
     "checkedAt": "2026-10-20",
-    "notes": "Срез динамический; зарплатные диапазоны иных регионов не подтверждены; не заменяет прежнюю медиану."
+    "notes": "Срез динамический; зарплатные диапазоны иных регионов не подтверждены; не заменяет прежнюю медиану.",
+    "evidenceLevel": "aggregate_or_range",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "architect-engineer",
@@ -36,7 +42,10 @@ window.salarySourceAudit = [
     "region": "Москва (регион на странице hh Карьера)",
     "metric": "Опубликованный диапазон зарплат в вакансиях; смежная категория может отличаться от специализации каталога",
     "checkedAt": "2026-10-20",
-    "notes": "Сопоставление не является полным совпадением профессий. Значения не переносить на Россию или федеральные округа."
+    "notes": "Сопоставление не является полным совпадением профессий. Значения не переносить на Россию или федеральные округа.",
+    "evidenceLevel": "adjacent_or_weak",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "road-engineer",
@@ -49,7 +58,10 @@ window.salarySourceAudit = [
     "region": "Ставрополь",
     "metric": "Одна вакансия, 20 апреля 2026; не рыночная медиана",
     "checkedAt": "2026-10-20",
-    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы."
+    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы.",
+    "evidenceLevel": "single_observation",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "road-designer",
@@ -62,7 +74,10 @@ window.salarySourceAudit = [
     "region": "Москва",
     "metric": "Одна вакансия ООО Промтерра, на руки, опыт 1–3 года",
     "checkedAt": "2026-10-20",
-    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы."
+    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы.",
+    "evidenceLevel": "single_observation",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "mechanical-engineer",
@@ -75,7 +90,10 @@ window.salarySourceAudit = [
     "region": "Москва (предустановленный регион на странице источника)",
     "metric": "Диапазон, опубликованный hh Карьера; не медиана фактических доходов",
     "checkedAt": "2026-10-20",
-    "notes": "Срез динамический; зарплатные диапазоны иных регионов не подтверждены; не заменяет прежнюю медиану."
+    "notes": "Срез динамический; зарплатные диапазоны иных регионов не подтверждены; не заменяет прежнюю медиану.",
+    "evidenceLevel": "aggregate_or_range",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "automotive-engineer",
@@ -88,7 +106,10 @@ window.salarySourceAudit = [
     "region": "Орехово-Зуево",
     "metric": "Одна вакансия от 120 000 ₽; верхняя граница не указана",
     "checkedAt": "2026-10-20",
-    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы."
+    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы.",
+    "evidenceLevel": "single_observation",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "power-engineer",
@@ -101,7 +122,10 @@ window.salarySourceAudit = [
     "region": "Аромашево",
     "metric": "Одна вакансия Дорожное РСУ-4, 1 июня 2026",
     "checkedAt": "2026-10-20",
-    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы."
+    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы.",
+    "evidenceLevel": "single_observation",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "electrical-engineer",
@@ -114,7 +138,10 @@ window.salarySourceAudit = [
     "region": "Россия",
     "metric": "P25–P75 вакансий до НДФЛ, медиана 65 000 ₽, 214 вакансий, сентябрь 2026",
     "checkedAt": "2026-10-20",
-    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы."
+    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы.",
+    "evidenceLevel": "aggregate_or_range",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "electrical-designer",
@@ -127,7 +154,10 @@ window.salarySourceAudit = [
     "region": "Москва (регион на странице hh Карьера)",
     "metric": "Диапазон зарплат в вакансиях hh Карьера; не медиана фактических доходов",
     "checkedAt": "2026-10-20",
-    "notes": "Сопоставление профессий по названию и обязанностям; выборка вакансий динамическая; старые региональные значения не подтверждены."
+    "notes": "Сопоставление профессий по названию и обязанностям; выборка вакансий динамическая; старые региональные значения не подтверждены.",
+    "evidenceLevel": "aggregate_or_range",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "nuclear-engineer",
@@ -140,7 +170,10 @@ window.salarySourceAudit = [
     "region": "Мурманск",
     "metric": "Одна вакансия ФГУП Атомфлот от 150 000 ₽; верхняя граница не указана",
     "checkedAt": "2026-10-20",
-    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы."
+    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы.",
+    "evidenceLevel": "single_observation",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "aerospace-engineer",
@@ -153,7 +186,10 @@ window.salarySourceAudit = [
     "region": "Люберцы",
     "metric": "Одна вакансия НЦВ им. Миля и Камова, 23 апреля 2026",
     "checkedAt": "2026-10-20",
-    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы."
+    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы.",
+    "evidenceLevel": "single_observation",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "space-engineer",
@@ -166,7 +202,10 @@ window.salarySourceAudit = [
     "region": "Москва",
     "metric": "Одна архивная проектная вакансия, опыт более 6 лет, август 2026",
     "checkedAt": "2026-10-20",
-    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы."
+    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы.",
+    "evidenceLevel": "single_observation",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "chemical-engineer",
@@ -179,7 +218,10 @@ window.salarySourceAudit = [
     "region": "Москва (регион на странице hh Карьера)",
     "metric": "Диапазон зарплат в вакансиях hh Карьера; не медиана фактических доходов",
     "checkedAt": "2026-10-20",
-    "notes": "Сопоставление профессий по названию и обязанностям; выборка вакансий динамическая; старые региональные значения не подтверждены."
+    "notes": "Сопоставление профессий по названию и обязанностям; выборка вакансий динамическая; старые региональные значения не подтверждены.",
+    "evidenceLevel": "aggregate_or_range",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "oil-gas-engineer",
@@ -192,7 +234,10 @@ window.salarySourceAudit = [
     "region": "Самара",
     "metric": "Одна вакансия вахтовым методом, 3 октября 2026",
     "checkedAt": "2026-10-20",
-    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы."
+    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы.",
+    "evidenceLevel": "single_observation",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "metallurgical-engineer",
@@ -205,7 +250,10 @@ window.salarySourceAudit = [
     "region": "Россия",
     "metric": "Оценка по 36 вакансиям Роструда, июнь 2026; источник приводит диапазон медиан",
     "checkedAt": "2026-10-20",
-    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы."
+    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы.",
+    "evidenceLevel": "aggregate_or_range",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "mining-engineer",
@@ -218,7 +266,10 @@ window.salarySourceAudit = [
     "region": "Москва (регион на странице hh Карьера)",
     "metric": "Опубликованный диапазон зарплат в вакансиях; смежная категория может отличаться от специализации каталога",
     "checkedAt": "2026-10-20",
-    "notes": "Сопоставление не является полным совпадением профессий. Значения не переносить на Россию или федеральные округа."
+    "notes": "Сопоставление не является полным совпадением профессий. Значения не переносить на Россию или федеральные округа.",
+    "evidenceLevel": "adjacent_or_weak",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "environmental-engineer",
@@ -231,7 +282,10 @@ window.salarySourceAudit = [
     "region": "Москва (предустановленный регион на странице источника)",
     "metric": "Диапазон, опубликованный hh Карьера; не медиана фактических доходов",
     "checkedAt": "2026-10-20",
-    "notes": "Срез динамический; зарплатные диапазоны иных регионов не подтверждены; не заменяет прежнюю медиану."
+    "notes": "Срез динамический; зарплатные диапазоны иных регионов не подтверждены; не заменяет прежнюю медиану.",
+    "evidenceLevel": "aggregate_or_range",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "biomedical-engineer",
@@ -244,7 +298,10 @@ window.salarySourceAudit = [
     "region": "Мурино",
     "metric": "Одна вакансия от 100 000 ₽, допускается образование по биомедицинской инженерии",
     "checkedAt": "2026-10-20",
-    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы."
+    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы.",
+    "evidenceLevel": "single_observation",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "robotics-engineer",
@@ -257,7 +314,10 @@ window.salarySourceAudit = [
     "region": "Москва",
     "metric": "Одна вакансия Института органической химии РАН, до НДФЛ",
     "checkedAt": "2026-10-20",
-    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы."
+    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы.",
+    "evidenceLevel": "single_observation",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "railway-engineer",
@@ -270,7 +330,10 @@ window.salarySourceAudit = [
     "region": "Россия",
     "metric": "P25–P75 по 8 вакансиям hh.ru, медиана 66 737 ₽, октябрь 2026",
     "checkedAt": "2026-10-20",
-    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы."
+    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы.",
+    "evidenceLevel": "aggregate_or_range",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "shipbuilding-engineer",
@@ -283,7 +346,10 @@ window.salarySourceAudit = [
     "region": "Санкт-Петербург",
     "metric": "Зарплата конкретной вакансии, НЕ рыночная медиана и НЕ типичный диапазон профессии",
     "checkedAt": "2026-10-20",
-    "notes": "Сведения из конкретной опубликованной вакансии или агрегата вакансий; не переносить на другие регионы и уровни опыта."
+    "notes": "Сведения из конкретной опубликованной вакансии или агрегата вакансий; не переносить на другие регионы и уровни опыта.",
+    "evidenceLevel": "single_observation",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "asu-tp-designer",
@@ -296,7 +362,10 @@ window.salarySourceAudit = [
     "region": "Россия",
     "metric": "Один отзыв о зарплате на руки; выборка недостаточна для рыночной медианы",
     "checkedAt": "2026-10-20",
-    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы."
+    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы.",
+    "evidenceLevel": "single_observation",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "asu-tp-programmer",
@@ -309,7 +378,10 @@ window.salarySourceAudit = [
     "region": "Россия",
     "metric": "Частый диапазон по 6 отзывам на руки, средняя 120 000 ₽; малая выборка",
     "checkedAt": "2026-10-20",
-    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы."
+    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы.",
+    "evidenceLevel": "aggregate_or_range",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "asu-tp-commissioning",
@@ -322,7 +394,10 @@ window.salarySourceAudit = [
     "region": "Хабаровск",
     "metric": "Одна вакансия от 130 000 ₽, верхняя граница не указана",
     "checkedAt": "2026-10-20",
-    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы."
+    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы.",
+    "evidenceLevel": "single_observation",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "kipia-engineer",
@@ -335,7 +410,10 @@ window.salarySourceAudit = [
     "region": "Москва (предустановленный регион на странице источника)",
     "metric": "Диапазон, опубликованный hh Карьера; не медиана фактических доходов",
     "checkedAt": "2026-10-20",
-    "notes": "Срез динамический; зарплатные диапазоны иных регионов не подтверждены; не заменяет прежнюю медиану."
+    "notes": "Срез динамический; зарплатные диапазоны иных регионов не подтверждены; не заменяет прежнюю медиану.",
+    "evidenceLevel": "aggregate_or_range",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "food-engineer",
@@ -348,7 +426,10 @@ window.salarySourceAudit = [
     "region": "Москва (регион на странице hh Карьера)",
     "metric": "Опубликованный диапазон зарплат в вакансиях; смежная категория может отличаться от специализации каталога",
     "checkedAt": "2026-10-20",
-    "notes": "Сопоставление не является полным совпадением профессий. Значения не переносить на Россию или федеральные округа."
+    "notes": "Сопоставление не является полным совпадением профессий. Значения не переносить на Россию или федеральные округа.",
+    "evidenceLevel": "adjacent_or_weak",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "textile-engineer",
@@ -361,7 +442,10 @@ window.salarySourceAudit = [
     "region": "Варфоломеево",
     "metric": "Одна вакансия технолога текстильно-швейного производства, 21 апреля 2026",
     "checkedAt": "2026-10-20",
-    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы."
+    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы.",
+    "evidenceLevel": "single_observation",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "forest-engineer",
@@ -374,7 +458,10 @@ window.salarySourceAudit = [
     "region": "Вологда",
     "metric": "Зарплата конкретной вакансии, НЕ рыночная медиана и НЕ типичный диапазон профессии",
     "checkedAt": "2026-10-20",
-    "notes": "Сведения из конкретной опубликованной вакансии или агрегата вакансий; не переносить на другие регионы и уровни опыта."
+    "notes": "Сведения из конкретной опубликованной вакансии или агрегата вакансий; не переносить на другие регионы и уровни опыта.",
+    "evidenceLevel": "single_observation",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "telecom-engineer",
@@ -387,7 +474,10 @@ window.salarySourceAudit = [
     "region": "Москва (регион на странице hh Карьера)",
     "metric": "Диапазон зарплат в вакансиях hh Карьера; не медиана фактических доходов",
     "checkedAt": "2026-10-20",
-    "notes": "Сопоставление профессий по названию и обязанностям; выборка вакансий динамическая; старые региональные значения не подтверждены."
+    "notes": "Сопоставление профессий по названию и обязанностям; выборка вакансий динамическая; старые региональные значения не подтверждены.",
+    "evidenceLevel": "aggregate_or_range",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "water-engineer",
@@ -400,7 +490,10 @@ window.salarySourceAudit = [
     "region": "Киров",
     "metric": "Зарплата конкретной вакансии, НЕ рыночная медиана и НЕ типичный диапазон профессии",
     "checkedAt": "2026-10-20",
-    "notes": "Сведения из конкретной опубликованной вакансии или агрегата вакансий; не переносить на другие регионы и уровни опыта."
+    "notes": "Сведения из конкретной опубликованной вакансии или агрегата вакансий; не переносить на другие регионы и уровни опыта.",
+    "evidenceLevel": "single_observation",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "lighting-engineer",
@@ -413,7 +506,10 @@ window.salarySourceAudit = [
     "region": "Москва",
     "metric": "Зарплата конкретной вакансии, НЕ рыночная медиана и НЕ типичный диапазон профессии",
     "checkedAt": "2026-10-20",
-    "notes": "Сведения из конкретной опубликованной вакансии или агрегата вакансий; не переносить на другие регионы и уровни опыта."
+    "notes": "Сведения из конкретной опубликованной вакансии или агрегата вакансий; не переносить на другие регионы и уровни опыта.",
+    "evidenceLevel": "single_observation",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "military-engineer",
@@ -426,7 +522,10 @@ window.salarySourceAudit = [
     "region": "Россия",
     "metric": "Редакционный ориентир начального уровня; методика и выборка не раскрыты",
     "checkedAt": "2026-10-20",
-    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы."
+    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы.",
+    "evidenceLevel": "adjacent_or_weak",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "polygraph-engineer",
@@ -439,7 +538,10 @@ window.salarySourceAudit = [
     "region": "Россия, вакансия работодателя",
     "metric": "Вакансия работодателя: от 80 000 ₽/мес.; верхняя граница не опубликована; требует высшего полиграфического образования и опыта от 3 лет",
     "checkedAt": "2026-10-20",
-    "notes": "Конкретное предложение/оклад, не рыночная медиана. Для астроинженера использована смешанная должность младшего научного сотрудника и инженера-исследователя."
+    "notes": "Конкретное предложение/оклад, не рыночная медиана. Для астроинженера использована смешанная должность младшего научного сотрудника и инженера-исследователя.",
+    "evidenceLevel": "adjacent_or_weak",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "materials-engineer",
@@ -452,7 +554,10 @@ window.salarySourceAudit = [
     "region": "Москва",
     "metric": "Одна вакансия АО «Российские космические системы», на руки; не медиана профессии",
     "checkedAt": "2026-10-20",
-    "notes": "Единичная вакансия, а не распределение зарплат; указаны условия и регион источника."
+    "notes": "Единичная вакансия, а не распределение зарплат; указаны условия и регион источника.",
+    "evidenceLevel": "single_observation",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "civil-defense-engineer",
@@ -465,7 +570,10 @@ window.salarySourceAudit = [
     "region": "Россия",
     "metric": "Диапазон предложений по вакансиям, источник также публикует медиану 53 573 ₽ (сентябрь 2026, 120 вакансий)",
     "checkedAt": "2026-10-20",
-    "notes": "Сведения из конкретной опубликованной вакансии или агрегата вакансий; не переносить на другие регионы и уровни опыта."
+    "notes": "Сведения из конкретной опубликованной вакансии или агрегата вакансий; не переносить на другие регионы и уровни опыта.",
+    "evidenceLevel": "aggregate_or_range",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "geodetic-engineer",
@@ -478,7 +586,10 @@ window.salarySourceAudit = [
     "region": "Москва (предустановленный регион на странице источника)",
     "metric": "Диапазон, опубликованный hh Карьера; не медиана фактических доходов",
     "checkedAt": "2026-10-20",
-    "notes": "Срез динамический; зарплатные диапазоны иных регионов не подтверждены; не заменяет прежнюю медиану."
+    "notes": "Срез динамический; зарплатные диапазоны иных регионов не подтверждены; не заменяет прежнюю медиану.",
+    "evidenceLevel": "aggregate_or_range",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "astronomer-engineer",
@@ -491,7 +602,10 @@ window.salarySourceAudit = [
     "region": "Крым, пгт Научный",
     "metric": "Официальный оклад 31 020 ₽, возможны стимулирующие выплаты; конкурс 2026 года завершён; не рыночная зарплата",
     "checkedAt": "2026-10-20",
-    "notes": "Конкретное предложение/оклад, не рыночная медиана. Для астроинженера использована смешанная должность младшего научного сотрудника и инженера-исследователя."
+    "notes": "Конкретное предложение/оклад, не рыночная медиана. Для астроинженера использована смешанная должность младшего научного сотрудника и инженера-исследователя.",
+    "evidenceLevel": "adjacent_or_weak",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "restoration-engineer",
@@ -504,7 +618,10 @@ window.salarySourceAudit = [
     "region": "Санкт-Петербург",
     "metric": "Одна вакансия учреждения культуры, сентябрь 2026",
     "checkedAt": "2026-10-20",
-    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы."
+    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы.",
+    "evidenceLevel": "single_observation",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "standardization-engineer",
@@ -517,7 +634,10 @@ window.salarySourceAudit = [
     "region": "Россия",
     "metric": "P25–P75 по 42 вакансиям до НДФЛ, медиана 59 750 ₽, август 2026",
     "checkedAt": "2026-10-20",
-    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы."
+    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы.",
+    "evidenceLevel": "aggregate_or_range",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "patent-engineer",
@@ -530,7 +650,10 @@ window.salarySourceAudit = [
     "region": "Жуковский, Московская область",
     "metric": "Одна вакансия АО НИИП им. Тихомирова, от 70 000 ₽ до вычета налогов; верхняя граница не опубликована",
     "checkedAt": "2026-10-20",
-    "notes": "Единичная вакансия, а не распределение зарплат; указаны условия и регион источника."
+    "notes": "Единичная вакансия, а не распределение зарплат; указаны условия и регион источника.",
+    "evidenceLevel": "single_observation",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "data-engineer",
@@ -543,7 +666,10 @@ window.salarySourceAudit = [
     "region": "Москва (предустановленный регион на странице источника)",
     "metric": "Диапазон, опубликованный hh Карьера; не медиана фактических доходов",
     "checkedAt": "2026-10-20",
-    "notes": "Срез динамический; зарплатные диапазоны иных регионов не подтверждены; не заменяет прежнюю медиану."
+    "notes": "Срез динамический; зарплатные диапазоны иных регионов не подтверждены; не заменяет прежнюю медиану.",
+    "evidenceLevel": "aggregate_or_range",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "devops-engineer",
@@ -556,7 +682,10 @@ window.salarySourceAudit = [
     "region": "Москва (предустановленный регион на странице источника)",
     "metric": "Диапазон, опубликованный hh Карьера; не медиана фактических доходов",
     "checkedAt": "2026-10-20",
-    "notes": "Срез динамический; зарплатные диапазоны иных регионов не подтверждены; не заменяет прежнюю медиану."
+    "notes": "Срез динамический; зарплатные диапазоны иных регионов не подтверждены; не заменяет прежнюю медиану.",
+    "evidenceLevel": "aggregate_or_range",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "ml-engineer",
@@ -569,7 +698,10 @@ window.salarySourceAudit = [
     "region": "Москва (предустановленный регион на странице источника)",
     "metric": "Диапазон, опубликованный hh Карьера; не медиана фактических доходов",
     "checkedAt": "2026-10-20",
-    "notes": "Срез динамический; зарплатные диапазоны иных регионов не подтверждены; не заменяет прежнюю медиану."
+    "notes": "Срез динамический; зарплатные диапазоны иных регионов не подтверждены; не заменяет прежнюю медиану.",
+    "evidenceLevel": "aggregate_or_range",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "security-engineer",
@@ -582,7 +714,10 @@ window.salarySourceAudit = [
     "region": "Москва (предустановленный регион на странице источника)",
     "metric": "Диапазон, опубликованный hh Карьера; не медиана фактических доходов",
     "checkedAt": "2026-10-20",
-    "notes": "Срез динамический; зарплатные диапазоны иных регионов не подтверждены; не заменяет прежнюю медиану."
+    "notes": "Срез динамический; зарплатные диапазоны иных регионов не подтверждены; не заменяет прежнюю медиану.",
+    "evidenceLevel": "aggregate_or_range",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "cloud-engineer",
@@ -595,7 +730,10 @@ window.salarySourceAudit = [
     "region": "РФ и СНГ",
     "metric": "P25–P75 по 10 вакансиям на руки за 12 месяцев; медиана 430 410 ₽",
     "checkedAt": "2026-10-20",
-    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы."
+    "notes": "Тип и размер выборки указаны в metric; не считать все диапазоны медианами профессии. Не переносить на другие регионы.",
+    "evidenceLevel": "aggregate_or_range",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "embedded-engineer",
@@ -608,7 +746,10 @@ window.salarySourceAudit = [
     "region": "Москва (регион на странице hh Карьера)",
     "metric": "Опубликованный диапазон зарплат в вакансиях; смежная категория может отличаться от специализации каталога",
     "checkedAt": "2026-10-20",
-    "notes": "Сопоставление не является полным совпадением профессий. Значения не переносить на Россию или федеральные округа."
+    "notes": "Сопоставление не является полным совпадением профессий. Значения не переносить на Россию или федеральные округа.",
+    "evidenceLevel": "adjacent_or_weak",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "frontend-engineer",
@@ -621,7 +762,10 @@ window.salarySourceAudit = [
     "region": "Москва (предустановленный регион на странице источника)",
     "metric": "Диапазон, опубликованный hh Карьера; не медиана фактических доходов",
     "checkedAt": "2026-10-20",
-    "notes": "Срез динамический; зарплатные диапазоны иных регионов не подтверждены; не заменяет прежнюю медиану."
+    "notes": "Срез динамический; зарплатные диапазоны иных регионов не подтверждены; не заменяет прежнюю медиану.",
+    "evidenceLevel": "aggregate_or_range",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "backend-engineer",
@@ -634,7 +778,10 @@ window.salarySourceAudit = [
     "region": "Москва (предустановленный регион на странице источника)",
     "metric": "Диапазон, опубликованный hh Карьера; не медиана фактических доходов",
     "checkedAt": "2026-10-20",
-    "notes": "Срез динамический; зарплатные диапазоны иных регионов не подтверждены; не заменяет прежнюю медиану."
+    "notes": "Срез динамический; зарплатные диапазоны иных регионов не подтверждены; не заменяет прежнюю медиану.",
+    "evidenceLevel": "aggregate_or_range",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "qa-engineer",
@@ -647,7 +794,10 @@ window.salarySourceAudit = [
     "region": "Москва (предустановленный регион на странице источника)",
     "metric": "Диапазон, опубликованный hh Карьера; не медиана фактических доходов",
     "checkedAt": "2026-10-20",
-    "notes": "Срез динамический; зарплатные диапазоны иных регионов не подтверждены; не заменяет прежнюю медиану."
+    "notes": "Срез динамический; зарплатные диапазоны иных регионов не подтверждены; не заменяет прежнюю медиану.",
+    "evidenceLevel": "aggregate_or_range",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   },
   {
     "id": "mobile-engineer",
@@ -660,6 +810,9 @@ window.salarySourceAudit = [
     "region": "Москва (регион на странице hh Карьера)",
     "metric": "Опубликованный диапазон зарплат в вакансиях; смежная категория может отличаться от специализации каталога",
     "checkedAt": "2026-10-20",
-    "notes": "Сопоставление не является полным совпадением профессий. Значения не переносить на Россию или федеральные округа."
+    "notes": "Сопоставление не является полным совпадением профессий. Значения не переносить на Россию или федеральные округа.",
+    "evidenceLevel": "adjacent_or_weak",
+    "salaryUnit": "RUB_per_month",
+    "validationStatus": "source_linked_not_independently_verified"
   }
 ];
