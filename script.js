@@ -163,6 +163,29 @@ function classifyLearningItems(items = []) {
   return { tools, topics };
 }
 
+// Reference directories are discovery aids, not proof that a standard applies to a given job.
+const PROFESSIONAL_REFERENCE_DIRECTORIES = [
+  { label: "Реестр профстандартов ВНИИ труда", url: "https://vcot.info/standards" },
+  { label: "Официальный каталог ГОСТ Росстандарта", url: "https://protect.gost.ru/gost?month=0&year=0" },
+  { label: "Каталоги стандартов Российского института стандартизации", url: "https://new.gostinfo.ru/catalog/" }
+];
+const VERIFIED_PROFESSION_DOCUMENTS = {
+  "standardization-engineer": [{
+    label: "Профстандарт «Специалист по стандартизации» — приказ Минтруда № 346н от 27.04.2023",
+    url: "https://mintrud.gov.ru/docs/mintrud/orders/2673",
+    note: "Официальная публикация приказа. Соответствие конкретной должности и актуальность редакции требуют проверки."
+  }]
+};
+function renderNormativeReferences(profession) {
+  const docs = VERIFIED_PROFESSION_DOCUMENTS[profession.id] || [];
+  const links = docs.map(x => '<li><a href="' + escapeHTML(x.url) + '" target="_blank" rel="noopener noreferrer">' + escapeHTML(x.label) + '</a><p>' + escapeHTML(x.note) + '</p></li>').join("");
+  const directories = PROFESSIONAL_REFERENCE_DIRECTORIES.map(x => '<li><a href="' + escapeHTML(x.url) + '" target="_blank" rel="noopener noreferrer">' + escapeHTML(x.label) + '</a></li>').join("");
+  return (docs.length ? '<p>Документы, найденные для этого направления:</p><ul>' + links + '</ul>' :
+    '<p class="data-quality-note">Привязка конкретных нормативных документов к этой профессии ещё не проверена.</p>') +
+    '<p>Реестры для поиска и проверки редакций:</p><ul>' + directories + '</ul>' +
+    '<p class="data-quality-note">Наличие документа в реестре не означает, что он обязателен для каждой должности. Проверяйте статус, область применения и редакцию.</p>';
+}
+
 function renderPracticalGuide(profession) {
   const requirements = profession.education?.requirements;
   const tools = profession.education?.courses || [];
@@ -196,6 +219,7 @@ function renderProfession(profession, category) {
     ${section("Чем занимается", `<p>${valueOrDash(profession.shortDesc)}</p>`, " profession-intro")}
     <p class="data-quality-note">Численность специалистов, средний возраст и гендерное распределение не публикуются без проверяемых статистических источников.</p>
     ${section("Практика: задачи, знания и инструменты", renderPracticalGuide(profession))}
+    ${section("Нормативные документы и профессиональные стандарты", renderNormativeReferences(profession))}
     ${section("Образование и подготовка (ориентир)", renderEducation(profession.education))}
     ${section("Зарплата", renderVerifiedSalarySource(profession))}
     ${section("Источники и ограничения данных", renderSourceMethodology(profession))}
