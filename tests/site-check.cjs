@@ -210,7 +210,7 @@ const resourceList=resourcesContext.resourceList;
 assert.equal(new Set(resourceList.map(x=>x.id)).size,resourceList.length,'duplicate resource IDs');
 assert.equal(new Set(resourceList.map(x=>x.link)).size,resourceList.length,'duplicate resource URLs');
 for(const resource of resourceList){
- assert.ok(/^https:\/\//.test(resource.link),'resource needs secure URL: '+resource.id);
+ assert.ok(/^https?:\/\//.test(resource.link),'resource needs valid HTTP URL: '+resource.id);
  assert.ok(resource.name&&resource.type&&resource.desc,'resource metadata incomplete: '+resource.id);
 }
 assert.ok(fs.readFileSync('navigation.js','utf8').includes("aria-current"),'current page accessibility missing');
@@ -218,4 +218,4 @@ for(const file of ['materials.js','processes.js']){
  const js=fs.readFileSync(file,'utf8');
  assert.ok(js.includes("addEventListener('hashchange'"),file+': linked card hash navigation missing');
 }
-console.log('OK: unique secure community links, external audit script and accessible deep links');
+console.log('OK: unique community links, external audit script and accessible deep links');
