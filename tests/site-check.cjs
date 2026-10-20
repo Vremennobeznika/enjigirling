@@ -139,10 +139,13 @@ console.log('OK: monochrome palette, unique navigation, standardized controls an
 const allPages=['index.html','calendar.html','resources.html','dictionary.html','map.html','calculator.html','compare.html','processes.html','materials.html'];
 for(const page of allPages){
   const markup=fs.readFileSync(page,'utf8');
-  const nav=markup.match(/<nav\\b[^>]*class="eng-tabs"[^>]*>[\\s\\S]*?<\\/nav>/i);
-  assert.ok(nav,page+': missing shared navigation');
-  for(const href of allPages) assert.equal(nav[0].split('href="'+href+'"').length-1,1,page+': missing or duplicated '+href);
-  assert.match(markup,/<meta\\s+charset="(?:UTF-8|utf-8)"/i,page+': missing UTF-8 declaration');
+  const navStart=markup.indexOf('<nav');
+  const navEnd=markup.indexOf('</nav>',navStart);
+  assert.ok(navStart>=0&&navEnd>navStart,page+': missing shared navigation');
+  const nav=markup.slice(navStart,navEnd+6);
+  assert.ok(nav.includes('class="eng-tabs"'),page+': navigation class missing');
+  for(const href of allPages) assert.equal(nav.split('href="'+href+'"').length-1,1,page+': missing or duplicated '+href);
+  assert.ok(markup.toLowerCase().includes('charset="utf-8"'),page+': missing UTF-8 declaration');
 }
-assert.match(fs.readFileSync('index.html','utf8'),/<strong>9<\\/strong> разделов/,'homepage section count is stale');
+assert.ok(fs.readFileSync('index.html','utf8').includes('<strong>9</strong> разделов'),'homepage section count is stale');
 console.log('OK: all nine pages retain complete navigation, UTF-8 declarations and accurate section count');
