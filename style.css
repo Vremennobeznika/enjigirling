@@ -1124,3 +1124,10 @@ html.theme-dark,body.theme-dark { --bg:#121719;--bg-block:#192124;--text-primary
 .site-page :is(a,button,input,select):focus-visible {outline:2px solid var(--accent);outline-offset:3px;}
 @media(max-width:680px){.site-page{padding:0 16px 42px}.site-brand span{display:none}.site-page .eng-tabs{margin-bottom:24px}.site-page .page-header h1{font-size:clamp(34px,9vw,52px)}.site-page .profession-tools{grid-template-columns:1fr;gap:10px}.catalog-section-heading{align-items:flex-start;flex-direction:column;gap:4px}.site-page .eng-grid{grid-template-columns:1fr}.site-page .eng-card{min-height:150px}.hero-stats{gap:7px}.hero-stats span{padding:10px 12px}}
 @media(prefers-reduced-motion:reduce){.site-page .eng-card,.site-page .eng-tab{transition:none!important}}
+
+/* Cross-links between related professions */
+.related-professions {display:flex;flex-wrap:wrap;gap:9px;margin-top:10px}
+.related-profession-link {font:inherit;font-size:13px;padding:10px 13px;border:1px solid var(--card-border);border-radius:10px;background:var(--soft-bg);color:var(--card-text);cursor:pointer;text-align:left}
+.related-profession-link:hover {border-color:var(--accent,#d99863)}
+.related-profession-link:focus-visible {outline:2px solid var(--accent,#d99863);outline-offset:2px}
+.career-unverified {font-size:12px;font-weight:500;color:var(--card-muted);white-space:normal}
