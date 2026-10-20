@@ -283,3 +283,13 @@ assert.equal(matrixRows.length,professions.length,'evidence matrix must cover al
 for(const p of professions)assert.equal(matrixRows.filter(row=>row.includes(' | '+p.id+' | ')).length,1,'missing or duplicated evidence row: '+p.id);
 assert.ok(matrix.includes('Не проведены:'),'matrix must disclose unverified dimensions');
 console.log('OK: all 51 professions have one evidence matrix row with explicit limitations');
+
+for(const p of professions){
+ assert.ok(!p.stats,'unverified demographic statistics must not remain: '+p.id);
+ assert.ok(!p.education?.duration,'unsourced education duration must not remain: '+p.id);
+ for(const role of p.careerGrowth||[]){
+  assert.ok(!role.period,'unsourced career time must not remain: '+p.id);
+  assert.ok(!role.salary,'unsourced career salary must not remain: '+p.id);
+ }
+}
+console.log('OK: all 51 records omit unsourced demographic and career estimates');
