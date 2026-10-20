@@ -106,8 +106,8 @@ assert.match(fs.readFileSync('index.html', 'utf8'), /href="compare\.html"/, 'com
 assert.match(fs.readFileSync('index.html', 'utf8'), /href="processes\.html"/, 'processes link missing');
 assert.match(fs.readFileSync('index.html', 'utf8'), /href="materials\.html"/, 'materials link missing');
 assert.match(fs.readFileSync('compare.js', 'utf8'), /chosen\.length>=4/, 'comparison limit missing');
-assert.match(fs.readFileSync('processes.js', 'utf8'), /Неразрушающий контроль/, 'process seed missing');
-assert.match(fs.readFileSync('materials.js', 'utf8'), /Технический текстиль/, 'materials seed missing');
+assert.match(fs.readFileSync('processes-data.js', 'utf8'), /Неразрушающий контроль/, 'process seed missing');
+assert.match(fs.readFileSync('materials-data.js', 'utf8'), /Арамидная ткань/, 'materials seed missing');
 console.log('OK: comparison, processes, materials navigation and seed checks');
 
 const referenceContext={window:{}};
