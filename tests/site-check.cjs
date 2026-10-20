@@ -57,3 +57,19 @@ assert.match(salaryUi, /Оценочные данные без подтверж�
 assert.match(salaryUi, /Фактическое удержание НДФЛ по месяцам может отличаться/, 'tax calculator lacks withholding caveat');
 assert.match(salaryUi, /не учитывает упущенный заработок/, 'ROI calculator lacks opportunity-cost caveat');
 console.log('OK: ' + salaryEntries.length + ' salary records with required fields and visible limitations');
+
+const salaryContext = {window: {}};
+vm.runInNewContext(fs.readFileSync('salary-sources.js', 'utf8'), salaryContext);
+const audits = salaryContext.window.salarySourceAudit;
+assert.equal(audits.length, professions.length, 'salary audit must cover every profession');
+assert.equal(new Set(audits.map(x => x.id)).size, audits.length, 'duplicate salary audit id');
+for (const row of audits) {
+  assert.ok(ids.includes(row.id), 'unknown salary audit id ' + row.id);
+  if (row.status !== 'source_snapshot') continue;
+  assert.match(row.sourceUrl, /^https:\/\/career\.hh\.ru\/profession\/\d+$/, row.id + ': invalid source');
+  assert.ok(Number.isFinite(row.rangeMinRub) && row.rangeMinRub > 0, row.id + ': invalid lower bound');
+  assert.ok(Number.isFinite(row.rangeMaxRub) && row.rangeMaxRub >= row.rangeMinRub, row.id + ': invalid upper bound');
+}
+assert.match(fs.readFileSync('index.html', 'utf8'), /src="salary-sources\.js"/);
+assert.match(fs.readFileSync('calculator.html', 'utf8'), /src="salary-sources\.js"/);
+console.log('OK: ' + audits.filter(x => x.status === 'source_snapshot').length + ' sourced salary records / ' + audits.length + ' professions');
