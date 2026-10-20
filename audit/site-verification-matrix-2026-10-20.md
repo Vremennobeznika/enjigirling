@@ -7,17 +7,17 @@
 | Блок | Метод | Результат | Доказательство |
 |---|---|---|---|
 | Каталог | Уникальные ID и поля каждой из 51 карточки | PASS (51/51) | data.js; tests/site-check.cjs |
-| Зарплатные источники | ID, ссылка, числовой диапазон, регион и метрика | PASS (51/51) | salary-sources.js |
+| Зарплатные источники | ID, ссылка, диапазон либо явный статус неподтверждения | PASS (51/51); 50 числовых записей и 1 без суммы | salary-sources.js; исходная ссылка АВТОВАЗа возвращала HTTP 404 |
 | Соответствие зарплаты опубликованному источнику | Независимая сверка цифр и дат по каждой странице | NOT VERIFIED | Требуется внешний фактчекинг |
 | Профстандарты | Наличие кандидатов по ID | 7/51 CANDIDATE | script.js; нет проверки действующей редакции и трудовых функций |
 | Профстандарты | Проверка действующей редакции и применимости | NOT VERIFIED | Реестр ВНИИ труда / Минтруд |
 | Образование | Отсутствие неподтверждённых универсальных сроков | PASS (51/51) | data.js; tests/site-check.cjs |
 | Карьера | Отсутствие неподтверждённых сроков и зарплат ступеней | PASS (51/51) | data.js; tests/site-check.cjs |
 | Демография | Отсутствие неподтверждённых показателей | PASS (51/51) | data.js; tests/site-check.cjs |
-| UI | Браузерные smoke-тесты и адаптивность | PASS для коммита 028eded | GitHub Actions Browser smoke checks #39409607797 |
+| UI | Браузерные и функциональные тесты, 51 модальная карточка | PASS для коммита f84f8bc (35 тестов, включая 7 функциональных); ранее найденное переполнение 390 px исправлено | GitHub Actions Browser smoke checks #39410774832; style.css |
 | Автотесты | Site checks | PASS для коммита 028eded | GitHub Actions Site checks #39409607739 |
-| Публикация | GitHub Pages | IN PROGRESS на момент составления | GitHub Actions run #39409607593 |
-| Безопасность | Проверка всех внешних ссылок на текущем коммите | NOT VERIFIED | Нужен отдельный актуальный прогон |
+| Публикация | GitHub Pages | PASS для коммита 65b95d (предыдущая опубликованная версия); новый статус зависит от CI | GitHub Actions run #39410108824 |
+| Внешние ссылки | Проверка 144 внешних URL, включая зарплатные и профстандарты | 118 OK / 1 BROKEN / 25 UNVERIFIED на 20.10.2026; подтверждённый HTTP 404 источника АВТОВАЗа обработан | GitHub Actions External link audit #39410774876; ожидается перепроверка после исправления |
 | Доступность | Полный аудит WCAG клавиатуры, экранных читалок и контраста | NOT VERIFIED | Smoke-тест не заменяет WCAG-аудит |
 | Производительность | Lighthouse / Core Web Vitals | NOT VERIFIED | Не измерялись |
 
@@ -31,7 +31,7 @@
 | 4 | road-engineer | Инженер-дорожник | PASS | PASS | adjacent_occupation_checked | UNMAPPED | NOT VERIFIED | NOT VERIFIED |
 | 5 | road-designer | Инженер-проектировщик автомобильных дорог | PASS | PASS | source_page_checked | UNMAPPED | NOT VERIFIED | NOT VERIFIED |
 | 6 | mechanical-engineer | Инженер-механик | PASS | PASS | source_page_checked | UNMAPPED | NOT VERIFIED | NOT VERIFIED |
-| 7 | automotive-engineer | Инженер-автомобилестроитель | PASS | PASS | source_page_checked | UNMAPPED | NOT VERIFIED | NOT VERIFIED |
+| 7 | automotive-engineer | Инженер-автомобилестроитель | PASS | UNVERIFIED (сумма скрыта) | source_linked_not_independently_verified | UNMAPPED | NOT VERIFIED | NOT VERIFIED |
 | 8 | power-engineer | Инженер-энергетик | PASS | PASS | source_page_checked | CANDIDATE | NOT VERIFIED | NOT VERIFIED |
 | 9 | electrical-engineer | Инженер-электрик | PASS | PASS | source_page_checked | CANDIDATE | NOT VERIFIED | NOT VERIFIED |
 | 10 | electrical-designer | Инженер-проектировщик электроснабжения | PASS | PASS | source_page_checked | UNMAPPED | NOT VERIFIED | NOT VERIFIED |
@@ -76,6 +76,10 @@
 | 49 | backend-engineer | Backend-разработчик | PASS | PASS | source_page_checked | UNMAPPED | NOT VERIFIED | NOT VERIFIED |
 | 50 | qa-engineer | QA-инженер | PASS | PASS | source_page_checked | UNMAPPED | NOT VERIFIED | NOT VERIFIED |
 | 51 | mobile-engineer | Mobile-разработчик | PASS | PASS | adjacent_occupation_checked | UNMAPPED | NOT VERIFIED | NOT VERIFIED |
+
+## Проверка фактической работоспособности
+
+Добавлены Playwright-тесты `tests/site-functionality.spec.cjs`: открытие и закрытие всех 51 карточки; поиск, сортировка и категории; сравнение профессий и удаление из сравнения; поиск и сброс в ресурсах, словаре, материалах и процессах; работа источников зарплат; преобразование единиц и защита от температуры ниже абсолютного нуля; календарь. В `tests/site-visual.spec.cjs` сохраняется проверка 9 страниц на 390, 768 и 1440 px и цветов ссылок. Автоматические проверки ссылок расширены с раздела ресурсов на зарплатные источники и профстандарты. Открытые ограничения — предметная верификация содержания, WCAG и производительность.
 
 ## Критерий завершения
 
