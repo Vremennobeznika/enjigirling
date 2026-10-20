@@ -53,7 +53,7 @@ for (const p of salaryEntries) {
   if (p.salary.regions !== undefined) assert.ok(typeof p.salary.regions === 'object', p.id + ': invalid regions');
 }
 const salaryUi = fs.readFileSync('engineer-calculators.js', 'utf8');
-assert.match(salaryUi, /Основное значение — оценка без подтверждённой методики/, 'salary calculator lacks data quality notice');
+assert.match(salaryUi, /Неподтверждённые суммы скрыты/, 'salary calculator must hide unsourced figures');
 assert.match(salaryUi, /Фактическое удержание НДФЛ по месяцам может отличаться/, 'tax calculator lacks withholding caveat');
 assert.match(salaryUi, /не учитывает упущенный заработок/, 'ROI calculator lacks opportunity-cost caveat');
 console.log('OK: ' + salaryEntries.length + ' salary records with required fields and visible limitations');
@@ -73,3 +73,5 @@ for (const row of audits) {
 assert.match(fs.readFileSync('index.html', 'utf8'), /src="salary-sources\.js"/);
 assert.match(fs.readFileSync('calculator.html', 'utf8'), /src="salary-sources\.js"/);
 console.log('OK: ' + audits.filter(x => x.status === 'source_snapshot').length + ' sourced salary records / ' + audits.length + ' professions');
+
+assert.match(fs.readFileSync('script.js', 'utf8'), /Непроверенные цифры скрыты/, 'profession cards must hide unsourced salaries');
