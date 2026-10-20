@@ -76,7 +76,8 @@ console.log('OK: ' + audits.filter(x => x.status === 'source_snapshot').length +
 
 assert.match(fs.readFileSync('script.js', 'utf8'), /Непроверенные цифры скрыты/, 'profession cards must hide unsourced salaries');
 
-assert.equal(audits.filter(x => x.status === 'source_snapshot').length, professions.length, 'every profession must have a salary source');
+assert.equal(audits.filter(x => x.status === 'source_snapshot').length + audits.filter(x => x.status === 'unverified').length, professions.length, 'every profession must have an explicit sourced or unverified status');
+assert.ok(audits.filter(x => x.status === 'unverified').every(x => x.rangeMinRub === null && x.rangeMaxRub === null), 'unverified salary values must be hidden');
 
 const allowedEvidenceLevels = new Set(['aggregate_or_range', 'single_observation', 'adjacent_or_weak', 'needs_manual_review']);
 for (const row of audits) {
