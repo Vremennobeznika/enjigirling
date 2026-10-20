@@ -113,7 +113,7 @@ function renderCareer(steps = []) {
   const rows = steps.map((step, index) => `
     <div class="career-row">
       <span class="career-number">${index + 1}</span>
-      <div><strong>${escapeHTML(step.title)}</strong><small>${escapeHTML(step.period)}</small></div>
+      <div><strong>${escapeHTML(step.title)}</strong><small>Последовательность условная; сроки зависят от работодателя и квалификации</small></div>
       <b class="career-unverified">Зарплата не подтверждена</b>
     </div>`).join("");
   return rows && `<div class="career-list">${rows}</div>`;
@@ -223,8 +223,8 @@ function renderProfession(profession, category) {
     ${section("Образование и подготовка (ориентир)", renderEducation(profession.education))}
     ${section("Зарплата", renderVerifiedSalarySource(profession))}
     ${section("Источники и ограничения данных", renderSourceMethodology(profession))}
-    ${section("Карьерный путь (ориентировочная последовательность должностей)", renderCareer(profession.careerGrowth))}
-    ${section("Пример рабочего дня (иллюстрация, не исследование)", profession.typicalDay ? renderRows("day-list", "day-row", DAY_LABELS, profession.typicalDay) : "")}
+    ${section("Возможные карьерные роли (без фиксированных сроков)", renderCareer(profession.careerGrowth))}
+    ${section("Пример рабочего дня (иллюстрация, график зависит от работодателя)", profession.typicalDay ? renderRows("day-list", "day-row", DAY_LABELS, profession.typicalDay) : "")}
     ${renderProsCons(profession)}
     ${section("Другие профессии направления", renderRelatedProfessions(profession, category))}`;
 }
