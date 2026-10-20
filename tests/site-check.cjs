@@ -82,7 +82,7 @@ assert.ok(audits.filter(x => x.status === 'unverified').every(x => x.rangeMinRub
 const allowedEvidenceLevels = new Set(['aggregate_or_range', 'single_observation', 'adjacent_or_weak', 'needs_manual_review']);
 for (const row of audits) {
   assert.ok(allowedEvidenceLevels.has(row.evidenceLevel), row.id + ': evidence quality not classified');
-  assert.ok(['source_linked_not_independently_verified', 'source_page_checked', 'employer_vacancy_checked', 'adjacent_occupation_checked'].includes(row.validationStatus), row.id + ': unknown validation status');
+  assert.ok(['source_linked_not_independently_verified', 'source_page_checked', 'employer_vacancy_checked', 'adjacent_occupation_checked', 'source_unavailable_for_verification'].includes(row.validationStatus), row.id + ': unknown validation status');
 }
 assert.match(fs.readFileSync('script.js', 'utf8'), /Тип данных:/, 'profession card missing evidence quality');
 console.log('OK: evidence limitations classified for all professions');
