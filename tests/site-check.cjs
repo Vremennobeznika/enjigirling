@@ -46,3 +46,14 @@ for (const value of ['', '12abc', '1.2.3', 'Infinity', '1e309']) {
   assert.ok(Number.isNaN(parseNumber(value)), 'invalid numeric input accepted: ' + value);
 }
 console.log('OK: numeric input validation scenarios');
+
+const salaryEntries = professions.filter(p => p.salary);
+for (const p of salaryEntries) {
+  assert.ok(p.salary.median, p.id + ': salary median missing');
+  assert.ok(p.salary.regions && typeof p.salary.regions === 'object', p.id + ': regions missing');
+}
+const salaryUi = fs.readFileSync('engineer-calculators.js', 'utf8');
+assert.match(salaryUi, /Оценочные данные без подтверждённых источников/, 'salary calculator lacks data quality notice');
+assert.match(salaryUi, /Фактическое удержание НДФЛ по месяцам может отличаться/, 'tax calculator lacks withholding caveat');
+assert.match(salaryUi, /не учитывает упущенный заработок/, 'ROI calculator lacks opportunity-cost caveat');
+console.log('OK: ' + salaryEntries.length + ' salary records with required fields and visible limitations');
