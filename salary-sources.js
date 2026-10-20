@@ -2,18 +2,19 @@ window.salarySourceAudit = [
   {
     "id": "civil-engineer",
     "title": "Инженер-строитель (ПГС)",
-    "status": "unverified",
-    "sourceTitle": "Инженер-строитель",
-    "sourceUrl": "https://xn----8sbdbp6brnfrl.xn--p1ai/professii/inzhener-stroitel/",
-    "rangeMinRub": null,
-    "rangeMaxRub": null,
+    "status": "source_snapshot",
+    "sourceTitle": "Инженер ПГС — статистика вакансий Trudvsem через FullEdu",
+    "sourceUrl": "https://fulledu.ru/professii/stroitelstvo/inzhener-pgs/zarplata/",
+    "rangeMinRub": 52114,
+    "rangeMaxRub": 96788,
     "region": "Россия",
-    "metric": "P25–P75 вакансий до НДФЛ, медиана 77 575 ₽, 120 вакансий, сентябрь 2026",
+    "metric": "P25–P75, медиана 77 909 ₽ на руки, 40 вакансий; данные обновлены 11.10.2026",
     "checkedAt": "2026-10-20",
-    "notes": "При попытке независимой проверки 20.10.2026 первоисточник не удалось получить через веб-доступ. Ссылка сохранена для повторной проверки, числовое значение скрыто.",
+    "notes": "Должность и суммы проверены в доступном тексте источника; не переносить на другие регионы или уровни опыта.",
     "evidenceLevel": "aggregate_or_range",
     "salaryUnit": "RUB_per_month",
-    "validationStatus": "source_unavailable_for_verification"
+    "validationStatus": "source_page_checked",
+    "verifiedAt": "2026-10-20"
   },
   {
     "id": "pgs-designer",
@@ -113,7 +114,13 @@ window.salarySourceAudit = [
     "notes": "При попытке независимой проверки 20.10.2026 первоисточник не удалось получить через веб-доступ. Ссылка сохранена для повторной проверки, числовое значение скрыто.",
     "evidenceLevel": "single_observation",
     "salaryUnit": "RUB_per_month",
-    "validationStatus": "source_unavailable_for_verification"
+    "validationStatus": "source_unavailable_for_verification",
+    "searchAliases": [
+      "инженер-конструктор автомобилей",
+      "инженер-конструктор автомобильной техники",
+      "инженер-конструктор транспортных средств",
+      "инженер-конструктор шасси"
+    ]
   },
   {
     "id": "power-engineer",
@@ -129,7 +136,13 @@ window.salarySourceAudit = [
     "notes": "При попытке независимой проверки 20.10.2026 первоисточник не удалось получить через веб-доступ. Ссылка сохранена для повторной проверки, числовое значение скрыто.",
     "evidenceLevel": "single_observation",
     "salaryUnit": "RUB_per_month",
-    "validationStatus": "source_unavailable_for_verification"
+    "validationStatus": "source_unavailable_for_verification",
+    "searchAliases": [
+      "инженер-энергетик",
+      "инженер по эксплуатации электроэнергетического оборудования",
+      "инженер по энергоснабжению",
+      "инженер службы главного энергетика"
+    ]
   },
   {
     "id": "electrical-engineer",
@@ -145,7 +158,13 @@ window.salarySourceAudit = [
     "notes": "При попытке независимой проверки 20.10.2026 первоисточник не удалось получить через веб-доступ. Ссылка сохранена для повторной проверки, числовое значение скрыто.",
     "evidenceLevel": "aggregate_or_range",
     "salaryUnit": "RUB_per_month",
-    "validationStatus": "source_unavailable_for_verification"
+    "validationStatus": "source_unavailable_for_verification",
+    "searchAliases": [
+      "инженер-электрик",
+      "инженер-электротехник",
+      "инженер по электрооборудованию",
+      "инженер по эксплуатации электроустановок"
+    ]
   },
   {
     "id": "electrical-designer",
@@ -245,7 +264,13 @@ window.salarySourceAudit = [
     "notes": "При попытке независимой проверки 20.10.2026 первоисточник не удалось получить через веб-доступ. Ссылка сохранена для повторной проверки, числовое значение скрыто.",
     "evidenceLevel": "single_observation",
     "salaryUnit": "RUB_per_month",
-    "validationStatus": "source_unavailable_for_verification"
+    "validationStatus": "source_unavailable_for_verification",
+    "searchAliases": [
+      "инженер по добыче нефти и газа",
+      "инженер по разработке нефтяных месторождений",
+      "инженер по бурению",
+      "инженер-технолог нефтегазового производства"
+    ]
   },
   {
     "id": "metallurgical-engineer",
@@ -261,7 +286,13 @@ window.salarySourceAudit = [
     "notes": "При попытке независимой проверки 20.10.2026 первоисточник не удалось получить через веб-доступ. Ссылка сохранена для повторной проверки, числовое значение скрыто.",
     "evidenceLevel": "aggregate_or_range",
     "salaryUnit": "RUB_per_month",
-    "validationStatus": "source_unavailable_for_verification"
+    "validationStatus": "source_unavailable_for_verification",
+    "searchAliases": [
+      "инженер-металлург",
+      "инженер-технолог металлургического производства",
+      "инженер по металлургическим процессам",
+      "инженер по плавке металлов"
+    ]
   },
   {
     "id": "mining-engineer",
@@ -588,18 +619,19 @@ window.salarySourceAudit = [
   {
     "id": "civil-defense-engineer",
     "title": "Инженер ГО и ЧС",
-    "status": "unverified",
-    "sourceTitle": "Инженер по гражданской обороне и ЧС",
-    "sourceUrl": "https://xn----8sbdbp6brnfrl.xn--p1ai/professii/inzhener-po-go-i-chs/",
-    "rangeMinRub": null,
-    "rangeMaxRub": null,
-    "region": "Россия",
-    "metric": "Диапазон предложений по вакансиям, источник также публикует медиану 53 573 ₽ (сентябрь 2026, 120 вакансий)",
+    "status": "source_snapshot",
+    "sourceTitle": "Инженер по гражданской обороне и чрезвычайным ситуациям — ГУ МЧС по Камчатскому краю",
+    "sourceUrl": "https://xn----8sbnjg0adinpefc8b1e6c.xn--p1ai/vacancies/164438-inzhener-po-grazhdanskoy-oborone-i-chrezvychaynym/",
+    "rangeMinRub": 67028,
+    "rangeMaxRub": 74843,
+    "region": "Петропавловск-Камчатский",
+    "metric": "Одна вакансия ГУ МЧС, 67 028–74 843 ₽, опубликована 09.10.2026",
     "checkedAt": "2026-10-20",
-    "notes": "При попытке независимой проверки 20.10.2026 первоисточник не удалось получить через веб-доступ. Ссылка сохранена для повторной проверки, числовое значение скрыто.",
-    "evidenceLevel": "aggregate_or_range",
+    "notes": "Должность и суммы проверены в доступном тексте источника; не переносить на другие регионы или уровни опыта.",
+    "evidenceLevel": "single_observation",
     "salaryUnit": "RUB_per_month",
-    "validationStatus": "source_unavailable_for_verification"
+    "validationStatus": "source_page_checked",
+    "verifiedAt": "2026-10-20"
   },
   {
     "id": "geodetic-engineer",
@@ -655,18 +687,19 @@ window.salarySourceAudit = [
   {
     "id": "standardization-engineer",
     "title": "Инженер по стандартизации",
-    "status": "unverified",
-    "sourceTitle": "Инженер по стандартизации",
-    "sourceUrl": "https://xn----8sbdbp6brnfrl.xn--p1ai/professii/inzhener-po-standartizacii/",
-    "rangeMinRub": null,
-    "rangeMaxRub": null,
-    "region": "Россия",
-    "metric": "P25–P75 по 42 вакансиям до НДФЛ, медиана 59 750 ₽, август 2026",
+    "status": "source_snapshot",
+    "sourceTitle": "Инженер по стандартизации / нормоконтролёр — «Звезда»",
+    "sourceUrl": "https://finder.work/vacancies/36865369",
+    "rangeMinRub": 80000,
+    "rangeMaxRub": 100000,
+    "region": "Ижевск",
+    "metric": "Одна вакансия, 80 000–100 000 ₽, опубликована 01.10.2026",
     "checkedAt": "2026-10-20",
-    "notes": "При попытке независимой проверки 20.10.2026 первоисточник не удалось получить через веб-доступ. Ссылка сохранена для повторной проверки, числовое значение скрыто.",
-    "evidenceLevel": "aggregate_or_range",
+    "notes": "Должность и суммы проверены в доступном тексте источника; не переносить на другие регионы или уровни опыта.",
+    "evidenceLevel": "single_observation",
     "salaryUnit": "RUB_per_month",
-    "validationStatus": "source_unavailable_for_verification"
+    "validationStatus": "source_page_checked",
+    "verifiedAt": "2026-10-20"
   },
   {
     "id": "patent-engineer",
