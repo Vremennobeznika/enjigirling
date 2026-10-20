@@ -53,7 +53,7 @@ for (const p of salaryEntries) {
   if (p.salary.regions !== undefined) assert.ok(typeof p.salary.regions === 'object', p.id + ': invalid regions');
 }
 const salaryUi = fs.readFileSync('engineer-calculators.js', 'utf8');
-assert.match(salaryUi, /Оценочные данные без подтверждённых источников/, 'salary calculator lacks data quality notice');
+assert.match(salaryUi, /Основное значение — оценка без подтверждённой методики/, 'salary calculator lacks data quality notice');
 assert.match(salaryUi, /Фактическое удержание НДФЛ по месяцам может отличаться/, 'tax calculator lacks withholding caveat');
 assert.match(salaryUi, /не учитывает упущенный заработок/, 'ROI calculator lacks opportunity-cost caveat');
 console.log('OK: ' + salaryEntries.length + ' salary records with required fields and visible limitations');
