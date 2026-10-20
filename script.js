@@ -131,7 +131,7 @@ function renderVerifiedSalarySource(profession) {
   const entry = (window.salarySourceAudit || []).find(item => item.id === profession.id && item.status === 'source_snapshot');
   if (!entry) return '<p class="data-quality-note">Подтверждённой зарплатной оценки для этой профессии пока нет. Непроверенные цифры скрыты.</p>';
   const fmt = value => Number(value).toLocaleString('ru-RU');
-  return `<p class="data-quality-note"><strong>Проверяемый ориентир:</strong> ${fmt(entry.rangeMinRub)}–${fmt(entry.rangeMaxRub)} ₽/мес., ${escapeHTML(entry.region)}, ${escapeHTML(entry.checkedAt)}. ${escapeHTML(entry.metric)}. Профессия в источнике: ${escapeHTML(entry.sourceTitle)}. <a href="${escapeHTML(entry.sourceUrl)}" target="_blank" rel="noopener noreferrer">Источник: hh Карьера</a>. Другие зарплатные значения и региональные медианы не подтверждены и не отображаются.</p>`;
+  return `<p class="data-quality-note"><strong>Проверяемый ориентир:</strong> ${fmt(entry.rangeMinRub)}–${fmt(entry.rangeMaxRub)} ₽/мес., ${escapeHTML(entry.region)}, ${escapeHTML(entry.checkedAt)}. ${escapeHTML(entry.metric)}. Профессия в источнике: ${escapeHTML(entry.sourceTitle)}. <a href="${escapeHTML(entry.sourceUrl)}" target="_blank" rel="noopener noreferrer">Открыть источник зарплаты</a>. Другие зарплатные значения и региональные медианы не подтверждены и не отображаются.</p>`;
 }
 
 function renderProfession(profession, category) {
