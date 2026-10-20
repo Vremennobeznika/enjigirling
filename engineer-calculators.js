@@ -275,12 +275,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function renderNet() {
             const monthly = parseNumber(netGross.value);
-            if (!(monthly >= 0)) {
+            if (!Number.isFinite(monthly) || monthly < 0) {
                 netValue.textContent = '—';
                 netHint.textContent = 'Введите сумму в рублях.';
                 return;
             }
             const yearly = monthly * 12;
+            if (!Number.isFinite(yearly)) {
+                netValue.textContent = '—';
+                netHint.textContent = 'Сумма слишком велика для расчёта.';
+                return;
+            }
             const tax = yearlyTax(yearly);
             const rate = yearly ? tax / yearly * 100 : 0;
             netValue.textContent = formatRub((yearly - tax) / 12);
@@ -311,13 +316,18 @@ document.addEventListener('DOMContentLoaded', () => {
     if (roiCost && roiYears && roiBefore && roiAfter && roiValue && roiHint) {
         function renderRoi() {
             const [cost, years, before, after] = [roiCost, roiYears, roiBefore, roiAfter].map(el => parseNumber(el.value));
-            if ([cost, years, before, after].some(n => !(n >= 0))) {
+            if ([cost, years, before, after].some(n => !Number.isFinite(n) || n < 0)) {
                 roiValue.textContent = '—';
                 roiHint.textContent = 'Заполните все поля числами.';
                 return;
             }
             const total = cost * years;
             const gain = after - before;
+            if (!Number.isFinite(total) || !Number.isFinite(gain)) {
+                roiValue.textContent = '—';
+                roiHint.textContent = 'Значения слишком велики для расчёта.';
+                return;
+            }
             if (total === 0) {
                 roiValue.textContent = 'Сразу';
                 roiHint.textContent = 'Обучение бесплатное — затрат, которые нужно возвращать, нет.';
