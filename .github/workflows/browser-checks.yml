@@ -26,6 +26,8 @@ jobs:
         run: mkdir -p visual-review
       - name: Run responsive browser tests
         run: npx playwright test tests/site-visual.spec.cjs tests/site-functionality.spec.cjs --workers=2 --reporter=line
+      - name: Verify metadata and page load
+        run: node tests/site-check.cjs
       - name: Upload screenshots
         if: always()
         uses: actions/upload-artifact@v4
