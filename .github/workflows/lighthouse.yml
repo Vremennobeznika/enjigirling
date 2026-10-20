@@ -28,7 +28,7 @@ jobs:
             CHROME_PATH=$(command -v chromium-browser || command -v chromium)
             CHROME_PATH="$CHROME_PATH" npx lighthouse "http://127.0.0.1:8765/$page.html" --quiet --chrome-flags="--headless --no-sandbox --disable-dev-shm-usage" --only-categories=performance,accessibility,best-practices,seo --output=json --output-path="lighthouse-results/$page.json"
           done
-          node -e "const fs=require('fs');for(const file of fs.readdirSync('lighthouse-results')){const x=JSON.parse(fs.readFileSync('lighthouse-results/'+file));console.log(file,Object.fromEntries(Object.entries(x.categories).map(([k,v])=>[k,Math.round(v.score*100)])))}"
+          node tests/lighthouse-summary.cjs
       - name: Upload Lighthouse measurements
         if: always()
         uses: actions/upload-artifact@v4
