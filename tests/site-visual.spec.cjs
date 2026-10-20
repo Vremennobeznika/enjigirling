@@ -57,3 +57,18 @@ test('skip link is available to keyboard users',async({page})=>{
  await page.keyboard.press('Enter');
  await expect(page).toHaveURL(/#main-content$/);
 });
+
+for(const mode of ['light','dark']){
+ test('all nine pages have unique main landmark and visible focus '+mode,async({page})=>{
+  await page.addInitScript(theme=>localStorage.setItem('theme',theme),mode);
+  for(const path of pages){
+   await page.goto('http://127.0.0.1:8765/'+path);
+   await expect(page.locator('main')).toHaveCount(1);
+   await expect(page.locator('h1')).toHaveCount(1);
+   const title=await page.title();expect(title.length).toBeGreaterThan(8);
+   await page.keyboard.press('Tab');
+   const focus=await page.evaluate(()=>{const el=document.activeElement;return el&&el!==document.body&&el!==document.documentElement;});
+   expect(focus,path+' should have keyboard focus').toBeTruthy();
+  }
+ });
+}
