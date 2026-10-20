@@ -67,18 +67,19 @@ window.salarySourceAudit = [
   {
     "id": "road-designer",
     "title": "Инженер-проектировщик автомобильных дорог",
-    "status": "unverified",
-    "sourceTitle": "Инженер-проектировщик автомобильных дорог",
+    "status": "source_snapshot",
+    "sourceTitle": "ООО «Промтерра», вакансия инженера-проектировщика автомобильных дорог",
     "sourceUrl": "https://hh.ru/vacancies/inzhener-proektirovschik-avtomobilnyh-dorog",
-    "rangeMinRub": null,
-    "rangeMaxRub": null,
+    "rangeMinRub": 120000,
+    "rangeMaxRub": 160000,
     "region": "Москва",
-    "metric": "Одна вакансия ООО Промтерра, на руки, опыт 1–3 года",
+    "metric": "Одна конкретная вакансия в Москве: 120 000–160 000 ₽ в месяц на руки; опыт 1–3 года; источник — hh.ru, 20.10.2026",
     "checkedAt": "2026-10-20",
-    "notes": "При попытке независимой проверки 20.10.2026 первоисточник не удалось получить через веб-доступ. Ссылка сохранена для повторной проверки, числовое значение скрыто.",
+    "notes": "Сумма и должность сверены непосредственно с конкретной вакансией на странице hh.ru. Это не статистика рынка и не медиана.",
     "evidenceLevel": "single_observation",
     "salaryUnit": "RUB_per_month",
-    "validationStatus": "source_unavailable_for_verification"
+    "validationStatus": "source_page_checked",
+    "verifiedAt": "2026-10-20"
   },
   {
     "id": "mechanical-engineer",
@@ -312,18 +313,19 @@ window.salarySourceAudit = [
   {
     "id": "robotics-engineer",
     "title": "Инженер-робототехник",
-    "status": "unverified",
-    "sourceTitle": "Инженер-робототехник",
+    "status": "source_snapshot",
+    "sourceTitle": "Институт органической химии им. Н. Д. Зелинского РАН, вакансия инженера-робототехника",
     "sourceUrl": "https://hh.ru/vacancies/inzhener-robototehnik",
-    "rangeMinRub": null,
-    "rangeMaxRub": null,
+    "rangeMinRub": 120000,
+    "rangeMaxRub": 200000,
     "region": "Москва",
-    "metric": "Одна вакансия Института органической химии РАН, до НДФЛ",
+    "metric": "Одна конкретная вакансия в Москве: 120 000–200 000 ₽ в месяц до вычета налогов; опыт 1–3 года; источник — hh.ru, 20.10.2026",
     "checkedAt": "2026-10-20",
-    "notes": "При попытке независимой проверки 20.10.2026 первоисточник не удалось получить через веб-доступ. Ссылка сохранена для повторной проверки, числовое значение скрыто.",
+    "notes": "Сумма и должность сверены непосредственно с конкретной вакансией на странице hh.ru. Это не статистика рынка и не медиана.",
     "evidenceLevel": "single_observation",
     "salaryUnit": "RUB_per_month",
-    "validationStatus": "source_unavailable_for_verification"
+    "validationStatus": "source_page_checked",
+    "verifiedAt": "2026-10-20"
   },
   {
     "id": "railway-engineer",
