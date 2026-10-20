@@ -39,3 +39,6 @@
 
 /* Long Russian page headings must wrap even on 320px screens. */
 .site-page .page-header h1 {overflow-wrap:anywhere;hyphens:auto;min-width:0;}
+
+/* Keep the footer below the initial viewport until the catalogs are populated. */
+#dictionaryGrid:empty,#resourcesGrid:empty{min-height:100vh;}
