@@ -332,7 +332,8 @@ check('originally named workshops and six dimensioned production tools', () => {
  }
  assert.ok(ui.includes('function productionInit()'),'production UI missing');
  assert.ok(ui.includes("if(which==='production')productionInit()"),'production lazy initialization missing');
- assert.ok(html.includes('class="production-panel"'),'production styling missing');
+ assert.ok(html.includes('class="calc-lab production-panel"'),'production panel styling hook missing');
+ assert.ok(fs.readFileSync('calculator-lab.css','utf8').includes('.production-panel .calc-lab-sub'),'production panel styles missing');
  assert.ok(fs.readFileSync('tests/engineering-lab.spec.cjs','utf8').includes('renamed original workbench names'));
 });
 
