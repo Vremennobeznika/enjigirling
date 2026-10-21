@@ -344,7 +344,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const title = document.createElement("h3");
     title.className = "eng-title";
     title.id = `profession-card-title-${profession.id}`;
-    card.setAttribute("aria-labelledby", title.id);
+    // The card has role=button: derive its accessible name from all visible
+    // card content, not the heading alone (WCAG 2.5.3 label in name).
     title.textContent = profession.title;
     card.append(title);
     const desc = document.createElement("p");
