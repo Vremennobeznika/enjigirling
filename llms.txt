@@ -17,6 +17,9 @@
 - [Календарь](https://vremennobeznika.github.io/enjigirling/calendar.html)
 - [Ресурсы](https://vremennobeznika.github.io/enjigirling/resources.html)
 
+## Первичные источники и достоверность
+- [Реестр источников и привязок к утверждениям](https://vremennobeznika.github.io/enjigirling/knowledge/source-registry.json) — статусы `source_located` означают только обнаружение источника, НЕ проверку каждого утверждения. Сверяйте область применимости и доступную версию документа.
+
 ## Граф связей
 - [Граф материалов, процессов и профессий](https://vremennobeznika.github.io/enjigirling/knowledge/graph.json) — связи имеют редакционный статус, а не нормативное подтверждение.
 
