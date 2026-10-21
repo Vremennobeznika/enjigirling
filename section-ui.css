@@ -134,3 +134,24 @@
 .field-guide a,.field-guide a:link,.field-guide a:visited {color:var(--text-primary)!important;text-decoration:underline;text-underline-offset:3px;}
 .field-guide a:focus-visible {outline:3px solid var(--text-primary);outline-offset:3px;}
 .field-guide-note {border-top:1px solid var(--card-border);padding-top:12px;margin-top:14px;color:var(--card-muted);}
+
+/* Combined processes/materials search: two catalog routes, one search field. */
+.technology-hub {margin:20px 0 26px;padding:clamp(15px,2.5vw,22px);border:1px solid var(--card-border);border-radius:16px;background:var(--soft-bg);color:var(--card-text);}
+.technology-hub h2 {font:700 clamp(18px,2.2vw,24px)/1.25 var(--font);margin:0 0 8px;}
+.technology-hub p {font:400 var(--fs-sm)/1.55 var(--font);margin:0 0 12px;color:var(--card-muted);}
+.technology-hub label {display:block;font:600 var(--fs-sm)/1.45 var(--font);margin:0 0 7px;}
+.technology-hub input {width:100%;min-width:0;max-width:100%;min-height:48px;box-sizing:border-box;padding:11px 14px;border:1px solid var(--control-border);border-radius:10px;background:var(--card-bg);color:var(--card-text);font:inherit;}
+.technology-hub #technologySearchStatus {margin:9px 0;color:var(--card-muted);}
+.technology-search-results[hidden] {display:none;}
+.technology-search-results {display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:12px;margin:12px 0;}
+.technology-search-group {min-width:0;padding:11px;border:1px solid var(--card-border);border-radius:12px;background:var(--card-bg);}
+.technology-search-group h3 {font:700 var(--fs-sm)/1.5 var(--font);margin:0 0 8px;}
+.technology-search-links {display:flex;flex-wrap:wrap;gap:6px;}
+.technology-search-result,.technology-search-result:link,.technology-search-result:visited,
+.technology-hub a,.technology-hub a:link,.technology-hub a:visited {color:var(--card-text)!important;}
+.technology-search-result {display:inline-flex;min-height:44px;align-items:center;border:1px solid var(--card-border);border-radius:10px;padding:8px 11px;background:var(--soft-bg);text-decoration:none;overflow-wrap:anywhere;}
+.technology-search-result:hover {border-color:var(--text-primary);text-decoration:underline;}
+.technology-hub .technology-hub-shortcuts {margin:12px 0 0;}
+.technology-hub :is(a,input):focus-visible {outline:3px solid var(--text-primary);outline-offset:3px;}
+/* Keep the footer outside the first paint until catalog render finishes. */
+#materialGrid:not([data-ready]),#processGrid:not([data-ready]) {min-height:max(65vh,520px);}

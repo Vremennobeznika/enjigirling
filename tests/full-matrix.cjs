@@ -261,5 +261,36 @@ check('editorial guides are available in technologies and calculators', () => {
  assert.ok(css.includes('.field-guide a:visited'),'guide links must inherit monochrome style');
 });
 
+
+check('combined technology search, static header and reusable CSV audit forms', () => {
+ for(const page of ['materials.html','processes.html']){
+  const h=fs.readFileSync(page,'utf8');
+  assert.ok(h.includes('id="technologySearch"'),page+' shared search input missing');
+  assert.ok(h.includes('src="technology-search.js"'),page+' shared search logic missing');
+  assert.ok(h.includes('id="technologySearchResults"'),page+' search results missing');
+ }
+ const search=fs.readFileSync('technology-search.js','utf8');
+ assert.ok(search.includes('window.engineeringProcesses'),'processes missing from combined search');
+ assert.ok(search.includes('window.engineeringMaterials'),'materials missing from combined search');
+ assert.ok(search.includes('encodeURIComponent(x.id)'),'search deep links are not encoded');
+ for(const page of ['calendar.html','resources.html','dictionary.html','map.html','calculator.html']){
+  const html=fs.readFileSync(page,'utf8');
+  assert.equal((html.match(/class="site-topbar site-topbar--shared"/g)||[]).length,1,page+' needs one pre-rendered header');
+  assert.equal((html.match(/id="themeToggle"/g)||[]).length,1,page+' duplicate theme control');
+ }
+ for(const js of ['materials.js','processes.js']){
+  assert.ok(fs.readFileSync(js,'utf8').includes("root.dataset.ready='true'"),js+' does not resolve catalog placeholder');
+ }
+ for(const file of ['templates/production-defect-review.csv','templates/material-evidence-register.csv']){
+  const text=fs.readFileSync(file,'utf8');
+  assert.ok(text.startsWith('\uFEFF'),file+' must have UTF-8 BOM for Excel');
+  const rows=text.replace(/^\uFEFF/,'').trim().split(/\r?\n/).map(x=>x.split(';').length);
+  assert.ok(rows.every(x=>x===rows[0]),file+' CSV column counts differ');
+ }
+ const m=fs.readFileSync('materials.html','utf8'),p=fs.readFileSync('processes.html','utf8');
+ assert.ok(m.includes('templates/material-evidence-register.csv'),'materials download missing');
+ assert.ok(p.includes('templates/production-defect-review.csv'),'processes download missing');
+});
+
 console.log('Matrix: '+count+' PASS, '+errors.length+' FAIL ('+pages.length+' pages, '+datasets.length+' datasets)');
 if(errors.length)process.exitCode=1;

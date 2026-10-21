@@ -14,6 +14,7 @@ const list=entries.filter(x=>(group==='all'||x.category===group)&&[x.name,x.desc
 status.textContent='Найдено: '+list.length+' из '+entries.length;
 reset.hidden=!search.value.trim()&&category.value==='all';
 root.innerHTML=list.map(x=>'<article class="atlas-card" id="'+esc(x.id)+'"><h2>'+esc(x.name)+'</h2><p>'+esc(x.description)+'</p><h3>Типовая последовательность</h3><p>'+esc(x.steps)+'</p><h3>Контроль и ограничения</h3><p>'+esc(x.checks)+'</p><h3>Связанные материалы</h3><p>'+x.materials.map(id=>'<a href="materials.html#'+encodeURIComponent(id)+'">'+esc(materialNames[id]||id)+'</a>').join(' · ')+'</p><h3>Связанная профессия</h3><p>'+(professionNames[x.profession]?'<a href="index.html#profession='+encodeURIComponent(x.profession)+'">'+esc(professionNames[x.profession])+'</a>':'<a href="index.html">Каталог профессий ↗</a>')+'</p><p class="data-quality-note">Обзор, не технологическая инструкция и не разрешение на выполнение работ.</p></article>').join('')||'<p class="eng-empty">Совпадений нет.</p>';
+root.dataset.ready='true';
 }
 search.addEventListener('input',render);category.addEventListener('change',render);
 const hash=decodeURIComponent(location.hash.slice(1));if(hash&&entries.some(x=>x.id===hash)){category.value='all';search.value=entries.find(x=>x.id===hash).name;}

@@ -15,6 +15,7 @@ const list=entries.filter(x=>(group==='all'||x.group===group)&&[x.name,x.family,
 status.textContent='Найдено: '+list.length+' из '+entries.length;
 reset.hidden=!search.value.trim()&&category.value==='all';
 root.innerHTML=list.map(x=>'<article class="atlas-card" id="'+esc(x.id)+'"><h2>'+esc(x.name)+'</h2><p class="data-quality-note">'+esc(x.family)+'</p><p>'+esc(x.detail)+'</p><h3>Применение</h3><p>'+esc(x.uses)+'</p><h3>Что нужно уточнять</h3><p>'+esc(x.note)+'</p><h3>Связанные процессы</h3><p>'+x.process.map(id=>'<a href="processes.html#'+encodeURIComponent(id)+'">'+esc(processNames[id]||id)+'</a>').join(' · ')+'</p><h3>Связанные профессии</h3><p>'+[...new Set(processes.filter(process=>x.process.includes(process.id)).map(process=>process.profession))].filter(id=>professionNames[id]).map(id=>'<a href="index.html#profession='+encodeURIComponent(id)+'">'+esc(professionNames[id])+'</a>').join(' · ')+'</p><p class="data-quality-note">Редакционное описание. Числовые характеристики и нормативный источник для данной марки пока не верифицированы.</p></article>').join('')||'<p class="eng-empty">Совпадений нет.</p>';
+root.dataset.ready='true';
 }
 search.addEventListener('input',render);category.addEventListener('change',render);
 const hash=decodeURIComponent(location.hash.slice(1));if(hash&&entries.some(x=>x.id===hash)){const x=entries.find(x=>x.id===hash);category.value='all';search.value=x.name;}

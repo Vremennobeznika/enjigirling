@@ -210,3 +210,39 @@ test('profession details link back to catalogued processes and materials',async(
  await expect(page.locator('#modalContent a[href^="processes.html#"]').first()).toBeVisible();
  await expect(page.locator('#modalContent a[href^="materials.html#"]').first()).toBeVisible();
 });
+
+
+test('technology search connects processes and materials without losing deep links',async({page})=>{
+ await page.goto('/processes.html');
+ const search=page.locator('#technologySearch');
+ await search.fill('сталь');
+ await expect(page.locator('#technologySearchResults a[href^="materials.html#"]').first()).toBeVisible();
+ await expect(page.locator('#technologySearchStatus')).toContainText('Найдено:');
+ await page.goto('/materials.html');
+ await page.locator('#technologySearch').fill('литье');
+ await expect(page.locator('#technologySearchResults a[href="processes.html#casting"]')).toBeVisible();
+ await page.locator('#technologySearch').press('Escape');
+ await expect(page.locator('#technologySearchResults')).toBeHidden();
+});
+
+test('five secondary pages pre-render topbar without moving theme control',async({page})=>{
+ for(const file of ['calendar.html','resources.html','dictionary.html','map.html','calculator.html']){
+  await page.goto('/'+file);
+  const header=page.locator('.eng-calendar-root > .site-topbar');
+  await expect(header).toHaveCount(1);
+  const control=header.locator('.theme-toggle');
+  await expect(control).toHaveCount(1);
+  const wasDark=await page.locator('html').evaluate(el=>el.classList.contains('theme-dark'));
+  await control.click();
+  const nowDark=await page.locator('html').evaluate(el=>el.classList.contains('theme-dark'));
+  expect(nowDark).not.toBe(wasDark);
+ }
+});
+
+test('materials and processes catalogues signal readiness after rendering',async({page})=>{
+ for(const [path,id] of [['materials.html','#materialGrid'],['processes.html','#processGrid']]){
+  await page.goto('/'+path);
+  await expect(page.locator(id)).toHaveAttribute('data-ready','true');
+  await expect(page.locator(id+' .atlas-card').first()).toBeVisible();
+ }
+});
