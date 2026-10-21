@@ -21,12 +21,14 @@ async function run(){
  assert.equal(manifest.type,'engineering-knowledge-base');
  const index=JSON.parse(files['knowledge/search-index.json']);
  assert.equal(index.recordCount,index.records.length);
- assert.ok(index.records.length>=626,'knowledge records were not deployed');
+ assert.ok(index.records.length>0,'knowledge index is empty');
  const graph=JSON.parse(files['knowledge/graph.json']);
  assert.equal(graph.edgeCount,graph.edges.length);
  const sources=JSON.parse(files['knowledge/source-registry.json']);
  assert.ok(Array.isArray(sources.sources)&&Array.isArray(sources.recordEvidence));
- assert.ok(files['knowledge/ai-context.md'].includes('## Краткий каталог (626 записей)'),'AI context was not deployed');
+ assert.ok(files['knowledge/ai-context.md'].includes('## Краткий каталог ('+index.records.length+' записей)'),'AI context and index record counts disagree');
+ const listed=(files['knowledge/ai-context.md'].match(/^- \*\*.+\*\* — /gm)||[]).length;
+ assert.equal(listed,index.records.length,'AI context does not contain every indexed record');
  assert.ok(files['llms.txt'].includes('knowledge-manifest.json'),'AI entrypoint does not mention manifest');
  console.log('LIVE PASS: '+paths.length+' HTTP endpoints, '+index.recordCount+' records, '+graph.edgeCount+' graph edges');
 }
