@@ -52,3 +52,19 @@
 .calc-lab-results{grid-template-columns:minmax(0,1fr)}
 }
 @media(prefers-reduced-motion:reduce){.calc-lab *{scroll-behavior:auto;transition:none!important}}
+
+
+/* ENJIGIRLING workshop identity: fieldbook-inspired black-and-white headings. */
+.calculator-directory {border-width:2px;border-radius:18px;position:relative;}
+.calculator-directory::before {content:'ENGINEERING / WORKBENCH';display:block;font:700 10px/1.5 ui-monospace,Consolas,monospace;letter-spacing:.16em;color:var(--card-muted);margin-bottom:12px;}
+.calculator-directory nav a {border-radius:6px;font-size:13px;}
+.calc-lab {counter-reset:workshop;overflow:hidden;}
+.calc-lab>summary {border-left:5px solid var(--text-primary);padding-left:18px;background:var(--soft-bg);}
+.calc-lab[open]>summary {border-bottom:1px dashed var(--card-border);}
+.calc-lab-sub {counter-increment:workshop;position:relative;background:var(--card-bg);}
+.calc-lab-sub h3::before {content:counter(workshop,decimal-leading-zero) " / ";font:700 12px ui-monospace,Consolas,monospace;color:var(--card-muted);}
+.calc-lab-output {border-left:3px solid var(--text-primary);border-radius:4px;background:var(--soft-bg);font-variant-numeric:tabular-nums;}
+.bit-passport-title {font:700 11px/1.5 ui-monospace,Consolas,monospace!important;letter-spacing:.09em;text-transform:uppercase;margin-top:16px!important;}
+.ieee-bit-legend span {font-family:ui-monospace,Consolas,monospace;}
+.production-panel .calc-lab-sub {scroll-margin-top:10px;}
+@media(max-width:600px){.calc-lab>summary{padding-left:12px}.calc-lab-sub h3::before{display:block;margin-bottom:4px}}

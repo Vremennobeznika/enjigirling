@@ -48,11 +48,12 @@
         <main class="site-page" id="main-content"><h1 class="sr-only">Инженерные калькуляторы</h1>
 
 <section class="calculator-directory" aria-labelledby="calcDirectoryTitle">
-  <h2 id="calcDirectoryTitle">Инженерные расчёты</h2>
-  <p>Все расчёты выполняются на устройстве. Дополнительные модули загружаются только при открытии; отправки значений на сервер нет.</p>
+  <h2 id="calcDirectoryTitle">Мастерская расчётов ENJIGIRLING</h2>
+  <p>От бита до цеха: вычисления на вашем устройстве без отправки введённых значений на сервер. Раскройте только нужную мастерскую.</p>
   <nav aria-label="Быстрый переход к калькуляторам">
-    <a href="#labIEEE">IEEE‑754 · float → биты</a>
-    <a href="#labElectronics">Электроника и допуски</a>
+    <a href="#labIEEE">Битоскоп — устройство числа</a>
+    <a href="#labElectronics">Электроцех — схемы и сигналы</a>
+    <a href="#labProduction">Цеховой расчёт — производство</a>
     <a href="#calcUnits">Единицы</a>
     <a href="#calcBases">Системы счисления</a>
     <a href="#calcSignal">4–20 мА</a>
@@ -60,7 +61,7 @@
 </section>
 
 <details class="calc-lab" id="labIEEE" data-lab="ieee">
- <summary><strong>IEEE‑754: конвертер чисел с плавающей точкой</strong><small>FP16 · bfloat16 · TF32 · FP32 · FP64 · HEX ↔ биты ↔ десятичное</small></summary>
+ <summary><strong>Битоскоп — паспорт двоичного числа</strong><small>FP16 · bfloat16 · TF32 · FP32 · FP64 · HEX ↔ биты ↔ десятичное</small></summary>
  <div class="calc-lab-body">
   <p>Разбор знака, порядка и мантиссы. Можно изменить отдельный бит кнопкой, декодировать HEX или двоичную строку и увидеть разницу с введённым десятичным значением.</p>
   <div class="calc-lab-grid">
@@ -71,6 +72,7 @@
   <div class="calc-lab-examples" id="ieeeExamples" aria-label="Примеры"><button type="button" data-example="0.1">0.1</button><button type="button" data-example="-0">−0</button><button type="button" data-example="1.5">1.5</button><button type="button" data-example="Infinity">∞</button><button type="button" data-example="NaN">NaN</button></div>
   <p class="calc-lab-status lab-load-status" aria-live="polite"></p>
   <p id="ieeeStatus" class="calc-lab-status" role="status" aria-live="polite">Разверните калькулятор, чтобы начать.</p>
+  <p class="bit-passport-title">Паспорт числа · редактируемые разряды</p>
   <div class="ieee-bit-legend"><span>Знак</span><span>Порядок</span><span>Мантисса</span></div>
   <div class="ieee-bit-wrap"><div class="ieee-bit-grid" id="ieeeBits" aria-label="Интерактивные биты числа"></div></div>
   <dl class="calc-lab-results">
@@ -88,10 +90,10 @@
 </details>
 
 <details class="calc-lab" id="labElectronics" data-lab="extra">
- <summary><strong>Электроника, Modbus и допуски</strong><small>Закон Ома · делитель · RC · допусковая цепь · регистры Float32</small></summary>
+ <summary><strong>Электроцех — сигналы, цепи и допуски</strong><small>Закон Ома · делитель · RC · допусковая цепь · регистры Float32</small></summary>
  <div class="calc-lab-body">
   <p class="calc-lab-status lab-load-status" aria-live="polite"></p>
-  <section class="calc-lab-sub" aria-labelledby="ohmTitle"><h3 id="ohmTitle">Закон Ома и мощность (постоянный ток)</h3><div class="calc-lab-grid">
+  <section class="calc-lab-sub" aria-labelledby="ohmTitle"><h3 id="ohmTitle">Электрическая цепь: закон Ома (постоянный ток)</h3><div class="calc-lab-grid">
    <div class="calc-lab-field"><label for="ohmMode">Известные величины</label><select id="ohmMode"><option value="ur">U и R</option><option value="ui">U и I</option><option value="ir">I и R</option></select></div>
    <div class="calc-lab-field"><label for="ohmA" id="ohmALabel">Напряжение U (В)</label><input id="ohmA" type="text" inputmode="decimal" value="12"></div>
    <div class="calc-lab-field"><label for="ohmB" id="ohmBLabel">Сопротивление R (Ом)</label><input id="ohmB" type="text" inputmode="decimal" value="6"></div>
@@ -115,6 +117,70 @@
    <div class="calc-lab-field"><label for="modbusSecond">Регистр 2 (HEX, 16 бит)</label><input id="modbusSecond" type="text" value="0000" maxlength="6" spellcheck="false" autocomplete="off"></div>
    <div class="calc-lab-field"><label for="modbusOrder">Порядок байтов в дампе</label><select id="modbusOrder"><option value="ABCD">ABCD (старшее слово первым)</option><option value="BADC">BADC</option><option value="CDAB">CDAB (слова переставлены)</option><option value="DCBA">DCBA</option></select></div>
    </div><output id="modbusOutput" class="calc-lab-output" aria-live="polite">—</output><p class="calc-lab-note">Modbus не фиксирует порядок двух регистров внутри 32-битного числа. Сверьте упаковку Float32 по документации устройства.</p>
+  </section>
+ </div>
+</details>
+
+
+<details class="calc-lab production-panel" id="labProduction" data-lab="production">
+ <summary><strong>Цеховой расчёт — производственная панель</strong><small>Такт · OEE · масса заготовки · удлинение · резание · расход</small></summary>
+ <div class="calc-lab-body">
+  <p>Шесть самостоятельных проверочных расчётов. Никакой базы коэффициентов «на глаз»: исходные данные задаёт пользователь, единицы показаны в полях.</p>
+  <p class="lab-load-status calc-lab-status" aria-live="polite"></p>
+  <section class="calc-lab-sub" aria-labelledby="taktTitle">
+   <h3 id="taktTitle">Такт выпуска</h3>
+   <div class="calc-lab-grid">
+    <div class="calc-lab-field"><label for="taktAvailable">Доступное время смены, мин</label><input id="taktAvailable" inputmode="decimal" type="text" value="420"></div>
+    <div class="calc-lab-field"><label for="taktDemand">Плановый выпуск, шт</label><input id="taktDemand" inputmode="decimal" type="text" value="840"></div>
+   </div><output id="taktOutput" class="calc-lab-output" aria-live="polite">—</output>
+   <p class="calc-lab-note">Такт = доступное время / спрос. Рассчитан для заданного выпуска; не равен фактическому времени цикла оборудования.</p>
+  </section>
+  <section class="calc-lab-sub" aria-labelledby="oeeTitle">
+   <h3 id="oeeTitle">OEE — эффективность оборудования</h3>
+   <div class="calc-lab-grid">
+    <div class="calc-lab-field"><label for="oeePlan">Плановый фонд, мин</label><input id="oeePlan" inputmode="decimal" type="text" value="480"></div>
+    <div class="calc-lab-field"><label for="oeeRun">Фактическая работа, мин</label><input id="oeeRun" inputmode="decimal" type="text" value="450"></div>
+    <div class="calc-lab-field"><label for="oeeTotal">Всего произведено, шт</label><input id="oeeTotal" inputmode="decimal" type="text" value="1000"></div>
+    <div class="calc-lab-field"><label for="oeeGood">Годных изделий, шт</label><input id="oeeGood" inputmode="decimal" type="text" value="960"></div>
+    <div class="calc-lab-field"><label for="oeeIdeal">Идеальный цикл, с/шт</label><input id="oeeIdeal" inputmode="decimal" type="text" value="24"></div>
+   </div><output id="oeeOutput" class="calc-lab-output" aria-live="polite">—</output>
+   <p class="calc-lab-note">OEE = доступность × производительность × качество. Если производительность выше 100%, проверьте норматив цикла и границы учёта времени.</p>
+  </section>
+  <section class="calc-lab-sub" aria-labelledby="massTitle">
+   <h3 id="massTitle">Масса прямоугольной заготовки</h3>
+   <div class="calc-lab-grid">
+    <div class="calc-lab-field"><label for="massDensity">Плотность, кг/м³</label><input id="massDensity" inputmode="decimal" type="text" value="7850"></div>
+    <div class="calc-lab-field"><label for="massLength">Длина, мм</label><input id="massLength" inputmode="decimal" type="text" value="1000"></div>
+    <div class="calc-lab-field"><label for="massWidth">Ширина, мм</label><input id="massWidth" inputmode="decimal" type="text" value="100"></div>
+    <div class="calc-lab-field"><label for="massHeight">Толщина, мм</label><input id="massHeight" inputmode="decimal" type="text" value="10"></div>
+   </div><output id="massOutput" class="calc-lab-output" aria-live="polite">—</output>
+   <p class="calc-lab-note">m = ρV. Плотность 7850 кг/м³ только пример для расчёта — фактическое значение зависит от конкретного материала и источника.</p>
+  </section>
+  <section class="calc-lab-sub" aria-labelledby="thermalTitle">
+   <h3 id="thermalTitle">Линейное тепловое расширение</h3>
+   <div class="calc-lab-grid">
+    <div class="calc-lab-field"><label for="thermalLength">Исходная длина, мм</label><input id="thermalLength" inputmode="decimal" type="text" value="1000"></div>
+    <div class="calc-lab-field"><label for="thermalAlpha">Коэффициент расширения, 10⁻⁶/K</label><input id="thermalAlpha" inputmode="decimal" type="text" value="12"></div>
+    <div class="calc-lab-field"><label for="thermalDelta">Разница температур, °C</label><input id="thermalDelta" inputmode="decimal" type="text" value="50"></div>
+   </div><output id="thermalOutput" class="calc-lab-output" aria-live="polite">—</output>
+   <p class="calc-lab-note">ΔL = αLΔT. Линейная модель с постоянным коэффициентом в рассматриваемом диапазоне; для ответственных расчётов проверяйте зависимость α от температуры.</p>
+  </section>
+  <section class="calc-lab-sub" aria-labelledby="cutTitle">
+   <h3 id="cutTitle">Скорость резания и обороты</h3>
+   <div class="calc-lab-grid">
+    <div class="calc-lab-field"><label for="cutMode">Рассчитать из</label><select id="cutMode"><option value="rpm">Частоты вращения</option><option value="speed">Скорости резания</option></select></div>
+    <div class="calc-lab-field"><label for="cutDiameter">Диаметр инструмента/заготовки, мм</label><input id="cutDiameter" inputmode="decimal" type="text" value="20"></div>
+    <div class="calc-lab-field"><label for="cutQuantity" id="cutQuantityLabel">Частота, об/мин</label><input id="cutQuantity" inputmode="decimal" type="text" value="1000"></div>
+   </div><output id="cutOutput" class="calc-lab-output" aria-live="polite">—</output>
+   <p class="calc-lab-note">v = πDn/1000. Формула описывает окружную скорость, но не подбирает безопасный режим резания для инструмента.</p>
+  </section>
+  <section class="calc-lab-sub" aria-labelledby="flowTitle">
+   <h3 id="flowTitle">Объёмный расход через круглое сечение</h3>
+   <div class="calc-lab-grid">
+    <div class="calc-lab-field"><label for="flowDiameter">Внутренний диаметр, мм</label><input id="flowDiameter" inputmode="decimal" type="text" value="100"></div>
+    <div class="calc-lab-field"><label for="flowSpeed">Средняя скорость потока, м/с</label><input id="flowSpeed" inputmode="decimal" type="text" value="2"></div>
+   </div><output id="flowOutput" class="calc-lab-output" aria-live="polite">—</output>
+   <p class="calc-lab-note">Q = Av для известной средней скорости; без потерь давления, профиля скоростей и расчёта гидросопротивления.</p>
   </section>
  </div>
 </details>

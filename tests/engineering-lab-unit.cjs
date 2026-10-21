@@ -43,4 +43,25 @@ assert.equal(m.tolerance('10;0.1\n-2;0.2').nominal,8);
 assert.ok(Math.abs(m.tolerance('10;0.1\n-2;0.2').rss-Math.sqrt(.05))<1e-12);
 assert.throws(()=>m.tolerance('1;bad'));
 assert.throws(()=>m.divider(5,0,100));
-console.log('Engineering math: 30+ IEEE754, Modbus, electronics and tolerance checks PASS');
+
+function close(actual,expected,tolerance=1e-9){assert.ok(Math.abs(actual-expected)<=tolerance,actual+' !== '+expected);}
+const takt=m.takt(420,840);
+close(takt.seconds,30);close(takt.perHour,120);
+const oee=m.oee(480,450,1000,960,24);
+close(oee.availability,.9375);close(oee.performance,8/9);close(oee.quality,.96);close(oee.oee,.8);
+close(m.billetMass(7850,1000,100,10).kilograms,7.85);
+close(m.thermalLength(1000,12,50).deltaMM,.6);
+close(m.thermalLength(1000,-4,50).deltaMM,-.2);
+close(m.cutSpeed('rpm',20,1000).mPerMin,Math.PI*20);
+close(m.cutSpeed('speed',20,Math.PI*20).rpm,1000);
+close(m.pipeFlow(100,2).m3Hour,Math.PI*.1*.1/4*2*3600);
+assert.throws(()=>m.takt(420,0));
+assert.throws(()=>m.oee(480,500,1000,960,24));
+assert.throws(()=>m.oee(480,450,1000,1001,24));
+assert.throws(()=>m.oee(480,450,1000,960,30));
+assert.throws(()=>m.billetMass(-1,100,100,100));
+assert.throws(()=>m.cutSpeed('rpm',0,100));
+assert.throws(()=>m.pipeFlow(0,1));
+assert.throws(()=>m.thermalLength(1000,12,Infinity));
+console.log('Engineering math: IEEE754 + Modbus + electronic + six production calculations PASS');
+

@@ -5,7 +5,8 @@ const math=window.EngineeringMath;
 if(!math)return;
 const by=id=>document.getElementById(id);
 const val=id=>by(id).value;
-const fmt=n=>Number.isFinite(n)?new Intl.NumberFormat('ru-RU',{maximumSignificantDigits:12}).format(n):String(n);
+const numberFormatter=new Intl.NumberFormat('ru-RU',{maximumSignificantDigits:12});
+const fmt=n=>Number.isFinite(n)?numberFormatter.format(n):String(n);
 function message(node,text,error){node.textContent=text;node.classList.toggle('calc-lab-error',!!error);}
 function later(fn){
  let pending=false;
@@ -97,11 +98,46 @@ function extraInit(){
   return 'Float32 = '+(Object.is(x.value,-0)?'-0':String(x.value))+' · Биты = 0x'+x.hex;
  }));
 }
+
+function productionInit(){
+ const status=(id,fn)=>{try{message(by(id),fn(),false);}catch(e){message(by(id),e.message,true);}};
+ attach(['taktAvailable','taktDemand'],()=>status('taktOutput',()=>{
+  const x=math.takt(math.number(val('taktAvailable')),math.number(val('taktDemand')));
+  return 'Расчётный такт '+fmt(x.seconds)+' с/шт · темп '+fmt(x.perHour)+' шт/ч';
+ }));
+ attach(['oeePlan','oeeRun','oeeTotal','oeeGood','oeeIdeal'],()=>status('oeeOutput',()=>{
+  const x=math.oee(...['oeePlan','oeeRun','oeeTotal','oeeGood','oeeIdeal'].map(id=>math.number(val(id))));
+  const pct=n=>fmt(n*100)+' %';
+  return 'OEE '+pct(x.oee)+' · доступность '+pct(x.availability)+' · производительность '+pct(x.performance)+' · качество '+pct(x.quality);
+ }));
+ attach(['massDensity','massLength','massWidth','massHeight'],()=>status('massOutput',()=>{
+  const x=math.billetMass(...['massDensity','massLength','massWidth','massHeight'].map(id=>math.number(val(id))));
+  return 'Расчётная масса '+fmt(x.kilograms)+' кг · объём '+fmt(x.cubicMeters)+' м³';
+ }));
+ attach(['thermalLength','thermalAlpha','thermalDelta'],()=>status('thermalOutput',()=>{
+  const x=math.thermalLength(...['thermalLength','thermalAlpha','thermalDelta'].map(id=>math.number(val(id))));
+  return 'Изменение длины '+fmt(x.deltaMM)+' мм · итоговая длина '+fmt(x.finalMM)+' мм';
+ }));
+ attach(['cutMode','cutDiameter','cutQuantity'],()=>{
+  const mode=val('cutMode');
+  by('cutQuantityLabel').textContent=mode==='rpm'?'Частота, об/мин':'Скорость резания, м/мин';
+  status('cutOutput',()=>{
+   const x=math.cutSpeed(mode,math.number(val('cutDiameter')),math.number(val('cutQuantity')));
+   return 'Скорость '+fmt(x.mPerMin)+' м/мин · вращение '+fmt(x.rpm)+' об/мин';
+  });
+ });
+ attach(['flowDiameter','flowSpeed'],()=>status('flowOutput',()=>{
+  const x=math.pipeFlow(math.number(val('flowDiameter')),math.number(val('flowSpeed')));
+  return 'Расход '+fmt(x.m3Hour)+' м³/ч · '+fmt(x.litersMinute)+' л/мин';
+ }));
+}
+
 const initialized=new Set();
 window.initEngineeringLab=function(which){
  if(initialized.has(which))return;
  if(which==='ieee')floatInit();
  if(which==='extra')extraInit();
+ if(which==='production')productionInit();
  initialized.add(which);
 };
 })();

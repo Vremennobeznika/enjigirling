@@ -54,3 +54,36 @@ test('new calculators do not break 320px viewports',async({page})=>{
  overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2);
  expect(overflow).toBeFalsy();
 });
+
+
+test('renamed original workbench names and six manufacturing calculators work on demand',async({page})=>{
+ await page.goto('/calculator.html');
+ await expect(page.locator('#labIEEE > summary')).toContainText('Битоскоп');
+ await expect(page.locator('#labElectronics > summary')).toContainText('Электроцех');
+ const summary=page.locator('#labProduction > summary');
+ await expect(summary).toContainText('Цеховой расчёт');
+ expect(await page.locator('script[src="engineering-lab-core.js"]').count()).toBe(0);
+ await summary.click();
+ await expect(page.locator('#taktOutput')).toContainText('30 с/шт');
+ await expect(page.locator('#oeeOutput')).toContainText('80 %');
+ await expect(page.locator('#massOutput')).toContainText('7,85 кг');
+ await expect(page.locator('#thermalOutput')).toContainText('0,6 мм');
+ await expect(page.locator('#cutOutput')).toContainText('62,831');
+ await expect(page.locator('#flowOutput')).toContainText('56,548');
+ await page.locator('#oeeGood').fill('1100');
+ await expect(page.locator('#oeeOutput')).toContainText('Годных изделий не может быть больше');
+ await page.locator('#oeeGood').fill('960');
+ await expect(page.locator('#oeeOutput')).toContainText('80 %');
+ await page.locator('#cutMode').selectOption('speed');
+ await page.locator('#cutQuantity').fill('62.83185307179586');
+ await expect(page.locator('#cutOutput')).toContainText('1 000 об/мин');
+});
+test('production workshop remains usable at narrow viewport',async({page})=>{
+ await page.setViewportSize({width:320,height:720});
+ await page.goto('/calculator.html#labProduction');
+ await expect(page.locator('#labProduction')).toHaveAttribute('open','');
+ await expect(page.locator('#taktOutput')).toContainText('30 с/шт');
+ await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2)).toBeTruthy();
+ await page.locator('#flowDiameter').fill('0');
+ await expect(page.locator('#flowOutput')).toContainText('Диаметр');
+});

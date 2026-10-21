@@ -146,5 +146,66 @@ function modbus(register1,register2,order){
  pos.forEach((p,i)=>view.setUint8(i,ordered[p]));
  return {value:view.getFloat32(0,false),hex:view.getUint32(0,false).toString(16).toUpperCase().padStart(8,'0')};
 }
-global.EngineeringMath={formats,encode,decode,exactError,number,ohm,divider,rc,tolerance,modbus};
+
+/* Production quantities are standalone dimensioned calculations, not plant norms. */
+function finitePositive(n,label){if(!Number.isFinite(n)||n<=0)throw Error(label+' должно быть положительным числом');return n;}
+function finiteNonnegative(n,label){if(!Number.isFinite(n)||n<0)throw Error(label+' должно быть неотрицательным числом');return n;}
+function finish(values){if(!values.every(Number.isFinite))throw Error('Результат вне диапазона вычислений');}
+function takt(availableMinutes,requiredPieces){
+ finitePositive(availableMinutes,'Доступное время');
+ finitePositive(requiredPieces,'Потребность в выпуске');
+ const seconds=availableMinutes*60/requiredPieces;
+ finish([seconds]);if(seconds<=0)throw Error('Недопустимое время такта');
+ return {seconds,perHour:3600/seconds};
+}
+function oee(plannedMinutes,runMinutes,total,good,idealSeconds){
+ finitePositive(plannedMinutes,'Плановый фонд');
+ finitePositive(runMinutes,'Фактическая работа');
+ finitePositive(total,'Количество изделий');
+ finiteNonnegative(good,'Годные изделия');
+ finitePositive(idealSeconds,'Идеальный цикл');
+ if(runMinutes>plannedMinutes)throw Error('Время работы больше планового фонда');
+ if(good>total)throw Error('Годных изделий не может быть больше всего выпущенных');
+ const availability=runMinutes/plannedMinutes;
+ const performance=idealSeconds*total/(runMinutes*60);
+ const quality=good/total;
+ finish([availability,performance,quality]);
+ if(performance>1+1e-9)throw Error('Производительность выше 100%: проверьте идеальный цикл или данные о выпуске');
+ return {availability,performance,quality,oee:availability*performance*quality};
+}
+function billetMass(densityKgM3,lengthMM,widthMM,heightMM){
+ for(const [v,name] of [[densityKgM3,'Плотность'],[lengthMM,'Длина'],[widthMM,'Ширина'],[heightMM,'Толщина']])finitePositive(v,name);
+ const cubicMeters=lengthMM*widthMM*heightMM*1e-9;
+ const kilograms=cubicMeters*densityKgM3;
+ finish([cubicMeters,kilograms]);
+ return {cubicMeters,kilograms};
+}
+function thermalLength(lengthMM,alphaPPM,deltaC){
+ finitePositive(lengthMM,'Исходная длина');
+ if(!Number.isFinite(alphaPPM))throw Error('Коэффициент расширения должен быть числом');
+ if(!Number.isFinite(deltaC))throw Error('Изменение температуры некорректно');
+ const deltaMM=lengthMM*alphaPPM*1e-6*deltaC,finalMM=lengthMM+deltaMM;
+ finish([deltaMM,finalMM]);
+ if(finalMM<0)throw Error('Расчётная длина отрицательна — проверьте допущения');
+ return {deltaMM,finalMM};
+}
+function cutSpeed(mode,diameterMM,quantity){
+ finitePositive(diameterMM,'Диаметр');
+ finitePositive(quantity,'Частота или скорость');
+ const constant=Math.PI*diameterMM/1000;
+ const mPerMin=mode==='rpm'?constant*quantity:mode==='speed'?quantity:NaN;
+ const rpm=mode==='rpm'?quantity:mode==='speed'?quantity/constant:NaN;
+ finish([mPerMin,rpm]);
+ return {mPerMin,rpm};
+}
+function pipeFlow(diameterMM,speedMS){
+ finitePositive(diameterMM,'Диаметр проходного сечения');
+ finiteNonnegative(speedMS,'Скорость потока');
+ const areaM2=Math.PI*(diameterMM/1000)**2/4;
+ const m3Hour=areaM2*speedMS*3600;
+ finish([areaM2,m3Hour]);
+ return {m3Hour,litersMinute:m3Hour*1000/60};
+}
+
+global.EngineeringMath={formats,encode,decode,exactError,number,ohm,divider,rc,tolerance,modbus,takt,oee,billetMass,thermalLength,cutSpeed,pipeFlow};
 })(typeof window!=='undefined'?window:globalThis);

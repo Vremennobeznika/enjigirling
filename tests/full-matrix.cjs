@@ -314,5 +314,27 @@ check('independent lazy engineering calculators and original tools preserved', (
  assert.ok(fs.existsSync('tests/engineering-lab.spec.cjs'),'browser checks absent');
 });
 
+
+check('originally named workshops and six dimensioned production tools', () => {
+ const html=fs.readFileSync('calculator.html','utf8');
+ for(const label of ['Битоскоп','Электроцех','Цеховой расчёт','Мастерская расчётов ENJIGIRLING']){
+  assert.ok(html.includes(label),'missing named tool '+label);
+ }
+ const sections=[...html.matchAll(/data-lab="([^"]+)"/g)].map(x=>x[1]);
+ assert.deepEqual(sections,['ieee','extra','production'],'wrong lazy workshop panels');
+ for(const id of ['taktAvailable','taktDemand','oeePlan','oeeRun','oeeTotal','oeeGood','oeeIdeal','massDensity','massLength','massWidth','massHeight','thermalLength','thermalAlpha','thermalDelta','cutMode','cutDiameter','cutQuantity','flowDiameter','flowSpeed']){
+  assert.ok(html.includes('id="'+id+'"'),'production input missing '+id);
+ }
+ const core=fs.readFileSync('engineering-lab-core.js','utf8');
+ const ui=fs.readFileSync('engineering-lab-ui.js','utf8');
+ for(const method of ['takt','oee','billetMass','thermalLength','cutSpeed','pipeFlow']){
+  assert.ok(core.includes('function '+method+'('),'missing mathematical implementation '+method);
+ }
+ assert.ok(ui.includes('function productionInit()'),'production UI missing');
+ assert.ok(ui.includes("if(which==='production')productionInit()"),'production lazy initialization missing');
+ assert.ok(html.includes('class="production-panel"'),'production styling missing');
+ assert.ok(fs.readFileSync('tests/engineering-lab.spec.cjs','utf8').includes('renamed original workbench names'));
+});
+
 console.log('Matrix: '+count+' PASS, '+errors.length+' FAIL ('+pages.length+' pages, '+datasets.length+' datasets)');
 if(errors.length)process.exitCode=1;
