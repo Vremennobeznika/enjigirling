@@ -126,7 +126,7 @@ for(const def of defs){
  }
  function change(raw){
  const n=num(raw);if(!Number.isFinite(n))return;
- val=Math.round((Math.round(clamp(n,0,def.max)/step)*step)*100)/100;
+ val=Math.round((Math.round(clamp(n,0,def.max)/step+1e-9)*step)*100)/100;
  range.step=String(step);field.step=String(step);range.value=String(val);field.value=String(val);
  $(id+'Feedback').textContent='';draw();
  }
