@@ -4,7 +4,7 @@ import { query } from '@ydbjs/query';
 import { MetadataCredentialsProvider } from '@ydbjs/auth/metadata';
 
 // Cloud Functions, Node.js 22. Deploy with a service account granted ydb.editor
-// ONLY for the dedicated YDB database. Never publish the shared secret.
+// ONLY for the dedicated YDB database. Store only SHA-256 of a random token.
 const ORIGIN = 'https://vremennobeznika.github.io';
 const BODY_LIMIT = 250000;
 const ID = 'personal';
@@ -27,10 +27,10 @@ function json(statusCode, value) {
 function digest(x) { return crypto.createHash('sha256').update(x, 'utf8').digest(); }
 function authorized(event) {
   const headers = Object.fromEntries(Object.entries(event.headers || {}).map(([key, value]) => [key.toLowerCase(), String(value)]));
-  const expected = process.env.SYNC_TOKEN;
-  if (!expected || expected.length < 32) return false;
+  const expectedHash = process.env.SYNC_TOKEN_SHA256 || '';
+  if (!/^[a-f0-9]{64}$/i.test(expectedHash)) return false;
   const supplied = headers['x-sync-token'] || '';
-  return crypto.timingSafeEqual(digest(expected), digest(supplied));
+  return crypto.timingSafeEqual(Buffer.from(expectedHash, 'hex'), digest(supplied));
 }
 async function getDb() {
   if (!connection) connection = (async () => {
@@ -58,7 +58,7 @@ export async function handler(event) {
   const method = event.httpMethod || 'GET';
   const origin = Object.entries(event.headers || {}).find(([key]) => key.toLowerCase() === 'origin')?.[1];
   if (origin && origin !== ORIGIN) return json(403, {error: 'Origin forbidden'});
-  if (method === 'OPTIONS') return json(204, {});
+  if (method === 'OPTIONS') return json(200, {});
   if (!['GET', 'PUT'].includes(method)) return json(405, {error: 'Method not allowed'});
   if (!authorized(event)) return json(401, {error: 'Неверный секрет синхронизации'});
   try {
