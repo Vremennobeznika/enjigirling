@@ -41,7 +41,17 @@ jobs:
       - name: Install browser test dependencies
         run: npm install --no-audit --no-fund
       - name: Install Chromium
-        run: npx playwright install --with-deps chromium
+        shell: bash
+        run: |
+          # Ubuntu hosted runners can carry an unrelated Microsoft apt source.
+          # When that mirror returns 403, Playwright's --with-deps fails before
+          # Chromium is installed. Disable only the broken external source.
+          for source in /etc/apt/sources.list.d/*.list /etc/apt/sources.list.d/*.sources; do
+            if [ -f "$source" ] && grep -q 'packages.microsoft.com/ubuntu/24.04/prod' "$source"; then
+              sudo mv "$source" "$source.disabled"
+            fi
+          done
+          npx playwright install --with-deps chromium
       - name: Validate desktop and mobile layouts
         run: npx playwright test
       - name: Archive browser failures
