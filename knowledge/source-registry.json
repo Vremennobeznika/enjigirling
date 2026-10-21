@@ -2,9 +2,122 @@
   "schemaVersion": "1.0",
   "language": "ru",
   "purpose": "Registry of independently verified primary sources for technical claims",
-  "status": "awaiting_source_verification",
-  "sources": [],
-  "recordEvidence": [],
+  "status": "partially_sourced_not_claim_verified",
+  "sources": [
+    {
+      "sourceId": "iso-4063-2023",
+      "title": "ISO 4063:2023 — Welding, brazing, soldering and cutting — Nomenclature of processes and reference numbers",
+      "url": "https://www.iso.org/standard/75108.html",
+      "publisher": "International Organization for Standardization",
+      "documentDate": "2023-03",
+      "checkedAt": "2026-10-21",
+      "appliesTo": "Nomenclature and reference numbers of welding processes; does not establish process parameters",
+      "access": "public_abstract_or_overview",
+      "notes": "Only directly visible publication or overview has been reviewed. No full paid-standard review is claimed."
+    },
+    {
+      "sourceId": "worldstainless-304",
+      "title": "Categories, grades and product forms",
+      "url": "https://worldstainless.org/about-stainless/what-are-stainless-steels/categories-grades-and-product-forms/",
+      "publisher": "worldstainless",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-21",
+      "appliesTo": "Austenitic stainless steel category and grade 304 overview",
+      "access": "public_abstract_or_overview",
+      "notes": "Only directly visible publication or overview has been reviewed. No full paid-standard review is claimed."
+    },
+    {
+      "sourceId": "aluminum-aa-standards",
+      "title": "Standards: aluminum alloy series",
+      "url": "https://www.aluminum.org/standards",
+      "publisher": "The Aluminum Association",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-21",
+      "appliesTo": "6xxx aluminum alloy group and alloy 6061 overview",
+      "access": "public_abstract_or_overview",
+      "notes": "Only directly visible publication or overview has been reviewed. No full paid-standard review is claimed."
+    },
+    {
+      "sourceId": "asnt-ut",
+      "title": "Ultrasonic Testing (UT): NDT Inspection Techniques",
+      "url": "https://www.asnt.org/what-is-nondestructive-testing/methods/ultrasonic-testing",
+      "publisher": "American Society for Nondestructive Testing",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-21",
+      "appliesTo": "Principle of ultrasonic nondestructive testing",
+      "access": "public_abstract_or_overview",
+      "notes": "Only directly visible publication or overview has been reviewed. No full paid-standard review is claimed."
+    },
+    {
+      "sourceId": "asnt-pt-2022",
+      "title": "NDT Method Overview: What is Liquid Penetrant Testing?",
+      "url": "https://www.asnt.org/standards-publications/blog/ndt-method-overview-what-is-liquid-penetrant-testing",
+      "publisher": "American Society for Nondestructive Testing",
+      "documentDate": "2022-03-28",
+      "checkedAt": "2026-10-21",
+      "appliesTo": "Liquid penetrant test principle; introductory educational overview",
+      "access": "public_abstract_or_overview",
+      "notes": "Only directly visible publication or overview has been reviewed. No full paid-standard review is claimed."
+    }
+  ],
+  "recordEvidence": [
+    {
+      "recordType": "materials",
+      "recordId": "aisi-304",
+      "sourceId": "worldstainless-304",
+      "claimPath": "detail",
+      "verificationStatus": "source_located",
+      "claimScope": "AISI 304 is classified among austenitic stainless steels"
+    },
+    {
+      "recordType": "materials",
+      "recordId": "al-6061",
+      "sourceId": "aluminum-aa-standards",
+      "claimPath": "detail",
+      "verificationStatus": "source_located",
+      "claimScope": "The 6xxx aluminum series contains Mg and Si; 6061 belongs to it"
+    },
+    {
+      "recordType": "processes",
+      "recordId": "welding",
+      "sourceId": "iso-4063-2023",
+      "claimPath": "name",
+      "verificationStatus": "source_located",
+      "claimScope": "The referenced standard classifies welding processes"
+    },
+    {
+      "recordType": "processes",
+      "recordId": "mig-mag",
+      "sourceId": "iso-4063-2023",
+      "claimPath": "name",
+      "verificationStatus": "source_located",
+      "claimScope": "Terminology and process reference numbers; detailed method distinction requires further review"
+    },
+    {
+      "recordType": "processes",
+      "recordId": "tig",
+      "sourceId": "iso-4063-2023",
+      "claimPath": "name",
+      "verificationStatus": "source_located",
+      "claimScope": "Terminology and process reference numbers"
+    },
+    {
+      "recordType": "processes",
+      "recordId": "ultrasonic",
+      "sourceId": "asnt-ut",
+      "claimPath": "description",
+      "verificationStatus": "source_located",
+      "claimScope": "Ultrasonic nondestructive testing uses high-frequency sound waves"
+    },
+    {
+      "recordType": "processes",
+      "recordId": "dye",
+      "sourceId": "asnt-pt-2022",
+      "claimPath": "description",
+      "verificationStatus": "source_located",
+      "claimScope": "Liquid penetrant testing detects surface-opening discontinuities"
+    }
+  ],
   "policy": {
     "acceptedEvidence": [
       "official standard or normative document with edition and applicability",
