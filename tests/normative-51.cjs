@@ -29,8 +29,8 @@ for(const card of cards){
 }
 const knownFuture=dataset.records.flatMap(x=>x.documents).filter(d=>d.periodStatus==='not_yet_effective');
 assert.equal(knownFuture.length,2,'future sources must be labeled');
-assert.equal(dataset.records.filter(x=>x.documents.length).length,44,'coverage changed');
-assert.equal(dataset.records.filter(x=>!x.documents.length).length,7,'broader roles must not be given invented standards');
+assert.equal(dataset.records.filter(x=>x.documents.length).length,45,'coverage changed');
+assert.equal(dataset.records.filter(x=>!x.documents.length).length,6,'broader roles must not be given invented standards');
 const ui=fs.readFileSync('script.js','utf8'),page=fs.readFileSync('index.html','utf8');
 assert.ok(page.indexOf('career-standards-data.js')>page.indexOf('data.js'));
 assert.ok(page.indexOf('career-standards-data.js')<page.indexOf('script.js'));
@@ -39,5 +39,5 @@ assert.ok(ui.includes('Ещё не действует'),'future standards not di
 assert.ok(ui.includes('ст. 195.3 ТК РФ'),'legal basis omitted');
 assert.ok(ui.includes('ст. 55.5-1 ГрК РФ'),'special construction statute omitted');
 assert.ok(!ui.includes('CANDIDATE_PROFESSION_DOCUMENTS'),'outdated hardcoded normative suggestions still rendered');
-assert.ok(fs.readFileSync('audit/career-standards-51-official-2026-10-22.md','utf8').includes('44/51'));
-console.log('PASS: 51/51 case-by-case normative assessments, 38 distinct primary documents, 2 future-effective and zero inferred universal obligations');
+assert.ok(fs.readFileSync('audit/career-standards-51-official-2026-10-22.md','utf8').includes('45/51'));
+console.log('PASS: 51/51 case-by-case normative assessments, 39 distinct primary documents, 2 future-effective and zero inferred universal obligations');
