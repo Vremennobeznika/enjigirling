@@ -33,7 +33,7 @@ for(const {item} of entries){
  for(const key of ['duration','cost','budget','admission','afterCollege'])
    assert.ok(!Object.hasOwn(item,key),item.name+': unsupported claim '+key);
 }
-assert.equal(entries.filter(x=>x.item.sourceStatus==='official_source_located').length,52);
+assert.equal(entries.filter(x=>x.item.sourceStatus==='official_source_located').length,80);
 assert.ok(html.includes('Схема условная'),'schematic map not labelled');
 assert.ok(html.includes('aria-current="page"'),'current learning tab must be announced');
 const aiBuilder=fs.readFileSync('scripts/build-ai-packs.cjs','utf8');
@@ -81,3 +81,19 @@ assert.ok(entries.some(x=>x.item.name==='Тюменский техникум с�
 
 assert.ok(entries.some(x=>x.item.name.includes('Новосибирский техникум железнодорожного транспорта СГУПС')&&x.item.sourceUrl),'Novosibirsk railway 2026 source missing');
 assert.ok(entries.some(x=>x.item.name.includes('Хабаровский техникум транспортных технологий имени')&&x.item.sourceUrl),'Khabarovsk full school name missing');
+
+const canonicalNames=entries.map(x=>x.item.name.trim().toLowerCase());
+assert.equal(new Set(canonicalNames).size,80,'all institutions must have distinct names');
+for(const row of entries){
+ const item=row.item;
+ assert.equal(item.sourceStatus,'official_source_located',item.name+': primary institution evidence missing');
+ assert.match(item.sourceUrl,/^https:\/\/[^\s]+$/,item.name+': invalid source URL');
+ assert.ok(item.verifiedScope&&item.verifiedScope.length>=40,item.name+': source scope and limitations missing');
+ assert.ok(!/сокращ[её]нн(ая|ой) программа гарантирован|без ЕГЭ всем/i.test(JSON.stringify(item)),item.name+': universal guarantee');
+}
+for(const checkedName of ['Колледж «Коломна»','Челябинский механико-технологический техникум','Кемеровский горнотехнический техникум им. В. Г. Кожевина','Владивостокский судостроительный колледж','Губернаторский авиастроительный колледж г. Комсомольска-на-Амуре (МЦК)']){
+ assert.ok(entries.some(x=>x.item.name===checkedName&&x.item.sourceUrl),checkedName+': verified college omitted');
+}
+for(const suspectName of ['Грозненский техникум','Уральский техникум металлообработки','Коломенский техникум','Комсомольский-на-Амуре авиастроительный техникум']){
+ assert.ok(!entries.some(x=>x.item.name===suspectName),suspectName+': ambiguous original entry returned');
+}
