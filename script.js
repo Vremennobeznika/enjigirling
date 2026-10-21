@@ -129,7 +129,7 @@ function renderProsCons({ easy, hard }) {
 
 function renderVerifiedSalarySource(profession) {
   const entry = (window.salarySourceAudit || []).find(item => item.id === profession.id && item.status === 'source_snapshot');
-  if (!entry) return '<p class="data-quality-note">Зарплатный диапазон для этой точной профессии не подтверждён проверяемым источником на 21.10.2026. Цифры скрыты; найденная ссылка и причина доступны в блоке источников ниже.</p>';
+  if (!entry) return '<p class="data-quality-note">Зарплатный диапазон для этой точной профессии не подтверждён проверяемым источником на 21.10.2026. Непроверенные цифры скрыты; найденная ссылка и причина доступны в блоке источников ниже.</p>';
   if (entry.validationStatus === 'adjacent_occupation_checked') return `<p class="data-quality-note">Для этой профессии точная зарплата не подтверждена. Найден источник по смежной должности «${escapeHTML(entry.sourceTitle)}», но его цифры не переносим на профессию каталога. <a href="${escapeHTML(entry.sourceUrl)}" target="_blank" rel="noopener noreferrer">Смежный источник</a>.</p>`;
   const fmt = value => Number(value).toLocaleString('ru-RU');
   const display = entry.rangeMinRub === entry.rangeMaxRub
