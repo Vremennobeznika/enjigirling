@@ -47,8 +47,8 @@ for(const renamed of ['Мурманский арктический универ�
  assert.ok(names.has(renamed),'missing successor institution '+renamed);
 }
 const bauman=entries.find(x=>x.item.name==='МГТУ им. Баумана').item;
-assert.ok(bauman.verifiedProgram.includes('15.03.01')&&bauman.verifiedProgram.includes('529 000'),'verified program-scoped fee was lost');
-assert.ok(js.includes('item.verifiedProgram'),'verified example should appear in card details');
+assert.ok(bauman.verifiedPrograms.some(p=>p.code==='15.03.01'&&p.tuitionAnnualRub===529000&&p.year==='2026/27 учебный год'),'verified program-scoped fee was lost');
+assert.ok(js.includes('item.verifiedPrograms'),'verified program should appear in card details');
 
 assert.ok(entries.some(x=>x.item.name.includes('Международный центр компетенций')&&x.item.city==='Казань'),'2026 Kazan college name missing');
 for(const value of ['Красноярский техникум промышленного сервиса','Волгоградский технический колледж']){
