@@ -7,7 +7,9 @@
     "test:unit": "node tests/site-check.cjs",
     "test:browser": "playwright test",
     "build:knowledge": "node scripts/build-knowledge.cjs",
-    "check:knowledge": "node scripts/build-knowledge.cjs --check"
+    "check:knowledge": "node scripts/build-knowledge.cjs --check",
+    "test:all": "node scripts/all-checks.cjs && playwright test",
+    "test:static": "node scripts/all-checks.cjs"
   },
   "devDependencies": {
     "@playwright/test": "1.56.1"
