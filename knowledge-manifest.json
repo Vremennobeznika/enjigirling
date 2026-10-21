@@ -54,7 +54,9 @@
     "status": "editorial_not_fully_verified",
     "note": "Отдельные записи могут не иметь подтверждённых источников. Не применять как инженерную спецификацию или нормативную инструкцию.",
     "auditCommand": "node scripts/audit-knowledge.cjs --json",
-    "evidenceStatus": "Salary evidence contains linked observations with explicit status; not primary verification of all assertions"
+    "evidenceStatus": "Salary evidence contains linked observations with explicit status; not primary verification of all assertions",
+    "sourceRegistry": "knowledge/source-registry.json",
+    "sourceCheckCommand": "node scripts/check-evidence.cjs"
   },
   "jsonApi": {
     "index": "knowledge/search-index.json",
