@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <span class="eng-resource-link">Перейти →</span>
           </a>`).join('')
             : '<p class="eng-empty">Ничего не найдено.</p>';
+        grid.dataset.ready = 'true';
     }
 
     types.forEach((type) => {
