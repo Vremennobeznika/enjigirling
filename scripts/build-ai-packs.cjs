@@ -50,6 +50,13 @@ for(const [, , ,filename] of sections){
  if(filename&&!canonical[filename])canonical[filename]=JSON.parse(read(filename)).items;
 }
 function datasetFor(slug,dataset){
+ if(slug==='learning'){
+  const districts=jsArray('map-data.js','federalDistricts');
+  return districts.flatMap(d=>[
+   ...(d.universities||[]).map(item=>({...item,type:'university',district:d.name})),
+   ...(d.colleges||[]).map(item=>({...item,type:'college',district:d.name}))
+  ]);
+ }
  if(slug==='calendar')return jsArray('calendar-data.js','holidays');
  if(slug==='resources')return jsArray('resources-data.js','resources');
  if(slug==='calculators'){
