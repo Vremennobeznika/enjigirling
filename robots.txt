@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://vremennobeznika.github.io/enjigirling/sitemap.xml
