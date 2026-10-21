@@ -20,6 +20,21 @@ check('all nine HTML pages and shared navigation', () => {
   assert.equal(ids.length,new Set(ids).size,name+' duplicate DOM id');
  }
 });
+check('basic HTML security and accessible form labels', () => {
+ for (const name of pages) {
+  const h=fs.readFileSync(name,'utf8');
+  assert.doesNotMatch(h,/\\son(?:click|load|error|mouseover)\\s*=/i,name+' inline event handler');
+  assert.doesNotMatch(h,/javascript:/i,name+' javascript URL');
+  assert.doesNotMatch(h,/<script\\b[^>]*\\bsrc=["']https?:/i,name+' unreviewed remote script');
+  const labels=new Set([...h.matchAll(/<label\\b[^>]*\\bfor=["']([^"']+)["']/gi)].map(m=>m[1]));
+  for(const match of h.matchAll(/<(?:input|select|textarea)\\b[^>]*>/gi)){
+   const tag=match[0];
+   if(/\\btype=["']hidden["']/i.test(tag))continue;
+   const id=tag.match(/\\bid=["']([^"']+)["']/i)?.[1];
+   assert.ok(/\\baria-label(?:ledby)?=/.test(tag)||(id&&labels.has(id)),name+' unlabeled form control '+tag);
+  }
+ }
+});
 check('local HTML assets and links', () => {
  for (const name of pages) {
   const h = fs.readFileSync(name,'utf8');
