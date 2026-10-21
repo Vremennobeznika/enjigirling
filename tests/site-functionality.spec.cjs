@@ -43,7 +43,7 @@ test('comparison adds and removes professions and shows cautious salary data',as
   await page.locator('#professionPicker').selectOption('road-engineer');
   await page.locator('#addProfession').click();
   await expect(page.locator('.comparison-table thead th')).toHaveCount(3);
-  await expect(page.locator('#comparisonResult')).toContainText('Только смежная профессия');
+  await expect(page.locator('#comparisonResult')).toContainText('Числовые данные не подтверждены');
   await page.locator('#selectedProfessions button').first().click();
   await expect(page.locator('#comparisonResult')).toContainText('Добавьте минимум две профессии');
 });
@@ -73,7 +73,7 @@ test('salary reference works without legacy salary objects or invented regional 
   await expect(page.locator('#salaryResultValue')).toContainText('₽');
   await expect(page.locator('#salaryResultHint')).toContainText('Источник:');
   await page.locator('#salaryProfession').selectOption('road-engineer');
-  await expect(page.locator('#salaryResultValue')).toHaveText('Нет сопоставимой оценки');
+  await expect(page.locator('#salaryResultValue')).toHaveText('Нет подтверждённых данных');
   expect(errors).toEqual([]);
 });
 
