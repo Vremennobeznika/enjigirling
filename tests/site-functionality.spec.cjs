@@ -170,3 +170,16 @@ test('closing a deep-linked profession clears stale URL fragment',async({page})=
   await expect(page.locator('#modalOverlay')).toHaveAttribute('aria-hidden','true');
   await expect(page).toHaveURL(/index\.html$/);
 });
+
+test('catalog layout placeholders are removed after rendering',async({page})=>{
+ for(const [path,grid] of [
+  ['calendar.html','#calendarGrid'],
+  ['resources.html','#resourcesGrid'],
+  ['dictionary.html','#dictionaryGrid']
+ ]){
+  await page.goto('/'+path);
+  await expect(page.locator(grid)).toHaveAttribute('data-ready','true');
+  const rendered=await page.locator(grid).locator('.eng-card').count();
+  expect(rendered,path+' content never rendered').toBeGreaterThan(0);
+ }
+});
