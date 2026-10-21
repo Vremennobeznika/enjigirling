@@ -111,6 +111,20 @@ check('evidence source and claim paths', () => {
   keys.add(key);
  }
 });
+check('machine-readable quality report matches indexed evidence', () => {
+ const q=json('knowledge/quality.json');
+ const idx=json('knowledge/search-index.json');
+ const registry=json('knowledge/source-registry.json');
+ assert.equal(q.totalRecords,idx.recordCount);
+ assert.equal(q.totalEvidenceLinks,registry.recordEvidence.length);
+ assert.equal(q.totalRegisteredSources,registry.sources.length);
+ const linked=new Set(registry.recordEvidence.map(e=>e.recordType+'/'+e.recordId));
+ const checked=new Set(registry.recordEvidence.filter(e=>e.verificationStatus==='claim_checked').map(e=>e.recordType+'/'+e.recordId));
+ assert.equal(q.recordsWithEvidenceLinks,linked.size);
+ assert.equal(q.recordsWithClaimCheckedLinks,checked.size);
+ for(const type of datasets)assert.equal(q.byDataset[type].records,data[type].length);
+ assert.equal(q.scope,'metadata_integrity_only');
+});
 check('sitemap and AI entrypoints', () => {
  const xml=fs.readFileSync('sitemap.xml','utf8');
  const robots=fs.readFileSync('robots.txt','utf8');
