@@ -105,6 +105,12 @@ document.addEventListener('DOMContentLoaded', () => {
   more.addEventListener('click',()=>{
     shown+=pageSize;render();
   });
+  document.querySelectorAll('.learning-shortcuts a[href^="#education-"]').forEach(link=>{
+    link.addEventListener('click',()=>{
+      const target=document.querySelector(link.getAttribute('href'));
+      if(target&&target.tagName==='DETAILS')target.open=true;
+    });
+  });
   const namespace='http://www.w3.org/2000/svg';
   function chooseDistrict(id,scroll){
     districtSelect.value=id;
