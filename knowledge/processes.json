@@ -1,0 +1,232 @@
+{
+  "schemaVersion": "1.0",
+  "dataset": "processes",
+  "language": "ru",
+  "quality": "editorial_not_independently_verified",
+  "sourceFile": "processes-data.js",
+  "sourceUrl": "https://vremennobeznika.github.io/enjigirling/processes-data.js",
+  "items": [
+    {
+      "id": "casting",
+      "name": "Литьё",
+      "category": "forming",
+      "description": "Формирование заготовки заливкой расплава в форму.",
+      "steps": "Подготовка формы → плавка → заливка → затвердевание → извлечение → контроль",
+      "checks": "Усадочные дефекты, пористость, включения",
+      "materials": [
+        "steel-20",
+        "steel-45"
+      ],
+      "profession": "metallurgical-engineer",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "processes-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/processes.html#casting"
+      }
+    },
+    {
+      "id": "welding",
+      "name": "Дуговая сварка",
+      "category": "joining",
+      "description": "Создание соединения с использованием электрической дуги. Выбор способа и присадочных материалов зависит от изделия.",
+      "steps": "Подготовка → сборка → сварка → контроль",
+      "checks": "Непровар, трещины, поры, деформации",
+      "materials": [
+        "09g2s",
+        "aisi-304",
+        "al-6061"
+      ],
+      "profession": "mechanical-engineer",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "processes-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/processes.html#welding"
+      }
+    },
+    {
+      "id": "cutting",
+      "name": "Обработка резанием",
+      "category": "forming",
+      "description": "Формирование геометрии удалением материала режущим инструментом.",
+      "steps": "Базирование → режимы резания → обработка → измерение",
+      "checks": "Размеры, шероховатость, износ инструмента",
+      "materials": [
+        "steel-20",
+        "steel-45",
+        "al-6061",
+        "pa6",
+        "copper-m1"
+      ],
+      "profession": "mechanical-engineer",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "processes-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/processes.html#cutting"
+      }
+    },
+    {
+      "id": "heat",
+      "name": "Термическая обработка",
+      "category": "treatment",
+      "description": "Изменение структуры и свойств материала заданным тепловым циклом.",
+      "steps": "Нагрев → выдержка → охлаждение → проверка",
+      "checks": "Твёрдость, деформация, трещины; критерии зависят от марки",
+      "materials": [
+        "steel-20",
+        "steel-45"
+      ],
+      "profession": "materials-engineer",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "processes-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/processes.html#heat"
+      }
+    },
+    {
+      "id": "additive",
+      "name": "Аддитивное производство",
+      "category": "forming",
+      "description": "Послойное изготовление деталей по цифровой модели.",
+      "steps": "Подготовка модели → изготовление → постобработка → контроль",
+      "checks": "Геометрия, пористость, ориентация слоёв",
+      "materials": [
+        "pa6",
+        "gfrp"
+      ],
+      "profession": "mechanical-engineer",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "processes-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/processes.html#additive"
+      }
+    },
+    {
+      "id": "inspection",
+      "name": "Неразрушающий контроль",
+      "category": "inspection",
+      "description": "Обнаружение несплошностей и других признаков дефектов без разрушения объекта контроля.",
+      "steps": "Выбор метода → подготовка → контроль → оценка → протокол",
+      "checks": "Чувствительность, доступность зон, ограничения метода",
+      "materials": [
+        "09g2s",
+        "gfrp",
+        "alumina"
+      ],
+      "profession": "materials-engineer",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "processes-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/processes.html#inspection"
+      }
+    },
+    {
+      "id": "mig-mag",
+      "name": "MIG/MAG-сварка",
+      "category": "joining",
+      "description": "Дуговая сварка плавящимся электродом в защитном газе; MIG и MAG различаются типом защитной среды.",
+      "steps": "Подготовка → настройка подачи проволоки и газа → сварка → контроль",
+      "checks": "Поры, брызги, непровар, качество газовой защиты",
+      "materials": [
+        "09g2s",
+        "al-6061"
+      ],
+      "profession": "mechanical-engineer",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "processes-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/processes.html#mig-mag"
+      }
+    },
+    {
+      "id": "tig",
+      "name": "TIG-сварка",
+      "category": "joining",
+      "description": "Дуговая сварка неплавящимся вольфрамовым электродом в защитном газе.",
+      "steps": "Подготовка → выбор электрода и присадки → сварка → контроль",
+      "checks": "Защита сварочной ванны, геометрия шва, несплошности",
+      "materials": [
+        "aisi-304",
+        "al-6061"
+      ],
+      "profession": "mechanical-engineer",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "processes-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/processes.html#tig"
+      }
+    },
+    {
+      "id": "ultrasonic",
+      "name": "Ультразвуковой контроль",
+      "category": "inspection",
+      "description": "Метод НК на основе распространения ультразвуковых волн; применимость зависит от материала и геометрии.",
+      "steps": "Выбор преобразователя → настройка → сканирование → интерпретация → протокол",
+      "checks": "Мёртвые зоны, акустический контакт, ориентация дефектов",
+      "materials": [
+        "09g2s",
+        "steel-45"
+      ],
+      "profession": "materials-engineer",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "processes-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/processes.html#ultrasonic"
+      }
+    },
+    {
+      "id": "radiographic",
+      "name": "Радиографический контроль",
+      "category": "inspection",
+      "description": "Получение изображения внутренней структуры объекта с помощью проникающего излучения.",
+      "steps": "Планирование → обеспечение радиационной безопасности → экспонирование → оценка → протокол",
+      "checks": "Чувствительность, толщина, геометрия, безопасность",
+      "materials": [
+        "09g2s",
+        "aisi-304"
+      ],
+      "profession": "materials-engineer",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "processes-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/processes.html#radiographic"
+      }
+    },
+    {
+      "id": "dye",
+      "name": "Капиллярный контроль",
+      "category": "inspection",
+      "description": "Обнаружение открытых на поверхность несплошностей с помощью проникающих веществ.",
+      "steps": "Очистка → нанесение пенетранта → удаление → проявление → оценка",
+      "checks": "Состояние поверхности, время выдержки, доступность дефекта",
+      "materials": [
+        "aisi-304",
+        "al-6061"
+      ],
+      "profession": "materials-engineer",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "processes-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/processes.html#dye"
+      }
+    },
+    {
+      "id": "hardness",
+      "name": "Измерение твёрдости",
+      "category": "inspection",
+      "description": "Контроль сопротивления материала локальному вдавливанию выбранным методом.",
+      "steps": "Выбор метода → подготовка поверхности → измерение → протокол",
+      "checks": "Толщина, поверхность, нагрузка, шкала и метод измерения",
+      "materials": [
+        "steel-20",
+        "steel-45",
+        "al-6061"
+      ],
+      "profession": "materials-engineer",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "processes-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/processes.html#hardness"
+      }
+    }
+  ]
+}
