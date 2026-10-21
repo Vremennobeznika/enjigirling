@@ -33,7 +33,7 @@ for(const {item} of entries){
  for(const key of ['duration','cost','budget','admission','afterCollege'])
    assert.ok(!Object.hasOwn(item,key),item.name+': unsupported claim '+key);
 }
-assert.equal(entries.filter(x=>x.item.sourceStatus==='official_source_located').length,7);
+assert.equal(entries.filter(x=>x.item.sourceStatus==='official_source_located').length,12);
 assert.ok(html.includes('Схема условная'),'schematic map not labelled');
 assert.ok(html.includes('aria-current="page"'),'current learning tab must be announced');
 const aiBuilder=fs.readFileSync('scripts/build-ai-packs.cjs','utf8');
@@ -49,3 +49,9 @@ for(const renamed of ['Мурманский арктический универ�
 const bauman=entries.find(x=>x.item.name==='МГТУ им. Баумана').item;
 assert.ok(bauman.verifiedProgram.includes('15.03.01')&&bauman.verifiedProgram.includes('529 000'),'verified program-scoped fee was lost');
 assert.ok(js.includes('item.verifiedProgram'),'verified example should appear in card details');
+
+assert.ok(entries.some(x=>x.item.name.includes('Международный центр компетенций')&&x.item.city==='Казань'),'2026 Kazan college name missing');
+for(const value of ['Красноярский техникум промышленного сервиса','Волгоградский технический колледж']){
+ const item=entries.find(x=>x.item.name===value)?.item;
+ assert.ok(item&&item.site&&item.sourceUrl,value+': verified site missing');
+}
