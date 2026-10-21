@@ -207,5 +207,88 @@ function pipeFlow(diameterMM,speedMS){
  return {m3Hour,litersMinute:m3Hour*1000/60};
 }
 
-global.EngineeringMath={formats,encode,decode,exactError,number,ohm,divider,rc,tolerance,modbus,takt,oee,billetMass,thermalLength,cutSpeed,pipeFlow};
+
+/* Textile shop: figures depend on actual marker layouts, seam types and standards. */
+function percentRange(n,label,max=100){
+ finiteNonnegative(n,label);
+ if(n>max)throw Error(label+' вне диапазона 0–'+max+' %');
+}
+function integerPositive(n,label){
+ finitePositive(n,label);
+ if(!Number.isSafeInteger(n))throw Error(label+' должно быть целым числом');
+}
+function markerEfficiency(areaCm2,lengthM,widthCm){
+ finitePositive(areaCm2,'Площадь лекал');finitePositive(lengthM,'Длина раскладки');finitePositive(widthCm,'Полезная ширина');
+ const markerCm2=lengthM*100*widthCm;
+ finish([markerCm2]);
+ if(areaCm2>markerCm2*(1+1e-10))throw Error('Площадь лекал превышает площадь раскладки');
+ const fraction=areaCm2/markerCm2;
+ return {percent:fraction*100,wastePercent:(1-fraction)*100,markerM2:markerCm2/10000,wasteM2:(markerCm2-areaCm2)/10000};
+}
+function fabricBooking(markerLengthM,piecesInMarker,allowancePct,orderPieces){
+ finitePositive(markerLengthM,'Длина раскладки');
+ integerPositive(piecesInMarker,'Изделий в раскладке');
+ integerPositive(orderPieces,'Количество изделий в заказе');
+ percentRange(allowancePct,'Припуск',100);
+ const perPiece=markerLengthM/piecesInMarker*(1+allowancePct/100);
+ const totalM=perPiece*orderPieces;
+ finish([perPiece,totalM]);
+ return {perPiece,totalM};
+}
+function threadBooking(seamMeters,ratio,lossPct,orderPieces){
+ finitePositive(seamMeters,'Длина шва');
+ finitePositive(ratio,'Расход нитки на 1 м шва');
+ percentRange(lossPct,'Потери',100);
+ integerPositive(orderPieces,'Размер партии');
+ const perPieceM=seamMeters*ratio*(1+lossPct/100);
+ const totalM=perPieceM*orderPieces;
+ finish([perPieceM,totalM]);
+ return {perPieceM,totalM};
+}
+function sewingEfficiency(goodPieces,smvMin,staff,workedMin){
+ finiteNonnegative(goodPieces,'Годный выпуск');
+ if(!Number.isSafeInteger(goodPieces))throw Error('Годный выпуск должен быть целым числом');
+ finitePositive(smvMin,'SMV');
+ integerPositive(staff,'Число сотрудников');
+ finitePositive(workedMin,'Минут на человека');
+ const earnedMin=goodPieces*smvMin,availableMin=staff*workedMin;
+ const percent=earnedMin/availableMin*100;
+ finish([earnedMin,availableMin,percent]);
+ return {earnedMin,availableMin,percent};
+}
+/* Maritime: dimensional arithmetic for teaching and desk estimates, not approved navigation. */
+const NM_METRES=1852;
+function marinePassage(distanceNm,speedKn){
+ finitePositive(distanceNm,'Дистанция');
+ finitePositive(speedKn,'Скорость относительно грунта');
+ const hours=distanceNm/speedKn;
+ finish([hours]);
+ return {hours,minutes:hours*60,distanceKm:distanceNm*NM_METRES/1000,speedKmh:speedKn*NM_METRES/1000};
+}
+function marineFuel(distanceNm,speedKn,litresHour,reservePct){
+ const voyage=marinePassage(distanceNm,speedKn);
+ finiteNonnegative(litresHour,'Расход топлива');
+ percentRange(reservePct,'Дополнительный запас',1000);
+ const usedL=voyage.hours*litresHour;
+ const totalL=usedL*(1+reservePct/100);
+ finish([usedL,totalL]);
+ return {hours:voyage.hours,usedL,extraL:totalL-usedL,totalL};
+}
+function hullSpeed(lwlM){
+ finitePositive(lwlM,'Длина ватерлинии');
+ const knots=1.34*Math.sqrt(lwlM/0.3048);
+ finish([knots]);
+ return {knots,kilometresHour:knots*NM_METRES/1000};
+}
+function draftByTPC(changedTonnes,waterplaneM2,densityTonM3){
+ if(!Number.isFinite(changedTonnes))throw Error('Изменение массы должно быть числом');
+ finitePositive(waterplaneM2,'Площадь ватерлинии');
+ finitePositive(densityTonM3,'Плотность воды');
+ const tpc=waterplaneM2*densityTonM3/100;
+ const deltaCm=changedTonnes/tpc;
+ finish([tpc,deltaCm]);
+ return {tpc,deltaCm,deltaM:deltaCm/100};
+}
+
+global.EngineeringMath={formats,encode,decode,exactError,number,ohm,divider,rc,tolerance,modbus,takt,oee,billetMass,thermalLength,cutSpeed,pipeFlow,markerEfficiency,fabricBooking,threadBooking,sewingEfficiency,marinePassage,marineFuel,hullSpeed,draftByTPC};
 })(typeof window!=='undefined'?window:globalThis);

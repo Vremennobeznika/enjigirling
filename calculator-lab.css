@@ -68,3 +68,13 @@
 .ieee-bit-legend span {font-family:ui-monospace,Consolas,monospace;}
 .production-panel .calc-lab-sub {scroll-margin-top:10px;}
 @media(max-width:600px){.calc-lab>summary{padding-left:12px}.calc-lab-sub h3::before{display:block;margin-bottom:4px}}
+
+
+/* Lightweight grouped index of calculator workbenches. */
+.calculator-directory .calculator-groups {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:12px;}
+.calculator-directory .calculator-group {display:flex;flex-direction:column;gap:6px;padding:12px;border:1px solid var(--card-border);border-radius:10px;min-width:0;background:var(--soft-bg);}
+.calculator-directory .calculator-group h3 {font:700 11px/1.4 var(--font);letter-spacing:.05em;text-transform:uppercase;color:var(--card-muted);margin:0 0 4px;}
+.calculator-directory .calculator-group a {width:100%;box-sizing:border-box;min-height:44px;overflow-wrap:anywhere;background:var(--card-bg);}
+.calc-lab-sub a,.calc-lab-sub a:visited {text-decoration:underline;text-underline-offset:3px;color:var(--card-text)!important;}
+@media(max-width:880px){.calculator-directory .calculator-groups{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:540px){.calculator-directory .calculator-groups{grid-template-columns:minmax(0,1fr);gap:7px;}.calculator-directory .calculator-group{padding:9px;}}

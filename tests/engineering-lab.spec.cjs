@@ -87,3 +87,40 @@ test('production workshop remains usable at narrow viewport',async({page})=>{
  await page.locator('#flowDiameter').fill('0');
  await expect(page.locator('#flowOutput')).toContainText('Диаметр');
 });
+
+
+test('sewing studio calculates marker, cloth, thread and SMV efficiency',async({page})=>{
+ await page.goto('/calculator.html');
+ const groups=page.locator('.calculator-group');
+ await expect(groups).toHaveCount(6);
+ await page.locator('#labSewing > summary').click();
+ await expect(page.locator('#markerOutput')).toContainText('82,666');
+ await expect(page.locator('#fabricOutput')).toContainText('159,65 м');
+ await expect(page.locator('#threadOutput')).toContainText('632,5 м');
+ await expect(page.locator('#lineOutput')).toContainText('62,5 %');
+ await page.locator('#markerArea').fill('100000');
+ await expect(page.locator('#markerOutput')).toContainText('превышает');
+ await page.locator('#markerArea').fill('62000');
+ await expect(page.locator('#markerOutput')).toContainText('82,666');
+});
+test('marine studio calculates voyage, fuel, hull-speed estimate and draft',async({page})=>{
+ await page.goto('/calculator.html#labMarine');
+ await expect(page.locator('#labMarine')).toHaveAttribute('open','');
+ await expect(page.locator('#passageOutput')).toContainText('92,6 км');
+ await expect(page.locator('#fuelOutput')).toContainText('120 л');
+ await expect(page.locator('#hullOutput')).toContainText('7,675');
+ await expect(page.locator('#draftOutput')).toContainText('12 см');
+ await page.locator('#draftMass').fill('-246');
+ await expect(page.locator('#draftOutput')).toContainText('-12 см');
+ await page.locator('#passageKn').fill('0');
+ await expect(page.locator('#passageOutput')).toContainText('положительным');
+});
+test('sewing and marine calculators fit a slow 320px mobile layout',async({page})=>{
+ await page.setViewportSize({width:320,height:720});
+ await page.goto('/calculator.html');
+ await page.locator('#labSewing > summary').click();
+ await expect(page.locator('#markerOutput')).toContainText('82,666');
+ await page.locator('#labMarine > summary').click();
+ await expect(page.locator('#draftOutput')).toContainText('12 см');
+ await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+2)).toBeTruthy();
+});

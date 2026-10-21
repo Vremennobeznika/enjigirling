@@ -132,12 +132,54 @@ function productionInit(){
  }));
 }
 
+
+function sewingInit(){
+ const status=(id,fn)=>{try{message(by(id),fn(),false);}catch(error){message(by(id),error.message,true);}};
+ attach(['markerArea','markerLength','markerWidth'],()=>status('markerOutput',()=>{
+  const x=math.markerEfficiency(...['markerArea','markerLength','markerWidth'].map(id=>math.number(val(id))));
+  return 'КПД '+fmt(x.percent)+' % · межлекальные отходы '+fmt(x.wastePercent)+' % ('+fmt(x.wasteM2)+' м²)';
+ }));
+ attach(['fabricLength','fabricPieces','fabricAllowance','fabricOrder'],()=>status('fabricOutput',()=>{
+  const x=math.fabricBooking(...['fabricLength','fabricPieces','fabricAllowance','fabricOrder'].map(id=>math.number(val(id))));
+  return 'На изделие '+fmt(x.perPiece)+' м · на заказ '+fmt(x.totalM)+' м';
+ }));
+ attach(['threadSeam','threadRatio','threadLoss','threadOrder'],()=>status('threadOutput',()=>{
+  const x=math.threadBooking(...['threadSeam','threadRatio','threadLoss','threadOrder'].map(id=>math.number(val(id))));
+  return 'На изделие '+fmt(x.perPieceM)+' м · на партию '+fmt(x.totalM)+' м';
+ }));
+ attach(['lineGood','lineSmv','lineStaff','lineMinutes'],()=>status('lineOutput',()=>{
+  const x=math.sewingEfficiency(...['lineGood','lineSmv','lineStaff','lineMinutes'].map(id=>math.number(val(id))));
+  return 'Эффективность '+fmt(x.percent)+' % · выработано '+fmt(x.earnedMin)+' нормо-мин · доступно '+fmt(x.availableMin)+' чел·мин';
+ }));
+}
+function marineInit(){
+ const status=(id,fn)=>{try{message(by(id),fn(),false);}catch(error){message(by(id),error.message,true);}};
+ attach(['passageNm','passageKn'],()=>status('passageOutput',()=>{
+  const x=math.marinePassage(math.number(val('passageNm')),math.number(val('passageKn')));
+  return 'В пути '+fmt(x.hours)+' ч ('+fmt(x.minutes)+' мин) · '+fmt(x.distanceKm)+' км · скорость '+fmt(x.speedKmh)+' км/ч';
+ }));
+ attach(['fuelNm','fuelKn','fuelRate','fuelMargin'],()=>status('fuelOutput',()=>{
+  const x=math.marineFuel(...['fuelNm','fuelKn','fuelRate','fuelMargin'].map(id=>math.number(val(id))));
+  return 'На переход '+fmt(x.usedL)+' л · добавлено '+fmt(x.extraL)+' л · всего '+fmt(x.totalL)+' л';
+ }));
+ attach(['hullLwl'],()=>status('hullOutput',()=>{
+  const x=math.hullSpeed(math.number(val('hullLwl')));
+  return 'Эмпирический ориентир '+fmt(x.knots)+' уз · '+fmt(x.kilometresHour)+' км/ч';
+ }));
+ attach(['draftMass','draftArea','draftDensity'],()=>status('draftOutput',()=>{
+  const x=math.draftByTPC(...['draftMass','draftArea','draftDensity'].map(id=>math.number(val(id))));
+  return 'TPC '+fmt(x.tpc)+' т/см · изменение средней осадки '+fmt(x.deltaCm)+' см ('+fmt(x.deltaM)+' м)';
+ }));
+}
+
 const initialized=new Set();
 window.initEngineeringLab=function(which){
  if(initialized.has(which))return;
  if(which==='ieee')floatInit();
  if(which==='extra')extraInit();
  if(which==='production')productionInit();
+ if(which==='sewing')sewingInit();
+ if(which==='marine')marineInit();
  initialized.add(which);
 };
 })();

@@ -321,7 +321,7 @@ check('originally named workshops and six dimensioned production tools', () => {
   assert.ok(html.includes(label),'missing named tool '+label);
  }
  const sections=[...html.matchAll(/data-lab="([^"]+)"/g)].map(x=>x[1]);
- assert.deepEqual(sections,['ieee','extra','production'],'wrong lazy workshop panels');
+ assert.deepEqual(sections,['ieee','extra','production','sewing','marine'],'wrong lazy workshop panels');
  for(const id of ['taktAvailable','taktDemand','oeePlan','oeeRun','oeeTotal','oeeGood','oeeIdeal','massDensity','massLength','massWidth','massHeight','thermalLength','thermalAlpha','thermalDelta','cutMode','cutDiameter','cutQuantity','flowDiameter','flowSpeed']){
   assert.ok(html.includes('id="'+id+'"'),'production input missing '+id);
  }
@@ -335,6 +335,21 @@ check('originally named workshops and six dimensioned production tools', () => {
  assert.ok(html.includes('class="calc-lab production-panel"'),'production panel styling hook missing');
  assert.ok(fs.readFileSync('calculator-lab.css','utf8').includes('.production-panel .calc-lab-sub'),'production panel styles missing');
  assert.ok(fs.readFileSync('tests/engineering-lab.spec.cjs','utf8').includes('renamed original workbench names'));
+});
+
+
+check('fabric and maritime calculators have groups, sources and independent formulae', () => {
+ const html=fs.readFileSync('calculator.html','utf8');
+ for(const name of ['Цифровые данные','Электротехника','Производство','Швейное дело','Море и суда','Единицы'])assert.ok(html.includes(name),'missing group '+name);
+ for(const id of ['labSewing','labMarine','markerArea','fabricLength','threadSeam','lineGood','passageNm','fuelNm','hullLwl','draftMass'])assert.ok(html.includes('id="'+id+'"'),'missing calculator '+id);
+ for(const source of ['coats.com/en/info-hub/thread-consumption-guide/','oceanservice.noaa.gov/facts/nautical-mile-knot.html','tc.canada.ca/sites/default/files/migrated/tp14609e.pdf'])
+  assert.ok(html.includes(source),'missing source '+source);
+ const core=fs.readFileSync('engineering-lab-core.js','utf8');
+ const ui=fs.readFileSync('engineering-lab-ui.js','utf8');
+ for(const fn of ['markerEfficiency','fabricBooking','threadBooking','sewingEfficiency','marinePassage','marineFuel','hullSpeed','draftByTPC'])
+  assert.ok(core.includes('function '+fn+'('),'missing formula '+fn);
+ for(const mode of ['sewing','marine'])assert.ok(ui.includes("if(which==='"+mode+"')"),'lazy module missing '+mode);
+ assert.ok(fs.readFileSync('calculator-lab.css','utf8').includes('.calculator-groups'),'category layout missing');
 });
 
 console.log('Matrix: '+count+' PASS, '+errors.length+' FAIL ('+pages.length+' pages, '+datasets.length+' datasets)');

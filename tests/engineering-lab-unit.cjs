@@ -63,5 +63,32 @@ assert.throws(()=>m.billetMass(-1,100,100,100));
 assert.throws(()=>m.cutSpeed('rpm',0,100));
 assert.throws(()=>m.pipeFlow(0,1));
 assert.throws(()=>m.thermalLength(1000,12,Infinity));
-console.log('Engineering math: IEEE754 + Modbus + electronic + six production calculations PASS');
+
+const marker=m.markerEfficiency(62000,5,150);
+close(marker.percent,62/75*100);close(marker.wasteM2,1.3);
+assert.throws(()=>m.markerEfficiency(76000,5,150));
+const book=m.fabricBooking(6.2,4,3,100);
+close(book.perPiece,1.5965);close(book.totalM,159.65);
+assert.throws(()=>m.fabricBooking(6.2,0,3,100));
+const thread=m.threadBooking(1,5.5,15,100);
+close(thread.perPieceM,6.325);close(thread.totalM,632.5);
+assert.throws(()=>m.threadBooking(1,5.5,-1,100));
+const line=m.sewingEfficiency(1000,12,40,480);
+close(line.percent,62.5);close(line.availableMin,19200);
+close(m.sewingEfficiency(0,12,40,480).percent,0);
+assert.throws(()=>m.sewingEfficiency(.5,12,40,480));
+const voyage=m.marinePassage(50,12);
+close(voyage.hours,50/12);close(voyage.distanceKm,92.6);close(voyage.speedKmh,22.224);
+assert.throws(()=>m.marinePassage(50,0));
+const fuel=m.marineFuel(50,12,24,20);
+close(fuel.usedL,100);close(fuel.totalL,120);
+assert.throws(()=>m.marineFuel(50,12,24,-20));
+close(m.hullSpeed(10).knots,1.34*Math.sqrt(10/.3048));
+assert.throws(()=>m.hullSpeed(0));
+const draft=m.draftByTPC(246,2000,1.025);
+close(draft.tpc,20.5);close(draft.deltaCm,12);
+close(m.draftByTPC(-246,2000,1.025).deltaCm,-12);
+assert.throws(()=>m.draftByTPC(246,2000,0));
+
+console.log('Engineering math: IEEE754, six production, four sewing and four marine calculators PASS');
 
