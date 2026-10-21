@@ -28,7 +28,8 @@ function activate(panel){
 for(const panel of details)panel.addEventListener('toggle',()=>activate(panel));
 function openHash(){
  const id=decodeURIComponent(location.hash.slice(1));
- const panel=details.find(x=>x.id===id);
+ const panel=document.getElementById(id);
+ if(!panel || !panel.matches('details.calc-lab'))return;
  if(panel&&!panel.open)panel.open=true;
 }
 window.addEventListener('hashchange',openHash);

@@ -140,3 +140,53 @@ test('virtual caliper and extended industry calculations',async({page})=>{
  await expect(page.locator('#currentOutput')).toContainText('10,198');
  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2)).toBeTruthy();
 });
+
+
+test('all calculator tools sit inside six consistent visual groups',async({page})=>{
+ await page.goto('/calculator.html');
+ const groups=page.locator('.calculator-workshop-section');
+ await expect(groups).toHaveCount(6);
+ const expected=[
+ ['group-digital',['labIEEE','calcBases']],
+ ['group-electrical',['labElectronics','calcSignal']],
+ ['group-production',['labProduction']],
+ ['group-sewing',['labSewing','labMoreSewing']],
+ ['group-marine',['labMarine','labMoreMarine']],
+ ['group-measurements',['labCaliper','calcUnits']]
+ ];
+ for(const [id,panels] of expected){
+  const section=page.locator('#'+id);
+  await expect(section).toBeVisible();
+  await expect(section.locator('.calculator-workshop-grid > details.calc-lab')).toHaveCount(panels.length);
+  expect(await section.locator('.calculator-workshop-grid > details.calc-lab').evaluateAll(els=>els.map(el=>el.id))).toEqual(panels);
+ }
+ await expect(page.locator('#calcUnits')).not.toHaveAttribute('open','');
+ await expect(page.locator('#calcBases')).not.toHaveAttribute('open','');
+ await expect(page.locator('#calcSignal')).not.toHaveAttribute('open','');
+ await expect(page.locator('.calc-section:not(.calc-legacy .calc-section)')).toHaveCount(0);
+});
+test('legacy calculators open from their unchanged deep links and compute',async({page})=>{
+ await page.goto('/calculator.html#calcUnits');
+ await expect(page.locator('#calcUnits')).toHaveAttribute('open','');
+ await page.locator('#convInput').fill('1000');
+ await expect(page.locator('#convResultValue')).not.toHaveText('—');
+ await page.goto('/calculator.html#calcBases');
+ await expect(page.locator('#calcBases')).toHaveAttribute('open','');
+ await page.locator('#numInput').fill('255');
+ await expect(page.locator('#numHex')).toHaveText('FF');
+ await page.goto('/calculator.html#calcSignal');
+ await expect(page.locator('#calcSignal')).toHaveAttribute('open','');
+ await expect(page.locator('#maResultValue')).toContainText('5');
+ await expect(page.locator('#signalGuideTitle')).toBeVisible();
+});
+test('all six calculator groups have no horizontal overflow on 320px screens',async({page})=>{
+ await page.setViewportSize({width:320,height:720});
+ await page.goto('/calculator.html');
+ for(const id of ['labIEEE','calcBases','labElectronics','calcSignal','labProduction','labSewing','labMoreSewing','labMarine','labMoreMarine','labCaliper','calcUnits']){
+  const details=page.locator('#'+id);
+  await details.locator('summary').click();
+  await expect(details).toHaveAttribute('open','');
+  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2)).toBeTruthy();
+  await details.locator('summary').click();
+ }
+});

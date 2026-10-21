@@ -386,5 +386,37 @@ check('734 unique calculator concepts across 34 research groups have honest stat
  assert.ok(fs.existsSync('tests/calculator-atlas.spec.cjs'),'atlas browser regressions missing');
 });
 
+
+check('calculator workshop layout embeds every tool in one of six groups',()=>{
+ const h=fs.readFileSync('calculator.html','utf8');
+ const g=[
+  ['group-digital',['labIEEE','calcBases']],
+  ['group-electrical',['labElectronics','calcSignal']],
+  ['group-production',['labProduction']],
+  ['group-sewing',['labSewing','labMoreSewing']],
+  ['group-marine',['labMarine','labMoreMarine']],
+  ['group-measurements',['labCaliper','calcUnits']]
+ ];
+ const points=g.map(([id])=>h.indexOf('id="'+id+'"'));
+ assert.ok(points.every(x=>x>=0),'workshop group heading missing');
+ assert.deepEqual([...points].sort((a,b)=>a-b),points,'workshop categories out of order');
+ for(let i=0;i<g.length;i++){
+  const [id,panels]=g[i];
+  const block=h.slice(points[i],points[i+1]||h.indexOf('</main>'));
+  const found=[...block.matchAll(/<details class="calc-lab[^"]*" id="([^"]+)"/g)].map(x=>x[1]);
+  assert.deepEqual(found,panels,id+' missing/misplaced calculators');
+ }
+ for(const id of ['calcUnits','calcBases','calcSignal']){
+  assert.equal((h.match(new RegExp('id="'+id+'"','g'))||[]).length,1,'duplicate old calculator id '+id);
+  assert.ok(h.includes('class="calc-lab calc-legacy" id="'+id+'"'),'legacy tool left ungrouped '+id);
+ }
+ assert.ok(h.includes('id="signalGuideTitle"'),'4–20 mA explanation lost');
+ const css=fs.readFileSync('calculator-lab.css','utf8');
+ assert.ok(css.includes('.calculator-workshop-grid'),'unified workshop styling missing');
+ assert.ok(css.includes('.calc-legacy .calc-section'),'original calculator integration styling missing');
+ const loader=fs.readFileSync('calculator-loader.js','utf8');
+ assert.ok(loader.includes("panel.matches('details.calc-lab')"),'old hash links no longer open panels');
+});
+
 console.log('Matrix: '+count+' PASS, '+errors.length+' FAIL ('+pages.length+' pages, '+datasets.length+' datasets)');
 if(errors.length)process.exitCode=1;

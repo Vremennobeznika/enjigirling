@@ -79,6 +79,7 @@ test('salary reference works without legacy salary objects or invented regional 
 
 test('engineering unit converter validates and computes actual values',async({page})=>{
   await page.goto(base+'calculator.html');
+  await page.locator('#calcUnits > summary').click();
   await page.locator('#convInput').fill('1000');
   await page.locator('#convFrom').selectOption('mm');
   await page.locator('#convTo').selectOption('m');

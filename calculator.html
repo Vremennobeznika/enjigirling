@@ -61,6 +61,9 @@
 <p class="atlas-direct-link"><a href="calculator-atlas.html">Атлас идей: 734 калькулятора по 34 отраслям →</a> <span>Поиск, источники и CSV. Пока это каталог идей, а не готовые 734 расчёта.</span></p>
 </section>
 
+<section class="calculator-workshop-section" id="group-digital" aria-labelledby="group-digital-heading">
+<header class="calculator-workshop-heading"><div><h2 id="group-digital-heading">Цифровые данные</h2><p>Форматы чисел и перевод систем счисления</p></div><span>2 инструмента</span></header>
+<div class="calculator-workshop-grid">
 <details class="calc-lab" id="labIEEE" data-lab="ieee">
  <summary><strong>Битоскоп — паспорт двоичного числа</strong><small>FP16 · bfloat16 · TF32 · FP32 · FP64 · HEX ↔ биты ↔ десятичное</small></summary>
  <div class="calc-lab-body">
@@ -90,6 +93,57 @@
  </div>
 </details>
 
+<details class="calc-lab calc-legacy" id="calcBases">
+<summary><strong>Системы счисления</strong><small>BIN / OCT / DEC / HEX</small></summary>
+<div class="calc-lab-body">
+<div class="calc-section">
+                <hr class="eng-divider">
+                <h2 class="calc-heading">Перевод систем счисления</h2>
+                <p class="calc-subtitle">Введите число в выбранной системе — получите его в двоичной, восьмеричной, десятичной и шестнадцатеричной.</p>
+
+                <div class="calc-layout">
+                    <div class="calc-controls">
+                        <div class="calc-field">
+                            <label for="numBase">Система счисления</label>
+                            <select id="numBase">
+                                <option value="2">Двоичная (2)</option>
+                                <option value="8">Восьмеричная (8)</option>
+                                <option value="10" selected>Десятичная (10)</option>
+                                <option value="16">Шестнадцатеричная (16)</option>
+                            </select>
+                        </div>
+                        <div class="calc-field">
+                            <label for="numInput">Число</label>
+                            <input id="numInput" type="text" placeholder="Например: 255" autocomplete="off">
+                        </div>
+                        <div class="calc-result">
+                            <p class="calc-result-label">Результат</p>
+                            <p class="calc-result-value" id="numDec">—</p>
+                            <p class="calc-result-hint" id="numResultHint"></p>
+                        </div>
+                        <div class="calc-result">
+                            <p class="calc-result-label">Двоичная (2)</p>
+                            <p class="calc-result-value" id="numBin">—</p>
+                        </div>
+                        <div class="calc-result">
+                            <p class="calc-result-label">Восьмеричная (8)</p>
+                            <p class="calc-result-value" id="numOct">—</p>
+                        </div>
+                        <div class="calc-result">
+                            <p class="calc-result-label">Шестнадцатеричная (16)</p>
+                            <p class="calc-result-value" id="numHex">—</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+</details>
+</div>
+</section>
+
+<section class="calculator-workshop-section" id="group-electrical" aria-labelledby="group-electrical-heading">
+<header class="calculator-workshop-heading"><div><h2 id="group-electrical-heading">Электротехника и автоматика</h2><p>Цепи, датчики, Modbus и токовый сигнал</p></div><span>2 инструмента</span></header>
+<div class="calculator-workshop-grid">
 <details class="calc-lab" id="labElectronics" data-lab="extra">
  <summary><strong>Электроцех — сигналы, цепи и допуски</strong><small>Закон Ома · делитель · RC · допусковая цепь · регистры Float32</small></summary>
  <div class="calc-lab-body">
@@ -122,7 +176,49 @@
  </div>
 </details>
 
+<details class="calc-lab calc-legacy" id="calcSignal">
+<summary><strong>Токовая петля 4–20 мА</strong><small>Датчики · значение процесса ↔ ток</small></summary>
+<div class="calc-lab-body">
+<div class="calc-section">
+                <hr class="eng-divider">
+                <h2 class="calc-heading">Токовый сигнал 4–20 мА</h2>
+                <p class="calc-subtitle">Перевод тока датчика в значение процесса и обратно по диапазону шкалы: давление, уровень, температура, расход.</p>
 
+                <div class="calc-layout">
+                    <div class="calc-controls">
+                        <div class="calc-field">
+                            <label for="maMin">Начало шкалы (при токе 4 миллиампера)</label>
+                            <input id="maMin" type="text" inputmode="decimal" value="0" autocomplete="off">
+                        </div>
+                        <div class="calc-field">
+                            <label for="maMax">Конец шкалы (при токе 20 миллиампер)</label>
+                            <input id="maMax" type="text" inputmode="decimal" value="10" autocomplete="off">
+                        </div>
+                        <div class="calc-field">
+                            <label for="maCurrent">Ток в миллиамперах</label>
+                            <input id="maCurrent" type="text" inputmode="decimal" value="12" autocomplete="off">
+                        </div>
+                        <div class="calc-field">
+                            <label for="maValue">Значение процесса (в единицах шкалы)</label>
+                            <input id="maValue" type="text" inputmode="decimal" autocomplete="off">
+                        </div>
+                        <div class="calc-result">
+                            <p class="calc-result-label">Результат</p>
+                            <p class="calc-result-value" id="maResultValue">—</p>
+                            <p class="calc-result-hint" id="maResultHint"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<section class="field-guide" aria-labelledby="signalGuideTitle"><h2 id="signalGuideTitle">Пример: из тока 4–20 мА в значение шкалы</h2><p>Для линейно настроенного передатчика используйте долю диапазона: <code>X = Xmin + (I − 4) × (Xmax − Xmin) / 16</code>, где <code>I</code> — ток в мА, а <code>Xmin</code> и <code>Xmax</code> — значения начала и конца шкалы.</p><p><strong>Проверка:</strong> шкала 0–10 условных единиц, измеренный ток 12 мА. Доля диапазона — (12 − 4) / 16 = 0,5; расчётное значение — <strong>5 единиц</strong>. Эти значения уже установлены в калькуляторе выше по умолчанию.</p><p class="field-guide-note">Формула применима к линейной шкале и не определяет состояние датчика при аварийном сигнале. Настройки диапазона, допустимые токи неисправности, единицы и алгоритм обработки проверяйте по документации конкретного прибора.</p></section>
+</div>
+</details>
+</div>
+</section>
+
+<section class="calculator-workshop-section" id="group-production" aria-labelledby="group-production-heading">
+<header class="calculator-workshop-heading"><div><h2 id="group-production-heading">Производственные расчёты</h2><p>Оборудование, такт, материалы и технологические режимы</p></div><span>1 инструмента</span></header>
+<div class="calculator-workshop-grid">
 <details class="calc-lab production-panel" id="labProduction" data-lab="production">
  <summary><strong>Цеховой расчёт — производственная панель</strong><small>Такт · OEE · масса заготовки · удлинение · резание · расход</small></summary>
  <div class="calc-lab-body">
@@ -185,8 +281,13 @@
   </section>
  </div>
 </details>
+</div>
+</section>
 
-            <details class="calc-lab" id="labSewing" data-lab="sewing"><summary><strong>Раскрой и поток — швейные расчёты</strong><small>Раскладка · ткань · нитки · нормо-минуты</small></summary><div class="calc-lab-body"><p>Расчёты для конструкторов, технологов и швейного производства. Используйте реальные ширины, результаты САПР, нормы и контрольные образцы.</p><p class="lab-load-status calc-lab-status" aria-live="polite"></p><section class="calc-lab-sub" aria-labelledby="markerTitle"><h3 id="markerTitle">Полезная площадь раскладки</h3><div class="calc-lab-grid"><div class="calc-lab-field"><label for="markerArea">Сумма площади лекал, см²</label><input id="markerArea" type="text" inputmode="decimal" value="62000" autocomplete="off"></div>
+<section class="calculator-workshop-section" id="group-sewing" aria-labelledby="group-sewing-heading">
+<header class="calculator-workshop-heading"><div><h2 id="group-sewing-heading">Швейное производство</h2><p>Раскрой, потери материала и эффективность потока</p></div><span>2 инструмента</span></header>
+<div class="calculator-workshop-grid">
+<details class="calc-lab" id="labSewing" data-lab="sewing"><summary><strong>Раскрой и поток — швейные расчёты</strong><small>Раскладка · ткань · нитки · нормо-минуты</small></summary><div class="calc-lab-body"><p>Расчёты для конструкторов, технологов и швейного производства. Используйте реальные ширины, результаты САПР, нормы и контрольные образцы.</p><p class="lab-load-status calc-lab-status" aria-live="polite"></p><section class="calc-lab-sub" aria-labelledby="markerTitle"><h3 id="markerTitle">Полезная площадь раскладки</h3><div class="calc-lab-grid"><div class="calc-lab-field"><label for="markerArea">Сумма площади лекал, см²</label><input id="markerArea" type="text" inputmode="decimal" value="62000" autocomplete="off"></div>
 <div class="calc-lab-field"><label for="markerLength">Длина раскладки, м</label><input id="markerLength" type="text" inputmode="decimal" value="5" autocomplete="off"></div>
 <div class="calc-lab-field"><label for="markerWidth">Полезная ширина, см</label><input id="markerWidth" type="text" inputmode="decimal" value="150" autocomplete="off"></div></div><output id="markerOutput" class="calc-lab-output" aria-live="polite">—</output><p class="calc-lab-note">Доля лекал от прямоугольной площади раскладки. Не включает концевые потери и межнастильные отходы. <a href="https://textilenotes.com/formulas/marker-efficiency" rel="noopener noreferrer" target="_blank">Формула и пояснения</a>.</p></section><section class="calc-lab-sub" aria-labelledby="fabricTitle"><h3 id="fabricTitle">Расход ткани из готовой раскладки</h3><div class="calc-lab-grid"><div class="calc-lab-field"><label for="fabricLength">Длина раскладки, м</label><input id="fabricLength" type="text" inputmode="decimal" value="6.2" autocomplete="off"></div>
 <div class="calc-lab-field"><label for="fabricPieces">Изделий в раскладке, шт</label><input id="fabricPieces" type="text" inputmode="decimal" value="4" autocomplete="off"></div>
@@ -198,6 +299,16 @@
 <div class="calc-lab-field"><label for="lineSmv">SMV на изделие, мин</label><input id="lineSmv" type="text" inputmode="decimal" value="12" autocomplete="off"></div>
 <div class="calc-lab-field"><label for="lineStaff">Число учтённых работников</label><input id="lineStaff" type="text" inputmode="decimal" value="40" autocomplete="off"></div>
 <div class="calc-lab-field"><label for="lineMinutes">Рабочих минут на человека</label><input id="lineMinutes" type="text" inputmode="decimal" value="480" autocomplete="off"></div></div><output id="lineOutput" class="calc-lab-output" aria-live="polite">—</output><p class="calc-lab-note">Выработанные нормо-минуты / доступные человеко-минуты. Состав работников и SMV должны быть сопоставимы между периодами. <a href="https://textilenotes.com/formulas/line-efficiency" rel="noopener noreferrer" target="_blank">Формула и пояснения</a>.</p></section></div></details>
+
+<details class="calc-lab" id="labMoreSewing" data-lab="moreSewing"><summary><strong>Настил и усадка — швейный контроль</strong><small>Усадка материала · настил · баланс операций</small></summary><div class="calc-lab-body"><p class="lab-load-status calc-lab-status" aria-live="polite"></p><section class="calc-lab-sub"><h3>Усадка ткани по двум измерениям</h3><div class="calc-lab-grid"><div class="calc-lab-field"><label for="shrinkBefore">До обработки, см</label><input id="shrinkBefore" type="text" inputmode="decimal" value="100"></div><div class="calc-lab-field"><label for="shrinkAfter">После обработки, см</label><input id="shrinkAfter" type="text" inputmode="decimal" value="97"></div></div><output id="shrinkOutput" class="calc-lab-output" aria-live="polite">—</output><p class="calc-lab-note">Усадка (%) = (до − после) / до × 100. Отрицательное число означает растяжение. Не заменяет методику лабораторных испытаний.</p></section><section class="calc-lab-sub"><h3>Расход ткани на многослойный настил</h3><div class="calc-lab-grid"><div class="calc-lab-field"><label for="layPieces">Изделий в раскладке</label><input id="layPieces" type="text" inputmode="decimal" value="4"></div><div class="calc-lab-field"><label for="layPlies">Слоёв настила</label><input id="layPlies" type="text" inputmode="decimal" value="10"></div><div class="calc-lab-field"><label for="layLength">Длина раскладки, м</label><input id="layLength" type="text" inputmode="decimal" value="5"></div><div class="calc-lab-field"><label for="layAllowance">Припуск на каждый слой, м</label><input id="layAllowance" type="text" inputmode="decimal" value="0.1"></div></div><output id="layOutput" class="calc-lab-output" aria-live="polite">—</output><p class="calc-lab-note">Итог = число слоёв × (длина + припуск). Без отходов на брак и дополнительных потерь.</p></section><section class="calc-lab-sub"><h3>Баланс потока по операциям</h3><label for="balanceOps">Время операций, секунды; одна операция в строке</label><textarea id="balanceOps" rows="4">20
+30
+15</textarea><div class="calc-lab-grid"><div class="calc-lab-field"><label for="balanceTakt">Целевой такт, с</label><input id="balanceTakt" type="text" inputmode="decimal" value="25"></div></div><output id="balanceOutput" class="calc-lab-output" aria-live="polite">—</output><p class="calc-lab-note">Теоретическое минимальное число рабочих мест округляется вверх из суммы операций/такта; реальная балансировка требует учёта последовательности, переналадок и оборудования.</p></section></div></details>
+</div>
+</section>
+
+<section class="calculator-workshop-section" id="group-marine" aria-labelledby="group-marine-heading">
+<header class="calculator-workshop-heading"><div><h2 id="group-marine-heading">Море и судостроение</h2><p>Переходы, корпус, расход топлива, течение и осадка</p></div><span>2 инструмента</span></header>
+<div class="calculator-workshop-grid">
 <details class="calc-lab" id="labMarine" data-lab="marine"><summary><strong>Морской блокнот — море и судостроение</strong><small>Переход · топливо · корпус · осадка</small></summary><div class="calc-lab-body"><p>Учебные инженерные оценки. Эти калькуляторы не заменяют судовой погрузочный компьютер, утверждённую информацию об остойчивости, навигационные документы или планирование рейса.</p><p class="lab-load-status calc-lab-status" aria-live="polite"></p><section class="calc-lab-sub" aria-labelledby="passageTitle"><h3 id="passageTitle">Расчётное время перехода</h3><div class="calc-lab-grid"><div class="calc-lab-field"><label for="passageNm">Дистанция по маршруту, миль морских</label><input id="passageNm" type="text" inputmode="decimal" value="50" autocomplete="off"></div>
 <div class="calc-lab-field"><label for="passageKn">Средняя путевая скорость, уз</label><input id="passageKn" type="text" inputmode="decimal" value="12" autocomplete="off"></div></div><output id="passageOutput" class="calc-lab-output" aria-live="polite">—</output><p class="calc-lab-note">Расчёт при постоянной скорости относительно грунта. Погода, течения, манёвры, ограничения движения и остановки не учтены. <a href="https://oceanservice.noaa.gov/facts/nautical-mile-knot.html" rel="noopener noreferrer" target="_blank">Формула и пояснения</a>.</p></section><section class="calc-lab-sub" aria-labelledby="fuelTitle"><h3 id="fuelTitle">Расход и дополнительный запас топлива</h3><div class="calc-lab-grid"><div class="calc-lab-field"><label for="fuelNm">Дистанция, морских миль</label><input id="fuelNm" type="text" inputmode="decimal" value="50" autocomplete="off"></div>
 <div class="calc-lab-field"><label for="fuelKn">Путевая скорость, уз</label><input id="fuelKn" type="text" inputmode="decimal" value="12" autocomplete="off"></div>
@@ -205,10 +316,14 @@
 <div class="calc-lab-field"><label for="fuelMargin">Дополнительный запас, %</label><input id="fuelMargin" type="text" inputmode="decimal" value="20" autocomplete="off"></div></div><output id="fuelOutput" class="calc-lab-output" aria-live="polite">—</output><p class="calc-lab-note">Постоянный часовой расход и скорость. Процент задаётся пользователем и не является нормативом безопасного резерва, требования судна и рейса определяются отдельно. <a href="https://boatcalculators.com/speed-distance-time-calculator/" rel="noopener noreferrer" target="_blank">Формула и пояснения</a>.</p></section><section class="calc-lab-sub" aria-labelledby="hullTitle"><h3 id="hullTitle">Ориентир скорости водоизмещающего корпуса</h3><div class="calc-lab-grid"><div class="calc-lab-field"><label for="hullLwl">Длина корпуса по ватерлинии, м</label><input id="hullLwl" type="text" inputmode="decimal" value="10" autocomplete="off"></div></div><output id="hullOutput" class="calc-lab-output" aria-live="polite">—</output><p class="calc-lab-note">Эмпирическое соотношение 1,34 × √LWL (в футах), результат в узлах. Не предел скорости, не расчёт сопротивления и мощности; неприменимо как универсальное правило для всех судов. <a href="https://calcimator.com/calculators/aviation-marine/hull-speed" rel="noopener noreferrer" target="_blank">Формула и пояснения</a>.</p></section><section class="calc-lab-sub" aria-labelledby="draftTitle"><h3 id="draftTitle">Осадка: оценка через TPC</h3><div class="calc-lab-grid"><div class="calc-lab-field"><label for="draftMass">Изменение массы, т (минус при выгрузке)</label><input id="draftMass" type="text" inputmode="decimal" value="246" autocomplete="off"></div>
 <div class="calc-lab-field"><label for="draftArea">Площадь ватерлинии, м²</label><input id="draftArea" type="text" inputmode="decimal" value="2000" autocomplete="off"></div>
 <div class="calc-lab-field"><label for="draftDensity">Плотность воды, т/м³</label><input id="draftDensity" type="text" inputmode="decimal" value="1.025" autocomplete="off"></div></div><output id="draftOutput" class="calc-lab-output" aria-live="polite">—</output><p class="calc-lab-note">TPC = A × ρ / 100; Δосадки, см = Δмассы / TPC. Локальное приближение для малого изменения средней осадки без дифферента. Для реальной грузовой операции нужны одобренные таблицы и контроль остойчивости. <a href="https://tc.canada.ca/sites/default/files/migrated/tp14609e.pdf" rel="noopener noreferrer" target="_blank">Формула и пояснения</a>.</p></section></div></details>
-<details class="calc-lab" id="labMoreSewing" data-lab="moreSewing"><summary><strong>Настил и усадка — швейный контроль</strong><small>Усадка материала · настил · баланс операций</small></summary><div class="calc-lab-body"><p class="lab-load-status calc-lab-status" aria-live="polite"></p><section class="calc-lab-sub"><h3>Усадка ткани по двум измерениям</h3><div class="calc-lab-grid"><div class="calc-lab-field"><label for="shrinkBefore">До обработки, см</label><input id="shrinkBefore" type="text" inputmode="decimal" value="100"></div><div class="calc-lab-field"><label for="shrinkAfter">После обработки, см</label><input id="shrinkAfter" type="text" inputmode="decimal" value="97"></div></div><output id="shrinkOutput" class="calc-lab-output" aria-live="polite">—</output><p class="calc-lab-note">Усадка (%) = (до − после) / до × 100. Отрицательное число означает растяжение. Не заменяет методику лабораторных испытаний.</p></section><section class="calc-lab-sub"><h3>Расход ткани на многослойный настил</h3><div class="calc-lab-grid"><div class="calc-lab-field"><label for="layPieces">Изделий в раскладке</label><input id="layPieces" type="text" inputmode="decimal" value="4"></div><div class="calc-lab-field"><label for="layPlies">Слоёв настила</label><input id="layPlies" type="text" inputmode="decimal" value="10"></div><div class="calc-lab-field"><label for="layLength">Длина раскладки, м</label><input id="layLength" type="text" inputmode="decimal" value="5"></div><div class="calc-lab-field"><label for="layAllowance">Припуск на каждый слой, м</label><input id="layAllowance" type="text" inputmode="decimal" value="0.1"></div></div><output id="layOutput" class="calc-lab-output" aria-live="polite">—</output><p class="calc-lab-note">Итог = число слоёв × (длина + припуск). Без отходов на брак и дополнительных потерь.</p></section><section class="calc-lab-sub"><h3>Баланс потока по операциям</h3><label for="balanceOps">Время операций, секунды; одна операция в строке</label><textarea id="balanceOps" rows="4">20
-30
-15</textarea><div class="calc-lab-grid"><div class="calc-lab-field"><label for="balanceTakt">Целевой такт, с</label><input id="balanceTakt" type="text" inputmode="decimal" value="25"></div></div><output id="balanceOutput" class="calc-lab-output" aria-live="polite">—</output><p class="calc-lab-note">Теоретическое минимальное число рабочих мест округляется вверх из суммы операций/такта; реальная балансировка требует учёта последовательности, переналадок и оборудования.</p></section></div></details>
+
 <details class="calc-lab" id="labMoreMarine" data-lab="moreMarine"><summary><strong>Корпус и течение — морские расчёты</strong><small>Водоизмещение · поправка на течение</small></summary><div class="calc-lab-body"><p class="lab-load-status calc-lab-status" aria-live="polite"></p><section class="calc-lab-sub"><h3>Водоизмещение через коэффициент полноты</h3><div class="calc-lab-grid"><div class="calc-lab-field"><label for="dispLength">Длина между перпендикулярами, м</label><input id="dispLength" type="text" inputmode="decimal" value="100"></div><div class="calc-lab-field"><label for="dispBeam">Ширина, м</label><input id="dispBeam" type="text" inputmode="decimal" value="20"></div><div class="calc-lab-field"><label for="dispDraft">Средняя осадка, м</label><input id="dispDraft" type="text" inputmode="decimal" value="5"></div><div class="calc-lab-field"><label for="dispCb">Коэффициент полноты Cb</label><input id="dispCb" type="text" inputmode="decimal" value="0.7"></div><div class="calc-lab-field"><label for="dispDensity">Плотность воды, т/м³</label><input id="dispDensity" type="text" inputmode="decimal" value="1.025"></div></div><output id="dispOutput" class="calc-lab-output" aria-live="polite">—</output><p class="calc-lab-note">Δ = L × B × T × Cb × ρ. Это геометрическая оценка, не расчёт грузовой марки, посадки или остойчивости.</p></section><section class="calc-lab-sub"><h3>Течение и результирующая скорость</h3><div class="calc-lab-grid"><div class="calc-lab-field"><label for="currentShip">Ход судна относительно воды, уз</label><input id="currentShip" type="text" inputmode="decimal" value="10"></div><div class="calc-lab-field"><label for="currentCourse">Курс движения относительно воды, градусы</label><input id="currentCourse" type="text" inputmode="decimal" value="0"></div><div class="calc-lab-field"><label for="currentKnots">Скорость течения, уз</label><input id="currentKnots" type="text" inputmode="decimal" value="2"></div><div class="calc-lab-field"><label for="currentDir">Направление течения КУДА, градусы</label><input id="currentDir" type="text" inputmode="decimal" value="90"></div></div><output id="currentOutput" class="calc-lab-output" aria-live="polite">—</output><p class="calc-lab-note">Векторная сумма скорости судна и течения; все углы от севера по часовой стрелке. Направление течения — куда течёт вода, а не откуда.</p></section></div></details>
+</div>
+</section>
+
+<section class="calculator-workshop-section" id="group-measurements" aria-labelledby="group-measurements-heading">
+<header class="calculator-workshop-heading"><div><h2 id="group-measurements-heading">Единицы и измерения</h2><p>Штангенциркуль и перевод физических величин</p></div><span>2 инструмента</span></header>
+<div class="calculator-workshop-grid">
 <details class="calc-lab instrument-panel" id="labCaliper" data-lab="caliper"><summary><strong>Шкаломер — виртуальный штангенциркуль</strong><small>50 мм · нониус 0,1 / 0,05 / 0,02 мм · учебная модель</small></summary><div class="calc-lab-body">
 <p>Перемещайте ползунок или используйте клавиши стрелок. На схеме меняется положение подвижной губки и нониуса. Это тренажёр отсчёта, а не измерение реального предмета на экране.</p>
 <div class="calc-lab-grid"><div class="calc-lab-field"><label for="caliperStep">Цена деления нониуса</label><select id="caliperStep"><option value="0.1">0,1 мм · 10 делений</option><option value="0.05" selected>0,05 мм · 20 делений</option><option value="0.02">0,02 мм · 50 делений</option></select></div><div class="calc-lab-field"><label for="caliperValue">Раствор губок, мм</label><input id="caliperValue" inputmode="decimal" type="text" value="23.45"></div></div>
@@ -216,7 +331,11 @@
 <label for="caliperSlider">Передвинуть подвижную губку</label><input id="caliperSlider" class="caliper-slider" type="range" min="0" max="50" step="0.05" value="23.45">
 <output id="caliperOutput" class="calc-lab-output" aria-live="polite">—</output><p class="calc-lab-note">Отсчёт = целые миллиметры главной шкалы + номер совпавшего деления × цена деления. Нониус условный: при 50 делениях он показан схематично, а не в физическом масштабе прибора. Штангенциркуль без поверки не подходит для контроля реальных деталей.</p>
 </div></details>
-<div class="calc-section" id="calcUnits">
+
+<details class="calc-lab calc-legacy" id="calcUnits">
+<summary><strong>Конвертер инженерных единиц</strong><small>Длина · масса · давление · мощность · температура</small></summary>
+<div class="calc-lab-body">
+<div class="calc-section">
                 <hr class="eng-divider">
                 <h2 class="calc-heading">Инженерный конвертер единиц</h2>
                 <p class="calc-subtitle">Перевод длины, массы, давления, мощности и температуры: мм↔дюймы, кВт↔л.с., МПа↔кгс/см² и другие.</p>
@@ -253,82 +372,12 @@
                     </div>
                 </div>
             </div>
+</div>
+</details>
+</div>
+</section>
 
-            <div class="calc-section" id="calcBases">
-                <hr class="eng-divider">
-                <h2 class="calc-heading">Перевод систем счисления</h2>
-                <p class="calc-subtitle">Введите число в выбранной системе — получите его в двоичной, восьмеричной, десятичной и шестнадцатеричной.</p>
-
-                <div class="calc-layout">
-                    <div class="calc-controls">
-                        <div class="calc-field">
-                            <label for="numBase">Система счисления</label>
-                            <select id="numBase">
-                                <option value="2">Двоичная (2)</option>
-                                <option value="8">Восьмеричная (8)</option>
-                                <option value="10" selected>Десятичная (10)</option>
-                                <option value="16">Шестнадцатеричная (16)</option>
-                            </select>
-                        </div>
-                        <div class="calc-field">
-                            <label for="numInput">Число</label>
-                            <input id="numInput" type="text" placeholder="Например: 255" autocomplete="off">
-                        </div>
-                        <div class="calc-result">
-                            <p class="calc-result-label">Результат</p>
-                            <p class="calc-result-value" id="numDec">—</p>
-                            <p class="calc-result-hint" id="numResultHint"></p>
-                        </div>
-                        <div class="calc-result">
-                            <p class="calc-result-label">Двоичная (2)</p>
-                            <p class="calc-result-value" id="numBin">—</p>
-                        </div>
-                        <div class="calc-result">
-                            <p class="calc-result-label">Восьмеричная (8)</p>
-                            <p class="calc-result-value" id="numOct">—</p>
-                        </div>
-                        <div class="calc-result">
-                            <p class="calc-result-label">Шестнадцатеричная (16)</p>
-                            <p class="calc-result-value" id="numHex">—</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="calc-section" id="calcSignal">
-                <hr class="eng-divider">
-                <h2 class="calc-heading">Токовый сигнал 4–20 мА</h2>
-                <p class="calc-subtitle">Перевод тока датчика в значение процесса и обратно по диапазону шкалы: давление, уровень, температура, расход.</p>
-
-                <div class="calc-layout">
-                    <div class="calc-controls">
-                        <div class="calc-field">
-                            <label for="maMin">Начало шкалы (при токе 4 миллиампера)</label>
-                            <input id="maMin" type="text" inputmode="decimal" value="0" autocomplete="off">
-                        </div>
-                        <div class="calc-field">
-                            <label for="maMax">Конец шкалы (при токе 20 миллиампер)</label>
-                            <input id="maMax" type="text" inputmode="decimal" value="10" autocomplete="off">
-                        </div>
-                        <div class="calc-field">
-                            <label for="maCurrent">Ток в миллиамперах</label>
-                            <input id="maCurrent" type="text" inputmode="decimal" value="12" autocomplete="off">
-                        </div>
-                        <div class="calc-field">
-                            <label for="maValue">Значение процесса (в единицах шкалы)</label>
-                            <input id="maValue" type="text" inputmode="decimal" autocomplete="off">
-                        </div>
-                        <div class="calc-result">
-                            <p class="calc-result-label">Результат</p>
-                            <p class="calc-result-value" id="maResultValue">—</p>
-                            <p class="calc-result-hint" id="maResultHint"></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <section class="field-guide" aria-labelledby="signalGuideTitle"><h2 id="signalGuideTitle">Пример: из тока 4–20 мА в значение шкалы</h2><p>Для линейно настроенного передатчика используйте долю диапазона: <code>X = Xmin + (I − 4) × (Xmax − Xmin) / 16</code>, где <code>I</code> — ток в мА, а <code>Xmin</code> и <code>Xmax</code> — значения начала и конца шкалы.</p><p><strong>Проверка:</strong> шкала 0–10 условных единиц, измеренный ток 12 мА. Доля диапазона — (12 − 4) / 16 = 0,5; расчётное значение — <strong>5 единиц</strong>. Эти значения уже установлены в калькуляторе выше по умолчанию.</p><p class="field-guide-note">Формула применима к линейной шкале и не определяет состояние датчика при аварийном сигнале. Настройки диапазона, допустимые токи неисправности, единицы и алгоритм обработки проверяйте по документации конкретного прибора.</p></section>
-        </main>
+</main>
     </div>
 
     <footer>
