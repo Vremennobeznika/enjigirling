@@ -40,7 +40,7 @@ test('education admission guidance reflects 2026 profile-only college exams',asy
  await page.goto('/map.html');
  await page.locator('a[href="#education-benefits"]').click();
  const a=page.locator('#education-benefits');
- await expect(a).toContainText('соответствующие профилю');
+ await expect(a).toContainText('соответствующих профилю');
  await expect(a).toContainText('смене профиля');
  await expect(a.locator('a[href*="minobrnauki.gov.ru"]')).toHaveCount(1);
  await expect(page.locator('#educationResults .education-card')).toHaveCount(12);
