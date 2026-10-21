@@ -97,7 +97,7 @@ const resources = [
         type: "Журналы",
         name: "Троицкий вариант — Наука",
         desc: "Независимая научно-популярная газета о науке, академической жизни и технологиях. Актуальные статьи для инженеров и учёных.",
-        link: "https://www.trv-science.ru/"
+        link: "https://www.trv-science.ru/home-2/"
     },
     {
         id: "mag-moluch",
