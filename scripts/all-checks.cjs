@@ -10,6 +10,7 @@ const files=[...rootJs,...scripts,...tests,'playwright.config.cjs'];
 const steps=[
  ['S00 JavaScript syntax across application and QA',()=>files.map(file=>['node',['--check',file]])],
  ['S01-S10 S16 HTML, navigation and editorial data',()=>[['node',['tests/site-check.cjs']]]],
+ ['FULL P01-P06 D01-D09 A01-A03 S03',()=>[['node',['tests/full-matrix.cjs']]]],
  ['S11-S12 JSON exports and graph',()=>[['node',['scripts/build-knowledge.cjs','--check']]]],
  ['S13 source and claim references',()=>[['node',['scripts/check-evidence.cjs']]]],
  ['S14 evidence completeness report',()=>[['node',['scripts/audit-knowledge.cjs']]]]
