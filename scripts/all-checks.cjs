@@ -13,7 +13,7 @@ const steps=[
  ['FULL P01-P06 D01-D09 A01-A03 S03',()=>[['node',['tests/full-matrix.cjs']]]],
  ['S11-S12 JSON exports and graph',()=>[['node',['scripts/build-knowledge.cjs','--check']]]],
  ['S13 source and claim references',()=>[['node',['scripts/check-evidence.cjs']]]],
- ['S14 evidence completeness report',()=>[['node',['scripts/audit-knowledge.cjs']]]]
+ ['S14 evidence structural integrity and completeness report',()=>[['node',['scripts/audit-knowledge.cjs','--strict']]]]
 ];
 let failures=0;
 for(const [name,getCommands] of steps){
