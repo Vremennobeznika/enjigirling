@@ -20,15 +20,17 @@ for(const card of cards){
  assert.ok(['not_determined_for_unspecified_employer_role','conditional_statutory_construction_roles'].includes(row.legalObligationStatus),'unqualified legal claim');
  for(const doc of row.documents){
   assert.match(doc.url,/^https:\/\/mintrud\.gov\.ru\/docs\/mintrud\/orders\/\d+$/);
-  assert.match(doc.effectiveFrom,/^\d{4}-\d{2}-\d{2}$/);
-  assert.equal(doc.periodStatus,doc.effectiveFrom>dataset.reviewDate?'not_yet_effective':'in_force_on_review_date','effective date contradiction '+card.id);
+  if(doc.effectiveFrom){
+   assert.match(doc.effectiveFrom,/^\d{4}-\d{2}-\d{2}$/);
+   assert.equal(doc.periodStatus,doc.effectiveFrom>dataset.reviewDate?'not_yet_effective':'in_force_on_review_date','effective date contradiction '+card.id);
+  }else assert.equal(doc.periodStatus,'publication_found_effective_date_requires_confirmation','unknown date must not be represented as current');
   assert.ok(doc.name&&doc.order&&doc.relationship,'incomplete official source metadata');
  }
 }
 const knownFuture=dataset.records.flatMap(x=>x.documents).filter(d=>d.periodStatus==='not_yet_effective');
 assert.equal(knownFuture.length,2,'future sources must be labeled');
-assert.equal(dataset.records.filter(x=>x.documents.length).length,38,'coverage changed');
-assert.equal(dataset.records.filter(x=>!x.documents.length).length,13,'broader roles must not be given invented standards');
+assert.equal(dataset.records.filter(x=>x.documents.length).length,44,'coverage changed');
+assert.equal(dataset.records.filter(x=>!x.documents.length).length,7,'broader roles must not be given invented standards');
 const ui=fs.readFileSync('script.js','utf8'),page=fs.readFileSync('index.html','utf8');
 assert.ok(page.indexOf('career-standards-data.js')>page.indexOf('data.js'));
 assert.ok(page.indexOf('career-standards-data.js')<page.indexOf('script.js'));
@@ -38,4 +40,4 @@ assert.ok(ui.includes('ст. 195.3 ТК РФ'),'legal basis omitted');
 assert.ok(ui.includes('ст. 55.5-1 ГрК РФ'),'special construction statute omitted');
 assert.ok(!ui.includes('CANDIDATE_PROFESSION_DOCUMENTS'),'outdated hardcoded normative suggestions still rendered');
 assert.ok(fs.readFileSync('audit/career-standards-51-official-2026-10-22.md','utf8').includes('38/51'));
-console.log('PASS: 51/51 case-by-case normative assessments, 33 distinct primary documents, 2 future-effective and zero inferred universal obligations');
+console.log('PASS: 51/51 case-by-case normative assessments, 38 distinct primary documents, 2 future-effective and zero inferred universal obligations');
