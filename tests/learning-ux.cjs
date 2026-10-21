@@ -33,7 +33,7 @@ for(const {item} of entries){
  for(const key of ['duration','cost','budget','admission','afterCollege'])
    assert.ok(!Object.hasOwn(item,key),item.name+': unsupported claim '+key);
 }
-assert.equal(entries.filter(x=>x.item.sourceStatus==='official_source_located').length,45);
+assert.equal(entries.filter(x=>x.item.sourceStatus==='official_source_located').length,48);
 assert.ok(html.includes('Схема условная'),'schematic map not labelled');
 assert.ok(html.includes('aria-current="page"'),'current learning tab must be announced');
 const aiBuilder=fs.readFileSync('scripts/build-ai-packs.cjs','utf8');
@@ -69,3 +69,9 @@ for(const resource of ['https://edu.itmo.ru/ru/edu_online/','https://education.y
 for(const oldLink of ['https://openedu.ifmo.ru/','https://academy.autodesk.com/','https://academy.yandex.ru/'])
  assert.ok(!html.includes(oldLink),'stale course provider link '+oldLink);
 assert.ok(!html.includes('Бесплатные обучающие материалы Autodesk'),'unverified Autodesk free access claim must not return');
+
+for(const wrong of ['Политехнический колледж №8','Колледж СПбГУПТД','Политехнический колледж им. Годовикова']){
+ assert.ok(!entries.some(x=>x.item.name===wrong),'ambiguous outdated college card '+wrong);
+}
+assert.ok(entries.some(x=>x.item.name==='Политехнический колледж городского хозяйства'&&x.item.city==='Санкт-Петербург'));
+assert.ok(entries.some(x=>x.item.name.includes('Колледж технологии, моделирования и управления СПбГУПТД')));
