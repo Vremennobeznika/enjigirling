@@ -57,7 +57,8 @@
     "auditCommand": "node scripts/audit-knowledge.cjs --json",
     "evidenceStatus": "Salary evidence contains linked observations with explicit status; not primary verification of all assertions",
     "sourceRegistry": "knowledge/source-registry.json",
-    "sourceCheckCommand": "node scripts/check-evidence.cjs"
+    "sourceCheckCommand": "node scripts/check-evidence.cjs",
+    "qualityReport": "knowledge/quality.json"
   },
   "jsonApi": {
     "index": "knowledge/search-index.json",
