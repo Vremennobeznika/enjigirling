@@ -65,3 +65,9 @@
   .modal {width:100%;max-width:100%;padding:clamp(16px,4vw,24px);border-radius:16px!important;}
   .modal-header {padding-right:34px;}
 }
+
+/* AI knowledge-base entry on landing page */
+.ai-knowledge-entry{border:1px solid var(--card-border);border-radius:16px;padding:20px;margin:24px 0;background:var(--soft-bg);color:var(--card-text)}
+.ai-knowledge-entry strong{display:block;font-size:var(--fs-lg);margin-bottom:6px}
+.ai-knowledge-entry p{margin:0 0 12px;line-height:1.55}
+.ai-knowledge-entry a{display:inline-block;margin:4px 16px 4px 0;color:inherit;text-decoration:underline;text-underline-offset:3px;font-weight:600}
