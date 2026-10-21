@@ -214,7 +214,7 @@ check('parallel font loading and nonduplicated main CI checks', () => {
   assert.ok(markup.includes(fontUrl),page+' missing font stylesheet');
  }
  for(const file of ['style-core.min.css','style-reference.min.css','style.min.css']){
-  assert.doesNotMatch(fs.readFileSync(file,'utf8'),/@import\\s+url\\([^)]*fonts\\.googleapis\\.com/,file+' has blocking font import');
+  assert.ok(!fs.readFileSync(file,'utf8').includes("@import url('https://fonts.googleapis.com"),file+' has blocking font import');
  }
  const workflow=fs.readFileSync('.github/workflows/site-check.yml','utf8');
  assert.doesNotMatch(workflow,/^  push:/m,'main branch runs duplicate test workflows');
