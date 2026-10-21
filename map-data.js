@@ -77,7 +77,7 @@ const federalDistricts = [
         colleges: [
             { name: "Ростовский-на-Дону техникум связи", city: "Ростов-на-Дону", focus: "Связь, телекоммуникации", profile: "Техникум", sourceStatus: "editorial_not_verified" },
             { name: "Краснодарский монтажный техникум", city: "Краснодар", focus: "Монтаж, электрика", profile: "Техникум", sourceStatus: "editorial_not_verified" },
-            { name: "Волгоградский технический колледж", city: "Волгоград", focus: "Машиностроение, металлургия", profile: "Технический колледж", sourceStatus: "editorial_not_verified" }
+            { name: "Волгоградский технический колледж", city: "Волгоград", focus: "Эксплуатация и ремонт техники, электрооборудование", profile: "Технический колледж", site: "https://www.volgtehkol.ru/", sourceStatus: "official_source_located", sourceUrl: "https://www.volgtehkol.ru/abiturients/admission-rules", verifiedScope: "Официальная страница правил приёма на 2026/27 год; профиль включает ремонт техники и эксплуатацию электрооборудования, не подтверждает металлургию." }
         ]
     },
     {
@@ -93,7 +93,7 @@ const federalDistricts = [
             { name: "Дагестанский ГТУ", city: "Махачкала", focus: "Машиностроение, энергетика", profile: "Политех", site: "https://dgtu.ru/", sourceStatus: "editorial_not_verified" }
         ],
         colleges: [
-            { name: "Ставропольский строительный техникум", city: "Ставрополь", focus: "Строительство, архитектура", profile: "Строительный техникум", sourceStatus: "editorial_not_verified" },
+            { name: "Ставропольский строительный техникум", city: "Ставрополь", focus: "Строительство, архитектура", profile: "Строительный техникум", site: "https://www.xn--80aejpylecgdd1b.xn--p1ai/", sourceStatus: "official_source_located", sourceUrl: "https://www.xn--80aejpylecgdd1b.xn--p1ai/index.php/common", verifiedScope: "Подтверждены официальное название и сведения об организации. Конкретные программы не сверялись." },
             { name: "Грозненский техникум", city: "Грозный", focus: "Нефтегаз, строительство", profile: "Техникум", sourceStatus: "editorial_not_verified" }
         ]
     },
@@ -116,7 +116,7 @@ const federalDistricts = [
             { name: "Чувашский ГУ", city: "Чебоксары", focus: "Электротехника, IT", profile: "Классический", site: "https://www.chuvsu.ru/", sourceStatus: "editorial_not_verified" }
         ],
         colleges: [
-            { name: "Казанский техникум связи", city: "Казань", focus: "Связь, телекоммуникации", profile: "Техникум", sourceStatus: "editorial_not_verified" },
+            { name: "Международный центр компетенций — Казанский техникум информационных технологий и связи", city: "Казань", focus: "Связь, телекоммуникации", profile: "Техникум", site: "https://mck-ktits.ru/", sourceStatus: "official_source_located", sourceUrl: "https://mck-ktits.ru/основные-сведения/", verifiedScope: "Проверены официальные название и история переименований. Конкретные программы и конкурс не проверены." },
             { name: "Самарский энергетический колледж", city: "Самара", focus: "Энергетика, электрика", profile: "Энергетический колледж", sourceStatus: "editorial_not_verified" },
             { name: "Уфимский машиностроительный колледж", city: "Уфа", focus: "Машиностроение, сварка", profile: "Машиностроительный колледж", sourceStatus: "editorial_not_verified" },
             { name: "Нижегородский автотранспортный техникум", city: "Нижний Новгород", focus: "Автомобильный транспорт", profile: "Техникум", sourceStatus: "editorial_not_verified" },
@@ -137,7 +137,7 @@ const federalDistricts = [
             { name: "Курганский ГУ", city: "Курган", focus: "Машиностроение", profile: "Классический", site: "https://ksu.edu.ru/", sourceStatus: "editorial_not_verified" }
         ],
         colleges: [
-            { name: "Екатеринбургский политехникум", city: "Екатеринбург", focus: "Машиностроение, металлургия", profile: "Политехникум", sourceStatus: "editorial_not_verified" },
+            { name: "Екатеринбургский политехникум", city: "Екатеринбург", focus: "Машиностроение, металлургия", profile: "Политехникум", site: "https://ekpt.ru/", sourceStatus: "official_source_located", sourceUrl: "https://ekpt.ru/svedeniya-ob-obrazovatelnoy-organizacii/osnovnye-svedeniya/", verifiedScope: "Официальная страница подтверждает название, Екатеринбург и статус организации. Программы приёма не проверены." },
             { name: "Уральский техникум металлообработки", city: "Челябинск", focus: "Металлообработка, сварка", profile: "Техникум", sourceStatus: "editorial_not_verified" },
             { name: "Тюменский техникум строительной индустрии", city: "Тюмень", focus: "Строительство", profile: "Строительный техникум", sourceStatus: "editorial_not_verified" }
         ]
@@ -162,7 +162,7 @@ const federalDistricts = [
             { name: "Новосибирский техникум ж/д транспорта", city: "Новосибирск", focus: "Железнодорожный транспорт", profile: "Транспортный техникум", sourceStatus: "editorial_not_verified" },
             { name: "Томский техникум информационных технологий", city: "Томск", focus: "IT, электроника", profile: "Техникум", sourceStatus: "editorial_not_verified" },
             { name: "Кемеровский горнотехнический техникум", city: "Кемерово", focus: "Горное дело", profile: "Горнотехнический техникум", sourceStatus: "editorial_not_verified" },
-            { name: "Красноярский техникум промышленного сервиса", city: "Красноярск", focus: "Промышленность, металлургия", profile: "Техникум", sourceStatus: "editorial_not_verified" }
+            { name: "Красноярский техникум промышленного сервиса", city: "Красноярск", focus: "Аддитивные технологии, промышленный сервис", profile: "Техникум", site: "https://ktps24.ru/", sourceStatus: "official_source_located", sourceUrl: "https://ktps24.ru/", verifiedScope: "Официальный сайт подтверждает название и Красноярск; описана программа по аддитивным технологиям. Приёмные цифры не проверены." }
         ]
     },
     {
