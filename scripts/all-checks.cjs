@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const {spawnSync}=require('node:child_process');
 const steps=[
+ ['FULL P01-P06 D01-D09 A01-A03 S03 consolidated QA matrix','node',['tests/full-matrix.cjs']],
  ['S01-S10 S16 HTML, navigation and editorial data','node',['tests/site-check.cjs']],
  ['S11-S12 JSON exports and graph','node',['scripts/build-knowledge.cjs','--check']],
  ['S13 source and claim references','node',['scripts/check-evidence.cjs']],
