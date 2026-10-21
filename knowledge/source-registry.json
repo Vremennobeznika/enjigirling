@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "language": "ru",
+  "purpose": "Registry of independently verified primary sources for technical claims",
+  "status": "awaiting_source_verification",
+  "sources": [],
+  "recordEvidence": [],
+  "policy": {
+    "acceptedEvidence": [
+      "official standard or normative document with edition and applicability",
+      "official technical datasheet with manufacturer and conditions",
+      "primary scientific publication with DOI and scope",
+      "official professional qualification or education requirement"
+    ],
+    "requiredFields": [
+      "sourceId",
+      "title",
+      "url",
+      "publisher",
+      "documentDate",
+      "checkedAt",
+      "appliesTo"
+    ],
+    "recordLinkFields": [
+      "recordType",
+      "recordId",
+      "sourceId",
+      "claimPath",
+      "verificationStatus"
+    ],
+    "allowedVerificationStatuses": [
+      "unverified",
+      "source_located",
+      "claim_checked",
+      "disputed",
+      "superseded"
+    ],
+    "rules": [
+      "Do not mark source as verified merely because a URL exists.",
+      "Link each technical claim to a specific source and applicable edition.",
+      "A source may support only claims within its scope and conditions.",
+      "Unknown data must remain unknown rather than inferred."
+    ]
+  }
+}
