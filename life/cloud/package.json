@@ -1,0 +1,12 @@
+{
+  "name": "personal-life-ydb-sync",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "dependencies": {
+    "@ydbjs/core": "^6.0.0",
+    "@ydbjs/query": "^6.0.0",
+    "@ydbjs/auth": "^6.0.0"
+  }
+}
