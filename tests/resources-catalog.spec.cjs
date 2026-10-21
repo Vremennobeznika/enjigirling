@@ -13,9 +13,13 @@ test('resources directory: categories, alphabetical sort, search, reset and list
   expect(activeColors.fg).not.toBe(activeColors.bg);
   const cards=page.locator('#resourcesGrid .resource-card');
   await expect(page.locator('#resourcesGrid')).toHaveAttribute('data-ready','true');
-  expect(await cards.count()).toBeGreaterThanOrEqual(135);
-  await expect(page.locator('#resourcesFilter button')).toHaveCount(11);
+  expect(await cards.count()).toBeGreaterThanOrEqual(148);
+  await expect(page.locator('#resourcesFilter button')).toHaveCount(12);
   await expect(page.locator('.resource-topic-header')).not.toHaveCount(0);
+  await page.locator('#resourcesFilter button[title="Онлайн-измерения"]').click();
+  await expect(cards).toHaveCount(12);
+  await expect(page.locator('#resourcesGrid')).toContainText('микрометр');
+  await page.locator('#resourcesFilter button[title="Журналы"]').click();
   await page.locator('#resourcesFilter button[title="САПР и конструирование"]').click();
   await expect(cards.first()).toBeVisible();
   await expect(page.locator('#resourcesGrid')).toContainText('КОМПАС-3D');
