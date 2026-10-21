@@ -12,12 +12,19 @@ for(const item of items){
  assert.ok(!urls.has(url.href),'duplicate resource link: '+url.href);urls.add(url.href);
  types.set(item.type,(types.get(item.type)||0)+1);
 }
-assert.ok(items.length>=100,'resource catalog unexpectedly small');
+assert.ok(items.length>=135,'resource catalog unexpectedly small');
 assert.equal(types.get('Чаты в Telegram'),12,'curated Telegram chats must remain unchanged');
 assert.equal(types.get('Дружественные каналы'),11,'curated friendly channels must remain unchanged');
-for(const cat of ['Журналы','Форумы','Платформы для разработок','Инструменты и симуляторы','Научные базы и справочники','Стандарты и метрология','Обучение и курсы'])assert.ok(types.get(cat)>=4,'missing category: '+cat);
+for(const cat of ['Журналы','Форумы','Разработка ПО','САПР и конструирование','Научные базы и справочники','Стандарты и метрология','Обучение и курсы'])assert.ok(types.get(cat)>=3,'missing category: '+cat);
 for(const id of ['platform-cyberleninka','platform-elibrary','platform-zhurnalivak'])assert.equal(items.find(x=>x.id===id).type,'Научные базы и справочники',id+' wrong group');
+assert.ok(types.get('Журналы')>=48,'journals catalog too sparse');
+assert.equal(types.has('Платформы для разработок'),false,'code and CAD still merged');
+for(const id of ['dev-github','dev-gitlab','dev-gitverse','dev-gitflic'])assert.equal(items.find(x=>x.id===id).type,'Разработка ПО',id+' wrong category');
+for(const id of ['dev-grabcad','dev-onshape','dev-freecad','cad-kompas','cad-nanocad','cad-tflex'])assert.equal(items.find(x=>x.id===id).type,'САПР и конструирование',id+' wrong category');
+assert.ok(items.filter(x=>x.type==='Журналы' && x.topic).length>=48,'journal topics incomplete');
 const html=fs.readFileSync('resources.html','utf8'),js=fs.readFileSync('resources.js','utf8');
 for(const id of ['resourceSearch','resourceSort','resourceGridView','resourceListView','resourcesGrid','resourcesFilter','resourcesStatus','resourceReset'])assert.ok(html.includes('id="'+id+'"'),id+' UI missing');
 assert.ok(js.includes('new Intl.Collator'),'alphabetical sorting missing');
+assert.ok(html.includes('class="resource-secondary-controls"'),'toolbar left-alignment missing');
+assert.ok(js.includes('resource-topic-header'),'journal topical grouping missing');
 console.log('PASS: '+items.length+' engineering resources, '+types.size+' types, preserved curated chats and channels');

@@ -13,14 +13,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const viewList = document.getElementById('resourceListView');
   if (!filter || !grid || !search || !sort || !status || !reset) return;
   const ALL = 'Все';
-  const order = ['Журналы', 'Форумы', 'Платформы для разработок', 'Инструменты и симуляторы', 'Научные базы и справочники', 'Стандарты и метрология', 'Обучение и курсы', 'Дружественные каналы', 'Чаты в Telegram'];
-  const labels = {'Платформы для разработок':'Разработка', 'Инструменты и симуляторы':'Инструменты', 'Научные базы и справочники':'Библиотеки', 'Стандарты и метрология':'Стандарты', 'Обучение и курсы':'Курсы', 'Дружественные каналы':'Каналы', 'Чаты в Telegram':'Чаты'};
+  const order = ['Журналы', 'САПР и конструирование', 'Разработка ПО', 'Инструменты и симуляторы', 'Форумы', 'Научные базы и справочники', 'Стандарты и метрология', 'Обучение и курсы', 'Дружественные каналы', 'Чаты в Telegram'];
+  const labels = {'Разработка ПО':'Код и Git', 'САПР и конструирование':'САПР и КБ', 'Инструменты и симуляторы':'Симуляторы', 'Научные базы и справочники':'Библиотеки', 'Стандарты и метрология':'Стандарты', 'Обучение и курсы':'Курсы', 'Дружественные каналы':'Каналы', 'Чаты в Telegram':'Чаты'};
   const htmlEsc = value => String(value ?? '').replace(/[&<>"']/g, ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
   const normalize = value => String(value ?? '').toLocaleLowerCase('ru-RU').replace(/ё/g,'е').replace(/\s+/g,' ').trim();
   const collator = new Intl.Collator('ru-RU', {numeric:true, sensitivity:'base'});
-  const count = new Map(), index = items.map(item=>({item,search:normalize([item.name,item.desc,item.type,item.tags||''].join(' '))}));
+  const count = new Map(), index = items.map(item=>({item,search:normalize([item.name,item.desc,item.type,item.topic||'',item.tags||''].join(' '))}));
   items.forEach(item=>count.set(item.type,(count.get(item.type)||0)+1));
   const types = [ALL,...order.filter(type=>count.has(type)), ...[...count.keys()].filter(type=>!order.includes(type)).sort(collator.compare)];
+  const journalTopics=['Машиностроение и САПР','Автоматизация и электроника','Материалы, контроль и измерения','Энергетика, строительство и транспорт','Пищевая и лёгкая промышленность','Наука и образование'];
   const buttons = new Map();
   let activeType=ALL, view='grid';
   const hostname = url => { try {return new URL(url).hostname.replace(/^www\./,'');} catch {return '';} };
@@ -28,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const href=String(item.link||'');
     if (!/^https?:\/\//i.test(href)) return '';
     return `<a class="eng-card eng-card--link resource-card" href="${htmlEsc(href)}" target="_blank" rel="noopener noreferrer">
-      <div class="resource-type">${htmlEsc(item.type || 'Ресурс')}</div>
+      <div class="resource-type">${htmlEsc(item.topic || item.type || 'Ресурс')}</div>
       <h3 class="eng-title">${htmlEsc(item.name)}</h3>
       <p class="eng-desc">${htmlEsc(item.desc)}</p>
       <div class="resource-card-bottom"><span class="resource-host">${htmlEsc(hostname(href))}</span><span class="eng-resource-link">Открыть ↗</span></div>
@@ -54,9 +55,16 @@ document.addEventListener('DOMContentLoaded', () => {
     for(const type of groups){
       const matches=visible.filter(item=>item.type===type);
       if(!matches.length)continue;
+      let cards = `<div class="resource-items">${matches.map(makeCard).join('')}</div>`;
+      if(type==='Журналы'){
+        cards = [...journalTopics,...new Set(matches.map(x=>x.topic||'Без направления').filter(x=>!journalTopics.includes(x)))].map(topic=>{
+          const subset=matches.filter(x=>(x.topic||'Без направления')===topic);
+          return subset.length?`<section class="resource-topic"><div class="resource-topic-header"><h3>${htmlEsc(topic)}</h3><span>${subset.length}</span></div><div class="resource-items">${subset.map(makeCard).join('')}</div></section>`:'';
+        }).join('');
+      }
       markup.push(`<section class="resource-group" aria-label="${htmlEsc(type)}">
        <div class="resource-group-header"><h2>${htmlEsc(type)}</h2><span>${matches.length}</span></div>
-       <div class="resource-items">${matches.map(makeCard).join('')}</div></section>`);
+       ${cards}</section>`);
     }
     grid.innerHTML=markup.join('')||'<p class="eng-empty">Ничего не найдено. Измените запрос или сбросьте фильтры.</p>';
     grid.classList.toggle('resource-list-view',view==='list');
