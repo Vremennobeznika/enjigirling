@@ -40,7 +40,10 @@ async function run(){
  // published content against the exact repository revision deployed by Actions.
  for(const name of compareExact){
   const expected=fs.readFileSync(path.join(root,name),'utf8');
-  assert.equal(digest(files[name]),digest(expected),name+' is stale or differs from the checked-out commit');
+  // Response.text() removes a UTF-8 BOM while fs.readFileSync('utf8') keeps it.
+  // Preserve an exact text comparison after accounting solely for that decoding rule.
+  const expectedText=name.endsWith('.csv')?expected.replace(/^\uFEFF/,''):expected;
+  assert.equal(digest(files[name]),digest(expectedText),name+' is stale or differs from the checked-out commit');
  }
  for(const name of paths.filter(p=>p.endsWith('.html'))){
   assert.ok(files[name].includes('<main'),name+' missing main landmark');
