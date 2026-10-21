@@ -139,15 +139,4 @@ const angleSet=bindRange('angle',0,180,1,n=>{angle=n;renderAngle();clearFeedback
 $('angleRandom').addEventListener('click',()=>angleSet(Math.floor(Math.random()*181)));
 bindPractice('angle',()=>angle,.001,n=>n+'°');
 
-const catalogue=$('measurementExternalGrid');
-const external=Array.isArray(window.measurementResources)?window.measurementResources:
- (typeof resources!=='undefined'&&Array.isArray(resources)?resources.filter(x=>x.type==='Онлайн-измерения'):[]);
-if(catalogue){
- const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
- catalogue.innerHTML=external.map(item=>{
-  if(!/^https:\/\//i.test(item.link||''))return '';
-  const type=item.topic||'Внешний тренажёр';
-  return '<article class="measurement-external-card"><span>'+safe(type)+'</span><h3>'+safe(item.name)+'</h3><p>'+safe(item.desc)+'</p><a href="'+safe(item.link)+'" target="_blank" rel="noopener noreferrer">Открыть инструмент ↗</a></article>';
- }).join('');
-}
 })();
