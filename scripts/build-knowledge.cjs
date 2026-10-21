@@ -71,6 +71,28 @@ writes.set('knowledge/search-index.json',serialize({
  schemaVersion:'1.0',language:'ru',generatedFrom:'repository editorial datasets',recordCount:index.length,records:index
 }));
 writes.set('knowledge/graph.json',serialize({schemaVersion:'1.0',language:'ru',status:'editorial_relationships',nodeCount:datasets.professions.length+datasets.materials.length+datasets.processes.length,edgeCount:graph.length,edges:graph}));
+// Preserve existing salary-source evidence separately from editorial profession descriptions.
+// A source snapshot is not a general endorsement of a salary estimate.
+const salaryAudit=load('salary-sources.js','salarySourceAudit');
+assert.equal(salaryAudit.length,datasets.professions.length,'salary evidence must cover every profession');
+assert.equal(new Set(salaryAudit.map(x=>x.id)).size,salaryAudit.length,'duplicate salary evidence IDs');
+for(const entry of salaryAudit){
+ assert.ok(professionIds.has(entry.id),'orphan salary evidence: '+entry.id);
+ assert.ok(['source_snapshot','unverified'].includes(entry.status),'invalid salary evidence status');
+ if(entry.status==='unverified')assert.ok(entry.rangeMinRub==null && entry.rangeMaxRub==null,'unverified salary amounts must be hidden');
+ if(entry.sourceUrl)assert.match(entry.sourceUrl,/^https:\/\/[^\s]+$/,'invalid evidence URL for '+entry.id);
+}
+writes.set('knowledge/salary-evidence.json',serialize({
+ schemaVersion:'1.0',dataset:'salary-evidence',language:'ru',
+ evidenceScope:'Salary observations, not independently validated occupational averages',
+ sourceFile:'salary-sources.js',sourceUrl:base+'salary-sources.js',
+ records:salaryAudit.map(x=>({
+  ...x,
+  professionId:x.id,
+  recordUrl:base+'index.html#profession='+encodeURIComponent(x.id),
+  caution:'Source scope, role match, geography and snapshot date may limit comparability.'
+ }))
+}));
 let stale=false;
 for (const [name,content] of writes){
  const target=path.join(root,name);
