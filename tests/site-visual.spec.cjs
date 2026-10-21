@@ -84,7 +84,7 @@ for(const theme of ['light','dark']){
     color:getComputedStyle(a).color
    })));
    for(const item of colors){
-    const rgb=item.color.match(/^rgba?\\((\\d+),\\s*(\\d+),\\s*(\\d+)/);
+    const rgb=item.color.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)/);
     if(!rgb)continue;
     const channels=rgb.slice(1,4).map(Number);
     const spread=Math.max(...channels)-Math.min(...channels);

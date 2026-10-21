@@ -204,5 +204,23 @@ check('nine static nav shells prevent postpaint reparenting', () => {
  assert.ok(navigation.includes("nav.parentElement.classList.contains('site-nav-wrap')"),'JS must reuse pre-rendered wrapper');
  assert.ok(navigation.includes("wrapper.querySelector('.site-nav-toggle')"),'JS must reuse pre-rendered toggle');
 });
+
+check('parallel font loading and nonduplicated main CI checks', () => {
+ const fontUrl='https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap';
+ for(const page of pages){
+  const markup=fs.readFileSync(page,'utf8');
+  assert.ok(markup.includes('rel="preconnect" href="https://fonts.googleapis.com"'),page+' missing font preconnect');
+  assert.ok(markup.includes('rel="preconnect" href="https://fonts.gstatic.com" crossorigin'),page+' missing font host preconnect');
+  assert.ok(markup.includes(fontUrl),page+' missing font stylesheet');
+ }
+ for(const file of ['style-core.min.css','style-reference.min.css','style.min.css']){
+  assert.doesNotMatch(fs.readFileSync(file,'utf8'),/@import\\s+url\\([^)]*fonts\\.googleapis\\.com/,file+' has blocking font import');
+ }
+ const workflow=fs.readFileSync('.github/workflows/site-check.yml','utf8');
+ assert.doesNotMatch(workflow,/^  push:/m,'main branch runs duplicate test workflows');
+ assert.match(workflow,/^  pull_request:/m,'PR checks must remain enabled');
+ assert.match(fs.readFileSync('.github/workflows/knowledge-pages.yml','utf8'),/npx playwright test/,'main deploy must gate browser tests');
+});
+
 console.log('Matrix: '+count+' PASS, '+errors.length+' FAIL ('+pages.length+' pages, '+datasets.length+' datasets)');
 if(errors.length)process.exitCode=1;
