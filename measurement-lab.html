@@ -51,6 +51,7 @@
 <nav class="measurement-quicklinks" aria-label="Перейти к прибору">
 <a href="#vernier">Нониусный</a><a href="#dialcal">Индикаторный</a><a href="#digital">Цифровой</a><a href="#depth">Глубиномер</a><a href="#micrometer">Микрометр</a><a href="#dial-indicator">Индикатор</a><a href="#protractor">Угломер</a><a href="#ruler">Линейка</a><a href="#multimeter">Мультиметр</a><a href="#oscilloscope">Осциллограф</a>
 </nav>
+<div id="embeddedInstruments" class="measurement-embedded" aria-label="Штангенциркули и другие линейные измерительные приборы"></div>
 <section class="instrument-card" id="micrometer" aria-labelledby="micHeading">
 <header><div><p class="measurement-index">01 / ЛИНЕЙНЫЕ РАЗМЕРЫ</p><h2 id="micHeading">Микрометр 0–25 мм</h2><p>Цена деления барабана 0,01 мм, шаг винта 0,5 мм за оборот. Отсчёт = гильза + деления барабана.</p></div><span class="measurement-spec">0,01 мм</span></header>
 <div class="instrument-svg-wrap"><svg id="micSvg" viewBox="0 0 680 225" role="img" aria-label="Учебная схема микрометра: шкала гильзы и круговая шкала барабана" xmlns="http://www.w3.org/2000/svg"></svg></div>
@@ -86,7 +87,7 @@
 <div class="instrument-actions"><button type="button" id="angleRandom">Случайный угол</button><button type="button" id="angleReveal" aria-pressed="true">Скрыть ответ</button></div>
 <div class="instrument-practice"><label for="angleGuess">Самопроверка: угол, °</label><div><input id="angleGuess" inputmode="numeric" type="text" autocomplete="off" placeholder="Например: 48"><button type="button" id="angleCheck">Проверить</button></div><p id="angleFeedback" aria-live="polite"></p></div>
 </section>
-<section class="measurement-embedded" aria-label="Дополнительные интерактивные измерительные приборы"><div id="embeddedInstruments"></div><div id="embeddedElectronics"></div></section>
+<div id="embeddedElectronics" class="measurement-embedded" aria-label="Электронные измерительные приборы"></div>
 </main></div>
 <footer><p>© 2026 — ENJIGIRLING</p></footer>
 <script src="measurement-lab.js"></script>
