@@ -269,19 +269,39 @@
       "id": "chemical-engineer",
       "title": "Инженер-химик-технолог",
       "reviewDate": "2026-10-22",
-      "assessment": "Производственный химик-технолог — слишком широкая группа: смешение, синтез, аналитический контроль, химбезопасность требуют уточнения предприятия и процесса.",
-      "evidenceStatus": "role_must_be_specified",
+      "assessment": "Производство химических волокон — документированная узкая специализация инженера химической технологии; правила синтеза, реакторного производства и лабораторного контроля отличаются.",
+      "evidenceStatus": "published_standards_for_specific_functions",
       "legalObligationStatus": "not_determined_for_unspecified_employer_role",
-      "documents": []
+      "documents": [
+        {
+          "name": "Специалист по производству химических волокон",
+          "order": "461н от 04.08.2022",
+          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2414",
+          "effectiveFrom": "2023-03-01",
+          "effectiveUntil": "2029-03-01",
+          "periodStatus": "in_force_on_review_date",
+          "relationship": "related_or_narrower_function"
+        }
+      ]
     },
     {
       "id": "oil-gas-engineer",
       "title": "Инженер-нефтяник",
       "reviewDate": "2026-10-22",
-      "assessment": "Сведения о бурении, промысле, геологии и переработке не позволяют применить один стандарт без конкретизации должностной функции.",
-      "evidenceStatus": "role_must_be_specified",
+      "assessment": "Диспетчерско-технологическое управление нефтегазовой отрасли охвачено специализированным стандартом; геологоразведка, бурение и эксплуатация скважин являются иными трудовыми функциями.",
+      "evidenceStatus": "published_standards_for_specific_functions",
       "legalObligationStatus": "not_determined_for_unspecified_employer_role",
-      "documents": []
+      "documents": [
+        {
+          "name": "Специалист по диспетчерско-технологическому управлению нефтегазовой отрасли",
+          "order": "382н от 30.06.2022",
+          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2374",
+          "effectiveFrom": "2023-03-01",
+          "effectiveUntil": "2029-03-01",
+          "periodStatus": "in_force_on_review_date",
+          "relationship": "related_or_narrower_function"
+        }
+      ]
     },
     {
       "id": "metallurgical-engineer",
@@ -390,19 +410,39 @@
       "id": "railway-engineer",
       "title": "Инженер-железнодорожник",
       "reviewDate": "2026-10-22",
-      "assessment": "Путь, сигнализация, электроснабжение и локомотивное хозяйство имеют разные требования; без функции невозможно выбрать один стандарт.",
-      "evidenceStatus": "role_must_be_specified",
+      "assessment": "Для содержания и ремонта железнодорожного пути и сооружений найден действующий с 01.09.2026 стандарт; другие направления железнодорожной инженерии не охвачены им автоматически.",
+      "evidenceStatus": "published_standards_for_specific_functions",
       "legalObligationStatus": "not_determined_for_unspecified_employer_role",
-      "documents": []
+      "documents": [
+        {
+          "name": "Специалист по содержанию и ремонту железнодорожного пути и искусственных сооружений",
+          "order": "155н от 13.04.2026",
+          "url": "https://mintrud.gov.ru/docs/mintrud/orders/3209",
+          "effectiveFrom": "2026-09-01",
+          "effectiveUntil": "2032-09-01",
+          "periodStatus": "in_force_on_review_date",
+          "relationship": "related_or_narrower_function"
+        }
+      ]
     },
     {
       "id": "shipbuilding-engineer",
       "title": "Инженер-кораблестроитель",
       "reviewDate": "2026-10-22",
-      "assessment": "Проектирование корпуса, оснастка верфи, судовые системы и испытания — разные профессии; общая карточка не подменяет специальный стандарт.",
-      "evidenceStatus": "role_must_be_specified",
+      "assessment": "При подготовке производства в судостроении действует специализированный стандарт; проектирование корпусов, судовых систем и испытания требуют самостоятельного соотнесения функций.",
+      "evidenceStatus": "published_standards_for_specific_functions",
       "legalObligationStatus": "not_determined_for_unspecified_employer_role",
-      "documents": []
+      "documents": [
+        {
+          "name": "Специалист по подготовке производства в судостроении",
+          "order": "13н от 16.01.2023",
+          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2579",
+          "effectiveFrom": "2023-09-01",
+          "effectiveUntil": "2029-09-01",
+          "periodStatus": "in_force_on_review_date",
+          "relationship": "related_or_narrower_function"
+        }
+      ]
     },
     {
       "id": "asu-tp-designer",
@@ -484,19 +524,39 @@
       "id": "food-engineer",
       "title": "Инженер-технолог пищевой промышленности",
       "reviewDate": "2026-10-22",
-      "assessment": "Разработка рецептур, микробиология, контроль производства и HACCP требуют специализации по продукту и виду работ. Универсальный стандарт не назначен.",
-      "evidenceStatus": "role_must_be_specified",
+      "assessment": "Официально опубликован профстандарт по безопасности, прослеживаемости и качеству пищевой продукции. Он касается этих функций, но не заменяет стандарты специалистов по рецептурам и отдельным производствам. Дата вступления в силу по доступному тексту приказа не установлена.",
+      "evidenceStatus": "published_standards_for_specific_functions",
       "legalObligationStatus": "not_determined_for_unspecified_employer_role",
-      "documents": []
+      "documents": [
+        {
+          "name": "Специалист по безопасности, прослеживаемости и качеству пищевой продукции на всех этапах ее производства",
+          "order": "556н от 02.09.2020",
+          "url": "https://mintrud.gov.ru/docs/mintrud/orders/1696",
+          "effectiveFrom": null,
+          "effectiveUntil": null,
+          "periodStatus": "publication_found_effective_date_requires_confirmation",
+          "relationship": "related_or_narrower_function"
+        }
+      ]
     },
     {
       "id": "textile-engineer",
       "title": "Инженер-текстильщик",
       "reviewDate": "2026-10-22",
-      "assessment": "Производство тканей, прядение и отделка, а также швейное производство — разные технологии; нельзя перенести швейные требования на инженера-текстильщика.",
-      "evidenceStatus": "role_must_be_specified",
+      "assessment": "Для изготовления химических волокон найден отраслевой стандарт; он не тождествен прядению, ткачеству, вязанию и отделке других видов текстиля.",
+      "evidenceStatus": "published_standards_for_specific_functions",
       "legalObligationStatus": "not_determined_for_unspecified_employer_role",
-      "documents": []
+      "documents": [
+        {
+          "name": "Специалист по производству химических волокон",
+          "order": "461н от 04.08.2022",
+          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2414",
+          "effectiveFrom": "2023-03-01",
+          "effectiveUntil": "2029-03-01",
+          "periodStatus": "in_force_on_review_date",
+          "relationship": "related_or_narrower_function"
+        }
+      ]
     },
     {
       "id": "forest-engineer",
