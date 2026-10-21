@@ -19,6 +19,8 @@ jobs:
         run: node tests/site-check.cjs
       - name: Validate knowledge exports and cross-links
         run: node scripts/build-knowledge.cjs --check
+      - name: Validate source references and coverage
+        run: node scripts/check-evidence.cjs
   browser:
     runs-on: ubuntu-latest
     steps:
