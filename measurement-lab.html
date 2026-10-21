@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Тренажёры микрометра, индикатора часового типа и угломера; подборка онлайн-инструментов для метрологии и измерений.">
+<title>Измерительные приборы онлайн — ENJIGIRLING</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="style-reference.min.css">
+<link rel="stylesheet" href="section-ui.css">
+<link rel="stylesheet" href="measurement-lab.css">
+<link rel="canonical" href="https://vremennobeznika.github.io/enjigirling/measurement-lab.html">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Перейти к содержимому</a>
+<div class="eng-calendar-root">
+<div class="site-topbar site-topbar--shared"><a class="site-brand" href="index.html">ENJIGIRLING <span>/ ENGINEERING INDEX</span></a><button class="theme-toggle" id="themeToggle" type="button" aria-label="Переключить тему">☾</button></div>
+<div class="site-nav-wrap"><button type="button" class="site-nav-toggle" aria-controls="site-main-navigation" aria-expanded="false" aria-label="Открыть разделы сайта">Разделы сайта</button><nav id="site-main-navigation" class="eng-tabs" aria-label="Основная навигация">
+<div class="nav-cluster" role="group" aria-label="Карьера">
+<span class="nav-cluster-title" aria-hidden="true">Карьера</span>
+<a href="index.html" class="eng-tab">Профессии</a>
+<a href="compare.html" class="eng-tab">Сравнение</a>
+<a href="map.html" class="eng-tab">Обучение</a>
+</div>
+<div class="nav-cluster" role="group" aria-label="Технологии">
+<span class="nav-cluster-title" aria-hidden="true">Технологии</span>
+<a href="processes.html" class="eng-tab">Процессы</a>
+<a href="materials.html" class="eng-tab">Материалы</a>
+</div>
+<div class="nav-cluster" role="group" aria-label="Инструменты">
+<span class="nav-cluster-title" aria-hidden="true">Инструменты</span>
+<a href="calculator.html" class="eng-tab">Калькуляторы инженера</a>
+</div>
+<div class="nav-cluster" role="group" aria-label="База знаний">
+<span class="nav-cluster-title" aria-hidden="true">База знаний</span>
+<a href="dictionary.html" class="eng-tab">Словарь инженера</a>
+</div>
+<div class="nav-cluster" role="group" aria-label="Сообщество">
+<span class="nav-cluster-title" aria-hidden="true">Сообщество</span>
+<a href="calendar.html" class="eng-tab">Календарь праздников</a>
+<a href="resources.html" class="eng-tab">Ресурсы сообщества<span class="age-badge">18+</span></a>
+</div>
+</nav><noscript><style>@media(max-width:860px){.site-nav-wrap>.eng-tabs{display:flex!important}.site-nav-wrap>.site-nav-toggle{display:none!important}}</style></noscript></div>
+<main class="site-page measurement-lab" id="main-content">
+<header class="page-header">
+<span class="measurement-kicker">МЕТРОЛОГИЯ / ИНТЕРАКТИВНЫЕ ПРИБОРЫ</span>
+<h1>Измерительные инструменты онлайн</h1>
+<p>Три собственных тренажёра и ссылки на профильные лаборатории. Настраивайте показания и проверяйте чтение шкалы — без установки программ.</p>
+</header>
+<div class="measurement-disclaimer"><strong>Не средство измерений.</strong> Тренажёры моделируют отсчёт по шкалам. Они не измеряют реальную деталь, не учитывают погрешности приборов и не заменяют поверку или калибровку. Экранные линейки требуют отдельной калибровки дисплея.</div>
+<nav class="measurement-quicklinks" aria-label="Перейти к прибору">
+<a href="#micrometer">Микрометр</a><a href="#dial-indicator">Индикатор часового типа</a><a href="#protractor">Угломер</a><a href="#external-measurement">Другие онлайн-приборы</a><a href="calculator.html#labCaliper">Штангенциркуль</a>
+</nav>
+<section class="instrument-card" id="micrometer" aria-labelledby="micHeading">
+<header><div><p class="measurement-index">01 / ЛИНЕЙНЫЕ РАЗМЕРЫ</p><h2 id="micHeading">Микрометр 0–25 мм</h2><p>Цена деления барабана 0,01 мм, шаг винта 0,5 мм за оборот. Отсчёт = гильза + деления барабана.</p></div><span class="measurement-spec">0,01 мм</span></header>
+<div class="instrument-svg-wrap"><svg id="micSvg" viewBox="0 0 680 225" role="img" aria-label="Учебная схема микрометра: шкала гильзы и круговая шкала барабана" xmlns="http://www.w3.org/2000/svg"></svg></div>
+<div class="instrument-fields">
+<div><label for="micRange">Перемещение винта, мм</label><input id="micRange" type="range" min="0" max="25" step="0.01" value="7.28"></div>
+<div><label for="micValue">Установить значение, мм</label><input id="micValue" type="number" inputmode="decimal" min="0" max="25" step="0.01" value="7.28"></div>
+</div>
+<p class="instrument-reading" id="micOutput" role="status" aria-live="polite">—</p>
+<p class="instrument-hint" id="micBreakdown"></p>
+<div class="instrument-actions"><button type="button" id="micRandom">Случайное положение</button><button type="button" id="micReveal" aria-pressed="true">Скрыть ответ</button></div>
+<div class="instrument-practice"><label for="micGuess">Самопроверка: мой отсчёт, мм</label><div><input id="micGuess" inputmode="decimal" type="text" autocomplete="off" placeholder="Например: 7,28"><button type="button" id="micCheck">Проверить</button></div><p id="micFeedback" aria-live="polite"></p></div>
+</section>
+<section class="instrument-card" id="dial-indicator" aria-labelledby="dialHeading">
+<header><div><p class="measurement-index">02 / ОТКЛОНЕНИЯ И БИЕНИЕ</p><h2 id="dialHeading">Индикатор часового типа</h2><p>100 делений на один оборот, 0,01 мм за деление. Задайте предварительный натяг, установите ноль и определите отклонение.</p></div><span class="measurement-spec">0,01 мм</span></header>
+<div class="instrument-svg-wrap instrument-dial-svg"><svg id="dialSvg" viewBox="0 0 420 310" role="img" aria-label="Циферблат индикатора с делениями и стрелкой" xmlns="http://www.w3.org/2000/svg"></svg></div>
+<div class="instrument-fields">
+<div><label for="dialRange">Перемещение штока, мм</label><input id="dialRange" type="range" min="0" max="10" step="0.01" value="3.45"></div>
+<div><label for="dialValue">Положение штока, мм</label><input id="dialValue" type="number" inputmode="decimal" min="0" max="10" step="0.01" value="3.45"></div>
+</div>
+<p class="instrument-reading" id="dialOutput" role="status" aria-live="polite">—</p>
+<p class="instrument-hint" id="dialBreakdown"></p>
+<div class="instrument-actions"><button type="button" id="dialZero">Установить ноль здесь</button><button type="button" id="dialRandom">Случайное положение</button><button type="button" id="dialReveal" aria-pressed="true">Скрыть ответ</button></div>
+<div class="instrument-practice"><label for="dialGuess">Самопроверка: отклонение со знаком, мм</label><div><input id="dialGuess" inputmode="decimal" type="text" autocomplete="off" placeholder="Например: −0,24"><button type="button" id="dialCheck">Проверить</button></div><p id="dialFeedback" aria-live="polite"></p></div>
+</section>
+<section class="instrument-card" id="protractor" aria-labelledby="angleHeading">
+<header><div><p class="measurement-index">03 / УГЛОВЫЕ ИЗМЕРЕНИЯ</p><h2 id="angleHeading">Угломер</h2><p>Виртуальная шкала 0–180°, цена деления 1°. Поворачивайте луч и считывайте угол относительно горизонтальной оси.</p></div><span class="measurement-spec">1°</span></header>
+<div class="instrument-svg-wrap"><svg id="angleSvg" viewBox="0 0 480 265" role="img" aria-label="Полукруглая шкала угломера с подвижным лучом" xmlns="http://www.w3.org/2000/svg"></svg></div>
+<div class="instrument-fields">
+<div><label for="angleRange">Угол, градусы</label><input id="angleRange" type="range" min="0" max="180" step="1" value="48"></div>
+<div><label for="angleValue">Установить угол, °</label><input id="angleValue" type="number" inputmode="numeric" min="0" max="180" step="1" value="48"></div>
+</div>
+<p class="instrument-reading" id="angleOutput" role="status" aria-live="polite">—</p>
+<div class="instrument-actions"><button type="button" id="angleRandom">Случайный угол</button><button type="button" id="angleReveal" aria-pressed="true">Скрыть ответ</button></div>
+<div class="instrument-practice"><label for="angleGuess">Самопроверка: угол, °</label><div><input id="angleGuess" inputmode="numeric" type="text" autocomplete="off" placeholder="Например: 48"><button type="button" id="angleCheck">Проверить</button></div><p id="angleFeedback" aria-live="polite"></p></div>
+</section>
+<section class="measurement-external" id="external-measurement" aria-labelledby="externalHeading">
+<h2 id="externalHeading">Другие онлайн-приборы и тренажёры</h2>
+<p>Ссылки на независимые проекты. Язык некоторых интерфейсов — английский. Прежде чем работать, учитывайте ограничения каждого симулятора.</p>
+<div class="measurement-link-grid" id="measurementExternalGrid"></div>
+<p class="measurement-limit">Разделяются три разных задачи: <strong>чтение шкалы учебного прибора</strong>, <strong>симуляция электрической схемы</strong> и <strong>измерение физического объекта по экрану</strong>. Последнее возможно лишь после калибровки и не подходит для производственной приёмки.</p>
+</section>
+</main></div>
+<footer><p>© 2026 — ENJIGIRLING</p></footer>
+<script src="resources-data.js"></script>
+<script src="measurement-lab.js"></script>
+<script src="theme.js"></script><script src="site-shell.js"></script><script src="navigation.js"></script>
+</body></html>

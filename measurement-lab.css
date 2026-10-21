@@ -1,0 +1,56 @@
+
+/* Interactive measuring instruments; all colors derive from the main gray theme. */
+.measurement-lab {min-width:0;color:var(--card-text);padding-bottom:38px}
+.measurement-lab .page-header {margin:28px 0 24px}
+.measurement-kicker,.measurement-index {display:block;letter-spacing:.09em;font-size:12px;font-weight:750;text-transform:uppercase;color:var(--card-muted);margin:0 0 8px}
+.measurement-lab .page-header h1 {font-size:clamp(28px,4.3vw,44px);line-height:1.18;overflow-wrap:anywhere}
+.measurement-lab .page-header p {line-height:1.7;max-width:750px;margin:0 auto}
+.measurement-disclaimer{padding:16px 20px;background:var(--soft-bg);border:1px solid var(--card-border);border-radius:14px;line-height:1.65;margin:18px 0 20px}
+.measurement-quicklinks{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 30px}
+.measurement-lab a,.measurement-lab a:link,.measurement-lab a:visited{color:inherit!important}
+.measurement-quicklinks a{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;border:1px solid var(--card-border);border-radius:11px;padding:8px 14px;background:var(--card-bg);font-weight:650;font-size:13px}
+.measurement-quicklinks a:hover{border-color:var(--text-primary);text-decoration:underline}
+.instrument-card{scroll-margin-top:20px;box-sizing:border-box;min-width:0;margin:24px 0;padding:clamp(15px,3vw,27px);border:1px solid var(--card-border);background:var(--card-bg);border-radius:16px;color:var(--card-text)}
+.instrument-card>header{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:12px;border-bottom:1px solid var(--card-border);padding-bottom:16px;margin-bottom:16px}
+.instrument-card>header h2{font-size:clamp(22px,2.7vw,28px);line-height:1.25;margin:0 0 8px}
+.instrument-card>header p:not(.measurement-index){line-height:1.55;font-size:14px;margin:0;max-width:680px;color:var(--card-muted)}
+.measurement-spec{white-space:nowrap;font-size:13px;border:1px solid var(--card-border);border-radius:99px;padding:5px 11px}
+.instrument-svg-wrap{box-sizing:border-box;width:100%;min-width:0;overflow:hidden;background:var(--soft-bg);border:1px solid var(--card-border);border-radius:13px;padding:9px 6px;display:flex;justify-content:center;margin:16px 0}
+.instrument-svg-wrap svg{width:100%;max-width:680px;height:auto;min-width:0;fill:none}
+.instrument-dial-svg svg{max-width:420px}
+.instrument-fill,.meter-dial{fill:var(--card-bg);stroke:var(--text-primary);stroke-width:2}
+.meter-axis,.meter-tick{stroke:var(--text-primary);stroke-width:2;stroke-linecap:round}
+.meter-minor{stroke:var(--card-muted);stroke-width:1}
+.meter-arc{stroke:var(--text-primary);stroke-width:2;fill:none}
+.meter-pointer{stroke:var(--text-primary);stroke-width:4;stroke-linecap:round}
+.meter-moving{fill:var(--card-muted);stroke:var(--text-primary);stroke-width:1}
+.meter-number,.meter-small,.meter-label,.meter-center{fill:var(--card-text);font-family:var(--font);font-size:12px}
+.meter-number{font-weight:700;font-size:13px}
+.meter-label{fill:var(--card-muted);font-size:11px}
+.meter-center{font-weight:700;font-size:20px}
+.instrument-fields{display:grid;grid-template-columns:minmax(0,2fr) minmax(150px,1fr);gap:18px;align-items:end}
+.instrument-fields>div{min-width:0}
+.instrument-fields label,.instrument-practice label{display:block;margin:0 0 8px;font-size:13px;font-weight:700}
+.instrument-fields input[type="number"],.instrument-practice input[type="text"]{display:block;box-sizing:border-box;min-width:0;width:100%;min-height:47px;background:var(--card-bg);color:var(--card-text);border:1px solid var(--control-border);border-radius:10px;font-size:16px;padding:10px 12px}
+.instrument-fields input[type="range"]{display:block;width:100%;min-height:44px;accent-color:var(--text-primary)}
+.instrument-reading{margin:17px 0 0;font-size:clamp(23px,3.5vw,31px);font-weight:700;line-height:1.35;min-height:42px}
+.instrument-hint{font-size:13px;line-height:1.6;color:var(--card-muted);margin:5px 0 15px}
+.instrument-actions,.instrument-practice>div{display:flex;align-items:stretch;flex-wrap:wrap;gap:9px;margin:14px 0}
+.instrument-actions button,.instrument-practice button{font-family:var(--font);background:var(--soft-bg);color:var(--card-text);border:1px solid var(--card-border);border-radius:10px;padding:10px 14px;min-height:44px;font-size:13px;font-weight:650;cursor:pointer}
+.instrument-actions button:hover,.instrument-practice button:hover{border-color:var(--text-primary)}
+.instrument-practice{border-top:1px solid var(--card-border);margin-top:20px;padding-top:17px}
+.instrument-practice>div input{flex:1 1 180px}
+.instrument-practice>div button{flex:0 0 auto}
+.instrument-practice p{margin:6px 0 0;color:var(--card-text);min-height:20px;font-size:13px}
+.measurement-external{scroll-margin-top:20px;margin:32px 0}
+.measurement-external>h2{font-size:clamp(23px,3vw,30px);margin:0 0 10px}
+.measurement-external>p{max-width:850px;line-height:1.7;margin:0 0 16px}
+.measurement-link-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,265px),1fr));gap:13px}
+.measurement-external-card{display:flex;flex-direction:column;border:1px solid var(--card-border);border-radius:14px;padding:18px;gap:10px;min-width:0;background:var(--card-bg)}
+.measurement-external-card span{font-size:11px;letter-spacing:.04em;color:var(--card-muted);text-transform:uppercase}
+.measurement-external-card h3{font-size:17px;line-height:1.4;margin:0}
+.measurement-external-card p{font-size:13px;line-height:1.6;flex:1;color:var(--card-muted);margin:0}
+.measurement-external-card a{min-height:44px;padding:8px 11px;display:inline-flex;align-items:center;justify-content:center;border-radius:10px;border:1px solid var(--card-border);text-decoration:none;font-weight:650;font-size:13px;align-self:start}
+.measurement-limit{margin-top:18px!important;padding:12px 0;border-top:1px solid var(--card-border);color:var(--card-muted);font-size:13px}
+.measurement-lab :is(a,button,input):focus-visible{outline:3px solid var(--text-primary);outline-offset:3px}
+@media(max-width:550px){.instrument-fields{grid-template-columns:minmax(0,1fr);gap:8px}.instrument-card{padding:15px}.instrument-practice>div button{flex:1 1 100%}.measurement-external-card a{align-self:stretch}.measurement-quicklinks a{flex:1 1 auto;justify-content:center}}
