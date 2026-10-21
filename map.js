@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
       '<div class="education-card-meta"><span class="education-kind">'+(type==='uni'?'Вуз':'Колледж / техникум')+'</span><span class="education-location">'+escapeHtml(item.city)+' · '+escapeHtml(district.short)+'</span></div>'+
       '<h3>'+escapeHtml(item.name)+'</h3>'+
       '<p class="education-focus"><strong>Направления (ориентир):</strong> '+escapeHtml(item.focus||item.profile||'Не указаны')+'</p>'+
-      '<p class="education-card-status">'+(hasSource?(item.sourceType==='institution_home'?'Название сверено с сайтом':'Есть документ-источник'):'Условия приёма не проверены')+'</p>'+
+      '<p class="education-card-status">'+(programs.length?'Есть подтверждённая программа':(hasSource?(item.sourceType==='institution_home'?'Подтверждено название, не набор':'Источник по организации; набор не проверен'):'Условия приёма не проверены'))+'</p>'+
       '<details class="education-card-details"><summary>Источники, программы и ограничения</summary><dl>'+facts+'</dl>'+
       programDetails.filter(p=>p.source).map(p=>'<a class="education-site" href="'+escapeHtml(p.source)+'" rel="noopener noreferrer" target="_blank">Программа '+escapeHtml(p.label.replace('Подтверждённая программа ',''))+' — документ ↗</a>').join('')+
       (hasSource?'<a class="education-site" href="'+escapeHtml(source)+'" rel="noopener noreferrer" target="_blank">'+(item.sourceType==='institution_home'?'Официальный сайт (название) ↗':'Первоисточник ↗')+'</a>':'')+
