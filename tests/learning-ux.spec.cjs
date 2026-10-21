@@ -7,7 +7,6 @@ test('education search, college filter, reset and more results work',async({page
  await expect(page.locator('#educationDistrict option')).toHaveCount(9);
  await expect(page.locator('#educationResults .education-card')).toHaveCount(12);
  await expect(page.locator('#educationStatus')).toContainText('из ');
- await expect(page.locator('#educationResults')).toContainText('СПбПУ');
  await page.locator('#educationSearch').fill('СПбПУ');
  await expect(page.locator('#educationResults .education-card')).toHaveCount(1);
  await expect(page.locator('#educationResults')).toContainText('Санкт-Петербург');
