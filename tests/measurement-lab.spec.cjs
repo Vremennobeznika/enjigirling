@@ -32,7 +32,10 @@ test('micrometer, dial gauge, protractor and verified external metrology resourc
  await page.locator('#angleGuess').fill('127');
  await page.locator('#angleCheck').click();
  await expect(page.locator('#angleFeedback')).toContainText('Верно');
- for(const id of ['micSvg','dialSvg','angleSvg'])await expect(page.locator('#'+id+' line').first()).toBeVisible();
+ for(const id of ['micSvg','dialSvg','angleSvg']){
+   await expect(page.locator('#'+id)).toBeVisible();
+   expect(await page.locator('#'+id+' line').count(),id+' missing marks').toBeGreaterThan(5);
+ }
  expect(errors).toEqual([]);
 });
 test('measurement tools are readable at 320 px and preserve main site nav',async({page})=>{
