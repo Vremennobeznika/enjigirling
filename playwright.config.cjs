@@ -13,7 +13,7 @@ module.exports = defineConfig({
    screenshot: 'only-on-failure'
  },
  projects: [
-   {name:'chromium-desktop',use:{...devices['Desktop Chrome']}},
+   {name:'chromium-desktop',testIgnore:/mobile-smoke\.spec\.cjs$/,use:{...devices['Desktop Chrome']}},
    {name:'chromium-mobile',testMatch:/mobile-smoke\.spec\.cjs$/,use:{...devices['Desktop Chrome'],viewport:{width:375,height:812},isMobile:true,hasTouch:true}}
  ],
  webServer: {
