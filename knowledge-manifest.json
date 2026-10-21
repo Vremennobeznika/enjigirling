@@ -2,7 +2,7 @@
   "name": "ENJIGIRLING",
   "type": "engineering-knowledge-base",
   "language": "ru",
-  "version": "0.1",
+  "version": "0.2",
   "baseUrl": "https://vremennobeznika.github.io/enjigirling/",
   "description": "Редакционный инженерный справочник; не заменяет первичные нормативные и технические источники.",
   "entryPoints": {
@@ -53,5 +53,16 @@
   "validation": {
     "status": "editorial_not_fully_verified",
     "note": "Отдельные записи могут не иметь подтверждённых источников. Не применять как инженерную спецификацию или нормативную инструкцию."
+  },
+  "jsonApi": {
+    "index": "knowledge/search-index.json",
+    "datasets": [
+      "knowledge/professions.json",
+      "knowledge/materials.json",
+      "knowledge/processes.json",
+      "knowledge/dictionary.json"
+    ],
+    "format": "application/json",
+    "note": "Static JSON snapshots; update these when source JavaScript datasets change."
   }
 }
