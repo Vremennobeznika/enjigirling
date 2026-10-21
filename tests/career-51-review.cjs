@@ -36,7 +36,8 @@ for(const card of cards){
  assert.ok(row.checkedAt,card.id+' salary snapshot date');
  assert.ok(row.region,card.id+' salary region');
  assert.ok(['source_page_checked','adjacent_occupation_checked','employer_vacancy_checked','source_linked_not_independently_verified','source_unavailable_for_verification'].includes(row.validationStatus),card.id+' unknown source status');
- assert.ok(Number.isFinite(row.rangeMinRub)&&Number.isFinite(row.rangeMaxRub)&&row.rangeMinRub>0&&row.rangeMaxRub>=row.rangeMinRub,card.id+' salary number invalid');
+ if(row.status==='source_snapshot') assert.ok(Number.isFinite(row.rangeMinRub)&&Number.isFinite(row.rangeMaxRub)&&row.rangeMinRub>0&&row.rangeMaxRub>=row.rangeMinRub,card.id+' salary number invalid');
+ else assert.ok(row.rangeMinRub==null&&row.rangeMaxRub==null,card.id+' unverified salaries must not carry numbers');
  if(row.validationStatus==='adjacent_occupation_checked')assert.ok(row.evidenceLevel==='adjacent_or_weak',card.id+' adjacent data must be flagged weak');
  classes[row.validationStatus]=(classes[row.validationStatus]||0)+1;
  sequential++;
