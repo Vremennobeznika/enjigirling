@@ -337,3 +337,22 @@ assert.match(navigation, /document\.addEventListener\('click'/, 'mobile menu mus
 assert.match(sharedStyles, /focus-visible/, 'keyboard focus style missing');
 assert.match(sharedStyles, /@media\(max-width:600px\)/, 'narrow-viewport rule missing');
 console.log('OK: nine-page shared shell, navigation, focus and responsive checks');
+
+/* Discoverability files should resolve to actual published resources. */
+const sitemap = fs.readFileSync('sitemap.xml','utf8');
+const robots = fs.readFileSync('robots.txt','utf8');
+const homepage = fs.readFileSync('index.html','utf8');
+const prefix='https://vremennobeznika.github.io/enjigirling/';
+assert.match(robots,/Sitemap: https:\/\/vremennobeznika\.github\.io\/enjigirling\/sitemap\.xml/);
+for (const match of sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)) {
+  assert.ok(match[1].startsWith(prefix),'unexpected sitemap origin: '+match[1]);
+  const local=decodeURIComponent(match[1].slice(prefix.length));
+  assert.ok(fs.existsSync(local),'sitemap entry missing in repository: '+local);
+}
+assert.match(homepage, /type="application\/ld\+json"/, 'missing structured knowledge catalog');
+const catalogMatch=homepage.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
+assert.ok(catalogMatch,'missing JSON-LD catalog');
+const catalog=JSON.parse(catalogMatch[1]);
+assert.equal(catalog['@type'],'DataCatalog');
+assert.equal(catalog.dataset.length,4);
+console.log('OK: sitemap, robots and JSON-LD engineering catalog');
