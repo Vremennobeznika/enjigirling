@@ -5,11 +5,15 @@
     const nav=document.querySelector('nav.eng-tabs');
     if(!nav || nav.dataset.enhanced==='true') return;
     nav.dataset.enhanced='true';
-    const wrapper=document.createElement('div');
-    wrapper.className='site-nav-wrap';
-    nav.parentNode.insertBefore(wrapper,nav);
-    wrapper.appendChild(nav);
-    const toggle=document.createElement('button');
+    // Reuse server-rendered navigation, avoiding a large layout shift.
+    // Older pages without static markup remain backward compatible.
+    const wrapper=nav.parentElement.classList.contains('site-nav-wrap')?nav.parentElement:document.createElement('div');
+    if(!wrapper.classList.contains('site-nav-wrap')){
+      wrapper.className='site-nav-wrap';
+      nav.parentNode.insertBefore(wrapper,nav);
+      wrapper.appendChild(nav);
+    }
+    const toggle=wrapper.querySelector('.site-nav-toggle')||document.createElement('button');
     toggle.type='button';
     toggle.className='site-nav-toggle';
     toggle.setAttribute('aria-controls','site-main-navigation');
@@ -20,7 +24,7 @@
     const current=nav.querySelector('.eng-tab.active');
     if(current)current.setAttribute('aria-current','page');
     nav.setAttribute('aria-label','Основная навигация');
-    wrapper.insertBefore(toggle,nav);
+    if(toggle.parentElement!==wrapper)wrapper.insertBefore(toggle,nav);
     function close(){
       toggle.setAttribute('aria-expanded','false');
       wrapper.classList.remove('site-nav-open');
