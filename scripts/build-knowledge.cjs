@@ -90,7 +90,7 @@ function aiContext(entries){
   '- Граф связей: knowledge/graph.json',
   '- Реестр доказательств: knowledge/source-registry.json',
   '- Данные о зарплатах и статусах: knowledge/salary-evidence.json','',
-  '## Краткий каталог (626 записей)',''
+  '## Краткий каталог ('+entries.length+' записей)',''
  ];
  const labels={profession:'Профессии',material:'Материалы',process:'Процессы',term:'Термины'};
  for(const type of ['profession','material','process','term']){
