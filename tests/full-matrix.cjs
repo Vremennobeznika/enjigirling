@@ -183,5 +183,14 @@ check('Pages deploy performs checkout before running local smoke script', () => 
  assert.ok(smokeScript.includes("compareExact"),'deployed data integrity verification absent');
  assert.ok(smokeScript.includes("missingAssets"),'live linked asset validation absent');
 });
+check('canonical URLs uniquely identify all nine sections', () => {
+ for (const page of pages) {
+  const markup=fs.readFileSync(page,'utf8');
+  const matches=[...markup.matchAll(/<link\s+rel="canonical"\s+href="([^"]+)"/g)];
+  assert.equal(matches.length,1,page+' must have one canonical');
+  const expected=base+(page==='index.html'?'':page);
+  assert.equal(matches[0][1],expected,page+' canonical mismatch');
+ }
+});
 console.log('Matrix: '+count+' PASS, '+errors.length+' FAIL ('+pages.length+' pages, '+datasets.length+' datasets)');
 if(errors.length)process.exitCode=1;
