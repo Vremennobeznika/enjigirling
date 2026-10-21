@@ -9,6 +9,7 @@ const tests=fs.readdirSync(path.join(root,'tests')).filter(name=>name.endsWith('
 const files=[...new Set([...rootJs,...scripts,...tests,'playwright.config.cjs'])];
 const steps=[
  ['S00 JavaScript syntax across application and QA',()=>files.map(file=>['node',['--check',file]])],
+ ['LEARNING education directory and section preservation',()=>[['node',['tests/learning-ux.cjs']]]],
  ['MEASUREMENT instruments assets',()=>[['node',['tests/measurement-lab.cjs']]]],
  ['RESOURCES catalog data and accessibility',()=>[['node',['tests/resources-catalog.cjs']]]],
  ['S01-S10 S16 HTML, navigation and editorial data',()=>[['node',['tests/site-check.cjs']]]],
