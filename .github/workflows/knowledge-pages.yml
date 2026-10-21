@@ -24,6 +24,8 @@ jobs:
         run: node scripts/build-knowledge.cjs --check
       - name: Check site assets
         run: node tests/site-check.cjs
+      - name: Report source-evidence coverage
+        run: node scripts/audit-knowledge.cjs
       - name: Prepare Pages
         uses: actions/configure-pages@v5
       - name: Upload site
