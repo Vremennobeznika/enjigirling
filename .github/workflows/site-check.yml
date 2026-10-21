@@ -17,3 +17,5 @@ jobs:
           for file in *.js; do node --check "$file"; done
       - name: Check local HTML assets and catalog data
         run: node tests/site-check.cjs
+      - name: Validate knowledge exports and cross-links
+        run: node scripts/build-knowledge.cjs --check
