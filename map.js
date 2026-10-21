@@ -41,7 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const facts=[
       ['Направление','Редакционный ориентир: наличие конкретной программы и набора не подтверждено.'],
       ['Сроки, стоимость, бюджет и экзамены','Зависят от программы и года приёма. Без проверенного документа не приводятся.'],
-      ['Статус',hasSource?item.verifiedScope:'Правила набора по этой организации индивидуально не проверены.']
+      ['Статус',hasSource?item.verifiedScope:'Правила набора по этой организации индивидуально не проверены.'],
+      ...(item.verifiedProgram?[['Проверенная стоимость одной программы',item.verifiedProgram]]:[])
     ].map(([label,value])=>'<div class="education-fact"><dt>'+escapeHtml(label)+'</dt><dd>'+escapeHtml(value)+'</dd></div>').join('');
     return '<article class="education-card">'+
       '<div class="education-card-meta"><span class="education-kind">'+(type==='uni'?'Вуз':'Колледж / техникум')+'</span><span class="education-location">'+escapeHtml(item.city)+' · '+escapeHtml(district.short)+'</span></div>'+
