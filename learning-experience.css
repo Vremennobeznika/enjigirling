@@ -1,0 +1,107 @@
+/* ENJIGIRLING / Learning section redesign. Local-only styles; palette from site. */
+.site-page .learning-hero{text-align:left;margin:18px 0 20px;padding:0;max-width:100%;color:var(--text-primary)}
+.site-page .learning-eyebrow{font-size:12px;letter-spacing:.09em;font-weight:700;color:var(--text-secondary);margin:0 0 10px}
+.site-page .learning-hero h1{font-size:clamp(29px,4.2vw,48px);line-height:1.14;font-weight:750;letter-spacing:-.025em;margin:0 0 14px;color:var(--text-primary)}
+.site-page .learning-hero p:not(.learning-eyebrow){max-width:820px;line-height:1.65;font-size:clamp(14px,1.8vw,17px);color:var(--text-body);margin:0}
+.site-page .learning-shortcuts{display:flex;flex-wrap:wrap;gap:8px;margin:19px 0 30px}
+.site-page .learning-shortcuts a{display:inline-flex;align-items:center;min-height:44px;padding:9px 14px;border:1px solid var(--border);border-radius:11px;text-decoration:none;color:var(--text-primary)!important;background:var(--bg-block);font-size:14px;font-weight:600}
+.site-page .learning-shortcuts a:hover{border-color:var(--text-primary);text-decoration:underline}
+.site-page :is(.learning-shortcuts a,.learning-directory button,.learning-directory select,.learning-directory input,.learning-accordion summary,.education-card details summary,.education-card a,.map-canvas path):focus-visible{outline:3px solid var(--text-primary);outline-offset:3px}
+.site-page .learning-directory{padding:clamp(14px,2.7vw,26px);border:1px solid var(--border);background:var(--bg);border-radius:18px;margin:0 0 25px;scroll-margin-top:18px}
+.site-page .learning-directory-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:15px;flex-wrap:wrap;margin:0 0 10px}
+.site-page .learning-directory-heading h2{font-size:clamp(22px,3vw,29px);line-height:1.28;margin:0;color:var(--text-primary)}
+.site-page .learning-total{font-size:13px;font-weight:700;padding:8px 12px;border:1px solid var(--border);background:var(--bg-block);border-radius:100px;white-space:nowrap}
+.site-page .learning-directory-intro{line-height:1.6;font-size:14px;color:var(--text-secondary);max-width:850px;margin:0 0 19px}
+.site-page .learning-filters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:end;margin-bottom:13px}
+.site-page .learning-control{min-width:0;max-width:100%;display:flex;flex-direction:column;gap:7px}
+.site-page .learning-search-control{grid-column:1/-1}
+.site-page .learning-control label{font-size:13px;font-weight:700;color:var(--text-primary);line-height:1.4}
+.site-page .learning-control input,.site-page .learning-control select{display:block;box-sizing:border-box;width:100%;min-width:0;min-height:46px;border:1px solid var(--border);border-radius:10px;padding:10px 12px;background:var(--bg-block);color:var(--text-primary);font:inherit;font-size:15px}
+.site-page .learning-control input::placeholder{color:var(--text-secondary);opacity:1}
+.site-page .learning-results-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin:13px 0}
+.site-page .learning-results-head p{font-size:13px;font-weight:600;color:var(--text-secondary);margin:0}
+.site-page .learning-clear,.site-page .learning-more{font:600 14px/1.3 inherit;min-height:44px;cursor:pointer;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg-block);color:var(--text-primary)}
+.site-page .learning-clear:hover,.site-page .learning-more:hover{border-color:var(--text-primary);text-decoration:underline}
+.site-page .learning-clear[hidden],.site-page .learning-more[hidden]{display:none!important}
+.site-page .learning-results{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;min-width:0}
+.site-page .education-card{min-width:0;display:flex;flex-direction:column;gap:10px;padding:16px;border:1px solid var(--border);border-radius:13px;background:var(--bg-block);color:var(--text-primary)}
+.site-page .education-card-meta{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;align-items:center;font-size:12px;color:var(--text-secondary)}
+.site-page .education-kind{font-weight:700;display:inline-flex;align-items:center;border:1px solid var(--border);border-radius:100px;padding:4px 9px;color:var(--text-primary)}
+.site-page .education-location{overflow-wrap:anywhere;line-height:1.4}
+.site-page .education-card h3{font-size:16px;line-height:1.35;font-weight:700;overflow-wrap:anywhere;margin:0;color:var(--text-primary)}
+.site-page .education-card .education-focus{font-size:13px;color:var(--text-body);line-height:1.55;margin:0;flex:1;overflow-wrap:anywhere}
+.site-page .education-card-details{border-top:1px solid var(--border);padding-top:10px;margin-top:2px;min-width:0}
+.site-page .education-card-details summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:44px;font-size:13px;font-weight:700;color:var(--text-primary)}
+.site-page .education-card-details summary::-webkit-details-marker{display:none}
+.site-page .education-card-details summary::after{content:"+";font-size:19px;font-weight:400}
+.site-page .education-card-details[open] summary::after{content:"−"}
+.site-page .education-card-details dl{margin:9px 0 13px}
+.site-page .education-fact{border-top:1px dashed var(--border);display:grid;grid-template-columns:minmax(0,1fr);gap:3px;padding:9px 0}
+.site-page .education-fact dt{font-size:11px;font-weight:700;letter-spacing:.01em;color:var(--text-secondary)}
+.site-page .education-fact dd{font-size:13px;color:var(--text-body);margin:0;line-height:1.5;overflow-wrap:anywhere}
+.site-page .education-site{display:inline-flex;min-height:44px;align-items:center;font-size:13px;font-weight:700;color:var(--text-primary)!important;text-decoration:underline;overflow-wrap:anywhere}
+.site-page .education-no-link{font-size:13px;color:var(--text-secondary)}
+.site-page .education-empty{grid-column:1/-1;border:1px dashed var(--border);padding:24px;text-align:center;color:var(--text-secondary);border-radius:12px;font-size:14px;line-height:1.6}
+.site-page .learning-more-row{display:flex;justify-content:center;margin:18px 0 11px}
+.site-page .learning-more{min-width:190px}
+.site-page .learning-editorial-note{border-top:1px solid var(--border);padding-top:13px;font-size:12px;color:var(--text-secondary);line-height:1.6;margin:16px 0 0}
+.site-page .learning-accordion{border:1px solid var(--border);border-radius:16px;margin:16px 0;background:var(--bg);color:var(--text-primary);scroll-margin-top:16px;overflow:hidden}
+.site-page .learning-accordion>summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:clamp(16px,2.4vw,22px);min-height:68px}
+.site-page .learning-accordion>summary::-webkit-details-marker{display:none}
+.site-page .learning-accordion>summary strong{display:block;font-size:clamp(18px,2vw,23px);line-height:1.35;font-weight:750;margin:0 0 4px}
+.site-page .learning-accordion>summary small{display:block;font-size:13px;line-height:1.5;color:var(--text-secondary);font-weight:400}
+.site-page .learning-chevron{flex:0 0 auto;font-size:24px;line-height:1;border:1px solid var(--border);border-radius:9px;width:38px;height:38px;display:grid;place-items:center;transition:transform .18s}
+.site-page .learning-accordion[open] .learning-chevron{transform:rotate(180deg)}
+.site-page .learning-accordion[open]>summary{border-bottom:1px solid var(--border)}
+.site-page .learning-accordion-body{padding:clamp(14px,2.5vw,23px);min-width:0}
+.site-page .learning-accordion .map-intro{text-align:left;margin:0 0 18px}
+.site-page .learning-accordion .map-title{font-size:clamp(19px,2.5vw,24px);line-height:1.4;margin:0 0 7px}
+.site-page .learning-accordion .map-subtitle{font-size:14px;line-height:1.55;margin:0}
+.site-page .learning-accordion .map-layout{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(230px,1fr);align-items:start;gap:16px}
+.site-page .learning-accordion .map-canvas{padding:8px;min-width:0;box-sizing:border-box;border-radius:13px!important;background:var(--bg-block)}
+.site-page .learning-accordion .eng-map-svg{width:100%;max-width:100%;height:auto;display:block}
+.site-page .learning-accordion .eng-district:focus-visible{stroke-width:5;stroke:var(--text-primary)}
+.site-page .learning-accordion .map-sidebar{min-width:0}
+.site-page .learning-accordion .map-panel{padding:15px!important;border-radius:13px!important;background:var(--bg-block)}
+.site-page .learning-accordion .map-panel h3{font-size:16px;margin:0 0 10px;color:var(--text-primary)}
+.site-page .learning-accordion .map-panel p{font-size:13px;line-height:1.55;color:var(--text-body);margin:8px 0}
+.site-page .learning-accordion .map-reset{min-height:44px;border-radius:10px!important;margin-bottom:10px}
+.site-page .education-map-return{display:inline-flex;align-items:center;min-height:44px;color:var(--text-primary)!important;font-weight:700;font-size:13px;text-decoration:underline}
+.site-page .learning-accordion .benefits-section{margin-top:0}
+.site-page .learning-accordion .benefits-section>.eng-divider{display:none}
+.site-page .learning-accordion .benefits-heading{font-size:clamp(18px,2.5vw,22px);text-align:left;margin:0 0 18px;line-height:1.4}
+.site-page .learning-accordion .benefits-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.site-page .learning-accordion .benefit-card{min-width:0;box-sizing:border-box;border:1px solid var(--border);border-radius:12px;padding:15px;background:var(--bg-block)}
+.site-page .learning-accordion .benefit-title{font-size:16px;line-height:1.45;margin:0 0 8px}
+.site-page .learning-accordion .benefit-card p{font-size:13px;line-height:1.65}
+.site-page .learning-accordion .benefits-note{font-size:12px;line-height:1.6;margin-top:16px;border-radius:10px}
+.site-page .training-calculators{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:0}
+.site-page .training-calculators>h2{grid-column:1/-1;margin:0;text-align:left;font-size:20px}
+.site-page .training-calculators .calc-section-inner{min-width:0;box-sizing:border-box;border:1px solid var(--border);border-radius:12px;padding:14px;background:var(--bg-block)}
+.site-page .training-calculators .calc-section-inner>h3{font-size:17px;text-align:left;line-height:1.4;margin:0 0 8px}
+.site-page .training-calculators .calc-subtitle{text-align:left;font-size:13px;line-height:1.6;margin:0 0 14px}
+.site-page .training-calculators .calc-layout{box-sizing:border-box;max-width:none;width:100%;padding:12px;border-radius:10px;background:var(--bg)}
+.site-page .training-calculators .calc-controls{gap:13px}
+.site-page .training-calculators .calc-result{border-radius:10px;padding:16px}
+.site-page .training-calculators select,.site-page .training-calculators input{max-width:100%;width:100%;box-sizing:border-box}
+@media(max-width:1100px){
+ .site-page .learning-results{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .site-page .learning-accordion .map-layout{grid-template-columns:minmax(0,1fr)}
+}
+@media(max-width:730px){
+ .site-page .learning-filters{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .site-page .learning-control:last-child{grid-column:1/-1}
+ .site-page .learning-results{grid-template-columns:minmax(0,1fr)}
+ .site-page .training-calculators{grid-template-columns:minmax(0,1fr)}
+ .site-page .learning-accordion .benefits-grid{grid-template-columns:minmax(0,1fr)}
+}
+@media(max-width:430px){
+ .site-page .learning-hero{margin-top:10px}
+ .site-page .learning-directory{padding:13px}
+ .site-page .learning-filters{grid-template-columns:minmax(0,1fr)}
+ .site-page .learning-search-control,.site-page .learning-control:last-child{grid-column:auto}
+ .site-page .learning-shortcuts a{flex:1 1 auto;justify-content:center;padding:9px 11px}
+ .site-page .learning-accordion-body{padding:12px}
+ .site-page .learning-accordion>summary{padding:13px}
+ .site-page .learning-accordion .map-canvas{padding:4px}
+}
