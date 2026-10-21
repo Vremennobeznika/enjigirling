@@ -12,9 +12,10 @@ for(const item of items){
  assert.ok(!urls.has(url.href),'duplicate resource link: '+url.href);urls.add(url.href);
  types.set(item.type,(types.get(item.type)||0)+1);
 }
-assert.ok(items.length>=135,'resource catalog unexpectedly small');
+assert.ok(items.length>=148,'resource catalog unexpectedly small');
 assert.equal(types.get('Чаты в Telegram'),12,'curated Telegram chats must remain unchanged');
 assert.equal(types.get('Дружественные каналы'),11,'curated friendly channels must remain unchanged');
+assert.equal(types.get('Онлайн-измерения'),12,'measurement resources must be exactly twelve');
 for(const cat of ['Журналы','Форумы','Разработка ПО','САПР и конструирование','Научные базы и справочники','Стандарты и метрология','Обучение и курсы'])assert.ok(types.get(cat)>=3,'missing category: '+cat);
 for(const id of ['platform-cyberleninka','platform-elibrary','platform-zhurnalivak'])assert.equal(items.find(x=>x.id===id).type,'Научные базы и справочники',id+' wrong group');
 assert.ok(types.get('Журналы')>=48,'journals catalog too sparse');
