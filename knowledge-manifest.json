@@ -8,7 +8,8 @@
   "entryPoints": {
     "humans": "index.html",
     "ai": "llms.txt",
-    "guide": "knowledge-base.md"
+    "guide": "knowledge-base.md",
+    "aiFull": "knowledge/ai-context.md"
   },
   "datasets": [
     {
@@ -69,6 +70,7 @@
     "format": "application/json",
     "note": "Static JSON snapshots; update these when source JavaScript datasets change.",
     "graph": "knowledge/graph.json",
-    "salaryEvidence": "knowledge/salary-evidence.json"
+    "salaryEvidence": "knowledge/salary-evidence.json",
+    "aiContext": "knowledge/ai-context.md"
   }
 }
