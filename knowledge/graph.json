@@ -1,0 +1,314 @@
+{
+  "schemaVersion": "1.0",
+  "language": "ru",
+  "status": "editorial_relationships",
+  "nodeCount": 75,
+  "edgeCount": 61,
+  "edges": [
+    {
+      "from": "material:steel-20",
+      "to": "process:cutting",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:steel-20",
+      "to": "process:heat",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:steel-45",
+      "to": "process:cutting",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:steel-45",
+      "to": "process:heat",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:09g2s",
+      "to": "process:welding",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:09g2s",
+      "to": "process:cutting",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:aisi-304",
+      "to": "process:welding",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:aisi-304",
+      "to": "process:cutting",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:al-6061",
+      "to": "process:cutting",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:al-6061",
+      "to": "process:welding",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:copper-m1",
+      "to": "process:cutting",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:pe-hd",
+      "to": "process:additive",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:pa6",
+      "to": "process:cutting",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:pa6",
+      "to": "process:additive",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:gfrp",
+      "to": "process:additive",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:gfrp",
+      "to": "process:inspection",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:alumina",
+      "to": "process:inspection",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:birch-plywood",
+      "to": "process:cutting",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:aramid",
+      "to": "process:inspection",
+      "relation": "processed_by"
+    },
+    {
+      "from": "process:casting",
+      "to": "material:steel-20",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:casting",
+      "to": "material:steel-45",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:casting",
+      "to": "profession:metallurgical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:welding",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:welding",
+      "to": "material:aisi-304",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:welding",
+      "to": "material:al-6061",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:welding",
+      "to": "profession:mechanical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:cutting",
+      "to": "material:steel-20",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:cutting",
+      "to": "material:steel-45",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:cutting",
+      "to": "material:al-6061",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:cutting",
+      "to": "material:pa6",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:cutting",
+      "to": "material:copper-m1",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:cutting",
+      "to": "profession:mechanical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:heat",
+      "to": "material:steel-20",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:heat",
+      "to": "material:steel-45",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:heat",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:additive",
+      "to": "material:pa6",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:additive",
+      "to": "material:gfrp",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:additive",
+      "to": "profession:mechanical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:inspection",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:inspection",
+      "to": "material:gfrp",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:inspection",
+      "to": "material:alumina",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:inspection",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:mig-mag",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:mig-mag",
+      "to": "material:al-6061",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:mig-mag",
+      "to": "profession:mechanical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:tig",
+      "to": "material:aisi-304",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:tig",
+      "to": "material:al-6061",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:tig",
+      "to": "profession:mechanical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:ultrasonic",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:ultrasonic",
+      "to": "material:steel-45",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:ultrasonic",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:radiographic",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:radiographic",
+      "to": "material:aisi-304",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:radiographic",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:dye",
+      "to": "material:aisi-304",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:dye",
+      "to": "material:al-6061",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:dye",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:hardness",
+      "to": "material:steel-20",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:hardness",
+      "to": "material:steel-45",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:hardness",
+      "to": "material:al-6061",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:hardness",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    }
+  ]
+}
