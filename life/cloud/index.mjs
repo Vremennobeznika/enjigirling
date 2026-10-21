@@ -36,7 +36,7 @@ async function getDb() {
   if (!connection) connection = (async () => {
     if (!process.env.YDB_CONNECTION_STRING) throw Error('YDB_CONNECTION_STRING is missing');
     const driver = new Driver(process.env.YDB_CONNECTION_STRING, {
-      credentialsProvider: new MetadataCredentialsProvider()
+      credentialsProvider: new MetadataCredentialsProvider({})
     });
     await driver.ready();
     return query(driver);
@@ -95,7 +95,7 @@ export async function handler(event) {
       ? json(409, {error: 'В облаке есть более новая версия. Сначала скачай её.', revision: result.revision})
       : json(200, {saved: true, revision: result.revision});
   } catch (error) {
-    console.error('YDB sync failed:', error?.name || 'Error');
+    console.error('YDB sync failed:', error?.name || 'Error', String(error?.message || '').slice(0, 240));
     return json(503, {error: 'Облачная база недоступна. Локальные данные сохранены.'});
   }
 }
