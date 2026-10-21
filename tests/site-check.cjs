@@ -319,7 +319,7 @@ assert.ok(!salaryUi.includes('!p.salary'),'salary calculator must not require re
 console.log('OK: confirmed 404 evidence quarantined and salary widgets remain accurate');
 
 /* Cross-page accessibility and responsive-shell regression checks. */
-const shell = fs.readFileSync('site-shell.js', 'utf8');
+const sharedShell = fs.readFileSync('site-shell.js', 'utf8');
 const navigation = fs.readFileSync('navigation.js', 'utf8');
 const sharedStyles = fs.readFileSync('section-ui.css', 'utf8');
 for (const file of ['index.html','calendar.html','resources.html','dictionary.html','map.html','calculator.html','compare.html','processes.html','materials.html']) {
@@ -331,7 +331,7 @@ for (const file of ['index.html','calendar.html','resources.html','dictionary.ht
   const navItems = (html.match(/class="eng-tab(?: active)?"/g) || []).length;
   assert.equal(navItems, 9, file + ': expected exactly nine section tabs');
 }
-assert.match(shell, /skip\.className='skip-link'/, 'site shell must add skip link where missing');
+assert.match(sharedShell, /skip\.className='skip-link'/, 'site shell must add skip link where missing');
 assert.match(navigation, /aria-expanded/, 'mobile menu must report expanded state');
 assert.match(navigation, /document\.addEventListener\('click'/, 'mobile menu must close on outside click');
 assert.match(sharedStyles, /focus-visible/, 'keyboard focus style missing');
