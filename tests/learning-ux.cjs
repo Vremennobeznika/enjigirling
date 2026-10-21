@@ -55,3 +55,8 @@ for(const value of ['Красноярский техникум промышле�
  const item=entries.find(x=>x.item.name===value)?.item;
  assert.ok(item&&item.site&&item.sourceUrl,value+': verified site missing');
 }
+
+const universityRows=entries.filter(x=>x.type==='uni');
+assert.equal(universityRows.filter(x=>x.item.siteFetchStatus==='fetched').length,28,'URL retrieval evidence changed');
+assert.equal(universityRows.filter(x=>x.item.siteFetchStatus==='not_retrieved').length,23,'uncertain URL failures changed');
+assert.ok(js.includes('item.siteFetchStatus'),'network check evidence should be displayed without implying confirmation');
