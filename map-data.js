@@ -28,7 +28,7 @@ const federalDistricts = [
         colleges: [
             { name: "Колледж СПбГУПТД", city: "Санкт-Петербург", focus: "Технология машиностроения, металлообработка", profile: "Технический колледж", sourceStatus: "editorial_not_verified" },
             { name: "Политехнический колледж №8", city: "Санкт-Петербург", focus: "Электромонтаж, автоматизация", profile: "Технический колледж", sourceStatus: "editorial_not_verified" },
-            { name: "Калининградский технический колледж", city: "Калининград", focus: "Судостроение, мехатроника", profile: "Технический колледж", sourceStatus: "editorial_not_verified" },
+            { name: "Прибалтийский судостроительный техникум", city: "Калининград", focus: "Судостроение, сварочное производство, металлообработка", profile: "Технический колледж", site: "https://xn--d1ac0akhds.xn--p1ai/", sourceStatus: "official_source_located", sourceUrl: "https://xn--d1ac0akhds.xn--p1ai/1278-uvazhaemye-abiturienty.html", verifiedScope: "Официальный набор в 2026 году: 26.02.02 Судостроение, 15.01.05 Сварщик, 15.01.38 Оператор-наладчик и другие программы. Это отдельное действующее учреждение, а НЕ правопреемник бывшего Калининградского технического колледжа." },
             { name: "Мурманский индустриальный колледж", city: "Мурманск", focus: "Морская техника, сварка", profile: "Индустриальный колледж", site: "https://murindkol.ru/", sourceStatus: "official_source_located", sourceUrl: "https://murindkol.ru/abiturientu/priemnaya-komissiya-1/pravila-priema/", verifiedScope: "Официальные правила приёма СПО на 2026/27 год обнаружены. Условия конкретных программ и срок обучения не переносились из общих шаблонов." }
         ]
     },
