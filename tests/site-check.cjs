@@ -262,28 +262,30 @@ assert.ok(!educationUi.includes('${escapeHTML(duration)}</p>'),'unsourced educat
 assert.ok(!comparisonUi.includes('p.education?.duration'),'unsourced education durations must not appear in comparisons');
 console.log('OK: unsupported education durations suppressed throughout profession UI');
 
-assert.ok(educationUi.includes('По статье 195.3 ТК РФ'),'profession modal must explain statutory applicability');
-assert.ok(educationUi.includes('Совпадение названия профессии не доказывает применимость документа'),'profession modal must warn about matching names');
-console.log('OK: legal applicability of professional standards explained in every card');
-
-for(const id of ['civil-engineer','pgs-designer','railway-engineer']){
- assert.ok(educationUi.includes('"'+id+'": [{'),'candidate normative document missing: '+id);
-}
-assert.ok(educationUi.includes('Найденные документы для проверки соответствия трудовым функциям'),'normative candidate labels must be qualified');
-console.log('OK: sourced normative candidates are clearly distinguished from binding standards');
-
-for(const id of ['power-engineer','electrical-engineer'])assert.ok(educationUi.includes('"'+id+'": [{'),'official source candidate missing: '+id);
-assert.ok(!educationUi.includes('"forest-engineer": [{'),'unrelated forestry production standard must not be linked to forestry engineer');
-console.log('OK: official standards have conservative occupation scope');
-
-assert.ok(educationUi.includes('Статус нормативной проверки:'),'normative evidence status must be visible');
-assert.ok(educationUi.includes('CANDIDATE_PROFESSION_DOCUMENTS'),'normative mapping must not be called verified');
-assert.ok(educationUi.includes('применимость и действующая редакция не подтверждены'),'unverified normative candidates must be qualified');
-console.log('OK: all 51 cards disclose normative evidence limitations');
-
-assert.ok(educationUi.includes('"metallurgical-engineer": [{'),'thermal production source candidate missing');
-assert.ok(educationUi.includes('не является общим стандартом инженера-металлурга'),'metallurgy standard scope caveat missing');
-console.log('OK: metallurgy normative candidate scoped to thermal production');
+const normativeContext={window:{}};
+vm.runInNewContext(fs.readFileSync('career-standards-data.js','utf8'),normativeContext,{timeout:5000});
+const normative=normativeContext.window.careerNormativeAudit;
+assert.ok(normative&&Array.isArray(normative.records),'normative audit data missing');
+assert.equal(normative.records.length,51,'normative audit must cover all 51');
+assert.equal(new Set(normative.records.map(x=>x.id)).size,51,'duplicate normative entry');
+assert.deepEqual(new Set(normative.records.map(x=>x.id)),new Set(professions.map(p=>p.id)),'normative mapping misses a profession');
+assert.match(educationUi,/Статус нормативной проверки:/,'normative status not visible');
+assert.ok(educationUi.includes('ст. 195.3 ТК РФ'),'legal applicability basis missing');
+assert.ok(educationUi.includes('ст. 55.5-1 ГрК РФ'),'special construction conditions missing');
+assert.ok(educationUi.includes('Ещё не действует'),'future effective date should be labeled');
+assert.ok(educationUi.includes('window.careerNormativeAudit'),'modals must read approved audit records');
+assert.ok(!educationUi.includes('CANDIDATE_PROFESSION_DOCUMENTS'),'obsolete normative candidates must be replaced');
+const links=normative.records.flatMap(x=>x.documents);
+assert.ok(links.length>=40,'too few function-specific references');
+assert.ok(links.every(x=>/^https:\/\/mintrud\.gov\.ru\/docs\/mintrud\/orders\/\d+$/.test(x.url)),'source URL must point to primary ministry order');
+assert.ok(normative.records.some(x=>x.id==='environmental-engineer'&&x.documents.some(y=>y.periodStatus==='not_yet_effective')),'future environmental standard must be separated');
+assert.ok(normative.records.some(x=>x.id==='biomedical-engineer'&&x.documents.some(y=>y.periodStatus==='not_yet_effective')),'future biomechanics standard must be separated');
+assert.ok(normative.records.some(x=>x.id==='civil-engineer'&&x.legalObligationStatus==='conditional_statutory_construction_roles'),'construction obligations must be conditional');
+assert.ok(normative.records.find(x=>x.id==='standardization-engineer').documents.some(x=>x.order.includes('346н')),'standardization standard missing');
+assert.ok(normative.records.find(x=>x.id==='patent-engineer').documents.some(x=>x.order.includes('748н')),'patent standard missing');
+assert.ok(normative.records.find(x=>x.id==='qa-engineer').documents.some(x=>x.order.includes('531н')),'QA standard missing');
+assert.ok(normative.records.some(x=>x.evidenceStatus==='role_must_be_specified'),'universal normative applicability cannot be fabricated');
+console.log('OK: all 51 career records have function-specific official normative judgments and legal limitations');
 
 const matrix=fs.readFileSync('audit/full-51-evidence-matrix-2026-10-20.md','utf8');
 const matrixRows=matrix.split('\n').filter(line=>/^\d+ \| /.test(line));
