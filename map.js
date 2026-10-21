@@ -33,24 +33,24 @@ document.addEventListener('DOMContentLoaded', () => {
   total.textContent=entries.length+' записей';
   const pageSize=12;
   let shown=pageSize,filtered=[];
-  const validLink=url=>{try{const parsed=new URL(String(url));return /^https?:$/.test(parsed.protocol)?parsed.href:'';}catch{return '';}};
+  const validLink=url=>{try{const parsed=new URL(String(url));return parsed.protocol==='https:'?parsed.href:'';}catch{return '';}};
   function renderCard(record){
-    const item=record.item,type=record.type,district=record.district;
-    const institution=type==='uni'?'Вуз':'Колледж / техникум';
-    const site=validLink(item.site);
-    const details=type==='uni'?
-      [['Срок обучения',item.duration],['Бюджетные места',item.budget],['Платное обучение',item.cost],['Поступление',item.admission]]:
-      [['Срок обучения',item.duration],['После колледжа',item.afterCollege]];
-    const facts=details.filter(pair=>pair[1]).map(pair=>
-      '<div class="education-fact"><dt>'+escapeHtml(pair[0])+'</dt><dd>'+escapeHtml(pair[1])+'</dd></div>'
-    ).join('');
+    const {item,district,type}=record;
+    const source=validLink(item.sourceUrl),site=validLink(item.site);
+    const hasSource=item.sourceStatus==='official_source_located'&&source;
+    const facts=[
+      ['Направление','Редакционный ориентир: наличие конкретной программы и набора не подтверждено.'],
+      ['Сроки, стоимость, бюджет и экзамены','Зависят от программы и года приёма. Без проверенного документа не приводятся.'],
+      ['Статус',hasSource?item.verifiedScope:'Правила набора по этой организации индивидуально не проверены.']
+    ].map(([label,value])=>'<div class="education-fact"><dt>'+escapeHtml(label)+'</dt><dd>'+escapeHtml(value)+'</dd></div>').join('');
     return '<article class="education-card">'+
-      '<div class="education-card-meta"><span class="education-kind">'+institution+'</span><span class="education-location">'+escapeHtml(item.city)+' · '+escapeHtml(district.short)+'</span></div>'+
+      '<div class="education-card-meta"><span class="education-kind">'+(type==='uni'?'Вуз':'Колледж / техникум')+'</span><span class="education-location">'+escapeHtml(item.city)+' · '+escapeHtml(district.short)+'</span></div>'+
       '<h3>'+escapeHtml(item.name)+'</h3>'+
-      '<p class="education-focus">'+escapeHtml(item.focus||item.profile||'Направление не указано')+'</p>'+
-      '<details class="education-card-details"><summary>Сроки, поступление и условия</summary>'+
-      '<dl>'+facts+'</dl>'+
-      (site?'<a class="education-site" href="'+escapeHtml(site)+'" target="_blank" rel="noopener noreferrer">Официальный сайт ↗</a>':'<p class="education-no-link">Адрес официального сайта не указан</p>')+
+      '<p class="education-focus"><strong>Направления (ориентир):</strong> '+escapeHtml(item.focus||item.profile||'Не указаны')+'</p>'+
+      '<p class="education-card-status">'+(hasSource?'Есть ссылка на первоисточник':'Условия приёма не проверены')+'</p>'+
+      '<details class="education-card-details"><summary>Источники и ограничения</summary><dl>'+facts+'</dl>'+
+      (hasSource?'<a class="education-site" href="'+escapeHtml(source)+'" rel="noopener noreferrer" target="_blank">Первичный документ ↗</a>':'')+
+      (site?'<a class="education-site" href="'+escapeHtml(site)+'" rel="noopener noreferrer" target="_blank">Сайт из каталога ↗</a>':'<p class="education-no-link">Официальный адрес сайта не подтверждён</p>')+
       '</details></article>';
   }
   function sortedMatches(){
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
     districtSelect.value=id;
     changed();
     if(scroll){
-      document.getElementById('education-directory').scrollIntoView({behavior:'instant',block:'start'});
+      document.getElementById('education-directory').scrollIntoView({behavior:'auto',block:'start'});
       districtSelect.focus({preventScroll:true});
     }
   }
