@@ -99,20 +99,20 @@ for(const suspectName of ['Грозненский техникум','Ураль�
 }
 
 const verified=entries.filter(({item})=>Array.isArray(item.verifiedPrograms)&&item.verifiedPrograms.length);
-assert.equal(verified.length,5,'five independently sourced program examples should remain');
+assert.equal(verified.length,6,'six independently sourced program examples should remain');
 for(const {item} of verified){
  for(const p of item.verifiedPrograms){
   assert.match(p.code,/^\d{2}\.\d{2}\.\d{2}$/,'program code required');
   assert.ok(p.name&&p.year&&p.sourceUrl,'program data must include title, period and source');
   assert.match(p.sourceUrl,/^https:\/\//,'program evidence URL must be HTTPS');
-  for(const key of ['budgetPlaces','paidPlaces'])if(p[key]!==undefined){
+  for(const key of ['budgetPlaces','paidPlaces','tuitionAnnualRub'])if(p[key]!==undefined){
     assert.ok(Number.isSafeInteger(p[key])&&p[key]>=0,'places should be finite nonnegative integers');
   }
  }
 }
 assert.ok(js.includes('item.verifiedPrograms')&&js.includes('programDetails'),'program evidence is rendered');
 assert.ok(js.includes('item.verifiedPrograms||[]'),'program codes included in search');
-console.log('PASS: 5 program-specific examples with a period, primary source URL and bounded numbers');
+console.log('PASS: 6 program-specific examples with a period, primary source URL and bounded numbers');
 
 assert.equal(entries.filter(x=>x.item.sourceFetchStatus==='fetched').length,75,'75 evidence pages fetched after admissions URL repair');
 assert.equal(entries.filter(x=>x.item.sourceFetchStatus==='fetch_failed').length,5,'5 links require retry, not deletion');
