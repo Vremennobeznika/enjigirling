@@ -25,7 +25,7 @@
 | S17 | Безопасность | Нет секретов, опасного HTML, непроверенных внешних скриптов | Ручной аудит + review | P0 |
 | S18 | Доступность | Фокус, Escape, контраст, подписи, screen reader | Playwright + ручной WCAG-аудит | P1 |
 | S19 | Производительность | Размеры ассетов, скорость, Core Web Vitals | Lighthouse / браузер, REVIEW | P1 |
-| S20 | Публикация | Pages использует актуальный main, URL отвечают 200 | GitHub Actions + HTTP smoke, NOT RUN до подтверждения | P0 |
+| S20 | Публикация | Pages использует актуальный main, 14 публичных URL отвечают 200, JSON согласованы | GitHub Actions + scripts/check-live-site.cjs, NOT RUN до подтверждения | P0 |
 | S21 | Регрессии | Сборка не публикуется при ошибках проверок | knowledge-pages.yml | P0 |
 | S22 | Воспроизводимость | Одна команда запускает весь доступный статический аудит | node scripts/all-checks.cjs | P0 |
 
@@ -33,6 +33,7 @@
 
 ```sh
 node scripts/all-checks.cjs
+node scripts/check-live-site.cjs  # только для опубликованного сайта, требует сети
 npm install
 npx playwright install chromium
 npx playwright test
