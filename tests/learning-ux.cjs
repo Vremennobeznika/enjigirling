@@ -113,3 +113,8 @@ for(const {item} of verified){
 assert.ok(js.includes('item.verifiedPrograms')&&js.includes('programDetails'),'program evidence is rendered');
 assert.ok(js.includes('item.verifiedPrograms||[]'),'program codes included in search');
 console.log('PASS: 5 program-specific examples with a period, primary source URL and bounded numbers');
+
+assert.equal(entries.filter(x=>x.item.sourceFetchStatus==='fetched').length,75,'75 evidence pages fetched after admissions URL repair');
+assert.equal(entries.filter(x=>x.item.sourceFetchStatus==='fetch_failed').length,5,'5 links require retry, not deletion');
+for(const row of entries)assert.equal(row.item.sourceFetchCheckedAt,'2026-10-22',row.item.name+': absent network audit date');
+assert.ok(js.includes('item.sourceFetchStatus'),'UI must expose URL fetch result to readers');
