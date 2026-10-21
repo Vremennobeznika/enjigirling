@@ -1,0 +1,107 @@
+/* Small UI initialized only when a calculator's <details> is opened. */
+(function(){
+'use strict';
+const math=window.EngineeringMath;
+if(!math)return;
+const by=id=>document.getElementById(id);
+const val=id=>by(id).value;
+const fmt=n=>Number.isFinite(n)?new Intl.NumberFormat('ru-RU',{maximumSignificantDigits:12}).format(n):String(n);
+function message(node,text,error){node.textContent=text;node.classList.toggle('calc-lab-error',!!error);}
+function later(fn){
+ let pending=false;
+ return ()=>{if(pending)return;pending=true;requestAnimationFrame(()=>{pending=false;fn();});};
+}
+function attach(ids,fn){
+ const update=later(fn);
+ ids.forEach(id=>{const el=by(id);el.addEventListener(el.tagName==='SELECT'?'change':'input',update);});
+ fn();
+}
+function text(id,value){by(id).textContent=value;}
+const copy=async(value,button)=>{
+ try{
+  if(navigator.clipboard&&window.isSecureContext)await navigator.clipboard.writeText(value);
+  else{const ta=document.createElement('textarea');ta.value=value;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();if(!document.execCommand('copy'))throw Error('copy');ta.remove();}
+  const before=button.textContent;button.textContent='Скопировано';setTimeout(()=>button.textContent=before,1200);
+ }catch{button.textContent='Выделите значение вручную';}
+};
+function floatInit(){
+ const format=by('ieeeFormat'),mode=by('ieeeMode'),input=by('ieeeInput'),bits=by('ieeeBits'),status=by('ieeeStatus');
+ function render(){
+  const f=format.value,src=input.value.trim();
+  if(!src){message(status,'Введите значение');bits.replaceChildren();return;}
+  try{
+   const item=mode.value==='decimal'?math.encode(f,src):math.decode(f,src,mode.value);
+   message(status,'Формат '+f.toUpperCase()+' · '+item.kind,false);
+   text('ieeeStored',Object.is(item.stored,-0)?'-0':String(item.stored));
+   text('ieeeHex',item.hex);
+   text('ieeeBinary',item.bin);
+   text('ieeeSign',item.sign==='1'?'1 (−)':'0 (+)');
+   text('ieeeExponent',item.exponent+' (поле '+item.biased+', степень '+(item.unbiased===null?'—':item.unbiased)+')');
+   text('ieeeMantissa',item.mantissa);
+   text('ieeeError',mode.value==='decimal'?math.exactError(f,item.hex,src):'— (обратное преобразование)');
+   const part=document.createDocumentFragment();
+   for(let i=0;i<item.bin.length;i++){
+    const kind=i===0?'Знак':i<=item.exponentBits?'Порядок':'Мантисса';
+    const b=document.createElement('button');b.type='button';b.className='ieee-bit ieee-bit-'+(i===0?'sign':i<=item.exponentBits?'exponent':'fraction');
+    b.textContent=item.bin[i];b.title=kind+' — бит '+i+' (нажмите для инверсии)';
+    b.setAttribute('aria-label',kind+', бит '+i+', значение '+item.bin[i]+'. Изменить');
+    b.dataset.index=String(i);part.appendChild(b);
+   }
+   bits.replaceChildren(part);
+  }catch(error){
+   message(status,error.message,true);bits.replaceChildren();
+   for(const id of ['ieeeStored','ieeeHex','ieeeBinary','ieeeSign','ieeeExponent','ieeeMantissa','ieeeError'])text(id,'—');
+  }
+ }
+ attach(['ieeeFormat','ieeeMode','ieeeInput'],render);
+ bits.addEventListener('click',e=>{
+  const b=e.target.closest('button[data-index]');if(!b)return;
+  const current=by('ieeeBinary').textContent;
+  if(!/^[01]+$/.test(current))return;
+  const i=Number(b.dataset.index);
+  input.value=current.slice(0,i)+(current[i]==='0'?'1':'0')+current.slice(i+1);
+  mode.value='binary';render();
+ });
+ by('ieeeExamples').addEventListener('click',e=>{
+  const btn=e.target.closest('button[data-example]');if(!btn)return;
+  mode.value='decimal';input.value=btn.dataset.example;render();
+ });
+ by('ieeeCopyHex').addEventListener('click',e=>copy(by('ieeeHex').textContent,e.currentTarget));
+ by('ieeeCopyBits').addEventListener('click',e=>copy(by('ieeeBinary').textContent,e.currentTarget));
+}
+function extraInit(){
+ const status=(id,fn)=>{try{message(by(id),fn(),false);}catch(e){message(by(id),e.message,true);}};
+ attach(['ohmMode','ohmA','ohmB'],()=>{
+  const mode=val('ohmMode');
+  const labels={ur:['Напряжение U (В)','Сопротивление R (Ом)'],ui:['Напряжение U (В)','Ток I (А)'],ir:['Ток I (А)','Сопротивление R (Ом)']}[mode];
+  by('ohmALabel').textContent=labels[0];by('ohmBLabel').textContent=labels[1];
+  status('ohmOutput',()=>{
+   const a=math.number(val('ohmA')),b=math.number(val('ohmB'));const x=math.ohm(mode,a,b);
+   return 'U = '+fmt(x.u)+' В · I = '+fmt(x.i)+' А · R = '+fmt(x.r)+' Ом · P = '+fmt(x.p)+' Вт';
+  });
+ });
+ attach(['dividerU','dividerR1','dividerR2'],()=>status('dividerOutput',()=>{
+  const x=math.divider(...['dividerU','dividerR1','dividerR2'].map(k=>math.number(val(k))));
+  return 'Uвых = '+fmt(x.v)+' В · Ток = '+fmt(x.i)+' А · P1 = '+fmt(x.p1)+' Вт · P2 = '+fmt(x.p2)+' Вт';
+ }));
+ attach(['rcR','rcC'],()=>status('rcOutput',()=>{
+  const x=math.rc(math.number(val('rcR')),math.number(val('rcC')));
+  return 'τ = '+fmt(x.seconds*1000)+' мс · fср = '+fmt(x.frequency)+' Гц · 5τ = '+fmt(x.seconds*5000)+' мс';
+ }));
+ attach(['toleranceRows'],()=>status('toleranceOutput',()=>{
+  const x=math.tolerance(val('toleranceRows'));
+  return 'Номинал = '+fmt(x.nominal)+' · предельный допуск ±'+fmt(x.worst)+' · RSS ±'+fmt(x.rss)+' (те же единицы)';
+ }));
+ attach(['modbusFirst','modbusSecond','modbusOrder'],()=>status('modbusOutput',()=>{
+  const x=math.modbus(val('modbusFirst'),val('modbusSecond'),val('modbusOrder'));
+  return 'Float32 = '+(Object.is(x.value,-0)?'-0':String(x.value))+' · Биты = 0x'+x.hex;
+ }));
+}
+const initialized=new Set();
+window.initEngineeringLab=function(which){
+ if(initialized.has(which))return;
+ if(which==='ieee')floatInit();
+ if(which==='extra')extraInit();
+ initialized.add(which);
+};
+})();

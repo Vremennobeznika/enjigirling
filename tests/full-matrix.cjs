@@ -292,5 +292,27 @@ check('combined technology search, static header and reusable CSV audit forms', 
  assert.ok(p.includes('templates/production-defect-review.csv'),'processes download missing');
 });
 
+
+check('independent lazy engineering calculators and original tools preserved', () => {
+ const html=fs.readFileSync('calculator.html','utf8');
+ for(const id of ['labIEEE','labElectronics','ieeeFormat','ieeeMode','ieeeInput','ieeeBits','ohmMode','dividerU','rcR','toleranceRows','modbusFirst','modbusSecond']){
+  assert.ok(html.includes('id="'+id+'"'),'calculator missing '+id);
+ }
+ for(const src of ['engineer-calculators.js','calculator-loader.js','calculator-lab.css'])
+  assert.ok(html.includes('src="'+src+'"')||html.includes('href="'+src+'"'),'missing calculator asset '+src);
+ assert.doesNotMatch(html,/<script src="(?:data|salary-sources)\.js"/,'calculator downloads unused salary data');
+ for(const id of ['convCategory','numInput','maCurrent','maResultValue'])
+  assert.ok(html.includes('id="'+id+'"'),'existing calculator removed: '+id);
+ const loader=fs.readFileSync('calculator-loader.js','utf8');
+ assert.ok(loader.includes("panel.addEventListener('toggle'"),'advanced code should be lazy');
+ assert.ok(loader.includes("script('engineering-lab-core.js')"),'math engine must load on demand');
+ const core=fs.readFileSync('engineering-lab-core.js','utf8');
+ assert.ok(core.includes('DataView'),'float implementation must operate on actual bits');
+ assert.ok(core.includes('roundEven'),'half precision must use ties-to-even');
+ assert.ok(core.includes('BigInt'),'exact decimal error is required');
+ assert.ok(fs.existsSync('tests/engineering-lab-unit.cjs'),'unit vectors absent');
+ assert.ok(fs.existsSync('tests/engineering-lab.spec.cjs'),'browser checks absent');
+});
+
 console.log('Matrix: '+count+' PASS, '+errors.length+' FAIL ('+pages.length+' pages, '+datasets.length+' datasets)');
 if(errors.length)process.exitCode=1;

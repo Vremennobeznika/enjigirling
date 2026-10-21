@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap">
 <link rel="stylesheet" href="style.min.css">
 <link rel="stylesheet" href="section-ui.css">
+<link rel="stylesheet" href="calculator-lab.css">
 <link rel="canonical" href="https://vremennobeznika.github.io/enjigirling/calculator.html">
 </head>
 <body>
@@ -45,7 +46,80 @@
 </nav><noscript><style>@media(max-width:860px){.site-nav-wrap>.eng-tabs{display:flex!important}.site-nav-wrap>.site-nav-toggle{display:none!important}}</style></noscript></div>
 
         <main class="site-page" id="main-content"><h1 class="sr-only">Инженерные калькуляторы</h1>
-            <div class="calc-section">
+
+<section class="calculator-directory" aria-labelledby="calcDirectoryTitle">
+  <h2 id="calcDirectoryTitle">Инженерные расчёты</h2>
+  <p>Все расчёты выполняются на устройстве. Дополнительные модули загружаются только при открытии; отправки значений на сервер нет.</p>
+  <nav aria-label="Быстрый переход к калькуляторам">
+    <a href="#labIEEE">IEEE‑754 · float → биты</a>
+    <a href="#labElectronics">Электроника и допуски</a>
+    <a href="#calcUnits">Единицы</a>
+    <a href="#calcBases">Системы счисления</a>
+    <a href="#calcSignal">4–20 мА</a>
+  </nav>
+</section>
+
+<details class="calc-lab" id="labIEEE" data-lab="ieee">
+ <summary><strong>IEEE‑754: конвертер чисел с плавающей точкой</strong><small>FP16 · bfloat16 · TF32 · FP32 · FP64 · HEX ↔ биты ↔ десятичное</small></summary>
+ <div class="calc-lab-body">
+  <p>Разбор знака, порядка и мантиссы. Можно изменить отдельный бит кнопкой, декодировать HEX или двоичную строку и увидеть разницу с введённым десятичным значением.</p>
+  <div class="calc-lab-grid">
+   <div class="calc-lab-field"><label for="ieeeFormat">Формат</label><select id="ieeeFormat"><option value="fp32" selected>FP32 — 32 бита</option><option value="fp64">FP64 — 64 бита</option><option value="fp16">FP16 — 16 бит</option><option value="bf16">bfloat16 — 16 бит</option><option value="tf32">TF32 — 19 значащих битов</option></select></div>
+   <div class="calc-lab-field"><label for="ieeeMode">Исходное представление</label><select id="ieeeMode"><option value="decimal">Десятичное значение</option><option value="hex">HEX-код (побитный)</option><option value="binary">Биты (0/1)</option></select></div>
+   <div class="calc-lab-field calc-lab-wide"><label for="ieeeInput">Число или битовый код</label><input type="text" id="ieeeInput" value="0.1" spellcheck="false" autocomplete="off" inputmode="text"></div>
+  </div>
+  <div class="calc-lab-examples" id="ieeeExamples" aria-label="Примеры"><button type="button" data-example="0.1">0.1</button><button type="button" data-example="-0">−0</button><button type="button" data-example="1.5">1.5</button><button type="button" data-example="Infinity">∞</button><button type="button" data-example="NaN">NaN</button></div>
+  <p class="calc-lab-status lab-load-status" aria-live="polite"></p>
+  <p id="ieeeStatus" class="calc-lab-status" role="status" aria-live="polite">Разверните калькулятор, чтобы начать.</p>
+  <div class="ieee-bit-legend"><span>Знак</span><span>Порядок</span><span>Мантисса</span></div>
+  <div class="ieee-bit-wrap"><div class="ieee-bit-grid" id="ieeeBits" aria-label="Интерактивные биты числа"></div></div>
+  <dl class="calc-lab-results">
+   <div><dt>Хранимое значение</dt><dd id="ieeeStored">—</dd></div>
+   <div><dt>HEX</dt><dd id="ieeeHex">—</dd></div>
+   <div><dt>Бинарная запись</dt><dd id="ieeeBinary">—</dd></div>
+   <div><dt>Знак</dt><dd id="ieeeSign">—</dd></div>
+   <div><dt>Порядок (со смещением)</dt><dd id="ieeeExponent">—</dd></div>
+   <div><dt>Мантисса</dt><dd id="ieeeMantissa">—</dd></div>
+   <div><dt>Ошибка представления относительно десятичного ввода</dt><dd id="ieeeError">—</dd></div>
+  </dl>
+  <div class="calc-lab-actions"><button type="button" id="ieeeCopyHex">Копировать HEX</button><button type="button" id="ieeeCopyBits">Копировать биты</button></div>
+  <p class="calc-lab-note">Округление: к ближайшему, при равенстве — к чётному. FP16 и bfloat16 рассчитаны программно; FP32 и FP64 используют DataView браузера. NaN, бесконечность, субнормальные числа и −0 поддерживаются. Представление HEX показывается в сетевом порядке (старший байт первым). TF32 представлен логическими 19 битами (1+8+10), а не 32-битной аппаратной раскладкой с пустыми битами.</p>
+ </div>
+</details>
+
+<details class="calc-lab" id="labElectronics" data-lab="extra">
+ <summary><strong>Электроника, Modbus и допуски</strong><small>Закон Ома · делитель · RC · допусковая цепь · регистры Float32</small></summary>
+ <div class="calc-lab-body">
+  <p class="calc-lab-status lab-load-status" aria-live="polite"></p>
+  <section class="calc-lab-sub" aria-labelledby="ohmTitle"><h3 id="ohmTitle">Закон Ома и мощность (постоянный ток)</h3><div class="calc-lab-grid">
+   <div class="calc-lab-field"><label for="ohmMode">Известные величины</label><select id="ohmMode"><option value="ur">U и R</option><option value="ui">U и I</option><option value="ir">I и R</option></select></div>
+   <div class="calc-lab-field"><label for="ohmA" id="ohmALabel">Напряжение U (В)</label><input id="ohmA" type="text" inputmode="decimal" value="12"></div>
+   <div class="calc-lab-field"><label for="ohmB" id="ohmBLabel">Сопротивление R (Ом)</label><input id="ohmB" type="text" inputmode="decimal" value="6"></div>
+   </div><output id="ohmOutput" class="calc-lab-output" aria-live="polite">—</output><p class="calc-lab-note">Идеальная цепь постоянного тока. Не учитывает нагрев, динамические и нелинейные нагрузки.</p></section>
+  <section class="calc-lab-sub" aria-labelledby="dividerTitle"><h3 id="dividerTitle">Резистивный делитель напряжения</h3><div class="calc-lab-grid">
+   <div class="calc-lab-field"><label for="dividerU">Вход, В</label><input id="dividerU" type="text" inputmode="decimal" value="12"></div>
+   <div class="calc-lab-field"><label for="dividerR1">Верхнее плечо, Ом</label><input id="dividerR1" type="text" inputmode="decimal" value="1000"></div>
+   <div class="calc-lab-field"><label for="dividerR2">Нижнее плечо, Ом</label><input id="dividerR2" type="text" inputmode="decimal" value="1000"></div>
+   </div><output id="dividerOutput" class="calc-lab-output" aria-live="polite">—</output><p class="calc-lab-note">Делитель без нагрузки: вход измерителя считается бесконечно высокоомным.</p></section>
+  <section class="calc-lab-sub" aria-labelledby="rcTitle"><h3 id="rcTitle">RC-цепь: постоянная времени и частота среза</h3><div class="calc-lab-grid">
+   <div class="calc-lab-field"><label for="rcR">Сопротивление, Ом</label><input id="rcR" type="text" inputmode="decimal" value="1000"></div>
+   <div class="calc-lab-field"><label for="rcC">Ёмкость, мкФ</label><input id="rcC" type="text" inputmode="decimal" value="1"></div>
+   </div><output id="rcOutput" class="calc-lab-output" aria-live="polite">—</output><p class="calc-lab-note">τ = R·C; f = 1/(2πRC). Идеальная цепь первого порядка без паразитных элементов.</p></section>
+  <section class="calc-lab-sub" aria-labelledby="toleranceTitle"><h3 id="toleranceTitle">Допусковая цепь размеров</h3>
+   <label for="toleranceRows">Один размер в строке: номинал;симметричный допуск</label><textarea id="toleranceRows" rows="3" spellcheck="false">10;0.1
+-2;0.2</textarea>
+   <output id="toleranceOutput" class="calc-lab-output" aria-live="polite">—</output><p class="calc-lab-note">Максимальный допуск — сумма модулей допусков. RSS — статистическая оценка при независимых отклонениях; она не заменяет расчёт гарантированной взаимозаменяемости.</p>
+  </section>
+  <section class="calc-lab-sub" aria-labelledby="modbusTitle"><h3 id="modbusTitle">Modbus: два регистра → Float32</h3><div class="calc-lab-grid">
+   <div class="calc-lab-field"><label for="modbusFirst">Регистр 1 (HEX, 16 бит)</label><input id="modbusFirst" type="text" value="3F80" maxlength="6" spellcheck="false" autocomplete="off"></div>
+   <div class="calc-lab-field"><label for="modbusSecond">Регистр 2 (HEX, 16 бит)</label><input id="modbusSecond" type="text" value="0000" maxlength="6" spellcheck="false" autocomplete="off"></div>
+   <div class="calc-lab-field"><label for="modbusOrder">Порядок байтов в дампе</label><select id="modbusOrder"><option value="ABCD">ABCD (старшее слово первым)</option><option value="BADC">BADC</option><option value="CDAB">CDAB (слова переставлены)</option><option value="DCBA">DCBA</option></select></div>
+   </div><output id="modbusOutput" class="calc-lab-output" aria-live="polite">—</output><p class="calc-lab-note">Modbus не фиксирует порядок двух регистров внутри 32-битного числа. Сверьте упаковку Float32 по документации устройства.</p>
+  </section>
+ </div>
+</details>
+
+            <div class="calc-section" id="calcUnits">
                 <hr class="eng-divider">
                 <h2 class="calc-heading">Инженерный конвертер единиц</h2>
                 <p class="calc-subtitle">Перевод длины, массы, давления, мощности и температуры: мм↔дюймы, кВт↔л.с., МПа↔кгс/см² и другие.</p>
@@ -83,7 +157,7 @@
                 </div>
             </div>
 
-            <div class="calc-section">
+            <div class="calc-section" id="calcBases">
                 <hr class="eng-divider">
                 <h2 class="calc-heading">Перевод систем счисления</h2>
                 <p class="calc-subtitle">Введите число в выбранной системе — получите его в двоичной, восьмеричной, десятичной и шестнадцатеричной.</p>
@@ -124,7 +198,7 @@
                 </div>
             </div>
 
-            <div class="calc-section">
+            <div class="calc-section" id="calcSignal">
                 <hr class="eng-divider">
                 <h2 class="calc-heading">Токовый сигнал 4–20 мА</h2>
                 <p class="calc-subtitle">Перевод тока датчика в значение процесса и обратно по диапазону шкалы: давление, уровень, температура, расход.</p>
@@ -178,11 +252,12 @@
         </div>
     </footer>
 
-    <script src="data.js"></script>
-        <script src="salary-sources.js"></script>
+    
+        
         <script src="engineer-calculators.js"></script>
     <script src="theme.js"></script>
 <script src="site-shell.js"></script>
 <script src="navigation.js"></script>
+<script src="calculator-loader.js"></script>
 </body>
 </html>

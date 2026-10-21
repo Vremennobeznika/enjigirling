@@ -72,7 +72,7 @@ for (const row of audits) {
   assert.ok(Number.isFinite(row.rangeMaxRub) && row.rangeMaxRub >= row.rangeMinRub, row.id + ': invalid upper bound');
 }
 assert.match(fs.readFileSync('index.html', 'utf8'), /src="salary-sources\.js"/);
-assert.match(fs.readFileSync('calculator.html', 'utf8'), /src="salary-sources\.js"/);
+assert.doesNotMatch(fs.readFileSync('calculator.html','utf8'), /src="(?:salary-sources|data)\.js"/, 'standalone calculators must not download profession and salary catalogs');
 console.log('OK: ' + audits.filter(x => x.status === 'source_snapshot').length + ' sourced salary records / ' + audits.length + ' professions');
 
 assert.match(fs.readFileSync('script.js', 'utf8'), /Непроверенные цифры скрыты/, 'profession cards must hide unsourced salaries');
