@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0d0d0d">
+<title>Сегодня — личная панель</title>
+<style>
+:root{color-scheme:dark;--bg:#0d0d0d;--box:#191919;--line:#414141;--ink:#f1f1f1;--muted:#aaa}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+main{max-width:850px;margin:auto;padding:20px 15px 90px}a{color:inherit;text-decoration:none}a:hover{text-decoration:underline}
+h1{font-size:30px;letter-spacing:-.5px;margin:0}h2{font-size:19px;margin:0 0 12px}h3{font-size:16px;margin:0 0 10px}
+p{margin:5px 0;color:var(--muted)}.sub{font-size:13px;color:var(--muted)}header{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:22px}
+.tag{border:1px solid var(--line);border-radius:20px;padding:7px 10px;font-size:12px;color:#ccc;white-space:nowrap}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.card{border:1px solid var(--line);background:var(--box);border-radius:17px;padding:16px;min-width:0}.card.full{grid-column:1/-1}.number{font-size:28px;font-weight:750;font-variant-numeric:tabular-nums}.head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.link{border:1px solid #666;border-radius:10px;padding:8px 10px;font-size:13px;color:#eee;display:inline-flex;align-items:center;min-height:38px}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.bar{height:5px;border-radius:6px;overflow:hidden;background:#383838;margin:12px 0}.bar>div{height:100%;background:#ddd;transition:width .2s}
+input,select,button{font:inherit}input,select{background:#101010;border:1px solid #656565;color:#fff;border-radius:10px;padding:11px;min-width:0}form{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.grow{flex:1 1 170px}.short{flex:0 1 115px;max-width:180px}.btn{background:#eee;color:#101010;border:1px solid #eee;border-radius:10px;padding:11px 13px;font-weight:700;cursor:pointer}.btn.soft{background:#242424;color:#eee;border-color:#575757;font-weight:500}.btn:disabled{opacity:.45;cursor:not-allowed}
+.list{margin:0;padding:0;list-style:none}.item{display:flex;align-items:center;gap:10px;border-top:1px solid #363636;padding:11px 0;min-height:48px}
+.item input[type=checkbox]{accent-color:#ddd;width:23px;height:23px;flex:none;cursor:pointer}
+.item .text{flex:1;overflow-wrap:anywhere;min-width:0}.item.done .text{text-decoration:line-through;color:#888}
+.mini{font-size:12px;color:#999}.delete{background:transparent;border:0;color:#aaa;font-size:23px;cursor:pointer;padding:4px}
+.empty{color:#888;font-size:13px;padding:10px 0}.status{font-size:13px;min-height:20px;color:#bbb;margin-top:7px;white-space:pre-wrap}
+details{border:1px solid var(--line);background:var(--box);border-radius:17px;padding:16px;margin-top:12px}summary{cursor:pointer;font-weight:600;list-style:auto}
+.warn{font-size:12px;color:#bbb;padding-top:12px}
+@media(max-width:530px){main{padding:17px 12px 85px}.grid{grid-template-columns:1fr}h1{font-size:27px}.number{font-size:26px}.short{flex:1 1 90px}.card{padding:14px}}
+</style></head><body><main>
+<header><div><h1>Сегодня</h1><p id="date"></p></div><span class="tag" id="mode">Локальный режим</span></header>
+<div class="grid">
+<section class="card"><div class="head"><h2>Расписание</h2><a class="link" href="../calendar/">Открыть →</a></div><div class="number" id="calendarCount">—</div><p>Выполнено за сегодня</p><div class="bar"><div id="calendarBar"></div></div></section>
+<section class="card"><div class="head"><h2>Покупки</h2><a class="link" href="../shopping/">Открыть →</a></div><div class="number" id="shoppingCount">—</div><p>Осталось купить</p><div class="bar"><div id="shoppingBar"></div></div></section>
+<section class="card full"><div class="head"><h2>Задачи и входящие</h2><span class="sub" id="taskCount">0 задач</span></div><p class="sub">Записывай всё в одно место. Приоритетные дела будут сверху.</p>
+<form id="taskForm"><input class="grow" id="taskName" maxlength="180" placeholder="Новая задача" aria-label="Новая задача" required><select id="taskCategory" aria-label="Категория задачи"><option value="Дела">Дела</option><option value="Работа">Работа</option><option value="Паблик">Паблик</option><option value="Дом">Дом</option><option value="Лев">Лев</option></select><select id="taskPriority" aria-label="Приоритет"><option value="normal">Обычно</option><option value="high">Важно</option></select><button class="btn" type="submit">Добавить</button></form>
+<ul id="taskList" class="list"></ul><div class="empty" id="taskEmpty">Задач пока нет.</div></section>
+<section class="card full"><div class="head"><h2>Домашние запасы</h2><span class="sub" id="pantryCount">0 позиций</span></div><p class="sub">Что уже есть дома — чтобы не покупать повторно.</p>
+<form id="pantryForm"><input class="grow" id="pantryName" maxlength="120" placeholder="Продукт или расходник" aria-label="Название запаса" required><input class="short" id="pantryAmount" maxlength="40" placeholder="Количество" aria-label="Количество"><button class="btn" type="submit">Добавить</button></form>
+<ul id="pantryList" class="list"></ul><div class="empty" id="pantryEmpty">Запасов пока нет.</div></section>
+<section class="card full"><div class="head"><h2>Управление данными</h2><span class="sub">Резервная копия всех разделов</span></div>
+<div class="actions"><button class="btn soft" id="backup" type="button">Скачать копию</button><button class="btn soft" id="restore" type="button">Восстановить</button><input id="backupFile" type="file" hidden accept=".json,application/json"></div><p class="warn">В копию входят отметки календаря, покупки, задачи и домашние запасы. Файл остаётся у тебя.</p></section>
+</div>
+<details id="cloudPanel"><summary>Облачная синхронизация · подключение Yandex Cloud</summary>
+<p class="sub">Синхронизация заработает после создания закрытой базы YDB и облачной функции. Без этого данные остаются в браузере. Адрес и секрет доступны только владельцу.</p>
+<form id="cloudForm"><input class="grow" id="endpoint" type="url" placeholder="HTTPS-адрес Cloud Function" aria-label="URL синхронизации" autocomplete="url"><input class="grow" id="syncToken" type="password" placeholder="Секрет синхронизации" aria-label="Секрет синхронизации" autocomplete="off"><button class="btn soft" type="submit">Применить</button></form>
+<div class="actions"><button class="btn soft" id="pull" type="button">Получить из облака</button><button class="btn soft" id="push" type="button">Отправить в облако</button><button class="btn soft" id="disconnect" type="button">Отключить</button></div><div class="status" id="cloudStatus" role="status">Облако пока не подключено.</div>
+<p class="warn">Синхронизация сейчас запускается вручную кнопками, чтобы избежать потери изменений на разных устройствах. До подключения можно пользоваться всем локально. Секрет хранится только до закрытия вкладки, не в GitHub.</p>
+</details>
+<p class="warn">Код этой страницы публичен, но твои списки не публикуются в GitHub. Хранилище браузера может быть очищено; регулярно сохраняй копию.</p>
+</main><script>
+(()=>{"use strict";
+const KEYS={calendar:"week-check-v2",shopping:"supermarket-shopping-list-v1",tasks:"life-inbox-v1",pantry:"life-pantry-v1"};
+const $=id=>document.getElementById(id),safe=(value,def)=>{try{return JSON.parse(localStorage.getItem(value)||"null")??def}catch{return def}};
+function persist(key,data){try{localStorage.setItem(key,JSON.stringify(data));return true}catch{alert("Не удалось сохранить данные. Проверь настройки браузера.");return false}}
+const elem=(tag,cl,txt)=>{const n=document.createElement(tag);if(cl)n.className=cl;if(txt!==undefined)n.textContent=txt;return n};
+function dateStr(d){return [d.getFullYear(),String(d.getMonth()+1).padStart(2,"0"),String(d.getDate()).padStart(2,"0")].join("-")}
+function validTasks(a){return Array.isArray(a)?a.filter(x=>x&&typeof x.name==="string").slice(0,600).map(x=>({id:String(x.id||crypto.randomUUID()),name:x.name.slice(0,180),category:["Дела","Работа","Паблик","Дом","Лев"].includes(x.category)?x.category:"Дела",priority:x.priority==="high"?"high":"normal",done:!!x.done})):[]}
+function validPantry(a){return Array.isArray(a)?a.filter(x=>x&&typeof x.name==="string").slice(0,600).map(x=>({id:String(x.id||crypto.randomUUID()),name:x.name.slice(0,120),amount:String(x.amount||"").slice(0,40)})):[]}
+function validShopping(a){return Array.isArray(a)?a.filter(x=>x&&typeof x.name==="string"&&typeof x.cat==="string").slice(0,1500).map(x=>({id:String(x.id||crypto.randomUUID()),name:x.name.slice(0,120),qty:String(x.qty||"").slice(0,35),cat:x.cat,done:!!x.done})):[]}
+function validCalendar(o){if(!o||typeof o!=="object"||Array.isArray(o))return {};return Object.fromEntries(Object.entries(o).filter(([k,v])=>/^\d{4}-\d\d-\d\d-\d+$/.test(k)&&v===true).slice(0,25000))}
+function snapshot(){return {calendar:validCalendar(safe(KEYS.calendar,{})),shopping:validShopping(safe(KEYS.shopping,[])),tasks:validTasks(safe(KEYS.tasks,[])),pantry:validPantry(safe(KEYS.pantry,[]))}}
+function restore(raw){if(!raw||typeof raw!=="object"||Array.isArray(raw)||!raw.data||typeof raw.data!=="object"||Array.isArray(raw.data))throw Error("Неизвестный формат");
+const d=raw.data;for(const k of Object.keys(KEYS))if(!(k in d))throw Error("Нет раздела: "+k);
+const clean={calendar:validCalendar(d.calendar),shopping:validShopping(d.shopping),tasks:validTasks(d.tasks),pantry:validPantry(d.pantry)};
+for(const [section,key] of Object.entries(KEYS)){if(!persist(key,clean[section]))throw Error("Не удалось сохранить");}draw();}
+function draw(){
+const now=new Date(),day=(now.getDay()+6)%7,key=dateStr(now),marks=safe(KEYS.calendar,{}),total=day<5?27:23,done=Object.keys(marks).filter(k=>k.startsWith(key+"-")&&marks[k]===true).length;
+$("date").textContent=now.toLocaleDateString("ru-RU",{weekday:"long",day:"numeric",month:"long",year:"numeric"});
+$("calendarCount").textContent=Math.min(total,done)+" / "+total;$("calendarBar").style.width=Math.min(100,done/total*100)+"%";
+const buys=validShopping(safe(KEYS.shopping,[])),remaining=buys.filter(x=>!x.done).length;
+$("shoppingCount").textContent=String(remaining);$("shoppingBar").style.width=(buys.length?(buys.length-remaining)/buys.length*100:0)+"%";
+const tasks=validTasks(safe(KEYS.tasks,[])),list=$("taskList");list.replaceChildren();
+$("taskCount").textContent=tasks.filter(x=>!x.done).length+" активных";$("taskEmpty").hidden=tasks.length>0;
+tasks.sort((a,b)=>Number(a.done)-Number(b.done)||Number(b.priority==="high")-Number(a.priority==="high")).forEach(t=>{
+const li=elem("li","item"+(t.done?" done":"")),cb=elem("input");cb.type="checkbox";cb.checked=t.done;cb.setAttribute("aria-label","Готово: "+t.name);
+cb.onchange=()=>{let a=validTasks(safe(KEYS.tasks,[]));let x=a.find(v=>v.id===t.id);if(x)x.done=cb.checked;persist(KEYS.tasks,a);draw()};
+const name=elem("div","text",t.name),meta=elem("div","mini",t.category+(t.priority==="high"?" · важно":""));name.append(meta);
+const del=elem("button","delete","×");del.type="button";del.setAttribute("aria-label","Удалить "+t.name);del.onclick=()=>{persist(KEYS.tasks,validTasks(safe(KEYS.tasks,[])).filter(x=>x.id!==t.id));draw()};li.append(cb,name,del);list.append(li)});
+const pantry=validPantry(safe(KEYS.pantry,[])),pList=$("pantryList");pList.replaceChildren();$("pantryCount").textContent=pantry.length+" позиций";$("pantryEmpty").hidden=pantry.length>0;
+pantry.forEach(p=>{const li=elem("li","item"),nm=elem("span","text",p.name),qty=elem("span","mini",p.amount),del=elem("button","delete","×");del.type="button";del.setAttribute("aria-label","Удалить "+p.name);del.onclick=()=>{persist(KEYS.pantry,validPantry(safe(KEYS.pantry,[])).filter(x=>x.id!==p.id));draw()};li.append(nm,qty,del);pList.append(li)});
+}
+$("taskForm").onsubmit=e=>{e.preventDefault();const name=$("taskName").value.trim();if(!name)return;const a=validTasks(safe(KEYS.tasks,[]));a.push({id:crypto.randomUUID(),name,category:$("taskCategory").value,priority:$("taskPriority").value,done:false});persist(KEYS.tasks,a);$("taskName").value="";draw();$("taskName").focus()};
+$("pantryForm").onsubmit=e=>{e.preventDefault();const name=$("pantryName").value.trim(),amount=$("pantryAmount").value.trim();if(!name)return;const a=validPantry(safe(KEYS.pantry,[]));a.push({id:crypto.randomUUID(),name,amount});persist(KEYS.pantry,a);$("pantryName").value="";$("pantryAmount").value="";draw();$("pantryName").focus()};
+$("backup").onclick=()=>{const data={version:1,exportedAt:new Date().toISOString(),data:snapshot()},blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=elem("a");a.href=url;a.download="moya-zhizn-"+dateStr(new Date())+".json";a.click();setTimeout(()=>URL.revokeObjectURL(url),3000)};
+$("restore").onclick=()=>$("backupFile").click();
+$("backupFile").onchange=async e=>{const f=e.target.files?.[0];if(!f)return;try{if(f.size>1000000)throw Error("Слишком большой файл");const raw=JSON.parse(await f.text());if(confirm("Заменить ВСЕ локальные отметки и списки данными из файла?")){restore(raw);$("cloudStatus").textContent="Резервная копия восстановлена."}}catch(err){alert("Не удалось восстановить: "+err.message)}finally{e.target.value=""}};
+window.addEventListener("storage",e=>{if(Object.values(KEYS).includes(e.key))draw()});window.addEventListener("focus",draw);document.addEventListener("visibilitychange",()=>{if(!document.hidden)draw()});
+let endpoint=localStorage.getItem("life-sync-endpoint-v1")||"",token=sessionStorage.getItem("life-sync-secret-v1")||"",revision=Number(sessionStorage.getItem("life-sync-revision-v1")||0);
+$("endpoint").value=endpoint;$("syncToken").value=token;
+const status=s=>$("cloudStatus").textContent=s;
+function updateMode(){$("mode").textContent=endpoint&&token?"Облако настроено":"Локальный режим"}
+function setting(){const url=$("endpoint").value.trim().replace(/\/+$/,""),t=$("syncToken").value.trim();if(!url||!/^https:\/\//i.test(url))throw Error("Нужен корректный HTTPS-адрес функции");if(!t||t.length<32)throw Error("Секрет должен быть не короче 32 символов");if(endpoint!==url||token!==t){revision=0;sessionStorage.removeItem("life-sync-revision-v1")}endpoint=url;token=t;localStorage.setItem("life-sync-endpoint-v1",endpoint);sessionStorage.setItem("life-sync-secret-v1",token);updateMode();}
+$("cloudForm").onsubmit=e=>{e.preventDefault();try{setting();status("Адрес сохранён. Проверь подключение кнопкой «Получить из облака».")}catch(err){status(err.message)}};
+$("disconnect").onclick=()=>{endpoint=token="";revision=0;localStorage.removeItem("life-sync-endpoint-v1");sessionStorage.removeItem("life-sync-secret-v1");sessionStorage.removeItem("life-sync-revision-v1");$("endpoint").value=$("syncToken").value="";updateMode();status("Облако отключено. Локальные данные не удалены.")};
+async function call(method,payload){if(!endpoint||!token)throw Error("Сначала настрой подключение.");const response=await fetch(endpoint,{method,headers:{"Content-Type":"application/json","X-Sync-Token":token},body:method==="PUT"?JSON.stringify(payload):undefined,cache:"no-store",mode:"cors",credentials:"omit"});let result;try{result=await response.json()}catch{throw Error("Функция вернула неверный ответ.")}if(!response.ok)throw Error(result.error||"Ошибка синхронизации ("+response.status+")");return result;}
+$("pull").onclick=async()=>{try{status("Проверяю облако…");const r=await call("GET");if(!r.data){status("База пуста. Сначала отправь данные из браузера.");return}const counts=Object.values(snapshot()).some(x=>Object.keys(x).length);
+if(counts&&!confirm("Заменить локальные данные облачной копией? Несохранённые изменения будут потеряны.")){status("Отменено.");return}
+restore({data:r.data});revision=Number(r.revision)||0;sessionStorage.setItem("life-sync-revision-v1",String(revision));status("Облачная копия получена. Версия "+revision+".")}catch(err){status("Не удалось получить: "+err.message)}};
+$("push").onclick=async()=>{try{status("Проверяю версию в облаке…");const remote=await call("GET"),remoteRev=Number(remote.revision)||0;
+if(remoteRev&&remoteRev!==revision){status("В облаке другая версия ("+remoteRev+"). Чтобы не потерять изменения, сначала получи копию или сделай локальный экспорт.");return}
+if(!confirm("Загрузить текущие данные в личное облако?")){status("Отменено.");return}
+const result=await call("PUT",{revision:remoteRev,data:snapshot()});revision=Number(result.revision)||0;sessionStorage.setItem("life-sync-revision-v1",String(revision));status("Данные сохранены в облаке. Версия "+revision+".")}catch(err){status("Не удалось отправить: "+err.message)}};
+updateMode();draw();
+})();
+</script></body></html>
