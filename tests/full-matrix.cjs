@@ -321,7 +321,7 @@ check('originally named workshops and six dimensioned production tools', () => {
   assert.ok(html.includes(label),'missing named tool '+label);
  }
  const sections=[...html.matchAll(/data-lab="([^"]+)"/g)].map(x=>x[1]);
- assert.deepEqual(sections,['ieee','extra','production','sewing','marine','moreSewing','moreMarine','caliper'],'wrong lazy workshop panels');
+ assert.deepEqual(sections,['ieee','extra','production','sewing','moreSewing','marine','moreMarine','caliper'],'wrong lazy workshop panels');
  for(const id of ['taktAvailable','taktDemand','oeePlan','oeeRun','oeeTotal','oeeGood','oeeIdeal','massDensity','massLength','massWidth','massHeight','thermalLength','thermalAlpha','thermalDelta','cutMode','cutDiameter','cutQuantity','flowDiameter','flowSpeed']){
   assert.ok(html.includes('id="'+id+'"'),'production input missing '+id);
  }
