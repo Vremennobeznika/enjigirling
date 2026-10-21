@@ -172,56 +172,43 @@ function classifyLearningItems(items = []) {
 }
 
 // Reference directories are discovery aids, not proof that a standard applies to a given job.
+// Per-profession primary documents: published text and a distinct scoped applicability assessment.
+// A relevant official standard does not establish a binding requirement for every job with a similar name.
 const PROFESSIONAL_REFERENCE_DIRECTORIES = [
-  { label: "Реестр профстандартов ВНИИ труда", url: "https://vcot.info/standards" },
-  { label: "Разъяснения Минтруда о применении профстандартов", url: "https://mintrud.gov.ru/ministry/programms/22/3" },
-  { label: "Профстандарты — ВНИИ труда", url: "https://nii-truda.ru/standards" }
+  {label:"Официальный реестр профстандартов",url:"https://vcot.info/standards"},
+  {label:"Минтруд: как применять профстандарты",url:"https://mintrud.gov.ru/ministry/programms/22/3"}
 ];
-const CANDIDATE_PROFESSION_DOCUMENTS = {
-  "civil-engineer": [{
-    label: "Профстандарт 16.025 «Специалист по организации строительства» — приказ Минтруда № 747н от 21.10.2021",
-    url: "https://profstandart.rosmintrud.ru/upload/iblock/2bb/%D0%A0%D0%B5%D0%BA%D0%BE%D0%BC%D0%B5%D0%BD%D0%B4%D0%B0%D1%86%D0%B8%D0%B8-%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D1%8E-%D0%9F%D0%A1-%D0%B2-%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B8.pdf",
-    note: "Упомянут в методических рекомендациях ВНИИ труда. Это кандидат по функции организации строительства, а не подтверждение применимости ко всем инженерам ПГС; актуальную редакцию проверить в реестре."
-  }],
-  "pgs-designer": [{
-    label: "Профстандарт 10.015 «Специалист по организации архитектурно-строительного проектирования» — приказ Минтруда № 257н от 19.04.2021",
-    url: "https://profstandart.rosmintrud.ru/upload/iblock/2bb/%D0%A0%D0%B5%D0%BA%D0%BE%D0%BC%D0%B5%D0%BD%D0%B4%D0%B0%D1%86%D0%B8%D0%B8-%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D1%8E-%D0%9F%D0%A1-%D0%B2-%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B8.pdf",
-    note: "Документ указан ВНИИ труда; соответствие трудовой функции проектировщика и актуальность стандарта требуют отдельной сверки."
-  }],
-  "railway-engineer": [{
-    label: "Профстандарт «Специалист по надзору и контролю за соблюдением норм содержания объектов железнодорожной инфраструктуры» — приказ № 204н от 16.04.2024",
-    url: "https://publication.pravo.gov.ru/document/0001202405240041",
-    note: "Официально опубликованный стандарт относится к надзору за железнодорожной инфраструктурой, а не ко всем инженерным профессиям железнодорожной отрасли; статус действующей редакции проверить отдельно."
-  }],
-  "power-engineer": [{
-    label: "Профстандарт «Работник по управлению качеством производственных активов гидроэнергетических объектов» — приказ Минтруда № 45н от 10.02.2016",
-    url: "https://publication.pravo.gov.ru/Document/View/0001201603090053",
-    note: "Подтверждён официальный текст приказа; узкая специализация в гидроэнергетике, не универсальный стандарт для инженеров-энергетиков. Актуальность редакции и применимость проверить отдельно."
-  }],
-  "electrical-engineer": [{
-    label: "Профстандарт «Работник по обслуживанию и ремонту оборудования релейной защиты и автоматики электрических сетей» — приказ Минтруда № 786н от 09.11.2021",
-    url: "https://publication.pravo.gov.ru/Document/View/0001202111240028",
-    note: "Официальная публикация подтверждена. Относится к обслуживанию и ремонту РЗА; не охватывает автоматически все функции инженера-электрика."
-  }],
-  "metallurgical-engineer": [{
-    label: "Профстандарт «Специалист по анализу и диагностике технологических комплексов термического производства» — приказ Минтруда № 1144н от 25.12.2014",
-    url: "https://publication.pravo.gov.ru/document/0001201502180006",
-    note: "Официальная публикация приказа подтверждена. Узкая область — диагностика комплексов термического производства; не является общим стандартом инженера-металлурга. Действующая редакция и трудовые функции требуют проверки."
-  }],
-  "standardization-engineer": [{
-    label: "Профстандарт «Специалист по стандартизации» — приказ Минтруда № 346н от 27.04.2023",
-    url: "https://mintrud.gov.ru/docs/mintrud/orders/2673",
-    note: "Официальная публикация приказа. Соответствие конкретной должности и актуальность редакции требуют проверки."
-  }]
-};
 function renderNormativeReferences(profession) {
-  const docs = CANDIDATE_PROFESSION_DOCUMENTS[profession.id] || [];
-  const links = docs.map(x => '<li><a href="' + escapeHTML(x.url) + '" target="_blank" rel="noopener noreferrer">' + escapeHTML(x.label) + '</a><p>' + escapeHTML(x.note) + '</p></li>').join("");
-  const directories = PROFESSIONAL_REFERENCE_DIRECTORIES.map(x => '<li><a href="' + escapeHTML(x.url) + '" target="_blank" rel="noopener noreferrer">' + escapeHTML(x.label) + '</a></li>').join("");
-  return '<p class="data-quality-note"><strong>Статус нормативной проверки:</strong> ' + (docs.length ? 'Есть документы-кандидаты; применимость и действующая редакция не подтверждены.' : 'Документы-кандидаты пока не установлены.') + '</p>' + (docs.length ? '<p>Найденные документы для проверки соответствия трудовым функциям (не подтверждение обязательности):</p><ul>' + links + '</ul>' :
-    '<p class="data-quality-note">Подтверждённого соответствия конкретного профстандарта трудовым функциям этой профессии в каталоге пока нет.</p>') +
-    '<p>Реестры для поиска и проверки редакций:</p><ul>' + directories + '</ul>' +
-    '<p class="data-quality-note">По статье 195.3 ТК РФ квалификационные требования профстандарта обязательны в случаях, установленных законом или иным нормативным правовым актом. В остальных случаях они служат основой для требований работодателя. Совпадение названия профессии не доказывает применимость документа; проверяйте трудовые функции, редакцию и дату вступления в силу. <a href="https://mintrud.gov.ru/ministry/programms/22/3" target="_blank" rel="noopener noreferrer">Разъяснения Минтруда</a>.</p>';
+  const audit = (window.careerNormativeAudit || {}).records || [];
+  const record = audit.find(x => x.id === profession.id);
+  const docs = record?.documents || [];
+  const header = '<p class="data-quality-note"><strong>Статус нормативной проверки:</strong> '+
+    (docs.length
+      ? 'Официальные документы соотнесены с конкретными функциями; обязательность определяется законом, должностью и условиями работодателя.'
+      : 'По слишком широкой группе профессий нельзя корректно назначить единый стандарт без конкретной трудовой функции; это не свидетельство отсутствия стандарта.')+'</p>';
+  const review = record
+    ? '<p><strong>Разбор профессии:</strong> '+escapeHTML(record.assessment)+'</p>'
+    : '<p>Индивидуальная проверка нормативной применимости отсутствует.</p>';
+  const rows = docs.map(doc => {
+    const when = doc.periodStatus === 'not_yet_effective'
+      ? '<strong>Ещё не действует</strong> (начало '+escapeHTML(doc.effectiveFrom)+')'
+      : 'Действующий на дату ревизии документ (начало '+escapeHTML(doc.effectiveFrom)+')';
+    const limits = doc.relationship === 'related_or_narrower_function'
+      ? 'Частичная/смежная функция, без автоматического переноса на всю профессию.'
+      : 'Соответствие функций оценивается для конкретной должности.';
+    return '<li><a href="'+escapeHTML(doc.url)+'" target="_blank" rel="noopener noreferrer">'+
+      escapeHTML(doc.name)+'</a><p>'+escapeHTML(doc.order)+'. '+when+'. '+limits+'</p></li>';
+  }).join('');
+  const details = rows
+    ? '<p>Профессиональные стандарты и документы для сопоставления трудовых функций:</p><ul>'+rows+'</ul>'
+    : '<p>Нужны конкретные трудовые обязанности и отрасль работы, чтобы выбрать нормативный документ; назначения по одному названию нет.</p>';
+  const construction = record?.legalObligationStatus === 'conditional_statutory_construction_roles'
+    ? '<p class="data-quality-note"><strong>Строительство:</strong> для отдельных специалистов по организации строительства и проектирования предусмотрены дополнительные условия по <a href="https://www.consultant.ru/document/cons_doc_LAW_51040/6da623a7da211d885c1eaccefb2ef34b26fc141a/" target="_blank" rel="noopener noreferrer">ст. 55.5-1 ГрК РФ</a>. Проверять должность, функции и применимость требований СРО.</p>'
+    : '';
+  const registry=PROFESSIONAL_REFERENCE_DIRECTORIES.map(x=>'<li><a href="'+escapeHTML(x.url)+'" target="_blank" rel="noopener noreferrer">'+escapeHTML(x.label)+'</a></li>').join('');
+  return header+review+details+construction+
+    '<p><strong>Реестр и разъяснения:</strong></p><ul>'+registry+'</ul>'+
+    '<p class="data-quality-note"><strong>Обязательность:</strong> по <a href="https://www.consultant.ru/document/cons_doc_LAW_34683/e76d6076ad800a12efcec206f99ad6c59b58517e/" target="_blank" rel="noopener noreferrer">ст. 195.3 ТК РФ</a> квалификационные требования профстандарта обязательны в предусмотренной законом части. Похожее название должности само по себе не устанавливает обязательность. Даты и применимость нужно проверять на дату конкретного решения.</p>';
 }
 
 function renderPracticalGuide(profession) {
