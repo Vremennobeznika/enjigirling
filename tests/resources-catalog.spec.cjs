@@ -1,0 +1,25 @@
+const {test,expect}=require('@playwright/test');
+test('resources directory: categories, alphabetical sort, search, reset and list mode',async({page})=>{
+  const errors=[];page.on('pageerror',e=>errors.push(e.message));
+  await page.goto('/resources.html');
+  const cards=page.locator('#resourcesGrid .resource-card');
+  await expect(page.locator('#resourcesGrid')).toHaveAttribute('data-ready','true');
+  expect(await cards.count()).toBeGreaterThanOrEqual(100);
+  await expect(page.locator('#resourcesFilter button')).toHaveCount(10);
+  await page.locator('#resourcesFilter button[title="Стандарты и метрология"]').click();
+  await expect(page.locator('#resourcesGrid .resource-group')).toHaveCount(1);
+  await expect(cards).toHaveCount(4);
+  await page.locator('#resourceSearch').fill('ISO');
+  await expect(cards).toHaveCount(1);
+  await page.locator('#resourceReset').click();
+  await expect(cards).toHaveCount(await page.locator('#resourcesGrid .resource-card').count());
+  await page.locator('#resourceSort').selectOption('za');
+  const names=await page.locator('#resourcesGrid .resource-group').first().locator('.resource-card .eng-title').allTextContents();
+  expect(names[0].localeCompare(names[names.length-1],'ru')).toBeGreaterThanOrEqual(0);
+  await page.locator('#resourceListView').click();
+  await expect(page.locator('#resourcesGrid')).toHaveClass(/resource-list-view/);
+  await page.setViewportSize({width:390,height:844});
+  const dimension=await page.evaluate(()=>({w:document.documentElement.scrollWidth,v:document.documentElement.clientWidth}));
+  expect(dimension.w).toBeLessThanOrEqual(dimension.v+2);
+  expect(errors).toEqual([]);
+});
