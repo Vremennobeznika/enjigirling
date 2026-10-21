@@ -4,13 +4,14 @@
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Инженерное образование: вузы, колледжи, курсы и варианты обучения.">
-    <title>Обучение — База данных профессий инженеров</title>
+<meta name="description" content="Поиск по инженерным вузам и колледжам России: направления, города, округа, сроки обучения, условия приёма, карта и калькуляторы.">
+    <title>Обучение инженеров: поиск вузов и колледжей — ENJIGIRLING</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap">
 <link rel="stylesheet" href="style.min.css">
 <link rel="stylesheet" href="section-ui.css">
+<link rel="stylesheet" href="learning-experience.css">
 <link rel="stylesheet" href="ai-transfer.css">
 <link rel="canonical" href="https://vremennobeznika.github.io/enjigirling/map.html">
 </head>
@@ -46,8 +47,92 @@
 </nav><noscript><style>@media(max-width:860px){.site-nav-wrap>.eng-tabs{display:flex!important}.site-nav-wrap>.site-nav-toggle{display:none!important}}</style></noscript></div>
 
         <main class="site-page" id="main-content">
-<aside class="ai-transfer-bar" aria-label="Передать раздел Обучение нейросети"><div><strong>Этот раздел для ИИ</strong><p>Полное содержимое для загрузки в нейросеть: не только ссылка на страницу.</p></div><div class="ai-transfer-links"><a href="knowledge/sections/learning.md" download>Markdown</a><a href="knowledge/sections/learning.json" download>JSON</a><a href="ai.html?section=learning">Как передать ИИ →</a></div></aside><h1 class="sr-only">Обучение инженерным специальностям</h1>
-            <section class="calc-section training-calculators">
+<aside class="ai-transfer-bar" aria-label="Передать раздел Обучение нейросети"><div><strong>Этот раздел для ИИ</strong><p>Полное содержимое для загрузки в нейросеть: не только ссылка на страницу.</p></div><div class="ai-transfer-links"><a href="knowledge/sections/learning.md" download>Markdown</a><a href="knowledge/sections/learning.json" download>JSON</a><a href="ai.html?section=learning">Как передать ИИ →</a></div></aside>
+<header class="learning-hero">
+    <p class="learning-eyebrow">ОБРАЗОВАНИЕ / ИНЖЕНЕРНЫЕ СПЕЦИАЛЬНОСТИ</p>
+    <h1>Где учиться инженерному делу</h1>
+    <p>Найдите вуз или колледж по названию, городу, направлению и федеральному округу. Карта, калькуляторы, льготы и онлайн-курсы — ниже, отдельными блоками.</p>
+</header>
+<nav class="learning-shortcuts" aria-label="Навигация по странице">
+    <a href="#education-directory">Учебные заведения</a>
+    <a href="#education-map">Карта округов</a>
+    <a href="#education-calculators">Калькуляторы</a>
+    <a href="#education-benefits">Поступление и льготы</a>
+    <a href="#education-courses">Онлайн-курсы</a>
+</nav>
+<section class="learning-directory" id="education-directory" aria-labelledby="educationDirectoryHeading">
+    <div class="learning-directory-heading">
+        <div><p class="learning-eyebrow">КАТАЛОГ УЧЕБНЫХ ЗАВЕДЕНИЙ</p><h2 id="educationDirectoryHeading">Найдите подходящее место обучения</h2></div>
+        <span class="learning-total" id="educationTotal" aria-label="Всего записей">—</span>
+    </div>
+    <p class="learning-directory-intro">Поиск работает сразу по всем восьми федеральным округам. Это редакционная подборка, не полный государственный реестр учебных заведений; цены и условия приёма перепроверяйте на официальных сайтах.</p>
+    <div class="learning-filters" role="search" aria-label="Поиск по образовательному каталогу">
+        <div class="learning-control learning-search-control">
+            <label for="educationSearch">Название, город или направление</label>
+            <input id="educationSearch" type="search" autocomplete="off" placeholder="Например: Брянск, робототехника, сварка…">
+        </div>
+        <div class="learning-control">
+            <label for="educationDistrict">Федеральный округ</label>
+            <select id="educationDistrict"><option value="">Все округа</option></select>
+        </div>
+        <div class="learning-control">
+            <label for="educationType">Тип образования</label>
+            <select id="educationType"><option value="all">Вузы и колледжи</option><option value="uni">Вузы</option><option value="college">Колледжи / техникумы</option></select>
+        </div>
+        <div class="learning-control">
+            <label for="educationSort">Сортировка</label>
+            <select id="educationSort"><option value="name">По названию А–Я</option><option value="city">По городу А–Я</option><option value="district">По федеральному округу</option></select>
+        </div>
+    </div>
+    <div class="learning-results-head">
+        <p id="educationStatus" role="status" aria-live="polite">Загрузка каталога…</p>
+        <button id="educationClear" type="button" class="learning-clear" hidden>Сбросить фильтры</button>
+    </div>
+    <div class="learning-results" id="educationResults" aria-label="Учебные заведения"></div>
+    <div class="learning-more-row"><button id="educationMore" type="button" class="learning-more" hidden>Показать ещё 12</button></div>
+    <p class="learning-editorial-note">Сроки, стоимость, наличие бюджетных мест, поступление без ЕГЭ и другие условия зависят от конкретной программы и года приёма. Сведения в карточках могут быть устаревшими.</p>
+</section>
+
+<details class="learning-accordion" id="education-map">
+<summary><span><strong>Карта федеральных округов</strong><small>Выбор округа на схеме синхронизируется с каталогом</small></span><span class="learning-chevron" aria-hidden="true">⌄</span></summary>
+<div class="learning-accordion-body">            <div class="map-intro">
+                <h2 class="map-title">Интерактивная карта инженерного образования</h2>
+                <p class="map-subtitle">Выберите округ на карте или в фильтре каталога. Результаты всегда доступны списком выше.</p>
+            </div>
+
+            <div class="map-layout">
+                <div class="map-canvas">
+                    <svg id="russiaMap" viewBox="100 60 930 420" class="eng-map-svg" role="img" aria-label="Карта федеральных округов России">
+                        <!-- Северо-Западный -->
+                        <path class="eng-district" data-id="northwest" />
+                        <!-- Центральный -->
+                        <path class="eng-district" data-id="central" />
+                        <!-- Южный -->
+                        <path class="eng-district" data-id="south" />
+                        <!-- Северо-Кавказский -->
+                        <path class="eng-district" data-id="northcaucasus" />
+                        <!-- Приволжский -->
+                        <path class="eng-district" data-id="volga" />
+                        <!-- Уральский -->
+                        <path class="eng-district" data-id="ural" />
+                        <!-- Сибирский -->
+                        <path class="eng-district" data-id="siberia" />
+                        <!-- Дальневосточный -->
+                        <path class="eng-district" data-id="fareast" />
+                    </svg>
+                </div>
+
+                <aside class="map-sidebar">
+                    <button class="eng-btn map-reset" id="mapReset">Сбросить выбор</button>
+                    <div class="map-panel" id="districtInfo"></div>
+                </aside>
+            </div>
+
+</div>
+</details>
+<details class="learning-accordion" id="education-calculators">
+<summary><span><strong>Калькуляторы обучения и зарплаты</strong><small>Срок до первой зарплаты, опубликованные ориентиры, НДФЛ и окупаемость</small></span><span class="learning-chevron" aria-hidden="true">⌄</span></summary>
+<div class="learning-accordion-body">            <section class="calc-section training-calculators">
                 <h2 class="calc-heading">Калькуляторы обучения и зарплаты</h2>
 
                 <div class="calc-section-inner">
@@ -100,40 +185,11 @@
             </section>
 
 
-            <div class="map-intro">
-                <h2 class="map-title">Интерактивная карта инженерного образования</h2>
-                <p class="map-subtitle">Нажмите на федеральный округ, чтобы узнать ведущие инженерные вузы региона и направления подготовки.</p>
-            </div>
-
-            <div class="map-layout">
-                <div class="map-canvas">
-                    <svg id="russiaMap" viewBox="100 60 930 420" class="eng-map-svg" role="img" aria-label="Карта федеральных округов России">
-                        <!-- Северо-Западный -->
-                        <path class="eng-district" data-id="northwest" />
-                        <!-- Центральный -->
-                        <path class="eng-district" data-id="central" />
-                        <!-- Южный -->
-                        <path class="eng-district" data-id="south" />
-                        <!-- Северо-Кавказский -->
-                        <path class="eng-district" data-id="northcaucasus" />
-                        <!-- Приволжский -->
-                        <path class="eng-district" data-id="volga" />
-                        <!-- Уральский -->
-                        <path class="eng-district" data-id="ural" />
-                        <!-- Сибирский -->
-                        <path class="eng-district" data-id="siberia" />
-                        <!-- Дальневосточный -->
-                        <path class="eng-district" data-id="fareast" />
-                    </svg>
-                </div>
-
-                <aside class="map-sidebar">
-                    <button class="eng-btn map-reset" id="mapReset">Сбросить выбор</button>
-                    <div class="map-panel" id="districtInfo"></div>
-                </aside>
-            </div>
-
-            <!-- Льготы и олимпиады (статичная информация) -->
+</div>
+</details>
+<details class="learning-accordion" id="education-benefits">
+<summary><span><strong>Поступление, льготы и олимпиады</strong><small>16 справочных тем: бюджет, квоты, целевое обучение, олимпиады и другие возможности</small></span><span class="learning-chevron" aria-hidden="true">⌄</span></summary>
+<div class="learning-accordion-body">            <!-- Льготы и олимпиады (статичная информация) -->
             <section class="benefits-section">
                 <hr class="eng-divider">
 
@@ -224,7 +280,11 @@
                 <p class="benefits-note">Примечание: перечни олимпиад, размеры льгот, квот и стипендий ежегодно пересматриваются. Актуальные условия на текущий год уточняйте на официальном сайте конкретного вуза или в приёмной комиссии.</p>
             </section>
 
-            <!-- Курсы и онлайн-обучение -->
+</div>
+</details>
+<details class="learning-accordion" id="education-courses">
+<summary><span><strong>Инженерные онлайн-курсы</strong><small>10 учебных платформ, включая российские ресурсы</small></span><span class="learning-chevron" aria-hidden="true">⌄</span></summary>
+<div class="learning-accordion-body">            <!-- Курсы и онлайн-обучение -->
             <section class="benefits-section">
                 <hr class="eng-divider">
 
@@ -294,6 +354,8 @@
                 </div>
                 <p class="benefits-note">Примечание: наличие бесплатного доступа, сертификатов и состав курсов меняется. Актуальные условия уточняйте на сайтах платформ.</p>
             </section>
+</div>
+</details>
         </main>
     </div>
 
