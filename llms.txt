@@ -17,6 +17,15 @@
 - [Календарь](https://vremennobeznika.github.io/enjigirling/calendar.html)
 - [Ресурсы](https://vremennobeznika.github.io/enjigirling/resources.html)
 
+## Машиночитаемые JSON-данные
+- [Общий поисковый индекс — 626 записей](https://vremennobeznika.github.io/enjigirling/knowledge/search-index.json)
+- [Профессии — JSON](https://vremennobeznika.github.io/enjigirling/knowledge/professions.json)
+- [Материалы — JSON](https://vremennobeznika.github.io/enjigirling/knowledge/materials.json)
+- [Процессы — JSON](https://vremennobeznika.github.io/enjigirling/knowledge/processes.json)
+- [Словарь — JSON](https://vremennobeznika.github.io/enjigirling/knowledge/dictionary.json)
+
+JSON — редакционные снимки данных. После изменения исходных .js необходима повторная генерация экспорта.
+
 ## Исходные наборы данных
 Данные пока публикуются в JavaScript, НЕ в чистом JSON. Не интерпретируйте .js как JSON.
 - [Профессии — data.js](https://vremennobeznika.github.io/enjigirling/data.js): window.professionsData.
