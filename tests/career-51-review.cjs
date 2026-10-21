@@ -16,13 +16,13 @@ assert.equal(new Set(cards.map(x=>x.id)).size,51);
 assert.equal(sourceMap.size,51);
 let sequential=0;
 const revisedAudit=fs.readFileSync('audit/career-51-source-by-source-2026-10-21.md','utf8');
-assert.equal((revisedAudit.match(/^### \\d+\\. /gm)||[]).length,51,'all 51 must have separate substantive review');
+assert.equal((revisedAudit.match(/^### \d+\. /gm)||[]).length,51,'all 51 must have separate substantive review');
 const sourceCounts={confirmed:0,hidden:0};
 for(const x of sources){
  assert.equal(x.checkedAt,'2026-10-21',x.id+' not re-reviewed on 21 October');
  assert.ok(['observed_21_10_2026','not_reproducible_21_10_2026'].includes(x.reviewStatus),x.id+' evidence classification missing');
  if(x.status==='source_snapshot'){sourceCounts.confirmed++;assert.equal(x.reviewStatus,'observed_21_10_2026',x.id+' source not re-opened');}
- else {sourceCounts.hidden++;assert.equal(x.reviewStatus,'not_reproducible_21_10_2026');assert.ok(!/Ранее в реестре стояло [\\d–]+ ₽/.test(x.notes),x.id+' suppressed salary leaked in modal note');}
+ else {sourceCounts.hidden++;assert.equal(x.reviewStatus,'not_reproducible_21_10_2026');assert.ok(!/Ранее в реестре стояло [\d–]+ ₽/.test(x.notes),x.id+' suppressed salary leaked in modal note');}
 }
 assert.equal(sourceCounts.confirmed,23,'reviewed displayable evidence count changed');
 assert.equal(sourceCounts.hidden,28,'withdrawn unsupported salary count changed');
