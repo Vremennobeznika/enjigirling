@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
       value:[p.name,p.year,p.basis,p.duration,
         Number.isFinite(p.budgetPlaces)?'Бюджетных мест: '+p.budgetPlaces:null,
         Number.isFinite(p.paidPlaces)?'Платных мест: '+p.paidPlaces:null,
+        Number.isFinite(p.tuitionAnnualRub)?'Стоимость платного обучения: '+new Intl.NumberFormat('ru-RU').format(p.tuitionAnnualRub)+' ₽ в год':null,
         p.note].filter(Boolean).join(' · '),
       source:validLink(p.sourceUrl)
     }));
@@ -54,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ['Статус',hasSource?item.verifiedScope:'Правила набора по этой организации индивидуально не проверены.'],
       ...(item.sourceFetchStatus?[['Доступность страницы источника',item.sourceFetchStatus==='fetched'?'22.10.2026: документ или сайт открылся. Содержательная точность остальных сведений не следует из этого факта.':'22.10.2026: проверить ссылку не удалось (тайм-аут или ошибка доступа). Это не доказательство закрытия организации.']]:[]),
       ...(item.siteFetchStatus?[['Доступность сайта из исходного каталога',item.siteFetchStatus==='fetched'?'22.10.2026: сайт открылся. Это не подтверждает программы и набор.':'22.10.2026: отдельная попытка открыть сайт не удалась. Адрес мог быть недоступен только для проверяющего клиента.']]:[]),
-      ...(item.verifiedProgram?[['Проверенная стоимость одной программы',item.verifiedProgram]]:[]),
+
       ...programDetails.map(p=>[p.label,p.value])
     ].map(([label,value])=>'<div class="education-fact"><dt>'+escapeHtml(label)+'</dt><dd>'+escapeHtml(value)+'</dd></div>').join('');
     return '<article class="education-card">'+
