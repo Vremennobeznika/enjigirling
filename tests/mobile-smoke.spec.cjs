@@ -25,3 +25,16 @@ for(const path of pages){
   });
 }
 }
+
+for(const path of pages){
+ test('no-JavaScript navigation remains accessible on 320px: '+path,async({browser})=>{
+  const context=await browser.newContext({viewport:{width:320,height:812},javaScriptEnabled:false});
+  const page=await context.newPage();
+  try{
+   await page.goto('/'+path);
+   await expect(page.locator('.site-nav-wrap > nav.eng-tabs a')).toHaveCount(9);
+   await expect(page.locator('.site-nav-wrap > nav.eng-tabs a').first()).toBeVisible();
+   await expect(page.locator('.site-nav-toggle')).toBeHidden();
+  }finally{await context.close();}
+ });
+}
