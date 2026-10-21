@@ -19,3 +19,23 @@ jobs:
         run: node tests/site-check.cjs
       - name: Validate knowledge exports and cross-links
         run: node scripts/build-knowledge.cjs --check
+  browser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser test tooling
+        run: npm install --no-audit --no-fund
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Test site at desktop and mobile widths
+        run: npx playwright test
+      - name: Save failure screenshots and traces
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-test-results
+          path: test-results/
+          if-no-files-found: ignore
