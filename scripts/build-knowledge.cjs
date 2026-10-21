@@ -70,6 +70,40 @@ for (const [type,file,,page] of sources) {
 writes.set('knowledge/search-index.json',serialize({
  schemaVersion:'1.0',language:'ru',generatedFrom:'repository editorial datasets',recordCount:index.length,records:index
 }));
+
+function cleanAiText(value){
+ return String(value??'').replace(/[\r\n\t]+/g,' ').replace(/\s+/g,' ').replace(/\|/g,'/').trim();
+}
+function aiContext(entries){
+ const lines=[
+  '# ENJIGIRLING — инженерный справочник для ИИ','',
+  'Язык: русский. Тип: редакционный инженерный каталог, НЕ проверенная нормативная база.',
+  'Дата файла не является датой проверки технических утверждений.',
+  'Используйте первичные стандарты, технические паспорта и применимые редакции при ответах на инженерные вопросы.','',
+  '## Машиночитаемые наборы','',
+  '- Манифест: knowledge-manifest.json',
+  '- Индекс: knowledge/search-index.json',
+  '- Профессии: knowledge/professions.json',
+  '- Материалы: knowledge/materials.json',
+  '- Процессы: knowledge/processes.json',
+  '- Словарь: knowledge/dictionary.json',
+  '- Граф связей: knowledge/graph.json',
+  '- Реестр доказательств: knowledge/source-registry.json',
+  '- Данные о зарплатах и статусах: knowledge/salary-evidence.json','',
+  '## Краткий каталог (626 записей)',''
+ ];
+ const labels={profession:'Профессии',material:'Материалы',process:'Процессы',term:'Термины'};
+ for(const type of ['profession','material','process','term']){
+  lines.push('### '+labels[type]);
+  for(const x of entries.filter(e=>e.type===type)){
+   const description=cleanAiText(x.description);
+   lines.push('- **'+cleanAiText(x.title)+'** — '+description.slice(0,200)+(description.length>200?'…':'')+'. Подробнее: '+x.url);
+  }
+  lines.push('');
+ }
+ return lines.join('\n')+'\n';
+}
+writes.set('knowledge/ai-context.md',aiContext(index));
 writes.set('knowledge/graph.json',serialize({schemaVersion:'1.0',language:'ru',status:'editorial_relationships',nodeCount:datasets.professions.length+datasets.materials.length+datasets.processes.length,edgeCount:graph.length,edges:graph}));
 // Preserve existing salary-source evidence separately from editorial profession descriptions.
 // A source snapshot is not a general endorsement of a salary estimate.
