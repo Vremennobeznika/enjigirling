@@ -80,7 +80,7 @@ check('graph counts and endpoint references', () => {
  const g=json('knowledge/graph.json');
  const valid=new Set();
  for(const type of ['materials','processes','professions'])
-  for(const r of data[type]) valid.add(type.slice(0,-1)+':'+r.id);
+  for(const r of data[type]) valid.add(({materials:'material',processes:'process',professions:'profession'})[type]+':'+r.id);
  assert.equal(g.nodeCount,valid.size);
  assert.equal(g.edgeCount,g.edges.length);
  for(const edge of g.edges){
