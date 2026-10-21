@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   for(const district of districts){
     for(const [key,type] of [['universities','uni'],['colleges','college']]){
       for(const item of district[key]||[]){
-        entries.push({item,district,type,search:normalize([item.name,item.city,item.focus,item.profile,item.duration,item.admission,item.afterCollege,district.name,district.short].join(' '))});
+        entries.push({item,district,type,search:normalize([item.name,item.city,item.focus,item.profile,...(item.verifiedPrograms||[]).flatMap(p=>[p.code,p.name,p.year]),district.name,district.short].join(' '))});
       }
     }
     const option=document.createElement('option');
@@ -38,21 +38,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const {item,district,type}=record;
     const source=validLink(item.sourceUrl),site=validLink(item.site);
     const hasSource=item.sourceStatus==='official_source_located'&&source;
+    const programs=Array.isArray(item.verifiedPrograms)?item.verifiedPrograms:[];
+    const programDetails=programs.map(p=>({
+      label:'Подтверждённая программа '+p.code,
+      value:[p.name,p.year,p.basis,p.duration,
+        Number.isFinite(p.budgetPlaces)?'Бюджетных мест: '+p.budgetPlaces:null,
+        Number.isFinite(p.paidPlaces)?'Платных мест: '+p.paidPlaces:null,
+        p.note].filter(Boolean).join(' · '),
+      source:validLink(p.sourceUrl)
+    }));
+
     const facts=[
       ['Направление','Редакционный ориентир: наличие конкретной программы и набора не подтверждено.'],
       ['Сроки, стоимость, бюджет и экзамены','Зависят от программы и года приёма. Без проверенного документа не приводятся.'],
       ['Статус',hasSource?item.verifiedScope:'Правила набора по этой организации индивидуально не проверены.'],
       ...(item.siteFetchStatus?[['Проверка адреса сайта',item.siteFetchStatus==='fetched'?'22.10.2026: сайт открылся при автоматическом сетевом запросе. Это не проверка программ и условий приёма.':'22.10.2026: проверяющий клиент не смог загрузить сайт. Это не доказательство неисправности или закрытия сайта.']]:[]),
-      ...(item.verifiedProgram?[['Проверенная стоимость одной программы',item.verifiedProgram]]:[])
+      ...(item.verifiedProgram?[['Проверенная стоимость одной программы',item.verifiedProgram]]:[]),
+      ...programDetails.map(p=>[p.label,p.value])
     ].map(([label,value])=>'<div class="education-fact"><dt>'+escapeHtml(label)+'</dt><dd>'+escapeHtml(value)+'</dd></div>').join('');
     return '<article class="education-card">'+
       '<div class="education-card-meta"><span class="education-kind">'+(type==='uni'?'Вуз':'Колледж / техникум')+'</span><span class="education-location">'+escapeHtml(item.city)+' · '+escapeHtml(district.short)+'</span></div>'+
       '<h3>'+escapeHtml(item.name)+'</h3>'+
       '<p class="education-focus"><strong>Направления (ориентир):</strong> '+escapeHtml(item.focus||item.profile||'Не указаны')+'</p>'+
       '<p class="education-card-status">'+(hasSource?(item.sourceType==='institution_home'?'Название сверено с сайтом':'Есть документ-источник'):'Условия приёма не проверены')+'</p>'+
-      '<details class="education-card-details"><summary>Источники и ограничения</summary><dl>'+facts+'</dl>'+
+      '<details class="education-card-details"><summary>Источники, программы и ограничения</summary><dl>'+facts+'</dl>'+
+      programDetails.filter(p=>p.source).map(p=>'<a class="education-site" href="'+escapeHtml(p.source)+'" rel="noopener noreferrer" target="_blank">Программа '+escapeHtml(p.label.replace('Подтверждённая программа ',''))+' — документ ↗</a>').join('')+
       (hasSource?'<a class="education-site" href="'+escapeHtml(source)+'" rel="noopener noreferrer" target="_blank">'+(item.sourceType==='institution_home'?'Официальный сайт (название) ↗':'Первоисточник ↗')+'</a>':'')+
-      (site&&site!==source?'<a class="education-site" href="'+escapeHtml(site)+'" rel="noopener noreferrer" target="_blank">Сайт из каталога ↗</a>':'<p class="education-no-link">Официальный адрес сайта не подтверждён</p>')+
+      (site&&site!==source?'<a class="education-site" href="'+escapeHtml(site)+'" rel="noopener noreferrer" target="_blank">Сайт из каталога ↗</a>':(!site&&!source?'<p class="education-no-link">Адрес сайта не подтверждён</p>':''))+
       '</details></article>';
   }
   function sortedMatches(){
