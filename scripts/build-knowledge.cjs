@@ -34,6 +34,14 @@ for(const process of datasets.processes) {
   assert.ok(professionIds.has(process.profession),'unknown profession '+process.profession);
 }
 const writes = new Map();
+const graph = [];
+const addEdge = (from,to,relation) => graph.push({from,to,relation});
+for (const m of datasets.materials) for (const id of m.process || []) addEdge('material:'+m.id,'process:'+id,'processed_by');
+for (const p of datasets.processes) {
+  for (const id of p.materials || []) addEdge('process:'+p.id,'material:'+id,'uses_material');
+  addEdge('process:'+p.id,'profession:'+p.profession,'associated_profession');
+}
+
 function serialize(value){return JSON.stringify(value,null,2)+'\n';}
 const index=[];
 for (const [type,file,,page] of sources) {
@@ -62,6 +70,7 @@ for (const [type,file,,page] of sources) {
 writes.set('knowledge/search-index.json',serialize({
  schemaVersion:'1.0',language:'ru',generatedFrom:'repository editorial datasets',recordCount:index.length,records:index
 }));
+writes.set('knowledge/graph.json',serialize({schemaVersion:'1.0',language:'ru',status:'editorial_relationships',nodeCount:datasets.professions.length+datasets.materials.length+datasets.processes.length,edgeCount:graph.length,edges:graph}));
 let stale=false;
 for (const [name,content] of writes){
  const target=path.join(root,name);
