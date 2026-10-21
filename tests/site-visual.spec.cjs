@@ -72,3 +72,24 @@ for(const mode of ['light','dark']){
   }
  });
 }
+
+
+for(const theme of ['light','dark']){
+ test('all nine sections keep visible links monochrome in '+theme+' theme',async({page})=>{
+  await page.addInitScript(value=>localStorage.setItem('theme',value),theme);
+  for(const name of pages){
+   await page.goto('/'+name);
+   const colors=await page.locator('a:visible').evaluateAll(nodes=>nodes.map(a=>({
+    label:(a.textContent||a.getAttribute('aria-label')||'').trim().slice(0,50),
+    color:getComputedStyle(a).color
+   })));
+   for(const item of colors){
+    const rgb=item.color.match(/^rgba?\\((\\d+),\\s*(\\d+),\\s*(\\d+)/);
+    if(!rgb)continue;
+    const channels=rgb.slice(1,4).map(Number);
+    const spread=Math.max(...channels)-Math.min(...channels);
+    expect(spread,name+' link "'+item.label+'" uses non-neutral color '+item.color).toBeLessThanOrEqual(20);
+   }
+  }
+ });
+}
