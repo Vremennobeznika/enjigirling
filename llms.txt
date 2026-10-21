@@ -70,3 +70,15 @@ JSON — редакционные снимки данных. Workflow публи
 6. Наличие файла llms.txt не гарантирует, что модель сможет его прочесть: требуется доступ инструмента к URL или загрузка данных в контекст.
 
 - [Статус качества записей](https://vremennobeznika.github.io/enjigirling/knowledge/quality.json) — количество ссылок на источники и заявленных содержательных проверок, не свидетельство фактической точности.
+
+## Markdown-файлы по разделам для ИИ
+- [Выбрать раздел](https://vremennobeznika.github.io/enjigirling/ai-training.html)
+- https://vremennobeznika.github.io/enjigirling/knowledge/sections/professions.md
+- https://vremennobeznika.github.io/enjigirling/knowledge/sections/compare.md
+- https://vremennobeznika.github.io/enjigirling/knowledge/sections/training.md
+- https://vremennobeznika.github.io/enjigirling/knowledge/sections/processes.md
+- https://vremennobeznika.github.io/enjigirling/knowledge/sections/materials.md
+- https://vremennobeznika.github.io/enjigirling/knowledge/sections/calculator.md
+- https://vremennobeznika.github.io/enjigirling/knowledge/sections/dictionary.md
+- https://vremennobeznika.github.io/enjigirling/knowledge/sections/calendar.md
+- https://vremennobeznika.github.io/enjigirling/knowledge/sections/resources.md
