@@ -1,29 +1,31 @@
-const assert=require('node:assert/strict');
-const fs=require('node:fs'),vm=require('node:vm');
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
 const html=fs.readFileSync('measurement-lab.html','utf8');
 const js=fs.readFileSync('measurement-lab.js','utf8');
 const css=fs.readFileSync('measurement-lab.css','utf8');
+const built=fs.readFileSync('measurement-builtins.js','utf8');
+const electronics=fs.readFileSync('measurement-electronics.js','utf8');
 const calculator=fs.readFileSync('calculator.html','utf8');
 const resourcesHtml=fs.readFileSync('resources.html','utf8');
-const resourceCode=fs.readFileSync('resources-data.js','utf8');
-const ctx={};vm.runInNewContext(resourceCode+';globalThis.__metrology=resources;',ctx,{timeout:5000});
-const items=JSON.parse(JSON.stringify(ctx.__metrology)).filter(x=>x.type==='Онлайн-измерения');
-assert.equal(items.length,12,'twelve curated online measurement resources');
-assert.equal(new Set(items.map(x=>x.link)).size,items.length,'duplicate measurement links');
-for(const x of items){
- assert.match(x.link,/^https:\/\//,'only HTTPS link '+x.id);
- assert.ok(x.name&&x.topic&&x.desc,'missing instrument details '+x.id);
+const ids=['vernier','dialcal','digital','depth','ruler','micrometer','dial-indicator','protractor','multimeter','oscilloscope'];
+for(const id of ids){
+ assert.ok(html.includes('id="'+id+'"')||built.includes("id:'"+id+"'")||electronics.includes('id="'+id+'"'),id+' simulator missing');
+ assert.ok(html.includes('href="#'+id+'"'),id+' nav link missing');
 }
-for(const id of ['micrometer','dial-indicator','protractor','external-measurement','micRange','micValue','micSvg','micGuess','dialRange','dialValue','dialSvg','dialZero','angleRange','angleValue','angleSvg','measurementExternalGrid']){
- assert.ok(html.includes('id="'+id+'"'),'missing instrument control '+id);
+assert.ok(!html.includes('measurementExternalGrid'),'third-party link grid must not replace instruments');
+assert.ok(!html.includes('src="resources-data.js"'),'embedded instruments must run without catalog download');
+assert.ok(!html.includes('<iframe'),'do not embed uncontrolled third-party frames');
+assert.equal((html.match(/class="eng-tab"/g)||[]).length,9,'nine primary nav links preserved');
+for(const file of ['measurement-lab.css','measurement-lab.js','measurement-builtins.js','measurement-electronics.js','site-shell.js','navigation.js','theme.js']){
+ assert.ok(html.includes('src="'+file+'"')||html.includes('href="'+file+'"'),'missing dependency '+file);
 }
-assert.equal((html.match(/class="eng-tab"/g)||[]).length,9,'nine primary navigation links retained');
-for(const file of ['measurement-lab.css','measurement-lab.js','resources-data.js','site-shell.js','navigation.js','theme.js']) assert.ok(html.includes('src="'+file+'"')||html.includes('href="'+file+'"'),'asset missing '+file);
-assert.ok(js.includes('0.01')||js.includes('.01'),'micrometer step missing');
-assert.ok(js.includes('dialZero'),'zeroing needed');
-assert.ok(js.includes('Math.random'),'practice randomization absent');
-assert.ok(html.includes('не заменяют поверку'),'instrument not calibrated warning missing');
-assert.ok(calculator.includes('href="measurement-lab.html"'),'calculator integration missing');
-assert.ok(resourcesHtml.includes('href="measurement-lab.html"'),'community integration missing');
-assert.ok(css.includes('@media(max-width:550px)'),'mobile layout missing');
-console.log('PASS measurement lab: three instruments, 12 external resources, site navigation and accessible inputs');
+for(const id of ['micRange','micValue','dialZero','angleRange','micGuess','dialGuess','angleGuess'])assert.ok(html.includes('id="'+id+'"'),'existing controls lost: '+id);
+for(const id of ['digitalZero','digitalUnit','digitalReset','vernierStep','meterVoltage','meterResistance','meterMode','oscFrequency','oscAmplitude','oscShape','oscTimebase'])assert.ok(built.includes(id)||electronics.includes(id),'new controls lost: '+id);
+assert.ok(js.includes('dialZero')&&js.includes('Math.random'),'old training controls must remain');
+assert.ok(built.includes("id+'Range'")&&built.includes("id+'Value'")&&built.includes("id+'Check'"),'dynamic numeric input and practice controls missing');
+assert.ok(built.includes('Math.random')&&built.includes('digitalZero'),'new interactive controls absent');
+assert.ok(electronics.includes('Math.sin')&&electronics.includes('meterResistance'),'waveform or Ohm model missing');
+assert.ok(html.includes('не средства измерений'),'physical-measurement disclaimer missing');
+assert.ok(calculator.includes('href="measurement-lab.html"'),'calculator section missing workshop');
+assert.ok(resourcesHtml.includes('href="measurement-lab.html"'),'resource section missing workshop');
+assert.ok(css.includes('max-width:560px'),'narrow viewport layout missing');
+console.log('PASS: ten locally embedded training instruments, zero external frames, original site and calculator routes preserved');

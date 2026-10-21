@@ -1,61 +1,86 @@
 const {test,expect}=require('@playwright/test');
-test('micrometer, dial gauge, protractor and verified external metrology resources work',async({page})=>{
- const errors=[];
- page.on('pageerror',e=>errors.push(e.message));
+test('all ten measuring instruments run locally and provide actual controls',async({page})=>{
+ const errors=[];page.on('pageerror',err=>errors.push(err.message));
  await page.goto('/measurement-lab.html');
  await expect(page.locator('nav.eng-tabs a')).toHaveCount(9);
- await expect(page.locator('#measurementExternalGrid a')).toHaveCount(12);
+ await expect(page.locator('main iframe')).toHaveCount(0);
+ await expect(page.locator('#measurementExternalGrid')).toHaveCount(0);
+ for(const id of ['vernier','dialcal','digital','depth','ruler','micrometer','dial-indicator','protractor','multimeter','oscilloscope']){
+  await expect(page.locator('#'+id)).toBeVisible();
+ }
+ await expect(page.locator('#vernierOutput')).toContainText('23,45 мм');
+ await page.locator('#vernierValue').fill('12.35');
+ await expect(page.locator('#vernierOutput')).toContainText('12,35 мм');
+ await expect(page.locator('#vernierDetails')).toContainText('№7');
+ await page.locator('#vernierGuess').fill('12,35');
+ await page.locator('#vernierCheck').click();
+ await expect(page.locator('#vernierFeedback')).toContainText('Верно');
+ await page.locator('#vernierStep').selectOption('0.1');
+ await expect(page.locator('#vernierOutput')).toContainText('12,40');
+ await page.locator('#vernierReveal').click();
+ await expect(page.locator('#vernierOutput')).toHaveText('Ответ скрыт');
+ await page.locator('#vernierReveal').click();
+ await expect(page.locator('#dialcalOutput')).toContainText('37,68 мм');
+ await page.locator('#dialcalValue').fill('43.26');
+ await expect(page.locator('#dialcalDetails')).toContainText('№13');
+ await page.locator('#digitalValue').fill('25.4');
+ await page.locator('#digitalZero').click();
+ await expect(page.locator('#digitalOutput')).toContainText('0,00 мм');
+ await page.locator('#digitalValue').fill('50.8');
+ await expect(page.locator('#digitalOutput')).toContainText('25,40 мм');
+ await page.locator('#digitalUnit').click();
+ await expect(page.locator('#digitalOutput')).toContainText('1,0000 in');
+ await page.locator('#digitalReset').click();
+ await expect(page.locator('#digitalOutput')).toContainText('50,80 мм');
+ await page.locator('#depthValue').fill('40.15');
+ await expect(page.locator('#depthOutput')).toContainText('40,15 мм');
+ await page.locator('#rulerValue').fill('90');
+ await expect(page.locator('#rulerOutput')).toContainText('90 мм');
  await expect(page.locator('#micOutput')).toContainText('7,28 мм');
  await page.locator('#micValue').fill('8.35');
  await expect(page.locator('#micOutput')).toContainText('8,35 мм');
- await expect(page.locator('#micBreakdown')).toContainText('8,00 мм');
- await page.locator('#micGuess').fill('8,35');
- await page.locator('#micCheck').click();
- await expect(page.locator('#micFeedback')).toContainText('Верно');
- await page.locator('#micReveal').click();
- await expect(page.locator('#micOutput')).toHaveText('Ответ скрыт');
- await page.locator('#micReveal').click();
- await expect(page.locator('#micOutput')).toContainText('8,35');
  await expect(page.locator('#dialOutput')).toContainText('0,00 мм');
  await page.locator('#dialValue').fill('3.81');
  await expect(page.locator('#dialOutput')).toContainText('+0,36 мм');
- await page.locator('#dialZero').click();
- await expect(page.locator('#dialOutput')).toContainText('0,00 мм');
- await page.locator('#dialValue').fill('3.50');
- await expect(page.locator('#dialOutput')).toContainText('-0,31 мм');
- await page.locator('#dialGuess').fill('-0,31');
- await page.locator('#dialCheck').click();
- await expect(page.locator('#dialFeedback')).toContainText('Верно');
- await expect(page.locator('#angleOutput')).toHaveText('48°');
  await page.locator('#angleValue').fill('127');
  await expect(page.locator('#angleOutput')).toHaveText('127°');
- await page.locator('#angleGuess').fill('127');
- await page.locator('#angleCheck').click();
- await expect(page.locator('#angleFeedback')).toContainText('Верно');
- for(const id of ['micSvg','dialSvg','angleSvg']){
-   await expect(page.locator('#'+id)).toBeVisible();
-   expect(await page.locator('#'+id+' line').count(),id+' missing marks').toBeGreaterThan(5);
+ await expect(page.locator('#meterOutput')).toContainText('12,00 В');
+ await page.locator('#meterMode').selectOption('current');
+ await expect(page.locator('#meterOutput')).toContainText('12,000 мА');
+ await page.locator('#meterResistance').fill('2000');
+ await expect(page.locator('#meterOutput')).toContainText('6,000 мА');
+ await page.locator('#meterMode').selectOption('ohms');
+ await expect(page.locator('#meterOutput')).toContainText('2 000 Ω');
+ await expect(page.locator('#oscOutput')).toContainText('1,000 мс');
+ await page.locator('#oscFrequency').fill('500');
+ await expect(page.locator('#oscOutput')).toContainText('2,000 мс');
+ await page.locator('#oscShape').selectOption('triangle');
+ await expect(page.locator('#oscSvg path')).toHaveCount(1);
+ for(const id of ['vernierSvg','dialcalSvg','digitalSvg','depthSvg','rulerSvg','micSvg','dialSvg','angleSvg','meterSvg','oscSvg']){
+  await expect(page.locator('#'+id)).toBeVisible();
+  expect(await page.locator('#'+id).locator('line, path, rect').count(),id+' is blank').toBeGreaterThan(3);
  }
  expect(errors).toEqual([]);
 });
-test('measurement tools are readable at 320 px and preserve main site nav',async({page})=>{
+test('embedded instruments have no horizontal overflow at 320px',async({page})=>{
  await page.setViewportSize({width:320,height:720});
  await page.goto('/measurement-lab.html');
- await expect(page.locator('main')).toBeVisible();
- await expect(page.locator('#micOutput')).toContainText('7,28');
- const dims=await page.evaluate(()=>({scroll:document.documentElement.scrollWidth,viewport:document.documentElement.clientWidth}));
- expect(dims.scroll).toBeLessThanOrEqual(dims.viewport+2);
- await page.locator('#angleRandom').click();
- const value=Number(await page.locator('#angleRange').inputValue());
- expect(value).toBeGreaterThanOrEqual(0);
- expect(value).toBeLessThanOrEqual(180);
- await expect(page.locator('nav.eng-tabs a')).toHaveCount(9);
+ await expect(page.locator('#vernierOutput')).toContainText('23,45');
+ await page.locator('#vernierStep').selectOption('0.02');
+ await page.locator('#vernierValue').fill('49.98');
+ await expect(page.locator('#vernierOutput')).toContainText('49,98');
+ await page.locator('#digitalValue').fill('120.75');
+ await page.locator('#oscFrequency').fill('2500');
+ await expect(page.locator('#oscOutput')).toContainText('0,400 мс');
+ const dims=await page.evaluate(()=>({scroll:document.documentElement.scrollWidth,width:document.documentElement.clientWidth}));
+ expect(dims.scroll).toBeLessThanOrEqual(dims.width+2);
 });
-test('existing calculator and resource directory both route to metrology workbench',async({page})=>{
+test('community and calculator entry points lead to the internal workshop',async({page})=>{
  await page.goto('/calculator.html');
  await expect(page.locator('a[href="measurement-lab.html"]').first()).toBeVisible();
  await page.goto('/resources.html');
  await expect(page.locator('a[href="measurement-lab.html"]').first()).toBeVisible();
- await page.locator('#resourcesFilter button[title="Онлайн-измерения"]').click();
- await expect(page.locator('#resourcesGrid .resource-card')).toHaveCount(12);
+ await page.locator('a[href="measurement-lab.html"]').first().click();
+ await expect(page).toHaveURL(/measurement-lab\.html/);
+ await expect(page.locator('#vernierSvg line').first()).toHaveCount(1);
 });

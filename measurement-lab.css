@@ -54,3 +54,23 @@
 .measurement-limit{margin-top:18px!important;padding:12px 0;border-top:1px solid var(--card-border);color:var(--card-muted);font-size:13px}
 .measurement-lab :is(a,button,input):focus-visible{outline:3px solid var(--text-primary);outline-offset:3px}
 @media(max-width:550px){.instrument-fields{grid-template-columns:minmax(0,1fr);gap:8px}.instrument-card{padding:15px}.instrument-practice>div button{flex:1 1 100%}.measurement-external-card a{align-self:stretch}.measurement-quicklinks a{flex:1 1 auto;justify-content:center}}
+
+/* Built-in metrology instruments: first-party controls, no third-party frame. */
+.measurement-embedded{min-width:0;max-width:100%}
+.measurement-embedded .instrument-card{scroll-margin-top:18px}
+.measurement-embedded .instrument-card:first-child{margin-top:24px}
+.built-in-option{margin:14px 0}
+.built-in-option label{font:700 13px/1.4 var(--font);display:block;margin-bottom:7px}
+.built-in-option select,
+.instrument-fields select{width:100%;max-width:100%;min-height:46px;padding:9px 12px;border:1px solid var(--control-border);border-radius:10px;background:var(--card-bg);color:var(--card-text);font:400 15px var(--font)}
+.embedded-meter .instrument-svg-wrap{overflow:hidden}
+.embedded-meter .instrument-svg-wrap svg{max-height:330px;height:auto}
+.embedded-meter .instrument-reading{overflow-wrap:anywhere}
+.embedded-meter .instrument-fields{grid-template-columns:repeat(2,minmax(0,1fr))}
+.instrument-scope svg{max-width:800px}
+.measurement-quicklinks{gap:7px;justify-content:flex-start}
+.measurement-quicklinks a{min-width:0}
+@media(max-width:560px){
+ .embedded-meter .instrument-fields{grid-template-columns:minmax(0,1fr)}
+ .measurement-quicklinks a{flex:1 1 auto;min-height:44px;padding:10px 11px}
+}
