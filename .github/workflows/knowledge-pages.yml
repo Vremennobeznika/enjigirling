@@ -18,6 +18,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Reject stale committed knowledge snapshots
+        run: node scripts/build-knowledge.cjs --check
       - name: Build machine-readable datasets
         run: node scripts/build-knowledge.cjs
       - name: Run complete static QA matrix
