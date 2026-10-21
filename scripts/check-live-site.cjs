@@ -5,10 +5,10 @@ const fs=require('node:fs');
 const crypto=require('node:crypto');
 const path=require('node:path');
 const root=path.resolve(__dirname,'..');
-const compareExact=['knowledge-base.md','knowledge/professions.json','knowledge/materials.json','knowledge/processes.json','knowledge/dictionary.json','knowledge/salary-evidence.json','index.html','calendar.html','resources.html','dictionary.html','map.html','calculator.html','calculator-atlas.html','calculator-atlas-data.js','calculator-atlas.js','calculator-atlas.css','calculator-atlas.csv','compare.html','processes.html','materials.html','knowledge-manifest.json','knowledge/search-index.json','knowledge/graph.json','knowledge/source-registry.json','knowledge/ai-context.md','knowledge/quality.json','llms.txt'];
+const compareExact=['ai.html','ai-transfer.css','ai-transfer.js','knowledge/sections/index.json','knowledge/sections/all.md','knowledge/sections/professions.md','knowledge/sections/professions.json','knowledge/sections/calendar.md','knowledge/sections/calendar.json','knowledge/sections/resources.md','knowledge/sections/resources.json','knowledge/sections/dictionary.md','knowledge/sections/dictionary.json','knowledge/sections/learning.md','knowledge/sections/learning.json','knowledge/sections/calculators.md','knowledge/sections/calculators.json','knowledge/sections/compare.md','knowledge/sections/compare.json','knowledge/sections/processes.md','knowledge/sections/processes.json','knowledge/sections/materials.md','knowledge/sections/materials.json','knowledge-base.md','knowledge/professions.json','knowledge/materials.json','knowledge/processes.json','knowledge/dictionary.json','knowledge/salary-evidence.json','index.html','calendar.html','resources.html','dictionary.html','map.html','calculator.html','calculator-atlas.html','calculator-atlas-data.js','calculator-atlas.js','calculator-atlas.css','calculator-atlas.csv','compare.html','processes.html','materials.html','knowledge-manifest.json','knowledge/search-index.json','knowledge/graph.json','knowledge/source-registry.json','knowledge/ai-context.md','knowledge/quality.json','llms.txt'];
 const digest=value=>crypto.createHash('sha256').update(value,'utf8').digest('hex');
 const base=(process.env.SITE_URL||'https://vremennobeznika.github.io/enjigirling/').replace(/\/+$/,'')+'/';
-const paths=['knowledge-base.md','knowledge/professions.json','knowledge/materials.json','knowledge/processes.json','knowledge/dictionary.json','knowledge/salary-evidence.json','index.html','calendar.html','resources.html','dictionary.html','map.html','calculator.html','calculator-atlas.html','calculator-atlas-data.js','calculator-atlas.js','calculator-atlas.css','calculator-atlas.csv','compare.html','processes.html','materials.html','llms.txt','knowledge-manifest.json','knowledge/search-index.json','knowledge/graph.json','knowledge/source-registry.json','knowledge/ai-context.md','knowledge/quality.json'];
+const paths=['ai.html','ai-transfer.css','ai-transfer.js','knowledge/sections/index.json','knowledge/sections/all.md','knowledge/sections/professions.md','knowledge/sections/professions.json','knowledge/sections/calendar.md','knowledge/sections/calendar.json','knowledge/sections/resources.md','knowledge/sections/resources.json','knowledge/sections/dictionary.md','knowledge/sections/dictionary.json','knowledge/sections/learning.md','knowledge/sections/learning.json','knowledge/sections/calculators.md','knowledge/sections/calculators.json','knowledge/sections/compare.md','knowledge/sections/compare.json','knowledge/sections/processes.md','knowledge/sections/processes.json','knowledge/sections/materials.md','knowledge/sections/materials.json','knowledge-base.md','knowledge/professions.json','knowledge/materials.json','knowledge/processes.json','knowledge/dictionary.json','knowledge/salary-evidence.json','index.html','calendar.html','resources.html','dictionary.html','map.html','calculator.html','calculator-atlas.html','calculator-atlas-data.js','calculator-atlas.js','calculator-atlas.css','calculator-atlas.csv','compare.html','processes.html','materials.html','llms.txt','knowledge-manifest.json','knowledge/search-index.json','knowledge/graph.json','knowledge/source-registry.json','knowledge/ai-context.md','knowledge/quality.json'];
 async function get(path){
  const url=new URL(path,base);
  const response=await fetch(url,{signal:AbortSignal.timeout(20000),redirect:'follow',headers:{'accept':'text/html,application/json,text/plain;q=0.9'}});
@@ -51,6 +51,16 @@ async function run(){
   const canonical=base+(name==='index.html'?'':name);
   assert.ok(files[name].includes('rel="canonical" href="'+canonical+'"'),name+' canonical URL missing or mismatched');
  }
+ const packIndex=JSON.parse(files['knowledge/sections/index.json']);
+ assert.equal(packIndex.sections.length,9,'nine AI sections required');
+ for(const p of packIndex.sections){
+  assert.ok(files[p.markdown]?.includes('## Текст и описание раздела'),'AI Markdown incomplete: '+p.id);
+  const data=JSON.parse(files[p.json]);
+  assert.equal(data.sectionId,p.id,'AI JSON has wrong section ID');
+  assert.equal(data.records.length,data.recordsCount,'AI record count mismatch');
+ }
+ assert.ok(files['knowledge/sections/all.md'].includes('Календарь инженерных дат'),'full AI export missing calendar');
+ assert.ok(files['ai.html'].includes('knowledge/sections/all.md'),'AI hub lacks complete download');
  const manifest=JSON.parse(files['knowledge-manifest.json']);
  assert.equal(manifest.type,'engineering-knowledge-base');
  const index=JSON.parse(files['knowledge/search-index.json']);

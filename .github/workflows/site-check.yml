@@ -10,6 +10,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Generate AI section exports
+        run: node scripts/build-ai-packs.cjs
       - name: Run complete static QA matrix
         shell: bash
         run: |
@@ -29,6 +31,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Generate AI section exports
+        run: node scripts/build-ai-packs.cjs
       - name: Install browser test tooling
         run: npm install --no-audit --no-fund
       - name: Install Chromium

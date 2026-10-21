@@ -1,0 +1,71 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Загрузите каждый раздел инженерного справочника ENJIGIRLING в нейросеть: Markdown, JSON, полная база и точные источники.">
+<title>Для ИИ — передать инженерную базу нейросети | ENJIGIRLING</title><link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="style-reference.min.css"><link rel="stylesheet" href="section-ui.css"><link rel="stylesheet" href="ai-transfer.css">
+<link rel="canonical" href="https://vremennobeznika.github.io/enjigirling/ai.html"></head>
+<body><a class="skip-link" href="#main-content">Перейти к содержимому</a>
+<div class="eng-calendar-root"><div class="site-topbar site-topbar--shared"><a class="site-brand" href="index.html">ENJIGIRLING <span>/ ENGINEERING INDEX</span></a><a class="site-ai-link" href="ai.html" aria-current="page">Для ИИ</a><button class="theme-toggle" id="themeToggle" aria-label="Переключить тему" type="button">☾</button></div>
+<div class="site-nav-wrap"><button type="button" class="site-nav-toggle" aria-controls="site-main-navigation" aria-expanded="false" aria-label="Открыть разделы сайта">Разделы сайта</button><nav id="site-main-navigation" class="eng-tabs" aria-label="Основная навигация">
+<div class="nav-cluster" role="group" aria-label="Карьера">
+<span class="nav-cluster-title" aria-hidden="true">Карьера</span>
+<a href="index.html" class="eng-tab">Профессии</a>
+<a href="compare.html" class="eng-tab">Сравнение</a>
+<a href="map.html" class="eng-tab">Обучение</a>
+</div>
+<div class="nav-cluster" role="group" aria-label="Технологии">
+<span class="nav-cluster-title" aria-hidden="true">Технологии</span>
+<a href="processes.html" class="eng-tab">Процессы</a>
+<a href="materials.html" class="eng-tab">Материалы</a>
+</div>
+<div class="nav-cluster" role="group" aria-label="Инструменты">
+<span class="nav-cluster-title" aria-hidden="true">Инструменты</span>
+<a href="calculator.html" class="eng-tab">Калькуляторы инженера</a>
+</div>
+<div class="nav-cluster" role="group" aria-label="База знаний">
+<span class="nav-cluster-title" aria-hidden="true">База знаний</span>
+<a href="dictionary.html" class="eng-tab">Словарь инженера</a>
+</div>
+<div class="nav-cluster" role="group" aria-label="Сообщество">
+<span class="nav-cluster-title" aria-hidden="true">Сообщество</span>
+<a href="calendar.html" class="eng-tab">Календарь праздников</a>
+<a href="resources.html" class="eng-tab active">Ресурсы сообщества<span class="age-badge">18+</span></a>
+</div>
+</nav></div>
+<main class="site-page ai-hub" id="main-content">
+<section class="ai-hub-header"><h1>Научить ИИ содержимому сайта</h1>
+<p>Каждый раздел доступен целиком в двух форматах: <strong>Markdown для загрузки в чат</strong> и <strong>JSON для автоматической обработки</strong>. Пакеты содержат тексты страниц и соответствующие записи каталогов, включая данные, которые обычно создаются JavaScript.</p>
+<div class="ai-hub-actions"><a href="knowledge/sections/all.md" download>Скачать все девять разделов — Markdown</a><a href="knowledge/sections/index.json" download>Индекс всех пакетов — JSON</a><a href="llms.txt">llms.txt</a><a href="knowledge-base.md">Документация</a></div>
+<p><strong>Как использовать:</strong> скачайте файл выбранного раздела, прикрепите его в чат с моделью и дайте ей запрос ниже. Если модель умеет открывать ссылки, можно передать ей адрес файла напрямую; доступность ссылок зависит от модели.</p>
+<label for="aiPrompt"><strong>Готовый запрос для нейросети</strong></label>
+<textarea class="ai-prompt" id="aiPrompt" readonly>Изучи приложенный файл ENJIGIRLING полностью. Используй его как редакционный инженерный справочник, а не как подтверждённый стандарт. При ответах указывай точную запись и источник, отделяй проверенные утверждения от непроверенных. Не выдумывай отсутствующие данные. Для расчётов, нормативов и требований безопасности перепроверяй первоисточники. Если файл неполон или не помещается в контекст, сообщи об ограничении.</textarea>
+<div class="ai-hub-actions"><button type="button" id="aiCopyPrompt">Скопировать запрос</button><span id="aiCopyStatus" role="status" aria-live="polite"></span></div>
+</section>
+<section aria-labelledby="aiPackTitle"><h2 id="aiPackTitle">Девять разделов — девять готовых пакетов</h2><div class="ai-hub-grid"><article class="ai-hub-card" id="pack-professions"><h2>Профессии</h2><p>51 профессия, подготовка, источники</p><div class="ai-transfer-links"><a href="knowledge/sections/professions.md" download>Скачать Markdown</a><a href="knowledge/sections/professions.json" download>Скачать JSON</a></div></article>
+<article class="ai-hub-card" id="pack-calendar"><h2>Календарь</h2><p>Инженерные даты и соответствующие профессии</p><div class="ai-transfer-links"><a href="knowledge/sections/calendar.md" download>Скачать Markdown</a><a href="knowledge/sections/calendar.json" download>Скачать JSON</a></div></article>
+<article class="ai-hub-card" id="pack-resources"><h2>Ресурсы</h2><p>Журналы, сообщества и справочные платформы</p><div class="ai-transfer-links"><a href="knowledge/sections/resources.md" download>Скачать Markdown</a><a href="knowledge/sections/resources.json" download>Скачать JSON</a></div></article>
+<article class="ai-hub-card" id="pack-dictionary"><h2>Словарь</h2><p>551 термин и определение</p><div class="ai-transfer-links"><a href="knowledge/sections/dictionary.md" download>Скачать Markdown</a><a href="knowledge/sections/dictionary.json" download>Скачать JSON</a></div></article>
+<article class="ai-hub-card" id="pack-learning"><h2>Обучение</h2><p>Маршруты подготовки, колледжи, вузы и курсы</p><div class="ai-transfer-links"><a href="knowledge/sections/learning.md" download>Скачать Markdown</a><a href="knowledge/sections/learning.json" download>Скачать JSON</a></div></article>
+<article class="ai-hub-card" id="pack-calculators"><h2>Калькуляторы</h2><p>Действующие инструменты, формулы, 734 идеи атласа</p><div class="ai-transfer-links"><a href="knowledge/sections/calculators.md" download>Скачать Markdown</a><a href="knowledge/sections/calculators.json" download>Скачать JSON</a></div></article>
+<article class="ai-hub-card" id="pack-compare"><h2>Сравнение</h2><p>Инженерные компетенции, сравнение профессий</p><div class="ai-transfer-links"><a href="knowledge/sections/compare.md" download>Скачать Markdown</a><a href="knowledge/sections/compare.json" download>Скачать JSON</a></div></article>
+<article class="ai-hub-card" id="pack-processes"><h2>Процессы</h2><p>12 процессов, связи с материалами и профессиями</p><div class="ai-transfer-links"><a href="knowledge/sections/processes.md" download>Скачать Markdown</a><a href="knowledge/sections/processes.json" download>Скачать JSON</a></div></article>
+<article class="ai-hub-card" id="pack-materials"><h2>Материалы</h2><p>12 записей, свойства, применение, ограничения</p><div class="ai-transfer-links"><a href="knowledge/sections/materials.md" download>Скачать Markdown</a><a href="knowledge/sections/materials.json" download>Скачать JSON</a></div></article></div></section>
+<aside class="ai-hub-note"><h2>Ограничениях данных</h2><p>Наличие Markdown или JSON не подтверждает достоверность сведений. Статус проверенности редакционный; зарплаты, инженерные параметры, профессиональные праздники, обучение и ссылки требуют сверки по первоисточникам. ИИ не обучает свои веса от прикреплённого файла автоматически — обычно он использует файл как контекст конкретной беседы или подключённой базы знаний.</p></aside>
+</main></div>
+<footer>
+        <div class="container">
+            <div class="footer-mission">
+                <p class="footer-mission-text">Этот проект — благотворительный. Он существует лишь благодаря упорству его создательницы.</p>
+                <p class="footer-mission-contact">По всем вопросам: <a href="https://t.me/evosif" class="footer-contact-link" target="_blank" rel="noopener noreferrer">@evosif</a> · <a href="mailto:eva.tselikina@ya.ru" class="footer-contact-link">eva.tselikina@ya.ru</a></p>
+            </div>
+            <div class="footer-links">
+                <a href="https://vk.ru/engigirling" class="footer-btn" target="_blank" rel="noopener noreferrer">ВКонтакте</a>
+                <a href="https://t.me/enjigirling" class="footer-btn" target="_blank" rel="noopener noreferrer">Telegram-канал</a>
+            </div>
+            <div class="footer-donations">
+                <a href="https://web.tribute.tg/d/Mue" class="footer-btn footer-btn--donate" target="_blank" rel="noopener noreferrer">Поддержать (Tribute)</a>
+                <a href="https://pay.cloudtips.ru/p/72472d16" class="footer-btn footer-btn--donate" target="_blank" rel="noopener noreferrer">Поддержать (CloudTips)</a>
+            </div>
+            <p class="footer-copy">© 2026 — База данных профессий инженеров</p>
+        </div>
+    </footer>
+<script src="ai-transfer.js" defer></script><script src="theme.js" defer></script><script src="site-shell.js" defer></script><script src="navigation.js" defer></script></body></html>

@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap">
 <link rel="stylesheet" href="style-core.min.css">
 <link rel="stylesheet" href="section-ui.css">
+<link rel="stylesheet" href="ai-transfer.css">
 <style>
 /* Calendar v2 */
 .calendar-page{max-width:1400px;margin:0 auto;padding:28px 20px 50px}
@@ -42,7 +43,7 @@
 <body>
 <a class="skip-link" href="#main-content">Перейти к содержимому</a>
 <div class="eng-calendar-root">
-<div class="site-topbar site-topbar--shared"><a class="site-brand" href="index.html">ENJIGIRLING <span>/ ENGINEERING INDEX</span></a><button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">☾</button></div>
+<div class="site-topbar site-topbar--shared"><a class="site-brand" href="index.html">ENJIGIRLING <span>/ ENGINEERING INDEX</span></a><a class="site-ai-link" href="ai.html?section=calendar">Для ИИ</a><button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">☾</button></div>
 <div class="site-nav-wrap"><button type="button" class="site-nav-toggle" aria-controls="site-main-navigation" aria-expanded="false" aria-label="Открыть разделы сайта">Разделы сайта</button><nav id="site-main-navigation" class="eng-tabs" aria-label="Основная навигация">
 <div class="nav-cluster" role="group" aria-label="Карьера">
 <span class="nav-cluster-title" aria-hidden="true">Карьера</span>
@@ -71,6 +72,7 @@
 </nav><noscript><style>@media(max-width:860px){.site-nav-wrap>.eng-tabs{display:flex!important}.site-nav-wrap>.site-nav-toggle{display:none!important}}</style></noscript></div>
 
 <main class="calendar-page" id="main-content">
+<aside class="ai-transfer-bar" aria-label="Передать раздел Календарь нейросети"><div><strong>Этот раздел для ИИ</strong><p>Полное содержимое для загрузки в нейросеть: не только ссылка на страницу.</p></div><div class="ai-transfer-links"><a href="knowledge/sections/calendar.md" download>Markdown</a><a href="knowledge/sections/calendar.json" download>JSON</a><a href="ai.html?section=calendar">Как передать ИИ →</a></div></aside>
 <section class="calendar-head">
 <h1>Календарь инженерных праздников</h1>
 <p>Профессиональные даты и инженерные профессии, к которым они относятся.</p>

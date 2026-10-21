@@ -9,7 +9,9 @@
     "humans": "index.html",
     "ai": "llms.txt",
     "guide": "knowledge-base.md",
-    "aiFull": "knowledge/ai-context.md"
+    "aiFull": "knowledge/ai-context.md",
+    "aiUserPage": "ai.html",
+    "aiDownloadAll": "knowledge/sections/all.md"
   },
   "datasets": [
     {
@@ -73,5 +75,23 @@
     "graph": "knowledge/graph.json",
     "salaryEvidence": "knowledge/salary-evidence.json",
     "aiContext": "knowledge/ai-context.md"
+  },
+  "aiSections": {
+    "manifest": "knowledge/sections/index.json",
+    "allMarkdown": "knowledge/sections/all.md",
+    "sectionIds": [
+      "professions",
+      "calendar",
+      "resources",
+      "dictionary",
+      "learning",
+      "calculators",
+      "compare",
+      "processes",
+      "materials"
+    ],
+    "markdownPattern": "knowledge/sections/{sectionId}.md",
+    "jsonPattern": "knowledge/sections/{sectionId}.json",
+    "quality": "editorial_not_independently_verified"
   }
 }

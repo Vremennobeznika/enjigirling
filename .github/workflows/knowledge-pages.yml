@@ -22,6 +22,10 @@ jobs:
         run: node scripts/build-knowledge.cjs --check
       - name: Build machine-readable datasets
         run: node scripts/build-knowledge.cjs
+      - name: Generate complete Markdown and JSON AI packages
+        run: |
+          node scripts/build-ai-packs.cjs
+          node scripts/build-ai-packs.cjs --check
       - name: Run complete static QA matrix
         shell: bash
         run: |
@@ -99,6 +103,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Recreate exact AI packages for deployment checks
+        run: node scripts/build-ai-packs.cjs
       - name: Verify deployed site and knowledge API
         env:
           SITE_URL: ${{ steps.deployment.outputs.page_url || steps.retry_deployment.outputs.page_url || steps.final_deployment.outputs.page_url }}

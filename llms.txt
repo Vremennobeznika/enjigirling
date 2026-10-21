@@ -8,6 +8,22 @@
 
 - [Полный каталог для ИИ: 626 записей](https://vremennobeznika.github.io/enjigirling/knowledge/ai-context.md)
 
+## Загрузить сайт в ИИ
+- [Для ИИ — отдельная страница](https://vremennobeznika.github.io/enjigirling/ai.html)
+- [Полная выгрузка всех девяти разделов, Markdown](https://vremennobeznika.github.io/enjigirling/knowledge/sections/all.md)
+- [Индекс выгрузок, JSON](https://vremennobeznika.github.io/enjigirling/knowledge/sections/index.json)
+- [professions: Markdown](https://vremennobeznika.github.io/enjigirling/knowledge/sections/professions.md) · [JSON](https://vremennobeznika.github.io/enjigirling/knowledge/sections/professions.json)
+- [calendar: Markdown](https://vremennobeznika.github.io/enjigirling/knowledge/sections/calendar.md) · [JSON](https://vremennobeznika.github.io/enjigirling/knowledge/sections/calendar.json)
+- [resources: Markdown](https://vremennobeznika.github.io/enjigirling/knowledge/sections/resources.md) · [JSON](https://vremennobeznika.github.io/enjigirling/knowledge/sections/resources.json)
+- [dictionary: Markdown](https://vremennobeznika.github.io/enjigirling/knowledge/sections/dictionary.md) · [JSON](https://vremennobeznika.github.io/enjigirling/knowledge/sections/dictionary.json)
+- [learning: Markdown](https://vremennobeznika.github.io/enjigirling/knowledge/sections/learning.md) · [JSON](https://vremennobeznika.github.io/enjigirling/knowledge/sections/learning.json)
+- [calculators: Markdown](https://vremennobeznika.github.io/enjigirling/knowledge/sections/calculators.md) · [JSON](https://vremennobeznika.github.io/enjigirling/knowledge/sections/calculators.json)
+- [compare: Markdown](https://vremennobeznika.github.io/enjigirling/knowledge/sections/compare.md) · [JSON](https://vremennobeznika.github.io/enjigirling/knowledge/sections/compare.json)
+- [processes: Markdown](https://vremennobeznika.github.io/enjigirling/knowledge/sections/processes.md) · [JSON](https://vremennobeznika.github.io/enjigirling/knowledge/sections/processes.json)
+- [materials: Markdown](https://vremennobeznika.github.io/enjigirling/knowledge/sections/materials.md) · [JSON](https://vremennobeznika.github.io/enjigirling/knowledge/sections/materials.json)
+
+Не каждая модель может скачивать по URL: при необходимости скачайте файл и прикрепите к чату.
+
 ## Основные разделы
 - [Профессии](https://vremennobeznika.github.io/enjigirling/index.html): описания профессий, подготовка, ссылки на источники и ограничения.
 - [Словарь](https://vremennobeznika.github.io/enjigirling/dictionary.html): технические термины и определения.

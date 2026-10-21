@@ -418,5 +418,35 @@ check('calculator workshop layout embeds every tool in one of six groups',()=>{
  assert.ok(loader.includes("panel.matches('details.calc-lab')"),'old hash links no longer open panels');
 });
 
+
+check('AI training packs expose all nine complete site sections',()=>{
+ const slug=['professions','calendar','resources','dictionary','learning','calculators','compare','processes','materials'];
+ const pages=['index.html','calendar.html','resources.html','dictionary.html','map.html','calculator.html','compare.html','processes.html','materials.html'];
+ const hub=fs.readFileSync('ai.html','utf8');
+ assert.equal((hub.match(/class="ai-hub-card"/g)||[]).length,9,'AI hub must list nine sections');
+ assert.ok(hub.includes('id="aiPrompt"'),'AI instruction prompt missing');
+ const registry=json('knowledge/sections/index.json');
+ assert.deepEqual(registry.sections.map(x=>x.id),slug);
+ const all=fs.readFileSync('knowledge/sections/all.md','utf8');
+ for(let i=0;i<slug.length;i++){
+  const id=slug[i],p=fs.readFileSync(pages[i],'utf8');
+  assert.ok(p.includes('href="ai.html?section='+id+'"'),pages[i]+' no AI navigation');
+  for(const ext of ['md','json'])assert.ok(p.includes('href="knowledge/sections/'+id+'.'+ext+'"'),pages[i]+' no '+ext+' download');
+  const md=fs.readFileSync('knowledge/sections/'+id+'.md','utf8');
+  const pack=json('knowledge/sections/'+id+'.json');
+  assert.ok(md.includes('## Текст и описание раздела')&&md.length>500,id+' incomplete Markdown');
+  assert.equal(pack.sectionId,id);
+  assert.equal(pack.recordsCount,pack.records.length);
+  assert.ok(pack.staticPageText.length>100,id+' missing page text');
+  assert.ok(all.includes('# ENJIGIRLING — '+registry.sections[i].title),id+' absent from all.md');
+ }
+ assert.equal(json('knowledge/sections/professions.json').recordsCount,51);
+ assert.equal(json('knowledge/sections/dictionary.json').recordsCount,551);
+ assert.ok(json('knowledge/sections/calendar.json').recordsCount>0);
+ assert.ok(json('knowledge/sections/resources.json').recordsCount>0);
+ assert.equal(json('knowledge/sections/calculators.json').recordsCount,34);
+ assert.ok(fs.existsSync('scripts/build-ai-packs.cjs'));
+});
+
 console.log('Matrix: '+count+' PASS, '+errors.length+' FAIL ('+pages.length+' pages, '+datasets.length+' datasets)');
 if(errors.length)process.exitCode=1;
