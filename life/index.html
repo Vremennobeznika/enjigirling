@@ -79,7 +79,7 @@ $("backup").onclick=()=>{const data={version:1,exportedAt:new Date().toISOString
 $("restore").onclick=()=>$("backupFile").click();
 $("backupFile").onchange=async e=>{const f=e.target.files?.[0];if(!f)return;try{if(f.size>1000000)throw Error("Слишком большой файл");const raw=JSON.parse(await f.text());if(confirm("Заменить ВСЕ локальные отметки и списки данными из файла?")){restore(raw);$("cloudStatus").textContent="Резервная копия восстановлена."}}catch(err){alert("Не удалось восстановить: "+err.message)}finally{e.target.value=""}};
 window.addEventListener("storage",e=>{if(Object.values(KEYS).includes(e.key))draw()});window.addEventListener("focus",draw);document.addEventListener("visibilitychange",()=>{if(!document.hidden)draw()});
-let endpoint=localStorage.getItem("life-sync-endpoint-v1")||"",token=sessionStorage.getItem("life-sync-secret-v1")||"",revision=Number(sessionStorage.getItem("life-sync-revision-v1")||0);
+let endpoint=localStorage.getItem("life-sync-endpoint-v1")||"https://functions.yandexcloud.net/d4ed26vrlmb1uk22m3b7",token=sessionStorage.getItem("life-sync-secret-v1")||"",revision=Number(sessionStorage.getItem("life-sync-revision-v1")||0);
 $("endpoint").value=endpoint;$("syncToken").value=token;
 const status=s=>$("cloudStatus").textContent=s;
 function updateMode(){$("mode").textContent=endpoint&&token?"Облако настроено":"Локальный режим"}
