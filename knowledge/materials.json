@@ -1,0 +1,221 @@
+{
+  "schemaVersion": "1.0",
+  "dataset": "materials",
+  "language": "ru",
+  "quality": "editorial_not_independently_verified",
+  "sourceFile": "materials-data.js",
+  "sourceUrl": "https://vremennobeznika.github.io/enjigirling/materials-data.js",
+  "items": [
+    {
+      "id": "steel-20",
+      "name": "Сталь 20",
+      "group": "metal",
+      "family": "Конструкционные углеродистые стали",
+      "detail": "Применяется для деталей машин и трубной продукции в зависимости от требований к поставке и обработке. Не путать обозначение марки с гарантированными свойствами любого изделия.",
+      "uses": "Детали машин, трубная продукция",
+      "process": [
+        "cutting",
+        "heat"
+      ],
+      "note": "Для химического состава и механических свойств необходимо выбрать действующий стандарт на конкретный вид проката или изделия.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#steel-20"
+      }
+    },
+    {
+      "id": "steel-45",
+      "name": "Сталь 45",
+      "group": "metal",
+      "family": "Конструкционные углеродистые стали",
+      "detail": "Применяется для деталей машин; свойства зависят от сечения, состояния поставки и термообработки.",
+      "uses": "Валы, оси и другие детали машин",
+      "process": [
+        "cutting",
+        "heat"
+      ],
+      "note": "Твёрдость и прочность без указания режима термообработки не приводятся.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#steel-45"
+      }
+    },
+    {
+      "id": "09g2s",
+      "name": "09Г2С",
+      "group": "metal",
+      "family": "Низколегированные конструкционные стали",
+      "detail": "Применяется в сварных конструкциях и прокате; пригодность к конкретной конструкции определяется проектными требованиями и документацией на поставку.",
+      "uses": "Металлоконструкции, сварные изделия",
+      "process": [
+        "welding",
+        "cutting"
+      ],
+      "note": "Марка сама по себе не определяет категорию проката, ударную вязкость или режим сварки.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#09g2s"
+      }
+    },
+    {
+      "id": "aisi-304",
+      "name": "AISI 304",
+      "group": "metal",
+      "family": "Коррозионностойкие стали",
+      "detail": "Распространённая аустенитная коррозионностойкая сталь; стойкость зависит от среды и состояния поверхности.",
+      "uses": "Оборудование, ёмкости, элементы конструкций",
+      "process": [
+        "welding",
+        "cutting"
+      ],
+      "note": "AISI — система обозначений; сопоставление с российскими марками требует отдельной проверки по составу и стандартам.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#aisi-304"
+      }
+    },
+    {
+      "id": "al-6061",
+      "name": "Алюминиевый сплав 6061",
+      "group": "metal",
+      "family": "Деформируемые алюминиевые сплавы",
+      "detail": "Сплав Al-Mg-Si; свойства зависят от состояния поставки, например T6, и формы изделия.",
+      "uses": "Машиностроительные детали, профили",
+      "process": [
+        "cutting",
+        "welding"
+      ],
+      "note": "Не переносить свойства 6061-T6 на 6061-O или на сварное соединение.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#al-6061"
+      }
+    },
+    {
+      "id": "copper-m1",
+      "name": "Медь М1",
+      "group": "metal",
+      "family": "Медь и медные сплавы",
+      "detail": "Медная марка, используемая в электротехнических и других изделиях с учётом вида полуфабриката.",
+      "uses": "Проводники, электротехнические детали",
+      "process": [
+        "cutting"
+      ],
+      "note": "Электропроводность и примеси уточняются по документу на конкретный полуфабрикат.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#copper-m1"
+      }
+    },
+    {
+      "id": "pe-hd",
+      "name": "ПЭНД (HDPE)",
+      "group": "organic",
+      "family": "Термопласты",
+      "detail": "Полиэтилен высокой плотности; эксплуатационные свойства зависят от марки, добавок и температуры.",
+      "uses": "Трубы, ёмкости, технические детали",
+      "process": [
+        "additive"
+      ],
+      "note": "Обозначение HDPE не является достаточной спецификацией для расчёта давления или долговечности.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#pe-hd"
+      }
+    },
+    {
+      "id": "pa6",
+      "name": "Полиамид 6 (PA6)",
+      "group": "organic",
+      "family": "Термопласты",
+      "detail": "Конструкционный полимер, чувствительный к влагопоглощению; условия эксплуатации влияют на размеры и свойства.",
+      "uses": "Втулки, шестерни, корпуса",
+      "process": [
+        "cutting",
+        "additive"
+      ],
+      "note": "При расчёте учитывать влажность, температуру и конкретную модификацию.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#pa6"
+      }
+    },
+    {
+      "id": "gfrp",
+      "name": "Стеклопластик (GFRP)",
+      "group": "composite",
+      "family": "Полимерные композиты",
+      "detail": "Матрица с армированием стекловолокном; свойства зависят от направления волокон, связующего и технологии.",
+      "uses": "Панели, оболочки, армированные детали",
+      "process": [
+        "additive",
+        "inspection"
+      ],
+      "note": "Без схемы армирования и условий испытаний единое значение прочности некорректно.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#gfrp"
+      }
+    },
+    {
+      "id": "alumina",
+      "name": "Оксидная керамика Al₂O₃",
+      "group": "inorganic",
+      "family": "Техническая керамика",
+      "detail": "Материал на основе оксида алюминия; чистота, пористость и способ изготовления влияют на характеристики.",
+      "uses": "Изоляторы, износостойкие компоненты",
+      "process": [
+        "inspection"
+      ],
+      "note": "Не задавать единые значения твёрдости и прочности без марки и метода испытаний.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#alumina"
+      }
+    },
+    {
+      "id": "birch-plywood",
+      "name": "Берёзовая фанера",
+      "group": "organic",
+      "family": "Древесные материалы",
+      "detail": "Слоистый древесный материал; свойства зависят от сортности, толщины, влажности и направления нагружения.",
+      "uses": "Оснастка, конструкции, мебель",
+      "process": [
+        "cutting"
+      ],
+      "note": "Класс эмиссии, водостойкость и сорт определяются конкретным стандартом и маркировкой.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#birch-plywood"
+      }
+    },
+    {
+      "id": "aramid",
+      "name": "Арамидная ткань",
+      "group": "organic",
+      "family": "Технический текстиль",
+      "detail": "Текстиль на основе арамидных волокон; свойства зависят от структуры ткани, плотности и обработки.",
+      "uses": "Армирование, защитные и технические изделия",
+      "process": [
+        "inspection"
+      ],
+      "note": "Защитные характеристики нельзя утверждать без испытаний готового изделия.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#aramid"
+      }
+    }
+  ]
+}
