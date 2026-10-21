@@ -129,6 +129,9 @@ check('sitemap and AI entrypoints', () => {
 
 check('Pages deploy performs checkout before running local smoke script', () => {
  const workflow=fs.readFileSync('.github/workflows/knowledge-pages.yml','utf8');
+ const precheck=workflow.indexOf('node scripts/build-knowledge.cjs --check');
+ const build=workflow.indexOf('run: node scripts/build-knowledge.cjs\n');
+ assert.ok(precheck>=0&&build>precheck,'committed knowledge snapshots must be checked before regeneration');
  const deploy=workflow.split('\n  deploy:\n')[1];
  assert.ok(deploy,'missing deployment job');
  const checkout=deploy.indexOf('uses: actions/checkout@');
