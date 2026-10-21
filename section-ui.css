@@ -228,3 +228,8 @@
  .resource-view-buttons{width:100%;}
  .resource-view-buttons button{flex:1 1 0;}
 }
+
+/* Independent metrology workshop shortcut — match all site themes. */
+.measurement-shortcut{margin:16px 0 22px;padding:15px 18px;line-height:1.65;border:1px solid var(--card-border);border-radius:14px;background:var(--soft-bg);color:var(--card-text);font-size:14px;}
+.measurement-shortcut a,.measurement-shortcut a:link,.measurement-shortcut a:visited{color:inherit!important;text-decoration:underline;font-weight:700;text-underline-offset:3px;}
+.measurement-shortcut a:focus-visible{outline:3px solid var(--text-primary);outline-offset:3px;}
