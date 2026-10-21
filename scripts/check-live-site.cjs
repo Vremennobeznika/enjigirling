@@ -5,7 +5,7 @@ const fs=require('node:fs');
 const crypto=require('node:crypto');
 const path=require('node:path');
 const root=path.resolve(__dirname,'..');
-const compareExact=['knowledge-manifest.json','knowledge/search-index.json','knowledge/graph.json','knowledge/source-registry.json','knowledge/ai-context.md','knowledge/quality.json','llms.txt'];
+const compareExact=['index.html','calendar.html','resources.html','dictionary.html','map.html','calculator.html','compare.html','processes.html','materials.html','knowledge-manifest.json','knowledge/search-index.json','knowledge/graph.json','knowledge/source-registry.json','knowledge/ai-context.md','knowledge/quality.json','llms.txt'];
 const digest=value=>crypto.createHash('sha256').update(value,'utf8').digest('hex');
 const base=(process.env.SITE_URL||'https://vremennobeznika.github.io/enjigirling/').replace(/\/+$/,'')+'/';
 const paths=['index.html','calendar.html','resources.html','dictionary.html','map.html','calculator.html','compare.html','processes.html','materials.html','llms.txt','knowledge-manifest.json','knowledge/search-index.json','knowledge/graph.json','knowledge/source-registry.json','knowledge/ai-context.md','knowledge/quality.json'];
@@ -45,6 +45,8 @@ async function run(){
  for(const name of paths.filter(p=>p.endsWith('.html'))){
   assert.ok(files[name].includes('<main'),name+' missing main landmark');
   assert.ok(files[name].includes('navigation.js'),name+' missing shared navigation');
+  const canonical=base+(name==='index.html'?'':name);
+  assert.ok(files[name].includes('rel="canonical" href="'+canonical+'"'),name+' canonical URL missing or mismatched');
  }
  const manifest=JSON.parse(files['knowledge-manifest.json']);
  assert.equal(manifest.type,'engineering-knowledge-base');
