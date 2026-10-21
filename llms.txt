@@ -6,6 +6,8 @@
 Манифест наборов данных: https://vremennobeznika.github.io/enjigirling/knowledge-manifest.json
 Код и история изменений: https://github.com/Vremennobeznika/enjigirling
 
+- [Полный каталог для ИИ: 626 записей](https://vremennobeznika.github.io/enjigirling/knowledge/ai-context.md)
+
 ## Основные разделы
 - [Профессии](https://vremennobeznika.github.io/enjigirling/index.html): описания профессий, подготовка, ссылки на источники и ограничения.
 - [Словарь](https://vremennobeznika.github.io/enjigirling/dictionary.html): технические термины и определения.
