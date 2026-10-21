@@ -20,6 +20,9 @@
 ## Граф связей
 - [Граф материалов, процессов и профессий](https://vremennobeznika.github.io/enjigirling/knowledge/graph.json) — связи имеют редакционный статус, а не нормативное подтверждение.
 
+## Реестр проверяемых источников
+- [Свидетельства о зарплатных оценках и ограничения выборок](https://vremennobeznika.github.io/enjigirling/knowledge/salary-evidence.json) — 51 запись, 50 ссылочных снимков и 1 неподтверждённая позиция. Статус исходной записи не гарантирует точность показателя для профессии.
+
 ## Машиночитаемые JSON-данные
 - [Общий поисковый индекс — 626 записей](https://vremennobeznika.github.io/enjigirling/knowledge/search-index.json)
 - [Профессии — JSON](https://vremennobeznika.github.io/enjigirling/knowledge/professions.json)
