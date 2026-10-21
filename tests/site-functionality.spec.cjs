@@ -161,3 +161,12 @@ test('material cards connect to existing engineer profiles', async ({page})=>{
  await expect(page.locator('#modalOverlay')).toHaveAttribute('aria-hidden','false');
  await expect(page.locator('#professionsGrid .eng-card')).toHaveCount(51);
 });
+
+
+test('closing a deep-linked profession clears stale URL fragment',async({page})=>{
+  await page.goto(base+'index.html#profession=civil-engineer');
+  await expect(page.locator('#modalOverlay')).toHaveAttribute('aria-hidden','false');
+  await page.keyboard.press('Escape');
+  await expect(page.locator('#modalOverlay')).toHaveAttribute('aria-hidden','true');
+  await expect(page).toHaveURL(/index\\.html$/);
+});
