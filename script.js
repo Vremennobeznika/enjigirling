@@ -121,18 +121,26 @@ function renderCareer(steps = []) {
 
 function renderProsCons({ easy, hard }) {
   const parts = [
-    easy && `<div><h3>Что в работе нравится</h3><p>${escapeHTML(easy)}</p></div>`,
-    hard && `<div><h3>Сложности</h3><p>${escapeHTML(hard)}</p></div>`
+    easy && `<div><h3>Возможные плюсы (субъективная оценка)</h3><p>${escapeHTML(easy)}</p></div>`,
+    hard && `<div><h3>Возможные сложности (зависят от условий труда)</h3><p>${escapeHTML(hard)}</p></div>`
   ].filter(Boolean).join("");
   return parts && `<section class="profession-section pros-cons">${parts}</section>`;
 }
 
 function renderVerifiedSalarySource(profession) {
   const entry = (window.salarySourceAudit || []).find(item => item.id === profession.id && item.status === 'source_snapshot');
-  if (!entry) return '<p class="data-quality-note">Подтверждённой зарплатной оценки для этой профессии пока нет. Непроверенные цифры скрыты.</p>';
+  if (!entry) return '<p class="data-quality-note">Сопоставимого опубликованного диапазона для этой профессии пока не установлено. Непроверенные цифры скрыты.</p>';
   if (entry.validationStatus === 'adjacent_occupation_checked') return `<p class="data-quality-note">Для этой профессии точная зарплата не подтверждена. Найден источник по смежной должности «${escapeHTML(entry.sourceTitle)}», но его цифры не переносим на профессию каталога. <a href="${escapeHTML(entry.sourceUrl)}" target="_blank" rel="noopener noreferrer">Смежный источник</a>.</p>`;
   const fmt = value => Number(value).toLocaleString('ru-RU');
-  return `<p class="data-quality-note"><strong>Опубликованный ориентир:</strong> ${entry.rangeMinRub === entry.rangeMaxRub ? `от ${fmt(entry.rangeMinRub)}` : `${fmt(entry.rangeMinRub)}–${fmt(entry.rangeMaxRub)}`} ₽/мес., ${escapeHTML(entry.region)}, ${escapeHTML(entry.checkedAt)}. ${escapeHTML(entry.metric)}. Статус сверки: ${entry.validationStatus === "source_linked_not_independently_verified" ? "ссылка добавлена, первоисточник ещё не перепроверен" : entry.validationStatus === "adjacent_occupation_checked" ? "источник проверен, профессия не совпадает" : "страница источника проверена"}. Тип данных: ${entry.evidenceLevel === "aggregate_or_range" ? "агрегированный диапазон / данные вакансий" : entry.evidenceLevel === "single_observation" ? "отдельная вакансия или оклад" : "смежная профессия либо слабая методика"}. Профессия в источнике: ${escapeHTML(entry.sourceTitle)}. <a href="${escapeHTML(entry.sourceUrl)}" target="_blank" rel="noopener noreferrer">Открыть источник зарплаты</a>. Другие зарплатные значения и региональные медианы не подтверждены и не отображаются.</p>`;
+  const display = entry.rangeMinRub === entry.rangeMaxRub
+    ? `одно значение ${fmt(entry.rangeMinRub)}`
+    : `диапазон ${fmt(entry.rangeMinRub)}–${fmt(entry.rangeMaxRub)}`;
+  const quality = entry.evidenceLevel === "single_observation"
+    ? "Одна вакансия / одно наблюдение; не медиана профессии."
+    : entry.evidenceLevel === "aggregate_or_range"
+      ? "Опубликованный диапазон; выборка, состав и методика не подтверждены редакцией."
+      : "Слабое соответствие данных профессии.";
+  return `<p class="data-quality-note"><strong>Снимок внешнего источника:</strong> ${display} ₽/мес. · ${escapeHTML(entry.region)} · дата записи ${escapeHTML(entry.checkedAt)}. ${escapeHTML(entry.metric)}. Тип данных: ${quality} Статус: ${entry.validationStatus === "source_linked_not_independently_verified" ? "ссылка сохранена, страница не проверена" : "отмечена проверка страницы (не независимая проверка цифр)"}. Должность в источнике: ${escapeHTML(entry.sourceTitle)}. <a href="${escapeHTML(entry.sourceUrl)}" target="_blank" rel="noopener noreferrer">Страница источника</a>. Данные разных регионов, дат и методик напрямую не сравнивать.</p>`;
 }
 
 // Editorial guide derived from existing profession descriptions; not a claim about a specific employer.
@@ -151,7 +159,7 @@ function renderSourceMethodology(profession) {
     '<p><strong>Проверка:</strong> ' + (verified ? 'Отмечена сверка страницы источника; репрезентативность и соответствие профессии оцениваются отдельно' : 'Полного подтверждения нет') + '</p>' +
     (item.checkedAt ? '<p><strong>Дата записи:</strong> ' + escapeHTML(item.checkedAt) + '</p>' : '') +
     (item.notes ? '<p>' + escapeHTML(item.notes) + '</p>' : '') +
-    (item.sourceUrl ? '<p><a href="' + escapeHTML(item.sourceUrl) + '" target="_blank" rel="noopener noreferrer">Открыть первоисточник ↗</a></p>' : '');
+    (item.sourceUrl ? '<p><a href="' + escapeHTML(item.sourceUrl) + '" target="_blank" rel="noopener noreferrer">Открыть страницу источника ↗</a></p>' : '');
 }
 
 // The legacy "courses" field mixes software, methods and training topics.
@@ -272,7 +280,7 @@ function renderProfession(profession, category) {
     ${section("Зарплата", renderVerifiedSalarySource(profession))}
     ${section("Источники и ограничения данных", renderSourceMethodology(profession))}
     ${section("Возможные карьерные роли (без фиксированных сроков)", renderCareer(profession.careerGrowth))}
-    ${section("Пример рабочего дня (иллюстрация, график зависит от работодателя)", profession.typicalDay ? renderRows("day-list", "day-row", DAY_LABELS, profession.typicalDay) : "")}
+    ${section("Пример рабочего дня (иллюстрация, не фактический график)", profession.typicalDay ? '<p class="data-quality-note">Время и последовательность действий придуманы для ориентира, не получены из наблюдений за этой должностью.</p>' + renderRows("day-list", "day-row", DAY_LABELS, profession.typicalDay) : "")}
     ${renderProsCons(profession)}
     ${section("Другие профессии направления", renderRelatedProfessions(profession, category))}`;
 }
@@ -362,18 +370,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const title = document.createElement("h3");
     title.className = "eng-title";
     title.id = `profession-card-title-${profession.id}`;
-    // The card has role=button: derive its accessible name from all visible
-    // card content, not the heading alone (WCAG 2.5.3 label in name).
+    // The role=button uses its only visible content as accessible name.
     title.textContent = profession.title;
     card.append(title);
-    const desc = document.createElement("p");
-    desc.className = "eng-card-summary";
-    desc.textContent = profession.shortDesc || "";
-    if (desc.textContent) card.append(desc);
-    const meta = document.createElement("div");
-    meta.className = "eng-card-meta";
-    meta.textContent = getCategory(profession) + "  ↗";
-    card.append(meta);
+    // Внешняя карточка содержит только название; всё описание открывается внутри.
+    // Доступное имя кнопки совпадает с видимым текстом.
+    card.setAttribute("aria-labelledby", title.id);
 
     const open = () => openModal(profession);
     card.addEventListener("click", open);
