@@ -131,7 +131,9 @@ const designCSS=fs.readFileSync('style.css','utf8');
 const hexColors=[...designCSS.matchAll(/(?<![\w-])#([0-9a-fA-F]{6}|[0-9a-fA-F]{3})(?![\w-])/g)].map(x=>x[1]);
 for(const raw of hexColors){const rgb=raw.length===3?raw.split('').map(x=>parseInt(x+x,16)):[0,2,4].map(i=>parseInt(raw.slice(i,i+2),16));assert.ok(Math.max(...rgb)-Math.min(...rgb)<=8,'non-monochrome color in CSS: #'+raw);}
 const home=fs.readFileSync('index.html','utf8');
-for(const target of ['compare.html','processes.html','materials.html'])assert.equal(home.split('href="'+target+'"').length-1,1,'duplicate home navigation to '+target);
+const homeNav=home.match(/<nav id="site-main-navigation"[\s\S]*?<\/nav>/)?.[0];
+assert.ok(homeNav,'homepage main navigation missing');
+for(const target of ['compare.html','processes.html','materials.html'])assert.equal(homeNav.split('href="'+target+'"').length-1,1,'duplicate home navigation to '+target);
 assert.match(designCSS,/--ui-control-height:54px/,'unified control height missing');
 assert.match(designCSS,/\.site-page \.atlas-card a/,'reference button links missing');
 assert.match(designCSS,/\.site-page \.eng-tabs \.eng-tab/,'navigation button style missing');
