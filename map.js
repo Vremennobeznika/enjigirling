@@ -51,8 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
       '<p class="education-focus"><strong>Направления (ориентир):</strong> '+escapeHtml(item.focus||item.profile||'Не указаны')+'</p>'+
       '<p class="education-card-status">'+(hasSource?'Есть ссылка на первоисточник':'Условия приёма не проверены')+'</p>'+
       '<details class="education-card-details"><summary>Источники и ограничения</summary><dl>'+facts+'</dl>'+
-      (hasSource?'<a class="education-site" href="'+escapeHtml(source)+'" rel="noopener noreferrer" target="_blank">Первичный документ ↗</a>':'')+
-      (site?'<a class="education-site" href="'+escapeHtml(site)+'" rel="noopener noreferrer" target="_blank">Сайт из каталога ↗</a>':'<p class="education-no-link">Официальный адрес сайта не подтверждён</p>')+
+      (hasSource?'<a class="education-site" href="'+escapeHtml(source)+'" rel="noopener noreferrer" target="_blank">'+(item.sourceType==='institution_home'?'Официальный сайт (название) ↗':'Первоисточник ↗')+'</a>':'')+
+      (site&&site!==source?'<a class="education-site" href="'+escapeHtml(site)+'" rel="noopener noreferrer" target="_blank">Сайт из каталога ↗</a>':'<p class="education-no-link">Официальный адрес сайта не подтверждён</p>')+
       '</details></article>';
   }
   function sortedMatches(){
