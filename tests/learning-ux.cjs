@@ -33,7 +33,7 @@ for(const {item} of entries){
  for(const key of ['duration','cost','budget','admission','afterCollege'])
    assert.ok(!Object.hasOwn(item,key),item.name+': unsupported claim '+key);
 }
-assert.equal(entries.filter(x=>x.item.sourceStatus==='official_source_located').length,12);
+assert.equal(entries.filter(x=>x.item.sourceStatus==='official_source_located').length,38);
 assert.ok(html.includes('Схема условная'),'schematic map not labelled');
 assert.ok(html.includes('aria-current="page"'),'current learning tab must be announced');
 const aiBuilder=fs.readFileSync('scripts/build-ai-packs.cjs','utf8');
@@ -60,3 +60,6 @@ const universityRows=entries.filter(x=>x.type==='uni');
 assert.equal(universityRows.filter(x=>x.item.siteFetchStatus==='fetched').length,28,'URL retrieval evidence changed');
 assert.equal(universityRows.filter(x=>x.item.siteFetchStatus==='not_retrieved').length,23,'uncertain URL failures changed');
 assert.ok(js.includes('item.siteFetchStatus'),'network check evidence should be displayed without implying confirmation');
+
+assert.ok(!entries.some(x=>x.item.name==='Калининградский технический колледж'),'closed Kaliningrad school must not be advertised');
+assert.ok(entries.some(x=>x.item.name==='Прибалтийский судостроительный техникум'&&x.item.sourceUrl),'verified replacement school missing');
