@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "language": "ru",
   "purpose": "Registry of independently verified primary sources for technical claims",
-  "status": "partially_sourced_not_claim_verified",
+  "status": "partially_claim_checked",
   "sources": [
     {
       "sourceId": "iso-4063-2023",
@@ -33,7 +33,7 @@
       "publisher": "The Aluminum Association",
       "documentDate": "undated",
       "checkedAt": "2026-10-21",
-      "appliesTo": "Standards organization, alloy registration and the effect of alloying elements or heat treatment on properties; does not identify 6061 composition on this page",
+      "appliesTo": "6xxx-series alloying elements and 6061 membership in the series, not alloy-specific numeric composition or certified properties",
       "access": "public_abstract_or_overview",
       "notes": "Only directly visible publication or overview has been reviewed. No full paid-standard review is claimed."
     },
@@ -66,16 +66,24 @@
       "recordId": "aisi-304",
       "sourceId": "worldstainless-304",
       "claimPath": "detail",
-      "verificationStatus": "source_located",
-      "claimScope": "AISI 304 is classified among austenitic stainless steels"
+      "verificationStatus": "claim_checked",
+      "claimScope": "AISI 304 is classified among austenitic stainless steels",
+      "verifiedClaim": "Марка AISI 304 относится к аустенитным нержавеющим сталям.",
+      "sourceSection": "Categories, grades and product forms / Austenitic",
+      "claimCheckedAt": "2026-10-21",
+      "reviewScope": "Проверена только сформулированная выше часть описания; остальные характеристики материала или метода этим статусом не охвачены."
     },
     {
       "recordType": "materials",
       "recordId": "al-6061",
       "sourceId": "aluminum-aa-standards",
       "claimPath": "detail",
-      "verificationStatus": "source_located",
-      "claimScope": "General guidance that aluminum properties depend on alloying elements and temper; exact 6061 chemistry requires an alloy-specific primary source"
+      "verificationStatus": "claim_checked",
+      "claimScope": "General guidance that aluminum properties depend on alloying elements and temper; exact 6061 chemistry requires an alloy-specific primary source",
+      "verifiedClaim": "Сплав 6061 входит в серию 6xxx, в которой основными легирующими компонентами являются магний и кремний.",
+      "sourceSection": "Aluminum Alloys / 6xxx",
+      "claimCheckedAt": "2026-10-21",
+      "reviewScope": "Проверена только сформулированная выше часть описания; остальные характеристики материала или метода этим статусом не охвачены."
     },
     {
       "recordType": "processes",
@@ -106,16 +114,24 @@
       "recordId": "ultrasonic",
       "sourceId": "asnt-ut",
       "claimPath": "description",
-      "verificationStatus": "source_located",
-      "claimScope": "Ultrasonic nondestructive testing uses high-frequency sound waves"
+      "verificationStatus": "claim_checked",
+      "claimScope": "Ultrasonic nondestructive testing uses high-frequency sound waves",
+      "verifiedClaim": "Ультразвуковой неразрушающий контроль использует высокочастотные звуковые волны.",
+      "sourceSection": "What Is Ultrasonic Testing and How is it Used in NDT?",
+      "claimCheckedAt": "2026-10-21",
+      "reviewScope": "Проверена только сформулированная выше часть описания; остальные характеристики материала или метода этим статусом не охвачены."
     },
     {
       "recordType": "processes",
       "recordId": "dye",
       "sourceId": "asnt-pt-2022",
       "claimPath": "description",
-      "verificationStatus": "source_located",
-      "claimScope": "Liquid penetrant testing detects surface-opening discontinuities"
+      "verificationStatus": "claim_checked",
+      "claimScope": "Liquid penetrant testing detects surface-opening discontinuities",
+      "verifiedClaim": "Капиллярный контроль выявляет несплошности, открытые на поверхность.",
+      "sourceSection": "Basic Penetrant Process; Disadvantages and Limitations of PT",
+      "claimCheckedAt": "2026-10-21",
+      "reviewScope": "Проверена только сформулированная выше часть описания; остальные характеристики материала или метода этим статусом не охвачены."
     }
   ],
   "policy": {
