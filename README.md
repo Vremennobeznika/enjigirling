@@ -77,3 +77,10 @@ JSON-экспорт строится из существующих JavaScript-к
 
 Публикация через Actions требует настройки GitHub Pages в разделе **Settings → Pages → Source: GitHub Actions**. Успешный запуск и доступность опубликованного URL проверяются отдельно.
 
+
+## Полная матрица качества
+
+- [Матрица проверки всех 9 разделов, данных, источников, доступности и публикации](QA-MATRIX.md)
+- Единый статический прогон: `node scripts/all-checks.cjs` (включая `tests/full-matrix.cjs`)
+- Браузерный прогон: `npm install && npx playwright install chromium && npx playwright test`
+- Статусы `BLOCKED` и `REVIEW` в матрице не означают успешной проверки; их нельзя заменять на PASS без фактического прогона или предметной экспертизы.
