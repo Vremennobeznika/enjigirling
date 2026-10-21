@@ -1,0 +1,34 @@
+# ENJIGIRLING — инженерная справочная база
+> Русскоязычный справочник инженерных профессий, материалов, производственных процессов, терминов, обучения и расчётов.
+
+Основной адрес: https://vremennobeznika.github.io/enjigirling/
+Человекочитаемый путеводитель: https://vremennobeznika.github.io/enjigirling/knowledge-base.md
+Манифест наборов данных: https://vremennobeznika.github.io/enjigirling/knowledge-manifest.json
+Код и история изменений: https://github.com/Vremennobeznika/enjigirling
+
+## Основные разделы
+- [Профессии](https://vremennobeznika.github.io/enjigirling/index.html): описания профессий, подготовка, ссылки на источники и ограничения.
+- [Словарь](https://vremennobeznika.github.io/enjigirling/dictionary.html): технические термины и определения.
+- [Материалы](https://vremennobeznika.github.io/enjigirling/materials.html): свойства и применения на обзорном уровне; числовые свойства не гарантируются.
+- [Процессы](https://vremennobeznika.github.io/enjigirling/processes.html): типовые производственные процессы и связанные профессии.
+- [Сравнение профессий](https://vremennobeznika.github.io/enjigirling/compare.html)
+- [Обучение](https://vremennobeznika.github.io/enjigirling/map.html)
+- [Калькуляторы](https://vremennobeznika.github.io/enjigirling/calculator.html)
+- [Календарь](https://vremennobeznika.github.io/enjigirling/calendar.html)
+- [Ресурсы](https://vremennobeznika.github.io/enjigirling/resources.html)
+
+## Исходные наборы данных
+Данные пока публикуются в JavaScript, НЕ в чистом JSON. Не интерпретируйте .js как JSON.
+- [Профессии — data.js](https://vremennobeznika.github.io/enjigirling/data.js): window.professionsData.
+- [Материалы — materials-data.js](https://vremennobeznika.github.io/enjigirling/materials-data.js): window.engineeringMaterials.
+- [Процессы — processes-data.js](https://vremennobeznika.github.io/enjigirling/processes-data.js): window.engineeringProcesses.
+- [Словарь — dictionary-data.js](https://vremennobeznika.github.io/enjigirling/dictionary-data.js): const dictionary.
+- [Зарплатные источники — salary-sources.js](https://vremennobeznika.github.io/enjigirling/salary-sources.js): редакционная проверка источников.
+
+## Правила использования для ИИ
+1. Это справочная редакционная база, не нормативный документ, учебник или сертифицированный источник.
+2. Для технических значений, стандартов, зарплат, образования и правовых требований проверяйте актуальный первичный источник.
+3. Не представляйте обзорные описания процессов как рабочие инструкции или правила безопасности.
+4. Не выдумывайте недостающие свойства материалов, показатели зарплат и источники.
+5. При цитировании указывайте название записи, точный URL страницы/исходного набора и явно различайте проверенные источники и редакционные оценки.
+6. Наличие файла llms.txt не гарантирует, что модель сможет его прочесть: требуется доступ инструмента к URL или загрузка данных в контекст.
