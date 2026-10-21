@@ -290,5 +290,56 @@ function draftByTPC(changedTonnes,waterplaneM2,densityTonM3){
  return {tpc,deltaCm,deltaM:deltaCm/100};
 }
 
-global.EngineeringMath={formats,encode,decode,exactError,number,ohm,divider,rc,tolerance,modbus,takt,oee,billetMass,thermalLength,cutSpeed,pipeFlow,markerEfficiency,fabricBooking,threadBooking,sewingEfficiency,marinePassage,marineFuel,hullSpeed,draftByTPC};
+
+/* Further textile/marine desk models with explicit simplifying assumptions. */
+function shrinkage(before,after){
+ finitePositive(before,'Исходный размер');finitePositive(after,'Размер после обработки');
+ return {percent:(before-after)/before*100,change:after-before};
+}
+function layLength(piecesPerLay,plyCount,patternLengthM,endAllowanceM){
+ integerPositive(piecesPerLay,'Изделий в раскладке');
+ integerPositive(plyCount,'Число слоёв');
+ finitePositive(patternLengthM,'Длина настила');
+ finiteNonnegative(endAllowanceM,'Припуск на слой');
+ const output=piecesPerLay*plyCount,consumption=plyCount*(patternLengthM+endAllowanceM);
+ finish([output,consumption]);return {output,consumption,perPiece:consumption/output};
+}
+function lineBalance(raw,taktSeconds){
+ finitePositive(taktSeconds,'Такт');
+ const lines=String(raw).trim().split(/\r?\n/).filter(x=>x.trim());
+ if(!lines.length||lines.length>60)throw Error('Введите 1–60 операций');
+ let sum=0,max=0;for(const row of lines){
+  const x=number(row);finitePositive(x,'Время операции');
+  sum+=x;max=Math.max(max,x);
+ }
+ const theoretical=Math.ceil(sum/taktSeconds);
+ const cycle=Math.max(taktSeconds,max);
+ finish([sum,cycle,theoretical]);
+ return {sum,operations:lines.length,theoretical,bottleneck:max,withinTakt:max<=taktSeconds};
+}
+function displacement(lengthM,beamM,draftM,coefficient,density){
+ for(const [n,label] of [[lengthM,'Длина'],[beamM,'Ширина'],[draftM,'Средняя осадка'],[density,'Плотность воды']])finitePositive(n,label);
+ finitePositive(coefficient,'Коэффициент полноты');if(coefficient>1)throw Error('Коэффициент полноты не может превышать единицу');
+ const volume=lengthM*beamM*draftM*coefficient,tonnes=volume*density;
+ finish([volume,tonnes]);return {volume,tonnes};
+}
+function currentVector(shipSpeed,courseDeg,currentSpeed,currentDirectionDeg){
+ finiteNonnegative(shipSpeed,'Скорость судна относительно воды');finiteNonnegative(currentSpeed,'Скорость течения');
+ for(const x of [courseDeg,currentDirectionDeg])if(!Number.isFinite(x))throw Error('Направления должны быть числами');
+ const rad=Math.PI/180;
+ const x=shipSpeed*Math.sin(courseDeg*rad)+currentSpeed*Math.sin(currentDirectionDeg*rad);
+ const y=shipSpeed*Math.cos(courseDeg*rad)+currentSpeed*Math.cos(currentDirectionDeg*rad);
+ const sog=Math.hypot(x,y),cog=(Math.atan2(x,y)*180/Math.PI+360)%360;
+ finish([sog,cog]);return {sog,cog};
+}
+function vernier(mm,step){
+ finiteNonnegative(mm,'Раствор губок');
+ if(mm>50)throw Error('Диапазон учебной модели 0–50 мм');
+ if(![.1,.05,.02].includes(step))throw Error('Выберите цену деления');
+ const ticks=Math.round(mm/step),read=ticks*step;
+ const whole=Math.floor(ticks*step+1e-9),fraction=Math.round((read-whole)/step);
+ return {read:Math.round(read*100)/100,whole,fraction,step};
+}
+
+global.EngineeringMath={formats,encode,decode,exactError,number,ohm,divider,rc,tolerance,modbus,takt,oee,billetMass,thermalLength,cutSpeed,pipeFlow,markerEfficiency,fabricBooking,threadBooking,sewingEfficiency,marinePassage,marineFuel,hullSpeed,draftByTPC,shrinkage,layLength,lineBalance,displacement,currentVector,vernier};
 })(typeof window!=='undefined'?window:globalThis);

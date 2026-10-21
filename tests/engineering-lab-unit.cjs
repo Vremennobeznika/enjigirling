@@ -90,5 +90,13 @@ close(draft.tpc,20.5);close(draft.deltaCm,12);
 close(m.draftByTPC(-246,2000,1.025).deltaCm,-12);
 assert.throws(()=>m.draftByTPC(246,2000,0));
 
-console.log('Engineering math: IEEE754, six production, four sewing and four marine calculators PASS');
+close(m.shrinkage(100,97).percent,3);
+close(m.layLength(4,10,5,.1).consumption,51);
+assert.equal(m.lineBalance('20\n30\n15',25).theoretical,3);
+close(m.displacement(100,20,5,.7,1.025).tonnes,7175);
+close(m.currentVector(10,0,2,90).sog,Math.sqrt(104));
+close(m.vernier(23.45,.05).read,23.45);
+assert.throws(()=>m.vernier(55,.05));
+assert.throws(()=>m.displacement(100,20,5,1.1,1.025));
+console.log('Engineering math: sewing, maritime, production and vernier PASS');
 

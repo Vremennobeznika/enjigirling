@@ -172,6 +172,58 @@ function marineInit(){
  }));
 }
 
+
+function moreSewingInit(){
+ const safe=(id,fn)=>{try{message(by(id),fn(),false);}catch(e){message(by(id),e.message,true);}};
+ attach(['shrinkBefore','shrinkAfter'],()=>safe('shrinkOutput',()=>{const x=math.shrinkage(math.number(val('shrinkBefore')),math.number(val('shrinkAfter')));return 'Усадка '+fmt(x.percent)+' % · изменение '+fmt(x.change)+' см';}));
+ attach(['layPieces','layPlies','layLength','layAllowance'],()=>safe('layOutput',()=>{const x=math.layLength(...['layPieces','layPlies','layLength','layAllowance'].map(id=>math.number(val(id))));return 'Изделий '+fmt(x.output)+' · материал '+fmt(x.consumption)+' м · на изделие '+fmt(x.perPiece)+' м';}));
+ attach(['balanceOps','balanceTakt'],()=>safe('balanceOutput',()=>{const x=math.lineBalance(val('balanceOps'),math.number(val('balanceTakt')));return 'Всего '+fmt(x.sum)+' с · минимум постов '+x.theoretical+' · самая длинная операция '+fmt(x.bottleneck)+' с · '+(x.withinTakt?'все операции укладываются в такт':'есть операция длиннее такта');}));
+}
+function moreMarineInit(){
+ const safe=(id,fn)=>{try{message(by(id),fn(),false);}catch(e){message(by(id),e.message,true);}};
+ attach(['dispLength','dispBeam','dispDraft','dispCb','dispDensity'],()=>safe('dispOutput',()=>{const x=math.displacement(...['dispLength','dispBeam','dispDraft','dispCb','dispDensity'].map(id=>math.number(val(id))));return 'Объём '+fmt(x.volume)+' м³ · водоизмещение '+fmt(x.tonnes)+' т';}));
+ attach(['currentShip','currentCourse','currentKnots','currentDir'],()=>safe('currentOutput',()=>{const x=math.currentVector(...['currentShip','currentCourse','currentKnots','currentDir'].map(id=>math.number(val(id))));return 'Скорость по грунту '+fmt(x.sog)+' уз · путь '+fmt(x.cog)+'°';}));
+}
+function caliperInit(){
+ const slider=by('caliperSlider'),value=by('caliperValue'),step=by('caliperStep'),svg=by('caliperSvg'),output=by('caliperOutput');
+ const ns='http://www.w3.org/2000/svg';
+ function el(tag,attrs,parent,textValue){
+  const node=document.createElementNS(ns,tag);
+  Object.entries(attrs).forEach(([key,val])=>node.setAttribute(key,String(val)));
+  if(textValue!==undefined)node.textContent=String(textValue);
+  parent.append(node);return node;
+ }
+ function render(){
+  try{
+   const x=math.vernier(math.number(value.value),Number(step.value));
+   slider.step=String(x.step);slider.value=String(x.read);
+   svg.replaceChildren();
+   // Fixed datum at x=45; 1 mm is 12 screen units.
+   el('rect',{x:25,y:45,width:720,height:43,rx:3,fill:'none',stroke:'currentColor','stroke-width':2},svg);
+   for(let i=0;i<=50;i++){
+    const xTick=45+i*12;
+    el('line',{x1:xTick,y1:47,x2:xTick,y2:i%5===0?68:58,stroke:'currentColor','stroke-width':i%5===0?1.7:1},svg);
+    if(i%5===0)el('text',{x:xTick,y:39,'text-anchor':'middle',fill:'currentColor','font-size':13},svg,i);
+   }
+   el('rect',{x:28,y:87,width:17,height:85,fill:'none',stroke:'currentColor','stroke-width':3},svg);
+   const jaw=45+x.read*12;
+   el('line',{x1:jaw,y1:72,x2:jaw,y2:174,stroke:'currentColor','stroke-width':3},svg);
+   el('rect',{x:jaw,y:87,width:91,height:40,rx:3,fill:'none',stroke:'currentColor','stroke-width':2},svg);
+   const n=Math.round(1/x.step),spacing=12*(n-1)/n;
+   for(let i=0;i<=n;i++){
+    const lineX=jaw+i*spacing;if(lineX>748)break;
+    el('line',{x1:lineX,y1:89,x2:lineX,y2:i%5===0?112:102,stroke:'currentColor','stroke-width':i===x.fraction?2.7:1},svg);
+   }
+   el('text',{x:390,y:204,'text-anchor':'middle',fill:'currentColor','font-size':13},svg,'Шкала условно увеличена для чтения на экране');
+   output.textContent='Главная шкала '+x.whole+' мм + деление №'+x.fraction+' × '+x.step+' мм = '+fmt(x.read)+' мм';
+  }catch(e){output.textContent=e.message;svg.replaceChildren();}
+ }
+ slider.addEventListener('input',()=>{value.value=slider.value;render();});
+ value.addEventListener('input',render);
+ step.addEventListener('change',()=>{const x=math.number(value.value);slider.step=step.value;if(Number.isFinite(x))value.value=String(Math.round(x/Number(step.value))*Number(step.value));render();});
+ render();
+}
+
 const initialized=new Set();
 window.initEngineeringLab=function(which){
  if(initialized.has(which))return;
@@ -180,6 +232,9 @@ window.initEngineeringLab=function(which){
  if(which==='production')productionInit();
  if(which==='sewing')sewingInit();
  if(which==='marine')marineInit();
+ if(which==='moreSewing')moreSewingInit();
+ if(which==='moreMarine')moreMarineInit();
+ if(which==='caliper')caliperInit();
  initialized.add(which);
 };
 })();

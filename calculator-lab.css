@@ -78,3 +78,9 @@
 .calc-lab-sub a,.calc-lab-sub a:visited {text-decoration:underline;text-underline-offset:3px;color:var(--card-text)!important;}
 @media(max-width:880px){.calculator-directory .calculator-groups{grid-template-columns:repeat(2,minmax(0,1fr));}}
 @media(max-width:540px){.calculator-directory .calculator-groups{grid-template-columns:minmax(0,1fr);gap:7px;}.calculator-directory .calculator-group{padding:9px;}}
+
+
+.caliper-viewport{width:100%;max-width:100%;overflow-x:auto;color:var(--card-text);padding:12px 0;}
+.caliper-viewport svg{display:block;min-width:580px;width:100%;max-width:780px;height:auto;}
+.caliper-slider{width:100%!important;accent-color:var(--text-primary);touch-action:pan-y;}
+.instrument-panel .calc-lab-body>label{display:block;margin:10px 0 7px;font-weight:600;}

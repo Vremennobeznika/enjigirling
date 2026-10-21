@@ -124,3 +124,19 @@ test('sewing and marine calculators fit a slow 320px mobile layout',async({page}
  await expect(page.locator('#draftOutput')).toContainText('12 см');
  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+2)).toBeTruthy();
 });
+
+
+test('virtual caliper and extended industry calculations',async({page})=>{
+ await page.setViewportSize({width:375,height:812});
+ await page.goto('/calculator.html#labCaliper');
+ await expect(page.locator('#caliperOutput')).toContainText('23,45 мм');
+ await page.locator('#caliperValue').fill('12.35');
+ await expect(page.locator('#caliperOutput')).toContainText('12,35 мм');
+ await page.locator('#labMoreSewing > summary').click();
+ await expect(page.locator('#shrinkOutput')).toContainText('3 %');
+ await expect(page.locator('#layOutput')).toContainText('51 м');
+ await page.locator('#labMoreMarine > summary').click();
+ await expect(page.locator('#dispOutput')).toContainText('7 175 т');
+ await expect(page.locator('#currentOutput')).toContainText('10,198');
+ await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2)).toBeTruthy();
+});

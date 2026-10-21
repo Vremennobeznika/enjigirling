@@ -321,7 +321,7 @@ check('originally named workshops and six dimensioned production tools', () => {
   assert.ok(html.includes(label),'missing named tool '+label);
  }
  const sections=[...html.matchAll(/data-lab="([^"]+)"/g)].map(x=>x[1]);
- assert.deepEqual(sections,['ieee','extra','production','sewing','marine'],'wrong lazy workshop panels');
+ assert.deepEqual(sections,['ieee','extra','production','sewing','marine','moreSewing','moreMarine','caliper'],'wrong lazy workshop panels');
  for(const id of ['taktAvailable','taktDemand','oeePlan','oeeRun','oeeTotal','oeeGood','oeeIdeal','massDensity','massLength','massWidth','massHeight','thermalLength','thermalAlpha','thermalDelta','cutMode','cutDiameter','cutQuantity','flowDiameter','flowSpeed']){
   assert.ok(html.includes('id="'+id+'"'),'production input missing '+id);
  }
@@ -350,6 +350,16 @@ check('fabric and maritime calculators have groups, sources and independent form
   assert.ok(core.includes('function '+fn+'('),'missing formula '+fn);
  for(const mode of ['sewing','marine'])assert.ok(ui.includes("if(which==='"+mode+"')"),'lazy module missing '+mode);
  assert.ok(fs.readFileSync('calculator-lab.css','utf8').includes('.calculator-groups'),'category layout missing');
+});
+
+check('virtual instrument and extra textile maritime calculation catalog',()=> {
+ const h=fs.readFileSync('calculator.html','utf8');
+ for(const id of ['labMoreSewing','labMoreMarine','labCaliper','caliperSvg','caliperSlider','shrinkBefore','balanceOps','dispLength','currentShip'])
+  assert.ok(h.includes('id="'+id+'"'),'missing '+id);
+ const core=fs.readFileSync('engineering-lab-core.js','utf8');
+ for(const fn of ['shrinkage','layLength','lineBalance','displacement','currentVector','vernier'])
+  assert.ok(core.includes('function '+fn+'('),'missing '+fn);
+ assert.ok(fs.readFileSync('engineering-lab-ui.js','utf8').includes('function caliperInit()'),'missing instrument UI');
 });
 
 console.log('Matrix: '+count+' PASS, '+errors.length+' FAIL ('+pages.length+' pages, '+datasets.length+' datasets)');
