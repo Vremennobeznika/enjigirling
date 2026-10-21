@@ -17,6 +17,9 @@
 - [Календарь](https://vremennobeznika.github.io/enjigirling/calendar.html)
 - [Ресурсы](https://vremennobeznika.github.io/enjigirling/resources.html)
 
+## Граф связей
+- [Граф материалов, процессов и профессий](https://vremennobeznika.github.io/enjigirling/knowledge/graph.json) — связи имеют редакционный статус, а не нормативное подтверждение.
+
 ## Машиночитаемые JSON-данные
 - [Общий поисковый индекс — 626 записей](https://vremennobeznika.github.io/enjigirling/knowledge/search-index.json)
 - [Профессии — JSON](https://vremennobeznika.github.io/enjigirling/knowledge/professions.json)
