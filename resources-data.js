@@ -1020,4 +1020,102 @@ const resources = [
         "desc": "Каталог КОМПАС, ВЕРТИКАЛЬ, ЛОЦМАН, Renga и других инженерных систем.",
         "link": "https://ascon.ru/products/"
     },
+
+    // ===== Онлайн измерительные приборы: тренажёры и виртуальные лаборатории =====
+    {
+        "id": "measurement-mic-tools",
+        "type": "Онлайн-измерения",
+        "topic": "Микрометр",
+        "name": "ToolsPix — микрометр",
+        "desc": "Интерактивный барабан и гильза; разные цены деления, погрешность нуля, упражнения.",
+        "link": "https://toolspix.uk/image-tools/micrometer/"
+    },
+    {
+        "id": "measurement-mic-numerilo",
+        "type": "Онлайн-измерения",
+        "topic": "Микрометр",
+        "name": "Numerilo — микрометр",
+        "desc": "Микрометр 0–25 мм и 0,01 мм; вращение барабана, объяснение отсчёта и упражнения.",
+        "link": "https://numerilo.com/micrometer-screw-gauge-simulator/"
+    },
+    {
+        "id": "measurement-mic-trade",
+        "type": "Онлайн-измерения",
+        "topic": "Микрометр и штангенциркуль",
+        "name": "Trade Schools — метрологический практикум",
+        "desc": "Общая лаборатория микрометров и штангенциркулей с проверкой результата и допусков.",
+        "link": "https://www.trade-schools.net/tools/micrometer-caliper-practice"
+    },
+    {
+        "id": "measurement-mic-mech",
+        "type": "Онлайн-измерения",
+        "topic": "Микрометр",
+        "name": "MechSimulator — винтовой микрометр",
+        "desc": "Виртуальный винтовой микрометр и проверка чтения шкалы.",
+        "link": "https://mechsimulator.com/tools/screw-gauge/"
+    },
+    {
+        "id": "measurement-dial-mech",
+        "type": "Онлайн-измерения",
+        "topic": "Индикатор",
+        "name": "MechSimulator — индикатор часового типа",
+        "desc": "Циферблат 0,01 мм, установка нуля, тренировка и учебная проверка биения.",
+        "link": "https://mechsimulator.com/tools/dial-gauge/"
+    },
+    {
+        "id": "measurement-dial-stefanelli",
+        "type": "Онлайн-измерения",
+        "topic": "Индикатор",
+        "name": "Stefanelli — индикатор часового типа",
+        "desc": "Учебный индикатор с перемещением штока и установкой нуля; интерфейс на английском.",
+        "link": "https://www.stefanelli.eng.br/en/virtual-dial-indicator-simulator-hundredths-millimeter/"
+    },
+    {
+        "id": "measurement-angle-stefanelli",
+        "type": "Онлайн-измерения",
+        "topic": "Угломер",
+        "name": "Stefanelli — угломер с нониусом",
+        "desc": "Виртуальный угломер с нониусом и отсчётом до 5 угловых минут.",
+        "link": "https://www.stefanelli.eng.br/en/virtual-goniometer-five-minutes-degree/"
+    },
+    {
+        "id": "measurement-ruler-screen",
+        "type": "Онлайн-измерения",
+        "topic": "Экранная линейка",
+        "name": "Online Ruler — линейка на экране",
+        "desc": "Экранная линейка в миллиметрах и дюймах. Для физического размера сначала калибруйте масштаб дисплея.",
+        "link": "https://online-ruler.net/"
+    },
+    {
+        "id": "measurement-multimeter-mokxi",
+        "type": "Онлайн-измерения",
+        "topic": "Электроизмерения",
+        "name": "Mokxi — мультиметр",
+        "desc": "Виртуальный мультиметр на модели электрической схемы: напряжение, сопротивление, ток, ёмкость и диод.",
+        "link": "https://mokxi.com/multimeter-simulator"
+    },
+    {
+        "id": "measurement-oscilloscope-falstad",
+        "type": "Онлайн-измерения",
+        "topic": "Электроизмерения",
+        "name": "Falstad CircuitJS — осциллограммы",
+        "desc": "Симулятор электронных цепей с графиками напряжения и тока, работающими как осциллограф.",
+        "link": "https://falstad.com/circuit/circuitjs.html"
+    },
+    {
+        "id": "measurement-dial-caliper-mech",
+        "type": "Онлайн-измерения",
+        "topic": "Штангенциркуль",
+        "name": "MechSimulator — штангенциркуль с индикатором",
+        "desc": "Симуляция штангенциркуля с круговой шкалой, ошибки нуля и тренировочные задания.",
+        "link": "https://mechsimulator.com/tools/dial-caliper/"
+    },
+    {
+        "id": "measurement-vernier-numerilo",
+        "type": "Онлайн-измерения",
+        "topic": "Штангенциркуль",
+        "name": "Numerilo — нониусный штангенциркуль",
+        "desc": "Интерактивная шкала и тренировочные задания для чтения нониуса.",
+        "link": "https://numerilo.com/vernier-caliper-simulator/"
+    },
 ];
