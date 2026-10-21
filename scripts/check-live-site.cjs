@@ -1,6 +1,12 @@
 #!/usr/bin/env node
 // Read-only smoke test for the deployed static knowledge base.
 const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const crypto=require('node:crypto');
+const path=require('node:path');
+const root=path.resolve(__dirname,'..');
+const compareExact=['knowledge-manifest.json','knowledge/search-index.json','knowledge/graph.json','knowledge/source-registry.json','knowledge/ai-context.md','llms.txt'];
+const digest=value=>crypto.createHash('sha256').update(value,'utf8').digest('hex');
 const base=(process.env.SITE_URL||'https://vremennobeznika.github.io/enjigirling/').replace(/\/+$/,'')+'/';
 const paths=['index.html','calendar.html','resources.html','dictionary.html','map.html','calculator.html','compare.html','processes.html','materials.html','llms.txt','knowledge-manifest.json','knowledge/search-index.json','knowledge/graph.json','knowledge/source-registry.json','knowledge/ai-context.md'];
 async function get(path){
@@ -13,6 +19,12 @@ async function get(path){
 async function run(){
  const responses=await Promise.all(paths.map(async p=>[p,await get(p)]));
  const files=Object.fromEntries(responses);
+ // A stale deployment can have valid JSON and identical record counts. Compare
+ // published content against the exact repository revision deployed by Actions.
+ for(const name of compareExact){
+  const expected=fs.readFileSync(path.join(root,name),'utf8');
+  assert.equal(digest(files[name]),digest(expected),name+' is stale or differs from the checked-out commit');
+ }
  for(const name of paths.filter(p=>p.endsWith('.html'))){
   assert.ok(files[name].includes('<main'),name+' missing main landmark');
   assert.ok(files[name].includes('navigation.js'),name+' missing shared navigation');
@@ -30,7 +42,7 @@ async function run(){
  const listed=(files['knowledge/ai-context.md'].match(/^- \*\*.+\*\* — /gm)||[]).length;
  assert.equal(listed,index.records.length,'AI context does not contain every indexed record');
  assert.ok(files['llms.txt'].includes('knowledge-manifest.json'),'AI entrypoint does not mention manifest');
- console.log('LIVE PASS: '+paths.length+' HTTP endpoints, '+index.recordCount+' records, '+graph.edgeCount+' graph edges');
+ console.log('LIVE PASS: '+paths.length+' HTTP endpoints, '+compareExact.length+' exact SHA-256 content matches, '+index.recordCount+' records, '+graph.edgeCount+' graph edges');
 }
 async function main(){
  let last;
