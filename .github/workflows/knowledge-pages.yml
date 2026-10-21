@@ -41,10 +41,27 @@ jobs:
           if-no-files-found: ignore
       - name: Prepare Pages
         uses: actions/configure-pages@v5
+      - name: Stage static site without test dependencies
+        run: |
+          mkdir -p _site
+          rsync -a \
+            --exclude='.git/' \
+            --exclude='.github/' \
+            --exclude='node_modules/' \
+            --exclude='tests/' \
+            --exclude='scripts/' \
+            --exclude='test-results/' \
+            --exclude='playwright-report/' \
+            --exclude='_site/' \
+            --exclude='package*.json' \
+            --exclude='playwright.config.cjs' \
+            --exclude='.gitignore' \
+            ./ _site/
+          touch _site/.nojekyll
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
   deploy:
     environment:
       name: github-pages
