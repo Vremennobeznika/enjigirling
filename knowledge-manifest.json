@@ -2,7 +2,7 @@
   "name": "ENJIGIRLING",
   "type": "engineering-knowledge-base",
   "language": "ru",
-  "version": "0.2",
+  "version": "0.3",
   "baseUrl": "https://vremennobeznika.github.io/enjigirling/",
   "description": "Редакционный инженерный справочник; не заменяет первичные нормативные и технические источники.",
   "entryPoints": {
@@ -53,7 +53,8 @@
   "validation": {
     "status": "editorial_not_fully_verified",
     "note": "Отдельные записи могут не иметь подтверждённых источников. Не применять как инженерную спецификацию или нормативную инструкцию.",
-    "auditCommand": "node scripts/audit-knowledge.cjs --json"
+    "auditCommand": "node scripts/audit-knowledge.cjs --json",
+    "evidenceStatus": "Salary evidence contains linked observations with explicit status; not primary verification of all assertions"
   },
   "jsonApi": {
     "index": "knowledge/search-index.json",
@@ -65,6 +66,7 @@
     ],
     "format": "application/json",
     "note": "Static JSON snapshots; update these when source JavaScript datasets change.",
-    "graph": "knowledge/graph.json"
+    "graph": "knowledge/graph.json",
+    "salaryEvidence": "knowledge/salary-evidence.json"
   }
 }
