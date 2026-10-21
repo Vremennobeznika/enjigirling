@@ -16,7 +16,14 @@ jobs:
         run: |
           for file in *.js; do node --check "$file"; done
       - name: Run complete static QA matrix
-        run: node scripts/all-checks.cjs
+        run: node scripts/all-checks.cjs 2>&1 | tee static-qa.log
+      - name: Static QA transcript
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: static-qa-transcript
+          path: static-qa.log
+          if-no-files-found: ignore
   browser:
     runs-on: ubuntu-latest
     steps:
