@@ -1,5 +1,19 @@
 # Личная панель и синхронизация через Yandex Cloud
 
+## Статус 22.10.2026
+
+В аккаунте Yandex Cloud созданы: база `life-personal-store` (Serverless, 0 provisioned RU/s, лимит 10 RU/s, до 1 ГБ), сервисный аккаунт `life-sync-sa` с ролью `ydb.editor` **только на базе**, и пустая Cloud Function `life-sync` (`d4ed26vrlmb1uk22m3b7`). **Версия функции ещё не опубликована и синхронизация не активна.**
+
+Изготовлен и проверен архив кода `deploy.zip` в ветке `life-cloud-deploy`:
+https://github.com/Vremennobeznika/enjigirling/raw/refs/heads/life-cloud-deploy/life/cloud/deploy.zip
+
+Ограничение браузерной автоматизации — системный диалог выбора файла для загрузки ZIP в консоли Yandex. После ручного выбора файла нужно выбрать Node.js 22, entrypoint `index.handler`, service account `life-sync-sa`, задать переменные `YDB_CONNECTION_STRING` и `SYNC_TOKEN_SHA256`, нажать «Сохранить». Секрет синхронизации НЕ хранится в GitHub и никогда не передаётся в переменную окружения в открытом виде.
+
+**Внимание:** переменная `YDB_CONNECTION_STRING` должна содержать `grpcs://ydb.serverless.yandexcloud.net:2135/ru-central1/b1gfjk1f2ihikvlkq67s/etnunn9vtmeospfv3c50`, а `SYNC_TOKEN_SHA256` — SHA-256 локально сохранённого случайного токена. Для этой установки SHA-256: `d218f1b19b8297372b649695b50dd046dc0947e3372fd7a5fc420c18734c58f4`. Хеш нельзя использовать вместо самого токена при синхронизации.
+
+Таблица `app_state` автоматически создаётся серверной функцией при первом авторизованном вызове (файл `index.mjs`), поэтому вручную запускать CREATE TABLE не обязательно.
+
+
 Интерфейс: https://vremennobeznika.github.io/enjigirling/life/
 
 **Что уже работает без облака:** список задач, домашние запасы, показатели календаря и покупок, единое резервное копирование и восстановление. Существующие приложения не заменены.
