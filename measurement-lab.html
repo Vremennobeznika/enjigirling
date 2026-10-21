@@ -43,13 +43,13 @@
 </nav><noscript><style>@media(max-width:860px){.site-nav-wrap>.eng-tabs{display:flex!important}.site-nav-wrap>.site-nav-toggle{display:none!important}}</style></noscript></div>
 <main class="site-page measurement-lab" id="main-content">
 <header class="page-header">
-<span class="measurement-kicker">МЕТРОЛОГИЯ / ИНТЕРАКТИВНЫЕ ПРИБОРЫ</span>
+<span class="measurement-kicker">МЕТРОЛОГИЯ / 10 ВСТРОЕННЫХ ТРЕНАЖЁРОВ</span>
 <h1>Измерительные инструменты онлайн</h1>
-<p>Три собственных тренажёра и ссылки на профильные лаборатории. Настраивайте показания и проверяйте чтение шкалы — без установки программ.</p>
+<p>Десять интерактивных тренажёров: три вида штангенциркулей, микрометр, индикатор, глубиномер, угломер, линейка, мультиметр и осциллограф. Всё работает прямо здесь, без внешних ссылок.</p>
 </header>
-<div class="measurement-disclaimer"><strong>Не средство измерений.</strong> Тренажёры моделируют отсчёт по шкалам. Они не измеряют реальную деталь, не учитывают погрешности приборов и не заменяют поверку или калибровку. Экранные линейки требуют отдельной калибровки дисплея.</div>
+<div class="measurement-disclaimer"><strong>Учебные модели, не средства измерений.</strong> Приборы показывают виртуальные значения и не измеряют детали, ток или напряжение через монитор. Для реального контроля нужны физические инструменты, поверка или калибровка и правильная методика.</div>
 <nav class="measurement-quicklinks" aria-label="Перейти к прибору">
-<a href="#micrometer">Микрометр</a><a href="#dial-indicator">Индикатор часового типа</a><a href="#protractor">Угломер</a><a href="#external-measurement">Другие онлайн-приборы</a><a href="calculator.html#labCaliper">Штангенциркуль</a>
+<a href="#vernier">Нониусный</a><a href="#dialcal">Индикаторный</a><a href="#digital">Цифровой</a><a href="#depth">Глубиномер</a><a href="#micrometer">Микрометр</a><a href="#dial-indicator">Индикатор</a><a href="#protractor">Угломер</a><a href="#ruler">Линейка</a><a href="#multimeter">Мультиметр</a><a href="#oscilloscope">Осциллограф</a>
 </nav>
 <section class="instrument-card" id="micrometer" aria-labelledby="micHeading">
 <header><div><p class="measurement-index">01 / ЛИНЕЙНЫЕ РАЗМЕРЫ</p><h2 id="micHeading">Микрометр 0–25 мм</h2><p>Цена деления барабана 0,01 мм, шаг винта 0,5 мм за оборот. Отсчёт = гильза + деления барабана.</p></div><span class="measurement-spec">0,01 мм</span></header>
@@ -86,15 +86,11 @@
 <div class="instrument-actions"><button type="button" id="angleRandom">Случайный угол</button><button type="button" id="angleReveal" aria-pressed="true">Скрыть ответ</button></div>
 <div class="instrument-practice"><label for="angleGuess">Самопроверка: угол, °</label><div><input id="angleGuess" inputmode="numeric" type="text" autocomplete="off" placeholder="Например: 48"><button type="button" id="angleCheck">Проверить</button></div><p id="angleFeedback" aria-live="polite"></p></div>
 </section>
-<section class="measurement-external" id="external-measurement" aria-labelledby="externalHeading">
-<h2 id="externalHeading">Другие онлайн-приборы и тренажёры</h2>
-<p>Ссылки на независимые проекты. Язык некоторых интерфейсов — английский. Прежде чем работать, учитывайте ограничения каждого симулятора.</p>
-<div class="measurement-link-grid" id="measurementExternalGrid"></div>
-<p class="measurement-limit">Разделяются три разных задачи: <strong>чтение шкалы учебного прибора</strong>, <strong>симуляция электрической схемы</strong> и <strong>измерение физического объекта по экрану</strong>. Последнее возможно лишь после калибровки и не подходит для производственной приёмки.</p>
-</section>
+<section class="measurement-embedded" aria-label="Дополнительные интерактивные измерительные приборы"><div id="embeddedInstruments"></div><div id="embeddedElectronics"></div></section>
 </main></div>
 <footer><p>© 2026 — ENJIGIRLING</p></footer>
-<script src="resources-data.js"></script>
 <script src="measurement-lab.js"></script>
+<script src="measurement-builtins.js"></script>
+<script src="measurement-electronics.js"></script>
 <script src="theme.js"></script><script src="site-shell.js"></script><script src="navigation.js"></script>
 </body></html>
