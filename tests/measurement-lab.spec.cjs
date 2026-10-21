@@ -34,7 +34,7 @@ test('all ten measuring instruments run locally and provide actual controls',asy
  await expect(page.locator('#digitalOutput')).toContainText('50,80 мм');
  await page.locator('#depthValue').fill('40.15');
  await expect(page.locator('#depthOutput')).toContainText('40,15 мм');
- await page.locator('#rulerRange').fill('90');
+ await page.locator('#rulerValue').fill('90');
  await expect(page.locator('#rulerOutput')).toContainText('90 мм');
  await expect(page.locator('#micOutput')).toContainText('7,28 мм');
  await page.locator('#micValue').fill('8.35');
