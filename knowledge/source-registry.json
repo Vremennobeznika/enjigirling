@@ -13,7 +13,7 @@
       "checkedAt": "2026-10-21",
       "appliesTo": "Nomenclature and reference numbers of welding processes; does not establish process parameters",
       "access": "public_abstract_or_overview",
-      "notes": "Only directly visible publication or overview has been reviewed. No full paid-standard review is claimed."
+      "notes": "Only the published ISO abstract and catalog metadata were inspected; the full standard was not accessed. ISO licensing restrictions apply."
     },
     {
       "sourceId": "worldstainless-304",
@@ -28,18 +28,18 @@
     },
     {
       "sourceId": "aluminum-aa-standards",
-      "title": "Standards: aluminum alloy series",
+      "title": "Standards — The Aluminum Association",
       "url": "https://www.aluminum.org/standards",
       "publisher": "The Aluminum Association",
       "documentDate": "undated",
       "checkedAt": "2026-10-21",
-      "appliesTo": "6xxx aluminum alloy group and alloy 6061 overview",
+      "appliesTo": "Standards organization, alloy registration and the effect of alloying elements or heat treatment on properties; does not identify 6061 composition on this page",
       "access": "public_abstract_or_overview",
       "notes": "Only directly visible publication or overview has been reviewed. No full paid-standard review is claimed."
     },
     {
       "sourceId": "asnt-ut",
-      "title": "Ultrasonic Testing (UT): NDT Inspection Techniques",
+      "title": "Ultrasonic Testing: A Versatile Method for NDT",
       "url": "https://www.asnt.org/what-is-nondestructive-testing/methods/ultrasonic-testing",
       "publisher": "American Society for Nondestructive Testing",
       "documentDate": "undated",
@@ -75,7 +75,7 @@
       "sourceId": "aluminum-aa-standards",
       "claimPath": "detail",
       "verificationStatus": "source_located",
-      "claimScope": "The 6xxx aluminum series contains Mg and Si; 6061 belongs to it"
+      "claimScope": "General guidance that aluminum properties depend on alloying elements and temper; exact 6061 chemistry requires an alloy-specific primary source"
     },
     {
       "recordType": "processes",
@@ -152,7 +152,8 @@
       "Do not mark source as verified merely because a URL exists.",
       "Link each technical claim to a specific source and applicable edition.",
       "A source may support only claims within its scope and conditions.",
-      "Unknown data must remain unknown rather than inferred."
+      "Unknown data must remain unknown rather than inferred.",
+      "CheckedAt records the latest landing-page inspection, not verification of an entire technical standard."
     ]
   }
 }
