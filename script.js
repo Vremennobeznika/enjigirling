@@ -129,7 +129,7 @@ function renderProsCons({ easy, hard }) {
 
 function renderVerifiedSalarySource(profession) {
   const entry = (window.salarySourceAudit || []).find(item => item.id === profession.id && item.status === 'source_snapshot');
-  if (!entry) return '<p class="data-quality-note">Сопоставимого опубликованного диапазона для этой профессии пока не установлено. Непроверенные цифры скрыты.</p>';
+  if (!entry) return '<p class="data-quality-note">Зарплатный диапазон для этой точной профессии не подтверждён проверяемым источником на 21.10.2026. Цифры скрыты; найденная ссылка и причина доступны в блоке источников ниже.</p>';
   if (entry.validationStatus === 'adjacent_occupation_checked') return `<p class="data-quality-note">Для этой профессии точная зарплата не подтверждена. Найден источник по смежной должности «${escapeHTML(entry.sourceTitle)}», но его цифры не переносим на профессию каталога. <a href="${escapeHTML(entry.sourceUrl)}" target="_blank" rel="noopener noreferrer">Смежный источник</a>.</p>`;
   const fmt = value => Number(value).toLocaleString('ru-RU');
   const display = entry.rangeMinRub === entry.rangeMaxRub
@@ -138,9 +138,9 @@ function renderVerifiedSalarySource(profession) {
   const quality = entry.evidenceLevel === "single_observation"
     ? "Одна вакансия / одно наблюдение; не медиана профессии."
     : entry.evidenceLevel === "aggregate_or_range"
-      ? "Опубликованный диапазон; выборка, состав и методика не подтверждены редакцией."
+      ? "Опубликованная на указанной странице выборка, зачастую малая и нерепрезентативная для всей профессии."
       : "Слабое соответствие данных профессии.";
-  return `<p class="data-quality-note"><strong>Снимок внешнего источника:</strong> ${display} ₽/мес. · ${escapeHTML(entry.region)} · дата записи ${escapeHTML(entry.checkedAt)}. ${escapeHTML(entry.metric)}. Тип данных: ${quality} Статус: ${entry.validationStatus === "source_linked_not_independently_verified" ? "ссылка сохранена, страница не проверена" : "отмечена проверка страницы (не независимая проверка цифр)"}. Должность в источнике: ${escapeHTML(entry.sourceTitle)}. <a href="${escapeHTML(entry.sourceUrl)}" target="_blank" rel="noopener noreferrer">Страница источника</a>. Данные разных регионов, дат и методик напрямую не сравнивать.</p>`;
+  return `<p class="data-quality-note"><strong>Снимок внешнего источника:</strong> ${display} ₽/мес. · ${escapeHTML(entry.region)} · дата записи ${escapeHTML(entry.checkedAt)}. ${escapeHTML(entry.metric)}. Тип данных: ${quality} Статус: ${entry.validationStatus === "source_linked_not_independently_verified" ? "ссылка сохранена, страница не проверена" : "числа повторно сопоставлены с отображаемой страницей; методика исходной выборки отдельно не аудирована"}. Должность в источнике: ${escapeHTML(entry.sourceTitle)}. <a href="${escapeHTML(entry.sourceUrl)}" target="_blank" rel="noopener noreferrer">Страница источника</a>. Данные разных регионов, дат и методик напрямую не сравнивать.</p>`;
 }
 
 // Editorial guide derived from existing profession descriptions; not a claim about a specific employer.
@@ -156,7 +156,7 @@ function renderSourceMethodology(profession) {
   const kind = evidence[item.evidenceLevel] || 'Тип данных не определён';
   const verified = item.validationStatus === 'source_page_checked' || item.validationStatus === 'employer_vacancy_checked';
   return '<p><strong>Тип свидетельства:</strong> ' + escapeHTML(kind) + '</p>' +
-    '<p><strong>Проверка:</strong> ' + (verified ? 'Отмечена сверка страницы источника; репрезентативность и соответствие профессии оцениваются отдельно' : 'Полного подтверждения нет') + '</p>' +
+    '<p><strong>Проверка:</strong> ' + (verified ? '21.10.2026 проверено совпадение суммы и категории с доступной страницей; выборка и методика не прошли независимый аудит' : 'Полного подтверждения нет') + '</p>' +
     (item.checkedAt ? '<p><strong>Дата записи:</strong> ' + escapeHTML(item.checkedAt) + '</p>' : '') +
     (item.notes ? '<p>' + escapeHTML(item.notes) + '</p>' : '') +
     (item.sourceUrl ? '<p><a href="' + escapeHTML(item.sourceUrl) + '" target="_blank" rel="noopener noreferrer">Открыть страницу источника ↗</a></p>' : '');
@@ -271,7 +271,7 @@ function renderProfession(profession, category) {
         <h2 id="modalTitle">${escapeHTML(profession.title)}</h2>
       </div>
     </div>
-    ${section("Чем занимается", `<p>${valueOrDash(profession.shortDesc)}</p>`, " profession-intro")}
+    ${section("Чем занимается", `<p>${valueOrDash(profession.shortDesc)}</p><p class="data-quality-note">Редакционное описание типичных функций, не должностная инструкция и не профстандарт для конкретного работодателя.</p>`, " profession-intro")}
     <p class="data-quality-note">Численность специалистов, средний возраст и гендерное распределение не публикуются без проверяемых статистических источников.</p>
     ${section("Практика: задачи, знания и инструменты", renderPracticalGuide(profession))}
     ${section("Связанные процессы и материалы", renderRelatedTechnology(profession))}
