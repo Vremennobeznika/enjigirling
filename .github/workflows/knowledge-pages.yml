@@ -26,6 +26,19 @@ jobs:
         run: node tests/site-check.cjs
       - name: Report source-evidence coverage
         run: node scripts/audit-knowledge.cjs
+      - name: Install browser test dependencies
+        run: npm install --no-audit --no-fund
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Validate desktop and mobile layouts
+        run: npx playwright test
+      - name: Archive browser failures
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pages-browser-test-results
+          path: test-results/
+          if-no-files-found: ignore
       - name: Prepare Pages
         uses: actions/configure-pages@v5
       - name: Upload site
