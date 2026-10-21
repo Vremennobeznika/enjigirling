@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         grid.innerHTML = '';
         if (items.length === 0) {
             emptyMsg.style.display = 'block';
+            grid.dataset.ready = 'true';
             return;
         }
         emptyMsg.style.display = 'none';
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             card.append(title,description);
             grid.appendChild(card);
         });
+        grid.dataset.ready = 'true';
     }
 
     searchInput.addEventListener('input', () => {
