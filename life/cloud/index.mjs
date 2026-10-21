@@ -39,7 +39,15 @@ async function getDb() {
       credentialsProvider: new MetadataCredentialsProvider({})
     });
     await driver.ready();
-    return query(driver);
+    const sql = query(driver);
+    // Safe idempotent schema setup on first successful authorized request.
+    await sql`CREATE TABLE IF NOT EXISTS app_state (
+      id Utf8 NOT NULL,
+      payload Utf8,
+      revision Int64,
+      PRIMARY KEY (id)
+    )`;
+    return sql;
   })().catch(err => { connection = null; throw err; });
   return connection;
 }
