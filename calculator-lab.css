@@ -84,3 +84,8 @@
 .caliper-viewport svg{display:block;min-width:580px;width:100%;max-width:780px;height:auto;}
 .caliper-slider{width:100%!important;accent-color:var(--text-primary);touch-action:pan-y;}
 .instrument-panel .calc-lab-body>label{display:block;margin:10px 0 7px;font-weight:600;}
+
+.atlas-direct-link{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:18px 0 0!important;font-size:13px!important}
+.atlas-direct-link a,.atlas-direct-link a:visited{display:inline-flex;align-items:center;min-height:44px;padding:9px 13px;border:2px solid var(--card-border);border-radius:9px;color:var(--card-text)!important;text-decoration:none;font-weight:700}
+.atlas-direct-link a:hover{border-color:var(--text-primary);text-decoration:underline}
+.atlas-direct-link span{color:var(--card-muted)}

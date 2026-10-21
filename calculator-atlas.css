@@ -1,0 +1,40 @@
+.atlas-page{min-height:75vh}
+.atlas-hero{margin:16px 0 24px;padding:clamp(18px,4vw,32px);border:2px solid var(--card-border);border-radius:18px;background:var(--card-bg);color:var(--card-text)}
+.atlas-eyebrow{font:700 11px/1.5 ui-monospace,Consolas,monospace;letter-spacing:.12em;color:var(--card-muted);margin:0 0 10px}
+.atlas-hero h1{font:700 clamp(24px,3vw,37px)/1.2 var(--font);margin:0 0 12px}
+.atlas-hero p{font:400 var(--fs-sm)/1.7 var(--font);max-width:76ch;margin:0 0 13px}
+.atlas-stats{display:flex;gap:12px;flex-wrap:wrap;margin:14px 0}
+.atlas-stat{display:flex;gap:8px;align-items:center;border:1px solid var(--card-border);border-radius:10px;padding:10px 13px;background:var(--soft-bg)}
+.atlas-stat strong{font:700 20px ui-monospace,Consolas,monospace}
+.atlas-stat span{font:500 12px var(--font)}
+.atlas-existing{margin:18px 0 20px;border:1px solid var(--card-border);padding:16px;border-radius:14px;background:var(--card-bg);color:var(--card-text)}
+.atlas-existing h2{font:700 20px var(--font);margin:0 0 10px}
+.atlas-links{display:flex;gap:8px;flex-wrap:wrap}
+.atlas-links a,.atlas-links a:link,.atlas-links a:visited,.atlas-source a,.atlas-source a:visited,.atlas-back,.atlas-back:visited{color:var(--card-text)!important}
+.atlas-links a{padding:8px 11px;display:inline-flex;min-height:44px;align-items:center;border:1px solid var(--card-border);border-radius:9px;text-decoration:none}
+.atlas-links a:hover,.atlas-source a:hover{text-decoration:underline;border-color:var(--text-primary)}
+.atlas-filters{margin:16px 0;padding:15px;border:1px solid var(--card-border);border-radius:14px;background:var(--soft-bg);color:var(--card-text);display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:12px}
+.atlas-filters label{font:700 var(--fs-sm)/1.4 var(--font);display:block;margin-bottom:6px}
+.atlas-filters :is(input,select){width:100%;min-height:48px;box-sizing:border-box;background:var(--card-bg);color:var(--card-text);border:1px solid var(--card-border);border-radius:9px;padding:10px 12px;font:400 16px/1.4 var(--font)}
+.atlas-actions{grid-column:1/-1;display:flex;align-items:center;flex-wrap:wrap;gap:10px}
+.atlas-actions button,.atlas-actions a{box-sizing:border-box;min-height:44px;display:inline-flex;align-items:center;padding:9px 14px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;text-decoration:none;color:var(--card-text)!important;font:600 var(--fs-sm)/1.4 var(--font);cursor:pointer}
+.atlas-actions button:hover,.atlas-actions a:hover{border-color:var(--text-primary)}
+.atlas-actions button:disabled{opacity:.5;cursor:default}
+.atlas-count{font:400 var(--fs-sm)/1.5 var(--font);color:var(--card-muted);margin:5px 0 15px}
+.atlas-results{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;align-items:start}
+.atlas-group{min-width:0;background:var(--card-bg);color:var(--card-text);border:1px solid var(--card-border);border-radius:12px;overflow:hidden}
+.atlas-group-head{cursor:pointer;list-style:none;position:relative;padding:16px 40px 16px 14px;font:700 var(--fs-sm)/1.45 var(--font);overflow-wrap:anywhere;min-height:22px}
+.atlas-group-head::-webkit-details-marker{display:none}
+.atlas-group-head::after{content:'+';font-size:22px;position:absolute;right:15px;top:12px}
+.atlas-group[open]>.atlas-group-head::after{content:'−'}
+.atlas-group[open]>.atlas-group-head{background:var(--soft-bg);border-bottom:1px solid var(--card-border)}
+.atlas-group-body{padding:11px 16px 16px}
+.atlas-source{font:400 12px/1.5 var(--font);color:var(--card-muted);margin:3px 0 12px}
+.atlas-topic-list{padding-left:23px;margin:0;columns:1}
+.atlas-topic{padding:6px 0;border-bottom:1px solid var(--card-border);font:400 var(--fs-sm)/1.45 var(--font);break-inside:avoid}
+.atlas-topic:last-child{border-bottom:0}
+.atlas-more{font:400 12px/1.5 var(--font);color:var(--card-muted)}
+.atlas-notes{margin:22px 0 30px;padding:17px;border-left:3px solid var(--text-primary);background:var(--soft-bg);color:var(--card-text);font:400 var(--fs-sm)/1.65 var(--font)}
+.atlas-page :is(a,button,input,select,summary):focus-visible{outline:3px solid var(--text-primary);outline-offset:3px}
+@media(max-width:760px){.atlas-results{grid-template-columns:minmax(0,1fr)}.atlas-filters{grid-template-columns:minmax(0,1fr)}}
+@media(prefers-reduced-motion:reduce){.atlas-page *{animation:none!important;transition:none!important}}

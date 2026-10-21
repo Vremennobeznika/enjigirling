@@ -362,5 +362,29 @@ check('virtual instrument and extra textile maritime calculation catalog',()=> {
  assert.ok(fs.readFileSync('engineering-lab-ui.js','utf8').includes('function caliperInit()'),'missing instrument UI');
 });
 
+
+check('734 unique calculator concepts across 34 research groups have honest statuses',()=>{
+ const data=fs.readFileSync('calculator-atlas-data.js','utf8');
+ const groups=JSON.parse(data.slice(data.indexOf('=')+1).trim().replace(/;\s*$/,''));
+ assert.equal(groups.length,34,'atlas category count');
+ const names=groups.flatMap(g=>g.items);
+ assert.equal(names.length,734,'catalog topic count');
+ assert.equal(new Set(names.map(x=>x.toLocaleLowerCase('ru-RU'))).size,names.length,'duplicate calculator proposals');
+ for(const group of groups){
+  assert.ok(group.title&&group.id&&group.source.startsWith('https://'),group.id+' invalid metadata');
+  assert.ok(group.items.length>=10,group.id+' has too few topics');
+ }
+ const page=fs.readFileSync('calculator-atlas.html','utf8');
+ assert.ok(page.includes('734 темы'),'atlas must label topics as ideas');
+ assert.ok(page.includes('не 734 якобы работающих калькулятора'),'atlas must not mislead');
+ for(const filename of ['calculator-atlas.js','calculator-atlas-data.js','calculator-atlas.css','calculator-atlas.csv'])
+   assert.ok(page.includes(filename),'atlas missing '+filename);
+ assert.ok(fs.readFileSync('calculator.html','utf8').includes('href="calculator-atlas.html"'),'calculator section has no catalog link');
+ const csv=fs.readFileSync('calculator-atlas.csv','utf8');
+ assert.ok(csv.startsWith('\uFEFF'),'CSV must be UTF-8 with BOM');
+ assert.equal(csv.trimEnd().split('\n').length,735,'CSV rows');
+ assert.ok(fs.existsSync('tests/calculator-atlas.spec.cjs'),'atlas browser regressions missing');
+});
+
 console.log('Matrix: '+count+' PASS, '+errors.length+' FAIL ('+pages.length+' pages, '+datasets.length+' datasets)');
 if(errors.length)process.exitCode=1;
