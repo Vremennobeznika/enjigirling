@@ -238,6 +238,23 @@ function renderRelatedProfessions(profession, category) {
   ).join("") + '</div>';
 }
 
+function renderRelatedTechnology(profession) {
+  // The process catalog is loaded after this script; read it only when a card opens.
+  const processes = (window.engineeringProcesses || []).filter(x => x.profession === profession.id);
+  if (!processes.length) return "";
+  const materials = new Map((window.engineeringMaterials || []).map(x => [x.id, x]));
+  const processLinks = processes.map(x =>
+    '<a href="processes.html#' + encodeURIComponent(x.id) + '">' + escapeHTML(x.name) + '</a>'
+  ).join("");
+  const materialIds = [...new Set(processes.flatMap(x => x.materials || []))];
+  const materialLinks = materialIds.filter(id => materials.has(id)).map(id =>
+    '<a href="materials.html#' + encodeURIComponent(id) + '">' + escapeHTML(materials.get(id).name) + '</a>'
+  ).join("");
+  return '<p class="data-quality-note">Связи в справочнике редакционные и не являются подтверждением допусков, режимов обработки или требований безопасности.</p>' +
+    '<p class="sub-label">Процессы</p><div class="technology-links">' + processLinks + '</div>' +
+    (materialLinks ? '<p class="sub-label">Материалы</p><div class="technology-links">' + materialLinks + '</div>' : "");
+}
+
 function renderProfession(profession, category) {
   return `
     <div class="modal-header">
@@ -249,6 +266,7 @@ function renderProfession(profession, category) {
     ${section("Чем занимается", `<p>${valueOrDash(profession.shortDesc)}</p>`, " profession-intro")}
     <p class="data-quality-note">Численность специалистов, средний возраст и гендерное распределение не публикуются без проверяемых статистических источников.</p>
     ${section("Практика: задачи, знания и инструменты", renderPracticalGuide(profession))}
+    ${section("Связанные процессы и материалы", renderRelatedTechnology(profession))}
     ${section("Нормативные документы и профессиональные стандарты", renderNormativeReferences(profession))}
     ${section("Образование и подготовка (направления, не квалификационные требования)", renderEducation(profession.education))}
     ${section("Зарплата", renderVerifiedSalarySource(profession))}

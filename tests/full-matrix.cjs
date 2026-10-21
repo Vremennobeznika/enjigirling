@@ -222,5 +222,28 @@ check('parallel font loading and nonduplicated main CI checks', () => {
  assert.match(fs.readFileSync('.github/workflows/knowledge-pages.yml','utf8'),/npx playwright test/,'main deploy must gate browser tests');
 });
 
+
+check('five navigation groups preserve all nine original page routes', () => {
+ const expectedGroups=['Карьера','Технологии','Инструменты','База знаний','Сообщество'];
+ for(const page of pages){
+  const markup=fs.readFileSync(page,'utf8');
+  const match=markup.match(/<nav id="site-main-navigation"[^>]*>([\s\S]*?)<\/nav>/);
+  assert.ok(match,page+' navigation missing');
+  const groups=[...match[1].matchAll(/class="nav-cluster" role="group" aria-label="([^"]+)"/g)].map(x=>x[1]);
+  assert.deepEqual(groups,expectedGroups,page+' incorrect navigation groups');
+  const hrefs=[...match[1].matchAll(/<a href="([^"]+)" class="eng-tab(?: active)?"/g)].map(x=>x[1]);
+  assert.equal(hrefs.length,9,page+' must retain exactly nine links');
+  assert.equal(new Set(hrefs).size,9,page+' repeated nav destinations');
+  assert.deepEqual(new Set(hrefs),new Set(pages),page+' old route missing');
+ }
+ const home=fs.readFileSync('index.html','utf8');
+ assert.ok(home.includes('class="learning-paths"'),'landing task routes missing');
+ assert.equal((home.match(/class="learning-path-card"/g)||[]).length,3,'three task routes expected');
+ const source=fs.readFileSync('script.js','utf8');
+ assert.ok(source.includes('function renderRelatedTechnology('),'reverse profession-to-process links missing');
+ assert.ok(source.includes('href="processes.html#'),'profession process deep link missing');
+ assert.ok(source.includes('href="materials.html#'),'profession material deep link missing');
+});
+
 console.log('Matrix: '+count+' PASS, '+errors.length+' FAIL ('+pages.length+' pages, '+datasets.length+' datasets)');
 if(errors.length)process.exitCode=1;

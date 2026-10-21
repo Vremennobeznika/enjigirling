@@ -183,3 +183,30 @@ test('catalog layout placeholders are removed after rendering',async({page})=>{
   expect(rendered,path+' content never rendered').toBeGreaterThan(0);
  }
 });
+
+
+test('five grouped navigation sections retain all nine page destinations on mobile',async({page})=>{
+ await page.setViewportSize({width:375,height:812});
+ await page.goto('/index.html');
+ const toggle=page.locator('.site-nav-toggle');
+ await toggle.click();
+ const nav=page.locator('#site-main-navigation');
+ await expect(nav.locator('.nav-cluster')).toHaveCount(5);
+ await expect(nav.locator('a.eng-tab')).toHaveCount(9);
+ for(const group of await nav.locator('.nav-cluster').all()){
+  await expect(group).toBeVisible();
+  expect(await group.locator('a.eng-tab').count()).toBeGreaterThan(0);
+ }
+});
+
+test('profession details link back to catalogued processes and materials',async({page})=>{
+ await page.goto('/index.html');
+ const professionId=await page.evaluate(()=>window.engineeringProcesses[0].profession);
+ await page.goto('/index.html#profession='+encodeURIComponent(professionId));
+ await expect(page.locator('#modalOverlay')).toHaveAttribute('aria-hidden','false');
+ const links=page.locator('#modalContent .technology-links a');
+ await expect(links.first()).toBeVisible();
+ expect(await links.count()).toBeGreaterThan(1);
+ await expect(page.locator('#modalContent a[href^="processes.html#"]').first()).toBeVisible();
+ await expect(page.locator('#modalContent a[href^="materials.html#"]').first()).toBeVisible();
+});

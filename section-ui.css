@@ -82,3 +82,44 @@
 #dictionaryGrid:not([data-ready]) {
   min-height: max(75vh, 650px);
 }
+
+
+/* Five stable, semantic navigation groups; original nine routes remain direct links. */
+.site-nav-wrap > .eng-tabs {justify-content:flex-start;align-items:stretch;gap:10px;flex-wrap:wrap;overflow:visible;}
+.site-nav-wrap > .eng-tabs .nav-cluster {
+  display:flex;flex-wrap:wrap;align-items:center;align-content:flex-start;gap:6px;
+  min-width:0;padding:8px;border:1px solid var(--card-border);
+  border-radius:14px;background:var(--soft-bg);
+}
+.site-nav-wrap > .eng-tabs .nav-cluster-title {
+  display:block;flex-basis:100%;color:var(--card-muted);font:700 11px/1.4 var(--font);
+  letter-spacing:.065em;text-transform:uppercase;padding:0 5px 2px;
+}
+.site-nav-wrap > .eng-tabs .nav-cluster .eng-tab {
+  min-height:44px;padding:9px 11px;white-space:normal;
+}
+@media(max-width:860px){
+  .site-nav-wrap > .eng-tabs .nav-cluster {display:flex;flex-direction:column;align-items:stretch;width:100%;padding:9px;}
+  .site-nav-wrap > .eng-tabs .nav-cluster-title {flex-basis:auto;padding:3px 4px;}
+  .site-nav-wrap > .eng-tabs .nav-cluster .eng-tab {width:100%;min-height:44px;}
+}
+@media(max-width:390px){.site-nav-wrap > .eng-tabs .nav-cluster {max-width:100%;}}
+
+/* Homepage task routes: monochrome, readable and stable at mobile widths. */
+.learning-paths {margin:28px 0 30px;}
+.learning-path-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;}
+.learning-path-card {display:flex;flex-direction:column;min-width:0;padding:20px;border:1px solid var(--card-border);border-radius:16px;background:var(--card-bg);color:var(--card-text);}
+.learning-path-card h3 {font:700 clamp(17px,2vw,21px)/1.3 var(--font);margin:9px 0 8px;overflow-wrap:anywhere;}
+.learning-path-card p {font:400 var(--fs-sm)/1.6 var(--font);color:var(--card-muted);margin:0 0 18px;}
+.learning-path-number {font:700 11px/1.35 var(--font);letter-spacing:.075em;color:var(--card-muted);}
+.learning-path-links {display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin-top:auto;}
+.learning-path-links a,.learning-path-links a:link,.learning-path-links a:visited,
+.technology-links a,.technology-links a:link,.technology-links a:visited {
+ display:inline-flex;align-items:center;min-height:44px;padding:8px 11px;border:1px solid var(--card-border);
+ border-radius:10px;background:var(--soft-bg);color:var(--card-text)!important;
+ font:600 var(--fs-sm)/1.35 var(--font);text-decoration:none;overflow-wrap:anywhere;
+}
+.learning-path-links a:hover,.technology-links a:hover {border-color:var(--text-primary);text-decoration:underline;}
+.learning-path-links a:focus-visible,.technology-links a:focus-visible {outline:3px solid var(--text-primary);outline-offset:2px;}
+.technology-links {display:flex;flex-wrap:wrap;gap:8px;margin:12px 0;}
+@media(max-width:950px){.learning-path-grid{grid-template-columns:minmax(0,1fr);}}
