@@ -40,8 +40,28 @@
 /* Long Russian page headings must wrap even on 320px screens. */
 .site-page .page-header h1 {overflow-wrap:anywhere;hyphens:auto;min-width:0;}
 
-/* Keep the footer below the initial viewport until the catalogs are populated. */
-#dictionaryGrid:empty,#resourcesGrid:empty{min-height:100vh;}
+/* Avoid artificial full-viewport blank space if a catalog has no entries. */
+#dictionaryGrid:empty,#resourcesGrid:empty{min-height:0;}
 
 /* Ensure small-print footer copyright meets contrast in both themes. */
 .footer-copy,.site-footer-copy{opacity:1;color:var(--text-primary);}
+
+/* Consistent keyboard focus and touch targets throughout all nine sections. */
+:where(.site-page,.eng-calendar-root,footer) :is(a,button,input,select,textarea):focus-visible,
+.site-nav-toggle:focus-visible {
+  outline:3px solid var(--text-primary,currentColor);
+  outline-offset:3px;
+}
+.eng-tab,.site-nav-toggle,.filter-reset,.eng-filter-btn,.footer-btn {min-height:44px;}
+.eng-tabs a[aria-current="page"] {font-weight:700;}
+/* Keep content inside the viewport without truncating engineering terminology. */
+.site-page,.eng-calendar-root,.eng-grid,.eng-card,.modal-content {min-width:0;}
+.site-page :is(table,pre) {max-width:100%;}
+.site-page pre {overflow-x:auto;}
+.site-page :is(input,select,textarea) {max-width:100%;}
+@media(max-width:600px){
+  .site-page .eng-grid,.eng-calendar-root .eng-grid {grid-template-columns:minmax(0,1fr);}
+  .modal-overlay {padding:10px;}
+  .modal {width:100%;max-width:100%;padding:clamp(16px,4vw,24px);border-radius:16px!important;}
+  .modal-header {padding-right:34px;}
+}
