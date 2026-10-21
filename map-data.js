@@ -159,7 +159,7 @@ const federalDistricts = [
             { name: "Сибирский федеральный университет (СФУ)", city: "Красноярск", focus: "Машиностроение, энергетика, металлургия", profile: "Технический", site: "https://sfu.ru/", sourceStatus: "official_source_located", sourceUrl: "https://sfu.ru/ru/about/sfu-history", verifiedScope: "Официальная история СФУ: Красноярский ГТУ вошёл в состав СФУ в 2006 году. Программы не проверены.", siteFetchStatus: "not_retrieved", siteFetchCheckedAt: "2026-10-22" }
         ],
         colleges: [
-            { name: "Новосибирский техникум ж/д транспорта", city: "Новосибирск", focus: "Железнодорожный транспорт", profile: "Транспортный техникум", sourceStatus: "editorial_not_verified" },
+            { name: "Новосибирский техникум железнодорожного транспорта СГУПС", city: "Новосибирск", focus: "Железнодорожный транспорт, эксплуатация путей и подвижного состава", profile: "Транспортный техникум", site: "https://www.stu.ru/abiturient/index.php?page=1237", sourceStatus: "official_source_located", sourceUrl: "https://www.stu.ru/abiturient/index.php?page=1237", verifiedScope: "Официальный сайт Сибирского государственного университета путей сообщения подтверждает филиал/подразделение НТЖТ, правила приёма и план набора СПО 2026/27. Конкретные места в карточку не переносились." },
             { name: "Томский техникум информационных технологий", city: "Томск", focus: "IT, электроника", profile: "Техникум", sourceStatus: "official_source_located", sourceUrl: "https://monitoring.miccedu.ru/iam/2024/_spo/inst.php?id=100738", verifiedScope: "Официальный мониторинг СПО 2024 подтверждает организацию и адрес Томск, Герцена, 18; актуальный сайт tomtit.tomsk.ru вернул 403 в этой проверке, приём 2026/27 не проверялся." },
             { name: "Кемеровский горнотехнический техникум", city: "Кемерово", focus: "Горное дело", profile: "Горнотехнический техникум", sourceStatus: "editorial_not_verified" },
             { name: "Красноярский техникум промышленного сервиса", city: "Красноярск", focus: "Аддитивные технологии, промышленный сервис", profile: "Техникум", site: "https://ktps24.ru/", sourceStatus: "official_source_located", sourceUrl: "https://ktps24.ru/", verifiedScope: "Официальный сайт подтверждает название и Красноярск; описана программа по аддитивным технологиям. Приёмные цифры не проверены." }
@@ -180,7 +180,7 @@ const federalDistricts = [
         ],
         colleges: [
             { name: "Владивостокский судостроительный колледж", city: "Владивосток", focus: "Судостроение", profile: "Судостроительный колледж", sourceStatus: "editorial_not_verified" },
-            { name: "Хабаровский техникум транспортных технологий", city: "Хабаровск", focus: "Транспорт, логистика", profile: "Техникум", sourceStatus: "editorial_not_verified" },
+            { name: "Хабаровский техникум транспортных технологий имени А. С. Панова", city: "Хабаровск", focus: "Железнодорожный транспорт, транспортные технологии", profile: "Техникум", site: "https://www.py16dv.ru/", sourceStatus: "official_source_located", sourceUrl: "https://www.py16dv.ru/svedeniya-ob-obrazovatelnom-uchrezhdenii/dokumenty", verifiedScope: "Официальная страница техникума содержит правила приёма на 2026/27, имя Героя Советского Союза А. С. Панова и действующие образовательные документы." },
             { name: "Комсомольский-на-Амуре авиастроительный техникум", city: "Комсомольск-на-Амуре", focus: "Авиастроение", profile: "Авиастроительный техникум", sourceStatus: "editorial_not_verified" }
         ]
     }
