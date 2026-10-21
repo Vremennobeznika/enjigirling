@@ -6,7 +6,7 @@ const root=path.resolve(__dirname,'..');
 const rootJs=fs.readdirSync(root).filter(name=>name.endsWith('.js')||name.endsWith('.cjs'));
 const scripts=fs.readdirSync(path.join(root,'scripts')).filter(name=>name.endsWith('.js')||name.endsWith('.cjs')).map(name=>'scripts/'+name);
 const tests=fs.readdirSync(path.join(root,'tests')).filter(name=>name.endsWith('.js')||name.endsWith('.cjs')).map(name=>'tests/'+name);
-const files=[...rootJs,...scripts,...tests,'playwright.config.cjs'];
+const files=[...new Set([...rootJs,...scripts,...tests,'playwright.config.cjs'])];
 const steps=[
  ['S00 JavaScript syntax across application and QA',()=>files.map(file=>['node',['--check',file]])],
  ['S01-S10 S16 HTML, navigation and editorial data',()=>[['node',['tests/site-check.cjs']]]],
