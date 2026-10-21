@@ -123,3 +123,14 @@
 .learning-path-links a:focus-visible,.technology-links a:focus-visible {outline:3px solid var(--text-primary);outline-offset:2px;}
 .technology-links {display:flex;flex-wrap:wrap;gap:8px;margin:12px 0;}
 @media(max-width:950px){.learning-path-grid{grid-template-columns:minmax(0,1fr);}}
+
+/* Editorial field guides reuse neutral card styling without affecting catalogs. */
+.field-guide {margin:30px 0 14px;padding:clamp(16px,3vw,26px);border:1px solid var(--card-border);border-radius:16px;background:var(--soft-bg);color:var(--card-text);}
+.field-guide h2 {margin:0 0 12px;font:700 clamp(19px,2.3vw,25px)/1.25 var(--font);}
+.field-guide p,.field-guide li {font:400 var(--fs-sm)/1.65 var(--font);overflow-wrap:anywhere;}
+.field-guide ol {padding-left:22px;margin:12px 0;}
+.field-guide li + li {margin-top:8px;}
+.field-guide code {white-space:normal;overflow-wrap:anywhere;padding:2px 5px;border:1px solid var(--card-border);border-radius:5px;background:var(--card-bg);color:var(--card-text);}
+.field-guide a,.field-guide a:link,.field-guide a:visited {color:var(--text-primary)!important;text-decoration:underline;text-underline-offset:3px;}
+.field-guide a:focus-visible {outline:3px solid var(--text-primary);outline-offset:3px;}
+.field-guide-note {border-top:1px solid var(--card-border);padding-top:12px;margin-top:14px;color:var(--card-muted);}

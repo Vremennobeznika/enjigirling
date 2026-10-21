@@ -245,5 +245,21 @@ check('five navigation groups preserve all nine original page routes', () => {
  assert.ok(source.includes('href="materials.html#'),'profession material deep link missing');
 });
 
+
+check('editorial guides are available in technologies and calculators', () => {
+ const places=[
+  ['materials.html','materialGuideTitle','processes.html#casting'],
+  ['processes.html','processGuideTitle','materials.html#steel-20'],
+  ['calculator.html','signalGuideTitle','(12 − 4) / 16 = 0,5']
+ ];
+ for(const [page,id,evidence] of places){
+  const markup=fs.readFileSync(page,'utf8');
+  assert.ok(markup.includes('aria-labelledby="'+id+'"'),page+' missing accessible guide');
+  assert.ok(markup.includes(evidence),page+' missing linked practical example');
+ }
+ const css=fs.readFileSync('section-ui.css','utf8');
+ assert.ok(css.includes('.field-guide a:visited'),'guide links must inherit monochrome style');
+});
+
 console.log('Matrix: '+count+' PASS, '+errors.length+' FAIL ('+pages.length+' pages, '+datasets.length+' datasets)');
 if(errors.length)process.exitCode=1;
