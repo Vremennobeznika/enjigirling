@@ -19,8 +19,9 @@ for(const file of ['measurement-lab.css','measurement-lab.js','measurement-built
  assert.ok(html.includes('src="'+file+'"')||html.includes('href="'+file+'"'),'missing dependency '+file);
 }
 for(const id of ['micRange','micValue','dialZero','angleRange','micGuess','dialGuess','angleGuess'])assert.ok(html.includes('id="'+id+'"'),'existing controls lost: '+id);
-for(const id of ['digitalZero','digitalUnit','digitalReset','vernierStep','vernierRange','depthRange','rulerRange','meterVoltage','meterResistance','meterMode','oscFrequency','oscAmplitude','oscShape','oscTimebase'])assert.ok(built.includes(id)||electronics.includes(id),'new controls lost: '+id);
+for(const id of ['digitalZero','digitalUnit','digitalReset','vernierStep','meterVoltage','meterResistance','meterMode','oscFrequency','oscAmplitude','oscShape','oscTimebase'])assert.ok(built.includes(id)||electronics.includes(id),'new controls lost: '+id);
 assert.ok(js.includes('dialZero')&&js.includes('Math.random'),'old training controls must remain');
+assert.ok(built.includes("id+'Range'")&&built.includes("id+'Value'")&&built.includes("id+'Check'"),'dynamic numeric input and practice controls missing');
 assert.ok(built.includes('Math.random')&&built.includes('digitalZero'),'new interactive controls absent');
 assert.ok(electronics.includes('Math.sin')&&electronics.includes('meterResistance'),'waveform or Ohm model missing');
 assert.ok(html.includes('не средства измерений'),'physical-measurement disclaimer missing');
