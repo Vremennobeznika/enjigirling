@@ -19,6 +19,23 @@ async function get(path){
 async function run(){
  const responses=await Promise.all(paths.map(async p=>[p,await get(p)]));
  const files=Object.fromEntries(responses);
+ // Check production resources actually linked from each of the nine HTML pages.
+ const assets=new Set();
+ for(const name of paths.filter(p=>p.endsWith('.html'))){
+  for(const match of files[name].matchAll(/(?:href|src)\s*=\s*["']([^"']+)["']/g)){
+   const href=match[1].split(/[?#]/)[0];
+   if(!href||/^(https?:|mailto:|tel:|data:|\/\/|#)/i.test(href))continue;
+   const origin=new URL(base);
+   const target=new URL(href,new URL(name,base));
+   if(target.origin!==origin.origin||!target.pathname.startsWith(origin.pathname))continue;
+   assets.add(target.pathname.slice(origin.pathname.length));
+  }
+ }
+ const missingAssets=[];
+ for(const asset of assets){
+  try{if(!files[asset])await get(asset);}catch(e){missingAssets.push(asset+': '+e.message);}
+ }
+ assert.deepEqual(missingAssets,[],'published HTML contains broken local assets');
  // A stale deployment can have valid JSON and identical record counts. Compare
  // published content against the exact repository revision deployed by Actions.
  for(const name of compareExact){
@@ -42,7 +59,7 @@ async function run(){
  const listed=(files['knowledge/ai-context.md'].match(/^- \*\*.+\*\* — /gm)||[]).length;
  assert.equal(listed,index.records.length,'AI context does not contain every indexed record');
  assert.ok(files['llms.txt'].includes('knowledge-manifest.json'),'AI entrypoint does not mention manifest');
- console.log('LIVE PASS: '+paths.length+' HTTP endpoints, '+compareExact.length+' exact SHA-256 content matches, '+index.recordCount+' records, '+graph.edgeCount+' graph edges');
+ console.log('LIVE PASS: '+paths.length+' HTTP endpoints, '+assets.size+' local asset paths, '+compareExact.length+' exact SHA-256 content matches, '+index.recordCount+' records, '+graph.edgeCount+' graph edges');
 }
 async function main(){
  let last;
