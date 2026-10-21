@@ -33,7 +33,7 @@ for(const {item} of entries){
  for(const key of ['duration','cost','budget','admission','afterCollege'])
    assert.ok(!Object.hasOwn(item,key),item.name+': unsupported claim '+key);
 }
-assert.equal(entries.filter(x=>x.item.sourceStatus==='official_source_located').length,50);
+assert.equal(entries.filter(x=>x.item.sourceStatus==='official_source_located').length,52);
 assert.ok(html.includes('Схема условная'),'schematic map not labelled');
 assert.ok(html.includes('aria-current="page"'),'current learning tab must be announced');
 const aiBuilder=fs.readFileSync('scripts/build-ai-packs.cjs','utf8');
@@ -78,3 +78,6 @@ assert.ok(entries.some(x=>x.item.name.includes('Колледж технолог�
 
 assert.ok(entries.some(x=>x.item.name==='Ростовский-на-Дону колледж связи и информатики'&&x.item.sourceUrl),'Rostov successor name missing');
 assert.ok(entries.some(x=>x.item.name==='Тюменский техникум строительной индустрии и городского хозяйства'&&x.item.sourceUrl),'Tyumen college official name missing');
+
+assert.ok(entries.some(x=>x.item.name.includes('Новосибирский техникум железнодорожного транспорта СГУПС')&&x.item.sourceUrl),'Novosibirsk railway 2026 source missing');
+assert.ok(entries.some(x=>x.item.name.includes('Хабаровский техникум транспортных технологий имени')&&x.item.sourceUrl),'Khabarovsk full school name missing');
