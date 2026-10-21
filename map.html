@@ -24,7 +24,7 @@
 <span class="nav-cluster-title" aria-hidden="true">Карьера</span>
 <a href="index.html" class="eng-tab">Профессии</a>
 <a href="compare.html" class="eng-tab">Сравнение</a>
-<a href="map.html" class="eng-tab active">Обучение</a>
+<a href="map.html" class="eng-tab active" aria-current="page">Обучение</a>
 </div>
 <div class="nav-cluster" role="group" aria-label="Технологии">
 <span class="nav-cluster-title" aria-hidden="true">Технологии</span>
@@ -65,7 +65,7 @@
         <div><p class="learning-eyebrow">КАТАЛОГ УЧЕБНЫХ ЗАВЕДЕНИЙ</p><h2 id="educationDirectoryHeading">Найдите подходящее место обучения</h2></div>
         <span class="learning-total" id="educationTotal" aria-label="Всего записей">—</span>
     </div>
-    <p class="learning-directory-intro">Поиск работает сразу по всем восьми федеральным округам. Это редакционная подборка, не полный государственный реестр учебных заведений; цены и условия приёма перепроверяйте на официальных сайтах.</p>
+    <p class="learning-directory-intro">Поиск работает сразу по всем восьми федеральным округам. Это редакционная подборка, не государственный реестр. Названия и направления без подтверждённых программ — ориентиры. Сроки, цены, бюджет и экзамены не показаны без первичных документов по конкретной программе.</p>
     <div class="learning-filters" role="search" aria-label="Поиск по образовательному каталогу">
         <div class="learning-control learning-search-control">
             <label for="educationSearch">Название, город или направление</label>
@@ -90,19 +90,19 @@
     </div>
     <div class="learning-results" id="educationResults" aria-label="Учебные заведения"></div>
     <div class="learning-more-row"><button id="educationMore" type="button" class="learning-more" hidden>Показать ещё 12</button></div>
-    <p class="learning-editorial-note">Сроки, стоимость, наличие бюджетных мест, поступление без ЕГЭ и другие условия зависят от конкретной программы и года приёма. Сведения в карточках могут быть устаревшими.</p>
+    <p class="learning-editorial-note">Проверена структура 80 записей, но не существование всех программ. Данные о поступлении необходимо подтверждать документами конкретной организации на нужный год.</p>
 </section>
 
 <details class="learning-accordion" id="education-map">
-<summary><span><strong>Карта федеральных округов</strong><small>Выбор округа на схеме синхронизируется с каталогом</small></span><span class="learning-chevron" aria-hidden="true">⌄</span></summary>
+<summary><span><strong>Схема федеральных округов</strong><small>Выбор округа на схеме синхронизируется с каталогом</small></span><span class="learning-chevron" aria-hidden="true">⌄</span></summary>
 <div class="learning-accordion-body">            <div class="map-intro">
-                <h2 class="map-title">Интерактивная карта инженерного образования</h2>
-                <p class="map-subtitle">Выберите округ на карте или в фильтре каталога. Результаты всегда доступны списком выше.</p>
+                <h2 class="map-title">Схема выбора федерального округа</h2>
+                <p class="map-subtitle">Схема условная, реальные границы округов не воспроизводит. Выберите округ здесь или в фильтре выше.</p>
             </div>
 
             <div class="map-layout">
                 <div class="map-canvas">
-                    <svg id="russiaMap" viewBox="100 60 930 420" class="eng-map-svg" role="img" aria-label="Карта федеральных округов России">
+                    <svg id="russiaMap" viewBox="100 60 930 420" class="eng-map-svg" role="group" aria-label="Условная схема округов России. Все округа доступны в списке фильтров.">
                         <!-- Северо-Западный -->
                         <path class="eng-district" data-id="northwest" />
                         <!-- Центральный -->
@@ -131,23 +131,23 @@
 </div>
 </details>
 <details class="learning-accordion" id="education-calculators" open>
-<summary><span><strong>Калькуляторы обучения и зарплаты</strong><small>Срок до первой зарплаты, опубликованные ориентиры, НДФЛ и окупаемость</small></span><span class="learning-chevron" aria-hidden="true">⌄</span></summary>
+<summary><span><strong>Калькуляторы обучения и зарплаты</strong><small>Ориентировочный срок учёбы, опубликованные ориентиры, НДФЛ и окупаемость</small></span><span class="learning-chevron" aria-hidden="true">⌄</span></summary>
 <div class="learning-accordion-body">            <section class="calc-section training-calculators">
                 <h2 class="calc-heading">Калькуляторы обучения и зарплаты</h2>
 
                 <div class="calc-section-inner">
-                    <h3 class="calc-heading">Сколько учиться до первой зарплаты</h3>
-                    <p class="calc-subtitle">Выберите путь и посчитайте, через сколько времени можно выйти на первую зарплату.</p>
+                    <h3 class="calc-heading">Ориентировочный срок до диплома</h3>
+                    <p class="calc-subtitle">Выберите условный образовательный маршрут. Дата первой зарплаты и трудоустройства здесь не прогнозируется.</p>
                     <div class="calc-layout">
                         <div class="calc-controls">
                             <div class="calc-field"><label for="calcPath">Путь</label><select id="calcPath">
                                 <option value="college9">Техникум после 9 классов</option><option value="college11">Техникум после 11 классов</option><option value="college9_uni">Техникум → вуз</option><option value="unibach">Вуз: бакалавриат</option><option value="unispec">Вуз: специалитет</option><option value="unimaster">Вуз: бакалавриат + магистратура</option>
                             </select></div>
-                            <div class="calc-field"><label for="calcAge">Сколько лет уже прошло после школы / начала пути</label><select id="calcAge">
-                                <option value="0">Нисколько, только начинаю</option><option value="1">1 год</option><option value="2">2 года</option><option value="3">3 года</option><option value="4">4 года</option><option value="5">5 лет</option><option value="6">6 лет и больше</option>
+                            <div class="calc-field"><label for="calcAge">Сколько лет уже отучились по выбранному маршруту</label><select id="calcAge">
+                                <option value="0">Нисколько, только начинаю</option><option value="1">1 год</option><option value="2">2 года</option><option value="3">3 года</option><option value="4">4 года</option><option value="5">5 лет</option><option value="6">6 лет</option>
                             </select></div>
                             <div class="calc-field"><label for="calcWork">Когда планируете начать работать</label><select id="calcWork"><option value="after">После выпуска</option><option value="during">Во время учёбы (совмещать)</option></select></div>
-                            <div class="calc-result"><p class="calc-result-label">До первой зарплаты</p><p class="calc-result-value" id="calcResultValue">—</p><p class="calc-result-hint" id="calcResultHint"></p></div>
+                            <div class="calc-result"><p class="calc-result-label">До окончания учёбы (ориентир)</p><p class="calc-result-value" id="calcResultValue">—</p><p class="calc-result-hint" id="calcResultHint"></p></div>
                         </div>
                     </div>
                 </div>
@@ -165,7 +165,7 @@
                     <h3 class="calc-heading">Зарплата на руки</h3>
                     <p class="calc-subtitle">Введите зарплату до вычета налога — посчитаем, сколько придёт на карту после НДФЛ (ставки 2026 года для резидентов РФ).</p>
                     <div class="calc-layout"><div class="calc-controls">
-                        <div class="calc-field"><label for="netProfession">Подставить медиану профессии</label><select id="netProfession"><option value="">Ввести свою сумму</option></select></div>
+                        <div class="calc-field"><label for="netProfession">Подставить доступную оценку профессии</label><select id="netProfession"><option value="">Ввести свою сумму</option></select></div>
                         <div class="calc-field"><label for="netGross">Зарплата до вычета НДФЛ, ₽ в месяц</label><input id="netGross" type="text" inputmode="numeric" value="100000" autocomplete="off"></div>
                         <div class="calc-result"><p class="calc-result-label">На руки в месяц</p><p class="calc-result-value" id="netResultValue">—</p><p class="calc-result-hint" id="netResultHint"></p></div>
                     </div></div>
