@@ -23,7 +23,14 @@ jobs:
       - name: Build machine-readable datasets
         run: node scripts/build-knowledge.cjs
       - name: Run complete static QA matrix
-        run: node scripts/all-checks.cjs
+        run: node scripts/all-checks.cjs 2>&1 | tee static-qa.log
+      - name: Archive static QA diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pages-static-qa-transcript
+          path: static-qa.log
+          if-no-files-found: ignore
       - name: Install browser test dependencies
         run: npm install --no-audit --no-fund
       - name: Install Chromium
