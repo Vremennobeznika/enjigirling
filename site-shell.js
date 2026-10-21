@@ -5,6 +5,20 @@ function init(){
   const root=document.querySelector('.eng-calendar-root');
   const main=document.querySelector('main.site-page');
   if(!main)return;
+  // Every page needs a stable main landmark and a keyboard skip link.
+  if(!main.id) main.id='main-content';
+  if(!document.querySelector('.skip-link')){
+    const skip=document.createElement('a');
+    skip.className='skip-link';skip.href='#'+main.id;
+    skip.textContent='Перейти к содержимому';
+    document.body.insertBefore(skip,document.body.firstChild);
+  }
+  // Some standalone tool pages had no visible heading in the main landmark.
+  const topbar=main.querySelector('.site-topbar');
+  if(topbar && !topbar.querySelector('.theme-toggle')){
+    const theme=document.querySelector('.theme-toggle');
+    if(theme)topbar.appendChild(theme);
+  }
   if(root && !root.querySelector('.site-topbar')){
     const top=document.createElement('div');
     top.className='site-topbar site-topbar--shared';
