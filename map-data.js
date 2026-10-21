@@ -75,7 +75,7 @@ const federalDistricts = [
             { name: "СевГУ", city: "Севастополь", focus: "Кораблестроение, IT, энергетика", profile: "Технический", site: "https://www.sevsu.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "not_retrieved", siteFetchCheckedAt: "2026-10-22" }
         ],
         colleges: [
-            { name: "Ростовский-на-Дону техникум связи", city: "Ростов-на-Дону", focus: "Связь, телекоммуникации", profile: "Техникум", sourceStatus: "editorial_not_verified" },
+            { name: "Ростовский-на-Дону колледж связи и информатики", city: "Ростов-на-Дону", focus: "Связь, телекоммуникации, информационные технологии", profile: "Техникум", site: "https://www.rksi.ru/", sourceStatus: "official_source_located", sourceUrl: "https://www.rksi.ru/", verifiedScope: "Официальный сайт ГБПОУ РО РКСИ подтверждает новое название и действующие новости 2026 года, разделы поступления и подготовки в области связи. Конкретные места и условия программ не сверялись." },
             { name: "Краснодарский монтажный техникум", city: "Краснодар", focus: "Монтаж, электрика", profile: "Техникум", sourceStatus: "editorial_not_verified" },
             { name: "Волгоградский технический колледж", city: "Волгоград", focus: "Эксплуатация и ремонт техники, электрооборудование", profile: "Технический колледж", site: "https://www.volgtehkol.ru/", sourceStatus: "official_source_located", sourceUrl: "https://www.volgtehkol.ru/abiturients/admission-rules", verifiedScope: "Официальная страница правил приёма на 2026/27 год; профиль включает ремонт техники и эксплуатацию электрооборудования, не подтверждает металлургию." }
         ]
@@ -139,7 +139,7 @@ const federalDistricts = [
         colleges: [
             { name: "Екатеринбургский политехникум", city: "Екатеринбург", focus: "Машиностроение, металлургия", profile: "Политехникум", site: "https://ekpt.ru/", sourceStatus: "official_source_located", sourceUrl: "https://ekpt.ru/svedeniya-ob-obrazovatelnoy-organizacii/osnovnye-svedeniya/", verifiedScope: "Официальная страница подтверждает название, Екатеринбург и статус организации. Программы приёма не проверены." },
             { name: "Уральский техникум металлообработки", city: "Челябинск", focus: "Металлообработка, сварка", profile: "Техникум", sourceStatus: "editorial_not_verified" },
-            { name: "Тюменский техникум строительной индустрии", city: "Тюмень", focus: "Строительство", profile: "Строительный техникум", sourceStatus: "editorial_not_verified" }
+            { name: "Тюменский техникум строительной индустрии и городского хозяйства", city: "Тюмень", focus: "Строительство, городское хозяйство, профессиональные технологии", profile: "Строительный техникум", site: "https://tci72.ru/", sourceStatus: "official_source_located", sourceUrl: "https://tci72.ru/enrollees/rules-of-admission/", verifiedScope: "Официальный сайт опубликовал правила приёма на 2026/27 и подтверждает нынешнее наименование; отдельные программы и бюджетные цифры не проверялись." }
         ]
     },
     {
