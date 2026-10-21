@@ -1,0 +1,2010 @@
+{
+  "schemaVersion": "1.0",
+  "dataset": "professions",
+  "language": "ru",
+  "quality": "editorial_not_independently_verified",
+  "sourceFile": "data.js",
+  "sourceUrl": "https://vremennobeznika.github.io/enjigirling/data.js",
+  "items": [
+    {
+      "id": "civil-engineer",
+      "title": "Инженер-строитель (ПГС)",
+      "shortDesc": "Организация и контроль строительства зданий и сооружений на объекте: ведение работ, исполнительная документация, сметы",
+      "education": {
+        "requirements": "Знание технологии строительного производства, строительных материалов и конструкций.",
+        "courses": [
+          "Гранд-Смета",
+          "Строительный контроль",
+          "Исполнительная документация"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Инженер ПТО"
+        },
+        {
+          "title": "Производитель работ (прораб)"
+        },
+        {
+          "title": "Начальник участка"
+        },
+        {
+          "title": "Руководитель строительства"
+        }
+      ],
+      "typicalDay": {
+        "morning": "07:30 — Планёрка на объекте",
+        "midday": "09:00–13:00 — Контроль работ",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–18:00 — Исполнительная документация"
+      },
+      "easy": "Работа на свежем воздухе, видимый результат.",
+      "hard": "Работа в любую погоду. Ответственность за сроки и безопасность.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=civil-engineer"
+      }
+    },
+    {
+      "id": "pgs-designer",
+      "title": "Инженер-проектировщик (ПГС)",
+      "shortDesc": "Проектирование конструкций и разделов проектной документации зданий и сооружений: расчёты, чертежи, BIM-модели",
+      "education": {
+        "requirements": "Строительная механика, сопротивление материалов, железобетонные и металлические конструкции, нормы проектирования (СП).",
+        "courses": [
+          "AutoCAD / Revit",
+          "ЛИРА-САПР / SCAD",
+          "Экспертиза проектов"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Инженер-проектировщик"
+        },
+        {
+          "title": "Ведущий инженер-проектировщик"
+        },
+        {
+          "title": "Главный специалист"
+        },
+        {
+          "title": "Главный инженер проекта (ГИП)"
+        }
+      ],
+      "typicalDay": {
+        "morning": "09:00 — Планёрка",
+        "midday": "10:00–13:00 — Расчёты и чертежи",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–18:00 — Модель и согласования"
+      },
+      "easy": "Спокойная работа в офисе. Идея превращается в реальное здание.",
+      "hard": "Ответственность за расчёты и чертежи. Много согласований и правок.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=pgs-designer"
+      }
+    },
+    {
+      "id": "architect-engineer",
+      "title": "Инженер-архитектор",
+      "shortDesc": "Архитектурное проектирование и планировка пространств",
+      "education": {
+        "requirements": "Знание архитектурной композиции.",
+        "courses": [
+          "Revit",
+          "SketchUp",
+          "3ds Max"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Архитектор-стажёр"
+        },
+        {
+          "title": "Архитектор"
+        },
+        {
+          "title": "Ведущий архитектор"
+        },
+        {
+          "title": "Главный архитектор проекта"
+        }
+      ],
+      "typicalDay": {
+        "morning": "09:00 — Обсуждение",
+        "midday": "10:30–14:00 — Моделирование",
+        "afternoon": "14:00–15:00 — Обед",
+        "evening": "15:00–19:00 — Визуализация"
+      },
+      "easy": "Творческая работа. Можно увидеть свои проекты в городе.",
+      "hard": "Бессонные ночи перед дедлайнами. Сложные согласования.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=architect-engineer"
+      }
+    },
+    {
+      "id": "road-engineer",
+      "title": "Инженер-дорожник",
+      "shortDesc": "Строительство, ремонт и содержание автомобильных дорог и мостов: организация работ на участке, контроль качества",
+      "education": {
+        "requirements": "Знание технологии дорожного строительства и дорожных материалов.",
+        "courses": [
+          "Дорожные материалы",
+          "Геодезия",
+          "Гранд-Смета"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Инженер-дорожник"
+        },
+        {
+          "title": "Производитель работ"
+        },
+        {
+          "title": "Начальник участка"
+        },
+        {
+          "title": "Главный инженер"
+        }
+      ],
+      "typicalDay": {
+        "morning": "07:00 — Выезд",
+        "midday": "08:30–13:00 — Контроль",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–17:00 — Документы"
+      },
+      "easy": "Работа на свежем воздухе. Видишь результат.",
+      "hard": "Вахтовый метод. Работа в любую погоду.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=road-engineer"
+      }
+    },
+    {
+      "id": "road-designer",
+      "title": "Инженер-проектировщик автомобильных дорог",
+      "shortDesc": "Проектирование автомобильных дорог и транспортных развязок: трассирование, расчёты, чертежи",
+      "education": {
+        "requirements": "Знание проектирования дорог, дорожных конструкций и нормативов (СП).",
+        "courses": [
+          "AutoCAD Civil 3D",
+          "IndorCAD",
+          "CREDO"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Инженер-проектировщик"
+        },
+        {
+          "title": "Ведущий инженер-проектировщик"
+        },
+        {
+          "title": "Главный специалист"
+        },
+        {
+          "title": "Главный инженер проекта (ГИП)"
+        }
+      ],
+      "typicalDay": {
+        "morning": "09:00 — Планёрка",
+        "midday": "10:00–13:00 — Трассирование и расчёты",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–18:00 — Чертежи и согласования"
+      },
+      "easy": "Проект превращается в реальную дорогу. Понятные нормативы.",
+      "hard": "Много согласований и правок. Выезды на изыскания.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=road-designer"
+      }
+    },
+    {
+      "id": "mechanical-engineer",
+      "title": "Инженер-механик",
+      "shortDesc": "Проектирование машин, механизмов и оборудования",
+      "education": {
+        "requirements": "Знание теоретической механики.",
+        "courses": [
+          "Компас-3D / SolidWorks",
+          "ANSYS"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Инженер-конструктор"
+        },
+        {
+          "title": "Ведущий инженер-механик"
+        },
+        {
+          "title": "Начальник конструкторского отдела"
+        },
+        {
+          "title": "Главный конструктор"
+        }
+      ],
+      "typicalDay": {
+        "morning": "08:00 — Планёрка",
+        "midday": "09:00–13:00 — Чертежи",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–17:30 — Контроль"
+      },
+      "easy": "Классическая инженерия. Работа с чертежами и 3D-моделями.",
+      "hard": "Советское наследие оборудования. Износ станков.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=mechanical-engineer"
+      }
+    },
+    {
+      "id": "automotive-engineer",
+      "title": "Инженер-автомобилестроитель",
+      "shortDesc": "Проектирование, расчёт и испытания автомобилей и их узлов",
+      "education": {
+        "requirements": "Знание автомобилей.",
+        "courses": [
+          "CATIA",
+          "ADAMS"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Инженер-конструктор"
+        },
+        {
+          "title": "Ведущий конструктор"
+        },
+        {
+          "title": "Руководитель группы"
+        },
+        {
+          "title": "Главный конструктор"
+        }
+      ],
+      "typicalDay": {
+        "morning": "08:30 — Испытания",
+        "midday": "09:30–13:00 — Моделирование",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–18:00 — Прототипы"
+      },
+      "easy": "Передовые CAD-системы. Интересные технологии.",
+      "hard": "Жёсткие дедлайны. Высокая конкуренция.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=automotive-engineer"
+      }
+    },
+    {
+      "id": "power-engineer",
+      "title": "Инженер-энергетик",
+      "shortDesc": "Эксплуатация и развитие энергосистем и энергооборудования: расчёт режимов, обходы, ремонты",
+      "education": {
+        "requirements": "Знание электротехники.",
+        "courses": [
+          "RastrWin",
+          "ANSYS"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Инженер-энергетик"
+        },
+        {
+          "title": "Ведущий инженер"
+        },
+        {
+          "title": "Главный энергетик"
+        },
+        {
+          "title": "Директор по энергетике"
+        }
+      ],
+      "typicalDay": {
+        "morning": "08:00 — Оперативка",
+        "midday": "09:00–13:00 — Расчёты",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–17:00 — Обход"
+      },
+      "easy": "Стабильная работа. Чёткие регламенты.",
+      "hard": "Аварийные ситуации. Высокая ответственность.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=power-engineer"
+      }
+    },
+    {
+      "id": "electrical-engineer",
+      "title": "Инженер-электрик",
+      "shortDesc": "Монтаж, наладка и обслуживание электрооборудования и электрических сетей",
+      "education": {
+        "requirements": "Знание электротехники.",
+        "courses": [
+          "ПУЭ",
+          "Электробезопасность",
+          "Релейная защита"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Инженер-электрик"
+        },
+        {
+          "title": "Ведущий инженер"
+        },
+        {
+          "title": "Главный электрик"
+        },
+        {
+          "title": "Директор по электрике"
+        }
+      ],
+      "typicalDay": {
+        "morning": "08:00 — Щитовая",
+        "midday": "09:00–13:00 — Обслуживание",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–17:00 — Монтаж"
+      },
+      "easy": "Стабильный спрос. Чёткие стандарты.",
+      "hard": "Аварийные вызовы. Работа с высоким напряжением.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=electrical-engineer"
+      }
+    },
+    {
+      "id": "electrical-designer",
+      "title": "Инженер-проектировщик электроснабжения",
+      "shortDesc": "Проектирование систем электроснабжения и электроосвещения зданий и объектов: расчёт нагрузок, схемы, чертежи",
+      "education": {
+        "requirements": "Знание электротехники, расчёта электрических нагрузок и требований ПУЭ.",
+        "courses": [
+          "AutoCAD",
+          "nanoCAD Электро",
+          "Расчёт нагрузок"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Инженер-проектировщик"
+        },
+        {
+          "title": "Ведущий инженер-проектировщик"
+        },
+        {
+          "title": "Главный специалист"
+        },
+        {
+          "title": "Главный инженер проекта (ГИП)"
+        }
+      ],
+      "typicalDay": {
+        "morning": "09:00 — Планёрка",
+        "midday": "10:00–13:00 — Расчёты и схемы",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–18:00 — Чертежи и согласования"
+      },
+      "easy": "Спокойная работа в офисе. Чёткие нормы и стандарты.",
+      "hard": "Ответственность за расчёты. Много согласований и правок.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=electrical-designer"
+      }
+    },
+    {
+      "id": "nuclear-engineer",
+      "title": "Инженер-атомщик",
+      "shortDesc": "Эксплуатация и обслуживание АЭС и ядерных установок: контроль реактора, расчёты безопасности",
+      "education": {
+        "requirements": "Знание ядерной физики.",
+        "courses": [
+          "KORSAR",
+          "MCNP"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Инженер АЭС"
+        },
+        {
+          "title": "Ведущий инженер"
+        },
+        {
+          "title": "Начальник смены"
+        },
+        {
+          "title": "Главный инженер АЭС"
+        }
+      ],
+      "typicalDay": {
+        "morning": "07:30 — Смена",
+        "midday": "08:30–13:00 — Реактор",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–17:00 — Документация"
+      },
+      "easy": "Высокая зарплата. Престиж. Современное оборудование.",
+      "hard": "Строжайшая дисциплина. Закрытые города.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=nuclear-engineer"
+      }
+    },
+    {
+      "id": "aerospace-engineer",
+      "title": "Инженер-авиастроитель",
+      "shortDesc": "Проектирование, расчёт и испытания летательных аппаратов",
+      "education": {
+        "requirements": "Знание аэродинамики.",
+        "courses": [
+          "ANSYS Fluent",
+          "CATIA"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Инженер-конструктор"
+        },
+        {
+          "title": "Ведущий инженер"
+        },
+        {
+          "title": "Начальник КБ"
+        },
+        {
+          "title": "Главный конструктор"
+        }
+      ],
+      "typicalDay": {
+        "morning": "08:00 — Планёрка",
+        "midday": "09:00–13:00 — Расчёты",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–18:00 — Макет"
+      },
+      "easy": "Работа на пределе технологий. Гордость за результат.",
+      "hard": "Огромная ответственность. Долгий цикл разработки.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=aerospace-engineer"
+      }
+    },
+    {
+      "id": "space-engineer",
+      "title": "Космический инженер (ракетостроитель)",
+      "shortDesc": "Проектирование и создание ракетно-космической техники",
+      "education": {
+        "requirements": "Знание баллистики.",
+        "courses": [
+          "Баллистика",
+          "Ракетные двигатели"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Инженер-конструктор"
+        },
+        {
+          "title": "Ведущий конструктор"
+        },
+        {
+          "title": "Начальник отдела"
+        },
+        {
+          "title": "Главный конструктор"
+        }
+      ],
+      "typicalDay": {
+        "morning": "08:00 — Планёрка",
+        "midday": "09:00–13:00 — Расчёты",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–18:00 — Испытания"
+      },
+      "easy": "Работа на переднем крае технологий. Причастность к космосу.",
+      "hard": "Огромная ответственность. Секретность.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=space-engineer"
+      }
+    },
+    {
+      "id": "chemical-engineer",
+      "title": "Инженер-химик-технолог",
+      "shortDesc": "Разработка и управление химическими производствами",
+      "education": {
+        "requirements": "Знание химии.",
+        "courses": [
+          "HYSYS",
+          "ChemCAD"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Инженер-технолог"
+        },
+        {
+          "title": "Ведущий технолог"
+        },
+        {
+          "title": "Начальник производства"
+        },
+        {
+          "title": "Главный технолог"
+        }
+      ],
+      "typicalDay": {
+        "morning": "08:00 — Обход",
+        "midday": "09:30–13:00 — Оптимизация",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–17:00 — Карты"
+      },
+      "easy": "Работа в лаборатории. Можно изобретать новые материалы.",
+      "hard": "Вредное производство. Риск аварий.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=chemical-engineer"
+      }
+    },
+    {
+      "id": "oil-gas-engineer",
+      "title": "Инженер-нефтяник",
+      "shortDesc": "Разведка, бурение и добыча нефти и газа",
+      "education": {
+        "requirements": "Знание геологии.",
+        "courses": [
+          "Petrel",
+          "ROXAR"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Оператор"
+        },
+        {
+          "title": "Ведущий инженер"
+        },
+        {
+          "title": "Начальник участка"
+        },
+        {
+          "title": "Главный инженер"
+        }
+      ],
+      "typicalDay": {
+        "morning": "06:00 — Буровая",
+        "midday": "07:30–13:00 — Бурение",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–18:00 — Анализ"
+      },
+      "easy": "Высокая зарплата. Современные технологии.",
+      "hard": "Вахтовый метод. Суровые климатические условия.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=oil-gas-engineer"
+      }
+    },
+    {
+      "id": "metallurgical-engineer",
+      "title": "Инженер-металлург",
+      "shortDesc": "Производство и обработка металлов и сплавов",
+      "education": {
+        "requirements": "Знание металлургии.",
+        "courses": [
+          "Thermo-Calc",
+          "SolidWorks"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Инженер-металлург"
+        },
+        {
+          "title": "Мастер участка"
+        },
+        {
+          "title": "Начальник цеха"
+        },
+        {
+          "title": "Главный металлург"
+        }
+      ],
+      "typicalDay": {
+        "morning": "07:00 — Планёрка",
+        "midday": "08:00–13:00 — Плавка",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–17:00 — Пробы"
+      },
+      "easy": "Работа с огнём и металлом. Стабильная занятость.",
+      "hard": "Горячее производство. Вредные условия.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=metallurgical-engineer"
+      }
+    },
+    {
+      "id": "mining-engineer",
+      "title": "Горный инженер",
+      "shortDesc": "Разработка месторождений полезных ископаемых",
+      "education": {
+        "requirements": "Знание геологии.",
+        "courses": [
+          "MineFrame",
+          "Blast-CAD"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Горный мастер"
+        },
+        {
+          "title": "Ведущий инженер"
+        },
+        {
+          "title": "Начальник участка"
+        },
+        {
+          "title": "Главный инженер рудника"
+        }
+      ],
+      "typicalDay": {
+        "morning": "06:00 — Шахта",
+        "midday": "07:00–13:00 — Проходка",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–17:00 — Отчёты"
+      },
+      "easy": "Высокая зарплата. Романтика горного дела.",
+      "hard": "Опасные условия. Вахты.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=mining-engineer"
+      }
+    },
+    {
+      "id": "environmental-engineer",
+      "title": "Инженер-эколог",
+      "shortDesc": "Охрана окружающей среды и экологическая безопасность",
+      "education": {
+        "requirements": "Знание экологии.",
+        "courses": [
+          "ОВОС",
+          "Экологический аудит"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Инженер-эколог"
+        },
+        {
+          "title": "Ведущий эколог"
+        },
+        {
+          "title": "Начальник отдела"
+        },
+        {
+          "title": "Директор по экологии"
+        }
+      ],
+      "typicalDay": {
+        "morning": "09:00 — Мониторинг",
+        "midday": "10:30–13:00 — Расчёты",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–17:30 — Отчёты"
+      },
+      "easy": "Работа на природе. Социально значимая профессия.",
+      "hard": "Бумажная работа. Конфликты с производством.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=environmental-engineer"
+      }
+    },
+    {
+      "id": "biomedical-engineer",
+      "title": "Инженер-биомедик",
+      "shortDesc": "Разработка медицинского оборудования и биопротезов",
+      "education": {
+        "requirements": "Знание анатомии.",
+        "courses": [
+          "SolidWorks",
+          "MATLAB"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Инженер-биомедик"
+        },
+        {
+          "title": "Ведущий инженер"
+        },
+        {
+          "title": "Руководитель разработки"
+        },
+        {
+          "title": "Технический директор"
+        }
+      ],
+      "typicalDay": {
+        "morning": "09:00 — Прототип",
+        "midday": "10:30–13:00 — Испытания",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–18:00 — Документация"
+      },
+      "easy": "Спасаешь жизни. Работа на стыке технологий и медицины.",
+      "hard": "Долгая сертификация. Высокая ответственность.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=biomedical-engineer"
+      }
+    },
+    {
+      "id": "robotics-engineer",
+      "title": "Инженер-робототехник",
+      "shortDesc": "Проектирование и программирование роботов",
+      "education": {
+        "requirements": "Знание автоматики.",
+        "courses": [
+          "ROS",
+          "OpenCV"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Инженер-робототехник"
+        },
+        {
+          "title": "Ведущий инженер"
+        },
+        {
+          "title": "Руководитель направления"
+        },
+        {
+          "title": "Технический директор"
+        }
+      ],
+      "typicalDay": {
+        "morning": "09:00 — Сенсоры",
+        "midday": "10:30–13:00 — Алгоритмы",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–18:00 — Тестирование"
+      },
+      "easy": "Современные технологии. Можно создавать реальных роботов.",
+      "hard": "Дорогое оборудование. Быстрое устаревание.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=robotics-engineer"
+      }
+    },
+    {
+      "id": "railway-engineer",
+      "title": "Инженер-железнодорожник",
+      "shortDesc": "Эксплуатация, содержание и ремонт железных дорог: путь, сооружения, безопасность движения",
+      "education": {
+        "requirements": "Знание ж/д.",
+        "courses": [
+          "Путевое хозяйство",
+          "ЖАТ"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Инженер пути"
+        },
+        {
+          "title": "Ведущий инженер"
+        },
+        {
+          "title": "Начальник дистанции"
+        },
+        {
+          "title": "Главный инженер дороги"
+        }
+      ],
+      "typicalDay": {
+        "morning": "06:00 — Планёрка",
+        "midday": "07:30–13:00 — Осмотр",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–17:00 — Документы"
+      },
+      "easy": "Стабильная работа в РЖД. Хороший соцпакет.",
+      "hard": "Работа в любую погоду. Ночные смены.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=railway-engineer"
+      }
+    },
+    {
+      "id": "shipbuilding-engineer",
+      "title": "Инженер-кораблестроитель",
+      "shortDesc": "Проектирование судов и кораблей, сопровождение их постройки и испытаний",
+      "education": {
+        "requirements": "Знание корабля.",
+        "courses": [
+          "SolidWorks",
+          "ANSYS"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Инженер-конструктор"
+        },
+        {
+          "title": "Ведущий конструктор"
+        },
+        {
+          "title": "Начальник КБ"
+        },
+        {
+          "title": "Главный конструктор проекта"
+        }
+      ],
+      "typicalDay": {
+        "morning": "08:00 — Планёрка",
+        "midday": "09:00–13:00 — Чертежи",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–17:30 — Испытания"
+      },
+      "easy": "Масштабные проекты. Гордость — спуск корабля на воду.",
+      "hard": "Долгий цикл строительства. Бюрократия.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=shipbuilding-engineer"
+      }
+    },
+    {
+      "id": "asu-tp-designer",
+      "title": "Проектировщик АСУ ТП",
+      "shortDesc": "Проектирование систем автоматизации технологических процессов",
+      "education": {
+        "requirements": "Знание автоматики.",
+        "courses": [
+          "SCADA",
+          "Siemens"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Проектировщик АСУ ТП"
+        },
+        {
+          "title": "Ведущий инженер"
+        },
+        {
+          "title": "Начальник службы КИП"
+        },
+        {
+          "title": "Главный метролог"
+        }
+      ],
+      "typicalDay": {
+        "morning": "08:00 — АСУ ТП",
+        "midday": "09:30–13:00 — Калибровка",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–17:00 — ПЛК"
+      },
+      "easy": "Работа и с железом, и с софтом. Востребовано везде.",
+      "hard": "Аварийные вызовы. Устаревший парк приборов.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=asu-tp-designer"
+      }
+    },
+    {
+      "id": "asu-tp-programmer",
+      "title": "Программист АСУ ТП",
+      "shortDesc": "Разработка программного обеспечения для ПЛК, SCADA и систем управления технологическими процессами",
+      "education": {
+        "requirements": "Автоматика, программирование, электротехника",
+        "courses": [
+          "PLC",
+          "SCADA",
+          "IEC 61131-3"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Программист АСУ ТП"
+        },
+        {
+          "title": "Ведущий программист"
+        },
+        {
+          "title": "Ведущий специалист АСУ ТП"
+        },
+        {
+          "title": "Руководитель проекта АСУ ТП"
+        }
+      ],
+      "typicalDay": {
+        "morning": "Проверка задач и состояния систем",
+        "midday": "Программирование ПЛК и SCADA",
+        "afternoon": "Тестирование",
+        "evening": "Документация и подготовка изменений"
+      },
+      "easy": "Связь программирования с реальным технологическим процессом.",
+      "hard": "Ответственность за корректность алгоритмов управления.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=asu-tp-programmer"
+      }
+    },
+    {
+      "id": "asu-tp-commissioning",
+      "title": "Пуско-наладчик АСУ ТП",
+      "shortDesc": "Пуск, наладка и проверка систем автоматизации на действующем объекте",
+      "education": {
+        "requirements": "Автоматика, электротехника, промышленное оборудование",
+        "courses": [
+          "ПЛК",
+          "SCADA",
+          "КИПиА"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Пуско-наладчик АСУ ТП"
+        },
+        {
+          "title": "Ведущий пуско-наладчик"
+        },
+        {
+          "title": "Руководитель пуско-наладочных работ"
+        },
+        {
+          "title": "Руководитель проекта"
+        }
+      ],
+      "typicalDay": {
+        "morning": "Проверка оборудования и сигналов",
+        "midday": "Наладка ПЛК, КИП и приводов",
+        "afternoon": "Испытания алгоритмов",
+        "evening": "Протоколы и устранение замечаний"
+      },
+      "easy": "Много практической работы и быстрый результат на объекте.",
+      "hard": "Работа на действующих объектах и выезды.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=asu-tp-commissioning"
+      }
+    },
+    {
+      "id": "kipia-engineer",
+      "title": "Инженер КИПиА",
+      "shortDesc": "Обслуживание, наладка и поверка контрольно-измерительных приборов и средств автоматики на производстве",
+      "education": {
+        "requirements": "Автоматика, электротехника, метрология, приборостроение",
+        "courses": [
+          "КИП",
+          "ПЛК",
+          "Метрология"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Инженер КИПиА"
+        },
+        {
+          "title": "Ведущий инженер КИПиА"
+        },
+        {
+          "title": "Начальник службы КИПиА"
+        },
+        {
+          "title": "Главный метролог"
+        }
+      ],
+      "typicalDay": {
+        "morning": "Обход оборудования и проверка показаний приборов",
+        "midday": "Поверка, калибровка и замена датчиков",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "Настройка контуров регулирования, акты и журналы"
+      },
+      "easy": "Работа с реальным оборудованием и востребованность на любом производстве.",
+      "hard": "Аварийные вызовы и работа в цехах и на открытых площадках.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=kipia-engineer"
+      }
+    },
+    {
+      "id": "food-engineer",
+      "title": "Инженер-технолог пищевой промышленности",
+      "shortDesc": "Разработка и производство продуктов питания",
+      "education": {
+        "requirements": "Знание биохимии.",
+        "courses": [
+          "HACCP",
+          "1С"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Технолог"
+        },
+        {
+          "title": "Ведущий технолог"
+        },
+        {
+          "title": "Начальник производства"
+        },
+        {
+          "title": "Главный технолог"
+        }
+      ],
+      "typicalDay": {
+        "morning": "08:00 — Сырьё",
+        "midday": "09:00–13:00 — Линии",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–17:00 — Дегустация"
+      },
+      "easy": "Работа с едой. Продукт видят миллионы.",
+      "hard": "Ранние смены. Строгий контроль.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=food-engineer"
+      }
+    },
+    {
+      "id": "textile-engineer",
+      "title": "Инженер-текстильщик",
+      "shortDesc": "Производство тканей и текстильных материалов",
+      "education": {
+        "requirements": "Знание ткачества.",
+        "courses": [
+          "NedGraphics"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Инженер-технолог"
+        },
+        {
+          "title": "Ведущий технолог"
+        },
+        {
+          "title": "Начальник производства"
+        },
+        {
+          "title": "Главный технолог"
+        }
+      ],
+      "typicalDay": {
+        "morning": "08:00 — Станки",
+        "midday": "09:00–13:00 — Контроль",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–17:00 — Рисунки"
+      },
+      "easy": "Творческая работа с цветом и фактурой.",
+      "hard": "Шум в цехах. Устаревшее оборудование.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=textile-engineer"
+      }
+    },
+    {
+      "id": "forest-engineer",
+      "title": "Инженер лесного хозяйства",
+      "shortDesc": "Лесовосстановление, лесозаготовка и деревообработка",
+      "education": {
+        "requirements": "Знание лесоведения.",
+        "courses": [
+          "ГИС",
+          "Таксация"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Инженер лесного хозяйства"
+        },
+        {
+          "title": "Ведущий инженер"
+        },
+        {
+          "title": "Начальник лесничества"
+        },
+        {
+          "title": "Директор лесхоза"
+        }
+      ],
+      "typicalDay": {
+        "morning": "07:00 — Делянки",
+        "midday": "09:00–13:00 — Таксация",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–17:00 — Отчёты"
+      },
+      "easy": "Работа на природе. Сохранение лесов.",
+      "hard": "Удалённые районы. Пожароопасный сезон.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=forest-engineer"
+      }
+    },
+    {
+      "id": "telecom-engineer",
+      "title": "Инженер связи",
+      "shortDesc": "Построение, настройка и обслуживание сетей связи",
+      "education": {
+        "requirements": "Знание сигналов.",
+        "courses": [
+          "Cisco",
+          "MikroTik"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Инженер связи"
+        },
+        {
+          "title": "Ведущий инженер"
+        },
+        {
+          "title": "Начальник узла связи"
+        },
+        {
+          "title": "Технический директор"
+        }
+      ],
+      "typicalDay": {
+        "morning": "09:00 — Мониторинг",
+        "midday": "10:00–13:00 — Настройка",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–18:00 — Выезды"
+      },
+      "easy": "Передовые технологии. Можно удалённо.",
+      "hard": "Аварии в любое время. Работа на высоте.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=telecom-engineer"
+      }
+    },
+    {
+      "id": "water-engineer",
+      "title": "Инженер водоснабжения и водоотведения",
+      "shortDesc": "Водоснабжение и водоотведение: насосные станции, водопроводные и канализационные сети, очистные сооружения",
+      "education": {
+        "requirements": "Знание гидравлики.",
+        "courses": [
+          "Zulu",
+          "AutoCAD Civil"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Инженер водоснабжения и водоотведения"
+        },
+        {
+          "title": "Ведущий инженер"
+        },
+        {
+          "title": "Начальник службы"
+        },
+        {
+          "title": "Главный инженер водоканала"
+        }
+      ],
+      "typicalDay": {
+        "morning": "08:00 — Насосные",
+        "midday": "09:30–13:00 — Расчёты",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–17:00 — Ремонты"
+      },
+      "easy": "Социально значимая работа. Стабильность.",
+      "hard": "Аварии на сетях. Износ сетей 70%.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=water-engineer"
+      }
+    },
+    {
+      "id": "lighting-engineer",
+      "title": "Инженер-светотехник",
+      "shortDesc": "Проектирование освещения зданий, улиц и объектов",
+      "education": {
+        "requirements": "Знание фотометрии.",
+        "courses": [
+          "DIALux",
+          "Relux"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Инженер-светотехник"
+        },
+        {
+          "title": "Ведущий инженер"
+        },
+        {
+          "title": "Руководитель проектов"
+        },
+        {
+          "title": "Главный светотехник"
+        }
+      ],
+      "typicalDay": {
+        "morning": "09:00 — Расчёты",
+        "midday": "10:30–13:00 — Подбор",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–18:00 — Замеры"
+      },
+      "easy": "Творческая работа. Красивые проекты.",
+      "hard": "Ночные замеры. Работа на высоте.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=lighting-engineer"
+      }
+    },
+    {
+      "id": "military-engineer",
+      "title": "Военный инженер",
+      "shortDesc": "Инженерное обеспечение войск и военной инфраструктуры",
+      "education": {
+        "requirements": "Военная подготовка.",
+        "courses": [
+          "Фортификация",
+          "Инженерные заграждения"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Лейтенант"
+        },
+        {
+          "title": "Старший инженер"
+        },
+        {
+          "title": "Начальник инженерной службы"
+        },
+        {
+          "title": "Командир инженерной части"
+        }
+      ],
+      "typicalDay": {
+        "morning": "06:00 — Подъём",
+        "midday": "08:00–14:00 — Полевые",
+        "afternoon": "14:00–15:00 — Обед",
+        "evening": "15:00–18:00 — Техника"
+      },
+      "easy": "Государственное обеспечение. Гарантированная занятость.",
+      "hard": "Строгая дисциплина. Физические нагрузки.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=military-engineer"
+      }
+    },
+    {
+      "id": "polygraph-engineer",
+      "title": "Инженер полиграфии",
+      "shortDesc": "Печатные технологии и производство печатной продукции",
+      "education": {
+        "requirements": "Знание печати.",
+        "courses": [
+          "Adobe InDesign",
+          "Photoshop"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Инженер-технолог печати"
+        },
+        {
+          "title": "Ведущий технолог"
+        },
+        {
+          "title": "Начальник производства"
+        },
+        {
+          "title": "Директор типографии"
+        }
+      ],
+      "typicalDay": {
+        "morning": "08:00 — Машины",
+        "midday": "09:00–13:00 — Цветопроба",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–17:00 — Подготовка"
+      },
+      "easy": "Работа с цветом и печатью. Виден конечный продукт.",
+      "hard": "Строгие требования к цвету. Срочные тиражи.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=polygraph-engineer"
+      }
+    },
+    {
+      "id": "materials-engineer",
+      "title": "Инженер-материаловед",
+      "shortDesc": "Разработка и исследование материалов и покрытий",
+      "education": {
+        "requirements": "Знание физики материалов.",
+        "courses": [
+          "Материаловедение",
+          "Металлография"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Инженер-материаловед"
+        },
+        {
+          "title": "Ведущий материаловед"
+        },
+        {
+          "title": "Начальник лаборатории"
+        },
+        {
+          "title": "Главный технолог по материалам"
+        }
+      ],
+      "typicalDay": {
+        "morning": "09:00 — Образцы",
+        "midday": "10:00–13:00 — Анализ",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–17:30 — Отчёты"
+      },
+      "easy": "Современное лабораторное оборудование. Создание новых материалов.",
+      "hard": "Монотонные испытания. Вредные реактивы.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=materials-engineer"
+      }
+    },
+    {
+      "id": "civil-defense-engineer",
+      "title": "Инженер ГО и ЧС",
+      "shortDesc": "Обеспечение гражданской обороны и защиты от чрезвычайных ситуаций",
+      "education": {
+        "requirements": "Знание защиты населения.",
+        "courses": [
+          "БЖД",
+          "Защита в ЧС"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Инженер ГО"
+        },
+        {
+          "title": "Ведущий специалист"
+        },
+        {
+          "title": "Начальник управления ГО"
+        },
+        {
+          "title": "Руководитель отдела ГО"
+        }
+      ],
+      "typicalDay": {
+        "morning": "09:00 — Оповещение",
+        "midday": "10:00–13:00 — Планирование",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–17:00 — Учения"
+      },
+      "easy": "Социально значимая работа. Стабильность.",
+      "hard": "Ответственность за жизни людей. Стрессовые ситуации.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=civil-defense-engineer"
+      }
+    },
+    {
+      "id": "geodetic-engineer",
+      "title": "Инженер-геодезист",
+      "shortDesc": "Геодезические изыскания и топографическая съёмка",
+      "education": {
+        "requirements": "Знание геодезии.",
+        "courses": [
+          "Геодезия",
+          "ГНСС",
+          "ГИС"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Геодезист"
+        },
+        {
+          "title": "Ведущий геодезист"
+        },
+        {
+          "title": "Начальник геодезической службы"
+        },
+        {
+          "title": "Главный геодезист проекта"
+        }
+      ],
+      "typicalDay": {
+        "morning": "07:00 — Выезд",
+        "midday": "08:30–13:00 — Съёмка",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–18:00 — Обработка"
+      },
+      "easy": "Работа на свежем воздухе. Современное GPS-оборудование.",
+      "hard": "Работа в любую погоду. Высокая точность.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=geodetic-engineer"
+      }
+    },
+    {
+      "id": "astronomer-engineer",
+      "title": "Инженер-астроном",
+      "shortDesc": "Разработка и эксплуатация астрономического оборудования",
+      "education": {
+        "requirements": "Знание астрофизики.",
+        "courses": [
+          "Астрофизика",
+          "Оптика"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Инженер-исследователь"
+        },
+        {
+          "title": "Ведущий инженер"
+        },
+        {
+          "title": "Руководитель группы"
+        },
+        {
+          "title": "Заведующий лабораторией"
+        }
+      ],
+      "typicalDay": {
+        "morning": "09:00 — Анализ",
+        "midday": "10:30–14:00 — Настройка",
+        "afternoon": "14:00–15:00 — Обед",
+        "evening": "15:00–19:00 — Наблюдения"
+      },
+      "easy": "Работа на границе знаний. Романтика космоса.",
+      "hard": "Ночные наблюдения. Удалённые обсерватории.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=astronomer-engineer"
+      }
+    },
+    {
+      "id": "restoration-engineer",
+      "title": "Инженер-реставратор",
+      "shortDesc": "Реставрация и сохранение памятников архитектуры",
+      "education": {
+        "requirements": "Знание истории архитектуры.",
+        "courses": [
+          "История архитектуры",
+          "Реставрационные технологии"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Инженер-реставратор"
+        },
+        {
+          "title": "Ведущий реставратор"
+        },
+        {
+          "title": "Руководитель работ"
+        },
+        {
+          "title": "Главный реставратор"
+        }
+      ],
+      "typicalDay": {
+        "morning": "09:00 — Осмотр",
+        "midday": "10:00–13:00 — Реставрация",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–18:00 — Документация"
+      },
+      "easy": "Сохранение культурного наследия. Уникальные технологии.",
+      "hard": "Огромная ответственность. Кропотливая работа.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=restoration-engineer"
+      }
+    },
+    {
+      "id": "standardization-engineer",
+      "title": "Инженер по стандартизации",
+      "shortDesc": "Разработка и контроль соблюдения стандартов и норм",
+      "education": {
+        "requirements": "Знание стандартизации.",
+        "courses": [
+          "Стандартизация",
+          "Метрология"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Инженер по стандартизации"
+        },
+        {
+          "title": "Ведущий специалист"
+        },
+        {
+          "title": "Начальник отдела"
+        },
+        {
+          "title": "Главный специалист по качеству"
+        }
+      ],
+      "typicalDay": {
+        "morning": "09:00 — Контроль",
+        "midday": "10:00–13:00 — Разработка",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–17:00 — Внедрение"
+      },
+      "easy": "Стабильная работа. Востребовано на производстве.",
+      "hard": "Много документации. Строгие сроки.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=standardization-engineer"
+      }
+    },
+    {
+      "id": "patent-engineer",
+      "title": "Инженер-патентовед",
+      "shortDesc": "Защита интеллектуальной собственности и патентование",
+      "education": {
+        "requirements": "Знание патентного права.",
+        "courses": [
+          "Патентное право",
+          "Патентные исследования"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Патентовед"
+        },
+        {
+          "title": "Ведущий патентовед"
+        },
+        {
+          "title": "Руководитель отдела"
+        },
+        {
+          "title": "Главный патентовед"
+        }
+      ],
+      "typicalDay": {
+        "morning": "09:00 — Поиски",
+        "midday": "10:30–14:00 — Заявки",
+        "afternoon": "14:00–15:00 — Обед",
+        "evening": "15:00–18:00 — Экспертиза"
+      },
+      "easy": "Интеллектуальная работа. Сочетание техники и права.",
+      "hard": "Сложные формулировки. Долгие сроки экспертизы.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=patent-engineer"
+      }
+    },
+    {
+      "id": "data-engineer",
+      "title": "Инженер данных (Data Engineer)",
+      "shortDesc": "Построение и поддержка инфраструктуры данных",
+      "education": {
+        "requirements": "Знание SQL.",
+        "courses": [
+          "Spark",
+          "Python"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Junior Data Engineer"
+        },
+        {
+          "title": "Data Engineer"
+        },
+        {
+          "title": "Senior Data Engineer"
+        },
+        {
+          "title": "Lead Data Engineer"
+        }
+      ],
+      "typicalDay": {
+        "morning": "09:30 — Daily",
+        "midday": "10:00–13:00 — Пайплайны",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–18:00 — Код-ревью"
+      },
+      "easy": "Высокий спрос. Работа с большими данными.",
+      "hard": "Легаси-код. Данные низкого качества.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=data-engineer"
+      }
+    },
+    {
+      "id": "devops-engineer",
+      "title": "DevOps-инженер",
+      "shortDesc": "Автоматизация разработки и эксплуатации IT-систем",
+      "education": {
+        "requirements": "Знание Linux.",
+        "courses": [
+          "Docker",
+          "Kubernetes"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Junior DevOps"
+        },
+        {
+          "title": "DevOps-инженер"
+        },
+        {
+          "title": "Senior DevOps"
+        },
+        {
+          "title": "Lead DevOps"
+        }
+      ],
+      "typicalDay": {
+        "morning": "09:00 — Алерты",
+        "midday": "10:00–13:00 — Terraform",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–18:00 — Инциденты"
+      },
+      "easy": "Автоматизация. Высокая зарплата.",
+      "hard": "Ночные дежурства. Легаси-инфраструктура.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=devops-engineer"
+      }
+    },
+    {
+      "id": "ml-engineer",
+      "title": "Инженер машинного обучения (ML Engineer)",
+      "shortDesc": "Разработка и внедрение моделей машинного обучения",
+      "education": {
+        "requirements": "Знание математики.",
+        "courses": [
+          "PyTorch",
+          "TensorFlow"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Junior ML Engineer"
+        },
+        {
+          "title": "ML Engineer"
+        },
+        {
+          "title": "Senior ML Engineer"
+        },
+        {
+          "title": "Lead ML"
+        }
+      ],
+      "typicalDay": {
+        "morning": "10:00 — Метрики",
+        "midday": "10:30–14:00 — Feature engineering",
+        "afternoon": "14:00–15:00 — Обед",
+        "evening": "15:00–19:00 — Деплой"
+      },
+      "easy": "Передний край технологий. Огромные зарплаты.",
+      "hard": "Данные низкого качества. Бесконечные эксперименты.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=ml-engineer"
+      }
+    },
+    {
+      "id": "security-engineer",
+      "title": "Инженер по информационной безопасности",
+      "shortDesc": "Защита IT-инфраструктуры от кибератак",
+      "education": {
+        "requirements": "Знание сетей.",
+        "courses": [
+          "OSCP",
+          "CEH"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Аналитик ИБ"
+        },
+        {
+          "title": "Инженер ИБ"
+        },
+        {
+          "title": "Senior Security Engineer"
+        },
+        {
+          "title": "Head of Security"
+        }
+      ],
+      "typicalDay": {
+        "morning": "09:00 — Инциденты",
+        "midday": "10:30–13:00 — Пентест",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–18:00 — Аудит"
+      },
+      "easy": "Высокая зарплата. Остросюжетная работа.",
+      "hard": "Ночные инциденты. Постоянное обучение.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=security-engineer"
+      }
+    },
+    {
+      "id": "cloud-engineer",
+      "title": "Cloud-инженер",
+      "shortDesc": "Проектирование и управление облачной инфраструктурой",
+      "education": {
+        "requirements": "Знание облаков.",
+        "courses": [
+          "Yandex Cloud",
+          "AWS"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Junior Cloud Engineer"
+        },
+        {
+          "title": "Cloud Engineer"
+        },
+        {
+          "title": "Senior Cloud Engineer"
+        },
+        {
+          "title": "Cloud Architect"
+        }
+      ],
+      "typicalDay": {
+        "morning": "09:00 — Биллинг",
+        "midday": "10:00–13:00 — Архитектура",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–18:00 — Оптимизация"
+      },
+      "easy": "Передовые технологии. Высокая зарплата.",
+      "hard": "Биллинг может вырасти. Сложность архитектур.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=cloud-engineer"
+      }
+    },
+    {
+      "id": "embedded-engineer",
+      "title": "Инженер встраиваемых систем (Embedded)",
+      "shortDesc": "Разработка ПО для микроконтроллеров и встраиваемых устройств",
+      "education": {
+        "requirements": "Знание C/C++.",
+        "courses": [
+          "ARM",
+          "RTOS"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Junior Embedded"
+        },
+        {
+          "title": "Embedded Engineer"
+        },
+        {
+          "title": "Senior Embedded"
+        },
+        {
+          "title": "Lead Embedded"
+        }
+      ],
+      "typicalDay": {
+        "morning": "09:00 — Баги",
+        "midday": "10:00–13:00 — Прошивка",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–18:00 — Осциллограф"
+      },
+      "easy": "Работа с железом. Видишь результат.",
+      "hard": "Отладка без отладчика. Жёсткие ограничения памяти.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=embedded-engineer"
+      }
+    },
+    {
+      "id": "frontend-engineer",
+      "title": "Frontend-разработчик",
+      "shortDesc": "Разработка пользовательских интерфейсов веб-приложений",
+      "education": {
+        "requirements": "Знание JavaScript.",
+        "courses": [
+          "React",
+          "Vue",
+          "Angular"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Junior Frontend"
+        },
+        {
+          "title": "Frontend-разработчик"
+        },
+        {
+          "title": "Senior Frontend"
+        },
+        {
+          "title": "Lead Frontend"
+        }
+      ],
+      "typicalDay": {
+        "morning": "10:00 — Daily",
+        "midday": "10:30–14:00 — Компоненты",
+        "afternoon": "14:00–15:00 — Обед",
+        "evening": "15:00–19:00 — Код-ревью"
+      },
+      "easy": "Видимый результат сразу. Много вакансий.",
+      "hard": "Правки дизайна. Кросс-браузерность.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=frontend-engineer"
+      }
+    },
+    {
+      "id": "backend-engineer",
+      "title": "Backend-разработчик",
+      "shortDesc": "Разработка серверной логики и API веб-приложений",
+      "education": {
+        "requirements": "Знание Java/Go/Python.",
+        "courses": [
+          "Spring",
+          "PostgreSQL"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Junior Backend"
+        },
+        {
+          "title": "Backend-разработчик"
+        },
+        {
+          "title": "Senior Backend"
+        },
+        {
+          "title": "Team Lead"
+        }
+      ],
+      "typicalDay": {
+        "morning": "10:00 — Daily",
+        "midday": "10:30–14:00 — API",
+        "afternoon": "14:00–15:00 — Обед",
+        "evening": "15:00–19:00 — Оптимизация"
+      },
+      "easy": "Высокий спрос. Чёткие задачи.",
+      "hard": "Легаси-код. Ночные дедлайны.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=backend-engineer"
+      }
+    },
+    {
+      "id": "qa-engineer",
+      "title": "QA-инженер",
+      "shortDesc": "Обеспечение качества и тестирование программного обеспечения",
+      "education": {
+        "requirements": "Знание тестирования.",
+        "courses": [
+          "Selenium",
+          "Postman"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Junior QA"
+        },
+        {
+          "title": "QA Engineer"
+        },
+        {
+          "title": "Senior QA"
+        },
+        {
+          "title": "QA Lead"
+        }
+      ],
+      "typicalDay": {
+        "morning": "09:30 — Баги",
+        "midday": "10:00–13:00 — Автотесты",
+        "afternoon": "13:00–14:00 — Обед",
+        "evening": "14:00–18:00 — Ручное тестирование"
+      },
+      "easy": "Можно найти баги. Автоматизация — творческая работа.",
+      "hard": "Ручное тестирование утомляет. Баги не воспроизводятся.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=qa-engineer"
+      }
+    },
+    {
+      "id": "mobile-engineer",
+      "title": "Mobile-разработчик",
+      "shortDesc": "Разработка мобильных приложений для iOS и Android",
+      "education": {
+        "requirements": "Знание Kotlin/Swift.",
+        "courses": [
+          "Kotlin",
+          "Swift"
+        ]
+      },
+      "careerGrowth": [
+        {
+          "title": "Junior Mobile"
+        },
+        {
+          "title": "Mobile-разработчик"
+        },
+        {
+          "title": "Senior Mobile"
+        },
+        {
+          "title": "Lead Mobile"
+        }
+      ],
+      "typicalDay": {
+        "morning": "10:00 — Daily",
+        "midday": "10:30–14:00 — Экраны",
+        "afternoon": "14:00–15:00 — Обед",
+        "evening": "15:00–19:00 — Тестирование"
+      },
+      "easy": "Продукт в кармане. Быстрая обратная связь.",
+      "hard": "Фрагментация устройств. Модерация App Store.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/index.html#profession=mobile-engineer"
+      }
+    }
+  ]
+}
