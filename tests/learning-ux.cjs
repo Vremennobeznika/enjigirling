@@ -99,7 +99,7 @@ for(const suspectName of ['Грозненский техникум','Ураль�
 }
 
 const verified=entries.filter(({item})=>Array.isArray(item.verifiedPrograms)&&item.verifiedPrograms.length);
-assert.equal(verified.length,4,'four independently sourced program examples should remain');
+assert.equal(verified.length,5,'five independently sourced program examples should remain');
 for(const {item} of verified){
  for(const p of item.verifiedPrograms){
   assert.match(p.code,/^\d{2}\.\d{2}\.\d{2}$/,'program code required');
@@ -112,4 +112,4 @@ for(const {item} of verified){
 }
 assert.ok(js.includes('item.verifiedPrograms')&&js.includes('programDetails'),'program evidence is rendered');
 assert.ok(js.includes('item.verifiedPrograms||[]'),'program codes included in search');
-console.log('PASS: 4 program-specific examples with a period, primary source URL and bounded numbers');
+console.log('PASS: 5 program-specific examples with a period, primary source URL and bounded numbers');
