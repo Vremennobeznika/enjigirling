@@ -24,7 +24,7 @@
       "id": "profession:architect-engineer",
       "type": "profession",
       "title": "Инженер-архитектор",
-      "description": "Архитектурное проектирование и планировка пространств",
+      "description": "Разработка архитектурных решений и документации: планировки, объёмно-пространственные решения, координация инженерных разделов.",
       "url": "https://vremennobeznika.github.io/enjigirling/index.html#profession=architect-engineer",
       "dataset": "knowledge/professions.json"
     },
@@ -48,7 +48,7 @@
       "id": "profession:mechanical-engineer",
       "type": "profession",
       "title": "Инженер-механик",
-      "description": "Проектирование машин, механизмов и оборудования",
+      "description": "Расчёты, конструирование, эксплуатация и обслуживание машин и механизмов — конкретный набор задач зависит от должности.",
       "url": "https://vremennobeznika.github.io/enjigirling/index.html#profession=mechanical-engineer",
       "dataset": "knowledge/professions.json"
     },
@@ -88,7 +88,7 @@
       "id": "profession:nuclear-engineer",
       "type": "profession",
       "title": "Инженер-атомщик",
-      "description": "Эксплуатация и обслуживание АЭС и ядерных установок: контроль реактора, расчёты безопасности",
+      "description": "Инженерные функции на объектах атомной отрасли: расчёты, эксплуатация, диагностика или проектирование — в зависимости от допуска и должности.",
       "url": "https://vremennobeznika.github.io/enjigirling/index.html#profession=nuclear-engineer",
       "dataset": "knowledge/professions.json"
     },
@@ -120,7 +120,7 @@
       "id": "profession:oil-gas-engineer",
       "type": "profession",
       "title": "Инженер-нефтяник",
-      "description": "Разведка, бурение и добыча нефти и газа",
+      "description": "Обобщённая группа специализаций: разведка, бурение, добыча, промысловые технологии и эксплуатация нефтегазового оборудования.",
       "url": "https://vremennobeznika.github.io/enjigirling/index.html#profession=oil-gas-engineer",
       "dataset": "knowledge/professions.json"
     },
@@ -152,7 +152,7 @@
       "id": "profession:biomedical-engineer",
       "type": "profession",
       "title": "Инженер-биомедик",
-      "description": "Разработка медицинского оборудования и биопротезов",
+      "description": "Инженерная разработка, испытания или сервис медицинских изделий и оборудования; клинические функции выполняются отдельно.",
       "url": "https://vremennobeznika.github.io/enjigirling/index.html#profession=biomedical-engineer",
       "dataset": "knowledge/professions.json"
     },
@@ -184,7 +184,7 @@
       "id": "profession:asu-tp-designer",
       "type": "profession",
       "title": "Проектировщик АСУ ТП",
-      "description": "Проектирование систем автоматизации технологических процессов",
+      "description": "Проектирование автоматизации: схемы КИП, архитектура ПЛК/SCADA, спецификации, кабельные связи, документация.",
       "url": "https://vremennobeznika.github.io/enjigirling/index.html#profession=asu-tp-designer",
       "dataset": "knowledge/professions.json"
     },
@@ -192,7 +192,7 @@
       "id": "profession:asu-tp-programmer",
       "type": "profession",
       "title": "Программист АСУ ТП",
-      "description": "Разработка программного обеспечения для ПЛК, SCADA и систем управления технологическими процессами",
+      "description": "Разработка и проверка программ ПЛК, экранов SCADA и промышленного обмена; пусконаладка является отдельной функцией.",
       "url": "https://vremennobeznika.github.io/enjigirling/index.html#profession=asu-tp-programmer",
       "dataset": "knowledge/professions.json"
     },
@@ -200,7 +200,7 @@
       "id": "profession:asu-tp-commissioning",
       "type": "profession",
       "title": "Пуско-наладчик АСУ ТП",
-      "description": "Пуск, наладка и проверка систем автоматизации на действующем объекте",
+      "description": "Проверка подключения и сигналов, тестирование ПЛК/SCADA, запуск контуров управления и оформление протоколов наладки.",
       "url": "https://vremennobeznika.github.io/enjigirling/index.html#profession=asu-tp-commissioning",
       "dataset": "knowledge/professions.json"
     },
@@ -232,7 +232,7 @@
       "id": "profession:forest-engineer",
       "type": "profession",
       "title": "Инженер лесного хозяйства",
-      "description": "Лесовосстановление, лесозаготовка и деревообработка",
+      "description": "Планирование и контроль работ в лесном хозяйстве: учёт лесов, охрана, лесовосстановление и рациональное использование.",
       "url": "https://vremennobeznika.github.io/enjigirling/index.html#profession=forest-engineer",
       "dataset": "knowledge/professions.json"
     },
@@ -304,7 +304,7 @@
       "id": "profession:astronomer-engineer",
       "type": "profession",
       "title": "Инженер-астроном",
-      "description": "Разработка и эксплуатация астрономического оборудования",
+      "description": "Инженерная разработка и эксплуатация астрономических приборов, систем наведения и обработки наблюдений; не тождественно профессии астронома.",
       "url": "https://vremennobeznika.github.io/enjigirling/index.html#profession=astronomer-engineer",
       "dataset": "knowledge/professions.json"
     },
@@ -312,7 +312,7 @@
       "id": "profession:restoration-engineer",
       "type": "profession",
       "title": "Инженер-реставратор",
-      "description": "Реставрация и сохранение памятников архитектуры",
+      "description": "Инженерное обследование, проектные решения и сопровождение консервации и реставрации объектов культурного наследия.",
       "url": "https://vremennobeznika.github.io/enjigirling/index.html#profession=restoration-engineer",
       "dataset": "knowledge/professions.json"
     },
