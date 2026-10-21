@@ -192,7 +192,9 @@ function renderNormativeReferences(profession) {
   const rows = docs.map(doc => {
     const when = doc.periodStatus === 'not_yet_effective'
       ? '<strong>Ещё не действует</strong> (начало '+escapeHTML(doc.effectiveFrom)+')'
-      : 'Действующий на дату ревизии документ (начало '+escapeHTML(doc.effectiveFrom)+')';
+      : doc.periodStatus === 'publication_found_effective_date_requires_confirmation'
+        ? 'Приказ официально опубликован; дата начала действия требует отдельной проверки.'
+        : 'Действующий на дату ревизии документ (начало '+escapeHTML(doc.effectiveFrom)+')';
     const limits = doc.relationship === 'related_or_narrower_function'
       ? 'Частичная/смежная функция, без автоматического переноса на всю профессию.'
       : 'Соответствие функций оценивается для конкретной должности.';
