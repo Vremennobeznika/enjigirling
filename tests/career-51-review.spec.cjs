@@ -13,7 +13,7 @@ test('career cards show title only and all 51 open with cautious internal text',
   await card.click();
   await expect(page.locator('#modalTitle')).toHaveText(label);
   await expect(page.locator('#modalContent')).toContainText('Нормативные документы');
-  await expect(page.locator('#modalContent')).toContainText(/Снимок внешнего источника|точная зарплата не подтверждена|Сопоставимого опубликованного/);
+  await expect(page.locator('#modalContent')).toContainText(/Снимок внешнего источника|не подтверждён проверяемым источником|точная зарплата не подтверждена/);
   await expect(page.locator('#modalContent')).toContainText('Время и последовательность действий придуманы');
   await expect(page.locator('#modalContent')).toContainText('субъективная оценка');
   await page.keyboard.press('Escape');
@@ -30,7 +30,7 @@ test('comparison links to sources and preserves selected IDs in URL',async({page
  await expect(page).toHaveURL(/ids=civil-engineer%2Croad-engineer/);
  await expect(page.locator('.comparison-table .education-site')).toHaveCount(0);
  await expect(page.locator('.comparison-table a[href^="https://"]')).toHaveCount(2);
- await expect(page.locator('#comparisonResult')).toContainText('Только смежная профессия');
+ await expect(page.locator('#comparisonResult')).toContainText('Числовые данные не подтверждены');
  await page.reload();
  await expect(page.locator('#selectedProfessions button')).toHaveCount(2);
  await page.locator('#selectedProfessions button').first().click();
