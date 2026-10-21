@@ -1,0 +1,521 @@
+{
+  "date": "2026-10-22",
+  "scope": "URL retrieval and page title only; does not prove program availability or admission conditions",
+  "recordsCount": 51,
+  "summary": {
+    "fetched": 28,
+    "failed": 23
+  },
+  "records": [
+    {
+      "name": "СПбПУ Петра Великого",
+      "city": "Санкт-Петербург",
+      "url": "https://www.spbstu.ru/",
+      "status": "fetched",
+      "title": "Санкт-Петербургский политехнический университет Петра Великого - Высшее образование в России",
+      "finalUrl": "https://www.spbstu.ru/",
+      "latencyMs": 1155.1708840052015,
+      "error": null
+    },
+    {
+      "name": "СПбГМТУ (Корабелка)",
+      "city": "Санкт-Петербург",
+      "url": "https://www.smtu.ru/",
+      "status": "fetched",
+      "title": "Санкт-Петербургский государственный морской технический университет",
+      "finalUrl": "https://www.smtu.ru/",
+      "latencyMs": 2054.168568000023,
+      "error": null
+    },
+    {
+      "name": "ЛЭТИ",
+      "city": "Санкт-Петербург",
+      "url": "https://etu.ru/",
+      "status": "fetched",
+      "title": "СПбГЭТУ «ЛЭТИ»",
+      "finalUrl": "https://etu.ru/",
+      "latencyMs": 7488.072993000969,
+      "error": null
+    },
+    {
+      "name": "Военмех (БГТУ)",
+      "city": "Санкт-Петербург",
+      "url": "https://www.voenmeh.ru/",
+      "status": "failed",
+      "title": null,
+      "finalUrl": null,
+      "latencyMs": null,
+      "error": "{\"url\":\"https://www.voenmeh.ru/\",\"error\":\"invalid_url\"}"
+    },
+    {
+      "name": "ГУАП",
+      "city": "Санкт-Петербург",
+      "url": "https://guap.ru/",
+      "status": "fetched",
+      "title": "Главная – ГУАП",
+      "finalUrl": "https://guap.ru/",
+      "latencyMs": 2266.476845004945,
+      "error": null
+    },
+    {
+      "name": "Мурманский арктический университет (МАУ)",
+      "city": "Мурманск",
+      "url": "https://mauniver.ru/",
+      "status": "failed",
+      "title": null,
+      "finalUrl": null,
+      "latencyMs": null,
+      "error": "{\"url\":\"https://mauniver.ru/\",\"error\":\"proxy_error\"}"
+    },
+    {
+      "name": "Калининградский ГТУ",
+      "city": "Калининград",
+      "url": "https://www.klgtu.ru/",
+      "status": "failed",
+      "title": null,
+      "finalUrl": null,
+      "latencyMs": null,
+      "error": "{\"url\":\"https://www.klgtu.ru/\",\"error\":\"target_unreachable\"}"
+    },
+    {
+      "name": "Петрозаводский ГУ",
+      "city": "Петрозаводск",
+      "url": "https://petrsu.ru/",
+      "status": "fetched",
+      "title": "Петрозаводский государственный университет",
+      "finalUrl": "https://petrsu.ru/",
+      "latencyMs": 6834.058221997111,
+      "error": null
+    },
+    {
+      "name": "МГТУ им. Баумана",
+      "city": "Москва",
+      "url": "https://bmstu.ru/",
+      "status": "fetched",
+      "title": null,
+      "finalUrl": "https://mirror.bmstu.ru/",
+      "latencyMs": 1788.7586439974257,
+      "error": null
+    },
+    {
+      "name": "МАИ",
+      "city": "Москва",
+      "url": "https://mai.ru/",
+      "status": "failed",
+      "title": null,
+      "finalUrl": null,
+      "latencyMs": null,
+      "error": "{\"url\":\"https://mai.ru/\",\"error\":\"target_unreachable\"}"
+    },
+    {
+      "name": "НИУ МЭИ",
+      "city": "Москва",
+      "url": "https://mpei.ru/",
+      "status": "fetched",
+      "title": "Национальный исследовательский университет \"МЭИ\"",
+      "finalUrl": "https://mpei.ru/Pages/default.aspx",
+      "latencyMs": 2124.7101079998174,
+      "error": null
+    },
+    {
+      "name": "МИРЭА",
+      "city": "Москва",
+      "url": "https://www.mirea.ru/",
+      "status": "failed",
+      "title": null,
+      "finalUrl": null,
+      "latencyMs": null,
+      "error": "{\"url\":\"https://www.mirea.ru/\",\"error\":\"target_http_error\",\"status\":403}"
+    },
+    {
+      "name": "МГСУ",
+      "city": "Москва",
+      "url": "https://mgsu.ru/",
+      "status": "failed",
+      "title": null,
+      "finalUrl": null,
+      "latencyMs": null,
+      "error": "{\"url\":\"https://mgsu.ru/\",\"error\":\"target_http_error\",\"status\":502}"
+    },
+    {
+      "name": "МАДИ",
+      "city": "Москва",
+      "url": "https://madi.ru/",
+      "status": "fetched",
+      "title": "Университет МАДИ",
+      "finalUrl": "https://madi.ru/",
+      "latencyMs": 2257.369006000772,
+      "error": null
+    },
+    {
+      "name": "РГУ нефти и газа им. Губкина",
+      "city": "Москва",
+      "url": "https://www.gubkin.ru/",
+      "status": "failed",
+      "title": null,
+      "finalUrl": null,
+      "latencyMs": null,
+      "error": "{\"url\":\"https://www.gubkin.ru/\",\"error\":\"proxy_error\"}"
+    },
+    {
+      "name": "МГТУ «СТАНКИН»",
+      "city": "Москва",
+      "url": "https://stankin.ru/",
+      "status": "fetched",
+      "title": "Официальный сайт Московского государственного технологического университета СТАНКИН.",
+      "finalUrl": "https://stankin.ru/",
+      "latencyMs": 1564.5714120000775,
+      "error": null
+    },
+    {
+      "name": "Воронежский ГТУ",
+      "city": "Воронеж",
+      "url": "https://cchgeu.ru/",
+      "status": "fetched",
+      "title": "Воронежский государственный технический университет | ВГТУ",
+      "finalUrl": "https://cchgeu.ru/",
+      "latencyMs": 1717.0956910003952,
+      "error": null
+    },
+    {
+      "name": "Тверской ГТУ",
+      "city": "Тверь",
+      "url": "https://www.tstu.tver.ru/",
+      "status": "failed",
+      "title": null,
+      "finalUrl": null,
+      "latencyMs": null,
+      "error": "{\"url\":\"https://www.tstu.tver.ru/\",\"error\":\"timeout\"}"
+    },
+    {
+      "name": "ДГТУ",
+      "city": "Ростов-на-Дону",
+      "url": "https://donstu.ru/",
+      "status": "fetched",
+      "title": "Официальный сайт ДГТУ",
+      "finalUrl": "https://donstu.ru/",
+      "latencyMs": 3357.6758279996284,
+      "error": null
+    },
+    {
+      "name": "КубГТУ",
+      "city": "Краснодар",
+      "url": "https://kubstu.ru/",
+      "status": "failed",
+      "title": null,
+      "finalUrl": null,
+      "latencyMs": null,
+      "error": "{\"url\":\"https://kubstu.ru/\",\"error\":\"timeout\"}"
+    },
+    {
+      "name": "ЮРГПУ (НПИ)",
+      "city": "Новочеркасск",
+      "url": "https://www.npi-tu.ru/",
+      "status": "failed",
+      "title": null,
+      "finalUrl": null,
+      "latencyMs": null,
+      "error": "{\"url\":\"https://www.npi-tu.ru/\",\"error\":\"proxy_error\"}"
+    },
+    {
+      "name": "ВолгГТУ",
+      "city": "Волгоград",
+      "url": "https://www.vstu.ru/",
+      "status": "fetched",
+      "title": "Волгоградский государственный технический университет",
+      "finalUrl": "https://www.vstu.ru/",
+      "latencyMs": 3868.785721002496,
+      "error": null
+    },
+    {
+      "name": "Астраханский ГТУ",
+      "city": "Астрахань",
+      "url": "https://astu.org/",
+      "status": "fetched",
+      "title": "Астраханский государственный технический университет",
+      "finalUrl": "https://astu.ru/",
+      "latencyMs": 8868.123107000429,
+      "error": null
+    },
+    {
+      "name": "СевГУ",
+      "city": "Севастополь",
+      "url": "https://www.sevsu.ru/",
+      "status": "failed",
+      "title": null,
+      "finalUrl": null,
+      "latencyMs": null,
+      "error": "{\"url\":\"https://www.sevsu.ru/\",\"error\":\"target_http_error\",\"status\":403}"
+    },
+    {
+      "name": "СКФУ",
+      "city": "Ставрополь",
+      "url": "https://www.ncfu.ru/",
+      "status": "fetched",
+      "title": "Северо-Кавказский федеральный университет",
+      "finalUrl": "https://ncfu.ru/",
+      "latencyMs": 4331.1284509982215,
+      "error": null
+    },
+    {
+      "name": "Грозненский ГНТУ",
+      "city": "Грозный",
+      "url": "https://gstou.ru/",
+      "status": "fetched",
+      "title": "ФГБОУ ВО \"Грозненский государственный нефтяной технический университет\"",
+      "finalUrl": "https://gstou.ru/",
+      "latencyMs": 1249.7725389985135,
+      "error": null
+    },
+    {
+      "name": "Дагестанский ГТУ",
+      "city": "Махачкала",
+      "url": "https://dgtu.ru/",
+      "status": "failed",
+      "title": null,
+      "finalUrl": null,
+      "latencyMs": null,
+      "error": "{\"url\":\"https://dgtu.ru/\",\"error\":\"target_unreachable\"}"
+    },
+    {
+      "name": "КНИТУ-КАИ",
+      "city": "Казань",
+      "url": "https://kai.ru/",
+      "status": "fetched",
+      "title": "КАЗАНСКИЙ НАЦИОНАЛЬНЫЙ ИССЛЕДОВАТЕЛЬСКИЙ ТЕХНИЧЕСКИЙ УНИВЕРСИТЕТ ИМ. А. Н. ТУПОЛЕВА - КАИ",
+      "finalUrl": "https://kai.ru/",
+      "latencyMs": 4472.814198998094,
+      "error": null
+    },
+    {
+      "name": "КНИТУ (КХТИ)",
+      "city": "Казань",
+      "url": "https://www.kstu.ru/",
+      "status": "fetched",
+      "title": "Казанский национальный исследовательский технологический университет",
+      "finalUrl": "https://www.kstu.ru/",
+      "latencyMs": 2022.6824130004388,
+      "error": null
+    },
+    {
+      "name": "Уфимский университет науки и технологий (УУНиТ)",
+      "city": "Уфа",
+      "url": "https://uust.ru/",
+      "status": "fetched",
+      "title": "Официальный сайт УУНиТ",
+      "finalUrl": "https://uust.ru/",
+      "latencyMs": 2573.37716800248,
+      "error": null
+    },
+    {
+      "name": "Самарский Политех",
+      "city": "Самара",
+      "url": "https://samgtu.ru/",
+      "status": "fetched",
+      "title": "Самарский государственный технический университет",
+      "finalUrl": "https://samgtu.ru/",
+      "latencyMs": 2211.8720849975944,
+      "error": null
+    },
+    {
+      "name": "ПНИПУ",
+      "city": "Пермь",
+      "url": "https://pstu.ru/",
+      "status": "failed",
+      "title": null,
+      "finalUrl": null,
+      "latencyMs": null,
+      "error": "{\"url\":\"https://pstu.ru/\",\"error\":\"timeout\"}"
+    },
+    {
+      "name": "НГТУ им. Алексеева",
+      "city": "Нижний Новгород",
+      "url": "https://www.nntu.ru/",
+      "status": "fetched",
+      "title": "НГТУ им. Р.Е. Алексеева | Нижегородский государственный технический университет",
+      "finalUrl": "https://www.nntu.ru/",
+      "latencyMs": 4760.571506994893,
+      "error": null
+    },
+    {
+      "name": "Саратовский ГТУ",
+      "city": "Саратов",
+      "url": "https://www.sstu.ru/",
+      "status": "fetched",
+      "title": "Саратовский государственный технический университет имени Гагарина Ю.А.",
+      "finalUrl": "https://www.sstu.ru/",
+      "latencyMs": 1869.4778719946044,
+      "error": null
+    },
+    {
+      "name": "Ульяновский ГТУ",
+      "city": "Ульяновск",
+      "url": "https://ulstu.ru/",
+      "status": "fetched",
+      "title": "Ульяновский государственный технический университет (УлГТУ)",
+      "finalUrl": "https://ulstu.ru/",
+      "latencyMs": 2531.6705069999443,
+      "error": null
+    },
+    {
+      "name": "Чувашский ГУ",
+      "city": "Чебоксары",
+      "url": "https://www.chuvsu.ru/",
+      "status": "failed",
+      "title": null,
+      "finalUrl": null,
+      "latencyMs": null,
+      "error": "{\"url\":\"https://www.chuvsu.ru/\",\"error\":\"timeout\"}"
+    },
+    {
+      "name": "УрФУ",
+      "city": "Екатеринбург",
+      "url": "https://urfu.ru/",
+      "status": "failed",
+      "title": null,
+      "finalUrl": null,
+      "latencyMs": null,
+      "error": "{\"url\":\"https://urfu.ru/\",\"error\":\"timeout\"}"
+    },
+    {
+      "name": "ЮУрГУ",
+      "city": "Челябинск",
+      "url": "https://www.susu.ru/",
+      "status": "fetched",
+      "title": "South Ural State University",
+      "finalUrl": "https://www.susu.ru/en",
+      "latencyMs": 5002.638343998115,
+      "error": null
+    },
+    {
+      "name": "Тюменский Индустриальный Университет",
+      "city": "Тюмень",
+      "url": "https://www.tyuiu.ru/",
+      "status": "fetched",
+      "title": "Тюменский индустриальный университет",
+      "finalUrl": "https://www.tyuiu.ru/",
+      "latencyMs": 2020.5695559998276,
+      "error": null
+    },
+    {
+      "name": "Курганский ГУ",
+      "city": "Курган",
+      "url": "https://ksu.edu.ru/",
+      "status": "failed",
+      "title": null,
+      "finalUrl": null,
+      "latencyMs": null,
+      "error": "{\"url\":\"https://ksu.edu.ru/\",\"error\":\"invalid_url\"}"
+    },
+    {
+      "name": "НГТУ",
+      "city": "Новосибирск",
+      "url": "https://www.nstu.ru/",
+      "status": "fetched",
+      "title": "НГТУ НЭТИ",
+      "finalUrl": "https://www.nstu.ru/",
+      "latencyMs": 2325.4959999903804,
+      "error": null
+    },
+    {
+      "name": "ТПУ",
+      "city": "Томск",
+      "url": "https://tpu.ru/",
+      "status": "failed",
+      "title": null,
+      "finalUrl": null,
+      "latencyMs": null,
+      "error": "{\"url\":\"https://tpu.ru/\",\"error\":\"timeout\"}"
+    },
+    {
+      "name": "ИРНИТУ",
+      "city": "Иркутск",
+      "url": "https://www.istu.edu/",
+      "status": "fetched",
+      "title": "ИРНИТУ - Иркутский национальный исследовательский технический университет",
+      "finalUrl": "https://www.istu.edu/",
+      "latencyMs": 2837.1345159976045,
+      "error": null
+    },
+    {
+      "name": "ОмГТУ",
+      "city": "Омск",
+      "url": "https://omgtu.ru/",
+      "status": "failed",
+      "title": null,
+      "finalUrl": null,
+      "latencyMs": null,
+      "error": "{\"url\":\"https://omgtu.ru/\",\"error\":\"target_http_error\",\"status\":403}"
+    },
+    {
+      "name": "СибГУТИ",
+      "city": "Новосибирск",
+      "url": "https://sibsutis.ru/",
+      "status": "failed",
+      "title": null,
+      "finalUrl": null,
+      "latencyMs": null,
+      "error": "{\"url\":\"https://sibsutis.ru/\",\"error\":\"target_unreachable\"}"
+    },
+    {
+      "name": "Кузбасский ГТУ",
+      "city": "Кемерово",
+      "url": "https://kuzstu.ru/",
+      "status": "fetched",
+      "title": "Кузбасский государственный технический университет",
+      "finalUrl": "https://kuzstu.ru/",
+      "latencyMs": 2603.278238006169,
+      "error": null
+    },
+    {
+      "name": "Сибирский федеральный университет (СФУ)",
+      "city": "Красноярск",
+      "url": "https://sfu.ru/",
+      "status": "failed",
+      "title": null,
+      "finalUrl": null,
+      "latencyMs": null,
+      "error": "{\"url\":\"https://sfu.ru/\",\"error\":\"timeout\"}"
+    },
+    {
+      "name": "ДВФУ",
+      "city": "Владивосток",
+      "url": "https://www.dvfu.ru/",
+      "status": "failed",
+      "title": null,
+      "finalUrl": null,
+      "latencyMs": null,
+      "error": "{\"url\":\"https://www.dvfu.ru/\",\"error\":\"timeout\"}"
+    },
+    {
+      "name": "Комсомольский-на-Амуре ГУ",
+      "city": "Комсомольск-на-Амуре",
+      "url": "https://knastu.ru/",
+      "status": "fetched",
+      "title": "КнАГУ",
+      "finalUrl": "https://knastu.ru/",
+      "latencyMs": 2612.4025549943326,
+      "error": null
+    },
+    {
+      "name": "Тихоокеанский ГУ",
+      "city": "Хабаровск",
+      "url": "https://pnu.edu.ru/",
+      "status": "failed",
+      "title": null,
+      "finalUrl": null,
+      "latencyMs": null,
+      "error": "{\"url\":\"https://pnu.edu.ru/\",\"error\":\"invalid_url\"}"
+    },
+    {
+      "name": "СВФУ",
+      "city": "Якутск",
+      "url": "https://www.s-vfu.ru/",
+      "status": "failed",
+      "title": null,
+      "finalUrl": null,
+      "latencyMs": null,
+      "error": "{\"url\":\"https://www.s-vfu.ru/\",\"error\":\"proxy_error\"}"
+    }
+  ]
+}
