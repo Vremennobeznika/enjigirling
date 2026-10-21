@@ -126,5 +126,19 @@ check('sitemap and AI entrypoints', () => {
  for(const p of manifest.jsonApi.datasets) assert.ok(fs.existsSync(p),'missing manifest dataset '+p);
  assert.ok(fs.readFileSync('index.html','utf8').includes('"@type":"DataCatalog"'),'homepage has no JSON-LD catalog');
 });
+
+check('Pages deploy performs checkout before running local smoke script', () => {
+ const workflow=fs.readFileSync('.github/workflows/knowledge-pages.yml','utf8');
+ const deploy=workflow.split('\n  deploy:\n')[1];
+ assert.ok(deploy,'missing deployment job');
+ const checkout=deploy.indexOf('uses: actions/checkout@');
+ const deployAction=deploy.indexOf('uses: actions/deploy-pages@');
+ const smoke=deploy.indexOf('node scripts/check-live-site.cjs');
+ assert.ok(checkout>=0&&deployAction>checkout&&smoke>deployAction,
+  'deploy job must check out sources before postdeploy smoke');
+ const smokeScript=fs.readFileSync('scripts/check-live-site.cjs','utf8');
+ assert.ok(smokeScript.includes("compareExact"),'deployed data integrity verification absent');
+ assert.ok(smokeScript.includes("missingAssets"),'live linked asset validation absent');
+});
 console.log('Matrix: '+count+' PASS, '+errors.length+' FAIL ('+pages.length+' pages, '+datasets.length+' datasets)');
 if(errors.length)process.exitCode=1;
