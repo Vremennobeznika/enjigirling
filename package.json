@@ -9,7 +9,9 @@
     "build:knowledge": "node scripts/build-knowledge.cjs",
     "check:knowledge": "node scripts/build-knowledge.cjs --check",
     "test:all": "node scripts/all-checks.cjs && playwright test",
-    "test:static": "node scripts/all-checks.cjs"
+    "test:static": "node scripts/all-checks.cjs",
+    "check:quality": "node scripts/build-quality.cjs --check",
+    "build:quality": "node scripts/build-quality.cjs"
   },
   "devDependencies": {
     "@playwright/test": "1.56.1"
