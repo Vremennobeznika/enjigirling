@@ -140,7 +140,7 @@ function renderVerifiedSalarySource(profession) {
     : entry.evidenceLevel === "aggregate_or_range"
       ? "Опубликованный диапазон; выборка, состав и методика не подтверждены редакцией."
       : "Слабое соответствие данных профессии.";
-  return `<p class="data-quality-note"><strong>Снимок внешнего источника:</strong> ${display} ₽/мес. · ${escapeHTML(entry.region)} · дата записи ${escapeHTML(entry.checkedAt)}. ${escapeHTML(entry.metric)}. ${quality} Статус: ${entry.validationStatus === "source_linked_not_independently_verified" ? "ссылка сохранена, страница не проверена" : "отмечена проверка страницы (не независимая проверка цифр)"}. Должность в источнике: ${escapeHTML(entry.sourceTitle)}. <a href="${escapeHTML(entry.sourceUrl)}" target="_blank" rel="noopener noreferrer">Страница источника</a>. Данные разных регионов, дат и методик напрямую не сравнивать.</p>`;
+  return `<p class="data-quality-note"><strong>Снимок внешнего источника:</strong> ${display} ₽/мес. · ${escapeHTML(entry.region)} · дата записи ${escapeHTML(entry.checkedAt)}. ${escapeHTML(entry.metric)}. Тип данных: ${quality} Статус: ${entry.validationStatus === "source_linked_not_independently_verified" ? "ссылка сохранена, страница не проверена" : "отмечена проверка страницы (не независимая проверка цифр)"}. Должность в источнике: ${escapeHTML(entry.sourceTitle)}. <a href="${escapeHTML(entry.sourceUrl)}" target="_blank" rel="noopener noreferrer">Страница источника</a>. Данные разных регионов, дат и методик напрямую не сравнивать.</p>`;
 }
 
 // Editorial guide derived from existing profession descriptions; not a claim about a specific employer.
