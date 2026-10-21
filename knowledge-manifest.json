@@ -1,0 +1,57 @@
+{
+  "name": "ENJIGIRLING",
+  "type": "engineering-knowledge-base",
+  "language": "ru",
+  "version": "0.1",
+  "baseUrl": "https://vremennobeznika.github.io/enjigirling/",
+  "description": "Редакционный инженерный справочник; не заменяет первичные нормативные и технические источники.",
+  "entryPoints": {
+    "humans": "index.html",
+    "ai": "llms.txt",
+    "guide": "knowledge-base.md"
+  },
+  "datasets": [
+    {
+      "id": "professions",
+      "path": "data.js",
+      "format": "javascript",
+      "global": "window.professionsData",
+      "recordId": "id",
+      "page": "index.html#profession="
+    },
+    {
+      "id": "materials",
+      "path": "materials-data.js",
+      "format": "javascript",
+      "global": "window.engineeringMaterials",
+      "recordId": "id",
+      "page": "materials.html#"
+    },
+    {
+      "id": "processes",
+      "path": "processes-data.js",
+      "format": "javascript",
+      "global": "window.engineeringProcesses",
+      "recordId": "id",
+      "page": "processes.html#"
+    },
+    {
+      "id": "dictionary",
+      "path": "dictionary-data.js",
+      "format": "javascript",
+      "global": "dictionary",
+      "recordId": "term",
+      "page": "dictionary.html?q="
+    },
+    {
+      "id": "salary-sources",
+      "path": "salary-sources.js",
+      "format": "javascript",
+      "note": "Данные об источниках и статусах проверки; проверяйте ограничения."
+    }
+  ],
+  "validation": {
+    "status": "editorial_not_fully_verified",
+    "note": "Отдельные записи могут не иметь подтверждённых источников. Не применять как инженерную спецификацию или нормативную инструкцию."
+  }
+}
