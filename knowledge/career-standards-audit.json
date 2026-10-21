@@ -665,10 +665,20 @@
       "id": "civil-defense-engineer",
       "title": "Инженер ГО и ЧС",
       "reviewDate": "2026-10-22",
-      "assessment": "Организация ГО и ЧС, аварийное реагирование и обеспечение безопасности различаются по уровню организации и требованиям должности.",
-      "evidenceStatus": "role_must_be_specified",
+      "assessment": "Для должностных функций по организации гражданской обороны найден профильный профстандарт Минтруда. Требования к конкретной должности зависят от категории организации, выполняемых функций и нормативных актов; обязанности по защите от ЧС могут отличаться.",
+      "evidenceStatus": "published_standards_for_specific_functions",
       "legalObligationStatus": "not_determined_for_unspecified_employer_role",
-      "documents": []
+      "documents": [
+        {
+          "name": "Специалист по гражданской обороне",
+          "order": "748н от 27.10.2020",
+          "url": "https://mintrud.gov.ru/docs/mintrud/orders/1712",
+          "effectiveFrom": null,
+          "effectiveUntil": null,
+          "periodStatus": "publication_found_effective_date_requires_confirmation",
+          "relationship": "functional_overlap"
+        }
+      ]
     },
     {
       "id": "geodetic-engineer",
