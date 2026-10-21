@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ['Направление','Редакционный ориентир: наличие конкретной программы и набора не подтверждено.'],
       ['Сроки, стоимость, бюджет и экзамены','Зависят от программы и года приёма. Без проверенного документа не приводятся.'],
       ['Статус',hasSource?item.verifiedScope:'Правила набора по этой организации индивидуально не проверены.'],
-      ...(item.siteFetchStatus?[['Проверка адреса сайта',item.siteFetchStatus==='fetched'?'22.10.2026: сайт открылся при автоматическом сетевом запросе. Это не проверка программ и условий приёма.':'22.10.2026: проверяющий клиент не смог загрузить сайт. Это не доказательство неисправности или закрытия сайта.']]:[]),
+      ...(item.sourceFetchStatus?[['Доступность страницы источника',item.sourceFetchStatus==='fetched'?'22.10.2026: документ или сайт открылся. Содержательная точность остальных сведений не следует из этого факта.':'22.10.2026: проверить ссылку не удалось (тайм-аут или ошибка доступа). Это не доказательство закрытия организации.']]:[]),
       ...(item.verifiedProgram?[['Проверенная стоимость одной программы',item.verifiedProgram]]:[]),
       ...programDetails.map(p=>[p.label,p.value])
     ].map(([label,value])=>'<div class="education-fact"><dt>'+escapeHtml(label)+'</dt><dd>'+escapeHtml(value)+'</dd></div>').join('');
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
       '<div class="education-card-meta"><span class="education-kind">'+(type==='uni'?'Вуз':'Колледж / техникум')+'</span><span class="education-location">'+escapeHtml(item.city)+' · '+escapeHtml(district.short)+'</span></div>'+
       '<h3>'+escapeHtml(item.name)+'</h3>'+
       '<p class="education-focus"><strong>Направления (ориентир):</strong> '+escapeHtml(item.focus||item.profile||'Не указаны')+'</p>'+
-      '<p class="education-card-status">'+(programs.length?'Есть подтверждённая программа':(hasSource?(item.sourceType==='institution_home'?'Подтверждено название, не набор':'Источник по организации; набор не проверен'):'Условия приёма не проверены'))+'</p>'+
+      '<p class="education-card-status">'+(programs.length?'Есть подтверждённая программа':(item.sourceFetchStatus==='fetch_failed'?'Ссылка не открылась при проверке':(hasSource?(item.sourceType==='institution_home'?'Название сверено, не набор':'Источник найден; условия не сверены'):'Условия приёма не проверены')))+'</p>'+
       '<details class="education-card-details"><summary>Источники, программы и ограничения</summary><dl>'+facts+'</dl>'+
       programDetails.filter(p=>p.source).map(p=>'<a class="education-site" href="'+escapeHtml(p.source)+'" rel="noopener noreferrer" target="_blank">Программа '+escapeHtml(p.label.replace('Подтверждённая программа ',''))+' — документ ↗</a>').join('')+
       (hasSource?'<a class="education-site" href="'+escapeHtml(source)+'" rel="noopener noreferrer" target="_blank">'+(item.sourceType==='institution_home'?'Официальный сайт (название) ↗':'Первоисточник ↗')+'</a>':'')+
