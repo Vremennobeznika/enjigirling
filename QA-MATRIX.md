@@ -45,7 +45,7 @@
 | S01 | Безопасность | Нет секретов, токенов и инъекций в исходниках | Поиск паттернов + review | REVIEW |
 | S02 | Зависимости | `npm audit`, Playwright, pin версии | CI и npm audit | BLOCKED |
 | S03 | Внешние ссылки | `target=_blank` имеет `rel=noopener noreferrer` | `tests/full-matrix.cjs` | PENDING |
-| C01 | Синтаксис | Все JS и CJS проходят `node --check` | GitHub Actions | BLOCKED |
+| C01 | Синтаксис | Все JS и CJS проходят `node --check` | 19 прикладных JS проверено на синтаксис; остальные JS/CJS — CI | PARTIAL |
 | C02 | Unit/static | `site-check.cjs`, `full-matrix.cjs`, `build-knowledge.cjs --check` | GitHub Actions | BLOCKED |
 | C03 | Браузеры | Все тесты Chromium desktop/mobile зелёные | GitHub Actions Playwright | BLOCKED |
 | C04 | Публикация | GitHub Pages собирается без dev-файлов | Workflow + артефакт | BLOCKED |
@@ -87,3 +87,5 @@ npx playwright test
 - `tests/full-matrix.cjs` включён в `scripts/all-checks.cjs`, используемый обеими GitHub Actions workflows. Факт выполнения workflow и состояние публичного URL пока НЕ подтверждены.
 
 - Дополнительно проверены 27 уникальных локальных файлов CSS/JS/SVG, встречающихся в исходных HTML: все 27 существуют в репозитории. Полную корректность исполнения JavaScript и внутренних динамических ссылок это не гарантирует.
+
+- Все 19 локальных прикладных JS-файлов, найденных на страницах, прошли синтаксический разбор; выполнение в реальном браузере этим не проверялось.
