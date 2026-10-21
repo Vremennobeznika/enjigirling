@@ -16,14 +16,14 @@ const federalDistricts = [
         path: "M210,120 L300,90 L380,110 L400,160 L360,210 L330,250 L280,270 L240,230 L215,190 L205,150 Z",
         marker: [300, 170],
         universities: [
-            { name: "СПбПУ Петра Великого", city: "Санкт-Петербург", focus: "Машиностроение, энергетика, IT", profile: "Политех", site: "https://www.spbstu.ru/", sourceStatus: "official_source_located", sourceUrl: "https://www.spbstu.ru/education/students/paid-educational-services/", verifiedScope: "Найдена официальная страница стоимости на 2026/27 год; конкретная программа не проверена." },
-            { name: "СПбГМТУ (Корабелка)", city: "Санкт-Петербург", focus: "Кораблестроение, океанотехника", profile: "Судостроение", site: "https://www.smtu.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "ЛЭТИ", city: "Санкт-Петербург", focus: "Радиотехника, электроника", profile: "Радиоэлектроника", site: "https://etu.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "Военмех (БГТУ)", city: "Санкт-Петербург", focus: "Ракетостроение, авиация", profile: "Оборонпром", site: "https://www.voenmeh.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "ГУАП", city: "Санкт-Петербург", focus: "Авиаприборостроение, IT", profile: "Приборостроение", site: "https://guap.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "Мурманский арктический университет (МАУ)", city: "Мурманск", focus: "Морская техника, рыбопромысловое", profile: "Морской", site: "https://mauniver.ru/", sourceStatus: "official_source_located", sourceUrl: "https://mauniver.ru/info/", verifiedScope: "Проверено официальное название и реорганизация от 07.06.2023. Направления и условия поступления по программам не проверялись." },
-            { name: "Калининградский ГТУ", city: "Калининград", focus: "Судостроение, холодильная техника", profile: "Технический", site: "https://www.klgtu.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "Петрозаводский ГУ", city: "Петрозаводск", focus: "Машиностроение, лесопереработка", profile: "Классический", site: "https://petrsu.ru/", sourceStatus: "editorial_not_verified" }
+            { name: "СПбПУ Петра Великого", city: "Санкт-Петербург", focus: "Машиностроение, энергетика, IT", profile: "Политех", site: "https://www.spbstu.ru/", sourceStatus: "official_source_located", sourceUrl: "https://www.spbstu.ru/education/students/paid-educational-services/", verifiedScope: "Найдена официальная страница стоимости на 2026/27 год; конкретная программа не проверена.", siteFetchStatus: "fetched", siteFetchCheckedAt: "2026-10-22" },
+            { name: "СПбГМТУ (Корабелка)", city: "Санкт-Петербург", focus: "Кораблестроение, океанотехника", profile: "Судостроение", site: "https://www.smtu.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "fetched", siteFetchCheckedAt: "2026-10-22" },
+            { name: "ЛЭТИ", city: "Санкт-Петербург", focus: "Радиотехника, электроника", profile: "Радиоэлектроника", site: "https://etu.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "fetched", siteFetchCheckedAt: "2026-10-22" },
+            { name: "Военмех (БГТУ)", city: "Санкт-Петербург", focus: "Ракетостроение, авиация", profile: "Оборонпром", site: "https://www.voenmeh.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "not_retrieved", siteFetchCheckedAt: "2026-10-22" },
+            { name: "ГУАП", city: "Санкт-Петербург", focus: "Авиаприборостроение, IT", profile: "Приборостроение", site: "https://guap.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "fetched", siteFetchCheckedAt: "2026-10-22" },
+            { name: "Мурманский арктический университет (МАУ)", city: "Мурманск", focus: "Морская техника, рыбопромысловое", profile: "Морской", site: "https://mauniver.ru/", sourceStatus: "official_source_located", sourceUrl: "https://mauniver.ru/info/", verifiedScope: "Проверено официальное название и реорганизация от 07.06.2023. Направления и условия поступления по программам не проверялись.", siteFetchStatus: "not_retrieved", siteFetchCheckedAt: "2026-10-22" },
+            { name: "Калининградский ГТУ", city: "Калининград", focus: "Судостроение, холодильная техника", profile: "Технический", site: "https://www.klgtu.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "not_retrieved", siteFetchCheckedAt: "2026-10-22" },
+            { name: "Петрозаводский ГУ", city: "Петрозаводск", focus: "Машиностроение, лесопереработка", profile: "Классический", site: "https://petrsu.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "fetched", siteFetchCheckedAt: "2026-10-22" }
         ],
         colleges: [
             { name: "Колледж СПбГУПТД", city: "Санкт-Петербург", focus: "Технология машиностроения, металлообработка", profile: "Технический колледж", sourceStatus: "editorial_not_verified" },
@@ -40,16 +40,16 @@ const federalDistricts = [
         path: "M380,185 L420,165 L470,175 L505,200 L515,250 L490,300 L450,330 L400,320 L370,275 L365,225 Z",
         marker: [440, 250],
         universities: [
-            { name: "МГТУ им. Баумана", city: "Москва", focus: "Машиностроение, ракетостроение, IT", profile: "Политех", site: "https://bmstu.ru/", sourceStatus: "official_source_located", sourceUrl: "https://isot.bmstu.ru/edu/cost", verifiedScope: "Найдена официальная страница стоимости на 2026/27 год; конкретная программа не проверена.", verifiedProgram: "15.03.01 Машиностроение — 529 000 ₽ в год, набор 2026/27, цена за первый курс по официальной таблице" },
-            { name: "МАИ", city: "Москва", focus: "Авиация, ракетно-космическая техника", profile: "Авиация", site: "https://mai.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "НИУ МЭИ", city: "Москва", focus: "Энергетика, электротехника", profile: "Энергетика", site: "https://mpei.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "МИРЭА", city: "Москва", focus: "IT, радиотехника, автоматика", profile: "Технологический", site: "https://www.mirea.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "МГСУ", city: "Москва", focus: "Строительство, ЖКХ", profile: "Строительный", site: "https://mgsu.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "МАДИ", city: "Москва", focus: "Транспорт, дорожное строительство", profile: "Транспортный", site: "https://madi.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "РГУ нефти и газа им. Губкина", city: "Москва", focus: "Нефтегазовое дело", profile: "Нефтегазовый", site: "https://www.gubkin.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "МГТУ «СТАНКИН»", city: "Москва", focus: "Станкостроение, автоматизация", profile: "Машиностроение", site: "https://stankin.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "Воронежский ГТУ", city: "Воронеж", focus: "Авиастроение, радиоэлектроника", profile: "Технический", site: "https://cchgeu.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "Тверской ГТУ", city: "Тверь", focus: "Машиностроение, строительство", profile: "Технический", site: "https://www.tstu.tver.ru/", sourceStatus: "editorial_not_verified" }
+            { name: "МГТУ им. Баумана", city: "Москва", focus: "Машиностроение, ракетостроение, IT", profile: "Политех", site: "https://bmstu.ru/", sourceStatus: "official_source_located", sourceUrl: "https://isot.bmstu.ru/edu/cost", verifiedScope: "Найдена официальная страница стоимости на 2026/27 год; конкретная программа не проверена.", verifiedProgram: "15.03.01 Машиностроение — 529 000 ₽ в год, набор 2026/27, цена за первый курс по официальной таблице", siteFetchStatus: "fetched", siteFetchCheckedAt: "2026-10-22" },
+            { name: "МАИ", city: "Москва", focus: "Авиация, ракетно-космическая техника", profile: "Авиация", site: "https://mai.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "not_retrieved", siteFetchCheckedAt: "2026-10-22" },
+            { name: "НИУ МЭИ", city: "Москва", focus: "Энергетика, электротехника", profile: "Энергетика", site: "https://mpei.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "fetched", siteFetchCheckedAt: "2026-10-22" },
+            { name: "МИРЭА", city: "Москва", focus: "IT, радиотехника, автоматика", profile: "Технологический", site: "https://www.mirea.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "not_retrieved", siteFetchCheckedAt: "2026-10-22" },
+            { name: "МГСУ", city: "Москва", focus: "Строительство, ЖКХ", profile: "Строительный", site: "https://mgsu.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "not_retrieved", siteFetchCheckedAt: "2026-10-22" },
+            { name: "МАДИ", city: "Москва", focus: "Транспорт, дорожное строительство", profile: "Транспортный", site: "https://madi.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "fetched", siteFetchCheckedAt: "2026-10-22" },
+            { name: "РГУ нефти и газа им. Губкина", city: "Москва", focus: "Нефтегазовое дело", profile: "Нефтегазовый", site: "https://www.gubkin.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "not_retrieved", siteFetchCheckedAt: "2026-10-22" },
+            { name: "МГТУ «СТАНКИН»", city: "Москва", focus: "Станкостроение, автоматизация", profile: "Машиностроение", site: "https://stankin.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "fetched", siteFetchCheckedAt: "2026-10-22" },
+            { name: "Воронежский ГТУ", city: "Воронеж", focus: "Авиастроение, радиоэлектроника", profile: "Технический", site: "https://cchgeu.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "fetched", siteFetchCheckedAt: "2026-10-22" },
+            { name: "Тверской ГТУ", city: "Тверь", focus: "Машиностроение, строительство", profile: "Технический", site: "https://www.tstu.tver.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "not_retrieved", siteFetchCheckedAt: "2026-10-22" }
         ],
         colleges: [
             { name: "Московский техникум космического приборостроения", city: "Москва", focus: "Приборостроение, авиаприборы", profile: "Техникум", site: "https://mtkp.bmstu.ru/", sourceStatus: "official_source_located", sourceUrl: "https://mtkp.bmstu.ru/", verifiedScope: "Официальный сайт подтверждает техникум как подразделение МГТУ им. Н. Э. Баумана; программы приёма на 2026/27 не проверялись." },
@@ -67,12 +67,12 @@ const federalDistricts = [
         path: "M420,335 L460,315 L500,325 L535,350 L545,400 L520,455 L470,475 L425,450 L405,395 Z",
         marker: [470, 400],
         universities: [
-            { name: "ДГТУ", city: "Ростов-на-Дону", focus: "Машиностроение, строительство, IT", profile: "Политех", site: "https://donstu.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "КубГТУ", city: "Краснодар", focus: "Нефтегаз, пищевые технологии", profile: "Технологический", site: "https://kubstu.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "ЮРГПУ (НПИ)", city: "Новочеркасск", focus: "Горное дело, энергетика", profile: "Политех", site: "https://www.npi-tu.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "ВолгГТУ", city: "Волгоград", focus: "Машиностроение, металлургия", profile: "Политех", site: "https://www.vstu.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "Астраханский ГТУ", city: "Астрахань", focus: "Нефтегаз, судостроение", profile: "Технический", site: "https://astu.org/", sourceStatus: "editorial_not_verified" },
-            { name: "СевГУ", city: "Севастополь", focus: "Кораблестроение, IT, энергетика", profile: "Технический", site: "https://www.sevsu.ru/", sourceStatus: "editorial_not_verified" }
+            { name: "ДГТУ", city: "Ростов-на-Дону", focus: "Машиностроение, строительство, IT", profile: "Политех", site: "https://donstu.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "fetched", siteFetchCheckedAt: "2026-10-22" },
+            { name: "КубГТУ", city: "Краснодар", focus: "Нефтегаз, пищевые технологии", profile: "Технологический", site: "https://kubstu.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "not_retrieved", siteFetchCheckedAt: "2026-10-22" },
+            { name: "ЮРГПУ (НПИ)", city: "Новочеркасск", focus: "Горное дело, энергетика", profile: "Политех", site: "https://www.npi-tu.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "not_retrieved", siteFetchCheckedAt: "2026-10-22" },
+            { name: "ВолгГТУ", city: "Волгоград", focus: "Машиностроение, металлургия", profile: "Политех", site: "https://www.vstu.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "fetched", siteFetchCheckedAt: "2026-10-22" },
+            { name: "Астраханский ГТУ", city: "Астрахань", focus: "Нефтегаз, судостроение", profile: "Технический", site: "https://astu.org/", sourceStatus: "editorial_not_verified", siteFetchStatus: "fetched", siteFetchCheckedAt: "2026-10-22" },
+            { name: "СевГУ", city: "Севастополь", focus: "Кораблестроение, IT, энергетика", profile: "Технический", site: "https://www.sevsu.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "not_retrieved", siteFetchCheckedAt: "2026-10-22" }
         ],
         colleges: [
             { name: "Ростовский-на-Дону техникум связи", city: "Ростов-на-Дону", focus: "Связь, телекоммуникации", profile: "Техникум", sourceStatus: "editorial_not_verified" },
@@ -88,9 +88,9 @@ const federalDistricts = [
         path: "M520,415 L560,400 L605,410 L625,445 L600,480 L550,475 L515,450 Z",
         marker: [568, 442],
         universities: [
-            { name: "СКФУ", city: "Ставрополь", focus: "Нефтегаз, IT, строительство", profile: "Классический", site: "https://www.ncfu.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "Грозненский ГНТУ", city: "Грозный", focus: "Нефтегазовое дело, строительство", profile: "Политех", site: "https://gstou.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "Дагестанский ГТУ", city: "Махачкала", focus: "Машиностроение, энергетика", profile: "Политех", site: "https://dgtu.ru/", sourceStatus: "editorial_not_verified" }
+            { name: "СКФУ", city: "Ставрополь", focus: "Нефтегаз, IT, строительство", profile: "Классический", site: "https://www.ncfu.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "fetched", siteFetchCheckedAt: "2026-10-22" },
+            { name: "Грозненский ГНТУ", city: "Грозный", focus: "Нефтегазовое дело, строительство", profile: "Политех", site: "https://gstou.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "fetched", siteFetchCheckedAt: "2026-10-22" },
+            { name: "Дагестанский ГТУ", city: "Махачкала", focus: "Машиностроение, энергетика", profile: "Политех", site: "https://dgtu.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "not_retrieved", siteFetchCheckedAt: "2026-10-22" }
         ],
         colleges: [
             { name: "Ставропольский строительный техникум", city: "Ставрополь", focus: "Строительство, архитектура", profile: "Строительный техникум", site: "https://www.xn--80aejpylecgdd1b.xn--p1ai/", sourceStatus: "official_source_located", sourceUrl: "https://www.xn--80aejpylecgdd1b.xn--p1ai/index.php/common", verifiedScope: "Подтверждены официальное название и сведения об организации. Конкретные программы не сверялись." },
@@ -105,15 +105,15 @@ const federalDistricts = [
         path: "M540,250 L585,230 L640,245 L685,270 L700,320 L690,380 L655,420 L610,430 L565,405 L550,350 L530,295 Z",
         marker: [615, 330],
         universities: [
-            { name: "КНИТУ-КАИ", city: "Казань", focus: "Авиация, ракетостроение, IT", profile: "Авиация", site: "https://kai.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "КНИТУ (КХТИ)", city: "Казань", focus: "Химическая технология, нефтехимия", profile: "Химический", site: "https://www.kstu.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "Уфимский университет науки и технологий (УУНиТ)", city: "Уфа", focus: "Авиадвигатели, машиностроение", profile: "Авиация", site: "https://uust.ru/", sourceStatus: "official_source_located", sourceUrl: "https://uust.ru/history/usatu/", verifiedScope: "Официальная история: УГАТУ объединён с БашГУ в УУНиТ с 01.11.2022. Направления и условия программ не проверены." },
-            { name: "Самарский Политех", city: "Самара", focus: "Авиастроение, энергетика", profile: "Политех", site: "https://samgtu.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "ПНИПУ", city: "Пермь", focus: "Авиадвигатели, нефтегаз, химия", profile: "Политех", site: "https://pstu.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "НГТУ им. Алексеева", city: "Нижний Новгород", focus: "Радиоэлектроника, машиностроение", profile: "Политех", site: "https://www.nntu.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "Саратовский ГТУ", city: "Саратов", focus: "Энергетика, машиностроение", profile: "Политех", site: "https://www.sstu.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "Ульяновский ГТУ", city: "Ульяновск", focus: "Авиастроение, IT", profile: "Технический", site: "https://ulstu.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "Чувашский ГУ", city: "Чебоксары", focus: "Электротехника, IT", profile: "Классический", site: "https://www.chuvsu.ru/", sourceStatus: "editorial_not_verified" }
+            { name: "КНИТУ-КАИ", city: "Казань", focus: "Авиация, ракетостроение, IT", profile: "Авиация", site: "https://kai.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "fetched", siteFetchCheckedAt: "2026-10-22" },
+            { name: "КНИТУ (КХТИ)", city: "Казань", focus: "Химическая технология, нефтехимия", profile: "Химический", site: "https://www.kstu.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "fetched", siteFetchCheckedAt: "2026-10-22" },
+            { name: "Уфимский университет науки и технологий (УУНиТ)", city: "Уфа", focus: "Авиадвигатели, машиностроение", profile: "Авиация", site: "https://uust.ru/", sourceStatus: "official_source_located", sourceUrl: "https://uust.ru/history/usatu/", verifiedScope: "Официальная история: УГАТУ объединён с БашГУ в УУНиТ с 01.11.2022. Направления и условия программ не проверены.", siteFetchStatus: "fetched", siteFetchCheckedAt: "2026-10-22" },
+            { name: "Самарский Политех", city: "Самара", focus: "Авиастроение, энергетика", profile: "Политех", site: "https://samgtu.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "fetched", siteFetchCheckedAt: "2026-10-22" },
+            { name: "ПНИПУ", city: "Пермь", focus: "Авиадвигатели, нефтегаз, химия", profile: "Политех", site: "https://pstu.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "not_retrieved", siteFetchCheckedAt: "2026-10-22" },
+            { name: "НГТУ им. Алексеева", city: "Нижний Новгород", focus: "Радиоэлектроника, машиностроение", profile: "Политех", site: "https://www.nntu.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "fetched", siteFetchCheckedAt: "2026-10-22" },
+            { name: "Саратовский ГТУ", city: "Саратов", focus: "Энергетика, машиностроение", profile: "Политех", site: "https://www.sstu.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "fetched", siteFetchCheckedAt: "2026-10-22" },
+            { name: "Ульяновский ГТУ", city: "Ульяновск", focus: "Авиастроение, IT", profile: "Технический", site: "https://ulstu.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "fetched", siteFetchCheckedAt: "2026-10-22" },
+            { name: "Чувашский ГУ", city: "Чебоксары", focus: "Электротехника, IT", profile: "Классический", site: "https://www.chuvsu.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "not_retrieved", siteFetchCheckedAt: "2026-10-22" }
         ],
         colleges: [
             { name: "Международный центр компетенций — Казанский техникум информационных технологий и связи", city: "Казань", focus: "Связь, телекоммуникации", profile: "Техникум", site: "https://mck-ktits.ru/", sourceStatus: "official_source_located", sourceUrl: "https://mck-ktits.ru/основные-сведения/", verifiedScope: "Проверены официальные название и история переименований. Конкретные программы и конкурс не проверены." },
@@ -131,10 +131,10 @@ const federalDistricts = [
         path: "M705,160 L750,140 L790,165 L800,230 L785,300 L770,360 L745,410 L710,380 L700,300 L692,220 Z",
         marker: [745, 270],
         universities: [
-            { name: "УрФУ", city: "Екатеринбург", focus: "Машиностроение, металлургия, энергетика, IT", profile: "Классический", site: "https://urfu.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "ЮУрГУ", city: "Челябинск", focus: "Машиностроение, металлургия, авто", profile: "Политех", site: "https://www.susu.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "Тюменский Индустриальный Университет", city: "Тюмень", focus: "Нефтегазовое дело", profile: "Индустриальный", site: "https://www.tyuiu.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "Курганский ГУ", city: "Курган", focus: "Машиностроение", profile: "Классический", site: "https://ksu.edu.ru/", sourceStatus: "editorial_not_verified" }
+            { name: "УрФУ", city: "Екатеринбург", focus: "Машиностроение, металлургия, энергетика, IT", profile: "Классический", site: "https://urfu.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "not_retrieved", siteFetchCheckedAt: "2026-10-22" },
+            { name: "ЮУрГУ", city: "Челябинск", focus: "Машиностроение, металлургия, авто", profile: "Политех", site: "https://www.susu.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "fetched", siteFetchCheckedAt: "2026-10-22" },
+            { name: "Тюменский Индустриальный Университет", city: "Тюмень", focus: "Нефтегазовое дело", profile: "Индустриальный", site: "https://www.tyuiu.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "fetched", siteFetchCheckedAt: "2026-10-22" },
+            { name: "Курганский ГУ", city: "Курган", focus: "Машиностроение", profile: "Классический", site: "https://ksu.edu.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "not_retrieved", siteFetchCheckedAt: "2026-10-22" }
         ],
         colleges: [
             { name: "Екатеринбургский политехникум", city: "Екатеринбург", focus: "Машиностроение, металлургия", profile: "Политехникум", site: "https://ekpt.ru/", sourceStatus: "official_source_located", sourceUrl: "https://ekpt.ru/svedeniya-ob-obrazovatelnoy-organizacii/osnovnye-svedeniya/", verifiedScope: "Официальная страница подтверждает название, Екатеринбург и статус организации. Программы приёма не проверены." },
@@ -150,13 +150,13 @@ const federalDistricts = [
         path: "M800,130 L860,105 L925,125 L955,180 L940,250 L920,320 L890,385 L845,410 L810,375 L790,310 L782,220 Z",
         marker: [860, 260],
         universities: [
-            { name: "НГТУ", city: "Новосибирск", focus: "Энергетика, электроника, IT", profile: "Политех", site: "https://www.nstu.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "ТПУ", city: "Томск", focus: "Энергетика, атомная, геология, нефтегаз", profile: "Политех", site: "https://tpu.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "ИРНИТУ", city: "Иркутск", focus: "Горное дело, энергетика", profile: "Политех", site: "https://www.istu.edu/", sourceStatus: "editorial_not_verified" },
-            { name: "ОмГТУ", city: "Омск", focus: "Машиностроение, нефтехимия", profile: "Политех", site: "https://omgtu.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "СибГУТИ", city: "Новосибирск", focus: "Связь, телекоммуникации", profile: "Связь", site: "https://sibsutis.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "Кузбасский ГТУ", city: "Кемерово", focus: "Горное дело, металлургия", profile: "Технический", site: "https://kuzstu.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "Сибирский федеральный университет (СФУ)", city: "Красноярск", focus: "Машиностроение, энергетика, металлургия", profile: "Технический", site: "https://sfu.ru/", sourceStatus: "official_source_located", sourceUrl: "https://sfu.ru/ru/about/sfu-history", verifiedScope: "Официальная история СФУ: Красноярский ГТУ вошёл в состав СФУ в 2006 году. Программы не проверены." }
+            { name: "НГТУ", city: "Новосибирск", focus: "Энергетика, электроника, IT", profile: "Политех", site: "https://www.nstu.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "fetched", siteFetchCheckedAt: "2026-10-22" },
+            { name: "ТПУ", city: "Томск", focus: "Энергетика, атомная, геология, нефтегаз", profile: "Политех", site: "https://tpu.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "not_retrieved", siteFetchCheckedAt: "2026-10-22" },
+            { name: "ИРНИТУ", city: "Иркутск", focus: "Горное дело, энергетика", profile: "Политех", site: "https://www.istu.edu/", sourceStatus: "editorial_not_verified", siteFetchStatus: "fetched", siteFetchCheckedAt: "2026-10-22" },
+            { name: "ОмГТУ", city: "Омск", focus: "Машиностроение, нефтехимия", profile: "Политех", site: "https://omgtu.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "not_retrieved", siteFetchCheckedAt: "2026-10-22" },
+            { name: "СибГУТИ", city: "Новосибирск", focus: "Связь, телекоммуникации", profile: "Связь", site: "https://sibsutis.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "not_retrieved", siteFetchCheckedAt: "2026-10-22" },
+            { name: "Кузбасский ГТУ", city: "Кемерово", focus: "Горное дело, металлургия", profile: "Технический", site: "https://kuzstu.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "fetched", siteFetchCheckedAt: "2026-10-22" },
+            { name: "Сибирский федеральный университет (СФУ)", city: "Красноярск", focus: "Машиностроение, энергетика, металлургия", profile: "Технический", site: "https://sfu.ru/", sourceStatus: "official_source_located", sourceUrl: "https://sfu.ru/ru/about/sfu-history", verifiedScope: "Официальная история СФУ: Красноярский ГТУ вошёл в состав СФУ в 2006 году. Программы не проверены.", siteFetchStatus: "not_retrieved", siteFetchCheckedAt: "2026-10-22" }
         ],
         colleges: [
             { name: "Новосибирский техникум ж/д транспорта", city: "Новосибирск", focus: "Железнодорожный транспорт", profile: "Транспортный техникум", sourceStatus: "editorial_not_verified" },
@@ -173,10 +173,10 @@ const federalDistricts = [
         path: "M950,120 L985,150 L985,260 L960,350 L915,415 L885,430 L868,360 L875,280 L900,200 L925,145 Z",
         marker: [930, 260],
         universities: [
-            { name: "ДВФУ", city: "Владивосток", focus: "Кораблестроение, IT, энергетика", profile: "Классический", site: "https://www.dvfu.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "Комсомольский-на-Амуре ГУ", city: "Комсомольск-на-Амуре", focus: "Авиастроение, судостроение", profile: "Технический", site: "https://knastu.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "Тихоокеанский ГУ", city: "Хабаровск", focus: "Строительство, транспорт", profile: "Технический", site: "https://pnu.edu.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "СВФУ", city: "Якутск", focus: "Горное дело, энергетика", profile: "Классический", site: "https://www.s-vfu.ru/", sourceStatus: "editorial_not_verified" }
+            { name: "ДВФУ", city: "Владивосток", focus: "Кораблестроение, IT, энергетика", profile: "Классический", site: "https://www.dvfu.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "not_retrieved", siteFetchCheckedAt: "2026-10-22" },
+            { name: "Комсомольский-на-Амуре ГУ", city: "Комсомольск-на-Амуре", focus: "Авиастроение, судостроение", profile: "Технический", site: "https://knastu.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "fetched", siteFetchCheckedAt: "2026-10-22" },
+            { name: "Тихоокеанский ГУ", city: "Хабаровск", focus: "Строительство, транспорт", profile: "Технический", site: "https://pnu.edu.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "not_retrieved", siteFetchCheckedAt: "2026-10-22" },
+            { name: "СВФУ", city: "Якутск", focus: "Горное дело, энергетика", profile: "Классический", site: "https://www.s-vfu.ru/", sourceStatus: "editorial_not_verified", siteFetchStatus: "not_retrieved", siteFetchCheckedAt: "2026-10-22" }
         ],
         colleges: [
             { name: "Владивостокский судостроительный колледж", city: "Владивосток", focus: "Судостроение", profile: "Судостроительный колледж", sourceStatus: "editorial_not_verified" },
