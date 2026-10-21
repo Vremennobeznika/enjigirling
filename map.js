@@ -1,209 +1,145 @@
+/* Education directory: accessible search and map controls, using existing editorial data. */
 document.addEventListener('DOMContentLoaded', () => {
-    const svg = document.getElementById('russiaMap');
-    const districtInfo = document.getElementById('districtInfo');
-    const resetBtn = document.getElementById('mapReset');
-
-    if (!svg || !districtInfo) return;
-
-    let viewMode = 'uni';
-    let activeDistrict = null;
-
-    function getDistrictById(id) {
-        return federalDistricts.find(d => d.id === id);
+  'use strict';
+  const districts=Array.isArray(typeof federalDistricts!=='undefined' ? federalDistricts : null) ? federalDistricts : [];
+  const search=document.getElementById('educationSearch');
+  const districtSelect=document.getElementById('educationDistrict');
+  const typeSelect=document.getElementById('educationType');
+  const sortSelect=document.getElementById('educationSort');
+  const results=document.getElementById('educationResults');
+  const status=document.getElementById('educationStatus');
+  const clear=document.getElementById('educationClear');
+  const more=document.getElementById('educationMore');
+  const total=document.getElementById('educationTotal');
+  const svg=document.getElementById('russiaMap');
+  const mapReset=document.getElementById('mapReset');
+  const mapInfo=document.getElementById('districtInfo');
+  if(!search||!districtSelect||!typeSelect||!sortSelect||!results||!status||!clear||!more||!svg||!mapInfo)return;
+  const escapeHtml=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const normalize=v=>String(v??'').toLocaleLowerCase('ru-RU').replace(/ё/g,'е').replace(/\s+/g,' ').trim();
+  const compare=new Intl.Collator('ru-RU',{numeric:true,sensitivity:'base'});
+  const count=(d,key)=>Array.isArray(d[key])?d[key].length:0;
+  const entries=[];
+  for(const district of districts){
+    for(const [key,type] of [['universities','uni'],['colleges','college']]){
+      for(const item of district[key]||[]){
+        entries.push({item,district,type,search:normalize([item.name,item.city,item.focus,item.profile,item.duration,item.admission,item.afterCollege,district.name,district.short].join(' '))});
+      }
     }
-
-    // Иконка для статуса бюджета
-    function budgetMark(v) {
-        return /да/i.test(v) ? '●' : '○';
-    }
-
-    // Карточка вуза
-    function renderUniversityCard(u) {
-        return `
-            <div class="map-uni-card">
-                <h4 class="map-uni-name">${u.name}</h4>
-                <p class="map-uni-city">${u.city} · <span class="map-uni-kind">Вуз</span></p>
-                <span class="map-uni-profile">${u.profile}</span>
-                <p class="map-uni-focus">${u.focus}</p>
-                <div class="map-detail-list">
-                    <div class="map-detail">
-                        <span class="map-detail-label">Срок обучения</span>
-                        <span class="map-detail-value">${u.duration}</span>
-                    </div>
-                    <div class="map-detail">
-                        <span class="map-detail-label">Бюджетные места</span>
-                        <span class="map-detail-value ${/да/i.test(u.budget) ? 'ok' : ''}">${budgetMark(u.budget)} ${u.budget}</span>
-                    </div>
-                    <div class="map-detail">
-                        <span class="map-detail-label">Платное обучение</span>
-                        <span class="map-detail-value">${u.cost}</span>
-                    </div>
-                    <div class="map-detail">
-                        <span class="map-detail-label">Поступление</span>
-                        <span class="map-detail-value">${u.admission}</span>
-                    </div>
-                    ${u.site ? `
-                    <div class="map-detail">
-                        <span class="map-detail-label">Сайт</span>
-                        <span class="map-detail-value"><a class="map-uni-site" href="${u.site}" target="_blank" rel="noopener noreferrer">${u.site}</a></span>
-                    </div>` : ''}
-                </div>
-            </div>
-        `;
-    }
-
-    // Карточка техникума
-    function renderCollegeCard(c) {
-        return `
-            <div class="map-uni-card">
-                <h4 class="map-uni-name">${c.name}</h4>
-                <p class="map-uni-city">${c.city} · <span class="map-uni-kind">Техникум / СПО</span></p>
-                <span class="map-uni-profile">${c.profile}</span>
-                <p class="map-uni-focus">${c.focus}</p>
-                <div class="map-detail-list">
-                    <div class="map-detail">
-                        <span class="map-detail-label">Срок обучения</span>
-                        <span class="map-detail-value">${c.duration}</span>
-                    </div>
-                    <div class="map-detail">
-                        <span class="map-detail-label">Бюджетные места</span>
-                        <span class="map-detail-value ok">● Да, в основном бесплатно</span>
-                    </div>
-                    <div class="map-detail">
-                        <span class="map-detail-label">Что после техникума</span>
-                        <span class="map-detail-value">${c.afterCollege}</span>
-                    </div>
-                </div>
-            </div>
-        `;
-    }
-
-    function renderList(district) {
-        if (!district) return '';
-        if (viewMode === 'uni') {
-            const data = district.universities || [];
-            return data.map(renderUniversityCard).join('');
-        }
-        const data = district.colleges || [];
-        return data.map(renderCollegeCard).join('');
-    }
-
-    // Пояснительная справка «что это вообще такое»
-    function renderExplain(mode) {
-        if (mode === 'college') {
-            return `
-                <div class="map-explain">
-                    <h3 class="map-explain-title">Что такое техникум и зачем он нужен?</h3>
-                    <p>Техникум и колледж — это среднее профессиональное образование (СПО). Туда можно поступить <strong>после 9 или 11 классов</strong> — без ЕГЭ, по конкурсу аттестата.</p>
-                    <p>Учиться обычно <strong>от 2 г. 10 мес. до 3 г. 10 мес.</strong>. Большинство мест — <strong>бюджетные</strong>.</p>
-                    <p><strong>Зачем:</strong> быстро получить рабочую специальность (сварщик, электромонтажник, механик, оператор станков) и сразу начать работать. После выпуска можно поступить в вуз <strong>без ЕГЭ</strong> — по внутренним экзаменам, часто сразу на сокращённую (ускоренную) программу.</p>
-                </div>
-            `;
-        }
-        return `
-            <div class="map-explain">
-                <h3 class="map-explain-title">Что такое вуз и как туда попасть?</h3>
-                <p>Вуз (институт, университет, академия) даёт <strong>высшее образование</strong> по направлению бакалавриата (4 года) или специалитета (5–5.5 лет).</p>
-                <p>Поступление — по результатам <strong>ЕГЭ</strong> (русский язык + математика + профильный предмет). Часть мест — <strong>бюджетные</strong> (бесплатно, по конкурсу баллов), остальное — платно.</p>
-                <p><strong>Зачем:</strong> даёт инженерную квалификацию и широкий карьерный рост. После техникума можно поступать в вуз <strong>без ЕГЭ</strong>.</p>
-            </div>
-        `;
-    }
-
-    function renderDistrictPanel() {
-        if (!activeDistrict) {
-            districtInfo.innerHTML = `
-                <div class="map-toggle">
-                    <button class="eng-filter-btn ${viewMode === 'uni' ? 'active' : ''}" data-mode="uni">Вузы</button>
-                    <button class="eng-filter-btn ${viewMode === 'college' ? 'active' : ''}" data-mode="college">Техникумы / СПО</button>
-                </div>
-                ${renderExplain(viewMode)}
-                <div class="map-placeholder">
-                    <p class="map-placeholder-title">Выберите федеральный округ на карте</p>
-                    <p class="map-placeholder-text">Кликните по контуру региона, чтобы увидеть вузы и техникумы с подробностями.</p>
-                </div>
-            `;
-            bindToggle();
-            return;
-        }
-
-        const total = viewMode === 'uni'
-            ? (activeDistrict.universities || []).length
-            : (activeDistrict.colleges || []).length;
-        const label = viewMode === 'uni' ? 'вузов' : 'техникумов / СПО';
-
-        districtInfo.innerHTML = `
-            <div class="map-toggle">
-                <button class="eng-filter-btn ${viewMode === 'uni' ? 'active' : ''}" data-mode="uni">Вузы</button>
-                <button class="eng-filter-btn ${viewMode === 'college' ? 'active' : ''}" data-mode="college">Техникумы / СПО</button>
-            </div>
-            ${renderExplain(viewMode)}
-            <div class="map-panel-head">
-                <h3 class="eng-title">${activeDistrict.name}</h3>
-                <span class="map-count">${total} ${label}</span>
-            </div>
-            <div class="map-uni-list">
-                ${renderList(activeDistrict)}
-            </div>
-        `;
-        bindToggle();
-    }
-
-    function bindToggle() {
-        districtInfo.querySelectorAll('.map-toggle .eng-filter-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                viewMode = btn.getAttribute('data-mode');
-                renderDistrictPanel();
-            });
-        });
-    }
-
-    // Построение карты из данных
-    svg.querySelectorAll('.eng-district').forEach(pathEl => {
-        const id = pathEl.getAttribute('data-id');
-        const district = getDistrictById(id);
-        if (!district) return;
-
-        pathEl.setAttribute('d', district.path);
-        pathEl.classList.add('eng-district--ready');
-
-        const marker = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-        marker.setAttribute('class', 'eng-marker');
-        marker.setAttribute('cx', district.marker[0]);
-        marker.setAttribute('cy', district.marker[1]);
-        marker.setAttribute('r', '6');
-        marker.setAttribute('data-id', id);
-        svg.appendChild(marker);
-
-        const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-        label.setAttribute('class', 'eng-district-label');
-        label.setAttribute('x', district.marker[0]);
-        label.setAttribute('y', district.marker[1] - 12);
-        label.textContent = district.short;
-        svg.appendChild(label);
-
-        const activate = () => {
-            svg.querySelectorAll('.eng-district').forEach(p => p.classList.remove('active'));
-            svg.querySelectorAll('.eng-marker').forEach(m => m.classList.remove('active'));
-            pathEl.classList.add('active');
-            marker.classList.add('active');
-            activeDistrict = district;
-            renderDistrictPanel();
-        };
-        pathEl.addEventListener('click', activate);
-        marker.addEventListener('click', activate);
-        pathEl.addEventListener('mouseenter', () => pathEl.classList.add('hover'));
-        pathEl.addEventListener('mouseleave', () => pathEl.classList.remove('hover'));
+    const option=document.createElement('option');
+    option.value=district.id;option.textContent=district.name;
+    districtSelect.appendChild(option);
+  }
+  total.textContent=entries.length+' записей';
+  const pageSize=12;
+  let shown=pageSize,filtered=[];
+  const validLink=url=>{try{const parsed=new URL(String(url));return /^https?:$/.test(parsed.protocol)?parsed.href:'';}catch{return '';}};
+  function renderCard(record){
+    const item=record.item,type=record.type,district=record.district;
+    const institution=type==='uni'?'Вуз':'Колледж / техникум';
+    const site=validLink(item.site);
+    const details=type==='uni'?
+      [['Срок обучения',item.duration],['Бюджетные места',item.budget],['Платное обучение',item.cost],['Поступление',item.admission]]:
+      [['Срок обучения',item.duration],['После колледжа',item.afterCollege]];
+    const facts=details.filter(pair=>pair[1]).map(pair=>
+      '<div class="education-fact"><dt>'+escapeHtml(pair[0])+'</dt><dd>'+escapeHtml(pair[1])+'</dd></div>'
+    ).join('');
+    return '<article class="education-card">'+
+      '<div class="education-card-meta"><span class="education-kind">'+institution+'</span><span class="education-location">'+escapeHtml(item.city)+' · '+escapeHtml(district.short)+'</span></div>'+
+      '<h3>'+escapeHtml(item.name)+'</h3>'+
+      '<p class="education-focus">'+escapeHtml(item.focus||item.profile||'Направление не указано')+'</p>'+
+      '<details class="education-card-details"><summary>Сроки, поступление и условия</summary>'+
+      '<dl>'+facts+'</dl>'+
+      (site?'<a class="education-site" href="'+escapeHtml(site)+'" target="_blank" rel="noopener noreferrer">Официальный сайт ↗</a>':'<p class="education-no-link">Адрес официального сайта не указан</p>')+
+      '</details></article>';
+  }
+  function sortedMatches(){
+    const terms=normalize(search.value).split(' ').filter(Boolean);
+    const districtId=districtSelect.value,kind=typeSelect.value;
+    const matched=entries.filter(row=>
+      (!districtId||row.district.id===districtId)&&
+      (kind==='all'||kind===row.type)&&
+      terms.every(t=>row.search.includes(t))
+    );
+    const order=sortSelect.value;
+    matched.sort((a,b)=>{
+      if(order==='city')return compare.compare(a.item.city,b.item.city)||compare.compare(a.item.name,b.item.name);
+      if(order==='district')return compare.compare(a.district.name,b.district.name)||compare.compare(a.item.city,b.item.city)||compare.compare(a.item.name,b.item.name);
+      return compare.compare(a.item.name,b.item.name)||compare.compare(a.item.city,b.item.city);
     });
-
-    if (resetBtn) {
-        resetBtn.addEventListener('click', () => {
-            svg.querySelectorAll('.eng-district').forEach(p => p.classList.remove('active'));
-            svg.querySelectorAll('.eng-marker').forEach(m => m.classList.remove('active'));
-            activeDistrict = null;
-            renderDistrictPanel();
-        });
+    return matched;
+  }
+  function synchronizeMap(){
+    const selected=districtSelect.value;
+    svg.querySelectorAll('.eng-district').forEach(el=>{
+      const active=el.dataset.id===selected;
+      el.classList.toggle('active',active);
+      el.setAttribute('aria-pressed',String(active));
+    });
+    svg.querySelectorAll('.eng-marker').forEach(el=>el.classList.toggle('active',el.dataset.id===selected));
+    const d=districts.find(row=>row.id===selected);
+    if(d){
+      mapInfo.innerHTML='<h3>'+escapeHtml(d.name)+'</h3>'+
+        '<p>В редакционной базе: <strong>'+count(d,'universities')+'</strong> вузов и <strong>'+count(d,'colleges')+'</strong> колледжей / техникумов.</p>'+
+        '<p>Выбранный округ уже применён к каталогу выше.</p>'+
+        '<a class="education-map-return" href="#education-directory">Посмотреть результаты ↑</a>';
+    }else{
+      mapInfo.innerHTML='<h3>Все федеральные округа</h3><p>Выберите округ на схеме, клавиатурой или через список фильтров в каталоге. Карта — дополнительный способ выбора, не обязательный.</p>';
     }
-
-    renderDistrictPanel();
+  }
+  function render(){
+    filtered=sortedMatches();
+    const visible=filtered.slice(0,shown);
+    results.innerHTML=visible.length?visible.map(renderCard).join(''):'<p class="education-empty">Ничего не найдено. Попробуйте другой город, специальность или сбросьте фильтры.</p>';
+    status.textContent='Найдено '+filtered.length+' из '+entries.length+' · показано '+visible.length;
+    more.hidden=visible.length>=filtered.length;
+    more.textContent='Показать ещё '+Math.min(pageSize,filtered.length-visible.length);
+    clear.hidden=!(search.value||districtSelect.value||typeSelect.value!=='all'||sortSelect.value!=='name');
+    synchronizeMap();
+  }
+  function changed(){shown=pageSize;render();}
+  search.addEventListener('input',changed);
+  search.addEventListener('keydown',e=>{if(e.key==='Escape'&&search.value){search.value='';changed();}});
+  [districtSelect,typeSelect,sortSelect].forEach(el=>el.addEventListener('change',changed));
+  clear.addEventListener('click',()=>{search.value='';districtSelect.value='';typeSelect.value='all';sortSelect.value='name';changed();search.focus();});
+  more.addEventListener('click',()=>{
+    shown+=pageSize;render();
+  });
+  const namespace='http://www.w3.org/2000/svg';
+  function chooseDistrict(id,scroll){
+    districtSelect.value=id;
+    changed();
+    if(scroll){
+      document.getElementById('education-directory').scrollIntoView({behavior:'instant',block:'start'});
+      districtSelect.focus({preventScroll:true});
+    }
+  }
+  svg.querySelectorAll('.eng-district').forEach(path=>{
+    const district=districts.find(d=>d.id===path.dataset.id);
+    if(!district)return;
+    path.setAttribute('d',district.path);
+    path.classList.add('eng-district--ready');
+    path.setAttribute('role','button');
+    path.setAttribute('tabindex','0');
+    path.setAttribute('aria-label',district.name+', выбрать федеральный округ');
+    const title=document.createElementNS(namespace,'title');title.textContent=district.name;path.appendChild(title);
+    path.addEventListener('click',()=>chooseDistrict(district.id,true));
+    path.addEventListener('keydown',e=>{
+      if(e.key==='Enter'||e.key===' '){e.preventDefault();chooseDistrict(district.id,true);}
+    });
+    const marker=document.createElementNS(namespace,'circle');
+    marker.setAttribute('class','eng-marker');
+    marker.setAttribute('cx',district.marker[0]);marker.setAttribute('cy',district.marker[1]);marker.setAttribute('r',6);
+    marker.dataset.id=district.id;
+    marker.setAttribute('aria-hidden','true');
+    marker.addEventListener('click',()=>chooseDistrict(district.id,true));
+    svg.appendChild(marker);
+    const label=document.createElementNS(namespace,'text');
+    label.setAttribute('class','eng-district-label');
+    label.setAttribute('x',district.marker[0]);label.setAttribute('y',district.marker[1]-12);
+    label.textContent=district.short;
+    svg.appendChild(label);
+  });
+  if(mapReset)mapReset.addEventListener('click',()=>chooseDistrict('',false));
+  render();
 });
