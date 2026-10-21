@@ -5,10 +5,10 @@ const fs=require('node:fs');
 const crypto=require('node:crypto');
 const path=require('node:path');
 const root=path.resolve(__dirname,'..');
-const compareExact=['knowledge-manifest.json','knowledge/search-index.json','knowledge/graph.json','knowledge/source-registry.json','knowledge/ai-context.md','llms.txt'];
+const compareExact=['knowledge-manifest.json','knowledge/search-index.json','knowledge/graph.json','knowledge/source-registry.json','knowledge/ai-context.md','knowledge/quality.json','llms.txt'];
 const digest=value=>crypto.createHash('sha256').update(value,'utf8').digest('hex');
 const base=(process.env.SITE_URL||'https://vremennobeznika.github.io/enjigirling/').replace(/\/+$/,'')+'/';
-const paths=['index.html','calendar.html','resources.html','dictionary.html','map.html','calculator.html','compare.html','processes.html','materials.html','llms.txt','knowledge-manifest.json','knowledge/search-index.json','knowledge/graph.json','knowledge/source-registry.json','knowledge/ai-context.md'];
+const paths=['index.html','calendar.html','resources.html','dictionary.html','map.html','calculator.html','compare.html','processes.html','materials.html','llms.txt','knowledge-manifest.json','knowledge/search-index.json','knowledge/graph.json','knowledge/source-registry.json','knowledge/ai-context.md','knowledge/quality.json'];
 async function get(path){
  const url=new URL(path,base);
  const response=await fetch(url,{signal:AbortSignal.timeout(20000),redirect:'follow',headers:{'accept':'text/html,application/json,text/plain;q=0.9'}});
@@ -53,6 +53,8 @@ async function run(){
  assert.ok(index.records.length>0,'knowledge index is empty');
  const graph=JSON.parse(files['knowledge/graph.json']);
  assert.equal(graph.edgeCount,graph.edges.length);
+ const quality=JSON.parse(files['knowledge/quality.json']);
+ assert.equal(quality.totalRecords,index.recordCount,'deployed quality coverage total mismatches index');
  const sources=JSON.parse(files['knowledge/source-registry.json']);
  assert.ok(Array.isArray(sources.sources)&&Array.isArray(sources.recordEvidence));
  assert.ok(files['knowledge/ai-context.md'].includes('## Краткий каталог ('+index.records.length+' записей)'),'AI context and index record counts disagree');
