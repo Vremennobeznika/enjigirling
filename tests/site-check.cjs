@@ -197,7 +197,9 @@ for(const file of htmlFiles){
    const targetHtml=fs.readFileSync(target,'utf8');
    const id=decodeURIComponent(fragment);
    if(!targetHtml.includes('id="'+id+'"')&&!targetHtml.includes("id='"+id+"'")){
-     if(!['materials.html','processes.html'].includes(relative))linkIssues.push(file+': '+url+' missing anchor');
+     // Profession deep links resolve through the catalog's router, not static DOM IDs.
+     const isKnownProfession = relative==='index.html' && id.startsWith('profession=') && ids.includes(id.slice('profession='.length));
+     if(!isKnownProfession && !['materials.html','processes.html'].includes(relative))linkIssues.push(file+': '+url+' missing anchor');
    }
  }
 }
