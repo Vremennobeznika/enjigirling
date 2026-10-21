@@ -21,7 +21,7 @@ const federalDistricts = [
             { name: "ЛЭТИ", city: "Санкт-Петербург", focus: "Радиотехника, электроника", profile: "Радиоэлектроника", site: "https://etu.ru/", sourceStatus: "editorial_not_verified" },
             { name: "Военмех (БГТУ)", city: "Санкт-Петербург", focus: "Ракетостроение, авиация", profile: "Оборонпром", site: "https://www.voenmeh.ru/", sourceStatus: "editorial_not_verified" },
             { name: "ГУАП", city: "Санкт-Петербург", focus: "Авиаприборостроение, IT", profile: "Приборостроение", site: "https://guap.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "Мурманский ГТУ", city: "Мурманск", focus: "Морская техника, рыбопромысловое", profile: "Морской", site: "https://www.mstu.edu.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "Мурманский арктический университет (МАУ)", city: "Мурманск", focus: "Морская техника, рыбопромысловое", profile: "Морской", site: "https://mauniver.ru/", sourceStatus: "official_source_located", sourceUrl: "https://mauniver.ru/info/", verifiedScope: "Проверено официальное название и реорганизация от 07.06.2023. Направления и условия поступления по программам не проверялись." },
             { name: "Калининградский ГТУ", city: "Калининград", focus: "Судостроение, холодильная техника", profile: "Технический", site: "https://www.klgtu.ru/", sourceStatus: "editorial_not_verified" },
             { name: "Петрозаводский ГУ", city: "Петрозаводск", focus: "Машиностроение, лесопереработка", profile: "Классический", site: "https://petrsu.ru/", sourceStatus: "editorial_not_verified" }
         ],
@@ -29,7 +29,7 @@ const federalDistricts = [
             { name: "Колледж СПбГУПТД", city: "Санкт-Петербург", focus: "Технология машиностроения, металлообработка", profile: "Технический колледж", sourceStatus: "editorial_not_verified" },
             { name: "Политехнический колледж №8", city: "Санкт-Петербург", focus: "Электромонтаж, автоматизация", profile: "Технический колледж", sourceStatus: "editorial_not_verified" },
             { name: "Калининградский технический колледж", city: "Калининград", focus: "Судостроение, мехатроника", profile: "Технический колледж", sourceStatus: "editorial_not_verified" },
-            { name: "Мурманский индустриальный колледж", city: "Мурманск", focus: "Морская техника, сварка", profile: "Индустриальный колледж", sourceStatus: "editorial_not_verified" }
+            { name: "Мурманский индустриальный колледж", city: "Мурманск", focus: "Морская техника, сварка", profile: "Индустриальный колледж", site: "https://murindkol.ru/", sourceStatus: "official_source_located", sourceUrl: "https://murindkol.ru/abiturientu/priemnaya-komissiya-1/pravila-priema/", verifiedScope: "Официальные правила приёма СПО на 2026/27 год обнаружены. Условия конкретных программ и срок обучения не переносились из общих шаблонов." }
         ]
     },
     {
@@ -40,7 +40,7 @@ const federalDistricts = [
         path: "M380,185 L420,165 L470,175 L505,200 L515,250 L490,300 L450,330 L400,320 L370,275 L365,225 Z",
         marker: [440, 250],
         universities: [
-            { name: "МГТУ им. Баумана", city: "Москва", focus: "Машиностроение, ракетостроение, IT", profile: "Политех", site: "https://bmstu.ru/", sourceStatus: "official_source_located", sourceUrl: "https://isot.bmstu.ru/edu/cost", verifiedScope: "Найдена официальная страница стоимости на 2026/27 год; конкретная программа не проверена." },
+            { name: "МГТУ им. Баумана", city: "Москва", focus: "Машиностроение, ракетостроение, IT", profile: "Политех", site: "https://bmstu.ru/", sourceStatus: "official_source_located", sourceUrl: "https://isot.bmstu.ru/edu/cost", verifiedScope: "Найдена официальная страница стоимости на 2026/27 год; конкретная программа не проверена.", verifiedProgram: "15.03.01 Машиностроение — 529 000 ₽ в год, набор 2026/27, цена за первый курс по официальной таблице" },
             { name: "МАИ", city: "Москва", focus: "Авиация, ракетно-космическая техника", profile: "Авиация", site: "https://mai.ru/", sourceStatus: "editorial_not_verified" },
             { name: "НИУ МЭИ", city: "Москва", focus: "Энергетика, электротехника", profile: "Энергетика", site: "https://mpei.ru/", sourceStatus: "editorial_not_verified" },
             { name: "МИРЭА", city: "Москва", focus: "IT, радиотехника, автоматика", profile: "Технологический", site: "https://www.mirea.ru/", sourceStatus: "editorial_not_verified" },
@@ -52,7 +52,7 @@ const federalDistricts = [
             { name: "Тверской ГТУ", city: "Тверь", focus: "Машиностроение, строительство", profile: "Технический", site: "https://www.tstu.tver.ru/", sourceStatus: "editorial_not_verified" }
         ],
         colleges: [
-            { name: "Московский техникум космического приборостроения", city: "Москва", focus: "Приборостроение, авиаприборы", profile: "Техникум", sourceStatus: "editorial_not_verified" },
+            { name: "Московский техникум космического приборостроения", city: "Москва", focus: "Приборостроение, авиаприборы", profile: "Техникум", site: "https://mtkp.bmstu.ru/", sourceStatus: "official_source_located", sourceUrl: "https://mtkp.bmstu.ru/", verifiedScope: "Официальный сайт подтверждает техникум как подразделение МГТУ им. Н. Э. Баумана; программы приёма на 2026/27 не проверялись." },
             { name: "Политехнический колледж им. Годовикова", city: "Москва", focus: "Машиностроение, автоматизация", profile: "Технический колледж", sourceStatus: "editorial_not_verified" },
             { name: "Московский электромеханический техникум", city: "Москва", focus: "Электротехника, КИПиА", profile: "Техникум", sourceStatus: "editorial_not_verified" },
             { name: "Воронежский политехнический техникум", city: "Воронеж", focus: "Машиностроение, сварка", profile: "Политехнический техникум", sourceStatus: "editorial_not_verified" },
@@ -107,7 +107,7 @@ const federalDistricts = [
         universities: [
             { name: "КНИТУ-КАИ", city: "Казань", focus: "Авиация, ракетостроение, IT", profile: "Авиация", site: "https://kai.ru/", sourceStatus: "editorial_not_verified" },
             { name: "КНИТУ (КХТИ)", city: "Казань", focus: "Химическая технология, нефтехимия", profile: "Химический", site: "https://www.kstu.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "УГАТУ", city: "Уфа", focus: "Авиадвигатели, машиностроение", profile: "Авиация", site: "https://ugatu.su/", sourceStatus: "editorial_not_verified" },
+            { name: "Уфимский университет науки и технологий (УУНиТ)", city: "Уфа", focus: "Авиадвигатели, машиностроение", profile: "Авиация", site: "https://uust.ru/", sourceStatus: "official_source_located", sourceUrl: "https://uust.ru/history/usatu/", verifiedScope: "Официальная история: УГАТУ объединён с БашГУ в УУНиТ с 01.11.2022. Направления и условия программ не проверены." },
             { name: "Самарский Политех", city: "Самара", focus: "Авиастроение, энергетика", profile: "Политех", site: "https://samgtu.ru/", sourceStatus: "editorial_not_verified" },
             { name: "ПНИПУ", city: "Пермь", focus: "Авиадвигатели, нефтегаз, химия", profile: "Политех", site: "https://pstu.ru/", sourceStatus: "editorial_not_verified" },
             { name: "НГТУ им. Алексеева", city: "Нижний Новгород", focus: "Радиоэлектроника, машиностроение", profile: "Политех", site: "https://www.nntu.ru/", sourceStatus: "editorial_not_verified" },
@@ -156,7 +156,7 @@ const federalDistricts = [
             { name: "ОмГТУ", city: "Омск", focus: "Машиностроение, нефтехимия", profile: "Политех", site: "https://omgtu.ru/", sourceStatus: "editorial_not_verified" },
             { name: "СибГУТИ", city: "Новосибирск", focus: "Связь, телекоммуникации", profile: "Связь", site: "https://sibsutis.ru/", sourceStatus: "editorial_not_verified" },
             { name: "Кузбасский ГТУ", city: "Кемерово", focus: "Горное дело, металлургия", profile: "Технический", site: "https://kuzstu.ru/", sourceStatus: "editorial_not_verified" },
-            { name: "Красноярский ГТУ (СФУ)", city: "Красноярск", focus: "Машиностроение, энергетика, металлургия", profile: "Технический", site: "https://www.sfu-kras.ru/", sourceStatus: "editorial_not_verified" }
+            { name: "Сибирский федеральный университет (СФУ)", city: "Красноярск", focus: "Машиностроение, энергетика, металлургия", profile: "Технический", site: "https://sfu.ru/", sourceStatus: "official_source_located", sourceUrl: "https://sfu.ru/ru/about/sfu-history", verifiedScope: "Официальная история СФУ: Красноярский ГТУ вошёл в состав СФУ в 2006 году. Программы не проверены." }
         ],
         colleges: [
             { name: "Новосибирский техникум ж/д транспорта", city: "Новосибирск", focus: "Железнодорожный транспорт", profile: "Транспортный техникум", sourceStatus: "editorial_not_verified" },
