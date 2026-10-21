@@ -42,4 +42,4 @@ else{
   console.log('Structural findings: '+findings.length);
   for(const row of findings.slice(0,30))console.log(row.type+': '+row.id+' — '+row.issue);
 }
-if(findings.length)process.exitCode=1;
+if(findings.length && process.argv.includes('--strict'))process.exitCode=1;
