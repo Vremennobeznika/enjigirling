@@ -26,6 +26,8 @@ jobs:
         run: node tests/site-check.cjs
       - name: Report source-evidence coverage
         run: node scripts/audit-knowledge.cjs
+      - name: Validate claim evidence links
+        run: node scripts/check-evidence.cjs
       - name: Install browser test dependencies
         run: npm install --no-audit --no-fund
       - name: Install Chromium
