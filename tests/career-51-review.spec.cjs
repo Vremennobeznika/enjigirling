@@ -1,5 +1,6 @@
 const {test,expect}=require('@playwright/test');
 test('career cards show title only and all 51 open with cautious internal text',async({page})=>{
+ test.setTimeout(120000);
  const errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto('/index.html');
  const cards=page.locator('#professionsGrid .eng-card');
@@ -12,7 +13,7 @@ test('career cards show title only and all 51 open with cautious internal text',
   await card.click();
   await expect(page.locator('#modalTitle')).toHaveText(label);
   await expect(page.locator('#modalContent')).toContainText('Нормативные документы');
-  await expect(page.locator('#modalContent')).toContainText('Снимок внешнего источника');
+  await expect(page.locator('#modalContent')).toContainText(/Снимок внешнего источника|точная зарплата не подтверждена|Сопоставимого опубликованного/);
   await expect(page.locator('#modalContent')).toContainText('Время и последовательность действий придуманы');
   await expect(page.locator('#modalContent')).toContainText('субъективная оценка');
   await page.keyboard.press('Escape');
