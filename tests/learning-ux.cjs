@@ -33,8 +33,19 @@ for(const {item} of entries){
  for(const key of ['duration','cost','budget','admission','afterCollege'])
    assert.ok(!Object.hasOwn(item,key),item.name+': unsupported claim '+key);
 }
-assert.equal(entries.filter(x=>x.item.sourceStatus==='official_source_located').length,2);
+assert.equal(entries.filter(x=>x.item.sourceStatus==='official_source_located').length,7);
 assert.ok(html.includes('Схема условная'),'schematic map not labelled');
 assert.ok(html.includes('aria-current="page"'),'current learning tab must be announced');
 const aiBuilder=fs.readFileSync('scripts/build-ai-packs.cjs','utf8');
 assert.ok(aiBuilder.includes("if(slug==='learning')"),'AI export must include school records');
+
+const names=new Set(entries.map(x=>x.item.name));
+for(const deprecated of ['Мурманский ГТУ','УГАТУ','Красноярский ГТУ (СФУ)']){
+ assert.ok(!names.has(deprecated),'outdated institution label: '+deprecated);
+}
+for(const renamed of ['Мурманский арктический университет (МАУ)','Уфимский университет науки и технологий (УУНиТ)','Сибирский федеральный университет (СФУ)']){
+ assert.ok(names.has(renamed),'missing successor institution '+renamed);
+}
+const bauman=entries.find(x=>x.item.name==='МГТУ им. Баумана').item;
+assert.ok(bauman.verifiedProgram.includes('15.03.01')&&bauman.verifiedProgram.includes('529 000'),'verified program-scoped fee was lost');
+assert.ok(js.includes('item.verifiedProgram'),'verified example should appear in card details');
