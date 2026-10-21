@@ -356,3 +356,20 @@ const catalog=JSON.parse(catalogMatch[1]);
 assert.equal(catalog['@type'],'DataCatalog');
 assert.equal(catalog.dataset.length,4);
 console.log('OK: sitemap, robots and JSON-LD engineering catalog');
+
+/* Evidence ledger integrity: the export must preserve exact source statuses. */
+const ledger = JSON.parse(fs.readFileSync('knowledge/salary-evidence.json','utf8'));
+assert.equal(ledger.dataset, 'salary-evidence');
+assert.equal(ledger.records.length, professions.length);
+const ledgerIds = new Set();
+for (const row of ledger.records) {
+  assert.ok(ids.includes(row.professionId), 'orphan evidence for ' + row.professionId);
+  assert.ok(!ledgerIds.has(row.professionId), 'duplicate evidence for ' + row.professionId);
+  ledgerIds.add(row.professionId);
+  assert.ok(['source_snapshot','unverified'].includes(row.status), 'unknown salary evidence status');
+  if (row.status === 'unverified') {
+    assert.equal(row.rangeMinRub,null, 'unverified minimum leaked');
+    assert.equal(row.rangeMaxRub,null, 'unverified maximum leaked');
+  }
+}
+console.log('OK: ' + ledger.records.length + ' explicit salary evidence records and source statuses');
