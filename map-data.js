@@ -16,20 +16,20 @@ const federalDistricts = [
         path: "M210,120 L300,90 L380,110 L400,160 L360,210 L330,250 L280,270 L240,230 L215,190 L205,150 Z",
         marker: [300, 170],
         universities: [
-            { name: "СПбПУ Петра Великого", city: "Санкт-Петербург", focus: "Машиностроение, энергетика, IT", profile: "Политех", duration: "Бакалавриат 4 года, магистратура +2", budget: "Да", cost: "от 220 000 ₽/год", admission: "ЕГЭ: русский, математика, физика/информатика", site: "https://www.spbstu.ru/" },
-            { name: "СПбГМТУ (Корабелка)", city: "Санкт-Петербург", focus: "Кораблестроение, океанотехника", profile: "Судостроение", duration: "Специалитет 5–5.5 лет", budget: "Да", cost: "от 180 000 ₽/год", admission: "ЕГЭ: русский, математика, физика", site: "https://www.smtu.ru/" },
-            { name: "ЛЭТИ", city: "Санкт-Петербург", focus: "Радиотехника, электроника", profile: "Радиоэлектроника", duration: "Бакалавриат 4 года, магистратура +2", budget: "Да", cost: "от 200 000 ₽/год", admission: "ЕГЭ: русский, математика, физика/информатика", site: "https://etu.ru/" },
-            { name: "Военмех (БГТУ)", city: "Санкт-Петербург", focus: "Ракетостроение, авиация", profile: "Оборонпром", duration: "Специалитет 5–5.5 лет", budget: "Да", cost: "от 190 000 ₽/год", admission: "ЕГЭ: русский, математика, физика", site: "https://www.voenmeh.ru/" },
-            { name: "ГУАП", city: "Санкт-Петербург", focus: "Авиаприборостроение, IT", profile: "Приборостроение", duration: "Бакалавриат 4 года, магистратура +2", budget: "Да", cost: "от 170 000 ₽/год", admission: "ЕГЭ: русский, математика, физика/информатика", site: "https://guap.ru/" },
-            { name: "Мурманский ГТУ", city: "Мурманск", focus: "Морская техника, рыбопромысловое", profile: "Морской", duration: "Бакалавриат 4 года, специалитет 5", budget: "Да", cost: "от 130 000 ₽/год", admission: "ЕГЭ: русский, математика, физика", site: "https://www.mstu.edu.ru/" },
-            { name: "Калининградский ГТУ", city: "Калининград", focus: "Судостроение, холодильная техника", profile: "Технический", duration: "Бакалавриат 4 года", budget: "Да", cost: "от 120 000 ₽/год", admission: "ЕГЭ: русский, математика, физика/информатика", site: "https://www.klgtu.ru/" },
-            { name: "Петрозаводский ГУ", city: "Петрозаводск", focus: "Машиностроение, лесопереработка", profile: "Классический", duration: "Бакалавриат 4 года", budget: "Да", cost: "от 100 000 ₽/год", admission: "ЕГЭ: русский, математика, физика", site: "https://petrsu.ru/" }
+            { name: "СПбПУ Петра Великого", city: "Санкт-Петербург", focus: "Машиностроение, энергетика, IT", profile: "Политех", site: "https://www.spbstu.ru/", sourceStatus: "official_source_located", sourceUrl: "https://www.spbstu.ru/education/students/paid-educational-services/", verifiedScope: "Найдена официальная страница стоимости на 2026/27 год; конкретная программа не проверена." },
+            { name: "СПбГМТУ (Корабелка)", city: "Санкт-Петербург", focus: "Кораблестроение, океанотехника", profile: "Судостроение", site: "https://www.smtu.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "ЛЭТИ", city: "Санкт-Петербург", focus: "Радиотехника, электроника", profile: "Радиоэлектроника", site: "https://etu.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "Военмех (БГТУ)", city: "Санкт-Петербург", focus: "Ракетостроение, авиация", profile: "Оборонпром", site: "https://www.voenmeh.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "ГУАП", city: "Санкт-Петербург", focus: "Авиаприборостроение, IT", profile: "Приборостроение", site: "https://guap.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "Мурманский ГТУ", city: "Мурманск", focus: "Морская техника, рыбопромысловое", profile: "Морской", site: "https://www.mstu.edu.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "Калининградский ГТУ", city: "Калининград", focus: "Судостроение, холодильная техника", profile: "Технический", site: "https://www.klgtu.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "Петрозаводский ГУ", city: "Петрозаводск", focus: "Машиностроение, лесопереработка", profile: "Классический", site: "https://petrsu.ru/", sourceStatus: "editorial_not_verified" }
         ],
         colleges: [
-            { name: "Колледж СПбГУПТД", city: "Санкт-Петербург", focus: "Технология машиностроения, металлообработка", profile: "Технический колледж", duration: "9 классов — 3 г. 10 мес., 11 классов — 2 г. 10 мес.", afterCollege: "После техникума можно пойти работать или продолжить обучение в вузе по сокращённой программе (по правилам приёма вуза, по внутренним экзаменам)." },
-            { name: "Политехнический колледж №8", city: "Санкт-Петербург", focus: "Электромонтаж, автоматизация", profile: "Технический колледж", duration: "9 классов — 3 г. 10 мес., 11 классов — 2 г. 10 мес.", afterCollege: "Даёт рабочую специальность. Можно сразу работать электромонтажником или продолжить в вузе по правилам приёма вуза." },
-            { name: "Калининградский технический колледж", city: "Калининград", focus: "Судостроение, мехатроника", profile: "Технический колледж", duration: "9 классов — 3 г. 10 мес., 11 классов — 2 г. 10 мес.", afterCollege: "После — работа на судостроительных заводах или поступление в вуз по действующим правилам приёма." },
-            { name: "Мурманский индустриальный колледж", city: "Мурманск", focus: "Морская техника, сварка", profile: "Индустриальный колледж", duration: "9 классов — 3 г. 10 мес., 11 классов — 2 г. 10 мес.", afterCollege: "Даёт морскую/рабочую специальность. Возможно продолжение в МГТУ по правилам приёма вуза." }
+            { name: "Колледж СПбГУПТД", city: "Санкт-Петербург", focus: "Технология машиностроения, металлообработка", profile: "Технический колледж", sourceStatus: "editorial_not_verified" },
+            { name: "Политехнический колледж №8", city: "Санкт-Петербург", focus: "Электромонтаж, автоматизация", profile: "Технический колледж", sourceStatus: "editorial_not_verified" },
+            { name: "Калининградский технический колледж", city: "Калининград", focus: "Судостроение, мехатроника", profile: "Технический колледж", sourceStatus: "editorial_not_verified" },
+            { name: "Мурманский индустриальный колледж", city: "Мурманск", focus: "Морская техника, сварка", profile: "Индустриальный колледж", sourceStatus: "editorial_not_verified" }
         ]
     },
     {
@@ -40,23 +40,23 @@ const federalDistricts = [
         path: "M380,185 L420,165 L470,175 L505,200 L515,250 L490,300 L450,330 L400,320 L370,275 L365,225 Z",
         marker: [440, 250],
         universities: [
-            { name: "МГТУ им. Баумана", city: "Москва", focus: "Машиностроение, ракетостроение, IT", profile: "Политех", duration: "Бакалавриат 4 года, специалитет 5.5", budget: "Да", cost: "от 250 000 ₽/год", admission: "ЕГЭ: русский, математика (профиль), физика/информатика", site: "https://bmstu.ru/" },
-            { name: "МАИ", city: "Москва", focus: "Авиация, ракетно-космическая техника", profile: "Авиация", duration: "Бакалавриат 4 года, специалитет 5.5", budget: "Да", cost: "от 230 000 ₽/год", admission: "ЕГЭ: русский, математика, физика/информатика", site: "https://mai.ru/" },
-            { name: "НИУ МЭИ", city: "Москва", focus: "Энергетика, электротехника", profile: "Энергетика", duration: "Бакалавриат 4 года, магистратура +2", budget: "Да", cost: "от 210 000 ₽/год", admission: "ЕГЭ: русский, математика, физика/информатика", site: "https://mpei.ru/" },
-            { name: "МИРЭА", city: "Москва", focus: "IT, радиотехника, автоматика", profile: "Технологический", duration: "Бакалавриат 4 года", budget: "Да", cost: "от 200 000 ₽/год", admission: "ЕГЭ: русский, математика, информатика/физика", site: "https://www.mirea.ru/" },
-            { name: "МГСУ", city: "Москва", focus: "Строительство, ЖКХ", profile: "Строительный", duration: "Бакалавриат 4 года, специалитет 5", budget: "Да", cost: "от 180 000 ₽/год", admission: "ЕГЭ: русский, математика, физика", site: "https://mgsu.ru/" },
-            { name: "МАДИ", city: "Москва", focus: "Транспорт, дорожное строительство", profile: "Транспортный", duration: "Бакалавриат 4 года", budget: "Да", cost: "от 160 000 ₽/год", admission: "ЕГЭ: русский, математика, физика", site: "https://madi.ru/" },
-            { name: "РГУ нефти и газа им. Губкина", city: "Москва", focus: "Нефтегазовое дело", profile: "Нефтегазовый", duration: "Бакалавриат 4 года, специалитет 5.5", budget: "Да", cost: "от 250 000 ₽/год", admission: "ЕГЭ: русский, математика, физика/химия", site: "https://www.gubkin.ru/" },
-            { name: "МГТУ «СТАНКИН»", city: "Москва", focus: "Станкостроение, автоматизация", profile: "Машиностроение", duration: "Бакалавриат 4 года", budget: "Да", cost: "от 170 000 ₽/год", admission: "ЕГЭ: русский, математика, физика/информатика", site: "https://stankin.ru/" },
-            { name: "Воронежский ГТУ", city: "Воронеж", focus: "Авиастроение, радиоэлектроника", profile: "Технический", duration: "Бакалавриат 4 года", budget: "Да", cost: "от 110 000 ₽/год", admission: "ЕГЭ: русский, математика, физика/информатика", site: "https://cchgeu.ru/" },
-            { name: "Тверской ГТУ", city: "Тверь", focus: "Машиностроение, строительство", profile: "Технический", duration: "Бакалавриат 4 года", budget: "Да", cost: "от 100 000 ₽/год", admission: "ЕГЭ: русский, математика, физика", site: "https://www.tstu.tver.ru/" }
+            { name: "МГТУ им. Баумана", city: "Москва", focus: "Машиностроение, ракетостроение, IT", profile: "Политех", site: "https://bmstu.ru/", sourceStatus: "official_source_located", sourceUrl: "https://isot.bmstu.ru/edu/cost", verifiedScope: "Найдена официальная страница стоимости на 2026/27 год; конкретная программа не проверена." },
+            { name: "МАИ", city: "Москва", focus: "Авиация, ракетно-космическая техника", profile: "Авиация", site: "https://mai.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "НИУ МЭИ", city: "Москва", focus: "Энергетика, электротехника", profile: "Энергетика", site: "https://mpei.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "МИРЭА", city: "Москва", focus: "IT, радиотехника, автоматика", profile: "Технологический", site: "https://www.mirea.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "МГСУ", city: "Москва", focus: "Строительство, ЖКХ", profile: "Строительный", site: "https://mgsu.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "МАДИ", city: "Москва", focus: "Транспорт, дорожное строительство", profile: "Транспортный", site: "https://madi.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "РГУ нефти и газа им. Губкина", city: "Москва", focus: "Нефтегазовое дело", profile: "Нефтегазовый", site: "https://www.gubkin.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "МГТУ «СТАНКИН»", city: "Москва", focus: "Станкостроение, автоматизация", profile: "Машиностроение", site: "https://stankin.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "Воронежский ГТУ", city: "Воронеж", focus: "Авиастроение, радиоэлектроника", profile: "Технический", site: "https://cchgeu.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "Тверской ГТУ", city: "Тверь", focus: "Машиностроение, строительство", profile: "Технический", site: "https://www.tstu.tver.ru/", sourceStatus: "editorial_not_verified" }
         ],
         colleges: [
-            { name: "Московский техникум космического приборостроения", city: "Москва", focus: "Приборостроение, авиаприборы", profile: "Техникум", duration: "9 классов — 3 г. 10 мес., 11 классов — 2 г. 10 мес.", afterCollege: "После техникума — работа на приборостроительных заводах или вуз по действующим правилам приёма по профилю." },
-            { name: "Политехнический колледж им. Годовикова", city: "Москва", focus: "Машиностроение, автоматизация", profile: "Технический колледж", duration: "9 классов — 3 г. 10 мес., 11 классов — 2 г. 10 мес.", afterCollege: "Рабочая специальность по металлообработке. Вуз по правилам приёма вуза после выпуска." },
-            { name: "Московский электромеханический техникум", city: "Москва", focus: "Электротехника, КИПиА", profile: "Техникум", duration: "9 классов — 3 г. 10 мес., 11 классов — 2 г. 10 мес.", afterCollege: "Электрик/КИПиА — сразу на производство, или вуз по действующим правилам приёма." },
-            { name: "Воронежский политехнический техникум", city: "Воронеж", focus: "Машиностроение, сварка", profile: "Политехнический техникум", duration: "9 классов — 3 г. 10 мес., 11 классов — 2 г. 10 мес.", afterCollege: "Работа по специальности или продолжение в ВГТУ по правилам приёма вуза." },
-            { name: "Коломенский техникум", city: "Коломна", focus: "Тепловозы, машиностроение", profile: "Техникум", duration: "9 классов — 3 г. 10 мес., 11 классов — 2 г. 10 мес.", afterCollege: "Специальность по ж/д и машиностроению. Вуз по правилам приёма вуза по профилю." }
+            { name: "Московский техникум космического приборостроения", city: "Москва", focus: "Приборостроение, авиаприборы", profile: "Техникум", sourceStatus: "editorial_not_verified" },
+            { name: "Политехнический колледж им. Годовикова", city: "Москва", focus: "Машиностроение, автоматизация", profile: "Технический колледж", sourceStatus: "editorial_not_verified" },
+            { name: "Московский электромеханический техникум", city: "Москва", focus: "Электротехника, КИПиА", profile: "Техникум", sourceStatus: "editorial_not_verified" },
+            { name: "Воронежский политехнический техникум", city: "Воронеж", focus: "Машиностроение, сварка", profile: "Политехнический техникум", sourceStatus: "editorial_not_verified" },
+            { name: "Коломенский техникум", city: "Коломна", focus: "Тепловозы, машиностроение", profile: "Техникум", sourceStatus: "editorial_not_verified" }
         ]
     },
     {
@@ -67,17 +67,17 @@ const federalDistricts = [
         path: "M420,335 L460,315 L500,325 L535,350 L545,400 L520,455 L470,475 L425,450 L405,395 Z",
         marker: [470, 400],
         universities: [
-            { name: "ДГТУ", city: "Ростов-на-Дону", focus: "Машиностроение, строительство, IT", profile: "Политех", duration: "Бакалавриат 4 года", budget: "Да", cost: "от 110 000 ₽/год", admission: "ЕГЭ: русский, математика, физика/информатика", site: "https://donstu.ru/" },
-            { name: "КубГТУ", city: "Краснодар", focus: "Нефтегаз, пищевые технологии", profile: "Технологический", duration: "Бакалавриат 4 года", budget: "Да", cost: "от 100 000 ₽/год", admission: "ЕГЭ: русский, математика, физика/химия", site: "https://kubstu.ru/" },
-            { name: "ЮРГПУ (НПИ)", city: "Новочеркасск", focus: "Горное дело, энергетика", profile: "Политех", duration: "Бакалавриат 4 года, специалитет 5", budget: "Да", cost: "от 100 000 ₽/год", admission: "ЕГЭ: русский, математика, физика", site: "https://www.npi-tu.ru/" },
-            { name: "ВолгГТУ", city: "Волгоград", focus: "Машиностроение, металлургия", profile: "Политех", duration: "Бакалавриат 4 года", budget: "Да", cost: "от 95 000 ₽/год", admission: "ЕГЭ: русский, математика, физика", site: "https://www.vstu.ru/" },
-            { name: "Астраханский ГТУ", city: "Астрахань", focus: "Нефтегаз, судостроение", profile: "Технический", duration: "Бакалавриат 4 года", budget: "Да", cost: "от 90 000 ₽/год", admission: "ЕГЭ: русский, математика, физика", site: "https://astu.org/" },
-            { name: "СевГУ", city: "Севастополь", focus: "Кораблестроение, IT, энергетика", profile: "Технический", duration: "Бакалавриат 4 года", budget: "Да", cost: "от 100 000 ₽/год", admission: "ЕГЭ: русский, математика, физика/информатика", site: "https://www.sevsu.ru/" }
+            { name: "ДГТУ", city: "Ростов-на-Дону", focus: "Машиностроение, строительство, IT", profile: "Политех", site: "https://donstu.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "КубГТУ", city: "Краснодар", focus: "Нефтегаз, пищевые технологии", profile: "Технологический", site: "https://kubstu.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "ЮРГПУ (НПИ)", city: "Новочеркасск", focus: "Горное дело, энергетика", profile: "Политех", site: "https://www.npi-tu.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "ВолгГТУ", city: "Волгоград", focus: "Машиностроение, металлургия", profile: "Политех", site: "https://www.vstu.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "Астраханский ГТУ", city: "Астрахань", focus: "Нефтегаз, судостроение", profile: "Технический", site: "https://astu.org/", sourceStatus: "editorial_not_verified" },
+            { name: "СевГУ", city: "Севастополь", focus: "Кораблестроение, IT, энергетика", profile: "Технический", site: "https://www.sevsu.ru/", sourceStatus: "editorial_not_verified" }
         ],
         colleges: [
-            { name: "Ростовский-на-Дону техникум связи", city: "Ростов-на-Дону", focus: "Связь, телекоммуникации", profile: "Техникум", duration: "9 классов — 3 г. 10 мес., 11 классов — 2 г. 10 мес.", afterCollege: "Работа в телекоме или вуз по действующим правилам приёма по связи." },
-            { name: "Краснодарский монтажный техникум", city: "Краснодар", focus: "Монтаж, электрика", profile: "Техникум", duration: "9 классов — 3 г. 10 мес., 11 классов — 2 г. 10 мес.", afterCollege: "Монтажник/электрик, можно сразу работать или продолжить в вузе по правилам приёма вуза." },
-            { name: "Волгоградский технический колледж", city: "Волгоград", focus: "Машиностроение, металлургия", profile: "Технический колледж", duration: "9 классов — 3 г. 10 мес., 11 классов — 2 г. 10 мес.", afterCollege: "Работа на заводе или вуз по действующим правилам приёма." }
+            { name: "Ростовский-на-Дону техникум связи", city: "Ростов-на-Дону", focus: "Связь, телекоммуникации", profile: "Техникум", sourceStatus: "editorial_not_verified" },
+            { name: "Краснодарский монтажный техникум", city: "Краснодар", focus: "Монтаж, электрика", profile: "Техникум", sourceStatus: "editorial_not_verified" },
+            { name: "Волгоградский технический колледж", city: "Волгоград", focus: "Машиностроение, металлургия", profile: "Технический колледж", sourceStatus: "editorial_not_verified" }
         ]
     },
     {
@@ -88,13 +88,13 @@ const federalDistricts = [
         path: "M520,415 L560,400 L605,410 L625,445 L600,480 L550,475 L515,450 Z",
         marker: [568, 442],
         universities: [
-            { name: "СКФУ", city: "Ставрополь", focus: "Нефтегаз, IT, строительство", profile: "Классический", duration: "Бакалавриат 4 года", budget: "Да", cost: "от 90 000 ₽/год", admission: "ЕГЭ: русский, математика, физика/информатика", site: "https://www.ncfu.ru/" },
-            { name: "Грозненский ГНТУ", city: "Грозный", focus: "Нефтегазовое дело, строительство", profile: "Политех", duration: "Бакалавриат 4 года", budget: "Да", cost: "от 80 000 ₽/год", admission: "ЕГЭ: русский, математика, физика", site: "https://gstou.ru/" },
-            { name: "Дагестанский ГТУ", city: "Махачкала", focus: "Машиностроение, энергетика", profile: "Политех", duration: "Бакалавриат 4 года", budget: "Да", cost: "от 80 000 ₽/год", admission: "ЕГЭ: русский, математика, физика", site: "https://dgtu.ru/" }
+            { name: "СКФУ", city: "Ставрополь", focus: "Нефтегаз, IT, строительство", profile: "Классический", site: "https://www.ncfu.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "Грозненский ГНТУ", city: "Грозный", focus: "Нефтегазовое дело, строительство", profile: "Политех", site: "https://gstou.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "Дагестанский ГТУ", city: "Махачкала", focus: "Машиностроение, энергетика", profile: "Политех", site: "https://dgtu.ru/", sourceStatus: "editorial_not_verified" }
         ],
         colleges: [
-            { name: "Ставропольский строительный техникум", city: "Ставрополь", focus: "Строительство, архитектура", profile: "Строительный техникум", duration: "9 классов — 3 г. 10 мес., 11 классов — 2 г. 10 мес.", afterCollege: "Рабочая специальность строителя или вуз по действующим правилам приёма." },
-            { name: "Грозненский техникум", city: "Грозный", focus: "Нефтегаз, строительство", profile: "Техникум", duration: "9 классов — 3 г. 10 мес., 11 классов — 2 г. 10 мес.", afterCollege: "Работа в нефтегазе/строительстве или вуз по действующим правилам приёма." }
+            { name: "Ставропольский строительный техникум", city: "Ставрополь", focus: "Строительство, архитектура", profile: "Строительный техникум", sourceStatus: "editorial_not_verified" },
+            { name: "Грозненский техникум", city: "Грозный", focus: "Нефтегаз, строительство", profile: "Техникум", sourceStatus: "editorial_not_verified" }
         ]
     },
     {
@@ -105,22 +105,22 @@ const federalDistricts = [
         path: "M540,250 L585,230 L640,245 L685,270 L700,320 L690,380 L655,420 L610,430 L565,405 L550,350 L530,295 Z",
         marker: [615, 330],
         universities: [
-            { name: "КНИТУ-КАИ", city: "Казань", focus: "Авиация, ракетостроение, IT", profile: "Авиация", duration: "Бакалавриат 4 года, специалитет 5.5", budget: "Да", cost: "от 130 000 ₽/год", admission: "ЕГЭ: русский, математика, физика/информатика", site: "https://kai.ru/" },
-            { name: "КНИТУ (КХТИ)", city: "Казань", focus: "Химическая технология, нефтехимия", profile: "Химический", duration: "Бакалавриат 4 года", budget: "Да", cost: "от 120 000 ₽/год", admission: "ЕГЭ: русский, математика, химия/физика", site: "https://www.kstu.ru/" },
-            { name: "УГАТУ", city: "Уфа", focus: "Авиадвигатели, машиностроение", profile: "Авиация", duration: "Бакалавриат 4 года, специалитет 5.5", budget: "Да", cost: "от 120 000 ₽/год", admission: "ЕГЭ: русский, математика, физика/информатика", site: "https://ugatu.su/" },
-            { name: "Самарский Политех", city: "Самара", focus: "Авиастроение, энергетика", profile: "Политех", duration: "Бакалавриат 4 года", budget: "Да", cost: "от 110 000 ₽/год", admission: "ЕГЭ: русский, математика, физика", site: "https://samgtu.ru/" },
-            { name: "ПНИПУ", city: "Пермь", focus: "Авиадвигатели, нефтегаз, химия", profile: "Политех", duration: "Бакалавриат 4 года", budget: "Да", cost: "от 110 000 ₽/год", admission: "ЕГЭ: русский, математика, физика/химия", site: "https://pstu.ru/" },
-            { name: "НГТУ им. Алексеева", city: "Нижний Новгород", focus: "Радиоэлектроника, машиностроение", profile: "Политех", duration: "Бакалавриат 4 года", budget: "Да", cost: "от 100 000 ₽/год", admission: "ЕГЭ: русский, математика, физика/информатика", site: "https://www.nntu.ru/" },
-            { name: "Саратовский ГТУ", city: "Саратов", focus: "Энергетика, машиностроение", profile: "Политех", duration: "Бакалавриат 4 года", budget: "Да", cost: "от 95 000 ₽/год", admission: "ЕГЭ: русский, математика, физика", site: "https://www.sstu.ru/" },
-            { name: "Ульяновский ГТУ", city: "Ульяновск", focus: "Авиастроение, IT", profile: "Технический", duration: "Бакалавриат 4 года", budget: "Да", cost: "от 95 000 ₽/год", admission: "ЕГЭ: русский, математика, физика/информатика", site: "https://ulstu.ru/" },
-            { name: "Чувашский ГУ", city: "Чебоксары", focus: "Электротехника, IT", profile: "Классический", duration: "Бакалавриат 4 года", budget: "Да", cost: "от 90 000 ₽/год", admission: "ЕГЭ: русский, математика, физика", site: "https://www.chuvsu.ru/" }
+            { name: "КНИТУ-КАИ", city: "Казань", focus: "Авиация, ракетостроение, IT", profile: "Авиация", site: "https://kai.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "КНИТУ (КХТИ)", city: "Казань", focus: "Химическая технология, нефтехимия", profile: "Химический", site: "https://www.kstu.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "УГАТУ", city: "Уфа", focus: "Авиадвигатели, машиностроение", profile: "Авиация", site: "https://ugatu.su/", sourceStatus: "editorial_not_verified" },
+            { name: "Самарский Политех", city: "Самара", focus: "Авиастроение, энергетика", profile: "Политех", site: "https://samgtu.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "ПНИПУ", city: "Пермь", focus: "Авиадвигатели, нефтегаз, химия", profile: "Политех", site: "https://pstu.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "НГТУ им. Алексеева", city: "Нижний Новгород", focus: "Радиоэлектроника, машиностроение", profile: "Политех", site: "https://www.nntu.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "Саратовский ГТУ", city: "Саратов", focus: "Энергетика, машиностроение", profile: "Политех", site: "https://www.sstu.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "Ульяновский ГТУ", city: "Ульяновск", focus: "Авиастроение, IT", profile: "Технический", site: "https://ulstu.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "Чувашский ГУ", city: "Чебоксары", focus: "Электротехника, IT", profile: "Классический", site: "https://www.chuvsu.ru/", sourceStatus: "editorial_not_verified" }
         ],
         colleges: [
-            { name: "Казанский техникум связи", city: "Казань", focus: "Связь, телекоммуникации", profile: "Техникум", duration: "9 классов — 3 г. 10 мес., 11 классов — 2 г. 10 мес.", afterCollege: "Работа в связи или вуз по действующим правилам приёма." },
-            { name: "Самарский энергетический колледж", city: "Самара", focus: "Энергетика, электрика", profile: "Энергетический колледж", duration: "9 классов — 3 г. 10 мес., 11 классов — 2 г. 10 мес.", afterCollege: "Электрик/энергетик — на производство или в вуз по действующим правилам приёма." },
-            { name: "Уфимский машиностроительный колледж", city: "Уфа", focus: "Машиностроение, сварка", profile: "Машиностроительный колледж", duration: "9 классов — 3 г. 10 мес., 11 классов — 2 г. 10 мес.", afterCollege: "Рабочая специальность на заводе или вуз по действующим правилам приёма." },
-            { name: "Нижегородский автотранспортный техникум", city: "Нижний Новгород", focus: "Автомобильный транспорт", profile: "Техникум", duration: "9 классов — 3 г. 10 мес., 11 классов — 2 г. 10 мес.", afterCollege: "Работа в автотранспорте или вуз по действующим правилам приёма." },
-            { name: "Пермский техникум промышленных технологий", city: "Пермь", focus: "Промышленные технологии", profile: "Техникум", duration: "9 классов — 3 г. 10 мес., 11 классов — 2 г. 10 мес.", afterCollege: "Промышленность или вуз по действующим правилам приёма." }
+            { name: "Казанский техникум связи", city: "Казань", focus: "Связь, телекоммуникации", profile: "Техникум", sourceStatus: "editorial_not_verified" },
+            { name: "Самарский энергетический колледж", city: "Самара", focus: "Энергетика, электрика", profile: "Энергетический колледж", sourceStatus: "editorial_not_verified" },
+            { name: "Уфимский машиностроительный колледж", city: "Уфа", focus: "Машиностроение, сварка", profile: "Машиностроительный колледж", sourceStatus: "editorial_not_verified" },
+            { name: "Нижегородский автотранспортный техникум", city: "Нижний Новгород", focus: "Автомобильный транспорт", profile: "Техникум", sourceStatus: "editorial_not_verified" },
+            { name: "Пермский техникум промышленных технологий", city: "Пермь", focus: "Промышленные технологии", profile: "Техникум", sourceStatus: "editorial_not_verified" }
         ]
     },
     {
@@ -131,15 +131,15 @@ const federalDistricts = [
         path: "M705,160 L750,140 L790,165 L800,230 L785,300 L770,360 L745,410 L710,380 L700,300 L692,220 Z",
         marker: [745, 270],
         universities: [
-            { name: "УрФУ", city: "Екатеринбург", focus: "Машиностроение, металлургия, энергетика, IT", profile: "Классический", duration: "Бакалавриат 4 года, магистратура +2", budget: "Да", cost: "от 140 000 ₽/год", admission: "ЕГЭ: русский, математика, физика/информатика", site: "https://urfu.ru/" },
-            { name: "ЮУрГУ", city: "Челябинск", focus: "Машиностроение, металлургия, авто", profile: "Политех", duration: "Бакалавриат 4 года", budget: "Да", cost: "от 110 000 ₽/год", admission: "ЕГЭ: русский, математика, физика", site: "https://www.susu.ru/" },
-            { name: "Тюменский Индустриальный Университет", city: "Тюмень", focus: "Нефтегазовое дело", profile: "Индустриальный", duration: "Бакалавриат 4 года", budget: "Да", cost: "от 120 000 ₽/год", admission: "ЕГЭ: русский, математика, физика/химия", site: "https://www.tyuiu.ru/" },
-            { name: "Курганский ГУ", city: "Курган", focus: "Машиностроение", profile: "Классический", duration: "Бакалавриат 4 года", budget: "Да", cost: "от 85 000 ₽/год", admission: "ЕГЭ: русский, математика, физика", site: "https://ksu.edu.ru/" }
+            { name: "УрФУ", city: "Екатеринбург", focus: "Машиностроение, металлургия, энергетика, IT", profile: "Классический", site: "https://urfu.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "ЮУрГУ", city: "Челябинск", focus: "Машиностроение, металлургия, авто", profile: "Политех", site: "https://www.susu.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "Тюменский Индустриальный Университет", city: "Тюмень", focus: "Нефтегазовое дело", profile: "Индустриальный", site: "https://www.tyuiu.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "Курганский ГУ", city: "Курган", focus: "Машиностроение", profile: "Классический", site: "https://ksu.edu.ru/", sourceStatus: "editorial_not_verified" }
         ],
         colleges: [
-            { name: "Екатеринбургский политехникум", city: "Екатеринбург", focus: "Машиностроение, металлургия", profile: "Политехникум", duration: "9 классов — 3 г. 10 мес., 11 классов — 2 г. 10 мес.", afterCollege: "Работа на заводе Урала или вуз по действующим правилам приёма." },
-            { name: "Уральский техникум металлообработки", city: "Челябинск", focus: "Металлообработка, сварка", profile: "Техникум", duration: "9 классов — 3 г. 10 мес., 11 классов — 2 г. 10 мес.", afterCollege: "Рабочая специальность металлурга/сварщика или вуз по действующим правилам приёма." },
-            { name: "Тюменский техникум строительной индустрии", city: "Тюмень", focus: "Строительство", profile: "Строительный техникум", duration: "9 классов — 3 г. 10 мес., 11 классов — 2 г. 10 мес.", afterCollege: "Строительная специальность или вуз по действующим правилам приёма." }
+            { name: "Екатеринбургский политехникум", city: "Екатеринбург", focus: "Машиностроение, металлургия", profile: "Политехникум", sourceStatus: "editorial_not_verified" },
+            { name: "Уральский техникум металлообработки", city: "Челябинск", focus: "Металлообработка, сварка", profile: "Техникум", sourceStatus: "editorial_not_verified" },
+            { name: "Тюменский техникум строительной индустрии", city: "Тюмень", focus: "Строительство", profile: "Строительный техникум", sourceStatus: "editorial_not_verified" }
         ]
     },
     {
@@ -150,19 +150,19 @@ const federalDistricts = [
         path: "M800,130 L860,105 L925,125 L955,180 L940,250 L920,320 L890,385 L845,410 L810,375 L790,310 L782,220 Z",
         marker: [860, 260],
         universities: [
-            { name: "НГТУ", city: "Новосибирск", focus: "Энергетика, электроника, IT", profile: "Политех", duration: "Бакалавриат 4 года", budget: "Да", cost: "от 120 000 ₽/год", admission: "ЕГЭ: русский, математика, физика/информатика", site: "https://www.nstu.ru/" },
-            { name: "ТПУ", city: "Томск", focus: "Энергетика, атомная, геология, нефтегаз", profile: "Политех", duration: "Бакалавриат 4 года, специалитет 5.5", budget: "Да", cost: "от 130 000 ₽/год", admission: "ЕГЭ: русский, математика, физика/химия", site: "https://tpu.ru/" },
-            { name: "ИРНИТУ", city: "Иркутск", focus: "Горное дело, энергетика", profile: "Политех", duration: "Бакалавриат 4 года", budget: "Да", cost: "от 100 000 ₽/год", admission: "ЕГЭ: русский, математика, физика", site: "https://www.istu.edu/" },
-            { name: "ОмГТУ", city: "Омск", focus: "Машиностроение, нефтехимия", profile: "Политех", duration: "Бакалавриат 4 года", budget: "Да", cost: "от 90 000 ₽/год", admission: "ЕГЭ: русский, математика, физика/химия", site: "https://omgtu.ru/" },
-            { name: "СибГУТИ", city: "Новосибирск", focus: "Связь, телекоммуникации", profile: "Связь", duration: "Бакалавриат 4 года", budget: "Да", cost: "от 100 000 ₽/год", admission: "ЕГЭ: русский, математика, физика/информатика", site: "https://sibsutis.ru/" },
-            { name: "Кузбасский ГТУ", city: "Кемерово", focus: "Горное дело, металлургия", profile: "Технический", duration: "Бакалавриат 4 года", budget: "Да", cost: "от 90 000 ₽/год", admission: "ЕГЭ: русский, математика, физика", site: "https://kuzstu.ru/" },
-            { name: "Красноярский ГТУ (СФУ)", city: "Красноярск", focus: "Машиностроение, энергетика, металлургия", profile: "Технический", duration: "Бакалавриат 4 года", budget: "Да", cost: "от 100 000 ₽/год", admission: "ЕГЭ: русский, математика, физика", site: "https://www.sfu-kras.ru/" }
+            { name: "НГТУ", city: "Новосибирск", focus: "Энергетика, электроника, IT", profile: "Политех", site: "https://www.nstu.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "ТПУ", city: "Томск", focus: "Энергетика, атомная, геология, нефтегаз", profile: "Политех", site: "https://tpu.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "ИРНИТУ", city: "Иркутск", focus: "Горное дело, энергетика", profile: "Политех", site: "https://www.istu.edu/", sourceStatus: "editorial_not_verified" },
+            { name: "ОмГТУ", city: "Омск", focus: "Машиностроение, нефтехимия", profile: "Политех", site: "https://omgtu.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "СибГУТИ", city: "Новосибирск", focus: "Связь, телекоммуникации", profile: "Связь", site: "https://sibsutis.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "Кузбасский ГТУ", city: "Кемерово", focus: "Горное дело, металлургия", profile: "Технический", site: "https://kuzstu.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "Красноярский ГТУ (СФУ)", city: "Красноярск", focus: "Машиностроение, энергетика, металлургия", profile: "Технический", site: "https://www.sfu-kras.ru/", sourceStatus: "editorial_not_verified" }
         ],
         colleges: [
-            { name: "Новосибирский техникум ж/д транспорта", city: "Новосибирск", focus: "Железнодорожный транспорт", profile: "Транспортный техникум", duration: "9 классов — 3 г. 10 мес., 11 классов — 2 г. 10 мес.", afterCollege: "Работа в РЖД или вуз по действующим правилам приёма." },
-            { name: "Томский техникум информационных технологий", city: "Томск", focus: "IT, электроника", profile: "Техникум", duration: "9 классов — 3 г. 10 мес., 11 классов — 2 г. 10 мес.", afterCollege: "Работа в IT/электронике или вуз по действующим правилам приёма." },
-            { name: "Кемеровский горнотехнический техникум", city: "Кемерово", focus: "Горное дело", profile: "Горнотехнический техникум", duration: "9 классов — 3 г. 10 мес., 11 классов — 2 г. 10 мес.", afterCollege: "Горная специальность в Кузбассе или вуз по действующим правилам приёма." },
-            { name: "Красноярский техникум промышленного сервиса", city: "Красноярск", focus: "Промышленность, металлургия", profile: "Техникум", duration: "9 классов — 3 г. 10 мес., 11 классов — 2 г. 10 мес.", afterCollege: "Работа в промышленности или вуз по действующим правилам приёма." }
+            { name: "Новосибирский техникум ж/д транспорта", city: "Новосибирск", focus: "Железнодорожный транспорт", profile: "Транспортный техникум", sourceStatus: "editorial_not_verified" },
+            { name: "Томский техникум информационных технологий", city: "Томск", focus: "IT, электроника", profile: "Техникум", sourceStatus: "editorial_not_verified" },
+            { name: "Кемеровский горнотехнический техникум", city: "Кемерово", focus: "Горное дело", profile: "Горнотехнический техникум", sourceStatus: "editorial_not_verified" },
+            { name: "Красноярский техникум промышленного сервиса", city: "Красноярск", focus: "Промышленность, металлургия", profile: "Техникум", sourceStatus: "editorial_not_verified" }
         ]
     },
     {
@@ -173,15 +173,15 @@ const federalDistricts = [
         path: "M950,120 L985,150 L985,260 L960,350 L915,415 L885,430 L868,360 L875,280 L900,200 L925,145 Z",
         marker: [930, 260],
         universities: [
-            { name: "ДВФУ", city: "Владивосток", focus: "Кораблестроение, IT, энергетика", profile: "Классический", duration: "Бакалавриат 4 года", budget: "Да", cost: "от 120 000 ₽/год", admission: "ЕГЭ: русский, математика, физика/информатика", site: "https://www.dvfu.ru/" },
-            { name: "Комсомольский-на-Амуре ГУ", city: "Комсомольск-на-Амуре", focus: "Авиастроение, судостроение", profile: "Технический", duration: "Бакалавриат 4 года", budget: "Да", cost: "от 90 000 ₽/год", admission: "ЕГЭ: русский, математика, физика", site: "https://knastu.ru/" },
-            { name: "Тихоокеанский ГУ", city: "Хабаровск", focus: "Строительство, транспорт", profile: "Технический", duration: "Бакалавриат 4 года", budget: "Да", cost: "от 90 000 ₽/год", admission: "ЕГЭ: русский, математика, физика", site: "https://pnu.edu.ru/" },
-            { name: "СВФУ", city: "Якутск", focus: "Горное дело, энергетика", profile: "Классический", duration: "Бакалавриат 4 года", budget: "Да", cost: "от 100 000 ₽/год", admission: "ЕГЭ: русский, математика, физика", site: "https://www.s-vfu.ru/" }
+            { name: "ДВФУ", city: "Владивосток", focus: "Кораблестроение, IT, энергетика", profile: "Классический", site: "https://www.dvfu.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "Комсомольский-на-Амуре ГУ", city: "Комсомольск-на-Амуре", focus: "Авиастроение, судостроение", profile: "Технический", site: "https://knastu.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "Тихоокеанский ГУ", city: "Хабаровск", focus: "Строительство, транспорт", profile: "Технический", site: "https://pnu.edu.ru/", sourceStatus: "editorial_not_verified" },
+            { name: "СВФУ", city: "Якутск", focus: "Горное дело, энергетика", profile: "Классический", site: "https://www.s-vfu.ru/", sourceStatus: "editorial_not_verified" }
         ],
         colleges: [
-            { name: "Владивостокский судостроительный колледж", city: "Владивосток", focus: "Судостроение", profile: "Судостроительный колледж", duration: "9 классов — 3 г. 10 мес., 11 классов — 2 г. 10 мес.", afterCollege: "Судостроительная специальность или вуз по действующим правилам приёма." },
-            { name: "Хабаровский техникум транспортных технологий", city: "Хабаровск", focus: "Транспорт, логистика", profile: "Техникум", duration: "9 классов — 3 г. 10 мес., 11 классов — 2 г. 10 мес.", afterCollege: "Работа в транспорте/логистике или вуз по действующим правилам приёма." },
-            { name: "Комсомольский-на-Амуре авиастроительный техникум", city: "Комсомольск-на-Амуре", focus: "Авиастроение", profile: "Авиастроительный техникум", duration: "9 классов — 3 г. 10 мес., 11 классов — 2 г. 10 мес.", afterCollege: "Авиастроение (завод Сухого) или вуз по действующим правилам приёма." }
+            { name: "Владивостокский судостроительный колледж", city: "Владивосток", focus: "Судостроение", profile: "Судостроительный колледж", sourceStatus: "editorial_not_verified" },
+            { name: "Хабаровский техникум транспортных технологий", city: "Хабаровск", focus: "Транспорт, логистика", profile: "Техникум", sourceStatus: "editorial_not_verified" },
+            { name: "Комсомольский-на-Амуре авиастроительный техникум", city: "Комсомольск-на-Амуре", focus: "Авиастроение", profile: "Авиастроительный техникум", sourceStatus: "editorial_not_verified" }
         ]
     }
 ];
