@@ -141,6 +141,15 @@ check('sitemap and AI entrypoints', () => {
  assert.ok(fs.readFileSync('index.html','utf8').includes('"@type":"DataCatalog"'),'homepage has no JSON-LD catalog');
 });
 
+check('CI cannot hide static QA failures behind tee', () => {
+ for(const filename of ['.github/workflows/site-check.yml','.github/workflows/knowledge-pages.yml']){
+  const workflow=fs.readFileSync(filename,'utf8');
+  const pipe=workflow.indexOf('node scripts/all-checks.cjs 2>&1 | tee static-qa.log');
+  assert.ok(pipe>=0,filename+' missing static QA transcript');
+  const step=workflow.slice(Math.max(0,pipe-180),pipe);
+  assert.match(step,/set -o pipefail/,filename+' masks failing static tests');
+ }
+});
 check('Pages deploy performs checkout before running local smoke script', () => {
  const workflow=fs.readFileSync('.github/workflows/knowledge-pages.yml','utf8');
  const precheck=workflow.indexOf('node scripts/build-knowledge.cjs --check');
