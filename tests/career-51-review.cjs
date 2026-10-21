@@ -15,6 +15,17 @@ assert.equal(sources.length,51);
 assert.equal(new Set(cards.map(x=>x.id)).size,51);
 assert.equal(sourceMap.size,51);
 let sequential=0;
+const revisedAudit=fs.readFileSync('audit/career-51-source-by-source-2026-10-21.md','utf8');
+assert.equal((revisedAudit.match(/^### \\d+\\. /gm)||[]).length,51,'all 51 must have separate substantive review');
+const sourceCounts={confirmed:0,hidden:0};
+for(const x of sources){
+ assert.equal(x.checkedAt,'2026-10-21',x.id+' not re-reviewed on 21 October');
+ assert.ok(['observed_21_10_2026','not_reproducible_21_10_2026'].includes(x.reviewStatus),x.id+' evidence classification missing');
+ if(x.status==='source_snapshot'){sourceCounts.confirmed++;assert.equal(x.reviewStatus,'observed_21_10_2026',x.id+' source not re-opened');}
+ else {sourceCounts.hidden++;assert.equal(x.reviewStatus,'not_reproducible_21_10_2026');assert.ok(!/Ранее в реестре стояло [\\d–]+ ₽/.test(x.notes),x.id+' suppressed salary leaked in modal note');}
+}
+assert.equal(sourceCounts.confirmed,23,'reviewed displayable evidence count changed');
+assert.equal(sourceCounts.hidden,28,'withdrawn unsupported salary count changed');
 const classes={};
 for(const card of cards){
  // Reload the same baseline checklist on EACH record; no blanket whole-file assumption.
@@ -24,6 +35,7 @@ for(const card of cards){
  assert.ok(typeof card.title==='string'&&card.title.trim().length>=4,card.id+' title');
  assert.ok(typeof card.shortDesc==='string'&&card.shortDesc.trim(),card.id+' description');
  assert.ok(card.education?.requirements?.trim(),card.id+' education');
+ assert.ok(card.education.requirements.length>=70,card.id+' education too generic following per-card review');
  assert.ok(Array.isArray(card.education?.courses)&&card.education.courses.length,card.id+' training topics');
  assert.ok(Array.isArray(card.careerGrowth)&&card.careerGrowth.length>=2,card.id+' career roles');
  assert.ok(card.careerGrowth.every(x=>typeof x.title==='string'&&x.title.trim()),card.id+' career roles incomplete');
