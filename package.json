@@ -11,7 +11,10 @@
     "test:all": "node scripts/all-checks.cjs && playwright test",
     "test:static": "node scripts/all-checks.cjs",
     "check:quality": "node scripts/build-quality.cjs --check",
-    "build:quality": "node scripts/build-quality.cjs"
+    "build:quality": "node scripts/build-quality.cjs",
+    "test:live": "node scripts/check-live-site.cjs",
+    "test:links": "node tests/external-links.cjs",
+    "test:matrix": "node scripts/all-checks.cjs && playwright test"
   },
   "devDependencies": {
     "@playwright/test": "1.56.1"
