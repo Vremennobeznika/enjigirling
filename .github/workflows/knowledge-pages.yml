@@ -20,14 +20,8 @@ jobs:
           node-version: '22'
       - name: Build machine-readable datasets
         run: node scripts/build-knowledge.cjs
-      - name: Validate generated datasets
-        run: node scripts/build-knowledge.cjs --check
-      - name: Check site assets
-        run: node tests/site-check.cjs
-      - name: Report source-evidence coverage
-        run: node scripts/audit-knowledge.cjs
-      - name: Validate claim evidence links
-        run: node scripts/check-evidence.cjs
+      - name: Run complete static QA matrix
+        run: node scripts/all-checks.cjs
       - name: Install browser test dependencies
         run: npm install --no-audit --no-fund
       - name: Install Chromium
