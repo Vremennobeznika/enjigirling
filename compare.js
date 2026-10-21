@@ -18,7 +18,7 @@ data.slice().sort((a,b)=>a.title.localeCompare(b.title,'ru')).forEach(p=>{
 });
 function evidence(p){
  const x=salaryById.get(p.id);
- if(!x||x.status!=='source_snapshot'||x.validationStatus==='adjacent_occupation_checked'||x.evidenceLevel==='adjacent_or_weak')return 'Нет сопоставимого диапазона; источник смежной профессии не переносится.';
+ if(!x||x.status!=='source_snapshot'||x.validationStatus==='adjacent_occupation_checked'||x.evidenceLevel==='adjacent_or_weak')return 'Только смежная профессия — нет сопоставимого диапазона; цифры не переносятся.';
  if(!Number.isFinite(x.rangeMinRub)||!Number.isFinite(x.rangeMaxRub))return 'Числовых данных нет';
  const range=x.rangeMinRub===x.rangeMaxRub?'Одно наблюдение '+fmt(x.rangeMinRub):fmt(x.rangeMinRub)+'–'+fmt(x.rangeMaxRub);
  return range+' ₽/мес. · '+x.region+' · '+x.checkedAt+' · '+(x.evidenceLevel==='single_observation'?'одна вакансия':'опубликованные данные')+'. Не общий рейтинг зарплат.';
