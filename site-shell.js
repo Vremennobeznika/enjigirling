@@ -3,7 +3,7 @@
 'use strict';
 function init(){
   const root=document.querySelector('.eng-calendar-root');
-  const main=document.querySelector('main.site-page');
+  const main=document.querySelector('main.site-page')||document.querySelector('main');
   if(!main)return;
   // Every page needs a stable main landmark and a keyboard skip link.
   if(!main.id) main.id='main-content';
