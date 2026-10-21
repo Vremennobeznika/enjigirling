@@ -5,10 +5,10 @@ const fs=require('node:fs');
 const crypto=require('node:crypto');
 const path=require('node:path');
 const root=path.resolve(__dirname,'..');
-const compareExact=['index.html','calendar.html','resources.html','dictionary.html','map.html','calculator.html','compare.html','processes.html','materials.html','knowledge-manifest.json','knowledge/search-index.json','knowledge/graph.json','knowledge/source-registry.json','knowledge/ai-context.md','knowledge/quality.json','llms.txt'];
+const compareExact=['knowledge-base.md','knowledge/professions.json','knowledge/materials.json','knowledge/processes.json','knowledge/dictionary.json','knowledge/salary-evidence.json','index.html','calendar.html','resources.html','dictionary.html','map.html','calculator.html','compare.html','processes.html','materials.html','knowledge-manifest.json','knowledge/search-index.json','knowledge/graph.json','knowledge/source-registry.json','knowledge/ai-context.md','knowledge/quality.json','llms.txt'];
 const digest=value=>crypto.createHash('sha256').update(value,'utf8').digest('hex');
 const base=(process.env.SITE_URL||'https://vremennobeznika.github.io/enjigirling/').replace(/\/+$/,'')+'/';
-const paths=['index.html','calendar.html','resources.html','dictionary.html','map.html','calculator.html','compare.html','processes.html','materials.html','llms.txt','knowledge-manifest.json','knowledge/search-index.json','knowledge/graph.json','knowledge/source-registry.json','knowledge/ai-context.md','knowledge/quality.json'];
+const paths=['knowledge-base.md','knowledge/professions.json','knowledge/materials.json','knowledge/processes.json','knowledge/dictionary.json','knowledge/salary-evidence.json','index.html','calendar.html','resources.html','dictionary.html','map.html','calculator.html','compare.html','processes.html','materials.html','llms.txt','knowledge-manifest.json','knowledge/search-index.json','knowledge/graph.json','knowledge/source-registry.json','knowledge/ai-context.md','knowledge/quality.json'];
 async function get(path){
  const url=new URL(path,base);
  const response=await fetch(url,{signal:AbortSignal.timeout(20000),redirect:'follow',headers:{'accept':'text/html,application/json,text/plain;q=0.9'}});
@@ -52,6 +52,13 @@ async function run(){
  assert.equal(manifest.type,'engineering-knowledge-base');
  const index=JSON.parse(files['knowledge/search-index.json']);
  assert.equal(index.recordCount,index.records.length);
+ const datasetSizes={professions:51,materials:12,processes:12,dictionary:551};
+ for(const [type,size] of Object.entries(datasetSizes)){
+  const dataset=JSON.parse(files['knowledge/'+type+'.json']);
+  assert.ok(Array.isArray(dataset.items),type+' deployed dataset missing items');
+  assert.equal(dataset.items.length,size,type+' deployed dataset has unexpected count');
+ }
+ assert.equal(Object.values(datasetSizes).reduce((a,b)=>a+b,0),index.recordCount,'deployed index and dataset totals differ');
  assert.ok(index.records.length>0,'knowledge index is empty');
  const graph=JSON.parse(files['knowledge/graph.json']);
  assert.equal(graph.edgeCount,graph.edges.length);
