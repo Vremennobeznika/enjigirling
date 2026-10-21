@@ -192,5 +192,17 @@ check('canonical URLs uniquely identify all nine sections', () => {
   assert.equal(matches[0][1],expected,page+' canonical mismatch');
  }
 });
+check('nine static nav shells prevent postpaint reparenting', () => {
+ for(const page of pages){
+  const html=fs.readFileSync(page,'utf8');
+  assert.equal(html.split('class="site-nav-wrap"').length-1,1,page+' static nav wrapper missing');
+  assert.equal(html.split('class="site-nav-toggle"').length-1,1,page+' static nav toggle missing');
+  assert.equal(html.split('id="site-main-navigation"').length-1,1,page+' stable nav identifier missing');
+  assert.ok(html.includes('<noscript>'),page+' missing no-JS navigation fallback');
+ }
+ const navigation=fs.readFileSync('navigation.js','utf8');
+ assert.ok(navigation.includes("nav.parentElement.classList.contains('site-nav-wrap')"),'JS must reuse pre-rendered wrapper');
+ assert.ok(navigation.includes("wrapper.querySelector('.site-nav-toggle')"),'JS must reuse pre-rendered toggle');
+});
 console.log('Matrix: '+count+' PASS, '+errors.length+' FAIL ('+pages.length+' pages, '+datasets.length+' datasets)');
 if(errors.length)process.exitCode=1;
