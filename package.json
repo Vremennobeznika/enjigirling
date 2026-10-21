@@ -1,0 +1,15 @@
+{
+  "name": "enjigirling-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Static engineering knowledge base checks",
+  "scripts": {
+    "test:unit": "node tests/site-check.cjs",
+    "test:browser": "playwright test",
+    "build:knowledge": "node scripts/build-knowledge.cjs",
+    "check:knowledge": "node scripts/build-knowledge.cjs --check"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1"
+  }
+}
