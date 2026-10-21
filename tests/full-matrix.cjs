@@ -13,6 +13,8 @@ check('all nine HTML pages and shared navigation', () => {
   const h = fs.readFileSync(name,'utf8');
   assert.match(h,/<title>[^<]+<\/title>/i,name+' title');
   assert.equal((h.match(/<main\b/gi)||[]).length,1,name+' main');
+  assert.ok(h.includes('class="skip-link" href="#main-content"'),name+' missing skip link');
+  assert.ok(h.includes('id="main-content"'),name+' missing main target');
   assert.equal((h.match(/class="eng-tab(?: active)?"/g)||[]).length,9,name+' navigation');
   const ids = [...h.matchAll(/\bid=["']([^"']+)["']/g)].map(x=>x[1]);
   assert.equal(ids.length,new Set(ids).size,name+' duplicate DOM id');
