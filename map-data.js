@@ -117,9 +117,9 @@ const federalDistricts = [
         ],
         colleges: [
             { name: "Международный центр компетенций — Казанский техникум информационных технологий и связи", city: "Казань", focus: "Связь, телекоммуникации", profile: "Техникум", site: "https://mck-ktits.ru/", sourceStatus: "official_source_located", sourceUrl: "https://mck-ktits.ru/основные-сведения/", verifiedScope: "Проверены официальные название и история переименований. Конкретные программы и конкурс не проверены." },
-            { name: "Самарский энергетический колледж", city: "Самара", focus: "Энергетика, электрика", profile: "Энергетический колледж", sourceStatus: "editorial_not_verified" },
-            { name: "Уфимский машиностроительный колледж", city: "Уфа", focus: "Машиностроение, сварка", profile: "Машиностроительный колледж", sourceStatus: "editorial_not_verified" },
-            { name: "Нижегородский автотранспортный техникум", city: "Нижний Новгород", focus: "Автомобильный транспорт", profile: "Техникум", sourceStatus: "editorial_not_verified" },
+            { name: "Самарский энергетический колледж", city: "Самара", focus: "Энергетика, электрика", profile: "Энергетический колледж", sourceStatus: "official_source_located", sourceUrl: "https://samaratrud.ru/employer/detail/?companyId=3014e197-f997-11e8-adb0-000c2973da2c", verifiedScope: "Региональная государственная служба занятости подтверждает наименование организации, но не образовательные программы и не приём 2026/27. Ранее связанный с учреждением sam-ek.ru сейчас ведёт на букмекерскую рекламу и не должен использоваться как сайт колледжа." },
+            { name: "Уфимский машиностроительный колледж", city: "Уфа", focus: "Машиностроение, сварка", profile: "Машиностроительный колледж", site: "https://umkufa.ru/", sourceStatus: "official_source_located", sourceUrl: "https://umkufa.ru/", verifiedScope: "Официальный сайт подтверждает название, адрес и работу колледжа в октябре 2026 года; точные программы, бюджетные места и проходные баллы не проверялись." },
+            { name: "Нижегородский автотранспортный техникум", city: "Нижний Новгород", focus: "Автомобильный транспорт", profile: "Техникум", sourceStatus: "official_source_located", sourceUrl: "https://admgor.nnov.ru/rayon/8/page/o-rajone/Uchrezhdeniya-vysshego-i-professionalnogo-obrazovaniya-", verifiedScope: "Администрация Нижнего Новгорода, список обновлён 14.04.2026, подтверждает техникум и адрес. Условия приёма 2026/27 и специальные программы не проверялись." },
             { name: "Пермский техникум промышленных технологий", city: "Пермь", focus: "Промышленные технологии", profile: "Техникум", sourceStatus: "editorial_not_verified" }
         ]
     },
@@ -160,7 +160,7 @@ const federalDistricts = [
         ],
         colleges: [
             { name: "Новосибирский техникум ж/д транспорта", city: "Новосибирск", focus: "Железнодорожный транспорт", profile: "Транспортный техникум", sourceStatus: "editorial_not_verified" },
-            { name: "Томский техникум информационных технологий", city: "Томск", focus: "IT, электроника", profile: "Техникум", sourceStatus: "editorial_not_verified" },
+            { name: "Томский техникум информационных технологий", city: "Томск", focus: "IT, электроника", profile: "Техникум", sourceStatus: "official_source_located", sourceUrl: "https://monitoring.miccedu.ru/iam/2024/_spo/inst.php?id=100738", verifiedScope: "Официальный мониторинг СПО 2024 подтверждает организацию и адрес Томск, Герцена, 18; актуальный сайт tomtit.tomsk.ru вернул 403 в этой проверке, приём 2026/27 не проверялся." },
             { name: "Кемеровский горнотехнический техникум", city: "Кемерово", focus: "Горное дело", profile: "Горнотехнический техникум", sourceStatus: "editorial_not_verified" },
             { name: "Красноярский техникум промышленного сервиса", city: "Красноярск", focus: "Аддитивные технологии, промышленный сервис", profile: "Техникум", site: "https://ktps24.ru/", sourceStatus: "official_source_located", sourceUrl: "https://ktps24.ru/", verifiedScope: "Официальный сайт подтверждает название и Красноярск; описана программа по аддитивным технологиям. Приёмные цифры не проверены." }
         ]
