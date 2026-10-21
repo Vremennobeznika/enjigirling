@@ -33,3 +33,24 @@ for(const filename of ['map.html','calculator.html']){
   for(const level of levels)expect(level).toBeGreaterThanOrEqual(2);
  });
 }
+
+for(const filename of pages){
+ test(filename+' keyboard skip link and navigation references',async({page})=>{
+  await page.goto('http://127.0.0.1:8765/'+filename);
+  await page.keyboard.press('Tab');
+  await expect(page.locator('.skip-link')).toBeFocused();
+  await expect(page.locator('.skip-link')).toHaveAttribute('href','#main-content');
+  const broken=await page.evaluate(()=>{
+   const ids=new Set(Array.from(document.querySelectorAll('[id]'),el=>el.id));
+   const failures=[];
+   for(const el of document.querySelectorAll('[aria-controls]')){
+    if(!ids.has(el.getAttribute('aria-controls')))failures.push('aria-controls: '+el.getAttribute('aria-controls'));
+   }
+   for(const el of document.querySelectorAll('label[for]')){
+    if(!ids.has(el.htmlFor))failures.push('label for: '+el.htmlFor);
+   }
+   return failures;
+  });
+  expect(broken,filename+' broken accessibility references').toEqual([]);
+ });
+}
