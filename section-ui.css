@@ -71,3 +71,14 @@
 .ai-knowledge-entry strong{display:block;font-size:var(--fs-lg);margin-bottom:6px}
 .ai-knowledge-entry p{margin:0 0 12px;line-height:1.55}
 .ai-knowledge-entry a{display:inline-block;margin:4px 16px 4px 0;color:inherit;text-decoration:underline;text-underline-offset:3px;font-weight:600}
+
+
+/* Reserve initial catalog space until the first JavaScript render completes.
+   Keeps the footer outside the first viewport and prevents large CLS spikes.
+   data-ready is set synchronously by each renderer; empty filter results
+   then use normal compact layout without an artificial blank region. */
+#calendarGrid:not([data-ready]),
+#resourcesGrid:not([data-ready]),
+#dictionaryGrid:not([data-ready]) {
+  min-height: max(75vh, 650px);
+}
