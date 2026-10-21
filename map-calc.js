@@ -7,14 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!pathSelect || !workSelect || !ageSelect || !resultValue || !resultHint) return;
 
-    // Данные по путям: срок обучения в годах
-    const PATHS = {
-        college9: { label: 'Техникум после 9 классов', years: 3.8, after: 'после 9 класса', grad: 'по окончании техникума' },
-        college11: { label: 'Техникум после 11 классов', years: 2.8, after: 'после 11 класса', grad: 'по окончании техникума' },
-        college9_uni: { label: 'Техникум → вуз', years: 3.8 + 3, after: 'после 9 класса', grad: 'по окончании вуза' },
-        unibach: { label: 'Вуз: бакалавриат', years: 4, after: 'после 11 класса', grad: 'по окончании бакалавриата' },
-        unispec: { label: 'Вуз: специалитет', years: 5.5, after: 'после 11 класса', grad: 'по окончании специалитета' },
-        unimaster: { label: 'Вуз: бакалавриат + магистратура', years: 6, after: 'после 11 класса', grad: 'по окончании магистратуры' }
+    // Примерный срок обучения, не прогноз зарплаты.
+    const PATHS={
+      college9:{label:'СПО после 9 классов',years:3+10/12},
+      college11:{label:'СПО после 11 классов',years:2+10/12},
+      college9_uni:{label:'СПО → вуз',years:3+10/12+4},
+      unibach:{label:'Бакалавриат',years:4},
+      unispec:{label:'Специалитет',years:5.5},
+      unimaster:{label:'Бакалавриат + магистратура',years:6}
     };
 
     function formatYears(years) {
@@ -41,36 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function calculate() {
-        const pathKey = pathSelect.value;
-        const workWhen = workSelect.value;
-        const age = parseFloat(ageSelect.value) || 0;
-        const path = PATHS[pathKey];
-        if (!path) return;
-
-        let total = path.years;
-        let hint = '';
-
-        // Учитываем уже пройденные годы после школы/колледжа
-        let alreadyText = '';
-        if (age > 0) {
-            total = Math.max(0, total - age);
-            alreadyText = ` Вы уже прошли ${formatYears(age)} — это вычитается из общего срока.`;
-        }
-
-        if (workWhen === 'during') {
-            const startYear = 1.5;
-            if (total <= startYear) {
-                hint = `Учиться ${formatYears(path.years)}${age > 0 ? `, осталось примерно ${formatYears(total)}` : ''}. Совмещая с работой, можно начать зарабатывать раньше окончания учёбы.${alreadyText}`;
-            } else {
-                total = Math.max(0, startYear - age);
-                hint = `Совмещая учёбу с работой, первую зарплату реально получить уже через ~1.5 года (обычно со 2-го курса). Диплом при этом позже.${alreadyText}`;
-            }
-        } else {
-            hint = `Путь: ${path.label} (${path.after}). Первая полноценная зарплата — ${path.grad}.${alreadyText}`;
-        }
-
-        resultValue.textContent = formatYears(total);
-        resultHint.textContent = hint;
+      const path=PATHS[pathSelect.value],completed=Number(ageSelect.value);
+      if(!path||!Number.isFinite(completed)||completed<0){resultValue.textContent='—';resultHint.textContent='Проверьте исходные данные.';return;}
+      resultValue.textContent=formatYears(Math.max(0,path.years-completed));
+      resultHint.textContent='Ориентир до диплома: '+path.label+'. Учитывайте уже пройденные годы, только если они относятся к выбранному маршруту. Длительность зависит от программы.'+(workSelect.value==='during'?' Совмещение работы и учёбы возможно, но срок до первой зарплаты неизвестен.':' Диплом не гарантирует трудоустройство.');
     }
 
     pathSelect.addEventListener('change', calculate);
