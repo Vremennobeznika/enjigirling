@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
       '<div class="education-card-meta"><span class="education-kind">'+(type==='uni'?'Вуз':'Колледж / техникум')+'</span><span class="education-location">'+escapeHtml(item.city)+' · '+escapeHtml(district.short)+'</span></div>'+
       '<h3>'+escapeHtml(item.name)+'</h3>'+
       '<p class="education-focus"><strong>Направления (ориентир):</strong> '+escapeHtml(item.focus||item.profile||'Не указаны')+'</p>'+
-      '<p class="education-card-status">'+(hasSource?'Есть ссылка на первоисточник':'Условия приёма не проверены')+'</p>'+
+      '<p class="education-card-status">'+(hasSource?(item.sourceType==='institution_home'?'Название сверено с сайтом':'Есть документ-источник'):'Условия приёма не проверены')+'</p>'+
       '<details class="education-card-details"><summary>Источники и ограничения</summary><dl>'+facts+'</dl>'+
       (hasSource?'<a class="education-site" href="'+escapeHtml(source)+'" rel="noopener noreferrer" target="_blank">'+(item.sourceType==='institution_home'?'Официальный сайт (название) ↗':'Первоисточник ↗')+'</a>':'')+
       (site&&site!==source?'<a class="education-site" href="'+escapeHtml(site)+'" rel="noopener noreferrer" target="_blank">Сайт из каталога ↗</a>':'<p class="education-no-link">Официальный адрес сайта не подтверждён</p>')+
