@@ -393,6 +393,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const closeModal = () => {
     setModalOpen(false);
+    // A closed dialog must not remain encoded as the active profession in the URL.
+    if (/^#profession=[a-z0-9-]+$/.test(location.hash)) {
+      history.replaceState(history.state, "", location.pathname + location.search);
+    }
     if (modalTrigger instanceof HTMLElement && modalTrigger.isConnected) modalTrigger.focus();
     modalTrigger = null;
   };
