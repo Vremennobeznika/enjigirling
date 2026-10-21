@@ -174,8 +174,10 @@ console.log('OK: shared header and footer script loaded on all nine pages');
 
 for(const page of ['resources.js','dictionary.js','materials.js','processes.js']){
  const js=fs.readFileSync(page,'utf8');
- assert.ok(js.includes('filter-status'),page+': missing result counter');
- assert.ok(js.includes('filter-reset'),page+': missing reset action');
+ // Resources controls are now static HTML to prevent layout shifts before JS renders.
+ const controls=page==='resources.js'?fs.readFileSync('resources.html','utf8'):js;
+ assert.ok(controls.includes('filter-status'),page+': missing result counter');
+ assert.ok(controls.includes('filter-reset'),page+': missing reset action');
 }
 assert.ok(fs.readFileSync('dictionary.js','utf8').includes('title.textContent=item.term'),'dictionary term must be rendered as text');
 console.log('OK: resource, dictionary and atlas search counters and reset actions');
