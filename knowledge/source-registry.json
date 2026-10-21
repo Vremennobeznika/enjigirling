@@ -58,6 +58,28 @@
       "appliesTo": "Liquid penetrant test principle; introductory educational overview",
       "access": "public_abstract_or_overview",
       "notes": "Only directly visible publication or overview has been reviewed. No full paid-standard review is claimed."
+    },
+    {
+      "sourceId": "iso-astm-52900-2021",
+      "title": "ISO/ASTM 52900:2021 — Additive manufacturing — General principles — Fundamentals and vocabulary",
+      "url": "https://www.iso.org/standard/74514.html",
+      "publisher": "International Organization for Standardization",
+      "documentDate": "2021-11",
+      "checkedAt": "2026-10-21",
+      "appliesTo": "Basic definition of additive manufacturing as successive addition of material; not process parameters or product fitness",
+      "access": "public_abstract_or_overview",
+      "notes": "Abstract and metadata inspected; full ISO publication is licensed and not asserted to have been reviewed."
+    },
+    {
+      "sourceId": "asnt-radiographic",
+      "title": "Radiographic Testing: A Foundational Method for NDT Inspections",
+      "url": "https://www.asnt.org/what-is-nondestructive-testing/methods/radiographic-testing",
+      "publisher": "American Society for Nondestructive Testing",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-21",
+      "appliesTo": "Use of X-rays or gamma rays to visualize internal conditions of components",
+      "access": "public_abstract_or_overview",
+      "notes": "The public methodological introduction was inspected; not a complete radiation safety protocol."
     }
   ],
   "recordEvidence": [
@@ -132,6 +154,30 @@
       "sourceSection": "Basic Penetrant Process; Disadvantages and Limitations of PT",
       "claimCheckedAt": "2026-10-21",
       "reviewScope": "Проверена только сформулированная выше часть описания; остальные характеристики материала или метода этим статусом не охвачены."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "additive",
+      "sourceId": "iso-astm-52900-2021",
+      "claimPath": "description",
+      "verificationStatus": "claim_checked",
+      "claimScope": "Additive manufacturing constructs 3D geometries through successive addition of material; digital input and individual layer technique not independently verified by this source",
+      "verifiedClaim": "Аддитивное производство формирует трёхмерные объекты последовательным добавлением материала.",
+      "sourceSection": "Abstract",
+      "claimCheckedAt": "2026-10-21",
+      "reviewScope": "Утверждение проверено только в приведённой формулировке. Не подтверждает конкретный технологический режим."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "radiographic",
+      "sourceId": "asnt-radiographic",
+      "claimPath": "description",
+      "verificationStatus": "claim_checked",
+      "claimScope": "Radiography visualizes internal conditions using X-rays and/or gamma rays",
+      "verifiedClaim": "Радиографический контроль использует рентгеновское или гамма-излучение для получения изображения внутренней структуры объекта.",
+      "sourceSection": "What Is Radiographic Testing and How Is It Used in NDT?",
+      "claimCheckedAt": "2026-10-21",
+      "reviewScope": "Не подтверждает допустимость условий облучения или пригодность метода для конкретной детали."
     }
   ],
   "policy": {
