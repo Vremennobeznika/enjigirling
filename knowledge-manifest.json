@@ -52,7 +52,8 @@
   ],
   "validation": {
     "status": "editorial_not_fully_verified",
-    "note": "Отдельные записи могут не иметь подтверждённых источников. Не применять как инженерную спецификацию или нормативную инструкцию."
+    "note": "Отдельные записи могут не иметь подтверждённых источников. Не применять как инженерную спецификацию или нормативную инструкцию.",
+    "auditCommand": "node scripts/audit-knowledge.cjs --json"
   },
   "jsonApi": {
     "index": "knowledge/search-index.json",
@@ -63,6 +64,7 @@
       "knowledge/dictionary.json"
     ],
     "format": "application/json",
-    "note": "Static JSON snapshots; update these when source JavaScript datasets change."
+    "note": "Static JSON snapshots; update these when source JavaScript datasets change.",
+    "graph": "knowledge/graph.json"
   }
 }
