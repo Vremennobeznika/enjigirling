@@ -32,7 +32,12 @@ const normativeScript=fs.readFileSync('script.js','utf8');
 for(const match of normativeScript.matchAll(/\burl:\s*["'](https?:\/\/[^"']+)["']/g))add(match[1],'script.js');
 for(const file of fs.readdirSync('.').filter(x=>x.endsWith('.html'))){
  const html=fs.readFileSync(file,'utf8');
- for(const m of html.matchAll(/(?:href|src)\s*=\s*["'](https?:[^"']+)["']/g))add(m[1],file);
+ // Audit navigable external links and images; preconnect hosts are not pages.
+ for(const tag of html.matchAll(/<(?:a|img)\b[^>]*>/gi)){
+  for(const m of tag[0].matchAll(/\b(?:href|src)\s*=\s*["'](https?:[^"']+)["']/gi)){
+   add(m[1].replace(/&amp;/g,'&'),file);
+  }
+ }
 }
 const results=[];
 const urls=[...links.keys()];

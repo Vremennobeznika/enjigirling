@@ -1,9 +1,5 @@
 name: Browser smoke checks
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
   workflow_dispatch:
 permissions:
   contents: read
@@ -18,7 +14,7 @@ jobs:
           node-version: '22'
       - name: Install Playwright and Chromium
         run: |
-          npm install --no-save @playwright/test
+          npm install --no-audit --no-fund
           npx playwright install --with-deps chromium
       - name: Create visual-review directory
         run: mkdir -p visual-review

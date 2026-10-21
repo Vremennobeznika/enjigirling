@@ -172,14 +172,14 @@ test('closing a deep-linked profession clears stale URL fragment',async({page})=
 });
 
 test('catalog layout placeholders are removed after rendering',async({page})=>{
- for(const [path,grid] of [
-  ['calendar.html','#calendarGrid'],
-  ['resources.html','#resourcesGrid'],
-  ['dictionary.html','#dictionaryGrid']
+ for(const [path,grid,card] of [
+  ['calendar.html','#calendarGrid','.holiday-card'],
+  ['resources.html','#resourcesGrid','.resource-card'],
+  ['dictionary.html','#dictionaryGrid','.eng-card']
  ]){
   await page.goto('/'+path);
   await expect(page.locator(grid)).toHaveAttribute('data-ready','true');
-  const rendered=await page.locator(grid).locator('.eng-card').count();
+  const rendered=await page.locator(grid).locator(card).count();
   expect(rendered,path+' content never rendered').toBeGreaterThan(0);
  }
 });
