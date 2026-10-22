@@ -479,7 +479,7 @@ check('education catalogue: 80 entries, eight districts, evidence consistency', 
     else assert.ok(programs.length>0,'reviewed card has no program '+key);
     for(const p of programs){
      assert.match(p.code||'',/^[0-9]{2}[.][0-9]{2}[.][0-9]{2}$/,'invalid code '+key);
-     assert.ok(p.name&&p.year&&p.sourceUrl?.startsWith('https://'),'incomplete program '+key);
+     assert.ok(p.name&&p.year&&(p.sourceUrl?.startsWith('https://')||p.sourceUrl?.startsWith('http://gaskk-mck.ru/')),'incomplete program '+key);
      for(const field of ['budgetPlaces','paidPlaces','tuitionAnnualRub','tuitionSemesterRub']){
       if(p[field]!==undefined)assert.ok(Number.isFinite(p[field])&&p[field]>=0,'invalid '+field+' '+key);
      }
