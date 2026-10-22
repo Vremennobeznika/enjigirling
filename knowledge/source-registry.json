@@ -239,7 +239,7 @@
       "sourceId": "atlas-industrial-filtration",
       "title": "US EPA — Drinking Water Treatment Technologies (filtration and adsorption)",
       "url": "https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies",
-      "publisher": "www.usgs.gov",
+      "publisher": "U.S. Environmental Protection Agency",
       "documentDate": "undated",
       "checkedAt": "2026-10-22",
       "appliesTo": "Частные методы разделения и водоочистки; не вся промышленная фильтрация.",
@@ -331,8 +331,8 @@
       "documentDate": "undated",
       "checkedAt": "2026-10-22",
       "appliesTo": "Проверка ограниченного общего утверждения",
-      "access": "public_abstract_or_overview",
-      "notes": "Не проверяются технологические параметры и все дефекты."
+      "access": "unreviewed_link",
+      "notes": "Архивная ссылка EPA 26 МБ не была проверена по полному содержимому; нельзя использовать для утверждения о физических принципах перегонки."
     },
     {
       "sourceId": "checked3-welding",
@@ -1535,14 +1535,11 @@
     {
       "recordType": "processes",
       "recordId": "distillation",
-      "sourceId": "checked2-distillation",
+      "sourceId": "atlas-distillation",
       "claimPath": "description",
-      "verificationStatus": "claim_checked",
-      "claimScope": "Принцип или отраслевое отнесение процесса",
-      "verifiedClaim": "Дистилляция разделяет компоненты жидкой смеси на основе различий в давлении насыщенного пара.",
-      "sourceSection": "Industrial Operations: Cleaning & Degreasing — Distillation",
-      "claimCheckedAt": "2026-10-22",
-      "reviewScope": "Проверено только приведённое утверждение, не вся карточка."
+      "verificationStatus": "source_located",
+      "claimScope": "OSHA описывает перегонку и обезвоживание этанола, а не общий закон дистилляции для всех жидких смесей.",
+      "reviewScope": "Узкий тезис о разнице давлений насыщенного пара не подтвержден ссылкой на EPA. Проверено, что OSHA описывает конкретную перегонку этанола. Вся карточка не проверена."
     },
     {
       "recordType": "processes",
