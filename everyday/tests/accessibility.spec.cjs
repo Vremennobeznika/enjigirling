@@ -14,7 +14,9 @@ test('Dark and light themes keep primary UI and finance screens readable',async(
      const panel=document.querySelector('main .page:not([hidden]) .panel');
      const primary=panel?.querySelector('button.primary')||document.querySelector('main .page:not([hidden]) button.primary');
      const norm=value=>{
-      const [r,g,b]=value.match(/\d+(?:\.\d+)?/g).slice(0,3).map(Number);
+      const color=value.trim();
+      const rgb=color.startsWith('#')?[parseInt(color.slice(1,3),16),parseInt(color.slice(3,5),16),parseInt(color.slice(5,7),16)]:color.match(/\d+(?:\.\d+)?/g).slice(0,3).map(Number);
+      const [r,g,b]=rgb;
       const scale=v=>{v/=255;return v<=.04045?v/12.92:((v+.055)/1.055)**2.4};
       return .2126*scale(r)+.7152*scale(g)+.0722*scale(b);
      };
