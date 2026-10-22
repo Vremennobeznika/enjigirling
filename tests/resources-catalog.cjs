@@ -24,8 +24,15 @@ for(const id of ['dev-github','dev-gitlab','dev-gitverse','dev-gitflic'])assert.
 for(const id of ['dev-grabcad','dev-onshape','dev-freecad','cad-kompas','cad-nanocad','cad-tflex'])assert.equal(items.find(x=>x.id===id).type,'САПР и конструирование',id+' wrong category');
 assert.ok(items.filter(x=>x.type==='Журналы' && x.topic).length>=48,'journal topics incomplete');
 const html=fs.readFileSync('resources.html','utf8'),js=fs.readFileSync('resources.js','utf8');
-for(const id of ['resourceSearch','resourceSort','resourceGridView','resourceListView','resourcesGrid','resourcesFilter','resourcesStatus','resourceReset'])assert.ok(html.includes('id="'+id+'"'),id+' UI missing');
+for(const id of ['resourceSearch','resourceSort','resourceGridView','resourceListView','resourcesGrid','resourcesFilter','resourcesStatus','resourceReset','resourceShowMore'])assert.ok(html.includes('id="'+id+'"'),id+' UI missing');
 assert.ok(js.includes('new Intl.Collator'),'alphabetical sorting missing');
 assert.ok(html.includes('class="resource-secondary-controls"'),'toolbar left-alignment missing');
 assert.ok(js.includes('resource-topic-header'),'journal topical grouping missing');
+assert.ok(js.includes('nextRendered')&&js.includes('more.addEventListener'),'progressive rendering missing');
+assert.ok(js.includes('searchTimer = setTimeout'),'search debounce missing');
+assert.ok(!/fonts\\.(?:googleapis|gstatic)\\.com/.test(html),'resource page must not require remote fonts');
+assert.ok(Buffer.byteLength(js)<=9000,'resource controller exceeds lightweight 9 KB budget');
+assert.ok(Buffer.byteLength(src)<=81920,'resource dataset exceeds lightweight 80 KiB budget');
+assert.ok(!/<script[^>]*src=["']https?:/i.test(html),'external scripts are forbidden for resource directory');
+assert.ok(html.indexOf('src="resources-data.js"')<html.indexOf('src="resources.js"'),'dataset must load before controller');
 console.log('PASS: '+items.length+' engineering resources, '+types.size+' types, preserved curated chats and channels');

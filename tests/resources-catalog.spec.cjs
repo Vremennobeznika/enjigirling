@@ -13,7 +13,9 @@ test('resources directory: categories, alphabetical sort, search, reset and list
   expect(activeColors.fg).not.toBe(activeColors.bg);
   const cards=page.locator('#resourcesGrid .resource-card');
   await expect(page.locator('#resourcesGrid')).toHaveAttribute('data-ready','true');
-  expect(await cards.count()).toBeGreaterThanOrEqual(148);
+  await expect(cards).toHaveCount(51);
+  await expect(page.locator('#resourcesGrid')).toHaveAttribute('data-matches','175');
+  await expect(page.locator('#resourceShowMore')).toBeVisible();
   await expect(page.locator('#resourcesFilter button')).toHaveCount(12);
   await expect(page.locator('.resource-topic-header')).not.toHaveCount(0);
   await page.locator('#resourcesFilter button[title="Онлайн-измерения"]').click();
@@ -33,7 +35,8 @@ test('resources directory: categories, alphabetical sort, search, reset and list
   await page.locator('#resourceSearch').fill('ISO');
   await expect(cards).toHaveCount(1);
   await page.locator('#resourceReset').click();
-  await expect(cards).toHaveCount(await page.locator('#resourcesGrid .resource-card').count());
+  await expect(cards).toHaveCount(51);
+  await expect(page.locator('#resourceShowMore')).toBeVisible();
   await page.locator('#resourceSort').selectOption('za');
   const names=await page.locator('#resourcesGrid .resource-group').first().locator('.resource-card .eng-title').allTextContents();
   expect(names[0].localeCompare(names[names.length-1],'ru')).toBeGreaterThanOrEqual(0);
@@ -43,4 +46,53 @@ test('resources directory: categories, alphabetical sort, search, reset and list
   const dimension=await page.evaluate(()=>({w:document.documentElement.scrollWidth,v:document.documentElement.clientWidth}));
   expect(dimension.w).toBeLessThanOrEqual(dimension.v+2);
   expect(errors).toEqual([]);
+});
+
+test('resources: full indexed search, progressive loading, keyboard and 320px mobile',async({page})=>{
+  const errors=[];page.on('pageerror',error=>errors.push(error.message));
+  await page.setViewportSize({width:320,height:700});
+  await page.goto('/resources.html');
+  const cards=page.locator('#resourcesGrid .resource-card');
+  const more=page.locator('#resourceShowMore');
+  await expect(cards).toHaveCount(51);
+  await expect(page.locator('#resourcesGrid .resource-group')).toHaveCount(11);
+  await expect(page.locator('#resourcesGrid .resource-group[aria-label="Дружественные каналы"] .resource-card')).toHaveCount(11);
+  await expect(page.locator('#resourcesGrid')).toHaveAttribute('data-matches','175');
+  expect(await page.locator('#resourcesGrid *').count()).toBeLessThan(900);
+  await page.locator('#resourceSearch').fill('KELIBRON');
+  await expect(cards).toHaveCount(1);
+  await expect(cards.first()).toContainText('KELIBRON');
+  await expect(more).toBeHidden();
+  await page.locator('#resourceSearch').fill('черной');
+  await expect(cards).toHaveCount(1);
+  await expect(cards.first()).toContainText('чёрной');
+  await page.locator('#resourceSearch').press('Escape');
+  await expect(cards).toHaveCount(51);
+  await expect(more).toBeVisible();
+  await more.focus();await page.keyboard.press('Enter');
+  await expect.poll(()=>cards.count()).toBeGreaterThan(51);
+  for(let i=0;i<15 && await more.isVisible();i++)await more.click();
+  await expect(more).toBeHidden();
+  await expect(cards).toHaveCount(175);
+  await expect(page.locator('#resourcesGrid')).toHaveAttribute('data-rendered','175');
+  expect(await cards.evaluateAll(els=>new Set(els.map(el=>el.href)).size)).toBe(175);
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth)).toBeLessThanOrEqual(2);
+  await page.locator('#resourceReset').click();
+  await expect(cards).toHaveCount(51);
+  for (const width of [320,375,390,768]) {
+    await page.setViewportSize({width,height:700});
+    const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);
+    expect(overflow,'horizontal overflow at '+width+' px').toBeLessThanOrEqual(2);
+  }
+  expect(errors).toEqual([]);
+});
+
+test('resources offer a readable fallback without JavaScript',async({browser})=>{
+  const context=await browser.newContext({javaScriptEnabled:false});
+  try {
+    const page=await context.newPage();
+    await page.goto('/resources.html');
+    await expect(page.locator('main noscript .eng-empty')).toContainText('Markdown');
+    await expect(page.locator('a[href="knowledge/sections/resources.md"]').first()).toBeVisible();
+  } finally { await context.close(); }
 });

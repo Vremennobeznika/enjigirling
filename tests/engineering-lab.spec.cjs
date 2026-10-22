@@ -128,10 +128,9 @@ test('sewing and marine calculators fit a slow 320px mobile layout',async({page}
 
 test('measurement lab link and extended industry calculations',async({page})=>{
  await page.setViewportSize({width:375,height:812});
- await page.goto('/calculator.html#labCaliper');
- await expect(page.locator('#caliperOutput')).toContainText('23,45 мм');
- await page.locator('#caliperValue').fill('12.35');
- await expect(page.locator('#caliperOutput')).toContainText('12,35 мм');
+ await page.goto('/calculator.html');
+ await expect(page.locator('#labCaliper')).toHaveCount(0);
+ await expect(page.locator('a[href="measurement-lab.html"]').first()).toBeVisible();
  await page.locator('#labMoreSewing > summary').click();
  await expect(page.locator('#shrinkOutput')).toContainText('3 %');
  await expect(page.locator('#layOutput')).toContainText('51 м');
@@ -152,7 +151,7 @@ test('all calculator tools sit inside seven consistent visual groups',async({pag
  ['group-production',['labProduction']],
  ['group-sewing',['labSewing','labMoreSewing']],
  ['group-marine',['labMarine','labMoreMarine']],
- ['group-measurements',['labCaliper','calcUnits']]
+ ['group-measurements',['calcUnits']]
  ];
  for(const [id,panels] of expected){
   const section=page.locator('#'+id);
