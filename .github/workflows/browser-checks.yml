@@ -1,6 +1,21 @@
 name: Browser smoke checks
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'processes.html'
+      - 'processes.js'
+      - 'processes-data.js'
+      - 'materials.js'
+      - 'materials-data.js'
+      - 'script.js'
+      - 'section-ui.css'
+      - 'tests/process-atlas.cjs'
+      - 'tests/site-functionality.spec.cjs'
+      - 'tests/site-visual.spec.cjs'
+      - 'tests/accessibility.spec.cjs'
+      - '.github/workflows/browser-checks.yml'
 permissions:
   contents: read
 jobs:
