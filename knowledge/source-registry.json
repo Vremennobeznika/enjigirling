@@ -435,14 +435,14 @@
     },
     {
       "sourceId": "atlas-source-004",
-      "title": "EPA — отраслевой обзор формования пластмасс — общий контекст; не техкарта",
-      "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT",
+      "title": "EPA 745-B-00-017 — Reporting Guidance for Rubber and Plastics Manufacturing, section 4.2.4",
+      "url": "https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf",
       "publisher": "United States Environmental Protection Agency (EPA)",
-      "documentDate": "unspecified",
+      "documentDate": "2000-05",
       "checkedAt": "2026-10-22",
-      "appliesTo": "Broad sector/process-family context; individual steps, defects and manufacturing parameters are not independently verified.",
+      "appliesTo": "Plastic-product manufacturing overview including compounding, injection, extrusion, thermoforming, calendering, rotational, compression/transfer and blow molding. Does not set product-specific process parameters.",
       "access": "public_overview_or_source_landing",
-      "notes": "Publisher landing page or public overview located; no assertion of full-standard review."
+      "notes": "Read section 4.2.4, PDF pp. 120-122, an environmental reporting guide not a shop-floor technical instruction. Official endpoint may redirect."
     },
     {
       "sourceId": "atlas-source-005",
