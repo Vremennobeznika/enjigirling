@@ -32,14 +32,29 @@
 </div>
 </nav></div>
 <main class="site-page ai-hub" id="main-content">
-<section class="ai-hub-header"><h1>Научить ИИ содержимому сайта</h1>
-<p>Каждый раздел доступен целиком в двух форматах: <strong>Markdown для загрузки в чат</strong> и <strong>JSON для автоматической обработки</strong>. Пакеты содержат тексты страниц и соответствующие записи каталогов, включая данные, которые обычно создаются JavaScript.</p>
+<section class="ai-hub-header"><h1>Передать инженерный справочник ИИ</h1>
+<p>Проверяйте доступность ссылок на остальные разделы. Для процессов и материалов используйте пакеты выше или отдельные каталоги. Доступные форматы: <strong>Markdown для загрузки в чат</strong> и <strong>JSON для автоматической обработки</strong>. Пакеты содержат тексты страниц и соответствующие записи каталогов, включая данные, которые обычно создаются JavaScript.</p>
 <div class="ai-hub-actions"><a href="knowledge/ai-context.md" download>Обзорная база для ИИ — Markdown</a><a href="knowledge/search-index.json" download>Поисковый индекс — JSON</a><a href="llms.txt">llms.txt</a><a href="knowledge-base.md">Документация</a></div>
 <p><strong>Как использовать:</strong> скачайте файл выбранного раздела, прикрепите его в чат с моделью и дайте ей запрос ниже. Если модель умеет открывать ссылки, можно передать ей адрес файла напрямую; доступность ссылок зависит от модели.</p>
 <label for="aiPrompt"><strong>Готовый запрос для нейросети</strong></label>
 <textarea class="ai-prompt" id="aiPrompt" readonly>Изучи приложенный файл ENJIGIRLING полностью. Используй его как редакционный инженерный справочник, а не как подтверждённый стандарт. При ответах указывай точную запись и источник, отделяй проверенные утверждения от непроверенных. Не выдумывай отсутствующие данные. Для расчётов, нормативов и требований безопасности перепроверяй первоисточники. Если файл неполон или не помещается в контекст, сообщи об ограничении.</textarea>
 <div class="ai-hub-actions"><button type="button" id="aiCopyPrompt">Скопировать запрос</button><span id="aiCopyStatus" role="status" aria-live="polite"></span></div>
 </section>
+<section class="ai-hub atlas-ai-hub" aria-label="Готовые отраслевые файлы для ИИ"><h2>Процессы и материалы: единая пакетная выгрузка</h2><p>Скачайте нужную отрасль целиком либо архив по всем отраслям. Файлы формируются локально из данных сайта.</p><div class="atlas-ai-pack" id="atlasAiPackage" role="group" aria-label="Единые пакеты процессов и материалов для ИИ">
+<div class="atlas-ai-pack__intro"><strong>Пакет для ИИ: процессы + материалы</strong>
+<p>Одна отрасль — один файл с обоими каталогами. Можно скачать весь атлас без повторов или ZIP со всеми 16 отраслевыми пакетами. Источники и пределы проверки сохраняются.</p></div>
+<div class="atlas-ai-pack__controls"><div class="atlas-ai-pack__fields">
+<div><label for="atlasAiSector">Отрасль пакета</label><select class="atlas-search" id="atlasAiSector"><option value="">Выберите отрасль</option><option value="all">Все отрасли — целиком без дублей</option></select></div>
+<div><label for="atlasAiScope">Состав файла</label><select class="atlas-search" id="atlasAiScope"><option value="both">Процессы + материалы</option><option value="processes">Только процессы</option><option value="materials">Только материалы</option></select></div></div>
+<div class="atlas-ai-pack__buttons">
+<button id="atlasAiMd" type="button" disabled>Markdown для чата</button>
+<button id="atlasAiJson" type="button" disabled>JSON</button>
+<button id="atlasAiJsonl" type="button" disabled>JSONL для базы</button>
+<button id="atlasAiCopy" type="button" disabled>Копировать</button>
+<button id="atlasAiZip" type="button">ZIP: все 16 отраслей</button></div>
+<p id="atlasAiStatus" class="atlas-ai-pack__status" role="status" aria-live="polite">Выберите отрасль.</p>
+<p class="atlas-ai-pack__note">ZIP создаётся прямо в браузере, без облака и платного сервиса. Для ИИ прикрепите Markdown или JSON; большие базы удобнее загружать по отраслям.</p>
+</div></div></section>
 <section aria-labelledby="aiPackTitle"><h2 id="aiPackTitle">Девять разделов — девять готовых пакетов</h2><div class="ai-hub-grid"><article class="ai-hub-card" id="pack-professions"><h2>Профессии</h2><p>51 профессия, подготовка, источники</p><div class="ai-transfer-links"><a href="knowledge/sections/professions.md" download>Скачать Markdown</a><a href="knowledge/professions.json" download>Скачать данные — JSON</a></div></article>
 <article class="ai-hub-card" id="pack-calendar"><h2>Календарь</h2><p>Инженерные даты и соответствующие профессии</p><div class="ai-transfer-links"><a href="knowledge/sections/calendar.md" download>Скачать Markdown</a><a href="calendar.html">Открыть календарь</a></div></article>
 <article class="ai-hub-card" id="pack-resources"><h2>Ресурсы</h2><p>Журналы, сообщества и справочные платформы</p><div class="ai-transfer-links"><a href="knowledge/sections/resources.md" download>Скачать Markdown</a><a href="resources.html">Открыть ресурсы</a></div></article>
@@ -68,4 +83,4 @@
             <p class="footer-copy">© 2026 — База данных профессий инженеров</p>
         </div>
     </footer>
-<script src="ai-transfer.js" defer></script><script src="theme.js" defer></script><script src="site-shell.js" defer></script><script src="navigation.js" defer></script></body></html>
+<script src="materials-data.js" defer></script><script src="processes-data.js" defer></script><script src="atlas-ai-core.js" defer></script><script src="atlas-ai-download.js" defer></script><script src="ai-transfer.js" defer></script><script src="theme.js" defer></script><script src="site-shell.js" defer></script><script src="navigation.js" defer></script></body></html>
