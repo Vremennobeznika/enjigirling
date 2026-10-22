@@ -56,7 +56,34 @@ function persist(){
  try{
   const all=sharedCalendar(),current=readShop();
   if(shoppingSnapshot!==null&&JSON.stringify(current)!==shoppingSnapshot){
-    state=load();renderPage();notice("Покупки изменились в другой вкладке. Список обновлён без перезаписи.");return false;
+    const base=JSON.parse(shoppingSnapshot);
+    const toMap=arr=>new Map(arr.filter(x=>x&&x.id!=null).map(x=>[String(x.id),x]));
+    const baseMap=toMap(base),localMap=toMap(state.shopping);
+    const originalField=(raw,item)=>{
+      if(!item)return null;
+      return {title:String(item.name||""),qty:String(item.qty||"").slice(0,30),done:!!item.done,
+        time:M.validTime(item.time)?item.time:"",remind:!!item.remind,
+        sectionId:shopSection(item.cat)};
+    };
+    let changed=false;
+    for(const x of base){
+      const original=originalField(x,x),localItem=localMap.get(String(x.id));
+      if(!localItem||["title","qty","done","time","remind"].some(k=>localItem[k]!==original[k])){changed=true;break}
+    }
+    if(localMap.size!==baseMap.size)changed=true;
+    if(changed){
+      try{localStorage.setItem("life-planner-pending-v1",JSON.stringify({format:"local-life-v2",app:C.id,data:state,exportedAt:new Date().toISOString()}))}catch{}
+      notice("Покупки изменились в другой вкладке одновременно с твоими правками. Перезапись остановлена. Несохранённое состояние скопировано отдельно в браузере.");
+      return false;
+    }
+    const currentMap=toMap(current);
+    state.shopping=current.filter(x=>x&&typeof x.name==="string").map(x=>{
+      const section=shopSection(x.cat),known=state.sections.some(s=>s.id===section&&s.type==="shopping");
+      return {id:String(x.id),sectionId:known?section:state.sections.find(s=>s.type==="shopping")?.id||"other",
+        title:String(x.name).slice(0,120),qty:String(x.qty||"").slice(0,30),done:!!x.done,
+        time:M.validTime(x.time)?x.time:"",remind:!!x.remind};
+    });
+    shoppingSnapshot=JSON.stringify(current);
   }
   const previous=new Map(current.filter(x=>x&&x.id!=null).map(x=>[String(x.id),x]));
   const canonical=state.shopping.map(item=>{
