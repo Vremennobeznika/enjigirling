@@ -57,8 +57,8 @@ for(const value of ['Красноярский техникум промышле�
 }
 
 const universityRows=entries.filter(x=>x.type==='uni');
-assert.equal(universityRows.filter(x=>x.item.siteFetchStatus==='fetched').length,28,'URL retrieval evidence changed');
-assert.equal(universityRows.filter(x=>x.item.siteFetchStatus==='not_retrieved').length,23,'uncertain URL failures changed');
+assert.equal(universityRows.filter(x=>x.item.siteFetchStatus==='fetched').length,29,'URL retrieval evidence changed');
+assert.equal(universityRows.filter(x=>x.item.siteFetchStatus==='not_retrieved').length,22,'uncertain URL failures changed');
 assert.ok(js.includes('item.siteFetchStatus'),'network check evidence should be displayed without implying confirmation');
 
 assert.ok(!entries.some(x=>x.item.name==='Калининградский технический колледж'),'closed Kaliningrad school must not be advertised');
