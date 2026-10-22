@@ -65,7 +65,7 @@ async function run(){
  assert.equal(manifest.type,'engineering-knowledge-base');
  const index=JSON.parse(files['knowledge/search-index.json']);
  assert.equal(index.recordCount,index.records.length);
- const datasetSizes={professions:51,materials:12,processes:12,dictionary:551};
+ const datasetSizes=Object.fromEntries(['professions','materials','processes','dictionary'].map(type=>[type,JSON.parse(fs.readFileSync(path.join(root,'knowledge/'+type+'.json'),'utf8')).items.length]));
  for(const [type,size] of Object.entries(datasetSizes)){
   const dataset=JSON.parse(files['knowledge/'+type+'.json']);
   assert.ok(Array.isArray(dataset.items),type+' deployed dataset missing items');
