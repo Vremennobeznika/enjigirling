@@ -680,7 +680,6 @@
       "url": "https://vremennobeznika.github.io/enjigirling/materials.html#al-6063",
       "dataset": "knowledge/materials.json",
       "relatedProcesses": [
-        "rolling",
         "cutting"
       ]
     },
@@ -797,9 +796,7 @@
       "description": "Функциональные полимерные сорбенты Синтетическая смола с функциональными группами, обменивающими ионы в водном растворе. Умягчение и целевая водоподготовка",
       "url": "https://vremennobeznika.github.io/enjigirling/materials.html#water-resin",
       "dataset": "knowledge/materials.json",
-      "relatedProcesses": [
-        "granular-filtration"
-      ]
+      "relatedProcesses": []
     },
     {
       "id": "material:ro-membrane",
