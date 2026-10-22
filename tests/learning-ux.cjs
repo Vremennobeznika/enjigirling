@@ -113,7 +113,7 @@ for(const {item} of verified){
 assert.ok(js.includes('item.verifiedPrograms')&&js.includes('programDetails'),'program evidence is rendered');
 assert.ok(js.includes('program_verified_with_access_limit'),'UI must disclose programme document fetch limitations');
 assert.ok(js.includes('item.verifiedPrograms||[]'),'program codes included in search');
-console.log('PASS: 79 programme leads structurally valid; citation presence is not fact verification');
+console.log('PASS: 80 programme leads structurally valid (not all independently verified)');
 
 assert.equal(entries.filter(x=>x.item.sourceFetchStatus==='fetched').length,77,'77 evidence pages fetched after source URL repair');
 assert.equal(entries.filter(x=>x.item.sourceFetchStatus==='fetch_failed').length,3,'3 links require retry, not deletion');
