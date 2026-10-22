@@ -289,6 +289,50 @@
       "appliesTo": "Классификация видов операций, не режимы крашения.",
       "access": "public_abstract_or_overview",
       "notes": "Проверено указанное в verifiedClaim утверждение; содержание платных стандартов целиком не проверялось."
+    },
+    {
+      "sourceId": "checked2-spinning",
+      "title": "Профильное описание Прядение",
+      "url": "https://www.osha.gov/data/sic-manual/major-group-22",
+      "publisher": "www.osha.gov",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Проверка ограниченного общего утверждения",
+      "access": "public_abstract_or_overview",
+      "notes": "Не проверяются технологические параметры и все дефекты."
+    },
+    {
+      "sourceId": "checked2-sewing",
+      "title": "Профильное описание Швейная сборка изделий",
+      "url": "https://www.osha.gov/data/sic-manual/major-group-23",
+      "publisher": "www.osha.gov",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Проверка ограниченного общего утверждения",
+      "access": "public_abstract_or_overview",
+      "notes": "Не проверяются технологические параметры и все дефекты."
+    },
+    {
+      "sourceId": "checked2-pasteurization",
+      "title": "Профильное описание Пастеризация",
+      "url": "https://www.fao.org/4/y5113e/y5113e04.htm",
+      "publisher": "www.fao.org",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Проверка ограниченного общего утверждения",
+      "access": "public_abstract_or_overview",
+      "notes": "Не проверяются технологические параметры и все дефекты."
+    },
+    {
+      "sourceId": "checked2-distillation",
+      "title": "Профильное описание Дистилляция",
+      "url": "https://www.epa.gov/system/files/documents/2021-07/pretreatment_industrial_assessments.pdf",
+      "publisher": "www.epa.gov",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Проверка ограниченного общего утверждения",
+      "access": "public_abstract_or_overview",
+      "notes": "Не проверяются технологические параметры и все дефекты."
     }
   ],
   "recordEvidence": [
@@ -517,8 +561,12 @@
       "recordId": "fermentation",
       "sourceId": "atlas-pasteurization",
       "claimPath": "description",
-      "verificationStatus": "source_located",
-      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена"
+      "verificationStatus": "claim_checked",
+      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена",
+      "verifiedClaim": "Ферментация применяется как один из способов консервирования пищевых продуктов.",
+      "sourceSection": "Preservation Methods by Chemical Action",
+      "claimCheckedAt": "2026-10-22",
+      "reviewScope": "Проверено только приведённое утверждение, не вся карточка."
     },
     {
       "recordType": "processes",
@@ -719,6 +767,174 @@
       "sourceSection": "Description for 2421",
       "claimCheckedAt": "2026-10-22",
       "reviewScope": "Подтверждено существование процесса, не его технологические режимы."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "forging",
+      "sourceId": "validated-cutting",
+      "claimPath": "description",
+      "verificationStatus": "claim_checked",
+      "claimScope": "Принцип или отраслевое отнесение процесса",
+      "verifiedClaim": "Ковка относится к формообразованию посредством пластической деформации.",
+      "sourceSection": "Shaping processes",
+      "claimCheckedAt": "2026-10-22",
+      "reviewScope": "Проверено только приведённое утверждение, не вся карточка."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "rolling",
+      "sourceId": "validated-cutting",
+      "claimPath": "description",
+      "verificationStatus": "claim_checked",
+      "claimScope": "Принцип или отраслевое отнесение процесса",
+      "verifiedClaim": "Прокатка относится к процессам формообразования металлических заготовок.",
+      "sourceSection": "Mass conserving processes",
+      "claimCheckedAt": "2026-10-22",
+      "reviewScope": "Проверено только приведённое утверждение, не вся карточка."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "stamping",
+      "sourceId": "validated-cutting",
+      "claimPath": "description",
+      "verificationStatus": "claim_checked",
+      "claimScope": "Принцип или отраслевое отнесение процесса",
+      "verifiedClaim": "Листовая штамповка входит в процессы формообразования материалов.",
+      "sourceSection": "Shaping processes",
+      "claimCheckedAt": "2026-10-22",
+      "reviewScope": "Проверено только приведённое утверждение, не вся карточка."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "grinding",
+      "sourceId": "validated-cutting",
+      "claimPath": "description",
+      "verificationStatus": "claim_checked",
+      "claimScope": "Принцип или отраслевое отнесение процесса",
+      "verifiedClaim": "Абразивное шлифование входит в процессы удаления материала.",
+      "sourceSection": "Mass reducing processes",
+      "claimCheckedAt": "2026-10-22",
+      "reviewScope": "Проверено только приведённое утверждение, не вся карточка."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "heat",
+      "sourceId": "validated-cutting",
+      "claimPath": "description",
+      "verificationStatus": "claim_checked",
+      "claimScope": "Принцип или отраслевое отнесение процесса",
+      "verifiedClaim": "Термическая обработка относится к производственным процессам изменения свойств без изменения формы.",
+      "sourceSection": "Non-shaping processes",
+      "claimCheckedAt": "2026-10-22",
+      "reviewScope": "Проверено только приведённое утверждение, не вся карточка."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "surface-finishing",
+      "sourceId": "validated-cutting",
+      "claimPath": "description",
+      "verificationStatus": "claim_checked",
+      "claimScope": "Принцип или отраслевое отнесение процесса",
+      "verifiedClaim": "Поверхностная обработка выделяется как направление производственных процессов.",
+      "sourceSection": "Non-shaping processes",
+      "claimCheckedAt": "2026-10-22",
+      "reviewScope": "Проверено только приведённое утверждение, не вся карточка."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "spinning",
+      "sourceId": "checked2-spinning",
+      "claimPath": "description",
+      "verificationStatus": "claim_checked",
+      "claimScope": "Принцип или отраслевое отнесение процесса",
+      "verifiedClaim": "Прядение является частью текстильного производства и изготовления пряжи.",
+      "sourceSection": "Industry Group 228",
+      "claimCheckedAt": "2026-10-22",
+      "reviewScope": "Проверено только приведённое утверждение, не вся карточка."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "weaving",
+      "sourceId": "checked2-spinning",
+      "claimPath": "description",
+      "verificationStatus": "claim_checked",
+      "claimScope": "Принцип или отраслевое отнесение процесса",
+      "verifiedClaim": "Ткачество формирует тканые полотна из пряжи.",
+      "sourceSection": "Major Group 22",
+      "claimCheckedAt": "2026-10-22",
+      "reviewScope": "Проверено только приведённое утверждение, не вся карточка."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "knitting",
+      "sourceId": "checked2-spinning",
+      "claimPath": "description",
+      "verificationStatus": "claim_checked",
+      "claimScope": "Принцип или отраслевое отнесение процесса",
+      "verifiedClaim": "Вязальные производства изготовляют трикотажные полотна.",
+      "sourceSection": "Industry Group 225",
+      "claimCheckedAt": "2026-10-22",
+      "reviewScope": "Проверено только приведённое утверждение, не вся карточка."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "sewing",
+      "sourceId": "checked2-sewing",
+      "claimPath": "description",
+      "verificationStatus": "claim_checked",
+      "claimScope": "Принцип или отраслевое отнесение процесса",
+      "verifiedClaim": "Швейное производство включает раскрой и соединение текстильных материалов.",
+      "sourceSection": "Major Group 23",
+      "claimCheckedAt": "2026-10-22",
+      "reviewScope": "Проверено только приведённое утверждение, не вся карточка."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "pasteurization",
+      "sourceId": "checked2-pasteurization",
+      "claimPath": "description",
+      "verificationStatus": "claim_checked",
+      "claimScope": "Принцип или отраслевое отнесение процесса",
+      "verifiedClaim": "Пастеризация является одним из методов тепловой обработки пищевых продуктов.",
+      "sourceSection": "Table 1",
+      "claimCheckedAt": "2026-10-22",
+      "reviewScope": "Проверено только приведённое утверждение, не вся карточка."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "food-drying",
+      "sourceId": "checked2-pasteurization",
+      "claimPath": "description",
+      "verificationStatus": "claim_checked",
+      "claimScope": "Принцип или отраслевое отнесение процесса",
+      "verifiedClaim": "Сушка уменьшает количество воды в пищевом продукте.",
+      "sourceSection": "Table 1",
+      "claimCheckedAt": "2026-10-22",
+      "reviewScope": "Проверено только приведённое утверждение, не вся карточка."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "food-packaging",
+      "sourceId": "checked2-pasteurization",
+      "claimPath": "description",
+      "verificationStatus": "claim_checked",
+      "claimScope": "Принцип или отраслевое отнесение процесса",
+      "verifiedClaim": "Упаковка применяется для защиты продуктов от внешних воздействий.",
+      "sourceSection": "Table 1",
+      "claimCheckedAt": "2026-10-22",
+      "reviewScope": "Проверено только приведённое утверждение, не вся карточка."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "distillation",
+      "sourceId": "checked2-distillation",
+      "claimPath": "description",
+      "verificationStatus": "claim_checked",
+      "claimScope": "Принцип или отраслевое отнесение процесса",
+      "verifiedClaim": "Дистилляция разделяет компоненты жидкой смеси на основе различий в давлении насыщенного пара.",
+      "sourceSection": "Industrial Operations: Cleaning & Degreasing — Distillation",
+      "claimCheckedAt": "2026-10-22",
+      "reviewScope": "Проверено только приведённое утверждение, не вся карточка."
     }
   ],
   "policy": {
