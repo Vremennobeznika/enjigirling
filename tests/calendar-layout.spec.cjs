@@ -15,6 +15,24 @@ test('Calendar sticky header is opaque and same-time tasks are stable',async({pa
     const overflow=await page.evaluate(()=>({client:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth}));
     expect(overflow.scroll,'horizontal overflow at '+width).toBeLessThanOrEqual(overflow.client+1);
   }
+  for(const width of [1366,650,375,320]){
+    await page.setViewportSize({width,height:780});
+    const ordinary=page.locator('#tasks .task:not(.house)').first();
+    const household=page.locator('#tasks .task.house').first();
+    const [normalBox,homeBox,normalRow,homeRow]=await Promise.all([
+      ordinary.locator('input[type=checkbox]').boundingBox(),
+      household.locator('input[type=checkbox]').boundingBox(),
+      ordinary.boundingBox(),household.boundingBox()
+    ]);
+    expect(normalBox).toBeTruthy();expect(homeBox).toBeTruthy();
+    expect(Math.abs(normalBox.x-homeBox.x),'checkboxes must share one column at '+width+'px').toBeLessThanOrEqual(1);
+    expect(normalBox.width).toBe(28);expect(homeBox.width).toBe(28);
+    expect(Math.abs(normalBox.x-normalRow.x-(homeBox.x-homeRow.x)),'identical row padding at '+width).toBeLessThanOrEqual(1);
+    for(const row of [ordinary,household]){
+      const line=await row.evaluate(el=>getComputedStyle(el).gridTemplateColumns);
+      expect(line.split(' ').length,'3-column checklist grid at '+width).toBe(3);
+    }
+  }
   const tasks=await page.locator('#tasks .task').evaluateAll(rows=>rows.map(row=>({
     time:row.querySelector('.time')?.textContent.trim(),
     label:row.querySelector('.name')?.textContent.trim(),
