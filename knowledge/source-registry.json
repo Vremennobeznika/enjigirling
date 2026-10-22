@@ -171,14 +171,14 @@
     },
     {
       "sourceId": "atlas-sewing",
-      "title": "Coats — технические дефекты швов и рекомендации для швейного производства",
-      "url": "https://www.coats.com/en/industries/composites/faqs/",
+      "title": "Coats — Solving Your Sewing Problems (stitches and seam defects)",
+      "url": "https://www.coats.com/en-us/info-hub/solving-your-sewing-problems/",
       "publisher": "www.coats.com",
       "documentDate": "undated",
       "checkedAt": "2026-10-22",
-      "appliesTo": "Обзор технологии или классификация процесса; не устанавливает режимы, критерии приёмки и допуски",
+      "appliesTo": "Классы технологических дефектов строчки; не численные критерии качества конкретного соединения.",
       "access": "public_abstract_or_overview",
-      "notes": "Ссылка просмотрена на уровне общих сведений. Достоверность конкретных режимов и дефектов этой записью не удостоверяется."
+      "notes": "Открыта техническая страница Coats о пропусках стежков, обрывах нити и посадке шва. Не заменяет норматив на конкретный шов."
     },
     {
       "sourceId": "atlas-sawmilling",
@@ -237,14 +237,14 @@
     },
     {
       "sourceId": "atlas-industrial-filtration",
-      "title": "USGS — фильтрация и разделение твёрдых частиц в водоочистке",
-      "url": "https://www.usgs.gov/water-science-school/science/water-use-questions-answers",
+      "title": "US EPA — Drinking Water Treatment Technologies (filtration and adsorption)",
+      "url": "https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies",
       "publisher": "www.usgs.gov",
       "documentDate": "undated",
       "checkedAt": "2026-10-22",
-      "appliesTo": "Обзор технологии или классификация процесса; не устанавливает режимы, критерии приёмки и допуски",
+      "appliesTo": "Частные методы разделения и водоочистки; не вся промышленная фильтрация.",
       "access": "public_abstract_or_overview",
-      "notes": "Ссылка просмотрена на уровне общих сведений. Достоверность конкретных режимов и дефектов этой записью не удостоверяется."
+      "notes": "Открыт обзор EPA. Примеры касаются водоподготовки, не всех промышленных видов фильтрации."
     },
     {
       "sourceId": "validated-cutting",
@@ -872,6 +872,72 @@
       "appliesTo": "Технические учебные ресурсы по производству хлопкового текстиля; применимость к другим волокнам и параметры конкретной ткани отдельно не проверены.",
       "access": "public_abstract_or_overview",
       "notes": "Проверена только открытая описательная часть, не текст платного стандарта."
+    },
+    {
+      "sourceId": "atlas-extra-additive-1",
+      "title": "NIST — аддитивное производство методом экструзии материала",
+      "url": "https://www.nist.gov/additive-manufacturing/research-areas/technologies/material-extrusion",
+      "publisher": "www.nist.gov",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Дополнительная ссылка в карточке additive; покрытие отдельных технических параметров не подтверждено.",
+      "access": "unreviewed_link",
+      "notes": "Зарегистрирована для прослеживаемости URL, НЕ проверена как доказательство технического тезиса."
+    },
+    {
+      "sourceId": "atlas-extra-additive-2",
+      "title": "ASTM F3489-23 — свойства полимерных изделий при экструзионной 3D-печати",
+      "url": "https://store.astm.org/f3489-23.html",
+      "publisher": "store.astm.org",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Дополнительная ссылка в карточке additive; покрытие отдельных технических параметров не подтверждено.",
+      "access": "unreviewed_link",
+      "notes": "Зарегистрирована для прослеживаемости URL, НЕ проверена как доказательство технического тезиса."
+    },
+    {
+      "sourceId": "atlas-extra-inspection-3",
+      "title": "ISO 9712:2021 — квалификация персонала",
+      "url": "https://committee.iso.org/cms/live/live/en/sites/isoorg/contents/data/standard/07/56/75614.html",
+      "publisher": "committee.iso.org",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Дополнительная ссылка в карточке inspection; покрытие отдельных технических параметров не подтверждено.",
+      "access": "unreviewed_link",
+      "notes": "Зарегистрирована для прослеживаемости URL, НЕ проверена как доказательство технического тезиса."
+    },
+    {
+      "sourceId": "atlas-extra-forging-4",
+      "title": "OSHA — определения операций ковки и объёмной штамповки",
+      "url": "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.211",
+      "publisher": "www.osha.gov",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Дополнительная ссылка в карточке forging; покрытие отдельных технических параметров не подтверждено.",
+      "access": "unreviewed_link",
+      "notes": "Зарегистрирована для прослеживаемости URL, НЕ проверена как доказательство технического тезиса."
+    },
+    {
+      "sourceId": "atlas-extra-grinding-5",
+      "title": "OSHA — опасности операций механической обработки",
+      "url": "https://www.osha.gov/metalworking-fluids/manual",
+      "publisher": "www.osha.gov",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Дополнительная ссылка в карточке grinding; покрытие отдельных технических параметров не подтверждено.",
+      "access": "unreviewed_link",
+      "notes": "Зарегистрирована для прослеживаемости URL, НЕ проверена как доказательство технического тезиса."
+    },
+    {
+      "sourceId": "atlas-extra-grinding-6",
+      "title": "OSHA — безопасность абразивного шлифования",
+      "url": "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.215",
+      "publisher": "www.osha.gov",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Дополнительная ссылка в карточке grinding; покрытие отдельных технических параметров не подтверждено.",
+      "access": "unreviewed_link",
+      "notes": "Зарегистрирована для прослеживаемости URL, НЕ проверена как доказательство технического тезиса."
     }
   ],
   "recordEvidence": [
