@@ -58,13 +58,13 @@ function notify(kind,message,revision){
   if(alert)alert.hidden=true;
  }
 }
-function applyRemote(data,revision,previous,reason){
+function applyRemote(data,revision,previous,reason,markSynced=true){
  validateData(data);
  if(!same(data,previous))backup(previous,reason,revision);
  applying=true;
  try{for(const section of SECTIONS)localStorage.setItem(DATA_KEYS[section],JSON.stringify(data[section]))}
  finally{applying=false}
- setBase(revision,data);
+ if(markSynced)setBase(revision,data);
  window.dispatchEvent(new Event("life-sync-applied"));
 }
 async function request(method,payload){
@@ -72,7 +72,8 @@ async function request(method,payload){
  if(!token||!/^https:\/\//.test(url))throw Error("Нужно запомнить ключ и HTTPS-адрес");
  const options={method,headers:{"X-Sync-Token":token},mode:"cors",credentials:"omit",cache:"no-store"};
  if(method==="PUT"){options.headers["Content-Type"]="application/json";options.body=JSON.stringify(payload)}
- const response=await fetch(url,options);
+ const ctrl=new AbortController();options.signal=ctrl.signal;const timeout=setTimeout(()=>ctrl.abort(),25000);let response;
+ try{response=await fetch(url,options)}finally{clearTimeout(timeout)}
  let value;try{value=await response.json()}catch{throw Error("Облачная функция вернула ответ, отличный от JSON")}
  if(response.status===409){const err=Error("Конфликт версий");err.code=409;throw err}
  if(!response.ok)throw Error(value.error||"HTTP "+response.status);
@@ -142,7 +143,7 @@ async function runOnce(){
   return;
  }
  if(same(merged.data,remote)){applyRemote(remote,revision,local,"Объединение изменений");conflict=false;notify("success","Изменения объединены · версия "+revision,revision);return}
- if(!same(local,merged.data)){applyRemote(merged.data,revision,local,"Объединение независимых изменений")}
+ if(!same(local,merged.data)){applyRemote(merged.data,revision,local,"Объединение независимых изменений",false)}
  await upload(revision,merged.data);
 }
 async function upload(revision,data){
