@@ -39,14 +39,7 @@
 <div class="process-control"><label for="processCategory">Тип операции</label><select class="atlas-search" id="processCategory"><option value="all">Все процессы</option><option value="forming">Формообразование и резание</option><option value="joining">Соединение и сборка</option><option value="treatment">Обработка и свойства</option><option value="inspection">Контроль</option></select></div>
 <div class="process-control"><label for="processSort">Сортировка</label><select class="atlas-search" id="processSort"><option value="default">По каталогу</option><option value="az">По названию А — Я</option><option value="za">По названию Я — А</option></select></div>
 </div><p class="process-search-help" id="processSearchHelp">Фильтры можно сочетать. Отрасль указывает основное применение, а не исключает применение в других отраслях. Источники и степень проверки указаны в карточках.</p>
-<div class="process-export" role="group" aria-label="Выгрузка выбранной отрасли для ИИ">
-<div class="process-export-heading"><strong>Выгрузка отрасли для ИИ</strong><p>Выберите конкретную отрасль в фильтре выше. Выгружаются все её процессы с источниками и пределами проверки — независимо от поиска, типа операции и количества показанных карточек.</p></div>
-<div class="process-export-actions"><p id="processExportCount" aria-live="polite">Выберите отрасль для выгрузки.</p><div class="ai-transfer-links">
-<button type="button" id="processExportMd" disabled>Markdown</button>
-<button type="button" id="processExportJson" disabled>JSON</button>
-<button type="button" id="processExportCopy" disabled>Копировать для ИИ</button>
-</div><p id="processExportStatus" class="ai-export-status" role="status" aria-live="polite"></p></div>
-</div><div class="atlas-ai-pack" id="atlasAiPackage" role="group" aria-label="Единые пакеты процессов и материалов для ИИ">
+<div class="atlas-ai-pack" id="atlasAiPackage" role="group" aria-label="Единые пакеты процессов и материалов для ИИ">
 <div class="atlas-ai-pack__intro"><strong>Пакет для ИИ: процессы + материалы</strong>
 <p>Одна отрасль — один файл с обоими каталогами. Можно скачать весь атлас без повторов или ZIP со всеми 16 отраслевыми пакетами. Источники и пределы проверки сохраняются.</p></div>
 <div class="atlas-ai-pack__controls"><div class="atlas-ai-pack__fields">
