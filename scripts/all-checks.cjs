@@ -12,6 +12,7 @@ const steps=[
  ['CAREER 51 occupation-specific government standard scopes',()=>[['node',['tests/normative-51.cjs']]]],
  ['CAREER sequential 51-card user-prompt audit',()=>[['node',['tests/career-51-review.cjs']]]],
  ['LEARNING education directory and section preservation',()=>[['node',['tests/learning-ux.cjs']]]],
+ ['PERSONAL calendar, backups, multi-device conflict safety',()=>[['node',['tests/life-sync.cjs']]]],
  ['MEASUREMENT instruments assets',()=>[['node',['tests/measurement-lab.cjs']]]],
  ['RESOURCES catalog data and accessibility',()=>[['node',['tests/resources-catalog.cjs']]]],
  ['S01-S10 S16 HTML, navigation and editorial data',()=>[['node',['tests/site-check.cjs']]]],
