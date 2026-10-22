@@ -95,8 +95,12 @@ window.engineeringProcesses = [
     "profession": "mechanical-engineer",
     "sources": [
       {
-        "title": "NIST — контроль аддитивного производства",
-        "url": "https://nvlpubs.nist.gov/nistpubs/ir/2024/NIST.IR.8538.pdf"
+        "title": "NIST — аддитивное производство методом экструзии материала",
+        "url": "https://www.nist.gov/additive-manufacturing/research-areas/technologies/material-extrusion"
+      },
+      {
+        "title": "ASTM F3489-23 — свойства полимерных изделий при экструзионной 3D-печати",
+        "url": "https://store.astm.org/f3489-23.html"
       }
     ]
   },
