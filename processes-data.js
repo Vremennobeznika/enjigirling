@@ -54,7 +54,12 @@ window.engineeringProcesses = [
       "aisi-304"
     ],
     "profession": "mechanical-engineer",
-    "sources": []
+    "sources": [
+      {
+        "title": "Sandvik Coromant — точность и качество обработки резанием",
+        "url": "https://www.sandvik.coromant.com/en-gb/tools/silent-tools/what-is-silent-tools/application-guide-silent-tools/turning-appl-guide"
+      }
+    ]
   },
   {
     "id": "heat",
@@ -223,6 +228,11 @@ window.engineeringProcesses = [
       "al-6061"
     ],
     "profession": "materials-engineer",
-    "sources": []
+    "sources": [
+      {
+        "title": "ASTM E18-25 — определение твёрдости по Роквеллу",
+        "url": "https://store.astm.org/standards/e18"
+      }
+    ]
   }
 ];
