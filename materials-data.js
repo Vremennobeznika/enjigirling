@@ -9,7 +9,9 @@ window.engineeringMaterials = [
     "uses": "Детали машин, трубная продукция",
     "process": [
       "cutting",
-      "heat"
+      "heat",
+      "casting",
+      "hardness"
     ],
     "note": "Для химического состава и механических свойств необходимо выбрать действующий стандарт на конкретный вид проката или изделия."
   },
@@ -22,7 +24,10 @@ window.engineeringMaterials = [
     "uses": "Валы, оси и другие детали машин",
     "process": [
       "cutting",
-      "heat"
+      "heat",
+      "casting",
+      "ultrasonic",
+      "hardness"
     ],
     "note": "Твёрдость и прочность без указания режима термообработки не приводятся."
   },
@@ -35,7 +40,11 @@ window.engineeringMaterials = [
     "uses": "Металлоконструкции, сварные изделия",
     "process": [
       "welding",
-      "cutting"
+      "cutting",
+      "inspection",
+      "mig-mag",
+      "ultrasonic",
+      "radiographic"
     ],
     "note": "Марка сама по себе не определяет категорию проката, ударную вязкость или режим сварки."
   },
@@ -48,7 +57,10 @@ window.engineeringMaterials = [
     "uses": "Оборудование, ёмкости, элементы конструкций",
     "process": [
       "welding",
-      "cutting"
+      "cutting",
+      "tig",
+      "radiographic",
+      "dye"
     ],
     "note": "AISI — система обозначений; сопоставление с российскими марками требует отдельной проверки по составу и стандартам."
   },
@@ -61,7 +73,11 @@ window.engineeringMaterials = [
     "uses": "Машиностроительные детали, профили",
     "process": [
       "cutting",
-      "welding"
+      "welding",
+      "mig-mag",
+      "tig",
+      "dye",
+      "hardness"
     ],
     "note": "Не переносить свойства 6061-T6 на 6061-O или на сварное соединение."
   },
