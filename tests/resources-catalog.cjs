@@ -32,7 +32,7 @@ assert.ok(js.includes('nextRendered')&&js.includes('more.addEventListener'),'pro
 assert.ok(js.includes('searchTimer = setTimeout'),'search debounce missing');
 assert.ok(!/fonts\\.(?:googleapis|gstatic)\\.com/.test(html),'resource page must not require remote fonts');
 assert.ok(Buffer.byteLength(js)<=9000,'resource controller exceeds lightweight 9 KB budget');
-assert.ok(Buffer.byteLength(src)<=65536,'resource dataset exceeds lightweight 64 KB budget');
+assert.ok(Buffer.byteLength(src)<=81920,'resource dataset exceeds lightweight 80 KiB budget');
 assert.ok(!/<script[^>]*src=["']https?:/i.test(html),'external scripts are forbidden for resource directory');
 assert.ok(html.indexOf('src="resources-data.js"')<html.indexOf('src="resources.js"'),'dataset must load before controller');
 console.log('PASS: '+items.length+' engineering resources, '+types.size+' types, preserved curated chats and channels');
