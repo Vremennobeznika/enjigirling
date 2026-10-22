@@ -142,10 +142,10 @@ test('virtual caliper and extended industry calculations',async({page})=>{
 });
 
 
-test('all calculator tools sit inside six consistent visual groups',async({page})=>{
+test('all calculator tools sit inside seven consistent visual groups',async({page})=>{
  await page.goto('/calculator.html');
  const groups=page.locator('.calculator-workshop-section');
- await expect(groups).toHaveCount(6);
+ await expect(groups).toHaveCount(7);
  const expected=[
  ['group-digital',['labIEEE','calcBases']],
  ['group-electrical',['labElectronics','calcSignal']],
@@ -179,10 +179,10 @@ test('legacy calculators open from their unchanged deep links and compute',async
  await expect(page.locator('#maResultValue')).toContainText('5');
  await expect(page.locator('#signalGuideTitle')).toBeVisible();
 });
-test('all six calculator groups have no horizontal overflow on 320px screens',async({page})=>{
+test('all seven calculator groups have no horizontal overflow on 320px screens',async({page})=>{
  await page.setViewportSize({width:320,height:720});
  await page.goto('/calculator.html');
- for(const id of ['labIEEE','calcBases','labElectronics','calcSignal','labProduction','labSewing','labMoreSewing','labMarine','labMoreMarine','labCaliper','calcUnits']){
+ for(const id of ['labIEEE','calcBases','labElectronics','calcSignal','labProduction','labPractical','labSewing','labMoreSewing','labMarine','labMoreMarine','labCaliper','calcUnits']){
   const details=page.locator('#'+id);
   await details.locator('summary').click();
   await expect(details).toHaveAttribute('open','');
