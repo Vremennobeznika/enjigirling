@@ -1,36 +1,46 @@
-/* Download calculator code only after an advanced calculator is expanded. */
+/* One small boot script. Heavy calculation engines load only when a panel is opened. */
 (function(){
 'use strict';
-const details=[...document.querySelectorAll('details[data-lab]')];
+const details=document.querySelectorAll('details[data-lab],details.calc-legacy,details.practical-lab');
 if(!details.length)return;
-let pending;
+const modules=new Map(),initialized=new WeakSet(),waiting=new WeakSet();
 function script(src){
- return new Promise((resolve,reject)=>{
-  const tag=document.createElement('script');tag.src=src;tag.onload=resolve;tag.onerror=()=>reject(Error('Не удалось загрузить '+src));
-  document.body.appendChild(tag);
- });
+ if(!modules.has(src)){
+  const promise=new Promise((resolve,reject)=>{
+   const tag=document.createElement('script');
+   tag.src=src;tag.async=true;
+   tag.addEventListener('load',resolve,{once:true});
+   tag.addEventListener('error',()=>{tag.remove();reject(Error('Не удалось загрузить '+src));},{once:true});
+   document.body.appendChild(tag);
+  }).catch(error=>{modules.delete(src);throw error});
+  modules.set(src,promise);
+ }
+ return modules.get(src);
 }
-function load(){
- if(!pending)pending=script('engineering-lab-core.js').then(()=>script('engineering-lab-ui.js')).catch(error=>{pending=null;throw error;});
- return pending;
-}
+function loadEngine(){return script('engineering-lab-core.js').then(()=>script('engineering-lab-ui.js'))}
+function loadPractical(){return script('calculator-practical-core.js').then(()=>script('calculator-practical.js'))}
+function loadLegacy(){return script('engineer-calculators.js')}
 function activate(panel){
- if(!panel.open)return;
+ if(!panel.open||initialized.has(panel)||waiting.has(panel))return;
+ waiting.add(panel);
  const status=panel.querySelector('.lab-load-status');
  if(status)status.textContent='Загрузка калькулятора…';
- load().then(()=>{
-  window.initEngineeringLab(panel.dataset.lab);
+ const isLab=panel.hasAttribute('data-lab');
+ const promise=isLab?loadEngine():panel.classList.contains('practical-lab')?loadPractical():loadLegacy();
+ promise.then(()=>{
+  if(isLab)window.initEngineeringLab(panel.dataset.lab);
+  initialized.add(panel);
   if(status)status.textContent='';
  }).catch(()=>{
-  if(status)status.textContent='Модуль не загрузился. Проверьте локальные файлы и обновите страницу.';
- });
+  if(status)status.textContent='Не удалось загрузить расчёт. Проверьте соединение и откройте этот блок ещё раз.';
+ }).finally(()=>waiting.delete(panel));
 }
 for(const panel of details)panel.addEventListener('toggle',()=>activate(panel));
 function openHash(){
- const id=decodeURIComponent(location.hash.slice(1));
+ let id;
+ try{id=decodeURIComponent(location.hash.slice(1))}catch{return}
  const panel=document.getElementById(id);
- if(!panel || !panel.matches('details.calc-lab'))return;
- if(panel&&!panel.open)panel.open=true;
+ if(panel&&panel.matches('details.calc-lab')&&!panel.open)panel.open=true;
 }
 window.addEventListener('hashchange',openHash);
 openHash();
