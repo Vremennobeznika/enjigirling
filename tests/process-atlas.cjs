@@ -9,7 +9,7 @@ const { chromium } = require('playwright');
   await page.goto('http://127.0.0.1:8765/processes.html');
   await page.locator('#processGrid[data-ready="true"]').waitFor();
   const count=await page.locator('#processGrid article.atlas-card').count();
-  if(count!==36)failures.push(width+': expected 12 cards, got '+count);
+  if(count!==36)failures.push(width+': expected 36 cards, got '+count);
   const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1);
   if(overflow)failures.push(width+': horizontal overflow');
   await page.locator('#processSearch').fill('сварка');
@@ -33,5 +33,5 @@ const { chromium } = require('playwright');
  }
  await browser.close();
  if(failures.length){console.error(failures.join('\n'));process.exit(1)}
- console.log('PASS: 36 cards, 3 viewports, search, reset, filter, 12 anchors and materials links');
+ console.log('PASS: 36 cards, 3 viewports, search, reset, filter, 36 anchors and materials links');
 })().catch(e=>{console.error(e);process.exit(1)});
