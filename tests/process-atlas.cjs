@@ -31,6 +31,25 @@ const { chromium } = require('playwright');
   if(!['casting','rolling','surface-finishing','assembly','pasteurization','food-drying','fermentation','food-packaging','spinning','weaving','knitting','textile-finishing','sewing','sawmilling','wood-drying','pcb-assembly','electronic-inspection','chemical-mixing','distillation','industrial-filtration'].includes(id) && links===0) failures.push(id+': no material links');
   await page.close();
  }
+ // Regression checks for linked search and corrected process classification.
+ {
+  const page=await browser.newPage({viewport:{width:390,height:844}});
+  await page.goto('http://127.0.0.1:8765/processes.html');
+  await page.locator('#processGrid[data-ready="true"]').waitFor();
+  await page.locator('#processSearch').fill('09г2с');
+  if(await page.locator('#processGrid #welding').count()!==1)failures.push('linked material search: 09Г2С');
+  await page.locator('.filter-reset').click();
+  await page.locator('#processSearch').fill('механик');
+  if(await page.locator('#processGrid #welding').count()!==1)failures.push('linked profession search: механик');
+  await page.locator('.filter-reset').click();
+  await page.locator('#processCategory').selectOption('forming');
+  if(await page.locator('#processGrid #grinding').count()!==1)failures.push('grinding should be categorized under material removal');
+  await page.locator('.filter-reset').click();
+  if(await page.locator('#processGrid .process-step-list').count()!==36)failures.push('steps should be structured in all cards');
+  const misleading=await page.locator('#processGrid a').evaluateAll(nodes=>nodes.filter(a=>/Проверенный источник для|Техническое описание процесса/.test(a.textContent)).length);
+  if(misleading)failures.push('misleading placeholder source labels remain');
+  await page.close();
+ }
  await browser.close();
  if(failures.length){console.error(failures.join('\n'));process.exit(1)}
  console.log('PASS: 36 cards, 3 viewports, search, reset, filter, 36 anchors and materials links');
