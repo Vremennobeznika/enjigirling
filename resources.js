@@ -17,9 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const order = ['Журналы', 'САПР и конструирование', 'Разработка ПО', 'Инструменты и симуляторы', 'Онлайн-измерения', 'Форумы', 'Научные базы и справочники', 'Стандарты и метрология', 'Обучение и курсы', 'Дружественные каналы', 'Чаты в Telegram'];
   const labels = {'Разработка ПО':'Код и Git', 'САПР и конструирование':'САПР и КБ', 'Инструменты и симуляторы':'Симуляторы', 'Онлайн-измерения':'Измерения онлайн', 'Научные базы и справочники':'Библиотеки', 'Стандарты и метрология':'Стандарты', 'Обучение и курсы':'Курсы', 'Дружественные каналы':'Каналы', 'Чаты в Telegram':'Чаты'};
   const journalTopics = ['Машиностроение и САПР','Автоматизация и электроника','Материалы, контроль и измерения','Энергетика, строительство и транспорт','Пищевая и лёгкая промышленность','Наука и образование'];
-  const htmlEsc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  const htmlEsc = value => String(value == null ? '' : value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
   const normalize = value => String(value ?? '').toLocaleLowerCase('ru-RU').replace(/ё/g,'е').replace(/\s+/g,' ').trim();
-  const collator = new Intl.Collator('ru-RU', {numeric:true, sensitivity:'base'});
+  const collator = typeof Intl !== 'undefined' && Intl.Collator ? new Intl.Collator('ru-RU', {numeric:true, sensitivity:'base'}) : {compare:(a,b) => String(a).localeCompare(String(b))};
   const index = items.map(item => ({item, terms:normalize([item.name,item.desc,item.type,item.topic || '',item.tags || ''].join(' '))}));
   const counts = new Map();
   items.forEach(item => counts.set(item.type, (counts.get(item.type) || 0) + 1));
