@@ -11,16 +11,48 @@ p{margin:5px 0;color:var(--muted)}.sub{font-size:13px;color:var(--muted)}header{
 .card{border:1px solid var(--line);background:var(--box);border-radius:17px;padding:16px;min-width:0}.card.full{grid-column:1/-1}.number{font-size:28px;font-weight:750;font-variant-numeric:tabular-nums}.head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
 .link{border:1px solid #666;border-radius:10px;padding:8px 10px;font-size:13px;color:#eee;display:inline-flex;align-items:center;min-height:38px}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
 .bar{height:5px;border-radius:6px;overflow:hidden;background:#383838;margin:12px 0}.bar>div{height:100%;background:#ddd;transition:width .2s}
-input,select,button{font:inherit}input,select{background:#101010;border:1px solid #656565;color:#fff;border-radius:10px;padding:11px;min-width:0}form{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.grow{flex:1 1 170px}.short{flex:0 1 115px;max-width:180px}.btn{background:#eee;color:#101010;border:1px solid #eee;border-radius:10px;padding:11px 13px;font-weight:700;cursor:pointer}.btn.soft{background:#242424;color:#eee;border-color:#575757;font-weight:500}.btn:disabled{opacity:.45;cursor:not-allowed}
+input,select,button{font:inherit}input,select{background:#101010;border:1px solid #656565;color:#fff;border-radius:10px;padding:11px;min-width:0}form{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.grow{flex:1 1 170px;min-width:0}.short{flex:0 1 115px;max-width:180px}
+#taskForm,#pantryForm,#cloudForm{display:grid;align-items:stretch;gap:8px;margin:14px 0}
+#taskForm{grid-template-columns:minmax(0,1fr) minmax(100px,128px) minmax(105px,135px) auto}
+#pantryForm{grid-template-columns:minmax(0,1fr) minmax(100px,125px) auto}
+#cloudForm{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr) auto}
+#taskForm>*,#pantryForm>*,#cloudForm>*{min-width:0;max-width:none;width:100%;height:auto;min-height:44px}
+#taskForm>.btn,#pantryForm>.btn,#cloudForm>.btn{white-space:nowrap}.btn{background:#eee;color:#101010;border:1px solid #eee;border-radius:10px;padding:11px 13px;font-weight:700;cursor:pointer}.btn.soft{background:#242424;color:#eee;border-color:#575757;font-weight:500}.btn:disabled{opacity:.45;cursor:not-allowed}
 .list{margin:0;padding:0;list-style:none}.item{display:flex;align-items:center;gap:10px;border-top:1px solid #363636;padding:11px 0;min-height:48px}
 .item input[type=checkbox]{accent-color:#ddd;width:23px;height:23px;flex:none;cursor:pointer}
 .item .text{flex:1;overflow-wrap:anywhere;min-width:0}.item.done .text{text-decoration:line-through;color:#888}
 .mini{font-size:12px;color:#999}.delete{background:transparent;border:0;color:#aaa;font-size:23px;cursor:pointer;padding:4px}
 .empty{color:#888;font-size:13px;padding:10px 0}.status{font-size:13px;min-height:20px;color:#bbb;margin-top:7px;white-space:pre-wrap}
-details{border:1px solid var(--line);background:var(--box);border-radius:17px;padding:16px;margin-top:12px}summary{cursor:pointer;font-weight:600;list-style:auto}
+details{border:1px solid var(--line);background:var(--box);border-radius:17px;padding:0;margin-top:12px;overflow:hidden;min-width:0}
+details>summary{cursor:pointer;font-size:16px;font-weight:650;list-style:none;display:flex;align-items:center;gap:10px;padding:17px 16px;min-height:54px;outline-offset:-3px;overflow-wrap:anywhere}
+details>summary::-webkit-details-marker{display:none}
+details>summary::marker{content:""}
+details>summary::before{content:"";width:9px;height:9px;flex:0 0 9px;border-right:2px solid #ddd;border-bottom:2px solid #ddd;transform:rotate(-45deg);transition:transform .15s}
+details[open]>summary::before{transform:rotate(45deg)}
+details[open]>summary{border-bottom:1px solid var(--line)}
+details>summary:hover{background:#242424}
+details>summary:focus-visible{outline:2px solid #eee;border-radius:13px}
+.cloud-body{padding:16px;min-width:0}
+.cloud-body>.sub:first-child{margin-top:0}
 .warn{font-size:12px;color:#bbb;padding-top:12px}
 .remember{display:flex;align-items:center;gap:9px;color:#eee;font-size:14px;cursor:pointer;margin:4px 0 6px}.remember input[type=checkbox]{width:20px;height:20px;min-width:20px;padding:0;accent-color:#eee;cursor:pointer}
-@media(max-width:530px){main{padding:17px 12px 85px}.grid{grid-template-columns:1fr}h1{font-size:27px}.number{font-size:26px}.short{flex:1 1 90px}.card{padding:14px}}
+@media(max-width:660px){
+ main{padding:17px 12px 85px}
+ .grid{grid-template-columns:1fr}
+ h1{font-size:27px}.number{font-size:26px}.card{padding:14px}
+ #taskForm{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+ #taskName{grid-column:1/-1}
+ #taskForm>.btn{grid-column:1/-1}
+ #pantryForm{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+ #pantryName{grid-column:1/-1}
+ #cloudForm{grid-template-columns:minmax(0,1fr)}
+ details>summary{padding:15px 14px}
+ .cloud-body{padding:14px}
+}
+@media(max-width:340px){
+ #taskForm,#pantryForm{grid-template-columns:minmax(0,1fr)}
+ #taskForm>*,#pantryForm>*{grid-column:1/-1}
+}
 </style></head><body><main>
 <header><div><h1>Сегодня</h1><p id="date"></p></div><span class="tag" id="mode">Локальный режим</span></header>
 <div class="grid">
@@ -40,6 +72,7 @@ details{border:1px solid var(--line);background:var(--box);border-radius:17px;pa
 <div class="actions"><button class="btn soft" id="backup" type="button">Скачать копию</button><button class="btn soft" id="restore" type="button">Восстановить</button><input id="backupFile" type="file" hidden accept=".json,application/json"></div><p class="warn">В копию входят отметки календаря, покупки, задачи, домашние запасы и журнал 72 растений. Можно восстановить и обычный экспорт, и файл «Скачать защитные копии». При восстановлении автосинхронизация отключается, чтобы избежать перезаписи.</p></section>
 </div>
 <details id="cloudPanel"><summary>Облачная синхронизация · подключение Yandex Cloud</summary>
+<div class="cloud-body">
 <p class="sub">База YDB и облачная функция уже созданы. Для синхронизации нужны правильный личный ключ и рабочий доступ функции к базе. Пока проверка не пройдена, данные остаются в браузере.</p>
 <form id="cloudForm"><input class="grow" id="endpoint" type="url" placeholder="HTTPS-адрес Cloud Function" aria-label="URL синхронизации" autocomplete="url"><input class="grow" id="syncToken" type="password" placeholder="Секрет синхронизации" aria-label="Секрет синхронизации" autocomplete="off"><button class="btn soft" type="submit">Применить</button></form>
 <label class="remember" for="rememberKey"><input id="rememberKey" type="checkbox"> Запомнить ключ на этом устройстве</label>
@@ -48,6 +81,7 @@ details{border:1px solid var(--line);background:var(--box);border-radius:17px;pa
 <p class="sub">На личном устройстве ключ останется после закрытия вкладки. Не включай на чужом компьютере: ключ хранится в браузере без дополнительного шифрования.</p>
 <div class="actions"><button class="btn soft" id="pull" type="button">Получить из облака</button><button class="btn soft" id="push" type="button">Отправить в облако</button><button class="btn soft" id="recovery" type="button">Скачать защитные копии</button><button class="btn soft" id="disconnect" type="button">Отключить</button></div><div class="status" id="cloudStatus" role="status">Облако пока не подключено.</div>
 <p class="warn">При включённой автоматической синхронизации изменения отправляются в YDB, а более новые данные загружаются при открытии и возвращении на сайт. Конфликты блокируются, а защитные копии сохраняются в браузере. Ручные кнопки остаются. Если появилась ошибка подключения, проверь <a class="link" href="https://console.yandex.cloud/folders/b1gb2bfrust2n5nnbk30/functions/functions/d4ed26vrlmb1uk22m3b7/editor" target="_blank" rel="noopener noreferrer">версию и сервисный аккаунт</a>, затем <a class="link" href="https://console.yandex.cloud/folders/b1gb2bfrust2n5nnbk30/functions/functions/d4ed26vrlmb1uk22m3b7/overview" target="_blank" rel="noopener noreferrer">доступ на вкладке «Обзор»</a>. Публичный вызов функции возможен только с дополнительным контролем расходов: неизвестные запросы тоже могут потреблять квоты. Данные сохраняются локально; ключ можно запомнить на личном устройстве. В GitHub он не отправляется.</p>
+</div>
 </details>
 <p class="warn">Код этой страницы публичен, но твои списки не публикуются в GitHub. Хранилище браузера может быть очищено; регулярно сохраняй копию.</p>
 </main><script src="../calendar/household.js"></script><script>
