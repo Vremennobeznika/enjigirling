@@ -1,0 +1,41 @@
+name: Ordinary Day — standalone app QA
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'everyday/**'
+      - '.github/workflows/everyday-qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ordinary-day-qa-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  unit-and-browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Data model, syntax and security checks
+        run: |
+          node --check everyday/model.js
+          node --check everyday/app.js
+          node --check everyday/sw.js
+          node everyday/tests/model.test.cjs
+      - name: Install Playwright
+        run: npm install --no-audit --no-fund
+      - name: Install Chromium
+        run: npx playwright install chromium
+      - name: Test public app in Chromium including mobile widths
+        run: npx playwright test --config everyday/playwright.config.cjs
+      - name: Save screenshots and traces if tests fail
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ordinary-day-ui-failures
+          path: test-results/
+          if-no-files-found: ignore
