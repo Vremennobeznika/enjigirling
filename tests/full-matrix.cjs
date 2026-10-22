@@ -298,14 +298,18 @@ check('independent lazy engineering calculators and original tools preserved', (
  for(const id of ['labIEEE','labElectronics','ieeeFormat','ieeeMode','ieeeInput','ieeeBits','ohmMode','dividerU','rcR','toleranceRows','modbusFirst','modbusSecond']){
   assert.ok(html.includes('id="'+id+'"'),'calculator missing '+id);
  }
- for(const src of ['engineer-calculators.js','calculator-loader.js','calculator-lab.css'])
-  assert.ok(html.includes('src="'+src+'"')||html.includes('href="'+src+'"'),'missing calculator asset '+src);
+ for(const src of ['calculator-loader.js','calculator-lab.css'])
+  assert.ok(html.includes('src="'+src+'"')||html.includes('href="'+src+'"'),'missing calculator boot/style '+src);
+ assert.ok(!html.includes('src="engineer-calculators.js"'),'legacy engine must not block initial page load');
+ assert.ok(!html.includes('src="calculator-practical.js"'),'practical calculator must load only when opened');
  assert.doesNotMatch(html,/<script src="(?:data|salary-sources)\.js"/,'calculator downloads unused salary data');
  for(const id of ['convCategory','numInput','maCurrent','maResultValue'])
   assert.ok(html.includes('id="'+id+'"'),'existing calculator removed: '+id);
  const loader=fs.readFileSync('calculator-loader.js','utf8');
  assert.ok(loader.includes("panel.addEventListener('toggle'"),'advanced code should be lazy');
  assert.ok(loader.includes("script('engineering-lab-core.js')"),'math engine must load on demand');
+ assert.ok(loader.includes("script('engineer-calculators.js')"),'legacy engine must load on demand');
+ assert.ok(loader.includes("script('calculator-practical-core.js')"),'practical engine must load on demand');
  const core=fs.readFileSync('engineering-lab-core.js','utf8');
  assert.ok(core.includes('DataView'),'float implementation must operate on actual bits');
  assert.ok(core.includes('roundEven'),'half precision must use ties-to-even');
