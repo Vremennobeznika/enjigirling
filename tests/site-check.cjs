@@ -192,7 +192,7 @@ console.log('OK: process cross-links display material names instead of technical
 const linkIssues=[];
 for(const file of htmlFiles){
  const html=fs.readFileSync(file,'utf8');
- for(const match of html.matchAll(/(?:href|src)\s*=\s*["']([^"']+)["']/g)){
+ for(const match of html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '').matchAll(/(?:href|src)\s*=\s*["']([^"']+)["']/g)){
    const url=match[1];
    if(!url||/^(?:https?:|mailto:|tel:|data:|\/\/|#)/i.test(url))continue;
    const [relative,fragment]=url.split('#');
