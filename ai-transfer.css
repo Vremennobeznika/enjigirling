@@ -32,3 +32,27 @@
 .process-export-actions .ai-transfer-links button:focus-visible{outline:3px solid var(--text-primary);outline-offset:3px}
 .process-export-actions .ai-export-status{min-height:1em;margin-top:8px!important}
 @media(max-width:550px){.process-export{padding:12px}.process-export-actions .ai-transfer-links button{flex:1 1 125px}}
+
+/* Material directory: responsive industry filters and contextual export. */
+.material-controls{margin:20px 0 18px;max-width:100%;box-sizing:border-box}
+.material-toolbar{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;align-items:end}
+.material-control{min-width:0;display:flex;flex-direction:column;gap:6px}
+.material-control label{font:600 13px/1.4 var(--font);color:var(--card-text)}
+.material-control .atlas-search{box-sizing:border-box;display:block;width:100%;max-width:100%;min-height:44px}
+.material-controls>.process-search-help{margin:12px 0!important}
+.material-export{box-sizing:border-box;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:16px;align-items:start;padding:15px 16px;border:1px solid var(--card-border);border-radius:12px;background:var(--soft-bg);color:var(--card-text)}
+.material-export strong{font:700 15px/1.4 var(--font)}
+.material-export p{margin:4px 0 8px!important;color:var(--card-muted);font:400 12px/1.6 var(--font)}
+.material-export-actions .ai-transfer-links{display:flex;flex-wrap:wrap;gap:8px}
+.material-export-actions button{box-sizing:border-box;border:1px solid var(--card-border);border-radius:9px;min-height:42px;padding:9px 12px;background:var(--card-bg);color:var(--card-text);font:600 13px var(--font);cursor:pointer}
+.material-export-actions button:disabled{opacity:.45;cursor:not-allowed}
+.material-export-actions button:hover:not(:disabled){border-color:var(--text-primary)}
+.material-export-actions button:focus-visible,.material-control .atlas-search:focus-visible{outline:3px solid var(--text-primary);outline-offset:3px}
+.material-card-meta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;font:600 12px/1.5 var(--font);color:var(--card-muted)}
+.material-card-meta a{color:var(--card-text);text-decoration:none}
+.material-references{margin:12px 0;min-width:0}
+.material-references summary{cursor:pointer}
+.material-references a,.material-process-links a{overflow-wrap:anywhere}
+.material-references li{padding:3px 0}
+@media(max-width:950px){.material-toolbar{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.material-toolbar{grid-template-columns:1fr}.material-export{grid-template-columns:1fr}.material-export-actions button{flex:1 1 124px}}
