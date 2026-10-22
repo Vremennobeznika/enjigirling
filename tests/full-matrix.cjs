@@ -350,7 +350,7 @@ check('fabric and maritime calculators have groups, sources and independent form
  const html=fs.readFileSync('calculator.html','utf8');
  for(const name of ['Цифровые данные','Электротехника','Производство','Швейное дело','Море и суда','Единицы'])assert.ok(html.includes(name),'missing group '+name);
  for(const id of ['labSewing','labMarine','markerArea','fabricLength','threadSeam','lineGood','passageNm','fuelNm','hullLwl','draftMass'])assert.ok(html.includes('id="'+id+'"'),'missing calculator '+id);
- for(const source of ['coats.com/en/info-hub/thread-consumption-guide/','oceanservice.noaa.gov/facts/nautical-mile-knot.html','tc.canada.ca/sites/default/files/migrated/tp14609e.pdf'])
+ for(const source of ['coats.com/en/info-hub/thread-consumption-guide/','oceanservice.noaa.gov/facts/nautical-mile-knot.html','tc.canada.ca/en/marine-transportation/publications/tp-14609-study-guide-applicants-fourth-class-engineer-certificate-stcw-endorsement'])
   assert.ok(html.includes(source),'missing source '+source);
  const core=fs.readFileSync('engineering-lab-core.js','utf8');
  const ui=fs.readFileSync('engineering-lab-ui.js','utf8');
