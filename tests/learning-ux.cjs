@@ -114,7 +114,7 @@ assert.ok(js.includes('item.verifiedPrograms')&&js.includes('programDetails'),'p
 assert.ok(js.includes('item.verifiedPrograms||[]'),'program codes included in search');
 console.log('PASS: 63 program-cited entries with a period, source URL and bounded numbers (not independent fact-check)');
 
-assert.equal(entries.filter(x=>x.item.sourceFetchStatus==='fetched').length,75,'75 evidence pages fetched after admissions URL repair');
-assert.equal(entries.filter(x=>x.item.sourceFetchStatus==='fetch_failed').length,5,'5 links require retry, not deletion');
+assert.equal(entries.filter(x=>x.item.sourceFetchStatus==='fetched').length,77,'77 evidence pages fetched after source URL repair');
+assert.equal(entries.filter(x=>x.item.sourceFetchStatus==='fetch_failed').length,3,'3 links require retry, not deletion');
 for(const row of entries)assert.equal(row.item.sourceFetchCheckedAt,'2026-10-22',row.item.name+': absent network audit date');
 assert.ok(js.includes('item.sourceFetchStatus'),'UI must expose URL fetch result to readers');
