@@ -22,6 +22,9 @@ for(const e of records){
 function day(n,year){const e=records.find(x=>x.name.includes(n));assert.ok(e,'missing '+n);const d=c.resolveDate(year,e);return d.day+'-'+(d.monthIndex+1)}
 const expected=[["День программиста",2024,"12-9"],["День программиста",2025,"13-9"],["День программиста",2028,"12-9"],["День строителя",2026,"9-8"],["День сварщика",2026,"29-5"],["День работников нефтяной",2026,"6-9"],["День работников атомной",2026,"28-9"],["День работников дорожного",2026,"18-10"],["День архитектора (Россия)",2026,"6-7"]];
 for(const [name,year,want] of expected)assert.equal(day(name,year),want,name);
+assert.equal(day('радиоэлектронной борьбе',2026),'15-4');
+assert.equal(records.find(x=>x.name==='День сварщика').since,2025);
+assert.equal(records.find(x=>x.name==='День архитектора (Россия)').since,2025);
 const page=fs.readFileSync('calendar.html','utf8');
 for(const token of ['src="calendar-data.js"','id="yearFilter"','aria-live="polite"','aria-pressed'])assert.ok(page.includes(token),token);
 assert.ok(records.length>=55,'event loss');
