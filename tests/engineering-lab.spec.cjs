@@ -189,3 +189,38 @@ test('all seven calculator groups have no horizontal overflow on 320px screens',
   await details.locator('summary').click();
  }
 });
+
+// High-risk display regression: a zero-speed vector must never masquerade as 000°.
+test('maritime vector cancellation has no fictitious course',async({page})=>{
+ await page.goto('/calculator.html#labMoreMarine');
+ await expect(page.locator('#currentOutput')).toContainText('10,198');
+ await page.locator('#currentShip').fill('10');
+ await page.locator('#currentCourse').fill('90');
+ await page.locator('#currentKnots').fill('10');
+ await page.locator('#currentDir').fill('270');
+ await expect(page.locator('#currentOutput')).toContainText('не определяется');
+ await page.locator('#currentDir').fill('361');
+ await expect(page.locator('#currentOutput')).toContainText('0–360');
+ await page.locator('#currentDir').fill('0');
+ await expect(page.locator('#currentOutput')).toContainText('уз');
+});
+test('fuel, loading and NE43 cases are visibly refused rather than showing false readings',async({page})=>{
+ await page.setViewportSize({width:320,height:720});
+ await page.goto('/calculator.html#labMarine');
+ await expect(page.locator('#fuelOutput')).toContainText('120 л');
+ await page.locator('#fuelRate').fill('0');
+ await expect(page.locator('#fuelOutput')).toContainText('положительным');
+ await page.locator('#fuelRate').fill('24');
+ await expect(page.locator('#fuelOutput')).toContainText('120 л');
+ await page.locator('#draftDensity').fill('0');
+ await expect(page.locator('#draftOutput')).toContainText('положительным');
+ await page.goto('/calculator.html#calcSignal');
+ await page.locator('#maCurrent').fill('3.6');
+ await expect(page.locator('#maResultValue')).toContainText('сигнал отказа');
+ await expect(page.locator('#maValue')).toHaveValue('');
+ await page.locator('#maCurrent').fill('4');
+ await expect(page.locator('#maResultValue')).toContainText('4');
+ await page.locator('#maCurrent').fill('21');
+ await expect(page.locator('#maResultValue')).toContainText('сигнал отказа');
+ await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2)).toBeTruthy();
+});
