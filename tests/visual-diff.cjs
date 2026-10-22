@@ -2,9 +2,9 @@
 const {chromium}=require('@playwright/test');
 const {PNG}=require('pngjs');
 const fs=require('node:fs');
-// calendar.html intentionally changed; its dedicated Playwright tests validate the new UI.
-// Compare all other sections to ensure no cross-site visual regressions.
-const pages=['index.html','resources.html','dictionary.html','map.html','calculator.html','compare.html','processes.html','materials.html'];
+// Calendar, resources and calculator pages intentionally changed; their dedicated browser tests validate functionality.
+// Compare unaffected sections against main to detect cross-site visual regressions.
+const pages=['index.html','dictionary.html','map.html','compare.html','processes.html','materials.html'];
 (async()=>{
  const browser=await chromium.launch({headless:true});
  let failures=[];
@@ -43,5 +43,5 @@ const pages=['index.html','resources.html','dictionary.html','map.html','calcula
   }
  }finally{await browser.close();}
  if(failures.length){console.error('Visual differences over tolerance:\n'+failures.join('\n'));process.exitCode=1;}
- else console.log('PASS: 32 unchanged-section comparisons against main; calendar covered by browser tests');
+ else console.log('PASS: 24 unaffected-section comparisons against main; intentionally edited sections covered by browser tests');
 })().catch(e=>{console.error(e);process.exitCode=1;});
