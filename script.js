@@ -240,15 +240,18 @@ function renderRelatedTechnology(profession) {
   const processes = (window.engineeringProcesses || []).filter(x => x.profession === profession.id);
   if (!processes.length) return "";
   const materials = new Map((window.engineeringMaterials || []).map(x => [x.id, x]));
-  const processLinks = processes.map(x =>
-    '<a href="processes.html#' + encodeURIComponent(x.id) + '">' + escapeHTML(x.name) + '</a>'
-  ).join("");
+  const processLink = x => '<a href="processes.html#' + encodeURIComponent(x.id) + '">' + escapeHTML(x.name) + '</a>';
+  const processLinks = processes.slice(0, 12).map(processLink).join("");
+  const extraProcesses = processes.length > 12
+    ? '<details class="related-more"><summary>Ещё ' + (processes.length - 12) + ' процессов</summary><div class="technology-links">' +
+      processes.slice(12).map(processLink).join("") + '</div></details>'
+    : '';
   const materialIds = [...new Set(processes.flatMap(x => x.materials || []))];
   const materialLinks = materialIds.filter(id => materials.has(id)).map(id =>
     '<a href="materials.html#' + encodeURIComponent(id) + '">' + escapeHTML(materials.get(id).name) + '</a>'
   ).join("");
   return '<p class="data-quality-note">Связи в справочнике редакционные и не являются подтверждением допусков, режимов обработки или требований безопасности.</p>' +
-    '<p class="sub-label">Процессы</p><div class="technology-links">' + processLinks + '</div>' +
+    '<p class="sub-label">Процессы (' + processes.length + ')</p><div class="technology-links">' + processLinks + '</div>' + extraProcesses +
     (materialLinks ? '<p class="sub-label">Материалы</p><div class="technology-links">' + materialLinks + '</div>' : "");
 }
 
