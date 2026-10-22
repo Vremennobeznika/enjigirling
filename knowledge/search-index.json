@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "language": "ru",
   "generatedFrom": "repository editorial datasets",
-  "recordCount": 830,
+  "recordCount": 856,
   "records": [
     {
       "id": "profession:civil-engineer",
@@ -670,6 +670,319 @@
       "relatedProcesses": [
         "pcb-assembly",
         "electronic-inspection"
+      ]
+    },
+    {
+      "id": "material:al-6063",
+      "type": "material",
+      "title": "Алюминиевый сплав 6063",
+      "description": "Деформируемые сплавы системы Al–Mg–Si Представитель группы 6xxx, применяемой в производстве профилей методом прессования. Строительные и промышленные профили",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#al-6063",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "rolling",
+        "cutting"
+      ]
+    },
+    {
+      "id": "material:stainless-austenitic",
+      "type": "material",
+      "title": "Аустенитные нержавеющие стали",
+      "description": "Высоколегированные коррозионностойкие стали Семейство сталей с преимущественно аустенитной структурой; обозначение семейства не заменяет марку. Технологическое оборудование, корпуса и трубопроводы",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#stainless-austenitic",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "welding",
+        "cutting",
+        "inspection"
+      ]
+    },
+    {
+      "id": "material:steel-scrap",
+      "type": "material",
+      "title": "Стальной лом",
+      "description": "Вторичные металлургические материалы Металлическая вторичная шихта для производства стали и чугунных изделий. Шихта металлургических и литейных производств",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#steel-scrap",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "casting"
+      ]
+    },
+    {
+      "id": "material:iron-ore",
+      "type": "material",
+      "title": "Железная руда",
+      "description": "Рудное сырьё Природное железосодержащее сырьё для получения железа и последующей металлургии. Горнодобывающее производство и металлургия",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#iron-ore",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "ore-crushing",
+        "ore-grinding",
+        "magnetic-separation-ore"
+      ]
+    },
+    {
+      "id": "material:bauxite-ore",
+      "type": "material",
+      "title": "Боксит",
+      "description": "Алюминиевая руда Сырьё для получения глинозёма, далее используемого в производстве алюминия. Глинозёмные и алюминиевые производства",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#bauxite-ore",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "ore-crushing",
+        "ore-grinding"
+      ]
+    },
+    {
+      "id": "material:cement-portland",
+      "type": "material",
+      "title": "Портландцемент",
+      "description": "Минеральные гидравлические вяжущие Вяжущее для бетонов и растворов, изготовляемое на основе размолотого клинкера. Бетонные смеси, строительные растворы",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#cement-portland",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "concrete-mixing",
+        "concrete-curing"
+      ]
+    },
+    {
+      "id": "material:cement-clinker",
+      "type": "material",
+      "title": "Цементный клинкер",
+      "description": "Полупродукты вяжущих Минеральный продукт высокотемпературной обработки сырьевой смеси, поступающий на помол. Цементное производство",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#cement-clinker",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "cement-clinker-firing"
+      ]
+    },
+    {
+      "id": "material:gypsum",
+      "type": "material",
+      "title": "Гипс природный",
+      "description": "Неметаллическое минеральное сырьё Сырьё для гипсовых изделий и добавка при выпуске цемента. Строительные гипсовые изделия, цемент",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#gypsum",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "ore-crushing"
+      ]
+    },
+    {
+      "id": "material:industrial-silica",
+      "type": "material",
+      "title": "Кварцевый песок технический",
+      "description": "Кремнезёмистое сырьё Пески с преобладанием кремнезёма; назначения зависят от фракций и химического состава. Стекольное производство, различные промышленные смеси",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#industrial-silica",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "glass-melting",
+        "granular-filtration"
+      ]
+    },
+    {
+      "id": "material:water-carbon",
+      "type": "material",
+      "title": "Активированный уголь гранулированный",
+      "description": "Адсорбционные фильтрующие материалы Пористый адсорбент, применяемый в водоочистке; эффективность зависит от загрязнителя и условий фильтра. Сорбционные фильтры",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#water-carbon",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "carbon-adsorption"
+      ]
+    },
+    {
+      "id": "material:water-resin",
+      "type": "material",
+      "title": "Ионообменная смола",
+      "description": "Функциональные полимерные сорбенты Синтетическая смола с функциональными группами, обменивающими ионы в водном растворе. Умягчение и целевая водоподготовка",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#water-resin",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "granular-filtration"
+      ]
+    },
+    {
+      "id": "material:ro-membrane",
+      "type": "material",
+      "title": "Мембранный материал обратного осмоса",
+      "description": "Мембранные разделительные материалы Материал мембранного элемента для разделения потоков под давлением; состав и селективность зависят от продукта. Мембранная водоподготовка",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#ro-membrane",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "reverse-osmosis",
+        "nanofiltration-water"
+      ]
+    },
+    {
+      "id": "material:polymer-pp",
+      "type": "material",
+      "title": "Полипропилен (PP)",
+      "description": "Термопластичные полиолефины Полимерное сырьё; потребительские свойства определяются маркой, составом и переработкой. Литые и экструзионные изделия",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#polymer-pp",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "injection-molding",
+        "extrusion"
+      ]
+    },
+    {
+      "id": "material:polymer-pet",
+      "type": "material",
+      "title": "Полиэтилентерефталат (PET)",
+      "description": "Полиэфиры Полимер, используемый в разных формах, включая упаковочные изделия и волокна, в зависимости от марки. Упаковка и волокнистые изделия",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#polymer-pet",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "stretch-blow-molding",
+        "extrusion"
+      ]
+    },
+    {
+      "id": "material:polymer-pvc",
+      "type": "material",
+      "title": "Поливинилхлорид (PVC)",
+      "description": "Виниловые полимеры Термопластичная полимерная основа композиций с переменным составом добавок. Профильные и трубные изделия, покрытия",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#polymer-pvc",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "extrusion",
+        "calendering"
+      ]
+    },
+    {
+      "id": "material:adhesive",
+      "type": "material",
+      "title": "Промышленные клеевые системы",
+      "description": "Клеи и герметизирующие композиции Многокомпонентные составы для соединения материалов, имеющие разные механизмы отверждения. Сборка, строительные изделия, композиты",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#adhesive",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "assembly",
+        "plywood-bonding"
+      ]
+    },
+    {
+      "id": "material:mdf",
+      "type": "material",
+      "title": "Древесноволокнистая плита (MDF)",
+      "description": "Древесные композитные панели Плитный древесный материал; показатели зависят от плотности и типа связующего. Мебель, интерьерные панели",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#mdf",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "fiberboard-pressing",
+        "wood-planing"
+      ]
+    },
+    {
+      "id": "material:glass-raw",
+      "type": "material",
+      "title": "Стекольная шихта",
+      "description": "Сырьевые смеси для стекла Подготовленная многокомпонентная смесь, перерабатываемая в стекломассу. Стекловаренные производства",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#glass-raw",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "glass-melting",
+        "glass-annealing"
+      ]
+    },
+    {
+      "id": "material:pharma-excipients",
+      "type": "material",
+      "title": "Фармацевтические вспомогательные вещества",
+      "description": "Компоненты лекарственных форм Вспомогательные ингредиенты, не предназначенные для основного фармакологического действия. Наполнители и технологические компоненты лекарственных форм",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#pharma-excipients",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "tablet-compression",
+        "capsule-filling",
+        "wet-granulation-pharma"
+      ]
+    },
+    {
+      "id": "material:pharma-api",
+      "type": "material",
+      "title": "Активные фармацевтические субстанции (АФС)",
+      "description": "Активные ингредиенты лекарственных средств Компоненты лекарственного продукта, предназначенные для фармакологического действия. Производство лекарственных форм",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#pharma-api",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "pharma-powder-blending",
+        "tablet-compression",
+        "pharma-micronization"
+      ]
+    },
+    {
+      "id": "material:printing-inks",
+      "type": "material",
+      "title": "Полиграфические краски",
+      "description": "Краски и покрытия для печати Системы красочного материала под определённый способ нанесения и последующего закрепления. Флексографская, офсетная и трафаретная печать",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#printing-inks",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "flexography",
+        "offset-lithography",
+        "screen-printing"
+      ]
+    },
+    {
+      "id": "material:printing-paper",
+      "type": "material",
+      "title": "Печатная бумага и картон",
+      "description": "Целлюлозно-бумажные субстраты Бумажные материалы, выбираемые под конкретную печать, покрытие и послепечатную обработку. Печатная продукция, упаковка",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#printing-paper",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "offset-lithography",
+        "flexography",
+        "print-binding"
+      ]
+    },
+    {
+      "id": "material:cotton-denim",
+      "type": "material",
+      "title": "Деним (хлопчатобумажная ткань)",
+      "description": "Тканые хлопковые материалы Один из типов тканей из пряжи, конструкция и отделка которых влияют на эксплуатационные свойства. Одежда и технические текстильные изделия",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#cotton-denim",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "weaving",
+        "textile-finishing",
+        "sewing"
+      ]
+    },
+    {
+      "id": "material:energy-copper",
+      "type": "material",
+      "title": "Медные полуфабрикаты для теплообменников",
+      "description": "Медные теплопроводящие изделия Трубы или листы из подходящей марки меди для теплопередающих узлов. Теплообменные поверхности",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#energy-copper",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "industrial-heat-exchange",
+        "cutting"
+      ]
+    },
+    {
+      "id": "material:refractory-ceramics",
+      "type": "material",
+      "title": "Огнеупорные керамические материалы",
+      "description": "Керамические изделия для высоких температур Класс материалов для теплового оборудования, включая изделия на основе оксидов. Футеровка термического оборудования",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#refractory-ceramics",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "ceramic-sintering"
+      ]
+    },
+    {
+      "id": "material:mining-quartz",
+      "type": "material",
+      "title": "Кварцевое сырьё высокой чистоты",
+      "description": "Кварцевое промышленное сырьё Кварц для применений, где критичны примеси и загрязнения. Специальное стекло, электронные материалы",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#mining-quartz",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "ore-crushing",
+        "ore-screening"
       ]
     },
     {
