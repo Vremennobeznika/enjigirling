@@ -1,6 +1,6 @@
 {
   "reviewedAt": "2026-10-22",
-  "method": "Explicit allowlist of numeric claims left visible after primary-source review; does not certify all metadata or future changes",
+  "method": "Each surviving numeric programme claim must be accompanied by programme-specific primary-source evidence. Exact values are pinned; source accessibility or numeric match alone is not verification.",
   "records": [
     {
       "organization": "БГТУ «ВОЕНМЕХ» им. Д. Ф. Устинова",
@@ -316,6 +316,13 @@
       "field": "duration",
       "value": "3 года 10 месяцев",
       "sourceUrl": "https://py16dv.ru/abiturientu/kontrolnye-tsifry-prijoma"
+    },
+    {
+      "organization": "Губернаторский авиастроительный колледж г. Комсомольска-на-Амуре (МЦК)",
+      "code": "24.02.01",
+      "field": "duration",
+      "value": "2 года 10 месяцев",
+      "sourceUrl": "http://gaskk-mck.ru/index.php/abiturientu/itemlist/category/24-professii-i-spetsialnosti"
     }
   ]
 }
