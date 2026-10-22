@@ -29,7 +29,7 @@ function isEmpty(data){
   return data.plants.every(p=>p&&Number.isInteger(p.id)&&p.id>=1&&p.id<=72&&(!p.name||p.name==="Горшок "+p.id)&&!p.note&&!p.checked&&!p.watered&&!p.attention);
  });
 }
-function enabled(){return Boolean(localStorage.getItem(SECRET_KEY))&&localStorage.getItem(AUTO_KEY)!=="off"}
+function enabled(){return Boolean(localStorage.getItem(SECRET_KEY))&&localStorage.getItem(AUTO_KEY)==="on"}
 function config(){return {token:localStorage.getItem(SECRET_KEY)||"",url:localStorage.getItem(URL_KEY)||DEFAULT_ENDPOINT}}
 function getBase(){
  const obj=parse(localStorage.getItem(BASE_KEY),null);
@@ -215,6 +215,14 @@ function init(){
  setInterval(()=>{if(!document.hidden)schedule(1000)},120000);
  refresh();
 }
-window.LifeAutoSync={refresh,pull,push,sync:cycle,isEnabled:enabled,isConflicted:()=>conflict};
+function downloadBackup(){
+ const backups=parse(localStorage.getItem(BACKUPS_KEY),[]);
+ if(!Array.isArray(backups)||!backups.length)throw Error("Защитных копий пока нет");
+ const blob=new Blob([JSON.stringify({version:1,backups},null,2)],{type:"application/json"});
+ const link=document.createElement("a"),url=URL.createObjectURL(blob);
+ link.href=url;link.download="life-recovery-"+new Date().toISOString().slice(0,10)+".json";link.click();
+ setTimeout(()=>URL.revokeObjectURL(url),3000);
+}
+window.LifeAutoSync={refresh,pull,push,sync:cycle,downloadBackup,isEnabled:enabled,isConflicted:()=>conflict};
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init,{once:true});else init();
 })();
