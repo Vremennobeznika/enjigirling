@@ -75,6 +75,7 @@ $('import').onclick=()=>$('file').click();
 $('file').onchange=async e=>{let f=e.target.files?.[0];if(!f)return;try{if(f.size>500000)throw Error('Слишком большой файл');let incoming=JSON.parse(await f.text());if(!incoming||!Array.isArray(incoming.plants))throw Error('Неверный формат');if(confirm('Заменить записи всех 72 горшков?')){pots=sanitize(incoming.plants);store();render()}}catch(err){alert('Ошибка файла: '+err.message)}finally{e.target.value=''}};
 window.addEventListener('storage',e=>{if(e.key===KEY){pots=load();render()}});
 window.addEventListener('life-sync-applied',()=>{pots=load();render()});
-store();render();
+// Rendering the 72 empty slots must not write or trigger cloud upload.
+render();
 })();
 </script><script src="../life/auto-sync.js"></script></body></html>
