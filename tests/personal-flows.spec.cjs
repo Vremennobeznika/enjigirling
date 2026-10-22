@@ -54,7 +54,7 @@ test('72 plants: no automatic blank write; group check marks and unmarks calenda
   expect(key.checked).toBe(true,'all 18 inspected plants must complete the calendar entry');
   await page.getByRole('checkbox',{name:'Осмотрено сегодня: Горшок 18'}).uncheck();
   const after=await page.evaluate(key=>JSON.parse(localStorage.getItem('week-check-v2')||'{}')[key],key.key);
-  expect(after).toBeUndefined('unchecking must clear the group entry');
+  expect(after,'unchecking must clear the group entry').toBeUndefined();
 });
 
 test('Shopping All filter stays selected when adding an uncategorized item',async({page})=>{
