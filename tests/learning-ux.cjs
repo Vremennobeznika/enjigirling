@@ -138,5 +138,5 @@ const actualTextNums=entries.flatMap(({item})=>{
 });
 const canonicalText=row=>JSON.stringify([row.organization,row.field,row.statement,row.sourceUrl]);
 assert.equal(textGate.sampledFields,238,'numeric-text baseline must include 238 source fields');
-assert.deepEqual(actualTextNums.map(canonicalText).sort(),textGate.records.map(canonicalText).sort(),'Unreviewed numeric detail appeared or changed in map card prose: audit primary source and refresh frozen gate');
+assert.deepEqual(Array.from(actualTextNums,canonicalText).sort(),Array.from(textGate.records,canonicalText).sort(),'Unreviewed numeric detail appeared or changed in map card prose: audit primary source and refresh frozen gate');
 console.log('PASS: '+actualTextNums.length+' retained numeric text fields match 238-item final adjudication gate');
