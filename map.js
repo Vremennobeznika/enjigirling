@@ -45,12 +45,14 @@ document.addEventListener('DOMContentLoaded', () => {
         Number.isFinite(p.budgetPlaces)?'Бюджетных мест: '+p.budgetPlaces:null,
         Number.isFinite(p.paidPlaces)?'Платных мест: '+p.paidPlaces:null,
         Number.isFinite(p.tuitionAnnualRub)?'Стоимость платного обучения: '+new Intl.NumberFormat('ru-RU').format(p.tuitionAnnualRub)+' ₽ в год':null,
+        Number.isFinite(p.tuitionSemesterRub)?'Стоимость: '+new Intl.NumberFormat('ru-RU').format(p.tuitionSemesterRub)+' ₽ за семестр':null,
+        p.admission?'Вступительные испытания: '+p.admission:null,
         p.note].filter(Boolean).join(' · '),
       source:validLink(p.sourceUrl)
     }));
 
     const facts=[
-      ['Направление','Редакционный ориентир: наличие конкретной программы и набора не подтверждено.'],
+      ['Описание направлений',programs.length?'Ниже указаны подтверждённые сведения о конкретных программах; другие направления остаются редакционным ориентиром.':'Направление — редакционный ориентир; наличие конкретной программы приёма не подтверждено.'],
       ['Сроки, стоимость, бюджет и экзамены','Зависят от программы и года приёма. Без проверенного документа не приводятся.'],
       ['Статус',hasSource?item.verifiedScope:'Правила набора по этой организации индивидуально не проверены.'],
       ...(item.sourceFetchStatus?[['Доступность страницы источника',item.sourceFetchStatus==='fetched'?'22.10.2026: документ или сайт открылся. Содержательная точность остальных сведений не следует из этого факта.':'22.10.2026: проверить ссылку не удалось (тайм-аут или ошибка доступа). Это не доказательство закрытия организации.']]:[]),
