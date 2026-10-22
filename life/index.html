@@ -36,7 +36,7 @@ details{border:1px solid var(--line);background:var(--box);border-radius:17px;pa
 <form id="pantryForm"><input class="grow" id="pantryName" maxlength="120" placeholder="Продукт или расходник" aria-label="Название запаса" required><input class="short" id="pantryAmount" maxlength="40" placeholder="Количество" aria-label="Количество"><button class="btn" type="submit">Добавить</button></form>
 <ul id="pantryList" class="list"></ul><div class="empty" id="pantryEmpty">Запасов пока нет.</div></section>
 <section class="card full"><div class="head"><h2>Управление данными</h2><span class="sub">Резервная копия всех разделов</span></div>
-<div class="actions"><button class="btn soft" id="backup" type="button">Скачать копию</button><button class="btn soft" id="restore" type="button">Восстановить</button><input id="backupFile" type="file" hidden accept=".json,application/json"></div><p class="warn">В копию входят отметки календаря, покупки, задачи и домашние запасы. Файл остаётся у тебя.</p></section>
+<div class="actions"><button class="btn soft" id="backup" type="button">Скачать копию</button><button class="btn soft" id="restore" type="button">Восстановить</button><input id="backupFile" type="file" hidden accept=".json,application/json"></div><p class="warn">В копию входят отметки календаря, покупки, задачи, домашние запасы и журнал 72 растений. Файл остаётся у тебя.</p></section>
 </div>
 <details id="cloudPanel"><summary>Облачная синхронизация · подключение Yandex Cloud</summary>
 <p class="sub">Синхронизация заработает после создания закрытой базы YDB и облачной функции. Без этого данные остаются в браузере. Адрес и секрет доступны только владельцу.</p>
@@ -57,11 +57,12 @@ function validPantry(a){return Array.isArray(a)?a.filter(x=>x&&typeof x.name==="
 function validPlants(a){return Array.isArray(a)?a.filter(p=>p&&Number.isInteger(p.id)&&p.id>=1&&p.id<=72).slice(0,72).map(p=>({id:p.id,name:String(p.name||"Горшок "+p.id).slice(0,90),note:String(p.note||"").slice(0,600),checked:/^\d{4}-\d\d-\d\d$/.test(p.checked||"")?p.checked:"",watered:/^\d{4}-\d\d-\d\d$/.test(p.watered||"")?p.watered:"",attention:!!p.attention})):[]}
 function validShopping(a){return Array.isArray(a)?a.filter(x=>x&&typeof x.name==="string"&&typeof x.cat==="string").slice(0,1500).map(x=>({id:String(x.id||crypto.randomUUID()),name:x.name.slice(0,120),qty:String(x.qty||"").slice(0,35),cat:x.cat,done:!!x.done})):[]}
 function validCalendar(o){if(!o||typeof o!=="object"||Array.isArray(o))return {};return Object.fromEntries(Object.entries(o).filter(([k,v])=>/^\d{4}-\d\d-\d\d-\d+$/.test(k)&&v===true).slice(0,25000))}
-function snapshot(){return {calendar:validCalendar(safe(KEYS.calendar,{})),shopping:validShopping(safe(KEYS.shopping,[])),tasks:validTasks(safe(KEYS.tasks,[])),pantry:validPantry(safe(KEYS.pantry,[]))}}
+function snapshot(){return {calendar:validCalendar(safe(KEYS.calendar,{})),shopping:validShopping(safe(KEYS.shopping,[])),tasks:validTasks(safe(KEYS.tasks,[])),pantry:validPantry(safe(KEYS.pantry,[])),plants:validPlants(safe(KEYS.plants,[]))}}
 function restore(raw){if(!raw||typeof raw!=="object"||Array.isArray(raw)||!raw.data||typeof raw.data!=="object"||Array.isArray(raw.data))throw Error("Неизвестный формат");
-const d=raw.data;for(const k of Object.keys(KEYS))if(!(k in d))throw Error("Нет раздела: "+k);
+const d=raw.data;for(const k of ["calendar","shopping","tasks","pantry"])if(!(k in d))throw Error("Нет раздела: "+k);
 const clean={calendar:validCalendar(d.calendar),shopping:validShopping(d.shopping),tasks:validTasks(d.tasks),pantry:validPantry(d.pantry)};
-for(const [section,key] of Object.entries(KEYS)){if(!persist(key,clean[section]))throw Error("Не удалось сохранить");}draw();}
+if("plants" in d)clean.plants=validPlants(d.plants);
+for(const [section,key] of Object.entries(KEYS)){if(!(section in clean))continue;if(!persist(key,clean[section]))throw Error("Не удалось сохранить");}draw();}
 function draw(){
 const now=new Date(),day=(now.getDay()+6)%7,key=dateStr(now),marks=safe(KEYS.calendar,{}),home=window.HOUSEHOLD_PLAN?.forDay(day)||[];
 const mainTotal=day<5?27:24,homeDone=home.filter(t=>marks[key+"-home-"+t.id]===true).length;
