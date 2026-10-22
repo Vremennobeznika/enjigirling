@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const labels = {'Разработка ПО':'Код и Git', 'САПР и конструирование':'САПР и КБ', 'Инструменты и симуляторы':'Симуляторы', 'Онлайн-измерения':'Измерения онлайн', 'Научные базы и справочники':'Библиотеки', 'Стандарты и метрология':'Стандарты', 'Обучение и курсы':'Курсы', 'Дружественные каналы':'Каналы', 'Чаты в Telegram':'Чаты'};
   const journalTopics = ['Машиностроение и САПР','Автоматизация и электроника','Материалы, контроль и измерения','Энергетика, строительство и транспорт','Пищевая и лёгкая промышленность','Наука и образование'];
   const htmlEsc = value => String(value == null ? '' : value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
-  const normalize = value => String(value ?? '').toLocaleLowerCase('ru-RU').replace(/ё/g,'е').replace(/\s+/g,' ').trim();
+  const normalize = value => String(value == null ? '' : value).toLocaleLowerCase('ru-RU').replace(/ё/g,'е').replace(/\s+/g,' ').trim();
   const collator = typeof Intl !== 'undefined' && Intl.Collator ? new Intl.Collator('ru-RU', {numeric:true, sensitivity:'base'}) : {compare:(a,b) => String(a).localeCompare(String(b))};
   const index = items.map(item => ({item, terms:normalize([item.name,item.desc,item.type,item.topic || '',item.tags || ''].join(' '))}));
   const counts = new Map();
