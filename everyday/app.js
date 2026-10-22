@@ -101,12 +101,12 @@ function renderNav(){
  for(const el of nav.querySelectorAll(".nav-btn")){const current=el.dataset.view===view;el.classList.toggle("active",current);if(current)el.setAttribute("aria-current","page");else el.removeAttribute("aria-current")}
 }
 function activeItems(section,date){
- return state.items.filter(item=>item.section===section).map(item=>({...item,key:M.keyFor(item,date),checked:!!state.done[M.keyFor(item,date)]}));
+ return state.items.filter(item=>item.section===section&&(item.repeat!=="weekly"||M.addDays(M.monday(date),item.weekday)===date)).map(item=>({...item,key:M.keyFor(item,date),checked:!!state.done[M.keyFor(item,date)]}));
 }
 function templateRows(where,section,date){
  const items=activeItems(section,date).sort((a,b)=>(a.time||"99:99").localeCompare(b.time||"99:99")||a.title.localeCompare(b.title,"ru"));
  for(const item of items){
-  where.append(row(item.title,item.repeat==="daily"?"Каждый день":item.repeat==="weekly"?"Раз в неделю":"До выполнения",
+  where.append(row(item.title,item.repeat==="daily"?"Каждый день":item.repeat==="weekly"?"Еженедельно · "+["Пн","Вт","Ср","Чт","Пт","Сб","Вс"][item.weekday]:"До выполнения",
    {time:item.time,checked:item.checked,checkbox:checked=>change(s=>{if(checked)s.done[item.key]=true;else delete s.done[item.key]})}));
  }
  return items.length;
@@ -327,8 +327,8 @@ function renderSettings(){
  }
  const items=$("settingsItems");items.replaceChildren();
  for(const item of state.items){
-  items.append(settingRow(item.title,secName(item.section)+" · "+(item.repeat==="daily"?"каждый день":item.repeat==="weekly"?"раз в неделю":"однократно")+(item.time?" · "+item.time:""),[
-   actionButton("Изменить",()=>{editingItem=item.id;$("itemName").value=item.title;$("itemSection").value=item.section;$("itemRepeat").value=item.repeat;$("itemTime").value=item.time;$("itemForm button[type=submit]").textContent="Сохранить изменения";$("itemName").focus()}),
+  items.append(settingRow(item.title,secName(item.section)+" · "+(item.repeat==="daily"?"каждый день":item.repeat==="weekly"?"по "+["пн","вт","ср","чт","пт","сб","вс"][item.weekday]:"однократно")+(item.time?" · "+item.time:""),[
+   actionButton("Изменить",()=>{editingItem=item.id;$("itemName").value=item.title;$("itemSection").value=item.section;$("itemRepeat").value=item.repeat;$("itemWeekday").value=String(item.weekday);$("itemWeekdayField").hidden=item.repeat!=="weekly";$("itemTime").value=item.time;$("itemForm button[type=submit]").textContent="Сохранить изменения";$("itemName").focus()}),
    removeButton("Удалить пункт",()=>{if(ask("Удалить пункт «"+item.title+"» и его отметки?"))change(doc=>{doc.items=doc.items.filter(x=>x.id!==item.id);for(const k of Object.keys(doc.done))if(k.startsWith(item.id+"@"))delete doc.done[k]})})
   ]));
  }
@@ -446,6 +446,7 @@ function bind(){
    })){editingSubscription=null;$("subscriptionForm").reset();$("subscriptionSave").textContent="Добавить платёж";$("subscriptionCancel").hidden=true;toast("Регулярный платёж сохранён")}
   }catch(err){toast(err.message)}
  };
+ $("itemRepeat").onchange=()=>{$("itemWeekdayField").hidden=$("itemRepeat").value!=="weekly"};
  $("subscriptionCancel").onclick=()=>{editingSubscription=null;$("subscriptionForm").reset();$("subscriptionSave").textContent="Добавить платёж";$("subscriptionCancel").hidden=true};
  $("exportCsv").onclick=()=>download("expenses-"+month+".csv",M.csvTransactions(state,month),"text/csv;charset=utf-8");
  $("shopForm").onsubmit=e=>{
@@ -472,9 +473,9 @@ function bind(){
  };
  $("itemForm").onsubmit=e=>{
   e.preventDefault();const title=$("itemName").value.trim();if(!title)return;
-  const updated={id:editingItem||M.uid(),title,section:$("itemSection").value,repeat:$("itemRepeat").value,time:$("itemTime").value||""};
+  const updated={id:editingItem||M.uid(),title,section:$("itemSection").value,repeat:$("itemRepeat").value,weekday:Number($("itemWeekday").value),time:$("itemTime").value||""};
   if(change(s=>{if(editingItem){const i=s.items.findIndex(v=>v.id===editingItem);if(i<0)throw Error("Пункт не найден");s.items[i]=updated}else s.items.push(updated)})){
-   editingItem=null;$("itemForm").reset();$("itemForm button[type=submit]").textContent="Добавить пункт";toast("Пункт сохранён")}
+   editingItem=null;$("itemForm").reset();$("itemWeekdayField").hidden=true;$("itemForm button[type=submit]").textContent="Добавить пункт";toast("Пункт сохранён")}
  };
  for(const [form,id,key] of [["expenseCatForm","expenseCatName","expenseCats"],["incomeCatForm","incomeCatName","incomeCats"],["shopCatForm","shopCatName","shopCats"]]){
   $(form).onsubmit=e=>{
