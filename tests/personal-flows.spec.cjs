@@ -1,5 +1,13 @@
 const {test,expect}=require('@playwright/test');
 
+async function chooseDate(page,prefix,key){
+ const [year,month,day]=key.split('-');
+ await page.locator('#'+prefix+'Year').selectOption(year);
+ await page.locator('#'+prefix+'Month').selectOption(month);
+ await page.locator('#'+prefix+'Day').selectOption(day);
+}
+
+
 test('Personal pages: tasks, pantry and shopping persist after navigation without cloud token',async({page})=>{
   const cloudRequests=[];
   page.on('request',req=>{if(req.url().includes('functions.yandexcloud.net'))cloudRequests.push(req.url())});
@@ -136,8 +144,9 @@ test('Today can schedule tasks for future dates and calendar shows them on the s
   return {key,weekday:(d.getDay()+6)%7};
  });
  await page.locator('#taskName').fill('Встреча на следующей неделе');
- await page.locator('#taskDate').fill(day.key);
- await page.locator('#taskTime').fill('16:30');
+ await chooseDate(page,'taskDate',day.key);
+ await page.locator('#taskTimeHour').selectOption('16');
+ await page.locator('#taskTimeMinute').selectOption('30');
  await page.locator('#taskForm button[type=submit]').click();
  await expect(page.locator('#taskList')).toContainText('Встреча на следующей неделе');
  const saved=await page.evaluate(()=>JSON.parse(localStorage.getItem('life-inbox-v1')));
@@ -147,10 +156,10 @@ test('Today can schedule tasks for future dates and calendar shows them on the s
  await page.locator('#taskShowAll').click();
  await expect(page.locator('#taskList')).toContainText('Встреча на следующей неделе');
  await page.locator('#taskShowAll').click();
- await page.locator('#taskViewDate').fill(day.key);
+ await chooseDate(page,'taskViewDate',day.key);
  await expect(page.locator('#taskList')).toContainText('Встреча на следующей неделе');
  await page.reload();
- await page.locator('#taskViewDate').fill(day.key);
+ await chooseDate(page,'taskViewDate',day.key);
  await expect(page.locator('#taskList')).toContainText('Встреча на следующей неделе');
  await page.goto('/calendar/');
  await page.locator('#next').click();
@@ -160,7 +169,7 @@ test('Today can schedule tasks for future dates and calendar shows them on the s
  await expect(row).toContainText('16:30');
  await row.locator('input[type=checkbox]').check();
  await page.goto('/life/');
- await page.locator('#taskViewDate').fill(day.key);
+ await chooseDate(page,'taskViewDate',day.key);
  await expect(page.locator('#taskList .item').filter({hasText:'Встреча на следующей неделе'}).locator('input[type=checkbox]')).toBeChecked();
  const backup=page.waitForEvent('download');
  await page.locator('#backup').click();
@@ -180,7 +189,7 @@ test('Legacy undated tasks survive and task dates can be moved without breaking 
  const legacy=page.locator('#taskList .item').filter({hasText:'Старое дело без даты'});
  await legacy.locator('input[type=date]').fill(newDay);
  await expect(page.locator('#taskList')).not.toContainText('Старое дело без даты');
- await page.locator('#taskViewDate').fill(newDay);
+ await chooseDate(page,'taskViewDate',newDay);
  await expect(page.locator('#taskList')).toContainText('Старое дело без даты');
  const saved=await page.evaluate(()=>JSON.parse(localStorage.getItem('life-inbox-v1')));
  expect(saved[0].date).toBe(newDay);
