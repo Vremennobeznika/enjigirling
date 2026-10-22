@@ -4,7 +4,7 @@
 
 ## Сводка
 
-Всего: 380; процессы: 208; материалы: 172. Приоритеты P0: 0, P1: 368, P2: 12.
+Всего: 380; процессы: 208; материалы: 172. Приоритеты P0: 0, P1: 364, P2: 16.
 
 P0 — битый ID или обязательные поля; P1 — недостаточная доказательная база/спорная полнота; P2 — уточнения. P1 НЕ значит, что запись обязательно неверна.
 
@@ -12,13 +12,12 @@ P0 — битый ID или обязательные поля; P1 — недос
 
 | Код | Количество | Описание |
 |---|---:|---|
-| E01 | 335 | Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника |
+| E01 | 336 | Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника |
 | T02 | 180 | Уточнить методы контроля и критерии дефектов |
-| S07 | 176 | Общие источники (R05); они не подтверждают параметры конкретного процесса/марки |
+| S07 | 177 | Общие источники (R05); они не подтверждают параметры конкретного процесса/марки |
 | T03 | 137 | Описание поверхностное; нужны инженерные различия и ограничения |
 | L02 | 65 | Нет конкретных материалов: не добавлять неподтверждённых связей |
-| E02 | 45 | Проверка отдельных тезисов не подтверждает всю карточку |
-| S04 | 7 | Зарегистрировано дополнительных ссылок, не показанных в карточке: 1 |
+| E02 | 44 | Проверка отдельных тезисов не подтверждает всю карточку |
 | L03 | 7 | Нет достоверно связанного процесса; не подставлять неподходящий |
 
 ## Процессы — каждая карточка
@@ -26,16 +25,16 @@ P0 — битый ID или обязательные поля; P1 — недос
 | Карточка | Отрасль | Статус доказательств | Очередь | Проблемы |
 |---|---|---|---|---|
 | [Литьё (casting)](../processes.html#casting) | metals | частный тезис | P1 | S07, E02, L02 |
-| [Дуговая сварка (welding)](../processes.html#welding) | metals | частный тезис | P1 | S04, E02 |
+| [Дуговая сварка (welding)](../processes.html#welding) | metals | частный тезис | P2 | E02 |
 | [Обработка резанием (cutting)](../processes.html#cutting) | general | частный тезис | P1 | S07, E02 |
 | [Термическая обработка (heat)](../processes.html#heat) | metals | частный тезис | P1 | S07, E02 |
-| [Аддитивное производство (additive)](../processes.html#additive) | general | частный тезис | P1 | S04, E02 |
+| [Аддитивное производство (additive)](../processes.html#additive) | general | частный тезис | P2 | E02 |
 | [Неразрушающий контроль (inspection)](../processes.html#inspection) | general | частный тезис | P1 | S07, E02 |
-| [MIG/MAG-сварка (mig-mag)](../processes.html#mig-mag) | metals | частный тезис | P1 | S04, E02 |
-| [TIG-сварка (tig)](../processes.html#tig) | metals | частный тезис | P1 | S04, E02 |
+| [MIG/MAG-сварка (mig-mag)](../processes.html#mig-mag) | metals | частный тезис | P2 | E02 |
+| [TIG-сварка (tig)](../processes.html#tig) | metals | частный тезис | P2 | E02 |
 | [Ультразвуковой контроль (ultrasonic)](../processes.html#ultrasonic) | general | частный тезис | P1 | S07, E02 |
 | [Радиографический контроль (radiographic)](../processes.html#radiographic) | general | частный тезис | P1 | S07, E02 |
-| [Капиллярный контроль (dye)](../processes.html#dye) | general | частный тезис | P1 | S04, S07, E02 |
+| [Капиллярный контроль (dye)](../processes.html#dye) | general | частный тезис | P1 | S07, E02 |
 | [Измерение твёрдости (hardness)](../processes.html#hardness) | general | частный тезис | P2 | E02 |
 | [Ковка и объёмная штамповка (forging)](../processes.html#forging) | metals | частный тезис | P1 | S07, E02 |
 | [Прокатка (rolling)](../processes.html#rolling) | metals | частный тезис | P1 | S07, E02 |
@@ -59,8 +58,8 @@ P0 — битый ID или обязательные поля; P1 — недос
 | [Монтаж печатных плат (pcb-assembly)](../processes.html#pcb-assembly) | electronics | частный тезис | P1 | S07, E02 |
 | [Контроль электронных сборок (electronic-inspection)](../processes.html#electronic-inspection) | electronics | частный тезис | P1 | S07, E02 |
 | [Промышленное смешение (chemical-mixing)](../processes.html#chemical-mixing) | chemicals | частный тезис | P2 | E02, L02 |
-| [Дистилляция (distillation)](../processes.html#distillation) | chemicals | частный тезис | P1 | S04, E02, L02 |
-| [Промышленная фильтрация (industrial-filtration)](../processes.html#industrial-filtration) | chemicals | частный тезис | P1 | S04, E02, L02 |
+| [Дистилляция (distillation)](../processes.html#distillation) | chemicals | только источник | P1 | E01, L02 |
+| [Промышленная фильтрация (industrial-filtration)](../processes.html#industrial-filtration) | chemicals | частный тезис | P1 | S07, E02, L02 |
 | [Точение (turning)](../processes.html#turning) | metals | только источник | P1 | S07, E01, T02 |
 | [Фрезерование (milling)](../processes.html#milling) | metals | только источник | P1 | S07, E01, T02 |
 | [Сверление (drilling)](../processes.html#drilling) | metals | только источник | P1 | S07, E01, T02 |
