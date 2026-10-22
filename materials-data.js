@@ -447,14 +447,14 @@ window.engineeringMaterials = [
     ],
     "sources": [
       {
-        "title": "Cotton Incorporated — Textile Resources",
-        "url": "https://www.cottoninc.com/quality-products/textile-resources/"
+        "title": "USDA AMS — Cotton Classing Services",
+        "url": "https://www.ams.usda.gov/services/grading/cotton-classing"
       }
     ],
     "evidence": {
       "verificationStatus": "context_only",
       "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
-      "reviewScope": "Отраслевой справочник по хлопку; показатели конкретного волокна не проверены.",
+      "reviewScope": "USDA приводит показатели оценки хлопкового волокна; свойства конкретной партии здесь не подтверждены.",
       "checkedAt": "2026-10-22"
     }
   },
@@ -475,14 +475,14 @@ window.engineeringMaterials = [
     ],
     "sources": [
       {
-        "title": "Cotton Incorporated — Fiber Processing Research",
-        "url": "https://www.cottoninc.com/quality-products/textile-research/fiber-processing/"
+        "title": "CottonWorks — Yarn Spinning",
+        "url": "https://cottonworks.com/learning-hub/yarn-manufacturing/yarn-spinning/?highlight=fiber%2Bquality"
       }
     ],
     "evidence": {
       "verificationStatus": "partial_claim",
       "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
-      "reviewScope": "Подтверждены общие операции получения хлопковой пряжи; сорт и линейная плотность не проверены.",
+      "reviewScope": "CottonWorks описывает прядение хлопка; качество отдельной партии пряжи не проверено.",
       "checkedAt": "2026-10-22"
     }
   },
@@ -503,14 +503,14 @@ window.engineeringMaterials = [
     ],
     "sources": [
       {
-        "title": "Cotton Incorporated — Textile Glossary",
-        "url": "https://www.cottoninc.com/quality-products/textile-resources/textile-glossary/"
+        "title": "CottonWorks — Weaving Basics",
+        "url": "https://cottonworks.com/learning-hub/weaving/weaving-basics/"
       }
     ],
     "evidence": {
       "verificationStatus": "context_only",
       "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
-      "reviewScope": "Подтверждена базовая ткацкая терминология; характеристики конкретной ткани не проверены.",
+      "reviewScope": "Источник описывает формирование тканого полотна; свойства конкретной ткани не проверены.",
       "checkedAt": "2026-10-22"
     }
   },
@@ -608,7 +608,6 @@ window.engineeringMaterials = [
     "detail": "Представитель группы 6xxx, применяемой в производстве профилей методом прессования.",
     "uses": "Строительные и промышленные профили",
     "process": [
-      "rolling",
       "cutting"
     ],
     "note": "Уточняйте состояние поставки, стандарт на профиль, допуски и свойства.",
@@ -902,9 +901,7 @@ window.engineeringMaterials = [
     "family": "Функциональные полимерные сорбенты",
     "detail": "Синтетическая смола с функциональными группами, обменивающими ионы в водном растворе.",
     "uses": "Умягчение и целевая водоподготовка",
-    "process": [
-      "granular-filtration"
-    ],
+    "process": [],
     "note": "Проверяйте тип смолы, селективность, рабочую ёмкость и регенерационный цикл.",
     "industries": [
       "water",
@@ -1265,14 +1262,14 @@ window.engineeringMaterials = [
     ],
     "sources": [
       {
-        "title": "Cotton Incorporated — Textile Resources",
-        "url": "https://www.cottoninc.com/quality-products/textile-resources/"
+        "title": "CottonWorks — Basic Woven Fabric Designs",
+        "url": "https://cottonworks.com/learning-hub/weaving/basic-woven-fabric-designs/"
       }
     ],
     "evidence": {
       "verificationStatus": "partial_claim",
       "verifiedClaim": "Cotton Incorporated описывает техническую базу хлопковых тканей.",
-      "reviewScope": "Не гарантирует параметров и состав конкретной партии денима.",
+      "reviewScope": "Источник описывает саржевые переплетения, применяемые для денима; состав и качество конкретной партии ткани не проверены.",
       "checkedAt": "2026-10-22"
     }
   },
