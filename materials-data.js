@@ -1,4 +1,4 @@
-// Описания обзорные; свойства по спецификациям партий.
+// Качественные описания материалов, не сертификат конкретной партии.
 window.engineeringMaterials = [
   {
     "id": "steel-20",
@@ -11,7 +11,8 @@ window.engineeringMaterials = [
       "cutting",
       "heat",
       "hardness",
-      "stamping"
+      "stamping",
+      "rolling"
     ],
     "note": "Для химического состава и механических свойств необходимо выбрать действующий стандарт на конкретный вид проката или изделия."
   },
@@ -28,7 +29,8 @@ window.engineeringMaterials = [
       "ultrasonic",
       "hardness",
       "forging",
-      "grinding"
+      "grinding",
+      "rolling"
     ],
     "note": "Твёрдость и прочность без указания режима термообработки не приводятся."
   },
