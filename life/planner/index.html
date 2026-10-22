@@ -14,7 +14,7 @@
  <div class="header-title"><h1 id="appTitle">МОЯ НЕДЕЛЯ</h1><p id="appSubtitle">Гибкое расписание, напоминания и финансы</p></div>
  <div class="privacy-pill" title="Данные хранятся только в этом браузере"><span class="privacy-dot"></span> Локально · синхронизация по настройкам</div>
 </header>
-<nav class="personal-shortcuts" aria-label="Другие разделы личного приложения"><a href="../">← Сегодня</a><a href="../../calendar/">Мой календарь · таблетки</a><a href="../../plants/">72 растения</a><a href="../../shopping/">Покупки</a></nav><p class="personal-note">Это редактируемый планировщик. Прежний личный календарь с таблетками и отметками сохранён отдельно. Добавляй новые разовые и повторяющиеся пункты здесь, без повторного внесения уже существующих лекарств.</p><nav class="main-tabs" aria-label="Разделы приложения">
+<nav class="personal-shortcuts" aria-label="Другие разделы личного приложения"><a href="../">← Сегодня</a><a href="../../calendar/">Мой календарь · таблетки</a><a href="../../plants/">72 растения</a><a href="../../shopping/">Покупки</a></nav><p class="personal-note">Это редактируемая часть личного приложения. Твоё прежнее расписание таблеток и журнал 72 растений сохранены. Покупки общие с первоначальным списком.</p><nav class="main-tabs" aria-label="Разделы приложения">
  <button type="button" class="main-tab active" data-page="week" aria-current="page">Неделя</button>
  <button type="button" class="main-tab" data-page="shopping">Покупки</button>
  <button type="button" class="main-tab" data-page="finance">Финансы</button>
@@ -30,7 +30,7 @@
  <p class="hint">Новые пункты, расписание и названия разделов редактируются в «Настройках». Значок колокольчика включает напоминание только для выбранного пункта.</p>
 </section>
 <section id="page-shopping" class="page" aria-labelledby="shoppingHeading" hidden>
- <div class="section-top"><div><h2 id="shoppingHeading">Список покупок</h2><p class="muted">Отмеченное остаётся до удаления</p></div><span class="counter" id="shoppingProgress">0 / 0</span></div>
+ <div class="section-top"><div><h2 id="shoppingHeading">Список покупок</h2><p class="muted">Общий с прежним списком супермаркета: одни товары, количества и отметки на всех страницах</p></div><span class="counter" id="shoppingProgress">0 / 0</span></div><p class="personal-note">В <a href="../../shopping/">каталоге магазина</a> сохраняются исходные отделы. Здесь можно включать напоминания к тем же товарам и экспортировать их в календарь.</p>
  <div class="bar shopping-bar"><div id="shoppingProgressBar" class="fill"></div></div>
  <nav id="shoppingTabs" class="pill-tabs" aria-label="Категории покупок"></nav>
  <form id="shoppingForm" class="panel form-flex">
@@ -44,7 +44,7 @@
  <div class="actions"><button type="button" id="removePurchased">Удалить купленное</button></div>
 </section>
 <section id="page-finance" class="page" aria-labelledby="financeHeading" hidden>
- <div class="section-top"><div><h2 id="financeHeading">Финансы</h2><p class="muted">Личный журнал операций на устройстве</p></div></div>
+ <div class="section-top"><div><h2 id="financeHeading">Финансы</h2><p class="muted">Данные сохраняются локально; при рабочем Яндекс-облаке входят в резервную синхронизацию</p></div></div>
  <div class="finance-summary"><div><span>Доходы</span><strong id="incomeTotal">0</strong></div><div><span>Расходы</span><strong id="expenseTotal">0</strong></div><div><span>Разница</span><strong id="balanceTotal">0</strong></div></div>
  <form id="financeForm" class="panel form-grid">
   <label>Дата<input id="financeDate" type="date" required></label>
@@ -75,7 +75,7 @@
   <div class="filter-wrap"><label for="taskSearch">Найти пункт</label><input id="taskSearch" type="search" placeholder="Поиск по названию"></div>
   <div id="taskManager" class="panel-list"></div>
  </div>
- <div class="settings-card"><div class="settings-head"><h3>Установка на Android</h3><small>Chrome · локально · без аккаунта</small></div><p class="note">В Chrome для Android открой меню ⋮ и выбери «Установить приложение» или «Добавить на главный экран». После первой загрузки приложение сможет открываться без сети. Данные этого устройства не передаются в облако.</p><div class="actions"><button type="button" id="installAndroid" class="primary" hidden>Установить приложение</button></div><p class="note">Для напоминаний при полностью закрытом Chrome экспортируй .ics в календарь Android: локальный сайт не может гарантировать фоновую доставку и самовольно открывать вкладку.</p></div>
+ <div class="settings-card"><div class="settings-head"><h3>Установка на iPhone и Android</h3><small>Домашний экран · офлайн · без App Store</small></div><p class="note">iPhone: открой главную панель в Safari → «Поделиться» → «На экран Домой». Android: меню Chrome → «Установить приложение». Приложение сохраняет записи на устройстве; синхронизация с Яндексом зависит от доступности сервера. Уведомления при полностью закрытом приложении без push-сервера не гарантируются.</p><div class="actions"><button type="button" id="installAndroid" class="primary" hidden>Установить приложение</button></div><p class="note">Для уведомлений при полностью закрытом приложении экспортируй .ics в системный календарь iPhone или Android. Импорт — отдельная копия событий; при повторном импорте могут появиться дубли.</p></div>
  <div class="settings-card"><div class="settings-head"><h3>Уведомления</h3><small>Включаются отдельно для каждого пункта</small></div>
   <p class="note">Пока вкладка открыта, приложение проверяет расписание и показывает крупное напоминание. Системное уведомление требует разрешения браузера. Нельзя программно принудить браузер открыть вкладку на переднем плане; нажатие по уведомлению открывает или активирует приложение, если браузер это позволяет.</p>
   <div class="actions"><button type="button" id="grantNotifications" class="primary">Разрешить уведомления</button><button type="button" id="testReminder">Проверить напоминание</button><button type="button" id="calendarExport">Экспорт в Календарь (.ics)</button></div>
