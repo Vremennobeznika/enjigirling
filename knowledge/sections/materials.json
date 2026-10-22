@@ -1,0 +1,1375 @@
+{
+  "schemaVersion": "1.1",
+  "sectionId": "materials",
+  "title": "Справочник материалов",
+  "language": "ru",
+  "quality": "editorial_not_independently_verified",
+  "url": "https://vremennobeznika.github.io/enjigirling/materials.html",
+  "recordsCount": 46,
+  "records": [
+    {
+      "id": "steel-20",
+      "name": "Сталь 20",
+      "group": "metal",
+      "family": "Конструкционные углеродистые стали",
+      "detail": "Применяется для деталей машин и трубной продукции в зависимости от требований к поставке и обработке. Не путать обозначение марки с гарантированными свойствами любого изделия.",
+      "uses": "Детали машин, трубная продукция",
+      "process": [
+        "cutting",
+        "heat",
+        "hardness",
+        "stamping",
+        "rolling"
+      ],
+      "note": "Для химического состава и механических свойств необходимо выбрать действующий стандарт на конкретный вид проката или изделия.",
+      "industries": [
+        "metals",
+        "general"
+      ],
+      "sources": [
+        {
+          "title": "USGS — Iron and Steel Statistics and Information",
+          "url": "https://www.usgs.gov/centers/national-minerals-information-center/iron-and-steel-statistics-and-information"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "context_only",
+        "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
+        "reviewScope": "USGS подтверждает общий класс чёрных металлов и процессы получения; конкретную марку Сталь 20, состав и свойства не подтверждает.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "steel-45",
+      "name": "Сталь 45",
+      "group": "metal",
+      "family": "Конструкционные углеродистые стали",
+      "detail": "Применяется для деталей машин; свойства зависят от сечения, состояния поставки и термообработки.",
+      "uses": "Валы, оси и другие детали машин",
+      "process": [
+        "cutting",
+        "heat",
+        "ultrasonic",
+        "hardness",
+        "forging",
+        "grinding",
+        "rolling"
+      ],
+      "note": "Твёрдость и прочность без указания режима термообработки не приводятся.",
+      "industries": [
+        "metals",
+        "general"
+      ],
+      "sources": [
+        {
+          "title": "USGS — Iron and Steel Statistics and Information",
+          "url": "https://www.usgs.gov/centers/national-minerals-information-center/iron-and-steel-statistics-and-information"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "context_only",
+        "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
+        "reviewScope": "Общие сведения о стали; ни марка Сталь 45, ни режимы термообработки источником не проверены.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "09g2s",
+      "name": "09Г2С",
+      "group": "metal",
+      "family": "Низколегированные конструкционные стали",
+      "detail": "Применяется в сварных конструкциях и прокате; пригодность к конкретной конструкции определяется проектными требованиями и документацией на поставку.",
+      "uses": "Металлоконструкции, сварные изделия",
+      "process": [
+        "welding",
+        "cutting",
+        "inspection",
+        "mig-mag",
+        "ultrasonic",
+        "radiographic"
+      ],
+      "note": "Марка сама по себе не определяет категорию проката, ударную вязкость или режим сварки.",
+      "industries": [
+        "metals",
+        "construction"
+      ],
+      "sources": [
+        {
+          "title": "USGS — Iron and Steel Statistics and Information",
+          "url": "https://www.usgs.gov/centers/national-minerals-information-center/iron-and-steel-statistics-and-information"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "context_only",
+        "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
+        "reviewScope": "Общие сведения о сталях; свойства проката 09Г2С и применимость к конструкции требуют профильного стандарта.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "aisi-304",
+      "name": "AISI 304",
+      "group": "metal",
+      "family": "Коррозионностойкие стали",
+      "detail": "Распространённая аустенитная коррозионностойкая сталь; стойкость зависит от среды и состояния поверхности.",
+      "uses": "Оборудование, ёмкости, элементы конструкций",
+      "process": [
+        "welding",
+        "cutting",
+        "tig",
+        "radiographic",
+        "dye",
+        "stamping"
+      ],
+      "note": "AISI — система обозначений; сопоставление с российскими марками требует отдельной проверки по составу и стандартам.",
+      "industries": [
+        "metals",
+        "chemicals",
+        "food",
+        "energy"
+      ],
+      "sources": [
+        {
+          "title": "Worldstainless — Categories, grades and product forms",
+          "url": "https://worldstainless.org/about-stainless/what-are-stainless-steels/categories-grades-and-product-forms/"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
+        "reviewScope": "Источник описывает семейство аустенитных сталей и марку 304; не подтверждает параметры конкретной поставки и разрешённость контакта с пищей.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "al-6061",
+      "name": "Алюминиевый сплав 6061",
+      "group": "metal",
+      "family": "Деформируемые алюминиевые сплавы",
+      "detail": "Сплав Al-Mg-Si; свойства зависят от состояния поставки, например T6, и формы изделия.",
+      "uses": "Машиностроительные детали, профили",
+      "process": [
+        "cutting",
+        "welding",
+        "mig-mag",
+        "tig",
+        "dye",
+        "hardness",
+        "stamping"
+      ],
+      "note": "Не переносить свойства 6061-T6 на 6061-O или на сварное соединение.",
+      "industries": [
+        "metals",
+        "construction"
+      ],
+      "sources": [
+        {
+          "title": "The Aluminum Association — Standards and alloy series",
+          "url": "https://www.aluminum.org/standards"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
+        "reviewScope": "Подтверждены классификация и общее применение 6061; состояние термообработки и характеристики не проверены.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "copper-m1",
+      "name": "Медь М1",
+      "group": "metal",
+      "family": "Медь и медные сплавы",
+      "detail": "Медная марка, используемая в электротехнических и других изделиях с учётом вида полуфабриката.",
+      "uses": "Проводники, электротехнические детали",
+      "process": [
+        "cutting"
+      ],
+      "note": "Электропроводность и примеси уточняются по документу на конкретный полуфабрикат.",
+      "industries": [
+        "metals",
+        "electronics",
+        "energy"
+      ],
+      "sources": [
+        {
+          "title": "Copper Development Association — Copper is Conductive",
+          "url": "https://archive.copper.org/education/copper-is/elements/conductive.html"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "context_only",
+        "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
+        "reviewScope": "Подтверждено общее применение меди как проводника; точная российская марка М1 не проверена.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "pe-hd",
+      "name": "ПЭНД (HDPE)",
+      "group": "organic",
+      "family": "Термопласты",
+      "detail": "Полиэтилен высокой плотности; эксплуатационные свойства зависят от марки, добавок и температуры.",
+      "uses": "Трубы, ёмкости, технические детали",
+      "process": [
+        "additive",
+        "injection-molding",
+        "extrusion"
+      ],
+      "note": "Обозначение HDPE не является достаточной спецификацией для расчёта давления или долговечности.",
+      "industries": [
+        "polymers",
+        "food",
+        "water"
+      ],
+      "sources": [
+        {
+          "title": "ISO 1043-1:2011 — Обозначения основных полимеров",
+          "url": "https://www.iso.org/ru/standard/50590.html"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "context_only",
+        "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
+        "reviewScope": "ISO определяет сокращения полимеров; допуск для пищевого контакта или питьевой воды не подтверждён.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "pa6",
+      "name": "Полиамид 6 (PA6)",
+      "group": "organic",
+      "family": "Термопласты",
+      "detail": "Конструкционный полимер, чувствительный к влагопоглощению; условия эксплуатации влияют на размеры и свойства.",
+      "uses": "Втулки, шестерни, корпуса",
+      "process": [
+        "cutting",
+        "additive",
+        "injection-molding",
+        "extrusion"
+      ],
+      "note": "При расчёте учитывать влажность, температуру и конкретную модификацию.",
+      "industries": [
+        "polymers",
+        "textiles"
+      ],
+      "sources": [
+        {
+          "title": "ISO 1043-1:2011 — Обозначения основных полимеров",
+          "url": "https://www.iso.org/ru/standard/50590.html"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "context_only",
+        "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
+        "reviewScope": "Подтверждена система сокращений полимеров, но не свойства конкретного PA6-компаунда.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "gfrp",
+      "name": "Стеклопластик (GFRP)",
+      "group": "composite",
+      "family": "Полимерные композиты",
+      "detail": "Матрица с армированием стекловолокном; свойства зависят от направления волокон, связующего и технологии.",
+      "uses": "Панели, оболочки, армированные детали",
+      "process": [
+        "additive",
+        "inspection"
+      ],
+      "note": "Без схемы армирования и условий испытаний единое значение прочности некорректно.",
+      "industries": [
+        "composites",
+        "construction",
+        "energy"
+      ],
+      "sources": [
+        {
+          "title": "ISO 1043-2:2011 — Усиливающие материалы и наполнители",
+          "url": "https://www.iso.org/standard/52829.html"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "context_only",
+        "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
+        "reviewScope": "ISO посвящён обозначениям армирующих материалов, а не прочности или пригодности стеклопластика.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "alumina",
+      "name": "Оксидная керамика Al₂O₃",
+      "group": "inorganic",
+      "family": "Техническая керамика",
+      "detail": "Материал на основе оксида алюминия; чистота, пористость и способ изготовления влияют на характеристики.",
+      "uses": "Изоляторы, износостойкие компоненты",
+      "process": [
+        "inspection"
+      ],
+      "note": "Не задавать единые значения твёрдости и прочности без марки и метода испытаний.",
+      "industries": [
+        "ceramics",
+        "electronics"
+      ],
+      "sources": [
+        {
+          "title": "USGS — Bauxite and Alumina Statistics and Information",
+          "url": "https://www.usgs.gov/centers/national-minerals-information-center/bauxite-and-alumina-statistics-and-information?qt-science_support_page_related_con=0"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "context_only",
+        "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
+        "reviewScope": "Источник описывает глинозём Al₂O₃ как промышленный продукт; не подтверждает свойства конкретной конструкционной керамики.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "birch-plywood",
+      "name": "Берёзовая фанера",
+      "group": "organic",
+      "family": "Древесные материалы",
+      "detail": "Слоистый древесный материал; свойства зависят от сортности, толщины, влажности и направления нагружения.",
+      "uses": "Оснастка, конструкции, мебель",
+      "process": [
+        "cutting"
+      ],
+      "note": "Класс эмиссии, водостойкость и сорт определяются конкретным стандартом и маркировкой.",
+      "industries": [
+        "wood",
+        "construction"
+      ],
+      "sources": [
+        {
+          "title": "USDA Forest Service — Wood Handbook (2021)",
+          "url": "https://research.fs.usda.gov/fpl/wood-handbook"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "context_only",
+        "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
+        "reviewScope": "USDA описывает фанеру и древесные композиты; не подтверждены свойства берёзовой фанеры конкретного сорта.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "aramid",
+      "name": "Арамидная ткань",
+      "group": "organic",
+      "family": "Технический текстиль",
+      "detail": "Текстиль на основе арамидных волокон; свойства зависят от структуры ткани, плотности и обработки.",
+      "uses": "Армирование, защитные и технические изделия",
+      "process": [
+        "inspection"
+      ],
+      "note": "Защитные характеристики нельзя утверждать без испытаний готового изделия.",
+      "industries": [
+        "textiles",
+        "composites"
+      ],
+      "sources": [
+        {
+          "title": "ISO 2076:2021 — Наименования химических волокон",
+          "url": "https://www.iso.org/standard/79685.html"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "context_only",
+        "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
+        "reviewScope": "ISO описывает общую номенклатуру химических волокон; свойства и тип арамидной ткани не проверены.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "food-raw",
+      "name": "Пищевое сырьё растительного происхождения",
+      "group": "organic",
+      "family": "Растительное пищевое сырьё",
+      "detail": "Вид, зрелость, санитарное состояние и состав определяют пригодность для конкретной технологии.",
+      "uses": "Плоды, овощи, растительные заготовки",
+      "process": [
+        "pasteurization",
+        "food-drying",
+        "fermentation",
+        "food-packaging"
+      ],
+      "note": "Проверять спецификации партии, показатели безопасности и условия хранения.",
+      "industries": [
+        "food"
+      ],
+      "sources": [
+        {
+          "title": "FAO — Primary production and food hazards",
+          "url": "https://www.fao.org/good-hygiene-practices-haccp-toolbox/ghp/primary-production/"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "context_only",
+        "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
+        "reviewScope": "FAO подтверждает необходимость анализа опасностей первичного пищевого сырья, не качество конкретной партии.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "food-pack",
+      "name": "Пищевые упаковочные материалы",
+      "group": "organic",
+      "family": "Контактирующие с пищей упаковочные материалы",
+      "detail": "Выбор упаковки зависит от продукта, температуры процесса и разрешённых условий контакта.",
+      "uses": "Плёнки, пакеты, банки и крышки",
+      "process": [
+        "food-packaging"
+      ],
+      "note": "Материал и миграционные требования проверяют по применимым регламентам и декларации соответствия.",
+      "industries": [
+        "food",
+        "polymers"
+      ],
+      "sources": [
+        {
+          "title": "FAO — Food contact materials, risks and alternatives",
+          "url": "https://www.fao.org/food-safety/news/detail/fao-report-highlights-key-food-safety-considerations-for-recycled-and-alternative-food-contact-materials/en"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "context_only",
+        "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
+        "reviewScope": "FAO описывает риски контактных материалов; безопасность конкретной упаковки не установлена.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "cotton",
+      "name": "Хлопковое волокно",
+      "group": "organic",
+      "family": "Натуральные текстильные волокна",
+      "detail": "Показатели длины, зрелости, засорённости и влажности влияют на перерабатываемость.",
+      "uses": "Пряжа, ткани, трикотаж",
+      "process": [
+        "spinning"
+      ],
+      "note": "Не приписывать единые свойства без класса и метода испытаний.",
+      "industries": [
+        "textiles"
+      ],
+      "sources": [
+        {
+          "title": "Cotton Incorporated — Textile Resources",
+          "url": "https://www.cottoninc.com/quality-products/textile-resources/"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "context_only",
+        "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
+        "reviewScope": "Отраслевой справочник по хлопку; показатели конкретного волокна не проверены.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "cotton-yarn",
+      "name": "Хлопковая пряжа",
+      "group": "organic",
+      "family": "Текстильная пряжа",
+      "detail": "Линейная плотность, крутка, прочность и неровнота зависят от способа прядения.",
+      "uses": "Ткачество, вязание",
+      "process": [
+        "weaving",
+        "knitting"
+      ],
+      "note": "Проверять номер пряжи, разрывные характеристики и партию.",
+      "industries": [
+        "textiles"
+      ],
+      "sources": [
+        {
+          "title": "Cotton Incorporated — Fiber Processing Research",
+          "url": "https://www.cottoninc.com/quality-products/textile-research/fiber-processing/"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
+        "reviewScope": "Подтверждены общие операции получения хлопковой пряжи; сорт и линейная плотность не проверены.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "woven-fabric",
+      "name": "Ткань текстильная",
+      "group": "organic",
+      "family": "Тканые материалы",
+      "detail": "Параметры переплетения, плотность и отделка определяют свойства готового полотна.",
+      "uses": "Швейные изделия, отделка",
+      "process": [
+        "textile-finishing",
+        "sewing"
+      ],
+      "note": "Состав и отделку проверяют по документам поставки.",
+      "industries": [
+        "textiles"
+      ],
+      "sources": [
+        {
+          "title": "Cotton Incorporated — Textile Glossary",
+          "url": "https://www.cottoninc.com/quality-products/textile-resources/textile-glossary/"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "context_only",
+        "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
+        "reviewScope": "Подтверждена базовая ткацкая терминология; характеристики конкретной ткани не проверены.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "timber",
+      "name": "Пиломатериалы из древесины",
+      "group": "organic",
+      "family": "Древесные материалы",
+      "detail": "Геометрия, порода, влажность и сортность определяются спецификацией.",
+      "uses": "Раскрой, сушка, изготовление деталей",
+      "process": [
+        "sawmilling",
+        "wood-drying"
+      ],
+      "note": "Проверять влажность, сорт и дефекты древесины.",
+      "industries": [
+        "wood",
+        "construction"
+      ],
+      "sources": [
+        {
+          "title": "USDA Forest Service — Wood Handbook (2021)",
+          "url": "https://research.fs.usda.gov/fpl/wood-handbook"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "context_only",
+        "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
+        "reviewScope": "Подтверждены свойства древесины как класса; параметры сорта и влажности должны сверяться отдельно.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "pcb",
+      "name": "Печатная плата (основание)",
+      "group": "composite",
+      "family": "Электронные основания",
+      "detail": "Плата с проводящим рисунком и диэлектрическим основанием; конструкция зависит от требований устройства.",
+      "uses": "Монтаж электронных компонентов",
+      "process": [
+        "pcb-assembly",
+        "electronic-inspection"
+      ],
+      "note": "Контролировать дефекты рисунка, геометрию и применимые требования к сборке.",
+      "industries": [
+        "electronics"
+      ],
+      "sources": [
+        {
+          "title": "IPC — IPC-4101 specification for PCB base materials",
+          "url": "https://www.ipc.org/ipc-validation-services-qualified-products-list-qpl-ipc-4101"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
+        "reviewScope": "IPC-4101 описывает базовые ламинаты для плат; параметры конкретной печатной платы не проверены.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "solder",
+      "name": "Материалы для пайки электронных узлов",
+      "group": "metal",
+      "family": "Припои и вспомогательные материалы",
+      "detail": "Состав припоя и флюса выбирается для процесса и требований к электронной сборке.",
+      "uses": "Пайка электронных компонентов",
+      "process": [
+        "pcb-assembly",
+        "electronic-inspection"
+      ],
+      "note": "Контролировать совместимость сплавов, флюса и технологических ограничений.",
+      "industries": [
+        "electronics",
+        "metals"
+      ],
+      "sources": [
+        {
+          "title": "IPC — J-STD-006C requirements for solder alloys (edition shown is older)",
+          "url": "https://www.ipc.org/TOC/IPC-J-STD-006C.pdf"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "context_only",
+        "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
+        "reviewScope": "Подтверждена спецификация класса электронных припоев; ссылка на старую редакцию, действующую редакцию требуется проверить.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "al-6063",
+      "name": "Алюминиевый сплав 6063",
+      "group": "metal",
+      "family": "Деформируемые сплавы системы Al–Mg–Si",
+      "detail": "Представитель группы 6xxx, применяемой в производстве профилей методом прессования.",
+      "uses": "Строительные и промышленные профили",
+      "process": [
+        "rolling",
+        "cutting"
+      ],
+      "note": "Уточняйте состояние поставки, стандарт на профиль, допуски и свойства.",
+      "industries": [
+        "metals",
+        "construction"
+      ],
+      "sources": [
+        {
+          "title": "The Aluminum Association — Standards and alloy series",
+          "url": "https://www.aluminum.org/standards"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "Группа 6xxx широко применяется в архитектурных и конструкционных изделиях.",
+        "reviewScope": "Это подтверждение семейства 6xxx; конкретный состав и свойства 6063 по стандарту отдельно не сверены.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "stainless-austenitic",
+      "name": "Аустенитные нержавеющие стали",
+      "group": "metal",
+      "family": "Высоколегированные коррозионностойкие стали",
+      "detail": "Семейство сталей с преимущественно аустенитной структурой; обозначение семейства не заменяет марку.",
+      "uses": "Технологическое оборудование, корпуса и трубопроводы",
+      "process": [
+        "welding",
+        "cutting",
+        "inspection"
+      ],
+      "note": "Марка, среда, температура, стойкость к коррозии и сварочное исполнение требуют проверки.",
+      "industries": [
+        "metals",
+        "chemicals",
+        "food",
+        "pharma",
+        "energy"
+      ],
+      "sources": [
+        {
+          "title": "Worldstainless — Categories, grades and product forms",
+          "url": "https://worldstainless.org/about-stainless/what-are-stainless-steels/categories-grades-and-product-forms/"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "Описана классификация аустенитных нержавеющих сталей.",
+        "reviewScope": "Не проверяет стойкость выбранной марки в конкретной среде.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "steel-scrap",
+      "name": "Стальной лом",
+      "group": "metal",
+      "family": "Вторичные металлургические материалы",
+      "detail": "Металлическая вторичная шихта для производства стали и чугунных изделий.",
+      "uses": "Шихта металлургических и литейных производств",
+      "process": [
+        "casting"
+      ],
+      "note": "Установите сортировку, загрязнения, прослеживаемость происхождения и химический состав.",
+      "industries": [
+        "metals",
+        "mining"
+      ],
+      "sources": [
+        {
+          "title": "USGS — Iron and Steel Scrap Statistics and Information",
+          "url": "https://www.usgs.gov/centers/national-minerals-information-center/iron-and-steel-scrap-statistics-and-information"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "Лом используется как сырьё при выплавке новых стальных и чугунных изделий.",
+        "reviewScope": "Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "iron-ore",
+      "name": "Железная руда",
+      "group": "inorganic",
+      "family": "Рудное сырьё",
+      "detail": "Природное железосодержащее сырьё для получения железа и последующей металлургии.",
+      "uses": "Горнодобывающее производство и металлургия",
+      "process": [
+        "ore-crushing",
+        "ore-grinding",
+        "magnetic-separation-ore"
+      ],
+      "note": "Требуются минералогия, гранулометрия, содержание железа и примесей.",
+      "industries": [
+        "mining",
+        "metals"
+      ],
+      "sources": [
+        {
+          "title": "USGS — Iron Ore Statistics and Information",
+          "url": "https://www.usgs.gov/centers/national-minerals-information-center/iron-ore-statistics-and-information"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "USGS описывает железную руду как основное первичное сырьё для чёрной металлургии.",
+        "reviewScope": "Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "bauxite-ore",
+      "name": "Боксит",
+      "group": "inorganic",
+      "family": "Алюминиевая руда",
+      "detail": "Сырьё для получения глинозёма, далее используемого в производстве алюминия.",
+      "uses": "Глинозёмные и алюминиевые производства",
+      "process": [
+        "ore-crushing",
+        "ore-grinding"
+      ],
+      "note": "Проверяются минералогический состав, реакционная способность и примеси.",
+      "industries": [
+        "mining",
+        "metals",
+        "ceramics"
+      ],
+      "sources": [
+        {
+          "title": "USGS — Bauxite and Alumina Statistics and Information",
+          "url": "https://www.usgs.gov/centers/national-minerals-information-center/bauxite-and-alumina-statistics-and-information?qt-science_support_page_related_con=0"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "USGS описывает получение глинозёма из боксита.",
+        "reviewScope": "Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "cement-portland",
+      "name": "Портландцемент",
+      "group": "inorganic",
+      "family": "Минеральные гидравлические вяжущие",
+      "detail": "Вяжущее для бетонов и растворов, изготовляемое на основе размолотого клинкера.",
+      "uses": "Бетонные смеси, строительные растворы",
+      "process": [
+        "concrete-mixing",
+        "concrete-curing"
+      ],
+      "note": "Вид, класс прочности, сроки схватывания и совместимость добавок подтверждаются паспортом и стандартом.",
+      "industries": [
+        "construction",
+        "ceramics"
+      ],
+      "sources": [
+        {
+          "title": "USGS — Cement Statistics and Information",
+          "url": "https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "USGS описывает цемент как вяжущее в бетоне и растворах.",
+        "reviewScope": "Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "cement-clinker",
+      "name": "Цементный клинкер",
+      "group": "inorganic",
+      "family": "Полупродукты вяжущих",
+      "detail": "Минеральный продукт высокотемпературной обработки сырьевой смеси, поступающий на помол.",
+      "uses": "Цементное производство",
+      "process": [
+        "cement-clinker-firing"
+      ],
+      "note": "Проверяются минералогия, свободная известь, тонкость помола после переработки.",
+      "industries": [
+        "ceramics",
+        "construction"
+      ],
+      "sources": [
+        {
+          "title": "USGS — Cement Statistics and Information",
+          "url": "https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "USGS описывает клинкер как основное сырьё цемента.",
+        "reviewScope": "Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "gypsum",
+      "name": "Гипс природный",
+      "group": "inorganic",
+      "family": "Неметаллическое минеральное сырьё",
+      "detail": "Сырьё для гипсовых изделий и добавка при выпуске цемента.",
+      "uses": "Строительные гипсовые изделия, цемент",
+      "process": [
+        "ore-crushing"
+      ],
+      "note": "Требуются фазовый состав, примеси, влажность и назначение.",
+      "industries": [
+        "ceramics",
+        "construction",
+        "mining"
+      ],
+      "sources": [
+        {
+          "title": "USGS — Gypsum Statistics and Information",
+          "url": "https://www.usgs.gov/centers/national-minerals-information-center/gypsum-statistics-and-information"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "USGS подтверждает широкое применение гипса в стройматериалах.",
+        "reviewScope": "Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "industrial-silica",
+      "name": "Кварцевый песок технический",
+      "group": "inorganic",
+      "family": "Кремнезёмистое сырьё",
+      "detail": "Пески с преобладанием кремнезёма; назначения зависят от фракций и химического состава.",
+      "uses": "Стекольное производство, различные промышленные смеси",
+      "process": [
+        "glass-melting",
+        "granular-filtration"
+      ],
+      "note": "Проверяйте содержание SiO₂, оксидов железа, фракционный состав и санитарные требования.",
+      "industries": [
+        "ceramics",
+        "mining",
+        "water",
+        "construction"
+      ],
+      "sources": [
+        {
+          "title": "USGS — Silica Statistics and Information",
+          "url": "https://www.usgs.gov/centers/national-minerals-information-center/silica-statistics-and-information"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "USGS перечисляет стекольное производство среди применений промышленного песка.",
+        "reviewScope": "Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "water-carbon",
+      "name": "Активированный уголь гранулированный",
+      "group": "inorganic",
+      "family": "Адсорбционные фильтрующие материалы",
+      "detail": "Пористый адсорбент, применяемый в водоочистке; эффективность зависит от загрязнителя и условий фильтра.",
+      "uses": "Сорбционные фильтры",
+      "process": [
+        "carbon-adsorption"
+      ],
+      "note": "Уточняйте исходное сырьё, йодное число, рабочую ёмкость, ресурс и способ регенерации.",
+      "industries": [
+        "water",
+        "chemicals"
+      ],
+      "sources": [
+        {
+          "title": "US EPA — Overview of Drinking Water Treatment Technologies",
+          "url": "https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "EPA описывает гранулированный активированный уголь как адсорбционный материал.",
+        "reviewScope": "Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "water-resin",
+      "name": "Ионообменная смола",
+      "group": "organic",
+      "family": "Функциональные полимерные сорбенты",
+      "detail": "Синтетическая смола с функциональными группами, обменивающими ионы в водном растворе.",
+      "uses": "Умягчение и целевая водоподготовка",
+      "process": [
+        "granular-filtration"
+      ],
+      "note": "Проверяйте тип смолы, селективность, рабочую ёмкость и регенерационный цикл.",
+      "industries": [
+        "water",
+        "chemicals"
+      ],
+      "sources": [
+        {
+          "title": "US EPA — Overview of Drinking Water Treatment Technologies",
+          "url": "https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "EPA описывает анионо- и катионообменные смолы для водоподготовки.",
+        "reviewScope": "Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "ro-membrane",
+      "name": "Мембранный материал обратного осмоса",
+      "group": "composite",
+      "family": "Мембранные разделительные материалы",
+      "detail": "Материал мембранного элемента для разделения потоков под давлением; состав и селективность зависят от продукта.",
+      "uses": "Мембранная водоподготовка",
+      "process": [
+        "reverse-osmosis",
+        "nanofiltration-water"
+      ],
+      "note": "Определяйте материал, селективность, совместимость по pH, давлению и температуре.",
+      "industries": [
+        "water",
+        "chemicals"
+      ],
+      "sources": [
+        {
+          "title": "US EPA — Overview of Drinking Water Treatment Technologies",
+          "url": "https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "EPA относит обратный осмос к мембранным технологиям водоподготовки.",
+        "reviewScope": "Проверен принцип мембранной сепарации; состав конкретной мембраны и рабочие параметры не подтверждены.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "polymer-pp",
+      "name": "Полипропилен (PP)",
+      "group": "organic",
+      "family": "Термопластичные полиолефины",
+      "detail": "Полимерное сырьё; потребительские свойства определяются маркой, составом и переработкой.",
+      "uses": "Литые и экструзионные изделия",
+      "process": [
+        "injection-molding",
+        "extrusion"
+      ],
+      "note": "Для выбора нужны марка, ПТР, добавки, температура переработки и ограничения применения.",
+      "industries": [
+        "polymers",
+        "food"
+      ],
+      "sources": [
+        {
+          "title": "ISO 1043-1:2011 — Обозначения основных полимеров",
+          "url": "https://www.iso.org/ru/standard/50590.html"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "ISO стандартизует сокращения полимеров, включая PP.",
+        "reviewScope": "Документ об обозначениях не удостоверяет физические свойства, медицинскую или пищевую пригодность.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "polymer-pet",
+      "name": "Полиэтилентерефталат (PET)",
+      "group": "organic",
+      "family": "Полиэфиры",
+      "detail": "Полимер, используемый в разных формах, включая упаковочные изделия и волокна, в зависимости от марки.",
+      "uses": "Упаковка и волокнистые изделия",
+      "process": [
+        "stretch-blow-molding",
+        "extrusion"
+      ],
+      "note": "Уточняйте назначение марки, вязкость, влагосодержание и требования к контакту с продуктом.",
+      "industries": [
+        "polymers",
+        "food",
+        "textiles"
+      ],
+      "sources": [
+        {
+          "title": "ISO 1043-1:2011 — Обозначения основных полимеров",
+          "url": "https://www.iso.org/ru/standard/50590.html"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "Система ISO 1043 охватывает сокращения базовых полимеров.",
+        "reviewScope": "Конкретная пригодность PET к применению и свойства данным источником не подтверждены.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "polymer-pvc",
+      "name": "Поливинилхлорид (PVC)",
+      "group": "organic",
+      "family": "Виниловые полимеры",
+      "detail": "Термопластичная полимерная основа композиций с переменным составом добавок.",
+      "uses": "Профильные и трубные изделия, покрытия",
+      "process": [
+        "extrusion",
+        "calendering"
+      ],
+      "note": "Характеристики определяются рецептурой, стабилизаторами и типом изделия.",
+      "industries": [
+        "polymers",
+        "construction",
+        "chemicals"
+      ],
+      "sources": [
+        {
+          "title": "ISO 1043-1:2011 — Обозначения основных полимеров",
+          "url": "https://www.iso.org/ru/standard/50590.html"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "Источник описывает международные сокращения полимеров.",
+        "reviewScope": "Подтверждена только номенклатура, не состав ПВХ-композиции.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "adhesive",
+      "name": "Промышленные клеевые системы",
+      "group": "functional",
+      "family": "Клеи и герметизирующие композиции",
+      "detail": "Многокомпонентные составы для соединения материалов, имеющие разные механизмы отверждения.",
+      "uses": "Сборка, строительные изделия, композиты",
+      "process": [
+        "assembly",
+        "plywood-bonding"
+      ],
+      "note": "Проверяют адгезию к основанию, режим отверждения, рабочую среду и инструкцию изготовителя.",
+      "industries": [
+        "chemicals",
+        "composites",
+        "wood",
+        "construction"
+      ],
+      "sources": [
+        {
+          "title": "FEICA — Adhesives and sealants industry",
+          "url": "https://www.feica.eu/adhesives-sealants-industry/"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "FEICA описывает промышленную роль клеёв и герметиков.",
+        "reviewScope": "Не проверены конкретные рецептуры и методы соединения.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "mdf",
+      "name": "Древесноволокнистая плита (MDF)",
+      "group": "composite",
+      "family": "Древесные композитные панели",
+      "detail": "Плитный древесный материал; показатели зависят от плотности и типа связующего.",
+      "uses": "Мебель, интерьерные панели",
+      "process": [
+        "fiberboard-pressing",
+        "wood-planing"
+      ],
+      "note": "Важны эмиссия связующего, влажность, толщина и условия эксплуатации.",
+      "industries": [
+        "wood",
+        "construction"
+      ],
+      "sources": [
+        {
+          "title": "USDA Forest Service — Wood Handbook (2021)",
+          "url": "https://research.fs.usda.gov/fpl/wood-handbook"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "USDA Wood Handbook описывает древесные композитные панели.",
+        "reviewScope": "Точные характеристики конкретной плиты и соответствие стандарту не проверены.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "glass-raw",
+      "name": "Стекольная шихта",
+      "group": "functional",
+      "family": "Сырьевые смеси для стекла",
+      "detail": "Подготовленная многокомпонентная смесь, перерабатываемая в стекломассу.",
+      "uses": "Стекловаренные производства",
+      "process": [
+        "glass-melting",
+        "glass-annealing"
+      ],
+      "note": "Контролируйте гранулометрию, химический состав, загрязнения и состав рецептуры.",
+      "industries": [
+        "ceramics"
+      ],
+      "sources": [
+        {
+          "title": "USGS — Silica Statistics and Information",
+          "url": "https://www.usgs.gov/centers/national-minerals-information-center/silica-statistics-and-information"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "USGS подтверждает применение промышленного кремнезёма при получении стекла.",
+        "reviewScope": "Состав готовой стекольной шихты этим источником не подтверждён.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "pharma-excipients",
+      "name": "Фармацевтические вспомогательные вещества",
+      "group": "functional",
+      "family": "Компоненты лекарственных форм",
+      "detail": "Вспомогательные ингредиенты, не предназначенные для основного фармакологического действия.",
+      "uses": "Наполнители и технологические компоненты лекарственных форм",
+      "process": [
+        "tablet-compression",
+        "capsule-filling",
+        "wet-granulation-pharma"
+      ],
+      "note": "Для каждой субстанции сверяются фармакопейная статья, путь введения и квалификация поставщика.",
+      "industries": [
+        "pharma"
+      ],
+      "sources": [
+        {
+          "title": "FDA — Inactive Ingredients Database FAQ",
+          "url": "https://www.fda.gov/drugs/drug-approvals-and-databases/inactive-ingredients-approved-drug-products-search-frequently-asked-questions"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "FDA описывает классификацию вспомогательных ингредиентов в одобренных препаратах.",
+        "reviewScope": "Это не разрешение любого ингредиента в любой лекарственной форме.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "pharma-api",
+      "name": "Активные фармацевтические субстанции (АФС)",
+      "group": "functional",
+      "family": "Активные ингредиенты лекарственных средств",
+      "detail": "Компоненты лекарственного продукта, предназначенные для фармакологического действия.",
+      "uses": "Производство лекарственных форм",
+      "process": [
+        "pharma-powder-blending",
+        "tablet-compression",
+        "pharma-micronization"
+      ],
+      "note": "Требуются фармакопейная спецификация, регистрационная документация и контроль критических свойств.",
+      "industries": [
+        "pharma"
+      ],
+      "sources": [
+        {
+          "title": "FDA — Inactive Ingredients Database FAQ",
+          "url": "https://www.fda.gov/drugs/drug-approvals-and-databases/inactive-ingredients-approved-drug-products-search-frequently-asked-questions"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "FDA разграничивает активные и неактивные ингредиенты.",
+        "reviewScope": "Не подтверждено качество какой-либо АФС или разрешение на её применение.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "printing-inks",
+      "name": "Полиграфические краски",
+      "group": "functional",
+      "family": "Краски и покрытия для печати",
+      "detail": "Системы красочного материала под определённый способ нанесения и последующего закрепления.",
+      "uses": "Флексографская, офсетная и трафаретная печать",
+      "process": [
+        "flexography",
+        "offset-lithography",
+        "screen-printing"
+      ],
+      "note": "Проверяются совместимость с субстратом, тип отверждения, вязкость, миграционные ограничения.",
+      "industries": [
+        "printing",
+        "chemicals"
+      ],
+      "sources": [
+        {
+          "title": "OSHA — Printing Industry Glossary",
+          "url": "https://www.osha.gov/etools/printing-industry/glossary"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "OSHA описывает разные виды полиграфических красок.",
+        "reviewScope": "Сведения об охране труда и терминологии не заменяют паспорт безопасности или технологический лист.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "printing-paper",
+      "name": "Печатная бумага и картон",
+      "group": "organic",
+      "family": "Целлюлозно-бумажные субстраты",
+      "detail": "Бумажные материалы, выбираемые под конкретную печать, покрытие и послепечатную обработку.",
+      "uses": "Печатная продукция, упаковка",
+      "process": [
+        "offset-lithography",
+        "flexography",
+        "print-binding"
+      ],
+      "note": "Указывают массу на м², влажность, гладкость, направление волокон и отделку.",
+      "industries": [
+        "printing",
+        "food"
+      ],
+      "sources": [
+        {
+          "title": "OSHA — Printing Industry Glossary",
+          "url": "https://www.osha.gov/etools/printing-industry/glossary"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "OSHA описывает операции с листовыми и рулонными субстратами в печати.",
+        "reviewScope": "Точный состав и бумажные марки источником не подтверждены.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "cotton-denim",
+      "name": "Деним (хлопчатобумажная ткань)",
+      "group": "organic",
+      "family": "Тканые хлопковые материалы",
+      "detail": "Один из типов тканей из пряжи, конструкция и отделка которых влияют на эксплуатационные свойства.",
+      "uses": "Одежда и технические текстильные изделия",
+      "process": [
+        "weaving",
+        "textile-finishing",
+        "sewing"
+      ],
+      "note": "Проверяются поверхностная плотность, состав, усадка, окрашивание и устойчивость окраски.",
+      "industries": [
+        "textiles"
+      ],
+      "sources": [
+        {
+          "title": "Cotton Incorporated — Textile Resources",
+          "url": "https://www.cottoninc.com/quality-products/textile-resources/"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "Cotton Incorporated описывает техническую базу хлопковых тканей.",
+        "reviewScope": "Не гарантирует параметров и состав конкретной партии денима.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "energy-copper",
+      "name": "Медные полуфабрикаты для теплообменников",
+      "group": "metal",
+      "family": "Медные теплопроводящие изделия",
+      "detail": "Трубы или листы из подходящей марки меди для теплопередающих узлов.",
+      "uses": "Теплообменные поверхности",
+      "process": [
+        "industrial-heat-exchange",
+        "cutting"
+      ],
+      "note": "Определите марку, стандарт полуфабриката, совместимость с теплоносителем и допуски.",
+      "industries": [
+        "energy",
+        "metals"
+      ],
+      "sources": [
+        {
+          "title": "Copper Development Association — Copper is Conductive",
+          "url": "https://archive.copper.org/education/copper-is/elements/conductive.html"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "Copper Development Association описывает медь как теплопроводящий металл.",
+        "reviewScope": "Не подтверждён выбор марки и долговечность в определённом теплоносителе.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "refractory-ceramics",
+      "name": "Огнеупорные керамические материалы",
+      "group": "inorganic",
+      "family": "Керамические изделия для высоких температур",
+      "detail": "Класс материалов для теплового оборудования, включая изделия на основе оксидов.",
+      "uses": "Футеровка термического оборудования",
+      "process": [
+        "ceramic-sintering"
+      ],
+      "note": "Температура службы, химическая стойкость и теплопроводность зависят от состава и изделия.",
+      "industries": [
+        "ceramics",
+        "energy",
+        "metals"
+      ],
+      "sources": [
+        {
+          "title": "USGS — Bauxite and Alumina Statistics and Information",
+          "url": "https://www.usgs.gov/centers/national-minerals-information-center/bauxite-and-alumina-statistics-and-information?qt-science_support_page_related_con=0"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "USGS отмечает использование бокситов в огнеупорах.",
+        "reviewScope": "Сведения относятся к сырьевой отрасли, а не к подтверждённым параметрам огнеупора.",
+        "checkedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "mining-quartz",
+      "name": "Кварцевое сырьё высокой чистоты",
+      "group": "inorganic",
+      "family": "Кварцевое промышленное сырьё",
+      "detail": "Кварц для применений, где критичны примеси и загрязнения.",
+      "uses": "Специальное стекло, электронные материалы",
+      "process": [
+        "ore-crushing",
+        "ore-screening"
+      ],
+      "note": "Необходим анализ следовых примесей и требования по чистоте для продукта.",
+      "industries": [
+        "mining",
+        "ceramics",
+        "electronics"
+      ],
+      "sources": [
+        {
+          "title": "USGS — Silica Statistics and Information",
+          "url": "https://www.usgs.gov/centers/national-minerals-information-center/silica-statistics-and-information"
+        }
+      ],
+      "evidence": {
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "USGS выделяет высокочистый кварц как отдельное промышленное сырьё.",
+        "reviewScope": "Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.",
+        "checkedAt": "2026-10-22"
+      }
+    }
+  ]
+}
