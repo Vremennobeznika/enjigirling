@@ -388,6 +388,17 @@
       "appliesTo": "Только конкретное утверждение из verifiedClaim",
       "access": "public_abstract_or_overview",
       "notes": "Не проверены все свойства и технологические нормы."
+    },
+    {
+      "sourceId": "iso-10209-assembly",
+      "title": "ISO 10209:2022 — определение сборки",
+      "url": "https://www.iso.org/obp/ui?_escaped_fragment_=iso%3Astd%3Aiso%3A10209%3Aed-2%3Av1%3Aen",
+      "publisher": "ISO",
+      "documentDate": "2022",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Только термин assembling: bringing together of components in a functional relationship",
+      "access": "public_abstract_or_overview",
+      "notes": "Определение без утверждений о способах затяжки, требованиях качества и безопасности."
     }
   ],
   "recordEvidence": [
@@ -1057,18 +1068,6 @@
     },
     {
       "recordType": "processes",
-      "recordId": "assembly",
-      "sourceId": "atlas-pcb-assembly",
-      "claimPath": "description",
-      "claimScope": "Проверка основного принципа процесса",
-      "verificationStatus": "claim_checked",
-      "verifiedClaim": "Сборка может включать соединение отдельных компонентов в готовый узел.",
-      "sourceSection": "Electronic assembly standards",
-      "claimCheckedAt": "2026-10-22",
-      "reviewScope": "Проверен только приведённый частный тезис, а не вся технологическая карточка."
-    },
-    {
-      "recordType": "processes",
       "recordId": "industrial-filtration",
       "sourceId": "checked3-industrial-filtration",
       "claimPath": "description",
@@ -1078,6 +1077,18 @@
       "sourceSection": "Sediment and Microporous Filtration",
       "claimCheckedAt": "2026-10-22",
       "reviewScope": "Проверен только приведённый частный тезис, а не вся технологическая карточка."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "assembly",
+      "sourceId": "iso-10209-assembly",
+      "claimPath": "description",
+      "verificationStatus": "claim_checked",
+      "claimScope": "Базовое определение сборки",
+      "verifiedClaim": "Сборка объединяет компоненты в функционально связанный узел.",
+      "sourceSection": "3.13.1 assembling",
+      "claimCheckedAt": "2026-10-22",
+      "reviewScope": "Подтверждено только определение, а не способы крепления или нормативные моменты затяжки."
     }
   ],
   "policy": {
