@@ -18,9 +18,8 @@ P0 — битый ID или обязательные поля; P1 — недос
 | T03 | 137 | Описание поверхностное; нужны инженерные различия и ограничения |
 | L02 | 65 | Нет конкретных материалов: не добавлять неподтверждённых связей |
 | E02 | 45 | Проверка отдельных тезисов не подтверждает всю карточку |
-| S04 | 8 | Зарегистрировано дополнительных ссылок, не показанных в карточке: 1 |
+| S04 | 7 | Зарегистрировано дополнительных ссылок, не показанных в карточке: 1 |
 | L03 | 7 | Нет достоверно связанного процесса; не подставлять неподходящий |
-| S06 | 5 | Нет реестровой записи для 2 URL карточки |
 
 ## Процессы — каждая карточка
 
@@ -30,20 +29,20 @@ P0 — битый ID или обязательные поля; P1 — недос
 | [Дуговая сварка (welding)](../processes.html#welding) | metals | частный тезис | P1 | S04, E02 |
 | [Обработка резанием (cutting)](../processes.html#cutting) | general | частный тезис | P1 | S07, E02 |
 | [Термическая обработка (heat)](../processes.html#heat) | metals | частный тезис | P1 | S07, E02 |
-| [Аддитивное производство (additive)](../processes.html#additive) | general | частный тезис | P1 | S04, S06, E02 |
-| [Неразрушающий контроль (inspection)](../processes.html#inspection) | general | частный тезис | P1 | S06, S07, E02 |
+| [Аддитивное производство (additive)](../processes.html#additive) | general | частный тезис | P1 | S04, E02 |
+| [Неразрушающий контроль (inspection)](../processes.html#inspection) | general | частный тезис | P1 | S07, E02 |
 | [MIG/MAG-сварка (mig-mag)](../processes.html#mig-mag) | metals | частный тезис | P1 | S04, E02 |
 | [TIG-сварка (tig)](../processes.html#tig) | metals | частный тезис | P1 | S04, E02 |
 | [Ультразвуковой контроль (ultrasonic)](../processes.html#ultrasonic) | general | частный тезис | P1 | S07, E02 |
 | [Радиографический контроль (radiographic)](../processes.html#radiographic) | general | частный тезис | P1 | S07, E02 |
 | [Капиллярный контроль (dye)](../processes.html#dye) | general | частный тезис | P1 | S04, S07, E02 |
 | [Измерение твёрдости (hardness)](../processes.html#hardness) | general | частный тезис | P2 | E02 |
-| [Ковка и объёмная штамповка (forging)](../processes.html#forging) | metals | частный тезис | P1 | S06, S07, E02 |
+| [Ковка и объёмная штамповка (forging)](../processes.html#forging) | metals | частный тезис | P1 | S07, E02 |
 | [Прокатка (rolling)](../processes.html#rolling) | metals | частный тезис | P1 | S07, E02 |
 | [Листовая штамповка (stamping)](../processes.html#stamping) | metals | частный тезис | P1 | S07, E02, T02 |
 | [Литьё термопластов под давлением (injection-molding)](../processes.html#injection-molding) | polymers | частный тезис | P2 | E02 |
 | [Экструзия полимеров (extrusion)](../processes.html#extrusion) | polymers | частный тезис | P1 | S07, E02 |
-| [Шлифование (grinding)](../processes.html#grinding) | metals | частный тезис | P1 | S06, S07, E02 |
+| [Шлифование (grinding)](../processes.html#grinding) | metals | частный тезис | P1 | S07, E02 |
 | [Покрытия и обработка поверхности (surface-finishing)](../processes.html#surface-finishing) | general | частный тезис | P1 | S07, E02, L02 |
 | [Механическая сборка (assembly)](../processes.html#assembly) | general | частный тезис | P1 | S07, E02, L02 |
 | [Пастеризация (pasteurization)](../processes.html#pasteurization) | food | частный тезис | P1 | S07, E02, T02 |
@@ -54,7 +53,7 @@ P0 — битый ID или обязательные поля; P1 — недос
 | [Ткачество (weaving)](../processes.html#weaving) | textiles | частный тезис | P1 | S07, E02, T02 |
 | [Вязальное производство (knitting)](../processes.html#knitting) | textiles | частный тезис | P1 | S07, E02, T02 |
 | [Крашение и отделка текстиля (textile-finishing)](../processes.html#textile-finishing) | textiles | частный тезис | P2 | E02 |
-| [Швейная сборка изделий (sewing)](../processes.html#sewing) | textiles | частный тезис | P1 | S04, S06, S07, E02 |
+| [Швейная сборка изделий (sewing)](../processes.html#sewing) | textiles | частный тезис | P1 | S07, E02 |
 | [Распиловка и обработка древесины (sawmilling)](../processes.html#sawmilling) | wood | частный тезис | P2 | E02, T02 |
 | [Камерная сушка древесины (wood-drying)](../processes.html#wood-drying) | wood | частный тезис | P2 | E02, T02 |
 | [Монтаж печатных плат (pcb-assembly)](../processes.html#pcb-assembly) | electronics | частный тезис | P1 | S07, E02 |
