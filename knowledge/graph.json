@@ -3,7 +3,7 @@
   "language": "ru",
   "status": "editorial_relationships",
   "nodeCount": 431,
-  "edgeCount": 755,
+  "edgeCount": 749,
   "edges": [
     {
       "from": "material:steel-20",
@@ -986,33 +986,8 @@
       "relation": "processed_by"
     },
     {
-      "from": "material:osb-board",
-      "to": "process:fiberboard-pressing",
-      "relation": "processed_by"
-    },
-    {
-      "from": "material:particleboard",
-      "to": "process:fiberboard-pressing",
-      "relation": "processed_by"
-    },
-    {
-      "from": "material:glulam",
-      "to": "process:plywood-bonding",
-      "relation": "processed_by"
-    },
-    {
-      "from": "material:clt",
-      "to": "process:plywood-bonding",
-      "relation": "processed_by"
-    },
-    {
       "from": "material:wood-impregnant",
       "to": "process:wood-preservation",
-      "relation": "processed_by"
-    },
-    {
-      "from": "material:pcb-prepreg",
-      "to": "process:pcb-assembly",
       "relation": "processed_by"
     },
     {
@@ -1253,11 +1228,6 @@
     {
       "from": "material:uf-membrane",
       "to": "process:ultrafiltration-water",
-      "relation": "processed_by"
-    },
-    {
-      "from": "material:activated-alumina-adsorbent",
-      "to": "process:carbon-adsorption",
       "relation": "processed_by"
     },
     {
