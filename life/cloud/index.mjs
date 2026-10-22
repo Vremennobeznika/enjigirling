@@ -75,7 +75,7 @@ export async function handler(event) {
     const sql = await getDb();
     if (method === 'GET') {
       const rows = await sql`SELECT payload, revision FROM app_state WHERE id = ${ID}`;
-      const row = rows?.[0]?.[0];
+      const row = rows?.[0];
       if (!row) return json(200, {revision: 0, data: null});
       return json(200, {revision: Number(row.revision), data: JSON.parse(row.payload)});
     }
@@ -94,7 +94,7 @@ export async function handler(event) {
     // Serializable transaction prevents silent overwrites when two devices edit at once.
     const result = await sql.begin(async (tx) => {
       const rows = await tx`SELECT revision FROM app_state WHERE id = ${ID}`;
-      const existingRevision = Number(rows?.[0]?.[0]?.revision || 0);
+      const existingRevision = Number(rows?.[0]?.revision || 0);
       if (baseRevision !== existingRevision) return {conflict: true, revision: existingRevision};
       const next = existingRevision + 1;
       await tx`UPSERT INTO app_state (id, payload, revision)
