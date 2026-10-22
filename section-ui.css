@@ -254,3 +254,13 @@
 .site-page .atlas-card:focus{outline:3px solid var(--text-primary);outline-offset:3px;}
 @media(max-width:1000px){.process-toolbar{grid-template-columns:repeat(2,minmax(0,1fr));}}
 @media(max-width:560px){.process-toolbar{grid-template-columns:minmax(0,1fr);}.process-controls{padding:14px;}}
+
+/* Extended process atlas: accessible progressive list and expandable source details. */
+.site-page .process-show-more{display:block;min-height:48px;margin:16px auto 28px;padding:11px 22px;border:1px solid var(--card-border);border-radius:var(--ui-radius);background:var(--card-bg);color:var(--card-text);font:600 var(--fs-sm)/1.4 var(--font);cursor:pointer;}
+.site-page .process-show-more:hover{border-color:var(--text-primary);}
+.site-page .process-show-more[hidden]{display:none!important;}
+.site-page .process-show-more:focus-visible,.site-page .process-references summary:focus-visible{outline:3px solid var(--text-primary);outline-offset:3px;}
+.site-page .process-references{margin:14px 0 8px;width:100%;border-top:1px solid var(--card-border);padding-top:10px;}
+.site-page .process-references summary{cursor:pointer;font:700 var(--fs-sm)/1.45 var(--font);min-height:40px;padding:8px 0;}
+.site-page .atlas-card .process-parent{margin:0 0 7px;color:var(--card-muted);font:400 var(--fs-sm)/1.45 var(--font);}
+.site-page .atlas-card .process-parent a{margin:0 0 0 4px;min-height:34px;padding:6px 10px;}
