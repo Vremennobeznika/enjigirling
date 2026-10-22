@@ -404,6 +404,17 @@ function initEngineerCalculators(){if(initialized)return;initialized=true;
                 mA = 4 + (value - min) / span * 16;
                 maCurrent.value = toInput(mA);
             }
+            if (![span, mA, value].every(Number.isFinite)) {
+                maResultValue.textContent = '—';
+                maResultHint.textContent = 'Результат вне числового диапазона.';
+                return;
+            }
+            if (mA <= 3.6 || mA >= 21) {
+                maResultValue.textContent = '— (сигнал отказа)';
+                if (lastEdited === 'current') maValue.value = '';
+                maResultHint.textContent = signalState(mA) + ' Пересчёт в величину процесса заблокирован.';
+                return;
+            }
             const percent = (mA - 4) / 16 * 100;
             maResultValue.textContent = lastEdited === 'current'
                 ? `${formatNumber(mA, 3)} мА → ${formatNumber(value, 3)}`
