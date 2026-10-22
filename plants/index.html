@@ -39,11 +39,11 @@ function sanitize(a){
 }
 function load(){try{return sanitize(JSON.parse(localStorage.getItem(KEY)||'[]'))}catch{return sanitize([])}}
 let pots=load();
-function store(){try{localStorage.setItem(KEY,JSON.stringify(pots));return true}catch{alert('Браузер не смог сохранить журнал. Сохрани резервную копию.');return false}}
+function store(){try{localStorage.setItem(KEY,JSON.stringify(pots));window.dispatchEvent(new Event('life-data-changed'));return true}catch{alert('Браузер не смог сохранить журнал. Сохрани резервную копию.');return false}}
 function syncCalendar(g){const ids=pots.slice(g*18,g*18+18),cur=today();
 try{const key='week-check-v2',s=JSON.parse(localStorage.getItem(key)||'{}'),id=cur+'-home-plant-'+(g*18+1)+'-'+(g*18+18);
 if(ids.every(p=>p.checked===cur))s[id]=true;else delete s[id];
-localStorage.setItem(key,JSON.stringify(s))}catch{}
+localStorage.setItem(key,JSON.stringify(s));window.dispatchEvent(new Event("life-data-changed"))}catch{}
 }
 function render(){
 const d=today(),seen=pots.filter(p=>p.checked===d).length,wet=pots.filter(p=>p.watered===d).length,flagged=pots.filter(p=>p.attention).length;
@@ -56,7 +56,7 @@ let card=node('section','pot');let hdr=node('div','row'),title=node('div'),num=n
 if(p.attention)hdr.append(node('span','flag','Внимание'));card.append(hdr);
 let meta=node('div','meta','Последний полив: '+dateLabel(p.watered)+' · Осмотр: '+dateLabel(p.checked));card.append(meta);
 let actions=node('div','actions');let check=node('label','check'),cb=node('input');cb.type='checkbox';cb.checked=p.checked===d;cb.setAttribute('aria-label','Осмотрено сегодня: '+p.name);
-cb.onchange=()=>{p.checked=cb.checked?d:'';store();if(cb.checked)syncCalendar(Math.floor((p.id-1)/18));render()};check.append(cb,node('span','', 'Осмотрено'));actions.append(check);
+cb.onchange=()=>{p.checked=cb.checked?d:'';store();syncCalendar(Math.floor((p.id-1)/18));render()};check.append(cb,node('span','', 'Осмотрено'));actions.append(check);
 let btn=node('button','btn'+(p.watered===d?' done':''),p.watered===d?'Полито сегодня':'Отметить полив');btn.type='button';
 btn.onclick=()=>{p.watered=d;p.checked=d;store();syncCalendar(Math.floor((p.id-1)/18));render()};actions.append(btn);
 let attention=node('button','btn',p.attention?'Снять отметку':'Нужен уход');attention.type='button';attention.onclick=()=>{p.attention=!p.attention;store();render()};actions.append(attention);card.append(actions);
@@ -74,6 +74,7 @@ $('export').onclick=()=>{const blob=new Blob([JSON.stringify({version:1,exported
 $('import').onclick=()=>$('file').click();
 $('file').onchange=async e=>{let f=e.target.files?.[0];if(!f)return;try{if(f.size>500000)throw Error('Слишком большой файл');let incoming=JSON.parse(await f.text());if(!incoming||!Array.isArray(incoming.plants))throw Error('Неверный формат');if(confirm('Заменить записи всех 72 горшков?')){pots=sanitize(incoming.plants);store();render()}}catch(err){alert('Ошибка файла: '+err.message)}finally{e.target.value=''}};
 window.addEventListener('storage',e=>{if(e.key===KEY){pots=load();render()}});
+window.addEventListener('life-sync-applied',()=>{pots=load();render()});
 store();render();
 })();
-</script></body></html>
+</script><script src="../life/auto-sync.js"></script></body></html>
