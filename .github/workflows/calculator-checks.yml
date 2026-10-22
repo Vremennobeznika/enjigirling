@@ -52,4 +52,4 @@ jobs:
           npm install --no-audit --no-fund
           npx playwright install --with-deps chromium
       - name: Calculator browser regression
-        run: npx playwright test tests/engineering-lab.spec.cjs tests/practical-calculator.spec.cjs --project=chromium --workers=2 --reporter=line
+        run: npx playwright test tests/engineering-lab.spec.cjs tests/practical-calculator.spec.cjs --workers=2 --reporter=line
