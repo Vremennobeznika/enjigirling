@@ -1,5 +1,5 @@
-const CACHE = 'life-dashboard-v2';
-const SHELL = ['./','./index.html','./manifest.webmanifest','./icon.svg','../calendar/household.js'];
+const CACHE = 'life-dashboard-v3';
+const SHELL = ['./','./index.html','./manifest.webmanifest','./icon.svg','../calendar/household.js','./auto-sync.js'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(SHELL)).then(()=>self.skipWaiting()));
 });
