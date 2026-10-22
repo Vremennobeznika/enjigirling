@@ -48,7 +48,7 @@ if(filter){
  filter.addEventListener('change',()=>{
   if(validKey(filter.value)){selector.value=filter.value;update();}
  });
- if(validKey(filter.value)){selector.value=filter.value;}
+ if(filter.value!=='all'&&validKey(filter.value)){selector.value=filter.value;}
 }
 downloadMd.addEventListener('click',()=>run('md'));
 downloadJson.addEventListener('click',()=>run('json'));
