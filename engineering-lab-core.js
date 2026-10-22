@@ -157,7 +157,7 @@ function finiteNonnegative(n,label){if(!Number.isFinite(n)||n<0)throw Error(labe
 function finish(values){if(!values.every(Number.isFinite))throw Error('Результат вне диапазона вычислений');}
 function takt(availableMinutes,requiredPieces){
  finitePositive(availableMinutes,'Доступное время');
- finitePositive(requiredPieces,'Потребность в выпуске');
+ integerPositive(requiredPieces,'Потребность в выпуске');
  const seconds=availableMinutes*60/requiredPieces;
  if(seconds<=0)throw Error('Недопустимое время такта');
  const perHour=3600/seconds;finish([seconds,perHour]);
@@ -166,8 +166,9 @@ function takt(availableMinutes,requiredPieces){
 function oee(plannedMinutes,runMinutes,total,good,idealSeconds){
  finitePositive(plannedMinutes,'Плановый фонд');
  finitePositive(runMinutes,'Фактическая работа');
- finitePositive(total,'Количество изделий');
+ integerPositive(total,'Количество изделий');
  finiteNonnegative(good,'Годные изделия');
+ if(!Number.isSafeInteger(good))throw Error('Годные изделия должны быть целым числом');
  finitePositive(idealSeconds,'Идеальный цикл');
  if(runMinutes>plannedMinutes)throw Error('Время работы больше планового фонда');
  if(good>total)throw Error('Годных изделий не может быть больше всего выпущенных');
@@ -176,7 +177,8 @@ function oee(plannedMinutes,runMinutes,total,good,idealSeconds){
  const quality=good/total;
  finish([availability,performance,quality]);
  if(performance>1+1e-9)throw Error('Производительность выше 100%: проверьте идеальный цикл или данные о выпуске');
- return {availability,performance,quality,oee:availability*performance*quality};
+ const boundedPerformance=Math.min(1,performance);
+ return {availability,performance:boundedPerformance,quality,oee:availability*boundedPerformance*quality};
 }
 function billetMass(densityKgM3,lengthMM,widthMM,heightMM){
  for(const [v,name] of [[densityKgM3,'Плотность'],[lengthMM,'Длина'],[widthMM,'Ширина'],[heightMM,'Толщина']])finitePositive(v,name);
@@ -228,8 +230,8 @@ function markerEfficiency(areaCm2,lengthM,widthCm){
  const markerCm2=lengthM*100*widthCm;
  finish([markerCm2]);
  if(areaCm2>markerCm2*(1+1e-10))throw Error('Площадь лекал превышает площадь раскладки');
- const fraction=areaCm2/markerCm2;
- return {percent:fraction*100,wastePercent:(1-fraction)*100,markerM2:markerCm2/10000,wasteM2:(markerCm2-areaCm2)/10000};
+ const fraction=Math.min(1,areaCm2/markerCm2); // Clamp round-off tolerated by the bound above.
+ return {percent:fraction*100,wastePercent:(1-fraction)*100,markerM2:markerCm2/10000,wasteM2:Math.max(0,markerCm2-areaCm2)/10000};
 }
 function fabricBooking(markerLengthM,piecesInMarker,allowancePct,orderPieces){
  finitePositive(markerLengthM,'Длина раскладки');
@@ -312,6 +314,7 @@ function layLength(piecesPerLay,plyCount,patternLengthM,endAllowanceM){
  finitePositive(patternLengthM,'Длина настила');
  finiteNonnegative(endAllowanceM,'Припуск на слой');
  const output=piecesPerLay*plyCount,consumption=plyCount*(patternLengthM+endAllowanceM);
+ if(!Number.isSafeInteger(output))throw Error('Число изделий превышает диапазон точного целочисленного счёта');
  const perPiece=consumption/output;finish([output,consumption,perPiece]);
  if(output<=0||consumption<=0)throw Error('Результат не представим численно');
  return {output,consumption,perPiece};
@@ -327,6 +330,7 @@ function lineBalance(raw,taktSeconds){
  const theoretical=Math.ceil(sum/taktSeconds);
  const cycle=Math.max(taktSeconds,max);
  finish([sum,cycle,theoretical]);
+ if(!Number.isSafeInteger(theoretical)||theoretical<1)throw Error('Число постов выходит за диапазон точного счёта');
  return {sum,operations:lines.length,theoretical,bottleneck:max,withinTakt:max<=taktSeconds};
 }
 function displacement(lengthM,beamM,draftM,coefficient,density){
