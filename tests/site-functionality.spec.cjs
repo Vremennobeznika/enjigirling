@@ -255,10 +255,10 @@ test('expanded process references work in reverse from materials without floodin
  const material=page.locator('#09g2s');
  await expect(material.locator('a[href="processes.html#manual-metal-arc"]')).toHaveCount(1);
  const more=material.locator('details.material-related-more');
- if(await more.count()){
+ if(await more.count()&&await more.locator('a[href="processes.html#manual-metal-arc"]').count()){
   await more.locator('summary').click();
-  await expect(more.locator('a[href="processes.html#manual-metal-arc"]')).toBeVisible();
  }
+ await expect(material.locator('a[href="processes.html#manual-metal-arc"]')).toBeVisible();
  await page.goto('/index.html#profession=mechanical-engineer');
  await expect(page.locator('#modalOverlay')).toHaveAttribute('aria-hidden','false');
  await expect(page.locator('#modalContent a[href^="processes.html#"]').first()).toBeVisible();
