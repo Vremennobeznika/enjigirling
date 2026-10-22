@@ -589,14 +589,14 @@
     },
     {
       "sourceId": "material-evidence-2",
-      "title": "Copper Development Association — Copper is Conductive",
-      "url": "https://archive.copper.org/education/copper-is/elements/conductive.html",
-      "publisher": "archive.copper.org",
+      "title": "Copper Development Association — Copper in power systems and its electrical conductivity",
+      "url": "https://blog.copper.org/power-grid/how-copper-supports-power-grid-expansion-and-rising-energy-demand",
+      "publisher": "Copper Development Association",
       "documentDate": "undated",
       "checkedAt": "2026-10-22",
       "appliesTo": "Подтверждено общее применение меди как проводника; точная российская марка М1 не проверена.",
       "access": "public_abstract_or_overview",
-      "notes": "Контекстный источник; не свидетельствует о проверке всех технических характеристик."
+      "notes": "Открыта страница первоисточника; она не подтверждает всю карточку."
     },
     {
       "sourceId": "material-evidence-3",
@@ -666,14 +666,14 @@
     },
     {
       "sourceId": "material-evidence-9",
-      "title": "FAO — Food contact materials, risks and alternatives",
-      "url": "https://www.fao.org/food-safety/news/detail/fao-report-highlights-key-food-safety-considerations-for-recycled-and-alternative-food-contact-materials/en",
-      "publisher": "www.fao.org",
+      "title": "EFSA — Food Contact Materials safety assessment",
+      "url": "https://www.efsa.europa.eu/en/science/scientific-committee-and-panels/fcm",
+      "publisher": "European Food Safety Authority",
       "documentDate": "undated",
       "checkedAt": "2026-10-22",
       "appliesTo": "FAO описывает риски контактных материалов; безопасность конкретной упаковки не установлена.",
       "access": "public_abstract_or_overview",
-      "notes": "Контекстный источник; не свидетельствует о проверке всех технических характеристик."
+      "notes": "Открыта страница первоисточника; она не подтверждает всю карточку."
     },
     {
       "sourceId": "material-evidence-10",
@@ -2921,12 +2921,13 @@
       "recordType": "materials",
       "recordId": "copper-m1",
       "sourceId": "material-evidence-2",
-      "claimPath": "family",
-      "verificationStatus": "source_located",
-      "claimScope": "Подтверждено общее применение меди как проводника; точная российская марка М1 не проверена.",
-      "sourceSection": "Обзор, информация о классе",
+      "claimPath": "detail",
+      "verificationStatus": "claim_checked",
+      "claimScope": "Медь применяется в электрических системах благодаря высокой электропроводности.",
+      "sourceSection": "How Copper Supports Power Grid Expansion and Rising Energy Demand",
       "claimCheckedAt": "2026-10-22",
-      "reviewScope": "Источник найден; проверка всей карточки не проводилась."
+      "reviewScope": "Подтверждено свойство меди в общем виде; российская марка М1 и сертифицированные свойства не проверены.",
+      "verifiedClaim": "Медь применяется в электрических системах благодаря высокой электропроводности."
     },
     {
       "recordType": "materials",
@@ -2998,56 +2999,61 @@
       "recordType": "materials",
       "recordId": "food-raw",
       "sourceId": "material-evidence-8",
-      "claimPath": "family",
-      "verificationStatus": "source_located",
-      "claimScope": "FAO подтверждает необходимость анализа опасностей первичного пищевого сырья, не качество конкретной партии.",
-      "sourceSection": "Обзор, информация о классе",
+      "claimPath": "detail",
+      "verificationStatus": "claim_checked",
+      "claimScope": "При первичном производстве пищевого сырья необходимо определять возможные угрозы его безопасности.",
+      "sourceSection": "GHP and HACCP Toolbox: Primary production",
       "claimCheckedAt": "2026-10-22",
-      "reviewScope": "Источник найден; проверка всей карточки не проводилась."
+      "reviewScope": "Проверены требования к анализу опасностей при первичном производстве, не качество конкретной партии.",
+      "verifiedClaim": "При первичном производстве пищевого сырья необходимо определять возможные угрозы его безопасности."
     },
     {
       "recordType": "materials",
       "recordId": "food-pack",
       "sourceId": "material-evidence-9",
-      "claimPath": "family",
-      "verificationStatus": "source_located",
-      "claimScope": "FAO описывает риски контактных материалов; безопасность конкретной упаковки не установлена.",
-      "sourceSection": "Обзор, информация о классе",
+      "claimPath": "detail",
+      "verificationStatus": "claim_checked",
+      "claimScope": "Материалы для контакта с пищей, включая упаковку, требуют научной оценки безопасности веществ.",
+      "sourceSection": "Food Contact Materials",
       "claimCheckedAt": "2026-10-22",
-      "reviewScope": "Источник найден; проверка всей карточки не проводилась."
+      "reviewScope": "Проверен общий принцип оценки безопасности; конкретный материал и допуск к применению не подтверждены.",
+      "verifiedClaim": "Материалы для контакта с пищей, включая упаковку, требуют научной оценки безопасности веществ."
     },
     {
       "recordType": "materials",
       "recordId": "cotton",
       "sourceId": "material-evidence-10",
-      "claimPath": "family",
-      "verificationStatus": "source_located",
-      "claimScope": "USDA приводит показатели оценки хлопкового волокна; свойства конкретной партии здесь не подтверждены.",
-      "sourceSection": "Обзор, информация о классе",
+      "claimPath": "detail",
+      "verificationStatus": "claim_checked",
+      "claimScope": "Классификация хлопкового волокна проводится по качественным показателям в рамках услуг USDA AMS.",
+      "sourceSection": "Cotton Classing Services",
       "claimCheckedAt": "2026-10-22",
-      "reviewScope": "Источник найден; проверка всей карточки не проводилась."
+      "reviewScope": "Проверено существование методики классификации; сорт конкретной партии не подтверждён.",
+      "verifiedClaim": "Классификация хлопкового волокна проводится по качественным показателям в рамках услуг USDA AMS."
     },
     {
       "recordType": "materials",
       "recordId": "cotton-yarn",
       "sourceId": "material-evidence-11",
-      "claimPath": "family",
-      "verificationStatus": "source_located",
-      "claimScope": "CottonWorks описывает прядение хлопка; качество отдельной партии пряжи не проверено.",
-      "sourceSection": "Обзор, информация о классе",
+      "claimPath": "detail",
+      "verificationStatus": "claim_checked",
+      "claimScope": "Производство хлопковой пряжи включает процессы прядения волокнистого сырья.",
+      "sourceSection": "Yarn Spinning",
       "claimCheckedAt": "2026-10-22",
-      "reviewScope": "Источник найден; проверка всей карточки не проводилась."
+      "reviewScope": "Проверен общий технологический принцип прядения; марка и качество партии пряжи не подтверждены.",
+      "verifiedClaim": "Производство хлопковой пряжи включает процессы прядения волокнистого сырья."
     },
     {
       "recordType": "materials",
       "recordId": "woven-fabric",
       "sourceId": "material-evidence-12",
-      "claimPath": "family",
-      "verificationStatus": "source_located",
-      "claimScope": "Источник описывает формирование тканого полотна; свойства конкретной ткани не проверены.",
-      "sourceSection": "Обзор, информация о классе",
+      "claimPath": "detail",
+      "verificationStatus": "claim_checked",
+      "claimScope": "Тканое полотно формируется переплетением нитей основы и утка.",
+      "sourceSection": "Weaving Basics",
       "claimCheckedAt": "2026-10-22",
-      "reviewScope": "Источник найден; проверка всей карточки не проводилась."
+      "reviewScope": "Проверено описание общей структуры тканых материалов; свойства ткани не подтверждены.",
+      "verifiedClaim": "Тканое полотно формируется переплетением нитей основы и утка."
     },
     {
       "recordType": "materials",
@@ -3064,23 +3070,25 @@
       "recordType": "materials",
       "recordId": "pcb",
       "sourceId": "material-evidence-13",
-      "claimPath": "family",
-      "verificationStatus": "source_located",
-      "claimScope": "IPC-4101 описывает базовые ламинаты для плат; параметры конкретной печатной платы не проверены.",
-      "sourceSection": "Обзор, информация о классе",
+      "claimPath": "detail",
+      "verificationStatus": "claim_checked",
+      "claimScope": "IPC-4101 описывает базовые материалы (ламинаты и препреги) для жёстких и многослойных печатных плат.",
+      "sourceSection": "IPC-4101 Specification for Base Materials",
       "claimCheckedAt": "2026-10-22",
-      "reviewScope": "Источник найден; проверка всей карточки не проводилась."
+      "reviewScope": "Проверен предмет стандарта, не свойства конкретной платы или поставки.",
+      "verifiedClaim": "IPC-4101 описывает базовые материалы (ламинаты и препреги) для жёстких и многослойных печатных плат."
     },
     {
       "recordType": "materials",
       "recordId": "solder",
       "sourceId": "material-evidence-14",
-      "claimPath": "family",
-      "verificationStatus": "source_located",
-      "claimScope": "Подтверждена спецификация класса электронных припоев; ссылка на старую редакцию, действующую редакцию требуется проверить.",
-      "sourceSection": "Обзор, информация о классе",
+      "claimPath": "detail",
+      "verificationStatus": "claim_checked",
+      "claimScope": "Существуют требования IPC J-STD-006C к припойным сплавам для электронного монтажа.",
+      "sourceSection": "IPC J-STD-006C / Cover and Contents",
       "claimCheckedAt": "2026-10-22",
-      "reviewScope": "Источник найден; проверка всей карточки не проводилась."
+      "reviewScope": "Подтверждено название и область действия исторической редакции; действующую редакцию и требования не проверяли.",
+      "verifiedClaim": "Существуют требования IPC J-STD-006C к припойным сплавам для электронного монтажа."
     },
     {
       "recordType": "materials",
@@ -3097,12 +3105,13 @@
       "recordType": "materials",
       "recordId": "stainless-austenitic",
       "sourceId": "worldstainless-304",
-      "claimPath": "family",
-      "verificationStatus": "source_located",
-      "claimScope": "Не проверяет стойкость выбранной марки в конкретной среде.",
-      "sourceSection": "Обзор, информация о классе",
+      "claimPath": "detail",
+      "verificationStatus": "claim_checked",
+      "claimScope": "Аустенитные нержавеющие стали выделены в отдельный класс нержавеющих сталей.",
+      "sourceSection": "Categories, grades and product forms / Austenitic",
       "claimCheckedAt": "2026-10-22",
-      "reviewScope": "Источник найден; проверка всей карточки не проводилась."
+      "reviewScope": "Проверена классификация, не свойства конкретной марки или партии.",
+      "verifiedClaim": "Аустенитные нержавеющие стали выделены в отдельный класс нержавеющих сталей."
     },
     {
       "recordType": "materials",
@@ -3340,23 +3349,25 @@
       "recordType": "materials",
       "recordId": "cotton-denim",
       "sourceId": "material-evidence-22",
-      "claimPath": "family",
-      "verificationStatus": "source_located",
-      "claimScope": "Источник описывает саржевые переплетения, применяемые для денима; состав и качество конкретной партии ткани не проверены.",
-      "sourceSection": "Обзор, информация о классе",
+      "claimPath": "detail",
+      "verificationStatus": "claim_checked",
+      "claimScope": "Саржевые переплетения относятся к основным вариантам конструкций тканых материалов.",
+      "sourceSection": "Basic Woven Fabric Designs",
       "claimCheckedAt": "2026-10-22",
-      "reviewScope": "Источник найден; проверка всей карточки не проводилась."
+      "reviewScope": "Подтверждён общий тип переплетения, не состав или качество конкретного денима.",
+      "verifiedClaim": "Саржевые переплетения относятся к основным вариантам конструкций тканых материалов."
     },
     {
       "recordType": "materials",
       "recordId": "energy-copper",
       "sourceId": "material-evidence-2",
-      "claimPath": "family",
-      "verificationStatus": "source_located",
-      "claimScope": "Не подтверждён выбор марки и долговечность в определённом теплоносителе.",
-      "sourceSection": "Обзор, информация о классе",
+      "claimPath": "detail",
+      "verificationStatus": "claim_checked",
+      "claimScope": "Медь используется в электрических системах благодаря низкому удельному сопротивлению.",
+      "sourceSection": "How Copper Supports Power Grid Expansion and Rising Energy Demand",
       "claimCheckedAt": "2026-10-22",
-      "reviewScope": "Источник найден; проверка всей карточки не проводилась."
+      "reviewScope": "Подтверждены электропроводность и применение в силовых системах; применение меди конкретного исполнения в теплообменниках этим источником не подтверждено.",
+      "verifiedClaim": "Медь используется в электрических системах благодаря низкому удельному сопротивлению."
     },
     {
       "recordType": "materials",
