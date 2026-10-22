@@ -26,7 +26,7 @@ function blank(){
  {id:"shopping",title:"Покупки",kind:"builtin",visible:true},
  {id:"home",title:"Дом",kind:"builtin",visible:true}
  ],
- items:[],done:{},tasks:[],transactions:[],shopping:[],pantry:[],plants:[],
+ items:[],done:{},tasks:[],transactions:[],subscriptions:[],shopping:[],pantry:[],plants:[],
  expenseCats:[
  {id:"food",title:"Продукты",limit:0},{id:"transport",title:"Транспорт",limit:0},
  {id:"housing",title:"Жильё",limit:0},{id:"health",title:"Здоровье",limit:0},
@@ -83,9 +83,15 @@ function validate(raw){
  const expIds=new Set(out.expenseCats.map(x=>x.id)),incIds=new Set(out.incomeCats.map(x=>x.id)),shIds=new Set(out.shopCats.map(x=>x.id));
  out.transactions=unique(arr(raw.transactions,30000).map(t=>({
   id:identifier(t.id),kind:allowed(t.kind,["income","expense"]),date:isoDate(t.date),
-  amount:number(t.amount),category:identifier(t.category),note:txt(t.note||"",160)
+  amount:number(t.amount),category:identifier(t.category),note:txt(t.note||"",160),subscriptionId:t.subscriptionId?identifier(t.subscriptionId):""
  })));
  if(out.transactions.some(t=>!t.amount||!(t.kind==="income"?incIds:expIds).has(t.category)))throw Error("Отсутствует категория у операции или сумма равна нулю");
+ out.subscriptions=unique(arr(raw.subscriptions||[],1000).map(v=>({
+  id:identifier(v.id),title:txt(v.title,100),amount:number(v.amount),category:identifier(v.category),
+  day:Math.trunc(v.day),active:v.active!==false
+ })));
+ if(out.subscriptions.some(v=>!v.title||!v.amount||!expIds.has(v.category)||v.day<1||v.day>31))throw Error("Некорректный регулярный платёж");
+ if(out.transactions.some(t=>t.subscriptionId&&(!out.subscriptions.some(x=>x.id===t.subscriptionId)||t.kind!=="expense")))throw Error("Связанный платеж отсутствует");
  out.shopping=unique(arr(raw.shopping,10000).map(v=>({
   id:identifier(v.id),title:txt(v.title,140),qty:txt(v.qty||"",40),category:identifier(v.category),done:Boolean(v.done)
  })));
@@ -140,6 +146,12 @@ function monthTotals(state,month){
  }
  return {income,expense,balance:income-expense,spent};
 }
+function dueDate(month,day){
+ const [year,m]=month.split("-").map(Number);
+ if(!Number.isInteger(year)||!Number.isInteger(m)||year<2000||year>9999||m<1||m>12)throw Error("Некорректный месяц");
+ const last=new Date(year,m,0,12).getDate();
+ return month+"-"+String(Math.min(day,last)).padStart(2,"0");
+}
 function csvField(value){
  let s=String(value??"");
  // Neutralise CSV formula execution in spreadsheet software.
@@ -157,5 +169,5 @@ function csvTransactions(state,month){
  }
  return "\ufeff"+rows.map(r=>r.map(csvField).join(";")).join("\r\n")+"\r\n";
 }
-return {VERSION,STORE,RECOVERY,builtin,dayNames,uid,blank,validate,localDate,addDays,monday,monthOf,shiftMonth,keyFor,parseMinor,money,monthTotals,csvTransactions};
+return {VERSION,STORE,RECOVERY,builtin,dayNames,uid,blank,validate,localDate,addDays,monday,monthOf,shiftMonth,keyFor,parseMinor,money,monthTotals,csvTransactions,dueDate};
 });
