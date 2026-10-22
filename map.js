@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const hasSource=item.sourceStatus==='official_source_located'&&source;
     const programs=Array.isArray(item.verifiedPrograms)?item.verifiedPrograms:[];
     const programDetails=programs.map(p=>({
-      label:'Подтверждённая программа '+p.code,
+      label:'Программа по источнику '+p.code,
       value:[p.name,p.year,p.basis,p.duration,
         Number.isFinite(p.budgetPlaces)?'Бюджетных мест: '+p.budgetPlaces:null,
         Number.isFinite(p.paidPlaces)?'Платных мест: '+p.paidPlaces:null,
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }));
 
     const facts=[
-      ['Описание направлений',programs.length?'Ниже указаны подтверждённые сведения о конкретных программах; другие направления остаются редакционным ориентиром.':'Направление — редакционный ориентир; наличие конкретной программы приёма не подтверждено.'],
+      ['Описание направлений',programs.length?'Ниже приведены сведения о программах с указанными источниками. Независимая сверка каждого утверждения не гарантирована; остальные направления — редакционный ориентир.':'Направление — редакционный ориентир; наличие конкретной программы приёма не подтверждено.'],
       ['Сроки, стоимость, бюджет и экзамены','Зависят от программы и года приёма. Без проверенного документа не приводятся.'],
       ['Статус',hasSource?item.verifiedScope:'Правила набора по этой организации индивидуально не проверены.'],
       ...(item.sourceFetchStatus?[['Доступность страницы источника',item.sourceFetchStatus==='fetched'?'22.10.2026: документ или сайт открылся. Содержательная точность остальных сведений не следует из этого факта.':'22.10.2026: проверить ссылку не удалось (тайм-аут или ошибка доступа). Это не доказательство закрытия организации.']]:[]),
@@ -64,9 +64,9 @@ document.addEventListener('DOMContentLoaded', () => {
       '<div class="education-card-meta"><span class="education-kind">'+(type==='uni'?'Вуз':'Колледж / техникум')+'</span><span class="education-location">'+escapeHtml(item.city)+' · '+escapeHtml(district.short)+'</span></div>'+
       '<h3>'+escapeHtml(item.name)+'</h3>'+
       '<p class="education-focus"><strong>Направления (ориентир):</strong> '+escapeHtml(item.focus||item.profile||'Не указаны')+'</p>'+
-      '<p class="education-card-status">'+(programs.length?'Есть подтверждённая программа':(item.sourceFetchStatus==='fetch_failed'?'Ссылка не открылась при проверке':(hasSource?(item.sourceType==='institution_home'?'Название сверено, не набор':'Источник найден; условия не сверены'):'Условия приёма не проверены')))+'</p>'+
+      '<p class="education-card-status">'+(programs.length?(item.reviewStatus==='program_source_recorded'?'Источник программы указан; повторная проверка не завершена':'Программа с документом в каталоге'):(item.sourceFetchStatus==='fetch_failed'?'Ссылка не открылась при проверке':(hasSource?(item.sourceType==='institution_home'?'Название сверено, не набор':'Источник найден; условия не сверены'):'Условия приёма не проверены')))+'</p>'+
       '<details class="education-card-details"><summary>Источники, программы и ограничения</summary><dl>'+facts+'</dl>'+
-      programDetails.filter(p=>p.source).map(p=>'<a class="education-site" href="'+escapeHtml(p.source)+'" rel="noopener noreferrer" target="_blank">Программа '+escapeHtml(p.label.replace('Подтверждённая программа ',''))+' — документ ↗</a>').join('')+
+      programDetails.filter(p=>p.source).map(p=>'<a class="education-site" href="'+escapeHtml(p.source)+'" rel="noopener noreferrer" target="_blank">Программа '+escapeHtml(p.label.replace('Программа по источнику ',''))+' — документ ↗</a>').join('')+
       (hasSource?'<a class="education-site" href="'+escapeHtml(source)+'" rel="noopener noreferrer" target="_blank">'+(item.sourceType==='institution_home'?'Официальный сайт (название) ↗':'Первоисточник ↗')+'</a>':'')+
       (site&&site!==source?'<a class="education-site" href="'+escapeHtml(site)+'" rel="noopener noreferrer" target="_blank">Сайт из каталога ↗</a>':(!site&&!source?'<p class="education-no-link">Адрес сайта не подтверждён</p>':''))+
       '</details></article>';
