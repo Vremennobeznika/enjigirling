@@ -1,0 +1,20 @@
+{
+  "name": "Обычный день — личный органайзер",
+  "short_name": "Обычный день",
+  "description": "Локальное приложение: дела, расходы, покупки, свои разделы и пункты",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "lang": "ru",
+  "background_color": "#0b0b0c",
+  "theme_color": "#111111",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
