@@ -52,3 +52,6 @@ input[type=checkbox].check-square:checked::after{content:"✓";position:absolute
 .main-tabs .return-home:hover{background:#303030}
 .main-tabs .return-home:focus-visible{outline:2px solid #fff;outline-offset:2px}
 @supports(top:env(safe-area-inset-top)){.main-tabs{top:env(safe-area-inset-top)}}
+
+/* Narrow iPhones: allow the header title and long privacy status to wrap instead of increasing page width. */
+@media(max-width:420px){.site-header{flex-wrap:wrap;align-items:flex-start;gap:8px;min-width:0}.site-header .header-title{flex:1 1 160px;min-width:0;overflow-wrap:anywhere}.site-header .privacy-pill{flex:0 1 auto;max-width:100%;min-width:0;white-space:normal;overflow-wrap:anywhere}.site-header p{max-width:100%}}
