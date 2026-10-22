@@ -13,7 +13,7 @@ ul{padding:0;margin:0;list-style:none}.item{display:flex;align-items:center;gap:
 .item .name{flex:1;min-width:0;overflow-wrap:anywhere}.item.done .name{text-decoration:line-through;color:#858585}.amount{color:#aaa;font-size:13px;white-space:nowrap}.del{border:0;background:none;color:#aaa;font-size:24px;padding:3px 6px}.empty{padding:24px 15px;text-align:center;color:#999;border-top:1px solid #333}
 .tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.tools button,.tools label{border:1px solid #555;background:#1b1b1b;color:#eee;border-radius:10px;padding:10px 12px;font-size:13px;cursor:pointer}.tools input{display:none}.footer{font-size:12px;margin-top:14px;line-height:1.6}
 @media(max-width:420px){h1{font-size:25px}.counter{font-size:12px}.item{gap:8px}.amount{max-width:85px;overflow:hidden;text-overflow:ellipsis}}
-</style></head><body><main>
+.item{flex-wrap:wrap}.item-time{width:104px;flex:none;min-height:42px;font-size:14px;border:1px solid #555;border-radius:9px;background:#111;color:#eee;padding:8px}.reminder-toggle{border:1px solid #666;border-radius:9px;background:#222;color:#eee;padding:9px 11px;min-height:42px;font-size:12px}.reminder-toggle[aria-pressed=true]{border-color:#eee}.item .name{flex-basis:30%}@media(max-width:420px){.item .name{flex-basis:55%}.item-time{width:103px}.reminder-toggle{font-size:12px}}</style></head><body><main>
 <div class="top"><div><h1>Список покупок</h1><p>По отделам супермаркета</p></div><div class="counter" id="counter">0 из 0</div></div><div class="progress"><div id="bar"></div></div>
 <nav class="tabs" id="tabs" aria-label="Отделы магазина"></nav>
 <section class="panel"><div class="panel-head"><h2 id="sectionTitle"></h2><span class="hint" id="sectionCount"></span></div>
@@ -23,7 +23,7 @@ ul{padding:0;margin:0;list-style:none}.item{display:flex;align-items:center;gap:
 (()=>{"use strict";
 const cats=[["all","Всё"],["produce","Овощи и фрукты"],["bakery","Хлеб и выпечка"],["dairy","Молочные продукты и яйца"],["meat","Мясо и птица"],["fish","Рыба и морепродукты"],["grocery","Крупы, макароны, консервы"],["frozen","Заморозка"],["drinks","Напитки"],["sweets","Сладости и снеки"],["sauces","Соусы, специи, масло"],["home","Бытовая химия"],["hygiene","Гигиена и косметика"],["baby","Детские товары"],["pets","Для животных"],["other","Прочее"]];
 const key="supermarket-shopping-list-v1";
-function loadShop(){try{let a=JSON.parse(localStorage.getItem(key)||"[]");if(Array.isArray(a))return a.filter(x=>x&&typeof x.name==="string"&&cats.some(c=>c[0]===x.cat)).map(x=>({id:String(x.id||Math.random()),name:x.name.slice(0,120),qty:String(x.qty||"").slice(0,35),cat:x.cat,done:!!x.done}))}catch(e){}return []}
+function loadShop(){try{let a=JSON.parse(localStorage.getItem(key)||"[]");if(Array.isArray(a))return a.filter(x=>x&&typeof x.name==="string"&&cats.some(c=>c[0]===x.cat)).map(x=>({id:String(x.id||Math.random()),name:x.name.slice(0,120),qty:String(x.qty||"").slice(0,35),cat:x.cat,done:!!x.done,time:/^([01]\d|2[0-3]):[0-5]\d$/.test(x.time||"")?x.time:"",remind:!!x.remind&&/^([01]\d|2[0-3]):[0-5]\d$/.test(x.time||"")}))}catch(e){}return []}
 let data=loadShop();
 let active="all";
 const $=id=>document.getElementById(id),save=()=>{try{localStorage.setItem(key,JSON.stringify(data));window.dispatchEvent(new Event("life-data-changed"));}catch(e){alert("Браузер не разрешил сохранить данные. Используй «Сохранить копию».");}};
@@ -39,7 +39,9 @@ visible.sort((a,b)=>Number(a.done)-Number(b.done)).forEach(x=>{
 let li=node("li","item"+(x.done?" done":"")),cb=node("input");cb.type="checkbox";cb.checked=x.done;cb.setAttribute("aria-label","Куплено: "+x.name);cb.onchange=()=>{x.done=cb.checked;save();render();};
 let name=node("span","name",x.name);if(active==="all"){let label=node("div","hint",cats.find(c=>c[0]===x.cat)?.[1]||"");let wrap=node("div","name");wrap.append(node("div","",x.name),label);name=wrap}
 let amount=node("span","amount",x.qty),del=node("button","del","×");del.type="button";del.setAttribute("aria-label","Удалить "+x.name);del.onclick=()=>{data=data.filter(y=>y.id!==x.id);save();render()};
-li.append(cb,name,amount,del);ul.append(li);
+let time=node("input","item-time");time.type="time";time.value=x.time||"12:00";time.setAttribute("aria-label","Время напоминания о покупке "+x.name);time.onchange=()=>{x.time=time.value;x.remind=!!x.remind&&!!x.time;save();render()};
+let bell=node("button","reminder-toggle",x.remind?"Напоминать ✓":"Напомнить");bell.type="button";bell.setAttribute("aria-pressed",String(!!x.remind));bell.setAttribute("aria-label",(x.remind?"Выключить":"Включить")+" напоминание: "+x.name);bell.onclick=()=>{x.remind=!x.remind;x.time=x.time||time.value||"12:00";save();render()};
+li.append(cb,name,amount,time,bell,del);ul.append(li);
 });
 }
 $("addForm").onsubmit=e=>{e.preventDefault();let name=$("itemName").value.trim(),qty=$("itemQty").value.trim();if(!name)return;const category=active==="all"?"other":active;
@@ -47,7 +49,7 @@ data.push({id:Date.now()+"-"+Math.random().toString(36).slice(2),name,qty,cat:ca
 $("removeDone").onclick=()=>{if(!data.some(x=>x.done))return;if(confirm("Удалить все отмеченные покупки?")){data=data.filter(x=>!x.done);save();render();}};
 $("reset").onclick=()=>{if(confirm("Удалить ВСЕ товары из списка?")){data=[];save();render();}};
 $("export").onclick=()=>{let blob=new Blob([JSON.stringify({version:1,items:data},null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="spisok-pokupok.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
-$("import").onchange=async e=>{let f=e.target.files?.[0];if(!f)return;try{if(f.size>1000000)throw Error("Файл слишком большой (максимум 1 МБ)");let j=JSON.parse(await f.text()),arr=Array.isArray(j)?j:j.items;if(!Array.isArray(arr))throw Error();let cleaned=arr.filter(x=>x&&typeof x.name==="string"&&cats.some(c=>c[0]===x.cat)).map(x=>({id:String(x.id||Math.random()),name:x.name.slice(0,120),qty:String(x.qty||"").slice(0,35),cat:x.cat,done:!!x.done}));if(!confirm("Заменить текущий список загруженной копией ("+cleaned.length+" товаров)?"))return;data=cleaned;save();render();}catch(err){alert("Не удалось прочитать файл списка.");}finally{e.target.value="";}};
+$("import").onchange=async e=>{let f=e.target.files?.[0];if(!f)return;try{if(f.size>1000000)throw Error("Файл слишком большой (максимум 1 МБ)");let j=JSON.parse(await f.text()),arr=Array.isArray(j)?j:j.items;if(!Array.isArray(arr))throw Error();let cleaned=arr.filter(x=>x&&typeof x.name==="string"&&cats.some(c=>c[0]===x.cat)).map(x=>({id:String(x.id||Math.random()),name:x.name.slice(0,120),qty:String(x.qty||"").slice(0,35),cat:x.cat,done:!!x.done,time:/^([01]\d|2[0-3]):[0-5]\d$/.test(x.time||"")?x.time:"",remind:!!x.remind&&/^([01]\d|2[0-3]):[0-5]\d$/.test(x.time||"")}));if(!confirm("Заменить текущий список загруженной копией ("+cleaned.length+" товаров)?"))return;data=cleaned;save();render();}catch(err){alert("Не удалось прочитать файл списка.");}finally{e.target.value="";}};
 window.addEventListener("life-sync-applied",()=>{data=loadShop();render()});
 window.addEventListener("storage",e=>{if(e.key===key){data=loadShop();render()}});
 render();
