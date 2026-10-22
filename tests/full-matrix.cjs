@@ -431,8 +431,9 @@ check('AI training packs expose all nine complete site sections',()=>{
  for(let i=0;i<slug.length;i++){
   const id=slug[i],p=fs.readFileSync(pages[i],'utf8');
   assert.ok(p.includes('href="ai.html?section='+id+'"'),pages[i]+' no AI navigation');
-  if(id==='processes'){
-   for(const control of ['processExportMd','processExportJson'])assert.ok(p.includes('id="'+control+'"'),pages[i]+' missing industry-only '+control);
+  if(id==='processes'||id==='materials'){
+   const prefix=id==='processes'?'process':'material';
+   for(const ext of ['Md','Json'])assert.ok(p.includes('id="'+prefix+'Export'+ext+'"'),pages[i]+' missing per-industry AI '+ext+' control');
   }else for(const ext of ['md','json'])assert.ok(p.includes('href="knowledge/sections/'+id+'.'+ext+'"'),pages[i]+' no '+ext+' download');
   const md=fs.readFileSync('knowledge/sections/'+id+'.md','utf8');
   const pack=json('knowledge/sections/'+id+'.json');
