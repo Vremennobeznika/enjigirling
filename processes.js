@@ -13,19 +13,20 @@ const q=search.value.trim().toLocaleLowerCase('ru'),group=category.value;
 const list=entries.filter(x=>(group==='all'||x.category===group)&&[x.name,x.description,x.steps,x.checks].join(' ').toLocaleLowerCase('ru').includes(q));
 status.textContent='Найдено: '+list.length+' из '+entries.length;
 reset.hidden=!search.value.trim()&&category.value==='all';
-root.innerHTML=list.map(x=>'<article class="atlas-card" id="'+esc(x.id)+'"><h2>'+esc(x.name)+'</h2><p>'+esc(x.description)+'</p><h3>Типовая последовательность</h3><p>'+esc(x.steps)+'</p><h3>Контроль и ограничения</h3><p>'+esc(x.checks)+'</p><h3>Связанные материалы</h3><p>'+x.materials.map(id=>'<a href="materials.html#'+encodeURIComponent(id)+'">'+esc(materialNames[id]||id)+'</a>').join(' · ')+'</p><h3>Связанная профессия</h3><p>'+(professionNames[x.profession]?'<a href="index.html#profession='+encodeURIComponent(x.profession)+'">'+esc(professionNames[x.profession])+'</a>':'<a href="index.html">Каталог профессий ↗</a>')+'</p><p class="data-quality-note">Обзор, не технологическая инструкция и не разрешение на выполнение работ.</p></article>').join('')||'<p class="eng-empty">Совпадений нет.</p>';
+root.innerHTML=list.map(x=>'<article class="atlas-card" id="'+esc(x.id)+'"><h2>'+esc(x.name)+'</h2><p>'+esc(x.description)+'</p><h3>Типовая последовательность</h3><p>'+esc(x.steps)+'</p><h3>Контроль и ограничения</h3><p>'+esc(x.checks)+'</p><h3>Связанные материалы</h3><p>'+(x.materials.length?x.materials.map(id=>'<a href="materials.html#'+encodeURIComponent(id)+'">'+esc(materialNames[id]||id)+'</a>').join(' · '):'Для процесса не указана конкретная марка; подбор материала — по документации на изделие.')+'</p><h3>Связанная профессия</h3><p>'+(professionNames[x.profession]?'<a href="index.html#profession='+encodeURIComponent(x.profession)+'">'+esc(professionNames[x.profession])+'</a>':'<a href="index.html">Каталог профессий ↗</a>') +'</p>'+(x.sources&&x.sources.length?'<h3>Источники для проверки</h3><ul>'+x.sources.map(s=>'<li><a href="'+esc(s.url)+'" target="_blank" rel="noopener noreferrer">'+esc(s.title)+'</a></li>').join('')+'</ul>':'<p class="data-quality-note">Подтверждённый внешний источник пока не добавлен.</p>')+'<p class="data-quality-note">Обзор, не технологическая инструкция и не разрешение на выполнение работ.</p></article>').join('')||'<p class="eng-empty">Совпадений нет.</p>';
 root.dataset.ready='true';
 }
 search.addEventListener('input',render);category.addEventListener('change',render);
-const hash=decodeURIComponent(location.hash.slice(1));if(hash&&entries.some(x=>x.id===hash)){category.value='all';search.value=entries.find(x=>x.id===hash).name;}
+const safeHash=()=>{try{return decodeURIComponent(location.hash.slice(1));}catch{return '';}};
+const hash=safeHash();if(hash&&entries.some(x=>x.id===hash)){category.value='all';search.value=entries.find(x=>x.id===hash).name;}
 render();
 if(location.hash){
- const id=decodeURIComponent(location.hash.slice(1));
+ const id=safeHash();
  const target=document.getElementById(id);
  if(target){target.setAttribute('tabindex','-1');requestAnimationFrame(()=>{target.scrollIntoView({block:'start'});target.focus({preventScroll:true});});}
 }
 window.addEventListener('hashchange',()=>{
- const id=decodeURIComponent(location.hash.slice(1));
+ const id=safeHash();
  const entry=entries.find(x=>x.id===id);
  if(!entry)return;
  category.value='all';search.value=entry.name;render();
