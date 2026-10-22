@@ -21,7 +21,8 @@ test('dedicated AI upload hub lists all nine sections at 320px',async({page})=>{
  await page.goto('/ai.html?section=calendar');
  await expect(page.locator('.ai-hub-card')).toHaveCount(9);
  await expect(page.locator('#pack-calendar')).toBeVisible();
- await expect(page.locator('a[href="knowledge/sections/all.md"]')).toHaveCount(1);
+ await expect(page.locator('a[href="knowledge/ai-context.md"]')).toHaveCount(1);
+ await expect(page.locator('#atlasAiPackage')).toBeVisible();
  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2)).toBeTruthy();
  await page.locator('#aiCopyPrompt').click();
  await expect(page.locator('#aiCopyStatus')).toContainText(/Скопировано|Выделите/);
