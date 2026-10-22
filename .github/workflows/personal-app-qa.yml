@@ -12,6 +12,8 @@ on:
       - 'shopping/**'
       - 'tests/life-*.cjs'
       - 'tests/personal-planner.spec.cjs'
+      - 'tests/personal-reminders.cjs'
+      - 'tests/personal-ics.cjs'
       - 'tests/calendar-layout.spec.cjs'
       - 'tests/personal-flows.spec.cjs'
       - 'scripts/all-checks.cjs'
@@ -45,6 +47,9 @@ jobs:
           node --check life/planner/app.js
           node tests/life-sync.cjs
           node tests/life-planner-parity.cjs
+          node --check life/active-reminders.js
+          node tests/personal-reminders.cjs
+          node tests/personal-ics.cjs
       - name: Install browser test tools
         run: npm install --no-audit --no-fund
       - name: Install Chromium
