@@ -18,6 +18,7 @@ const steps=[
  ['S01-S10 S16 HTML, navigation and editorial data',()=>[['node',['tests/site-check.cjs']]]],
  ['FULL P01-P06 D01-D09 A01-A03 S03',()=>[['node',['tests/full-matrix.cjs']],['node',['tests/engineering-lab-unit.cjs']]]],
  ['S11-S12 JSON exports and graph',()=>[['node',['scripts/build-knowledge.cjs','--check']]]],
+ ['PROCESS ATLAS 208 integrity and evidence scope',()=>[['node',['tests/process-atlas-data.cjs']]]],
  ['S13 source and claim references',()=>[['node',['scripts/check-evidence.cjs']]]],
  ['S15 deterministic quality metadata',()=>[['node',['scripts/build-quality.cjs','--check']]]],
  ['S14 evidence structural integrity and completeness report',()=>[['node',['scripts/audit-knowledge.cjs','--strict']]]]
