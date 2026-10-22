@@ -87,3 +87,23 @@ test('Compact iPhone selectors fit and do not overlap even with the keyboard vis
   }
  }
 });
+
+
+test('Entering Russian task text does not stretch date/time selectors while field focused',async({page})=>{
+ await page.setViewportSize({width:390,height:844});
+ await page.goto('/life/');
+ await page.locator('#taskName').fill('Лев');
+ await expect(page.locator('#taskName')).toHaveValue('Лев');
+ const geometries=await page.evaluate(()=>{
+  const b=s=>{const r=document.querySelector(s).getBoundingClientRect();return {left:r.left,right:r.right,bottom:r.bottom,top:r.top}};
+  return {view:window.innerWidth,page:document.documentElement.scrollWidth,
+    date:b('.date-parts[data-date-parts=taskDate]'),
+    time:b('.time-parts'),
+    name:b('#taskName'),card:b('#taskForm')};
+ });
+ expect(geometries.page).toBeLessThanOrEqual(392);
+ expect(geometries.date.right).toBeLessThanOrEqual(geometries.card.right+1);
+ expect(geometries.time.right).toBeLessThanOrEqual(geometries.card.right+1);
+ expect(geometries.date.bottom).toBeLessThanOrEqual(geometries.time.top);
+ expect(geometries.date.left).toBeGreaterThanOrEqual(geometries.card.left);
+});
