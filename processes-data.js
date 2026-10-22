@@ -11,7 +11,7 @@ window.engineeringProcesses = [
     "profession": "metallurgical-engineer",
     "sources": [
       {
-        "title": "NIST IR 7913 — классификация способов производства",
+        "title": "NIST (2013) — обзор оценки устойчивости производственных процессов (общий контекст)",
         "url": "https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes"
       },
       {
@@ -45,7 +45,7 @@ window.engineeringProcesses = [
         "url": "https://www.twi-global.com/technical-knowledge/faqs/what-is-fusion-welding"
       },
       {
-        "title": "TWI — классификация сварочных процессов",
+        "title": "TWI — классификация способов сварки (обзор с прежними редакциями стандартов)",
         "url": "https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly"
       }
     ],
@@ -80,7 +80,7 @@ window.engineeringProcesses = [
         "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
       },
       {
-        "title": "Sandvik Coromant — точность и качество обработки резанием",
+        "title": "Sandvik Coromant — справочник по токарной обработке (частный вид резания)",
         "url": "https://www.sandvik.coromant.com/en-gb/tools/silent-tools/what-is-silent-tools/application-guide-silent-tools/turning-appl-guide"
       }
     ],
@@ -361,7 +361,7 @@ window.engineeringProcesses = [
         "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
       },
       {
-        "title": "NIST IR 7913 — классификация способов производства",
+        "title": "NIST (2013) — обзор оценки устойчивости производственных процессов (общий контекст)",
         "url": "https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes"
       },
       {
@@ -394,7 +394,7 @@ window.engineeringProcesses = [
         "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
       },
       {
-        "title": "NIST IR 7913 — классификация способов производства",
+        "title": "NIST (2013) — обзор оценки устойчивости производственных процессов (общий контекст)",
         "url": "https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes"
       }
     ],
@@ -424,7 +424,7 @@ window.engineeringProcesses = [
         "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
       },
       {
-        "title": "NIST IR 7913 — классификация способов производства",
+        "title": "NIST (2013) — обзор оценки устойчивости производственных процессов (общий контекст)",
         "url": "https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes"
       }
     ],
@@ -482,7 +482,7 @@ window.engineeringProcesses = [
         "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
       },
       {
-        "title": "NIST IR 7913 — классификация способов производства",
+        "title": "NIST (2013) — обзор оценки устойчивости производственных процессов (общий контекст)",
         "url": "https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes"
       }
     ],
@@ -510,12 +510,16 @@ window.engineeringProcesses = [
         "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
       },
       {
-        "title": "NIST IR 7913 — классификация способов производства",
+        "title": "NIST (2013) — обзор оценки устойчивости производственных процессов (общий контекст)",
         "url": "https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes"
       },
       {
         "title": "OSHA — опасности операций механической обработки",
         "url": "https://www.osha.gov/metalworking-fluids/manual"
+      },
+      {
+        "name": "OSHA — безопасность абразивного шлифования",
+        "url": "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.215"
       }
     ],
     "evidence": {
@@ -540,7 +544,7 @@ window.engineeringProcesses = [
         "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
       },
       {
-        "title": "NIST IR 7913 — классификация способов производства",
+        "title": "NIST (2013) — обзор оценки устойчивости производственных процессов (общий контекст)",
         "url": "https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes"
       }
     ],
@@ -570,7 +574,7 @@ window.engineeringProcesses = [
         "url": "https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"
       },
       {
-        "title": "NIST IR 7913 — классификация способов производства",
+        "title": "NIST (2013) — обзор оценки устойчивости производственных процессов (общий контекст)",
         "url": "https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes"
       }
     ],
@@ -594,11 +598,11 @@ window.engineeringProcesses = [
     "profession": "food-engineer",
     "sources": [
       {
-        "title": "Профильное описание Пастеризация",
+        "title": "FAO — обзор переработки пищевых продуктов",
         "url": "https://www.fao.org/4/y5113e/y5113e04.htm"
       },
       {
-        "title": "FAO — технология переработки фруктов и овощей",
+        "title": "FAO — маломасштабная переработка овощей и фруктов",
         "url": "https://www.fao.org/4/x0209e/x0209e06.htm"
       }
     ],
@@ -622,11 +626,11 @@ window.engineeringProcesses = [
     "profession": "food-engineer",
     "sources": [
       {
-        "title": "Профильное описание Пастеризация",
+        "title": "FAO — обзор переработки пищевых продуктов",
         "url": "https://www.fao.org/4/y5113e/y5113e04.htm"
       },
       {
-        "title": "FAO — технология переработки фруктов и овощей",
+        "title": "FAO — маломасштабная переработка овощей и фруктов",
         "url": "https://www.fao.org/4/x0209e/x0209e06.htm"
       }
     ],
@@ -650,7 +654,7 @@ window.engineeringProcesses = [
     "profession": "food-engineer",
     "sources": [
       {
-        "title": "FAO — технология переработки фруктов и овощей",
+        "title": "FAO — маломасштабная переработка овощей и фруктов",
         "url": "https://www.fao.org/4/x0209e/x0209e06.htm"
       }
     ],
@@ -675,11 +679,11 @@ window.engineeringProcesses = [
     "profession": "food-engineer",
     "sources": [
       {
-        "title": "Профильное описание Пастеризация",
+        "title": "FAO — обзор переработки пищевых продуктов",
         "url": "https://www.fao.org/4/y5113e/y5113e04.htm"
       },
       {
-        "title": "FAO — технология переработки фруктов и овощей",
+        "title": "FAO — маломасштабная переработка овощей и фруктов",
         "url": "https://www.fao.org/4/x0209e/x0209e06.htm"
       }
     ],
@@ -703,7 +707,7 @@ window.engineeringProcesses = [
     "profession": "textile-engineer",
     "sources": [
       {
-        "title": "Профильное описание Прядение",
+        "title": "OSHA SIC 22 — классификация текстильных производств",
         "url": "https://www.osha.gov/data/sic-manual/major-group-22"
       },
       {
@@ -731,7 +735,7 @@ window.engineeringProcesses = [
     "profession": "textile-engineer",
     "sources": [
       {
-        "title": "Профильное описание Прядение",
+        "title": "OSHA SIC 22 — классификация текстильных производств",
         "url": "https://www.osha.gov/data/sic-manual/major-group-22"
       },
       {
@@ -759,7 +763,7 @@ window.engineeringProcesses = [
     "profession": "textile-engineer",
     "sources": [
       {
-        "title": "Профильное описание Прядение",
+        "title": "OSHA SIC 22 — классификация текстильных производств",
         "url": "https://www.osha.gov/data/sic-manual/major-group-22"
       },
       {
@@ -815,12 +819,12 @@ window.engineeringProcesses = [
     "profession": "textile-engineer",
     "sources": [
       {
-        "title": "Профильное описание Швейная сборка изделий",
+        "title": "OSHA SIC 23 — классификация швейных производств",
         "url": "https://www.osha.gov/data/sic-manual/major-group-23"
       },
       {
-        "title": "Coats — технические дефекты швов и рекомендации для швейного производства",
-        "url": "https://www.coats.com/en/industries/composites/faqs/"
+        "title": "Coats — дефекты строчки, сборка швов и причины",
+        "url": "https://www.coats.com/en-us/info-hub/solving-your-sewing-problems/"
       },
       {
         "title": "OSHA — основные процессы текстильной промышленности",
@@ -969,10 +973,6 @@ window.engineeringProcesses = [
     "profession": "chemical-engineer",
     "sources": [
       {
-        "title": "Профильное описание Дистилляция",
-        "url": "https://www.epa.gov/system/files/documents/2021-07/pretreatment_industrial_assessments.pdf"
-      },
-      {
         "title": "OSHA — перегонка и риски технологического процесса",
         "url": "https://www.osha.gov/otm/section-4-safety-hazards/chapter-5"
       }
@@ -997,10 +997,6 @@ window.engineeringProcesses = [
       {
         "title": "EPA WaterSense — фильтрация в системах очистки воды (частный пример)",
         "url": "https://www.epa.gov/system/files/documents/2024-03/ws-commercial-bmp-watersenseatwork_section7.1_waterpurification.pdf"
-      },
-      {
-        "title": "USGS — фильтрация и разделение твёрдых частиц в водоочистке",
-        "url": "https://www.usgs.gov/water-science-school/science/water-use-questions-answers"
       }
     ],
     "evidence": {
