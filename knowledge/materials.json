@@ -217,14 +217,14 @@
       ],
       "sources": [
         {
-          "title": "Copper Development Association — Copper is Conductive",
-          "url": "https://archive.copper.org/education/copper-is/elements/conductive.html"
+          "title": "Copper Development Association — Copper in power systems and its electrical conductivity",
+          "url": "https://blog.copper.org/power-grid/how-copper-supports-power-grid-expansion-and-rising-energy-demand"
         }
       ],
       "evidence": {
         "verificationStatus": "context_only",
         "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
-        "reviewScope": "Подтверждено общее применение меди как проводника; точная российская марка М1 не проверена.",
+        "reviewScope": "CDA подтверждает высокую электропроводность меди и промышленное применение; точная марка М1 и требования к партии не проверены.",
         "checkedAt": "2026-10-22"
       },
       "knowledgeMeta": {
@@ -491,14 +491,14 @@
       ],
       "sources": [
         {
-          "title": "FAO — Food contact materials, risks and alternatives",
-          "url": "https://www.fao.org/food-safety/news/detail/fao-report-highlights-key-food-safety-considerations-for-recycled-and-alternative-food-contact-materials/en"
+          "title": "EFSA — Food Contact Materials safety assessment",
+          "url": "https://www.efsa.europa.eu/en/science/scientific-committee-and-panels/fcm"
         }
       ],
       "evidence": {
         "verificationStatus": "context_only",
         "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
-        "reviewScope": "FAO описывает риски контактных материалов; безопасность конкретной упаковки не установлена.",
+        "reviewScope": "EFSA описывает научную оценку веществ и материалов, контактирующих с пищей, включая упаковку; не подтверждает безопасность конкретного изделия, разрешение или национальную применимость.",
         "checkedAt": "2026-10-22"
       },
       "knowledgeMeta": {
@@ -1512,14 +1512,14 @@
       ],
       "sources": [
         {
-          "title": "Copper Development Association — Copper is Conductive",
-          "url": "https://archive.copper.org/education/copper-is/elements/conductive.html"
+          "title": "Copper Development Association — Copper in power systems and its electrical conductivity",
+          "url": "https://blog.copper.org/power-grid/how-copper-supports-power-grid-expansion-and-rising-energy-demand"
         }
       ],
       "evidence": {
         "verificationStatus": "partial_claim",
         "verifiedClaim": "Copper Development Association описывает медь как теплопроводящий металл.",
-        "reviewScope": "Не подтверждён выбор марки и долговечность в определённом теплоносителе.",
+        "reviewScope": "CDA подтверждает применение меди в электрических системах и низкие потери; пригодность конкретного полуфабриката к теплообменнику требует отдельного источника.",
         "checkedAt": "2026-10-22"
       },
       "knowledgeMeta": {
