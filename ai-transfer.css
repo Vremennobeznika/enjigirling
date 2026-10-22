@@ -18,18 +18,17 @@
 @media(max-width:850px){.ai-hub-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:550px){.ai-hub-grid{grid-template-columns:minmax(0,1fr)}.ai-transfer-bar{padding:11px}.site-topbar{flex-wrap:wrap}.site-ai-link{margin-left:0}}
 
-/* Выгрузка отрасли: управление доступно без прокрутки к фильтрам атласа. */
-.ai-transfer-bar--industry{align-items:stretch;flex-wrap:wrap;gap:14px}
-.ai-export-intro{flex:1 1 230px;min-width:0}
-.ai-export-intro a{display:inline-block;margin-top:7px;color:var(--card-text);font:600 13px/1.5 var(--font);text-underline-offset:3px}
-.ai-export-controls{flex:1 1 340px;min-width:0}
-.ai-export-controls label{display:block;margin-bottom:6px;color:var(--card-text);font:600 13px/1.45 var(--font)}
-.ai-export-controls select{display:block;width:100%;max-width:100%;min-height:42px;box-sizing:border-box}
-.ai-export-controls #processExportCount{margin:7px 0!important}
-.ai-export-controls .ai-transfer-links{margin-top:7px}
-.ai-transfer-links button{display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;min-height:44px;padding:9px 12px;border:1px solid var(--card-border);border-radius:9px;background:var(--card-bg);color:var(--card-text);font:600 13px/1.5 var(--font);cursor:pointer}
-.ai-transfer-links button:hover:not(:disabled){border-color:var(--text-primary);text-decoration:underline}
-.ai-transfer-links button:disabled{opacity:.45;cursor:not-allowed}
-.ai-transfer-links button:focus-visible,.ai-export-controls select:focus-visible{outline:3px solid var(--text-primary);outline-offset:3px}
-.ai-export-status{min-height:1em}
-@media(max-width:550px){.ai-export-controls{flex-basis:100%}.ai-export-controls .ai-transfer-links button{flex:1 1 130px}}
+/* Компактная выгрузка у отраслевого фильтра, не в шапке сайта. */
+.process-export{box-sizing:border-box;display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:14px;margin:14px 0 3px;padding:14px 16px;border:1px solid var(--card-border);border-radius:12px;background:var(--soft-bg);color:var(--card-text)}
+.process-export-heading{flex:1 1 245px;min-width:0}
+.process-export-heading strong{font:700 15px/1.4 var(--font)}
+.process-export-heading p{margin:5px 0 0!important;font:400 12px/1.6 var(--font);color:var(--card-muted)}
+.process-export-actions{flex:1 1 310px;min-width:0}
+.process-export-actions>p{margin:0 0 8px!important;font:400 12px/1.5 var(--font);color:var(--card-muted)}
+.process-export-actions .ai-transfer-links{display:flex;flex-wrap:wrap;gap:8px}
+.process-export-actions .ai-transfer-links button{display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;min-height:42px;padding:8px 11px;border:1px solid var(--card-border);border-radius:9px;background:var(--card-bg);color:var(--card-text);font:600 13px/1.5 var(--font);cursor:pointer}
+.process-export-actions .ai-transfer-links button:hover:not(:disabled){border-color:var(--text-primary);text-decoration:underline}
+.process-export-actions .ai-transfer-links button:disabled{opacity:.45;cursor:not-allowed}
+.process-export-actions .ai-transfer-links button:focus-visible{outline:3px solid var(--text-primary);outline-offset:3px}
+.process-export-actions .ai-export-status{min-height:1em;margin-top:8px!important}
+@media(max-width:550px){.process-export{padding:12px}.process-export-actions .ai-transfer-links button{flex:1 1 125px}}
