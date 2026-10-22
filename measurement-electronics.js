@@ -80,6 +80,9 @@ function renderScope(){
   $('oscOutput').textContent='Проверьте частоту, амплитуду и смещение';
   $('oscDetails').textContent='Частота 1–10 000 Гц, амплитуда 0,1–8 В, смещение от −6 до +6 В.';
  }else{
+  // With 1000 screen intervals, >125 cycles are too poorly sampled to draw accurately.
+  const cycles=f*tb/100;
+  if(cycles<=125){
   const path=[];
   for(let i=0;i<=1000;i++){
    const x=40+.72*i,t=i/1000*10*tb/1000,v=offset+amp*wave(f*t,kind);
@@ -87,9 +90,10 @@ function renderScope(){
    path.push((i===0?'M':'L')+x.toFixed(2)+' '+Math.max(26,Math.min(281,y)).toFixed(2));
   }
   s+='<path d="'+path.join(' ')+'" stroke="var(--text-primary)" stroke-width="2.8" fill="none" stroke-linejoin="round"/>';
+  }
   const rms=amp*(kind==='sine'?Math.SQRT1_2:kind==='triangle'?1/Math.sqrt(3):1);
   $('oscOutput').textContent='Период '+fmt(1000/f,3)+' мс · Vpp '+fmt(amp*2)+' В';
-  $('oscDetails').textContent='Амплитуда '+fmt(amp)+' В · смещение '+fmt(offset)+' В · RMS '+fmt(Math.hypot(rms,offset),3)+' В · '+fmt(tb)+' мс/дел.';
+  $('oscDetails').textContent='Амплитуда '+fmt(amp)+' В · смещение '+fmt(offset)+' В · RMS '+fmt(Math.hypot(rms,offset),3)+' В · '+fmt(tb)+' мс/дел.'+(cycles>125?' График скрыт: недостаточно отсчётов на период при этой развёртке. Уменьшите мс/дел.':'');
  }
  s+=text(400,314,'10 × 8 делений · горизонталь: время · вертикаль: 2 В/дел.');
  $('oscSvg').innerHTML=s;
