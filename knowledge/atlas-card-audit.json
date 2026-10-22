@@ -7,9 +7,9 @@
     "materials": 172,
     "total": 380,
     "P0": 0,
-    "P1": 368,
-    "P2": 12,
-    "claimCheckedEntries": 45
+    "P1": 364,
+    "P2": 16,
+    "claimCheckedEntries": 44
   },
   "methodology": [
     "обязательные поля и терминология",
@@ -27,12 +27,11 @@
     "Все карточки требуют индивидуальной предметной проверки содержимого документов"
   ],
   "issueCounts": {
-    "S07": 176,
-    "E02": 45,
+    "S07": 177,
+    "E02": 44,
     "L02": 65,
-    "S04": 7,
     "T02": 180,
-    "E01": 335,
+    "E01": 336,
     "T03": 137,
     "L03": 7
   },
@@ -78,24 +77,18 @@
       "type": "processes",
       "industry": "metals",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#welding",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 2,
-      "primaryAuthorityLinks": 0,
+      "sourceCount": 3,
+      "primaryAuthorityLinks": 1,
       "sourceUrls": [
         "https://www.twi-global.com/technical-knowledge/faqs/what-is-fusion-welding",
-        "https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly"
-      ],
-      "additionalRegistryUrls": [
+        "https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly",
         "https://www.iso.org/standard/75108.html"
       ],
+      "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S04",
-          "level": "P1",
-          "details": "Зарегистрировано дополнительных ссылок, не показанных в карточке: 1"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -170,25 +163,19 @@
       "type": "processes",
       "industry": "general",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#additive",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 3,
-      "primaryAuthorityLinks": 2,
+      "sourceCount": 4,
+      "primaryAuthorityLinks": 3,
       "sourceUrls": [
         "https://www.nist.gov/additive-manufacturing/what-additive-manufacturing",
         "https://www.nist.gov/additive-manufacturing/research-areas/technologies/material-extrusion",
-        "https://store.astm.org/f3489-23.html"
-      ],
-      "additionalRegistryUrls": [
+        "https://store.astm.org/f3489-23.html",
         "https://www.iso.org/standard/74514.html"
       ],
+      "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 2,
       "issues": [
-        {
-          "code": "S04",
-          "level": "P1",
-          "details": "Зарегистрировано дополнительных ссылок, не показанных в карточке: 1"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -234,23 +221,17 @@
       "type": "processes",
       "industry": "metals",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#mig-mag",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
-      "primaryAuthorityLinks": 0,
+      "sourceCount": 2,
+      "primaryAuthorityLinks": 1,
       "sourceUrls": [
-        "https://www.twi-global.com/technical-knowledge/faqs/faq-what-is-the-difference-between-mig-and-mag"
-      ],
-      "additionalRegistryUrls": [
+        "https://www.twi-global.com/technical-knowledge/faqs/faq-what-is-the-difference-between-mig-and-mag",
         "https://www.iso.org/standard/75108.html"
       ],
+      "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S04",
-          "level": "P1",
-          "details": "Зарегистрировано дополнительных ссылок, не показанных в карточке: 1"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -265,23 +246,17 @@
       "type": "processes",
       "industry": "metals",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#tig",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
-      "primaryAuthorityLinks": 0,
+      "sourceCount": 2,
+      "primaryAuthorityLinks": 1,
       "sourceUrls": [
-        "https://www.twi-global.com/technical-knowledge/job-knowledge/tungsten-inert-gas-tig-or-gta-welding-006"
-      ],
-      "additionalRegistryUrls": [
+        "https://www.twi-global.com/technical-knowledge/job-knowledge/tungsten-inert-gas-tig-or-gta-welding-006",
         "https://www.iso.org/standard/75108.html"
       ],
+      "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S04",
-          "level": "P1",
-          "details": "Зарегистрировано дополнительных ссылок, не показанных в карточке: 1"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -357,21 +332,15 @@
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#dye",
       "priority": "P1",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
-      "primaryAuthorityLinks": 1,
+      "sourceCount": 2,
+      "primaryAuthorityLinks": 2,
       "sourceUrls": [
-        "https://www.asnt.org/what-is-nondestructive-testing/methods"
-      ],
-      "additionalRegistryUrls": [
+        "https://www.asnt.org/what-is-nondestructive-testing/methods",
         "https://www.asnt.org/standards-publications/blog/ndt-method-overview-what-is-liquid-penetrant-testing"
       ],
+      "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 2,
       "issues": [
-        {
-          "code": "S04",
-          "level": "P1",
-          "details": "Зарегистрировано дополнительных ссылок, не показанных в карточке: 1"
-        },
         {
           "code": "S07",
           "level": "P1",
@@ -1112,20 +1081,13 @@
       "sourceUrls": [
         "https://www.osha.gov/otm/section-4-safety-hazards/chapter-5"
       ],
-      "additionalRegistryUrls": [
-        "https://www.epa.gov/system/files/documents/2021-07/pretreatment_industrial_assessments.pdf"
-      ],
-      "claimCheckedInRegistry": 1,
+      "additionalRegistryUrls": [],
+      "claimCheckedInRegistry": 0,
       "issues": [
         {
-          "code": "S04",
+          "code": "E01",
           "level": "P1",
-          "details": "Зарегистрировано дополнительных ссылок, не показанных в карточке: 1"
-        },
-        {
-          "code": "E02",
-          "level": "P2",
-          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
+          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
         },
         {
           "code": "L02",
@@ -1143,20 +1105,19 @@
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#industrial-filtration",
       "priority": "P1",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
-      "primaryAuthorityLinks": 1,
+      "sourceCount": 2,
+      "primaryAuthorityLinks": 2,
       "sourceUrls": [
-        "https://www.epa.gov/system/files/documents/2024-03/ws-commercial-bmp-watersenseatwork_section7.1_waterpurification.pdf"
-      ],
-      "additionalRegistryUrls": [
+        "https://www.epa.gov/system/files/documents/2024-03/ws-commercial-bmp-watersenseatwork_section7.1_waterpurification.pdf",
         "https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"
       ],
+      "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "S04",
+          "code": "S07",
           "level": "P1",
-          "details": "Зарегистрировано дополнительных ссылок, не показанных в карточке: 1"
+          "details": "Общие источники (R08); они не подтверждают параметры конкретного процесса/марки"
         },
         {
           "code": "E02",
