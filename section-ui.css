@@ -233,3 +233,8 @@
 .measurement-shortcut{margin:16px 0 22px;padding:15px 18px;line-height:1.65;border:1px solid var(--card-border);border-radius:14px;background:var(--soft-bg);color:var(--card-text);font-size:14px;}
 .measurement-shortcut a,.measurement-shortcut a:link,.measurement-shortcut a:visited{color:inherit!important;text-decoration:underline;font-weight:700;text-underline-offset:3px;}
 .measurement-shortcut a:focus-visible{outline:3px solid var(--text-primary);outline-offset:3px;}
+
+/* Ordered process stages: readable on desktop and narrow screens. */
+.site-page .atlas-card .process-step-list{padding-left:23px;margin:8px 0 12px;list-style:decimal;color:var(--card-text);}
+.site-page .atlas-card .process-step-list li{padding-left:4px;margin:0 0 7px;font:400 var(--fs-sm)/1.6 var(--font);overflow-wrap:anywhere;}
+.site-page .atlas-card .process-step-list li::marker{font-weight:700;}
