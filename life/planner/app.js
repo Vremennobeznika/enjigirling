@@ -35,9 +35,9 @@ function persist(){
   if(all[PERSONAL_KEY]&&JSON.stringify(all[PERSONAL_KEY])===fresh)return true;
   all[PERSONAL_KEY]=state;
   const total=JSON.stringify(all);
-  if(total.length>210000){notice('Планировщик приближается к лимиту Яндекс-функции. Скачай копию и сократи историю записей.');return false}
   localStorage.setItem(SHARED_KEY,total);
   window.dispatchEvent(new Event('life-data-changed'));
+  if(new TextEncoder().encode(total).length>170000)notice('Данные сохранены локально. Общий объём приближается к ограничению облачной функции: регулярно сохраняй JSON-копию. Функция Яндекса может отклонить слишком большой пакет.');
   return true;
  }catch(err){notice('Не удалось сохранить: '+err.message);return false}
 }
