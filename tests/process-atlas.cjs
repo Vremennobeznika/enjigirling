@@ -28,7 +28,6 @@ const {chromium}=require('playwright');
       if(await page.locator('#processGrid .atlas-card').count()!==48)errors.push(width+': show-more count');
     }
     if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2))errors.push(width+': horizontal overflow '+theme);
-    await page.locator('.filter-reset').click().catch(()=>{});
     await page.locator('#processSearch').fill('09г2с');
     if(await page.locator('#processGrid #welding').count()!==1)errors.push('material search');
     await page.locator('.filter-reset').click();
