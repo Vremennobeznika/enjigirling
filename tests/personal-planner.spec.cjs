@@ -104,4 +104,17 @@ test('Personal planner saved local data does not silently overwrite a newer shop
  const items=await page.evaluate(()=>JSON.parse(localStorage.getItem('supermarket-shopping-list-v1')));
  expect(items).toHaveLength(1);
  expect(items[0].id).toBe('external');
+ const ledger=await page.evaluate(()=>JSON.parse(localStorage.getItem('week-check-v2'))?.__planner_v3?.ledger||[]);
+ expect(ledger).toHaveLength(1);
+ expect(ledger[0].amount).toBe(10);
+});
+
+test('An untouched new device remains empty so first Yandex pull is not blocked',async({page})=>{
+ await page.goto('/life/planner/');
+ const persisted=await page.evaluate(()=>({
+  calendar:localStorage.getItem('week-check-v2'),
+  shopping:localStorage.getItem('supermarket-shopping-list-v1')
+ }));
+ expect(persisted.calendar).toBeNull();
+ expect(persisted.shopping).toBeNull();
 });
