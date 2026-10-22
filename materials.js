@@ -81,53 +81,10 @@ search.addEventListener('keydown',e=>{if(e.key==='Escape'&&search.value){search.
 category.addEventListener('change',changeFilter);
 industry.addEventListener('change',changeFilter);
 sort.addEventListener('change',changeFilter);
-reset.addEventListener('click',()=>{resetFilters();render();updateExport();search.focus();});
+reset.addEventListener('click',()=>{resetFilters();render();search.focus();});
 more.addEventListener('click',()=>{visibleLimit+=PAGE;render();});
-const eCount=document.getElementById('materialExportCount');
-const eStatus=document.getElementById('materialExportStatus');
-const eMd=document.getElementById('materialExportMd'),eJson=document.getElementById('materialExportJson'),eCopy=document.getElementById('materialExportCopy');
-const hasExport=!!(eCount&&eStatus&&eMd&&eJson&&eCopy);
-const selected=()=>Object.prototype.hasOwnProperty.call(industries,industry.value)?industry.value:'';
-function sectorRecords(){
-const key=selected();if(!key)throw Error('Выберите конкретную отрасль.');
-const records=entries.filter(x=>(x.industries||[]).includes(key)).slice().sort((a,b)=>a.name.localeCompare(b.name,'ru'));
-if(!records.length)throw Error('Для отрасли нет материалов.');
-return {key,records};
-}
-function updateExport(){
-if(!hasExport)return;
-const key=selected(),count=key?entries.filter(x=>(x.industries||[]).includes(key)).length:0;
-eCount.textContent=key?'Материалов в отрасли «'+industries[key]+'»: '+count+'. Все карточки будут выгружены.':'Выберите конкретную отрасль для выгрузки.';
-eMd.disabled=eJson.disabled=eCopy.disabled=!count;eStatus.textContent='';
-}
-function payload(){
-const {key,records}=sectorRecords();
-return {schemaVersion:'1.1',dataset:'materials',industry:{id:key,name:industries[key]},recordsCount:records.length,sourceUrl:'https://vremennobeznika.github.io/enjigirling/materials.html',quality:'editorial_not_independently_verified',notice:'Сведения обзорные. Статус частичного подтверждения не означает проверки всей карточки. Нормативные параметры требуют марки, состояния, стандарта и паспорта партии.',
-records:records.map(x=>({...x,industryNames:(x.industries||[]).map(i=>industries[i]||i),relatedProcesses:(relatedByMaterial[x.id]||[]).map(id=>({id,name:processById[id].name})),professionNames:[...new Set((relatedByMaterial[x.id]||[]).map(id=>professionNames[processById[id]?.profession]).filter(Boolean))]}))};
-}
-function markdown(p){
-const lines=['# Материалы — '+p.industry.name,'','Записей: '+p.recordsCount,'Источник: '+p.sourceUrl,'Статус: редакционный справочник, не проверенный как единая нормативная база.','',p.notice,''];
-for(const x of p.records){
-lines.push('## '+x.name+' ('+x.id+')','','Класс: '+x.family,'Отрасли: '+x.industryNames.join(', '),'',x.detail,'','### Применение','',x.uses,'','### Уточнить перед применением','',x.note,'','### Связанные процессы','');
-lines.push(...(x.relatedProcesses.length?x.relatedProcesses.map(v=>'- '+v.name+' ('+v.id+')'):['Не установлены.']));
-lines.push('','### Связанные профессии','',x.professionNames.join(', ')||'Не указаны.','',
-'### Достоверность','',
-'Статус: '+(x.evidence?.verificationStatus||'нет'),'Подтверждаемый тезис: '+(x.evidence?.verifiedClaim||'не задан'),'Предел проверки: '+(x.evidence?.reviewScope||'не задан'),'Дата просмотра: '+(x.evidence?.checkedAt||'не указана'),'','### Источники','');
-lines.push(...((x.sources||[]).length?x.sources.map(s=>'- '+s.title+' — '+s.url):['Не указаны.']));lines.push('');
-}
-return lines.join('\n').trim()+'\n';
-}
-function download(content,name,mime){
-const url=URL.createObjectURL(new Blob([content],{type:mime}));
-const a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();
-setTimeout(()=>URL.revokeObjectURL(url),30000);
-}
-if(hasExport){
-industry.addEventListener('change',updateExport);
-eMd.addEventListener('click',()=>{try{const p=payload();download(markdown(p),'materials-'+p.industry.id+'.md','text/markdown;charset=utf-8');eStatus.textContent='Markdown: '+p.recordsCount+' материалов.';}catch(e){eStatus.textContent=e.message;}});
-eJson.addEventListener('click',()=>{try{const p=payload();download(JSON.stringify(p,null,2)+'\n','materials-'+p.industry.id+'.json','application/json;charset=utf-8');eStatus.textContent='JSON: '+p.recordsCount+' материалов.';}catch(e){eStatus.textContent=e.message;}});
-eCopy.addEventListener('click',async()=>{try{const p=payload();if(!navigator.clipboard?.writeText)throw Error('Буфер обмена недоступен. Скачайте Markdown.');await navigator.clipboard.writeText(markdown(p));eStatus.textContent='Скопировано '+p.recordsCount+' карточек.';}catch(e){eStatus.textContent='Копирование не удалось: '+(e.message||'Скачайте Markdown.');}});
-}
-render();updateExport();openHash();
+
+
+render();openHash();
 window.addEventListener('hashchange',openHash);
 })();
