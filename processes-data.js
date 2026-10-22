@@ -4396,5 +4396,1112 @@ window.engineeringProcesses = [
       "checkedAt": "2026-10-22"
     },
     "reviewStatus": "source_located"
+  },
+  {
+    "id": "magnetic-particle-ndt",
+    "name": "Магнитопорошковый контроль",
+    "category": "inspection",
+    "industry": "general",
+    "parentId": "inspection",
+    "description": "Выявление поверхностных и подповерхностных нарушений в ферромагнитных материалах.",
+    "steps": "Подготовка → намагничивание → нанесение частиц → оценка",
+    "checks": "Направление поля, чистота поверхности, индикации",
+    "materials": [
+      "09g2s",
+      "steel-45"
+    ],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "ASNT — каталог методов неразрушающего контроля — обзор без технологических режимов",
+        "url": "https://www.asnt.org/what-is-nondestructive-testing/methods"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "eddy-current-ndt",
+    "name": "Вихретоковый контроль",
+    "category": "inspection",
+    "industry": "general",
+    "parentId": "inspection",
+    "description": "Контроль проводящих изделий по изменению наведённых вихревых токов.",
+    "steps": "Выбор датчика → калибровка → сканирование → протокол",
+    "checks": "Проводимость, зазор, чувствительность, глубина",
+    "materials": [
+      "09g2s",
+      "steel-45"
+    ],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "ASNT — каталог методов неразрушающего контроля — обзор без технологических режимов",
+        "url": "https://www.asnt.org/what-is-nondestructive-testing/methods"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "visual-ndt",
+    "name": "Визуальный и измерительный контроль",
+    "category": "inspection",
+    "industry": "general",
+    "parentId": "inspection",
+    "description": "Осмотр доступных поверхностей с визуальными и измерительными средствами.",
+    "steps": "Подготовка поверхности → осмотр → измерение → протокол",
+    "checks": "Освещённость, доступность, допуски, критерии",
+    "materials": [
+      "09g2s",
+      "steel-45"
+    ],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "ASNT — каталог методов неразрушающего контроля — обзор без технологических режимов",
+        "url": "https://www.asnt.org/what-is-nondestructive-testing/methods"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "leak-testing",
+    "name": "Испытание на герметичность",
+    "category": "inspection",
+    "industry": "general",
+    "parentId": "inspection",
+    "description": "Поиск утечек в системах с помощью перепада давления или индикаторной среды.",
+    "steps": "Подготовка → испытание → оценка потерь → запись",
+    "checks": "Чувствительность, утечки, перепад давления",
+    "materials": [
+      "09g2s",
+      "steel-45"
+    ],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "ASNT — каталог методов неразрушающего контроля — обзор без технологических режимов",
+        "url": "https://www.asnt.org/what-is-nondestructive-testing/methods"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "acoustic-emission-ndt",
+    "name": "Акустико-эмиссионный контроль",
+    "category": "inspection",
+    "industry": "general",
+    "parentId": "inspection",
+    "description": "Регистрация акустических сигналов, связанных с активными изменениями материала.",
+    "steps": "Установка датчиков → нагружение по методике → анализ сигналов",
+    "checks": "Помехи, локализация, активность источников",
+    "materials": [
+      "09g2s",
+      "steel-45"
+    ],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "ASNT — каталог методов неразрушающего контроля — обзор без технологических режимов",
+        "url": "https://www.asnt.org/what-is-nondestructive-testing/methods"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "infrared-thermography",
+    "name": "Инфракрасная термография",
+    "category": "inspection",
+    "industry": "general",
+    "parentId": "inspection",
+    "description": "Выявление температурных неоднородностей по тепловому излучению поверхности.",
+    "steps": "Подготовка → тепловизионная съёмка → интерпретация",
+    "checks": "Коэффициент излучения, отражения, условия съёмки",
+    "materials": [
+      "09g2s",
+      "steel-45"
+    ],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "ASNT — каталог методов неразрушающего контроля — обзор без технологических режимов",
+        "url": "https://www.asnt.org/what-is-nondestructive-testing/methods"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "ground-penetrating-radar",
+    "name": "Георадарное обследование",
+    "category": "inspection",
+    "industry": "general",
+    "parentId": "inspection",
+    "description": "Зондирование подповерхностных объектов электромагнитными импульсами.",
+    "steps": "Выбор трассы → зондирование → интерпретация профиля",
+    "checks": "Влажность, глубина, разрешение, помехи",
+    "materials": [
+      "09g2s",
+      "steel-45"
+    ],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "ASNT — каталог методов неразрушающего контроля — обзор без технологических режимов",
+        "url": "https://www.asnt.org/what-is-nondestructive-testing/methods"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "guided-wave-ndt",
+    "name": "Контроль направленными ультразвуковыми волнами",
+    "category": "inspection",
+    "industry": "general",
+    "parentId": "ultrasonic",
+    "description": "Обследование протяжённого объекта направленными волнами.",
+    "steps": "Установка преобразователей → возбуждение → анализ отражений",
+    "checks": "Мёртвые зоны, затухание, локализация",
+    "materials": [
+      "09g2s",
+      "steel-45"
+    ],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "ASNT — каталог методов неразрушающего контроля — обзор без технологических режимов",
+        "url": "https://www.asnt.org/what-is-nondestructive-testing/methods"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "magnetic-flux-leakage",
+    "name": "Контроль утечкой магнитного потока",
+    "category": "inspection",
+    "industry": "general",
+    "parentId": "inspection",
+    "description": "Обнаружение неоднородностей ферромагнитной стенки по полю рассеяния.",
+    "steps": "Намагничивание → сканирование → оценка изменений",
+    "checks": "Геометрия, насыщение, глубина дефектов",
+    "materials": [
+      "09g2s",
+      "steel-45"
+    ],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "ASNT — каталог методов неразрушающего контроля — обзор без технологических режимов",
+        "url": "https://www.asnt.org/what-is-nondestructive-testing/methods"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "neutron-radiography",
+    "name": "Нейтронная радиография",
+    "category": "inspection",
+    "industry": "general",
+    "parentId": "radiographic",
+    "description": "Получение изображения по ослаблению нейтронного потока объектом.",
+    "steps": "Подготовка образца → экспонирование по методике → анализ",
+    "checks": "Контраст материалов, радиационная безопасность",
+    "materials": [
+      "09g2s",
+      "steel-45"
+    ],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "ASNT — каталог методов неразрушающего контроля — обзор без технологических режимов",
+        "url": "https://www.asnt.org/what-is-nondestructive-testing/methods"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "laser-shearography",
+    "name": "Лазерная шерография",
+    "category": "inspection",
+    "industry": "general",
+    "parentId": "inspection",
+    "description": "Оптическая регистрация деформационных полей при заданной нагрузке.",
+    "steps": "Подготовка поверхности → воздействие → сравнение изображений",
+    "checks": "Вибрации, чувствительность, интерпретация",
+    "materials": [
+      "09g2s",
+      "steel-45"
+    ],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "ASNT — каталог методов неразрушающего контроля — обзор без технологических режимов",
+        "url": "https://www.asnt.org/what-is-nondestructive-testing/methods"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "phased-array-ut",
+    "name": "Ультразвуковой контроль фазированной решёткой",
+    "category": "inspection",
+    "industry": "general",
+    "parentId": "ultrasonic",
+    "description": "Электронное управление направлением ультразвукового пучка массивом элементов.",
+    "steps": "Выбор закона фокусировки → сканирование → протокол",
+    "checks": "Калибровка, покрытие зоны, ложные показания",
+    "materials": [
+      "09g2s",
+      "steel-45"
+    ],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "ASNT — каталог методов неразрушающего контроля — обзор без технологических режимов",
+        "url": "https://www.asnt.org/what-is-nondestructive-testing/methods"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "resistance-seam",
+    "name": "Контактная шовная сварка",
+    "category": "joining",
+    "industry": "metals",
+    "description": "Формирование соединения последовательными контактными точками при движении роликов.",
+    "steps": "Подготовка листов → проход роликов → испытание",
+    "checks": "Герметичность, перекрытие точек, деформации",
+    "materials": [
+      "steel-20",
+      "09g2s"
+    ],
+    "profession": "mechanical-engineer",
+    "sources": [
+      {
+        "title": "TWI — классификация процессов сварки и соединения — обзор без технологических режимов",
+        "url": "https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "flash-butt-welding",
+    "name": "Стыковая сварка оплавлением",
+    "category": "joining",
+    "industry": "metals",
+    "description": "Соединение торцов с нагревом при оплавлении и последующей осадке.",
+    "steps": "Совмещение → оплавление → осадка → контроль",
+    "checks": "Соосность, дефекты стыка, облой",
+    "materials": [
+      "steel-20",
+      "09g2s"
+    ],
+    "profession": "mechanical-engineer",
+    "sources": [
+      {
+        "title": "TWI — классификация процессов сварки и соединения — обзор без технологических режимов",
+        "url": "https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "electron-beam-welding",
+    "name": "Электронно-лучевая сварка",
+    "category": "joining",
+    "industry": "metals",
+    "description": "Получение шва сфокусированным пучком электронов.",
+    "steps": "Подготовка → вакуумная операция → сварка → контроль",
+    "checks": "Проплавление, поры, геометрия",
+    "materials": [
+      "steel-20",
+      "09g2s"
+    ],
+    "profession": "mechanical-engineer",
+    "sources": [
+      {
+        "title": "TWI — классификация процессов сварки и соединения — обзор без технологических режимов",
+        "url": "https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "plasma-arc-welding",
+    "name": "Плазменная дуговая сварка",
+    "category": "joining",
+    "industry": "metals",
+    "parentId": "welding",
+    "description": "Дуговая сварка с плазмообразующим газом и сжатой дугой.",
+    "steps": "Подготовка → настройка оснастки → сварка → контроль",
+    "checks": "Геометрия, поры, несплавление",
+    "materials": [
+      "steel-20",
+      "09g2s"
+    ],
+    "profession": "mechanical-engineer",
+    "sources": [
+      {
+        "title": "TWI — классификация процессов сварки и соединения — обзор без технологических режимов",
+        "url": "https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "stud-welding",
+    "name": "Приварка шпилек",
+    "category": "joining",
+    "industry": "metals",
+    "parentId": "welding",
+    "description": "Дуговое или контактное присоединение крепёжного элемента к поверхности.",
+    "steps": "Подготовка зоны → позиционирование шпильки → соединение → проверка",
+    "checks": "Соосность, прочность, подрезы",
+    "materials": [
+      "steel-20",
+      "09g2s"
+    ],
+    "profession": "mechanical-engineer",
+    "sources": [
+      {
+        "title": "TWI — классификация процессов сварки и соединения — обзор без технологических режимов",
+        "url": "https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "diffusion-bonding",
+    "name": "Диффузионная сварка",
+    "category": "joining",
+    "industry": "metals",
+    "description": "Твердофазное соединение контактирующих поверхностей под действием температуры и давления.",
+    "steps": "Подготовка поверхностей → сближение → цикл → испытания",
+    "checks": "Несплошности, качество контакта, изменения структуры",
+    "materials": [
+      "steel-20",
+      "09g2s"
+    ],
+    "profession": "mechanical-engineer",
+    "sources": [
+      {
+        "title": "TWI — классификация процессов сварки и соединения — обзор без технологических режимов",
+        "url": "https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "compression-molding-plastics",
+    "name": "Компрессионное формование пластмасс",
+    "category": "forming",
+    "industry": "polymers",
+    "description": "Формование материала сдавливанием в нагретой пресс-форме.",
+    "steps": "Подготовка навески → прессование → охлаждение → контроль",
+    "checks": "Пустоты, облой, степень отверждения",
+    "materials": [
+      "pe-hd",
+      "pa6"
+    ],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "EPA — обзор производства изделий из пластмасс — обзор без технологических режимов",
+        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "stretch-blow-molding",
+    "name": "Инжекционно-выдувное формование с вытяжкой",
+    "category": "forming",
+    "industry": "polymers",
+    "description": "Формование полой тары из предварительно полученной заготовки с вытяжкой.",
+    "steps": "Изготовление преформы → разогрев → вытяжка и раздув → контроль",
+    "checks": "Толщина, прозрачность, геометрия",
+    "materials": [
+      "pe-hd",
+      "pa6"
+    ],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "EPA — обзор производства изделий из пластмасс — обзор без технологических режимов",
+        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "blown-film-extrusion",
+    "name": "Экструзия рукавной плёнки",
+    "category": "forming",
+    "industry": "polymers",
+    "parentId": "extrusion",
+    "description": "Получение плёнки из полимерного рукава при экструзии и раздуве.",
+    "steps": "Пластикация → кольцевая фильера → раздув → намотка",
+    "checks": "Толщина, складки, пузырь, стабильность рукава",
+    "materials": [
+      "pe-hd",
+      "pa6"
+    ],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "EPA — обзор производства изделий из пластмасс — обзор без технологических режимов",
+        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "polymer-transfer-molding",
+    "name": "Трансферное формование реактопластов",
+    "category": "forming",
+    "industry": "polymers",
+    "description": "Заполнение формы подготовленным реактопластом из передаточной камеры.",
+    "steps": "Подготовка сырья → передача в форму → отверждение → контроль",
+    "checks": "Недолив, облой, время отверждения",
+    "materials": [
+      "pe-hd",
+      "pa6"
+    ],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "EPA — обзор производства изделий из пластмасс — обзор без технологических режимов",
+        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "rubber-vulcanization",
+    "name": "Вулканизация эластомеров",
+    "category": "treatment",
+    "industry": "polymers",
+    "description": "Формирование связанной структуры эластомера в предусмотренном цикле.",
+    "steps": "Подготовка смеси → вулканизация → охлаждение → испытания",
+    "checks": "Степень вулканизации, твёрдость, трещины",
+    "materials": [
+      "pe-hd",
+      "pa6"
+    ],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "EPA — обзор производства изделий из пластмасс — обзор без технологических режимов",
+        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "extrusion-coating",
+    "name": "Экструзионное покрытие полимером",
+    "category": "treatment",
+    "industry": "polymers",
+    "description": "Нанесение расплава полимера на подложку в процессе экструзии.",
+    "steps": "Подача подложки → нанесение расплава → охлаждение",
+    "checks": "Толщина, адгезия, сплошность",
+    "materials": [
+      "pe-hd",
+      "pa6"
+    ],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "EPA — обзор производства изделий из пластмасс — обзор без технологических режимов",
+        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "needle-punching-nonwovens",
+    "name": "Иглопробивное производство нетканых материалов",
+    "category": "forming",
+    "industry": "textiles",
+    "description": "Связывание волокнистого холста множественными проходами игл.",
+    "steps": "Подготовка холста → иглопробивание → контроль",
+    "checks": "Поверхностная плотность, разрывы, равномерность",
+    "materials": [
+      "cotton",
+      "woven-fabric"
+    ],
+    "profession": "textile-engineer",
+    "sources": [
+      {
+        "title": "OSHA — отраслевой каталог текстильных процессов — обзор без технологических режимов",
+        "url": "https://www.osha.gov/data/sic-manual/major-group-22"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "mercerization",
+    "name": "Мерсеризация хлопка",
+    "category": "treatment",
+    "industry": "textiles",
+    "parentId": "textile-finishing",
+    "description": "Химическая обработка хлопкового материала с изменением структуры волокон.",
+    "steps": "Подготовка ткани → обработка → промывка → контроль",
+    "checks": "Равномерность, усадка, остаточные реагенты",
+    "materials": [
+      "cotton",
+      "woven-fabric"
+    ],
+    "profession": "textile-engineer",
+    "sources": [
+      {
+        "title": "OSHA — отраслевой каталог текстильных процессов — обзор без технологических режимов",
+        "url": "https://www.osha.gov/data/sic-manual/major-group-22"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "heat-setting-textiles",
+    "name": "Термофиксация текстиля",
+    "category": "treatment",
+    "industry": "textiles",
+    "parentId": "textile-finishing",
+    "description": "Тепловая стабилизация структуры подходящего волокнистого материала.",
+    "steps": "Подготовка → термообработка → охлаждение → испытания",
+    "checks": "Усадка, деформации, цвет",
+    "materials": [
+      "cotton",
+      "woven-fabric"
+    ],
+    "profession": "textile-engineer",
+    "sources": [
+      {
+        "title": "OSHA — отраслевой каталог текстильных процессов — обзор без технологических режимов",
+        "url": "https://www.osha.gov/data/sic-manual/major-group-22"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "textile-calendering",
+    "name": "Каландрование тканей",
+    "category": "treatment",
+    "industry": "textiles",
+    "parentId": "textile-finishing",
+    "description": "Механическая финишная обработка ткани между валками.",
+    "steps": "Подача полотна → валки → контроль поверхности",
+    "checks": "Складки, равномерность отделки, блеск",
+    "materials": [
+      "cotton",
+      "woven-fabric"
+    ],
+    "profession": "textile-engineer",
+    "sources": [
+      {
+        "title": "OSHA — отраслевой каталог текстильных процессов — обзор без технологических режимов",
+        "url": "https://www.osha.gov/data/sic-manual/major-group-22"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "industrial-embroidery",
+    "name": "Машинная вышивка",
+    "category": "joining",
+    "industry": "textiles",
+    "parentId": "sewing",
+    "description": "Формирование шовного рисунка нитями на текстильной основе.",
+    "steps": "Подготовка рисунка → закрепление ткани → вышивка → осмотр",
+    "checks": "Натяжение нитей, смещение, плотность стежков",
+    "materials": [
+      "cotton",
+      "woven-fabric"
+    ],
+    "profession": "textile-engineer",
+    "sources": [
+      {
+        "title": "OSHA — отраслевой каталог текстильных процессов — обзор без технологических режимов",
+        "url": "https://www.osha.gov/data/sic-manual/major-group-22"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "pcb-drilling",
+    "name": "Сверление отверстий печатных плат",
+    "category": "forming",
+    "industry": "electronics",
+    "description": "Формирование сквозных или технологических отверстий в заготовке платы.",
+    "steps": "Позиционирование → сверление → очистка → проверка",
+    "checks": "Размеры, смещение, заусенцы, повреждение основы",
+    "materials": [
+      "pcb",
+      "solder"
+    ],
+    "profession": "electrical-engineer",
+    "sources": [
+      {
+        "title": "IPC — сборка плат и границы стандартов — обзор без технологических режимов",
+        "url": "https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "pcb-etching",
+    "name": "Травление печатных проводников",
+    "category": "treatment",
+    "industry": "electronics",
+    "description": "Удаление незащищённых участков металлического слоя по рисунку.",
+    "steps": "Нанесение защитного рисунка → травление → промывка",
+    "checks": "Подтравливание, ширина дорожек, остатки",
+    "materials": [
+      "pcb",
+      "solder"
+    ],
+    "profession": "electrical-engineer",
+    "sources": [
+      {
+        "title": "IPC — сборка плат и границы стандартов — обзор без технологических режимов",
+        "url": "https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "pcb-plating",
+    "name": "Металлизация отверстий печатных плат",
+    "category": "treatment",
+    "industry": "electronics",
+    "description": "Формирование проводящего слоя на стенках отверстий платы.",
+    "steps": "Подготовка поверхности → осаждение слоя → контроль",
+    "checks": "Сплошность, толщина, пустоты",
+    "materials": [
+      "pcb",
+      "solder"
+    ],
+    "profession": "electrical-engineer",
+    "sources": [
+      {
+        "title": "IPC — сборка плат и границы стандартов — обзор без технологических режимов",
+        "url": "https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "selective-soldering",
+    "name": "Селективная пайка узлов плат",
+    "category": "joining",
+    "industry": "electronics",
+    "parentId": "pcb-assembly",
+    "description": "Локальное формирование паяных соединений на отдельных участках платы.",
+    "steps": "Подготовка → локальная пайка → инспекция",
+    "checks": "Смачиваемость, перемычки, термовлияние",
+    "materials": [
+      "pcb",
+      "solder"
+    ],
+    "profession": "electrical-engineer",
+    "sources": [
+      {
+        "title": "IPC — сборка плат и границы стандартов — обзор без технологических режимов",
+        "url": "https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "pcb-xray-inspection",
+    "name": "Рентгеновский контроль электронных сборок",
+    "category": "inspection",
+    "industry": "electronics",
+    "parentId": "electronic-inspection",
+    "description": "Получение рентгеновского изображения скрытых паяных соединений.",
+    "steps": "Подготовка платы → съёмка → интерпретация → протокол",
+    "checks": "Пустоты, перемычки, предел разрешения",
+    "materials": [
+      "pcb",
+      "solder"
+    ],
+    "profession": "electrical-engineer",
+    "sources": [
+      {
+        "title": "IPC — сборка плат и границы стандартов — обзор без технологических режимов",
+        "url": "https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "pharma-powder-blending",
+    "name": "Смешение фармацевтических порошков",
+    "category": "treatment",
+    "industry": "pharma",
+    "description": "Обеспечение однородности состава подготовленных порошковых компонентов.",
+    "steps": "Дозирование → смешение → контроль смеси",
+    "checks": "Однородность, сегрегация, загрязнение",
+    "materials": [],
+    "profession": "chemical-engineer",
+    "sources": [
+      {
+        "title": "FDA — инспекционное руководство по производству твёрдых лекарственных форм — обзор без технологических режимов",
+        "url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "pharma-micronization",
+    "name": "Микронизация фармацевтических веществ",
+    "category": "forming",
+    "industry": "pharma",
+    "description": "Снижение размера частиц активного вещества механическим способом.",
+    "steps": "Подготовка → измельчение → классификация → испытания",
+    "checks": "Размер частиц, нагрев, загрязнение",
+    "materials": [],
+    "profession": "chemical-engineer",
+    "sources": [
+      {
+        "title": "FDA — инспекционное руководство по производству твёрдых лекарственных форм — обзор без технологических режимов",
+        "url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "fluid-bed-pharma-drying",
+    "name": "Сушка в псевдоожиженном слое",
+    "category": "treatment",
+    "industry": "pharma",
+    "description": "Удаление влаги из гранулята в потоке газа, поддерживающего псевдоожижение.",
+    "steps": "Подготовка гранулята → сушка → отделение → измерение",
+    "checks": "Влажность, потери мелких фракций, однородность",
+    "materials": [],
+    "profession": "chemical-engineer",
+    "sources": [
+      {
+        "title": "FDA — инспекционное руководство по производству твёрдых лекарственных форм — обзор без технологических режимов",
+        "url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "pharma-inprocess-control",
+    "name": "Внутрипроизводственный контроль таблеток",
+    "category": "inspection",
+    "industry": "pharma",
+    "description": "Измерение свойств таблеток на промежуточных этапах выпуска.",
+    "steps": "Отбор → измерение массы и твёрдости → запись",
+    "checks": "Вариация массы, распадаемость и прочность",
+    "materials": [],
+    "profession": "chemical-engineer",
+    "sources": [
+      {
+        "title": "FDA — инспекционное руководство по производству твёрдых лекарственных форм — обзор без технологических режимов",
+        "url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "printing-plate-making",
+    "name": "Изготовление печатных форм",
+    "category": "forming",
+    "industry": "printing",
+    "description": "Получение носителя печатного изображения из подготовленных цифровых данных.",
+    "steps": "Подготовка макета → изготовление формы → проверка",
+    "checks": "Растровое изображение, приводка, дефекты формы",
+    "materials": [],
+    "profession": "polygraph-engineer",
+    "sources": [
+      {
+        "title": "OSHA — терминология печати и послепечатных операций — обзор без технологических режимов",
+        "url": "https://www.osha.gov/etools/printing-industry/glossary"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "print-die-cutting",
+    "name": "Высечка печатной продукции",
+    "category": "forming",
+    "industry": "printing",
+    "description": "Формирование контура изделия резанием высекальным штампом.",
+    "steps": "Совмещение заготовки → высечка → удаление отходов",
+    "checks": "Размер, заусенцы, совмещение",
+    "materials": [],
+    "profession": "polygraph-engineer",
+    "sources": [
+      {
+        "title": "OSHA — терминология печати и послепечатных операций — обзор без технологических режимов",
+        "url": "https://www.osha.gov/etools/printing-industry/glossary"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
+  },
+  {
+    "id": "uv-curing-print",
+    "name": "УФ-отверждение печатных покрытий",
+    "category": "treatment",
+    "industry": "printing",
+    "description": "Отверждение совместимых красочных систем ультрафиолетовым излучением.",
+    "steps": "Нанесение краски → облучение → контроль покрытия",
+    "checks": "Неполное отверждение, липкость, стойкость",
+    "materials": [],
+    "profession": "polygraph-engineer",
+    "sources": [
+      {
+        "title": "OSHA — терминология печати и послепечатных операций — обзор без технологических режимов",
+        "url": "https://www.osha.gov/etools/printing-industry/glossary"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
+      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
+      "checkedAt": "2026-10-22"
+    },
+    "reviewStatus": "source_located"
   }
 ];
