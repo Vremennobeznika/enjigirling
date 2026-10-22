@@ -36,7 +36,7 @@ test('72 plants: no automatic blank write; group check marks and unmarks calenda
   await expect(page.locator('#checked')).toHaveText('0 / 72');
   await page.getByRole('button',{name:'1–18',exact:true}).click();
   await expect(page.locator('#rows .pot')).toHaveCount(18);
-  await page.locator('#search').fill('Горшок 3');
+  await page.locator('#search').fill('Горшок 72');
   await expect(page.locator('#rows .pot')).toHaveCount(1);
   await page.locator('#search').fill('');
   await page.evaluate(()=>{
