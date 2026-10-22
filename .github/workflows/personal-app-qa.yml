@@ -29,7 +29,7 @@ concurrency:
 
 jobs:
   validate:
-    name: Personal app — unit and real Chromium checks
+    name: Personal app — Chromium and WebKit iPhone checks
     runs-on: ubuntu-latest
     timeout-minutes: 18
     steps:
@@ -52,10 +52,12 @@ jobs:
           node tests/personal-ics.cjs
       - name: Install browser test tools
         run: npm install --no-audit --no-fund
-      - name: Install Chromium
-        run: npx playwright install chromium
+      - name: Install Chromium and WebKit
+        run: npx playwright install --with-deps chromium webkit
       - name: Calendar, dashboard, shopping and plants in Chromium
         run: npx playwright test tests/calendar-layout.spec.cjs tests/life-layout.spec.cjs tests/personal-flows.spec.cjs tests/personal-planner.spec.cjs --project=chromium-desktop
+      - name: Safari engine - iPhone form layout in WebKit
+        run: npx playwright test tests/life-layout.spec.cjs --project=webkit-iphone
       - name: Upload screenshots and traces on failure
         if: failure()
         uses: actions/upload-artifact@v4
