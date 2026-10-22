@@ -53,8 +53,9 @@ details>summary:focus-visible{outline:2px solid #eee;border-radius:13px}
  #taskForm,#pantryForm{grid-template-columns:minmax(0,1fr)}
  #taskForm>*,#pantryForm>*{grid-column:1/-1}
 }
-#iphoneInstall{border:1px solid var(--line);border-radius:13px;background:var(--box);padding:10px 14px;margin:0 0 14px}#iphoneInstall>summary{cursor:pointer;min-height:40px;padding:7px 0;font-weight:600}#iphoneInstall p{font-size:14px;line-height:1.5;margin:7px 0;color:#ddd}#iphoneInstall[hidden]{display:none}@supports(padding:env(safe-area-inset-top)){main{padding-top:max(20px,env(safe-area-inset-top));padding-bottom:calc(90px + env(safe-area-inset-bottom));padding-left:max(12px,env(safe-area-inset-left));padding-right:max(12px,env(safe-area-inset-right))}}</style></head><body><main>
+#iphoneInstall{border:1px solid var(--line);border-radius:13px;background:var(--box);padding:10px 14px;margin:0 0 14px}#iphoneInstall>summary{cursor:pointer;min-height:40px;padding:7px 0;font-weight:600}#iphoneInstall p{font-size:14px;line-height:1.5;margin:7px 0;color:#ddd}#iphoneInstall[hidden]{display:none}@supports(padding:env(safe-area-inset-top)){main{padding-top:max(20px,env(safe-area-inset-top));padding-bottom:calc(90px + env(safe-area-inset-bottom));padding-left:max(12px,env(safe-area-inset-left));padding-right:max(12px,env(safe-area-inset-right))}}.personal-feature{margin:0 0 12px}.personal-feature .link{min-height:44px}</style></head><body><main>
 <header><div><h1>Сегодня</h1><p id="date"></p></div><span class="tag" id="mode">Локальный режим</span></header><details id="iphoneInstall"><summary>Установить на iPhone — инструкция</summary><p>Открой эту страницу в Safari → «Поделиться» → «На экран Домой» → включи «Открыть как веб-приложение» → «Добавить». Затем запускай «Сегодня» с иконки. Календарь, покупки и растения будут открываться внутри приложения.</p><p>После первоначальной загрузки страницы доступны без сети. Записи хранятся на устройстве; синхронизация с Яндексом работает отдельно, когда облако доступно.</p></details>
+<section class="card full personal-feature"><div class="head"><h2>Гибкий планировщик</h2><a class="link" href="./planner/">Открыть →</a></div><p class="sub">Свои разделы, разовые и повторяющиеся дела, напоминания, тихие часы, покупки и финансы. Прежний календарь с таблетками и журнал растений остаются на месте.</p></section>
 <div class="grid">
 <section class="card"><div class="head"><h2>Расписание</h2><a class="link" href="../calendar/">Открыть →</a></div><div class="number" id="calendarCount">—</div><p>Выполнено за сегодня</p><div class="bar"><div id="calendarBar"></div></div></section>
 <section class="card"><div class="head"><h2>Покупки</h2><a class="link" href="../shopping/">Открыть →</a></div><div class="number" id="shoppingCount">—</div><p>Осталось купить</p><div class="bar"><div id="shoppingBar"></div></div></section>
@@ -69,7 +70,7 @@ details>summary:focus-visible{outline:2px solid #eee;border-radius:13px}
 <form id="pantryForm"><input class="grow" id="pantryName" maxlength="120" placeholder="Продукт или расходник" aria-label="Название запаса" required><input class="short" id="pantryAmount" maxlength="40" placeholder="Количество" aria-label="Количество"><button class="btn" type="submit">Добавить</button></form>
 <ul id="pantryList" class="list"></ul><div class="empty" id="pantryEmpty">Запасов пока нет.</div></section>
 <section class="card full"><div class="head"><h2>Управление данными</h2><span class="sub">Резервная копия всех разделов</span></div>
-<div class="actions"><button class="btn soft" id="backup" type="button">Скачать копию</button><button class="btn soft" id="restore" type="button">Восстановить</button><input id="backupFile" type="file" hidden accept=".json,application/json"></div><p class="warn">В копию входят отметки календаря, покупки, задачи, домашние запасы и журнал 72 растений. Можно восстановить и обычный экспорт, и файл «Скачать защитные копии». При восстановлении автосинхронизация отключается, чтобы избежать перезаписи.</p></section>
+<div class="actions"><button class="btn soft" id="backup" type="button">Скачать копию</button><button class="btn soft" id="restore" type="button">Восстановить</button><input id="backupFile" type="file" hidden accept=".json,application/json"></div><p class="warn">В копию входят отметки календаря, гибкий планировщик (включая финансы и напоминания), покупки, задачи, домашние запасы и журнал 72 растений. Можно восстановить и обычный экспорт, и файл «Скачать защитные копии». При восстановлении автосинхронизация отключается, чтобы избежать перезаписи.</p></section>
 </div>
 <details id="cloudPanel"><summary>Облачная синхронизация · подключение Yandex Cloud</summary>
 <div class="cloud-body">
@@ -95,7 +96,17 @@ function validTasks(a){return Array.isArray(a)?a.filter(x=>x&&typeof x.name==="s
 function validPantry(a){return Array.isArray(a)?a.filter(x=>x&&typeof x.name==="string").slice(0,600).map(x=>({id:String(x.id||crypto.randomUUID()),name:x.name.slice(0,120),amount:String(x.amount||"").slice(0,40)})):[]}
 function validPlants(a){return Array.isArray(a)?a.filter(p=>p&&Number.isInteger(p.id)&&p.id>=1&&p.id<=72).slice(0,72).map(p=>({id:p.id,name:String(p.name||"Горшок "+p.id).slice(0,90),note:String(p.note||"").slice(0,600),checked:/^\d{4}-\d\d-\d\d$/.test(p.checked||"")?p.checked:"",watered:/^\d{4}-\d\d-\d\d$/.test(p.watered||"")?p.watered:"",attention:!!p.attention})):[]}
 function validShopping(a){return Array.isArray(a)?a.filter(x=>x&&typeof x.name==="string"&&typeof x.cat==="string").slice(0,1500).map(x=>({id:String(x.id||crypto.randomUUID()),name:x.name.slice(0,120),qty:String(x.qty||"").slice(0,35),cat:x.cat,done:!!x.done})):[]}
-function validCalendar(o){if(!o||typeof o!=="object"||Array.isArray(o))return {};return Object.fromEntries(Object.entries(o).filter(([k,v])=>/^\d{4}-\d{2}-\d{2}-(?:\d+|home-[a-z0-9-]+)$/i.test(k)&&v===true).slice(0,25000))}
+function validCalendar(o){
+ if(!o||typeof o!=="object"||Array.isArray(o))return {};
+ const marks=Object.fromEntries(Object.entries(o).filter(([k,v])=>/^\d{4}-\d{2}-\d{2}-(?:\d+|home-[a-z0-9-]+)$/i.test(k)&&v===true).slice(0,25000));
+ const plan=o.__planner_v3;
+ if(plan&&typeof plan==="object"&&!Array.isArray(plan)&&Array.isArray(plan.sections)&&Array.isArray(plan.tasks)){
+  const bytes=JSON.stringify(plan).length;
+  if(bytes<=210000)marks.__planner_v3=plan;
+  else throw Error("Расширенный планировщик превышает допустимый размер для облачной копии; данные не удалены. Сохрани экспорт планировщика отдельно.");
+ }
+ return marks;
+}
 function snapshot(){return {calendar:validCalendar(safe(KEYS.calendar,{})),shopping:validShopping(safe(KEYS.shopping,[])),tasks:validTasks(safe(KEYS.tasks,[])),pantry:validPantry(safe(KEYS.pantry,[])),plants:validPlants(safe(KEYS.plants,[]))}}
 function restore(raw){
 // Both ordinary exports and emergency recovery exports can be restored here.
