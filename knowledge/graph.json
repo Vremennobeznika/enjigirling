@@ -3,7 +3,7 @@
   "language": "ru",
   "status": "editorial_relationships",
   "nodeCount": 305,
-  "edgeCount": 582,
+  "edgeCount": 580,
   "edges": [
     {
       "from": "material:steel-20",
@@ -307,11 +307,6 @@
     },
     {
       "from": "material:al-6063",
-      "to": "process:rolling",
-      "relation": "processed_by"
-    },
-    {
-      "from": "material:al-6063",
       "to": "process:cutting",
       "relation": "processed_by"
     },
@@ -393,11 +388,6 @@
     {
       "from": "material:water-carbon",
       "to": "process:carbon-adsorption",
-      "relation": "processed_by"
-    },
-    {
-      "from": "material:water-resin",
-      "to": "process:granular-filtration",
       "relation": "processed_by"
     },
     {
