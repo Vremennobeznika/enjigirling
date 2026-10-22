@@ -40,8 +40,10 @@ function sanitize(a){
 function load(){try{return sanitize(JSON.parse(localStorage.getItem(KEY)||'[]'))}catch{return sanitize([])}}
 let pots=load();
 function store(){try{localStorage.setItem(KEY,JSON.stringify(pots));return true}catch{alert('Браузер не смог сохранить журнал. Сохрани резервную копию.');return false}}
-function syncCalendar(g){const ids=pots.slice(g*18,g*18+18);const dates=ids.map(p=>p.checked);const cur=today();
-if(dates.every(d=>d===cur)){try{const key='week-check-v2',s=JSON.parse(localStorage.getItem(key)||'{}');const id='plant-'+(g*18+1)+'-'+(g*18+18);s[cur+'-home-'+id]=true;localStorage.setItem(key,JSON.stringify(s))}catch{}}
+function syncCalendar(g){const ids=pots.slice(g*18,g*18+18),cur=today();
+try{const key='week-check-v2',s=JSON.parse(localStorage.getItem(key)||'{}'),id=cur+'-home-plant-'+(g*18+1)+'-'+(g*18+18);
+if(ids.every(p=>p.checked===cur))s[id]=true;else delete s[id];
+localStorage.setItem(key,JSON.stringify(s))}catch{}
 }
 function render(){
 const d=today(),seen=pots.filter(p=>p.checked===d).length,wet=pots.filter(p=>p.watered===d).length,flagged=pots.filter(p=>p.attention).length;
@@ -61,7 +63,7 @@ let attention=node('button','btn',p.attention?'Снять отметку':'Ну�
 let detail=node('details'),summary=node('summary','', 'Название, заметки и дата полива');detail.append(summary);
 let edit=node('form','editor'),nameLabel=node('label','', 'Название'),name=node('input');name.maxLength=90;name.value=p.name;name.setAttribute('aria-label','Название горшка '+p.id);nameLabel.append(name);
 let noteLabel=node('label','', 'Особенности и уход'),note=node('textarea');note.maxLength=600;note.value=p.note;noteLabel.append(note);
-let waterLabel=node('label','', 'Дата последнего полива'),water=node('input');water.type='date';water.value=p.watered;waterLabel.append(water);
+let waterLabel=node('label','', 'Дата последнего полива'),water=node('input');water.type='date';water.max=today();water.value=p.watered;waterLabel.append(water);
 let save=node('button','btn primary','Сохранить');save.type='submit';
 edit.onsubmit=e=>{e.preventDefault();p.name=name.value.trim()||'Горшок '+p.id;p.note=note.value.trim();p.watered=water.value||'';store();render()};
 edit.append(nameLabel,noteLabel,waterLabel,save);detail.append(edit);card.append(detail);list.append(card)
