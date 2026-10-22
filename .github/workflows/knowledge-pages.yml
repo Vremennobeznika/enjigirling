@@ -26,6 +26,8 @@ jobs:
         run: |
           node scripts/build-ai-packs.cjs
           node scripts/build-ai-packs.cjs --check
+      - name: Rebuild deterministic evidence coverage report
+        run: node scripts/build-quality.cjs
       - name: Run complete static QA matrix
         shell: bash
         run: |
