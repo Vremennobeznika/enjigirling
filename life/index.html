@@ -67,6 +67,14 @@ const mainTotal=day<5?27:24,homeDone=home.filter(t=>marks[key+"-home-"+t.id]===t
 const done=Array.from({length:mainTotal},(_,i)=>marks[key+"-"+i]===true).filter(Boolean).length+homeDone,total=mainTotal+home.length;
 $("date").textContent=now.toLocaleDateString("ru-RU",{weekday:"long",day:"numeric",month:"long",year:"numeric"});
 $("calendarCount").textContent=Math.min(total,done)+" / "+total;$("calendarBar").style.width=Math.min(100,done/total*100)+"%";
+$("homeCount").textContent=homeDone+" / "+home.length+" сделано";$("homeBar").style.width=home.length?(homeDone/home.length*100)+"%":"0%";
+const homeList=$("homeTaskList");homeList.replaceChildren();$("homeEmpty").hidden=home.length>0;
+home.slice().sort((a,b)=>a.time.localeCompare(b.time)).forEach(t=>{
+const id=key+"-home-"+t.id,li=elem("li","item"+(marks[id]?" done":""));
+const cb=elem("input");cb.type="checkbox";cb.checked=!!marks[id];cb.setAttribute("aria-label","Выполнено: "+t.name);
+cb.onchange=()=>{const updated=safe(KEYS.calendar,{});if(cb.checked)updated[id]=true;else delete updated[id];persist(KEYS.calendar,updated);draw()};
+const label=elem("div","text",t.name),meta=elem("div","mini",t.time+" · "+t.length);label.append(meta);li.append(cb,label);homeList.append(li)
+});
 const buys=validShopping(safe(KEYS.shopping,[])),remaining=buys.filter(x=>!x.done).length;
 $("shoppingCount").textContent=String(remaining);$("shoppingBar").style.width=(buys.length?(buys.length-remaining)/buys.length*100:0)+"%";
 const tasks=validTasks(safe(KEYS.tasks,[])),list=$("taskList");list.replaceChildren();
