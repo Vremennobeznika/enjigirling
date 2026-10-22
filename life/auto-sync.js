@@ -10,6 +10,16 @@ const SECRET_KEY="life-sync-secret-saved-v1",URL_KEY="life-sync-endpoint-v1",AUT
 const DEFAULT_ENDPOINT="https://functions.yandexcloud.net/d4ed26vrlmb1uk22m3b7";
 const EMPTY={calendar:{},shopping:[],tasks:[],pantry:[],plants:[]};
 let processing=false,again=false,applying=false,timer=null,conflict=false,lastMessage="";
+const RETRY_KEY="life-sync-retry-v1";
+function retryInfo(){try{const v=JSON.parse(sessionStorage.getItem(RETRY_KEY)||"null");return v&&Number.isFinite(v.until)&&Number.isInteger(v.errors)?v:{until:0,errors:0}}catch{return {until:0,errors:0}}}
+function clearRetry(){try{sessionStorage.removeItem(RETRY_KEY)}catch{}}
+function recordFailure(){
+ const old=retryInfo(),errors=Math.min(old.errors+1,6);
+ const pause=Math.min(600000,60000*Math.pow(2,errors-1)),until=Date.now()+pause;
+ try{sessionStorage.setItem(RETRY_KEY,JSON.stringify({errors,until}))}catch{}
+ return Math.ceil(pause/60000);
+}
+
 
 const parse=(s,fallback)=>{try{return JSON.parse(s)??fallback}catch{return fallback}};
 const same=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
@@ -137,7 +147,7 @@ function mergeData(base,local,remote){
 }
 function schedule(delay=1300){
  if(!enabled()||applying)return;
- clearTimeout(timer);timer=setTimeout(()=>{void cycle()},delay);
+ clearTimeout(timer);timer=setTimeout(()=>{void cycle()},Math.max(delay,retryInfo().until-Date.now()));
 }
 async function runOnce(){
  if(!enabled())return;
@@ -174,11 +184,15 @@ async function upload(revision,data){
 async function cycle(){
  if(processing){again=true;return}
  if(!enabled())return;
+ if(retryInfo().until>Date.now())return;
  processing=true;
- try{await runOnce()}
+ try{await runOnce();clearRetry()}
  catch(err){
   if(err.code===409){again=true;notify("info","Другая версия появилась в облаке. Проверяю объединение изменений.")}
-  else notify("error","Автосинхронизация: "+err.message+". Локальные данные сохранены.");
+  else{
+   const minutes=recordFailure();
+   notify("error","Облако недоступно: "+err.message+". Записи сохранены на устройстве. Автоматическая повторная попытка — не раньше чем через "+minutes+" мин.");
+  }
  }finally{
   processing=false;
   if(again){again=false;schedule(1300)}
@@ -188,7 +202,7 @@ async function pull(manual=false){
  if(processing)throw Error("Синхронизация уже выполняется");
  processing=true;
  try{
-  const a=await request("GET"),revision=Number(a.revision)||0;
+  const a=await request("GET"),revision=Number(a.revision)||0;clearRetry();
   if(!a.data){notify("info","База пуста. Сначала отправь данные из браузера.",revision);return}
   const remote=validateData(a.data),local=readData();
   if(manual&&!same(remote,local)&&!confirm("Заменить данные этого устройства облачной копией? Перед заменой сохранится защитная локальная копия.")){notify("info","Получение отменено.");return}
@@ -209,14 +223,15 @@ async function push(manual=false){
   await upload(rev,local);
  }finally{processing=false}
 }
-function refresh(){
+function refresh(force=false){
+ if(force)clearRetry();
  clearTimeout(timer);again=false;
  if(!enabled()){
   const indicator=document.getElementById("life-auto-health");
   if(indicator&&typeof indicator.remove==="function")indicator.remove();
   notify("info","Автосинхронизация выключена. Чтобы включить, запомни ключ в панели «Сегодня».");return
  }
- notify("info","Облачная синхронизация: проверяю данные…");
+ notify("info",retryInfo().until>Date.now()?"Облако временно недоступно. Работаю локально, следующая проверка запланирована.":"Облачная синхронизация: проверяю данные…");
  schedule(200);
 }
 function init(){
@@ -236,7 +251,7 @@ function init(){
  });
  window.addEventListener("focus",()=>schedule(150));
  document.addEventListener("visibilitychange",()=>{if(!document.hidden)schedule(150)});
- window.addEventListener("online",()=>schedule(300));
+ window.addEventListener("online",()=>{clearRetry();schedule(300)});
  setInterval(()=>{if(!document.hidden)schedule(1000)},120000);
  refresh();
 }
