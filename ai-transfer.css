@@ -56,3 +56,23 @@
 .material-references li{padding:3px 0}
 @media(max-width:950px){.material-toolbar{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px){.material-toolbar{grid-template-columns:1fr}.material-export{grid-template-columns:1fr}.material-export-actions button{flex:1 1 124px}}
+
+/* Offline AI package composer for both atlases and the AI hub; monochrome layout. */
+.atlas-ai-pack{box-sizing:border-box;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.6fr);gap:16px;margin:16px 0 8px;padding:16px;border:1px solid var(--card-border);border-radius:12px;background:var(--card-bg);color:var(--card-text);min-width:0}
+.atlas-ai-pack__intro{min-width:0}
+.atlas-ai-pack__intro strong{font:700 15px/1.5 var(--font)}
+.atlas-ai-pack__intro p,.atlas-ai-pack__note,.atlas-ai-pack__status{font:400 12px/1.6 var(--font);color:var(--card-muted);margin:8px 0!important}
+.atlas-ai-pack__controls{min-width:0}
+.atlas-ai-pack__fields{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:10px}
+.atlas-ai-pack__fields>div{min-width:0}
+.atlas-ai-pack__fields label{display:block;font:600 12px/1.5 var(--font);margin-bottom:6px}
+.atlas-ai-pack__fields select{box-sizing:border-box;display:block;width:100%;max-width:100%;min-height:44px;color:var(--card-text);background:var(--card-bg)}
+.atlas-ai-pack__buttons{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.atlas-ai-pack__buttons button{border:1px solid var(--card-border);border-radius:9px;min-height:44px;padding:8px 12px;background:var(--soft-bg);color:var(--card-text);font:600 13px/1.4 var(--font);cursor:pointer}
+.atlas-ai-pack__buttons button:disabled{opacity:.45;cursor:not-allowed}
+.atlas-ai-pack__buttons button:hover:not(:disabled){border-color:var(--text-primary);text-decoration:underline}
+.atlas-ai-pack__buttons button:focus-visible,.atlas-ai-pack__fields select:focus-visible{outline:3px solid var(--text-primary);outline-offset:3px}
+.atlas-ai-hub{max-width:100%;margin:15px 0;padding:0}.atlas-ai-hub h2{font:700 20px/1.35 var(--font);margin:0 0 8px}
+.atlas-ai-hub>.atlas-ai-pack{margin-bottom:20px}
+@media(max-width:900px){.atlas-ai-pack{grid-template-columns:1fr}.atlas-ai-pack__fields{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:550px){.atlas-ai-pack{padding:12px}.atlas-ai-pack__fields{grid-template-columns:1fr}.atlas-ai-pack__buttons button{flex:1 1 130px}}
