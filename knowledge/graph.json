@@ -2,8 +2,8 @@
   "schemaVersion": "1.0",
   "language": "ru",
   "status": "editorial_relationships",
-  "nodeCount": 75,
-  "edgeCount": 61,
+  "nodeCount": 279,
+  "edgeCount": 529,
   "edges": [
     {
       "from": "material:steel-20",
@@ -16,6 +16,21 @@
       "relation": "processed_by"
     },
     {
+      "from": "material:steel-20",
+      "to": "process:hardness",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:steel-20",
+      "to": "process:stamping",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:steel-20",
+      "to": "process:rolling",
+      "relation": "processed_by"
+    },
+    {
       "from": "material:steel-45",
       "to": "process:cutting",
       "relation": "processed_by"
@@ -26,6 +41,31 @@
       "relation": "processed_by"
     },
     {
+      "from": "material:steel-45",
+      "to": "process:ultrasonic",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:steel-45",
+      "to": "process:hardness",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:steel-45",
+      "to": "process:forging",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:steel-45",
+      "to": "process:grinding",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:steel-45",
+      "to": "process:rolling",
+      "relation": "processed_by"
+    },
+    {
       "from": "material:09g2s",
       "to": "process:welding",
       "relation": "processed_by"
@@ -33,6 +73,26 @@
     {
       "from": "material:09g2s",
       "to": "process:cutting",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:09g2s",
+      "to": "process:inspection",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:09g2s",
+      "to": "process:mig-mag",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:09g2s",
+      "to": "process:ultrasonic",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:09g2s",
+      "to": "process:radiographic",
       "relation": "processed_by"
     },
     {
@@ -46,6 +106,26 @@
       "relation": "processed_by"
     },
     {
+      "from": "material:aisi-304",
+      "to": "process:tig",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:aisi-304",
+      "to": "process:radiographic",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:aisi-304",
+      "to": "process:dye",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:aisi-304",
+      "to": "process:stamping",
+      "relation": "processed_by"
+    },
+    {
       "from": "material:al-6061",
       "to": "process:cutting",
       "relation": "processed_by"
@@ -53,6 +133,31 @@
     {
       "from": "material:al-6061",
       "to": "process:welding",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:al-6061",
+      "to": "process:mig-mag",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:al-6061",
+      "to": "process:tig",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:al-6061",
+      "to": "process:dye",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:al-6061",
+      "to": "process:hardness",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:al-6061",
+      "to": "process:stamping",
       "relation": "processed_by"
     },
     {
@@ -66,6 +171,16 @@
       "relation": "processed_by"
     },
     {
+      "from": "material:pe-hd",
+      "to": "process:injection-molding",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:pe-hd",
+      "to": "process:extrusion",
+      "relation": "processed_by"
+    },
+    {
       "from": "material:pa6",
       "to": "process:cutting",
       "relation": "processed_by"
@@ -73,6 +188,16 @@
     {
       "from": "material:pa6",
       "to": "process:additive",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:pa6",
+      "to": "process:injection-molding",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:pa6",
+      "to": "process:extrusion",
       "relation": "processed_by"
     },
     {
@@ -101,14 +226,84 @@
       "relation": "processed_by"
     },
     {
-      "from": "process:casting",
-      "to": "material:steel-20",
-      "relation": "uses_material"
+      "from": "material:food-raw",
+      "to": "process:pasteurization",
+      "relation": "processed_by"
     },
     {
-      "from": "process:casting",
-      "to": "material:steel-45",
-      "relation": "uses_material"
+      "from": "material:food-raw",
+      "to": "process:food-drying",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:food-raw",
+      "to": "process:fermentation",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:food-raw",
+      "to": "process:food-packaging",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:food-pack",
+      "to": "process:food-packaging",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:cotton",
+      "to": "process:spinning",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:cotton-yarn",
+      "to": "process:weaving",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:cotton-yarn",
+      "to": "process:knitting",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:woven-fabric",
+      "to": "process:textile-finishing",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:woven-fabric",
+      "to": "process:sewing",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:timber",
+      "to": "process:sawmilling",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:timber",
+      "to": "process:wood-drying",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:pcb",
+      "to": "process:pcb-assembly",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:pcb",
+      "to": "process:electronic-inspection",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:solder",
+      "to": "process:pcb-assembly",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:solder",
+      "to": "process:electronic-inspection",
+      "relation": "processed_by"
     },
     {
       "from": "process:casting",
@@ -162,6 +357,21 @@
     },
     {
       "from": "process:cutting",
+      "to": "material:birch-plywood",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:cutting",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:cutting",
+      "to": "material:aisi-304",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:cutting",
       "to": "profession:mechanical-engineer",
       "relation": "associated_profession"
     },
@@ -192,6 +402,11 @@
     },
     {
       "from": "process:additive",
+      "to": "material:pe-hd",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:additive",
       "to": "profession:mechanical-engineer",
       "relation": "associated_profession"
     },
@@ -208,6 +423,11 @@
     {
       "from": "process:inspection",
       "to": "material:alumina",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:inspection",
+      "to": "material:aramid",
       "relation": "uses_material"
     },
     {
@@ -308,6 +528,2126 @@
     {
       "from": "process:hardness",
       "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:forging",
+      "to": "material:steel-45",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:forging",
+      "to": "profession:mechanical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:rolling",
+      "to": "material:steel-20",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:rolling",
+      "to": "material:steel-45",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:rolling",
+      "to": "profession:metallurgical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:stamping",
+      "to": "material:steel-20",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:stamping",
+      "to": "material:aisi-304",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:stamping",
+      "to": "material:al-6061",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:stamping",
+      "to": "profession:mechanical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:injection-molding",
+      "to": "material:pa6",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:injection-molding",
+      "to": "material:pe-hd",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:injection-molding",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:extrusion",
+      "to": "material:pe-hd",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:extrusion",
+      "to": "material:pa6",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:extrusion",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:grinding",
+      "to": "material:steel-45",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:grinding",
+      "to": "profession:mechanical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:surface-finishing",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:assembly",
+      "to": "profession:mechanical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:pasteurization",
+      "to": "material:food-raw",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:pasteurization",
+      "to": "profession:food-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:food-drying",
+      "to": "material:food-raw",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:food-drying",
+      "to": "profession:food-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:fermentation",
+      "to": "material:food-raw",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:fermentation",
+      "to": "profession:food-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:food-packaging",
+      "to": "material:food-raw",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:food-packaging",
+      "to": "material:food-pack",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:food-packaging",
+      "to": "profession:food-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:spinning",
+      "to": "material:cotton",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:spinning",
+      "to": "profession:textile-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:weaving",
+      "to": "material:cotton-yarn",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:weaving",
+      "to": "profession:textile-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:knitting",
+      "to": "material:cotton-yarn",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:knitting",
+      "to": "profession:textile-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:textile-finishing",
+      "to": "material:woven-fabric",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:textile-finishing",
+      "to": "profession:textile-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:sewing",
+      "to": "material:woven-fabric",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:sewing",
+      "to": "profession:textile-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:sawmilling",
+      "to": "material:timber",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:sawmilling",
+      "to": "profession:forest-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:wood-drying",
+      "to": "material:timber",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:wood-drying",
+      "to": "profession:forest-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:pcb-assembly",
+      "to": "material:pcb",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:pcb-assembly",
+      "to": "material:solder",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:pcb-assembly",
+      "to": "profession:electrical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:electronic-inspection",
+      "to": "material:pcb",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:electronic-inspection",
+      "to": "material:solder",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:electronic-inspection",
+      "to": "profession:electrical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:chemical-mixing",
+      "to": "profession:chemical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:distillation",
+      "to": "profession:chemical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:industrial-filtration",
+      "to": "profession:chemical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:turning",
+      "to": "material:steel-45",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:turning",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:turning",
+      "to": "profession:mechanical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:milling",
+      "to": "material:steel-45",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:milling",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:milling",
+      "to": "profession:mechanical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:drilling",
+      "to": "material:steel-45",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:drilling",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:drilling",
+      "to": "profession:mechanical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:boring",
+      "to": "material:steel-45",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:boring",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:boring",
+      "to": "profession:mechanical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:reaming",
+      "to": "material:steel-45",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:reaming",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:reaming",
+      "to": "profession:mechanical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:broaching",
+      "to": "material:steel-45",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:broaching",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:broaching",
+      "to": "profession:mechanical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:gear-cutting",
+      "to": "material:steel-45",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:gear-cutting",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:gear-cutting",
+      "to": "profession:mechanical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:electrodischarge-machining",
+      "to": "material:steel-45",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:electrodischarge-machining",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:electrodischarge-machining",
+      "to": "profession:mechanical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:laser-cutting",
+      "to": "material:steel-45",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:laser-cutting",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:laser-cutting",
+      "to": "profession:mechanical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:waterjet-cutting",
+      "to": "material:steel-45",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:waterjet-cutting",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:waterjet-cutting",
+      "to": "profession:mechanical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:annealing",
+      "to": "material:steel-45",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:annealing",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:annealing",
+      "to": "profession:mechanical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:quenching",
+      "to": "material:steel-45",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:quenching",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:quenching",
+      "to": "profession:mechanical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:tempering",
+      "to": "material:steel-45",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:tempering",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:tempering",
+      "to": "profession:mechanical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:induction-hardening",
+      "to": "material:steel-45",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:induction-hardening",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:induction-hardening",
+      "to": "profession:mechanical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:manual-metal-arc",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:manual-metal-arc",
+      "to": "material:al-6061",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:manual-metal-arc",
+      "to": "profession:mechanical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:submerged-arc",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:submerged-arc",
+      "to": "material:al-6061",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:submerged-arc",
+      "to": "profession:mechanical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:resistance-spot",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:resistance-spot",
+      "to": "material:al-6061",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:resistance-spot",
+      "to": "profession:mechanical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:laser-welding",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:laser-welding",
+      "to": "material:al-6061",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:laser-welding",
+      "to": "profession:mechanical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:friction-stir-welding",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:friction-stir-welding",
+      "to": "material:al-6061",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:friction-stir-welding",
+      "to": "profession:mechanical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:brazing",
+      "to": "material:copper-m1",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:brazing",
+      "to": "material:aisi-304",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:brazing",
+      "to": "profession:mechanical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:soft-soldering",
+      "to": "material:copper-m1",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:soft-soldering",
+      "to": "material:aisi-304",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:soft-soldering",
+      "to": "profession:mechanical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:powder-bed-fusion",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:directed-energy-deposition",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:binder-jetting",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:material-jetting",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:vat-photopolymerization",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:additive-extrusion",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:blow-molding",
+      "to": "material:pe-hd",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:blow-molding",
+      "to": "material:pa6",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:blow-molding",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:rotomolding",
+      "to": "material:pe-hd",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:rotomolding",
+      "to": "material:pa6",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:rotomolding",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:thermoforming",
+      "to": "material:pe-hd",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:thermoforming",
+      "to": "material:pa6",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:thermoforming",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:calendering",
+      "to": "material:pe-hd",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:calendering",
+      "to": "material:pa6",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:calendering",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:compounding",
+      "to": "material:pe-hd",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:compounding",
+      "to": "material:pa6",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:compounding",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:polymer-foaming",
+      "to": "material:pe-hd",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:polymer-foaming",
+      "to": "material:pa6",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:polymer-foaming",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:ultrasonic-plastic-welding",
+      "to": "material:pe-hd",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:ultrasonic-plastic-welding",
+      "to": "material:pa6",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:ultrasonic-plastic-welding",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:laser-plastic-welding",
+      "to": "material:pe-hd",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:laser-plastic-welding",
+      "to": "material:pa6",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:laser-plastic-welding",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:hand-layup",
+      "to": "material:gfrp",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:hand-layup",
+      "to": "material:aramid",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:hand-layup",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:vacuum-infusion",
+      "to": "material:gfrp",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:vacuum-infusion",
+      "to": "material:aramid",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:vacuum-infusion",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:resin-transfer-molding",
+      "to": "material:gfrp",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:resin-transfer-molding",
+      "to": "material:aramid",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:resin-transfer-molding",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:pultrusion",
+      "to": "material:gfrp",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:pultrusion",
+      "to": "material:aramid",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:pultrusion",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:filament-winding",
+      "to": "material:gfrp",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:filament-winding",
+      "to": "material:aramid",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:filament-winding",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:autoclave-composites",
+      "to": "material:gfrp",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:autoclave-composites",
+      "to": "material:aramid",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:autoclave-composites",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:solder-paste-printing",
+      "to": "material:pcb",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:solder-paste-printing",
+      "to": "material:solder",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:solder-paste-printing",
+      "to": "profession:electrical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:smt-placement",
+      "to": "material:pcb",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:smt-placement",
+      "to": "material:solder",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:smt-placement",
+      "to": "profession:electrical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:reflow-soldering",
+      "to": "material:pcb",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:reflow-soldering",
+      "to": "material:solder",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:reflow-soldering",
+      "to": "profession:electrical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:wave-soldering",
+      "to": "material:pcb",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:wave-soldering",
+      "to": "material:solder",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:wave-soldering",
+      "to": "profession:electrical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:conformal-coating",
+      "to": "material:pcb",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:conformal-coating",
+      "to": "material:solder",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:conformal-coating",
+      "to": "profession:electrical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:aoi-pcb",
+      "to": "material:pcb",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:aoi-pcb",
+      "to": "material:solder",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:aoi-pcb",
+      "to": "profession:electrical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:blanching-food",
+      "to": "material:food-raw",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:blanching-food",
+      "to": "profession:food-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:thermal-sterilization-food",
+      "to": "material:food-raw",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:thermal-sterilization-food",
+      "to": "profession:food-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:freezing-food",
+      "to": "material:food-raw",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:freezing-food",
+      "to": "profession:food-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:spray-drying-food",
+      "to": "material:food-raw",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:spray-drying-food",
+      "to": "profession:food-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:food-evaporation",
+      "to": "material:food-raw",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:food-evaporation",
+      "to": "profession:food-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:grain-milling",
+      "to": "material:food-raw",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:grain-milling",
+      "to": "profession:food-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:food-extrusion",
+      "to": "material:food-raw",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:food-extrusion",
+      "to": "profession:food-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:juice-clarification",
+      "to": "material:food-raw",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:juice-clarification",
+      "to": "profession:food-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:carding",
+      "to": "material:cotton",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:carding",
+      "to": "material:cotton-yarn",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:carding",
+      "to": "profession:textile-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:combing-textile",
+      "to": "material:cotton",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:combing-textile",
+      "to": "material:cotton-yarn",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:combing-textile",
+      "to": "profession:textile-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:drawing-textile",
+      "to": "material:cotton",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:drawing-textile",
+      "to": "material:cotton-yarn",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:drawing-textile",
+      "to": "profession:textile-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:winding-yarn",
+      "to": "material:cotton",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:winding-yarn",
+      "to": "material:cotton-yarn",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:winding-yarn",
+      "to": "profession:textile-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:warping",
+      "to": "material:cotton",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:warping",
+      "to": "material:cotton-yarn",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:warping",
+      "to": "profession:textile-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:warp-sizing",
+      "to": "material:cotton",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:warp-sizing",
+      "to": "material:cotton-yarn",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:warp-sizing",
+      "to": "profession:textile-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:textile-bleaching",
+      "to": "material:cotton",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:textile-bleaching",
+      "to": "material:cotton-yarn",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:textile-bleaching",
+      "to": "profession:textile-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:textile-printing",
+      "to": "material:cotton",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:textile-printing",
+      "to": "material:cotton-yarn",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:textile-printing",
+      "to": "profession:textile-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:wood-planing",
+      "to": "material:timber",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:wood-planing",
+      "to": "material:birch-plywood",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:wood-planing",
+      "to": "profession:forest-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:veneer-peeling",
+      "to": "material:timber",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:veneer-peeling",
+      "to": "material:birch-plywood",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:veneer-peeling",
+      "to": "profession:forest-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:plywood-bonding",
+      "to": "material:timber",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:plywood-bonding",
+      "to": "material:birch-plywood",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:plywood-bonding",
+      "to": "profession:forest-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:wood-preservation",
+      "to": "material:timber",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:wood-preservation",
+      "to": "material:birch-plywood",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:wood-preservation",
+      "to": "profession:forest-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:fiberboard-pressing",
+      "to": "material:timber",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:fiberboard-pressing",
+      "to": "material:birch-plywood",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:fiberboard-pressing",
+      "to": "profession:forest-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:industrial-evaporation",
+      "to": "profession:chemical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:crystallization",
+      "to": "profession:chemical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:gas-absorption",
+      "to": "profession:chemical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:gas-stripping",
+      "to": "profession:chemical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:industrial-centrifugation",
+      "to": "profession:chemical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:chemical-membrane",
+      "to": "profession:chemical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:catalytic-reaction",
+      "to": "profession:chemical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:solvent-extraction",
+      "to": "profession:chemical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:concrete-mixing",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:concrete-mixing",
+      "to": "profession:civil-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:concrete-placing",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:concrete-placing",
+      "to": "profession:civil-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:concrete-vibration",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:concrete-vibration",
+      "to": "profession:civil-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:concrete-curing",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:concrete-curing",
+      "to": "profession:civil-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:formwork-erection",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:formwork-erection",
+      "to": "profession:civil-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:rebar-installation",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:rebar-installation",
+      "to": "profession:civil-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:masonry-works",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:masonry-works",
+      "to": "profession:civil-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:road-asphalt-placement",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:road-asphalt-placement",
+      "to": "profession:civil-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:geotechnical-grouting",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:geotechnical-grouting",
+      "to": "profession:civil-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:asphalt-mix-production",
+      "to": "profession:road-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:steam-generation",
+      "to": "profession:power-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:condensate-return",
+      "to": "profession:power-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:deaeration-water",
+      "to": "profession:power-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:economizer-heat-recovery",
+      "to": "profession:power-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:steam-trap-monitoring",
+      "to": "profession:power-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:industrial-induction-heating",
+      "to": "profession:power-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:industrial-heat-exchange",
+      "to": "profession:power-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:coagulation-water",
+      "to": "profession:water-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:flocculation-water",
+      "to": "profession:water-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:sedimentation-water",
+      "to": "profession:water-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:granular-filtration",
+      "to": "profession:water-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:carbon-adsorption",
+      "to": "profession:water-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:reverse-osmosis",
+      "to": "profession:water-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:nanofiltration-water",
+      "to": "profession:water-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:ultrafiltration-water",
+      "to": "profession:water-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:ozonation-water",
+      "to": "profession:water-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:sludge-dewatering",
+      "to": "profession:water-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:cement-clinker-firing",
+      "to": "material:alumina",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:cement-clinker-firing",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:ceramic-calcination",
+      "to": "material:alumina",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:ceramic-calcination",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:ceramic-sintering",
+      "to": "material:alumina",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:ceramic-sintering",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:slip-casting-ceramics",
+      "to": "material:alumina",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:slip-casting-ceramics",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:dry-pressing-ceramics",
+      "to": "material:alumina",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:dry-pressing-ceramics",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:brick-extrusion",
+      "to": "material:alumina",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:brick-extrusion",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:glass-melting",
+      "to": "material:alumina",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:glass-melting",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:glass-annealing",
+      "to": "material:alumina",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:glass-annealing",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:wet-granulation-pharma",
+      "to": "profession:chemical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:dry-granulation-pharma",
+      "to": "profession:chemical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:tablet-compression",
+      "to": "profession:chemical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:tablet-coating",
+      "to": "profession:chemical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:capsule-filling",
+      "to": "profession:chemical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:aseptic-filling",
+      "to": "profession:chemical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:pharma-spray-drying",
+      "to": "profession:chemical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:pharma-sieving",
+      "to": "profession:chemical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:offset-lithography",
+      "to": "profession:polygraph-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:flexography",
+      "to": "profession:polygraph-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:screen-printing",
+      "to": "profession:polygraph-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:gravure-printing",
+      "to": "profession:polygraph-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:print-binding",
+      "to": "profession:polygraph-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:ore-crushing",
+      "to": "profession:mining-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:ore-grinding",
+      "to": "profession:mining-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:ore-screening",
+      "to": "profession:mining-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:ore-flotation",
+      "to": "profession:mining-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:magnetic-separation-ore",
+      "to": "profession:mining-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:gravity-concentration",
+      "to": "profession:mining-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:ore-leaching",
+      "to": "profession:mining-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:magnetic-particle-ndt",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:magnetic-particle-ndt",
+      "to": "material:steel-45",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:magnetic-particle-ndt",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:eddy-current-ndt",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:eddy-current-ndt",
+      "to": "material:steel-45",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:eddy-current-ndt",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:visual-ndt",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:visual-ndt",
+      "to": "material:steel-45",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:visual-ndt",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:leak-testing",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:leak-testing",
+      "to": "material:steel-45",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:leak-testing",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:acoustic-emission-ndt",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:acoustic-emission-ndt",
+      "to": "material:steel-45",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:acoustic-emission-ndt",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:infrared-thermography",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:infrared-thermography",
+      "to": "material:steel-45",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:infrared-thermography",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:ground-penetrating-radar",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:ground-penetrating-radar",
+      "to": "material:steel-45",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:ground-penetrating-radar",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:guided-wave-ndt",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:guided-wave-ndt",
+      "to": "material:steel-45",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:guided-wave-ndt",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:magnetic-flux-leakage",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:magnetic-flux-leakage",
+      "to": "material:steel-45",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:magnetic-flux-leakage",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:neutron-radiography",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:neutron-radiography",
+      "to": "material:steel-45",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:neutron-radiography",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:laser-shearography",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:laser-shearography",
+      "to": "material:steel-45",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:laser-shearography",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:phased-array-ut",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:phased-array-ut",
+      "to": "material:steel-45",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:phased-array-ut",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:resistance-seam",
+      "to": "material:steel-20",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:resistance-seam",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:resistance-seam",
+      "to": "profession:mechanical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:flash-butt-welding",
+      "to": "material:steel-20",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:flash-butt-welding",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:flash-butt-welding",
+      "to": "profession:mechanical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:electron-beam-welding",
+      "to": "material:steel-20",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:electron-beam-welding",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:electron-beam-welding",
+      "to": "profession:mechanical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:plasma-arc-welding",
+      "to": "material:steel-20",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:plasma-arc-welding",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:plasma-arc-welding",
+      "to": "profession:mechanical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:stud-welding",
+      "to": "material:steel-20",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:stud-welding",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:stud-welding",
+      "to": "profession:mechanical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:diffusion-bonding",
+      "to": "material:steel-20",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:diffusion-bonding",
+      "to": "material:09g2s",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:diffusion-bonding",
+      "to": "profession:mechanical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:compression-molding-plastics",
+      "to": "material:pe-hd",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:compression-molding-plastics",
+      "to": "material:pa6",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:compression-molding-plastics",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:stretch-blow-molding",
+      "to": "material:pe-hd",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:stretch-blow-molding",
+      "to": "material:pa6",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:stretch-blow-molding",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:blown-film-extrusion",
+      "to": "material:pe-hd",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:blown-film-extrusion",
+      "to": "material:pa6",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:blown-film-extrusion",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:polymer-transfer-molding",
+      "to": "material:pe-hd",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:polymer-transfer-molding",
+      "to": "material:pa6",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:polymer-transfer-molding",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:rubber-vulcanization",
+      "to": "material:pe-hd",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:rubber-vulcanization",
+      "to": "material:pa6",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:rubber-vulcanization",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:extrusion-coating",
+      "to": "material:pe-hd",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:extrusion-coating",
+      "to": "material:pa6",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:extrusion-coating",
+      "to": "profession:materials-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:needle-punching-nonwovens",
+      "to": "material:cotton",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:needle-punching-nonwovens",
+      "to": "material:woven-fabric",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:needle-punching-nonwovens",
+      "to": "profession:textile-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:mercerization",
+      "to": "material:cotton",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:mercerization",
+      "to": "material:woven-fabric",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:mercerization",
+      "to": "profession:textile-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:heat-setting-textiles",
+      "to": "material:cotton",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:heat-setting-textiles",
+      "to": "material:woven-fabric",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:heat-setting-textiles",
+      "to": "profession:textile-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:textile-calendering",
+      "to": "material:cotton",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:textile-calendering",
+      "to": "material:woven-fabric",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:textile-calendering",
+      "to": "profession:textile-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:industrial-embroidery",
+      "to": "material:cotton",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:industrial-embroidery",
+      "to": "material:woven-fabric",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:industrial-embroidery",
+      "to": "profession:textile-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:pcb-drilling",
+      "to": "material:pcb",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:pcb-drilling",
+      "to": "material:solder",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:pcb-drilling",
+      "to": "profession:electrical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:pcb-etching",
+      "to": "material:pcb",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:pcb-etching",
+      "to": "material:solder",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:pcb-etching",
+      "to": "profession:electrical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:pcb-plating",
+      "to": "material:pcb",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:pcb-plating",
+      "to": "material:solder",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:pcb-plating",
+      "to": "profession:electrical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:selective-soldering",
+      "to": "material:pcb",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:selective-soldering",
+      "to": "material:solder",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:selective-soldering",
+      "to": "profession:electrical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:pcb-xray-inspection",
+      "to": "material:pcb",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:pcb-xray-inspection",
+      "to": "material:solder",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:pcb-xray-inspection",
+      "to": "profession:electrical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:pharma-powder-blending",
+      "to": "profession:chemical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:pharma-micronization",
+      "to": "profession:chemical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:fluid-bed-pharma-drying",
+      "to": "profession:chemical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:pharma-inprocess-control",
+      "to": "profession:chemical-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:printing-plate-making",
+      "to": "profession:polygraph-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:print-die-cutting",
+      "to": "profession:polygraph-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:uv-curing-print",
+      "to": "profession:polygraph-engineer",
       "relation": "associated_profession"
     }
   ]
