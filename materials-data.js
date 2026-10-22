@@ -1,4 +1,4 @@
-// Описания материалов: общий источник не подтверждает свойства конкретной партии.
+// Редакционные описания: ссылки на источники не равнозначны сертификации.
 window.engineeringMaterials = [
   {
     "id": "steel-20",
@@ -162,8 +162,8 @@ window.engineeringMaterials = [
       }
     ],
     "evidence": {
-      "verificationStatus": "partial_claim",
-      "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
       "reviewScope": "Подтверждены классификация и общее применение 6061; состояние термообработки и характеристики не проверены.",
       "checkedAt": "2026-10-22"
     }
@@ -480,8 +480,8 @@ window.engineeringMaterials = [
       }
     ],
     "evidence": {
-      "verificationStatus": "partial_claim",
-      "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
       "reviewScope": "CottonWorks описывает прядение хлопка; качество отдельной партии пряжи не проверено.",
       "checkedAt": "2026-10-22"
     }
@@ -622,8 +622,8 @@ window.engineeringMaterials = [
       }
     ],
     "evidence": {
-      "verificationStatus": "partial_claim",
-      "verifiedClaim": "Группа 6xxx широко применяется в архитектурных и конструкционных изделиях.",
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
       "reviewScope": "Это подтверждение семейства 6xxx; конкретный состав и свойства 6063 по стандарту отдельно не сверены.",
       "checkedAt": "2026-10-22"
     }
@@ -683,8 +683,8 @@ window.engineeringMaterials = [
       }
     ],
     "evidence": {
-      "verificationStatus": "partial_claim",
-      "verifiedClaim": "Лом используется как сырьё при выплавке новых стальных и чугунных изделий.",
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
       "reviewScope": "Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.",
       "checkedAt": "2026-10-22"
     }
@@ -713,8 +713,8 @@ window.engineeringMaterials = [
       }
     ],
     "evidence": {
-      "verificationStatus": "partial_claim",
-      "verifiedClaim": "USGS описывает железную руду как основное первичное сырьё для чёрной металлургии.",
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
       "reviewScope": "Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.",
       "checkedAt": "2026-10-22"
     }
@@ -743,8 +743,8 @@ window.engineeringMaterials = [
       }
     ],
     "evidence": {
-      "verificationStatus": "partial_claim",
-      "verifiedClaim": "USGS описывает получение глинозёма из боксита.",
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
       "reviewScope": "Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.",
       "checkedAt": "2026-10-22"
     }
@@ -772,8 +772,8 @@ window.engineeringMaterials = [
       }
     ],
     "evidence": {
-      "verificationStatus": "partial_claim",
-      "verifiedClaim": "USGS описывает цемент как вяжущее в бетоне и растворах.",
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
       "reviewScope": "Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.",
       "checkedAt": "2026-10-22"
     }
@@ -800,8 +800,8 @@ window.engineeringMaterials = [
       }
     ],
     "evidence": {
-      "verificationStatus": "partial_claim",
-      "verifiedClaim": "USGS описывает клинкер как основное сырьё цемента.",
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
       "reviewScope": "Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.",
       "checkedAt": "2026-10-22"
     }
@@ -829,8 +829,8 @@ window.engineeringMaterials = [
       }
     ],
     "evidence": {
-      "verificationStatus": "partial_claim",
-      "verifiedClaim": "USGS подтверждает широкое применение гипса в стройматериалах.",
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
       "reviewScope": "Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.",
       "checkedAt": "2026-10-22"
     }
@@ -860,8 +860,8 @@ window.engineeringMaterials = [
       }
     ],
     "evidence": {
-      "verificationStatus": "partial_claim",
-      "verifiedClaim": "USGS перечисляет стекольное производство среди применений промышленного песка.",
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
       "reviewScope": "Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.",
       "checkedAt": "2026-10-22"
     }
@@ -972,8 +972,8 @@ window.engineeringMaterials = [
       }
     ],
     "evidence": {
-      "verificationStatus": "partial_claim",
-      "verifiedClaim": "ISO стандартизует сокращения полимеров, включая PP.",
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
       "reviewScope": "Документ об обозначениях не удостоверяет физические свойства, медицинскую или пищевую пригодность.",
       "checkedAt": "2026-10-22"
     }
@@ -1002,8 +1002,8 @@ window.engineeringMaterials = [
       }
     ],
     "evidence": {
-      "verificationStatus": "partial_claim",
-      "verifiedClaim": "Система ISO 1043 охватывает сокращения базовых полимеров.",
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
       "reviewScope": "Конкретная пригодность PET к применению и свойства данным источником не подтверждены.",
       "checkedAt": "2026-10-22"
     }
@@ -1032,8 +1032,8 @@ window.engineeringMaterials = [
       }
     ],
     "evidence": {
-      "verificationStatus": "partial_claim",
-      "verifiedClaim": "Источник описывает международные сокращения полимеров.",
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
       "reviewScope": "Подтверждена только номенклатура, не состав ПВХ-композиции.",
       "checkedAt": "2026-10-22"
     }
@@ -1063,8 +1063,8 @@ window.engineeringMaterials = [
       }
     ],
     "evidence": {
-      "verificationStatus": "partial_claim",
-      "verifiedClaim": "FEICA описывает промышленную роль клеёв и герметиков.",
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
       "reviewScope": "Не проверены конкретные рецептуры и методы соединения.",
       "checkedAt": "2026-10-22"
     }
@@ -1092,8 +1092,8 @@ window.engineeringMaterials = [
       }
     ],
     "evidence": {
-      "verificationStatus": "partial_claim",
-      "verifiedClaim": "USDA Wood Handbook описывает древесные композитные панели.",
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
       "reviewScope": "Точные характеристики конкретной плиты и соответствие стандарту не проверены.",
       "checkedAt": "2026-10-22"
     }
@@ -1120,8 +1120,8 @@ window.engineeringMaterials = [
       }
     ],
     "evidence": {
-      "verificationStatus": "partial_claim",
-      "verifiedClaim": "USGS подтверждает применение промышленного кремнезёма при получении стекла.",
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
       "reviewScope": "Состав готовой стекольной шихты этим источником не подтверждён.",
       "checkedAt": "2026-10-22"
     }
@@ -1208,8 +1208,8 @@ window.engineeringMaterials = [
       }
     ],
     "evidence": {
-      "verificationStatus": "partial_claim",
-      "verifiedClaim": "OSHA описывает разные виды полиграфических красок.",
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
       "reviewScope": "Сведения об охране труда и терминологии не заменяют паспорт безопасности или технологический лист.",
       "checkedAt": "2026-10-22"
     }
@@ -1238,8 +1238,8 @@ window.engineeringMaterials = [
       }
     ],
     "evidence": {
-      "verificationStatus": "partial_claim",
-      "verifiedClaim": "OSHA описывает операции с листовыми и рулонными субстратами в печати.",
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
       "reviewScope": "Точный состав и бумажные марки источником не подтверждены.",
       "checkedAt": "2026-10-22"
     }
@@ -1267,8 +1267,8 @@ window.engineeringMaterials = [
       }
     ],
     "evidence": {
-      "verificationStatus": "partial_claim",
-      "verifiedClaim": "Cotton Incorporated описывает техническую базу хлопковых тканей.",
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
       "reviewScope": "Источник описывает саржевые переплетения, применяемые для денима; состав и качество конкретной партии ткани не проверены.",
       "checkedAt": "2026-10-22"
     }
@@ -1296,8 +1296,8 @@ window.engineeringMaterials = [
       }
     ],
     "evidence": {
-      "verificationStatus": "partial_claim",
-      "verifiedClaim": "Copper Development Association описывает медь как теплопроводящий металл.",
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
       "reviewScope": "CDA подтверждает применение меди в электрических системах и низкие потери; пригодность конкретного полуфабриката к теплообменнику требует отдельного источника.",
       "checkedAt": "2026-10-22"
     }
@@ -1325,8 +1325,8 @@ window.engineeringMaterials = [
       }
     ],
     "evidence": {
-      "verificationStatus": "partial_claim",
-      "verifiedClaim": "USGS отмечает использование бокситов в огнеупорах.",
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
       "reviewScope": "Сведения относятся к сырьевой отрасли, а не к подтверждённым параметрам огнеупора.",
       "checkedAt": "2026-10-22"
     }
@@ -1355,8 +1355,8 @@ window.engineeringMaterials = [
       }
     ],
     "evidence": {
-      "verificationStatus": "partial_claim",
-      "verifiedClaim": "USGS выделяет высокочистый кварц как отдельное промышленное сырьё.",
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
       "reviewScope": "Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.",
       "checkedAt": "2026-10-22"
     }
