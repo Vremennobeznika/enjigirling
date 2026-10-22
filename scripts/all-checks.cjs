@@ -21,6 +21,7 @@ const steps=[
  ['PROCESS ATLAS 208 integrity and evidence scope',()=>[['node',['tests/process-atlas-data.cjs']]]],
  ['MATERIAL ATLAS sector coverage and source boundaries',()=>[['node',['tests/materials-atlas-data.cjs']]]],
  ['ATLAS each of 380 cards audit state',()=>[['node',['scripts/audit-atlas-cards.cjs','--check']]]],
+ ['ATLAS executable-code budget and duplicate exporter guard',()=>[['node',['tests/atlas-code-size.cjs']]]],
  ['ATLAS joint processes/materials/AI exports and ZIP checks',()=>[['node',['tests/atlas-dual-ai.cjs']]]],
  ['S13 source and claim references',()=>[['node',['scripts/check-evidence.cjs']]]],
  ['S15 deterministic quality metadata',()=>[['node',['scripts/build-quality.cjs','--check']]]],
