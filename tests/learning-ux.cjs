@@ -99,7 +99,7 @@ for(const suspectName of ['Грозненский техникум','Ураль�
 }
 
 const verified=entries.filter(({item})=>Array.isArray(item.verifiedPrograms)&&item.verifiedPrograms.length);
-assert.equal(verified.length,67,'67 program-cited entries should remain; presence of citation is not independent verification');
+assert.equal(verified.length,69,'69 program-cited entries should remain; presence of citation is not independent verification');
 for(const {item} of verified){
  for(const p of item.verifiedPrograms){
   assert.match(p.code,/^\d{2}\.\d{2}\.\d{2}$/,'program code required');
@@ -112,7 +112,7 @@ for(const {item} of verified){
 }
 assert.ok(js.includes('item.verifiedPrograms')&&js.includes('programDetails'),'program evidence is rendered');
 assert.ok(js.includes('item.verifiedPrograms||[]'),'program codes included in search');
-console.log('PASS: 67 program-cited entries with a period, source URL and bounded numbers (not independent fact-check)');
+console.log('PASS: 69 program-cited entries with a period, source URL and bounded numbers (not independent fact-check)');
 
 assert.equal(entries.filter(x=>x.item.sourceFetchStatus==='fetched').length,77,'77 evidence pages fetched after source URL repair');
 assert.equal(entries.filter(x=>x.item.sourceFetchStatus==='fetch_failed').length,3,'3 links require retry, not deletion');
