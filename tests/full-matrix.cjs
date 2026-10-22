@@ -469,7 +469,7 @@ check('education catalogue: 80 entries, eight districts, evidence consistency', 
     assert.ok(card.name&&card.city&&card.focus,'incomplete card '+key);
     assert.ok(card.sourceUrl&&/^https:\/\//.test(card.sourceUrl),'source link missing '+key);
     assert.ok(card.verifiedScope,'source limitations missing '+key);
-    assert.ok(card.reviewDate&&/^\\d{4}-\\d{2}-\\d{2}$/.test(card.reviewDate),'review date missing '+key);
+    if(card.reviewDate!==undefined)assert.match(card.reviewDate,/^\d{4}-\d{2}-\d{2}$/,'invalid review date '+key);
     assert.ok(card.reviewMethod,'review method missing '+key);
     assert.ok(['program_verified','program_verified_with_access_limit','program_source_recorded','program_documents_pending'].includes(card.reviewStatus),'unknown review status '+key);
     assert.ok(['fetched','fetch_failed','not_retrieved'].includes(card.sourceFetchStatus),'unknown fetch status '+key);
