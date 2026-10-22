@@ -10,7 +10,6 @@ window.engineeringMaterials = [
     "process": [
       "cutting",
       "heat",
-      "casting",
       "hardness"
     ],
     "note": "Для химического состава и механических свойств необходимо выбрать действующий стандарт на конкретный вид проката или изделия."
@@ -25,7 +24,6 @@ window.engineeringMaterials = [
     "process": [
       "cutting",
       "heat",
-      "casting",
       "ultrasonic",
       "hardness"
     ],
