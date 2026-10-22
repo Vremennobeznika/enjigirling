@@ -288,4 +288,4 @@ const result=await call("PUT",{revision:remoteRev,data:snapshot()});revision=Num
 updateMode();draw();
 if('serviceWorker' in navigator && location.protocol==='https:')navigator.serviceWorker.getRegistrations().then(async regs=>{await Promise.all(regs.filter(r=>new URL(r.scope).pathname.endsWith('/life/')).map(r=>r.unregister()));return navigator.serviceWorker.register('../life-pwa-sw.js',{scope:'../'});}).catch(()=>{});if(window.matchMedia('(display-mode: standalone)').matches||navigator.standalone===true)document.getElementById('iphoneInstall').hidden=true;
 })();
-</script><script src="./auto-sync.js"></script></body></html>
+</script><script src="./auto-sync.js"></script><script defer src="./planner/model.js"></script><script defer src="./planner/config.js"></script><script defer src="./active-reminders.js"></script></body></html>
