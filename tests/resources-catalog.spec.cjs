@@ -92,7 +92,7 @@ test('resources offer a readable fallback without JavaScript',async({browser})=>
   try {
     const page=await context.newPage();
     await page.goto('/resources.html');
-    await expect(page.locator('main noscript')).toContainText('Markdown');
+    await expect(page.locator('main noscript .eng-empty')).toContainText('Markdown');
     await expect(page.locator('a[href="knowledge/sections/resources.md"]').first()).toBeVisible();
   } finally { await context.close(); }
 });
