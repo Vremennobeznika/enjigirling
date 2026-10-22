@@ -209,8 +209,8 @@ check('parallel font loading and nonduplicated main CI checks', () => {
  const fontUrl='https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap';
  for(const page of pages){
   const markup=fs.readFileSync(page,'utf8');
-  if(page==='calculator.html'){
-   assert.ok(!markup.includes('fonts.googleapis.com')&&!markup.includes('fonts.gstatic.com'),'calculators should use system fonts without remote requests');
+  if(page==='calculator.html'||page==='resources.html'){
+   assert.ok(!markup.includes('fonts.googleapis.com')&&!markup.includes('fonts.gstatic.com'),page+' should use system fonts without remote requests');
    continue;
   }
   assert.ok(markup.includes('rel="preconnect" href="https://fonts.googleapis.com"'),page+' missing font preconnect');
