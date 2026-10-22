@@ -925,7 +925,7 @@
 - **checks:** Толщина, герметичность, усадка
 - **materials:** ["pe-hd","pa6"]
 - **profession:** materials-engineer
-- **sources:** [{"title":"EPA — отраслевой обзор формования пластмасс — общий контекст; не техкарта","url":"https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"}]
+- **sources:** [{"title":"EPA (2000), § 4.2.4 — отраслевой обзор производства изделий из пластмасс","url":"https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf"}]
 - **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
 - **reviewStatus:** source_located
 
@@ -939,7 +939,7 @@
 - **checks:** Толщина, поры, коробление
 - **materials:** ["pe-hd","pa6"]
 - **profession:** materials-engineer
-- **sources:** [{"title":"EPA — отраслевой обзор формования пластмасс — общий контекст; не техкарта","url":"https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"}]
+- **sources:** [{"title":"EPA (2000), § 4.2.4 — отраслевой обзор производства изделий из пластмасс","url":"https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf"}]
 - **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
 - **reviewStatus:** source_located
 
@@ -953,7 +953,7 @@
 - **checks:** Складки, истончение, размеры
 - **materials:** ["pe-hd","pa6"]
 - **profession:** materials-engineer
-- **sources:** [{"title":"EPA — отраслевой обзор формования пластмасс — общий контекст; не техкарта","url":"https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"}]
+- **sources:** [{"title":"EPA (2000), § 4.2.4 — отраслевой обзор производства изделий из пластмасс","url":"https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf"}]
 - **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
 - **reviewStatus:** source_located
 
@@ -967,7 +967,7 @@
 - **checks:** Толщина, неоднородность, полосы
 - **materials:** ["pe-hd","pa6"]
 - **profession:** materials-engineer
-- **sources:** [{"title":"EPA — отраслевой обзор формования пластмасс — общий контекст; не техкарта","url":"https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"}]
+- **sources:** [{"title":"EPA (2000), § 4.2.4 — отраслевой обзор производства изделий из пластмасс","url":"https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf"}]
 - **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
 - **reviewStatus:** source_located
 
@@ -981,7 +981,7 @@
 - **checks:** Однородность, влажность, распределение добавок
 - **materials:** ["pe-hd","pa6"]
 - **profession:** materials-engineer
-- **sources:** [{"title":"EPA — отраслевой обзор формования пластмасс — общий контекст; не техкарта","url":"https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"}]
+- **sources:** [{"title":"EPA (2000), § 4.2.4 — отраслевой обзор производства изделий из пластмасс","url":"https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf"}]
 - **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
 - **reviewStatus:** source_located
 
@@ -995,7 +995,7 @@
 - **checks:** Плотность, структура ячеек, усадка
 - **materials:** ["pe-hd","pa6"]
 - **profession:** materials-engineer
-- **sources:** [{"title":"EPA — отраслевой обзор формования пластмасс — общий контекст; не техкарта","url":"https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"}]
+- **sources:** [{"title":"EPA (2000), § 4.2.4 — отраслевой обзор производства изделий из пластмасс","url":"https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf"}]
 - **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
 - **reviewStatus:** source_located
 
@@ -2663,7 +2663,7 @@
 - **checks:** Пустоты, облой, степень отверждения
 - **materials:** ["pe-hd","pa6"]
 - **profession:** materials-engineer
-- **sources:** [{"title":"EPA — обзор производства изделий из пластмасс — обзор без технологических режимов","url":"https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"}]
+- **sources:** [{"title":"EPA (2000), § 4.2.4 — отраслевой обзор производства изделий из пластмасс","url":"https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf"}]
 - **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
 - **reviewStatus:** source_located
 
@@ -2677,7 +2677,7 @@
 - **checks:** Толщина, прозрачность, геометрия
 - **materials:** ["pe-hd","pa6"]
 - **profession:** materials-engineer
-- **sources:** [{"title":"EPA — обзор производства изделий из пластмасс — обзор без технологических режимов","url":"https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"}]
+- **sources:** [{"title":"EPA (2000), § 4.2.4 — отраслевой обзор производства изделий из пластмасс","url":"https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf"}]
 - **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
 - **reviewStatus:** source_located
 
@@ -2692,7 +2692,7 @@
 - **checks:** Толщина, складки, пузырь, стабильность рукава
 - **materials:** ["pe-hd","pa6"]
 - **profession:** materials-engineer
-- **sources:** [{"title":"EPA — обзор производства изделий из пластмасс — обзор без технологических режимов","url":"https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"}]
+- **sources:** [{"title":"EPA (2000), § 4.2.4 — отраслевой обзор производства изделий из пластмасс","url":"https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf"}]
 - **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
 - **reviewStatus:** source_located
 
@@ -2706,7 +2706,7 @@
 - **checks:** Недолив, облой, время отверждения
 - **materials:** ["pe-hd","pa6"]
 - **profession:** materials-engineer
-- **sources:** [{"title":"EPA — обзор производства изделий из пластмасс — обзор без технологических режимов","url":"https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"}]
+- **sources:** [{"title":"EPA (2000), § 4.2.4 — отраслевой обзор производства изделий из пластмасс","url":"https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf"}]
 - **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
 - **reviewStatus:** source_located
 
@@ -2720,7 +2720,7 @@
 - **checks:** Степень вулканизации, твёрдость, трещины
 - **materials:** ["pe-hd","pa6"]
 - **profession:** materials-engineer
-- **sources:** [{"title":"EPA — обзор производства изделий из пластмасс — обзор без технологических режимов","url":"https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"}]
+- **sources:** [{"title":"EPA (2000), § 4.2.4 — отраслевой обзор производства изделий из пластмасс","url":"https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf"}]
 - **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
 - **reviewStatus:** source_located
 
@@ -2734,7 +2734,7 @@
 - **checks:** Толщина, адгезия, сплошность
 - **materials:** ["pe-hd","pa6"]
 - **profession:** materials-engineer
-- **sources:** [{"title":"EPA — обзор производства изделий из пластмасс — обзор без технологических режимов","url":"https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"}]
+- **sources:** [{"title":"EPA (2000), § 4.2.4 — отраслевой обзор производства изделий из пластмасс","url":"https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf"}]
 - **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
 - **reviewStatus:** source_located
 
