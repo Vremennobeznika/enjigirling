@@ -5,7 +5,7 @@ const root=document.getElementById('materialGrid'),search=document.getElementByI
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const processes=window.engineeringProcesses||[];
 const professionNames=Object.fromEntries((window.professionsData||[]).map(p=>[p.id,p.title]));
-const processNames={casting:'Литьё',welding:'Дуговая сварка',cutting:'Обработка резанием',heat:'Термическая обработка',additive:'Аддитивное производство',inspection:'Неразрушающий контроль','mig-mag':'MIG/MAG-сварка',tig:'TIG-сварка',ultrasonic:'Ультразвуковой контроль',radiographic:'Радиографический контроль',dye:'Капиллярный контроль',hardness:'Измерение твёрдости'};
+const processNames=Object.fromEntries(processes.map(p=>[p.id,p.name]));
 const status=document.createElement('p');status.className='filter-status';status.setAttribute('role','status');status.setAttribute('aria-live','polite');search.insertAdjacentElement('afterend',status);
 const reset=document.createElement('button');reset.type='button';reset.className='eng-filter-btn filter-reset';reset.textContent='Сбросить фильтры';status.insertAdjacentElement('afterend',reset);
 reset.addEventListener('click',()=>{search.value='';category.value='all';render();search.focus();});
