@@ -224,3 +224,23 @@ test('fuel, loading and NE43 cases are visibly refused rather than showing false
  await expect(page.locator('#maResultValue')).toContainText('сигнал отказа');
  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2)).toBeTruthy();
 });
+
+test('legacy converters preserve tiny values and reject oversized integers on weak devices',async({page})=>{
+ await page.setViewportSize({width:320,height:720});
+ await page.goto('/calculator.html#calcUnits');
+ await expect(page.locator('#convInput')).toBeVisible();
+ await page.locator('#convFrom').selectOption('mm');
+ await page.locator('#convTo').selectOption('m');
+ await page.locator('#convInput').fill('0.000001');
+ await expect(page.locator('#convResultValue')).toContainText('e-9');
+ await page.goto('/calculator.html#calcBases');
+ await page.locator('#numInput').evaluate(node=>{
+   node.value='9'.repeat(400);
+   node.dispatchEvent(new Event('input',{bubbles:true}));
+ });
+ await expect(page.locator('#numResultHint')).toContainText('не больше 256 цифр');
+ await expect(page.locator('#numHex')).toHaveText('—');
+ await page.locator('#numInput').fill('255');
+ await expect(page.locator('#numHex')).toHaveText('FF');
+ await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2)).toBeTruthy();
+});
