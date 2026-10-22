@@ -42,7 +42,7 @@ function txt(v,max=200){
  return v.trim().slice(0,max);
 }
 function identifier(v){if(typeof v!=="string"||v.length<1||v.length>100||!/^[a-zA-Z0-9_-]+$/.test(v))throw Error("Некорректный идентификатор");return v}
-function number(v){if(!Number.isSafeInteger(v)||v<0||v>999999999999)throw Error("Некорректная сумма");return v}
+function number(v){if(!Number.isSafeInteger(v)||v<0||v>9999999999)throw Error("Некорректная сумма");return v}
 function arr(v,max=15000){if(!Array.isArray(v)||v.length>max)throw Error("Некорректный или слишком длинный список");return v}
 function isoDate(v){
  if(typeof v!=="string"||!/^\d{4}-\d{2}-\d{2}$/.test(v))throw Error("Некорректная дата");
@@ -99,7 +99,7 @@ function validate(raw){
  if(!raw.done||typeof raw.done!=="object"||Array.isArray(raw.done))throw Error("Некорректные отметки");
  const done=Object.create(null),ids=new Set(out.items.map(i=>i.id));
  for(const [key,value] of Object.entries(raw.done)){
-  if(key.length>120||!/^[a-zA-Z0-9_-]+@(?:\d{4}-\d{2}-\d{2}|\d{4}-\d{2}-weekly|once)$/.test(key))throw Error("Некорректная отметка");
+  if(key.length>120||!/^[a-zA-Z0-9_-]+@(?:\d{4}-\d{2}-\d{2}(?:-weekly)?|once)$/.test(key))throw Error("Некорректная отметка");
   if(value!==true)continue;
   const id=key.split("@")[0];
   if(ids.has(id))done[key]=true;
@@ -123,9 +123,9 @@ function keyFor(item,date){
 function parseMinor(value){
  if(typeof value!=="string")throw Error("Укажи сумму");
  const s=value.trim().replace(/[\s\u00a0\u202f]/g,"");
- if(!/^(?:0|[1-9]\d{0,9})(?:[.,]\d{1,2})?$/.test(s))throw Error("Сумма должна быть положительным числом с максимум двумя знаками после запятой");
+ if(!/^(?:0|[1-9]\d{0,7})(?:[.,]\d{1,2})?$/.test(s))throw Error("Сумма должна быть положительным числом с максимум двумя знаками после запятой");
  const p=s.replace(",",".").split("."),cents=Number(p[0])*100+Number((p[1]||"").padEnd(2,"0"));
- if(!Number.isSafeInteger(cents)||cents<1||cents>999999999999)throw Error("Сумма слишком большая или равна нулю");
+ if(!Number.isSafeInteger(cents)||cents<1||cents>9999999999)throw Error("Сумма слишком большая или равна нулю");
  return cents;
 }
 function money(value,currency){
