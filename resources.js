@@ -25,15 +25,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const buttons = new Map();
   let activeType=ALL, view='grid';
   const hostname = url => { try {return new URL(url).hostname.replace(/^www\./,'');} catch {return '';} };
+  const cardCache = new Map();
   const makeCard = item => {
+    if (cardCache.has(item.id)) return cardCache.get(item.id);
     const href=String(item.link||'');
     if (!/^https?:\/\//i.test(href)) return '';
-    return `<a class="eng-card eng-card--link resource-card" href="${htmlEsc(href)}" target="_blank" rel="noopener noreferrer">
+    const markup = `<a class="eng-card eng-card--link resource-card" href="${htmlEsc(href)}" target="_blank" rel="noopener noreferrer">
       <div class="resource-type">${htmlEsc(item.topic || item.type || 'Ресурс')}</div>
       <h3 class="eng-title">${htmlEsc(item.name)}</h3>
       <p class="eng-desc">${htmlEsc(item.desc)}</p>
       <div class="resource-card-bottom"><span class="resource-host">${htmlEsc(hostname(href))}</span><span class="eng-resource-link">Открыть ↗</span></div>
     </a>`;
+    cardCache.set(item.id, markup);
+    return markup;
   };
   for(const type of types){
     const button=document.createElement('button');
@@ -79,7 +83,11 @@ document.addEventListener('DOMContentLoaded', () => {
     viewGrid.setAttribute('aria-pressed',String(view==='grid'));
     viewList.setAttribute('aria-pressed',String(view==='list'));
   }
-  search.addEventListener('input',update);
+  let searchFrame = 0;
+  search.addEventListener('input',()=>{
+    if (searchFrame) cancelAnimationFrame(searchFrame);
+    searchFrame=requestAnimationFrame(()=>{searchFrame=0;update();});
+  });
   search.addEventListener('keydown',e=>{if(e.key==='Escape'&&search.value){search.value='';update();}});
   sort.addEventListener('change',update);
   viewGrid.addEventListener('click',()=>{view='grid';update();});
