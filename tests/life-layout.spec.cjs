@@ -18,7 +18,7 @@ test('Personal dashboard: disclosure and forms have no marker or overflow',async
     }
     for(const selector of ['#taskForm','#pantryForm']){
       const form=page.locator(selector);
-      for(const field of await form.locator('input,select,button').all()){
+      for(const field of await form.locator('input:not([type=hidden]),select,button').all()){
         const box=await field.boundingBox();
         expect(box.width,selector+' item width at '+width).toBeGreaterThan(35);
         expect(box.height,selector+' item height at '+width).toBeGreaterThanOrEqual(43);
