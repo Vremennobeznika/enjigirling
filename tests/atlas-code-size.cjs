@@ -20,11 +20,11 @@ for(const page of ['materials.html','processes.html']){
 }
 for(const page of ['materials.html','processes.html']){
  const html=read(page);
- const scripts=[...html.matchAll(/<script\\s+[^>]*src="([^"]+)"[^>]*>/g)];
+ const scripts=[...html.matchAll(/<script\s+[^>]*src="([^"]+)"[^>]*>/g)];
  const atlas=['materials-data.js','processes-data.js','data.js',page==='materials.html'?'materials.js':'processes.js','atlas-ai-core.js','atlas-ai-download.js'];
  for(const file of atlas){
   const tag=scripts.find(m=>m[1]===file)?.[0];
-  assert.ok(tag&&/\\sdefer(?:\\s|>)/.test(tag),page+' must defer '+file+' without reordering dependent scripts');
+  assert.ok(tag&&/\sdefer(?:\s|>)/.test(tag),page+' must defer '+file+' without reordering dependent scripts');
  }
  const positions=atlas.map(file=>scripts.findIndex(m=>m[1]===file));
  assert.deepEqual(positions,positions.slice().sort((a,b)=>a-b),page+' script dependency order changed');
