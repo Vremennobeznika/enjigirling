@@ -26,7 +26,7 @@ jobs:
           node-version: '22'
       - name: Install Lighthouse and Chromium
         run: |
-          npm install --no-save lighthouse
+          npm install --no-save --ignore-scripts lighthouse@12.8.2
           sudo apt-get update -qq
           sudo apt-get install -y chromium-browser || sudo apt-get install -y chromium
       - name: Run local server
