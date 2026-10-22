@@ -36,7 +36,12 @@ test('school details remain compact, official sites accessible and map keyboard 
  await expect(first.locator('dl')).not.toBeVisible();
  await first.locator('summary').click();
  await expect(first.locator('dl')).toBeVisible();
- await expect(first.locator('a.education-site')).toHaveAttribute('rel','noopener noreferrer');
+ const sourceLinks=first.locator('a.education-site');
+ expect(await sourceLinks.count()).toBeGreaterThan(0);
+ for(const link of await sourceLinks.all())await expect(link).toHaveAttribute('rel','noopener noreferrer');
+ await page.locator('#educationDistrict').selectOption('');
+ await page.locator('#educationMore').click();
+ await expect(first.locator('details')).toHaveAttribute('open','');
  await page.locator('#education-map > summary').click();
  const district=page.locator('.eng-district[data-id="central"]');
  await district.focus();
