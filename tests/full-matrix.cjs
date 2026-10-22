@@ -507,5 +507,31 @@ check('education catalogue: 80 entries, eight districts, evidence consistency', 
  assert.ok(script.includes('label.addEventListener(\'click\''),'district labels not clickable');
 });
 
+
+check('resource catalogue: protected friends, free education, uniqueness, no duplicate caliper',()=>{
+ const vm=require('node:vm');
+ const items=vm.runInNewContext(fs.readFileSync('resources-data.js','utf8')+'\nresources',Object.create(null));
+ assert.ok(items.length>=175,'unexpected catalogue shrinkage');
+ const ids=new Set(), urls=new Set();
+ for(const item of items){
+  assert.ok(item.id&&item.name&&item.desc&&item.type&&item.link,'incomplete resource '+item.id);
+  assert.match(item.link,/^https?:\/\//,'invalid URL '+item.id);
+  assert.ok(!ids.has(item.id),'duplicate resource ID '+item.id); ids.add(item.id);
+  const canonical=new URL(item.link).href.replace(/\/$/,'').toLowerCase();
+  assert.ok(!urls.has(canonical),'duplicate URL '+canonical);urls.add(canonical);
+ }
+ const friends=items.filter(x=>x.type==='Дружественные каналы').map(x=>[x.id,x.name,x.desc,x.link]);
+ assert.equal(friends.length,11,'do not alter friendly channels');
+ for(const [id] of friends)assert.ok(id.startsWith('fr-'),'invalid friendly ID');
+ const free=new Set(['learn-mit-ocw','learn-nptel','learn-teachengineering','learn-freecodecamp','learn-odin','learn-openlearn','learn-mit-open-library','learn-arduino','learn-allaboutcircuits']);
+ const courses=items.filter(x=>x.type==='Обучение и курсы');
+ assert.ok(courses.length>=9);
+ for(const x of courses)assert.ok(free.has(x.id),'learning resources must be reviewed for free access: '+x.id);
+ const calculator=fs.readFileSync('calculator.html','utf8');
+ assert.ok(!calculator.includes('id="labCaliper"'),'duplicate virtual caliper in calculators');
+ assert.ok(calculator.includes('id="calcUnits"'),'unit converter should remain');
+ assert.ok(fs.readFileSync('measurement-lab.html','utf8').includes('id="embeddedInstruments"'),'measurement lab must keep calipers');
+});
+
 console.log('Matrix: '+count+' PASS, '+errors.length+' FAIL ('+pages.length+' pages, '+datasets.length+' datasets)');
 if(errors.length)process.exitCode=1;
