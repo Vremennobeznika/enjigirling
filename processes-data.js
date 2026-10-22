@@ -1,4 +1,4 @@
-// Обзорные описания, не технологические инструкции.
+// Описания обзорные: ссылки не заменяют проверки применимого стандарта, сырья и технологической документации.
 window.engineeringProcesses = [
   {
     "id": "casting",
@@ -11,7 +11,11 @@ window.engineeringProcesses = [
     "profession": "metallurgical-engineer",
     "sources": [
       {
-        "title": "ASNT — методы контроля отливок",
+        "title": "NIST IR 7913 — классификация способов производства",
+        "url": "https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes"
+      },
+      {
+        "title": "ASNT — возможности и ограничения методов неразрушающего контроля",
         "url": "https://www.asnt.org/what-is-nondestructive-testing/methods"
       }
     ]
@@ -31,8 +35,8 @@ window.engineeringProcesses = [
     "profession": "mechanical-engineer",
     "sources": [
       {
-        "title": "TWI — несплавление и контроль сварных соединений",
-        "url": "https://www.twi-global.com/technical-knowledge/job-knowledge/weld-defects-imperfections-in-welds-lack-of-sidewall-and-inter-run-fusion-041?goback=%252Egde_2888580_member_258683180&vAction=swpTextOnly"
+        "title": "TWI — классификация сварочных процессов",
+        "url": "https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly"
       }
     ]
   },
@@ -75,7 +79,7 @@ window.engineeringProcesses = [
     "profession": "materials-engineer",
     "sources": [
       {
-        "title": "Bodycote — ограничения и деформации при термообработке",
+        "title": "Bodycote — технический словарь термической обработки",
         "url": "https://www.bodycote.com/technical-glossary/"
       }
     ]
@@ -143,8 +147,8 @@ window.engineeringProcesses = [
     "profession": "mechanical-engineer",
     "sources": [
       {
-        "title": "TWI — причины пористости сварных швов",
-        "url": "https://www.twi-global.com/technical-knowledge/faqs/faq-what-is-porosity-and-how-can-it-be-prevented"
+        "title": "TWI — различия MIG/MAG и типы защитных газов",
+        "url": "https://www.twi-global.com/technical-knowledge/faqs/faq-what-is-the-difference-between-mig-and-mag"
       }
     ]
   },
@@ -162,8 +166,8 @@ window.engineeringProcesses = [
     "profession": "mechanical-engineer",
     "sources": [
       {
-        "title": "TWI — причины пористости сварных швов",
-        "url": "https://www.twi-global.com/technical-knowledge/faqs/faq-what-is-porosity-and-how-can-it-be-prevented"
+        "title": "TWI — особенности TIG-сварки и защитных газов",
+        "url": "https://www.twi-global.com/technical-knowledge/job-knowledge/tungsten-inert-gas-tig-or-gta-welding-006"
       }
     ]
   },
@@ -257,8 +261,12 @@ window.engineeringProcesses = [
     "profession": "mechanical-engineer",
     "sources": [
       {
-        "title": "NIST — классификация и модели производственных процессов (обзор)",
-        "url": "https://nvlpubs.nist.gov/nistpubs/ir/2015/NIST.IR.8094.pdf"
+        "title": "NIST IR 7913 — классификация способов производства",
+        "url": "https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes"
+      },
+      {
+        "title": "OSHA — определения операций ковки и объёмной штамповки",
+        "url": "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.211"
       }
     ]
   },
@@ -273,8 +281,8 @@ window.engineeringProcesses = [
     "profession": "metallurgical-engineer",
     "sources": [
       {
-        "title": "NIST — классификация и модели производственных процессов (обзор)",
-        "url": "https://nvlpubs.nist.gov/nistpubs/ir/2015/NIST.IR.8094.pdf"
+        "title": "NIST IR 7913 — классификация способов производства",
+        "url": "https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes"
       }
     ]
   },
@@ -293,8 +301,8 @@ window.engineeringProcesses = [
     "profession": "mechanical-engineer",
     "sources": [
       {
-        "title": "NIST — классификация и модели производственных процессов (обзор)",
-        "url": "https://nvlpubs.nist.gov/nistpubs/ir/2015/NIST.IR.8094.pdf"
+        "title": "NIST IR 7913 — классификация способов производства",
+        "url": "https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes"
       }
     ]
   },
@@ -312,8 +320,8 @@ window.engineeringProcesses = [
     "profession": "materials-engineer",
     "sources": [
       {
-        "title": "NIST — классификация и модели производственных процессов (обзор)",
-        "url": "https://nvlpubs.nist.gov/nistpubs/ir/2015/NIST.IR.8094.pdf"
+        "title": "Protolabs — технология литья пластмасс и типовые дефекты",
+        "url": "https://www.protolabs.com/en-gb/resources/guides-and-trend-reports/injection-moulding-guide-process-design-tips-materials/"
       }
     ]
   },
@@ -331,8 +339,8 @@ window.engineeringProcesses = [
     "profession": "materials-engineer",
     "sources": [
       {
-        "title": "NIST — классификация и модели производственных процессов (обзор)",
-        "url": "https://nvlpubs.nist.gov/nistpubs/ir/2015/NIST.IR.8094.pdf"
+        "title": "NIST IR 7913 — классификация способов производства",
+        "url": "https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes"
       }
     ]
   },
@@ -349,8 +357,12 @@ window.engineeringProcesses = [
     "profession": "mechanical-engineer",
     "sources": [
       {
-        "title": "NIST — классификация и модели производственных процессов (обзор)",
-        "url": "https://nvlpubs.nist.gov/nistpubs/ir/2015/NIST.IR.8094.pdf"
+        "title": "NIST IR 7913 — классификация способов производства",
+        "url": "https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes"
+      },
+      {
+        "title": "OSHA — опасности операций механической обработки",
+        "url": "https://www.osha.gov/metalworking-fluids/manual"
       }
     ]
   },
@@ -365,8 +377,8 @@ window.engineeringProcesses = [
     "profession": "materials-engineer",
     "sources": [
       {
-        "title": "NIST — классификация и модели производственных процессов (обзор)",
-        "url": "https://nvlpubs.nist.gov/nistpubs/ir/2015/NIST.IR.8094.pdf"
+        "title": "NIST IR 7913 — классификация способов производства",
+        "url": "https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes"
       }
     ]
   },
@@ -381,8 +393,8 @@ window.engineeringProcesses = [
     "profession": "mechanical-engineer",
     "sources": [
       {
-        "title": "NIST — классификация и модели производственных процессов (обзор)",
-        "url": "https://nvlpubs.nist.gov/nistpubs/ir/2015/NIST.IR.8094.pdf"
+        "title": "NIST IR 7913 — классификация способов производства",
+        "url": "https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes"
       }
     ]
   },
@@ -396,10 +408,10 @@ window.engineeringProcesses = [
     "materials": [
       "food-raw"
     ],
-    "profession": "materials-engineer",
+    "profession": "food-engineer",
     "sources": [
       {
-        "title": "FAO — технология переработки плодов и овощей",
+        "title": "FAO — технология переработки фруктов и овощей",
         "url": "https://www.fao.org/4/x0209e/x0209e06.htm"
       }
     ]
@@ -414,10 +426,10 @@ window.engineeringProcesses = [
     "materials": [
       "food-raw"
     ],
-    "profession": "materials-engineer",
+    "profession": "food-engineer",
     "sources": [
       {
-        "title": "FAO — технология переработки плодов и овощей",
+        "title": "FAO — технология переработки фруктов и овощей",
         "url": "https://www.fao.org/4/x0209e/x0209e06.htm"
       }
     ]
@@ -432,10 +444,10 @@ window.engineeringProcesses = [
     "materials": [
       "food-raw"
     ],
-    "profession": "materials-engineer",
+    "profession": "food-engineer",
     "sources": [
       {
-        "title": "FAO — технология переработки плодов и овощей",
+        "title": "FAO — технология переработки фруктов и овощей",
         "url": "https://www.fao.org/4/x0209e/x0209e06.htm"
       }
     ]
@@ -451,10 +463,10 @@ window.engineeringProcesses = [
       "food-raw",
       "food-pack"
     ],
-    "profession": "materials-engineer",
+    "profession": "food-engineer",
     "sources": [
       {
-        "title": "FAO — технология переработки плодов и овощей",
+        "title": "FAO — технология переработки фруктов и овощей",
         "url": "https://www.fao.org/4/x0209e/x0209e06.htm"
       }
     ]
@@ -469,11 +481,11 @@ window.engineeringProcesses = [
     "materials": [
       "cotton"
     ],
-    "profession": "materials-engineer",
+    "profession": "textile-engineer",
     "sources": [
       {
-        "title": "ISO 11111-1 — области текстильного производства",
-        "url": "https://www.iso.org/cms/live/live/en/sites/isoorg/contents/data/standard/06/55/65561.html?browse=ics"
+        "title": "OSHA — основные процессы текстильной промышленности",
+        "url": "https://www.osha.gov/textiles"
       }
     ]
   },
@@ -487,11 +499,11 @@ window.engineeringProcesses = [
     "materials": [
       "cotton-yarn"
     ],
-    "profession": "materials-engineer",
+    "profession": "textile-engineer",
     "sources": [
       {
-        "title": "ISO 11111-1 — области текстильного производства",
-        "url": "https://www.iso.org/cms/live/live/en/sites/isoorg/contents/data/standard/06/55/65561.html?browse=ics"
+        "title": "OSHA — основные процессы текстильной промышленности",
+        "url": "https://www.osha.gov/textiles"
       }
     ]
   },
@@ -505,11 +517,11 @@ window.engineeringProcesses = [
     "materials": [
       "cotton-yarn"
     ],
-    "profession": "materials-engineer",
+    "profession": "textile-engineer",
     "sources": [
       {
-        "title": "ISO 11111-1 — области текстильного производства",
-        "url": "https://www.iso.org/cms/live/live/en/sites/isoorg/contents/data/standard/06/55/65561.html?browse=ics"
+        "title": "OSHA — основные процессы текстильной промышленности",
+        "url": "https://www.osha.gov/textiles"
       }
     ]
   },
@@ -523,11 +535,11 @@ window.engineeringProcesses = [
     "materials": [
       "woven-fabric"
     ],
-    "profession": "materials-engineer",
+    "profession": "textile-engineer",
     "sources": [
       {
-        "title": "ISO 11111-1 — области текстильного производства",
-        "url": "https://www.iso.org/cms/live/live/en/sites/isoorg/contents/data/standard/06/55/65561.html?browse=ics"
+        "title": "OSHA — основные процессы текстильной промышленности",
+        "url": "https://www.osha.gov/textiles"
       }
     ]
   },
@@ -541,11 +553,15 @@ window.engineeringProcesses = [
     "materials": [
       "woven-fabric"
     ],
-    "profession": "materials-engineer",
+    "profession": "textile-engineer",
     "sources": [
       {
-        "title": "ISO 11111-1 — области текстильного производства",
-        "url": "https://www.iso.org/cms/live/live/en/sites/isoorg/contents/data/standard/06/55/65561.html?browse=ics"
+        "title": "Coats — технические дефекты швов и рекомендации для швейного производства",
+        "url": "https://www.coats.com/en/industries/composites/faqs/"
+      },
+      {
+        "title": "OSHA — основные процессы текстильной промышленности",
+        "url": "https://www.osha.gov/textiles"
       }
     ]
   },
@@ -559,10 +575,10 @@ window.engineeringProcesses = [
     "materials": [
       "timber"
     ],
-    "profession": "mechanical-engineer",
+    "profession": "forest-engineer",
     "sources": [
       {
-        "title": "OSHA — лесопильное производство и сушка древесины",
+        "title": "OSHA — виды лесопильных и строгальных операций",
         "url": "https://www.osha.gov/sic-manual/2421"
       }
     ]
@@ -577,11 +593,11 @@ window.engineeringProcesses = [
     "materials": [
       "timber"
     ],
-    "profession": "mechanical-engineer",
+    "profession": "forest-engineer",
     "sources": [
       {
-        "title": "OSHA — лесопильное производство и сушка древесины",
-        "url": "https://www.osha.gov/sic-manual/2421"
+        "title": "US Forest Service — Drying Hardwood Lumber, обзор методов и дефектов",
+        "url": "https://research.fs.usda.gov/treesearch/5710"
       }
     ]
   },
@@ -596,11 +612,11 @@ window.engineeringProcesses = [
       "pcb",
       "solder"
     ],
-    "profession": "mechanical-engineer",
+    "profession": "electrical-engineer",
     "sources": [
       {
-        "title": "IPC — требования к электронным сборкам и пайке",
-        "url": "https://www.ipc.org/meet-your-standards"
+        "title": "IPC — J-STD-001J и IPC-A-610J: производство электронных сборок",
+        "url": "https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"
       }
     ]
   },
@@ -615,11 +631,11 @@ window.engineeringProcesses = [
       "pcb",
       "solder"
     ],
-    "profession": "mechanical-engineer",
+    "profession": "electrical-engineer",
     "sources": [
       {
-        "title": "IPC — требования к электронным сборкам и пайке",
-        "url": "https://www.ipc.org/meet-your-standards"
+        "title": "IPC — IPC-A-610J, требования к приёмке электронных сборок",
+        "url": "https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"
       }
     ]
   },
@@ -631,10 +647,10 @@ window.engineeringProcesses = [
     "steps": "Приёмка и идентификация компонентов → дозирование → смешение → отбор проб → контроль",
     "checks": "Состав, равномерность, совместимость веществ, экзотермические эффекты и опасные пары.",
     "materials": [],
-    "profession": "materials-engineer",
+    "profession": "chemical-engineer",
     "sources": [
       {
-        "title": "OSHA — устройство и операции химического производства",
+        "title": "OSHA — нефтепереработка: смешение продуктов и технологические опасности",
         "url": "https://www.osha.gov/otm/section-4-safety-hazards/chapter-2"
       }
     ]
@@ -647,11 +663,11 @@ window.engineeringProcesses = [
     "steps": "Подготовка подачи → испарение и массообмен → конденсация → сбор фракций → контроль",
     "checks": "Состав фракций, давление, температура, герметичность; опасности воспламеняющихся паров.",
     "materials": [],
-    "profession": "materials-engineer",
+    "profession": "chemical-engineer",
     "sources": [
       {
-        "title": "OSHA — устройство и операции химического производства",
-        "url": "https://www.osha.gov/otm/section-4-safety-hazards/chapter-2"
+        "title": "OSHA — перегонка и риски технологического процесса",
+        "url": "https://www.osha.gov/otm/section-4-safety-hazards/chapter-5"
       }
     ]
   },
@@ -663,11 +679,11 @@ window.engineeringProcesses = [
     "steps": "Подбор среды → подготовка оборудования → фильтрация → выгрузка или очистка → контроль",
     "checks": "Перепад давления, тонкость фильтрации, проскок частиц, загрязнение и ресурс фильтра.",
     "materials": [],
-    "profession": "materials-engineer",
+    "profession": "chemical-engineer",
     "sources": [
       {
-        "title": "OSHA — устройство и операции химического производства",
-        "url": "https://www.osha.gov/otm/section-4-safety-hazards/chapter-2"
+        "title": "USGS — фильтрация и разделение твёрдых частиц в водоочистке",
+        "url": "https://www.usgs.gov/water-science-school/science/water-use-questions-answers"
       }
     ]
   }
