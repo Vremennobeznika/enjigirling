@@ -35,7 +35,7 @@ const ctx={
  window:{LIFE_CONFIG:cfg,LifeModel:{normalize:x=>x},dispatchEvent:e=>signals.push(e.type)},
  localStorage,document:{getElementById:()=>null},
  Event:class{constructor(type){this.type=type}},
- setTimeout(){return 1},notice(){},console,Date,JSON,crypto:require('node:crypto').webcrypto
+ setTimeout(){return 1},notice(){},console,Date,JSON,TextEncoder:require('node:util').TextEncoder,crypto:require('node:crypto').webcrypto
 };
 const start=app.indexOf('const M='),stop=app.indexOf('const el=');
 assert.ok(start>=0&&stop>start);
