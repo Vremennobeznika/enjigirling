@@ -104,7 +104,7 @@ function exactError(format,hex,raw){
   return (negative?'-':'+')+str[0]+'.'+str.slice(1).replace(/0+$/,'')+' × 10^'+power10;
  }catch{return '—';}
 }
-function number(text){const normalized=String(text).trim().replace(/\s/g,'').replace(',','.');return /^[+-]?(?:\d+\.?\d*|\.\d+)(?:e[+-]?\d+)?$/i.test(normalized)?Number(normalized):NaN;}
+function number(text){const normalized=String(text).trim().replace(/\s/g,'').replace(',','.');const n=/^[+-]?(?:\d+\.?\d*|\.\d+)(?:e[+-]?\d+)?$/i.test(normalized)?Number(normalized):NaN;return Number.isFinite(n)?n:NaN;}
 function ohm(mode,x,y){
  if(!Number.isFinite(x)||!Number.isFinite(y)||x<0||y<=0)throw Error('Введите допустимые положительные значения');
  let u,i,r;
@@ -137,7 +137,8 @@ function tolerance(raw){
   if(cells.length!==2||!cells.every(Number.isFinite)||cells[1]<0)throw Error('Строка '+(idx+1)+': формат номинал;±допуск');
   nominal+=cells[0];worst+=cells[1];sumSquares+=cells[1]**2;
  }
- return {nominal,worst,rss:Math.sqrt(sumSquares),count:lines.length};
+ const rss=Math.sqrt(sumSquares);finish([nominal,worst,sumSquares,rss]);
+ return {nominal,worst,rss,count:lines.length};
 }
 function modbus(register1,register2,order){
  const valid=x=>/^(?:0x)?[0-9a-f]{1,4}$/i.test(String(x).trim());
@@ -208,7 +209,7 @@ function pipeFlow(diameterMM,speedMS){
  const areaM2=Math.PI*(diameterMM/1000)**2/4;
  const m3Hour=areaM2*speedMS*3600;
  const litersMinute=m3Hour*1000/60;
- finish([areaM2,m3Hour,litersMinute]);
+ finish([areaM2,m3Hour,litersMinute]);if(areaM2<=0)throw Error('Площадь сечения не представима численно');
  return {m3Hour,litersMinute};
 }
 
@@ -302,7 +303,8 @@ function draftByTPC(changedTonnes,waterplaneM2,densityTonM3){
 /* Further textile/marine desk models with explicit simplifying assumptions. */
 function shrinkage(before,after){
  finitePositive(before,'Исходный размер');finitePositive(after,'Размер после обработки');
- return {percent:(before-after)/before*100,change:after-before};
+ const percent=(before-after)/before*100,change=after-before;
+ finish([percent,change]);return {percent,change};
 }
 function layLength(piecesPerLay,plyCount,patternLengthM,endAllowanceM){
  integerPositive(piecesPerLay,'Изделий в раскладке');
@@ -310,7 +312,9 @@ function layLength(piecesPerLay,plyCount,patternLengthM,endAllowanceM){
  finitePositive(patternLengthM,'Длина настила');
  finiteNonnegative(endAllowanceM,'Припуск на слой');
  const output=piecesPerLay*plyCount,consumption=plyCount*(patternLengthM+endAllowanceM);
- finish([output,consumption]);return {output,consumption,perPiece:consumption/output};
+ const perPiece=consumption/output;finish([output,consumption,perPiece]);
+ if(output<=0||consumption<=0)throw Error('Результат не представим численно');
+ return {output,consumption,perPiece};
 }
 function lineBalance(raw,taktSeconds){
  finitePositive(taktSeconds,'Такт');
