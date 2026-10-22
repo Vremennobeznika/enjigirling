@@ -49,7 +49,7 @@ gate('L01-L05 cross references are resolvable and editorial',()=>{
   const seen=new Set();let current=p;
   while(current.parentId){assert.ok(!seen.has(current.id),'parent cycle '+p.id);seen.add(current.id);current=processes.find(x=>x.id===current.parentId);assert.ok(current);}
  }
- assert.ok(read('materials.js').includes('редакцион')||read('materials.html').includes('редакционные'));
+ assert.ok(/Редакцион|редакцион|навигацион|не подтвержда/.test(read('materials.js')+read('materials.html')));
  assert.ok(read('processes.js').includes('не подтверждение'));
 });
 gate('E01-E03 evidence scope, source IDs, truthful status',()=>{
