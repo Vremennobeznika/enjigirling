@@ -95,12 +95,25 @@ $("backup").onclick=()=>{const data={version:1,exportedAt:new Date().toISOString
 $("restore").onclick=()=>$("backupFile").click();
 $("backupFile").onchange=async e=>{const f=e.target.files?.[0];if(!f)return;try{if(f.size>1000000)throw Error("Слишком большой файл");const raw=JSON.parse(await f.text());if(confirm("Заменить ВСЕ локальные отметки и списки данными из файла?")){restore(raw);$("cloudStatus").textContent="Резервная копия восстановлена."}}catch(err){alert("Не удалось восстановить: "+err.message)}finally{e.target.value=""}};
 window.addEventListener("storage",e=>{if(Object.values(KEYS).includes(e.key))draw()});window.addEventListener("focus",draw);document.addEventListener("visibilitychange",()=>{if(!document.hidden)draw()});
-let endpoint=localStorage.getItem("life-sync-endpoint-v1")||"https://functions.yandexcloud.net/d4ed26vrlmb1uk22m3b7",token=sessionStorage.getItem("life-sync-secret-v1")||"",revision=Number(sessionStorage.getItem("life-sync-revision-v1")||0);
+const LIFE_ENDPOINT="https://functions.yandexcloud.net/d4ed26vrlmb1uk22m3b7";
+const LIFE_TOKEN_SHA256="d218f1b19b8297372b649695b50dd046dc0947e3372fd7a5fc420c18734c58f4";
+let endpoint=localStorage.getItem("life-sync-endpoint-v1")||LIFE_ENDPOINT,token=sessionStorage.getItem("life-sync-secret-v1")||"",revision=Number(sessionStorage.getItem("life-sync-revision-v1")||0);
 $("endpoint").value=endpoint;$("syncToken").value=token;
 const status=s=>$("cloudStatus").textContent=s;
+function urlIsOriginalFunction(){return endpoint===LIFE_ENDPOINT}
 function updateMode(){$("mode").textContent=endpoint&&token?"Облако настроено":"Локальный режим"}
-function setting(){const url=$("endpoint").value.trim().replace(/\/+$/,""),t=$("syncToken").value.trim();if(!url||!/^https:\/\//i.test(url))throw Error("Нужен корректный HTTPS-адрес функции");if(!t||t.length<32)throw Error("Секрет должен быть не короче 32 символов");if(endpoint!==url||token!==t){revision=0;sessionStorage.removeItem("life-sync-revision-v1")}endpoint=url;token=t;localStorage.setItem("life-sync-endpoint-v1",endpoint);sessionStorage.setItem("life-sync-secret-v1",token);updateMode();}
-$("cloudForm").onsubmit=e=>{e.preventDefault();try{setting();status("Адрес сохранён. Проверь подключение кнопкой «Получить из облака».")}catch(err){status(err.message)}};
+function extractSecret(raw){const lines=raw.split(/\r?\n/).map(x=>x.trim()).filter(Boolean),candidates=lines.filter(x=>/^[A-Za-z0-9_-]{64}$/.test(x));return candidates.length===1?candidates[0]:raw.trim()}
+async function keyMatchesInstalledVersion(value){const bytes=new TextEncoder().encode(value),hash=await crypto.subtle.digest("SHA-256",bytes);return Array.from(new Uint8Array(hash),n=>n.toString(16).padStart(2,"0")).join("")===LIFE_TOKEN_SHA256}
+async function setting(){
+const url=$("endpoint").value.trim().replace(/\/+$/,""),t=extractSecret($("syncToken").value);
+if(!url||!/^https:\/\//i.test(url))throw Error("Нужен корректный HTTPS-адрес функции");
+if(!t||t.length<32)throw Error("Секрет должен быть не короче 32 символов");
+if(url===LIFE_ENDPOINT&&!(await keyMatchesInstalledVersion(t)))throw Error("Этот секрет НЕ совпадает с личным ключом функции. Скопируй вторую строку из файла life_yandex_sync_key.txt (64 символа), не контрольную сумму SHA-256. Данные в браузере не изменены.");
+if(endpoint!==url||token!==t){revision=0;sessionStorage.removeItem("life-sync-revision-v1")}
+endpoint=url;token=t;$("syncToken").value=t;
+localStorage.setItem("life-sync-endpoint-v1",endpoint);sessionStorage.setItem("life-sync-secret-v1",token);updateMode();
+}
+$("cloudForm").onsubmit=async e=>{e.preventDefault();try{await setting();status("Ключ проверен по SHA-256 и сохранён только в этой вкладке. Теперь нажми «Получить из облака».")}catch(err){status(err.message)}};
 $("disconnect").onclick=()=>{endpoint=token="";revision=0;localStorage.removeItem("life-sync-endpoint-v1");sessionStorage.removeItem("life-sync-secret-v1");sessionStorage.removeItem("life-sync-revision-v1");$("endpoint").value=$("syncToken").value="";updateMode();status("Облако отключено. Локальные данные не удалены.")};
 async function call(method,payload){
 if(!endpoint||!token)throw Error("Сначала настрой подключение.");
@@ -114,6 +127,10 @@ try{
 let result;
 try{result=await response.json()}catch{
   throw Error("Функция ответила, но не JSON (HTTP "+response.status+"). Проверь состояние версии функции и логи Yandex Cloud.");
+}
+if(response.status===401&&urlIsOriginalFunction()&&result.error==="Неверный секрет синхронизации"){
+const valid=await keyMatchesInstalledVersion(token);
+throw Error(valid?"Ключ из файла ПРАВИЛЬНЫЙ (SHA-256 совпадает), но функция Яндекса его отвергла. Проверь в последней версии функции переменную окружения SYNC_TOKEN_SHA256: если там старое значение, удали его. После изменения сохрани новую версию.":"В текущей вкладке сохранён НЕПРАВИЛЬНЫЙ секрет. Снова вставь вторую строку файла с ключом и нажми «Применить».");
 }
 if(!response.ok)throw Error(result.error||"Ошибка синхронизации (HTTP "+response.status+")");
 return result;
