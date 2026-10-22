@@ -448,5 +448,50 @@ check('AI training packs expose all nine complete site sections',()=>{
  assert.ok(fs.existsSync('scripts/build-ai-packs.cjs'));
 });
 
-console.log('Matrix: '+count+' PASS, '+errors.length+' FAIL ('+pages.length+' pages, '+datasets.length+' datasets)');
+check('education catalogue: 80 entries, eight districts, evidence consistency', () => {
+ const vm=require('node:vm');
+ const raw=fs.readFileSync('map-data.js','utf8');
+ const districts=vm.runInNewContext(raw+'\n;federalDistricts');
+ assert.equal(districts.length,8,'federal district count');
+ const seenDistrict=new Set(),seenSchools=new Set();
+ let total=0;
+ for(const district of districts){
+  assert.ok(!seenDistrict.has(district.id),'duplicate district '+district.id);
+  seenDistrict.add(district.id);
+  assert.ok(district.name&&district.short&&district.path,'district metadata');
+  for(const type of ['universities','colleges']){
+   assert.ok(Array.isArray(district[type]),district.id+' missing '+type);
+   for(const card of district[type]){
+    total++;
+    const key=(card.name+'|'+card.city).toLocaleLowerCase('ru-RU');
+    assert.ok(!seenSchools.has(key),'duplicate card '+key);
+    seenSchools.add(key);
+    assert.ok(card.name&&card.city&&card.focus,'incomplete card '+key);
+    assert.ok(card.sourceUrl&&/^https:\/\//.test(card.sourceUrl),'source link missing '+key);
+    assert.ok(card.verifiedScope,'source limitations missing '+key);
+    assert.ok(card.reviewDate&&/^\\d{4}-\\d{2}-\\d{2}$/.test(card.reviewDate),'review date missing '+key);
+    assert.ok(card.reviewMethod,'review method missing '+key);
+    assert.ok(['program_verified','program_verified_with_access_limit','program_source_recorded','program_documents_pending'].includes(card.reviewStatus),'unknown review status '+key);
+    assert.ok(['fetched','fetch_failed','not_retrieved'].includes(card.sourceFetchStatus),'unknown fetch status '+key);
+    const programs=card.verifiedPrograms||[];
+    assert.ok(Array.isArray(programs),'invalid programs '+key);
+    if(card.reviewStatus==='program_documents_pending')assert.equal(programs.length,0,'pending card declares program '+key);
+    else assert.ok(programs.length>0,'reviewed card has no program '+key);
+    for(const p of programs){
+     assert.match(p.code||'',/^\\d{2}\\.\\d{2}\\.\\d{2}$/,'invalid code '+key);
+     assert.ok(p.name&&p.year&&p.sourceUrl?.startsWith('https://'),'incomplete program '+key);
+     for(const field of ['budgetPlaces','paidPlaces','tuitionAnnualRub','tuitionSemesterRub']){
+      if(p[field]!==undefined)assert.ok(Number.isFinite(p[field])&&p[field]>=0,'invalid '+field+' '+key);
+     }
+    }
+   }
+  }
+ }
+ assert.equal(total,80,'catalogue count changed: review editorial claim in map.html');
+ const html=fs.readFileSync('map.html','utf8');
+ assert.ok(html.includes('map-data.js')&&html.includes('map.js'),'catalogue scripts not loaded');
+ const script=fs.readFileSync('map.js','utf8');
+ assert.ok(script.includes('escapeHtml('),'unsafe output templating');
+ assert.ok(script.includes('label.addEventListener(\'click\''),'district labels not clickable');
+});\n\nconsole.log('Matrix: '+count+' PASS, '+errors.length+' FAIL ('+pages.length+' pages, '+datasets.length+' datasets)');
 if(errors.length)process.exitCode=1;
