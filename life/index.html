@@ -17,7 +17,23 @@ input,select,button{font:inherit}input,select{background:#101010;border:1px soli
 #pantryForm{grid-template-columns:minmax(0,1fr) minmax(100px,125px) auto}
 #cloudForm{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr) auto}
 #taskForm>*,#pantryForm>*,#cloudForm>*{min-width:0;max-width:none;width:100%;height:auto;min-height:44px}
-#taskForm>.btn,#pantryForm>.btn,#cloudForm>.btn{white-space:nowrap}#taskForm>.task-field{min-height:44px;height:auto}.btn{background:#eee;color:#101010;border:1px solid #eee;border-radius:10px;padding:11px 13px;font-weight:700;cursor:pointer}.btn.soft{background:#242424;color:#eee;border-color:#575757;font-weight:500}.btn:disabled{opacity:.45;cursor:not-allowed}
+#taskForm>.btn,#pantryForm>.btn,#cloudForm>.btn{white-space:nowrap}#taskForm>.task-field{min-height:44px;height:auto}
+/* Native iOS date/time inputs have a large intrinsic width. Each field gets a full row
+   on phone screens so Safari cannot paint one control over its neighbour. */
+#taskForm .task-field{box-sizing:border-box;inline-size:100%;max-inline-size:100%;min-inline-size:0}
+#taskForm .task-field input{display:block;box-sizing:border-box;inline-size:100%;max-inline-size:100%;min-inline-size:0;max-width:100%;height:48px;min-height:48px;overflow:hidden}
+.task-date-nav{display:grid;grid-template-columns:minmax(0,1fr);gap:9px;min-width:0;margin:14px 0 8px}
+.task-view-date-label{display:grid;grid-template-columns:minmax(0,1fr);gap:6px;font-size:13px;color:#bbb;min-width:0}
+.task-view-date-label input{box-sizing:border-box;display:block;width:100%;min-width:0;max-width:100%;min-height:48px}
+.task-date-actions{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;min-width:0}
+.task-date-actions .btn{flex:1 1 100px;max-width:100%;min-width:0;min-height:44px;white-space:normal}
+@media(max-width:660px){
+ #taskForm{grid-template-columns:minmax(0,1fr)}
+ #taskForm>*{grid-column:1/-1;min-width:0;max-width:100%}
+ #taskForm .task-field{grid-column:1/-1}
+ #taskForm select{display:block;min-width:0;width:100%;max-width:100%}
+}
+.btn{background:#eee;color:#101010;border:1px solid #eee;border-radius:10px;padding:11px 13px;font-weight:700;cursor:pointer}.btn.soft{background:#242424;color:#eee;border-color:#575757;font-weight:500}.btn:disabled{opacity:.45;cursor:not-allowed}
 .list{margin:0;padding:0;list-style:none}.item{display:flex;align-items:center;gap:10px;border-top:1px solid #363636;padding:11px 0;min-height:48px}
 .item input[type=checkbox]{accent-color:#ddd;width:23px;height:23px;flex:none;cursor:pointer}
 .item .text{flex:1;overflow-wrap:anywhere;min-width:0}.item.done .text{text-decoration:line-through;color:#888}
@@ -65,7 +81,7 @@ details>summary:focus-visible{outline:2px solid #eee;border-radius:13px}
 <p class="warn">Растения проверяем по группам по 18. Поливаем по состоянию почвы и виду растения, а не автоматически по дням. <a class="link" href="../plants/">Журнал 72 горшков →</a></p></section>
 <section class="card full"><div class="head"><h2>Задачи и входящие</h2><span class="sub" id="taskCount">0 задач</span></div><p class="sub">Выбирай дату и время прямо здесь — можно записать сегодня задачу на любой другой день. Старые задачи без даты остаются во входящих.</p>
 <form id="taskForm"><input class="grow" id="taskName" maxlength="180" placeholder="Новая задача" aria-label="Новая задача" required><label class="task-field">Когда <input id="taskDate" type="date" aria-label="Дата выполнения задачи" required></label><label class="task-field">Во сколько <input id="taskTime" type="time" aria-label="Время выполнения (необязательно)"></label><select id="taskCategory" aria-label="Категория задачи"><option value="Дела">Дела</option><option value="Работа">Работа</option><option value="Паблик">Паблик</option><option value="Дом">Дом</option><option value="Лев">Лев</option></select><select id="taskPriority" aria-label="Приоритет"><option value="normal">Обычно</option><option value="high">Важно</option></select><button class="btn" type="submit">Записать дело</button></form>
-<div class="task-date-nav" aria-label="Просмотр задач по дням"><button type="button" class="btn soft" id="taskPrevDay" aria-label="Предыдущий день">‹</button><input id="taskViewDate" type="date" aria-label="Показать задачи на дату"><button type="button" class="btn soft" id="taskNextDay" aria-label="Следующий день">›</button><button type="button" class="btn soft" id="taskGoToday">Сегодня</button><button type="button" class="btn soft" id="taskShowAll" aria-pressed="false">Все даты</button></div><p class="sub" id="taskViewHint"></p>
+<div class="task-date-nav" aria-label="Просмотр задач по дням"><label class="task-view-date-label" for="taskViewDate">Показать дела на дату<input id="taskViewDate" type="date" aria-label="Показать задачи на дату"></label><div class="task-date-actions"><button type="button" class="btn soft" id="taskPrevDay" aria-label="Предыдущий день">‹ Назад</button><button type="button" class="btn soft" id="taskNextDay" aria-label="Следующий день">Вперёд ›</button><button type="button" class="btn soft" id="taskGoToday">Сегодня</button><button type="button" class="btn soft" id="taskShowAll" aria-pressed="false">Все даты</button></div></div><p class="sub" id="taskViewHint"></p>
 <ul id="taskList" class="list"></ul><div class="empty" id="taskEmpty">На этот день задач нет.</div></section>
 <section class="card full"><div class="head"><h2>Домашние запасы</h2><span class="sub" id="pantryCount">0 позиций</span></div><p class="sub">Что уже есть дома — чтобы не покупать повторно.</p>
 <form id="pantryForm"><input class="grow" id="pantryName" maxlength="120" placeholder="Продукт или расходник" aria-label="Название запаса" required><input class="short" id="pantryAmount" maxlength="40" placeholder="Количество" aria-label="Количество"><button class="btn" type="submit">Добавить</button></form>
