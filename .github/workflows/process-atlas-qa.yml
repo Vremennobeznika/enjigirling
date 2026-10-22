@@ -1,0 +1,23 @@
+name: Process atlas browser QA
+on:
+  push:
+    paths:
+      - 'processes.html'
+      - 'processes.js'
+      - 'processes-data.js'
+      - 'materials-data.js'
+      - 'tests/process-atlas.cjs'
+      - '.github/workflows/process-atlas-qa.yml'
+  workflow_dispatch:
+jobs:
+  browser-qa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-save playwright
+      - run: npx playwright install --with-deps chromium
+      - run: python3 -m http.server 8765 --bind 127.0.0.1 &
+      - run: node tests/process-atlas.cjs
