@@ -54,14 +54,14 @@ details{border:1px solid var(--line);background:var(--box);border-radius:17px;pa
 (()=>{"use strict";
 const KEYS={calendar:"week-check-v2",shopping:"supermarket-shopping-list-v1",tasks:"life-inbox-v1",pantry:"life-pantry-v1",plants:"life-plants-v1"};
 const $=id=>document.getElementById(id),safe=(value,def)=>{try{return JSON.parse(localStorage.getItem(value)||"null")??def}catch{return def}};
-function persist(key,data){try{localStorage.setItem(key,JSON.stringify(data));return true}catch{alert("Не удалось сохранить данные. Проверь настройки браузера.");return false}}
+function persist(key,data){try{localStorage.setItem(key,JSON.stringify(data));window.dispatchEvent(new Event("life-data-changed"));return true}catch{alert("Не удалось сохранить данные. Проверь настройки браузера.");return false}}
 const elem=(tag,cl,txt)=>{const n=document.createElement(tag);if(cl)n.className=cl;if(txt!==undefined)n.textContent=txt;return n};
 function dateStr(d){return [d.getFullYear(),String(d.getMonth()+1).padStart(2,"0"),String(d.getDate()).padStart(2,"0")].join("-")}
 function validTasks(a){return Array.isArray(a)?a.filter(x=>x&&typeof x.name==="string").slice(0,600).map(x=>({id:String(x.id||crypto.randomUUID()),name:x.name.slice(0,180),category:["Дела","Работа","Паблик","Дом","Лев"].includes(x.category)?x.category:"Дела",priority:x.priority==="high"?"high":"normal",done:!!x.done})):[]}
 function validPantry(a){return Array.isArray(a)?a.filter(x=>x&&typeof x.name==="string").slice(0,600).map(x=>({id:String(x.id||crypto.randomUUID()),name:x.name.slice(0,120),amount:String(x.amount||"").slice(0,40)})):[]}
 function validPlants(a){return Array.isArray(a)?a.filter(p=>p&&Number.isInteger(p.id)&&p.id>=1&&p.id<=72).slice(0,72).map(p=>({id:p.id,name:String(p.name||"Горшок "+p.id).slice(0,90),note:String(p.note||"").slice(0,600),checked:/^\d{4}-\d\d-\d\d$/.test(p.checked||"")?p.checked:"",watered:/^\d{4}-\d\d-\d\d$/.test(p.watered||"")?p.watered:"",attention:!!p.attention})):[]}
 function validShopping(a){return Array.isArray(a)?a.filter(x=>x&&typeof x.name==="string"&&typeof x.cat==="string").slice(0,1500).map(x=>({id:String(x.id||crypto.randomUUID()),name:x.name.slice(0,120),qty:String(x.qty||"").slice(0,35),cat:x.cat,done:!!x.done})):[]}
-function validCalendar(o){if(!o||typeof o!=="object"||Array.isArray(o))return {};return Object.fromEntries(Object.entries(o).filter(([k,v])=>/^\d{4}-\d\d-\d\d-\d+$/.test(k)&&v===true).slice(0,25000))}
+function validCalendar(o){if(!o||typeof o!=="object"||Array.isArray(o))return {};return Object.fromEntries(Object.entries(o).filter(([k,v])=>/^\d{4}-\d{2}-\d{2}-(?:\d+|home-[a-z0-9-]+)$/i.test(k)&&v===true).slice(0,25000))}
 function snapshot(){return {calendar:validCalendar(safe(KEYS.calendar,{})),shopping:validShopping(safe(KEYS.shopping,[])),tasks:validTasks(safe(KEYS.tasks,[])),pantry:validPantry(safe(KEYS.pantry,[])),plants:validPlants(safe(KEYS.plants,[]))}}
 function restore(raw){if(!raw||typeof raw!=="object"||Array.isArray(raw)||!raw.data||typeof raw.data!=="object"||Array.isArray(raw.data))throw Error("Неизвестный формат");
 const d=raw.data;for(const k of ["calendar","shopping","tasks","pantry"])if(!(k in d))throw Error("Нет раздела: "+k);
