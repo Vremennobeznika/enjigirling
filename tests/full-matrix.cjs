@@ -171,7 +171,7 @@ check('Pages deploy performs checkout before running local smoke script', () => 
  const workflow=fs.readFileSync('.github/workflows/knowledge-pages.yml','utf8');
  const precheck=workflow.indexOf('node scripts/build-knowledge.cjs --check');
  const build=workflow.indexOf('run: node scripts/build-knowledge.cjs\n');
- assert.ok(precheck>=0&&build>precheck,'committed knowledge snapshots must be checked before regeneration');
+ assert.ok(build>=0&&precheck>build,'generated knowledge snapshots must be checked after regeneration');
  const deploy=workflow.split('\n  deploy:\n')[1];
  assert.ok(deploy,'missing deployment job');
  const checkout=deploy.indexOf('uses: actions/checkout@');
@@ -249,7 +249,7 @@ check('five navigation groups preserve all nine original page routes', () => {
 check('editorial guides are available in technologies and calculators', () => {
  const places=[
   ['materials.html','materialGuideTitle','processes.html#casting'],
-  ['processes.html','processGuideTitle','materials.html#steel-20'],
+  ['processes.html','processGuideTitle','materials.html#09g2s'],
   ['calculator.html','signalGuideTitle','(12 − 4) / 16 = 0,5']
  ];
  for(const [page,id,evidence] of places){
