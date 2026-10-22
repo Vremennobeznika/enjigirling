@@ -518,8 +518,8 @@ window.engineeringProcesses = [
         "url": "https://www.osha.gov/metalworking-fluids/manual"
       },
       {
-        "name": "OSHA — безопасность абразивного шлифования",
-        "url": "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.215"
+        "url": "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.215",
+        "title": "OSHA — безопасность абразивного шлифования"
       }
     ],
     "evidence": {
