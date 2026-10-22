@@ -10,6 +10,7 @@ const files=[...new Set([...rootJs,...scripts,...tests,'playwright.config.cjs'])
 const steps=[
  ['CALENDAR date and evidence matrix',()=>[['node',['tests/calendar-rules.cjs']]]],
  ['S00 JavaScript syntax across application and QA',()=>files.map(file=>['node',['--check',file]])],
+ ['PERF start-up payload budgets and deferred home search',()=>[['node',['tests/performance-budget.cjs']]]],
  ['CAREER 51 occupation-specific government standard scopes',()=>[['node',['tests/normative-51.cjs']]]],
  ['CAREER sequential 51-card user-prompt audit',()=>[['node',['tests/career-51-review.cjs']]]],
  ['LEARNING education directory and section preservation',()=>[['node',['tests/learning-ux.cjs']]]],
