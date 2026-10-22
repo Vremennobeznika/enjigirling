@@ -9,7 +9,9 @@ permissions:
   id-token: write
 concurrency:
   group: github-pages
-  cancel-in-progress: true
+  # Preserve the in-progress publish while a newer push queues up.
+  # Cancelling on each commit prevented any site version from deploying.
+  cancel-in-progress: false
 jobs:
   build:
     runs-on: ubuntu-latest
