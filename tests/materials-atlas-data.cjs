@@ -10,7 +10,7 @@ const materials=ctx.window.engineeringMaterials,processes=ctx.window.engineering
 const groups=new Set(['metal','organic','inorganic','composite','functional']);
 const industries=new Set(['metals','polymers','food','textiles','wood','electronics','chemicals','general','composites','construction','energy','water','ceramics','pharma','printing','mining']);
 const processIds=new Set(processes.map(p=>p.id));
-assert.ok(materials.length>=46,'Material coverage unexpectedly contracted');
+assert.ok(materials.length>=170,'Material coverage unexpectedly contracted');
 assert.equal(new Set(materials.map(m=>m.id)).size,materials.length,'Material IDs must be unique');
 for(const m of materials){
  assert.ok(m.name&&m.family&&m.detail&&m.uses&&m.note,m.id+' missing descriptive fields');
@@ -19,11 +19,13 @@ for(const m of materials){
  assert.ok(m.industries.every(id=>industries.has(id)),m.id+' invalid industry');
  assert.ok((m.process||[]).every(id=>processIds.has(id)),m.id+' references missing process');
  assert.ok(m.sources?.length&&m.sources.every(s=>/^https:\/\/[^\s]+$/.test(s.url)&&s.title),m.id+' missing source URL');
- assert.ok(['context_only','partial_claim'].includes(m.evidence?.verificationStatus),m.id+' missing evidence status');
+ assert.ok(['context_only','partial_claim','source_located'].includes(m.evidence?.verificationStatus),m.id+' missing evidence status');
  assert.ok(m.evidence?.reviewScope&&m.evidence?.checkedAt,m.id+' unscoped source');
 }
 for(const industry of industries)assert.ok(materials.some(m=>m.industries.includes(industry)),industry+' empty');
 assert.equal(materials.find(x=>x.id==='water-resin').process.length,0,'Do not confuse ion exchange with granular filtration');
+for(const id of ['activated-alumina-adsorbent','osb-board','particleboard','glulam','clt','pcb-prepreg'])assert.equal(materials.find(x=>x.id===id).process.length,0,id+' invalid inferred link');
+assert.ok(!materials.find(x=>x.id==='grain-wheat').industries.includes('mining'),'Grain is not mining material');
 const html=read('materials.html');
 assert.doesNotMatch(html,/Этот раздел для ИИ/,'Old full-site banner remains');
 assert.ok(html.indexOf('id="materialIndustry"')<html.indexOf('class="material-export"'),'Export must follow filters');
