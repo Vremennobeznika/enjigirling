@@ -1,0 +1,36 @@
+name: Site screenshots (320, 375, 1440)
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/screenshots.yml'
+      - 'scripts/capture-screenshots.cjs'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright
+        run: |
+          npm install --no-audit --no-fund
+          npx playwright install --with-deps chromium
+      - name: Start local website
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/enjigirling-screenshots-server.log 2>&1 &
+      - name: Capture screenshots and viewport audit
+        run: node scripts/capture-screenshots.cjs
+      - name: Publish screenshots PNG + audit JSON
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: enjigirling-screenshots-320-375-1440
+          path: screenshots/
+          if-no-files-found: warn
+          retention-days: 30
