@@ -238,3 +238,19 @@
 .site-page .atlas-card .process-step-list{padding-left:23px;margin:8px 0 12px;list-style:decimal;color:var(--card-text);}
 .site-page .atlas-card .process-step-list li{padding-left:4px;margin:0 0 7px;font:400 var(--fs-sm)/1.6 var(--font);overflow-wrap:anywhere;}
 .site-page .atlas-card .process-step-list li::marker{font-weight:700;}
+
+/* Process atlas controls and stage cards. Shared neutral tokens support both themes. */
+.process-controls{margin:18px 0 20px;padding:clamp(14px,2.5vw,22px);border:1px solid var(--card-border);border-radius:16px;background:var(--soft-bg);color:var(--card-text);}
+.process-toolbar{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;align-items:end;}
+.process-control{min-width:0;}
+.process-control label{display:block;margin:0 0 7px;font:700 var(--fs-sm)/1.45 var(--font);}
+.site-page .process-control .atlas-search{display:block;width:100%;margin:0;}
+.process-search-help{margin:14px 0 0;font:400 var(--fs-sm)/1.6 var(--font);color:var(--card-muted);overflow-wrap:anywhere;}
+.process-card-meta{display:flex;width:100%;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;color:var(--card-muted);font:600 12px/1.4 var(--font);}
+.site-page .atlas-card .process-card-meta a{margin:0;padding:6px 10px;min-height:36px;font-size:12px;}
+.site-page .atlas-card .process-sources{margin:0;padding-left:21px;}
+.site-page .atlas-card .process-sources li{margin:0 0 5px;overflow-wrap:anywhere;}
+.site-page .atlas-card:target{border-color:var(--text-primary);box-shadow:0 0 0 1px var(--text-primary);}
+.site-page .atlas-card:focus{outline:3px solid var(--text-primary);outline-offset:3px;}
+@media(max-width:1000px){.process-toolbar{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:560px){.process-toolbar{grid-template-columns:minmax(0,1fr);}.process-controls{padding:14px;}}
