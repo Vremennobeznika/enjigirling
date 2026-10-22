@@ -18,7 +18,7 @@
 .calendar-head{margin-bottom:22px}
 .calendar-head h1{margin:0 0 8px;font-size:var(--fs-h1);line-height:1.05}
 .calendar-head p{margin:0;opacity:.72}
-.calendar-controls{display:grid;grid-template-columns:minmax(220px,1.2fr) minmax(210px,1fr) auto;gap:12px;margin:20px 0 16px}
+.calendar-controls{display:grid;grid-template-columns:minmax(95px,.3fr) minmax(200px,1.2fr) minmax(200px,1fr) auto;gap:12px;margin:20px 0 16px}
 .calendar-control{min-width:0}
 .calendar-control label{display:block;font-size:var(--fs-xs);font-weight:700;text-transform:uppercase;letter-spacing:.06em;opacity:.65;margin:0 0 6px}
 .calendar-control input,.calendar-control select{width:100%;box-sizing:border-box;padding:12px 14px;border:1px solid rgba(127,127,127,.28);border-radius:12px;background:var(--card-bg);color:var(--card-text);font:inherit;outline:none}
@@ -26,7 +26,8 @@
 .calendar-reset{align-self:end;padding:12px 15px;border:1px solid rgba(127,127,127,.28);border-radius:12px;background:transparent;color:inherit;font:inherit;cursor:pointer}
 .months{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 22px}
 .month-btn{border:1px solid rgba(127,127,127,.25);background:transparent;color:var(--card-text);border-radius:999px;padding:8px 12px;cursor:pointer;font:inherit;font-size:var(--fs-sm)}
-.month-btn.active{background:currentColor;color:var(--bg,#fff)}
+.month-btn.active{background:var(--card-text);color:var(--card-bg)}
+.month-btn:focus-visible,.calendar-control input:focus-visible,.calendar-control select:focus-visible,.calendar-reset:focus-visible{outline:2px solid currentColor;outline-offset:2px}
 .calendar-summary{display:flex;justify-content:space-between;gap:12px;align-items:center;margin:0 0 14px;font-size:var(--fs-sm);opacity:.72}
 .calendar-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
 .holiday-card{border:1px solid rgba(127,127,127,.22);border-radius:18px;padding:18px;background:var(--card-bg);color:var(--card-text);box-shadow:0 5px 20px rgba(0,0,0,.05);min-width:0}
@@ -35,7 +36,7 @@
 .holiday-professions{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 13px}
 .prof-chip{display:inline-flex;align-items:center;border-radius:999px;padding:5px 9px;font-size:var(--fs-xs);line-height:1.15;background:rgba(127,127,127,.11);color:var(--card-text);text-decoration:none}
 .holiday-note{margin:0;font-size:var(--fs-sm);line-height:1.5;opacity:.78;overflow-wrap:anywhere}
-.holiday-empty{padding:45px 15px;text-align:center;opacity:.65}
+.holiday-status{display:block;margin-top:12px;font-size:var(--fs-xs);opacity:.78}.holiday-source{display:inline-block;margin-top:8px;font-size:var(--fs-sm);color:inherit}.holiday-empty{padding:45px 15px;text-align:center;opacity:.65}
 @media(max-width:800px){.calendar-controls{grid-template-columns:1fr}.calendar-reset{align-self:stretch}.calendar-page{padding-left:14px;padding-right:14px}.calendar-grid{grid-template-columns:1fr}}
 </style>
 <link rel="canonical" href="https://vremennobeznika.github.io/enjigirling/calendar.html">
@@ -75,10 +76,11 @@
 <aside class="ai-transfer-bar" aria-label="Передать раздел Календарь нейросети"><div><strong>Этот раздел для ИИ</strong><p>Полное содержимое для загрузки в нейросеть: не только ссылка на страницу.</p></div><div class="ai-transfer-links"><a href="knowledge/sections/calendar.md" download>Markdown</a><a href="knowledge/sections/calendar.json" download>JSON</a><a href="ai.html?section=calendar">Как передать ИИ →</a></div></aside>
 <section class="calendar-head">
 <h1>Календарь инженерных праздников</h1>
-<p>Профессиональные даты и инженерные профессии, к которым они относятся.</p>
+<p>Профессиональные и памятные даты. Не каждый повод является официальным праздником или выходным днём. Неподтверждённые даты обозначены отдельно.</p>
 </section>
 
 <section class="calendar-controls" aria-label="Фильтры календаря">
+<div class="calendar-control"><label for="yearFilter">Год</label><select id="yearFilter"></select></div>
 <div class="calendar-control">
 <label for="searchInput">Поиск</label>
 <input id="searchInput" type="search" placeholder="Праздник или профессия…" autocomplete="off">
@@ -91,7 +93,7 @@
 </section>
 
 <div class="months" id="monthFilter" aria-label="Фильтр по месяцам"></div>
-<div class="calendar-summary"><span id="resultCount"></span><span id="activeHint"></span></div>
+<div class="calendar-summary"><span id="resultCount" role="status" aria-live="polite" aria-atomic="true"></span><span id="activeHint"></span></div>
 <section class="calendar-grid" id="calendarGrid"></section>
 <p class="holiday-empty" id="calendarEmpty" hidden>Ничего не найдено.</p>
 </main>
@@ -107,86 +109,18 @@
 </footer>
 
 <script src="data.js"></script>
+<script src="calendar-data.js"></script>
 <script src="theme.js"></script>
 <script>
 (() => {
 'use strict';
 
-const monthNames=['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'];
-const professionFallback=[
-['civil-engineer','Инженер-строитель (ПГС)'],['architect-engineer','Инженер-архитектор'],['road-engineer','Инженер-дорожник'],['mechanical-engineer','Инженер-механик'],['automotive-engineer','Инженер-автомобилестроитель'],['power-engineer','Инженер-энергетик'],['electrical-engineer','Инженер-электрик'],['nuclear-engineer','Инженер-атомщик'],['aerospace-engineer','Инженер-авиастроитель'],['space-engineer','Космический инженер (ракетостроитель)'],['chemical-engineer','Инженер-химик-технолог'],['oil-gas-engineer','Инженер-нефтяник'],['metallurgical-engineer','Инженер-металлург'],['mining-engineer','Горный инженер'],['environmental-engineer','Инженер-эколог'],['biomedical-engineer','Инженер-биомедик'],['robotics-engineer','Инженер-робототехник'],['railway-engineer','Инженер-железнодорожник'],['shipbuilding-engineer','Инженер-кораблестроитель'],['asu-tp-designer','АСУ ТП'],['food-engineer','Инженер-технолог пищевой промышленности'],['textile-engineer','Инженер-текстильщик'],['forest-engineer','Инженер лесного хозяйства'],['telecom-engineer','Инженер связи'],['water-engineer','Инженер-гидротехник'],['lighting-engineer','Инженер-светотехник'],['military-engineer','Военный инженер'],['polygraph-engineer','Инженер полиграфии'],['materials-engineer','Инженер-материаловед'],['civil-defense-engineer','Инженер ГО и ЧС'],['geodetic-engineer','Инженер-геодезист'],['astronomer-engineer','Инженер-астроном'],['restoration-engineer','Инженер-реставратор'],['standardization-engineer','Инженер по стандартизации'],['patent-engineer','Инженер-патентовед'],['data-engineer','Инженер данных (Data Engineer)'],['devops-engineer','DevOps-инженер'],['ml-engineer','Инженер машинного обучения (ML Engineer)'],['security-engineer','Инженер по информационной безопасности'],['cloud-engineer','Cloud-инженер'],['embedded-engineer','Инженер встраиваемых систем (Embedded)'],['frontend-engineer','Frontend-разработчик'],['backend-engineer','Backend-разработчик'],['qa-engineer','QA-инженер'],['mobile-engineer','Mobile-разработчик']
-];
-const profs=(Array.isArray(window.professionsData)?window.professionsData.map(p=>[p.id,p.title]):professionFallback);
-const pMap=new Map(profs);
-
-const E=(date,month,name,ids,note)=>({date,month,name,ids,note});
-const holidays=[
-E('13 января','Январь','День российской печати',['polygraph-engineer'],'Дата связана с развитием печатного дела и полиграфических технологий.'),
-E('21 января','Январь','День инженерных войск РФ',['military-engineer','civil-engineer','road-engineer'],'Профессиональная дата военных инженеров, сапёрных и инженерно-строительных подразделений.'),
-E('31 января','Январь','День ювелира',['materials-engineer'],'Профессия связана с материалами, технологиями обработки и контролем качества изделий.'),
-E('7 февраля','Февраль','День робототехники',['robotics-engineer','embedded-engineer','electrical-engineer'],'Профильная дата для специалистов по робототехнике, автоматике и встраиваемым системам.'),
-E('9 февраля','Февраль','День работника гражданской авиации — авиационные инженеры',['aerospace-engineer'],'Профессиональный праздник гражданской авиации.'),
-E('14 февраля','Февраль','День компьютерщика — IT-инженеры',['data-engineer','devops-engineer','ml-engineer','security-engineer','cloud-engineer','embedded-engineer','frontend-engineer','backend-engineer','qa-engineer','mobile-engineer'],'Неофициальная дата для специалистов компьютерной отрасли.'),
-E('1 марта','Март','Всемирный день гражданской обороны — инженеры ГО и ЧС',['civil-defense-engineer'],'Дата посвящена гражданской защите и системам реагирования на чрезвычайные ситуации.'),
-E('5 марта','Март','День геодезии и картографии — геодезические инженеры',['geodetic-engineer'],'Профессиональная дата специалистов геодезии, измерений и пространственных данных.'),
-E('22 марта','Март','Всемирный день водных ресурсов — инженеры водоснабжения и водоотведения',['water-engineer'],'Инженерные задачи водного хозяйства, гидротехнических сооружений и управления ресурсами.'),
-E('7 апреля','Апрель','День рождения Рунета — инженеры связи и IT',['telecom-engineer','data-engineer','devops-engineer','cloud-engineer','security-engineer','backend-engineer'],'Дата появления домена .ru и развития российского интернет-пространства.'),
-E('14 апреля','Апрель','День специалиста по радиоэлектронной борьбе — радиоинженеры',['electrical-engineer','telecom-engineer','military-engineer'],'Профильная дата военных специалистов радиоэлектронной борьбы.'),
-E('18 апреля','Апрель','Международный день памятников — инженеры-реставраторы',['restoration-engineer'],'Дата посвящена сохранению культурного наследия и инженерным технологиям реставрации.'),
-E('26 апреля','Апрель','День памяти погибших в радиационных авариях — атомные инженеры',['nuclear-engineer'],'Дата памяти и осмысления последствий радиационных аварий.'),
-E('7 мая','Май','День радио — радиотехнические и связные инженеры',['electrical-engineer','telecom-engineer','embedded-engineer'],'Праздник развития радио и радиотехнической отрасли.'),
-E('16 мая','Май','Международный день света — инженеры-светотехники',['lighting-engineer'],'Профильная дата науки и технологий света.'),
-E('17 мая','Май','Всемирный день электросвязи — инженеры связи',['telecom-engineer','data-engineer','network-engineer'],'Дата отрасли электросвязи и информационного общества.'),
-E('20 мая','Май','Всемирный день метрологии — инженеры КИПиА и метрологи',['kipia-engineer','asu-tp-designer','standardization-engineer'],'Профессиональная дата измерений, средств измерений и метрологического обеспечения.'),
-E('30 мая','Май','День химика — химические инженеры',['chemical-engineer'],'Профессиональная дата работников химической и нефтехимической промышленности.'),
-E('5 июня','Июнь','День эколога — экологические инженеры',['environmental-engineer'],'Профессиональная дата специалистов по охране окружающей среды.'),
-E('12 июня','Июнь','День работников текстильной и лёгкой промышленности — текстильные инженеры',['textile-engineer'],'Профильная дата работников текстильной и лёгкой промышленности.'),
-E('16 июня','Июнь','День медицинского работника — биомедицинские инженеры',['biomedical-engineer'],'Инженеры биомедицинских систем участвуют в создании и эксплуатации медицинской техники.'),
-E('24 июня','Июнь','День изобретателя и рационализатора — инженерные профессии',['mechanical-engineer','electrical-engineer','chemical-engineer','materials-engineer','robotics-engineer','patent-engineer'],'Дата для изобретателей, рационализаторов и специалистов, создающих новые технические решения.'),
-E('29 июня','Июнь','День кораблестроителя — инженеры-кораблестроители',['shipbuilding-engineer'],'Профессиональная дата судостроительной отрасли.'),
-E('13 июля','Июль','День работников морского и речного флота — судостроительные инженеры',['shipbuilding-engineer'],'Профессиональная дата работников флота и судостроительной отрасли.'),
-E('19 июля','Июль','День металлурга — инженеры-металлурги',['metallurgical-engineer'],'Профессиональная дата металлургической промышленности.'),
-E('2 августа','Август','День железнодорожника — железнодорожные инженеры',['railway-engineer'],'Профессиональная дата работников железнодорожного транспорта.'),
-E('9 августа','Август','День строителя — инженеры-строители',['civil-engineer','architect-engineer','road-engineer'],'Профессиональная дата строительной отрасли.'),
-E('12 августа','Август','День Военно-воздушных сил — авиационные инженеры',['aerospace-engineer'],'Дата связана с историей отечественной авиации.'),
-E('19 августа','Август','День авиации России — авиационные инженеры',['aerospace-engineer'],'Праздничная дата авиационной отрасли.'),
-E('27 августа','Август','День шахтёра — горные инженеры',['mining-engineer'],'Профессиональная дата работников угольной и горной промышленности.'),
-E('9 сентября','Сентябрь','День тестировщика — QA-инженеры',['qa-engineer'],'Неофициальная профессиональная дата специалистов по тестированию программного обеспечения.'),
-E('13 сентября','Сентябрь','День программиста — инженеры программного обеспечения',['frontend-engineer','backend-engineer','mobile-engineer','qa-engineer','data-engineer','devops-engineer','ml-engineer'],'256-й день года; дата используется как профессиональный праздник программистов.'),
-E('17 сентября','Сентябрь','День работников леса — инженеры лесного хозяйства',['forest-engineer'],'Профессиональная дата работников лесного хозяйства.'),
-E('27 сентября','Сентябрь','День машиностроителя — инженеры-механики и конструкторы',['mechanical-engineer','automotive-engineer','robotics-engineer'],'Профессиональная дата машиностроительной отрасли.'),
-E('30 сентября','Сентябрь','День работников атомной промышленности — атомные инженеры',['nuclear-engineer'],'Профессиональная дата работников атомной промышленности.'),
-E('1 октября','Октябрь','День сухопутных войск — военные инженеры',['military-engineer'],'Инженерное обеспечение является одной из важных составляющих военной инфраструктуры.'),
-E('4 октября','Октябрь','День космических войск — космические инженеры и ракетостроители',['space-engineer','aerospace-engineer'],'Дата связана с запуском первого искусственного спутника Земли и развитием космической отрасли.'),
-E('5 октября','Октябрь','Всемирный день архитектуры — инженеры-архитекторы',['architect-engineer'],'Профессиональная дата архитектуры и проектирования.'),
-E('6 октября','Октябрь','День страховщика — инженерные системы безопасности и оценки рисков',['civil-engineer','mechanical-engineer','environmental-engineer'],'Инженерная экспертиза и оценка технических рисков применяются в страховании сложных объектов.'),
-E('14 октября','Октябрь','Всемирный день стандартов — инженеры по стандартизации',['standardization-engineer','asu-tp-designer'],'Дата посвящена международной стандартизации и техническим нормам.'),
-E('18 октября','Октябрь','День работников пищевой промышленности — пищевые инженеры',['food-engineer'],'Профессиональная дата пищевой промышленности.'),
-E('18 октября','Октябрь','День работников дорожного хозяйства — дорожные инженеры',['road-engineer','road-designer'],'Профессиональная дата дорожной отрасли.'),
-E('20 октября','Октябрь','День работников лёгкой промышленности — текстильные инженеры',['textile-engineer'],'Профессиональная дата текстильной и лёгкой промышленности.'),
-E('25 октября','Октябрь','День работников кабельной промышленности — инженеры-электрики',['electrical-engineer'],'Профессиональная дата кабельной промышленности и электротехнических технологий.'),
-E('29 октября','Октябрь','День работников автомобильного транспорта — автомобильные инженеры',['automotive-engineer','mechanical-engineer'],'Профессиональная дата автомобильного транспорта.'),
-E('30 октября','Октябрь','День инженера-механика — инженеры-механики',['mechanical-engineer'],'Профильная дата специалистов механического оборудования и машин.'),
-E('31 октября','Октябрь','День работников нефтяной и газовой промышленности — инженеры-нефтяники',['oil-gas-engineer'],'Профессиональная дата нефтегазовой отрасли.'),
-E('4 ноября','Ноябрь','День народного единства — инженерные службы инфраструктуры',['civil-engineer','railway-engineer','power-engineer','telecom-engineer'],'Общественный праздник; инженерные службы обеспечивают работу критической инфраструктуры.'),
-E('10 ноября','Ноябрь','Всемирный день науки — инженеры-исследователи',['astronomer-engineer','materials-engineer','biomedical-engineer','ml-engineer'],'Дата популяризации науки и её роли в развитии общества.'),
-E('14 ноября','Ноябрь','Всемирный день качества — инженеры по стандартизации и качеству',['standardization-engineer','materials-engineer','asu-tp-designer'],'Дата посвящена качеству продукции, процессов и систем.'),
-E('16 ноября','Ноябрь','День проектировщика — инженеры-конструкторы и проектировщики',['pgs-designer','road-designer','electrical-designer','architect-engineer','mechanical-engineer','automotive-engineer','aerospace-engineer','space-engineer','shipbuilding-engineer'],'Профессиональная дата проектирования и инженерной документации.'),
-E('22 ноября','Ноябрь','День психолога — инженерия человеческих факторов и безопасности',['civil-defense-engineer','environmental-engineer'],'Смежная область для инженерных систем безопасности и человеко-машинного взаимодействия.'),
-E('4 декабря','Декабрь','День информатики — инженеры данных и IT',['data-engineer','devops-engineer','ml-engineer','security-engineer','cloud-engineer','embedded-engineer','frontend-engineer','backend-engineer','qa-engineer','mobile-engineer'],'Дата связана с историей отечественной вычислительной техники и информатики.'),
-E('8 декабря','Декабрь','День образования — инженерные профессии и подготовка специалистов',['civil-engineer','mechanical-engineer','electrical-engineer','data-engineer'],'Образование и инженерная подготовка являются базой для профессионального развития.'),
-E('20 декабря','Декабрь','День работника органов безопасности — инженеры информационной безопасности',['security-engineer','embedded-engineer','telecom-engineer'],'Инженерные специалисты обеспечивают защиту информационных и технических систем.'),
-E('22 декабря','Декабрь','День энергетика — инженеры энергетики',['power-engineer','electrical-engineer','electrical-designer'],'Профессиональный праздник работников энергетики.'),
-E('27 декабря','Декабрь','День спасателя — инженеры ГО и ЧС',['civil-defense-engineer'],'Дата работников системы предупреждения и ликвидации чрезвычайных ситуаций.')
-];
-
-// Удаляем технические id, для которых в текущей базе нет карточки, и заменяем названия на реальные названия карточек.
-for(const h of holidays){
-  h.ids=h.ids.filter(id=>pMap.has(id));
-  h.professions=h.ids.map(id=>pMap.get(id));
-}
-
-const grid=document.getElementById('calendarGrid');
+const calendar=window.engineeringCalendar,monthNames=calendar.monthNames,monthGen=["января","февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря"];
+const pMap=new Map((window.professionsData||[]).map(p=>[p.id,p.title]));
+const holidays=calendar.holidays;
+const grid=document.getElementById('calendarGrid'),yearFilter=document.getElementById('yearFilter');
+for(let y=2024;y<=2035;y++){const o=document.createElement('option');o.value=String(y);o.textContent=String(y);yearFilter.appendChild(o);}
+yearFilter.value=String(Math.max(2024,Math.min(2035,new Date().getFullYear())));
 const empty=document.getElementById('calendarEmpty');
 const search=document.getElementById('searchInput');
 const profession=document.getElementById('professionFilter');
@@ -201,37 +135,34 @@ let activeMonth='';
 });
 
 monthNames.forEach(month=>{
-  const b=document.createElement('button'); b.type='button'; b.className='month-btn'; b.textContent=month;
-  b.addEventListener('click',()=>{activeMonth=activeMonth===month?'':month; document.querySelectorAll('.month-btn').forEach(x=>x.classList.toggle('active',x===b&&!!activeMonth)); render();});
+  const b=document.createElement('button'); b.type='button'; b.className='month-btn'; b.textContent=month; b.setAttribute('aria-pressed','false');
+  b.addEventListener('click',()=>{activeMonth=activeMonth===month?'':month; document.querySelectorAll('.month-btn').forEach(x=>{const pressed=x===b&&!!activeMonth;x.classList.toggle('active',pressed);x.setAttribute('aria-pressed',String(pressed));}); render();});
   monthsEl.appendChild(b);
 });
 
 function plural(n,[one,few,many]){const a=n%10,b=n%100;return a===1&&b!==11?one:a>=2&&a<=4&&(b<12||b>14)?few:many;}
 function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));}
 function render(){
-  const q=search.value.trim().toLocaleLowerCase('ru-RU');
-  const pid=profession.value;
-  const items=holidays.filter(h=>{
-    if(activeMonth&&h.month!==activeMonth)return false;
-    if(pid&&!h.ids.includes(pid))return false;
-    if(q){const hay=[h.date,h.name,h.note,...h.professions].join(' ').toLocaleLowerCase('ru-RU');if(!hay.includes(q))return false;}
-    return true;
-  });
-  countEl.textContent=`Показано: ${items.length} ${plural(items.length,['праздник','праздника','праздников'])}`;
-  const ptxt=pid?pMap.get(pid):'';
-  hintEl.textContent=[activeMonth,ptxt].filter(Boolean).join(' · ');
-  grid.innerHTML=items.map(h=>`<article class="holiday-card">
-    <p class="holiday-date">${esc(h.date)}</p>
-    <h2 class="holiday-title">${esc(h.name)}</h2>
-    <div class="holiday-professions">${h.professions.map(t=>`<span class="prof-chip">${esc(t)}</span>`).join('')}</div>
-    <p class="holiday-note">${esc(h.note)}</p>
-  </article>`).join('');
-  empty.hidden=items.length!==0;
-  grid.dataset.ready='true';
+ const q=search.value.trim().toLowerCase(),pid=profession.value,year=Number(yearFilter.value);
+ const items=holidays.map(h=>({...h,...calendar.resolveDate(year,h)}))
+   .filter(h=>(!activeMonth||h.month===activeMonth)&&(!pid||h.ids.includes(pid))&&(!q||[h.day,monthGen[h.monthIndex],h.name,h.note,...h.ids.map(id=>pMap.get(id))].join(' ').toLowerCase().includes(q)))
+   .sort((a,b)=>a.time-b.time||a.name.localeCompare(b.name,'ru'));
+ countEl.textContent=`Показано: ${items.length} ${plural(items.length,['праздник','праздника','праздников'])}`;
+ hintEl.textContent=[year,activeMonth,pMap.get(pid)].filter(Boolean).join(' · ');
+ grid.innerHTML=items.map(h=>`<article class="holiday-card">
+ <p class="holiday-date"><time datetime="${year}-${String(h.monthIndex+1).padStart(2,'0')}-${String(h.day).padStart(2,'0')}">${h.day} ${monthGen[h.monthIndex]} ${year}</time></p>
+ <h2 class="holiday-title">${esc(h.name)}</h2>
+ <div class="holiday-professions">${h.ids.map(id=>`<a class="prof-chip" href="index.html#profession=${encodeURIComponent(id)}">${esc(pMap.get(id))}</a>`).join('')}</div>
+ <p class="holiday-note">${esc(h.note)}</p>
+ <span class="holiday-status">${h.kind==='documented'?'Дата подтверждена источником':'Редакционная дата · требуется проверка источника'}</span>
+ ${h.source?`<a class="holiday-source" href="${esc(h.source)}" target="_blank" rel="noopener noreferrer">Источник даты ↗</a>`:''}
+ </article>`).join('');
+ empty.hidden=items.length!==0;grid.dataset.ready='true';
 }
 search.addEventListener('input',render);
 profession.addEventListener('change',render);
-document.getElementById('resetFilters').addEventListener('click',()=>{search.value='';profession.value='';activeMonth='';document.querySelectorAll('.month-btn').forEach(b=>b.classList.remove('active'));render();});
+yearFilter.addEventListener('change',render);
+document.getElementById('resetFilters').addEventListener('click',()=>{search.value='';profession.value='';activeMonth='';document.querySelectorAll('.month-btn').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-pressed','false');});render();});
 render();
 })();
 </script>
