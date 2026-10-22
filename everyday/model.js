@@ -68,9 +68,9 @@ function validate(raw){
  const secIds=new Set(sec.map(s=>s.id));
  out.items=unique(arr(raw.items,3000).map(i=>({
   id:identifier(i.id),title:txt(i.title,150),section:identifier(i.section),
-  repeat:allowed(i.repeat,["daily","weekly","once"]),time:tm(i.time||"")
+  repeat:allowed(i.repeat,["daily","weekly","once"]),weekday:i.weekday===undefined?0:i.weekday,time:tm(i.time||"")
  })));
- if(out.items.some(i=>!i.title||!secIds.has(i.section)||["money","shopping"].includes(i.section)))throw Error("Неверный пункт в настройках");
+ if(out.items.some(i=>!i.title||!secIds.has(i.section)||["money","shopping"].includes(i.section)||!Number.isInteger(i.weekday)||i.weekday<0||i.weekday>6))throw Error("Неверный пункт в настройках");
  out.tasks=unique(arr(raw.tasks,10000).map(t=>({
   id:identifier(t.id),title:txt(t.title,160),date:isoDate(t.date),
   section:identifier(t.section),time:tm(t.time||""),done:Boolean(t.done)
