@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#080808"><meta name="color-scheme" content="dark">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="../manifest.webmanifest"><link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="./styles.css"><title>МОЯ НЕДЕЛЯ · локально</title>
+<script defer src="./model.js"></script><script defer src="./config.js"></script><script defer src="./app.js"></script><script defer src="../auto-sync.js"></script>
+</head>
+<body>
+<div class="shell">
+<header class="site-header">
+ <div class="header-title"><h1 id="appTitle">МОЯ НЕДЕЛЯ</h1><p id="appSubtitle">Гибкое расписание, напоминания и финансы</p></div>
+ <div class="privacy-pill" title="Данные хранятся только в этом браузере"><span class="privacy-dot"></span> Локально · синхронизация по настройкам</div>
+</header>
+<nav class="personal-shortcuts" aria-label="Другие разделы личного приложения"><a href="../">← Сегодня</a><a href="../../calendar/">Мой календарь · таблетки</a><a href="../../plants/">72 растения</a><a href="../../shopping/">Покупки</a></nav><p class="personal-note">Это редактируемый планировщик. Прежний личный календарь с таблетками и отметками сохранён отдельно. Добавляй новые разовые и повторяющиеся пункты здесь, без повторного внесения уже существующих лекарств.</p><nav class="main-tabs" aria-label="Разделы приложения">
+ <button type="button" class="main-tab active" data-page="week" aria-current="page">Неделя</button>
+ <button type="button" class="main-tab" data-page="shopping">Покупки</button>
+ <button type="button" class="main-tab" data-page="finance">Финансы</button>
+ <button type="button" class="main-tab" data-page="settings">Настройки</button>
+</nav>
+<div id="status" role="status" aria-live="polite" class="status-message" hidden></div>
+<section id="page-week" class="page active" aria-labelledby="weekHeading">
+ <div class="section-top"><div><h2 id="weekHeading">Моя неделя</h2><p class="muted" id="weekLabel"></p></div><div class="paired"><button type="button" id="prevWeek" aria-label="Предыдущая неделя">‹</button><button type="button" id="nextWeek" aria-label="Следующая неделя">›</button></div></div>
+ <nav id="dayTabs" class="day-nav" aria-label="Дни недели"></nav>
+ <div class="progress-line"><span id="weekProgress">0 / 0</span><div class="bar"><div id="weekProgressBar" class="fill"></div></div></div>
+ <div class="filter-wrap"><label for="weekSection">Показывать</label><select id="weekSection"></select><button type="button" class="subtle" id="jumpToday">Сегодня</button></div>
+ <div id="weekItems" class="panel-list"></div>
+ <p class="hint">Новые пункты, расписание и названия разделов редактируются в «Настройках». Значок колокольчика включает напоминание только для выбранного пункта.</p>
+</section>
+<section id="page-shopping" class="page" aria-labelledby="shoppingHeading" hidden>
+ <div class="section-top"><div><h2 id="shoppingHeading">Список покупок</h2><p class="muted">Отмеченное остаётся до удаления</p></div><span class="counter" id="shoppingProgress">0 / 0</span></div>
+ <div class="bar shopping-bar"><div id="shoppingProgressBar" class="fill"></div></div>
+ <nav id="shoppingTabs" class="pill-tabs" aria-label="Категории покупок"></nav>
+ <form id="shoppingForm" class="panel form-flex">
+  <label class="grow">Название<input id="shoppingTitle" type="text" required maxlength="120" placeholder="Что купить" autocomplete="off"></label>
+  <label class="qty-field">Кол-во<input id="shoppingQty" type="text" maxlength="30" placeholder="1 шт."></label>
+  <label class="time-field">Напомнить в<input id="shoppingTime" type="time" value="12:00"></label>
+  <label class="check-line compact"><input type="checkbox" id="shoppingRemind"> Напоминать</label>
+  <button type="submit" class="primary">Добавить</button>
+ </form>
+ <div id="shoppingItems" class="panel-list shopping-items"></div>
+ <div class="actions"><button type="button" id="removePurchased">Удалить купленное</button></div>
+</section>
+<section id="page-finance" class="page" aria-labelledby="financeHeading" hidden>
+ <div class="section-top"><div><h2 id="financeHeading">Финансы</h2><p class="muted">Личный журнал операций на устройстве</p></div></div>
+ <div class="finance-summary"><div><span>Доходы</span><strong id="incomeTotal">0</strong></div><div><span>Расходы</span><strong id="expenseTotal">0</strong></div><div><span>Разница</span><strong id="balanceTotal">0</strong></div></div>
+ <form id="financeForm" class="panel form-grid">
+  <label>Дата<input id="financeDate" type="date" required></label>
+  <label>Тип<select id="financeKind"><option value="expense">Расход</option><option value="income">Доход</option></select></label>
+  <label>Сумма<input id="financeAmount" type="number" min="0.01" max="1000000000" step="0.01" inputmode="decimal" required placeholder="0.00"></label>
+  <label>Категория<input id="financeCategory" type="text" maxlength="80" placeholder="Например, продукты" required></label>
+  <label class="span-all">Комментарий<input id="financeNote" type="text" maxlength="160" placeholder="Необязательно"></label>
+  <button class="primary" type="submit">Записать операцию</button>
+ </form>
+ <div class="filter-wrap"><label for="financeMonth">Месяц</label><input id="financeMonth" type="month"></div>
+ <div class="actions"><button type="button" id="financeCSV">Экспорт операций (.csv)</button></div>
+ <div id="ledgerItems" class="panel-list"></div>
+</section>
+<section id="page-settings" class="page" aria-labelledby="settingsHeading" hidden>
+ <div class="section-top"><div><h2 id="settingsHeading">Настройки</h2><p class="muted">Единое место управления разделами, пунктами и напоминаниями</p></div></div>
+ <div class="settings-card"><div class="settings-head"><h3>Разделы</h3><small>Порядок, название, видимость</small></div><div id="sectionManager"></div>
+  <form id="addSectionForm" class="form-flex lined"><label class="grow">Название<input id="newSectionTitle" type="text" placeholder="Новый раздел" required maxlength="80"></label><label>Где показывать<select id="newSectionType"><option value="routine">Неделя</option><option value="shopping">Покупки</option></select></label><button class="primary" type="submit">Добавить</button></form>
+ </div>
+ <div class="settings-card"><div class="settings-head"><h3>Пункты расписания</h3><small>Все изменения только здесь</small></div>
+  <form id="taskForm" class="task-editor"><input type="hidden" id="editTaskId">
+   <div class="form-grid"><label class="span-all">Название<input id="taskTitle" type="text" required maxlength="120" placeholder="Что нужно сделать"></label><label>Раздел<select id="taskSection" required></select></label><label>Время<input id="taskTime" type="time" required value="09:00"></label></div>
+   <div class="form-grid spacing-top"><label>Повторение<select id="taskMode"><option value="repeat">По дням недели</option><option value="once">Один раз в дату</option></select></label><label id="taskDateWrap" hidden>Дата выполнения<input id="taskDate" type="date"></label></div>
+   <fieldset id="taskDaysWrap" class="days-field"><legend>Дни недели</legend><div id="taskDays" class="days-choices"></div></fieldset>
+   <label class="block-label">Заметка<input id="taskNote" type="text" maxlength="360" placeholder="Необязательно"></label>
+   <div class="check-options"><label class="check-line"><input id="taskRemind" type="checkbox"> Напоминать</label><label class="check-line"><input id="taskActive" type="checkbox" checked> Пункт включён</label></div>
+   <div class="actions"><button class="primary" type="submit" id="saveTask">Добавить пункт</button><button type="button" id="cancelTaskEdit" hidden>Отменить редактирование</button></div>
+  </form>
+  <div class="filter-wrap"><label for="taskSearch">Найти пункт</label><input id="taskSearch" type="search" placeholder="Поиск по названию"></div>
+  <div id="taskManager" class="panel-list"></div>
+ </div>
+ <div class="settings-card"><div class="settings-head"><h3>Установка на Android</h3><small>Chrome · локально · без аккаунта</small></div><p class="note">В Chrome для Android открой меню ⋮ и выбери «Установить приложение» или «Добавить на главный экран». После первой загрузки приложение сможет открываться без сети. Данные этого устройства не передаются в облако.</p><div class="actions"><button type="button" id="installAndroid" class="primary" hidden>Установить приложение</button></div><p class="note">Для напоминаний при полностью закрытом Chrome экспортируй .ics в календарь Android: локальный сайт не может гарантировать фоновую доставку и самовольно открывать вкладку.</p></div>
+ <div class="settings-card"><div class="settings-head"><h3>Уведомления</h3><small>Включаются отдельно для каждого пункта</small></div>
+  <p class="note">Пока вкладка открыта, приложение проверяет расписание и показывает крупное напоминание. Системное уведомление требует разрешения браузера. Нельзя программно принудить браузер открыть вкладку на переднем плане; нажатие по уведомлению открывает или активирует приложение, если браузер это позволяет.</p>
+  <div class="actions"><button type="button" id="grantNotifications" class="primary">Разрешить уведомления</button><button type="button" id="testReminder">Проверить напоминание</button><button type="button" id="calendarExport">Экспорт в Календарь (.ics)</button></div>
+  <div id="permissionStatus" class="hint" role="status"></div>
+  <div class="form-grid spacing-top"><label>Тихие часы: с<input type="time" id="quietStart"></label><label>До<input type="time" id="quietEnd"></label><label class="check-line"><input type="checkbox" id="soundEnabled"> Звуковой сигнал во вкладке</label></div>
+  <p class="note">Календарь .ics создаёт события на следующие 30 дней для включённых пунктов расписания и по одному событию для незавершённых покупок с напоминанием. Это отдельная локальная копия расписания: изменения в приложении не отменяют уже импортированные события.</p>
+ </div>
+ <div class="settings-card"><div class="settings-head"><h3>Данные и приватность</h3><small>Без регистрации и синхронизации</small></div>
+  <p class="note">Данные остаются в браузере этого устройства. Очистка данных сайта или приватный режим могут удалить их. Для переноса на другое устройство скачай JSON-копию и импортируй её там. Пароли и облако не используются.</p>
+  <div class="form-grid"><label>Символ валюты<input type="text" id="currencySymbol" maxlength="8" placeholder="₽"></label></div>
+  <div class="actions"><button type="button" id="legacyImport">Импорт прежнего календаря (.html)</button><button type="button" id="legacyMarksImport">Импорт прежних отметок (.json)</button></div>
+  <input id="legacyHtmlFile" hidden type="file" accept=".html,text/html"><input id="legacyMarksFile" hidden type="file" accept=".json,application/json">
+  <div class="actions"><button type="button" id="backupData">Сохранить JSON-копию</button><button type="button" id="importData">Восстановить JSON-копию</button><button type="button" id="clearDay">Сбросить отметки выбранного дня</button><button type="button" id="resetAll" class="danger">Сбросить приложение</button></div>
+  <input id="restoreFile" hidden type="file" accept=".json,application/json">
+ </div>
+</section>
+<footer class="site-footer"><span>МОЯ НЕДЕЛЯ</span><span>Локально; при работающем Яндекс-облаке — общая синхронизация</span></footer>
+</div>
+<div id="reminderOverlay" class="reminder-cover" hidden>
+ <section class="reminder-dialog" role="alertdialog" aria-modal="true" aria-labelledby="reminderTitle" aria-describedby="reminderInfo" tabindex="-1">
+  <span class="reminder-kicker">НАПОМИНАНИЕ</span><h2 id="reminderTitle">Пора выполнить пункт</h2><p id="reminderInfo">Открой расписание</p>
+  <div class="reminder-actions"><button type="button" class="primary" id="reminderDone">Готово</button><button type="button" id="reminderSnooze">Через 10 минут</button><button type="button" id="reminderDismiss">Закрыть</button></div>
+ </section>
+</div>
+</body></html>
