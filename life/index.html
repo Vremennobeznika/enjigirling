@@ -13,11 +13,11 @@ p{margin:5px 0;color:var(--muted)}.sub{font-size:13px;color:var(--muted)}header{
 .bar{height:5px;border-radius:6px;overflow:hidden;background:#383838;margin:12px 0}.bar>div{height:100%;background:#ddd;transition:width .2s}
 input,select,button{font:inherit}input,select{background:#101010;border:1px solid #656565;color:#fff;border-radius:10px;padding:11px;min-width:0}form{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.grow{flex:1 1 170px;min-width:0}.short{flex:0 1 115px;max-width:180px}
 #taskForm,#pantryForm,#cloudForm{display:grid;align-items:stretch;gap:8px;margin:14px 0}
-#taskForm{grid-template-columns:minmax(0,1fr) minmax(100px,128px) minmax(105px,135px) auto}
+#taskForm{grid-template-columns:repeat(2,minmax(0,1fr))}#taskForm>#taskName,#taskForm>.btn{grid-column:1/-1}.task-field{font-size:12px;color:#bbb;display:flex;flex-direction:column;gap:4px;min-width:0}.task-field input{width:100%;min-width:0;min-height:44px}.task-date-nav{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:12px 0 5px}.task-date-nav input{flex:1 1 138px;max-width:220px;min-height:44px}.task-date-nav .btn{min-width:44px;min-height:44px;padding:8px 10px}.task-date-nav .btn[aria-pressed=true]{background:#eee;color:#111}.task-item-edit{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:7px;font-size:12px;color:#aaa}.task-item-edit input{width:142px;max-width:100%;min-height:40px;padding:6px;font-size:13px}.task-item-edit input[type=time]{width:104px}.item .delete{min-width:38px;min-height:44px}
 #pantryForm{grid-template-columns:minmax(0,1fr) minmax(100px,125px) auto}
 #cloudForm{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr) auto}
 #taskForm>*,#pantryForm>*,#cloudForm>*{min-width:0;max-width:none;width:100%;height:auto;min-height:44px}
-#taskForm>.btn,#pantryForm>.btn,#cloudForm>.btn{white-space:nowrap}.btn{background:#eee;color:#101010;border:1px solid #eee;border-radius:10px;padding:11px 13px;font-weight:700;cursor:pointer}.btn.soft{background:#242424;color:#eee;border-color:#575757;font-weight:500}.btn:disabled{opacity:.45;cursor:not-allowed}
+#taskForm>.btn,#pantryForm>.btn,#cloudForm>.btn{white-space:nowrap}#taskForm>.task-field{min-height:44px;height:auto}.btn{background:#eee;color:#101010;border:1px solid #eee;border-radius:10px;padding:11px 13px;font-weight:700;cursor:pointer}.btn.soft{background:#242424;color:#eee;border-color:#575757;font-weight:500}.btn:disabled{opacity:.45;cursor:not-allowed}
 .list{margin:0;padding:0;list-style:none}.item{display:flex;align-items:center;gap:10px;border-top:1px solid #363636;padding:11px 0;min-height:48px}
 .item input[type=checkbox]{accent-color:#ddd;width:23px;height:23px;flex:none;cursor:pointer}
 .item .text{flex:1;overflow-wrap:anywhere;min-width:0}.item.done .text{text-decoration:line-through;color:#888}
@@ -63,9 +63,10 @@ details>summary:focus-visible{outline:2px solid #eee;border-radius:13px}
 <p class="sub">Две комнаты, посудомойка, стиралка, детские вещи, 72 растения. Галочки общие с календарём.</p>
 <div class="bar"><div id="homeBar"></div></div><ul class="list" id="homeTaskList"></ul><div class="empty" id="homeEmpty" hidden>Бытовых задач на сегодня нет.</div>
 <p class="warn">Растения проверяем по группам по 18. Поливаем по состоянию почвы и виду растения, а не автоматически по дням. <a class="link" href="../plants/">Журнал 72 горшков →</a></p></section>
-<section class="card full"><div class="head"><h2>Задачи и входящие</h2><span class="sub" id="taskCount">0 задач</span></div><p class="sub">Записывай всё в одно место. Приоритетные дела будут сверху.</p>
-<form id="taskForm"><input class="grow" id="taskName" maxlength="180" placeholder="Новая задача" aria-label="Новая задача" required><select id="taskCategory" aria-label="Категория задачи"><option value="Дела">Дела</option><option value="Работа">Работа</option><option value="Паблик">Паблик</option><option value="Дом">Дом</option><option value="Лев">Лев</option></select><select id="taskPriority" aria-label="Приоритет"><option value="normal">Обычно</option><option value="high">Важно</option></select><button class="btn" type="submit">Добавить</button></form>
-<ul id="taskList" class="list"></ul><div class="empty" id="taskEmpty">Задач пока нет.</div></section>
+<section class="card full"><div class="head"><h2>Задачи и входящие</h2><span class="sub" id="taskCount">0 задач</span></div><p class="sub">Выбирай дату и время прямо здесь — можно записать сегодня задачу на любой другой день. Старые задачи без даты остаются во входящих.</p>
+<form id="taskForm"><input class="grow" id="taskName" maxlength="180" placeholder="Новая задача" aria-label="Новая задача" required><label class="task-field">Когда <input id="taskDate" type="date" aria-label="Дата выполнения задачи" required></label><label class="task-field">Во сколько <input id="taskTime" type="time" aria-label="Время выполнения (необязательно)"></label><select id="taskCategory" aria-label="Категория задачи"><option value="Дела">Дела</option><option value="Работа">Работа</option><option value="Паблик">Паблик</option><option value="Дом">Дом</option><option value="Лев">Лев</option></select><select id="taskPriority" aria-label="Приоритет"><option value="normal">Обычно</option><option value="high">Важно</option></select><button class="btn" type="submit">Записать дело</button></form>
+<div class="task-date-nav" aria-label="Просмотр задач по дням"><button type="button" class="btn soft" id="taskPrevDay" aria-label="Предыдущий день">‹</button><input id="taskViewDate" type="date" aria-label="Показать задачи на дату"><button type="button" class="btn soft" id="taskNextDay" aria-label="Следующий день">›</button><button type="button" class="btn soft" id="taskGoToday">Сегодня</button><button type="button" class="btn soft" id="taskShowAll" aria-pressed="false">Все даты</button></div><p class="sub" id="taskViewHint"></p>
+<ul id="taskList" class="list"></ul><div class="empty" id="taskEmpty">На этот день задач нет.</div></section>
 <section class="card full"><div class="head"><h2>Домашние запасы</h2><span class="sub" id="pantryCount">0 позиций</span></div><p class="sub">Что уже есть дома — чтобы не покупать повторно.</p>
 <form id="pantryForm"><input class="grow" id="pantryName" maxlength="120" placeholder="Продукт или расходник" aria-label="Название запаса" required><input class="short" id="pantryAmount" maxlength="40" placeholder="Количество" aria-label="Количество"><button class="btn" type="submit">Добавить</button></form>
 <ul id="pantryList" class="list"></ul><div class="empty" id="pantryEmpty">Запасов пока нет.</div></section>
@@ -92,7 +93,8 @@ const $=id=>document.getElementById(id),safe=(value,def)=>{try{return JSON.parse
 function persist(key,data){try{localStorage.setItem(key,JSON.stringify(data));window.dispatchEvent(new Event("life-data-changed"));return true}catch{alert("Не удалось сохранить данные. Проверь настройки браузера.");return false}}
 const elem=(tag,cl,txt)=>{const n=document.createElement(tag);if(cl)n.className=cl;if(txt!==undefined)n.textContent=txt;return n};
 function dateStr(d){return [d.getFullYear(),String(d.getMonth()+1).padStart(2,"0"),String(d.getDate()).padStart(2,"0")].join("-")}
-function validTasks(a){return Array.isArray(a)?a.filter(x=>x&&typeof x.name==="string").slice(0,600).map(x=>({id:String(x.id||crypto.randomUUID()),name:x.name.slice(0,180),category:["Дела","Работа","Паблик","Дом","Лев"].includes(x.category)?x.category:"Дела",priority:x.priority==="high"?"high":"normal",done:!!x.done})):[]}
+function validTaskDate(v){if(typeof v!=="string"||!/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/.test(v))return "";const d=new Date(v+"T12:00:00");return Number.isFinite(d.getTime())&&dateStr(d)===v?v:""}
+function validTasks(a){return Array.isArray(a)?a.filter(x=>x&&typeof x.name==="string").slice(0,600).map(x=>({id:String(x.id||crypto.randomUUID()),name:x.name.slice(0,180),category:["Дела","Работа","Паблик","Дом","Лев"].includes(x.category)?x.category:"Дела",priority:x.priority==="high"?"high":"normal",done:!!x.done,date:validTaskDate(x.date),time:typeof x.time==="string"&&/^([01][0-9]|2[0-3]):[0-5][0-9]$/.test(x.time)?x.time:""})):[]}
 function validPantry(a){return Array.isArray(a)?a.filter(x=>x&&typeof x.name==="string").slice(0,600).map(x=>({id:String(x.id||crypto.randomUUID()),name:x.name.slice(0,120),amount:String(x.amount||"").slice(0,40)})):[]}
 function validPlants(a){return Array.isArray(a)?a.filter(p=>p&&Number.isInteger(p.id)&&p.id>=1&&p.id<=72).slice(0,72).map(p=>({id:p.id,name:String(p.name||"Горшок "+p.id).slice(0,90),note:String(p.note||"").slice(0,600),checked:/^\d{4}-\d\d-\d\d$/.test(p.checked||"")?p.checked:"",watered:/^\d{4}-\d\d-\d\d$/.test(p.watered||"")?p.watered:"",attention:!!p.attention})):[]}
 function validShopping(a){return Array.isArray(a)?a.filter(x=>x&&typeof x.name==="string"&&typeof x.cat==="string").slice(0,1500).map(x=>({id:String(x.id||crypto.randomUUID()),name:x.name.slice(0,120),qty:String(x.qty||"").slice(0,35),cat:x.cat,done:!!x.done,time:/^([01]\d|2[0-3]):[0-5]\d$/.test(x.time||"")?x.time:"",remind:!!x.remind&&/^([01]\d|2[0-3]):[0-5]\d$/.test(x.time||"")})):[]}
@@ -149,6 +151,7 @@ window.dispatchEvent(new Event("life-sync-applied"));
 draw();
 return recovered?"Защитная копия восстановлена ("+recoveryLabel+"). Автосинхронизация отключена до повторной проверки.":"Резервная копия восстановлена. Автосинхронизация отключена до повторной проверки.";
 }
+let taskViewDate=dateStr(new Date()),taskAllDates=false;
 function draw(){
 const now=new Date(),day=(now.getDay()+6)%7,key=dateStr(now),marks=safe(KEYS.calendar,{}),home=window.HOUSEHOLD_PLAN?.forDay(day)||[];
 
@@ -175,16 +178,29 @@ const label=elem("div","text",t.name),meta=elem("div","mini",t.time+" · "+t.len
 const buys=validShopping(safe(KEYS.shopping,[])),remaining=buys.filter(x=>!x.done).length;
 $("shoppingCount").textContent=String(remaining);$("shoppingBar").style.width=(buys.length?(buys.length-remaining)/buys.length*100:0)+"%";
 const tasks=validTasks(safe(KEYS.tasks,[])),list=$("taskList");list.replaceChildren();
-$("taskCount").textContent=tasks.filter(x=>!x.done).length+" активных";$("taskEmpty").hidden=tasks.length>0;
-tasks.sort((a,b)=>Number(a.done)-Number(b.done)||Number(b.priority==="high")-Number(a.priority==="high")).forEach(t=>{
+const shown=tasks.filter(t=>taskAllDates||!t.date||t.date===taskViewDate);
+$("taskCount").textContent=tasks.filter(x=>!x.done).length+" активных";
+$("taskEmpty").hidden=shown.length>0;
+$("taskViewHint").textContent=taskAllDates?"Все дни · "+shown.length+" записей":"На "+new Date(taskViewDate+"T12:00:00").toLocaleDateString("ru-RU",{day:"numeric",month:"long",weekday:"long"})+" · "+shown.filter(x=>x.date===taskViewDate).length+" запланировано · "+shown.filter(x=>!x.date).length+" без даты";
+$("taskViewDate").value=taskViewDate;$("taskShowAll").setAttribute("aria-pressed",String(taskAllDates));
+shown.sort((a,b)=>Number(a.done)-Number(b.done)||(taskAllDates?(a.date||"9999").localeCompare(b.date||"9999"):0)||Number(b.priority==="high")-Number(a.priority==="high")||(a.time||"99:99").localeCompare(b.time||"99:99")).forEach(t=>{
 const li=elem("li","item"+(t.done?" done":"")),cb=elem("input");cb.type="checkbox";cb.checked=t.done;cb.setAttribute("aria-label","Готово: "+t.name);
-cb.onchange=()=>{let a=validTasks(safe(KEYS.tasks,[]));let x=a.find(v=>v.id===t.id);if(x)x.done=cb.checked;persist(KEYS.tasks,a);draw()};
-const name=elem("div","text",t.name),meta=elem("div","mini",t.category+(t.priority==="high"?" · важно":""));name.append(meta);
-const del=elem("button","delete","×");del.type="button";del.setAttribute("aria-label","Удалить "+t.name);del.onclick=()=>{persist(KEYS.tasks,validTasks(safe(KEYS.tasks,[])).filter(x=>x.id!==t.id));draw()};li.append(cb,name,del);list.append(li)});
+cb.onchange=()=>{let a=validTasks(safe(KEYS.tasks,[]));let x=a.find(v=>v.id===t.id);if(x)x.done=cb.checked;if(persist(KEYS.tasks,a))draw()};
+const name=elem("div","text",t.name),meta=elem("div","mini",t.category+(t.priority==="high"?" · важно":"")+(t.date?" · "+t.date:" · без даты")+(t.time?" · "+t.time:""));name.append(meta);
+const editor=elem("div","task-item-edit"),dateLabel=elem("span","", "Перенести:"),dateInput=elem("input");dateInput.type="date";dateInput.value=t.date;dateInput.setAttribute("aria-label","Изменить дату задачи "+t.name);
+dateInput.onchange=()=>{const value=dateInput.value;if(value&&!validTaskDate(value)){dateInput.value=t.date;return}const a=validTasks(safe(KEYS.tasks,[])),item=a.find(x=>x.id===t.id);if(item){item.date=value;if(persist(KEYS.tasks,a))draw()}};
+editor.append(dateLabel,dateInput);name.append(editor);
+const del=elem("button","delete","×");del.type="button";del.setAttribute("aria-label","Удалить "+t.name);del.onclick=()=>{if(persist(KEYS.tasks,validTasks(safe(KEYS.tasks,[])).filter(x=>x.id!==t.id)))draw()};li.append(cb,name,del);list.append(li)});
 const pantry=validPantry(safe(KEYS.pantry,[])),pList=$("pantryList");pList.replaceChildren();$("pantryCount").textContent=pantry.length+" позиций";$("pantryEmpty").hidden=pantry.length>0;
 pantry.forEach(p=>{const li=elem("li","item"),nm=elem("span","text",p.name),qty=elem("span","mini",p.amount),del=elem("button","delete","×");del.type="button";del.setAttribute("aria-label","Удалить "+p.name);del.onclick=()=>{persist(KEYS.pantry,validPantry(safe(KEYS.pantry,[])).filter(x=>x.id!==p.id));draw()};li.append(nm,qty,del);pList.append(li)});
 }
-$("taskForm").onsubmit=e=>{e.preventDefault();const name=$("taskName").value.trim();if(!name)return;const a=validTasks(safe(KEYS.tasks,[]));a.push({id:crypto.randomUUID(),name,category:$("taskCategory").value,priority:$("taskPriority").value,done:false});persist(KEYS.tasks,a);$("taskName").value="";draw();$("taskName").focus()};
+$("taskDate").value=dateStr(new Date());$("taskViewDate").value=taskViewDate;
+function changeTaskDay(offset){const d=new Date(taskViewDate+"T12:00:00");d.setDate(d.getDate()+offset);taskViewDate=dateStr(d);taskAllDates=false;$("taskDate").value=taskViewDate;draw()}
+$("taskPrevDay").onclick=()=>changeTaskDay(-1);$("taskNextDay").onclick=()=>changeTaskDay(1);
+$("taskGoToday").onclick=()=>{taskViewDate=dateStr(new Date());taskAllDates=false;$("taskDate").value=taskViewDate;draw()};
+$("taskViewDate").onchange=()=>{const d=validTaskDate($("taskViewDate").value);if(!d){$("taskViewDate").value=taskViewDate;return}taskViewDate=d;taskAllDates=false;$("taskDate").value=d;draw()};
+$("taskShowAll").onclick=()=>{taskAllDates=!taskAllDates;draw()};
+$("taskForm").onsubmit=e=>{e.preventDefault();const name=$("taskName").value.trim(),date=validTaskDate($("taskDate").value),time=$("taskTime").value;if(!name||!date)return;if(time&&!/^([01][0-9]|2[0-3]):[0-5][0-9]$/.test(time))return;const a=validTasks(safe(KEYS.tasks,[]));a.push({id:crypto.randomUUID(),name,category:$("taskCategory").value,priority:$("taskPriority").value,done:false,date,time});if(!persist(KEYS.tasks,a))return;taskViewDate=date;taskAllDates=false;$("taskViewDate").value=date;$("taskName").value="";$("taskTime").value="";draw();$("taskName").focus()};
 $("pantryForm").onsubmit=e=>{e.preventDefault();const name=$("pantryName").value.trim(),amount=$("pantryAmount").value.trim();if(!name)return;const a=validPantry(safe(KEYS.pantry,[]));a.push({id:crypto.randomUUID(),name,amount});persist(KEYS.pantry,a);$("pantryName").value="";$("pantryAmount").value="";draw();$("pantryName").focus()};
 $("backup").onclick=()=>{const data={version:1,exportedAt:new Date().toISOString(),data:snapshot()},blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=elem("a");a.href=url;a.download="moya-zhizn-"+dateStr(new Date())+".json";a.click();setTimeout(()=>URL.revokeObjectURL(url),3000)};
 $("restore").onclick=()=>$("backupFile").click();
