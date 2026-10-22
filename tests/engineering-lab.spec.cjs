@@ -126,7 +126,7 @@ test('sewing and marine calculators fit a slow 320px mobile layout',async({page}
 });
 
 
-test('virtual caliper and extended industry calculations',async({page})=>{
+test('measurement lab link and extended industry calculations',async({page})=>{
  await page.setViewportSize({width:375,height:812});
  await page.goto('/calculator.html#labCaliper');
  await expect(page.locator('#caliperOutput')).toContainText('23,45 мм');
@@ -182,7 +182,7 @@ test('legacy calculators open from their unchanged deep links and compute',async
 test('all seven calculator groups have no horizontal overflow on 320px screens',async({page})=>{
  await page.setViewportSize({width:320,height:720});
  await page.goto('/calculator.html');
- for(const id of ['labIEEE','calcBases','labElectronics','calcSignal','labProduction','labPractical','labSewing','labMoreSewing','labMarine','labMoreMarine','labCaliper','calcUnits']){
+ for(const id of ['labIEEE','calcBases','labElectronics','calcSignal','labProduction','labPractical','labSewing','labMoreSewing','labMarine','labMoreMarine','calcUnits']){
   const details=page.locator('#'+id);
   await details.locator('summary').click();
   await expect(details).toHaveAttribute('open','');

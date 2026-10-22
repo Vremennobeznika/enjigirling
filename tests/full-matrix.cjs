@@ -209,8 +209,8 @@ check('parallel font loading and nonduplicated main CI checks', () => {
  const fontUrl='https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap';
  for(const page of pages){
   const markup=fs.readFileSync(page,'utf8');
-  if(page==='calculator.html'){
-   assert.ok(!markup.includes('fonts.googleapis.com')&&!markup.includes('fonts.gstatic.com'),'calculators should use system fonts without remote requests');
+  if(page==='calculator.html'||page==='resources.html'){
+   assert.ok(!markup.includes('fonts.googleapis.com')&&!markup.includes('fonts.gstatic.com'),page+' should use system fonts without remote requests');
    continue;
   }
   assert.ok(markup.includes('rel="preconnect" href="https://fonts.googleapis.com"'),page+' missing font preconnect');
@@ -505,6 +505,36 @@ check('education catalogue: 80 entries, eight districts, evidence consistency', 
  const script=fs.readFileSync('map.js','utf8');
  assert.ok(script.includes('escapeHtml('),'unsafe output templating');
  assert.ok(script.includes('label.addEventListener(\'click\''),'district labels not clickable');
+});
+
+
+check('resource catalogue: protected friends, free education, uniqueness, no duplicate caliper',()=>{
+ const vm=require('node:vm');
+ const items=vm.runInNewContext(fs.readFileSync('resources-data.js','utf8')+'\nresources',Object.create(null));
+ assert.ok(items.length>=175,'unexpected catalogue shrinkage');
+ const ids=new Set(), urls=new Set();
+ for(const item of items){
+  assert.ok(item.id&&item.name&&item.desc&&item.type&&item.link,'incomplete resource '+item.id);
+  assert.match(item.link,/^https?:\/\//,'invalid URL '+item.id);
+  assert.ok(!ids.has(item.id),'duplicate resource ID '+item.id); ids.add(item.id);
+  const canonical=new URL(item.link).href.replace(/\/$/,'').toLowerCase();
+  assert.ok(!urls.has(canonical),'duplicate URL '+canonical);urls.add(canonical);
+ }
+ const friends=items.filter(x=>x.type==='Дружественные каналы').map(x=>[x.id,x.name,x.desc,x.link]);
+ assert.equal(friends.length,11,'do not alter friendly channels');
+ const snapshot=JSON.stringify(items.filter(x=>x.type==='Дружественные каналы'));
+ let friendlyHash=2166136261;
+ for(let i=0;i<snapshot.length;i++){friendlyHash^=snapshot.charCodeAt(i);friendlyHash=Math.imul(friendlyHash,16777619);}
+ assert.equal(friendlyHash>>>0,2266693070,'friendly channels changed: names, order, links or descriptions');
+ for(const [id] of friends)assert.ok(id.startsWith('fr-'),'invalid friendly ID');
+ const free=new Set(['learn-mit-ocw','learn-nptel','learn-teachengineering','learn-freecodecamp','learn-odin','learn-openlearn','learn-mit-open-library','learn-arduino','learn-allaboutcircuits']);
+ const courses=items.filter(x=>x.type==='Обучение и курсы');
+ assert.ok(courses.length>=9);
+ for(const x of courses)assert.ok(free.has(x.id),'learning resources must be reviewed for free access: '+x.id);
+ const calculator=fs.readFileSync('calculator.html','utf8');
+ assert.ok(!calculator.includes('id="labCaliper"'),'duplicate virtual caliper in calculators');
+ assert.ok(calculator.includes('id="calcUnits"'),'unit converter should remain');
+ assert.ok(fs.readFileSync('measurement-lab.html','utf8').includes('id="embeddedInstruments"'),'measurement lab must keep calipers');
 });
 
 console.log('Matrix: '+count+' PASS, '+errors.length+' FAIL ('+pages.length+' pages, '+datasets.length+' datasets)');
