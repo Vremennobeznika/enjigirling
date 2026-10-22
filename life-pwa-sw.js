@@ -1,6 +1,6 @@
 /* Planner-only PWA cache. Cloud requests and private data are never cached. */
-const PREFIX='personal-planner-ios-',CACHE=PREFIX+'v1';
-const ASSETS=['./life/','./life/index.html','./life/manifest.webmanifest','./life/icon.svg','./life/apple-touch-icon.png','./life/icon-192.png','./life/icon-512.png','./life/auto-sync.js','./calendar/','./calendar/index.html','./calendar/household.js','./plants/','./plants/index.html','./shopping/','./shopping/index.html'];
+const PREFIX='personal-planner-ios-',CACHE=PREFIX+'v2';
+const ASSETS=['./life/','./life/index.html','./life/manifest.webmanifest','./life/icon.svg','./life/apple-touch-icon.png','./life/icon-192.png','./life/icon-512.png','./life/auto-sync.js','./calendar/','./calendar/index.html','./calendar/household.js','./plants/','./plants/index.html','./shopping/','./shopping/index.html','./life/planner/','./life/planner/index.html','./life/planner/model.js','./life/planner/config.js','./life/planner/app.js','./life/planner/styles.css'];
 const URLS=ASSETS.map(p=>new URL(p,self.registration.scope).href);
 const PATHS=new Set(URLS.map(u=>new URL(u).pathname));
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(URLS)).then(()=>self.skipWaiting())));
