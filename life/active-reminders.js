@@ -76,7 +76,6 @@ function panel(){
 async function systemNotice(event){
  if(!('Notification' in window)||Notification.permission!=='granted')return;
  try{
-  const url=new URL('life/planner/',new URL('./',location.href).origin+'/'); // overridden below by the site's project root
   const target=new URL('life/planner/',selfOrigin());
   target.searchParams.set('item',event.type+':'+event.id);
   const reg='serviceWorker' in navigator?await navigator.serviceWorker.getRegistration():null;
