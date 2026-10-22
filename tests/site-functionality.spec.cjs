@@ -252,7 +252,7 @@ test('materials and processes catalogues signal readiness after rendering',async
 test('expanded process references work in reverse from materials without flooding the UI',async({page})=>{
  await page.goto('/materials.html');
  await expect(page.locator('#materialGrid[data-ready="true"]')).toBeVisible();
- const material=page.locator('#09g2s');
+ const material=page.locator('[id="09g2s"]');
  await expect(material.locator('a[href="processes.html#manual-metal-arc"]')).toHaveCount(1);
  const more=material.locator('details.material-related-more');
  if(await more.count()&&await more.locator('a[href="processes.html#manual-metal-arc"]').count()){
