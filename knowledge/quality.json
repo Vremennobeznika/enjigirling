@@ -3,14 +3,14 @@
   "generatedFrom": "repository knowledge datasets and evidence registry",
   "scope": "metadata_integrity_only",
   "limitations": "A located source is not a verified claim. This report does not check source contents, technical compliance, website availability or browser performance.",
-  "totalRecords": 856,
-  "recordsWithEvidenceLinks": 254,
-  "recordsWithClaimCheckedLinks": 62,
-  "totalRegisteredSources": 74,
-  "totalEvidenceLinks": 282,
+  "totalRecords": 982,
+  "recordsWithEvidenceLinks": 380,
+  "recordsWithClaimCheckedLinks": 45,
+  "totalRegisteredSources": 77,
+  "totalEvidenceLinks": 408,
   "evidenceStatuses": {
-    "claim_checked": 64,
-    "source_located": 218
+    "claim_checked": 47,
+    "source_located": 361
   },
   "byDataset": {
     "professions": {
@@ -19,9 +19,9 @@
       "recordsWithClaimCheckedLinks": 0
     },
     "materials": {
-      "records": 46,
-      "recordsWithEvidenceLinks": 46,
-      "recordsWithClaimCheckedLinks": 26
+      "records": 172,
+      "recordsWithEvidenceLinks": 172,
+      "recordsWithClaimCheckedLinks": 9
     },
     "processes": {
       "records": 208,
