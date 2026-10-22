@@ -118,3 +118,39 @@ test('An untouched new device remains empty so first Yandex pull is not blocked'
  expect(persisted.calendar).toBeNull();
  expect(persisted.shopping).toBeNull();
 });
+
+test('Every personal app subpage has a responsive return to main menu',async({page})=>{
+ const routes=[
+  ['/life/planner/','.return-home'],
+  ['/calendar/','.home-return'],
+  ['/shopping/','.home-return'],
+  ['/plants/','.home-return']
+ ];
+ for(const width of [320,390,768]){
+  await page.setViewportSize({width,height:844});
+  for(const [path,selector] of routes){
+   await page.goto(path);
+   const back=page.locator(selector);
+   await expect(back).toHaveCount(1);
+   await expect(back).toHaveText('← Главное меню');
+   await expect(back).toBeVisible();
+   const geometry=await page.evaluate(sel=>{
+    const a=document.querySelector(sel),r=a.getBoundingClientRect();
+    return {scrollWidth:document.documentElement.scrollWidth,viewport:window.innerWidth,
+      x:r.x,right:r.right,height:r.height};
+   },selector);
+   expect(geometry.height, path+' touch target '+width).toBeGreaterThanOrEqual(44);
+   expect(geometry.scrollWidth, path+' overflow '+width).toBeLessThanOrEqual(geometry.viewport+2);
+   expect(geometry.x, path+' left edge '+width).toBeGreaterThanOrEqual(0);
+   expect(geometry.right, path+' right edge '+width).toBeLessThanOrEqual(geometry.viewport+1);
+   await page.evaluate(()=>window.scrollTo(0,document.body.scrollHeight));
+   const sticky=await back.boundingBox();
+   expect(sticky, path+' link visible after scrolling').not.toBeNull();
+   expect(sticky.y, path+' sticky top '+width).toBeGreaterThanOrEqual(-2);
+   expect(sticky.y, path+' sticky bottom '+width).toBeLessThan(844-44);
+   await back.click();
+   await expect(page).toHaveURL(/\/life\/?$/);
+   await expect(page.locator('h1')).toContainText('Сегодня');
+  }
+ }
+});
