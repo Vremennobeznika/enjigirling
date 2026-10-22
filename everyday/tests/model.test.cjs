@@ -56,7 +56,7 @@ invalid(d=>{d.transactions[0].amount=Infinity},/сумма/);
 invalid(d=>{d.tasks=[{id:'bad',title:'Недопустимо',date:'2026-02-30',section:'planner',time:'',done:false}]},/дата/);
 invalid(d=>{d.tasks=[{id:'bad',title:'Недопустимо',date:'2026-10-22',section:'absent',time:'',done:false}]},/задач/);
 invalid(d=>{d.transactions[2].subscriptionId='missing'},/Связанный/);
-invalid(d=>{d.done['__proto__@once']=true},/отметка|отметк/i);
+invalid(d=>{d.done['<script>@once']=true},/отметка|отметк/i);
 // Older backups made before subscriptions were introduced should still load.
 const older=JSON.parse(JSON.stringify(valid));
 delete older.subscriptions;
