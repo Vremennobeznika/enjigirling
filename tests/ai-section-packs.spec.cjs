@@ -1,10 +1,17 @@
 const {test,expect}=require('@playwright/test');
 const sections=[['index.html','professions'],['calendar.html','calendar'],['resources.html','resources'],['dictionary.html','dictionary'],['map.html','learning'],['calculator.html','calculators'],['compare.html','compare'],['processes.html','processes'],['materials.html','materials']];
-test('all nine pages expose full AI section downloads',async({page})=>{
+test('all nine pages provide AI exports, with per-industry controls for materials and processes',async({page})=>{
  for(const [name,slug] of sections){
   await page.goto('/'+name);
-  await expect(page.locator('.ai-transfer-bar')).toHaveCount(1);
   await expect(page.locator('.site-ai-link')).toHaveAttribute('href','ai.html?section='+slug);
+  if(slug==='processes'||slug==='materials'){
+   const prefix=slug==='processes'?'process':'material';
+   await expect(page.locator(slug==='processes'?'.process-export':'.material-export')).toHaveCount(1);
+   await expect(page.locator('#'+prefix+'ExportMd')).toHaveCount(1);
+   await expect(page.locator('#'+prefix+'ExportJson')).toHaveCount(1);
+   continue;
+  }
+  await expect(page.locator('.ai-transfer-bar')).toHaveCount(1);
   await expect(page.locator('.ai-transfer-bar a[href="knowledge/sections/'+slug+'.md"]')).toHaveCount(1);
   await expect(page.locator('.ai-transfer-bar a[href="knowledge/sections/'+slug+'.json"]')).toHaveCount(1);
  }
