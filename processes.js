@@ -95,23 +95,17 @@ function render(){
 
 // Экспорт полных данных одной отрасли. Фильтры и постраничный показ карточек
 // не обрезают передаваемые ИИ записи.
-const exportIndustry=document.getElementById('processExportIndustry');
 const exportCount=document.getElementById('processExportCount');
 const exportStatus=document.getElementById('processExportStatus');
 const exportMd=document.getElementById('processExportMd');
 const exportJson=document.getElementById('processExportJson');
 const exportCopy=document.getElementById('processExportCopy');
-if(exportIndustry&&exportCount&&exportStatus&&exportMd&&exportJson&&exportCopy){
- for(const opt of Array.from(industry.options)){
-  if(opt.value==='all'||!Object.prototype.hasOwnProperty.call(industries,opt.value))continue;
-  exportIndustry.add(new Option(opt.textContent,opt.value));
- }
+if(exportCount&&exportStatus&&exportMd&&exportJson&&exportCopy){
  const canonical=document.querySelector('link[rel="canonical"]')?.href||location.href.split('#')[0];
  const exportEntries=key=>entries.filter(x=>x.industry===key).slice().sort((a,b)=>a.name.localeCompare(b.name,'ru'));
- const selectedKey=()=>Object.prototype.hasOwnProperty.call(industries,exportIndustry.value)?exportIndustry.value:'';
+ const selectedKey=()=>Object.prototype.hasOwnProperty.call(industries,industry.value)?industry.value:'';
  function updateExportUI(){
-  const key=industry.value==='all'?'':industry.value;
-  if(exportIndustry.value!==key)exportIndustry.value=key;
+  const key=selectedKey();
   const n=key?exportEntries(key).length:0;
   exportCount.textContent=key?'Записей в отрасли: '+n+'. Выгружаются все записи отрасли.':'Выберите конкретную отрасль для выгрузки.';
   exportMd.disabled=exportJson.disabled=exportCopy.disabled=!n;
@@ -182,11 +176,6 @@ if(exportIndustry&&exportCount&&exportStatus&&exportMd&&exportJson&&exportCopy){
   setTimeout(()=>URL.revokeObjectURL(url),30000);
  }
  const filename=ext=>'processes-'+selectedKey()+'.'+ext;
- exportIndustry.addEventListener('change',()=>{
-  industry.value=selectedKey()||'all';
-  changeFilter();
-  updateExportUI();
- });
  industry.addEventListener('change',updateExportUI);
  reset.addEventListener('click',updateExportUI);
  exportMd.addEventListener('click',()=>{
