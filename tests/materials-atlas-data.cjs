@@ -44,7 +44,7 @@ assert.equal(index.records.filter(x=>x.type==='material').length,materials.lengt
 assert.equal(graph.nodeCount,51+materials.length+processes.length,'Knowledge graph node count stale');
 assert.equal(graph.edgeCount,graph.edges.length,'Knowledge graph edge count stale');
 for(const m of materials){
- const expected=m.process||[];
+ const expected=Array.from(m.process||[]); // Convert vm-realm arrays before strict prototype-sensitive comparison.
  const edges=graph.edges.filter(x=>x.from==='material:'+m.id&&x.relation==='processed_by').map(x=>x.to.slice(8));
  assert.deepEqual(edges,expected,m.id+' graph differs from data');
 }
