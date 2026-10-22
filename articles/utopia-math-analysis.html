@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Математический разбор графиков об авторах утопий: ошибки интерпретации, нормировка, пуассоновская модель и проверяемые гипотезы о причинах создания утопий.">
+<title>Почему возникают утопии — математический разбор графиков</title>
+<style>
+:root{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;--bg:#f6f6f6;--paper:#fff;--text:#202020;--muted:#656565;--line:#d9d9d9;--soft:#f2f2f2;--accent:#303030;color-scheme:light}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);line-height:1.65;font-size:16px}
+a{color:inherit;text-underline-offset:3px;text-decoration-thickness:1px}a:hover{text-decoration-thickness:2px}
+.wrap{max-width:940px;margin:0 auto;background:var(--paper);min-height:100vh;padding:0 44px 64px}
+.top{border-bottom:1px solid var(--line);padding:22px 0;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{font-size:14px;font-weight:800;letter-spacing:.065em;text-decoration:none}
+.top span{font-size:12px;color:var(--muted)}
+.kicker{margin:44px 0 9px;text-transform:uppercase;font-size:12px;letter-spacing:.16em;color:var(--muted);font-weight:700}
+h1{font-size:clamp(30px,5vw,53px);line-height:1.13;letter-spacing:-.035em;max-width:770px;margin:0 0 22px}h2{font-size:clamp(22px,3vw,30px);line-height:1.24;margin:52px 0 16px;letter-spacing:-.025em}h3{font-size:18px;margin:30px 0 12px}p{margin:12px 0 17px}strong{font-weight:750}
+.lead{font-size:20px;line-height:1.5;color:#3a3a3a;max-width:790px}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 30px}.meta span{border:1px solid var(--line);padding:4px 10px;border-radius:20px;color:var(--muted);font-size:12px}
+blockquote{border-left:3px solid var(--accent);margin:24px 0;padding:10px 18px;background:var(--soft);font-size:17px}
+.tablewrap{overflow-x:auto;margin:18px 0 22px;border:1px solid var(--line);border-radius:9px}
+table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.5}th,td{padding:13px 15px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{background:var(--soft);font-size:12px;letter-spacing:.02em}tr:last-child td{border-bottom:0}
+.formula{border:1px solid var(--line);background:var(--soft);border-radius:9px;padding:16px 20px;margin:20px 0;text-align:center;font-family:Georgia,"Times New Roman",serif;font-size:clamp(16px,2.5vw,22px);overflow-x:auto;white-space:nowrap}
+.note{font-size:13px;color:var(--muted)}.figure{padding:18px;border:1px solid var(--line);border-radius:10px;margin:20px 0;background:var(--paper)}.figure figcaption{font-size:13px;color:var(--muted);margin:13px 0 2px}.figure h3{margin:0 0 10px}
+.barline{display:grid;grid-template-columns:88px minmax(0,1fr) 52px;align-items:center;gap:11px;margin:13px 0;font-size:13px}.track{background:var(--soft);height:18px;position:relative;border-radius:3px;overflow:hidden}.fill{height:100%;background:#575757}.barline b{text-align:right;font-variant-numeric:tabular-nums}
+ul{padding-left:22px}li{margin:9px 0}.sources li{overflow-wrap:anywhere}
+.footer{border-top:1px solid var(--line);margin-top:50px;padding-top:20px;color:var(--muted);font-size:13px}
+button{appearance:none;border:1px solid #444;background:#242424;color:white;border-radius:7px;padding:11px 16px;font:inherit;font-weight:600;cursor:pointer}button:focus-visible,a:focus-visible{outline:2px solid #444;outline-offset:3px}
+@media(prefers-color-scheme:dark){:root{--bg:#111;--paper:#1b1b1b;--text:#f1f1f1;--muted:#b4b4b4;--line:#454545;--soft:#292929;--accent:#dedede;color-scheme:dark}.lead{color:#e1e1e1}.fill{background:#aaa}button{background:#e4e4e4;color:#151515;border-color:#e4e4e4}}
+@media(max-width:650px){.wrap{padding:0 18px 40px}.top{padding:15px 0}.brand{font-size:12px}.top span{font-size:11px}.lead{font-size:18px}th,td{padding:10px 11px}table{min-width:570px}}
+@media print{body{background:white}.wrap{max-width:none;padding:0 15mm}.top button{display:none}.figure,.tablewrap{break-inside:avoid}a{text-decoration:none}}
+</style>
+</head>
+<body><main class="wrap">
+<header class="top"><a class="brand" href="../index.html">ENJIGIRLING / МАТЕРИАЛЫ</a><span>Исследовательский разбор · 22.10.2026</span></header>
+<p class="kicker">Математический анализ · Литература и статистика</p>
+<h1>Почему возникают утопии и что не так с графиками об утопистах</h1>
+<p class="lead">Возраст автора, дата публикации и пересечение биографий — три разных характеристики. Ни одна из них сама по себе не отвечает на вопрос, почему человек пишет утопию.</p>
+<div class="meta"><span>Методология</span><span>Вероятность</span><span>Исторические данные</span><span>Гипотезы</span></div>
+<p>Поводом послужили <a href="https://t.me/ivanwritesbook/282" rel="noopener">головоломка №1</a> и <a href="https://t.me/ivanwritesbook/286" rel="noopener">головоломка №2</a>, посвящённые возрастам авторов утопий и продолжительности их жизни. Наблюдения интересны как визуализация биографий, но требуют иной методики, если цель — объяснить появление утопических произведений.</p>
+<blockquote><strong>Важное уточнение.</strong> Автор головоломок прямо не утверждал, что возраст является причиной создания утопий. Главная методологическая претензия — непроверенные статистические обобщения и потенциальное смешение описания с объяснением.</blockquote>
+
+<section><h2>1. Что из этих графиков нельзя заключить</h2>
+<div class="tablewrap"><table><thead><tr><th>Наблюдение из публикации</th><th>Что требуется для обоснованного вывода</th></tr></thead><tbody>
+<tr><td>«Возраст авторов распределён практически равномерно»</td><td>Исходный список, число наблюдений, интервалы возрастов, правила отбора и статистическая проверка.</td></tr>
+<tr><td>«Утопии пишут в любом возрасте»</td><td>Различать возраст написания и возраст первой публикации.</td></tr>
+<tr><td>«После 1600 года одновременно жили минимум 6 утопистов»</td><td>Уточнить, кого считать утопистом до создания первой утопии, и оценить полноту списка.</td></tr>
+<tr><td>«Сформировались 3–4 волны утопистов»</td><td>Показать, что волны сохраняются при другом размещении строк и не являются артефактом алгоритма визуализации.</td></tr>
+<tr><td>«Авторы вдохновлялись предшественниками»</td><td>Искать документы о чтении, цитировании и интеллектуальных связях; временной порядок не доказывает влияния.</td></tr>
+</tbody></table></div>
+<p>Пример ошибки датировки: <em>«Город Солнца»</em> Томмазо Кампанеллы был написан в 1602 году, но впервые издан в 1623-м. Для исследования обстоятельств создания важнее первая дата. <a href="https://www.larousse.fr/encyclopedie/oeuvre/la_Cit%C3%A9_du_Soleil/113721" target="_blank" rel="noopener">Источник: Larousse</a>.</p></section>
+
+<section><h2>2. Почему одинаковое количество книг не означает одинаковую вероятность их написания</h2>
+<p>Допустим, обнаружилось по десять произведений в каждой возрастной группе. Однако число людей и время, в течение которого они могли писать, различаются.</p>
+<div class="tablewrap"><table><thead><tr><th>Возраст</th><th>Утопий</th><th>Человеко-лет потенциальных авторов</th><th>На 100 000 человеко-лет</th></tr></thead><tbody>
+<tr><td>20–39 лет</td><td>10</td><td>100 000</td><td>10</td></tr>
+<tr><td>40–59 лет</td><td>10</td><td>80 000</td><td>12,5</td></tr>
+<tr><td>60–79 лет</td><td>10</td><td>20 000</td><td>50</td></tr>
+</tbody></table></div><p class="note">Это специально сконструированный пример, а не реальные исторические наблюдения.</p>
+<div class="formula">R<sub>a</sub> = (U<sub>a</sub> / E<sub>a</sub>) × 100 000</div>
+<p>Здесь <strong>U<sub>a</sub></strong> — число созданных утопий в возрастной группе, <strong>E<sub>a</sub></strong> — человеко-годы наблюдения за потенциальными авторами.</p>
+<p>Все три группы дают по десять книг, но нормированная частота в старшей группе оказывается в пять раз выше, чем в младшей. Для реального анализа нужны не только биографии утопистов, но и сведения о совокупности людей, которые могли написать произведение.</p></section>
+
+<section><h2>3. Почему шесть современников могут получиться без всяких «волн»</h2>
+<p>Рассмотрим нулевую модель: будущие авторы рождаются в среднем с интенсивностью λ в год независимо друг от друга, а средняя длительность их жизни равна L. При стационарном пуассоновском потоке рождений и независимой продолжительности жизни:</p>
+<div class="formula">E[N] = λL</div>
+<p>Если рождаются 12 будущих авторов на столетие, а средняя продолжительность жизни составляет 60 лет, то <strong>E[N] = 0,12 × 60 = 7,2</strong>.</p>
+<p>В этой идеализированной модели вероятность застать одновременно хотя бы шесть будущих авторов в <em>случайно выбранный момент</em> составляет:</p>
+<div class="formula">P(N ≥ 6) = 1 − ∑<sub>k=0…5</sub> e<sup>−7,2</sup> · 7,2<sup>k</sup> / k! ≈ 72,4%</div>
+<figure class="figure"><h3>Модельная вероятность сосуществования не менее шести авторов</h3>
+<div class="barline"><span>5 за век</span><div class="track"><div class="fill" style="width:8.4%"></div></div><b>8,4%</b></div>
+<div class="barline"><span>8 за век</span><div class="track"><div class="fill" style="width:34.9%"></div></div><b>34,9%</b></div>
+<div class="barline"><span>10 за век</span><div class="track"><div class="fill" style="width:55.4%"></div></div><b>55,4%</b></div>
+<div class="barline"><span>12 за век</span><div class="track"><div class="fill" style="width:72.4%"></div></div><b>72,4%</b></div>
+<div class="barline"><span>15 за век</span><div class="track"><div class="fill" style="width:88.4%"></div></div><b>88,4%</b></div>
+<div class="barline"><span>20 за век</span><div class="track"><div class="fill" style="width:98%"></div></div><b>98,0%</b></div>
+<figcaption>Только математический пример. Во всех сценариях средняя продолжительность жизни — 60 лет. Расчёт не доказывает, что после 1600 года в <em>каждый</em> год жили хотя бы шесть авторов: для такого утверждения нужна проверка всего временного интервала.</figcaption></figure>
+<p>Есть более тонкая ошибка. Если человек впервые написал утопию в 60 лет, при отображении полной биографии он будет считаться «будущим утопистом» даже в детстве. Поэтому следует различать два показателя:</p>
+<div class="formula">N<sub>ever</sub>(t) = ∑ 1(b<sub>i</sub> ≤ t &lt; d<sub>i</sub>)</div>
+<div class="formula">N<sub>active</sub>(t) = ∑ 1(b<sub>i</sub> ≤ t &lt; d<sub>i</sub>) · 1(w<sub>i</sub> ≤ t)</div>
+<p>Первый — число живых людей, которые <em>когда-либо</em> напишут утопию. Второй — число живых авторов, которые <em>уже написали</em> утопию к году t. Здесь b — год рождения, d — смерти, w — создания первого произведения. Это разные ряды данных.</p>
+<p>Кроме того, «волны» на уложенных друг над другом полосах жизни могут появляться вследствие порядка сортировки, правил размещения и плотности записей. До проверки устойчивости формы графика называть такие гребни историческими волнами нельзя.</p></section>
+
+<section><h2>4. Модель, которая исследует возможные причины</h2>
+<p><strong>Исследовательская гипотеза:</strong> создание утопий связано с сочетанием общественных потрясений, изменений техники и институтов, социальной траектории автора и знакомства с предшествующими текстами. Это гипотеза, а не установленный универсальный закон.</p>
+<p>Социолог Батист Броссар в статье 2019 года сопоставил 19 углублённых случаев создания утопических текстов и предложил изучать пересечение биографии автора и социального контекста. <a href="https://doi.org/10.5325/utopianstudies.30.3.0422" target="_blank" rel="noopener">Brossard, 2019</a>. Полный текст у издателя ограничен доступом; здесь использованы библиографические сведения и аннотация.</p>
+<p>Для подсчёта новых утопий по регионам и периодам можно начать с отрицательной биномиальной регрессии:</p>
+<div class="formula">Y<sub>r,t</sub> ~ NegBin(μ<sub>r,t</sub>, θ)</div>
+<div class="formula">log μ<sub>r,t</sub> = log B<sub>r,t</sub> + α<sub>r</sub> + f(t) + β₁C<sub>r,t−ℓ</sub> + β₂T<sub>r,t−ℓ</sub> + β₃P<sub>r,t−ℓ</sub> + β₄I<sub>r,t−ℓ</sub></div>
+<div class="tablewrap"><table><thead><tr><th>Переменная</th><th>Смысл</th></tr></thead><tbody>
+<tr><td>Y<sub>r,t</sub></td><td>Количество созданных утопий в регионе r в период t.</td></tr>
+<tr><td>B<sub>r,t</sub></td><td>Масштаб книгоиздания; используется как нормировочная величина.</td></tr>
+<tr><td>C</td><td>Войны, экономические кризисы и социальные потрясения.</td></tr>
+<tr><td>T</td><td>Изменения технологии.</td></tr>
+<tr><td>P</td><td>Политическая и институциональная среда.</td></tr>
+<tr><td>I</td><td>Доступность и распространение предыдущих утопических текстов.</td></tr>
+<tr><td>ℓ, α<sub>r</sub>, f(t)</td><td>Временной лаг, региональные различия и долговременный тренд.</td></tr>
+</tbody></table></div>
+<p>Выбор отрицательного биномиального распределения целесообразен, только если фактические счётные данные показывают соответствующую дисперсию; альтернативы и качество подгонки нужно проверить. Значения коэффициентов β не вычислены — исходного массива данных нет.</p>
+<h3>Что именно проверять</h3>
+<div class="tablewrap"><table><thead><tr><th>Гипотеза</th><th>Проверка</th></tr></thead><tbody>
+<tr><td>Кризисы стимулируют утопическое творчество</td><td>Сопоставить частоту новых текстов до и после потрясений с сопоставимыми регионами.</td></tr>
+<tr><td>Технологические перемены влияют на содержание</td><td>Сравнивать тематические доли, а не просто общее число книг.</td></tr>
+<tr><td>Предшественники влияют на новые тексты</td><td>Анализировать документированные связи, чтение, цитирования и распространение изданий.</td></tr>
+<tr><td>Возраст влияет на создание утопии</td><td>Оценивать возрастную частоту с учётом эпохи, стажа и структуры популяции потенциальных авторов.</td></tr>
+</tbody></table></div>
+<p>Положительный коэффициент регрессии не устанавливает причинность. Возможны смешение факторов, обратные зависимости и систематические пропуски исторических данных.</p>
+<p>Близкий подход применяли Крисс Драсс и Эдгар Кайзер в статье 1988 года: они исследовали временные ряды публикаций утопической и антиутопической литературы США за 1883–1975 годы и сообщили о связях с изменениями мировой системы. По доступной аннотации нельзя судить о размерах эффектов или идентификации причинности. <a href="https://academic.oup.com/isq/article-abstract/32/4/421/1805484" target="_blank" rel="noopener">Drass &amp; Kiser, 1988</a>.</p></section>
+
+<section><h2>5. Какой график стоило бы построить</h2>
+<h3>«Интенсивность появления утопий и социальные изменения»</h3>
+<p>Две нормированные временные серии: создание утопий на единицу книгоиздания и индекс выбранных социальных потрясений. Затем проверка запаздывания эффекта, устойчивости к исключению отдельных периодов и альтернативных объяснений.</p>
+<figure class="figure">
+<h3>Пример композиции двух рядов</h3>
+<svg viewBox="0 0 680 230" role="img" aria-label="Схематический график двух произвольных рядов: число утопий и индекс потрясений. Никаких исторических значений на нём нет." style="width:100%;height:auto;display:block;max-width:680px">
+<rect x="56" y="22" width="590" height="157" fill="currentColor" fill-opacity=".035"/>
+<g stroke="currentColor" stroke-opacity=".13" stroke-dasharray="3,4"><line x1="56" y1="60" x2="646" y2="60"/><line x1="56" y1="101" x2="646" y2="101"/><line x1="56" y1="142" x2="646" y2="142"/></g>
+<path d="M56 26 V179 H646" stroke="currentColor" stroke-opacity=".45" fill="none"/>
+<path d="M57 162 L97 152 L137 130 L177 149 L217 104 L257 114 L297 75 L337 104 L377 151 L417 139 L457 48 L497 35 L537 83 L577 116 L617 90 L646 67" stroke="currentColor" stroke-width="3" stroke-opacity=".78" fill="none" stroke-linejoin="round"/>
+<path d="M57 163 C105 155,120 125,177 117 S257 150,297 137 S370 83,417 96 S469 34,497 49 S570 117,646 85" stroke="currentColor" stroke-width="3" stroke-dasharray="9 6" fill="none" stroke-linejoin="round" stroke-opacity=".5"/>
+<g fill="currentColor" font-size="12" font-family="sans-serif"><text x="57" y="199">Ранние периоды</text><text x="530" y="199">Поздние периоды</text><text x="56" y="15" font-weight="bold">Условные индексы</text><text x="70" y="222">━ Утопии</text><text x="290" y="222">┄ Социальные изменения</text></g></svg>
+<figcaption><strong>Только схема.</strong> Обе линии придуманы для демонстрации вида графика; их нельзя интерпретировать как исторические наблюдения.</figcaption>
+</figure>
+<p>Для настоящего исследования возможными отправными точками будут аннотированная библиография утопической литературы на английском Лаймана Тауэра Сарджента и препринт <em>Utopian Vectors</em>, описывающий 797 полнотекстовых произведений. Последний не прошёл рецензирование как журнальная публикация, а корпус прямо назван незавершённым. Ни один источник нельзя автоматически считать полной статистикой мирового утопического творчества.</p>
+</section>
+
+<section><h2>Итог</h2>
+<blockquote>Вопрос не в том, в каком возрасте жили и публиковались утописты, а в том, при каких исторических и личных обстоятельствах появлялись их произведения. Биографический график может быть красивым и точным, но не превращается от этого в объяснение причин.</blockquote>
+<p>Более содержательная, но пока непроверенная гипотеза: утопический текст возникает на пересечении личного опыта, неудовлетворённости сторонами существующего общественного порядка и представления об альтернативном устройстве общества.</p>
+<p><strong>Статус анализа:</strong> математические примеры и формулы рассчитаны для явно указанных модельных предположений. Исходной таблицы автора нет, поэтому равномерность реальных возрастов, исторические «волны» и величины причинных эффектов не оценивались.</p></section>
+
+<section><h2>Источники и исходные публикации</h2>
+<ol class="sources">
+<li><a href="https://t.me/ivanwritesbook/282" target="_blank" rel="noopener">Головоломка №1, Telegram</a>; <a href="https://t.me/ivanwritesbook/286" target="_blank" rel="noopener">головоломка №2</a>. Исходные ссылки на обсуждаемые графики.</li>
+<li><a href="https://www.larousse.fr/encyclopedie/oeuvre/la_Cit%C3%A9_du_Soleil/113721" target="_blank" rel="noopener">Larousse: La Cité du Soleil</a>. Дата написания и публикации произведения Кампанеллы.</li>
+<li><a href="https://doi.org/10.5325/utopianstudies.30.3.0422" target="_blank" rel="noopener">Brossard B. Elements for a Theory of Utopia Production. Utopian Studies. 2019;30(3):422–443</a>. Социологический подход; аннотация открыта, полный текст у издателя платный.</li>
+<li><a href="https://academic.oup.com/isq/article-abstract/32/4/421/1805484" target="_blank" rel="noopener">Drass K.A., Kiser E. Structural Roots of Visions of the Future. International Studies Quarterly. 1988;32(4):421–438</a>. Исторический анализ; аннотация открыта.</li>
+<li><a href="https://profiles.umsl.edu/en/publications/utopian-literature-in-english-an-annotated-bibliography-from-1516/" target="_blank" rel="noopener">Sargent L.T. Utopian Literature in English: An Annotated Bibliography from 1516 to the Present. 2016</a>. Библиографическая база.</li>
+<li><a href="https://sciety.org/articles/activity/10.31235/osf.io/tng23_v1" target="_blank" rel="noopener">del Junco C., Desikan B.S. Utopian Vectors: An In-Progress Dataset of Utopian Literature. 2025</a>. Препринт, 797 текстов; незавершённый корпус.</li>
+</ol></section>
+<footer class="footer"><p>Материал подготовлен как методологический разбор; условные расчёты отделены от исторических фактов. Опубликовано 22 октября 2026 года.</p><p><a href="../index.html">← К инженерному справочнику</a></p></footer>
+</main></body></html>
