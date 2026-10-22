@@ -40,10 +40,7 @@
 <option value="all">Все классы</option><option value="metal">Металлы и сплавы</option><option value="organic">Органические и полимерные</option><option value="inorganic">Неорганические</option><option value="composite">Композиты</option><option value="functional">Функциональные смеси и вещества</option></select></div>
 <div class="material-control"><label for="materialSort">Сортировка</label><select class="atlas-search" id="materialSort"><option value="az">По названию А — Я</option><option value="za">По названию Я — А</option><option value="default">По каталогу</option></select></div></div>
 <p class="process-search-help">Одна карточка может относиться к нескольким отраслям. Связи с процессами — навигационные, а не технологический допуск. Численные свойства без марки, состояния и источника не приводятся.</p>
-<div class="material-export" role="group" aria-label="Выгрузка материалов выбранной отрасли для ИИ"><div>
-<strong>Выгрузка материалов для ИИ</strong><p>Сначала выберите отрасль выше. Выгружаются все её материалы с источниками и границами проверки независимо от поиска, класса и пагинации.</p>
-</div><div class="material-export-actions"><p id="materialExportCount" role="status" aria-live="polite">Выберите конкретную отрасль для выгрузки.</p><div class="ai-transfer-links">
-<button type="button" id="materialExportMd" disabled>Markdown</button><button type="button" id="materialExportJson" disabled>JSON</button><button type="button" id="materialExportCopy" disabled>Копировать для ИИ</button></div><p id="materialExportStatus" role="status" aria-live="polite"></p></div></div><div class="atlas-ai-pack" id="atlasAiPackage" role="group" aria-label="Единые пакеты процессов и материалов для ИИ">
+<div class="atlas-ai-pack" id="atlasAiPackage" role="group" aria-label="Единые пакеты процессов и материалов для ИИ">
 <div class="atlas-ai-pack__intro"><strong>Пакет для ИИ: процессы + материалы</strong>
 <p>Одна отрасль — один файл с обоими каталогами. Можно скачать весь атлас без повторов или ZIP со всеми 16 отраслевыми пакетами. Источники и пределы проверки сохраняются.</p></div>
 <div class="atlas-ai-pack__controls"><div class="atlas-ai-pack__fields">
