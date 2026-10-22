@@ -88,9 +88,9 @@ function validate(raw){
  if(out.transactions.some(t=>!t.amount||!(t.kind==="income"?incIds:expIds).has(t.category)))throw Error("Отсутствует категория у операции или сумма равна нулю");
  out.subscriptions=unique(arr(raw.subscriptions||[],1000).map(v=>({
   id:identifier(v.id),title:txt(v.title,100),amount:number(v.amount),category:identifier(v.category),
-  day:Math.trunc(v.day),active:v.active!==false
+  day:v.day,active:v.active!==false
  })));
- if(out.subscriptions.some(v=>!v.title||!v.amount||!expIds.has(v.category)||v.day<1||v.day>31))throw Error("Некорректный регулярный платёж");
+ if(out.subscriptions.some(v=>!v.title||!v.amount||!expIds.has(v.category)||!Number.isInteger(v.day)||v.day<1||v.day>31))throw Error("Некорректный регулярный платёж");
  if(out.transactions.some(t=>t.subscriptionId&&(!out.subscriptions.some(x=>x.id===t.subscriptionId)||t.kind!=="expense")))throw Error("Связанный платеж отсутствует");
  out.shopping=unique(arr(raw.shopping,10000).map(v=>({
   id:identifier(v.id),title:txt(v.title,140),qty:txt(v.qty||"",40),category:identifier(v.category),done:Boolean(v.done)
