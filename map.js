@@ -106,9 +106,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
   function render(){
+    const opened=new Set([...results.querySelectorAll('.education-card')].filter(card=>card.querySelector('details[open]')).map(card=>card.querySelector('h3')?.textContent));
     filtered=sortedMatches();
     const visible=filtered.slice(0,shown);
     results.innerHTML=visible.length?visible.map(renderCard).join(''):'<p class="education-empty">Ничего не найдено. Попробуйте другой город, специальность или сбросьте фильтры.</p>';
+    results.querySelectorAll('.education-card').forEach(card=>{
+      if(opened.has(card.querySelector('h3')?.textContent))card.querySelector('details').open=true;
+    });
     status.textContent='Найдено '+filtered.length+' из '+entries.length+' · показано '+visible.length;
     more.hidden=visible.length>=filtered.length;
     more.textContent='Показать ещё '+Math.min(pageSize,filtered.length-visible.length);
