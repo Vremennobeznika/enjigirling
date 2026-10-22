@@ -23,9 +23,10 @@ ul{padding:0;margin:0;list-style:none}.item{display:flex;align-items:center;gap:
 (()=>{"use strict";
 const cats=[["all","Всё"],["produce","Овощи и фрукты"],["bakery","Хлеб и выпечка"],["dairy","Молочные продукты и яйца"],["meat","Мясо и птица"],["fish","Рыба и морепродукты"],["grocery","Крупы, макароны, консервы"],["frozen","Заморозка"],["drinks","Напитки"],["sweets","Сладости и снеки"],["sauces","Соусы, специи, масло"],["home","Бытовая химия"],["hygiene","Гигиена и косметика"],["baby","Детские товары"],["pets","Для животных"],["other","Прочее"]];
 const key="supermarket-shopping-list-v1";
-let data=[];try{let a=JSON.parse(localStorage.getItem(key)||"[]");if(Array.isArray(a))data=a.filter(x=>x&&typeof x.name==="string"&&cats.some(c=>c[0]===x.cat)).map(x=>({id:String(x.id||Math.random()),name:x.name.slice(0,120),qty:String(x.qty||"").slice(0,35),cat:x.cat,done:!!x.done}));}catch(e){}
+function loadShop(){try{let a=JSON.parse(localStorage.getItem(key)||"[]");if(Array.isArray(a))return a.filter(x=>x&&typeof x.name==="string"&&cats.some(c=>c[0]===x.cat)).map(x=>({id:String(x.id||Math.random()),name:x.name.slice(0,120),qty:String(x.qty||"").slice(0,35),cat:x.cat,done:!!x.done}))}catch(e){}return []}
+let data=loadShop();
 let active="all";
-const $=id=>document.getElementById(id),save=()=>{try{localStorage.setItem(key,JSON.stringify(data));}catch(e){alert("Браузер не разрешил сохранить данные. Используй «Сохранить копию».");}};
+const $=id=>document.getElementById(id),save=()=>{try{localStorage.setItem(key,JSON.stringify(data));window.dispatchEvent(new Event("life-data-changed"));}catch(e){alert("Браузер не разрешил сохранить данные. Используй «Сохранить копию».");}};
 function node(tag,cl,txt){let el=document.createElement(tag);if(cl)el.className=cl;if(txt!==undefined)el.textContent=txt;return el}
 function render(){
 const done=data.filter(x=>x.done).length;$("counter").textContent=done+" из "+data.length;$("bar").style.width=(data.length?done/data.length*100:0)+"%";
@@ -47,6 +48,8 @@ $("removeDone").onclick=()=>{if(!data.some(x=>x.done))return;if(confirm("Уда�
 $("reset").onclick=()=>{if(confirm("Удалить ВСЕ товары из списка?")){data=[];save();render();}};
 $("export").onclick=()=>{let blob=new Blob([JSON.stringify({version:1,items:data},null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="spisok-pokupok.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
 $("import").onchange=async e=>{let f=e.target.files?.[0];if(!f)return;try{let j=JSON.parse(await f.text()),arr=Array.isArray(j)?j:j.items;if(!Array.isArray(arr))throw Error();let cleaned=arr.filter(x=>x&&typeof x.name==="string"&&cats.some(c=>c[0]===x.cat)).map(x=>({id:String(x.id||Math.random()),name:x.name.slice(0,120),qty:String(x.qty||"").slice(0,35),cat:x.cat,done:!!x.done}));if(!confirm("Заменить текущий список загруженной копией ("+cleaned.length+" товаров)?"))return;data=cleaned;save();render();}catch(err){alert("Не удалось прочитать файл списка.");}finally{e.target.value="";}};
+window.addEventListener("life-sync-applied",()=>{data=loadShop();render()});
+window.addEventListener("storage",e=>{if(e.key===key){data=loadShop();render()}});
 render();
 })();
-</script></body></html>
+</script><script src="../life/auto-sync.js"></script></body></html>
