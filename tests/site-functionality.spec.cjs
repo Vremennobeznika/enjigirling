@@ -247,3 +247,23 @@ test('materials and processes catalogues signal readiness after rendering',async
   await expect(page.locator(id+' .atlas-card').first()).toBeVisible();
  }
 });
+
+
+test('expanded process references work in reverse from materials without flooding the UI',async({page})=>{
+ await page.goto('/materials.html');
+ await expect(page.locator('#materialGrid[data-ready="true"]')).toBeVisible();
+ const material=page.locator('#09g2s');
+ await expect(material.locator('a[href="processes.html#manual-metal-arc"]')).toHaveCount(1);
+ const more=material.locator('details.material-related-more');
+ if(await more.count()){
+  await more.locator('summary').click();
+  await expect(more.locator('a[href="processes.html#manual-metal-arc"]')).toBeVisible();
+ }
+ await page.goto('/index.html#profession=mechanical-engineer');
+ await expect(page.locator('#modalOverlay')).toHaveAttribute('aria-hidden','false');
+ await expect(page.locator('#modalContent a[href^="processes.html#"]').first()).toBeVisible();
+ const moreProcesses=page.locator('#modalContent details.related-more');
+ await expect(moreProcesses).toHaveCount(1);
+ await moreProcesses.locator('summary').click();
+ await expect(moreProcesses.locator('a[href^="processes.html#"]').first()).toBeVisible();
+});
