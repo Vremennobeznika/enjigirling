@@ -80,7 +80,7 @@ near(M.fabricBooking(6.2,4,3,100).totalM,159.65,'fabric booking');
 near(M.threadBooking(1,5.5,15,100).totalM,632.5,'thread booking');
 near(M.sewingEfficiency(1000,12,40,480).percent,62.5,'sewing efficiency');
 near(M.shrinkage(100,97).percent,3,'shrinkage');near(M.layLength(4,10,5,.1).consumption,51,'lay calculation');
-near(M.lineBalance('20\\n30\\n15',25).theoretical,3,'line balance');
+near(M.lineBalance('20\n30\n15',25).theoretical,3,'line balance');
 near(M.vernier(23.45,.05).read,23.45,'vernier');
 near(M.ohm('ur',12,6).p,24,'ohm');near(M.divider(12,1000,1000).v,6,'divider');
 near(M.rc(1000,1).frequency,159.15494309189535,'RC cutoff');
