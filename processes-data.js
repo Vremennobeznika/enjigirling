@@ -73,7 +73,12 @@ window.engineeringProcesses = [
       "steel-45"
     ],
     "profession": "materials-engineer",
-    "sources": []
+    "sources": [
+      {
+        "title": "Bodycote — ограничения и деформации при термообработке",
+        "url": "https://www.bodycote.com/technical-glossary/"
+      }
+    ]
   },
   {
     "id": "additive",
