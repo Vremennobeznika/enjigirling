@@ -8,7 +8,10 @@ for (const file of htmlFiles) {
   const html = fs.readFileSync(file, 'utf8');
   assert.match(html, /<html\b/i, file + ': missing html tag');
   assert.match(html, /<title>[^<]+<\/title>/i, file + ': missing title');
-  for (const match of html.matchAll(/(?:src|href)\s*=\s*["']([^"']+)["']/g)) {
+  // Only static HTML attributes are local assets. Ignore JS template strings
+  // inside inline scripts, which can contain dynamic href/src expressions.
+  const staticMarkup = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '');
+  for (const match of staticMarkup.matchAll(/(?:src|href)\s*=\s*["']([^"']+)["']/g)) {
     const link = match[1].split(/[?#]/)[0];
     if (!link || /^(?:https?:|mailto:|tel:|data:|\/\/|#)/i.test(link)) continue;
     const resolved = path.resolve(path.dirname(file), decodeURIComponent(link));
@@ -189,7 +192,7 @@ console.log('OK: process cross-links display material names instead of technical
 const linkIssues=[];
 for(const file of htmlFiles){
  const html=fs.readFileSync(file,'utf8');
- for(const match of html.matchAll(/(?:href|src)\s*=\s*["']([^"']+)["']/g)){
+ for(const match of html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '').matchAll(/(?:href|src)\s*=\s*["']([^"']+)["']/g)){
    const url=match[1];
    if(!url||/^(?:https?:|mailto:|tel:|data:|\/\/|#)/i.test(url))continue;
    const [relative,fragment]=url.split('#');
