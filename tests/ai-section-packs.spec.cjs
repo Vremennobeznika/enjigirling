@@ -5,10 +5,10 @@ test('all nine pages provide AI exports, with per-industry controls for material
   await page.goto('/'+name);
   await expect(page.locator('.site-ai-link')).toHaveAttribute('href','ai.html?section='+slug);
   if(slug==='processes'||slug==='materials'){
-   const prefix=slug==='processes'?'process':'material';
-   await expect(page.locator(slug==='processes'?'.process-export':'.material-export')).toHaveCount(1);
-   await expect(page.locator('#'+prefix+'ExportMd')).toHaveCount(1);
-   await expect(page.locator('#'+prefix+'ExportJson')).toHaveCount(1);
+   await expect(page.locator('#atlasAiPackage')).toHaveCount(1);
+   await expect(page.locator('#atlasAiMd')).toHaveCount(1);
+   await expect(page.locator('#atlasAiJson')).toHaveCount(1);
+   await expect(page.locator('#atlasAiSector')).toHaveCount(1);
    continue;
   }
   await expect(page.locator('.ai-transfer-bar')).toHaveCount(1);
