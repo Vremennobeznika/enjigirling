@@ -333,6 +333,61 @@
       "appliesTo": "Проверка ограниченного общего утверждения",
       "access": "public_abstract_or_overview",
       "notes": "Не проверяются технологические параметры и все дефекты."
+    },
+    {
+      "sourceId": "checked3-welding",
+      "title": "Техническое описание процесса Дуговая сварка",
+      "url": "https://www.twi-global.com/technical-knowledge/faqs/what-is-fusion-welding",
+      "publisher": "www.twi-global.com",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Только конкретное утверждение из verifiedClaim",
+      "access": "public_abstract_or_overview",
+      "notes": "Не проверены все свойства и технологические нормы."
+    },
+    {
+      "sourceId": "checked3-mig-mag",
+      "title": "Техническое описание процесса MIG/MAG-сварка",
+      "url": "https://www.twi-global.com/technical-knowledge/faqs/faq-what-is-the-difference-between-mig-and-mag",
+      "publisher": "www.twi-global.com",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Только конкретное утверждение из verifiedClaim",
+      "access": "public_abstract_or_overview",
+      "notes": "Не проверены все свойства и технологические нормы."
+    },
+    {
+      "sourceId": "checked3-tig",
+      "title": "Техническое описание процесса TIG-сварка",
+      "url": "https://www.twi-global.com/technical-knowledge/job-knowledge/tungsten-inert-gas-tig-or-gta-welding-006",
+      "publisher": "www.twi-global.com",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Только конкретное утверждение из verifiedClaim",
+      "access": "public_abstract_or_overview",
+      "notes": "Не проверены все свойства и технологические нормы."
+    },
+    {
+      "sourceId": "checked3-injection-molding",
+      "title": "Техническое описание процесса Литьё термопластов под давлением",
+      "url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=912839",
+      "publisher": "tsapps.nist.gov",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Только конкретное утверждение из verifiedClaim",
+      "access": "public_abstract_or_overview",
+      "notes": "Не проверены все свойства и технологические нормы."
+    },
+    {
+      "sourceId": "checked3-industrial-filtration",
+      "title": "Техническое описание процесса Промышленная фильтрация",
+      "url": "https://www.epa.gov/system/files/documents/2024-03/ws-commercial-bmp-watersenseatwork_section7.1_waterpurification.pdf",
+      "publisher": "www.epa.gov",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Только конкретное утверждение из verifiedClaim",
+      "access": "public_abstract_or_overview",
+      "notes": "Не проверены все свойства и технологические нормы."
     }
   ],
   "recordEvidence": [
@@ -665,8 +720,12 @@
       "recordId": "chemical-mixing",
       "sourceId": "atlas-chemical-mixing",
       "claimPath": "description",
-      "verificationStatus": "source_located",
-      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена"
+      "verificationStatus": "claim_checked",
+      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена",
+      "verifiedClaim": "Смешение компонентов применяется для получения продукта с заданными характеристиками.",
+      "sourceSection": "Blending operations",
+      "claimCheckedAt": "2026-10-22",
+      "reviewScope": "Проверен только приведённый частный тезис, а не вся технологическая карточка."
     },
     {
       "recordType": "processes",
@@ -935,6 +994,90 @@
       "sourceSection": "Industrial Operations: Cleaning & Degreasing — Distillation",
       "claimCheckedAt": "2026-10-22",
       "reviewScope": "Проверено только приведённое утверждение, не вся карточка."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "welding",
+      "sourceId": "checked3-welding",
+      "claimPath": "description",
+      "claimScope": "Проверка основного принципа процесса",
+      "verificationStatus": "claim_checked",
+      "verifiedClaim": "Дуговая сварка использует электрическую дугу для формирования сварного соединения.",
+      "sourceSection": "Arc welding processes",
+      "claimCheckedAt": "2026-10-22",
+      "reviewScope": "Проверен только приведённый частный тезис, а не вся технологическая карточка."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "mig-mag",
+      "sourceId": "checked3-mig-mag",
+      "claimPath": "description",
+      "claimScope": "Проверка основного принципа процесса",
+      "verificationStatus": "claim_checked",
+      "verifiedClaim": "MIG применяет инертные защитные газы, а MAG — активные газовые смеси.",
+      "sourceSection": "What is the difference between MIG and MAG?",
+      "claimCheckedAt": "2026-10-22",
+      "reviewScope": "Проверен только приведённый частный тезис, а не вся технологическая карточка."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "tig",
+      "sourceId": "checked3-tig",
+      "claimPath": "description",
+      "claimScope": "Проверка основного принципа процесса",
+      "verificationStatus": "claim_checked",
+      "verifiedClaim": "TIG использует неплавящийся вольфрамовый электрод и инертную газовую защиту.",
+      "sourceSection": "Process characteristics",
+      "claimCheckedAt": "2026-10-22",
+      "reviewScope": "Проверен только приведённый частный тезис, а не вся технологическая карточка."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "injection-molding",
+      "sourceId": "checked3-injection-molding",
+      "claimPath": "description",
+      "claimScope": "Проверка основного принципа процесса",
+      "verificationStatus": "claim_checked",
+      "verifiedClaim": "При литье термопластов под давлением расплав полимера впрыскивают в форму, охлаждают и извлекают изделие.",
+      "sourceSection": "Injection molding process description",
+      "claimCheckedAt": "2026-10-22",
+      "reviewScope": "Проверен только приведённый частный тезис, а не вся технологическая карточка."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "extrusion",
+      "sourceId": "validated-cutting",
+      "claimPath": "description",
+      "claimScope": "Проверка основного принципа процесса",
+      "verificationStatus": "claim_checked",
+      "verifiedClaim": "Экструзия относится к процессам формообразования.",
+      "sourceSection": "Shaping processes",
+      "claimCheckedAt": "2026-10-22",
+      "reviewScope": "Проверен только приведённый частный тезис, а не вся технологическая карточка."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "assembly",
+      "sourceId": "atlas-pcb-assembly",
+      "claimPath": "description",
+      "claimScope": "Проверка основного принципа процесса",
+      "verificationStatus": "claim_checked",
+      "verifiedClaim": "Сборка может включать соединение отдельных компонентов в готовый узел.",
+      "sourceSection": "Electronic assembly standards",
+      "claimCheckedAt": "2026-10-22",
+      "reviewScope": "Проверен только приведённый частный тезис, а не вся технологическая карточка."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "industrial-filtration",
+      "sourceId": "checked3-industrial-filtration",
+      "claimPath": "description",
+      "claimScope": "Проверка основного принципа процесса",
+      "verificationStatus": "claim_checked",
+      "verifiedClaim": "Фильтрация может удалять взвешенные твёрдые частицы из жидкости.",
+      "sourceSection": "Sediment and Microporous Filtration",
+      "claimCheckedAt": "2026-10-22",
+      "reviewScope": "Проверен только приведённый частный тезис, а не вся технологическая карточка."
     }
   ],
   "policy": {
