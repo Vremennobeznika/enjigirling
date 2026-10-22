@@ -58,10 +58,14 @@ test('resources: full indexed search, progressive loading, keyboard and 320px mo
   await expect(page.locator('#resourcesGrid .resource-group')).toHaveCount(11);
   await expect(page.locator('#resourcesGrid .resource-group[aria-label="Дружественные каналы"] .resource-card')).toHaveCount(11);
   await expect(page.locator('#resourcesGrid')).toHaveAttribute('data-matches','175');
+  expect(await page.locator('#resourcesGrid *').count()).toBeLessThan(900);
   await page.locator('#resourceSearch').fill('KELIBRON');
   await expect(cards).toHaveCount(1);
   await expect(cards.first()).toContainText('KELIBRON');
   await expect(more).toBeHidden();
+  await page.locator('#resourceSearch').fill('черной');
+  await expect(cards).toHaveCount(1);
+  await expect(cards.first()).toContainText('чёрной');
   await page.locator('#resourceSearch').press('Escape');
   await expect(cards).toHaveCount(51);
   await expect(more).toBeVisible();
@@ -71,6 +75,8 @@ test('resources: full indexed search, progressive loading, keyboard and 320px mo
   await expect(more).toBeHidden();
   await expect(cards).toHaveCount(175);
   await expect(page.locator('#resourcesGrid')).toHaveAttribute('data-rendered','175');
+  expect(await cards.evaluateAll(els=>new Set(els.map(el=>el.href)).size)).toBe(175);
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth)).toBeLessThanOrEqual(2);
   await page.locator('#resourceReset').click();
   await expect(cards).toHaveCount(51);
   for (const width of [320,375,390,768]) {
@@ -79,4 +85,14 @@ test('resources: full indexed search, progressive loading, keyboard and 320px mo
     expect(overflow,'horizontal overflow at '+width+' px').toBeLessThanOrEqual(2);
   }
   expect(errors).toEqual([]);
+});
+
+test('resources offer a readable fallback without JavaScript',async({browser})=>{
+  const context=await browser.newContext({javaScriptEnabled:false});
+  try {
+    const page=await context.newPage();
+    await page.goto('/resources.html');
+    await expect(page.locator('main noscript')).toContainText('Markdown');
+    await expect(page.locator('a[href="knowledge/sections/resources.md"]').first()).toBeVisible();
+  } finally { await context.close(); }
 });
