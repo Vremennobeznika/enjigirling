@@ -1,18 +1,25 @@
 {
-  "name": "Сегодня — личная панель",
+  "id": "./",
+  "name": "Сегодня — личный планировщик",
   "short_name": "Сегодня",
-  "description": "Личные дела, календарь, покупки и домашние запасы",
+  "description": "Личный планировщик: календарь, покупки, растения и домашние дела",
   "start_url": "./",
-  "scope": "./",
+  "scope": "../",
   "display": "standalone",
-  "background_color": "#0d0d0d",
-  "theme_color": "#0d0d0d",
+  "background_color": "#111111",
+  "theme_color": "#111111",
   "lang": "ru",
   "icons": [
     {
-      "src": "./icon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
       "purpose": "any maskable"
     }
   ]
