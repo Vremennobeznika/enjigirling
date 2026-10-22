@@ -132,8 +132,8 @@ console.log('PASS: '+actualNumeric.length+' numerically scoped education claims 
 const textGate=JSON.parse(fs.readFileSync('audit/map-retained-text-numeric-allowlist.json','utf8'));
 const sourceFieldNames=['year','verifiedScope','reviewMethod','note','basis','admission'];
 const actualTextNums=entries.flatMap(({item})=>{
- const scope=[...sourceFieldNames.filter(field=>Object.hasOwn(item,field)&&typeof item[field]==='string'&&/\\d/.test(item[field])).map(field=>({organization:item.name,field,statement:item[field],sourceUrl:(item.verifiedPrograms||[])[0]?.sourceUrl||item.sourceUrl}))];
- for(const p of item.verifiedPrograms||[]){for(const field of sourceFieldNames){if(typeof p[field]==='string'&&/\\d/.test(p[field]))scope.push({organization:item.name,field,statement:p[field],sourceUrl:p.sourceUrl})}}
+ const scope=[...sourceFieldNames.filter(field=>Object.hasOwn(item,field)&&typeof item[field]==='string'&&/\d/.test(item[field])).map(field=>({organization:item.name,field,statement:item[field],sourceUrl:(item.verifiedPrograms||[])[0]?.sourceUrl||item.sourceUrl}))];
+ for(const p of item.verifiedPrograms||[]){for(const field of sourceFieldNames){if(typeof p[field]==='string'&&/\d/.test(p[field]))scope.push({organization:item.name,field,statement:p[field],sourceUrl:p.sourceUrl})}}
  return scope;
 });
 const canonicalText=row=>JSON.stringify([row.organization,row.field,row.statement,row.sourceUrl]);
