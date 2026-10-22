@@ -7,10 +7,10 @@
   "recordsWithEvidenceLinks": 380,
   "recordsWithClaimCheckedLinks": 44,
   "totalRegisteredSources": 85,
-  "totalEvidenceLinks": 408,
+  "totalEvidenceLinks": 407,
   "evidenceStatuses": {
     "claim_checked": 46,
-    "source_located": 362
+    "source_located": 361
   },
   "byDataset": {
     "professions": {
