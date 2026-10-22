@@ -1,17 +1,20 @@
-// Обзорные сведения; режимы и критерии приёмки задаются документацией на конкретное изделие.
+// Обзорные сведения: не инструкция по выполнению работ. Ссылки подтверждают только соответствующие части описаний.
 window.engineeringProcesses = [
   {
     "id": "casting",
     "name": "Литьё",
     "category": "forming",
-    "description": "Формирование заготовки заливкой расплава в форму.",
+    "description": "Получение отливки заливкой расплава в литейную форму. Материал и марку выбирают по документации на отливку, а не по обозначению стали для проката.",
     "steps": "Выбор литейной технологии и материала → подготовка модели и формы → плавка и подготовка расплава → заливка → затвердевание и охлаждение → извлечение и очистка → контроль",
     "checks": "Усадочные раковины и пористость, газовые поры, неметаллические включения, трещины и отклонения размеров. Метод обнаружения и критерии приёмки зависят от отливки.",
-    "materials": [
-      "steel-20",
-      "steel-45"
-    ],
-    "profession": "metallurgical-engineer"
+    "materials": [],
+    "profession": "metallurgical-engineer",
+    "sources": [
+      {
+        "title": "ASNT — методы контроля отливок",
+        "url": "https://www.asnt.org/what-is-nondestructive-testing/methods"
+      }
+    ]
   },
   {
     "id": "welding",
@@ -25,7 +28,13 @@ window.engineeringProcesses = [
       "aisi-304",
       "al-6061"
     ],
-    "profession": "mechanical-engineer"
+    "profession": "mechanical-engineer",
+    "sources": [
+      {
+        "title": "TWI — несплавление и контроль сварных соединений",
+        "url": "https://www.twi-global.com/technical-knowledge/job-knowledge/weld-defects-imperfections-in-welds-lack-of-sidewall-and-inter-run-fusion-041?goback=%252Egde_2888580_member_258683180&vAction=swpTextOnly"
+      }
+    ]
   },
   {
     "id": "cutting",
@@ -44,7 +53,8 @@ window.engineeringProcesses = [
       "09g2s",
       "aisi-304"
     ],
-    "profession": "mechanical-engineer"
+    "profession": "mechanical-engineer",
+    "sources": []
   },
   {
     "id": "heat",
@@ -57,7 +67,8 @@ window.engineeringProcesses = [
       "steel-20",
       "steel-45"
     ],
-    "profession": "materials-engineer"
+    "profession": "materials-engineer",
+    "sources": []
   },
   {
     "id": "additive",
@@ -71,7 +82,13 @@ window.engineeringProcesses = [
       "gfrp",
       "pe-hd"
     ],
-    "profession": "mechanical-engineer"
+    "profession": "mechanical-engineer",
+    "sources": [
+      {
+        "title": "NIST — контроль аддитивного производства",
+        "url": "https://nvlpubs.nist.gov/nistpubs/ir/2024/NIST.IR.8538.pdf"
+      }
+    ]
   },
   {
     "id": "inspection",
@@ -86,7 +103,17 @@ window.engineeringProcesses = [
       "alumina",
       "aramid"
     ],
-    "profession": "materials-engineer"
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "ASNT — методы НК",
+        "url": "https://www.asnt.org/what-is-nondestructive-testing/methods"
+      },
+      {
+        "title": "ISO 9712:2021 — квалификация персонала",
+        "url": "https://committee.iso.org/cms/live/live/en/sites/isoorg/contents/data/standard/07/56/75614.html"
+      }
+    ]
   },
   {
     "id": "mig-mag",
@@ -99,7 +126,13 @@ window.engineeringProcesses = [
       "09g2s",
       "al-6061"
     ],
-    "profession": "mechanical-engineer"
+    "profession": "mechanical-engineer",
+    "sources": [
+      {
+        "title": "TWI — причины пористости сварных швов",
+        "url": "https://www.twi-global.com/technical-knowledge/faqs/faq-what-is-porosity-and-how-can-it-be-prevented"
+      }
+    ]
   },
   {
     "id": "tig",
@@ -112,7 +145,13 @@ window.engineeringProcesses = [
       "aisi-304",
       "al-6061"
     ],
-    "profession": "mechanical-engineer"
+    "profession": "mechanical-engineer",
+    "sources": [
+      {
+        "title": "TWI — причины пористости сварных швов",
+        "url": "https://www.twi-global.com/technical-knowledge/faqs/faq-what-is-porosity-and-how-can-it-be-prevented"
+      }
+    ]
   },
   {
     "id": "ultrasonic",
@@ -125,7 +164,13 @@ window.engineeringProcesses = [
       "09g2s",
       "steel-45"
     ],
-    "profession": "materials-engineer"
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "ASNT — ультразвуковой метод НК",
+        "url": "https://www.asnt.org/what-is-nondestructive-testing/methods"
+      }
+    ]
   },
   {
     "id": "radiographic",
@@ -138,7 +183,13 @@ window.engineeringProcesses = [
       "09g2s",
       "aisi-304"
     ],
-    "profession": "materials-engineer"
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "ASNT — радиографический контроль",
+        "url": "https://www.asnt.org/what-is-nondestructive-testing/methods/radiographic-testing"
+      }
+    ]
   },
   {
     "id": "dye",
@@ -151,7 +202,13 @@ window.engineeringProcesses = [
       "aisi-304",
       "al-6061"
     ],
-    "profession": "materials-engineer"
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "ASNT — капиллярный контроль",
+        "url": "https://www.asnt.org/what-is-nondestructive-testing/methods"
+      }
+    ]
   },
   {
     "id": "hardness",
@@ -165,6 +222,7 @@ window.engineeringProcesses = [
       "steel-45",
       "al-6061"
     ],
-    "profession": "materials-engineer"
+    "profession": "materials-engineer",
+    "sources": []
   }
 ];
