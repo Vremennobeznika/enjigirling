@@ -17,7 +17,7 @@ test('resources directory: categories, alphabetical sort, search, reset and list
   await expect(page.locator('#resourcesFilter button')).toHaveCount(12);
   await expect(page.locator('.resource-topic-header')).not.toHaveCount(0);
   await page.locator('#resourcesFilter button[title="Онлайн-измерения"]').click();
-  await expect(cards).toHaveCount(12);
+  await expect(cards).toHaveCount(13);
   await expect(page.locator('#resourcesGrid')).toContainText('микрометр');
   await page.locator('#resourcesFilter button[title="Журналы"]').click();
   await page.locator('#resourcesFilter button[title="САПР и конструирование"]').click();
@@ -29,7 +29,7 @@ test('resources directory: categories, alphabetical sort, search, reset and list
   await expect(page.locator('#resourcesGrid')).not.toContainText('КОМПАС-3D');
   await page.locator('#resourcesFilter button[title="Стандарты и метрология"]').click();
   await expect(page.locator('#resourcesGrid .resource-group')).toHaveCount(1);
-  await expect(cards).toHaveCount(4);
+  await expect(cards).toHaveCount(7);
   await page.locator('#resourceSearch').fill('ISO');
   await expect(cards).toHaveCount(1);
   await page.locator('#resourceReset').click();
