@@ -68,3 +68,62 @@ test('Shopping All filter stays selected when adding an uncategorized item',asyn
   expect(data[0].cat).toBe('other');
   await expect(page.locator('#counter')).toHaveText('0 из 1');
 });
+
+test('Calendar clear day preserves marks of other dates and allows JSON export',async({page})=>{
+  await page.goto('/calendar/');
+  await page.getByRole('button',{name:'Чт',exact:true}).click();
+  await page.locator('#tasks input[type=checkbox]').first().check();
+  await page.getByRole('button',{name:'Пт',exact:true}).click();
+  await page.locator('#tasks input[type=checkbox]').first().check();
+  const downloadPromise=page.waitForEvent('download');
+  await page.locator('#export').click();
+  const download=await downloadPromise;
+  expect(download.suggestedFilename()).toContain('kalendar-otmetki.json');
+  await page.getByRole('button',{name:'Чт',exact:true}).click();
+  page.once('dialog',d=>d.accept());
+  await page.locator('#clear').click();
+  await expect(page.locator('#tasks input[type=checkbox]').first()).not.toBeChecked();
+  await page.getByRole('button',{name:'Пт',exact:true}).click();
+  await expect(page.locator('#tasks input[type=checkbox]').first()).toBeChecked();
+});
+
+test('Dashboard backup import restores data and disables automatic sync',async({page})=>{
+  await page.goto('/life/');
+  await page.locator('#taskName').fill('Сохранить перед импортом');
+  await page.locator('#taskForm button[type=submit]').click();
+  const downloadPromise=page.waitForEvent('download');
+  await page.locator('#backup').click();
+  const download=await downloadPromise;
+  expect(download.suggestedFilename()).toMatch(/^moya-zhizn-.+\.json$/);
+  const saved={version:1,data:{
+    calendar:{},shopping:[],tasks:[{id:'test-restore',name:'Восстановленная задача',category:'Дела',priority:'high',done:false}],
+    pantry:[{id:'test-pantry',name:'Крупа',amount:'2 кг'}],plants:[]
+  }};
+  page.once('dialog',d=>d.accept());
+  await page.locator('#backupFile').setInputFiles({name:'life-test.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(saved))});
+  await expect(page.locator('#taskList')).toContainText('Восстановленная задача');
+  await expect(page.locator('#pantryList')).toContainText('Крупа');
+  const state=await page.evaluate(()=>({
+    auto:localStorage.getItem('life-sync-auto-v1'),
+    previous:JSON.parse(localStorage.getItem('life-sync-recovery-v1')||'[]')
+  }));
+  expect(state.auto).toBe('off');
+  expect(state.previous[0].data.tasks[0].name).toBe('Сохранить перед импортом');
+});
+
+test('Plant rename, note, water record and search survive reload',async({page})=>{
+  await page.goto('/plants/');
+  await page.getByRole('button',{name:'1–18',exact:true}).click();
+  const first=page.locator('#rows .pot').first();
+  await first.locator('summary').click();
+  await first.getByRole('textbox',{name:'Название горшка 1'}).fill('Фикус тестовый');
+  await first.getByRole('textbox',{name:'Особенности и уход'}).fill('Полив по сухости грунта');
+  await first.getByRole('button',{name:'Сохранить',exact:true}).click();
+  await expect(page.locator('#rows .pot').first()).toContainText('Фикус тестовый');
+  await page.locator('#search').fill('Фикус тестовый');
+  await expect(page.locator('#rows .pot')).toHaveCount(1);
+  await page.reload();
+  await page.locator('#search').fill('Фикус тестовый');
+  await expect(page.locator('#rows .pot')).toHaveCount(1);
+  await expect(page.locator('#rows .pot').first()).toContainText('Фикус тестовый');
+});
