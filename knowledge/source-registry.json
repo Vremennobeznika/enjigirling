@@ -245,6 +245,50 @@
       "appliesTo": "Обзор технологии или классификация процесса; не устанавливает режимы, критерии приёмки и допуски",
       "access": "public_abstract_or_overview",
       "notes": "Ссылка просмотрена на уровне общих сведений. Достоверность конкретных режимов и дефектов этой записью не удостоверяется."
+    },
+    {
+      "sourceId": "validated-cutting",
+      "title": "Проверенный источник для Обработка резанием",
+      "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies",
+      "publisher": "www.nist.gov",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Проверен принцип процесса, но не все параметры качества.",
+      "access": "public_abstract_or_overview",
+      "notes": "Проверено указанное в verifiedClaim утверждение; содержание платных стандартов целиком не проверялось."
+    },
+    {
+      "sourceId": "validated-additive",
+      "title": "Проверенный источник для Аддитивное производство",
+      "url": "https://www.nist.gov/additive-manufacturing/what-additive-manufacturing",
+      "publisher": "www.nist.gov",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Проверен принцип, не применимость к HDPE или GFRP.",
+      "access": "public_abstract_or_overview",
+      "notes": "Проверено указанное в verifiedClaim утверждение; содержание платных стандартов целиком не проверялось."
+    },
+    {
+      "sourceId": "validated-inspection",
+      "title": "Проверенный источник для Неразрушающий контроль",
+      "url": "https://www.asnt.org/what-is-nondestructive-testing",
+      "publisher": "www.asnt.org",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Проверена обзорная характеристика, не процедура и квалификация.",
+      "access": "public_abstract_or_overview",
+      "notes": "Проверено указанное в verifiedClaim утверждение; содержание платных стандартов целиком не проверялось."
+    },
+    {
+      "sourceId": "validated-textile-finishing",
+      "title": "Проверенный источник для Крашение и отделка текстиля",
+      "url": "https://www.osha.gov/sic-manual/2261",
+      "publisher": "www.osha.gov",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Классификация видов операций, не режимы крашения.",
+      "access": "public_abstract_or_overview",
+      "notes": "Проверено указанное в verifiedClaim утверждение; содержание платных стандартов целиком не проверялось."
     }
   ],
   "recordEvidence": [
@@ -303,10 +347,10 @@
       "claimPath": "description",
       "verificationStatus": "claim_checked",
       "claimScope": "Ultrasonic nondestructive testing uses high-frequency sound waves",
-      "verifiedClaim": "Ультразвуковой неразрушающий контроль использует высокочастотные звуковые волны.",
-      "sourceSection": "What Is Ultrasonic Testing and How is it Used in NDT?",
-      "claimCheckedAt": "2026-10-21",
-      "reviewScope": "Проверена только сформулированная выше часть описания; остальные характеристики материала или метода этим статусом не охвачены."
+      "verifiedClaim": "Ультразвуковой контроль использует высокочастотные звуковые волны для оценки материала.",
+      "sourceSection": "UT Testing Modes",
+      "claimCheckedAt": "2026-10-22",
+      "reviewScope": "Проверен физический принцип."
     },
     {
       "recordType": "processes",
@@ -339,10 +383,10 @@
       "claimPath": "description",
       "verificationStatus": "claim_checked",
       "claimScope": "Radiography visualizes internal conditions using X-rays and/or gamma rays",
-      "verifiedClaim": "Радиографический контроль использует рентгеновское или гамма-излучение для получения изображения внутренней структуры объекта.",
-      "sourceSection": "What Is Radiographic Testing and How Is It Used in NDT?",
-      "claimCheckedAt": "2026-10-21",
-      "reviewScope": "Не подтверждает допустимость условий облучения или пригодность метода для конкретной детали."
+      "verifiedClaim": "Радиографический контроль использует рентгеновское или гамма-излучение для изображения внутренней структуры.",
+      "sourceSection": "Radiographic Testing",
+      "claimCheckedAt": "2026-10-22",
+      "reviewScope": "Проверен принцип."
     },
     {
       "recordType": "processes",
@@ -381,8 +425,12 @@
       "recordId": "hardness",
       "sourceId": "atlas-hardness",
       "claimPath": "description",
-      "verificationStatus": "source_located",
-      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена"
+      "verificationStatus": "claim_checked",
+      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена",
+      "verifiedClaim": "Метод Роквелла основан на вдавливании индентора и предназначен для определения твёрдости металлических материалов.",
+      "sourceSection": "Scope 1.1, Significance and Use 4.1",
+      "claimCheckedAt": "2026-10-22",
+      "reviewScope": "Этот стандарт подтверждает только метод Роквелла, не все методики измерения твёрдости."
     },
     {
       "recordType": "processes",
@@ -525,8 +573,12 @@
       "recordId": "sawmilling",
       "sourceId": "atlas-sawmilling",
       "claimPath": "description",
-      "verificationStatus": "source_located",
-      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена"
+      "verificationStatus": "claim_checked",
+      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена",
+      "verifiedClaim": "Лесопильные производства выполняют распиловку древесины на пиломатериалы.",
+      "sourceSection": "Description for 2421",
+      "claimCheckedAt": "2026-10-22",
+      "reviewScope": "Классификация отрасли, не нормы качества."
     },
     {
       "recordType": "processes",
@@ -541,16 +593,24 @@
       "recordId": "pcb-assembly",
       "sourceId": "atlas-pcb-assembly",
       "claimPath": "description",
-      "verificationStatus": "source_located",
-      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена"
+      "verificationStatus": "claim_checked",
+      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена",
+      "verifiedClaim": "IPC J-STD-001J устанавливает требования к паяным электронным сборкам.",
+      "sourceSection": "IPC Releases J Revisions",
+      "claimCheckedAt": "2026-10-22",
+      "reviewScope": "Подтверждены назначение стандарта и область применения, не условия пайки."
     },
     {
       "recordType": "processes",
       "recordId": "electronic-inspection",
       "sourceId": "atlas-pcb-assembly",
       "claimPath": "description",
-      "verificationStatus": "source_located",
-      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена"
+      "verificationStatus": "claim_checked",
+      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена",
+      "verifiedClaim": "IPC-A-610J определяет критерии приемлемости электронных сборок после изготовления.",
+      "sourceSection": "IPC Releases J Revisions",
+      "claimCheckedAt": "2026-10-22",
+      "reviewScope": "Подтверждено назначение документа, не частные критерии приёмки."
     },
     {
       "recordType": "processes",
@@ -575,6 +635,90 @@
       "claimPath": "description",
       "verificationStatus": "source_located",
       "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена"
+    },
+    {
+      "recordType": "processes",
+      "recordId": "casting",
+      "sourceId": "atlas-inspection",
+      "claimPath": "description",
+      "verificationStatus": "claim_checked",
+      "claimScope": "Метод применим к отливкам; не подтверждены все виды дефектов и режимы литья.",
+      "verifiedClaim": "Объекты литейного производства могут контролироваться радиографическими методами на внутренние дефекты.",
+      "sourceSection": "Explore Nondestructive Testing Methods",
+      "claimCheckedAt": "2026-10-22",
+      "reviewScope": "Метод применим к отливкам; не подтверждены все виды дефектов и режимы литья."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "cutting",
+      "sourceId": "validated-cutting",
+      "claimPath": "description",
+      "verificationStatus": "claim_checked",
+      "claimScope": "Проверен принцип процесса, но не все параметры качества.",
+      "verifiedClaim": "Механическая обработка удаляет материал заготовки для получения требуемой геометрии.",
+      "sourceSection": "Mass reducing processes",
+      "claimCheckedAt": "2026-10-22",
+      "reviewScope": "Проверен принцип процесса, но не все параметры качества."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "additive",
+      "sourceId": "validated-additive",
+      "claimPath": "description",
+      "verificationStatus": "claim_checked",
+      "claimScope": "Проверен принцип, не применимость к HDPE или GFRP.",
+      "verifiedClaim": "Аддитивное производство создаёт изделия по цифровой модели последовательным добавлением слоёв материала.",
+      "sourceSection": "What Is Additive Manufacturing?",
+      "claimCheckedAt": "2026-10-22",
+      "reviewScope": "Проверен принцип, не применимость к HDPE или GFRP."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "inspection",
+      "sourceId": "validated-inspection",
+      "claimPath": "description",
+      "verificationStatus": "claim_checked",
+      "claimScope": "Проверена обзорная характеристика, не процедура и квалификация.",
+      "verifiedClaim": "Разные методы неразрушающего контроля обнаруживают разные виды несплошностей без повреждения детали.",
+      "sourceSection": "What Is Nondestructive Testing?",
+      "claimCheckedAt": "2026-10-22",
+      "reviewScope": "Проверена обзорная характеристика, не процедура и квалификация."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "dye",
+      "sourceId": "atlas-inspection",
+      "claimPath": "description",
+      "verificationStatus": "claim_checked",
+      "claimScope": "Проверены назначение и поверхностный характер метода.",
+      "verifiedClaim": "Капиллярный контроль выявляет несплошности, открытые на поверхность непористых материалов.",
+      "sourceSection": "Liquid Penetrant Testing (PT)",
+      "claimCheckedAt": "2026-10-22",
+      "reviewScope": "Проверены назначение и поверхностный характер метода."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "textile-finishing",
+      "sourceId": "validated-textile-finishing",
+      "claimPath": "description",
+      "verificationStatus": "claim_checked",
+      "claimScope": "Классификация видов операций, не режимы крашения.",
+      "verifiedClaim": "Текстильная отделка может включать отбеливание, крашение, печать и механическую финишную обработку.",
+      "sourceSection": "Description for 2261",
+      "claimCheckedAt": "2026-10-22",
+      "reviewScope": "Классификация видов операций, не режимы крашения."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "wood-drying",
+      "sourceId": "atlas-sawmilling",
+      "claimPath": "description",
+      "verificationStatus": "claim_checked",
+      "claimScope": "Подтверждено существование процесса, не его технологические режимы.",
+      "verifiedClaim": "Камерная сушка пиломатериалов входит в виды операций лесопильного производства.",
+      "sourceSection": "Description for 2421",
+      "claimCheckedAt": "2026-10-22",
+      "reviewScope": "Подтверждено существование процесса, не его технологические режимы."
     }
   ],
   "policy": {
