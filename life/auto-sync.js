@@ -122,7 +122,7 @@ function schedule(delay=1300){
 async function runOnce(){
  if(!enabled())return;
  if(navigator.onLine===false){notify("offline","Нет сети. Изменения остаются на устройстве.");return}
- const answer=await request("GET"),revision=Number(answer.revision)||0,remote=answer.data?validateData(answer.data):structuredClone(EMPTY);
+ const answer=await request("GET"),revision=Number(answer.revision)||0,remote=answer.data?validateData(answer.data):JSON.parse(JSON.stringify(EMPTY));
  const local=readData(),stored=getBase();
  // First activation: never destroy a separately populated device.
  if(!stored){
@@ -180,7 +180,7 @@ async function push(manual=false){
  if(processing)throw Error("Синхронизация уже выполняется");
  processing=true;
  try{
-  const a=await request("GET"),rev=Number(a.revision)||0,local=readData(),remote=a.data?validateData(a.data):structuredClone(EMPTY),stored=getBase();
+  const a=await request("GET"),rev=Number(a.revision)||0,local=readData(),remote=a.data?validateData(a.data):JSON.parse(JSON.stringify(EMPTY)),stored=getBase();
   if(!same(local,remote)&&rev!==0&&(!stored||rev!==stored.revision)){
    throw Error("В облаке другая версия. Для защиты данных сначала «Получить из облака» или разреши конфликт");
   }
