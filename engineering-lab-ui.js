@@ -182,7 +182,7 @@ function moreSewingInit(){
 function moreMarineInit(){
  const safe=(id,fn)=>{try{message(by(id),fn(),false);}catch(e){message(by(id),e.message,true);}};
  attach(['dispLength','dispBeam','dispDraft','dispCb','dispDensity'],()=>safe('dispOutput',()=>{const x=math.displacement(...['dispLength','dispBeam','dispDraft','dispCb','dispDensity'].map(id=>math.number(val(id))));return 'Объём '+fmt(x.volume)+' м³ · водоизмещение '+fmt(x.tonnes)+' т';}));
- attach(['currentShip','currentCourse','currentKnots','currentDir'],()=>safe('currentOutput',()=>{const x=math.currentVector(...['currentShip','currentCourse','currentKnots','currentDir'].map(id=>math.number(val(id))));return 'Скорость по грунту '+fmt(x.sog)+' уз · путь '+fmt(x.cog)+'°';}));
+ attach(['currentShip','currentCourse','currentKnots','currentDir'],()=>safe('currentOutput',()=>{const x=math.currentVector(...['currentShip','currentCourse','currentKnots','currentDir'].map(id=>math.number(val(id))));return 'Скорость по грунту '+fmt(x.sog)+' уз · курс относительно грунта '+(x.cog===null?'не определяется (судно не перемещается)':fmt(x.cog)+'°');}));
 }
 const initialized=new Set();
 window.initEngineeringLab=function(which){
