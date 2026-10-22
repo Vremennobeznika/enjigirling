@@ -101,9 +101,7 @@ function validCalendar(o){
  const marks=Object.fromEntries(Object.entries(o).filter(([k,v])=>/^\d{4}-\d{2}-\d{2}-(?:\d+|home-[a-z0-9-]+)$/i.test(k)&&v===true).slice(0,25000));
  const plan=o.__planner_v3;
  if(plan&&typeof plan==="object"&&!Array.isArray(plan)&&Array.isArray(plan.sections)&&Array.isArray(plan.tasks)){
-  const bytes=JSON.stringify(plan).length;
-  if(bytes<=210000)marks.__planner_v3=plan;
-  else throw Error("Расширенный планировщик превышает допустимый размер для облачной копии; данные не удалены. Сохрани экспорт планировщика отдельно.");
+  marks.__planner_v3=plan;
  }
  return marks;
 }
