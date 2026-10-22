@@ -19,6 +19,7 @@ input,select,button{font:inherit}input,select{background:#101010;border:1px soli
 .empty{color:#888;font-size:13px;padding:10px 0}.status{font-size:13px;min-height:20px;color:#bbb;margin-top:7px;white-space:pre-wrap}
 details{border:1px solid var(--line);background:var(--box);border-radius:17px;padding:16px;margin-top:12px}summary{cursor:pointer;font-weight:600;list-style:auto}
 .warn{font-size:12px;color:#bbb;padding-top:12px}
+.remember{display:flex;align-items:center;gap:9px;color:#eee;font-size:14px;cursor:pointer;margin:4px 0 6px}.remember input[type=checkbox]{width:20px;height:20px;min-width:20px;padding:0;accent-color:#eee;cursor:pointer}
 @media(max-width:530px){main{padding:17px 12px 85px}.grid{grid-template-columns:1fr}h1{font-size:27px}.number{font-size:26px}.short{flex:1 1 90px}.card{padding:14px}}
 </style></head><body><main>
 <header><div><h1>Сегодня</h1><p id="date"></p></div><span class="tag" id="mode">Локальный режим</span></header>
@@ -41,8 +42,10 @@ details{border:1px solid var(--line);background:var(--box);border-radius:17px;pa
 <details id="cloudPanel"><summary>Облачная синхронизация · подключение Yandex Cloud</summary>
 <p class="sub">База YDB и облачная функция уже созданы. Для синхронизации нужны правильный личный ключ и рабочий доступ функции к базе. Пока проверка не пройдена, данные остаются в браузере.</p>
 <form id="cloudForm"><input class="grow" id="endpoint" type="url" placeholder="HTTPS-адрес Cloud Function" aria-label="URL синхронизации" autocomplete="url"><input class="grow" id="syncToken" type="password" placeholder="Секрет синхронизации" aria-label="Секрет синхронизации" autocomplete="off"><button class="btn soft" type="submit">Применить</button></form>
+<label class="remember" for="rememberKey"><input id="rememberKey" type="checkbox"> Запомнить ключ на этом устройстве</label>
+<p class="sub">На личном устройстве ключ останется после закрытия вкладки. Не включай на чужом компьютере: ключ хранится в браузере без дополнительного шифрования.</p>
 <div class="actions"><button class="btn soft" id="pull" type="button">Получить из облака</button><button class="btn soft" id="push" type="button">Отправить в облако</button><button class="btn soft" id="disconnect" type="button">Отключить</button></div><div class="status" id="cloudStatus" role="status">Облако пока не подключено.</div>
-<p class="warn">Синхронизация запускается вручную кнопками. Если появилась ошибка подключения, проверь <a class="link" href="https://console.yandex.cloud/folders/b1gb2bfrust2n5nnbk30/functions/functions/d4ed26vrlmb1uk22m3b7/editor" target="_blank" rel="noopener noreferrer">версию и сервисный аккаунт</a>, затем <a class="link" href="https://console.yandex.cloud/folders/b1gb2bfrust2n5nnbk30/functions/functions/d4ed26vrlmb1uk22m3b7/overview" target="_blank" rel="noopener noreferrer">доступ на вкладке «Обзор»</a>. Публичный вызов функции возможен только с дополнительным контролем расходов: неизвестные запросы тоже могут потреблять квоты. Данные сохраняются локально; секрет хранится до закрытия вкладки, не в GitHub.</p>
+<p class="warn">Синхронизация запускается вручную кнопками. Если появилась ошибка подключения, проверь <a class="link" href="https://console.yandex.cloud/folders/b1gb2bfrust2n5nnbk30/functions/functions/d4ed26vrlmb1uk22m3b7/editor" target="_blank" rel="noopener noreferrer">версию и сервисный аккаунт</a>, затем <a class="link" href="https://console.yandex.cloud/folders/b1gb2bfrust2n5nnbk30/functions/functions/d4ed26vrlmb1uk22m3b7/overview" target="_blank" rel="noopener noreferrer">доступ на вкладке «Обзор»</a>. Публичный вызов функции возможен только с дополнительным контролем расходов: неизвестные запросы тоже могут потреблять квоты. Данные сохраняются локально; ключ можно запомнить на личном устройстве. В GitHub он не отправляется.</p>
 </details>
 <p class="warn">Код этой страницы публичен, но твои списки не публикуются в GitHub. Хранилище браузера может быть очищено; регулярно сохраняй копию.</p>
 </main><script src="../calendar/household.js"></script><script>
@@ -97,8 +100,10 @@ $("backupFile").onchange=async e=>{const f=e.target.files?.[0];if(!f)return;try{
 window.addEventListener("storage",e=>{if(Object.values(KEYS).includes(e.key))draw()});window.addEventListener("focus",draw);document.addEventListener("visibilitychange",()=>{if(!document.hidden)draw()});
 const LIFE_ENDPOINT="https://functions.yandexcloud.net/d4ed26vrlmb1uk22m3b7";
 const LIFE_TOKEN_SHA256="d218f1b19b8297372b649695b50dd046dc0947e3372fd7a5fc420c18734c58f4";
-let endpoint=localStorage.getItem("life-sync-endpoint-v1")||LIFE_ENDPOINT,token=sessionStorage.getItem("life-sync-secret-v1")||"",revision=Number(sessionStorage.getItem("life-sync-revision-v1")||0);
-$("endpoint").value=endpoint;$("syncToken").value=token;
+const SAVED_TOKEN_KEY="life-sync-secret-saved-v1";
+const savedToken=localStorage.getItem(SAVED_TOKEN_KEY)||"";
+let endpoint=localStorage.getItem("life-sync-endpoint-v1")||LIFE_ENDPOINT,token=sessionStorage.getItem("life-sync-secret-v1")||savedToken,revision=Number(sessionStorage.getItem("life-sync-revision-v1")||0);
+$("endpoint").value=endpoint;$("syncToken").value=token;$("rememberKey").checked=Boolean(savedToken);
 const status=s=>$("cloudStatus").textContent=s;
 function urlIsOriginalFunction(){return endpoint===LIFE_ENDPOINT}
 function updateMode(){$("mode").textContent=endpoint&&token?"Облако настроено":"Локальный режим"}
@@ -111,10 +116,11 @@ if(!t||t.length<32)throw Error("Секрет должен быть не коро
 if(url===LIFE_ENDPOINT&&!(await keyMatchesInstalledVersion(t)))throw Error("Этот секрет НЕ совпадает с личным ключом функции. Скопируй вторую строку из файла life_yandex_sync_key.txt (64 символа), не контрольную сумму SHA-256. Данные в браузере не изменены.");
 if(endpoint!==url||token!==t){revision=0;sessionStorage.removeItem("life-sync-revision-v1")}
 endpoint=url;token=t;$("syncToken").value=t;
-localStorage.setItem("life-sync-endpoint-v1",endpoint);sessionStorage.setItem("life-sync-secret-v1",token);updateMode();
+localStorage.setItem("life-sync-endpoint-v1",endpoint);sessionStorage.setItem("life-sync-secret-v1",token);if($("rememberKey").checked)localStorage.setItem(SAVED_TOKEN_KEY,token);else localStorage.removeItem(SAVED_TOKEN_KEY);updateMode();
 }
-$("cloudForm").onsubmit=async e=>{e.preventDefault();try{await setting();status("Ключ проверен по SHA-256 и сохранён только в этой вкладке. Теперь нажми «Получить из облака».")}catch(err){status(err.message)}};
-$("disconnect").onclick=()=>{endpoint=token="";revision=0;localStorage.removeItem("life-sync-endpoint-v1");sessionStorage.removeItem("life-sync-secret-v1");sessionStorage.removeItem("life-sync-revision-v1");$("endpoint").value=$("syncToken").value="";updateMode();status("Облако отключено. Локальные данные не удалены.")};
+$("cloudForm").onsubmit=async e=>{e.preventDefault();try{await setting();status($("rememberKey").checked?"Ключ проверен и запомнен на этом устройстве. Повторно вводить его не потребуется.":"Ключ проверен и сохранён до закрытия вкладки. Для постоянного хранения отметь «Запомнить ключ».")}catch(err){status(err.message)}};
+$("rememberKey").onchange=async()=>{if(!$("rememberKey").checked){localStorage.removeItem(SAVED_TOKEN_KEY);status("Постоянное хранение отключено. Ключ останется только до закрытия вкладки.");return}try{await setting();status("Ключ запомнен на этом устройстве. При следующем открытии вводить его не придётся.")}catch(err){$("rememberKey").checked=false;localStorage.removeItem(SAVED_TOKEN_KEY);status(err.message)}};
+$("disconnect").onclick=()=>{endpoint=token="";revision=0;localStorage.removeItem("life-sync-endpoint-v1");localStorage.removeItem(SAVED_TOKEN_KEY);sessionStorage.removeItem("life-sync-secret-v1");sessionStorage.removeItem("life-sync-revision-v1");$("endpoint").value=$("syncToken").value="";$("rememberKey").checked=false;updateMode();status("Облако отключено, сохранённый ключ удалён из браузера. Локальные данные не удалены.")};
 async function call(method,payload){
 if(!endpoint||!token)throw Error("Сначала настрой подключение.");
 let response;
