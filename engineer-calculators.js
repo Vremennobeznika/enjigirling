@@ -1,4 +1,6 @@
-document.addEventListener('DOMContentLoaded', () => {
+/* Works both as a normal script and as a deferred-on-demand module. */
+(function(){'use strict';let initialized=false;
+function initEngineerCalculators(){if(initialized)return;initialized=true;
     // Профессии из data.js (нужны калькуляторам зарплаты)
     const professions = Array.isArray(window.professionsData) ? window.professionsData : [];
 
@@ -413,4 +415,6 @@ document.addEventListener('DOMContentLoaded', () => {
         maMax.addEventListener('input', renderMa);
         renderMa();
     }
-});
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initEngineerCalculators,{once:true});else initEngineerCalculators();
+})();
