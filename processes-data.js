@@ -40,7 +40,7 @@ window.engineeringProcesses = [
     "profession": "mechanical-engineer",
     "sources": [
       {
-        "title": "Техническое описание процесса Дуговая сварка",
+        "title": "TWI — общий обзор сварки плавлением",
         "url": "https://www.twi-global.com/technical-knowledge/faqs/what-is-fusion-welding"
       },
       {
@@ -74,7 +74,7 @@ window.engineeringProcesses = [
     "profession": "mechanical-engineer",
     "sources": [
       {
-        "title": "Проверенный источник для Обработка резанием",
+        "title": "NIST — обзор производственных технологий (общий контекст)",
         "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
       },
       {
@@ -102,7 +102,7 @@ window.engineeringProcesses = [
     "profession": "materials-engineer",
     "sources": [
       {
-        "title": "Проверенный источник для Обработка резанием",
+        "title": "NIST — обзор производственных технологий (общий контекст)",
         "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
       },
       {
@@ -131,7 +131,7 @@ window.engineeringProcesses = [
     "profession": "mechanical-engineer",
     "sources": [
       {
-        "title": "Проверенный источник для Аддитивное производство",
+        "title": "NIST — обзор аддитивного производства",
         "url": "https://www.nist.gov/additive-manufacturing/what-additive-manufacturing"
       },
       {
@@ -165,7 +165,7 @@ window.engineeringProcesses = [
     "profession": "materials-engineer",
     "sources": [
       {
-        "title": "Проверенный источник для Неразрушающий контроль",
+        "title": "ASNT — обзор неразрушающего контроля",
         "url": "https://www.asnt.org/what-is-nondestructive-testing"
       },
       {
@@ -345,7 +345,7 @@ window.engineeringProcesses = [
     "profession": "mechanical-engineer",
     "sources": [
       {
-        "title": "Проверенный источник для Обработка резанием",
+        "title": "NIST — обзор производственных технологий (общий контекст)",
         "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
       },
       {
@@ -377,7 +377,7 @@ window.engineeringProcesses = [
     "profession": "metallurgical-engineer",
     "sources": [
       {
-        "title": "Проверенный источник для Обработка резанием",
+        "title": "NIST — обзор производственных технологий (общий контекст)",
         "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
       },
       {
@@ -406,7 +406,7 @@ window.engineeringProcesses = [
     "profession": "mechanical-engineer",
     "sources": [
       {
-        "title": "Проверенный источник для Обработка резанием",
+        "title": "NIST — обзор производственных технологий (общий контекст)",
         "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
       },
       {
@@ -434,7 +434,7 @@ window.engineeringProcesses = [
     "profession": "materials-engineer",
     "sources": [
       {
-        "title": "Техническое описание процесса Литьё термопластов под давлением",
+        "title": "NIST — исследование энергопотребления литья под давлением (не технологический регламент)",
         "url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=912839"
       },
       {
@@ -462,7 +462,7 @@ window.engineeringProcesses = [
     "profession": "materials-engineer",
     "sources": [
       {
-        "title": "Проверенный источник для Обработка резанием",
+        "title": "NIST — обзор производственных технологий (общий контекст)",
         "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
       },
       {
@@ -479,7 +479,7 @@ window.engineeringProcesses = [
   {
     "id": "grinding",
     "name": "Шлифование",
-    "category": "treatment",
+    "category": "forming",
     "description": "Абразивная финишная обработка для получения требуемой точности размеров и качества поверхности.",
     "steps": "Подготовка баз и круга → выбор режима → шлифование → охлаждение (при необходимости) → контроль",
     "checks": "Прижоги, микротрещины, шероховатость, точность формы, износ и состояние абразивного инструмента.",
@@ -489,7 +489,7 @@ window.engineeringProcesses = [
     "profession": "mechanical-engineer",
     "sources": [
       {
-        "title": "Проверенный источник для Обработка резанием",
+        "title": "NIST — обзор производственных технологий (общий контекст)",
         "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
       },
       {
@@ -518,7 +518,7 @@ window.engineeringProcesses = [
     "profession": "materials-engineer",
     "sources": [
       {
-        "title": "Проверенный источник для Обработка резанием",
+        "title": "NIST — обзор производственных технологий (общий контекст)",
         "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
       },
       {
@@ -760,7 +760,7 @@ window.engineeringProcesses = [
     "profession": "textile-engineer",
     "sources": [
       {
-        "title": "Проверенный источник для Крашение и отделка текстиля",
+        "title": "OSHA SIC 2261 — справочник отрасли отделки хлопчатобумажных тканей",
         "url": "https://www.osha.gov/sic-manual/2261"
       },
       {
@@ -960,7 +960,7 @@ window.engineeringProcesses = [
     "profession": "chemical-engineer",
     "sources": [
       {
-        "title": "Техническое описание процесса Промышленная фильтрация",
+        "title": "EPA WaterSense — фильтрация в системах очистки воды (частный пример)",
         "url": "https://www.epa.gov/system/files/documents/2024-03/ws-commercial-bmp-watersenseatwork_section7.1_waterpurification.pdf"
       },
       {
