@@ -24,19 +24,24 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Install Lighthouse and Chromium
+      - name: Install Lighthouse and select Chromium
         run: |
           npm install --no-save --ignore-scripts lighthouse@12.8.2
-          sudo apt-get update -qq
-          sudo apt-get install -y chromium-browser || sudo apt-get install -y chromium
+          if command -v google-chrome >/dev/null 2>&1; then
+            echo "CHROME_PATH=$(command -v google-chrome)" >> "$GITHUB_ENV"
+          elif command -v chromium >/dev/null 2>&1; then
+            echo "CHROME_PATH=$(command -v chromium)" >> "$GITHUB_ENV"
+          else
+            npx playwright install chromium
+            echo "CHROME_PATH=$(node -e 'process.stdout.write(require("@playwright/test").chromium.executablePath())')" >> "$GITHUB_ENV"
+          fi
       - name: Run local server
         run: python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/lighthouse-server.log 2>&1 &
       - name: Audit all sections
         run: |
           mkdir -p lighthouse-results
           for page in index calendar resources dictionary map calculator compare processes materials; do
-            CHROME_PATH=$(command -v chromium-browser || command -v chromium)
-            CHROME_PATH="$CHROME_PATH" npx lighthouse "http://127.0.0.1:8765/$page.html" --quiet --chrome-flags="--headless --no-sandbox --disable-dev-shm-usage" --only-categories=performance,accessibility,best-practices,seo --output=json --output-path="lighthouse-results/$page.json"
+            npx lighthouse "http://127.0.0.1:8765/$page.html" --quiet --chrome-flags="--headless --no-sandbox --disable-dev-shm-usage" --only-categories=performance,accessibility,best-practices,seo --output=json --output-path="lighthouse-results/$page.json"
           done
           node tests/lighthouse-summary.cjs
       - name: Upload Lighthouse measurements
