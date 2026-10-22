@@ -2,8 +2,8 @@
   "schemaVersion": "1.0",
   "language": "ru",
   "status": "editorial_relationships",
-  "nodeCount": 305,
-  "edgeCount": 580,
+  "nodeCount": 431,
+  "edgeCount": 755,
   "edges": [
     {
       "from": "material:steel-20",
@@ -558,6 +558,881 @@
     {
       "from": "material:mining-quartz",
       "to": "process:ore-screening",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:stainless-ferritic",
+      "to": "process:welding",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:stainless-ferritic",
+      "to": "process:cutting",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:stainless-martensitic",
+      "to": "process:heat",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:stainless-martensitic",
+      "to": "process:cutting",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:stainless-duplex",
+      "to": "process:welding",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:stainless-duplex",
+      "to": "process:inspection",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:al-series-5xxx",
+      "to": "process:rolling",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:al-series-5xxx",
+      "to": "process:cutting",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:al-series-7xxx",
+      "to": "process:cutting",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:al-series-7xxx",
+      "to": "process:inspection",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:cast-iron-gray",
+      "to": "process:casting",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:cast-iron-gray",
+      "to": "process:inspection",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:cast-iron-ductile",
+      "to": "process:casting",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:cast-iron-ductile",
+      "to": "process:inspection",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:brass-alloys",
+      "to": "process:cutting",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:brass-alloys",
+      "to": "process:forging",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:bronze-alloys",
+      "to": "process:casting",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:bronze-alloys",
+      "to": "process:cutting",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:titanium-industrial",
+      "to": "process:cutting",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:titanium-industrial",
+      "to": "process:inspection",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:nickel-alloys",
+      "to": "process:welding",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:nickel-alloys",
+      "to": "process:cutting",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:zinc-diecast",
+      "to": "process:casting",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:magnesium-alloys",
+      "to": "process:casting",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:magnesium-alloys",
+      "to": "process:cutting",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:ldpe",
+      "to": "process:extrusion",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:ldpe",
+      "to": "process:blown-film-extrusion",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:lldpe",
+      "to": "process:blown-film-extrusion",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:lldpe",
+      "to": "process:extrusion",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:ps",
+      "to": "process:injection-molding",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:eps",
+      "to": "process:polymer-foaming",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:abs",
+      "to": "process:injection-molding",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:pc",
+      "to": "process:injection-molding",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:pc",
+      "to": "process:extrusion",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:pmma",
+      "to": "process:extrusion",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:pmma",
+      "to": "process:thermoforming",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:pom",
+      "to": "process:injection-molding",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:pom",
+      "to": "process:cutting",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:pbt",
+      "to": "process:injection-molding",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:pps",
+      "to": "process:injection-molding",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:peek",
+      "to": "process:cutting",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:peek",
+      "to": "process:additive",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:ptfe",
+      "to": "process:cutting",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:eva-polymer",
+      "to": "process:extrusion",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:eva-polymer",
+      "to": "process:polymer-foaming",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:epdm",
+      "to": "process:rubber-vulcanization",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:sbr",
+      "to": "process:rubber-vulcanization",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:tpu",
+      "to": "process:extrusion",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:tpu",
+      "to": "process:injection-molding",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:grain-wheat",
+      "to": "process:grain-milling",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:wheat-flour",
+      "to": "process:food-extrusion",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:vegetable-oils",
+      "to": "process:food-packaging",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:raw-milk",
+      "to": "process:pasteurization",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:milk-powder",
+      "to": "process:spray-drying-food",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:fruit-juice-base",
+      "to": "process:juice-clarification",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:fruit-juice-base",
+      "to": "process:pasteurization",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:fruit-puree",
+      "to": "process:pasteurization",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:sugar-crystal",
+      "to": "process:food-packaging",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:yeast-food",
+      "to": "process:fermentation",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:meat-raw",
+      "to": "process:food-packaging",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:meat-raw",
+      "to": "process:freezing-food",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:wool-fiber",
+      "to": "process:carding",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:wool-fiber",
+      "to": "process:spinning",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:flax-fiber",
+      "to": "process:spinning",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:flax-fiber",
+      "to": "process:weaving",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:polyester-fiber",
+      "to": "process:spinning",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:polyester-fiber",
+      "to": "process:weaving",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:polyamide-textile-yarn",
+      "to": "process:winding-yarn",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:polyamide-textile-yarn",
+      "to": "process:weaving",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:viscose-fiber",
+      "to": "process:spinning",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:viscose-fiber",
+      "to": "process:weaving",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:nonwoven-fabric",
+      "to": "process:needle-punching-nonwovens",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:knitted-fabric",
+      "to": "process:knitting",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:knitted-fabric",
+      "to": "process:sewing",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:sewing-thread",
+      "to": "process:sewing",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:warp-yarn",
+      "to": "process:warping",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:warp-yarn",
+      "to": "process:warp-sizing",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:technical-dye",
+      "to": "process:textile-finishing",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:technical-felt",
+      "to": "process:needle-punching-nonwovens",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:spruce-lumber",
+      "to": "process:sawmilling",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:spruce-lumber",
+      "to": "process:wood-drying",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:pine-lumber",
+      "to": "process:sawmilling",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:pine-lumber",
+      "to": "process:wood-drying",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:wood-veneer",
+      "to": "process:veneer-peeling",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:wood-veneer",
+      "to": "process:plywood-bonding",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:osb-board",
+      "to": "process:fiberboard-pressing",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:particleboard",
+      "to": "process:fiberboard-pressing",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:glulam",
+      "to": "process:plywood-bonding",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:clt",
+      "to": "process:plywood-bonding",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:wood-impregnant",
+      "to": "process:wood-preservation",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:pcb-prepreg",
+      "to": "process:pcb-assembly",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:pcb-laminate",
+      "to": "process:pcb-drilling",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:pcb-laminate",
+      "to": "process:pcb-etching",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:pcb-copper-foil",
+      "to": "process:pcb-etching",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:pcb-copper-foil",
+      "to": "process:pcb-plating",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:solder-paste",
+      "to": "process:solder-paste-printing",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:solder-paste",
+      "to": "process:reflow-soldering",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:solder-flux",
+      "to": "process:wave-soldering",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:solder-flux",
+      "to": "process:selective-soldering",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:electronic-encapsulant",
+      "to": "process:conformal-coating",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:conformal-coating-material",
+      "to": "process:conformal-coating",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:lime-stone",
+      "to": "process:ore-crushing",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:soda-ash",
+      "to": "process:glass-melting",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:soda-ash",
+      "to": "process:chemical-mixing",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:industrial-sulfur",
+      "to": "process:chemical-mixing",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:phosphate-rock",
+      "to": "process:ore-crushing",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:potash-raw",
+      "to": "process:crystallization",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:industrial-zeolite",
+      "to": "process:granular-filtration",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:bentonite-clay",
+      "to": "process:chemical-mixing",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:industrial-salt",
+      "to": "process:chemical-mixing",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:carbon-fiber-preform",
+      "to": "process:hand-layup",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:carbon-fiber-preform",
+      "to": "process:filament-winding",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:carbon-fiber-laminate",
+      "to": "process:vacuum-infusion",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:carbon-fiber-laminate",
+      "to": "process:autoclave-composites",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:composite-honeycomb",
+      "to": "process:assembly",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:composite-epoxy-resin",
+      "to": "process:vacuum-infusion",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:composite-epoxy-resin",
+      "to": "process:resin-transfer-molding",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:prepreg-composite",
+      "to": "process:autoclave-composites",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:basalt-fiber",
+      "to": "process:pultrusion",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:basalt-fiber",
+      "to": "process:filament-winding",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:building-aggregate",
+      "to": "process:concrete-mixing",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:crushed-stone",
+      "to": "process:ore-crushing",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:crushed-stone",
+      "to": "process:concrete-mixing",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:sand-building",
+      "to": "process:concrete-mixing",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:asphalt-binder",
+      "to": "process:asphalt-mix-production",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:asphalt-mix",
+      "to": "process:asphalt-mix-production",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:asphalt-mix",
+      "to": "process:road-asphalt-placement",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:rebar-steel",
+      "to": "process:rebar-installation",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:ready-mix-concrete",
+      "to": "process:concrete-mixing",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:ready-mix-concrete",
+      "to": "process:concrete-placing",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:geotextile",
+      "to": "process:needle-punching-nonwovens",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:electrical-steel",
+      "to": "process:rolling",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:electrical-steel",
+      "to": "process:stamping",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:graphite-electrode",
+      "to": "process:inspection",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:copper-electric-wire",
+      "to": "process:inspection",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:thermal-insulation-wool",
+      "to": "process:inspection",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:heat-exchanger-steel",
+      "to": "process:welding",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:heat-exchanger-steel",
+      "to": "process:industrial-heat-exchange",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:uf-membrane",
+      "to": "process:ultrafiltration-water",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:activated-alumina-adsorbent",
+      "to": "process:carbon-adsorption",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:ferric-oxide-media",
+      "to": "process:granular-filtration",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:flocculant-polyelectrolyte",
+      "to": "process:flocculation-water",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:coagulant-iron",
+      "to": "process:coagulation-water",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:alumina-ceramic",
+      "to": "process:ceramic-sintering",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:silica-refractory",
+      "to": "process:ceramic-sintering",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:fireclay-raw",
+      "to": "process:ceramic-calcination",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:kaolin-industrial",
+      "to": "process:ceramic-calcination",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:glass-cullet",
+      "to": "process:glass-melting",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:ceramic-glaze",
+      "to": "process:ceramic-sintering",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:lime-technical",
+      "to": "process:chemical-mixing",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:pharma-mcc",
+      "to": "process:tablet-compression",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:pharma-lactose",
+      "to": "process:pharma-powder-blending",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:pharma-gelatin",
+      "to": "process:capsule-filling",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:pharma-povidone",
+      "to": "process:wet-granulation-pharma",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:pharma-hpmc",
+      "to": "process:tablet-coating",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:pharma-starch",
+      "to": "process:pharma-powder-blending",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:flexo-plate",
+      "to": "process:printing-plate-making",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:flexo-plate",
+      "to": "process:flexography",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:screen-print-mesh",
+      "to": "process:screen-printing",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:offset-blanket",
+      "to": "process:offset-lithography",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:uv-curing-ink",
+      "to": "process:uv-curing-print",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:printing-film-substrate",
+      "to": "process:flexography",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:copper-ore",
+      "to": "process:ore-crushing",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:copper-ore",
+      "to": "process:ore-flotation",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:nickel-ore",
+      "to": "process:ore-grinding",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:nickel-ore",
+      "to": "process:ore-flotation",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:manganese-ore",
+      "to": "process:ore-crushing",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:lithium-concentrate",
+      "to": "process:ore-flotation",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:graphite-concentrate",
+      "to": "process:ore-flotation",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:rare-earth-concentrate",
+      "to": "process:magnetic-separation-ore",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:fluorite-ore",
+      "to": "process:ore-flotation",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:talc-industrial",
+      "to": "process:ore-grinding",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:perlite-raw",
+      "to": "process:ore-screening",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:diatomite-raw",
+      "to": "process:industrial-filtration",
+      "relation": "processed_by"
+    },
+    {
+      "from": "material:zinc-concentrate",
+      "to": "process:ore-flotation",
       "relation": "processed_by"
     },
     {
