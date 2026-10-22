@@ -23,7 +23,11 @@ function loadLegacy(){return script('engineer-calculators.js')}
 function activate(panel){
  if(!panel.open||initialized.has(panel)||waiting.has(panel))return;
  waiting.add(panel);
- const status=panel.querySelector('.lab-load-status');
+ let status=panel.querySelector('.lab-load-status');
+ if(!status){
+  const body=panel.querySelector('.calc-lab-body');
+  if(body){status=document.createElement('p');status.className='lab-load-status calc-lab-status';status.setAttribute('role','status');body.prepend(status)}
+ }
  if(status)status.textContent='Загрузка калькулятора…';
  const isLab=panel.hasAttribute('data-lab');
  const promise=isLab?loadEngine():panel.classList.contains('practical-lab')?loadPractical():loadLegacy();
