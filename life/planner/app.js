@@ -93,14 +93,16 @@ function persist(){
       cat:typeof prev.cat==="string"?prev.cat:shopCategory(item.sectionId),done:!!item.done,
       time:M.validTime(item.time)?item.time:"",remind:!!item.remind&&M.validTime(item.time)};
   });
-  const fresh=JSON.stringify(state),samePlan=all[PERSONAL_KEY]&&JSON.stringify(all[PERSONAL_KEY])===fresh;
+  // Shopping lives only in the original shared shopping key. The flexible plan stores tasks, finances and settings without duplicating goods.
+  const storedPlan={...state,shopping:[]};
+  const fresh=JSON.stringify(storedPlan),samePlan=all[PERSONAL_KEY]&&JSON.stringify(all[PERSONAL_KEY])===fresh;
   const sameShop=JSON.stringify(current)===JSON.stringify(canonical);
   if(samePlan&&sameShop)return true;
   // Never materialize an untouched blank flexible planner on an empty new device:
   // the cloud client must still recognize it as empty and download existing data.
   if(!all[PERSONAL_KEY]&&!localStorage.getItem(KEY)&&sameShop&&
      JSON.stringify(state)===JSON.stringify(newDefault()))return true;
-  all[PERSONAL_KEY]=state;
+  all[PERSONAL_KEY]=storedPlan;
   const total=JSON.stringify(all);
   if(!sameShop)localStorage.setItem(SHOP_KEY,JSON.stringify(canonical));
   if(!samePlan)localStorage.setItem(SHARED_KEY,total);
