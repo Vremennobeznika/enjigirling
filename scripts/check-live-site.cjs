@@ -22,7 +22,7 @@ async function run(){
  // Check production resources actually linked from each of the nine HTML pages.
  const assets=new Set();
  for(const name of paths.filter(p=>p.endsWith('.html'))){
-  for(const match of files[name].matchAll(/(?:href|src)\s*=\s*["']([^"']+)["']/g)){
+  for(const match of files[name].replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi,'').matchAll(/(?:href|src)\s*=\s*["']([^"']+)["']/g)){
    const href=match[1].split(/[?#]/)[0];
    if(!href||/^(https?:|mailto:|tel:|data:|\/\/|#)/i.test(href))continue;
    const origin=new URL(base);
