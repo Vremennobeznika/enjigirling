@@ -42,12 +42,12 @@ let amount=node("span","amount",x.qty),del=node("button","del","×");del.type="b
 li.append(cb,name,amount,del);ul.append(li);
 });
 }
-$("addForm").onsubmit=e=>{e.preventDefault();let name=$("itemName").value.trim(),qty=$("itemQty").value.trim();if(!name)return;if(active==="all")active="other";
-data.push({id:Date.now()+"-"+Math.random().toString(36).slice(2),name,qty,cat:active,done:false});save();$("itemName").value="";$("itemQty").value="";render();$("itemName").focus();};
+$("addForm").onsubmit=e=>{e.preventDefault();let name=$("itemName").value.trim(),qty=$("itemQty").value.trim();if(!name)return;const category=active==="all"?"other":active;
+data.push({id:Date.now()+"-"+Math.random().toString(36).slice(2),name,qty,cat:category,done:false});save();$("itemName").value="";$("itemQty").value="";render();$("itemName").focus();};
 $("removeDone").onclick=()=>{if(!data.some(x=>x.done))return;if(confirm("Удалить все отмеченные покупки?")){data=data.filter(x=>!x.done);save();render();}};
 $("reset").onclick=()=>{if(confirm("Удалить ВСЕ товары из списка?")){data=[];save();render();}};
 $("export").onclick=()=>{let blob=new Blob([JSON.stringify({version:1,items:data},null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="spisok-pokupok.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
-$("import").onchange=async e=>{let f=e.target.files?.[0];if(!f)return;try{let j=JSON.parse(await f.text()),arr=Array.isArray(j)?j:j.items;if(!Array.isArray(arr))throw Error();let cleaned=arr.filter(x=>x&&typeof x.name==="string"&&cats.some(c=>c[0]===x.cat)).map(x=>({id:String(x.id||Math.random()),name:x.name.slice(0,120),qty:String(x.qty||"").slice(0,35),cat:x.cat,done:!!x.done}));if(!confirm("Заменить текущий список загруженной копией ("+cleaned.length+" товаров)?"))return;data=cleaned;save();render();}catch(err){alert("Не удалось прочитать файл списка.");}finally{e.target.value="";}};
+$("import").onchange=async e=>{let f=e.target.files?.[0];if(!f)return;try{if(f.size>1000000)throw Error("Файл слишком большой (максимум 1 МБ)");let j=JSON.parse(await f.text()),arr=Array.isArray(j)?j:j.items;if(!Array.isArray(arr))throw Error();let cleaned=arr.filter(x=>x&&typeof x.name==="string"&&cats.some(c=>c[0]===x.cat)).map(x=>({id:String(x.id||Math.random()),name:x.name.slice(0,120),qty:String(x.qty||"").slice(0,35),cat:x.cat,done:!!x.done}));if(!confirm("Заменить текущий список загруженной копией ("+cleaned.length+" товаров)?"))return;data=cleaned;save();render();}catch(err){alert("Не удалось прочитать файл списка.");}finally{e.target.value="";}};
 window.addEventListener("life-sync-applied",()=>{data=loadShop();render()});
 window.addEventListener("storage",e=>{if(e.key===key){data=loadShop();render()}});
 render();
