@@ -38,6 +38,7 @@ test('legacy and advanced tools initialize on demand after page load',async({pag
  expect(seen.filter(url=>url.endsWith('/engineering-lab-core.js')).length).toBe(1);
  await page.locator('#calcUnits > summary').click();
  await page.locator('#convInput').fill('1000');
+ await page.locator('#convTo').selectOption('m');
  await expect(page.locator('#convResultValue')).toHaveText('1');
  expect(seen.filter(url=>url.endsWith('/engineer-calculators.js')).length).toBe(1);
 });
