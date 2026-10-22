@@ -5,7 +5,7 @@
 <meta name="theme-color" content="#111111"><meta name="description" content="Локальный органайзер: планы, финансы, покупки и свои разделы. Без аккаунта и облака.">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
 <link rel="icon" type="image/svg+xml" href="./icon.svg"><link rel="manifest" href="./manifest.webmanifest">
-<link rel="stylesheet" href="./style.css"><script src="./app.js" defer></script>
+<link rel="stylesheet" href="./style.css"><script src="./model.js" defer></script><script src="./app.js" defer></script>
 <title>Обычный день — личный органайзер</title>
 </head>
 <body>
@@ -50,7 +50,7 @@
 </section>
 <section id="page-home" class="page" hidden>
  <div class="heading"><p class="eyebrow">ДОМАШНИЕ ДЕЛА</p><h1>Дом</h1><p class="muted">Запасы и растения — без заданного количества горшков или навязанного графика полива.</p></div>
- <div class="cols">
+ <article class="panel" id="homeRoutinePanel" hidden><div class="panel-head"><h2>Повторяющиеся домашние дела</h2><button class="link-btn" type="button" data-go="settings">Настроить пункты →</button></div><div id="homeRoutineRows" class="rows"></div></article><div class="cols">
  <article class="panel"><div class="panel-head"><h2>Домашние запасы</h2><span id="pantryCount" class="muted"></span></div><form id="pantryForm" class="form-grid"><label class="field wide"><span>Продукт или вещь</span><input id="pantryName" maxlength="140" placeholder="Что уже есть дома" required></label><label class="field"><span>Количество</span><input id="pantryQty" maxlength="40" placeholder="2 шт."></label><button class="btn primary" type="submit">Добавить</button></form><div id="pantryRows" class="rows"></div></article>
  <article class="panel"><div class="panel-head"><h2>Мои растения</h2><span id="plantCount" class="muted"></span></div><form id="plantForm" class="form-grid"><label class="field wide"><span>Название растения</span><input id="plantName" maxlength="140" placeholder="Фикус" required></label><label class="field wide"><span>Особенности ухода</span><input id="plantNote" maxlength="200" placeholder="Полив по влажности грунта"></label><button class="btn primary" type="submit">Добавить</button></form><div id="plantRows" class="rows"></div></article>
  </div>
