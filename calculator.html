@@ -56,6 +56,7 @@
 <div class="calculator-group"><h3>Цифровые данные</h3><a href="#labIEEE">Битоскоп</a><a href="#calcBases">Системы счисления</a></div>
 <div class="calculator-group"><h3>Электротехника</h3><a href="#labElectronics">Электроцех</a><a href="#calcSignal">Сигнал 4–20 мА</a></div>
 <div class="calculator-group"><h3>Производство</h3><a href="#labProduction">Цеховой расчёт</a></div>
+<div class="calculator-group"><h3>Практические расчёты</h3><a href="#labPractical">Электросеть и заготовка</a></div>
 <div class="calculator-group"><h3>Швейное дело</h3><a href="#labSewing">Раскрой и поток</a><a href="#labMoreSewing">Настил и усадка</a></div>
 <div class="calculator-group"><h3>Море и суда</h3><a href="#labMarine">Морской блокнот</a><a href="#labMoreMarine">Корпус и течение</a></div>
 <div class="calculator-group"><h3>Единицы и измерения</h3><a href="#calcUnits">Инженерный конвертер</a><a href="#labCaliper">Шкаломер</a></div>
@@ -287,6 +288,14 @@
 </div>
 </section>
 
+<section class="calculator-workshop-section" id="group-practical" aria-labelledby="group-practical-heading">
+<header class="calculator-workshop-heading"><div><h2 id="group-practical-heading">Практические расчёты</h2><p>Электроснабжение и геометрия заготовок</p></div><span>3 инструмента</span></header>
+<div class="calculator-workshop-grid"><details class="calc-lab practical-lab" id="labPractical"><summary><strong>Электросеть и заготовка</strong><small>Трёхфазная мощность · падение напряжения · масса цилиндра</small></summary><div class="calc-lab-body">
+<section class="calc-lab-sub"><h3>Трёхфазная мощность симметричной нагрузки</h3><div class="calc-lab-grid"><div class="calc-lab-field"><label for="threeVoltage">Линейное напряжение, В</label><input id="threeVoltage" type="text" inputmode="decimal" value="400"></div><div class="calc-lab-field"><label for="threeCurrent">Линейный ток, А</label><input id="threeCurrent" type="text" inputmode="decimal" value="10"></div><div class="calc-lab-field"><label for="threePF">cos φ</label><input id="threePF" type="text" inputmode="decimal" value="0.8"></div></div><output id="threeOutput" class="calc-lab-output" aria-live="polite">—</output><button type="button" class="calc-practical-copy" data-copy-for="threeOutput">Копировать результат</button><p class="calc-lab-note">S = √3 UI; P = S·cos φ; Q = S·sin φ. Только симметричная синусоидальная нагрузка, без гармоник и искажений. Для несинусоидальных режимов нужен учёт полного коэффициента мощности.</p></section>
+<section class="calc-lab-sub"><h3>Оценка падения напряжения в линии</h3><div class="calc-lab-grid"><div class="calc-lab-field"><label for="voltageSystem">Система</label><select id="voltageSystem"><option value="dc">Постоянный ток, двухпроводная</option><option value="single">Однофазная AC</option><option value="three" selected>Трёхфазная AC, симметричная</option></select></div><div class="calc-lab-field"><label for="voltageNominal">Напряжение, В</label><input id="voltageNominal" type="text" inputmode="decimal" value="400"></div><div class="calc-lab-field"><label for="voltageCurrent">Ток, А</label><input id="voltageCurrent" type="text" inputmode="decimal" value="20"></div><div class="calc-lab-field"><label for="voltageLength">Длина линии в одну сторону, м</label><input id="voltageLength" type="text" inputmode="decimal" value="50"></div><div class="calc-lab-field"><label for="voltageSection">Сечение проводника, мм²</label><input id="voltageSection" type="text" inputmode="decimal" value="4"></div><div class="calc-lab-field"><label for="voltageRho">Удельное сопротивление, Ом·мм²/м</label><input id="voltageRho" type="text" inputmode="decimal" value="0.0175"></div><div class="calc-lab-field"><label id="voltagePFLabel" for="voltagePF">cos φ нагрузки</label><input id="voltagePF" type="text" inputmode="decimal" value="0.9"></div></div><output id="voltageOutput" class="calc-lab-output" aria-live="polite">—</output><button type="button" class="calc-practical-copy" data-copy-for="voltageOutput">Копировать результат</button><p class="calc-lab-note">Упрощённая резистивная оценка: 2·I·ρ·L/A (DC), 2·I·ρ·L·cosφ/A (однофазная AC), √3·I·ρ·L·cosφ/A (трёхфазная AC). Не учтены реактивность, нагрев жил, контакты, гармоники и реальные схемы прокладки. Не использовать как проектный расчёт защиты или выбора кабеля.</p></section>
+<section class="calc-lab-sub"><h3>Масса сплошного или полого цилиндра</h3><div class="calc-lab-grid"><div class="calc-lab-field"><label for="cylDensity">Плотность материала, кг/м³</label><input id="cylDensity" type="text" inputmode="decimal" value="7850"></div><div class="calc-lab-field"><label for="cylOuter">Наружный диаметр, мм</label><input id="cylOuter" type="text" inputmode="decimal" value="50"></div><div class="calc-lab-field"><label for="cylInner">Внутренний диаметр, мм (0 — сплошной)</label><input id="cylInner" type="text" inputmode="decimal" value="20"></div><div class="calc-lab-field"><label for="cylLength">Длина, мм</label><input id="cylLength" type="text" inputmode="decimal" value="1000"></div></div><output id="cylOutput" class="calc-lab-output" aria-live="polite">—</output><button type="button" class="calc-practical-copy" data-copy-for="cylOutput">Копировать результат</button><p class="calc-lab-note">m = ρπ(D²−d²)L/4, размеры переводятся из мм в м. Значение плотности приведено только как пример, не как универсальное свойство стали.</p></section>
+</div></details></div></section>
+
 <section class="calculator-workshop-section" id="group-sewing" aria-labelledby="group-sewing-heading">
 <header class="calculator-workshop-heading"><div><h2 id="group-sewing-heading">Швейное производство</h2><p>Раскрой, потери материала и эффективность потока</p></div><span>2 инструмента</span></header>
 <div class="calculator-workshop-grid">
@@ -409,5 +418,7 @@
 <script src="site-shell.js"></script>
 <script src="navigation.js"></script>
 <script src="calculator-loader.js"></script>
+<script src="calculator-practical-core.js"></script>
+<script src="calculator-practical.js"></script>
 </body>
 </html>
