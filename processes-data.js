@@ -1751,8 +1751,8 @@ window.engineeringProcesses = [
     "profession": "materials-engineer",
     "sources": [
       {
-        "title": "EPA — отраслевой обзор формования пластмасс — общий контекст; не техкарта",
-        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
+        "title": "EPA (2000), § 4.2.4 — отраслевой обзор производства изделий из пластмасс",
+        "url": "https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf"
       }
     ],
     "evidence": {
@@ -1778,8 +1778,8 @@ window.engineeringProcesses = [
     "profession": "materials-engineer",
     "sources": [
       {
-        "title": "EPA — отраслевой обзор формования пластмасс — общий контекст; не техкарта",
-        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
+        "title": "EPA (2000), § 4.2.4 — отраслевой обзор производства изделий из пластмасс",
+        "url": "https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf"
       }
     ],
     "evidence": {
@@ -1805,8 +1805,8 @@ window.engineeringProcesses = [
     "profession": "materials-engineer",
     "sources": [
       {
-        "title": "EPA — отраслевой обзор формования пластмасс — общий контекст; не техкарта",
-        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
+        "title": "EPA (2000), § 4.2.4 — отраслевой обзор производства изделий из пластмасс",
+        "url": "https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf"
       }
     ],
     "evidence": {
@@ -1832,8 +1832,8 @@ window.engineeringProcesses = [
     "profession": "materials-engineer",
     "sources": [
       {
-        "title": "EPA — отраслевой обзор формования пластмасс — общий контекст; не техкарта",
-        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
+        "title": "EPA (2000), § 4.2.4 — отраслевой обзор производства изделий из пластмасс",
+        "url": "https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf"
       }
     ],
     "evidence": {
@@ -1859,8 +1859,8 @@ window.engineeringProcesses = [
     "profession": "materials-engineer",
     "sources": [
       {
-        "title": "EPA — отраслевой обзор формования пластмасс — общий контекст; не техкарта",
-        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
+        "title": "EPA (2000), § 4.2.4 — отраслевой обзор производства изделий из пластмасс",
+        "url": "https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf"
       }
     ],
     "evidence": {
@@ -1886,8 +1886,8 @@ window.engineeringProcesses = [
     "profession": "materials-engineer",
     "sources": [
       {
-        "title": "EPA — отраслевой обзор формования пластмасс — общий контекст; не техкарта",
-        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
+        "title": "EPA (2000), § 4.2.4 — отраслевой обзор производства изделий из пластмасс",
+        "url": "https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf"
       }
     ],
     "evidence": {
@@ -4912,8 +4912,8 @@ window.engineeringProcesses = [
     "profession": "materials-engineer",
     "sources": [
       {
-        "title": "EPA — обзор производства изделий из пластмасс — обзор без технологических режимов",
-        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
+        "title": "EPA (2000), § 4.2.4 — отраслевой обзор производства изделий из пластмасс",
+        "url": "https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf"
       }
     ],
     "evidence": {
@@ -4939,8 +4939,8 @@ window.engineeringProcesses = [
     "profession": "materials-engineer",
     "sources": [
       {
-        "title": "EPA — обзор производства изделий из пластмасс — обзор без технологических режимов",
-        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
+        "title": "EPA (2000), § 4.2.4 — отраслевой обзор производства изделий из пластмасс",
+        "url": "https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf"
       }
     ],
     "evidence": {
@@ -4967,8 +4967,8 @@ window.engineeringProcesses = [
     "profession": "materials-engineer",
     "sources": [
       {
-        "title": "EPA — обзор производства изделий из пластмасс — обзор без технологических режимов",
-        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
+        "title": "EPA (2000), § 4.2.4 — отраслевой обзор производства изделий из пластмасс",
+        "url": "https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf"
       }
     ],
     "evidence": {
@@ -4994,8 +4994,8 @@ window.engineeringProcesses = [
     "profession": "materials-engineer",
     "sources": [
       {
-        "title": "EPA — обзор производства изделий из пластмасс — обзор без технологических режимов",
-        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
+        "title": "EPA (2000), § 4.2.4 — отраслевой обзор производства изделий из пластмасс",
+        "url": "https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf"
       }
     ],
     "evidence": {
@@ -5021,8 +5021,8 @@ window.engineeringProcesses = [
     "profession": "materials-engineer",
     "sources": [
       {
-        "title": "EPA — обзор производства изделий из пластмасс — обзор без технологических режимов",
-        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
+        "title": "EPA (2000), § 4.2.4 — отраслевой обзор производства изделий из пластмасс",
+        "url": "https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf"
       }
     ],
     "evidence": {
@@ -5048,8 +5048,8 @@ window.engineeringProcesses = [
     "profession": "materials-engineer",
     "sources": [
       {
-        "title": "EPA — обзор производства изделий из пластмасс — обзор без технологических режимов",
-        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
+        "title": "EPA (2000), § 4.2.4 — отраслевой обзор производства изделий из пластмасс",
+        "url": "https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf"
       }
     ],
     "evidence": {
