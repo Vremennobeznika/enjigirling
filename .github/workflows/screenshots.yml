@@ -7,7 +7,7 @@ on:
       - 'scripts/capture-screenshots.cjs'
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 jobs:
   capture:
     runs-on: ubuntu-latest
@@ -26,6 +26,52 @@ jobs:
           python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/enjigirling-screenshots-server.log 2>&1 &
       - name: Capture screenshots and viewport audit
         run: node scripts/capture-screenshots.cjs
+      - name: Prepare README preview images
+        run: |
+          python3 -m pip install --user --quiet Pillow
+          python3 - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+          root=Path('docs/screenshots')
+          root.mkdir(parents=True,exist_ok=True)
+          shots=[
+            ('screenshots/desktop-1440-index.png','home-desktop.webp',1200,820),
+            ('screenshots/mobile-375-index.png','home-mobile.webp',375,812),
+          ]
+          for source,name,width,height in shots:
+            with Image.open(source) as original:
+              image=original.convert('RGB')
+              image=image.crop((0,0,min(width,image.width),min(height,image.height)))
+              image.save(root/name,'WEBP',quality=82,method=6)
+              print(name,(root/name).stat().st_size,'bytes')
+          PY
+      - name: Embed screenshots in README and commit assets
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          readme=Path('README.md')
+          src=readme.read_text(encoding='utf-8')
+          marker='Сайт: https://vremennobeznika.github.io/enjigirling/'
+          gallery='''## Скриншоты сайта
+
+          <p align="center">
+            <img src="docs/screenshots/home-desktop.webp" alt="ENJIGIRLING — главная страница на компьютере" width="680">
+            <img src="docs/screenshots/home-mobile.webp" alt="ENJIGIRLING — главная страница на телефоне" width="220">
+          </p>
+
+          '''
+          if '## Скриншоты сайта' not in src:
+            assert marker in src,'Expected site link in README'
+            src=src.replace(marker+'\\n\\n',marker+'\\n\\n'+gallery,1)
+            readme.write_text(src,encoding='utf-8')
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md docs/screenshots/home-desktop.webp docs/screenshots/home-mobile.webp
+          if ! git diff --cached --quiet; then
+            git commit -m "docs: add desktop and mobile screenshots to README"
+            git push origin HEAD:main
+          fi
       - name: Publish screenshots PNG + audit JSON
         if: always()
         uses: actions/upload-artifact@v4
