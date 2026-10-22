@@ -93,7 +93,7 @@ async function request(method,payload){
  const options={method,headers:{"X-Sync-Token":token},mode:"cors",credentials:"omit",cache:"no-store"};
  if(method==="PUT"){options.headers["Content-Type"]="application/json";options.body=JSON.stringify(payload)}
  const ctrl=new AbortController();options.signal=ctrl.signal;const timeout=setTimeout(()=>ctrl.abort(),25000);let response;
- try{response=await fetch(url,options)}finally{clearTimeout(timeout)}
+ try{response=await fetch(url,options)}catch(err){if(err?.name==="AbortError")throw Error("тайм-аут соединения (25 секунд). Открой «Сегодня» → «Проверить соединение»");if(err instanceof TypeError)throw Error("браузер не получил ответ (сеть, CORS или доступ функции). Открой «Сегодня» → «Проверить соединение»");throw err}finally{clearTimeout(timeout)}
  let value;try{value=await response.json()}catch{throw Error("Облачная функция вернула ответ, отличный от JSON")}
  if(response.status===409){const err=Error("Конфликт версий");err.code=409;throw err}
  if(!response.ok)throw Error(value.error||"HTTP "+response.status);
