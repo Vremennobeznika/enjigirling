@@ -378,6 +378,12 @@ function renderSettings(){
  $("restorePrevious").disabled=!localStorage.getItem(M.RECOVERY);
 }
 function render(){
+ // Renaming a built-in section also renames its page title, not just its tab.
+ const builtinTitles={planner:["Календарь","Моя неделя"],money:["Финансы","Доходы и расходы"],shopping:["Покупки","Покупки"],home:["Дом","Дом"]};
+ for(const section of state.sections.filter(x=>x.kind==="builtin")){
+  const heading=$("page-"+section.id)?.querySelector("h1"),def=builtinTitles[section.id];
+  if(heading&&def)heading.textContent=section.title===def[0]?def[1]:section.title;
+ }
  document.body.dataset.theme=state.theme;
  $("themeToggle").textContent=state.theme==="dark"?"☼":"☾";
  renderNav();renderOverview();renderPlanner();renderMoney();renderShopping();renderHome();renderSettings();
