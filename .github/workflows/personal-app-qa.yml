@@ -1,0 +1,53 @@
+name: Personal app quality matrix
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'life/**'
+      - 'calendar/index.html'
+      - 'calendar/household.js'
+      - 'plants/**'
+      - 'shopping/**'
+      - 'tests/life-*.cjs'
+      - 'tests/calendar-layout.spec.cjs'
+      - 'tests/personal-flows.spec.cjs'
+      - 'scripts/all-checks.cjs'
+      - '.github/workflows/personal-app-qa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: personal-app-qa-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Personal app — unit and real Chromium checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax and simulated multi-device data tests
+        run: |
+          node --check life/auto-sync.js
+          node --check life/sw.js
+          node tests/life-sync.cjs
+      - name: Install browser test tools
+        run: npm install --no-audit --no-fund
+      - name: Install Chromium
+        run: npx playwright install chromium
+      - name: Calendar, dashboard, shopping and plants in Chromium
+        run: npx playwright test tests/calendar-layout.spec.cjs tests/life-layout.spec.cjs tests/personal-flows.spec.cjs --project=chromium-desktop
+      - name: Upload screenshots and traces on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: personal-app-browser-test-results
+          path: test-results/
+          if-no-files-found: ignore
