@@ -1534,15 +1534,6 @@
     },
     {
       "recordType": "processes",
-      "recordId": "distillation",
-      "sourceId": "atlas-distillation",
-      "claimPath": "description",
-      "verificationStatus": "source_located",
-      "claimScope": "OSHA описывает перегонку и обезвоживание этанола, а не общий закон дистилляции для всех жидких смесей.",
-      "reviewScope": "Узкий тезис о разнице давлений насыщенного пара не подтвержден ссылкой на EPA. Проверено, что OSHA описывает конкретную перегонку этанола. Вся карточка не проверена."
-    },
-    {
-      "recordType": "processes",
       "recordId": "welding",
       "sourceId": "checked3-welding",
       "claimPath": "description",
