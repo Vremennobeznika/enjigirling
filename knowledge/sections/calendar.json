@@ -134,7 +134,7 @@
       "source": ""
     },
     {
-      "rule": "14 апреля",
+      "rule": "15 апреля",
       "month": "Апрель",
       "name": "День специалиста по радиоэлектронной борьбе — радиоинженеры",
       "ids": [
@@ -142,9 +142,9 @@
         "telecom-engineer",
         "military-engineer"
       ],
-      "note": "Профильная дата военных специалистов радиоэлектронной борьбы.",
-      "kind": "editorial",
-      "source": ""
+      "note": "Памятный день специалистов радиоэлектронной борьбы; 15 апреля по Указу Президента РФ от 31.05.2006 № 549.",
+      "kind": "documented",
+      "source": "https://www.consultant.ru/document/cons_doc_LAW_19238/8ade43b77c61b79cd7f3e83eba63c21bc342172b/"
     },
     {
       "rule": "18 апреля",
@@ -682,7 +682,8 @@
       ],
       "note": "Установлен приказом Минпромторга России от 21.11.2025 № 5763.",
       "kind": "documented",
-      "source": "https://www.consultant.ru/law/hotdocs/91872.html"
+      "source": "https://www.consultant.ru/law/hotdocs/91872.html",
+      "since": 2025
     },
     {
       "rule": "1@1",
@@ -694,7 +695,8 @@
       ],
       "note": "Установлен постановлением Правительства РФ от 07.03.2025 № 286.",
       "kind": "documented",
-      "source": "https://www.consultant.ru/document/cons_doc_LAW_19238/4b53aabae6a5a7b59afdb8c7d8c3936cf0afbd51/"
+      "source": "https://www.consultant.ru/document/cons_doc_LAW_19238/4b53aabae6a5a7b59afdb8c7d8c3936cf0afbd51/",
+      "since": 2025
     },
     {
       "rule": "2 октября",
