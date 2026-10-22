@@ -2481,7 +2481,7 @@ window.engineeringMaterials = [
     "sources": [
       {
         "title": "ISO 6938:2012 — Натуральные волокна: названия и определения",
-        "url": "https://www.iso.org/ru/standard/57474.html"
+        "url": "https://www.iso.org/standard/57474.html"
       }
     ],
     "evidence": {
@@ -2509,7 +2509,7 @@ window.engineeringMaterials = [
     "sources": [
       {
         "title": "ISO 6938:2012 — Натуральные волокна: названия и определения",
-        "url": "https://www.iso.org/ru/standard/57474.html"
+        "url": "https://www.iso.org/standard/57474.html"
       }
     ],
     "evidence": {
