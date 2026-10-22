@@ -13,6 +13,7 @@ on:
       - 'engineer-calculators.js'
       - 'tests/practical-calculator*'
       - 'tests/engineering-lab*'
+      - 'tests/engineering-safety-matrix.cjs'
       - '.github/workflows/calculator-checks.yml'
   pull_request:
     paths:
@@ -26,6 +27,7 @@ on:
       - 'engineer-calculators.js'
       - 'tests/practical-calculator*'
       - 'tests/engineering-lab*'
+      - 'tests/engineering-safety-matrix.cjs'
       - '.github/workflows/calculator-checks.yml'
 jobs:
   math:
@@ -44,6 +46,7 @@ jobs:
       - name: Engineering formulas
         run: |
           node tests/engineering-lab-unit.cjs
+          node tests/engineering-safety-matrix.cjs
           node tests/practical-calculator-unit.cjs
   browser:
     runs-on: ubuntu-latest
