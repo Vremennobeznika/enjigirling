@@ -1,0 +1,18 @@
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const source=fs.readFileSync('calendar/index.html','utf8');
+const match=source.match(/const wd=(\[[\s\S]*?\]),we=(\[[\s\S]*?\]),names=/);
+assert.ok(match,'old schedule is present');
+const work=JSON.parse(match[1]),weekend=JSON.parse(match[2]);
+const start=source.indexOf('function buildPillCalendarICS(');
+const end=source.indexOf('document.getElementById("exportPillsICS")',start);
+assert.ok(start>0&&end>start,'calendar ICS exporter exists');
+const exportICS=new Function('wd','we','TextEncoder',source.slice(start,end)+'return buildPillCalendarICS;')(work,weekend,TextEncoder);
+const ics=exportICS(new Date(2026,9,23),30);
+assert.equal((ics.match(/BEGIN:VEVENT/g)||[]).length,150);
+assert.equal((ics.match(/BEGIN:VALARM/g)||[]).length,150);
+assert.equal((ics.match(/END:VEVENT/g)||[]).length,150);
+assert.ok(ics.includes('DTSTART:20261023T074000'),'events use local floating times');
+assert.ok(ics.endsWith('END:VCALENDAR\r\n'));
+assert.ok(!ics.includes('Подготовка на завтра'),'only pill reminders are exported');
+console.log('PASS: personal calendar 30-day iOS .ics exports 150 events and 150 alarms');
