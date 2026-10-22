@@ -119,3 +119,11 @@ assert.equal(entries.filter(x=>x.item.sourceFetchStatus==='fetched').length,77,'
 assert.equal(entries.filter(x=>x.item.sourceFetchStatus==='fetch_failed').length,3,'3 links require retry, not deletion');
 for(const row of entries)assert.equal(row.item.sourceFetchCheckedAt,'2026-10-22',row.item.name+': absent network audit date');
 assert.ok(js.includes('item.sourceFetchStatus'),'UI must expose URL fetch result to readers');
+
+// Numeric claims are release-controlled separately from editorial sources and links.
+const numericGate=JSON.parse(fs.readFileSync('audit/map-visible-numeric-allowlist.json','utf8'));
+const numericFields=['budgetPlaces','paidPlaces','tuitionAnnualRub','tuitionSemesterRub','duration'];
+const actualNumeric=entries.flatMap(({item})=>(item.verifiedPrograms||[]).flatMap(program=>numericFields.filter(field=>program[field]!==undefined).map(field=>({organization:item.name,code:program.code,field,value:program[field],sourceUrl:program.sourceUrl}))));
+const stableClaim=row=>JSON.stringify([row.organization,row.code,row.field,row.value,row.sourceUrl]);
+assert.deepEqual(actualNumeric.map(stableClaim).sort(),numericGate.records.map(stableClaim).sort(),'An uncited or unreviewed numeric education claim was added, removed, or changed; regenerate and re-audit the numeric gate before release');
+console.log('PASS: '+actualNumeric.length+' numerically scoped education claims match the reviewed allowlist');
