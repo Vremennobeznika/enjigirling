@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "language": "ru",
   "generatedFrom": "repository editorial datasets",
-  "recordCount": 626,
+  "recordCount": 830,
   "records": [
     {
       "id": "profession:civil-engineer",
@@ -421,7 +421,10 @@
       "dataset": "knowledge/materials.json",
       "relatedProcesses": [
         "cutting",
-        "heat"
+        "heat",
+        "hardness",
+        "stamping",
+        "rolling"
       ]
     },
     {
@@ -433,7 +436,12 @@
       "dataset": "knowledge/materials.json",
       "relatedProcesses": [
         "cutting",
-        "heat"
+        "heat",
+        "ultrasonic",
+        "hardness",
+        "forging",
+        "grinding",
+        "rolling"
       ]
     },
     {
@@ -445,7 +453,11 @@
       "dataset": "knowledge/materials.json",
       "relatedProcesses": [
         "welding",
-        "cutting"
+        "cutting",
+        "inspection",
+        "mig-mag",
+        "ultrasonic",
+        "radiographic"
       ]
     },
     {
@@ -457,7 +469,11 @@
       "dataset": "knowledge/materials.json",
       "relatedProcesses": [
         "welding",
-        "cutting"
+        "cutting",
+        "tig",
+        "radiographic",
+        "dye",
+        "stamping"
       ]
     },
     {
@@ -469,7 +485,12 @@
       "dataset": "knowledge/materials.json",
       "relatedProcesses": [
         "cutting",
-        "welding"
+        "welding",
+        "mig-mag",
+        "tig",
+        "dye",
+        "hardness",
+        "stamping"
       ]
     },
     {
@@ -491,7 +512,9 @@
       "url": "https://vremennobeznika.github.io/enjigirling/materials.html#pe-hd",
       "dataset": "knowledge/materials.json",
       "relatedProcesses": [
-        "additive"
+        "additive",
+        "injection-molding",
+        "extrusion"
       ]
     },
     {
@@ -503,7 +526,9 @@
       "dataset": "knowledge/materials.json",
       "relatedProcesses": [
         "cutting",
-        "additive"
+        "additive",
+        "injection-molding",
+        "extrusion"
       ]
     },
     {
@@ -552,23 +577,116 @@
       ]
     },
     {
+      "id": "material:food-raw",
+      "type": "material",
+      "title": "Пищевое сырьё растительного происхождения",
+      "description": "Растительное пищевое сырьё Вид, зрелость, санитарное состояние и состав определяют пригодность для конкретной технологии. Плоды, овощи, растительные заготовки",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#food-raw",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "pasteurization",
+        "food-drying",
+        "fermentation",
+        "food-packaging"
+      ]
+    },
+    {
+      "id": "material:food-pack",
+      "type": "material",
+      "title": "Пищевые упаковочные материалы",
+      "description": "Контактирующие с пищей упаковочные материалы Выбор упаковки зависит от продукта, температуры процесса и разрешённых условий контакта. Плёнки, пакеты, банки и крышки",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#food-pack",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "food-packaging"
+      ]
+    },
+    {
+      "id": "material:cotton",
+      "type": "material",
+      "title": "Хлопковое волокно",
+      "description": "Натуральные текстильные волокна Показатели длины, зрелости, засорённости и влажности влияют на перерабатываемость. Пряжа, ткани, трикотаж",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#cotton",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "spinning"
+      ]
+    },
+    {
+      "id": "material:cotton-yarn",
+      "type": "material",
+      "title": "Хлопковая пряжа",
+      "description": "Текстильная пряжа Линейная плотность, крутка, прочность и неровнота зависят от способа прядения. Ткачество, вязание",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#cotton-yarn",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "weaving",
+        "knitting"
+      ]
+    },
+    {
+      "id": "material:woven-fabric",
+      "type": "material",
+      "title": "Ткань текстильная",
+      "description": "Тканые материалы Параметры переплетения, плотность и отделка определяют свойства готового полотна. Швейные изделия, отделка",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#woven-fabric",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "textile-finishing",
+        "sewing"
+      ]
+    },
+    {
+      "id": "material:timber",
+      "type": "material",
+      "title": "Пиломатериалы из древесины",
+      "description": "Древесные материалы Геометрия, порода, влажность и сортность определяются спецификацией. Раскрой, сушка, изготовление деталей",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#timber",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "sawmilling",
+        "wood-drying"
+      ]
+    },
+    {
+      "id": "material:pcb",
+      "type": "material",
+      "title": "Печатная плата (основание)",
+      "description": "Электронные основания Плата с проводящим рисунком и диэлектрическим основанием; конструкция зависит от требований устройства. Монтаж электронных компонентов",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#pcb",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "pcb-assembly",
+        "electronic-inspection"
+      ]
+    },
+    {
+      "id": "material:solder",
+      "type": "material",
+      "title": "Материалы для пайки электронных узлов",
+      "description": "Припои и вспомогательные материалы Состав припоя и флюса выбирается для процесса и требований к электронной сборке. Пайка электронных компонентов",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#solder",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "pcb-assembly",
+        "electronic-inspection"
+      ]
+    },
+    {
       "id": "process:casting",
       "type": "process",
       "title": "Литьё",
-      "description": "Формирование заготовки заливкой расплава в форму. Подготовка формы → плавка → заливка → затвердевание → извлечение → контроль Усадочные дефекты, пористость, включения",
+      "description": "Получение отливки заливкой расплава в литейную форму. Материал и марку выбирают по документации на отливку, а не по обозначению стали для проката. Выбор литейной технологии и материала → подготовка модели и формы → плавка и подготовка расплава → заливка → затвердевание и охлаждение → извлечение и очистка → контроль Усадочные раковины и пористость, газовые поры, неметаллические включения, трещины и отклонения размеров. Метод обнаружения и критерии приёмки зависят от отливки.",
       "url": "https://vremennobeznika.github.io/enjigirling/processes.html#casting",
       "dataset": "knowledge/processes.json",
-      "relatedMaterials": [
-        "steel-20",
-        "steel-45"
-      ],
+      "relatedMaterials": [],
       "relatedProfession": "metallurgical-engineer"
     },
     {
       "id": "process:welding",
       "type": "process",
       "title": "Дуговая сварка",
-      "description": "Создание соединения с использованием электрической дуги. Выбор способа и присадочных материалов зависит от изделия. Подготовка → сборка → сварка → контроль Непровар, трещины, поры, деформации",
+      "description": "Группа процессов соединения материалов электрической дугой. Конкретный способ, подготовка кромок, расходные материалы и контроль выбираются для соединения и условий производства. Выбор способа и технологической документации → подготовка кромок → сборка и фиксация → сварка → очистка (при необходимости) → контроль Несплавление, непровар, поры, трещины, подрезы и деформации; допустимость устанавливается требованиями к конкретному соединению.",
       "url": "https://vremennobeznika.github.io/enjigirling/processes.html#welding",
       "dataset": "knowledge/processes.json",
       "relatedMaterials": [
@@ -582,7 +700,7 @@
       "id": "process:cutting",
       "type": "process",
       "title": "Обработка резанием",
-      "description": "Формирование геометрии удалением материала режущим инструментом. Базирование → режимы резания → обработка → измерение Размеры, шероховатость, износ инструмента",
+      "description": "Формирование геометрии удалением материала режущим инструментом. Анализ чертежа и заготовки → выбор инструмента и баз → закрепление → обработка → измерение и контроль поверхности Геометрические размеры, допуски формы и расположения, шероховатость, заусенцы, состояние инструмента. Требования определяет чертёж.",
       "url": "https://vremennobeznika.github.io/enjigirling/processes.html#cutting",
       "dataset": "knowledge/processes.json",
       "relatedMaterials": [
@@ -590,7 +708,10 @@
         "steel-45",
         "al-6061",
         "pa6",
-        "copper-m1"
+        "copper-m1",
+        "birch-plywood",
+        "09g2s",
+        "aisi-304"
       ],
       "relatedProfession": "mechanical-engineer"
     },
@@ -598,7 +719,7 @@
       "id": "process:heat",
       "type": "process",
       "title": "Термическая обработка",
-      "description": "Изменение структуры и свойств материала заданным тепловым циклом. Нагрев → выдержка → охлаждение → проверка Твёрдость, деформация, трещины; критерии зависят от марки",
+      "description": "Тепловая обработка для изменения структуры и свойств материала; результат зависит от состава, состояния материала и полного цикла. Проверка марки и исходного состояния → выбор утверждённого цикла → нагрев → выдержка → охлаждение → контроль свойств и геометрии Твёрдость и другие требуемые свойства, коробление, трещины, состояние поверхности. Не всякая сталь приобретает высокую твёрдость при закалке.",
       "url": "https://vremennobeznika.github.io/enjigirling/processes.html#heat",
       "dataset": "knowledge/processes.json",
       "relatedMaterials": [
@@ -611,12 +732,13 @@
       "id": "process:additive",
       "type": "process",
       "title": "Аддитивное производство",
-      "description": "Послойное изготовление деталей по цифровой модели. Подготовка модели → изготовление → постобработка → контроль Геометрия, пористость, ориентация слоёв",
+      "description": "Послойное создание изделий по цифровой модели; технология, ориентация, поддерживающие структуры и постобработка определяются конкретным процессом и материалом. Для HDPE и армированных композитов применимость зависит от конкретного процесса и рецептуры сырья. Проверка модели и требований → подготовка сборки и ориентации → изготовление → удаление поддержек (если есть) → постобработка → контроль Точность геометрии, межслойные дефекты, качество поверхности, а для некоторых технологий — внутренние поры и анизотропия свойств.",
       "url": "https://vremennobeznika.github.io/enjigirling/processes.html#additive",
       "dataset": "knowledge/processes.json",
       "relatedMaterials": [
         "pa6",
-        "gfrp"
+        "gfrp",
+        "pe-hd"
       ],
       "relatedProfession": "mechanical-engineer"
     },
@@ -624,13 +746,14 @@
       "id": "process:inspection",
       "type": "process",
       "title": "Неразрушающий контроль",
-      "description": "Обнаружение несплошностей и других признаков дефектов без разрушения объекта контроля. Выбор метода → подготовка → контроль → оценка → протокол Чувствительность, доступность зон, ограничения метода",
+      "description": "Совокупность методов оценки объекта без нарушения его пригодности к эксплуатации; разные методы выявляют разные типы несплошностей. Определение задачи и критериев приёмки → выбор пригодного метода → подготовка → проведение контроля → интерпретация показаний → протокол Обнаруживаемость нужного типа дефекта, чувствительность, ограничения по материалу и геометрии, квалификация персонала и прослеживаемость результата.",
       "url": "https://vremennobeznika.github.io/enjigirling/processes.html#inspection",
       "dataset": "knowledge/processes.json",
       "relatedMaterials": [
         "09g2s",
         "gfrp",
-        "alumina"
+        "alumina",
+        "aramid"
       ],
       "relatedProfession": "materials-engineer"
     },
@@ -638,7 +761,7 @@
       "id": "process:mig-mag",
       "type": "process",
       "title": "MIG/MAG-сварка",
-      "description": "Дуговая сварка плавящимся электродом в защитном газе; MIG и MAG различаются типом защитной среды. Подготовка → настройка подачи проволоки и газа → сварка → контроль Поры, брызги, непровар, качество газовой защиты",
+      "description": "Дуговая сварка плавящимся проволочным электродом в защитном газе: MIG использует инертную, MAG — активную газовую среду. Подготовка соединения → выбор проволоки и защитного газа → настройка оборудования по утверждённой технологии → сварка → контроль Поры из-за нарушения газовой защиты, несплавление, подрезы, брызги и деформации. Брызги сами по себе не равнозначны недопустимому дефекту.",
       "url": "https://vremennobeznika.github.io/enjigirling/processes.html#mig-mag",
       "dataset": "knowledge/processes.json",
       "relatedMaterials": [
@@ -651,7 +774,7 @@
       "id": "process:tig",
       "type": "process",
       "title": "TIG-сварка",
-      "description": "Дуговая сварка неплавящимся вольфрамовым электродом в защитном газе. Подготовка → выбор электрода и присадки → сварка → контроль Защита сварочной ванны, геометрия шва, несплошности",
+      "description": "Дуговая сварка неплавящимся вольфрамовым электродом в защитной газовой среде; присадочный материал используется не всегда. Подготовка соединения → выбор электрода, защитного газа и при необходимости присадки → сварка → контроль Поры, несплавление, трещины, геометрия шва, окисление из-за недостаточной защиты; оценка по требованиям к соединению.",
       "url": "https://vremennobeznika.github.io/enjigirling/processes.html#tig",
       "dataset": "knowledge/processes.json",
       "relatedMaterials": [
@@ -664,7 +787,7 @@
       "id": "process:ultrasonic",
       "type": "process",
       "title": "Ультразвуковой контроль",
-      "description": "Метод НК на основе распространения ультразвуковых волн; применимость зависит от материала и геометрии. Выбор преобразователя → настройка → сканирование → интерпретация → протокол Мёртвые зоны, акустический контакт, ориентация дефектов",
+      "description": "Неразрушающий контроль с использованием ультразвуковых волн; эффективность зависит от материала, геометрии, состояния поверхности и ориентации несплошностей. Выбор методики и преобразователя → настройка по образцам → подготовка поверхности → сканирование → оценка показаний → протокол Мёртвые зоны, акустический контакт, затухание и структура материала, ориентация отражателей, калибровка. Не все дефекты обнаружимы ультразвуком.",
       "url": "https://vremennobeznika.github.io/enjigirling/processes.html#ultrasonic",
       "dataset": "knowledge/processes.json",
       "relatedMaterials": [
@@ -677,7 +800,7 @@
       "id": "process:radiographic",
       "type": "process",
       "title": "Радиографический контроль",
-      "description": "Получение изображения внутренней структуры объекта с помощью проникающего излучения. Планирование → обеспечение радиационной безопасности → экспонирование → оценка → протокол Чувствительность, толщина, геометрия, безопасность",
+      "description": "Неразрушающий контроль с помощью рентгеновского или гамма-излучения для получения изображения различий в ослаблении излучения внутри объекта. Выбор методики и обеспечение радиационной безопасности → подготовка объекта и средств контроля → экспонирование → обработка изображения → оценка → протокол Качество изображения, чувствительность, толщина и геометрия объекта, ориентация несплошности. Плоские дефекты могут выявляться хуже; применяются требования радиационной безопасности.",
       "url": "https://vremennobeznika.github.io/enjigirling/processes.html#radiographic",
       "dataset": "knowledge/processes.json",
       "relatedMaterials": [
@@ -690,7 +813,7 @@
       "id": "process:dye",
       "type": "process",
       "title": "Капиллярный контроль",
-      "description": "Обнаружение открытых на поверхность несплошностей с помощью проникающих веществ. Очистка → нанесение пенетранта → удаление → проявление → оценка Состояние поверхности, время выдержки, доступность дефекта",
+      "description": "Капиллярный метод выявления несплошностей, открытых на поверхность непористых материалов; внутренние закрытые дефекты он не обнаруживает. Предварительная очистка и сушка → нанесение пенетранта → выдержка → удаление избытка → нанесение проявителя → оценка → окончательная очистка Открытость дефекта на поверхность, загрязнения и шероховатость, выдержка, совместимость материалов, условия освещения и критерии оценки.",
       "url": "https://vremennobeznika.github.io/enjigirling/processes.html#dye",
       "dataset": "knowledge/processes.json",
       "relatedMaterials": [
@@ -703,7 +826,7 @@
       "id": "process:hardness",
       "type": "process",
       "title": "Измерение твёрдости",
-      "description": "Контроль сопротивления материала локальному вдавливанию выбранным методом. Выбор метода → подготовка поверхности → измерение → протокол Толщина, поверхность, нагрузка, шкала и метод измерения",
+      "description": "Определение твёрдости выбранным методом вдавливания; получаемые числа зависят от метода, шкалы и условий измерения. Выбор метода и шкалы → проверка прибора и образцов → подготовка поверхности → измерения → оценка результатов → протокол Толщина и размеры образца, расстояния между отпечатками и от края, качество поверхности, нагрузка, точность прибора; шкалы нельзя безусловно пересчитывать.",
       "url": "https://vremennobeznika.github.io/enjigirling/processes.html#hardness",
       "dataset": "knowledge/processes.json",
       "relatedMaterials": [
@@ -712,6 +835,2326 @@
         "al-6061"
       ],
       "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:forging",
+      "type": "process",
+      "title": "Ковка и объёмная штамповка",
+      "description": "Пластическое деформирование металлической заготовки в объёме, в том числе с использованием штамповой оснастки. Выбор заготовки и маршрута → нагрев (если предусмотрен) → деформирование → удаление облоя (если есть) → дальнейшая обработка → контроль Недоштамповка, складки, трещины, отклонения размеров, направление волокон; режимы зависят от сплава и изделия.",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#forging",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "steel-45"
+      ],
+      "relatedProfession": "mechanical-engineer"
+    },
+    {
+      "id": "process:rolling",
+      "type": "process",
+      "title": "Прокатка",
+      "description": "Изменение поперечного сечения и размеров материала пропусканием между валками; холодная и горячая прокатка предъявляют разные требования. Указанные в каталоге стали приведены лишь как примеры марок для прокатной продукции; вид и условия поставки необходимо уточнять. Подготовка исходной заготовки → настройка клети → прокатка → охлаждение или промежуточная обработка → контроль Толщина, профиль, плоскостность, состояние поверхности, трещины и остаточные напряжения.",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#rolling",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "steel-20",
+        "steel-45"
+      ],
+      "relatedProfession": "metallurgical-engineer"
+    },
+    {
+      "id": "process:stamping",
+      "type": "process",
+      "title": "Листовая штамповка",
+      "description": "Разделительные и формоизменяющие операции с листовым материалом на прессовом оборудовании. Подготовка листа и оснастки → подача и позиционирование → вырубка или гибка/вытяжка → удаление отходов → контроль Заусенцы, трещины, пружинение, складки, геометрия и износ инструмента.",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#stamping",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "steel-20",
+        "aisi-304",
+        "al-6061"
+      ],
+      "relatedProfession": "mechanical-engineer"
+    },
+    {
+      "id": "process:injection-molding",
+      "type": "process",
+      "title": "Литьё термопластов под давлением",
+      "description": "Формование изделий из расплава термопласта в пресс-форме; не следует смешивать с литьём металлов. Подготовка гранулята и формы → пластификация → впрыск → выдержка и охлаждение → извлечение → контроль Усадка, коробление, утяжины, облой, неполное заполнение, влажность и термодеструкция материала.",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#injection-molding",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "pa6",
+        "pe-hd"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:extrusion",
+      "type": "process",
+      "title": "Экструзия полимеров",
+      "description": "Непрерывное формирование профилей, плёнок или труб из расплава полимера через формующую головку. Подготовка сырья → пластификация → продавливание через головку → охлаждение и калибрование → резка или намотка → контроль Геометрия, колебания толщины, неоднородность расплава, дефекты поверхности и стабильность размеров.",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#extrusion",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "pe-hd",
+        "pa6"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:grinding",
+      "type": "process",
+      "title": "Шлифование",
+      "description": "Абразивная финишная обработка для получения требуемой точности размеров и качества поверхности. Подготовка баз и круга → выбор режима → шлифование → охлаждение (при необходимости) → контроль Прижоги, микротрещины, шероховатость, точность формы, износ и состояние абразивного инструмента.",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#grinding",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "steel-45"
+      ],
+      "relatedProfession": "mechanical-engineer"
+    },
+    {
+      "id": "process:surface-finishing",
+      "type": "process",
+      "title": "Покрытия и обработка поверхности",
+      "description": "Нанесение защитного или функционального слоя; подготовка поверхности, метод покрытия и критерии качества зависят от системы. Подготовка поверхности → подготовка состава или оборудования → нанесение покрытия → отверждение или сушка (если нужно) → контроль Адгезия, сплошность, толщина, поры, отслаивание, коррозионная стойкость в заданной среде.",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#surface-finishing",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:assembly",
+      "type": "process",
+      "title": "Механическая сборка",
+      "description": "Формирование узлов из деталей с разъёмными или неразъёмными механическими соединениями. Комплектация и идентификация деталей → подготовка баз → сборка → затяжка или фиксация по документации → функциональный контроль Посадка, взаимное положение, момент затяжки (когда нормирован), повреждения деталей и прослеживаемость.",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#assembly",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "mechanical-engineer"
+    },
+    {
+      "id": "process:pasteurization",
+      "type": "process",
+      "title": "Пастеризация",
+      "description": "Тепловая обработка пищевого продукта для снижения микробной нагрузки; не обеспечивает стерильность. Приёмка сырья → подготовка → тепловая обработка по утверждённому режиму → охлаждение → контроль Температурно-временной профиль, микробиология и повторное загрязнение.",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#pasteurization",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "food-raw"
+      ],
+      "relatedProfession": "food-engineer"
+    },
+    {
+      "id": "process:food-drying",
+      "type": "process",
+      "title": "Сушка пищевых продуктов",
+      "description": "Удаление влаги для получения заданных характеристик хранения; показатели зависят от продукта. Подготовка → загрузка → сушка → выравнивание влаги → контроль → упаковка Активность воды, остаточная влажность, загрязнение и неравномерность сушки.",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#food-drying",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "food-raw"
+      ],
+      "relatedProfession": "food-engineer"
+    },
+    {
+      "id": "process:fermentation",
+      "type": "process",
+      "title": "Пищевая ферментация",
+      "description": "Биохимическое преобразование сырья микроорганизмами или ферментами в контролируемых условиях. Подготовка субстрата → внесение культуры (если предусмотрено) → ферментация → стабилизация → контроль Микробиологическая безопасность, pH, температура, время, загрязнение посторонней микрофлорой.",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#fermentation",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "food-raw"
+      ],
+      "relatedProfession": "food-engineer"
+    },
+    {
+      "id": "process:food-packaging",
+      "type": "process",
+      "title": "Фасовка и упаковка пищевой продукции",
+      "description": "Дозирование продукта и формирование закрытой упаковки с контролем целостности и маркировки. Подготовка тары → дозирование → укупорка или запайка → проверка герметичности → маркировка Масса нетто, герметичность, совместимость упаковки с продуктом, прослеживаемость.",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#food-packaging",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "food-raw",
+        "food-pack"
+      ],
+      "relatedProfession": "food-engineer"
+    },
+    {
+      "id": "process:spinning",
+      "type": "process",
+      "title": "Прядение",
+      "description": "Подготовка волокнистой массы и формирование пряжи с заданными показателями линейной плотности и крутки. Разрыхление и очистка → кардочесание → вытягивание → прядение → намотка → контроль Неровнота пряжи, обрывность, засорённость, прочность.",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#spinning",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "cotton"
+      ],
+      "relatedProfession": "textile-engineer"
+    },
+    {
+      "id": "process:weaving",
+      "type": "process",
+      "title": "Ткачество",
+      "description": "Формирование ткани переплетением продольных и поперечных нитей. Подготовка основы и утка → заправка станка → ткачество → съём ткани → разбраковка Плотность нитей, обрывы, пропуски, полосатость и дефекты переплетения.",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#weaving",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "cotton-yarn"
+      ],
+      "relatedProfession": "textile-engineer"
+    },
+    {
+      "id": "process:knitting",
+      "type": "process",
+      "title": "Вязальное производство",
+      "description": "Формирование трикотажного полотна из петель одной или нескольких систем нитей. Подготовка пряжи → настройка машины → вязание → стабилизация → контроль Спущенные петли, затяжки, разнооттеночность и плотность петель.",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#knitting",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "cotton-yarn"
+      ],
+      "relatedProfession": "textile-engineer"
+    },
+    {
+      "id": "process:textile-finishing",
+      "type": "process",
+      "title": "Крашение и отделка текстиля",
+      "description": "Предварительная обработка, крашение, печать и окончательная отделка тканей или трикотажа. Подготовка и очистка → крашение или печать → промывка и фиксация → сушка → финишная обработка → контроль Равномерность окраски, устойчивость красителя, усадка, остаточные химические вещества.",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#textile-finishing",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "woven-fabric"
+      ],
+      "relatedProfession": "textile-engineer"
+    },
+    {
+      "id": "process:sewing",
+      "type": "process",
+      "title": "Швейная сборка изделий",
+      "description": "Соединение деталей кроя ниточными швами и выполнение сборочных операций по документации. Настил и раскрой → комплектование → соединение деталей → влажно-тепловая обработка → контроль Прочность швов, пропуски стежков, посадка, смещение срезов, соответствие размеров.",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#sewing",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "woven-fabric"
+      ],
+      "relatedProfession": "textile-engineer"
+    },
+    {
+      "id": "process:sawmilling",
+      "type": "process",
+      "title": "Распиловка и обработка древесины",
+      "description": "Продольное или поперечное пиление древесины для получения пиломатериалов и заготовок. Сортировка сырья → раскрой → пиление → сортировка → контроль размеров Геометрия, трещины, коробление, сучки, повреждения поверхности.",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#sawmilling",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "timber"
+      ],
+      "relatedProfession": "forest-engineer"
+    },
+    {
+      "id": "process:wood-drying",
+      "type": "process",
+      "title": "Камерная сушка древесины",
+      "description": "Снижение влажности древесины при управляемых условиях для последующего применения. Сортировка и штабелирование → сушка → кондиционирование → измерение влажности → сортировка Остаточная влажность, внутренние напряжения, растрескивание и коробление.",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#wood-drying",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "timber"
+      ],
+      "relatedProfession": "forest-engineer"
+    },
+    {
+      "id": "process:pcb-assembly",
+      "type": "process",
+      "title": "Монтаж печатных плат",
+      "description": "Установка и закрепление электронных компонентов на печатной плате с формированием соединений. Проверка платы → нанесение пасты (для SMT) → установка компонентов → оплавление или пайка → контроль Паяные соединения, перемычки, недостаток припоя, смещение компонентов, электростатическая защита.",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#pcb-assembly",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "pcb",
+        "solder"
+      ],
+      "relatedProfession": "electrical-engineer"
+    },
+    {
+      "id": "process:electronic-inspection",
+      "type": "process",
+      "title": "Контроль электронных сборок",
+      "description": "Визуальный, оптический, рентгеновский и электрический контроль плат и электронных узлов. Идентификация требований → осмотр и измерения → электрические испытания → фиксация несоответствий Паяные соединения, ориентация компонентов, электрические дефекты, критерии приемки.",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#electronic-inspection",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "pcb",
+        "solder"
+      ],
+      "relatedProfession": "electrical-engineer"
+    },
+    {
+      "id": "process:chemical-mixing",
+      "type": "process",
+      "title": "Промышленное смешение",
+      "description": "Однородное или заданно неоднородное смешение компонентов без обязательной химической реакции. Приёмка и идентификация компонентов → дозирование → смешение → отбор проб → контроль Состав, равномерность, совместимость веществ, экзотермические эффекты и опасные пары.",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#chemical-mixing",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "chemical-engineer"
+    },
+    {
+      "id": "process:distillation",
+      "type": "process",
+      "title": "Дистилляция",
+      "description": "Разделение жидких смесей за счёт различий летучести компонентов; применимость зависит от состава и схемы. Подготовка подачи → испарение и массообмен → конденсация → сбор фракций → контроль Состав фракций, давление, температура, герметичность; опасности воспламеняющихся паров.",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#distillation",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "chemical-engineer"
+    },
+    {
+      "id": "process:industrial-filtration",
+      "type": "process",
+      "title": "Промышленная фильтрация",
+      "description": "Отделение дисперсной фазы от жидкости или газа с использованием фильтрующей среды. Подбор среды → подготовка оборудования → фильтрация → выгрузка или очистка → контроль Перепад давления, тонкость фильтрации, проскок частиц, загрязнение и ресурс фильтра.",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#industrial-filtration",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "chemical-engineer"
+    },
+    {
+      "id": "process:turning",
+      "type": "process",
+      "title": "Точение",
+      "description": "Получение поверхностей вращающейся заготовки резцом. Базирование → точение → измерение Биение, размеры, шероховатость",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#turning",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "steel-45",
+        "09g2s"
+      ],
+      "relatedProfession": "mechanical-engineer"
+    },
+    {
+      "id": "process:milling",
+      "type": "process",
+      "title": "Фрезерование",
+      "description": "Получение плоскостей и профилей вращающейся многолезвийной фрезой. Базирование → проходы фрезой → измерение Плоскостность, геометрия, заусенцы",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#milling",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "steel-45",
+        "09g2s"
+      ],
+      "relatedProfession": "mechanical-engineer"
+    },
+    {
+      "id": "process:drilling",
+      "type": "process",
+      "title": "Сверление",
+      "description": "Получение отверстий сверлом с осевой подачей. Закрепление → сверление → контроль отверстия Диаметр, увод, положение оси, заусенцы",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#drilling",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "steel-45",
+        "09g2s"
+      ],
+      "relatedProfession": "mechanical-engineer"
+    },
+    {
+      "id": "process:boring",
+      "type": "process",
+      "title": "Растачивание",
+      "description": "Обработка предварительно полученного отверстия расточным инструментом. Базирование → растачивание → контроль Соосность, цилиндричность, размер",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#boring",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "steel-45",
+        "09g2s"
+      ],
+      "relatedProfession": "mechanical-engineer"
+    },
+    {
+      "id": "process:reaming",
+      "type": "process",
+      "title": "Развёртывание",
+      "description": "Чистовая обработка подготовленного отверстия развёрткой. Проверка припуска → развёртывание → измерение Диаметр, форма, шероховатость",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#reaming",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "steel-45",
+        "09g2s"
+      ],
+      "relatedProfession": "mechanical-engineer"
+    },
+    {
+      "id": "process:broaching",
+      "type": "process",
+      "title": "Протягивание",
+      "description": "Формирование профиля последовательными режущими зубьями протяжки. Установка заготовки → проход протяжки → контроль Профиль, следы зубьев, заусенцы",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#broaching",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "steel-45",
+        "09g2s"
+      ],
+      "relatedProfession": "mechanical-engineer"
+    },
+    {
+      "id": "process:gear-cutting",
+      "type": "process",
+      "title": "Зубонарезание",
+      "description": "Обработка зубчатых венцов специальным инструментом. Подготовка заготовки → нарезание → измерение зубьев Шаг, профиль и биение зубьев",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#gear-cutting",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "steel-45",
+        "09g2s"
+      ],
+      "relatedProfession": "mechanical-engineer"
+    },
+    {
+      "id": "process:electrodischarge-machining",
+      "type": "process",
+      "title": "Электроэрозионная обработка",
+      "description": "Эрозионное удаление электропроводящего материала электрическими разрядами. Позиционирование электрода → обработка → контроль Геометрия, износ электрода, состояние слоя",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#electrodischarge-machining",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "steel-45",
+        "09g2s"
+      ],
+      "relatedProfession": "mechanical-engineer"
+    },
+    {
+      "id": "process:laser-cutting",
+      "type": "process",
+      "title": "Лазерная резка",
+      "description": "Разделение заготовки сфокусированным лазерным излучением. Раскрой → резка → отделение деталей → осмотр Кромка, геометрия, термическое влияние",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#laser-cutting",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "steel-45",
+        "09g2s"
+      ],
+      "relatedProfession": "mechanical-engineer"
+    },
+    {
+      "id": "process:waterjet-cutting",
+      "type": "process",
+      "title": "Гидроабразивная резка",
+      "description": "Разделение материала струёй воды с абразивом. Закрепление → резка → очистка → измерение Конусность реза, кромка, размер",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#waterjet-cutting",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "steel-45",
+        "09g2s"
+      ],
+      "relatedProfession": "mechanical-engineer"
+    },
+    {
+      "id": "process:annealing",
+      "type": "process",
+      "title": "Отжиг",
+      "description": "Термический цикл нагрева и охлаждения для изменения структуры. Выбор цикла по материалу → обработка → испытания Структура, твёрдость, деформации",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#annealing",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "steel-45",
+        "09g2s"
+      ],
+      "relatedProfession": "mechanical-engineer"
+    },
+    {
+      "id": "process:quenching",
+      "type": "process",
+      "title": "Закалка сталей",
+      "description": "Термическая обработка с ускоренным охлаждением для изменения структуры стали. Проверка марки → нагрев → охлаждение → контроль Трещины, коробление и твёрдость",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#quenching",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "steel-45",
+        "09g2s"
+      ],
+      "relatedProfession": "mechanical-engineer"
+    },
+    {
+      "id": "process:tempering",
+      "type": "process",
+      "title": "Отпуск стали",
+      "description": "Тепловая обработка закалённой стали для изменения сочетания свойств. Проверка состояния → отпуск → измерения Твёрдость, деформации, требования к свойствам",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#tempering",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "steel-45",
+        "09g2s"
+      ],
+      "relatedProfession": "mechanical-engineer"
+    },
+    {
+      "id": "process:induction-hardening",
+      "type": "process",
+      "title": "Индукционная поверхностная закалка",
+      "description": "Локальная закалка с нагревом электромагнитной индукцией. Позиционирование → нагрев → охлаждение → проверка слоя Глубина слоя, трещины, твёрдость",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#induction-hardening",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "steel-45",
+        "09g2s"
+      ],
+      "relatedProfession": "mechanical-engineer"
+    },
+    {
+      "id": "process:manual-metal-arc",
+      "type": "process",
+      "title": "Ручная дуговая сварка покрытым электродом",
+      "description": "Дуговое соединение с расходуемым покрытым электродом. Подготовка → сборка → сварка → удаление шлака → контроль Несплавление, трещины, включения",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#manual-metal-arc",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "09g2s",
+        "al-6061"
+      ],
+      "relatedProfession": "mechanical-engineer"
+    },
+    {
+      "id": "process:submerged-arc",
+      "type": "process",
+      "title": "Сварка под флюсом",
+      "description": "Дуговая сварка с защитой дуги гранулированным флюсом. Подготовка стыка → сварка под флюсом → очистка → контроль Включения, поры, геометрия",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#submerged-arc",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "09g2s",
+        "al-6061"
+      ],
+      "relatedProfession": "mechanical-engineer"
+    },
+    {
+      "id": "process:resistance-spot",
+      "type": "process",
+      "title": "Контактная точечная сварка",
+      "description": "Локальное соединение нахлёсточных листов нагревом током и усилием. Совмещение листов → контактный цикл → испытания Размер точки, выплеск, прочность",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#resistance-spot",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "09g2s",
+        "al-6061"
+      ],
+      "relatedProfession": "mechanical-engineer"
+    },
+    {
+      "id": "process:laser-welding",
+      "type": "process",
+      "title": "Лазерная сварка",
+      "description": "Формирование шва концентрированным лазерным источником энергии. Подготовка → позиционирование → сварка → контроль Проплавление, поры, трещины",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#laser-welding",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "09g2s",
+        "al-6061"
+      ],
+      "relatedProfession": "mechanical-engineer"
+    },
+    {
+      "id": "process:friction-stir-welding",
+      "type": "process",
+      "title": "Сварка трением с перемешиванием",
+      "description": "Твердофазное соединение вращающимся инструментом вдоль линии стыка. Сборка → проход инструмента → контроль соединения Несплошности, проплавление не применимо, геометрия",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#friction-stir-welding",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "09g2s",
+        "al-6061"
+      ],
+      "relatedProfession": "mechanical-engineer"
+    },
+    {
+      "id": "process:brazing",
+      "type": "process",
+      "title": "Высокотемпературная пайка",
+      "description": "Соединение основного металла расплавленным припоем без расплавления основы. Очистка → сборка → нагрев → охлаждение → контроль Смачивание, поры, зазор",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#brazing",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "copper-m1",
+        "aisi-304"
+      ],
+      "relatedProfession": "mechanical-engineer"
+    },
+    {
+      "id": "process:soft-soldering",
+      "type": "process",
+      "title": "Низкотемпературная пайка",
+      "description": "Соединение деталей припойным металлом с более низкой температурой плавления. Подготовка → пайка → очистка → проверка Смачивание, загрязнение, прочность",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#soft-soldering",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "copper-m1",
+        "aisi-304"
+      ],
+      "relatedProfession": "mechanical-engineer"
+    },
+    {
+      "id": "process:powder-bed-fusion",
+      "type": "process",
+      "title": "Сплавление порошкового слоя",
+      "description": "Послойное сплавление порошка направленным источником энергии. Подготовка порошка → построение → извлечение → контроль Пористость, деформации, размер",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#powder-bed-fusion",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:directed-energy-deposition",
+      "type": "process",
+      "title": "Направленное энергетическое осаждение",
+      "description": "Подача материала в область локального нагрева и формирования объёма. Подготовка траектории → осаждение → охлаждение → контроль Несплавление, геометрия, трещины",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#directed-energy-deposition",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:binder-jetting",
+      "type": "process",
+      "title": "Струйное нанесение связующего",
+      "description": "Выборочное связывание порошковых слоёв жидким связующим. Подача порошка → нанесение связующего → постобработка → контроль Прочность сырца, усадка, плотность",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#binder-jetting",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:material-jetting",
+      "type": "process",
+      "title": "Струйное нанесение материала",
+      "description": "Послойное построение изделия дозированными каплями материала. Дозирование капель → построение → отверждение → измерение Слои, геометрия, качество поверхности",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#material-jetting",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:vat-photopolymerization",
+      "type": "process",
+      "title": "Ванночная фотополимеризация",
+      "description": "Послойное световое отверждение фотополимерной смолы. Подготовка модели → экспонирование → очистка и доотверждение → контроль Размеры, остаточная смола, полнота отверждения",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#vat-photopolymerization",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:additive-extrusion",
+      "type": "process",
+      "title": "Аддитивная экструзия материала",
+      "description": "Послойная укладка экструдируемого полимерного материала. Подготовка нити → экструзия слоёв → охлаждение → контроль Межслойная связь, геометрия, пористость",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#additive-extrusion",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:blow-molding",
+      "type": "process",
+      "title": "Выдувное формование",
+      "description": "Получение полых термопластичных изделий раздувом заготовки в форме. Формование заготовки → раздув → охлаждение → извлечение Толщина, герметичность, усадка",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#blow-molding",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "pe-hd",
+        "pa6"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:rotomolding",
+      "type": "process",
+      "title": "Ротационное формование",
+      "description": "Получение полого изделия распределением нагретого полимера по вращающейся форме. Загрузка сырья → нагрев и вращение → охлаждение Толщина, поры, коробление",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#rotomolding",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "pe-hd",
+        "pa6"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:thermoforming",
+      "type": "process",
+      "title": "Термоформование листа",
+      "description": "Придание нагретому полимерному листу формы под вакуумом или давлением. Нагрев листа → формование → охлаждение → обрезка Складки, истончение, размеры",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#thermoforming",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "pe-hd",
+        "pa6"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:calendering",
+      "type": "process",
+      "title": "Каландрование пластмасс",
+      "description": "Формирование полотна или плёнки прохождением полимерной массы между валками. Подготовка массы → валки → калибрование → контроль Толщина, неоднородность, полосы",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#calendering",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "pe-hd",
+        "pa6"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:compounding",
+      "type": "process",
+      "title": "Компаундирование полимеров",
+      "description": "Смешивание полимера с наполнителями и добавками для получения композиции. Дозирование → смешение → гранулирование → испытания Однородность, влажность, распределение добавок",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#compounding",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "pe-hd",
+        "pa6"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:polymer-foaming",
+      "type": "process",
+      "title": "Вспенивание пластмасс",
+      "description": "Формирование ячеистой структуры в полимерном материале. Подготовка состава → вспенивание → охлаждение → контроль Плотность, структура ячеек, усадка",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#polymer-foaming",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "pe-hd",
+        "pa6"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:ultrasonic-plastic-welding",
+      "type": "process",
+      "title": "Ультразвуковая сварка термопластов",
+      "description": "Соединение подходящих термопластов за счёт высокочастотных механических колебаний. Совмещение → прижатие → воздействие → контроль Прочность, герметичность, перегрев",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#ultrasonic-plastic-welding",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "pe-hd",
+        "pa6"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:laser-plastic-welding",
+      "type": "process",
+      "title": "Лазерная сварка термопластов",
+      "description": "Локальное лазерное соединение оптически совместимых термопластичных деталей. Подготовка сопряжения → лазерное воздействие → контроль Непровар, пережог, прочность",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#laser-plastic-welding",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "pe-hd",
+        "pa6"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:hand-layup",
+      "type": "process",
+      "title": "Ручная выкладка композитов",
+      "description": "Выкладка слоёв армирования с пропиткой связующим в оснастке. Подготовка формы → укладка → пропитка → отверждение Поры, сухие зоны, складки",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#hand-layup",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "gfrp",
+        "aramid"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:vacuum-infusion",
+      "type": "process",
+      "title": "Вакуумная инфузия",
+      "description": "Пропитка сухого армирующего пакета смолой при перепаде давлений. Выкладка → вакуумный пакет → инфузия → отверждение Непропитка, утечки, поры",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#vacuum-infusion",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "gfrp",
+        "aramid"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:resin-transfer-molding",
+      "type": "process",
+      "title": "Трансферное формование композитов (RTM)",
+      "description": "Подача жидкой смолы в закрытую форму с армирующей преформой. Укладка преформы → инжекция смолы → отверждение Пористость, усадка, геометрия",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#resin-transfer-molding",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "gfrp",
+        "aramid"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:pultrusion",
+      "type": "process",
+      "title": "Пултрузия",
+      "description": "Непрерывное протягивание пропитанных волокон через формующую фильеру. Подача армирования → пропитка → фильера → резка Профиль, содержание волокон, поры",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#pultrusion",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "gfrp",
+        "aramid"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:filament-winding",
+      "type": "process",
+      "title": "Намотка композитов",
+      "description": "Размещение армирующих нитей на вращающейся оправке. Подготовка оправки → намотка → отверждение → съём Угол армирования, равномерность, поры",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#filament-winding",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "gfrp",
+        "aramid"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:autoclave-composites",
+      "type": "process",
+      "title": "Автоклавное отверждение композитов",
+      "description": "Отверждение пакета композита при контролируемом тепловом и барическом цикле. Вакуумный пакет → автоклавный цикл → извлечение → контроль Пористость, степень отверждения, деформации",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#autoclave-composites",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "gfrp",
+        "aramid"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:solder-paste-printing",
+      "type": "process",
+      "title": "Трафаретное нанесение паяльной пасты",
+      "description": "Дозирование пасты через трафарет на площадки печатной платы. Совмещение → нанесение пасты → контроль рисунка Объём, смещение, мостики пасты",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#solder-paste-printing",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "pcb",
+        "solder"
+      ],
+      "relatedProfession": "electrical-engineer"
+    },
+    {
+      "id": "process:smt-placement",
+      "type": "process",
+      "title": "Автоматическая установка SMD-компонентов",
+      "description": "Автоматическое позиционирование компонентов на площадки платы. Подготовка питателей → установка → оптический контроль Ориентация, смещение, пропуски",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#smt-placement",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "pcb",
+        "solder"
+      ],
+      "relatedProfession": "electrical-engineer"
+    },
+    {
+      "id": "process:reflow-soldering",
+      "type": "process",
+      "title": "Пайка оплавлением",
+      "description": "Образование паяных соединений при нагреве нанесённой пасты. Нанесение → термопрофиль → оплавление → охлаждение Пустоты, непропай, перемычки",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#reflow-soldering",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "pcb",
+        "solder"
+      ],
+      "relatedProfession": "electrical-engineer"
+    },
+    {
+      "id": "process:wave-soldering",
+      "type": "process",
+      "title": "Пайка волной припоя",
+      "description": "Формирование соединений при контакте платы с волной расплавленного припоя. Флюсование → предварительный нагрев → волна → контроль Перемычки, недостаток припоя, загрязнение",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#wave-soldering",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "pcb",
+        "solder"
+      ],
+      "relatedProfession": "electrical-engineer"
+    },
+    {
+      "id": "process:conformal-coating",
+      "type": "process",
+      "title": "Защитное покрытие электронных сборок",
+      "description": "Нанесение защитной полимерной плёнки на собранную плату. Очистка → маскирование → нанесение → отверждение Толщина, пропуски, пузыри",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#conformal-coating",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "pcb",
+        "solder"
+      ],
+      "relatedProfession": "electrical-engineer"
+    },
+    {
+      "id": "process:aoi-pcb",
+      "type": "process",
+      "title": "Автоматизированная оптическая инспекция плат",
+      "description": "Контроль сборки системой машинного зрения по заданным критериям. Настройка эталона → сканирование → проверка обнаружений Ложные срабатывания, пропуски, ошибки размещения",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#aoi-pcb",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "pcb",
+        "solder"
+      ],
+      "relatedProfession": "electrical-engineer"
+    },
+    {
+      "id": "process:blanching-food",
+      "type": "process",
+      "title": "Бланширование пищевого сырья",
+      "description": "Кратковременная тепловая обработка до последующих операций. Подготовка → нагрев → охлаждение → контроль Температурное воздействие, цвет, ферментативная активность",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#blanching-food",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "food-raw"
+      ],
+      "relatedProfession": "food-engineer"
+    },
+    {
+      "id": "process:thermal-sterilization-food",
+      "type": "process",
+      "title": "Тепловая стерилизация пищевой продукции",
+      "description": "Тепловая обработка упаковки или продукта для достижения заданной микробиологической стабильности. Подготовка → утверждённый тепловой цикл → охлаждение → контроль Герметичность, сохранность упаковки, микробиологические критерии",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#thermal-sterilization-food",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "food-raw"
+      ],
+      "relatedProfession": "food-engineer"
+    },
+    {
+      "id": "process:freezing-food",
+      "type": "process",
+      "title": "Промышленное замораживание пищевых продуктов",
+      "description": "Снижение температуры продуктов с переходом части влаги в лёд. Подготовка → охлаждение и заморозка → хранение → контроль Температура продукта, кристаллизация, потери массы",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#freezing-food",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "food-raw"
+      ],
+      "relatedProfession": "food-engineer"
+    },
+    {
+      "id": "process:spray-drying-food",
+      "type": "process",
+      "title": "Распылительная сушка пищевых жидкостей",
+      "description": "Получение порошка из жидкого сырья при распылении и удалении влаги. Подготовка жидкости → распыление → отделение порошка → контроль Влажность, агломерация, изменение свойств",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#spray-drying-food",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "food-raw"
+      ],
+      "relatedProfession": "food-engineer"
+    },
+    {
+      "id": "process:food-evaporation",
+      "type": "process",
+      "title": "Выпаривание пищевых растворов",
+      "description": "Концентрирование раствора удалением части растворителя при теплопередаче. Подготовка → выпаривание → отвод паров → проверка концентрата Сухие вещества, термическое повреждение, загрязнение",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#food-evaporation",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "food-raw"
+      ],
+      "relatedProfession": "food-engineer"
+    },
+    {
+      "id": "process:grain-milling",
+      "type": "process",
+      "title": "Помол зерна",
+      "description": "Измельчение и сортирование зернового сырья на фракции. Очистка → дробление или помол → просеивание → анализ Гранулометрия, загрязнения, посторонние примеси",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#grain-milling",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "food-raw"
+      ],
+      "relatedProfession": "food-engineer"
+    },
+    {
+      "id": "process:food-extrusion",
+      "type": "process",
+      "title": "Экструзионная обработка пищевых смесей",
+      "description": "Формирование пищевой массы проходом через экструдер и формующий канал. Подготовка рецептуры → экструзия → охлаждение → контроль Структура, форма, равномерность состава",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#food-extrusion",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "food-raw"
+      ],
+      "relatedProfession": "food-engineer"
+    },
+    {
+      "id": "process:juice-clarification",
+      "type": "process",
+      "title": "Осветление соков",
+      "description": "Снижение содержания взвесей и мутности пищевой жидкости. Подготовка сока → осветление или фильтрация → измерение Мутность, осадок, выход и сохранение состава",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#juice-clarification",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "food-raw"
+      ],
+      "relatedProfession": "food-engineer"
+    },
+    {
+      "id": "process:carding",
+      "type": "process",
+      "title": "Кардочесание волокон",
+      "description": "Разделение и ориентирование волокон кардочесальным оборудованием. Подача волокон → чесание → получение ленты → контроль Непсы, равномерность ленты, загрязнения",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#carding",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "cotton",
+        "cotton-yarn"
+      ],
+      "relatedProfession": "textile-engineer"
+    },
+    {
+      "id": "process:combing-textile",
+      "type": "process",
+      "title": "Гребнечесание волокон",
+      "description": "Дополнительное выравнивание волокон и удаление коротких фракций. Подготовка ленты → гребнечесание → контроль Короткие волокна, равномерность, потери",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#combing-textile",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "cotton",
+        "cotton-yarn"
+      ],
+      "relatedProfession": "textile-engineer"
+    },
+    {
+      "id": "process:drawing-textile",
+      "type": "process",
+      "title": "Вытяжка текстильной ленты",
+      "description": "Утонение и выравнивание ленты вытяжными парами. Подача → вытяжка → намотка → анализ Линейная плотность, неровнота, обрывы",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#drawing-textile",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "cotton",
+        "cotton-yarn"
+      ],
+      "relatedProfession": "textile-engineer"
+    },
+    {
+      "id": "process:winding-yarn",
+      "type": "process",
+      "title": "Перемотка пряжи",
+      "description": "Формирование паковок пряжи для дальнейших операций. Подача пряжи → очистка → намотка → контроль Натяжение, дефекты нити, масса паковки",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#winding-yarn",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "cotton",
+        "cotton-yarn"
+      ],
+      "relatedProfession": "textile-engineer"
+    },
+    {
+      "id": "process:warping",
+      "type": "process",
+      "title": "Снование основы",
+      "description": "Формирование системы параллельных основных нитей для ткачества. Подготовка паковок → снование → контроль основы Обрывность, равномерность натяжения, число нитей",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#warping",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "cotton",
+        "cotton-yarn"
+      ],
+      "relatedProfession": "textile-engineer"
+    },
+    {
+      "id": "process:warp-sizing",
+      "type": "process",
+      "title": "Шлихтование основы",
+      "description": "Нанесение шлихты на основные нити для изменения технологических свойств. Подготовка основы → нанесение → сушка → контроль Равномерность покрытия, влажность, обрывность",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#warp-sizing",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "cotton",
+        "cotton-yarn"
+      ],
+      "relatedProfession": "textile-engineer"
+    },
+    {
+      "id": "process:textile-bleaching",
+      "type": "process",
+      "title": "Отбеливание текстиля",
+      "description": "Изменение окраски и удаление окрашенных примесей подходящей химической обработкой. Подготовка ткани → отбеливание → промывка → контроль Белизна, прочность, остаточные реагенты",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#textile-bleaching",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "cotton",
+        "cotton-yarn"
+      ],
+      "relatedProfession": "textile-engineer"
+    },
+    {
+      "id": "process:textile-printing",
+      "type": "process",
+      "title": "Печать по ткани",
+      "description": "Нанесение цветного рисунка на текстильную поверхность. Подготовка ткани → нанесение рисунка → фиксация → контроль Совмещение цветов, стойкость, пропуски",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#textile-printing",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "cotton",
+        "cotton-yarn"
+      ],
+      "relatedProfession": "textile-engineer"
+    },
+    {
+      "id": "process:wood-planing",
+      "type": "process",
+      "title": "Строгание пиломатериалов",
+      "description": "Обработка поверхности древесины резанием до требуемой геометрии. Сортировка → базирование → строгание → контроль Размер, волнистость, сколы",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#wood-planing",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "timber",
+        "birch-plywood"
+      ],
+      "relatedProfession": "forest-engineer"
+    },
+    {
+      "id": "process:veneer-peeling",
+      "type": "process",
+      "title": "Лущение шпона",
+      "description": "Получение тонкой ленты древесины при вращении чурака относительно ножа. Подготовка сырья → лущение → резка → сортировка Толщина шпона, трещины, влажность",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#veneer-peeling",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "timber",
+        "birch-plywood"
+      ],
+      "relatedProfession": "forest-engineer"
+    },
+    {
+      "id": "process:plywood-bonding",
+      "type": "process",
+      "title": "Склеивание фанеры",
+      "description": "Соединение листов шпона связующим в пакет с заданной ориентацией слоёв. Подбор шпона → нанесение клея → сборка → прессование → контроль Клеевой шов, расслоение, геометрия",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#plywood-bonding",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "timber",
+        "birch-plywood"
+      ],
+      "relatedProfession": "forest-engineer"
+    },
+    {
+      "id": "process:wood-preservation",
+      "type": "process",
+      "title": "Защитная пропитка древесины",
+      "description": "Введение защитного состава в древесину по требованиям применения. Подготовка древесины → пропитка → выдержка → контроль Глубина пропитки, влажность и требования безопасности",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#wood-preservation",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "timber",
+        "birch-plywood"
+      ],
+      "relatedProfession": "forest-engineer"
+    },
+    {
+      "id": "process:fiberboard-pressing",
+      "type": "process",
+      "title": "Прессование древесных плит",
+      "description": "Уплотнение подготовленной древесной массы или стружки с образованием плиты. Подготовка массы → формирование ковра → прессование → контроль Плотность, толщина, расслоение",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#fiberboard-pressing",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "timber",
+        "birch-plywood"
+      ],
+      "relatedProfession": "forest-engineer"
+    },
+    {
+      "id": "process:industrial-evaporation",
+      "type": "process",
+      "title": "Промышленное выпаривание",
+      "description": "Концентрирование раствора испарением части растворителя. Подготовка смеси → подвод тепла → испарение → контроль концентрации Концентрация, отложения, качество продукта",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#industrial-evaporation",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "chemical-engineer"
+    },
+    {
+      "id": "process:crystallization",
+      "type": "process",
+      "title": "Кристаллизация растворов",
+      "description": "Выделение твёрдой фазы при изменении условий растворимости. Подготовка раствора → зарождение и рост кристаллов → отделение Чистота, размер кристаллов, остаточная влага",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#crystallization",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "chemical-engineer"
+    },
+    {
+      "id": "process:gas-absorption",
+      "type": "process",
+      "title": "Абсорбция газовых компонентов",
+      "description": "Перенос выбранных компонентов газовой смеси в жидкий поглотитель. Контакт фаз → отвод обогащённого поглотителя → контроль Степень извлечения, перепад давления, унос жидкости",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#gas-absorption",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "chemical-engineer"
+    },
+    {
+      "id": "process:gas-stripping",
+      "type": "process",
+      "title": "Стриппинг растворённых компонентов",
+      "description": "Удаление летучих компонентов из жидкости при контакте с газом или паром. Подготовка жидкости → контакт фаз → отвод потоков → контроль Остаточная концентрация, унос, баланс потоков",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#gas-stripping",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "chemical-engineer"
+    },
+    {
+      "id": "process:industrial-centrifugation",
+      "type": "process",
+      "title": "Промышленное центрифугирование",
+      "description": "Разделение суспензии или эмульсии в поле центробежных сил. Подача → центрифугирование → отвод фаз → контроль Остаточная влажность, эффективность разделения, вибрация",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#industrial-centrifugation",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "chemical-engineer"
+    },
+    {
+      "id": "process:chemical-membrane",
+      "type": "process",
+      "title": "Мембранное разделение промышленных смесей",
+      "description": "Разделение компонентов смеси с использованием селективной мембраны. Подготовка среды → поток через мембрану → анализ фракций Проницаемость, селективность, загрязнение мембраны",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#chemical-membrane",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "chemical-engineer"
+    },
+    {
+      "id": "process:catalytic-reaction",
+      "type": "process",
+      "title": "Каталитическая реакция в промышленном реакторе",
+      "description": "Химическое превращение с участием катализатора в реакционной системе. Подготовка реагентов → реакция → разделение продуктов → контроль Конверсия, селективность, дезактивация катализатора",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#catalytic-reaction",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "chemical-engineer"
+    },
+    {
+      "id": "process:solvent-extraction",
+      "type": "process",
+      "title": "Экстракция растворителем",
+      "description": "Перераспределение компонентов между контактирующими фазами. Подготовка фаз → контакт → разделение фаз → контроль состава Извлечение, остаточный растворитель, эмульгирование",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#solvent-extraction",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "chemical-engineer"
+    },
+    {
+      "id": "process:concrete-mixing",
+      "type": "process",
+      "title": "Приготовление бетонной смеси",
+      "description": "Смешение компонентов бетона до получения требуемых свойств свежей смеси. Дозирование → перемешивание → доставка → контроль Однородность, удобоукладываемость, отклонения состава",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#concrete-mixing",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "09g2s"
+      ],
+      "relatedProfession": "civil-engineer"
+    },
+    {
+      "id": "process:concrete-placing",
+      "type": "process",
+      "title": "Укладка бетонной смеси",
+      "description": "Заполнение конструктивного объёма свежей бетонной смесью. Подготовка захватки → укладка → уплотнение → уход → контроль Расслоение, пустоты, геометрия",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#concrete-placing",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "09g2s"
+      ],
+      "relatedProfession": "civil-engineer"
+    },
+    {
+      "id": "process:concrete-vibration",
+      "type": "process",
+      "title": "Виброуплотнение бетона",
+      "description": "Уплотнение свежей бетонной смеси механическими колебаниями. Подача смеси → виброуплотнение → осмотр поверхности Пустоты, расслоение, качество уплотнения",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#concrete-vibration",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "09g2s"
+      ],
+      "relatedProfession": "civil-engineer"
+    },
+    {
+      "id": "process:concrete-curing",
+      "type": "process",
+      "title": "Уход за твердеющим бетоном",
+      "description": "Контроль условий твердения бетона для формирования проектных свойств. Завершение укладки → поддержание условий твердения → контроль Температура, влажность, трещинообразование",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#concrete-curing",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "09g2s"
+      ],
+      "relatedProfession": "civil-engineer"
+    },
+    {
+      "id": "process:formwork-erection",
+      "type": "process",
+      "title": "Монтаж опалубки",
+      "description": "Установка временной оснастки для задания формы монолитного бетона. Проверка чертежей → монтаж → закрепление → приёмка Устойчивость, геометрия, положение креплений",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#formwork-erection",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "09g2s"
+      ],
+      "relatedProfession": "civil-engineer"
+    },
+    {
+      "id": "process:rebar-installation",
+      "type": "process",
+      "title": "Монтаж арматуры",
+      "description": "Размещение арматурных элементов по проекту до бетонирования. Проверка арматуры → установка фиксаторов → вязка или крепление → контроль Защитный слой, положение стержней, стыки",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#rebar-installation",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "09g2s"
+      ],
+      "relatedProfession": "civil-engineer"
+    },
+    {
+      "id": "process:masonry-works",
+      "type": "process",
+      "title": "Каменная кладка",
+      "description": "Соединение штучных каменных элементов в конструкцию согласно проекту. Подготовка основания → укладка элементов и раствора → контроль Перевязка, ровность, заполнение швов",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#masonry-works",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "09g2s"
+      ],
+      "relatedProfession": "civil-engineer"
+    },
+    {
+      "id": "process:road-asphalt-placement",
+      "type": "process",
+      "title": "Укладка асфальтобетона",
+      "description": "Формирование слоя покрытия из горячей или холодной смеси с последующим уплотнением. Подготовка основания → укладка → уплотнение → проверка Плотность, ровность, толщина, температура",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#road-asphalt-placement",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "09g2s"
+      ],
+      "relatedProfession": "civil-engineer"
+    },
+    {
+      "id": "process:geotechnical-grouting",
+      "type": "process",
+      "title": "Инъекционное закрепление грунта",
+      "description": "Введение закрепляющего состава в грунтовый массив по проекту. Обследование → инъектирование по проекту → испытания Распределение состава, проницаемость, смещения",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#geotechnical-grouting",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "09g2s"
+      ],
+      "relatedProfession": "civil-engineer"
+    },
+    {
+      "id": "process:asphalt-mix-production",
+      "type": "process",
+      "title": "Производство асфальтобетонной смеси",
+      "description": "Приготовление смеси минеральных заполнителей и битумного вяжущего. Подготовка компонентов → нагрев и смешение → выпуск → контроль Температура, гранулометрия, доля вяжущего",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#asphalt-mix-production",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "road-engineer"
+    },
+    {
+      "id": "process:steam-generation",
+      "type": "process",
+      "title": "Генерация технологического пара",
+      "description": "Производство пара в котельной или парогенераторной системе. Подготовка питательной воды → подвод тепла → парообразование → контроль Качество воды, давление, паропроизводительность",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#steam-generation",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "power-engineer"
+    },
+    {
+      "id": "process:condensate-return",
+      "type": "process",
+      "title": "Возврат конденсата",
+      "description": "Сбор и подача конденсата для повторного использования в паровой системе. Сбор конденсата → проверка качества → возврат → контроль Загрязнения, потери тепла, утечки",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#condensate-return",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "power-engineer"
+    },
+    {
+      "id": "process:deaeration-water",
+      "type": "process",
+      "title": "Деаэрация котловой воды",
+      "description": "Удаление растворённых газов из питательной воды паровой системы. Подача воды → деаэрация → проверка остаточных газов Остаточный кислород, температура, стабильность режима",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#deaeration-water",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "power-engineer"
+    },
+    {
+      "id": "process:economizer-heat-recovery",
+      "type": "process",
+      "title": "Теплоутилизация в экономайзере",
+      "description": "Передача теплоты дымовых газов потоку технологической воды. Обход газов и воды → теплообмен → контроль параметров Температура, загрязнение поверхности, перепад давления",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#economizer-heat-recovery",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "power-engineer"
+    },
+    {
+      "id": "process:steam-trap-monitoring",
+      "type": "process",
+      "title": "Контроль конденсатоотводчиков",
+      "description": "Проверка работы устройств удаления конденсата из паровой сети. Инвентаризация → обследование → анализ потерь → протокол Пропуск пара, застой конденсата, исправность",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#steam-trap-monitoring",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "power-engineer"
+    },
+    {
+      "id": "process:industrial-induction-heating",
+      "type": "process",
+      "title": "Индукционный нагрев в производстве",
+      "description": "Нагрев проводящего материала под действием переменного электромагнитного поля. Позиционирование → индуцирование нагрева → контроль температуры Равномерность нагрева, перегрев, деформации",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#industrial-induction-heating",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "power-engineer"
+    },
+    {
+      "id": "process:industrial-heat-exchange",
+      "type": "process",
+      "title": "Промышленный теплообмен",
+      "description": "Передача тепловой энергии между средами через разделяющую поверхность. Подача потоков → теплообмен → контроль выхода Перепад температур, загрязнение, утечки",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#industrial-heat-exchange",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "power-engineer"
+    },
+    {
+      "id": "process:coagulation-water",
+      "type": "process",
+      "title": "Коагуляция при водоподготовке",
+      "description": "Дестабилизация коллоидных частиц для последующего удаления из воды. Дозирование реагента → смешение → контроль Доза реагента, мутность, pH",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#coagulation-water",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "water-engineer"
+    },
+    {
+      "id": "process:flocculation-water",
+      "type": "process",
+      "title": "Флокуляция воды",
+      "description": "Укрупнение взвешенных частиц в хлопья перед разделением. Подготовка воды → мягкое перемешивание → контроль Размер хлопьев, мутность и прочность агрегатов",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#flocculation-water",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "water-engineer"
+    },
+    {
+      "id": "process:sedimentation-water",
+      "type": "process",
+      "title": "Отстаивание воды",
+      "description": "Гравитационное отделение оседающих взвесей из водного потока. Входной поток → отстаивание → отвод осадка → контроль Вынос взвесей, гидравлическая нагрузка",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#sedimentation-water",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "water-engineer"
+    },
+    {
+      "id": "process:granular-filtration",
+      "type": "process",
+      "title": "Зернистая фильтрация воды",
+      "description": "Удаление взвесей прохождением воды через зернистый фильтрующий слой. Подача воды → фильтрация → промывка фильтра → контроль Мутность, перепад давления, загрязнение загрузки",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#granular-filtration",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "water-engineer"
+    },
+    {
+      "id": "process:carbon-adsorption",
+      "type": "process",
+      "title": "Адсорбция на активированном угле",
+      "description": "Удаление части растворённых веществ при контакте с активированным углём. Подготовка воды → контакт с сорбентом → контроль Прорыв загрязнителей, ресурс сорбента",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#carbon-adsorption",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "water-engineer"
+    },
+    {
+      "id": "process:reverse-osmosis",
+      "type": "process",
+      "title": "Обратный осмос",
+      "description": "Мембранное разделение воды и части растворённых компонентов при перепаде давления. Предочистка → мембранный блок → контроль потоков Качество пермеата, загрязнение мембраны, баланс",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#reverse-osmosis",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "water-engineer"
+    },
+    {
+      "id": "process:nanofiltration-water",
+      "type": "process",
+      "title": "Нанофильтрация воды",
+      "description": "Мембранное разделение по селективности к растворённым компонентам. Предочистка → нанофильтрация → анализ пермеата Селективность, мембранное загрязнение, расход",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#nanofiltration-water",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "water-engineer"
+    },
+    {
+      "id": "process:ultrafiltration-water",
+      "type": "process",
+      "title": "Ультрафильтрация воды",
+      "description": "Удаление коллоидов и взвешенных веществ мембранными барьерами. Подготовка → фильтрация → промывка → контроль Турбидность, поток через мембрану, целостность",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#ultrafiltration-water",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "water-engineer"
+    },
+    {
+      "id": "process:ozonation-water",
+      "type": "process",
+      "title": "Озонирование воды",
+      "description": "Обработка воды озоном для окисления отдельных компонентов. Генерация озона → контакт с водой → контроль Остаточный озон, эффективность контакта и окисления",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#ozonation-water",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "water-engineer"
+    },
+    {
+      "id": "process:sludge-dewatering",
+      "type": "process",
+      "title": "Обезвоживание осадка",
+      "description": "Отделение части воды от осадка после очистных процессов. Кондиционирование → механическое обезвоживание → контроль Влажность кека, качество фильтрата, выход",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#sludge-dewatering",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "water-engineer"
+    },
+    {
+      "id": "process:cement-clinker-firing",
+      "type": "process",
+      "title": "Обжиг цементного клинкера",
+      "description": "Тепловое преобразование минеральной сырьевой смеси при выпуске клинкера. Подготовка шихты → обжиг → охлаждение → контроль Минеральный состав, степень обжига, выбросы",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#cement-clinker-firing",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "alumina"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:ceramic-calcination",
+      "type": "process",
+      "title": "Кальцинация керамического сырья",
+      "description": "Термическая обработка минерального сырья с удалением летучих компонентов. Подготовка сырья → нагрев → охлаждение → анализ Потери при прокаливании, остаточные фазы",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#ceramic-calcination",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "alumina"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:ceramic-sintering",
+      "type": "process",
+      "title": "Спекание керамики",
+      "description": "Уплотнение сформованной керамической заготовки при высокотемпературном цикле. Формовка → спекание → охлаждение → испытания Пористость, усадка, микротрещины",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#ceramic-sintering",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "alumina"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:slip-casting-ceramics",
+      "type": "process",
+      "title": "Шликерное литьё керамики",
+      "description": "Формирование керамического изделия из суспензии в пористой форме. Подготовка шликера → формование → извлечение → сушка Равномерность стенок, трещины, поры",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#slip-casting-ceramics",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "alumina"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:dry-pressing-ceramics",
+      "type": "process",
+      "title": "Сухое прессование керамики",
+      "description": "Формирование заготовки уплотнением сухого или полусухого порошка в пресс-форме. Дозирование порошка → прессование → извлечение → контроль Плотность, расслоение, размер",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#dry-pressing-ceramics",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "alumina"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:brick-extrusion",
+      "type": "process",
+      "title": "Экструзия глиняных изделий",
+      "description": "Формование глиняной массы через фильеру с последующей резкой. Подготовка массы → экструзия → резка → сушка Геометрия, трещины, неоднородность",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#brick-extrusion",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "alumina"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:glass-melting",
+      "type": "process",
+      "title": "Варка стекломассы",
+      "description": "Получение расплава из подготовленной стекольной шихты. Подготовка шихты → плавление → осветление → контроль Пузырьки, включения, состав",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#glass-melting",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "alumina"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:glass-annealing",
+      "type": "process",
+      "title": "Отжиг стекла",
+      "description": "Управляемое охлаждение стекла для снижения остаточных напряжений. Подача изделия → отжиг → охлаждение → контроль Остаточные напряжения, коробление, трещины",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#glass-annealing",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "alumina"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:wet-granulation-pharma",
+      "type": "process",
+      "title": "Влажная грануляция фармацевтических порошков",
+      "description": "Образование гранул из порошковой смеси с введением жидкого связующего. Дозирование → грануляция → сушка → анализ Размер гранул, влажность, равномерность состава",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#wet-granulation-pharma",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "chemical-engineer"
+    },
+    {
+      "id": "process:dry-granulation-pharma",
+      "type": "process",
+      "title": "Сухая грануляция фармацевтических порошков",
+      "description": "Укрупнение частиц уплотнением без обязательного введения жидкости. Смешение → уплотнение → дробление → просеивание Распределение гранул, пыль, однородность",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#dry-granulation-pharma",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "chemical-engineer"
+    },
+    {
+      "id": "process:tablet-compression",
+      "type": "process",
+      "title": "Таблетирование",
+      "description": "Формирование дозированных таблеток из порошка или гранулята прессованием. Дозирование → прессование → отбраковка → контроль Масса, твёрдость, распадаемость, вариабельность",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#tablet-compression",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "chemical-engineer"
+    },
+    {
+      "id": "process:tablet-coating",
+      "type": "process",
+      "title": "Покрытие фармацевтических таблеток",
+      "description": "Нанесение покрывающего слоя на таблеточные ядра. Подготовка ядер → напыление покрытия → сушка → проверка Равномерность покрытия, дефекты поверхности",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#tablet-coating",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "chemical-engineer"
+    },
+    {
+      "id": "process:capsule-filling",
+      "type": "process",
+      "title": "Наполнение капсул",
+      "description": "Дозирование подготовленного материала в капсульную оболочку. Подача капсул → дозирование → закрытие → контроль Масса наполнения, целостность оболочки",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#capsule-filling",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "chemical-engineer"
+    },
+    {
+      "id": "process:aseptic-filling",
+      "type": "process",
+      "title": "Асептическое наполнение стерильных форм",
+      "description": "Наполнение предварительно подготовленной тары стерильным продуктом в контролируемой среде. Подготовка компонентов → асептическое наполнение → укупорка → контроль Контроль загрязнения, целостность закрытия",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#aseptic-filling",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "chemical-engineer"
+    },
+    {
+      "id": "process:pharma-spray-drying",
+      "type": "process",
+      "title": "Распылительная сушка фармацевтических растворов",
+      "description": "Получение сухого порошка из жидкости распылением с удалением растворителя. Подготовка раствора → распыление → сепарация → контроль Размер частиц, влажность, остаточный растворитель",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#pharma-spray-drying",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "chemical-engineer"
+    },
+    {
+      "id": "process:pharma-sieving",
+      "type": "process",
+      "title": "Фармацевтическое просеивание",
+      "description": "Разделение частиц порошка по размерным фракциям. Подача порошка → просеивание → отбор фракций → контроль Гранулометрия, загрязнения, выход",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#pharma-sieving",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "chemical-engineer"
+    },
+    {
+      "id": "process:offset-lithography",
+      "type": "process",
+      "title": "Офсетная печать",
+      "description": "Перенос печатного изображения через промежуточное полотно с печатной формы на материал. Подготовка формы → настройка подачи → печать → контроль оттиска Приводка, равномерность красочного слоя",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#offset-lithography",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "polygraph-engineer"
+    },
+    {
+      "id": "process:flexography",
+      "type": "process",
+      "title": "Флексографская печать",
+      "description": "Ротационная печать с эластичной рельефной формой на различных подложках. Подготовка формы и красок → подача материала → печать → осмотр Приводка, растискивание, дефекты покрытия",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#flexography",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "polygraph-engineer"
+    },
+    {
+      "id": "process:screen-printing",
+      "type": "process",
+      "title": "Трафаретная печать",
+      "description": "Нанесение краски через открытые участки сетчатого трафарета. Подготовка трафарета → печать → сушка → контроль Толщина слоя, пропуски, контур",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#screen-printing",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "polygraph-engineer"
+    },
+    {
+      "id": "process:gravure-printing",
+      "type": "process",
+      "title": "Глубокая печать",
+      "description": "Перенос краски из углублений печатной формы на подложку. Подготовка вала → подача краски → печать → контроль Перенос краски, полосы, приводка",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#gravure-printing",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "polygraph-engineer"
+    },
+    {
+      "id": "process:print-binding",
+      "type": "process",
+      "title": "Послепечатная фальцовка и переплёт",
+      "description": "Формирование и скрепление отпечатанных листов в изделие. Фальцовка → подборка → скрепление → обрезка → контроль Комплектность, совмещение листов, прочность",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#print-binding",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "polygraph-engineer"
+    },
+    {
+      "id": "process:ore-crushing",
+      "type": "process",
+      "title": "Дробление руды",
+      "description": "Снижение крупности добытого материала в дробильном оборудовании. Подача руды → дробление → сортировка → контроль Размер куска, пыление, загрязнение",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#ore-crushing",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "mining-engineer"
+    },
+    {
+      "id": "process:ore-grinding",
+      "type": "process",
+      "title": "Измельчение руды",
+      "description": "Дальнейшее снижение крупности материала в измельчающем оборудовании. Подготовка → измельчение → классификация → контроль Гранулометрия, переизмельчение, расход энергии",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#ore-grinding",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "mining-engineer"
+    },
+    {
+      "id": "process:ore-screening",
+      "type": "process",
+      "title": "Грохочение руды",
+      "description": "Разделение сыпучей массы на размерные классы через ситовые поверхности. Подача → грохочение → отвод фракций → проверка Разделение по крупности, забивание сит",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#ore-screening",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "mining-engineer"
+    },
+    {
+      "id": "process:ore-flotation",
+      "type": "process",
+      "title": "Флотационное обогащение",
+      "description": "Разделение минеральных частиц по различиям их поверхностных свойств. Подготовка пульпы → флотация → разделение потоков → анализ Извлечение, качество концентрата, реагентный баланс",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#ore-flotation",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "mining-engineer"
+    },
+    {
+      "id": "process:magnetic-separation-ore",
+      "type": "process",
+      "title": "Магнитная сепарация руды",
+      "description": "Разделение фракций минералов в магнитном поле. Подача измельчённой руды → сепарация → контроль фракций Извлечение магнитной фазы, примеси",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#magnetic-separation-ore",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "mining-engineer"
+    },
+    {
+      "id": "process:gravity-concentration",
+      "type": "process",
+      "title": "Гравитационное обогащение",
+      "description": "Концентрирование минералов по различиям их плотности и динамики движения. Подготовка питания → гравитационное разделение → анализ Содержание полезного компонента, потери",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#gravity-concentration",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "mining-engineer"
+    },
+    {
+      "id": "process:ore-leaching",
+      "type": "process",
+      "title": "Выщелачивание руды",
+      "description": "Перевод выбранных компонентов твёрдой руды в раствор при химическом воздействии. Подготовка руды → контакт с раствором → отделение → контроль Извлечение, примеси, обращение с растворами",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#ore-leaching",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "mining-engineer"
+    },
+    {
+      "id": "process:magnetic-particle-ndt",
+      "type": "process",
+      "title": "Магнитопорошковый контроль",
+      "description": "Выявление поверхностных и подповерхностных нарушений в ферромагнитных материалах. Подготовка → намагничивание → нанесение частиц → оценка Направление поля, чистота поверхности, индикации",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#magnetic-particle-ndt",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "09g2s",
+        "steel-45"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:eddy-current-ndt",
+      "type": "process",
+      "title": "Вихретоковый контроль",
+      "description": "Контроль проводящих изделий по изменению наведённых вихревых токов. Выбор датчика → калибровка → сканирование → протокол Проводимость, зазор, чувствительность, глубина",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#eddy-current-ndt",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "09g2s",
+        "steel-45"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:visual-ndt",
+      "type": "process",
+      "title": "Визуальный и измерительный контроль",
+      "description": "Осмотр доступных поверхностей с визуальными и измерительными средствами. Подготовка поверхности → осмотр → измерение → протокол Освещённость, доступность, допуски, критерии",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#visual-ndt",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "09g2s",
+        "steel-45"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:leak-testing",
+      "type": "process",
+      "title": "Испытание на герметичность",
+      "description": "Поиск утечек в системах с помощью перепада давления или индикаторной среды. Подготовка → испытание → оценка потерь → запись Чувствительность, утечки, перепад давления",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#leak-testing",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "09g2s",
+        "steel-45"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:acoustic-emission-ndt",
+      "type": "process",
+      "title": "Акустико-эмиссионный контроль",
+      "description": "Регистрация акустических сигналов, связанных с активными изменениями материала. Установка датчиков → нагружение по методике → анализ сигналов Помехи, локализация, активность источников",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#acoustic-emission-ndt",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "09g2s",
+        "steel-45"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:infrared-thermography",
+      "type": "process",
+      "title": "Инфракрасная термография",
+      "description": "Выявление температурных неоднородностей по тепловому излучению поверхности. Подготовка → тепловизионная съёмка → интерпретация Коэффициент излучения, отражения, условия съёмки",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#infrared-thermography",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "09g2s",
+        "steel-45"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:ground-penetrating-radar",
+      "type": "process",
+      "title": "Георадарное обследование",
+      "description": "Зондирование подповерхностных объектов электромагнитными импульсами. Выбор трассы → зондирование → интерпретация профиля Влажность, глубина, разрешение, помехи",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#ground-penetrating-radar",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "09g2s",
+        "steel-45"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:guided-wave-ndt",
+      "type": "process",
+      "title": "Контроль направленными ультразвуковыми волнами",
+      "description": "Обследование протяжённого объекта направленными волнами. Установка преобразователей → возбуждение → анализ отражений Мёртвые зоны, затухание, локализация",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#guided-wave-ndt",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "09g2s",
+        "steel-45"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:magnetic-flux-leakage",
+      "type": "process",
+      "title": "Контроль утечкой магнитного потока",
+      "description": "Обнаружение неоднородностей ферромагнитной стенки по полю рассеяния. Намагничивание → сканирование → оценка изменений Геометрия, насыщение, глубина дефектов",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#magnetic-flux-leakage",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "09g2s",
+        "steel-45"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:neutron-radiography",
+      "type": "process",
+      "title": "Нейтронная радиография",
+      "description": "Получение изображения по ослаблению нейтронного потока объектом. Подготовка образца → экспонирование по методике → анализ Контраст материалов, радиационная безопасность",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#neutron-radiography",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "09g2s",
+        "steel-45"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:laser-shearography",
+      "type": "process",
+      "title": "Лазерная шерография",
+      "description": "Оптическая регистрация деформационных полей при заданной нагрузке. Подготовка поверхности → воздействие → сравнение изображений Вибрации, чувствительность, интерпретация",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#laser-shearography",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "09g2s",
+        "steel-45"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:phased-array-ut",
+      "type": "process",
+      "title": "Ультразвуковой контроль фазированной решёткой",
+      "description": "Электронное управление направлением ультразвукового пучка массивом элементов. Выбор закона фокусировки → сканирование → протокол Калибровка, покрытие зоны, ложные показания",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#phased-array-ut",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "09g2s",
+        "steel-45"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:resistance-seam",
+      "type": "process",
+      "title": "Контактная шовная сварка",
+      "description": "Формирование соединения последовательными контактными точками при движении роликов. Подготовка листов → проход роликов → испытание Герметичность, перекрытие точек, деформации",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#resistance-seam",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "steel-20",
+        "09g2s"
+      ],
+      "relatedProfession": "mechanical-engineer"
+    },
+    {
+      "id": "process:flash-butt-welding",
+      "type": "process",
+      "title": "Стыковая сварка оплавлением",
+      "description": "Соединение торцов с нагревом при оплавлении и последующей осадке. Совмещение → оплавление → осадка → контроль Соосность, дефекты стыка, облой",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#flash-butt-welding",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "steel-20",
+        "09g2s"
+      ],
+      "relatedProfession": "mechanical-engineer"
+    },
+    {
+      "id": "process:electron-beam-welding",
+      "type": "process",
+      "title": "Электронно-лучевая сварка",
+      "description": "Получение шва сфокусированным пучком электронов. Подготовка → вакуумная операция → сварка → контроль Проплавление, поры, геометрия",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#electron-beam-welding",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "steel-20",
+        "09g2s"
+      ],
+      "relatedProfession": "mechanical-engineer"
+    },
+    {
+      "id": "process:plasma-arc-welding",
+      "type": "process",
+      "title": "Плазменная дуговая сварка",
+      "description": "Дуговая сварка с плазмообразующим газом и сжатой дугой. Подготовка → настройка оснастки → сварка → контроль Геометрия, поры, несплавление",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#plasma-arc-welding",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "steel-20",
+        "09g2s"
+      ],
+      "relatedProfession": "mechanical-engineer"
+    },
+    {
+      "id": "process:stud-welding",
+      "type": "process",
+      "title": "Приварка шпилек",
+      "description": "Дуговое или контактное присоединение крепёжного элемента к поверхности. Подготовка зоны → позиционирование шпильки → соединение → проверка Соосность, прочность, подрезы",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#stud-welding",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "steel-20",
+        "09g2s"
+      ],
+      "relatedProfession": "mechanical-engineer"
+    },
+    {
+      "id": "process:diffusion-bonding",
+      "type": "process",
+      "title": "Диффузионная сварка",
+      "description": "Твердофазное соединение контактирующих поверхностей под действием температуры и давления. Подготовка поверхностей → сближение → цикл → испытания Несплошности, качество контакта, изменения структуры",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#diffusion-bonding",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "steel-20",
+        "09g2s"
+      ],
+      "relatedProfession": "mechanical-engineer"
+    },
+    {
+      "id": "process:compression-molding-plastics",
+      "type": "process",
+      "title": "Компрессионное формование пластмасс",
+      "description": "Формование материала сдавливанием в нагретой пресс-форме. Подготовка навески → прессование → охлаждение → контроль Пустоты, облой, степень отверждения",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#compression-molding-plastics",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "pe-hd",
+        "pa6"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:stretch-blow-molding",
+      "type": "process",
+      "title": "Инжекционно-выдувное формование с вытяжкой",
+      "description": "Формование полой тары из предварительно полученной заготовки с вытяжкой. Изготовление преформы → разогрев → вытяжка и раздув → контроль Толщина, прозрачность, геометрия",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#stretch-blow-molding",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "pe-hd",
+        "pa6"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:blown-film-extrusion",
+      "type": "process",
+      "title": "Экструзия рукавной плёнки",
+      "description": "Получение плёнки из полимерного рукава при экструзии и раздуве. Пластикация → кольцевая фильера → раздув → намотка Толщина, складки, пузырь, стабильность рукава",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#blown-film-extrusion",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "pe-hd",
+        "pa6"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:polymer-transfer-molding",
+      "type": "process",
+      "title": "Трансферное формование реактопластов",
+      "description": "Заполнение формы подготовленным реактопластом из передаточной камеры. Подготовка сырья → передача в форму → отверждение → контроль Недолив, облой, время отверждения",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#polymer-transfer-molding",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "pe-hd",
+        "pa6"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:rubber-vulcanization",
+      "type": "process",
+      "title": "Вулканизация эластомеров",
+      "description": "Формирование связанной структуры эластомера в предусмотренном цикле. Подготовка смеси → вулканизация → охлаждение → испытания Степень вулканизации, твёрдость, трещины",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#rubber-vulcanization",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "pe-hd",
+        "pa6"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:extrusion-coating",
+      "type": "process",
+      "title": "Экструзионное покрытие полимером",
+      "description": "Нанесение расплава полимера на подложку в процессе экструзии. Подача подложки → нанесение расплава → охлаждение Толщина, адгезия, сплошность",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#extrusion-coating",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "pe-hd",
+        "pa6"
+      ],
+      "relatedProfession": "materials-engineer"
+    },
+    {
+      "id": "process:needle-punching-nonwovens",
+      "type": "process",
+      "title": "Иглопробивное производство нетканых материалов",
+      "description": "Связывание волокнистого холста множественными проходами игл. Подготовка холста → иглопробивание → контроль Поверхностная плотность, разрывы, равномерность",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#needle-punching-nonwovens",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "cotton",
+        "woven-fabric"
+      ],
+      "relatedProfession": "textile-engineer"
+    },
+    {
+      "id": "process:mercerization",
+      "type": "process",
+      "title": "Мерсеризация хлопка",
+      "description": "Химическая обработка хлопкового материала с изменением структуры волокон. Подготовка ткани → обработка → промывка → контроль Равномерность, усадка, остаточные реагенты",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#mercerization",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "cotton",
+        "woven-fabric"
+      ],
+      "relatedProfession": "textile-engineer"
+    },
+    {
+      "id": "process:heat-setting-textiles",
+      "type": "process",
+      "title": "Термофиксация текстиля",
+      "description": "Тепловая стабилизация структуры подходящего волокнистого материала. Подготовка → термообработка → охлаждение → испытания Усадка, деформации, цвет",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#heat-setting-textiles",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "cotton",
+        "woven-fabric"
+      ],
+      "relatedProfession": "textile-engineer"
+    },
+    {
+      "id": "process:textile-calendering",
+      "type": "process",
+      "title": "Каландрование тканей",
+      "description": "Механическая финишная обработка ткани между валками. Подача полотна → валки → контроль поверхности Складки, равномерность отделки, блеск",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#textile-calendering",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "cotton",
+        "woven-fabric"
+      ],
+      "relatedProfession": "textile-engineer"
+    },
+    {
+      "id": "process:industrial-embroidery",
+      "type": "process",
+      "title": "Машинная вышивка",
+      "description": "Формирование шовного рисунка нитями на текстильной основе. Подготовка рисунка → закрепление ткани → вышивка → осмотр Натяжение нитей, смещение, плотность стежков",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#industrial-embroidery",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "cotton",
+        "woven-fabric"
+      ],
+      "relatedProfession": "textile-engineer"
+    },
+    {
+      "id": "process:pcb-drilling",
+      "type": "process",
+      "title": "Сверление отверстий печатных плат",
+      "description": "Формирование сквозных или технологических отверстий в заготовке платы. Позиционирование → сверление → очистка → проверка Размеры, смещение, заусенцы, повреждение основы",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#pcb-drilling",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "pcb",
+        "solder"
+      ],
+      "relatedProfession": "electrical-engineer"
+    },
+    {
+      "id": "process:pcb-etching",
+      "type": "process",
+      "title": "Травление печатных проводников",
+      "description": "Удаление незащищённых участков металлического слоя по рисунку. Нанесение защитного рисунка → травление → промывка Подтравливание, ширина дорожек, остатки",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#pcb-etching",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "pcb",
+        "solder"
+      ],
+      "relatedProfession": "electrical-engineer"
+    },
+    {
+      "id": "process:pcb-plating",
+      "type": "process",
+      "title": "Металлизация отверстий печатных плат",
+      "description": "Формирование проводящего слоя на стенках отверстий платы. Подготовка поверхности → осаждение слоя → контроль Сплошность, толщина, пустоты",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#pcb-plating",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "pcb",
+        "solder"
+      ],
+      "relatedProfession": "electrical-engineer"
+    },
+    {
+      "id": "process:selective-soldering",
+      "type": "process",
+      "title": "Селективная пайка узлов плат",
+      "description": "Локальное формирование паяных соединений на отдельных участках платы. Подготовка → локальная пайка → инспекция Смачиваемость, перемычки, термовлияние",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#selective-soldering",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "pcb",
+        "solder"
+      ],
+      "relatedProfession": "electrical-engineer"
+    },
+    {
+      "id": "process:pcb-xray-inspection",
+      "type": "process",
+      "title": "Рентгеновский контроль электронных сборок",
+      "description": "Получение рентгеновского изображения скрытых паяных соединений. Подготовка платы → съёмка → интерпретация → протокол Пустоты, перемычки, предел разрешения",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#pcb-xray-inspection",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [
+        "pcb",
+        "solder"
+      ],
+      "relatedProfession": "electrical-engineer"
+    },
+    {
+      "id": "process:pharma-powder-blending",
+      "type": "process",
+      "title": "Смешение фармацевтических порошков",
+      "description": "Обеспечение однородности состава подготовленных порошковых компонентов. Дозирование → смешение → контроль смеси Однородность, сегрегация, загрязнение",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#pharma-powder-blending",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "chemical-engineer"
+    },
+    {
+      "id": "process:pharma-micronization",
+      "type": "process",
+      "title": "Микронизация фармацевтических веществ",
+      "description": "Снижение размера частиц активного вещества механическим способом. Подготовка → измельчение → классификация → испытания Размер частиц, нагрев, загрязнение",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#pharma-micronization",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "chemical-engineer"
+    },
+    {
+      "id": "process:fluid-bed-pharma-drying",
+      "type": "process",
+      "title": "Сушка в псевдоожиженном слое",
+      "description": "Удаление влаги из гранулята в потоке газа, поддерживающего псевдоожижение. Подготовка гранулята → сушка → отделение → измерение Влажность, потери мелких фракций, однородность",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#fluid-bed-pharma-drying",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "chemical-engineer"
+    },
+    {
+      "id": "process:pharma-inprocess-control",
+      "type": "process",
+      "title": "Внутрипроизводственный контроль таблеток",
+      "description": "Измерение свойств таблеток на промежуточных этапах выпуска. Отбор → измерение массы и твёрдости → запись Вариация массы, распадаемость и прочность",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#pharma-inprocess-control",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "chemical-engineer"
+    },
+    {
+      "id": "process:printing-plate-making",
+      "type": "process",
+      "title": "Изготовление печатных форм",
+      "description": "Получение носителя печатного изображения из подготовленных цифровых данных. Подготовка макета → изготовление формы → проверка Растровое изображение, приводка, дефекты формы",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#printing-plate-making",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "polygraph-engineer"
+    },
+    {
+      "id": "process:print-die-cutting",
+      "type": "process",
+      "title": "Высечка печатной продукции",
+      "description": "Формирование контура изделия резанием высекальным штампом. Совмещение заготовки → высечка → удаление отходов Размер, заусенцы, совмещение",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#print-die-cutting",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "polygraph-engineer"
+    },
+    {
+      "id": "process:uv-curing-print",
+      "type": "process",
+      "title": "УФ-отверждение печатных покрытий",
+      "description": "Отверждение совместимых красочных систем ультрафиолетовым излучением. Нанесение краски → облучение → контроль покрытия Неполное отверждение, липкость, стойкость",
+      "url": "https://vremennobeznika.github.io/enjigirling/processes.html#uv-curing-print",
+      "dataset": "knowledge/processes.json",
+      "relatedMaterials": [],
+      "relatedProfession": "polygraph-engineer"
     },
     {
       "id": "term:0",
