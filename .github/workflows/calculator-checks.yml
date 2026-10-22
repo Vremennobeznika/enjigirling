@@ -10,6 +10,8 @@ on:
       - 'calculator-practical*.js'
       - 'calculator-practical.css'
       - 'engineering-lab-core.js'
+      - 'measurement-electronics.js'
+      - 'tests/measurement-lab.spec.cjs'
       - 'engineer-calculators.js'
       - 'tests/practical-calculator*'
       - 'tests/engineering-lab*'
@@ -24,6 +26,8 @@ on:
       - 'calculator-practical*.js'
       - 'calculator-practical.css'
       - 'engineering-lab-core.js'
+      - 'measurement-electronics.js'
+      - 'tests/measurement-lab.spec.cjs'
       - 'engineer-calculators.js'
       - 'tests/practical-calculator*'
       - 'tests/engineering-lab*'
@@ -61,4 +65,4 @@ jobs:
           npm install --no-audit --no-fund
           npx playwright install chromium
       - name: Calculator browser regression
-        run: npx playwright test tests/engineering-lab.spec.cjs tests/practical-calculator.spec.cjs tests/calculator-low-end.spec.cjs --workers=2 --reporter=line
+        run: npx playwright test tests/engineering-lab.spec.cjs tests/practical-calculator.spec.cjs tests/calculator-low-end.spec.cjs tests/measurement-lab.spec.cjs --workers=2 --reporter=line

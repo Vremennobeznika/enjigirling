@@ -84,3 +84,14 @@ test('community and calculator entry points lead to the internal workshop',async
  await expect(page).toHaveURL(/measurement-lab\.html/);
  await expect(page.locator('#vernierSvg line').first()).toHaveCount(1);
 });
+
+test('oscilloscope does not draw aliased waves at excessive cycles per screen',async({page})=>{
+ await page.goto('/measurement-lab.html');
+ await page.locator('#oscFrequency').fill('10000');
+ await page.locator('#oscTimebase').selectOption('10');
+ await expect(page.locator('#oscDetails')).toContainText('График скрыт');
+ await expect(page.locator('#oscSvg path')).toHaveCount(0);
+ await page.locator('#oscTimebase').selectOption('0.1');
+ await expect(page.locator('#oscDetails')).not.toContainText('График скрыт');
+ await expect(page.locator('#oscSvg path')).toHaveCount(1);
+});

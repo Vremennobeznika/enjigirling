@@ -69,6 +69,18 @@ for(let i=0;i<256;i++){
  assert.ok(track.sog>=Math.abs(v-c)-1e-10,'vector triangle lower bound');checks++;
  assert.ok(track.cog===null||(track.cog>=0&&track.cog<360),'COG bounds');checks++;
 }
+// Cross-domain boundary regressions: fractional counts, unsafe integer products, negative waste.
+bad(()=>M.takt(420,.5),'takt must reject fractional demand');
+bad(()=>M.oee(480,450,1000.5,960,24),'OEE must reject fractional total');
+bad(()=>M.oee(480,450,1000,960.5,24),'OEE must reject fractional good');
+bad(()=>M.layLength(Number.MAX_SAFE_INTEGER,2,5,.1),'lay output must remain a safe integer');
+bad(()=>M.lineBalance('10000000000000000',.1),'line count must remain a safe integer');
+const almostFull=M.markerEfficiency(75000+1e-7,5,150);
+near(almostFull.percent,100,'rounded full marker efficiency');
+near(almostFull.wastePercent,0,'no negative waste percent');
+near(almostFull.wasteM2,0,'no negative waste area');
+near(M.marinePassage(50,12).hours,50/12,'marine baseline stable');
+near(M.currentVector(10,0,2,90).sog,Math.hypot(10,2),'marine current remains vectorial');
 // Separate production/electrical/textile/number-format boundary gates.
 near(M.takt(420,840).seconds,30,'takt');near(M.oee(480,450,1000,960,24).oee,.8,'OEE');
 near(M.billetMass(7850,1000,100,10).kilograms,7.85,'billet mass');
