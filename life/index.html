@@ -41,7 +41,7 @@ details{border:1px solid var(--line);background:var(--box);border-radius:17px;pa
 <p class="warn">Синхронизация сейчас запускается вручную кнопками, чтобы избежать потери изменений на разных устройствах. До подключения можно пользоваться всем локально. Секрет хранится только до закрытия вкладки, не в GitHub.</p>
 </details>
 <p class="warn">Код этой страницы публичен, но твои списки не публикуются в GitHub. Хранилище браузера может быть очищено; регулярно сохраняй копию.</p>
-</main><script>
+</main><script src="../calendar/household.js"></script><script>
 (()=>{"use strict";
 const KEYS={calendar:"week-check-v2",shopping:"supermarket-shopping-list-v1",tasks:"life-inbox-v1",pantry:"life-pantry-v1"};
 const $=id=>document.getElementById(id),safe=(value,def)=>{try{return JSON.parse(localStorage.getItem(value)||"null")??def}catch{return def}};
@@ -58,7 +58,9 @@ const d=raw.data;for(const k of Object.keys(KEYS))if(!(k in d))throw Error("Не
 const clean={calendar:validCalendar(d.calendar),shopping:validShopping(d.shopping),tasks:validTasks(d.tasks),pantry:validPantry(d.pantry)};
 for(const [section,key] of Object.entries(KEYS)){if(!persist(key,clean[section]))throw Error("Не удалось сохранить");}draw();}
 function draw(){
-const now=new Date(),day=(now.getDay()+6)%7,key=dateStr(now),marks=safe(KEYS.calendar,{}),total=day<5?27:23,done=Object.keys(marks).filter(k=>k.startsWith(key+"-")&&marks[k]===true).length;
+const now=new Date(),day=(now.getDay()+6)%7,key=dateStr(now),marks=safe(KEYS.calendar,{}),home=window.HOUSEHOLD_PLAN?.forDay(day)||[];
+const mainTotal=day<5?27:24,homeDone=home.filter(t=>marks[key+"-home-"+t.id]===true).length;
+const done=Array.from({length:mainTotal},(_,i)=>marks[key+"-"+i]===true).filter(Boolean).length+homeDone,total=mainTotal+home.length;
 $("date").textContent=now.toLocaleDateString("ru-RU",{weekday:"long",day:"numeric",month:"long",year:"numeric"});
 $("calendarCount").textContent=Math.min(total,done)+" / "+total;$("calendarBar").style.width=Math.min(100,done/total*100)+"%";
 const buys=validShopping(safe(KEYS.shopping,[])),remaining=buys.filter(x=>!x.done).length;
