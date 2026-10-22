@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
   total.textContent=entries.length+' записей';
   const pageSize=12;
   let shown=pageSize,filtered=[];
-  const validLink=url=>{try{const parsed=new URL(String(url));return parsed.protocol==='https:'?parsed.href:'';}catch{return '';}};
+  const validLink=url=>{try{const parsed=new URL(String(url));return (parsed.protocol==='https:'||(parsed.protocol==='http:'&&parsed.hostname==='gaskk-mck.ru'))?parsed.href:'';}catch{return '';}};
   function renderCard(record){
     const {item,district,type}=record;
     const source=validLink(item.sourceUrl),site=validLink(item.site);
@@ -66,8 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
       '<p class="education-focus"><strong>Направления (ориентир):</strong> '+escapeHtml(item.focus||item.profile||'Не указаны')+'</p>'+
       '<p class="education-card-status">'+(programs.length?(item.reviewStatus==='program_source_recorded'?'Программа указана в источнике; условия набора не подтверждены':item.reviewStatus==='program_verified_with_access_limit'?'Документ программы требует повторной проверки доступности':item.reviewStatus==='program_verified'?'Отдельные сведения о программе сверены с источником':'Источник программы указан; проверка не завершена'):(item.sourceFetchStatus==='fetch_failed'?'Ссылка не открылась при проверке':(hasSource?(item.sourceType==='institution_home'?'Название сверено, не набор':'Источник найден; условия не сверены'):'Условия приёма не проверены')))+'</p>'+
       '<details class="education-card-details"><summary>Источники, программы и ограничения</summary><dl>'+facts+'</dl>'+
-      programDetails.filter(p=>p.source).map(p=>'<a class="education-site" href="'+escapeHtml(p.source)+'" rel="noopener noreferrer" target="_blank">Программа '+escapeHtml(p.label.replace('Программа по источнику ',''))+' — документ ↗</a>').join('')+
-      (hasSource?'<a class="education-site" href="'+escapeHtml(source)+'" rel="noopener noreferrer" target="_blank">'+(item.sourceType==='institution_home'?'Официальный сайт (название) ↗':'Первоисточник ↗')+'</a>':'')+
+      programDetails.filter(p=>p.source).map(p=>'<a class="education-site" href="'+escapeHtml(p.source)+'" rel="noopener noreferrer" target="_blank">Программа '+escapeHtml(p.label.replace('Программа по источнику ',''))+' — документ'+(p.source.startsWith('http:')?' (HTTP, без шифрования)':'')+' ↗</a>').join('')+
+      (hasSource?'<a class="education-site" href="'+escapeHtml(source)+'" rel="noopener noreferrer" target="_blank">'+(item.sourceType==='institution_home'?'Официальный сайт (название)':'Первоисточник')+(source.startsWith('http:')?' (HTTP, без шифрования)':'')+' ↗</a>':'')+
       (site&&site!==source?'<a class="education-site" href="'+escapeHtml(site)+'" rel="noopener noreferrer" target="_blank">Сайт из каталога ↗</a>':(!site&&!source?'<p class="education-no-link">Адрес сайта не подтверждён</p>':''))+
       '</details></article>';
   }
