@@ -387,12 +387,13 @@ check('734 unique calculator concepts across 34 research groups have honest stat
 });
 
 
-check('calculator workshop layout embeds every tool in one of six groups',()=>{
+check('calculator workshop layout embeds every tool in seven groups',()=>{
  const h=fs.readFileSync('calculator.html','utf8');
  const g=[
   ['group-digital',['labIEEE','calcBases']],
   ['group-electrical',['labElectronics','calcSignal']],
   ['group-production',['labProduction']],
+  ['group-practical',['labPractical']],
   ['group-sewing',['labSewing','labMoreSewing']],
   ['group-marine',['labMarine','labMoreMarine']],
   ['group-measurements',['labCaliper','calcUnits']]
