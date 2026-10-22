@@ -26,11 +26,11 @@
 | 18 | МАДИ | 23.03.01 | https://pk.madi.ru/59-plan-priema.html | OPENED / CODE NOT SEEN |
 | 19 | РГУ нефти и газа (НИУ) им. И. М. Губкина | 21.03.01 | https://gubkin.ru/faculty/oil_and_gas_development/informatsiya-dlya-studentov_novaya/bachelor.php | FAILED / RETRY |
 | 20 | МГТУ «СТАНКИН» | 15.03.01 | https://priem.stankin.ru/bakalavriatispetsialitet/training_programs/ | OPENED / CODE VISIBLE |
-| 21 | Воронежский ГТУ | 15.03.01 | https://abiturient.cchgeu.ru/osnovnye-svedeniya-postupayushchim/bak-spec/plan-reception-bak/ | OPENED / CODE VISIBLE |
+| 21 | Воронежский ГТУ | 15.03.01 | https://abiturient.cchgeu.ru/osnovnye-svedeniya-postupayushchim/bak-spec/plan-reception-bak/ | OPENED / CODE NOT SEEN |
 | 22 | Тверской ГТУ | 15.03.05 | https://new.tstu.tver.ru/abitur/bachelor/ | OPENED / CODE VISIBLE |
 | 23 | Московский техникум космического приборостроения | 09.02.11 | https://mtkp.bmstu.ru/entrant/plan-priema | OPENED / CODE VISIBLE |
-| 24 | Политехнический колледж им. Н. Н. Годовикова | 25.02.06 | https://pkgodovikov.mskobr.ru/postuplenie-v-kolledzh/specialnosti-professii | OPENED / CODE VISIBLE |
-| 25 | Московский государственный колледж электромеханики и информационных технологий | 09.02.12 | https://itmoscow.mskobr.ru/postuplenie-v-kolledzh/specialnosti-professii | OPENED / CODE VISIBLE |
+| 24 | Политехнический колледж им. Н. Н. Годовикова | 25.02.06 | https://pkgodovikov.mskobr.ru/postuplenie-v-kolledzh/specialnosti-professii | OPENED / CODE NOT SEEN |
+| 25 | Московский государственный колледж электромеханики и информационных технологий | 09.02.12 | https://itmoscow.mskobr.ru/postuplenie-v-kolledzh/specialnosti-professii | OPENED / CODE NOT SEEN |
 | 26 | Воронежский политехнический техникум (реорганизация 2026) | 15.02.16 | https://profcopp.ru/WhereToGoStudy/GetInfo?spo=7e50cbcc-47b3-48e1-b427-2e89c0eb62d9 | OPENED / CODE VISIBLE |
 | 27 | Колледж «Коломна» | 15.02.16 | https://college-kolomna.ru/tehnologiya-mashinostroeniya/ | OPENED / CODE VISIBLE |
 | 28 | ДГТУ | 15.03.01 | https://itf.donstu.ru/sveden/education/programs/oborudovanie-i-tehnologiya-svarochnogo-proizvodstva-15.03.01.html | OPENED / CODE VISIBLE |
@@ -53,7 +53,7 @@
 | 45 | Чувашский государственный университет им. И. Н. Ульянова | 13.03.02 | https://www.chuvsu.ru/sveden/education/programs/inghenernoe-konstruirovanie-i-tehnologiya-sozdaniya-elektricheskih-apparatov-13.03.02.html | FAILED / RETRY |
 | 46 | Международный центр компетенций — Казанский техникум информационных технологий и связи | 09.02.01 | https://mck-ktits.ru/контрольные-цифры-приема/ | FAILED / RETRY |
 | 47 | Уральский федеральный университет им. Б. Н. Ельцина (УрФУ) | 15.03.01 | https://upish.urfu.ru/entrance/bachelor/ | FAILED / RETRY |
-| 48 | ЮУрГУ | 15.03.01 | https://www.susu.ru/ru/about/official/plans?field_department_filter_value_1=All&field_year_begin_value=All&page=3 | OPENED / CODE VISIBLE |
+| 48 | ЮУрГУ | 15.03.01 | https://www.susu.ru/ru/about/official/plans?field_department_filter_value_1=All&field_year_begin_value=All&page=3 | OPENED / CODE NOT SEEN |
 | 49 | Тюменский Индустриальный Университет | 21.03.01 | https://tyuiu.ru/sveden/education/programs/burenie-neftyanyh-i-gazovyh-skvaghin-21.03.01.html | OPENED / CODE VISIBLE |
 | 50 | Курганский государственный университет (КГУ) | 15.03.01 | https://abit.kgsu.ru/page/3 | OPENED / CODE VISIBLE |
 | 51 | Екатеринбургский политехникум | 15.02.16 | https://ekpt.ru/abiturientam/komissiya/kontrolnye_cifry_priema/ | OPENED / CODE VISIBLE |
