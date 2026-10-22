@@ -1,4 +1,4 @@
-// Краткие производственные сведения. verifiedClaim — проверенный частный тезис, а не подтверждение всей карточки.
+// Справочные данные, не технологическая инструкция.
 window.engineeringProcesses = [
   {
     "id": "casting",
@@ -543,6 +543,10 @@ window.engineeringProcesses = [
     "profession": "mechanical-engineer",
     "sources": [
       {
+        "title": "ISO 10209:2022 — определение сборки",
+        "url": "https://www.iso.org/obp/ui?_escaped_fragment_=iso%3Astd%3Aiso%3A10209%3Aed-2%3Av1%3Aen"
+      },
+      {
         "title": "IPC — J-STD-001J и IPC-A-610J: производство электронных сборок",
         "url": "https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"
       },
@@ -552,8 +556,8 @@ window.engineeringProcesses = [
       }
     ],
     "evidence": {
-      "verifiedClaim": "Сборка может включать соединение отдельных компонентов в готовый узел.",
-      "reviewScope": "Проверен только приведённый частный тезис, а не вся технологическая карточка.",
+      "verifiedClaim": "Сборка объединяет компоненты в функционально связанный узел.",
+      "reviewScope": "Подтверждено только определение, а не способы крепления или нормативные моменты затяжки.",
       "checkedAt": "2026-10-22"
     }
   },
