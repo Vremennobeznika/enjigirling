@@ -66,9 +66,10 @@ document.addEventListener('DOMContentLoaded', () => {
     for (const type of groups) {
       const candidates = byType.get(type) || [];
       if (!candidates.length) continue;
-      const shown = candidates.slice(0, limit);
+      // Дружественные каналы всегда выводятся полностью, без ограничения числа карточек.
+      const shown = type === 'Дружественные каналы' ? candidates : candidates.slice(0, limit);
       rendered += shown.length;
-      nextRendered += Math.min(candidates.length, limit + batchSize());
+      nextRendered += type === 'Дружественные каналы' ? candidates.length : Math.min(candidates.length, limit + batchSize());
       let cards = `<div class="resource-items">${shown.map(makeCard).join('')}</div>`;
       if (type === 'Журналы') {
         const topics = [...journalTopics, ...new Set(shown.map(x => x.topic || 'Без направления').filter(x => !journalTopics.includes(x)))];
