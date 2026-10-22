@@ -1,4 +1,4 @@
-// Справочные описания, не технологическая инструкция.
+// Краткие производственные сведения. verifiedClaim — проверенный частный тезис, а не подтверждение всей карточки.
 window.engineeringProcesses = [
   {
     "id": "casting",
@@ -18,7 +18,12 @@ window.engineeringProcesses = [
         "title": "ASNT — возможности и ограничения методов неразрушающего контроля",
         "url": "https://www.asnt.org/what-is-nondestructive-testing/methods"
       }
-    ]
+    ],
+    "evidence": {
+      "verifiedClaim": "Объекты литейного производства могут контролироваться радиографическими методами на внутренние дефекты.",
+      "reviewScope": "Метод применим к отливкам; не подтверждены все виды дефектов и режимы литья.",
+      "checkedAt": "2026-10-22"
+    }
   },
   {
     "id": "welding",
@@ -42,7 +47,12 @@ window.engineeringProcesses = [
         "title": "TWI — классификация сварочных процессов",
         "url": "https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly"
       }
-    ]
+    ],
+    "evidence": {
+      "verifiedClaim": "Дуговая сварка использует электрическую дугу для формирования сварного соединения.",
+      "reviewScope": "Проверен только приведённый частный тезис, а не вся технологическая карточка.",
+      "checkedAt": "2026-10-22"
+    }
   },
   {
     "id": "cutting",
@@ -71,7 +81,12 @@ window.engineeringProcesses = [
         "title": "Sandvik Coromant — точность и качество обработки резанием",
         "url": "https://www.sandvik.coromant.com/en-gb/tools/silent-tools/what-is-silent-tools/application-guide-silent-tools/turning-appl-guide"
       }
-    ]
+    ],
+    "evidence": {
+      "verifiedClaim": "Механическая обработка удаляет материал заготовки для получения требуемой геометрии.",
+      "reviewScope": "Проверен принцип процесса, но не все параметры качества.",
+      "checkedAt": "2026-10-22"
+    }
   },
   {
     "id": "heat",
@@ -94,7 +109,12 @@ window.engineeringProcesses = [
         "title": "Bodycote — технический словарь термической обработки",
         "url": "https://www.bodycote.com/technical-glossary/"
       }
-    ]
+    ],
+    "evidence": {
+      "verifiedClaim": "Термическая обработка относится к производственным процессам изменения свойств без изменения формы.",
+      "reviewScope": "Проверено только приведённое утверждение, не вся карточка.",
+      "checkedAt": "2026-10-22"
+    }
   },
   {
     "id": "additive",
@@ -122,7 +142,12 @@ window.engineeringProcesses = [
         "title": "ASTM F3489-23 — свойства полимерных изделий при экструзионной 3D-печати",
         "url": "https://store.astm.org/f3489-23.html"
       }
-    ]
+    ],
+    "evidence": {
+      "verifiedClaim": "Аддитивное производство создаёт изделия по цифровой модели последовательным добавлением слоёв материала.",
+      "reviewScope": "Проверен принцип, не применимость к HDPE или GFRP.",
+      "checkedAt": "2026-10-22"
+    }
   },
   {
     "id": "inspection",
@@ -151,7 +176,12 @@ window.engineeringProcesses = [
         "title": "ISO 9712:2021 — квалификация персонала",
         "url": "https://committee.iso.org/cms/live/live/en/sites/isoorg/contents/data/standard/07/56/75614.html"
       }
-    ]
+    ],
+    "evidence": {
+      "verifiedClaim": "Разные методы неразрушающего контроля обнаруживают разные виды несплошностей без повреждения детали.",
+      "reviewScope": "Проверена обзорная характеристика, не процедура и квалификация.",
+      "checkedAt": "2026-10-22"
+    }
   },
   {
     "id": "mig-mag",
@@ -170,7 +200,12 @@ window.engineeringProcesses = [
         "title": "TWI — различия MIG/MAG и типы защитных газов",
         "url": "https://www.twi-global.com/technical-knowledge/faqs/faq-what-is-the-difference-between-mig-and-mag"
       }
-    ]
+    ],
+    "evidence": {
+      "verifiedClaim": "MIG применяет инертные защитные газы, а MAG — активные газовые смеси.",
+      "reviewScope": "Проверен только приведённый частный тезис, а не вся технологическая карточка.",
+      "checkedAt": "2026-10-22"
+    }
   },
   {
     "id": "tig",
@@ -189,7 +224,12 @@ window.engineeringProcesses = [
         "title": "TWI — особенности TIG-сварки и защитных газов",
         "url": "https://www.twi-global.com/technical-knowledge/job-knowledge/tungsten-inert-gas-tig-or-gta-welding-006"
       }
-    ]
+    ],
+    "evidence": {
+      "verifiedClaim": "TIG использует неплавящийся вольфрамовый электрод и инертную газовую защиту.",
+      "reviewScope": "Проверен только приведённый частный тезис, а не вся технологическая карточка.",
+      "checkedAt": "2026-10-22"
+    }
   },
   {
     "id": "ultrasonic",
@@ -212,7 +252,12 @@ window.engineeringProcesses = [
         "title": "ASNT — ультразвуковой метод НК",
         "url": "https://www.asnt.org/what-is-nondestructive-testing/methods"
       }
-    ]
+    ],
+    "evidence": {
+      "verifiedClaim": "Ультразвуковой контроль использует высокочастотные звуковые волны для оценки материала.",
+      "reviewScope": "Проверен физический принцип.",
+      "checkedAt": "2026-10-22"
+    }
   },
   {
     "id": "radiographic",
@@ -231,7 +276,12 @@ window.engineeringProcesses = [
         "title": "ASNT — радиографический контроль",
         "url": "https://www.asnt.org/what-is-nondestructive-testing/methods/radiographic-testing"
       }
-    ]
+    ],
+    "evidence": {
+      "verifiedClaim": "Радиографический контроль использует рентгеновское или гамма-излучение для изображения внутренней структуры.",
+      "reviewScope": "Проверен принцип.",
+      "checkedAt": "2026-10-22"
+    }
   },
   {
     "id": "dye",
@@ -250,7 +300,12 @@ window.engineeringProcesses = [
         "title": "ASNT — капиллярный контроль",
         "url": "https://www.asnt.org/what-is-nondestructive-testing/methods"
       }
-    ]
+    ],
+    "evidence": {
+      "verifiedClaim": "Капиллярный контроль выявляет несплошности, открытые на поверхность непористых материалов.",
+      "reviewScope": "Проверены назначение и поверхностный характер метода.",
+      "checkedAt": "2026-10-22"
+    }
   },
   {
     "id": "hardness",
@@ -270,7 +325,12 @@ window.engineeringProcesses = [
         "title": "ASTM E18-25 — определение твёрдости по Роквеллу",
         "url": "https://store.astm.org/standards/e18"
       }
-    ]
+    ],
+    "evidence": {
+      "verifiedClaim": "Метод Роквелла основан на вдавливании индентора и предназначен для определения твёрдости металлических материалов.",
+      "reviewScope": "Этот стандарт подтверждает только метод Роквелла, не все методики измерения твёрдости.",
+      "checkedAt": "2026-10-22"
+    }
   },
   {
     "id": "forging",
@@ -296,7 +356,12 @@ window.engineeringProcesses = [
         "title": "OSHA — определения операций ковки и объёмной штамповки",
         "url": "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.211"
       }
-    ]
+    ],
+    "evidence": {
+      "verifiedClaim": "Ковка относится к формообразованию посредством пластической деформации.",
+      "reviewScope": "Проверено только приведённое утверждение, не вся карточка.",
+      "checkedAt": "2026-10-22"
+    }
   },
   {
     "id": "rolling",
@@ -319,7 +384,12 @@ window.engineeringProcesses = [
         "title": "NIST IR 7913 — классификация способов производства",
         "url": "https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes"
       }
-    ]
+    ],
+    "evidence": {
+      "verifiedClaim": "Прокатка относится к процессам формообразования металлических заготовок.",
+      "reviewScope": "Проверено только приведённое утверждение, не вся карточка.",
+      "checkedAt": "2026-10-22"
+    }
   },
   {
     "id": "stamping",
@@ -343,7 +413,12 @@ window.engineeringProcesses = [
         "title": "NIST IR 7913 — классификация способов производства",
         "url": "https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes"
       }
-    ]
+    ],
+    "evidence": {
+      "verifiedClaim": "Листовая штамповка входит в процессы формообразования материалов.",
+      "reviewScope": "Проверено только приведённое утверждение, не вся карточка.",
+      "checkedAt": "2026-10-22"
+    }
   },
   {
     "id": "injection-molding",
@@ -366,7 +441,12 @@ window.engineeringProcesses = [
         "title": "Protolabs — технология литья пластмасс и типовые дефекты",
         "url": "https://www.protolabs.com/en-gb/resources/guides-and-trend-reports/injection-moulding-guide-process-design-tips-materials/"
       }
-    ]
+    ],
+    "evidence": {
+      "verifiedClaim": "При литье термопластов под давлением расплав полимера впрыскивают в форму, охлаждают и извлекают изделие.",
+      "reviewScope": "Проверен только приведённый частный тезис, а не вся технологическая карточка.",
+      "checkedAt": "2026-10-22"
+    }
   },
   {
     "id": "extrusion",
@@ -389,7 +469,12 @@ window.engineeringProcesses = [
         "title": "NIST IR 7913 — классификация способов производства",
         "url": "https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes"
       }
-    ]
+    ],
+    "evidence": {
+      "verifiedClaim": "Экструзия относится к процессам формообразования.",
+      "reviewScope": "Проверен только приведённый частный тезис, а не вся технологическая карточка.",
+      "checkedAt": "2026-10-22"
+    }
   },
   {
     "id": "grinding",
@@ -415,7 +500,12 @@ window.engineeringProcesses = [
         "title": "OSHA — опасности операций механической обработки",
         "url": "https://www.osha.gov/metalworking-fluids/manual"
       }
-    ]
+    ],
+    "evidence": {
+      "verifiedClaim": "Абразивное шлифование входит в процессы удаления материала.",
+      "reviewScope": "Проверено только приведённое утверждение, не вся карточка.",
+      "checkedAt": "2026-10-22"
+    }
   },
   {
     "id": "surface-finishing",
@@ -435,7 +525,12 @@ window.engineeringProcesses = [
         "title": "NIST IR 7913 — классификация способов производства",
         "url": "https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes"
       }
-    ]
+    ],
+    "evidence": {
+      "verifiedClaim": "Поверхностная обработка выделяется как направление производственных процессов.",
+      "reviewScope": "Проверено только приведённое утверждение, не вся карточка.",
+      "checkedAt": "2026-10-22"
+    }
   },
   {
     "id": "assembly",
@@ -455,7 +550,12 @@ window.engineeringProcesses = [
         "title": "NIST IR 7913 — классификация способов производства",
         "url": "https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes"
       }
-    ]
+    ],
+    "evidence": {
+      "verifiedClaim": "Сборка может включать соединение отдельных компонентов в готовый узел.",
+      "reviewScope": "Проверен только приведённый частный тезис, а не вся технологическая карточка.",
+      "checkedAt": "2026-10-22"
+    }
   },
   {
     "id": "pasteurization",
@@ -477,7 +577,12 @@ window.engineeringProcesses = [
         "title": "FAO — технология переработки фруктов и овощей",
         "url": "https://www.fao.org/4/x0209e/x0209e06.htm"
       }
-    ]
+    ],
+    "evidence": {
+      "verifiedClaim": "Пастеризация является одним из методов тепловой обработки пищевых продуктов.",
+      "reviewScope": "Проверено только приведённое утверждение, не вся карточка.",
+      "checkedAt": "2026-10-22"
+    }
   },
   {
     "id": "food-drying",
@@ -499,7 +604,12 @@ window.engineeringProcesses = [
         "title": "FAO — технология переработки фруктов и овощей",
         "url": "https://www.fao.org/4/x0209e/x0209e06.htm"
       }
-    ]
+    ],
+    "evidence": {
+      "verifiedClaim": "Сушка уменьшает количество воды в пищевом продукте.",
+      "reviewScope": "Проверено только приведённое утверждение, не вся карточка.",
+      "checkedAt": "2026-10-22"
+    }
   },
   {
     "id": "fermentation",
@@ -517,7 +627,12 @@ window.engineeringProcesses = [
         "title": "FAO — технология переработки фруктов и овощей",
         "url": "https://www.fao.org/4/x0209e/x0209e06.htm"
       }
-    ]
+    ],
+    "evidence": {
+      "verifiedClaim": "Ферментация применяется как один из способов консервирования пищевых продуктов.",
+      "reviewScope": "Проверено только приведённое утверждение, не вся карточка.",
+      "checkedAt": "2026-10-22"
+    }
   },
   {
     "id": "food-packaging",
@@ -540,7 +655,12 @@ window.engineeringProcesses = [
         "title": "FAO — технология переработки фруктов и овощей",
         "url": "https://www.fao.org/4/x0209e/x0209e06.htm"
       }
-    ]
+    ],
+    "evidence": {
+      "verifiedClaim": "Упаковка применяется для защиты продуктов от внешних воздействий.",
+      "reviewScope": "Проверено только приведённое утверждение, не вся карточка.",
+      "checkedAt": "2026-10-22"
+    }
   },
   {
     "id": "spinning",
@@ -562,7 +682,12 @@ window.engineeringProcesses = [
         "title": "OSHA — основные процессы текстильной промышленности",
         "url": "https://www.osha.gov/textiles"
       }
-    ]
+    ],
+    "evidence": {
+      "verifiedClaim": "Прядение является частью текстильного производства и изготовления пряжи.",
+      "reviewScope": "Проверено только приведённое утверждение, не вся карточка.",
+      "checkedAt": "2026-10-22"
+    }
   },
   {
     "id": "weaving",
@@ -584,7 +709,12 @@ window.engineeringProcesses = [
         "title": "OSHA — основные процессы текстильной промышленности",
         "url": "https://www.osha.gov/textiles"
       }
-    ]
+    ],
+    "evidence": {
+      "verifiedClaim": "Ткачество формирует тканые полотна из пряжи.",
+      "reviewScope": "Проверено только приведённое утверждение, не вся карточка.",
+      "checkedAt": "2026-10-22"
+    }
   },
   {
     "id": "knitting",
@@ -606,7 +736,12 @@ window.engineeringProcesses = [
         "title": "OSHA — основные процессы текстильной промышленности",
         "url": "https://www.osha.gov/textiles"
       }
-    ]
+    ],
+    "evidence": {
+      "verifiedClaim": "Вязальные производства изготовляют трикотажные полотна.",
+      "reviewScope": "Проверено только приведённое утверждение, не вся карточка.",
+      "checkedAt": "2026-10-22"
+    }
   },
   {
     "id": "textile-finishing",
@@ -628,7 +763,12 @@ window.engineeringProcesses = [
         "title": "OSHA — основные процессы текстильной промышленности",
         "url": "https://www.osha.gov/textiles"
       }
-    ]
+    ],
+    "evidence": {
+      "verifiedClaim": "Текстильная отделка может включать отбеливание, крашение, печать и механическую финишную обработку.",
+      "reviewScope": "Классификация видов операций, не режимы крашения.",
+      "checkedAt": "2026-10-22"
+    }
   },
   {
     "id": "sewing",
@@ -654,7 +794,12 @@ window.engineeringProcesses = [
         "title": "OSHA — основные процессы текстильной промышленности",
         "url": "https://www.osha.gov/textiles"
       }
-    ]
+    ],
+    "evidence": {
+      "verifiedClaim": "Швейное производство включает раскрой и соединение текстильных материалов.",
+      "reviewScope": "Проверено только приведённое утверждение, не вся карточка.",
+      "checkedAt": "2026-10-22"
+    }
   },
   {
     "id": "sawmilling",
@@ -672,7 +817,12 @@ window.engineeringProcesses = [
         "title": "OSHA — виды лесопильных и строгальных операций",
         "url": "https://www.osha.gov/sic-manual/2421"
       }
-    ]
+    ],
+    "evidence": {
+      "verifiedClaim": "Лесопильные производства выполняют распиловку древесины на пиломатериалы.",
+      "reviewScope": "Классификация отрасли, не нормы качества.",
+      "checkedAt": "2026-10-22"
+    }
   },
   {
     "id": "wood-drying",
@@ -694,7 +844,12 @@ window.engineeringProcesses = [
         "title": "US Forest Service — Drying Hardwood Lumber, обзор методов и дефектов",
         "url": "https://research.fs.usda.gov/treesearch/5710"
       }
-    ]
+    ],
+    "evidence": {
+      "verifiedClaim": "Камерная сушка пиломатериалов входит в виды операций лесопильного производства.",
+      "reviewScope": "Подтверждено существование процесса, не его технологические режимы.",
+      "checkedAt": "2026-10-22"
+    }
   },
   {
     "id": "pcb-assembly",
@@ -713,7 +868,12 @@ window.engineeringProcesses = [
         "title": "IPC — J-STD-001J и IPC-A-610J: производство электронных сборок",
         "url": "https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"
       }
-    ]
+    ],
+    "evidence": {
+      "verifiedClaim": "IPC J-STD-001J устанавливает требования к паяным электронным сборкам.",
+      "reviewScope": "Подтверждены назначение стандарта и область применения, не условия пайки.",
+      "checkedAt": "2026-10-22"
+    }
   },
   {
     "id": "electronic-inspection",
@@ -732,7 +892,12 @@ window.engineeringProcesses = [
         "title": "IPC — IPC-A-610J, требования к приёмке электронных сборок",
         "url": "https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"
       }
-    ]
+    ],
+    "evidence": {
+      "verifiedClaim": "IPC-A-610J определяет критерии приемлемости электронных сборок после изготовления.",
+      "reviewScope": "Подтверждено назначение документа, не частные критерии приёмки.",
+      "checkedAt": "2026-10-22"
+    }
   },
   {
     "id": "chemical-mixing",
@@ -748,7 +913,12 @@ window.engineeringProcesses = [
         "title": "OSHA — нефтепереработка: смешение продуктов и технологические опасности",
         "url": "https://www.osha.gov/otm/section-4-safety-hazards/chapter-2"
       }
-    ]
+    ],
+    "evidence": {
+      "verifiedClaim": "Смешение компонентов применяется для получения продукта с заданными характеристиками.",
+      "reviewScope": "Проверен только приведённый частный тезис, а не вся технологическая карточка.",
+      "checkedAt": "2026-10-22"
+    }
   },
   {
     "id": "distillation",
@@ -768,7 +938,12 @@ window.engineeringProcesses = [
         "title": "OSHA — перегонка и риски технологического процесса",
         "url": "https://www.osha.gov/otm/section-4-safety-hazards/chapter-5"
       }
-    ]
+    ],
+    "evidence": {
+      "verifiedClaim": "Дистилляция разделяет компоненты жидкой смеси на основе различий в давлении насыщенного пара.",
+      "reviewScope": "Проверено только приведённое утверждение, не вся карточка.",
+      "checkedAt": "2026-10-22"
+    }
   },
   {
     "id": "industrial-filtration",
@@ -788,6 +963,11 @@ window.engineeringProcesses = [
         "title": "USGS — фильтрация и разделение твёрдых частиц в водоочистке",
         "url": "https://www.usgs.gov/water-science-school/science/water-use-questions-answers"
       }
-    ]
+    ],
+    "evidence": {
+      "verifiedClaim": "Фильтрация может удалять взвешенные твёрдые частицы из жидкости.",
+      "reviewScope": "Проверен только приведённый частный тезис, а не вся технологическая карточка.",
+      "checkedAt": "2026-10-22"
+    }
   }
 ];
