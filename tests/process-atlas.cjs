@@ -18,7 +18,7 @@ const { chromium } = require('playwright');
   await page.getByRole('button',{name:'Сбросить фильтры'}).click();
   if(await page.locator('#processGrid article.atlas-card').count()!==33)failures.push(width+': reset failed');
   await page.locator('#processCategory').selectOption('inspection');
-  if(await page.locator('#processGrid article.atlas-card').count()!==5)failures.push(width+': inspection filter count mismatch');
+  if(await page.locator('#processGrid article.atlas-card').count()!==6)failures.push(width+': inspection filter count mismatch');
   if(errors.length)failures.push(width+': JS error: '+errors.join('; '));
   await page.close();
  }
