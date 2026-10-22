@@ -172,9 +172,10 @@ function initEngineerCalculators(){if(initialized)return;initialized=true;
             } else {
                 result = raw * from.factor / to.factor;
             }
-            const formatted = Number.isFinite(result)
-                ? new Intl.NumberFormat('ru-RU', { maximumFractionDigits: 6 }).format(result)
-                : '—';
+            const formatted = !Number.isFinite(result) ? '—'
+                : result !== 0 && Math.abs(result) < 0.000001
+                ? result.toExponential(6).replace('.', ',')
+                : new Intl.NumberFormat('ru-RU', { maximumFractionDigits: 6 }).format(result);
             convValue.textContent = formatted;
             convHint.textContent = `${raw} ${from.name} = ${formatted} ${to.name}`;
         }
@@ -210,6 +211,11 @@ function initEngineerCalculators(){if(initialized)return;initialized=true;
                 numDec.textContent = '—';
                 numHex.textContent = '—';
                 numHint.textContent = '';
+                return;
+            }
+            if (text.length > 256) {
+                for (const element of [numBin,numOct,numDec,numHex]) element.textContent = '—';
+                numHint.textContent = 'Для слабых устройств ограничение: не больше 256 цифр.';
                 return;
             }
             // Проверяем ВСЮ строку: parseInt('102', 2) ошибочно принимает её за 2.
