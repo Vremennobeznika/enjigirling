@@ -102,7 +102,6 @@ test('Expense categories, budget, subscriptions, transactions, editing and CSV w
  await page.locator('#txNote').fill('Капучино');
  await page.locator('#txForm button[type=submit]').click();
  await expect(page.locator('#txRows')).toContainText('Капучино');
- await page.locator('#subscriptionRows button').filter({hasText:'Записать оплату'}).click({timeout:4000}).catch(()=>{});
  // Confirm exactly one new ledger entry when the user approves.
  page.once('dialog',d=>d.accept());
  await page.locator('#subscriptionRows button').filter({hasText:'Записать оплату'}).click();
