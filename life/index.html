@@ -79,7 +79,7 @@ details>summary:focus-visible{outline:2px solid #eee;border-radius:13px}
 <label class="remember" for="autoSync"><input id="autoSync" type="checkbox"> Автоматически синхронизировать изменения</label>
 <div id="autoSyncStatus" class="status" role="status" aria-live="polite">Автосинхронизация выключена.</div>
 <p class="sub">На личном устройстве ключ останется после закрытия вкладки. Не включай на чужом компьютере: ключ хранится в браузере без дополнительного шифрования.</p>
-<div class="actions"><button class="btn soft" id="pull" type="button">Получить из облака</button><button class="btn soft" id="push" type="button">Отправить в облако</button><button class="btn soft" id="recovery" type="button">Скачать защитные копии</button><button class="btn soft" id="disconnect" type="button">Отключить</button></div><div class="status" id="cloudStatus" role="status">Облако пока не подключено.</div>
+<div class="actions"><button class="btn soft" id="checkCloud" type="button">Проверить соединение</button><button class="btn soft" id="pull" type="button">Получить из облака</button><button class="btn soft" id="push" type="button">Отправить в облако</button><button class="btn soft" id="recovery" type="button">Скачать защитные копии</button><button class="btn soft" id="disconnect" type="button">Отключить</button></div><div class="status" id="cloudStatus" role="status">Облако пока не подключено.</div>
 <p class="warn">При включённой автоматической синхронизации изменения отправляются в YDB, а более новые данные загружаются при открытии и возвращении на сайт. Конфликты блокируются, а защитные копии сохраняются в браузере. Ручные кнопки остаются. Если появилась ошибка подключения, проверь <a class="link" href="https://console.yandex.cloud/folders/b1gb2bfrust2n5nnbk30/functions/functions/d4ed26vrlmb1uk22m3b7/editor" target="_blank" rel="noopener noreferrer">версию и сервисный аккаунт</a>, затем <a class="link" href="https://console.yandex.cloud/folders/b1gb2bfrust2n5nnbk30/functions/functions/d4ed26vrlmb1uk22m3b7/overview" target="_blank" rel="noopener noreferrer">доступ на вкладке «Обзор»</a>. Публичный вызов функции возможен только с дополнительным контролем расходов: неизвестные запросы тоже могут потреблять квоты. Данные сохраняются локально; ключ можно запомнить на личном устройстве. В GitHub он не отправляется.</p>
 </div>
 </details>
@@ -221,6 +221,45 @@ throw Error(valid?"Ключ из файла ПРАВИЛЬНЫЙ (SHA-256 сов
 if(!response.ok)throw Error(result.error||"Ошибка синхронизации (HTTP "+response.status+")");
 return result;
 }
+
+async function cloudProbe(url,options){
+  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),9000);
+  try{return await fetch(url,{...options,signal:controller.signal})}
+  finally{clearTimeout(timer)}
+}
+$("checkCloud").onclick=async()=>{
+  const button=$("checkCloud"),url=$("endpoint").value.trim()||endpoint;
+  button.disabled=true;
+  try{
+    if(!url.startsWith("https://")){status("Нужен HTTPS-адрес функции.");return}
+    status("Проверка 1/2: запрос к функции без ключа. Данные не отправляются.");
+    let simple;
+    try{simple=await cloudProbe(url,{method:"GET",mode:"cors",credentials:"omit",cache:"no-store"})}
+    catch(err){
+      status("Браузер не прочитал ответ функции. Проверяю доступность сервера…");
+      try{
+        await cloudProbe(url,{method:"GET",mode:"no-cors",credentials:"omit",cache:"no-store"});
+        status("Сервер достижим, но его ответ не читается из браузера. Возможны CORS или ответ шлюза без CORS. Проверь «Публичная функция», версию и журнал вызовов Yandex Cloud.");
+      }catch(networkError){
+        status(networkError?.name==="AbortError"?"Функция не ответила за 9 секунд. Проверь сеть или VPN.":"Адрес функции недоступен с этого устройства: возможны DNS, блокировка сети или неверный URL.");
+      }
+      return;
+    }
+    if(simple.status!==401){
+      const reason=simple.status===503?"Проверь журнал функции и подключение YDB.":simple.status===403?"Проверь публичный доступ.":simple.status===404?"Проверь URL функции.":"Проверь текущую версию и журнал функции.";
+      status("Без ключа получен HTTP "+simple.status+" (ожидался 401). "+reason);
+      return;
+    }
+    status("Проверка 2/2: тест CORS для X-Sync-Token, настоящий ключ не передаётся.");
+    try{
+      const checked=await cloudProbe(url,{method:"GET",mode:"cors",credentials:"omit",cache:"no-store",headers:{"X-Sync-Token":"diagnostic-invalid-token"}});
+      if(checked.status===401)status("Сеть, функция и CORS работают. Если ошибка повторяется, проверь журнал функции, ключ и состояние соединения. Тест не передавал личный ключ.");
+      else status("Предварительный запрос CORS прошёл, но функция ответила HTTP "+checked.status+". Проверь её журнал и активную версию.");
+    }catch(err){
+      status(err?.name==="AbortError"?"CORS-проверка не завершилась за 9 секунд.":"Обычный GET работает, но запрос с X-Sync-Token заблокирован. Проверь OPTIONS/CORS и публичность функции.");
+    }
+  }finally{button.disabled=false}
+};
 $("pull").onclick=async()=>{try{status("Проверяю облако…");if(localStorage.getItem(SAVED_TOKEN_KEY)&&window.LifeAutoSync){await window.LifeAutoSync.pull(true);revision=Number(sessionStorage.getItem("life-sync-revision-v1")||0);return}const r=await call("GET");if(!r.data){status("База пуста. Сначала отправь данные из браузера.");return}const counts=Object.values(snapshot()).some(x=>Object.keys(x).length);
 if(counts&&!confirm("Заменить локальные данные облачной копией? Несохранённые изменения будут потеряны.")){status("Отменено.");return}
 restore({data:r.data});revision=Number(r.revision)||0;sessionStorage.setItem("life-sync-revision-v1",String(revision));status("Облачная копия получена. Версия "+revision+".")}catch(err){status("Не удалось получить: "+err.message)}};
