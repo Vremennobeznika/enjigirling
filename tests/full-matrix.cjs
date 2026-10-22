@@ -248,7 +248,7 @@ check('five navigation groups preserve all nine original page routes', () => {
 
 check('editorial guides are available in technologies and calculators', () => {
  const places=[
-  ['materials.html','materialGuideTitle','processes.html#casting'],
+  ['materials.html','materialGuideTitle','processes.html#cutting'],
   ['processes.html','processGuideTitle','materials.html#09g2s'],
   ['calculator.html','signalGuideTitle','(12 − 4) / 16 = 0,5']
  ];
@@ -431,7 +431,9 @@ check('AI training packs expose all nine complete site sections',()=>{
  for(let i=0;i<slug.length;i++){
   const id=slug[i],p=fs.readFileSync(pages[i],'utf8');
   assert.ok(p.includes('href="ai.html?section='+id+'"'),pages[i]+' no AI navigation');
-  for(const ext of ['md','json'])assert.ok(p.includes('href="knowledge/sections/'+id+'.'+ext+'"'),pages[i]+' no '+ext+' download');
+  if(id==='processes'){
+   for(const control of ['processExportMd','processExportJson'])assert.ok(p.includes('id="'+control+'"'),pages[i]+' missing industry-only '+control);
+  }else for(const ext of ['md','json'])assert.ok(p.includes('href="knowledge/sections/'+id+'.'+ext+'"'),pages[i]+' no '+ext+' download');
   const md=fs.readFileSync('knowledge/sections/'+id+'.md','utf8');
   const pack=json('knowledge/sections/'+id+'.json');
   assert.ok(md.includes('## Текст и описание раздела')&&md.length>500,id+' incomplete Markdown');
