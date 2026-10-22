@@ -14,10 +14,9 @@ for(const page of ['materials.html','processes.html']){
  const html=read(page),shared=(html.match(/id="atlasAiPackage"/g)||[]).length;
  const legacy=page==='materials.html'?(html.match(/class="material-export"/g)||[]).length:(html.match(/class="process-export"/g)||[]).length;
  assert.equal(shared,1,page+' must have exactly one common export panel');
- assert.ok(legacy<=1,page+' introduced a redundant third export panel');
+ assert.equal(legacy,0,page+' must not duplicate the common export panel');
  assert.ok(html.includes('src="atlas-ai-core.js"')&&html.includes('src="atlas-ai-download.js"'),page+' must reuse common exporter');
  assert.ok(!/<script[^>]+src=["']https?:\/\//i.test(html),page+' introduces remote script');
- if(legacy)console.log('DEBT '+page+': legacy export UI duplicates common exporter');
 }
 const dataCount=read('materials-data.js').length+read('processes-data.js').length;
 console.log('PASS code-size budget: '+newTotal+' / '+Math.ceil(oldTotal*1.10)+' JS characters; knowledge data '+dataCount+' characters tracked separately');
