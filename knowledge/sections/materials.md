@@ -91,10 +91,10 @@
 Связанные процессы: cutting
 Статус источника: context_only
 Подтверждаемый тезис: Найден источник по общему классу материала или терминологии.
-Границы проверки: Подтверждено общее применение меди как проводника; точная российская марка М1 не проверена.
+Границы проверки: CDA подтверждает высокую электропроводность меди и промышленное применение; точная марка М1 и требования к партии не проверены.
 Дата просмотра: 2026-10-22
 Источники:
-- Copper Development Association — Copper is Conductive: https://archive.copper.org/education/copper-is/elements/conductive.html
+- Copper Development Association — Copper in power systems and its electrical conductivity: https://blog.copper.org/power-grid/how-copper-supports-power-grid-expansion-and-rising-energy-demand
 
 ## ПЭНД (HDPE) (pe-hd)
 
@@ -211,10 +211,10 @@
 Связанные процессы: food-packaging
 Статус источника: context_only
 Подтверждаемый тезис: Найден источник по общему классу материала или терминологии.
-Границы проверки: FAO описывает риски контактных материалов; безопасность конкретной упаковки не установлена.
+Границы проверки: EFSA описывает научную оценку веществ и материалов, контактирующих с пищей, включая упаковку; не подтверждает безопасность конкретного изделия, разрешение или национальную применимость.
 Дата просмотра: 2026-10-22
 Источники:
-- FAO — Food contact materials, risks and alternatives: https://www.fao.org/food-safety/news/detail/fao-report-highlights-key-food-safety-considerations-for-recycled-and-alternative-food-contact-materials/en
+- EFSA — Food Contact Materials safety assessment: https://www.efsa.europa.eu/en/science/scientific-committee-and-panels/fcm
 
 ## Хлопковое волокно (cotton)
 
@@ -661,10 +661,10 @@
 Связанные процессы: industrial-heat-exchange, cutting
 Статус источника: partial_claim
 Подтверждаемый тезис: Copper Development Association описывает медь как теплопроводящий металл.
-Границы проверки: Не подтверждён выбор марки и долговечность в определённом теплоносителе.
+Границы проверки: CDA подтверждает применение меди в электрических системах и низкие потери; пригодность конкретного полуфабриката к теплообменнику требует отдельного источника.
 Дата просмотра: 2026-10-22
 Источники:
-- Copper Development Association — Copper is Conductive: https://archive.copper.org/education/copper-is/elements/conductive.html
+- Copper Development Association — Copper in power systems and its electrical conductivity: https://blog.copper.org/power-grid/how-copper-supports-power-grid-expansion-and-rising-energy-demand
 
 ## Огнеупорные керамические материалы (refractory-ceramics)
 
