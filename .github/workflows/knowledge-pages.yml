@@ -105,8 +105,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Recreate exact AI packages for deployment checks
-        run: node scripts/build-ai-packs.cjs
+      - name: Recreate exact knowledge and AI packages for deployment checks
+        run: |
+          node scripts/build-knowledge.cjs
+          node scripts/build-ai-packs.cjs
+          node scripts/build-quality.cjs
       - name: Verify deployed site and knowledge API
         env:
           SITE_URL: ${{ steps.deployment.outputs.page_url || steps.retry_deployment.outputs.page_url || steps.final_deployment.outputs.page_url }}
