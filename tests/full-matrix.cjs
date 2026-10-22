@@ -493,5 +493,7 @@ check('education catalogue: 80 entries, eight districts, evidence consistency', 
  const script=fs.readFileSync('map.js','utf8');
  assert.ok(script.includes('escapeHtml('),'unsafe output templating');
  assert.ok(script.includes('label.addEventListener(\'click\''),'district labels not clickable');
-});\n\nconsole.log('Matrix: '+count+' PASS, '+errors.length+' FAIL ('+pages.length+' pages, '+datasets.length+' datasets)');
+});
+
+console.log('Matrix: '+count+' PASS, '+errors.length+' FAIL ('+pages.length+' pages, '+datasets.length+' datasets)');
 if(errors.length)process.exitCode=1;
