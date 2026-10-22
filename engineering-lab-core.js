@@ -117,12 +117,15 @@ function ohm(mode,x,y){
 }
 function divider(u,r1,r2){
  if(![u,r1,r2].every(Number.isFinite)||r1<=0||r2<=0)throw Error('Сопротивления должны быть положительными');
- return {v:u*r2/(r1+r2),i:u/(r1+r2),p1:power(u/(r1+r2),2)*r1,p2:power(u/(r1+r2),2)*r2};
+ const total=r1+r2,i=u/total,v=i*r2,p1=i*i*r1,p2=i*i*r2;
+ finish([total,i,v,p1,p2]);return {v,i,p1,p2};
 }
 function rc(r,cMicro){
  if(!Number.isFinite(r)||!Number.isFinite(cMicro)||r<=0||cMicro<=0)throw Error('R и C должны быть больше нуля');
  const tau=r*cMicro*1e-6;
- return {seconds:tau,frequency:1/(2*Math.PI*tau)};
+ const frequency=1/(2*Math.PI*tau);
+ finish([tau,frequency]);if(tau<=0)throw Error('Постоянная времени не представима');
+ return {seconds:tau,frequency};
 }
 function tolerance(raw){
  const text=String(raw).trim();if(text.length>3000)throw Error('Слишком много данных');
@@ -155,8 +158,9 @@ function takt(availableMinutes,requiredPieces){
  finitePositive(availableMinutes,'Доступное время');
  finitePositive(requiredPieces,'Потребность в выпуске');
  const seconds=availableMinutes*60/requiredPieces;
- finish([seconds]);if(seconds<=0)throw Error('Недопустимое время такта');
- return {seconds,perHour:3600/seconds};
+ if(seconds<=0)throw Error('Недопустимое время такта');
+ const perHour=3600/seconds;finish([seconds,perHour]);
+ return {seconds,perHour};
 }
 function oee(plannedMinutes,runMinutes,total,good,idealSeconds){
  finitePositive(plannedMinutes,'Плановый фонд');
@@ -203,8 +207,9 @@ function pipeFlow(diameterMM,speedMS){
  finiteNonnegative(speedMS,'Скорость потока');
  const areaM2=Math.PI*(diameterMM/1000)**2/4;
  const m3Hour=areaM2*speedMS*3600;
- finish([areaM2,m3Hour]);
- return {m3Hour,litersMinute:m3Hour*1000/60};
+ const litersMinute=m3Hour*1000/60;
+ finish([areaM2,m3Hour,litersMinute]);
+ return {m3Hour,litersMinute};
 }
 
 
@@ -262,23 +267,25 @@ function marinePassage(distanceNm,speedKn){
  finitePositive(distanceNm,'Дистанция');
  finitePositive(speedKn,'Скорость относительно грунта');
  const hours=distanceNm/speedKn;
- finish([hours]);
- return {hours,minutes:hours*60,distanceKm:distanceNm*NM_METRES/1000,speedKmh:speedKn*NM_METRES/1000};
+ const minutes=hours*60,distanceKm=distanceNm*NM_METRES/1000,speedKmh=speedKn*NM_METRES/1000;
+ finish([hours,minutes,distanceKm,speedKmh]);if(hours<=0)throw Error('Время перехода вне диапазона вычислений');
+ return {hours,minutes,distanceKm,speedKmh};
 }
 function marineFuel(distanceNm,speedKn,litresHour,reservePct){
  const voyage=marinePassage(distanceNm,speedKn);
- finiteNonnegative(litresHour,'Расход топлива');
+ finitePositive(litresHour,'Расход топлива');
  percentRange(reservePct,'Дополнительный запас',1000);
  const usedL=voyage.hours*litresHour;
  const totalL=usedL*(1+reservePct/100);
- finish([usedL,totalL]);
- return {hours:voyage.hours,usedL,extraL:totalL-usedL,totalL};
+ const extraL=totalL-usedL;
+ finish([usedL,extraL,totalL]);if(usedL<=0)throw Error('Расход не представим численно');
+ return {hours:voyage.hours,usedL,extraL,totalL};
 }
 function hullSpeed(lwlM){
  finitePositive(lwlM,'Длина ватерлинии');
  const knots=1.34*Math.sqrt(lwlM/0.3048);
- finish([knots]);
- return {knots,kilometresHour:knots*NM_METRES/1000};
+ const kilometresHour=knots*NM_METRES/1000;finish([knots,kilometresHour]);
+ return {knots,kilometresHour};
 }
 function draftByTPC(changedTonnes,waterplaneM2,densityTonM3){
  if(!Number.isFinite(changedTonnes))throw Error('Изменение массы должно быть числом');
@@ -286,8 +293,9 @@ function draftByTPC(changedTonnes,waterplaneM2,densityTonM3){
  finitePositive(densityTonM3,'Плотность воды');
  const tpc=waterplaneM2*densityTonM3/100;
  const deltaCm=changedTonnes/tpc;
- finish([tpc,deltaCm]);
- return {tpc,deltaCm,deltaM:deltaCm/100};
+ const deltaM=deltaCm/100;finish([tpc,deltaCm,deltaM]);
+ if(tpc<=0)throw Error('TPC вне диапазона вычислений');
+ return {tpc,deltaCm,deltaM};
 }
 
 
@@ -321,16 +329,23 @@ function displacement(lengthM,beamM,draftM,coefficient,density){
  for(const [n,label] of [[lengthM,'Длина'],[beamM,'Ширина'],[draftM,'Средняя осадка'],[density,'Плотность воды']])finitePositive(n,label);
  finitePositive(coefficient,'Коэффициент полноты');if(coefficient>1)throw Error('Коэффициент полноты не может превышать единицу');
  const volume=lengthM*beamM*draftM*coefficient,tonnes=volume*density;
- finish([volume,tonnes]);return {volume,tonnes};
+ finish([volume,tonnes]);if(volume<=0||tonnes<=0)throw Error('Водоизмещение не представимо численно');
+ return {volume,tonnes};
 }
 function currentVector(shipSpeed,courseDeg,currentSpeed,currentDirectionDeg){
  finiteNonnegative(shipSpeed,'Скорость судна относительно воды');finiteNonnegative(currentSpeed,'Скорость течения');
- for(const x of [courseDeg,currentDirectionDeg])if(!Number.isFinite(x))throw Error('Направления должны быть числами');
+ for(const angle of [courseDeg,currentDirectionDeg])
+  if(!Number.isFinite(angle)||angle<0||angle>360)throw Error('Направления должны быть в диапазоне 0–360°');
  const rad=Math.PI/180;
  const x=shipSpeed*Math.sin(courseDeg*rad)+currentSpeed*Math.sin(currentDirectionDeg*rad);
  const y=shipSpeed*Math.cos(courseDeg*rad)+currentSpeed*Math.cos(currentDirectionDeg*rad);
- const sog=Math.hypot(x,y),cog=(Math.atan2(x,y)*180/Math.PI+360)%360;
- finish([sog,cog]);return {sog,cog};
+ const sog=Math.hypot(x,y);
+ finish([sog]);
+ // Opposed vectors cancel: a course over ground is undefined at zero speed.
+ const epsilon=Math.max(shipSpeed,currentSpeed)*1e-12;
+ if(sog<=epsilon)return {sog:0,cog:null};
+ const cog=(Math.atan2(x,y)*180/Math.PI+360)%360;
+ finish([cog]);return {sog,cog};
 }
 function vernier(mm,step){
  finiteNonnegative(mm,'Раствор губок');
