@@ -236,9 +236,10 @@ function renderRelatedProfessions(profession, category) {
 }
 
 function renderRelatedTechnology(profession) {
-  // The process catalog is loaded after this script; read it only when a card opens.
+  // Heavy related catalogs are loaded on first card opening, not during initial page load.
   const processes = (window.engineeringProcesses || []).filter(x => x.profession === profession.id);
-  if (!processes.length) return "";
+  if (!processes.length) return Array.isArray(window.engineeringProcesses)
+    ? "" : '<p class="data-quality-note">Загружаем связи с процессами и материалами…</p>';
   const materials = new Map((window.engineeringMaterials || []).map(x => [x.id, x]));
   const processLink = x => '<a href="processes.html#' + encodeURIComponent(x.id) + '">' + escapeHTML(x.name) + '</a>';
   const processLinks = processes.slice(0, 12).map(processLink).join("");
@@ -289,6 +290,44 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalClose = document.getElementById("modalClose");
 
   let modalTrigger = null;
+  let modalRequest = 0;
+  let technologyLoading = null;
+  function loadTechnology() {
+    if (Array.isArray(window.engineeringMaterials) && Array.isArray(window.engineeringProcesses))
+      return Promise.resolve();
+    if (technologyLoading) return technologyLoading;
+    function addScript(src,ready) {
+      if (ready()) return Promise.resolve();
+      return new Promise((resolve,reject) => {
+        const tag=document.createElement('script');
+        tag.src=src;tag.async=true;
+        tag.onload=()=>ready()?resolve():reject(Error('Не загрузились данные: '+src));
+        tag.onerror=()=>{tag.remove();reject(Error('Нет соединения: '+src));};
+        document.head.appendChild(tag);
+      });
+    }
+    technologyLoading=Promise.all([
+      addScript('materials-data.js',()=>Array.isArray(window.engineeringMaterials)),
+      addScript('processes-data.js',()=>Array.isArray(window.engineeringProcesses))
+    ]).catch(error=>{technologyLoading=null;throw error;});
+    return technologyLoading;
+  }
+  function renderModalWithTechnology(profession) {
+    const token=++modalRequest;
+    modalContent.innerHTML=renderProfession(profession,getCategory(profession));
+    if(Array.isArray(window.engineeringMaterials) && Array.isArray(window.engineeringProcesses))return;
+    loadTechnology().then(()=>{
+      if(token!==modalRequest||!modalOverlay.classList.contains('active'))return;
+      const modal=modalContent.closest('.modal'),scroll=modal?modal.scrollTop:0;
+      modalContent.innerHTML=renderProfession(profession,getCategory(profession));
+      if(modal)modal.scrollTop=scroll;
+    }).catch(()=>{
+      if(token!==modalRequest||!modalOverlay.classList.contains('active'))return;
+      const loading=[...modalContent.querySelectorAll('.data-quality-note')]
+        .find(x=>x.textContent.includes('Загружаем связи с процессами'));
+      if(loading)loading.textContent='Не удалось загрузить связи. Проверьте сеть и откройте карточку повторно.';
+    });
+  }
   let activeCategory = ALL;
   let activeProfessionId = ALL; // выбранная кнопка во второй строке (только для «АСУ ТП»)
   let searchQuery = "";
@@ -399,12 +438,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function openModal(profession) {
     modalTrigger = document.activeElement;
-    modalContent.innerHTML = renderProfession(profession, getCategory(profession));
     setModalOpen(true);
+    renderModalWithTechnology(profession);
     modalClose.focus();
   }
 
   const closeModal = () => {
+    ++modalRequest;
     setModalOpen(false);
     // A closed dialog must not remain encoded as the active profession in the URL.
     if (/^#profession=[a-z0-9-]+$/.test(location.hash)) {
@@ -419,7 +459,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!button) return;
     const related = professionsData.find(item => item.id === button.dataset.relatedId);
     if (!related) return;
-    modalContent.innerHTML = renderProfession(related, getCategory(related));
+    renderModalWithTechnology(related);
     const modal = modalContent.closest(".modal");
     if (modal) modal.scrollTop = 0;
     modalClose.focus();
