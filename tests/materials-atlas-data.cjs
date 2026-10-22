@@ -28,12 +28,12 @@ for(const id of ['activated-alumina-adsorbent','osb-board','particleboard','glul
 assert.ok(!materials.find(x=>x.id==='grain-wheat').industries.includes('mining'),'Grain is not mining material');
 const html=read('materials.html');
 assert.doesNotMatch(html,/Этот раздел для ИИ/,'Old full-site banner remains');
-assert.ok(html.indexOf('id="materialIndustry"')<html.indexOf('class="material-export"'),'Export must follow filters');
-for(const id of ['materialCategory','materialSearch','materialSort','materialExportMd','materialExportJson','materialExportCopy'])assert.ok(html.includes('id="'+id+'"'),id+' missing');
+assert.ok(html.indexOf('id="materialIndustry"')<html.indexOf('id="atlasAiPackage"'),'Export must follow filters');
+for(const id of ['materialCategory','materialSearch','materialSort','atlasAiMd','atlasAiJson','atlasAiCopy'])assert.ok(html.includes('id="'+id+'"'),id+' missing');
 const code=read('materials.js');
 new Function(code);
-assert.ok(code.includes("entries.filter(x=>(x.industries||[]).includes(key))"),'Export must use industry data, not visible grid');
-assert.ok(code.includes("eMd.disabled=eJson.disabled=eCopy.disabled=!count"),'No unrestricted export by default');
+assert.ok(read('atlas-ai-core.js').includes("sector==='all'"),'Export must select full industry data');
+assert.ok(read('atlas-ai-download.js').includes('validKey(selector.value)'),'Export must validate industry selection');
 const index=json('knowledge/search-index.json');
 const knowledge=json('knowledge/materials.json');
 const graph=json('knowledge/graph.json');
