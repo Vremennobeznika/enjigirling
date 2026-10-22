@@ -56,3 +56,15 @@ test('72 plants: no automatic blank write; group check marks and unmarks calenda
   const after=await page.evaluate(key=>JSON.parse(localStorage.getItem('week-check-v2')||'{}')[key],key.key);
   expect(after).toBeUndefined('unchecking must clear the group entry');
 });
+
+test('Shopping All filter stays selected when adding an uncategorized item',async({page})=>{
+  await page.goto('/shopping/');
+  await expect(page.locator('#sectionTitle')).toHaveText('Всё');
+  await page.locator('#itemName').fill('Тестовое мыло');
+  await page.locator('#addForm button[type=submit]').click();
+  await expect(page.locator('#sectionTitle')).toHaveText('Всё');
+  await expect(page.locator('#items .item')).toHaveCount(1);
+  const data=await page.evaluate(()=>JSON.parse(localStorage.getItem('supermarket-shopping-list-v1')||'[]'));
+  expect(data[0].cat).toBe('other');
+  await expect(page.locator('#counter')).toHaveText('0 из 1');
+});
