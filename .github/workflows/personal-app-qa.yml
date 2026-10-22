@@ -11,6 +11,8 @@ on:
       - 'plants/**'
       - 'shopping/**'
       - 'tests/life-*.cjs'
+      - 'tests/life-layout.spec.cjs'
+      - 'playwright.config.cjs'
       - 'tests/personal-planner.spec.cjs'
       - 'tests/personal-reminders.cjs'
       - 'tests/personal-ics.cjs'
