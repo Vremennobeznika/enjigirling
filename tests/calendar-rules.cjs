@@ -1,6 +1,6 @@
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
 const sandbox={window:{},Date};vm.runInNewContext(fs.readFileSync('calendar-data.js','utf8'),sandbox,{timeout:5000});
-const c=sandbox.window.engineeringCalendar,records=c.holidays,exported=JSON.parse(fs.readFileSync('knowledge/sections/calendar.json','utf8')).holidays;
+const c=sandbox.window.engineeringCalendar,records=c.holidays,exported=JSON.parse(fs.readFileSync('knowledge/sections/calendar.json','utf8')).records;
 assert.deepEqual(JSON.parse(JSON.stringify(records)),exported,'JSON export differs');
 const ids=new Set([...fs.readFileSync('data.js','utf8').matchAll(/\bid:\s*"([^"]+)"/g)].map(m=>m[1]));
 const unique=new Set();
