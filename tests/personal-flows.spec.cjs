@@ -127,3 +127,63 @@ test('Plant rename, note, water record and search survive reload',async({page})=
   await expect(page.locator('#rows .pot')).toHaveCount(1);
   await expect(page.locator('#rows .pot').first()).toContainText('Фикус тестовый');
 });
+
+test('Today can schedule tasks for future dates and calendar shows them on the selected day',async({page})=>{
+ await page.goto('/life/');
+ const day=await page.evaluate(()=>{
+  const d=new Date();d.setHours(12,0,0,0);d.setDate(d.getDate()+7);
+  const key=[d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-');
+  return {key,weekday:(d.getDay()+6)%7};
+ });
+ await page.locator('#taskName').fill('Встреча на следующей неделе');
+ await page.locator('#taskDate').fill(day.key);
+ await page.locator('#taskTime').fill('16:30');
+ await page.locator('#taskForm button[type=submit]').click();
+ await expect(page.locator('#taskList')).toContainText('Встреча на следующей неделе');
+ const saved=await page.evaluate(()=>JSON.parse(localStorage.getItem('life-inbox-v1')));
+ expect(saved[0]).toMatchObject({name:'Встреча на следующей неделе',date:day.key,time:'16:30',done:false});
+ await page.locator('#taskGoToday').click();
+ await expect(page.locator('#taskList')).not.toContainText('Встреча на следующей неделе');
+ await page.locator('#taskShowAll').click();
+ await expect(page.locator('#taskList')).toContainText('Встреча на следующей неделе');
+ await page.locator('#taskShowAll').click();
+ await page.locator('#taskViewDate').fill(day.key);
+ await expect(page.locator('#taskList')).toContainText('Встреча на следующей неделе');
+ await page.reload();
+ await page.locator('#taskViewDate').fill(day.key);
+ await expect(page.locator('#taskList')).toContainText('Встреча на следующей неделе');
+ await page.goto('/calendar/');
+ await page.locator('#next').click();
+ await page.locator('#nav button').nth(day.weekday).click();
+ const row=page.locator('#tasks .personal-task').filter({hasText:'Встреча на следующей неделе'});
+ await expect(row).toHaveCount(1);
+ await expect(row).toContainText('16:30');
+ await row.locator('input[type=checkbox]').check();
+ await page.goto('/life/');
+ await page.locator('#taskViewDate').fill(day.key);
+ await expect(page.locator('#taskList .item').filter({hasText:'Встреча на следующей неделе'}).locator('input[type=checkbox]')).toBeChecked();
+ const backup=page.waitForEvent('download');
+ await page.locator('#backup').click();
+ const fs=require('node:fs'),archive=JSON.parse(fs.readFileSync(await (await backup).path(),'utf8'));
+ expect(archive.data.tasks[0]).toMatchObject({date:day.key,time:'16:30',done:true});
+});
+test('Legacy undated tasks survive and task dates can be moved without breaking the narrow iPhone layout',async({page})=>{
+ await page.setViewportSize({width:320,height:700});
+ await page.goto('/life/');
+ await page.evaluate(()=>localStorage.setItem('life-inbox-v1',JSON.stringify([{id:'old',name:'Старое дело без даты',category:'Дела',priority:'normal',done:false}])));
+ await page.reload();
+ await expect(page.locator('#taskList')).toContainText('Старое дело без даты');
+ const newDay=await page.evaluate(()=>{
+  const d=new Date();d.setDate(d.getDate()+4);
+  return [d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-');
+ });
+ const legacy=page.locator('#taskList .item').filter({hasText:'Старое дело без даты'});
+ await legacy.locator('input[type=date]').fill(newDay);
+ await expect(page.locator('#taskList')).not.toContainText('Старое дело без даты');
+ await page.locator('#taskViewDate').fill(newDay);
+ await expect(page.locator('#taskList')).toContainText('Старое дело без даты');
+ const saved=await page.evaluate(()=>JSON.parse(localStorage.getItem('life-inbox-v1')));
+ expect(saved[0].date).toBe(newDay);
+ const dimensions=await page.evaluate(()=>({width:document.documentElement.scrollWidth,screen:window.innerWidth}));
+ expect(dimensions.width).toBeLessThanOrEqual(dimensions.screen+2);
+});
