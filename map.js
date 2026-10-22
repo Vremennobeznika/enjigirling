@@ -162,6 +162,10 @@ document.addEventListener('DOMContentLoaded', () => {
     label.setAttribute('class','eng-district-label');
     label.setAttribute('x',district.marker[0]);label.setAttribute('y',district.marker[1]-12);
     label.textContent=district.short;
+    label.setAttribute('aria-hidden','true');
+    label.style.pointerEvents='auto';
+    label.style.cursor='pointer';
+    label.addEventListener('click',()=>chooseDistrict(district.id,true));
     svg.appendChild(label);
   });
   if(mapReset)mapReset.addEventListener('click',()=>chooseDistrict('',false));
