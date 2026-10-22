@@ -1,0 +1,55 @@
+name: Calculator regression checks
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'calculator.html'
+      - 'calculator-practical*.js'
+      - 'calculator-practical.css'
+      - 'engineering-lab-core.js'
+      - 'engineer-calculators.js'
+      - 'tests/practical-calculator*'
+      - 'tests/engineering-lab*'
+      - '.github/workflows/calculator-checks.yml'
+  pull_request:
+    paths:
+      - 'calculator.html'
+      - 'calculator-practical*.js'
+      - 'calculator-practical.css'
+      - 'engineering-lab-core.js'
+      - 'engineer-calculators.js'
+      - 'tests/practical-calculator*'
+      - 'tests/engineering-lab*'
+      - '.github/workflows/calculator-checks.yml'
+jobs:
+  math:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax
+        run: |
+          node --check calculator-practical-core.js
+          node --check calculator-practical.js
+          node --check engineering-lab-core.js
+          node --check engineer-calculators.js
+      - name: Engineering formulas
+        run: |
+          node tests/engineering-lab-unit.cjs
+          node tests/practical-calculator-unit.cjs
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser test dependencies
+        run: |
+          npm install --no-audit --no-fund
+          npx playwright install --with-deps chromium
+      - name: Calculator browser regression
+        run: npx playwright test tests/engineering-lab.spec.cjs tests/practical-calculator.spec.cjs --project=chromium --workers=2 --reporter=line
