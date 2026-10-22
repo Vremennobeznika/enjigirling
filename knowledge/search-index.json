@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "language": "ru",
   "generatedFrom": "repository editorial datasets",
-  "recordCount": 856,
+  "recordCount": 982,
   "records": [
     {
       "id": "profession:civil-engineer",
@@ -980,6 +980,1441 @@
       "relatedProcesses": [
         "ore-crushing",
         "ore-screening"
+      ]
+    },
+    {
+      "id": "material:stainless-ferritic",
+      "type": "material",
+      "title": "Ферритные нержавеющие стали",
+      "description": "Коррозионностойкие стали Ферритная структурная группа нержавеющих сталей; выбор марки зависит от среды и температуры. Технические изделия и оборудование",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#stainless-ferritic",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "welding",
+        "cutting"
+      ]
+    },
+    {
+      "id": "material:stainless-martensitic",
+      "type": "material",
+      "title": "Мартенситные нержавеющие стали",
+      "description": "Коррозионностойкие стали Мартенситное семейство отличается от аустенитных сталей и требует оценки режима термообработки. Детали машин и режущие изделия",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#stainless-martensitic",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "heat",
+        "cutting"
+      ]
+    },
+    {
+      "id": "material:stainless-duplex",
+      "type": "material",
+      "title": "Дуплексные нержавеющие стали",
+      "description": "Коррозионностойкие стали Аустенитно-ферритная группа; эксплуатационную стойкость определяют марка, структура и сварочное состояние. Коррозионно-активные производственные среды",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#stainless-duplex",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "welding",
+        "inspection"
+      ]
+    },
+    {
+      "id": "material:al-series-5xxx",
+      "type": "material",
+      "title": "Алюминиевые сплавы серии 5xxx",
+      "description": "Деформируемые алюминиевые сплавы Группа алюминиевых материалов, для которых нужно установить сплав и состояние поставки; серии нельзя считать взаимозаменяемыми. Листовой прокат и металлоконструкции",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#al-series-5xxx",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "rolling",
+        "cutting"
+      ]
+    },
+    {
+      "id": "material:al-series-7xxx",
+      "type": "material",
+      "title": "Алюминиевые сплавы серии 7xxx",
+      "description": "Деформируемые алюминиевые сплавы Группа алюминиевых сплавов; прочность и коррозионные ограничения зависят от конкретной марки и термообработки. Нагруженные детали и конструкции",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#al-series-7xxx",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "cutting",
+        "inspection"
+      ]
+    },
+    {
+      "id": "material:cast-iron-gray",
+      "type": "material",
+      "title": "Серый чугун",
+      "description": "Чугунные литейные сплавы Класс чугунов; литейные дефекты и свойства нельзя определять только названием класса. Корпусные литые изделия",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#cast-iron-gray",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "casting",
+        "inspection"
+      ]
+    },
+    {
+      "id": "material:cast-iron-ductile",
+      "type": "material",
+      "title": "Чугун с шаровидным графитом",
+      "description": "Чугунные литейные сплавы Литейный материал, свойства которого зависят от марки, структуры и условий производства. Корпуса, арматура, трубная продукция",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#cast-iron-ductile",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "casting",
+        "inspection"
+      ]
+    },
+    {
+      "id": "material:brass-alloys",
+      "type": "material",
+      "title": "Латуни",
+      "description": "Медные сплавы Семейство сплавов на основе меди и цинка; технологичность и ограничения зависят от состава. Фитинги, детали механизмов",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#brass-alloys",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "cutting",
+        "forging"
+      ]
+    },
+    {
+      "id": "material:bronze-alloys",
+      "type": "material",
+      "title": "Бронзы",
+      "description": "Медные сплавы Семейство медных сплавов без единого набора механических или коррозионных свойств. Втулки, подшипниковые узлы, арматура",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#bronze-alloys",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "casting",
+        "cutting"
+      ]
+    },
+    {
+      "id": "material:titanium-industrial",
+      "type": "material",
+      "title": "Титан и титановые сплавы",
+      "description": "Титановые конструкционные материалы Класс металлических материалов; для выбора нужна точная марка и подтверждённая стойкость к среде. Оборудование, детали машин",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#titanium-industrial",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "cutting",
+        "inspection"
+      ]
+    },
+    {
+      "id": "material:nickel-alloys",
+      "type": "material",
+      "title": "Никелевые сплавы",
+      "description": "Технические никелевые материалы Группа сплавов разного состава; термостойкость или коррозионная стойкость не универсальны. Оборудование для сложных сред",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#nickel-alloys",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "welding",
+        "cutting"
+      ]
+    },
+    {
+      "id": "material:zinc-diecast",
+      "type": "material",
+      "title": "Цинковые литейные сплавы",
+      "description": "Цинковые сплавы Отливки из сплавов на основе цинка; точность и эксплуатационные свойства требуют проверки технологии. Литые корпусные детали",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#zinc-diecast",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "casting"
+      ]
+    },
+    {
+      "id": "material:magnesium-alloys",
+      "type": "material",
+      "title": "Магниевые конструкционные сплавы",
+      "description": "Магниевые сплавы Отдельный класс легких металлических материалов; технологию и безопасность выбирают для марки и формы поставки. Механические детали и корпуса",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#magnesium-alloys",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "casting",
+        "cutting"
+      ]
+    },
+    {
+      "id": "material:ldpe",
+      "type": "material",
+      "title": "Полиэтилен низкой плотности (LDPE)",
+      "description": "Полиолефины Разновидность полиэтилена; марка и добавки определяют свойства упаковочных и технических изделий. Гибкие плёнки и экструзионные изделия",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#ldpe",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "extrusion",
+        "blown-film-extrusion"
+      ]
+    },
+    {
+      "id": "material:lldpe",
+      "type": "material",
+      "title": "Линейный полиэтилен низкой плотности (LLDPE)",
+      "description": "Полиолефины Класс полиэтилена для переработки, выбираемый по конкретной марке и требованиям к плёнке. Плёночная упаковка и компаунды",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#lldpe",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "blown-film-extrusion",
+        "extrusion"
+      ]
+    },
+    {
+      "id": "material:ps",
+      "type": "material",
+      "title": "Полистирол (PS)",
+      "description": "Стирольные термопласты Термопластичный полимер; ударные свойства и переработка зависят от типа и марки. Корпуса и формованные изделия",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#ps",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "injection-molding"
+      ]
+    },
+    {
+      "id": "material:eps",
+      "type": "material",
+      "title": "Пенополистирол (EPS)",
+      "description": "Ячеистые полимеры Вспененный полимерный материал; плотность, горючесть и применимость устанавливаются для конкретного изделия. Теплоизоляционные изделия, упаковка",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#eps",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "polymer-foaming"
+      ]
+    },
+    {
+      "id": "material:abs",
+      "type": "material",
+      "title": "Акрилонитрилбутадиенстирол (ABS)",
+      "description": "Стирольные сополимеры Сополимерное семейство; отдельные марки могут иметь разные присадки, прочность и термостойкость. Литые корпуса приборов",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#abs",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "injection-molding"
+      ]
+    },
+    {
+      "id": "material:pc",
+      "type": "material",
+      "title": "Поликарбонат (PC)",
+      "description": "Инженерные термопласты Группа полимеров для формования деталей; свойства зависят от марки и технологического состояния. Прозрачные и конструкционные изделия",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#pc",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "injection-molding",
+        "extrusion"
+      ]
+    },
+    {
+      "id": "material:pmma",
+      "type": "material",
+      "title": "Полиметилметакрилат (PMMA)",
+      "description": "Акриловые полимеры Термопластичный материал для листовых и формованных изделий; требуются спецификации по стойкости и назначению. Светопрозрачные панели и детали",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#pmma",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "extrusion",
+        "thermoforming"
+      ]
+    },
+    {
+      "id": "material:pom",
+      "type": "material",
+      "title": "Полиоксиметилен (POM)",
+      "description": "Конструкционные термопласты Класс полимеров для деталей механизмов; нельзя переносить свойства между сополимерными и иными марками. Втулки, крепёжные и механические детали",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#pom",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "injection-molding",
+        "cutting"
+      ]
+    },
+    {
+      "id": "material:pbt",
+      "type": "material",
+      "title": "Полибутилентерефталат (PBT)",
+      "description": "Полиэфирные термопласты Полимерные композиции для формования; электрические и механические параметры зависят от наполнения. Корпуса, электротехнические компоненты",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#pbt",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "injection-molding"
+      ]
+    },
+    {
+      "id": "material:pps",
+      "type": "material",
+      "title": "Полифениленсульфид (PPS)",
+      "description": "Высокотемпературные термопласты Материал для технических изделий; требования по работе при температуре задаются маркой и испытанием. Компоненты технических сборок",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#pps",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "injection-molding"
+      ]
+    },
+    {
+      "id": "material:peek",
+      "type": "material",
+      "title": "Полиэфирэфиркетон (PEEK)",
+      "description": "Специальные термопласты Полимерный класс для специальных деталей; медицинское применение требует отдельной документации и допуска. Детали точных механизмов",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#peek",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "cutting",
+        "additive"
+      ]
+    },
+    {
+      "id": "material:ptfe",
+      "type": "material",
+      "title": "Политетрафторэтилен (PTFE)",
+      "description": "Фторполимеры Полимерный материал, подбираемый под температуру, среду и требования к ползучести. Уплотнения, детали оборудования",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#ptfe",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "cutting"
+      ]
+    },
+    {
+      "id": "material:eva-polymer",
+      "type": "material",
+      "title": "Этиленвинилацетат (EVA)",
+      "description": "Этиленовые сополимеры Полимерное семейство с разным составом и диапазоном технологических свойств. Плёночные и вспененные изделия",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#eva-polymer",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "extrusion",
+        "polymer-foaming"
+      ]
+    },
+    {
+      "id": "material:epdm",
+      "type": "material",
+      "title": "Этиленпропилендиеновый каучук (EPDM)",
+      "description": "Эластомерные материалы Эластомерное сырьё; долговечность уплотнения определяется рецептурой смеси и испытаниями. Уплотнения и техническая резина",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#epdm",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "rubber-vulcanization"
+      ]
+    },
+    {
+      "id": "material:sbr",
+      "type": "material",
+      "title": "Бутадиенстирольный каучук (SBR)",
+      "description": "Синтетические каучуки Сырьё для резиновых смесей; характеристики зависят от вулканизующей системы и наполнителей. Резинотехнические изделия",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#sbr",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "rubber-vulcanization"
+      ]
+    },
+    {
+      "id": "material:tpu",
+      "type": "material",
+      "title": "Термопластичный полиуретан (TPU)",
+      "description": "Термопластичные эластомеры Группа формуемых эластомеров; характеристики нельзя выводить из аббревиатуры без марки. Гибкие технические детали",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#tpu",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "extrusion",
+        "injection-molding"
+      ]
+    },
+    {
+      "id": "material:grain-wheat",
+      "type": "material",
+      "title": "Пшеница продовольственная",
+      "description": "Зерновое пищевое сырьё Партии зерна различаются по качественным показателям и рискам загрязнений. Помол и переработка зерна",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#grain-wheat",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "grain-milling"
+      ]
+    },
+    {
+      "id": "material:wheat-flour",
+      "type": "material",
+      "title": "Пшеничная мука",
+      "description": "Пищевые сыпучие материалы Продукт помола зерна; функциональные свойства зависят от сорта и контроля партии. Тесто и пищевые смеси",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#wheat-flour",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "food-extrusion"
+      ]
+    },
+    {
+      "id": "material:vegetable-oils",
+      "type": "material",
+      "title": "Растительные пищевые масла",
+      "description": "Пищевое жировое сырьё Пищевые масла требуют идентификации происхождения и контроля окисления и примесей. Пищевое производство",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#vegetable-oils",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "food-packaging"
+      ]
+    },
+    {
+      "id": "material:raw-milk",
+      "type": "material",
+      "title": "Сырое молоко",
+      "description": "Животное жидкое сырьё Молочное сырьё требует контроля микробиологических и физико-химических показателей партии. Термическая переработка молока",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#raw-milk",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "pasteurization"
+      ]
+    },
+    {
+      "id": "material:milk-powder",
+      "type": "material",
+      "title": "Сухое молоко",
+      "description": "Пищевые порошкообразные продукты Сухой молочный продукт; пригодность зависит от влажности и условий хранения. Смеси, восстановленные молочные продукты",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#milk-powder",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "spray-drying-food"
+      ]
+    },
+    {
+      "id": "material:fruit-juice-base",
+      "type": "material",
+      "title": "Плодово-ягодные соки как сырьё",
+      "description": "Пищевые жидкие полуфабрикаты Соковое сырьё требует контроля состава, микробиологии и устойчивости продукта. Осветление и упаковка соков",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#fruit-juice-base",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "juice-clarification",
+        "pasteurization"
+      ]
+    },
+    {
+      "id": "material:fruit-puree",
+      "type": "material",
+      "title": "Плодовоягодные пюре",
+      "description": "Пищевые пастообразные полуфабрикаты Плодовые пюре требуют контроля механических включений, микробиологии и консистенции. Наполнители и фруктовые продукты",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#fruit-puree",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "pasteurization"
+      ]
+    },
+    {
+      "id": "material:sugar-crystal",
+      "type": "material",
+      "title": "Сахар-песок",
+      "description": "Кристаллическое пищевое сырьё Сыпучий сахар требует проверки влажности и примесей для технологического применения. Пищевые рецептуры",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#sugar-crystal",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "food-packaging"
+      ]
+    },
+    {
+      "id": "material:yeast-food",
+      "type": "material",
+      "title": "Пищевые дрожжи",
+      "description": "Микробиологическое сырьё Дрожжевое сырьё требует контроля вида, жизнеспособности и безопасности культуры. Ферментированные пищевые изделия",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#yeast-food",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "fermentation"
+      ]
+    },
+    {
+      "id": "material:meat-raw",
+      "type": "material",
+      "title": "Мясное сырьё",
+      "description": "Животное пищевое сырьё Требуются документальная прослеживаемость, контроль условий хранения и безопасности партии. Переработка животного сырья",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#meat-raw",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "food-packaging",
+        "freezing-food"
+      ]
+    },
+    {
+      "id": "material:wool-fiber",
+      "type": "material",
+      "title": "Шерстяное волокно",
+      "description": "Натуральные волокна Волокно природного происхождения; характеристики различаются по качеству и подготовке партии. Прядение и нетканые изделия",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#wool-fiber",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "carding",
+        "spinning"
+      ]
+    },
+    {
+      "id": "material:flax-fiber",
+      "type": "material",
+      "title": "Льняное волокно",
+      "description": "Натуральные волокна Растительное волокно; свойства зависят от сортировки и степени подготовки к прядению. Пряжа, ткани и технические полотна",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#flax-fiber",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "spinning",
+        "weaving"
+      ]
+    },
+    {
+      "id": "material:polyester-fiber",
+      "type": "material",
+      "title": "Полиэфирное текстильное волокно",
+      "description": "Синтетические волокна Полиэфирное волокно; свойства определяются способом получения и спецификацией. Ткани, трикотаж, нетканые материалы",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#polyester-fiber",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "spinning",
+        "weaving"
+      ]
+    },
+    {
+      "id": "material:polyamide-textile-yarn",
+      "type": "material",
+      "title": "Полиамидная техническая нить",
+      "description": "Синтетические нити Нить на основе полиамида; эксплуатационные показатели требуют испытаний конкретного продукта. Технический текстиль",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#polyamide-textile-yarn",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "winding-yarn",
+        "weaving"
+      ]
+    },
+    {
+      "id": "material:viscose-fiber",
+      "type": "material",
+      "title": "Вискозное волокно",
+      "description": "Химические волокна целлюлозной природы Волокнистый текстильный материал; параметры определяются способом получения и отделкой. Текстильные полотна",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#viscose-fiber",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "spinning",
+        "weaving"
+      ]
+    },
+    {
+      "id": "material:nonwoven-fabric",
+      "type": "material",
+      "title": "Нетканое полотно",
+      "description": "Нетканые текстильные материалы Полотно, формируемое без обычного переплетения основы и утка; требуется указать способ скрепления. Фильтры, технические изделия, упаковка",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#nonwoven-fabric",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "needle-punching-nonwovens"
+      ]
+    },
+    {
+      "id": "material:knitted-fabric",
+      "type": "material",
+      "title": "Трикотажное полотно",
+      "description": "Петлевые текстильные материалы Полотно, изготовляемое вязанием; деформации и усадка зависят от структуры и отделки. Одежда, технический текстиль",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#knitted-fabric",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "knitting",
+        "sewing"
+      ]
+    },
+    {
+      "id": "material:sewing-thread",
+      "type": "material",
+      "title": "Швейные нитки",
+      "description": "Ниточные соединительные материалы Технические свойства нитки требуют указания волокна, линейной плотности и отделки. Швейная сборка изделий",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#sewing-thread",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "sewing"
+      ]
+    },
+    {
+      "id": "material:warp-yarn",
+      "type": "material",
+      "title": "Основная пряжа",
+      "description": "Пряжа для ткачества Нити, используемые как основа тканого полотна; устойчивость определяется подбором нити и подготовкой. Ткачество",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#warp-yarn",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "warping",
+        "warp-sizing"
+      ]
+    },
+    {
+      "id": "material:technical-dye",
+      "type": "material",
+      "title": "Текстильный краситель",
+      "description": "Красящие химические вещества Класс красителей; выбор зависит от типа волокна и технологии фиксации. Окрашивание текстиля",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#technical-dye",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "textile-finishing"
+      ]
+    },
+    {
+      "id": "material:technical-felt",
+      "type": "material",
+      "title": "Технический войлок",
+      "description": "Волокнистые технические материалы Уплотнённое волокнистое полотно; требуется установить тип волокна и способ получения. Прокладки, фильтрация, изоляция",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#technical-felt",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "needle-punching-nonwovens"
+      ]
+    },
+    {
+      "id": "material:spruce-lumber",
+      "type": "material",
+      "title": "Пиломатериалы из ели",
+      "description": "Хвойная древесина Древесный материал, свойства которого сильно зависят от влажности, сорта и наличия дефектов. Строительные конструкции и столярные изделия",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#spruce-lumber",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "sawmilling",
+        "wood-drying"
+      ]
+    },
+    {
+      "id": "material:pine-lumber",
+      "type": "material",
+      "title": "Сосновые пиломатериалы",
+      "description": "Хвойная древесина Натуральные пиломатериалы, требующие контроля породы, влажности и сортировки. Столярные и строительные изделия",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#pine-lumber",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "sawmilling",
+        "wood-drying"
+      ]
+    },
+    {
+      "id": "material:wood-veneer",
+      "type": "material",
+      "title": "Лущёный шпон",
+      "description": "Тонколистовые древесные материалы Слой древесины для многослойных изделий; контролируются толщина, влажность и сорт. Фанера и облицовка",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#wood-veneer",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "veneer-peeling",
+        "plywood-bonding"
+      ]
+    },
+    {
+      "id": "material:osb-board",
+      "type": "material",
+      "title": "Ориентированно-стружечная плита (OSB)",
+      "description": "Древесные композиционные панели Панель из ориентированных древесных элементов на связующем; параметры должны соответствовать выбранному классу изделия. Обшивки и панели",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#osb-board",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "fiberboard-pressing"
+      ]
+    },
+    {
+      "id": "material:particleboard",
+      "type": "material",
+      "title": "Древесно-стружечная плита (ДСП)",
+      "description": "Древесные композиционные панели Плита из древесных частиц на связующем; свойства зависят от рецептуры и плотности. Мебельные и интерьерные панели",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#particleboard",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "fiberboard-pressing"
+      ]
+    },
+    {
+      "id": "material:glulam",
+      "type": "material",
+      "title": "Клеёная древесина (glulam)",
+      "description": "Клеёные несущие древесные материалы Материал из соединённых деревянных элементов, характеристики которого задаются сортами и технологией склейки. Несущие конструкции",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#glulam",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "plywood-bonding"
+      ]
+    },
+    {
+      "id": "material:clt",
+      "type": "material",
+      "title": "Перекрёстно-клеёная древесина (CLT)",
+      "description": "Многослойные деревянные панели Слоистая древесная панель с заданной ориентацией слоёв; расчёт требует проектных и нормативных данных. Строительные панели",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#clt",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "plywood-bonding"
+      ]
+    },
+    {
+      "id": "material:wood-impregnant",
+      "type": "material",
+      "title": "Древесные защитные составы",
+      "description": "Составы для обработки древесины Химические составы для защиты; применение определяется инструкцией изготовителя и требуемой средой. Защитная обработка древесины",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#wood-impregnant",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "wood-preservation"
+      ]
+    },
+    {
+      "id": "material:pcb-prepreg",
+      "type": "material",
+      "title": "Препрег для печатных плат",
+      "description": "Материалы печатных плат Предварительно пропитанная связующим армирующая основа; конечные свойства зависят от спецификации. Многослойные печатные платы",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#pcb-prepreg",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "pcb-assembly"
+      ]
+    },
+    {
+      "id": "material:pcb-laminate",
+      "type": "material",
+      "title": "Ламинат для жёстких печатных плат",
+      "description": "Основания печатных плат Листовой диэлектрический материал для основы плат; группа и лист спецификации имеют значение. Жёсткие и многослойные платы",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#pcb-laminate",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "pcb-drilling",
+        "pcb-etching"
+      ]
+    },
+    {
+      "id": "material:pcb-copper-foil",
+      "type": "material",
+      "title": "Медная фольга для печатных плат",
+      "description": "Металлические проводниковые материалы Фольга для проводящих слоёв, подбираемая по толщине, обработке поверхности и стандарту. Печатные проводники",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#pcb-copper-foil",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "pcb-etching",
+        "pcb-plating"
+      ]
+    },
+    {
+      "id": "material:solder-paste",
+      "type": "material",
+      "title": "Паяльная паста",
+      "description": "Монтажные припойные композиции Смесь частиц припоя с флюсовой системой; качество зависит от рецептуры, хранения и профиля нагрева. Поверхностный монтаж",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#solder-paste",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "solder-paste-printing",
+        "reflow-soldering"
+      ]
+    },
+    {
+      "id": "material:solder-flux",
+      "type": "material",
+      "title": "Флюс для электронного монтажа",
+      "description": "Технологические химические вещества Состав, обеспечивающий условия пайки; остатки и совместимость определяются конкретным продуктом. Пайка электронных сборок",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#solder-flux",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "wave-soldering",
+        "selective-soldering"
+      ]
+    },
+    {
+      "id": "material:electronic-encapsulant",
+      "type": "material",
+      "title": "Компаунд для заливки электронных узлов",
+      "description": "Защитные полимерные композиции Полимерная система для защиты узлов; материал должен быть согласован с термонагрузками и электрическими требованиями. Герметизация электроники",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#electronic-encapsulant",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "conformal-coating"
+      ]
+    },
+    {
+      "id": "material:conformal-coating-material",
+      "type": "material",
+      "title": "Лак для защитного покрытия плат",
+      "description": "Защитные электроизоляционные покрытия Покрытие для электронной сборки; режим нанесения и стойкость зависят от материала. Электронные платы",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#conformal-coating-material",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "conformal-coating"
+      ]
+    },
+    {
+      "id": "material:lime-stone",
+      "type": "material",
+      "title": "Известняк промышленный",
+      "description": "Карбонатное минеральное сырьё Карбонатная горная порода, требующая проверки состава и примесей по назначению. Строительные и химические процессы",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#lime-stone",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "ore-crushing"
+      ]
+    },
+    {
+      "id": "material:soda-ash",
+      "type": "material",
+      "title": "Кальцинированная сода",
+      "description": "Неорганические технические вещества Сырьё для различных промышленных смесей; чистота и сорт должны соответствовать задаче. Стекольные и химические смеси",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#soda-ash",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "glass-melting",
+        "chemical-mixing"
+      ]
+    },
+    {
+      "id": "material:industrial-sulfur",
+      "type": "material",
+      "title": "Сера промышленная",
+      "description": "Неметаллическое химическое сырьё Химическое сырьё; качество и загрязнения требуют контроля для каждого применения. Химическое производство",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#industrial-sulfur",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "chemical-mixing"
+      ]
+    },
+    {
+      "id": "material:phosphate-rock",
+      "type": "material",
+      "title": "Фосфатное сырьё",
+      "description": "Фосфатные минералы Природное минеральное сырьё, качество которого зависит от минералогии и примесей. Химическая переработка",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#phosphate-rock",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "ore-crushing"
+      ]
+    },
+    {
+      "id": "material:potash-raw",
+      "type": "material",
+      "title": "Калийное минеральное сырьё",
+      "description": "Калийсодержащие минералы Сырьё для промышленной переработки, требующее проверки минерального состава. Химические производства",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#potash-raw",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "crystallization"
+      ]
+    },
+    {
+      "id": "material:industrial-zeolite",
+      "type": "material",
+      "title": "Цеолиты технические",
+      "description": "Пористые алюмосиликаты Группа минеральных сорбентов; селективность определяется структурой и модификацией. Адсорбция и разделение",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#industrial-zeolite",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "granular-filtration"
+      ]
+    },
+    {
+      "id": "material:bentonite-clay",
+      "type": "material",
+      "title": "Бентонитовая глина",
+      "description": "Глинистое минеральное сырьё Глинистая порода; промышленное назначение зависит от набухания и минерального состава. Буровые и строительные смеси",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#bentonite-clay",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "chemical-mixing"
+      ]
+    },
+    {
+      "id": "material:industrial-salt",
+      "type": "material",
+      "title": "Соль техническая",
+      "description": "Хлоридное минеральное сырьё Техническая соль; состав и примеси контролируются для целевого процесса. Приготовление технологических растворов",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#industrial-salt",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "chemical-mixing"
+      ]
+    },
+    {
+      "id": "material:carbon-fiber-preform",
+      "type": "material",
+      "title": "Углеродное армирующее волокно",
+      "description": "Армирующие материалы Волокнистый полуфабрикат для композитной системы; свойства зависят от типа волокна и структуры ткани. Армирование полимерных изделий",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#carbon-fiber-preform",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "hand-layup",
+        "filament-winding"
+      ]
+    },
+    {
+      "id": "material:carbon-fiber-laminate",
+      "type": "material",
+      "title": "Углепластик (CFRP)",
+      "description": "Полимерные волокнистые композиты Система из полимерной матрицы и углеродного армирования; не имеет единого набора свойств. Нагруженные композитные изделия",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#carbon-fiber-laminate",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "vacuum-infusion",
+        "autoclave-composites"
+      ]
+    },
+    {
+      "id": "material:composite-honeycomb",
+      "type": "material",
+      "title": "Сотовый заполнитель",
+      "description": "Лёгкие заполнители Заполнитель с ячеистой геометрией; выбор обусловлен ориентацией нагрузок и материалом стенок. Сэндвич-панели",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#composite-honeycomb",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "assembly"
+      ]
+    },
+    {
+      "id": "material:composite-epoxy-resin",
+      "type": "material",
+      "title": "Эпоксидная связующая система",
+      "description": "Полимерные связующие Связующее для композитных систем; стехиометрия и режим отверждения зависят от рецептуры. Композитное формование",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#composite-epoxy-resin",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "vacuum-infusion",
+        "resin-transfer-molding"
+      ]
+    },
+    {
+      "id": "material:prepreg-composite",
+      "type": "material",
+      "title": "Препрег для композитов",
+      "description": "Предварительно пропитанные армирующие материалы Армирование с нанесённой связующей системой; хранение и цикл отверждения задаются производителем. Автоклавное формование",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#prepreg-composite",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "autoclave-composites"
+      ]
+    },
+    {
+      "id": "material:basalt-fiber",
+      "type": "material",
+      "title": "Базальтовое армирующее волокно",
+      "description": "Минеральные армирующие волокна Волокнистое армирование для композитных изделий; характеристики требуют испытания конкретного продукта. Композитные изделия",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#basalt-fiber",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "pultrusion",
+        "filament-winding"
+      ]
+    },
+    {
+      "id": "material:building-aggregate",
+      "type": "material",
+      "title": "Заполнители для бетона",
+      "description": "Минеральные заполнители Материал для бетонных смесей, подбираемый по гранулометрии и ограничениям по примесям. Бетонное производство",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#building-aggregate",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "concrete-mixing"
+      ]
+    },
+    {
+      "id": "material:crushed-stone",
+      "type": "material",
+      "title": "Щебень строительный",
+      "description": "Каменные заполнители Дроблёное минеральное сырьё; качество зависит от породы и требуемого класса. Бетон, дороги и подоснова",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#crushed-stone",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "ore-crushing",
+        "concrete-mixing"
+      ]
+    },
+    {
+      "id": "material:sand-building",
+      "type": "material",
+      "title": "Песок строительный",
+      "description": "Сыпучие минеральные заполнители Строительный песок; требования к фракциям и загрязнению зависят от области применения. Растворы, смеси, подосновы",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#sand-building",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "concrete-mixing"
+      ]
+    },
+    {
+      "id": "material:asphalt-binder",
+      "type": "material",
+      "title": "Битум дорожный",
+      "description": "Органические вяжущие Вяжущий материал для асфальтобетона; характеристики требуют данных по конкретной марке. Дорожные смеси",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#asphalt-binder",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "asphalt-mix-production"
+      ]
+    },
+    {
+      "id": "material:asphalt-mix",
+      "type": "material",
+      "title": "Асфальтобетонная смесь",
+      "description": "minерально-органические смеси Смесь заполнителей и вяжущего; состав и параметры уплотнения устанавливаются рецептурой. Дорожное покрытие",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#asphalt-mix",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "asphalt-mix-production",
+        "road-asphalt-placement"
+      ]
+    },
+    {
+      "id": "material:rebar-steel",
+      "type": "material",
+      "title": "Арматурный стальной прокат",
+      "description": "Стальная строительная арматура Прокат для армирования бетона; класс и условия применения определяются стандартом и проектом. Железобетонные конструкции",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#rebar-steel",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "rebar-installation"
+      ]
+    },
+    {
+      "id": "material:ready-mix-concrete",
+      "type": "material",
+      "title": "Бетонная смесь товарная",
+      "description": "Минеральные строительные смеси Смесь вяжущего, заполнителей, воды и возможных добавок; пригодность подтверждают рецептура и испытания. Монолитное строительство",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#ready-mix-concrete",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "concrete-mixing",
+        "concrete-placing"
+      ]
+    },
+    {
+      "id": "material:geotextile",
+      "type": "material",
+      "title": "Геотекстиль",
+      "description": "Геосинтетические полотна Полотна для строительных слоёв; фильтрационная способность зависит от структуры и материала. Дорожное и геотехническое строительство",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#geotextile",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "needle-punching-nonwovens"
+      ]
+    },
+    {
+      "id": "material:electrical-steel",
+      "type": "material",
+      "title": "Электротехническая листовая сталь",
+      "description": "Специальный стальной прокат Стальной материал для магнитопроводов; характеристики зависят от сплава, текстуры и обработки. Электрические машины",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#electrical-steel",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "rolling",
+        "stamping"
+      ]
+    },
+    {
+      "id": "material:graphite-electrode",
+      "type": "material",
+      "title": "Графитовые электроды промышленного назначения",
+      "description": "minерально-углеродные материалы Углеродный материал для электротермического оборудования; режим применения ограничен стандартом изделия. Металлургическое оборудование",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#graphite-electrode",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "inspection"
+      ]
+    },
+    {
+      "id": "material:copper-electric-wire",
+      "type": "material",
+      "title": "Медный провод электротехнический",
+      "description": "Электропроводные материалы Проводниковое изделие; сечение, изоляция и свойства задаются спецификацией. Электроснабжение и аппаратура",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#copper-electric-wire",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "inspection"
+      ]
+    },
+    {
+      "id": "material:thermal-insulation-wool",
+      "type": "material",
+      "title": "Минеральная теплоизоляционная вата",
+      "description": "Теплоизоляционные материалы Волокнистая теплоизоляция; свойства зависят от вида волокна и режима эксплуатации. Изоляция теплотехнических систем",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#thermal-insulation-wool",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "inspection"
+      ]
+    },
+    {
+      "id": "material:heat-exchanger-steel",
+      "type": "material",
+      "title": "Коррозионностойкий прокат для теплообменников",
+      "description": "Специальные металлические полуфабрикаты Металлический прокат для поверхностей теплообмена; выбор зависит от теплоносителя и требований к коррозии. Теплотехническое оборудование",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#heat-exchanger-steel",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "welding",
+        "industrial-heat-exchange"
+      ]
+    },
+    {
+      "id": "material:uf-membrane",
+      "type": "material",
+      "title": "Мембрана для ультрафильтрации",
+      "description": "Мембранные разделительные материалы Мембранный элемент; подбирается по разделяемому потоку и устойчивости к загрязнению. Водоподготовка",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#uf-membrane",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "ultrafiltration-water"
+      ]
+    },
+    {
+      "id": "material:activated-alumina-adsorbent",
+      "type": "material",
+      "title": "Активированный оксид алюминия (адсорбент)",
+      "description": "Пористые минеральные сорбенты Адсорбционный материал; ёмкость зависит от примесей и химии обрабатываемой воды. Адсорбционные фильтры",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#activated-alumina-adsorbent",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "carbon-adsorption"
+      ]
+    },
+    {
+      "id": "material:ferric-oxide-media",
+      "type": "material",
+      "title": "Гранулированный сорбент на основе оксидов железа",
+      "description": "Железосодержащие сорбенты Пористый сорбент для водоочистки; селективность требует проверки в конкретной воде. Адсорбционные загрузки",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#ferric-oxide-media",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "granular-filtration"
+      ]
+    },
+    {
+      "id": "material:flocculant-polyelectrolyte",
+      "type": "material",
+      "title": "Флокулянт-полиэлектролит",
+      "description": "Реагенты водоподготовки Полимерный реагент; дозировка и эффективность требуют лабораторного подбора. Обработка воды и осадка",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#flocculant-polyelectrolyte",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "flocculation-water"
+      ]
+    },
+    {
+      "id": "material:coagulant-iron",
+      "type": "material",
+      "title": "Коагулянт на основе соли железа",
+      "description": "Неорганические реагенты водоподготовки Реагент для коагуляции; химические и технологические условия подбирают на испытаниях. Коагуляция воды",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#coagulant-iron",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "coagulation-water"
+      ]
+    },
+    {
+      "id": "material:alumina-ceramic",
+      "type": "material",
+      "title": "Техническая корундовая керамика",
+      "description": "Оксидные керамические материалы Оксидная керамика на основе Al₂O₃; свойства зависят от чистоты и метода формования. Изоляторы и технические детали",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#alumina-ceramic",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "ceramic-sintering"
+      ]
+    },
+    {
+      "id": "material:silica-refractory",
+      "type": "material",
+      "title": "Кремнезёмистый огнеупор",
+      "description": "Огнеупорные материалы Огнеупорный материал на кремнезёмистой основе; рабочая стойкость требует проверки состава. Футеровки и печное оборудование",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#silica-refractory",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "ceramic-sintering"
+      ]
+    },
+    {
+      "id": "material:fireclay-raw",
+      "type": "material",
+      "title": "Огнеупорная глина",
+      "description": "Глинистое керамическое сырьё Минеральное сырьё; пригодность определяется минералогией и поведением при обжиге. Огнеупорные изделия",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#fireclay-raw",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "ceramic-calcination"
+      ]
+    },
+    {
+      "id": "material:kaolin-industrial",
+      "type": "material",
+      "title": "Каолин технический",
+      "description": "Глинистое сырьё Классы каолина различаются по чистоте, дисперсности и назначению. Керамика и минеральные композиции",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#kaolin-industrial",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "ceramic-calcination"
+      ]
+    },
+    {
+      "id": "material:glass-cullet",
+      "type": "material",
+      "title": "Стеклобой технологический",
+      "description": "minеральное вторичное сырьё Стеклянное вторичное сырьё для варки; загрязнения и совместимость стекол требуют контроля. Стекловарение",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#glass-cullet",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "glass-melting"
+      ]
+    },
+    {
+      "id": "material:ceramic-glaze",
+      "type": "material",
+      "title": "Керамическая глазурная масса",
+      "description": "Стеклообразующие композиции Композиция для покрытия керамики, состав и обжиг определяются спецификацией. Керамические изделия",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#ceramic-glaze",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "ceramic-sintering"
+      ]
+    },
+    {
+      "id": "material:lime-technical",
+      "type": "material",
+      "title": "Известь техническая",
+      "description": "Минеральные вяжущие и реагенты Промышленный материал на основе соединений кальция; вид и активность требуют уточнения. Растворы, очистка, химическая переработка",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#lime-technical",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "chemical-mixing"
+      ]
+    },
+    {
+      "id": "material:pharma-mcc",
+      "type": "material",
+      "title": "Микрокристаллическая целлюлоза фармацевтическая",
+      "description": "Фармацевтические наполнители Категория вспомогательного вещества; стандарт качества, физические показатели и совместимость должны быть определены. Таблетные композиции",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#pharma-mcc",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "tablet-compression"
+      ]
+    },
+    {
+      "id": "material:pharma-lactose",
+      "type": "material",
+      "title": "Лактоза фармацевтическая",
+      "description": "Фармацевтические наполнители Вспомогательное сырьё; форма и спецификация выбираются под конкретную лекарственную форму. Порошковые и таблетные формы",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#pharma-lactose",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "pharma-powder-blending"
+      ]
+    },
+    {
+      "id": "material:pharma-gelatin",
+      "type": "material",
+      "title": "Желатин для капсул",
+      "description": "Материалы оболочек лекарственных форм Белковый технологический материал; характеристики зависят от качества сырья и назначения. Капсульные формы",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#pharma-gelatin",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "capsule-filling"
+      ]
+    },
+    {
+      "id": "material:pharma-povidone",
+      "type": "material",
+      "title": "Повидон (PVP) фармацевтический",
+      "description": "Полимерные вспомогательные вещества Полимерный компонент лекарственных форм; вязкость и применение определяются фармакопейной спецификацией. Грануляция и смеси",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#pharma-povidone",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "wet-granulation-pharma"
+      ]
+    },
+    {
+      "id": "material:pharma-hpmc",
+      "type": "material",
+      "title": "Гипромеллоза (HPMC) фармацевтическая",
+      "description": "Полимерные вспомогательные вещества Модифицированный целлюлозный полимер; назначение зависит от марки и лекарственной формы. Оболочки, покрытие таблеток",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#pharma-hpmc",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "tablet-coating"
+      ]
+    },
+    {
+      "id": "material:pharma-starch",
+      "type": "material",
+      "title": "Крахмал фармацевтический",
+      "description": "Крахмалосодержащие вспомогательные материалы Сырьё для лекарственных форм; качество и назначение определяются фармакопейной монографией. Таблетные и порошковые смеси",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#pharma-starch",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "pharma-powder-blending"
+      ]
+    },
+    {
+      "id": "material:flexo-plate",
+      "type": "material",
+      "title": "Фотополимерная флексографская форма",
+      "description": "Печатные формы Полимерная печатная форма с рельефом; пригодность определяется печатной системой. Флексографская печать",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#flexo-plate",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "printing-plate-making",
+        "flexography"
+      ]
+    },
+    {
+      "id": "material:screen-print-mesh",
+      "type": "material",
+      "title": "Сетка для трафаретной печати",
+      "description": "Печатные сеточные материалы Тканый/сеточный материал, параметры которого задают тип нити и число нитей. Трафаретная печать",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#screen-print-mesh",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "screen-printing"
+      ]
+    },
+    {
+      "id": "material:offset-blanket",
+      "type": "material",
+      "title": "Офсетное печатное полотно",
+      "description": "Композитные материалы печати Эластичное полотно для передачи изображения с формы на субстрат; свойства определяются конструкцией. Офсетная печать",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#offset-blanket",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "offset-lithography"
+      ]
+    },
+    {
+      "id": "material:uv-curing-ink",
+      "type": "material",
+      "title": "УФ-отверждаемая печатная краска",
+      "description": "Реакционноспособные красочные композиции Краска, полимеризующаяся при совместимом облучении; требуется проверка источника энергии и состава. Полиграфия и покрытия",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#uv-curing-ink",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "uv-curing-print"
+      ]
+    },
+    {
+      "id": "material:printing-film-substrate",
+      "type": "material",
+      "title": "Полимерная плёнка для печати",
+      "description": "Печатные субстраты Полимерный рулонный материал; совместимость с краской и ограничения миграции проверяются отдельно. Упаковочная печать",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#printing-film-substrate",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "flexography"
+      ]
+    },
+    {
+      "id": "material:copper-ore",
+      "type": "material",
+      "title": "Медные руды",
+      "description": "Рудное сырьё цветной металлургии Минеральная смесь, требующая химического и минералогического анализа. Обогащение и металлургия",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#copper-ore",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "ore-crushing",
+        "ore-flotation"
+      ]
+    },
+    {
+      "id": "material:nickel-ore",
+      "type": "material",
+      "title": "Никелевые руды",
+      "description": "Рудное сырьё цветной металлургии Рудное сырьё; состав и технология обогащения зависят от типа месторождения. Горная переработка",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#nickel-ore",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "ore-grinding",
+        "ore-flotation"
+      ]
+    },
+    {
+      "id": "material:manganese-ore",
+      "type": "material",
+      "title": "Марганцевые руды",
+      "description": "Рудное сырьё металлургии Минеральное сырьё; вид руды влияет на требования к подготовке. Металлургическое сырьё",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#manganese-ore",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "ore-crushing"
+      ]
+    },
+    {
+      "id": "material:lithium-concentrate",
+      "type": "material",
+      "title": "Литиевый минеральный концентрат",
+      "description": "Минеральные концентраты Продукт обогащения литийсодержащего сырья; качество определяет конкретная спецификация. Химическая переработка",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#lithium-concentrate",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "ore-flotation"
+      ]
+    },
+    {
+      "id": "material:graphite-concentrate",
+      "type": "material",
+      "title": "Природный графитовый концентрат",
+      "description": "Углеродное минеральное сырьё Концентрат графита; размер частиц и примеси требуют контроля для целевого применения. Электротехнические и химические материалы",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#graphite-concentrate",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "ore-flotation"
+      ]
+    },
+    {
+      "id": "material:rare-earth-concentrate",
+      "type": "material",
+      "title": "Концентрат редкоземельного сырья",
+      "description": "Минеральные концентраты Продукт обогащения руд; состав конкретных элементов требуется подтверждать анализом. Сырьё для химической переработки",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#rare-earth-concentrate",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "magnetic-separation-ore"
+      ]
+    },
+    {
+      "id": "material:fluorite-ore",
+      "type": "material",
+      "title": "Плавиковый шпат (флюорит)",
+      "description": "Фторсодержащее минеральное сырьё Минерал как промышленное сырьё; содержание примесей определяет область применения. Химическое сырьё",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#fluorite-ore",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "ore-flotation"
+      ]
+    },
+    {
+      "id": "material:talc-industrial",
+      "type": "material",
+      "title": "Тальк промышленный",
+      "description": "Минеральные порошки Минеральное сырьё, используемое в промышленных составах; чистота и гранулометрия обязательны к проверке. Наполнители композиций",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#talc-industrial",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "ore-grinding"
+      ]
+    },
+    {
+      "id": "material:perlite-raw",
+      "type": "material",
+      "title": "Перлит промышленный",
+      "description": "Вулканическое минеральное сырьё Пористое минеральное сырьё для технических изделий; свойства зависят от обработки. Строительные и фильтрующие изделия",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#perlite-raw",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "ore-screening"
+      ]
+    },
+    {
+      "id": "material:diatomite-raw",
+      "type": "material",
+      "title": "Диатомит промышленный",
+      "description": "Кремнезёмистое минеральное сырьё Минеральный порошок; фильтрационные свойства устанавливают для партии и степени обработки. Фильтрующие и технологические материалы",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#diatomite-raw",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "industrial-filtration"
+      ]
+    },
+    {
+      "id": "material:zinc-concentrate",
+      "type": "material",
+      "title": "Цинковый минеральный концентрат",
+      "description": "Сырьё цветной металлургии Концентрат для металлургической переработки; содержание металла и вредные примеси требуют анализа. Производство цинка",
+      "url": "https://vremennobeznika.github.io/enjigirling/materials.html#zinc-concentrate",
+      "dataset": "knowledge/materials.json",
+      "relatedProcesses": [
+        "ore-flotation"
       ]
     },
     {
