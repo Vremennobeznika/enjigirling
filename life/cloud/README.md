@@ -2,7 +2,7 @@
 
 ## Статус 22.10.2026
 
-В аккаунте Yandex Cloud созданы: база `life-personal-store` (Serverless, 0 provisioned RU/s, лимит 10 RU/s, до 1 ГБ), сервисный аккаунт `life-sync-sa` с ролью `ydb.editor` **только на базе**, и пустая Cloud Function `life-sync` (`d4ed26vrlmb1uk22m3b7`). **Версия функции ещё не опубликована и синхронизация не активна.**
+В аккаунте Yandex Cloud созданы: база `life-personal-store` (Serverless, 0 provisioned RU/s, лимит 10 RU/s, до 1 ГБ), сервисный аккаунт `life-sync-sa` с ролью `ydb.editor` **только на базе**, и пустая Cloud Function `life-sync` (`d4ed26vrlmb1uk22m3b7`). **Первая версия Cloud Function существует, но её код и настройки не соответствуют текущему проекту; синхронизация не работает.** Для исправления нужна новая версия с обновлённым deploy.zip, привязанным сервисным аккаунтом и двумя переменными окружения.
 
 Изготовлен и проверен архив кода `deploy.zip` в ветке `life-cloud-deploy`:
 https://github.com/Vremennobeznika/enjigirling/raw/refs/heads/life-cloud-deploy/life/cloud/deploy.zip
