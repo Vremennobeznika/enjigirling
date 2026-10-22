@@ -15,7 +15,10 @@
       "uses": "Детали машин, трубная продукция",
       "process": [
         "cutting",
-        "heat"
+        "heat",
+        "hardness",
+        "stamping",
+        "rolling"
       ],
       "note": "Для химического состава и механических свойств необходимо выбрать действующий стандарт на конкретный вид проката или изделия.",
       "knowledgeMeta": {
@@ -33,7 +36,12 @@
       "uses": "Валы, оси и другие детали машин",
       "process": [
         "cutting",
-        "heat"
+        "heat",
+        "ultrasonic",
+        "hardness",
+        "forging",
+        "grinding",
+        "rolling"
       ],
       "note": "Твёрдость и прочность без указания режима термообработки не приводятся.",
       "knowledgeMeta": {
@@ -51,7 +59,11 @@
       "uses": "Металлоконструкции, сварные изделия",
       "process": [
         "welding",
-        "cutting"
+        "cutting",
+        "inspection",
+        "mig-mag",
+        "ultrasonic",
+        "radiographic"
       ],
       "note": "Марка сама по себе не определяет категорию проката, ударную вязкость или режим сварки.",
       "knowledgeMeta": {
@@ -69,7 +81,11 @@
       "uses": "Оборудование, ёмкости, элементы конструкций",
       "process": [
         "welding",
-        "cutting"
+        "cutting",
+        "tig",
+        "radiographic",
+        "dye",
+        "stamping"
       ],
       "note": "AISI — система обозначений; сопоставление с российскими марками требует отдельной проверки по составу и стандартам.",
       "knowledgeMeta": {
@@ -87,7 +103,12 @@
       "uses": "Машиностроительные детали, профили",
       "process": [
         "cutting",
-        "welding"
+        "welding",
+        "mig-mag",
+        "tig",
+        "dye",
+        "hardness",
+        "stamping"
       ],
       "note": "Не переносить свойства 6061-T6 на 6061-O или на сварное соединение.",
       "knowledgeMeta": {
@@ -121,7 +142,9 @@
       "detail": "Полиэтилен высокой плотности; эксплуатационные свойства зависят от марки, добавок и температуры.",
       "uses": "Трубы, ёмкости, технические детали",
       "process": [
-        "additive"
+        "additive",
+        "injection-molding",
+        "extrusion"
       ],
       "note": "Обозначение HDPE не является достаточной спецификацией для расчёта давления или долговечности.",
       "knowledgeMeta": {
@@ -139,7 +162,9 @@
       "uses": "Втулки, шестерни, корпуса",
       "process": [
         "cutting",
-        "additive"
+        "additive",
+        "injection-molding",
+        "extrusion"
       ],
       "note": "При расчёте учитывать влажность, температуру и конкретную модификацию.",
       "knowledgeMeta": {
@@ -215,6 +240,150 @@
         "verificationStatus": "requires_source_review",
         "sourceRecord": "materials-data.js",
         "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#aramid"
+      }
+    },
+    {
+      "id": "food-raw",
+      "name": "Пищевое сырьё растительного происхождения",
+      "group": "organic",
+      "family": "Растительное пищевое сырьё",
+      "detail": "Вид, зрелость, санитарное состояние и состав определяют пригодность для конкретной технологии.",
+      "uses": "Плоды, овощи, растительные заготовки",
+      "process": [
+        "pasteurization",
+        "food-drying",
+        "fermentation",
+        "food-packaging"
+      ],
+      "note": "Проверять спецификации партии, показатели безопасности и условия хранения.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#food-raw"
+      }
+    },
+    {
+      "id": "food-pack",
+      "name": "Пищевые упаковочные материалы",
+      "group": "organic",
+      "family": "Контактирующие с пищей упаковочные материалы",
+      "detail": "Выбор упаковки зависит от продукта, температуры процесса и разрешённых условий контакта.",
+      "uses": "Плёнки, пакеты, банки и крышки",
+      "process": [
+        "food-packaging"
+      ],
+      "note": "Материал и миграционные требования проверяют по применимым регламентам и декларации соответствия.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#food-pack"
+      }
+    },
+    {
+      "id": "cotton",
+      "name": "Хлопковое волокно",
+      "group": "organic",
+      "family": "Натуральные текстильные волокна",
+      "detail": "Показатели длины, зрелости, засорённости и влажности влияют на перерабатываемость.",
+      "uses": "Пряжа, ткани, трикотаж",
+      "process": [
+        "spinning"
+      ],
+      "note": "Не приписывать единые свойства без класса и метода испытаний.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#cotton"
+      }
+    },
+    {
+      "id": "cotton-yarn",
+      "name": "Хлопковая пряжа",
+      "group": "organic",
+      "family": "Текстильная пряжа",
+      "detail": "Линейная плотность, крутка, прочность и неровнота зависят от способа прядения.",
+      "uses": "Ткачество, вязание",
+      "process": [
+        "weaving",
+        "knitting"
+      ],
+      "note": "Проверять номер пряжи, разрывные характеристики и партию.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#cotton-yarn"
+      }
+    },
+    {
+      "id": "woven-fabric",
+      "name": "Ткань текстильная",
+      "group": "organic",
+      "family": "Тканые материалы",
+      "detail": "Параметры переплетения, плотность и отделка определяют свойства готового полотна.",
+      "uses": "Швейные изделия, отделка",
+      "process": [
+        "textile-finishing",
+        "sewing"
+      ],
+      "note": "Состав и отделку проверяют по документам поставки.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#woven-fabric"
+      }
+    },
+    {
+      "id": "timber",
+      "name": "Пиломатериалы из древесины",
+      "group": "organic",
+      "family": "Древесные материалы",
+      "detail": "Геометрия, порода, влажность и сортность определяются спецификацией.",
+      "uses": "Раскрой, сушка, изготовление деталей",
+      "process": [
+        "sawmilling",
+        "wood-drying"
+      ],
+      "note": "Проверять влажность, сорт и дефекты древесины.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#timber"
+      }
+    },
+    {
+      "id": "pcb",
+      "name": "Печатная плата (основание)",
+      "group": "composite",
+      "family": "Электронные основания",
+      "detail": "Плата с проводящим рисунком и диэлектрическим основанием; конструкция зависит от требований устройства.",
+      "uses": "Монтаж электронных компонентов",
+      "process": [
+        "pcb-assembly",
+        "electronic-inspection"
+      ],
+      "note": "Контролировать дефекты рисунка, геометрию и применимые требования к сборке.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#pcb"
+      }
+    },
+    {
+      "id": "solder",
+      "name": "Материалы для пайки электронных узлов",
+      "group": "metal",
+      "family": "Припои и вспомогательные материалы",
+      "detail": "Состав припоя и флюса выбирается для процесса и требований к электронной сборке.",
+      "uses": "Пайка электронных компонентов",
+      "process": [
+        "pcb-assembly",
+        "electronic-inspection"
+      ],
+      "note": "Контролировать совместимость сплавов, флюса и технологических ограничений.",
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#solder"
       }
     }
   ]
