@@ -25,6 +25,7 @@ function json(statusCode, value) {
   };
 }
 function digest(x) { return crypto.createHash('sha256').update(x, 'utf8').digest(); }
+function firstRow(result) { if (!Array.isArray(result)) return null; const first = result[0]; return Array.isArray(first) ? first[0] || null : first || null; }
 function authorized(event) {
   const headers = Object.fromEntries(Object.entries(event.headers || {}).map(([key, value]) => [key.toLowerCase(), String(value)]));
   const expectedHash = process.env.SYNC_TOKEN_SHA256 || '';
@@ -75,7 +76,7 @@ export async function handler(event) {
     const sql = await getDb();
     if (method === 'GET') {
       const rows = await sql`SELECT payload, revision FROM app_state WHERE id = ${ID}`;
-      const row = rows?.[0];
+      const row = firstRow(rows);
       if (!row) return json(200, {revision: 0, data: null});
       return json(200, {revision: Number(row.revision), data: JSON.parse(row.payload)});
     }
@@ -94,7 +95,7 @@ export async function handler(event) {
     // Serializable transaction prevents silent overwrites when two devices edit at once.
     const result = await sql.begin(async (tx) => {
       const rows = await tx`SELECT revision FROM app_state WHERE id = ${ID}`;
-      const existingRevision = Number(rows?.[0]?.revision || 0);
+      const existingRevision = Number(firstRow(rows)?.revision || 0);
       if (baseRevision !== existingRevision) return {conflict: true, revision: existingRevision};
       const next = existingRevision + 1;
       await tx`UPSERT INTO app_state (id, payload, revision)
