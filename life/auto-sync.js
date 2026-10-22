@@ -46,9 +46,29 @@ function backup(data,label,revision){
  try{localStorage.setItem(BACKUPS_KEY,JSON.stringify(old.slice(0,2)))}
  catch{try{localStorage.setItem(BACKUPS_KEY,JSON.stringify(old.slice(0,1)))}catch{throw Error("Не удалось сохранить защитную копию. Автоматическая замена данных остановлена.")}}
 }
+function updateIndicator(kind,message){
+ if(!enabled())return;
+ let node=document.getElementById("life-auto-health");
+ if(!node&&typeof document.querySelector==="function"){
+  const header=document.querySelector("header");
+  if(header&&typeof header.insertAdjacentElement==="function"){
+   node=document.createElement("p");
+   node.id="life-auto-health";
+   node.setAttribute("role","status");
+   node.setAttribute("aria-live","polite");
+   node.style.cssText="border:1px solid #555;background:#191919;color:#ddd;border-radius:10px;padding:8px 12px;margin:8px 0 14px;font:12px/1.4 -apple-system,BlinkMacSystemFont,sans-serif;overflow-wrap:anywhere";
+   header.insertAdjacentElement("afterend",node);
+  }
+ }
+ if(node){
+  node.textContent=message;
+  node.style.borderColor=kind==="conflict"||kind==="error"?"#999":"#555";
+ }
+}
 function notify(kind,message,revision){
  if(message===lastMessage&&kind!=="success")return;
  lastMessage=message;
+ updateIndicator(kind,message);
  window.dispatchEvent(new CustomEvent("life-sync-status",{detail:{kind,message,revision}}));
  if(kind==="conflict"||kind==="error"){
   const alert=document.getElementById("life-auto-alert");
@@ -191,7 +211,12 @@ async function push(manual=false){
 }
 function refresh(){
  clearTimeout(timer);again=false;
- if(!enabled()){notify("info","Автосинхронизация выключена. Чтобы включить, запомни ключ в панели «Сегодня».");return}
+ if(!enabled()){
+  const indicator=document.getElementById("life-auto-health");
+  if(indicator&&typeof indicator.remove==="function")indicator.remove();
+  notify("info","Автосинхронизация выключена. Чтобы включить, запомни ключ в панели «Сегодня».");return
+ }
+ notify("info","Облачная синхронизация: проверяю данные…");
  schedule(200);
 }
 function init(){
@@ -203,11 +228,11 @@ function init(){
   dismiss.onclick=()=>alert.hidden=true;
   alert.append(dismiss,label,link);document.body.append(alert);
  }
- window.addEventListener("life-data-changed",()=>schedule());
+ window.addEventListener("life-data-changed",()=>{if(enabled())notify("info","Изменения пока только на устройстве. Сохраняю в облако…");schedule()});
  window.addEventListener("storage",e=>{
   if(e.key===AUTO_KEY||e.key===SECRET_KEY||e.key===URL_KEY){refresh();return}
   if(e.key===BASE_KEY){schedule(1300);return}
-  if(Object.values(DATA_KEYS).includes(e.key))schedule(1400);
+  if(Object.values(DATA_KEYS).includes(e.key)){if(enabled())notify("info","Обнаружены локальные изменения. Сохраняю в облако…");schedule(1400)}
  });
  window.addEventListener("focus",()=>schedule(150));
  document.addEventListener("visibilitychange",()=>{if(!document.hidden)schedule(150)});
