@@ -60,7 +60,7 @@
 <div class="calculator-group"><h3>Практические расчёты</h3><a href="#labPractical">Электросеть и заготовка</a></div>
 <div class="calculator-group"><h3>Швейное дело</h3><a href="#labSewing">Раскрой и поток</a><a href="#labMoreSewing">Настил и усадка</a></div>
 <div class="calculator-group"><h3>Море и суда</h3><a href="#labMarine">Морской блокнот</a><a href="#labMoreMarine">Корпус и течение</a></div>
-<div class="calculator-group"><h3>Единицы и измерения</h3><a href="#calcUnits">Инженерный конвертер</a><a href="#labCaliper">Шкаломер</a></div>
+<div class="calculator-group"><h3>Единицы и измерения</h3><a href="#calcUnits">Инженерный конвертер</a></div>
 </nav>
 <p class="atlas-direct-link"><a href="measurement-lab.html">Измерительные приборы онлайн: 10 полноценных интерактивных тренажёров на сайте →</a> <span>Модели для обучения чтению шкал, не реальные измерения деталей.</span></p>
 <p class="atlas-direct-link"><a href="calculator-atlas.html">Атлас идей: 734 калькулятора по 34 отраслям →</a> <span>Поиск, источники и CSV. Пока это каталог идей, а не готовые 734 расчёта.</span></p>
@@ -335,17 +335,9 @@
 </section>
 
 <section class="calculator-workshop-section" id="group-measurements" aria-labelledby="group-measurements-heading">
-<header class="calculator-workshop-heading"><div><h2 id="group-measurements-heading">Единицы и измерения</h2><p>Штангенциркуль, конвертер и виртуальные приборы</p></div><span>2 встроенных</span></header>
+<header class="calculator-workshop-heading"><div><h2 id="group-measurements-heading">Единицы и измерения</h2><p>Конвертер единиц; тренажёры приборов — в измерительной мастерской</p></div><span>1 встроенный</span></header>
 <p class="measurement-shortcut"><strong>Новая измерительная мастерская:</strong> <a href="measurement-lab.html">3 штангенциркуля, микрометр, глубиномер, линейка, индикатор, угломер, мультиметр и осциллограф — работают здесь →</a></p>
 <div class="calculator-workshop-grid">
-<details class="calc-lab instrument-panel" id="labCaliper" data-lab="caliper"><summary><strong>Шкаломер — виртуальный штангенциркуль</strong><small>50 мм · нониус 0,1 / 0,05 / 0,02 мм · учебная модель</small></summary><div class="calc-lab-body">
-<p>Перемещайте ползунок или используйте клавиши стрелок. На схеме меняется положение подвижной губки и нониуса. Это тренажёр отсчёта, а не измерение реального предмета на экране.</p>
-<div class="calc-lab-grid"><div class="calc-lab-field"><label for="caliperStep">Цена деления нониуса</label><select id="caliperStep"><option value="0.1">0,1 мм · 10 делений</option><option value="0.05" selected>0,05 мм · 20 делений</option><option value="0.02">0,02 мм · 50 делений</option></select></div><div class="calc-lab-field"><label for="caliperValue">Раствор губок, мм</label><input id="caliperValue" inputmode="decimal" type="text" value="23.45"></div></div>
-<div class="caliper-viewport"><svg id="caliperSvg" viewBox="0 0 780 210" role="img" aria-label="Учебный штангенциркуль с главной шкалой и подвижным нониусом" xmlns="http://www.w3.org/2000/svg"></svg></div>
-<label for="caliperSlider">Передвинуть подвижную губку</label><input id="caliperSlider" class="caliper-slider" type="range" min="0" max="50" step="0.05" value="23.45">
-<output id="caliperOutput" class="calc-lab-output" aria-live="polite">—</output><p class="calc-lab-note">Отсчёт = целые миллиметры главной шкалы + номер совпавшего деления × цена деления. Нониус условный: при 50 делениях он показан схематично, а не в физическом масштабе прибора. Штангенциркуль без поверки не подходит для контроля реальных деталей.</p>
-</div></details>
-
 <details class="calc-lab calc-legacy" id="calcUnits">
 <summary><strong>Конвертер инженерных единиц</strong><small>Длина · масса · давление · мощность · температура</small></summary>
 <div class="calc-lab-body">

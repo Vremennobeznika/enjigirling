@@ -717,20 +717,6 @@ const resources = [
         "link": "https://www.nist.gov/"
     },
     {
-        "id": "learn-openedu",
-        "type": "Обучение и курсы",
-        "name": "Открытое образование",
-        "desc": "Российская платформа университетских онлайн-курсов и образовательных программ.",
-        "link": "https://openedu.ru/"
-    },
-    {
-        "id": "learn-lektorium",
-        "type": "Обучение и курсы",
-        "name": "Лекториум",
-        "desc": "Лекции и курсы по технологиям, естественным наукам и другим направлениям.",
-        "link": "https://www.lektorium.tv/"
-    },
-    {
         "id": "learn-mit-ocw",
         "type": "Обучение и курсы",
         "name": "MIT OpenCourseWare",
@@ -750,13 +736,6 @@ const resources = [
         "name": "TeachEngineering",
         "desc": "Учебные инженерные проекты, практические задания и методические материалы для школьного обучения.",
         "link": "https://www.teachengineering.org/"
-    },
-    {
-        "id": "learn-coursera",
-        "type": "Обучение и курсы",
-        "name": "Coursera",
-        "desc": "Платформа онлайн-курсов по инженерии, аналитике, IT и смежным областям; условия доступа различаются.",
-        "link": "https://www.coursera.org/"
     },
 
     // ===== Каталог профильной прессы и конструкторских систем; октябрь 2026 =====
@@ -1117,5 +1096,220 @@ const resources = [
         "name": "Numerilo — нониусный штангенциркуль",
         "desc": "Интерактивная шкала и тренировочные задания для чтения нониуса.",
         "link": "https://numerilo.com/vernier-caliper-simulator/"
+    },
+
+    // ===== Кураторское пополнение 22.10.2026: проверка целевых страниц и условий бесплатного обучения =====
+    {
+        "id": "mag-communications-engineering",
+        "type": "Журналы",
+        "topic": "Энергетика, строительство и транспорт",
+        "name": "Communications Engineering",
+        "desc": "Рецензируемый журнал открытого доступа о механике, материалах, робототехнике и инженерных системах.",
+        "link": "https://www.nature.com/commseng/"
+    },
+    {
+        "id": "mag-frontiers-mechanical",
+        "type": "Журналы",
+        "topic": "Машиностроение и САПР",
+        "name": "Frontiers in Mechanical Engineering",
+        "desc": "Журнал открытого доступа о механических системах, теплообмене, мехатронике и цифровом производстве.",
+        "link": "https://www.frontiersin.org/journals/mechanical-engineering"
+    },
+    {
+        "id": "forum-arduino",
+        "type": "Форумы",
+        "name": "Arduino Forum",
+        "desc": "Официальный форум по микроконтроллерам, прошивкам, аппаратуре и отладке Arduino.",
+        "link": "https://forum.arduino.cc/"
+    },
+    {
+        "id": "forum-engineering-stackexchange",
+        "type": "Форумы",
+        "name": "Engineering Stack Exchange",
+        "desc": "Профессиональные вопросы и ответы по механике, электротехнике, расчётам и проектированию.",
+        "link": "https://engineering.stackexchange.com/"
+    },
+    {
+        "id": "forum-librecad",
+        "type": "Форумы",
+        "name": "LibreCAD Forum",
+        "desc": "Вопросы пользователей свободной 2D-САПР LibreCAD, чертежи, DXF, настройка и ошибки.",
+        "link": "https://discourse.librecad.org/"
+    },
+    {
+        "id": "dev-sourceforge",
+        "type": "Разработка ПО",
+        "name": "SourceForge",
+        "desc": "Хостинг, совместная разработка, распространение и каталог программ с открытым исходным кодом.",
+        "link": "https://sourceforge.net/"
+    },
+    {
+        "id": "dev-launchpad",
+        "type": "Разработка ПО",
+        "name": "Launchpad",
+        "desc": "Платформа разработки с Git-репозиториями, задачами, ревью и пакетами для Ubuntu.",
+        "link": "https://launchpad.net/"
+    },
+    {
+        "id": "cad-librecad",
+        "type": "САПР и конструирование",
+        "name": "LibreCAD",
+        "desc": "Свободная 2D-САПР для технических чертежей, DXF и работы без подписки.",
+        "link": "https://librecad.org/"
+    },
+    {
+        "id": "cad-solvespace",
+        "type": "САПР и конструирование",
+        "name": "SolveSpace",
+        "desc": "Свободная параметрическая 2D/3D-САПР для деталей, сборочных ограничений и экспорта STEP.",
+        "link": "https://solvespace.com/index.pl"
+    },
+    {
+        "id": "tool-phet",
+        "type": "Инструменты и симуляторы",
+        "name": "PhET",
+        "desc": "Бесплатные интерактивные модели по физике, электричеству, химии и математике.",
+        "link": "https://phet.colorado.edu/"
+    },
+    {
+        "id": "tool-falstad-circuit",
+        "type": "Инструменты и симуляторы",
+        "name": "Falstad Circuit Simulator",
+        "desc": "Моделирование электрических цепей в браузере: токи, напряжения и осциллограммы.",
+        "link": "https://falstad.com/circuit/"
+    },
+    {
+        "id": "tool-octave-online",
+        "type": "Инструменты и симуляторы",
+        "name": "Octave Online",
+        "desc": "Онлайн-редактор для численных расчётов и выполнения кода GNU Octave; сложные задачи нагружают браузер.",
+        "link": "https://octave-online.net/"
+    },
+    {
+        "id": "tool-scilab",
+        "type": "Инструменты и симуляторы",
+        "name": "Scilab / Xcos",
+        "desc": "Свободные численные вычисления и моделирование динамических систем; требуется установка.",
+        "link": "https://www.scilab.org/"
+    },
+    {
+        "id": "ref-nist-webbook",
+        "type": "Научные базы и справочники",
+        "name": "NIST Chemistry WebBook",
+        "desc": "Справочные термохимические и спектральные данные с описанием источников и ограничений.",
+        "link": "https://webbook.nist.gov/chemistry/"
+    },
+    {
+        "id": "ref-nasa-ntrs",
+        "type": "Научные базы и справочники",
+        "name": "NASA Technical Reports Server",
+        "desc": "Открытые инженерные отчёты NASA: аэрокосмическая техника, испытания и исследования.",
+        "link": "https://ntrs.nasa.gov/"
+    },
+    {
+        "id": "ref-pubchem",
+        "type": "Научные базы и справочники",
+        "name": "PubChem",
+        "desc": "Публичная база химических соединений, структуры и физико-химических свойств; требует JavaScript.",
+        "link": "https://pubchem.ncbi.nlm.nih.gov/"
+    },
+    {
+        "id": "ref-allaboutcircuits",
+        "type": "Научные базы и справочники",
+        "name": "All About Circuits — учебник",
+        "desc": "Открытый учебник по цепям постоянного и переменного тока, схемотехнике и электронике.",
+        "link": "https://www.allaboutcircuits.com/textbook/product/ac-circuits/"
+    },
+    {
+        "id": "std-bipm-si",
+        "type": "Стандарты и метрология",
+        "name": "BIPM — Брошюра SI",
+        "desc": "Официальное описание Международной системы единиц SI и правил записи величин.",
+        "link": "https://www.bipm.org/en/publications/si-brochure"
+    },
+    {
+        "id": "std-nist-constants",
+        "type": "Стандарты и метрология",
+        "name": "NIST — физические константы",
+        "desc": "Рекомендованные значения фундаментальных физических констант, неопределённости и ссылки на CODATA.",
+        "link": "https://physics.nist.gov/cuu/Constants/"
+    },
+    {
+        "id": "std-euramet",
+        "type": "Стандарты и метрология",
+        "name": "EURAMET",
+        "desc": "Европейская сеть национальных метрологических институтов: руководства, проекты и результаты работ.",
+        "link": "https://www.euramet.org/"
+    },
+    {
+        "id": "learn-freecodecamp",
+        "type": "Обучение и курсы",
+        "name": "freeCodeCamp",
+        "desc": "Полностью бесплатные курсы и практические задания по программированию, Python и веб-разработке.",
+        "link": "https://www.freecodecamp.org/"
+    },
+    {
+        "id": "learn-odin",
+        "type": "Обучение и курсы",
+        "name": "The Odin Project",
+        "desc": "Бесплатная структурированная программа по веб-разработке и Git с практическими проектами.",
+        "link": "https://www.theodinproject.com/"
+    },
+    {
+        "id": "learn-openlearn",
+        "type": "Обучение и курсы",
+        "name": "OpenLearn — бесплатные курсы",
+        "desc": "Подборка бесплатных коротких университетских курсов Open University; есть STEM и цифровые навыки.",
+        "link": "https://www.open.edu/openlearn/free-courses"
+    },
+    {
+        "id": "learn-mit-open-library",
+        "type": "Обучение и курсы",
+        "name": "MIT Open Learning Library",
+        "desc": "Бесплатные интерактивные университетские материалы и задания без регистрации; без сертификата.",
+        "link": "https://openlearninglibrary.mit.edu/"
+    },
+    {
+        "id": "learn-arduino",
+        "type": "Обучение и курсы",
+        "name": "Arduino — учебные материалы",
+        "desc": "Бесплатные официальные уроки по схемам, микроконтроллерам, интерфейсам и программированию.",
+        "link": "https://docs.arduino.cc/learn"
+    },
+    {
+        "id": "learn-allaboutcircuits",
+        "type": "Обучение и курсы",
+        "name": "All About Circuits — DC Circuits",
+        "desc": "Бесплатный последовательный учебник по электрическим цепям постоянного тока.",
+        "link": "https://www.allaboutcircuits.com/TEXTBOOK/product/dc-circuits/"
+    },
+    {
+        "id": "measurement-kelibron",
+        "type": "Онлайн-измерения",
+        "topic": "Штангенциркуль и микрометр",
+        "name": "KELIBRON — 3D метрологическая лаборатория",
+        "desc": "Бесплатный браузерный тренажёр штангенциркулей и микрометров с проверкой приёмки детали; требует WebGL.",
+        "link": "https://kelibron.com/?play=scene-micrometer-reading"
+    },
+    {
+        "id": "tg-sprutai-3dcreator",
+        "type": "Чаты в Telegram",
+        "name": "Sprut — 3D-печать и моделирование",
+        "desc": "Публичный технический чат по 3D-печати и моделированию; отдельная группа экосистемы Sprut.AI.",
+        "link": "https://t.me/SprutAI_3Dcreator"
+    },
+    {
+        "id": "tg-chat3diy",
+        "type": "Чаты в Telegram",
+        "name": "3DIY — 3D-печать",
+        "desc": "Публичный чат о 3D-принтерах, материалах и печати, связанный с каналом 3DIY.",
+        "link": "https://t.me/chat3diy"
+    },
+    {
+        "id": "tg-python-generation",
+        "type": "Чаты в Telegram",
+        "name": "Поколение Python — чат",
+        "desc": "Обсуждение программирования и учебного сообщества «Поколение Python»; правила и модерация указаны в группе.",
+        "link": "https://t.me/pygen_ru_comments"
     },
 ];

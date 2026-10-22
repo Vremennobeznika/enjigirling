@@ -329,7 +329,7 @@ check('originally named workshops and six dimensioned production tools', () => {
   assert.ok(html.includes(label),'missing named tool '+label);
  }
  const sections=[...html.matchAll(/data-lab="([^"]+)"/g)].map(x=>x[1]);
- assert.deepEqual(sections,['ieee','extra','production','sewing','moreSewing','marine','moreMarine','caliper'],'wrong lazy workshop panels');
+ assert.deepEqual(sections,['ieee','extra','production','sewing','moreSewing','marine','moreMarine'],'wrong lazy workshop panels');
  for(const id of ['taktAvailable','taktDemand','oeePlan','oeeRun','oeeTotal','oeeGood','oeeIdeal','massDensity','massLength','massWidth','massHeight','thermalLength','thermalAlpha','thermalDelta','cutMode','cutDiameter','cutQuantity','flowDiameter','flowSpeed']){
   assert.ok(html.includes('id="'+id+'"'),'production input missing '+id);
  }
@@ -362,12 +362,13 @@ check('fabric and maritime calculators have groups, sources and independent form
 
 check('virtual instrument and extra textile maritime calculation catalog',()=> {
  const h=fs.readFileSync('calculator.html','utf8');
- for(const id of ['labMoreSewing','labMoreMarine','labCaliper','caliperSvg','caliperSlider','shrinkBefore','balanceOps','dispLength','currentShip'])
+ for(const id of ['labMoreSewing','labMoreMarine','shrinkBefore','balanceOps','dispLength','currentShip'])
   assert.ok(h.includes('id="'+id+'"'),'missing '+id);
  const core=fs.readFileSync('engineering-lab-core.js','utf8');
  for(const fn of ['shrinkage','layLength','lineBalance','displacement','currentVector','vernier'])
   assert.ok(core.includes('function '+fn+'('),'missing '+fn);
- assert.ok(fs.readFileSync('engineering-lab-ui.js','utf8').includes('function caliperInit()'),'missing instrument UI');
+  assert.ok(!h.includes('id="labCaliper"'),'duplicate virtual caliper prohibited');
+  assert.ok(fs.readFileSync('measurement-lab.html','utf8').includes('id="embeddedInstruments"'),'measurement lab missing calipers');
 });
 
 
@@ -404,7 +405,7 @@ check('calculator workshop layout embeds every tool in seven groups',()=>{
   ['group-practical',['labPractical']],
   ['group-sewing',['labSewing','labMoreSewing']],
   ['group-marine',['labMarine','labMoreMarine']],
-  ['group-measurements',['labCaliper','calcUnits']]
+  ['group-measurements',['calcUnits']]
  ];
  const points=g.map(([id])=>h.indexOf('id="'+id+'"'));
  assert.ok(points.every(x=>x>=0),'workshop group heading missing');
