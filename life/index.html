@@ -37,7 +37,7 @@ details{border:1px solid var(--line);background:var(--box);border-radius:17px;pa
 <form id="pantryForm"><input class="grow" id="pantryName" maxlength="120" placeholder="Продукт или расходник" aria-label="Название запаса" required><input class="short" id="pantryAmount" maxlength="40" placeholder="Количество" aria-label="Количество"><button class="btn" type="submit">Добавить</button></form>
 <ul id="pantryList" class="list"></ul><div class="empty" id="pantryEmpty">Запасов пока нет.</div></section>
 <section class="card full"><div class="head"><h2>Управление данными</h2><span class="sub">Резервная копия всех разделов</span></div>
-<div class="actions"><button class="btn soft" id="backup" type="button">Скачать копию</button><button class="btn soft" id="restore" type="button">Восстановить</button><input id="backupFile" type="file" hidden accept=".json,application/json"></div><p class="warn">В копию входят отметки календаря, покупки, задачи, домашние запасы и журнал 72 растений. Файл остаётся у тебя.</p></section>
+<div class="actions"><button class="btn soft" id="backup" type="button">Скачать копию</button><button class="btn soft" id="restore" type="button">Восстановить</button><input id="backupFile" type="file" hidden accept=".json,application/json"></div><p class="warn">В копию входят отметки календаря, покупки, задачи, домашние запасы и журнал 72 растений. Можно восстановить и обычный экспорт, и файл «Скачать защитные копии». При восстановлении автосинхронизация отключается, чтобы избежать перезаписи.</p></section>
 </div>
 <details id="cloudPanel"><summary>Облачная синхронизация · подключение Yandex Cloud</summary>
 <p class="sub">База YDB и облачная функция уже созданы. Для синхронизации нужны правильный личный ключ и рабочий доступ функции к базе. Пока проверка не пройдена, данные остаются в браузере.</p>
@@ -63,11 +63,49 @@ function validPlants(a){return Array.isArray(a)?a.filter(p=>p&&Number.isInteger(
 function validShopping(a){return Array.isArray(a)?a.filter(x=>x&&typeof x.name==="string"&&typeof x.cat==="string").slice(0,1500).map(x=>({id:String(x.id||crypto.randomUUID()),name:x.name.slice(0,120),qty:String(x.qty||"").slice(0,35),cat:x.cat,done:!!x.done})):[]}
 function validCalendar(o){if(!o||typeof o!=="object"||Array.isArray(o))return {};return Object.fromEntries(Object.entries(o).filter(([k,v])=>/^\d{4}-\d{2}-\d{2}-(?:\d+|home-[a-z0-9-]+)$/i.test(k)&&v===true).slice(0,25000))}
 function snapshot(){return {calendar:validCalendar(safe(KEYS.calendar,{})),shopping:validShopping(safe(KEYS.shopping,[])),tasks:validTasks(safe(KEYS.tasks,[])),pantry:validPantry(safe(KEYS.pantry,[])),plants:validPlants(safe(KEYS.plants,[]))}}
-function restore(raw){if(!raw||typeof raw!=="object"||Array.isArray(raw)||!raw.data||typeof raw.data!=="object"||Array.isArray(raw.data))throw Error("Неизвестный формат");
-const d=raw.data;for(const k of ["calendar","shopping","tasks","pantry"])if(!(k in d))throw Error("Нет раздела: "+k);
-const clean={calendar:validCalendar(d.calendar),shopping:validShopping(d.shopping),tasks:validTasks(d.tasks),pantry:validPantry(d.pantry)};
-if("plants" in d)clean.plants=validPlants(d.plants);
-for(const [section,key] of Object.entries(KEYS)){if(!(section in clean))continue;if(!persist(key,clean[section]))throw Error("Не удалось сохранить");}draw();}
+function restore(raw){
+// Both ordinary exports and emergency recovery exports can be restored here.
+if(!raw||typeof raw!=="object"||Array.isArray(raw))throw Error("Неизвестный формат");
+let data=raw.data,recovered=false,recoveryLabel="";
+if(!data&&Array.isArray(raw.backups)){
+ const backups=raw.backups.filter(item=>item&&item.data&&typeof item.data==="object"&&!Array.isArray(item.data));
+ if(!backups.length)throw Error("В файле нет защитных копий");
+ const selected=backups[0];
+ data=selected.data;recovered=true;recoveryLabel=String(selected.savedAt||"неизвестная дата");
+}
+if(!data||typeof data!=="object"||Array.isArray(data))throw Error("В файле нет данных");
+for(const k of ["calendar","shopping","tasks","pantry"])if(!(k in data))throw Error("Нет раздела: "+k);
+for(const k of ["shopping","tasks","pantry"])if(!Array.isArray(data[k]))throw Error("Некорректный раздел: "+k);
+if(!data.calendar||typeof data.calendar!=="object"||Array.isArray(data.calendar))throw Error("Некорректный календарь");
+if("plants" in data&&!Array.isArray(data.plants))throw Error("Некорректный журнал растений");
+const clean={calendar:validCalendar(data.calendar),shopping:validShopping(data.shopping),tasks:validTasks(data.tasks),pantry:validPantry(data.pantry)};
+if("plants" in data)clean.plants=validPlants(data.plants);
+const previous=Object.fromEntries(Object.entries(KEYS).map(([section,key])=>[section,localStorage.getItem(key)]));
+const writes=Object.entries(KEYS).filter(([section])=>section in clean).map(([section,key])=>[key,JSON.stringify(clean[section])]);
+// Preserve the current data in the same recovery format before replacing anything.
+const recoveryKey="life-sync-recovery-v1",priorBackup=localStorage.getItem(recoveryKey),allBackups=safe(recoveryKey,[]);
+const previousSnapshot=snapshot();
+const backup={savedAt:new Date().toISOString(),reason:"Перед ручным восстановлением",revision:Number(sessionStorage.getItem("life-sync-revision-v1")||0),data:previousSnapshot};
+const futureBackups=[backup,...(Array.isArray(allBackups)?allBackups:[])].slice(0,2);
+try{localStorage.setItem(recoveryKey,JSON.stringify(futureBackups))}
+catch{throw Error("Недостаточно места для защитной копии. Экспортируй данные перед восстановлением.")}
+try{for(const [key,value] of writes)localStorage.setItem(key,value)}
+catch{
+ for(const [section,key] of Object.entries(KEYS))try{if(previous[section]===null)localStorage.removeItem(key);else localStorage.setItem(key,previous[section])}catch{}
+ try{if(priorBackup===null)localStorage.removeItem(recoveryKey);else localStorage.setItem(recoveryKey,priorBackup)}catch{}
+ throw Error("Не удалось записать все разделы. Предыдущие данные сохранены по возможности; скачай резервную копию.");
+}
+// New restored snapshot has no established cloud revision; require a deliberate resync.
+localStorage.setItem("life-sync-auto-v1","off");
+localStorage.removeItem("life-sync-state-v2");
+sessionStorage.removeItem("life-sync-revision-v1");
+revision=0;
+$("autoSync").checked=false;
+window.LifeAutoSync?.refresh();
+window.dispatchEvent(new Event("life-sync-applied"));
+draw();
+return recovered?"Защитная копия восстановлена ("+recoveryLabel+"). Автосинхронизация отключена до повторной проверки.":"Резервная копия восстановлена. Автосинхронизация отключена до повторной проверки.";
+}
 function draw(){
 const now=new Date(),day=(now.getDay()+6)%7,key=dateStr(now),marks=safe(KEYS.calendar,{}),home=window.HOUSEHOLD_PLAN?.forDay(day)||[];
 const mainTotal=day<5?28:25,homeDone=home.filter(t=>marks[key+"-home-"+t.id]===true).length;
@@ -98,7 +136,7 @@ $("taskForm").onsubmit=e=>{e.preventDefault();const name=$("taskName").value.tri
 $("pantryForm").onsubmit=e=>{e.preventDefault();const name=$("pantryName").value.trim(),amount=$("pantryAmount").value.trim();if(!name)return;const a=validPantry(safe(KEYS.pantry,[]));a.push({id:crypto.randomUUID(),name,amount});persist(KEYS.pantry,a);$("pantryName").value="";$("pantryAmount").value="";draw();$("pantryName").focus()};
 $("backup").onclick=()=>{const data={version:1,exportedAt:new Date().toISOString(),data:snapshot()},blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=elem("a");a.href=url;a.download="moya-zhizn-"+dateStr(new Date())+".json";a.click();setTimeout(()=>URL.revokeObjectURL(url),3000)};
 $("restore").onclick=()=>$("backupFile").click();
-$("backupFile").onchange=async e=>{const f=e.target.files?.[0];if(!f)return;try{if(f.size>1000000)throw Error("Слишком большой файл");const raw=JSON.parse(await f.text());if(confirm("Заменить ВСЕ локальные отметки и списки данными из файла?")){restore(raw);$("cloudStatus").textContent="Резервная копия восстановлена."}}catch(err){alert("Не удалось восстановить: "+err.message)}finally{e.target.value=""}};
+$("backupFile").onchange=async e=>{const f=e.target.files?.[0];if(!f)return;try{if(f.size>1000000)throw Error("Слишком большой файл");const raw=JSON.parse(await f.text());if(confirm(Array.isArray(raw.backups)?"Восстановить последнюю защитную копию из файла? Текущие данные будут сохранены отдельно, автосинхронизация отключится.":"Заменить ВСЕ локальные отметки и списки данными из файла? Сначала будет сохранена защитная копия, автосинхронизация отключится.")){const message=restore(raw);$("cloudStatus").textContent=message;$("autoSyncStatus").textContent="Автосинхронизация выключена после восстановления."}}catch(err){alert("Не удалось восстановить: "+err.message)}finally{e.target.value=""}};
 window.addEventListener("storage",e=>{if(Object.values(KEYS).includes(e.key))draw()});window.addEventListener("focus",draw);document.addEventListener("visibilitychange",()=>{if(!document.hidden)draw()});
 const LIFE_ENDPOINT="https://functions.yandexcloud.net/d4ed26vrlmb1uk22m3b7";
 const LIFE_TOKEN_SHA256="d218f1b19b8297372b649695b50dd046dc0947e3372fd7a5fc420c18734c58f4";
