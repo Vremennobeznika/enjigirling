@@ -92,7 +92,7 @@ test('production workshop remains usable at narrow viewport',async({page})=>{
 test('sewing studio calculates marker, cloth, thread and SMV efficiency',async({page})=>{
  await page.goto('/calculator.html');
  const groups=page.locator('.calculator-group');
- await expect(groups).toHaveCount(6);
+ await expect(groups).toHaveCount(7);
  await page.locator('#labSewing > summary').click();
  await expect(page.locator('#markerOutput')).toContainText('82,666');
  await expect(page.locator('#fabricOutput')).toContainText('159,65 м');
