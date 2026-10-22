@@ -72,7 +72,7 @@
 - **checks:** Несплавление, непровар, поры, трещины, подрезы и деформации; допустимость устанавливается требованиями к конкретному соединению.
 - **materials:** ["09g2s","aisi-304","al-6061"]
 - **profession:** mechanical-engineer
-- **sources:** [{"title":"TWI — общий обзор сварки плавлением","url":"https://www.twi-global.com/technical-knowledge/faqs/what-is-fusion-welding"},{"title":"TWI — классификация способов сварки (обзор с прежними редакциями стандартов)","url":"https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly"}]
+- **sources:** [{"title":"TWI — общий обзор сварки плавлением","url":"https://www.twi-global.com/technical-knowledge/faqs/what-is-fusion-welding"},{"title":"TWI — классификация способов сварки (обзор с прежними редакциями стандартов)","url":"https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly"},{"title":"ISO 4063:2023 — международная номенклатура сварочных процессов (не режимы)","url":"https://www.iso.org/standard/75108.html"}]
 - **evidence:** {"verifiedClaim":"Дуговая сварка использует электрическую дугу для формирования сварного соединения.","reviewScope":"Проверен только приведённый частный тезис, а не вся технологическая карточка.","checkedAt":"2026-10-22"}
 - **industry:** metals
 
@@ -111,7 +111,7 @@
 - **checks:** Точность геометрии, межслойные дефекты, качество поверхности, а для некоторых технологий — внутренние поры и анизотропия свойств.
 - **materials:** ["pa6","gfrp","pe-hd"]
 - **profession:** mechanical-engineer
-- **sources:** [{"title":"NIST — обзор аддитивного производства","url":"https://www.nist.gov/additive-manufacturing/what-additive-manufacturing"},{"title":"NIST — аддитивное производство методом экструзии материала","url":"https://www.nist.gov/additive-manufacturing/research-areas/technologies/material-extrusion"},{"title":"ASTM F3489-23 — свойства полимерных изделий при экструзионной 3D-печати","url":"https://store.astm.org/f3489-23.html"}]
+- **sources:** [{"title":"NIST — обзор аддитивного производства","url":"https://www.nist.gov/additive-manufacturing/what-additive-manufacturing"},{"title":"NIST — аддитивное производство методом экструзии материала","url":"https://www.nist.gov/additive-manufacturing/research-areas/technologies/material-extrusion"},{"title":"ASTM F3489-23 — свойства полимерных изделий при экструзионной 3D-печати","url":"https://store.astm.org/f3489-23.html"},{"title":"ISO/ASTM 52900:2021 — определение и терминология аддитивного производства","url":"https://www.iso.org/standard/74514.html"}]
 - **evidence:** {"verifiedClaim":"Аддитивное производство создаёт изделия по цифровой модели последовательным добавлением слоёв материала.","reviewScope":"Проверен принцип, не применимость к HDPE или GFRP.","checkedAt":"2026-10-22"}
 - **industry:** general
 
@@ -137,7 +137,7 @@
 - **checks:** Поры из-за нарушения газовой защиты, несплавление, подрезы, брызги и деформации. Брызги сами по себе не равнозначны недопустимому дефекту.
 - **materials:** ["09g2s","al-6061"]
 - **profession:** mechanical-engineer
-- **sources:** [{"title":"TWI — различия MIG/MAG и типы защитных газов","url":"https://www.twi-global.com/technical-knowledge/faqs/faq-what-is-the-difference-between-mig-and-mag"}]
+- **sources:** [{"title":"TWI — различия MIG/MAG и типы защитных газов","url":"https://www.twi-global.com/technical-knowledge/faqs/faq-what-is-the-difference-between-mig-and-mag"},{"title":"ISO 4063:2023 — классификация сварочных процессов, не режимы MIG/MAG","url":"https://www.iso.org/standard/75108.html"}]
 - **evidence:** {"verifiedClaim":"MIG применяет инертные защитные газы, а MAG — активные газовые смеси.","reviewScope":"Проверен только приведённый частный тезис, а не вся технологическая карточка.","checkedAt":"2026-10-22"}
 - **industry:** metals
 
@@ -150,7 +150,7 @@
 - **checks:** Поры, несплавление, трещины, геометрия шва, окисление из-за недостаточной защиты; оценка по требованиям к соединению.
 - **materials:** ["aisi-304","al-6061"]
 - **profession:** mechanical-engineer
-- **sources:** [{"title":"TWI — особенности TIG-сварки и защитных газов","url":"https://www.twi-global.com/technical-knowledge/job-knowledge/tungsten-inert-gas-tig-or-gta-welding-006"}]
+- **sources:** [{"title":"TWI — особенности TIG-сварки и защитных газов","url":"https://www.twi-global.com/technical-knowledge/job-knowledge/tungsten-inert-gas-tig-or-gta-welding-006"},{"title":"ISO 4063:2023 — классификация сварочных процессов, не режимы TIG","url":"https://www.iso.org/standard/75108.html"}]
 - **evidence:** {"verifiedClaim":"TIG использует неплавящийся вольфрамовый электрод и инертную газовую защиту.","reviewScope":"Проверен только приведённый частный тезис, а не вся технологическая карточка.","checkedAt":"2026-10-22"}
 - **industry:** metals
 
@@ -189,7 +189,7 @@
 - **checks:** Открытость дефекта на поверхность, загрязнения и шероховатость, выдержка, совместимость материалов, условия освещения и критерии оценки.
 - **materials:** ["aisi-304","al-6061"]
 - **profession:** materials-engineer
-- **sources:** [{"title":"ASNT — капиллярный контроль","url":"https://www.asnt.org/what-is-nondestructive-testing/methods"}]
+- **sources:** [{"title":"ASNT — капиллярный контроль","url":"https://www.asnt.org/what-is-nondestructive-testing/methods"},{"title":"ASNT — Liquid Penetrant Testing: процесс, применимость, ограничения","url":"https://www.asnt.org/standards-publications/blog/ndt-method-overview-what-is-liquid-penetrant-testing"}]
 - **evidence:** {"verifiedClaim":"Капиллярный контроль выявляет несплошности, открытые на поверхность непористых материалов.","reviewScope":"Проверены назначение и поверхностный характер метода.","checkedAt":"2026-10-22"}
 - **industry:** general
 
@@ -514,7 +514,7 @@
 - **checks:** Перепад давления, тонкость фильтрации, проскок частиц, загрязнение и ресурс фильтра.
 - **materials:** []
 - **profession:** chemical-engineer
-- **sources:** [{"title":"EPA WaterSense — фильтрация в системах очистки воды (частный пример)","url":"https://www.epa.gov/system/files/documents/2024-03/ws-commercial-bmp-watersenseatwork_section7.1_waterpurification.pdf"}]
+- **sources:** [{"title":"EPA WaterSense — фильтрация в системах очистки воды (частный пример)","url":"https://www.epa.gov/system/files/documents/2024-03/ws-commercial-bmp-watersenseatwork_section7.1_waterpurification.pdf"},{"title":"US EPA — водоподготовка: фильтрация, ионный обмен и мембраны (частный пример)","url":"https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"}]
 - **evidence:** {"verifiedClaim":"Фильтрация может удалять взвешенные твёрдые частицы из жидкости.","reviewScope":"Проверен только приведённый частный тезис, а не вся технологическая карточка.","checkedAt":"2026-10-22"}
 - **industry:** chemicals
 
