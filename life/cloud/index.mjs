@@ -55,11 +55,13 @@ function normalize(data) {
   if (!data || typeof data !== 'object' || Array.isArray(data)) throw Error('bad_data');
   if (!data.calendar || typeof data.calendar !== 'object' || Array.isArray(data.calendar)) throw Error('bad_calendar');
   for (const name of ['shopping', 'tasks', 'pantry']) if (!Array.isArray(data[name])) throw Error('bad_' + name);
+  if ('plants' in data && !Array.isArray(data.plants)) throw Error('bad_plants');
   return {
     calendar: data.calendar,
     shopping: data.shopping,
     tasks: data.tasks,
-    pantry: data.pantry
+    pantry: data.pantry,
+    plants: Array.isArray(data.plants) ? data.plants : []
   };
 }
 export async function handler(event) {
