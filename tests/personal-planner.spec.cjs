@@ -90,7 +90,7 @@ test('One shopping list: old categories and reminders are shared with flexible p
  const archive=JSON.parse(fs.readFileSync(await (await backup).path(),'utf8'));
  expect(archive.data.shopping).toHaveLength(2);
  expect(archive.data.shopping.find(i=>i.cat==='bakery').remind).toBe(true);
- expect(archive.data.calendar.__planner_v3.shopping).toHaveLength(2);
+ expect(archive.data.calendar.__planner_v3.shopping).toHaveLength(0); // only original shopping store is authoritative
 });
 test('Personal planner saved local data does not silently overwrite a newer shopping list',async({page})=>{
  await page.goto('/life/planner/');
