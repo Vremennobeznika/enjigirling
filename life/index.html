@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0d0d0d">
-<title>Сегодня — личная панель</title><link rel="manifest" href="./manifest.webmanifest"><link rel="icon" type="image/svg+xml" href="./icon.svg">
+<title>Сегодня — личная панель</title><link rel="manifest" href="./manifest.webmanifest"><link rel="icon" type="image/svg+xml" href="./icon.svg"><link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Сегодня"><meta name="apple-mobile-web-app-status-bar-style" content="black">
 <style>
 :root{color-scheme:dark;--bg:#0d0d0d;--box:#191919;--line:#414141;--ink:#f1f1f1;--muted:#aaa}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
@@ -53,8 +53,8 @@ details>summary:focus-visible{outline:2px solid #eee;border-radius:13px}
  #taskForm,#pantryForm{grid-template-columns:minmax(0,1fr)}
  #taskForm>*,#pantryForm>*{grid-column:1/-1}
 }
-</style></head><body><main>
-<header><div><h1>Сегодня</h1><p id="date"></p></div><span class="tag" id="mode">Локальный режим</span></header>
+#iphoneInstall{border:1px solid var(--line);border-radius:13px;background:var(--box);padding:10px 14px;margin:0 0 14px}#iphoneInstall>summary{cursor:pointer;min-height:40px;padding:7px 0;font-weight:600}#iphoneInstall p{font-size:14px;line-height:1.5;margin:7px 0;color:#ddd}#iphoneInstall[hidden]{display:none}@supports(padding:env(safe-area-inset-top)){main{padding-top:max(20px,env(safe-area-inset-top));padding-bottom:calc(90px + env(safe-area-inset-bottom));padding-left:max(12px,env(safe-area-inset-left));padding-right:max(12px,env(safe-area-inset-right))}}</style></head><body><main>
+<header><div><h1>Сегодня</h1><p id="date"></p></div><span class="tag" id="mode">Локальный режим</span></header><details id="iphoneInstall"><summary>Установить на iPhone — инструкция</summary><p>Открой эту страницу в Safari → «Поделиться» → «На экран Домой» → включи «Открыть как веб-приложение» → «Добавить». Затем запускай «Сегодня» с иконки. Календарь, покупки и растения будут открываться внутри приложения.</p><p>После первоначальной загрузки страницы доступны без сети. Записи хранятся на устройстве; синхронизация с Яндексом работает отдельно, когда облако доступно.</p></details>
 <div class="grid">
 <section class="card"><div class="head"><h2>Расписание</h2><a class="link" href="../calendar/">Открыть →</a></div><div class="number" id="calendarCount">—</div><p>Выполнено за сегодня</p><div class="bar"><div id="calendarBar"></div></div></section>
 <section class="card"><div class="head"><h2>Покупки</h2><a class="link" href="../shopping/">Открыть →</a></div><div class="number" id="shoppingCount">—</div><p>Осталось купить</p><div class="bar"><div id="shoppingBar"></div></div></section>
@@ -268,6 +268,6 @@ if(remoteRev&&remoteRev!==revision){status("В облаке другая вер�
 if(!confirm("Загрузить текущие данные в личное облако?")){status("Отменено.");return}
 const result=await call("PUT",{revision:remoteRev,data:snapshot()});revision=Number(result.revision)||0;sessionStorage.setItem("life-sync-revision-v1",String(revision));status("Данные сохранены в облаке. Версия "+revision+".")}catch(err){status("Не удалось отправить: "+err.message)}};
 updateMode();draw();
-if('serviceWorker' in navigator && location.protocol==='https:') navigator.serviceWorker.register('./sw.js').catch(()=>{});
+if('serviceWorker' in navigator && location.protocol==='https:')navigator.serviceWorker.getRegistrations().then(async regs=>{await Promise.all(regs.filter(r=>new URL(r.scope).pathname.endsWith('/life/')).map(r=>r.unregister()));return navigator.serviceWorker.register('../life-pwa-sw.js',{scope:'../'});}).catch(()=>{});if(window.matchMedia('(display-mode: standalone)').matches||navigator.standalone===true)document.getElementById('iphoneInstall').hidden=true;
 })();
 </script><script src="./auto-sync.js"></script></body></html>
