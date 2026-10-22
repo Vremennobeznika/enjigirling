@@ -44,8 +44,8 @@ jobs:
           if-no-files-found: ignore
       - name: Install browser test dependencies
         run: npm install --no-audit --no-fund
-      - name: Install Chromium for browser tests
-        run: npx playwright install chromium
+      - name: Install Chromium and WebKit for browser tests
+        run: npx playwright install --with-deps chromium webkit
       - name: Validate desktop and mobile layouts
         run: npx playwright test
       - name: Archive browser failures
