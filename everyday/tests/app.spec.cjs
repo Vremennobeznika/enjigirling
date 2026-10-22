@@ -211,3 +211,20 @@ test('Offline static shell opens after installation without sending user data of
  await expect(page.locator('#page-planner')).toBeVisible();
  expect(outbound).toEqual([]);
 });
+
+test('Built-in section titles and visibility are controlled only in central Settings',async({page})=>{
+ await page.goto(APP);await openSettings(page);
+ const finance=page.locator('#settingsSections .settings-row').filter({hasText:'Финансы'});
+ page.once('dialog',d=>d.accept('Семейный бюджет'));
+ await finance.getByRole('button',{name:'Название'}).click();
+ await expect(page.locator('#mainNav [data-view="money"]')).toHaveText('Семейный бюджет');
+ await tab(page,'money');
+ await expect(page.locator('#page-money h1')).toHaveText('Семейный бюджет');
+ await openSettings(page);
+ await page.getByRole('checkbox',{name:'Показывать раздел Семейный бюджет'}).uncheck();
+ await expect(page.locator('#mainNav [data-view="money"]')).toHaveCount(0);
+ await page.reload();
+ await expect(page.locator('#mainNav [data-view="money"]')).toHaveCount(0);
+ await page.getByRole('checkbox',{name:'Показывать раздел Семейный бюджет'}).check();
+ await expect(page.locator('#mainNav [data-view="money"]')).toHaveText('Семейный бюджет');
+});
