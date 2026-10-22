@@ -125,5 +125,5 @@ const numericGate=JSON.parse(fs.readFileSync('audit/map-visible-numeric-allowlis
 const numericFields=['budgetPlaces','paidPlaces','tuitionAnnualRub','tuitionSemesterRub','duration'];
 const actualNumeric=entries.flatMap(({item})=>(item.verifiedPrograms||[]).flatMap(program=>numericFields.filter(field=>program[field]!==undefined).map(field=>({organization:item.name,code:program.code,field,value:program[field],sourceUrl:program.sourceUrl}))));
 const stableClaim=row=>JSON.stringify([row.organization,row.code,row.field,row.value,row.sourceUrl]);
-assert.deepEqual(actualNumeric.map(stableClaim).sort(),numericGate.records.map(stableClaim).sort(),'An uncited or unreviewed numeric education claim was added, removed, or changed; regenerate and re-audit the numeric gate before release');
+assert.deepEqual(Array.from(actualNumeric,stableClaim).sort(),Array.from(numericGate.records,stableClaim).sort(),'An uncited or unreviewed numeric education claim was added, removed, or changed; regenerate and re-audit the numeric gate before release');
 console.log('PASS: '+actualNumeric.length+' numerically scoped education claims match the reviewed allowlist');
