@@ -34,10 +34,10 @@
 Название, применение, операция или дефект Введите не менее двух символов.
 Каталоги: [процессы](https://vremennobeznika.github.io/enjigirling/processes.html) · [материалы](https://vremennobeznika.github.io/enjigirling/materials.html)
 Поиск по процессам
-Отрасль Все отрасли Металлы и машиностроение Полимеры Пищевая промышленность Текстиль и швейное производство Деревообработка Электроника Химическое производство Межотраслевые процессы
+Отрасль Все отрасли Металлы и машиностроение Полимеры Пищевая промышленность Текстиль и швейное производство Деревообработка Электроника Химическое производство Межотраслевые процессы Композиты Строительство и дороги Энергетика и теплообмен Водоподготовка и очистка Керамика, цемент и стекло Фармацевтическое производство Полиграфия Горное производство
 Тип операции Все процессы Формообразование и резание Соединение и сборка Обработка и свойства Контроль
 Сортировка По каталогу По названию А — Я По названию Я — А
-Фильтры можно сочетать. Отрасль обозначает основное применение: некоторые процессы используются сразу в нескольких отраслях.
+Фильтры можно сочетать. Отрасль указывает основное применение, а не исключает применение в других отраслях. Источники и степень проверки указаны в карточках.
 Этапы обобщены; конкретная технология, режимы, безопасность и методы контроля устанавливаются документацией для изделия и производства.
 ### Как разбирать технологическую цепочку
 Для каждого процесса отдельно определите исходный материал, результат операции, оборудование, точки контроля и документ, в котором утверждены режимы.
@@ -48,7 +48,7 @@
 Пример цепочки из каталога: [дуговая сварка](https://vremennobeznika.github.io/enjigirling/processes.html#welding) → [сталь 09Г2С](https://vremennobeznika.github.io/enjigirling/materials.html#09g2s) → [инженер-механик](https://vremennobeznika.github.io/enjigirling/index.html#profession=mechanical-engineer). Описание здесь обзорное, не инструкция по выполнению опасных работ.
 [Скачать CSV-карту анализа производственного дефекта](https://vremennobeznika.github.io/enjigirling/templates/production-defect-review.csv) · [Инструкция по заполнению](https://vremennobeznika.github.io/enjigirling/templates/README.md)
 
-## Полные записи справочника (36 записей/групп)
+## Полные записи справочника (208 записей/групп)
 
 ### Литьё
 - **id:** casting
@@ -517,6 +517,2470 @@
 - **sources:** [{"title":"EPA WaterSense — фильтрация в системах очистки воды (частный пример)","url":"https://www.epa.gov/system/files/documents/2024-03/ws-commercial-bmp-watersenseatwork_section7.1_waterpurification.pdf"}]
 - **evidence:** {"verifiedClaim":"Фильтрация может удалять взвешенные твёрдые частицы из жидкости.","reviewScope":"Проверен только приведённый частный тезис, а не вся технологическая карточка.","checkedAt":"2026-10-22"}
 - **industry:** chemicals
+
+### Точение
+- **id:** turning
+- **name:** Точение
+- **industry:** metals
+- **category:** forming
+- **parentId:** cutting
+- **description:** Получение поверхностей вращающейся заготовки резцом.
+- **steps:** Базирование → точение → измерение
+- **checks:** Биение, размеры, шероховатость
+- **materials:** ["steel-45","09g2s"]
+- **profession:** mechanical-engineer
+- **sources:** [{"title":"NIST — технологии производства: обзор — общий контекст; не техкарта","url":"https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Фрезерование
+- **id:** milling
+- **name:** Фрезерование
+- **industry:** metals
+- **category:** forming
+- **parentId:** cutting
+- **description:** Получение плоскостей и профилей вращающейся многолезвийной фрезой.
+- **steps:** Базирование → проходы фрезой → измерение
+- **checks:** Плоскостность, геометрия, заусенцы
+- **materials:** ["steel-45","09g2s"]
+- **profession:** mechanical-engineer
+- **sources:** [{"title":"NIST — технологии производства: обзор — общий контекст; не техкарта","url":"https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Сверление
+- **id:** drilling
+- **name:** Сверление
+- **industry:** metals
+- **category:** forming
+- **parentId:** cutting
+- **description:** Получение отверстий сверлом с осевой подачей.
+- **steps:** Закрепление → сверление → контроль отверстия
+- **checks:** Диаметр, увод, положение оси, заусенцы
+- **materials:** ["steel-45","09g2s"]
+- **profession:** mechanical-engineer
+- **sources:** [{"title":"NIST — технологии производства: обзор — общий контекст; не техкарта","url":"https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Растачивание
+- **id:** boring
+- **name:** Растачивание
+- **industry:** metals
+- **category:** forming
+- **parentId:** cutting
+- **description:** Обработка предварительно полученного отверстия расточным инструментом.
+- **steps:** Базирование → растачивание → контроль
+- **checks:** Соосность, цилиндричность, размер
+- **materials:** ["steel-45","09g2s"]
+- **profession:** mechanical-engineer
+- **sources:** [{"title":"NIST — технологии производства: обзор — общий контекст; не техкарта","url":"https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Развёртывание
+- **id:** reaming
+- **name:** Развёртывание
+- **industry:** metals
+- **category:** forming
+- **parentId:** cutting
+- **description:** Чистовая обработка подготовленного отверстия развёрткой.
+- **steps:** Проверка припуска → развёртывание → измерение
+- **checks:** Диаметр, форма, шероховатость
+- **materials:** ["steel-45","09g2s"]
+- **profession:** mechanical-engineer
+- **sources:** [{"title":"NIST — технологии производства: обзор — общий контекст; не техкарта","url":"https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Протягивание
+- **id:** broaching
+- **name:** Протягивание
+- **industry:** metals
+- **category:** forming
+- **parentId:** cutting
+- **description:** Формирование профиля последовательными режущими зубьями протяжки.
+- **steps:** Установка заготовки → проход протяжки → контроль
+- **checks:** Профиль, следы зубьев, заусенцы
+- **materials:** ["steel-45","09g2s"]
+- **profession:** mechanical-engineer
+- **sources:** [{"title":"NIST — технологии производства: обзор — общий контекст; не техкарта","url":"https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Зубонарезание
+- **id:** gear-cutting
+- **name:** Зубонарезание
+- **industry:** metals
+- **category:** forming
+- **parentId:** cutting
+- **description:** Обработка зубчатых венцов специальным инструментом.
+- **steps:** Подготовка заготовки → нарезание → измерение зубьев
+- **checks:** Шаг, профиль и биение зубьев
+- **materials:** ["steel-45","09g2s"]
+- **profession:** mechanical-engineer
+- **sources:** [{"title":"NIST — технологии производства: обзор — общий контекст; не техкарта","url":"https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Электроэрозионная обработка
+- **id:** electrodischarge-machining
+- **name:** Электроэрозионная обработка
+- **industry:** metals
+- **category:** forming
+- **description:** Эрозионное удаление электропроводящего материала электрическими разрядами.
+- **steps:** Позиционирование электрода → обработка → контроль
+- **checks:** Геометрия, износ электрода, состояние слоя
+- **materials:** ["steel-45","09g2s"]
+- **profession:** mechanical-engineer
+- **sources:** [{"title":"NIST — технологии производства: обзор — общий контекст; не техкарта","url":"https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Лазерная резка
+- **id:** laser-cutting
+- **name:** Лазерная резка
+- **industry:** metals
+- **category:** forming
+- **description:** Разделение заготовки сфокусированным лазерным излучением.
+- **steps:** Раскрой → резка → отделение деталей → осмотр
+- **checks:** Кромка, геометрия, термическое влияние
+- **materials:** ["steel-45","09g2s"]
+- **profession:** mechanical-engineer
+- **sources:** [{"title":"NIST — технологии производства: обзор — общий контекст; не техкарта","url":"https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Гидроабразивная резка
+- **id:** waterjet-cutting
+- **name:** Гидроабразивная резка
+- **industry:** metals
+- **category:** forming
+- **description:** Разделение материала струёй воды с абразивом.
+- **steps:** Закрепление → резка → очистка → измерение
+- **checks:** Конусность реза, кромка, размер
+- **materials:** ["steel-45","09g2s"]
+- **profession:** mechanical-engineer
+- **sources:** [{"title":"NIST — технологии производства: обзор — общий контекст; не техкарта","url":"https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Отжиг
+- **id:** annealing
+- **name:** Отжиг
+- **industry:** metals
+- **category:** treatment
+- **parentId:** heat
+- **description:** Термический цикл нагрева и охлаждения для изменения структуры.
+- **steps:** Выбор цикла по материалу → обработка → испытания
+- **checks:** Структура, твёрдость, деформации
+- **materials:** ["steel-45","09g2s"]
+- **profession:** mechanical-engineer
+- **sources:** [{"title":"NIST — технологии производства: обзор — общий контекст; не техкарта","url":"https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Закалка сталей
+- **id:** quenching
+- **name:** Закалка сталей
+- **industry:** metals
+- **category:** treatment
+- **parentId:** heat
+- **description:** Термическая обработка с ускоренным охлаждением для изменения структуры стали.
+- **steps:** Проверка марки → нагрев → охлаждение → контроль
+- **checks:** Трещины, коробление и твёрдость
+- **materials:** ["steel-45","09g2s"]
+- **profession:** mechanical-engineer
+- **sources:** [{"title":"NIST — технологии производства: обзор — общий контекст; не техкарта","url":"https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Отпуск стали
+- **id:** tempering
+- **name:** Отпуск стали
+- **industry:** metals
+- **category:** treatment
+- **parentId:** heat
+- **description:** Тепловая обработка закалённой стали для изменения сочетания свойств.
+- **steps:** Проверка состояния → отпуск → измерения
+- **checks:** Твёрдость, деформации, требования к свойствам
+- **materials:** ["steel-45","09g2s"]
+- **profession:** mechanical-engineer
+- **sources:** [{"title":"NIST — технологии производства: обзор — общий контекст; не техкарта","url":"https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Индукционная поверхностная закалка
+- **id:** induction-hardening
+- **name:** Индукционная поверхностная закалка
+- **industry:** metals
+- **category:** treatment
+- **parentId:** heat
+- **description:** Локальная закалка с нагревом электромагнитной индукцией.
+- **steps:** Позиционирование → нагрев → охлаждение → проверка слоя
+- **checks:** Глубина слоя, трещины, твёрдость
+- **materials:** ["steel-45","09g2s"]
+- **profession:** mechanical-engineer
+- **sources:** [{"title":"NIST — технологии производства: обзор — общий контекст; не техкарта","url":"https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Ручная дуговая сварка покрытым электродом
+- **id:** manual-metal-arc
+- **name:** Ручная дуговая сварка покрытым электродом
+- **industry:** metals
+- **category:** joining
+- **parentId:** welding
+- **description:** Дуговое соединение с расходуемым покрытым электродом.
+- **steps:** Подготовка → сборка → сварка → удаление шлака → контроль
+- **checks:** Несплавление, трещины, включения
+- **materials:** ["09g2s","al-6061"]
+- **profession:** mechanical-engineer
+- **sources:** [{"title":"TWI — классификация сварочных технологий — общий контекст; не техкарта","url":"https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Сварка под флюсом
+- **id:** submerged-arc
+- **name:** Сварка под флюсом
+- **industry:** metals
+- **category:** joining
+- **parentId:** welding
+- **description:** Дуговая сварка с защитой дуги гранулированным флюсом.
+- **steps:** Подготовка стыка → сварка под флюсом → очистка → контроль
+- **checks:** Включения, поры, геометрия
+- **materials:** ["09g2s","al-6061"]
+- **profession:** mechanical-engineer
+- **sources:** [{"title":"TWI — классификация сварочных технологий — общий контекст; не техкарта","url":"https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Контактная точечная сварка
+- **id:** resistance-spot
+- **name:** Контактная точечная сварка
+- **industry:** metals
+- **category:** joining
+- **description:** Локальное соединение нахлёсточных листов нагревом током и усилием.
+- **steps:** Совмещение листов → контактный цикл → испытания
+- **checks:** Размер точки, выплеск, прочность
+- **materials:** ["09g2s","al-6061"]
+- **profession:** mechanical-engineer
+- **sources:** [{"title":"TWI — классификация сварочных технологий — общий контекст; не техкарта","url":"https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Лазерная сварка
+- **id:** laser-welding
+- **name:** Лазерная сварка
+- **industry:** metals
+- **category:** joining
+- **description:** Формирование шва концентрированным лазерным источником энергии.
+- **steps:** Подготовка → позиционирование → сварка → контроль
+- **checks:** Проплавление, поры, трещины
+- **materials:** ["09g2s","al-6061"]
+- **profession:** mechanical-engineer
+- **sources:** [{"title":"TWI — классификация сварочных технологий — общий контекст; не техкарта","url":"https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Сварка трением с перемешиванием
+- **id:** friction-stir-welding
+- **name:** Сварка трением с перемешиванием
+- **industry:** metals
+- **category:** joining
+- **description:** Твердофазное соединение вращающимся инструментом вдоль линии стыка.
+- **steps:** Сборка → проход инструмента → контроль соединения
+- **checks:** Несплошности, проплавление не применимо, геометрия
+- **materials:** ["09g2s","al-6061"]
+- **profession:** mechanical-engineer
+- **sources:** [{"title":"TWI — классификация сварочных технологий — общий контекст; не техкарта","url":"https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Высокотемпературная пайка
+- **id:** brazing
+- **name:** Высокотемпературная пайка
+- **industry:** metals
+- **category:** joining
+- **description:** Соединение основного металла расплавленным припоем без расплавления основы.
+- **steps:** Очистка → сборка → нагрев → охлаждение → контроль
+- **checks:** Смачивание, поры, зазор
+- **materials:** ["copper-m1","aisi-304"]
+- **profession:** mechanical-engineer
+- **sources:** [{"title":"TWI — сварка и пайка: различия — общий контекст; не техкарта","url":"https://www.twi-global.com/technical-knowledge/faqs/welding-brazing-and-soldering"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Низкотемпературная пайка
+- **id:** soft-soldering
+- **name:** Низкотемпературная пайка
+- **industry:** metals
+- **category:** joining
+- **description:** Соединение деталей припойным металлом с более низкой температурой плавления.
+- **steps:** Подготовка → пайка → очистка → проверка
+- **checks:** Смачивание, загрязнение, прочность
+- **materials:** ["copper-m1","aisi-304"]
+- **profession:** mechanical-engineer
+- **sources:** [{"title":"TWI — сварка и пайка: различия — общий контекст; не техкарта","url":"https://www.twi-global.com/technical-knowledge/faqs/welding-brazing-and-soldering"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Сплавление порошкового слоя
+- **id:** powder-bed-fusion
+- **name:** Сплавление порошкового слоя
+- **industry:** general
+- **category:** forming
+- **parentId:** additive
+- **description:** Послойное сплавление порошка направленным источником энергии.
+- **steps:** Подготовка порошка → построение → извлечение → контроль
+- **checks:** Пористость, деформации, размер
+- **materials:** []
+- **profession:** materials-engineer
+- **sources:** [{"title":"NIST — виды аддитивного производства — общий контекст; не техкарта","url":"https://www.nist.gov/additive-manufacturing/research-areas/technologies"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Направленное энергетическое осаждение
+- **id:** directed-energy-deposition
+- **name:** Направленное энергетическое осаждение
+- **industry:** general
+- **category:** forming
+- **parentId:** additive
+- **description:** Подача материала в область локального нагрева и формирования объёма.
+- **steps:** Подготовка траектории → осаждение → охлаждение → контроль
+- **checks:** Несплавление, геометрия, трещины
+- **materials:** []
+- **profession:** materials-engineer
+- **sources:** [{"title":"NIST — виды аддитивного производства — общий контекст; не техкарта","url":"https://www.nist.gov/additive-manufacturing/research-areas/technologies"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Струйное нанесение связующего
+- **id:** binder-jetting
+- **name:** Струйное нанесение связующего
+- **industry:** general
+- **category:** forming
+- **parentId:** additive
+- **description:** Выборочное связывание порошковых слоёв жидким связующим.
+- **steps:** Подача порошка → нанесение связующего → постобработка → контроль
+- **checks:** Прочность сырца, усадка, плотность
+- **materials:** []
+- **profession:** materials-engineer
+- **sources:** [{"title":"NIST — виды аддитивного производства — общий контекст; не техкарта","url":"https://www.nist.gov/additive-manufacturing/research-areas/technologies"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Струйное нанесение материала
+- **id:** material-jetting
+- **name:** Струйное нанесение материала
+- **industry:** general
+- **category:** forming
+- **parentId:** additive
+- **description:** Послойное построение изделия дозированными каплями материала.
+- **steps:** Дозирование капель → построение → отверждение → измерение
+- **checks:** Слои, геометрия, качество поверхности
+- **materials:** []
+- **profession:** materials-engineer
+- **sources:** [{"title":"NIST — виды аддитивного производства — общий контекст; не техкарта","url":"https://www.nist.gov/additive-manufacturing/research-areas/technologies"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Ванночная фотополимеризация
+- **id:** vat-photopolymerization
+- **name:** Ванночная фотополимеризация
+- **industry:** general
+- **category:** forming
+- **parentId:** additive
+- **description:** Послойное световое отверждение фотополимерной смолы.
+- **steps:** Подготовка модели → экспонирование → очистка и доотверждение → контроль
+- **checks:** Размеры, остаточная смола, полнота отверждения
+- **materials:** []
+- **profession:** materials-engineer
+- **sources:** [{"title":"NIST — виды аддитивного производства — общий контекст; не техкарта","url":"https://www.nist.gov/additive-manufacturing/research-areas/technologies"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Аддитивная экструзия материала
+- **id:** additive-extrusion
+- **name:** Аддитивная экструзия материала
+- **industry:** general
+- **category:** forming
+- **parentId:** additive
+- **description:** Послойная укладка экструдируемого полимерного материала.
+- **steps:** Подготовка нити → экструзия слоёв → охлаждение → контроль
+- **checks:** Межслойная связь, геометрия, пористость
+- **materials:** []
+- **profession:** materials-engineer
+- **sources:** [{"title":"NIST — виды аддитивного производства — общий контекст; не техкарта","url":"https://www.nist.gov/additive-manufacturing/research-areas/technologies"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Выдувное формование
+- **id:** blow-molding
+- **name:** Выдувное формование
+- **industry:** polymers
+- **category:** forming
+- **description:** Получение полых термопластичных изделий раздувом заготовки в форме.
+- **steps:** Формование заготовки → раздув → охлаждение → извлечение
+- **checks:** Толщина, герметичность, усадка
+- **materials:** ["pe-hd","pa6"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"EPA — отраслевой обзор формования пластмасс — общий контекст; не техкарта","url":"https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Ротационное формование
+- **id:** rotomolding
+- **name:** Ротационное формование
+- **industry:** polymers
+- **category:** forming
+- **description:** Получение полого изделия распределением нагретого полимера по вращающейся форме.
+- **steps:** Загрузка сырья → нагрев и вращение → охлаждение
+- **checks:** Толщина, поры, коробление
+- **materials:** ["pe-hd","pa6"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"EPA — отраслевой обзор формования пластмасс — общий контекст; не техкарта","url":"https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Термоформование листа
+- **id:** thermoforming
+- **name:** Термоформование листа
+- **industry:** polymers
+- **category:** forming
+- **description:** Придание нагретому полимерному листу формы под вакуумом или давлением.
+- **steps:** Нагрев листа → формование → охлаждение → обрезка
+- **checks:** Складки, истончение, размеры
+- **materials:** ["pe-hd","pa6"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"EPA — отраслевой обзор формования пластмасс — общий контекст; не техкарта","url":"https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Каландрование пластмасс
+- **id:** calendering
+- **name:** Каландрование пластмасс
+- **industry:** polymers
+- **category:** forming
+- **description:** Формирование полотна или плёнки прохождением полимерной массы между валками.
+- **steps:** Подготовка массы → валки → калибрование → контроль
+- **checks:** Толщина, неоднородность, полосы
+- **materials:** ["pe-hd","pa6"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"EPA — отраслевой обзор формования пластмасс — общий контекст; не техкарта","url":"https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Компаундирование полимеров
+- **id:** compounding
+- **name:** Компаундирование полимеров
+- **industry:** polymers
+- **category:** treatment
+- **description:** Смешивание полимера с наполнителями и добавками для получения композиции.
+- **steps:** Дозирование → смешение → гранулирование → испытания
+- **checks:** Однородность, влажность, распределение добавок
+- **materials:** ["pe-hd","pa6"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"EPA — отраслевой обзор формования пластмасс — общий контекст; не техкарта","url":"https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Вспенивание пластмасс
+- **id:** polymer-foaming
+- **name:** Вспенивание пластмасс
+- **industry:** polymers
+- **category:** forming
+- **description:** Формирование ячеистой структуры в полимерном материале.
+- **steps:** Подготовка состава → вспенивание → охлаждение → контроль
+- **checks:** Плотность, структура ячеек, усадка
+- **materials:** ["pe-hd","pa6"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"EPA — отраслевой обзор формования пластмасс — общий контекст; не техкарта","url":"https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Ультразвуковая сварка термопластов
+- **id:** ultrasonic-plastic-welding
+- **name:** Ультразвуковая сварка термопластов
+- **industry:** polymers
+- **category:** joining
+- **description:** Соединение подходящих термопластов за счёт высокочастотных механических колебаний.
+- **steps:** Совмещение → прижатие → воздействие → контроль
+- **checks:** Прочность, герметичность, перегрев
+- **materials:** ["pe-hd","pa6"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"TWI — методы соединения полимеров — общий контекст; не техкарта","url":"https://www.twi-global.com/technical-knowledge/faqs/joining-methods-of-polymers?trk=public_post_reshare-text"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Лазерная сварка термопластов
+- **id:** laser-plastic-welding
+- **name:** Лазерная сварка термопластов
+- **industry:** polymers
+- **category:** joining
+- **description:** Локальное лазерное соединение оптически совместимых термопластичных деталей.
+- **steps:** Подготовка сопряжения → лазерное воздействие → контроль
+- **checks:** Непровар, пережог, прочность
+- **materials:** ["pe-hd","pa6"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"TWI — методы соединения полимеров — общий контекст; не техкарта","url":"https://www.twi-global.com/technical-knowledge/faqs/joining-methods-of-polymers?trk=public_post_reshare-text"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Ручная выкладка композитов
+- **id:** hand-layup
+- **name:** Ручная выкладка композитов
+- **industry:** composites
+- **category:** forming
+- **description:** Выкладка слоёв армирования с пропиткой связующим в оснастке.
+- **steps:** Подготовка формы → укладка → пропитка → отверждение
+- **checks:** Поры, сухие зоны, складки
+- **materials:** ["gfrp","aramid"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"DOE — способы изготовления композитов, 2016 — общий контекст; не техкарта","url":"https://www.energy.gov/sites/prod/files/2016/04/f30/Carbon%20Fiber%20Report.pdf"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Вакуумная инфузия
+- **id:** vacuum-infusion
+- **name:** Вакуумная инфузия
+- **industry:** composites
+- **category:** forming
+- **description:** Пропитка сухого армирующего пакета смолой при перепаде давлений.
+- **steps:** Выкладка → вакуумный пакет → инфузия → отверждение
+- **checks:** Непропитка, утечки, поры
+- **materials:** ["gfrp","aramid"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"DOE — способы изготовления композитов, 2016 — общий контекст; не техкарта","url":"https://www.energy.gov/sites/prod/files/2016/04/f30/Carbon%20Fiber%20Report.pdf"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Трансферное формование композитов (RTM)
+- **id:** resin-transfer-molding
+- **name:** Трансферное формование композитов (RTM)
+- **industry:** composites
+- **category:** forming
+- **description:** Подача жидкой смолы в закрытую форму с армирующей преформой.
+- **steps:** Укладка преформы → инжекция смолы → отверждение
+- **checks:** Пористость, усадка, геометрия
+- **materials:** ["gfrp","aramid"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"DOE — способы изготовления композитов, 2016 — общий контекст; не техкарта","url":"https://www.energy.gov/sites/prod/files/2016/04/f30/Carbon%20Fiber%20Report.pdf"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Пултрузия
+- **id:** pultrusion
+- **name:** Пултрузия
+- **industry:** composites
+- **category:** forming
+- **description:** Непрерывное протягивание пропитанных волокон через формующую фильеру.
+- **steps:** Подача армирования → пропитка → фильера → резка
+- **checks:** Профиль, содержание волокон, поры
+- **materials:** ["gfrp","aramid"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"DOE — способы изготовления композитов, 2016 — общий контекст; не техкарта","url":"https://www.energy.gov/sites/prod/files/2016/04/f30/Carbon%20Fiber%20Report.pdf"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Намотка композитов
+- **id:** filament-winding
+- **name:** Намотка композитов
+- **industry:** composites
+- **category:** forming
+- **description:** Размещение армирующих нитей на вращающейся оправке.
+- **steps:** Подготовка оправки → намотка → отверждение → съём
+- **checks:** Угол армирования, равномерность, поры
+- **materials:** ["gfrp","aramid"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"DOE — способы изготовления композитов, 2016 — общий контекст; не техкарта","url":"https://www.energy.gov/sites/prod/files/2016/04/f30/Carbon%20Fiber%20Report.pdf"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Автоклавное отверждение композитов
+- **id:** autoclave-composites
+- **name:** Автоклавное отверждение композитов
+- **industry:** composites
+- **category:** treatment
+- **description:** Отверждение пакета композита при контролируемом тепловом и барическом цикле.
+- **steps:** Вакуумный пакет → автоклавный цикл → извлечение → контроль
+- **checks:** Пористость, степень отверждения, деформации
+- **materials:** ["gfrp","aramid"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"DOE — способы изготовления композитов, 2016 — общий контекст; не техкарта","url":"https://www.energy.gov/sites/prod/files/2016/04/f30/Carbon%20Fiber%20Report.pdf"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Трафаретное нанесение паяльной пасты
+- **id:** solder-paste-printing
+- **name:** Трафаретное нанесение паяльной пасты
+- **industry:** electronics
+- **category:** joining
+- **parentId:** pcb-assembly
+- **description:** Дозирование пасты через трафарет на площадки печатной платы.
+- **steps:** Совмещение → нанесение пасты → контроль рисунка
+- **checks:** Объём, смещение, мостики пасты
+- **materials:** ["pcb","solder"]
+- **profession:** electrical-engineer
+- **sources:** [{"title":"IPC — стандарты сборки электроники (обзор) — общий контекст; не техкарта","url":"https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Автоматическая установка SMD-компонентов
+- **id:** smt-placement
+- **name:** Автоматическая установка SMD-компонентов
+- **industry:** electronics
+- **category:** joining
+- **parentId:** pcb-assembly
+- **description:** Автоматическое позиционирование компонентов на площадки платы.
+- **steps:** Подготовка питателей → установка → оптический контроль
+- **checks:** Ориентация, смещение, пропуски
+- **materials:** ["pcb","solder"]
+- **profession:** electrical-engineer
+- **sources:** [{"title":"IPC — стандарты сборки электроники (обзор) — общий контекст; не техкарта","url":"https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Пайка оплавлением
+- **id:** reflow-soldering
+- **name:** Пайка оплавлением
+- **industry:** electronics
+- **category:** joining
+- **parentId:** pcb-assembly
+- **description:** Образование паяных соединений при нагреве нанесённой пасты.
+- **steps:** Нанесение → термопрофиль → оплавление → охлаждение
+- **checks:** Пустоты, непропай, перемычки
+- **materials:** ["pcb","solder"]
+- **profession:** electrical-engineer
+- **sources:** [{"title":"IPC — стандарты сборки электроники (обзор) — общий контекст; не техкарта","url":"https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Пайка волной припоя
+- **id:** wave-soldering
+- **name:** Пайка волной припоя
+- **industry:** electronics
+- **category:** joining
+- **parentId:** pcb-assembly
+- **description:** Формирование соединений при контакте платы с волной расплавленного припоя.
+- **steps:** Флюсование → предварительный нагрев → волна → контроль
+- **checks:** Перемычки, недостаток припоя, загрязнение
+- **materials:** ["pcb","solder"]
+- **profession:** electrical-engineer
+- **sources:** [{"title":"IPC — стандарты сборки электроники (обзор) — общий контекст; не техкарта","url":"https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Защитное покрытие электронных сборок
+- **id:** conformal-coating
+- **name:** Защитное покрытие электронных сборок
+- **industry:** electronics
+- **category:** treatment
+- **parentId:** pcb-assembly
+- **description:** Нанесение защитной полимерной плёнки на собранную плату.
+- **steps:** Очистка → маскирование → нанесение → отверждение
+- **checks:** Толщина, пропуски, пузыри
+- **materials:** ["pcb","solder"]
+- **profession:** electrical-engineer
+- **sources:** [{"title":"IPC — стандарты сборки электроники (обзор) — общий контекст; не техкарта","url":"https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Автоматизированная оптическая инспекция плат
+- **id:** aoi-pcb
+- **name:** Автоматизированная оптическая инспекция плат
+- **industry:** electronics
+- **category:** inspection
+- **parentId:** electronic-inspection
+- **description:** Контроль сборки системой машинного зрения по заданным критериям.
+- **steps:** Настройка эталона → сканирование → проверка обнаружений
+- **checks:** Ложные срабатывания, пропуски, ошибки размещения
+- **materials:** ["pcb","solder"]
+- **profession:** electrical-engineer
+- **sources:** [{"title":"IPC — стандарты сборки электроники (обзор) — общий контекст; не техкарта","url":"https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Бланширование пищевого сырья
+- **id:** blanching-food
+- **name:** Бланширование пищевого сырья
+- **category:** treatment
+- **industry:** food
+- **description:** Кратковременная тепловая обработка до последующих операций.
+- **steps:** Подготовка → нагрев → охлаждение → контроль
+- **checks:** Температурное воздействие, цвет, ферментативная активность
+- **materials:** ["food-raw"]
+- **profession:** food-engineer
+- **sources:** [{"title":"FAO — руководство по переработке фруктов и овощей — обзор; не технологическая инструкция","url":"https://www.fao.org/4/x0209e/x0209e06.htm"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Тепловая стерилизация пищевой продукции
+- **id:** thermal-sterilization-food
+- **name:** Тепловая стерилизация пищевой продукции
+- **category:** treatment
+- **industry:** food
+- **description:** Тепловая обработка упаковки или продукта для достижения заданной микробиологической стабильности.
+- **steps:** Подготовка → утверждённый тепловой цикл → охлаждение → контроль
+- **checks:** Герметичность, сохранность упаковки, микробиологические критерии
+- **materials:** ["food-raw"]
+- **profession:** food-engineer
+- **sources:** [{"title":"FAO — руководство по переработке фруктов и овощей — обзор; не технологическая инструкция","url":"https://www.fao.org/4/x0209e/x0209e06.htm"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Промышленное замораживание пищевых продуктов
+- **id:** freezing-food
+- **name:** Промышленное замораживание пищевых продуктов
+- **category:** treatment
+- **industry:** food
+- **description:** Снижение температуры продуктов с переходом части влаги в лёд.
+- **steps:** Подготовка → охлаждение и заморозка → хранение → контроль
+- **checks:** Температура продукта, кристаллизация, потери массы
+- **materials:** ["food-raw"]
+- **profession:** food-engineer
+- **sources:** [{"title":"FAO — руководство по переработке фруктов и овощей — обзор; не технологическая инструкция","url":"https://www.fao.org/4/x0209e/x0209e06.htm"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Распылительная сушка пищевых жидкостей
+- **id:** spray-drying-food
+- **name:** Распылительная сушка пищевых жидкостей
+- **category:** treatment
+- **industry:** food
+- **description:** Получение порошка из жидкого сырья при распылении и удалении влаги.
+- **steps:** Подготовка жидкости → распыление → отделение порошка → контроль
+- **checks:** Влажность, агломерация, изменение свойств
+- **materials:** ["food-raw"]
+- **profession:** food-engineer
+- **sources:** [{"title":"FAO — руководство по переработке фруктов и овощей — обзор; не технологическая инструкция","url":"https://www.fao.org/4/x0209e/x0209e06.htm"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Выпаривание пищевых растворов
+- **id:** food-evaporation
+- **name:** Выпаривание пищевых растворов
+- **category:** treatment
+- **industry:** food
+- **description:** Концентрирование раствора удалением части растворителя при теплопередаче.
+- **steps:** Подготовка → выпаривание → отвод паров → проверка концентрата
+- **checks:** Сухие вещества, термическое повреждение, загрязнение
+- **materials:** ["food-raw"]
+- **profession:** food-engineer
+- **sources:** [{"title":"FAO — руководство по переработке фруктов и овощей — обзор; не технологическая инструкция","url":"https://www.fao.org/4/x0209e/x0209e06.htm"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Помол зерна
+- **id:** grain-milling
+- **name:** Помол зерна
+- **category:** forming
+- **industry:** food
+- **description:** Измельчение и сортирование зернового сырья на фракции.
+- **steps:** Очистка → дробление или помол → просеивание → анализ
+- **checks:** Гранулометрия, загрязнения, посторонние примеси
+- **materials:** ["food-raw"]
+- **profession:** food-engineer
+- **sources:** [{"title":"FAO — руководство по переработке фруктов и овощей — обзор; не технологическая инструкция","url":"https://www.fao.org/4/x0209e/x0209e06.htm"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Экструзионная обработка пищевых смесей
+- **id:** food-extrusion
+- **name:** Экструзионная обработка пищевых смесей
+- **category:** forming
+- **industry:** food
+- **description:** Формирование пищевой массы проходом через экструдер и формующий канал.
+- **steps:** Подготовка рецептуры → экструзия → охлаждение → контроль
+- **checks:** Структура, форма, равномерность состава
+- **materials:** ["food-raw"]
+- **profession:** food-engineer
+- **sources:** [{"title":"FAO — руководство по переработке фруктов и овощей — обзор; не технологическая инструкция","url":"https://www.fao.org/4/x0209e/x0209e06.htm"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Осветление соков
+- **id:** juice-clarification
+- **name:** Осветление соков
+- **category:** treatment
+- **industry:** food
+- **description:** Снижение содержания взвесей и мутности пищевой жидкости.
+- **steps:** Подготовка сока → осветление или фильтрация → измерение
+- **checks:** Мутность, осадок, выход и сохранение состава
+- **materials:** ["food-raw"]
+- **profession:** food-engineer
+- **sources:** [{"title":"FAO — руководство по переработке фруктов и овощей — обзор; не технологическая инструкция","url":"https://www.fao.org/4/x0209e/x0209e06.htm"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Кардочесание волокон
+- **id:** carding
+- **name:** Кардочесание волокон
+- **category:** forming
+- **industry:** textiles
+- **parentId:** spinning
+- **description:** Разделение и ориентирование волокон кардочесальным оборудованием.
+- **steps:** Подача волокон → чесание → получение ленты → контроль
+- **checks:** Непсы, равномерность ленты, загрязнения
+- **materials:** ["cotton","cotton-yarn"]
+- **profession:** textile-engineer
+- **sources:** [{"title":"OSHA — классификация текстильных операций — обзор; не технологическая инструкция","url":"https://www.osha.gov/data/sic-manual/major-group-22"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Гребнечесание волокон
+- **id:** combing-textile
+- **name:** Гребнечесание волокон
+- **category:** forming
+- **industry:** textiles
+- **parentId:** spinning
+- **description:** Дополнительное выравнивание волокон и удаление коротких фракций.
+- **steps:** Подготовка ленты → гребнечесание → контроль
+- **checks:** Короткие волокна, равномерность, потери
+- **materials:** ["cotton","cotton-yarn"]
+- **profession:** textile-engineer
+- **sources:** [{"title":"OSHA — классификация текстильных операций — обзор; не технологическая инструкция","url":"https://www.osha.gov/data/sic-manual/major-group-22"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Вытяжка текстильной ленты
+- **id:** drawing-textile
+- **name:** Вытяжка текстильной ленты
+- **category:** forming
+- **industry:** textiles
+- **parentId:** spinning
+- **description:** Утонение и выравнивание ленты вытяжными парами.
+- **steps:** Подача → вытяжка → намотка → анализ
+- **checks:** Линейная плотность, неровнота, обрывы
+- **materials:** ["cotton","cotton-yarn"]
+- **profession:** textile-engineer
+- **sources:** [{"title":"OSHA — классификация текстильных операций — обзор; не технологическая инструкция","url":"https://www.osha.gov/data/sic-manual/major-group-22"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Перемотка пряжи
+- **id:** winding-yarn
+- **name:** Перемотка пряжи
+- **category:** forming
+- **industry:** textiles
+- **parentId:** spinning
+- **description:** Формирование паковок пряжи для дальнейших операций.
+- **steps:** Подача пряжи → очистка → намотка → контроль
+- **checks:** Натяжение, дефекты нити, масса паковки
+- **materials:** ["cotton","cotton-yarn"]
+- **profession:** textile-engineer
+- **sources:** [{"title":"OSHA — классификация текстильных операций — обзор; не технологическая инструкция","url":"https://www.osha.gov/data/sic-manual/major-group-22"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Снование основы
+- **id:** warping
+- **name:** Снование основы
+- **category:** forming
+- **industry:** textiles
+- **description:** Формирование системы параллельных основных нитей для ткачества.
+- **steps:** Подготовка паковок → снование → контроль основы
+- **checks:** Обрывность, равномерность натяжения, число нитей
+- **materials:** ["cotton","cotton-yarn"]
+- **profession:** textile-engineer
+- **sources:** [{"title":"OSHA — классификация текстильных операций — обзор; не технологическая инструкция","url":"https://www.osha.gov/data/sic-manual/major-group-22"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Шлихтование основы
+- **id:** warp-sizing
+- **name:** Шлихтование основы
+- **category:** treatment
+- **industry:** textiles
+- **description:** Нанесение шлихты на основные нити для изменения технологических свойств.
+- **steps:** Подготовка основы → нанесение → сушка → контроль
+- **checks:** Равномерность покрытия, влажность, обрывность
+- **materials:** ["cotton","cotton-yarn"]
+- **profession:** textile-engineer
+- **sources:** [{"title":"OSHA — классификация текстильных операций — обзор; не технологическая инструкция","url":"https://www.osha.gov/data/sic-manual/major-group-22"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Отбеливание текстиля
+- **id:** textile-bleaching
+- **name:** Отбеливание текстиля
+- **category:** treatment
+- **industry:** textiles
+- **parentId:** textile-finishing
+- **description:** Изменение окраски и удаление окрашенных примесей подходящей химической обработкой.
+- **steps:** Подготовка ткани → отбеливание → промывка → контроль
+- **checks:** Белизна, прочность, остаточные реагенты
+- **materials:** ["cotton","cotton-yarn"]
+- **profession:** textile-engineer
+- **sources:** [{"title":"OSHA — классификация текстильных операций — обзор; не технологическая инструкция","url":"https://www.osha.gov/data/sic-manual/major-group-22"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Печать по ткани
+- **id:** textile-printing
+- **name:** Печать по ткани
+- **category:** treatment
+- **industry:** textiles
+- **parentId:** textile-finishing
+- **description:** Нанесение цветного рисунка на текстильную поверхность.
+- **steps:** Подготовка ткани → нанесение рисунка → фиксация → контроль
+- **checks:** Совмещение цветов, стойкость, пропуски
+- **materials:** ["cotton","cotton-yarn"]
+- **profession:** textile-engineer
+- **sources:** [{"title":"OSHA — классификация текстильных операций — обзор; не технологическая инструкция","url":"https://www.osha.gov/data/sic-manual/major-group-22"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Строгание пиломатериалов
+- **id:** wood-planing
+- **name:** Строгание пиломатериалов
+- **category:** forming
+- **industry:** wood
+- **description:** Обработка поверхности древесины резанием до требуемой геометрии.
+- **steps:** Сортировка → базирование → строгание → контроль
+- **checks:** Размер, волнистость, сколы
+- **materials:** ["timber","birch-plywood"]
+- **profession:** forest-engineer
+- **sources:** [{"title":"US Forest Service — справочник о древесине как инженерном материале — обзор; не технологическая инструкция","url":"https://research.fs.usda.gov/treesearch/37419"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Лущение шпона
+- **id:** veneer-peeling
+- **name:** Лущение шпона
+- **category:** forming
+- **industry:** wood
+- **description:** Получение тонкой ленты древесины при вращении чурака относительно ножа.
+- **steps:** Подготовка сырья → лущение → резка → сортировка
+- **checks:** Толщина шпона, трещины, влажность
+- **materials:** ["timber","birch-plywood"]
+- **profession:** forest-engineer
+- **sources:** [{"title":"US Forest Service — справочник о древесине как инженерном материале — обзор; не технологическая инструкция","url":"https://research.fs.usda.gov/treesearch/37419"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Склеивание фанеры
+- **id:** plywood-bonding
+- **name:** Склеивание фанеры
+- **category:** joining
+- **industry:** wood
+- **description:** Соединение листов шпона связующим в пакет с заданной ориентацией слоёв.
+- **steps:** Подбор шпона → нанесение клея → сборка → прессование → контроль
+- **checks:** Клеевой шов, расслоение, геометрия
+- **materials:** ["timber","birch-plywood"]
+- **profession:** forest-engineer
+- **sources:** [{"title":"US Forest Service — справочник о древесине как инженерном материале — обзор; не технологическая инструкция","url":"https://research.fs.usda.gov/treesearch/37419"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Защитная пропитка древесины
+- **id:** wood-preservation
+- **name:** Защитная пропитка древесины
+- **category:** treatment
+- **industry:** wood
+- **description:** Введение защитного состава в древесину по требованиям применения.
+- **steps:** Подготовка древесины → пропитка → выдержка → контроль
+- **checks:** Глубина пропитки, влажность и требования безопасности
+- **materials:** ["timber","birch-plywood"]
+- **profession:** forest-engineer
+- **sources:** [{"title":"US Forest Service — справочник о древесине как инженерном материале — обзор; не технологическая инструкция","url":"https://research.fs.usda.gov/treesearch/37419"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Прессование древесных плит
+- **id:** fiberboard-pressing
+- **name:** Прессование древесных плит
+- **category:** forming
+- **industry:** wood
+- **description:** Уплотнение подготовленной древесной массы или стружки с образованием плиты.
+- **steps:** Подготовка массы → формирование ковра → прессование → контроль
+- **checks:** Плотность, толщина, расслоение
+- **materials:** ["timber","birch-plywood"]
+- **profession:** forest-engineer
+- **sources:** [{"title":"US Forest Service — справочник о древесине как инженерном материале — обзор; не технологическая инструкция","url":"https://research.fs.usda.gov/treesearch/37419"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Промышленное выпаривание
+- **id:** industrial-evaporation
+- **name:** Промышленное выпаривание
+- **category:** treatment
+- **industry:** chemicals
+- **description:** Концентрирование раствора испарением части растворителя.
+- **steps:** Подготовка смеси → подвод тепла → испарение → контроль концентрации
+- **checks:** Концентрация, отложения, качество продукта
+- **materials:** []
+- **profession:** chemical-engineer
+- **sources:** [{"title":"DOE — технологии промышленного нагрева — обзор; не технологическая инструкция","url":"https://www.energy.gov/cmei/ito/what-are-different-kinds-process-heating-systems"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Кристаллизация растворов
+- **id:** crystallization
+- **name:** Кристаллизация растворов
+- **category:** treatment
+- **industry:** chemicals
+- **description:** Выделение твёрдой фазы при изменении условий растворимости.
+- **steps:** Подготовка раствора → зарождение и рост кристаллов → отделение
+- **checks:** Чистота, размер кристаллов, остаточная влага
+- **materials:** []
+- **profession:** chemical-engineer
+- **sources:** [{"title":"DOE — технологии промышленного нагрева — обзор; не технологическая инструкция","url":"https://www.energy.gov/cmei/ito/what-are-different-kinds-process-heating-systems"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Абсорбция газовых компонентов
+- **id:** gas-absorption
+- **name:** Абсорбция газовых компонентов
+- **category:** treatment
+- **industry:** chemicals
+- **description:** Перенос выбранных компонентов газовой смеси в жидкий поглотитель.
+- **steps:** Контакт фаз → отвод обогащённого поглотителя → контроль
+- **checks:** Степень извлечения, перепад давления, унос жидкости
+- **materials:** []
+- **profession:** chemical-engineer
+- **sources:** [{"title":"DOE — технологии промышленного нагрева — обзор; не технологическая инструкция","url":"https://www.energy.gov/cmei/ito/what-are-different-kinds-process-heating-systems"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Стриппинг растворённых компонентов
+- **id:** gas-stripping
+- **name:** Стриппинг растворённых компонентов
+- **category:** treatment
+- **industry:** chemicals
+- **description:** Удаление летучих компонентов из жидкости при контакте с газом или паром.
+- **steps:** Подготовка жидкости → контакт фаз → отвод потоков → контроль
+- **checks:** Остаточная концентрация, унос, баланс потоков
+- **materials:** []
+- **profession:** chemical-engineer
+- **sources:** [{"title":"DOE — технологии промышленного нагрева — обзор; не технологическая инструкция","url":"https://www.energy.gov/cmei/ito/what-are-different-kinds-process-heating-systems"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Промышленное центрифугирование
+- **id:** industrial-centrifugation
+- **name:** Промышленное центрифугирование
+- **category:** treatment
+- **industry:** chemicals
+- **description:** Разделение суспензии или эмульсии в поле центробежных сил.
+- **steps:** Подача → центрифугирование → отвод фаз → контроль
+- **checks:** Остаточная влажность, эффективность разделения, вибрация
+- **materials:** []
+- **profession:** chemical-engineer
+- **sources:** [{"title":"DOE — технологии промышленного нагрева — обзор; не технологическая инструкция","url":"https://www.energy.gov/cmei/ito/what-are-different-kinds-process-heating-systems"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Мембранное разделение промышленных смесей
+- **id:** chemical-membrane
+- **name:** Мембранное разделение промышленных смесей
+- **category:** treatment
+- **industry:** chemicals
+- **description:** Разделение компонентов смеси с использованием селективной мембраны.
+- **steps:** Подготовка среды → поток через мембрану → анализ фракций
+- **checks:** Проницаемость, селективность, загрязнение мембраны
+- **materials:** []
+- **profession:** chemical-engineer
+- **sources:** [{"title":"DOE — технологии промышленного нагрева — обзор; не технологическая инструкция","url":"https://www.energy.gov/cmei/ito/what-are-different-kinds-process-heating-systems"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Каталитическая реакция в промышленном реакторе
+- **id:** catalytic-reaction
+- **name:** Каталитическая реакция в промышленном реакторе
+- **category:** treatment
+- **industry:** chemicals
+- **description:** Химическое превращение с участием катализатора в реакционной системе.
+- **steps:** Подготовка реагентов → реакция → разделение продуктов → контроль
+- **checks:** Конверсия, селективность, дезактивация катализатора
+- **materials:** []
+- **profession:** chemical-engineer
+- **sources:** [{"title":"DOE — технологии промышленного нагрева — обзор; не технологическая инструкция","url":"https://www.energy.gov/cmei/ito/what-are-different-kinds-process-heating-systems"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Экстракция растворителем
+- **id:** solvent-extraction
+- **name:** Экстракция растворителем
+- **category:** treatment
+- **industry:** chemicals
+- **description:** Перераспределение компонентов между контактирующими фазами.
+- **steps:** Подготовка фаз → контакт → разделение фаз → контроль состава
+- **checks:** Извлечение, остаточный растворитель, эмульгирование
+- **materials:** []
+- **profession:** chemical-engineer
+- **sources:** [{"title":"DOE — технологии промышленного нагрева — обзор; не технологическая инструкция","url":"https://www.energy.gov/cmei/ito/what-are-different-kinds-process-heating-systems"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Приготовление бетонной смеси
+- **id:** concrete-mixing
+- **name:** Приготовление бетонной смеси
+- **category:** treatment
+- **industry:** construction
+- **description:** Смешение компонентов бетона до получения требуемых свойств свежей смеси.
+- **steps:** Дозирование → перемешивание → доставка → контроль
+- **checks:** Однородность, удобоукладываемость, отклонения состава
+- **materials:** ["09g2s"]
+- **profession:** civil-engineer
+- **sources:** [{"title":"OSHA — нормы бетонных и каменных строительных работ — обзор; не технологическая инструкция","url":"https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.701"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Укладка бетонной смеси
+- **id:** concrete-placing
+- **name:** Укладка бетонной смеси
+- **category:** forming
+- **industry:** construction
+- **description:** Заполнение конструктивного объёма свежей бетонной смесью.
+- **steps:** Подготовка захватки → укладка → уплотнение → уход → контроль
+- **checks:** Расслоение, пустоты, геометрия
+- **materials:** ["09g2s"]
+- **profession:** civil-engineer
+- **sources:** [{"title":"OSHA — нормы бетонных и каменных строительных работ — обзор; не технологическая инструкция","url":"https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.701"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Виброуплотнение бетона
+- **id:** concrete-vibration
+- **name:** Виброуплотнение бетона
+- **category:** forming
+- **industry:** construction
+- **description:** Уплотнение свежей бетонной смеси механическими колебаниями.
+- **steps:** Подача смеси → виброуплотнение → осмотр поверхности
+- **checks:** Пустоты, расслоение, качество уплотнения
+- **materials:** ["09g2s"]
+- **profession:** civil-engineer
+- **sources:** [{"title":"OSHA — нормы бетонных и каменных строительных работ — обзор; не технологическая инструкция","url":"https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.701"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Уход за твердеющим бетоном
+- **id:** concrete-curing
+- **name:** Уход за твердеющим бетоном
+- **category:** treatment
+- **industry:** construction
+- **description:** Контроль условий твердения бетона для формирования проектных свойств.
+- **steps:** Завершение укладки → поддержание условий твердения → контроль
+- **checks:** Температура, влажность, трещинообразование
+- **materials:** ["09g2s"]
+- **profession:** civil-engineer
+- **sources:** [{"title":"OSHA — нормы бетонных и каменных строительных работ — обзор; не технологическая инструкция","url":"https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.701"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Монтаж опалубки
+- **id:** formwork-erection
+- **name:** Монтаж опалубки
+- **category:** joining
+- **industry:** construction
+- **description:** Установка временной оснастки для задания формы монолитного бетона.
+- **steps:** Проверка чертежей → монтаж → закрепление → приёмка
+- **checks:** Устойчивость, геометрия, положение креплений
+- **materials:** ["09g2s"]
+- **profession:** civil-engineer
+- **sources:** [{"title":"OSHA — нормы бетонных и каменных строительных работ — обзор; не технологическая инструкция","url":"https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.701"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Монтаж арматуры
+- **id:** rebar-installation
+- **name:** Монтаж арматуры
+- **category:** joining
+- **industry:** construction
+- **description:** Размещение арматурных элементов по проекту до бетонирования.
+- **steps:** Проверка арматуры → установка фиксаторов → вязка или крепление → контроль
+- **checks:** Защитный слой, положение стержней, стыки
+- **materials:** ["09g2s"]
+- **profession:** civil-engineer
+- **sources:** [{"title":"OSHA — нормы бетонных и каменных строительных работ — обзор; не технологическая инструкция","url":"https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.701"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Каменная кладка
+- **id:** masonry-works
+- **name:** Каменная кладка
+- **category:** joining
+- **industry:** construction
+- **description:** Соединение штучных каменных элементов в конструкцию согласно проекту.
+- **steps:** Подготовка основания → укладка элементов и раствора → контроль
+- **checks:** Перевязка, ровность, заполнение швов
+- **materials:** ["09g2s"]
+- **profession:** civil-engineer
+- **sources:** [{"title":"OSHA — нормы бетонных и каменных строительных работ — обзор; не технологическая инструкция","url":"https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.701"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Укладка асфальтобетона
+- **id:** road-asphalt-placement
+- **name:** Укладка асфальтобетона
+- **category:** forming
+- **industry:** construction
+- **description:** Формирование слоя покрытия из горячей или холодной смеси с последующим уплотнением.
+- **steps:** Подготовка основания → укладка → уплотнение → проверка
+- **checks:** Плотность, ровность, толщина, температура
+- **materials:** ["09g2s"]
+- **profession:** civil-engineer
+- **sources:** [{"title":"OSHA — нормы бетонных и каменных строительных работ — обзор; не технологическая инструкция","url":"https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.701"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Инъекционное закрепление грунта
+- **id:** geotechnical-grouting
+- **name:** Инъекционное закрепление грунта
+- **category:** treatment
+- **industry:** construction
+- **description:** Введение закрепляющего состава в грунтовый массив по проекту.
+- **steps:** Обследование → инъектирование по проекту → испытания
+- **checks:** Распределение состава, проницаемость, смещения
+- **materials:** ["09g2s"]
+- **profession:** civil-engineer
+- **sources:** [{"title":"OSHA — нормы бетонных и каменных строительных работ — обзор; не технологическая инструкция","url":"https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.701"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Производство асфальтобетонной смеси
+- **id:** asphalt-mix-production
+- **name:** Производство асфальтобетонной смеси
+- **category:** treatment
+- **industry:** construction
+- **description:** Приготовление смеси минеральных заполнителей и битумного вяжущего.
+- **steps:** Подготовка компонентов → нагрев и смешение → выпуск → контроль
+- **checks:** Температура, гранулометрия, доля вяжущего
+- **materials:** []
+- **profession:** road-engineer
+- **sources:** [{"title":"EPA AP-42 — производство асфальтобетонных смесей — обзор; не технологическая инструкция","url":"https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Генерация технологического пара
+- **id:** steam-generation
+- **name:** Генерация технологического пара
+- **category:** treatment
+- **industry:** energy
+- **description:** Производство пара в котельной или парогенераторной системе.
+- **steps:** Подготовка питательной воды → подвод тепла → парообразование → контроль
+- **checks:** Качество воды, давление, паропроизводительность
+- **materials:** []
+- **profession:** power-engineer
+- **sources:** [{"title":"DOE — промышленные паровые системы — обзор; не технологическая инструкция","url":"https://www.energy.gov/cmei/ito/steam-systems"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Возврат конденсата
+- **id:** condensate-return
+- **name:** Возврат конденсата
+- **category:** treatment
+- **industry:** energy
+- **description:** Сбор и подача конденсата для повторного использования в паровой системе.
+- **steps:** Сбор конденсата → проверка качества → возврат → контроль
+- **checks:** Загрязнения, потери тепла, утечки
+- **materials:** []
+- **profession:** power-engineer
+- **sources:** [{"title":"DOE — промышленные паровые системы — обзор; не технологическая инструкция","url":"https://www.energy.gov/cmei/ito/steam-systems"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Деаэрация котловой воды
+- **id:** deaeration-water
+- **name:** Деаэрация котловой воды
+- **category:** treatment
+- **industry:** energy
+- **description:** Удаление растворённых газов из питательной воды паровой системы.
+- **steps:** Подача воды → деаэрация → проверка остаточных газов
+- **checks:** Остаточный кислород, температура, стабильность режима
+- **materials:** []
+- **profession:** power-engineer
+- **sources:** [{"title":"DOE — промышленные паровые системы — обзор; не технологическая инструкция","url":"https://www.energy.gov/cmei/ito/steam-systems"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Теплоутилизация в экономайзере
+- **id:** economizer-heat-recovery
+- **name:** Теплоутилизация в экономайзере
+- **category:** treatment
+- **industry:** energy
+- **description:** Передача теплоты дымовых газов потоку технологической воды.
+- **steps:** Обход газов и воды → теплообмен → контроль параметров
+- **checks:** Температура, загрязнение поверхности, перепад давления
+- **materials:** []
+- **profession:** power-engineer
+- **sources:** [{"title":"DOE — промышленные паровые системы — обзор; не технологическая инструкция","url":"https://www.energy.gov/cmei/ito/steam-systems"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Контроль конденсатоотводчиков
+- **id:** steam-trap-monitoring
+- **name:** Контроль конденсатоотводчиков
+- **category:** inspection
+- **industry:** energy
+- **description:** Проверка работы устройств удаления конденсата из паровой сети.
+- **steps:** Инвентаризация → обследование → анализ потерь → протокол
+- **checks:** Пропуск пара, застой конденсата, исправность
+- **materials:** []
+- **profession:** power-engineer
+- **sources:** [{"title":"DOE — промышленные паровые системы — обзор; не технологическая инструкция","url":"https://www.energy.gov/cmei/ito/steam-systems"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Индукционный нагрев в производстве
+- **id:** industrial-induction-heating
+- **name:** Индукционный нагрев в производстве
+- **category:** treatment
+- **industry:** energy
+- **description:** Нагрев проводящего материала под действием переменного электромагнитного поля.
+- **steps:** Позиционирование → индуцирование нагрева → контроль температуры
+- **checks:** Равномерность нагрева, перегрев, деформации
+- **materials:** []
+- **profession:** power-engineer
+- **sources:** [{"title":"DOE — технологии промышленного теплового нагрева — обзор; не технологическая инструкция","url":"https://www.energy.gov/cmei/ito/what-are-different-kinds-process-heating-systems"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Промышленный теплообмен
+- **id:** industrial-heat-exchange
+- **name:** Промышленный теплообмен
+- **category:** treatment
+- **industry:** energy
+- **description:** Передача тепловой энергии между средами через разделяющую поверхность.
+- **steps:** Подача потоков → теплообмен → контроль выхода
+- **checks:** Перепад температур, загрязнение, утечки
+- **materials:** []
+- **profession:** power-engineer
+- **sources:** [{"title":"DOE — технологии промышленного теплового нагрева — обзор; не технологическая инструкция","url":"https://www.energy.gov/cmei/ito/what-are-different-kinds-process-heating-systems"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Коагуляция при водоподготовке
+- **id:** coagulation-water
+- **name:** Коагуляция при водоподготовке
+- **category:** treatment
+- **industry:** water
+- **description:** Дестабилизация коллоидных частиц для последующего удаления из воды.
+- **steps:** Дозирование реагента → смешение → контроль
+- **checks:** Доза реагента, мутность, pH
+- **materials:** []
+- **profession:** water-engineer
+- **sources:** [{"title":"EPA — обзор технологий очистки воды — обзор; не технологическая инструкция","url":"https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Флокуляция воды
+- **id:** flocculation-water
+- **name:** Флокуляция воды
+- **category:** treatment
+- **industry:** water
+- **description:** Укрупнение взвешенных частиц в хлопья перед разделением.
+- **steps:** Подготовка воды → мягкое перемешивание → контроль
+- **checks:** Размер хлопьев, мутность и прочность агрегатов
+- **materials:** []
+- **profession:** water-engineer
+- **sources:** [{"title":"EPA — обзор технологий очистки воды — обзор; не технологическая инструкция","url":"https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Отстаивание воды
+- **id:** sedimentation-water
+- **name:** Отстаивание воды
+- **category:** treatment
+- **industry:** water
+- **description:** Гравитационное отделение оседающих взвесей из водного потока.
+- **steps:** Входной поток → отстаивание → отвод осадка → контроль
+- **checks:** Вынос взвесей, гидравлическая нагрузка
+- **materials:** []
+- **profession:** water-engineer
+- **sources:** [{"title":"EPA — обзор технологий очистки воды — обзор; не технологическая инструкция","url":"https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Зернистая фильтрация воды
+- **id:** granular-filtration
+- **name:** Зернистая фильтрация воды
+- **category:** treatment
+- **industry:** water
+- **parentId:** industrial-filtration
+- **description:** Удаление взвесей прохождением воды через зернистый фильтрующий слой.
+- **steps:** Подача воды → фильтрация → промывка фильтра → контроль
+- **checks:** Мутность, перепад давления, загрязнение загрузки
+- **materials:** []
+- **profession:** water-engineer
+- **sources:** [{"title":"EPA — обзор технологий очистки воды — обзор; не технологическая инструкция","url":"https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Адсорбция на активированном угле
+- **id:** carbon-adsorption
+- **name:** Адсорбция на активированном угле
+- **category:** treatment
+- **industry:** water
+- **description:** Удаление части растворённых веществ при контакте с активированным углём.
+- **steps:** Подготовка воды → контакт с сорбентом → контроль
+- **checks:** Прорыв загрязнителей, ресурс сорбента
+- **materials:** []
+- **profession:** water-engineer
+- **sources:** [{"title":"EPA — обзор технологий очистки воды — обзор; не технологическая инструкция","url":"https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Обратный осмос
+- **id:** reverse-osmosis
+- **name:** Обратный осмос
+- **category:** treatment
+- **industry:** water
+- **parentId:** industrial-filtration
+- **description:** Мембранное разделение воды и части растворённых компонентов при перепаде давления.
+- **steps:** Предочистка → мембранный блок → контроль потоков
+- **checks:** Качество пермеата, загрязнение мембраны, баланс
+- **materials:** []
+- **profession:** water-engineer
+- **sources:** [{"title":"EPA — обзор технологий очистки воды — обзор; не технологическая инструкция","url":"https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Нанофильтрация воды
+- **id:** nanofiltration-water
+- **name:** Нанофильтрация воды
+- **category:** treatment
+- **industry:** water
+- **parentId:** industrial-filtration
+- **description:** Мембранное разделение по селективности к растворённым компонентам.
+- **steps:** Предочистка → нанофильтрация → анализ пермеата
+- **checks:** Селективность, мембранное загрязнение, расход
+- **materials:** []
+- **profession:** water-engineer
+- **sources:** [{"title":"EPA — обзор технологий очистки воды — обзор; не технологическая инструкция","url":"https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Ультрафильтрация воды
+- **id:** ultrafiltration-water
+- **name:** Ультрафильтрация воды
+- **category:** treatment
+- **industry:** water
+- **parentId:** industrial-filtration
+- **description:** Удаление коллоидов и взвешенных веществ мембранными барьерами.
+- **steps:** Подготовка → фильтрация → промывка → контроль
+- **checks:** Турбидность, поток через мембрану, целостность
+- **materials:** []
+- **profession:** water-engineer
+- **sources:** [{"title":"EPA — обзор технологий очистки воды — обзор; не технологическая инструкция","url":"https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Озонирование воды
+- **id:** ozonation-water
+- **name:** Озонирование воды
+- **category:** treatment
+- **industry:** water
+- **description:** Обработка воды озоном для окисления отдельных компонентов.
+- **steps:** Генерация озона → контакт с водой → контроль
+- **checks:** Остаточный озон, эффективность контакта и окисления
+- **materials:** []
+- **profession:** water-engineer
+- **sources:** [{"title":"EPA — обзор технологий очистки воды — обзор; не технологическая инструкция","url":"https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Обезвоживание осадка
+- **id:** sludge-dewatering
+- **name:** Обезвоживание осадка
+- **category:** treatment
+- **industry:** water
+- **description:** Отделение части воды от осадка после очистных процессов.
+- **steps:** Кондиционирование → механическое обезвоживание → контроль
+- **checks:** Влажность кека, качество фильтрата, выход
+- **materials:** []
+- **profession:** water-engineer
+- **sources:** [{"title":"EPA — обзор технологий очистки воды — обзор; не технологическая инструкция","url":"https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Обжиг цементного клинкера
+- **id:** cement-clinker-firing
+- **name:** Обжиг цементного клинкера
+- **category:** treatment
+- **industry:** ceramics
+- **description:** Тепловое преобразование минеральной сырьевой смеси при выпуске клинкера.
+- **steps:** Подготовка шихты → обжиг → охлаждение → контроль
+- **checks:** Минеральный состав, степень обжига, выбросы
+- **materials:** ["alumina"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"EPA AP-42 — производство керамики, кирпича, цемента и стекла — обзор; не технологическая инструкция","url":"https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Кальцинация керамического сырья
+- **id:** ceramic-calcination
+- **name:** Кальцинация керамического сырья
+- **category:** treatment
+- **industry:** ceramics
+- **description:** Термическая обработка минерального сырья с удалением летучих компонентов.
+- **steps:** Подготовка сырья → нагрев → охлаждение → анализ
+- **checks:** Потери при прокаливании, остаточные фазы
+- **materials:** ["alumina"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"EPA AP-42 — производство керамики, кирпича, цемента и стекла — обзор; не технологическая инструкция","url":"https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Спекание керамики
+- **id:** ceramic-sintering
+- **name:** Спекание керамики
+- **category:** treatment
+- **industry:** ceramics
+- **description:** Уплотнение сформованной керамической заготовки при высокотемпературном цикле.
+- **steps:** Формовка → спекание → охлаждение → испытания
+- **checks:** Пористость, усадка, микротрещины
+- **materials:** ["alumina"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"EPA AP-42 — производство керамики, кирпича, цемента и стекла — обзор; не технологическая инструкция","url":"https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Шликерное литьё керамики
+- **id:** slip-casting-ceramics
+- **name:** Шликерное литьё керамики
+- **category:** forming
+- **industry:** ceramics
+- **description:** Формирование керамического изделия из суспензии в пористой форме.
+- **steps:** Подготовка шликера → формование → извлечение → сушка
+- **checks:** Равномерность стенок, трещины, поры
+- **materials:** ["alumina"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"EPA AP-42 — производство керамики, кирпича, цемента и стекла — обзор; не технологическая инструкция","url":"https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Сухое прессование керамики
+- **id:** dry-pressing-ceramics
+- **name:** Сухое прессование керамики
+- **category:** forming
+- **industry:** ceramics
+- **description:** Формирование заготовки уплотнением сухого или полусухого порошка в пресс-форме.
+- **steps:** Дозирование порошка → прессование → извлечение → контроль
+- **checks:** Плотность, расслоение, размер
+- **materials:** ["alumina"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"EPA AP-42 — производство керамики, кирпича, цемента и стекла — обзор; не технологическая инструкция","url":"https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Экструзия глиняных изделий
+- **id:** brick-extrusion
+- **name:** Экструзия глиняных изделий
+- **category:** forming
+- **industry:** ceramics
+- **description:** Формование глиняной массы через фильеру с последующей резкой.
+- **steps:** Подготовка массы → экструзия → резка → сушка
+- **checks:** Геометрия, трещины, неоднородность
+- **materials:** ["alumina"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"EPA AP-42 — производство керамики, кирпича, цемента и стекла — обзор; не технологическая инструкция","url":"https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Варка стекломассы
+- **id:** glass-melting
+- **name:** Варка стекломассы
+- **category:** treatment
+- **industry:** ceramics
+- **description:** Получение расплава из подготовленной стекольной шихты.
+- **steps:** Подготовка шихты → плавление → осветление → контроль
+- **checks:** Пузырьки, включения, состав
+- **materials:** ["alumina"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"EPA AP-42 — производство керамики, кирпича, цемента и стекла — обзор; не технологическая инструкция","url":"https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Отжиг стекла
+- **id:** glass-annealing
+- **name:** Отжиг стекла
+- **category:** treatment
+- **industry:** ceramics
+- **description:** Управляемое охлаждение стекла для снижения остаточных напряжений.
+- **steps:** Подача изделия → отжиг → охлаждение → контроль
+- **checks:** Остаточные напряжения, коробление, трещины
+- **materials:** ["alumina"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"EPA AP-42 — производство керамики, кирпича, цемента и стекла — обзор; не технологическая инструкция","url":"https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Влажная грануляция фармацевтических порошков
+- **id:** wet-granulation-pharma
+- **name:** Влажная грануляция фармацевтических порошков
+- **category:** treatment
+- **industry:** pharma
+- **description:** Образование гранул из порошковой смеси с введением жидкого связующего.
+- **steps:** Дозирование → грануляция → сушка → анализ
+- **checks:** Размер гранул, влажность, равномерность состава
+- **materials:** []
+- **profession:** chemical-engineer
+- **sources:** [{"title":"FDA — контроль твёрдых лекарственных форм — обзор; не технологическая инструкция","url":"https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Сухая грануляция фармацевтических порошков
+- **id:** dry-granulation-pharma
+- **name:** Сухая грануляция фармацевтических порошков
+- **category:** forming
+- **industry:** pharma
+- **description:** Укрупнение частиц уплотнением без обязательного введения жидкости.
+- **steps:** Смешение → уплотнение → дробление → просеивание
+- **checks:** Распределение гранул, пыль, однородность
+- **materials:** []
+- **profession:** chemical-engineer
+- **sources:** [{"title":"FDA — контроль твёрдых лекарственных форм — обзор; не технологическая инструкция","url":"https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Таблетирование
+- **id:** tablet-compression
+- **name:** Таблетирование
+- **category:** forming
+- **industry:** pharma
+- **description:** Формирование дозированных таблеток из порошка или гранулята прессованием.
+- **steps:** Дозирование → прессование → отбраковка → контроль
+- **checks:** Масса, твёрдость, распадаемость, вариабельность
+- **materials:** []
+- **profession:** chemical-engineer
+- **sources:** [{"title":"FDA — контроль твёрдых лекарственных форм — обзор; не технологическая инструкция","url":"https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Покрытие фармацевтических таблеток
+- **id:** tablet-coating
+- **name:** Покрытие фармацевтических таблеток
+- **category:** treatment
+- **industry:** pharma
+- **description:** Нанесение покрывающего слоя на таблеточные ядра.
+- **steps:** Подготовка ядер → напыление покрытия → сушка → проверка
+- **checks:** Равномерность покрытия, дефекты поверхности
+- **materials:** []
+- **profession:** chemical-engineer
+- **sources:** [{"title":"FDA — контроль твёрдых лекарственных форм — обзор; не технологическая инструкция","url":"https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Наполнение капсул
+- **id:** capsule-filling
+- **name:** Наполнение капсул
+- **category:** joining
+- **industry:** pharma
+- **description:** Дозирование подготовленного материала в капсульную оболочку.
+- **steps:** Подача капсул → дозирование → закрытие → контроль
+- **checks:** Масса наполнения, целостность оболочки
+- **materials:** []
+- **profession:** chemical-engineer
+- **sources:** [{"title":"FDA — контроль твёрдых лекарственных форм — обзор; не технологическая инструкция","url":"https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Асептическое наполнение стерильных форм
+- **id:** aseptic-filling
+- **name:** Асептическое наполнение стерильных форм
+- **category:** joining
+- **industry:** pharma
+- **description:** Наполнение предварительно подготовленной тары стерильным продуктом в контролируемой среде.
+- **steps:** Подготовка компонентов → асептическое наполнение → укупорка → контроль
+- **checks:** Контроль загрязнения, целостность закрытия
+- **materials:** []
+- **profession:** chemical-engineer
+- **sources:** [{"title":"FDA — контроль твёрдых лекарственных форм — обзор; не технологическая инструкция","url":"https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Распылительная сушка фармацевтических растворов
+- **id:** pharma-spray-drying
+- **name:** Распылительная сушка фармацевтических растворов
+- **category:** treatment
+- **industry:** pharma
+- **description:** Получение сухого порошка из жидкости распылением с удалением растворителя.
+- **steps:** Подготовка раствора → распыление → сепарация → контроль
+- **checks:** Размер частиц, влажность, остаточный растворитель
+- **materials:** []
+- **profession:** chemical-engineer
+- **sources:** [{"title":"FDA — контроль твёрдых лекарственных форм — обзор; не технологическая инструкция","url":"https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Фармацевтическое просеивание
+- **id:** pharma-sieving
+- **name:** Фармацевтическое просеивание
+- **category:** forming
+- **industry:** pharma
+- **description:** Разделение частиц порошка по размерным фракциям.
+- **steps:** Подача порошка → просеивание → отбор фракций → контроль
+- **checks:** Гранулометрия, загрязнения, выход
+- **materials:** []
+- **profession:** chemical-engineer
+- **sources:** [{"title":"FDA — контроль твёрдых лекарственных форм — обзор; не технологическая инструкция","url":"https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Офсетная печать
+- **id:** offset-lithography
+- **name:** Офсетная печать
+- **category:** forming
+- **industry:** printing
+- **description:** Перенос печатного изображения через промежуточное полотно с печатной формы на материал.
+- **steps:** Подготовка формы → настройка подачи → печать → контроль оттиска
+- **checks:** Приводка, равномерность красочного слоя
+- **materials:** []
+- **profession:** polygraph-engineer
+- **sources:** [{"title":"OSHA — отрасли полиграфии, офсет, флексо и трафарет — обзор; не технологическая инструкция","url":"https://www.osha.gov/printing-industry/industry-segments"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Флексографская печать
+- **id:** flexography
+- **name:** Флексографская печать
+- **category:** forming
+- **industry:** printing
+- **description:** Ротационная печать с эластичной рельефной формой на различных подложках.
+- **steps:** Подготовка формы и красок → подача материала → печать → осмотр
+- **checks:** Приводка, растискивание, дефекты покрытия
+- **materials:** []
+- **profession:** polygraph-engineer
+- **sources:** [{"title":"OSHA — отрасли полиграфии, офсет, флексо и трафарет — обзор; не технологическая инструкция","url":"https://www.osha.gov/printing-industry/industry-segments"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Трафаретная печать
+- **id:** screen-printing
+- **name:** Трафаретная печать
+- **category:** forming
+- **industry:** printing
+- **description:** Нанесение краски через открытые участки сетчатого трафарета.
+- **steps:** Подготовка трафарета → печать → сушка → контроль
+- **checks:** Толщина слоя, пропуски, контур
+- **materials:** []
+- **profession:** polygraph-engineer
+- **sources:** [{"title":"OSHA — отрасли полиграфии, офсет, флексо и трафарет — обзор; не технологическая инструкция","url":"https://www.osha.gov/printing-industry/industry-segments"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Глубокая печать
+- **id:** gravure-printing
+- **name:** Глубокая печать
+- **category:** forming
+- **industry:** printing
+- **description:** Перенос краски из углублений печатной формы на подложку.
+- **steps:** Подготовка вала → подача краски → печать → контроль
+- **checks:** Перенос краски, полосы, приводка
+- **materials:** []
+- **profession:** polygraph-engineer
+- **sources:** [{"title":"OSHA — отрасли полиграфии, офсет, флексо и трафарет — обзор; не технологическая инструкция","url":"https://www.osha.gov/printing-industry/industry-segments"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Послепечатная фальцовка и переплёт
+- **id:** print-binding
+- **name:** Послепечатная фальцовка и переплёт
+- **category:** joining
+- **industry:** printing
+- **description:** Формирование и скрепление отпечатанных листов в изделие.
+- **steps:** Фальцовка → подборка → скрепление → обрезка → контроль
+- **checks:** Комплектность, совмещение листов, прочность
+- **materials:** []
+- **profession:** polygraph-engineer
+- **sources:** [{"title":"OSHA — отрасли полиграфии, офсет, флексо и трафарет — обзор; не технологическая инструкция","url":"https://www.osha.gov/printing-industry/industry-segments"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Дробление руды
+- **id:** ore-crushing
+- **name:** Дробление руды
+- **category:** forming
+- **industry:** mining
+- **description:** Снижение крупности добытого материала в дробильном оборудовании.
+- **steps:** Подача руды → дробление → сортировка → контроль
+- **checks:** Размер куска, пыление, загрязнение
+- **materials:** []
+- **profession:** mining-engineer
+- **sources:** [{"title":"EPA — руда и обогащение: водоотведение, дробление и сортировка — обзор; не технологическая инструкция","url":"https://www.epa.gov/eg/ore-mining-and-dressing-effluent-guidelines"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Измельчение руды
+- **id:** ore-grinding
+- **name:** Измельчение руды
+- **category:** forming
+- **industry:** mining
+- **description:** Дальнейшее снижение крупности материала в измельчающем оборудовании.
+- **steps:** Подготовка → измельчение → классификация → контроль
+- **checks:** Гранулометрия, переизмельчение, расход энергии
+- **materials:** []
+- **profession:** mining-engineer
+- **sources:** [{"title":"EPA — руда и обогащение: водоотведение, дробление и сортировка — обзор; не технологическая инструкция","url":"https://www.epa.gov/eg/ore-mining-and-dressing-effluent-guidelines"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Грохочение руды
+- **id:** ore-screening
+- **name:** Грохочение руды
+- **category:** inspection
+- **industry:** mining
+- **description:** Разделение сыпучей массы на размерные классы через ситовые поверхности.
+- **steps:** Подача → грохочение → отвод фракций → проверка
+- **checks:** Разделение по крупности, забивание сит
+- **materials:** []
+- **profession:** mining-engineer
+- **sources:** [{"title":"EPA — руда и обогащение: водоотведение, дробление и сортировка — обзор; не технологическая инструкция","url":"https://www.epa.gov/eg/ore-mining-and-dressing-effluent-guidelines"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Флотационное обогащение
+- **id:** ore-flotation
+- **name:** Флотационное обогащение
+- **category:** treatment
+- **industry:** mining
+- **description:** Разделение минеральных частиц по различиям их поверхностных свойств.
+- **steps:** Подготовка пульпы → флотация → разделение потоков → анализ
+- **checks:** Извлечение, качество концентрата, реагентный баланс
+- **materials:** []
+- **profession:** mining-engineer
+- **sources:** [{"title":"EPA — руда и обогащение: водоотведение, дробление и сортировка — обзор; не технологическая инструкция","url":"https://www.epa.gov/eg/ore-mining-and-dressing-effluent-guidelines"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Магнитная сепарация руды
+- **id:** magnetic-separation-ore
+- **name:** Магнитная сепарация руды
+- **category:** treatment
+- **industry:** mining
+- **description:** Разделение фракций минералов в магнитном поле.
+- **steps:** Подача измельчённой руды → сепарация → контроль фракций
+- **checks:** Извлечение магнитной фазы, примеси
+- **materials:** []
+- **profession:** mining-engineer
+- **sources:** [{"title":"EPA — руда и обогащение: водоотведение, дробление и сортировка — обзор; не технологическая инструкция","url":"https://www.epa.gov/eg/ore-mining-and-dressing-effluent-guidelines"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Гравитационное обогащение
+- **id:** gravity-concentration
+- **name:** Гравитационное обогащение
+- **category:** treatment
+- **industry:** mining
+- **description:** Концентрирование минералов по различиям их плотности и динамики движения.
+- **steps:** Подготовка питания → гравитационное разделение → анализ
+- **checks:** Содержание полезного компонента, потери
+- **materials:** []
+- **profession:** mining-engineer
+- **sources:** [{"title":"EPA — руда и обогащение: водоотведение, дробление и сортировка — обзор; не технологическая инструкция","url":"https://www.epa.gov/eg/ore-mining-and-dressing-effluent-guidelines"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Выщелачивание руды
+- **id:** ore-leaching
+- **name:** Выщелачивание руды
+- **category:** treatment
+- **industry:** mining
+- **description:** Перевод выбранных компонентов твёрдой руды в раствор при химическом воздействии.
+- **steps:** Подготовка руды → контакт с раствором → отделение → контроль
+- **checks:** Извлечение, примеси, обращение с растворами
+- **materials:** []
+- **profession:** mining-engineer
+- **sources:** [{"title":"EPA — руда и обогащение: водоотведение, дробление и сортировка — обзор; не технологическая инструкция","url":"https://www.epa.gov/eg/ore-mining-and-dressing-effluent-guidelines"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Магнитопорошковый контроль
+- **id:** magnetic-particle-ndt
+- **name:** Магнитопорошковый контроль
+- **category:** inspection
+- **industry:** general
+- **parentId:** inspection
+- **description:** Выявление поверхностных и подповерхностных нарушений в ферромагнитных материалах.
+- **steps:** Подготовка → намагничивание → нанесение частиц → оценка
+- **checks:** Направление поля, чистота поверхности, индикации
+- **materials:** ["09g2s","steel-45"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"ASNT — каталог методов неразрушающего контроля — обзор без технологических режимов","url":"https://www.asnt.org/what-is-nondestructive-testing/methods"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Вихретоковый контроль
+- **id:** eddy-current-ndt
+- **name:** Вихретоковый контроль
+- **category:** inspection
+- **industry:** general
+- **parentId:** inspection
+- **description:** Контроль проводящих изделий по изменению наведённых вихревых токов.
+- **steps:** Выбор датчика → калибровка → сканирование → протокол
+- **checks:** Проводимость, зазор, чувствительность, глубина
+- **materials:** ["09g2s","steel-45"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"ASNT — каталог методов неразрушающего контроля — обзор без технологических режимов","url":"https://www.asnt.org/what-is-nondestructive-testing/methods"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Визуальный и измерительный контроль
+- **id:** visual-ndt
+- **name:** Визуальный и измерительный контроль
+- **category:** inspection
+- **industry:** general
+- **parentId:** inspection
+- **description:** Осмотр доступных поверхностей с визуальными и измерительными средствами.
+- **steps:** Подготовка поверхности → осмотр → измерение → протокол
+- **checks:** Освещённость, доступность, допуски, критерии
+- **materials:** ["09g2s","steel-45"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"ASNT — каталог методов неразрушающего контроля — обзор без технологических режимов","url":"https://www.asnt.org/what-is-nondestructive-testing/methods"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Испытание на герметичность
+- **id:** leak-testing
+- **name:** Испытание на герметичность
+- **category:** inspection
+- **industry:** general
+- **parentId:** inspection
+- **description:** Поиск утечек в системах с помощью перепада давления или индикаторной среды.
+- **steps:** Подготовка → испытание → оценка потерь → запись
+- **checks:** Чувствительность, утечки, перепад давления
+- **materials:** ["09g2s","steel-45"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"ASNT — каталог методов неразрушающего контроля — обзор без технологических режимов","url":"https://www.asnt.org/what-is-nondestructive-testing/methods"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Акустико-эмиссионный контроль
+- **id:** acoustic-emission-ndt
+- **name:** Акустико-эмиссионный контроль
+- **category:** inspection
+- **industry:** general
+- **parentId:** inspection
+- **description:** Регистрация акустических сигналов, связанных с активными изменениями материала.
+- **steps:** Установка датчиков → нагружение по методике → анализ сигналов
+- **checks:** Помехи, локализация, активность источников
+- **materials:** ["09g2s","steel-45"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"ASNT — каталог методов неразрушающего контроля — обзор без технологических режимов","url":"https://www.asnt.org/what-is-nondestructive-testing/methods"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Инфракрасная термография
+- **id:** infrared-thermography
+- **name:** Инфракрасная термография
+- **category:** inspection
+- **industry:** general
+- **parentId:** inspection
+- **description:** Выявление температурных неоднородностей по тепловому излучению поверхности.
+- **steps:** Подготовка → тепловизионная съёмка → интерпретация
+- **checks:** Коэффициент излучения, отражения, условия съёмки
+- **materials:** ["09g2s","steel-45"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"ASNT — каталог методов неразрушающего контроля — обзор без технологических режимов","url":"https://www.asnt.org/what-is-nondestructive-testing/methods"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Георадарное обследование
+- **id:** ground-penetrating-radar
+- **name:** Георадарное обследование
+- **category:** inspection
+- **industry:** general
+- **parentId:** inspection
+- **description:** Зондирование подповерхностных объектов электромагнитными импульсами.
+- **steps:** Выбор трассы → зондирование → интерпретация профиля
+- **checks:** Влажность, глубина, разрешение, помехи
+- **materials:** ["09g2s","steel-45"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"ASNT — каталог методов неразрушающего контроля — обзор без технологических режимов","url":"https://www.asnt.org/what-is-nondestructive-testing/methods"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Контроль направленными ультразвуковыми волнами
+- **id:** guided-wave-ndt
+- **name:** Контроль направленными ультразвуковыми волнами
+- **category:** inspection
+- **industry:** general
+- **parentId:** ultrasonic
+- **description:** Обследование протяжённого объекта направленными волнами.
+- **steps:** Установка преобразователей → возбуждение → анализ отражений
+- **checks:** Мёртвые зоны, затухание, локализация
+- **materials:** ["09g2s","steel-45"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"ASNT — каталог методов неразрушающего контроля — обзор без технологических режимов","url":"https://www.asnt.org/what-is-nondestructive-testing/methods"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Контроль утечкой магнитного потока
+- **id:** magnetic-flux-leakage
+- **name:** Контроль утечкой магнитного потока
+- **category:** inspection
+- **industry:** general
+- **parentId:** inspection
+- **description:** Обнаружение неоднородностей ферромагнитной стенки по полю рассеяния.
+- **steps:** Намагничивание → сканирование → оценка изменений
+- **checks:** Геометрия, насыщение, глубина дефектов
+- **materials:** ["09g2s","steel-45"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"ASNT — каталог методов неразрушающего контроля — обзор без технологических режимов","url":"https://www.asnt.org/what-is-nondestructive-testing/methods"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Нейтронная радиография
+- **id:** neutron-radiography
+- **name:** Нейтронная радиография
+- **category:** inspection
+- **industry:** general
+- **parentId:** radiographic
+- **description:** Получение изображения по ослаблению нейтронного потока объектом.
+- **steps:** Подготовка образца → экспонирование по методике → анализ
+- **checks:** Контраст материалов, радиационная безопасность
+- **materials:** ["09g2s","steel-45"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"ASNT — каталог методов неразрушающего контроля — обзор без технологических режимов","url":"https://www.asnt.org/what-is-nondestructive-testing/methods"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Лазерная шерография
+- **id:** laser-shearography
+- **name:** Лазерная шерография
+- **category:** inspection
+- **industry:** general
+- **parentId:** inspection
+- **description:** Оптическая регистрация деформационных полей при заданной нагрузке.
+- **steps:** Подготовка поверхности → воздействие → сравнение изображений
+- **checks:** Вибрации, чувствительность, интерпретация
+- **materials:** ["09g2s","steel-45"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"ASNT — каталог методов неразрушающего контроля — обзор без технологических режимов","url":"https://www.asnt.org/what-is-nondestructive-testing/methods"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Ультразвуковой контроль фазированной решёткой
+- **id:** phased-array-ut
+- **name:** Ультразвуковой контроль фазированной решёткой
+- **category:** inspection
+- **industry:** general
+- **parentId:** ultrasonic
+- **description:** Электронное управление направлением ультразвукового пучка массивом элементов.
+- **steps:** Выбор закона фокусировки → сканирование → протокол
+- **checks:** Калибровка, покрытие зоны, ложные показания
+- **materials:** ["09g2s","steel-45"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"ASNT — каталог методов неразрушающего контроля — обзор без технологических режимов","url":"https://www.asnt.org/what-is-nondestructive-testing/methods"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Контактная шовная сварка
+- **id:** resistance-seam
+- **name:** Контактная шовная сварка
+- **category:** joining
+- **industry:** metals
+- **description:** Формирование соединения последовательными контактными точками при движении роликов.
+- **steps:** Подготовка листов → проход роликов → испытание
+- **checks:** Герметичность, перекрытие точек, деформации
+- **materials:** ["steel-20","09g2s"]
+- **profession:** mechanical-engineer
+- **sources:** [{"title":"TWI — классификация процессов сварки и соединения — обзор без технологических режимов","url":"https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Стыковая сварка оплавлением
+- **id:** flash-butt-welding
+- **name:** Стыковая сварка оплавлением
+- **category:** joining
+- **industry:** metals
+- **description:** Соединение торцов с нагревом при оплавлении и последующей осадке.
+- **steps:** Совмещение → оплавление → осадка → контроль
+- **checks:** Соосность, дефекты стыка, облой
+- **materials:** ["steel-20","09g2s"]
+- **profession:** mechanical-engineer
+- **sources:** [{"title":"TWI — классификация процессов сварки и соединения — обзор без технологических режимов","url":"https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Электронно-лучевая сварка
+- **id:** electron-beam-welding
+- **name:** Электронно-лучевая сварка
+- **category:** joining
+- **industry:** metals
+- **description:** Получение шва сфокусированным пучком электронов.
+- **steps:** Подготовка → вакуумная операция → сварка → контроль
+- **checks:** Проплавление, поры, геометрия
+- **materials:** ["steel-20","09g2s"]
+- **profession:** mechanical-engineer
+- **sources:** [{"title":"TWI — классификация процессов сварки и соединения — обзор без технологических режимов","url":"https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Плазменная дуговая сварка
+- **id:** plasma-arc-welding
+- **name:** Плазменная дуговая сварка
+- **category:** joining
+- **industry:** metals
+- **parentId:** welding
+- **description:** Дуговая сварка с плазмообразующим газом и сжатой дугой.
+- **steps:** Подготовка → настройка оснастки → сварка → контроль
+- **checks:** Геометрия, поры, несплавление
+- **materials:** ["steel-20","09g2s"]
+- **profession:** mechanical-engineer
+- **sources:** [{"title":"TWI — классификация процессов сварки и соединения — обзор без технологических режимов","url":"https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Приварка шпилек
+- **id:** stud-welding
+- **name:** Приварка шпилек
+- **category:** joining
+- **industry:** metals
+- **parentId:** welding
+- **description:** Дуговое или контактное присоединение крепёжного элемента к поверхности.
+- **steps:** Подготовка зоны → позиционирование шпильки → соединение → проверка
+- **checks:** Соосность, прочность, подрезы
+- **materials:** ["steel-20","09g2s"]
+- **profession:** mechanical-engineer
+- **sources:** [{"title":"TWI — классификация процессов сварки и соединения — обзор без технологических режимов","url":"https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Диффузионная сварка
+- **id:** diffusion-bonding
+- **name:** Диффузионная сварка
+- **category:** joining
+- **industry:** metals
+- **description:** Твердофазное соединение контактирующих поверхностей под действием температуры и давления.
+- **steps:** Подготовка поверхностей → сближение → цикл → испытания
+- **checks:** Несплошности, качество контакта, изменения структуры
+- **materials:** ["steel-20","09g2s"]
+- **profession:** mechanical-engineer
+- **sources:** [{"title":"TWI — классификация процессов сварки и соединения — обзор без технологических режимов","url":"https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Компрессионное формование пластмасс
+- **id:** compression-molding-plastics
+- **name:** Компрессионное формование пластмасс
+- **category:** forming
+- **industry:** polymers
+- **description:** Формование материала сдавливанием в нагретой пресс-форме.
+- **steps:** Подготовка навески → прессование → охлаждение → контроль
+- **checks:** Пустоты, облой, степень отверждения
+- **materials:** ["pe-hd","pa6"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"EPA — обзор производства изделий из пластмасс — обзор без технологических режимов","url":"https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Инжекционно-выдувное формование с вытяжкой
+- **id:** stretch-blow-molding
+- **name:** Инжекционно-выдувное формование с вытяжкой
+- **category:** forming
+- **industry:** polymers
+- **description:** Формование полой тары из предварительно полученной заготовки с вытяжкой.
+- **steps:** Изготовление преформы → разогрев → вытяжка и раздув → контроль
+- **checks:** Толщина, прозрачность, геометрия
+- **materials:** ["pe-hd","pa6"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"EPA — обзор производства изделий из пластмасс — обзор без технологических режимов","url":"https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Экструзия рукавной плёнки
+- **id:** blown-film-extrusion
+- **name:** Экструзия рукавной плёнки
+- **category:** forming
+- **industry:** polymers
+- **parentId:** extrusion
+- **description:** Получение плёнки из полимерного рукава при экструзии и раздуве.
+- **steps:** Пластикация → кольцевая фильера → раздув → намотка
+- **checks:** Толщина, складки, пузырь, стабильность рукава
+- **materials:** ["pe-hd","pa6"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"EPA — обзор производства изделий из пластмасс — обзор без технологических режимов","url":"https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Трансферное формование реактопластов
+- **id:** polymer-transfer-molding
+- **name:** Трансферное формование реактопластов
+- **category:** forming
+- **industry:** polymers
+- **description:** Заполнение формы подготовленным реактопластом из передаточной камеры.
+- **steps:** Подготовка сырья → передача в форму → отверждение → контроль
+- **checks:** Недолив, облой, время отверждения
+- **materials:** ["pe-hd","pa6"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"EPA — обзор производства изделий из пластмасс — обзор без технологических режимов","url":"https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Вулканизация эластомеров
+- **id:** rubber-vulcanization
+- **name:** Вулканизация эластомеров
+- **category:** treatment
+- **industry:** polymers
+- **description:** Формирование связанной структуры эластомера в предусмотренном цикле.
+- **steps:** Подготовка смеси → вулканизация → охлаждение → испытания
+- **checks:** Степень вулканизации, твёрдость, трещины
+- **materials:** ["pe-hd","pa6"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"EPA — обзор производства изделий из пластмасс — обзор без технологических режимов","url":"https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Экструзионное покрытие полимером
+- **id:** extrusion-coating
+- **name:** Экструзионное покрытие полимером
+- **category:** treatment
+- **industry:** polymers
+- **description:** Нанесение расплава полимера на подложку в процессе экструзии.
+- **steps:** Подача подложки → нанесение расплава → охлаждение
+- **checks:** Толщина, адгезия, сплошность
+- **materials:** ["pe-hd","pa6"]
+- **profession:** materials-engineer
+- **sources:** [{"title":"EPA — обзор производства изделий из пластмасс — обзор без технологических режимов","url":"https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Иглопробивное производство нетканых материалов
+- **id:** needle-punching-nonwovens
+- **name:** Иглопробивное производство нетканых материалов
+- **category:** forming
+- **industry:** textiles
+- **description:** Связывание волокнистого холста множественными проходами игл.
+- **steps:** Подготовка холста → иглопробивание → контроль
+- **checks:** Поверхностная плотность, разрывы, равномерность
+- **materials:** ["cotton","woven-fabric"]
+- **profession:** textile-engineer
+- **sources:** [{"title":"OSHA — отраслевой каталог текстильных процессов — обзор без технологических режимов","url":"https://www.osha.gov/data/sic-manual/major-group-22"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Мерсеризация хлопка
+- **id:** mercerization
+- **name:** Мерсеризация хлопка
+- **category:** treatment
+- **industry:** textiles
+- **parentId:** textile-finishing
+- **description:** Химическая обработка хлопкового материала с изменением структуры волокон.
+- **steps:** Подготовка ткани → обработка → промывка → контроль
+- **checks:** Равномерность, усадка, остаточные реагенты
+- **materials:** ["cotton","woven-fabric"]
+- **profession:** textile-engineer
+- **sources:** [{"title":"OSHA — отраслевой каталог текстильных процессов — обзор без технологических режимов","url":"https://www.osha.gov/data/sic-manual/major-group-22"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Термофиксация текстиля
+- **id:** heat-setting-textiles
+- **name:** Термофиксация текстиля
+- **category:** treatment
+- **industry:** textiles
+- **parentId:** textile-finishing
+- **description:** Тепловая стабилизация структуры подходящего волокнистого материала.
+- **steps:** Подготовка → термообработка → охлаждение → испытания
+- **checks:** Усадка, деформации, цвет
+- **materials:** ["cotton","woven-fabric"]
+- **profession:** textile-engineer
+- **sources:** [{"title":"OSHA — отраслевой каталог текстильных процессов — обзор без технологических режимов","url":"https://www.osha.gov/data/sic-manual/major-group-22"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Каландрование тканей
+- **id:** textile-calendering
+- **name:** Каландрование тканей
+- **category:** treatment
+- **industry:** textiles
+- **parentId:** textile-finishing
+- **description:** Механическая финишная обработка ткани между валками.
+- **steps:** Подача полотна → валки → контроль поверхности
+- **checks:** Складки, равномерность отделки, блеск
+- **materials:** ["cotton","woven-fabric"]
+- **profession:** textile-engineer
+- **sources:** [{"title":"OSHA — отраслевой каталог текстильных процессов — обзор без технологических режимов","url":"https://www.osha.gov/data/sic-manual/major-group-22"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Машинная вышивка
+- **id:** industrial-embroidery
+- **name:** Машинная вышивка
+- **category:** joining
+- **industry:** textiles
+- **parentId:** sewing
+- **description:** Формирование шовного рисунка нитями на текстильной основе.
+- **steps:** Подготовка рисунка → закрепление ткани → вышивка → осмотр
+- **checks:** Натяжение нитей, смещение, плотность стежков
+- **materials:** ["cotton","woven-fabric"]
+- **profession:** textile-engineer
+- **sources:** [{"title":"OSHA — отраслевой каталог текстильных процессов — обзор без технологических режимов","url":"https://www.osha.gov/data/sic-manual/major-group-22"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Сверление отверстий печатных плат
+- **id:** pcb-drilling
+- **name:** Сверление отверстий печатных плат
+- **category:** forming
+- **industry:** electronics
+- **description:** Формирование сквозных или технологических отверстий в заготовке платы.
+- **steps:** Позиционирование → сверление → очистка → проверка
+- **checks:** Размеры, смещение, заусенцы, повреждение основы
+- **materials:** ["pcb","solder"]
+- **profession:** electrical-engineer
+- **sources:** [{"title":"IPC — сборка плат и границы стандартов — обзор без технологических режимов","url":"https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Травление печатных проводников
+- **id:** pcb-etching
+- **name:** Травление печатных проводников
+- **category:** treatment
+- **industry:** electronics
+- **description:** Удаление незащищённых участков металлического слоя по рисунку.
+- **steps:** Нанесение защитного рисунка → травление → промывка
+- **checks:** Подтравливание, ширина дорожек, остатки
+- **materials:** ["pcb","solder"]
+- **profession:** electrical-engineer
+- **sources:** [{"title":"IPC — сборка плат и границы стандартов — обзор без технологических режимов","url":"https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Металлизация отверстий печатных плат
+- **id:** pcb-plating
+- **name:** Металлизация отверстий печатных плат
+- **category:** treatment
+- **industry:** electronics
+- **description:** Формирование проводящего слоя на стенках отверстий платы.
+- **steps:** Подготовка поверхности → осаждение слоя → контроль
+- **checks:** Сплошность, толщина, пустоты
+- **materials:** ["pcb","solder"]
+- **profession:** electrical-engineer
+- **sources:** [{"title":"IPC — сборка плат и границы стандартов — обзор без технологических режимов","url":"https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Селективная пайка узлов плат
+- **id:** selective-soldering
+- **name:** Селективная пайка узлов плат
+- **category:** joining
+- **industry:** electronics
+- **parentId:** pcb-assembly
+- **description:** Локальное формирование паяных соединений на отдельных участках платы.
+- **steps:** Подготовка → локальная пайка → инспекция
+- **checks:** Смачиваемость, перемычки, термовлияние
+- **materials:** ["pcb","solder"]
+- **profession:** electrical-engineer
+- **sources:** [{"title":"IPC — сборка плат и границы стандартов — обзор без технологических режимов","url":"https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Рентгеновский контроль электронных сборок
+- **id:** pcb-xray-inspection
+- **name:** Рентгеновский контроль электронных сборок
+- **category:** inspection
+- **industry:** electronics
+- **parentId:** electronic-inspection
+- **description:** Получение рентгеновского изображения скрытых паяных соединений.
+- **steps:** Подготовка платы → съёмка → интерпретация → протокол
+- **checks:** Пустоты, перемычки, предел разрешения
+- **materials:** ["pcb","solder"]
+- **profession:** electrical-engineer
+- **sources:** [{"title":"IPC — сборка плат и границы стандартов — обзор без технологических режимов","url":"https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Смешение фармацевтических порошков
+- **id:** pharma-powder-blending
+- **name:** Смешение фармацевтических порошков
+- **category:** treatment
+- **industry:** pharma
+- **description:** Обеспечение однородности состава подготовленных порошковых компонентов.
+- **steps:** Дозирование → смешение → контроль смеси
+- **checks:** Однородность, сегрегация, загрязнение
+- **materials:** []
+- **profession:** chemical-engineer
+- **sources:** [{"title":"FDA — инспекционное руководство по производству твёрдых лекарственных форм — обзор без технологических режимов","url":"https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Микронизация фармацевтических веществ
+- **id:** pharma-micronization
+- **name:** Микронизация фармацевтических веществ
+- **category:** forming
+- **industry:** pharma
+- **description:** Снижение размера частиц активного вещества механическим способом.
+- **steps:** Подготовка → измельчение → классификация → испытания
+- **checks:** Размер частиц, нагрев, загрязнение
+- **materials:** []
+- **profession:** chemical-engineer
+- **sources:** [{"title":"FDA — инспекционное руководство по производству твёрдых лекарственных форм — обзор без технологических режимов","url":"https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Сушка в псевдоожиженном слое
+- **id:** fluid-bed-pharma-drying
+- **name:** Сушка в псевдоожиженном слое
+- **category:** treatment
+- **industry:** pharma
+- **description:** Удаление влаги из гранулята в потоке газа, поддерживающего псевдоожижение.
+- **steps:** Подготовка гранулята → сушка → отделение → измерение
+- **checks:** Влажность, потери мелких фракций, однородность
+- **materials:** []
+- **profession:** chemical-engineer
+- **sources:** [{"title":"FDA — инспекционное руководство по производству твёрдых лекарственных форм — обзор без технологических режимов","url":"https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Внутрипроизводственный контроль таблеток
+- **id:** pharma-inprocess-control
+- **name:** Внутрипроизводственный контроль таблеток
+- **category:** inspection
+- **industry:** pharma
+- **description:** Измерение свойств таблеток на промежуточных этапах выпуска.
+- **steps:** Отбор → измерение массы и твёрдости → запись
+- **checks:** Вариация массы, распадаемость и прочность
+- **materials:** []
+- **profession:** chemical-engineer
+- **sources:** [{"title":"FDA — инспекционное руководство по производству твёрдых лекарственных форм — обзор без технологических режимов","url":"https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Изготовление печатных форм
+- **id:** printing-plate-making
+- **name:** Изготовление печатных форм
+- **category:** forming
+- **industry:** printing
+- **description:** Получение носителя печатного изображения из подготовленных цифровых данных.
+- **steps:** Подготовка макета → изготовление формы → проверка
+- **checks:** Растровое изображение, приводка, дефекты формы
+- **materials:** []
+- **profession:** polygraph-engineer
+- **sources:** [{"title":"OSHA — терминология печати и послепечатных операций — обзор без технологических режимов","url":"https://www.osha.gov/etools/printing-industry/glossary"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### Высечка печатной продукции
+- **id:** print-die-cutting
+- **name:** Высечка печатной продукции
+- **category:** forming
+- **industry:** printing
+- **description:** Формирование контура изделия резанием высекальным штампом.
+- **steps:** Совмещение заготовки → высечка → удаление отходов
+- **checks:** Размер, заусенцы, совмещение
+- **materials:** []
+- **profession:** polygraph-engineer
+- **sources:** [{"title":"OSHA — терминология печати и послепечатных операций — обзор без технологических режимов","url":"https://www.osha.gov/etools/printing-industry/glossary"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
+
+### УФ-отверждение печатных покрытий
+- **id:** uv-curing-print
+- **name:** УФ-отверждение печатных покрытий
+- **category:** treatment
+- **industry:** printing
+- **description:** Отверждение совместимых красочных систем ультрафиолетовым излучением.
+- **steps:** Нанесение краски → облучение → контроль покрытия
+- **checks:** Неполное отверждение, липкость, стойкость
+- **materials:** []
+- **profession:** polygraph-engineer
+- **sources:** [{"title":"OSHA — терминология печати и послепечатных операций — обзор без технологических режимов","url":"https://www.osha.gov/etools/printing-industry/glossary"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **reviewStatus:** source_located
 
 
 ## Машиночитаемые исходники
