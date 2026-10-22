@@ -30,8 +30,7 @@
     "S07": 176,
     "E02": 45,
     "L02": 65,
-    "S04": 8,
-    "S06": 5,
+    "S04": 7,
     "T02": 180,
     "E01": 335,
     "T03": 137,
@@ -191,11 +190,6 @@
           "details": "Зарегистрировано дополнительных ссылок, не показанных в карточке: 1"
         },
         {
-          "code": "S06",
-          "level": "P1",
-          "details": "Нет реестровой записи для 2 URL карточки"
-        },
-        {
           "code": "E02",
           "level": "P2",
           "details": "Проверка отдельных тезисов не подтверждает всю карточку"
@@ -221,11 +215,6 @@
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S06",
-          "level": "P1",
-          "details": "Нет реестровой записи для 1 URL карточки"
-        },
         {
           "code": "S07",
           "level": "P1",
@@ -439,11 +428,6 @@
       "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "S06",
-          "level": "P1",
-          "details": "Нет реестровой записи для 1 URL карточки"
-        },
-        {
           "code": "S07",
           "level": "P1",
           "details": "Общие источники (R03); они не подтверждают параметры конкретного процесса/марки"
@@ -595,11 +579,6 @@
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S06",
-          "level": "P1",
-          "details": "Нет реестровой записи для 2 URL карточки"
-        },
         {
           "code": "S07",
           "level": "P1",
@@ -958,21 +937,9 @@
         "https://www.coats.com/en-us/info-hub/solving-your-sewing-problems/",
         "https://www.osha.gov/textiles"
       ],
-      "additionalRegistryUrls": [
-        "https://www.coats.com/en/industries/composites/faqs/"
-      ],
+      "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S04",
-          "level": "P1",
-          "details": "Зарегистрировано дополнительных ссылок, не показанных в карточке: 1"
-        },
-        {
-          "code": "S06",
-          "level": "P1",
-          "details": "Нет реестровой записи для 1 URL карточки"
-        },
         {
           "code": "S07",
           "level": "P1",
@@ -1182,7 +1149,7 @@
         "https://www.epa.gov/system/files/documents/2024-03/ws-commercial-bmp-watersenseatwork_section7.1_waterpurification.pdf"
       ],
       "additionalRegistryUrls": [
-        "https://www.usgs.gov/water-science-school/science/water-use-questions-answers"
+        "https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"
       ],
       "claimCheckedInRegistry": 1,
       "issues": [
