@@ -1005,5 +1005,1256 @@ window.engineeringProcesses = [
       "checkedAt": "2026-10-22"
     },
     "industry": "chemicals"
+  },
+  {
+    "id": "turning",
+    "name": "Точение",
+    "industry": "metals",
+    "category": "forming",
+    "parentId": "cutting",
+    "description": "Получение поверхностей вращающейся заготовки резцом.",
+    "steps": "Базирование → точение → измерение",
+    "checks": "Биение, размеры, шероховатость",
+    "materials": [
+      "steel-45",
+      "09g2s"
+    ],
+    "profession": "mechanical-engineer",
+    "sources": [
+      {
+        "title": "NIST — технологии производства: обзор — общий контекст; не техкарта",
+        "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "milling",
+    "name": "Фрезерование",
+    "industry": "metals",
+    "category": "forming",
+    "parentId": "cutting",
+    "description": "Получение плоскостей и профилей вращающейся многолезвийной фрезой.",
+    "steps": "Базирование → проходы фрезой → измерение",
+    "checks": "Плоскостность, геометрия, заусенцы",
+    "materials": [
+      "steel-45",
+      "09g2s"
+    ],
+    "profession": "mechanical-engineer",
+    "sources": [
+      {
+        "title": "NIST — технологии производства: обзор — общий контекст; не техкарта",
+        "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "drilling",
+    "name": "Сверление",
+    "industry": "metals",
+    "category": "forming",
+    "parentId": "cutting",
+    "description": "Получение отверстий сверлом с осевой подачей.",
+    "steps": "Закрепление → сверление → контроль отверстия",
+    "checks": "Диаметр, увод, положение оси, заусенцы",
+    "materials": [
+      "steel-45",
+      "09g2s"
+    ],
+    "profession": "mechanical-engineer",
+    "sources": [
+      {
+        "title": "NIST — технологии производства: обзор — общий контекст; не техкарта",
+        "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "boring",
+    "name": "Растачивание",
+    "industry": "metals",
+    "category": "forming",
+    "parentId": "cutting",
+    "description": "Обработка предварительно полученного отверстия расточным инструментом.",
+    "steps": "Базирование → растачивание → контроль",
+    "checks": "Соосность, цилиндричность, размер",
+    "materials": [
+      "steel-45",
+      "09g2s"
+    ],
+    "profession": "mechanical-engineer",
+    "sources": [
+      {
+        "title": "NIST — технологии производства: обзор — общий контекст; не техкарта",
+        "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "reaming",
+    "name": "Развёртывание",
+    "industry": "metals",
+    "category": "forming",
+    "parentId": "cutting",
+    "description": "Чистовая обработка подготовленного отверстия развёрткой.",
+    "steps": "Проверка припуска → развёртывание → измерение",
+    "checks": "Диаметр, форма, шероховатость",
+    "materials": [
+      "steel-45",
+      "09g2s"
+    ],
+    "profession": "mechanical-engineer",
+    "sources": [
+      {
+        "title": "NIST — технологии производства: обзор — общий контекст; не техкарта",
+        "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "broaching",
+    "name": "Протягивание",
+    "industry": "metals",
+    "category": "forming",
+    "parentId": "cutting",
+    "description": "Формирование профиля последовательными режущими зубьями протяжки.",
+    "steps": "Установка заготовки → проход протяжки → контроль",
+    "checks": "Профиль, следы зубьев, заусенцы",
+    "materials": [
+      "steel-45",
+      "09g2s"
+    ],
+    "profession": "mechanical-engineer",
+    "sources": [
+      {
+        "title": "NIST — технологии производства: обзор — общий контекст; не техкарта",
+        "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "gear-cutting",
+    "name": "Зубонарезание",
+    "industry": "metals",
+    "category": "forming",
+    "parentId": "cutting",
+    "description": "Обработка зубчатых венцов специальным инструментом.",
+    "steps": "Подготовка заготовки → нарезание → измерение зубьев",
+    "checks": "Шаг, профиль и биение зубьев",
+    "materials": [
+      "steel-45",
+      "09g2s"
+    ],
+    "profession": "mechanical-engineer",
+    "sources": [
+      {
+        "title": "NIST — технологии производства: обзор — общий контекст; не техкарта",
+        "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "electrodischarge-machining",
+    "name": "Электроэрозионная обработка",
+    "industry": "metals",
+    "category": "forming",
+    "parentId": "cutting",
+    "description": "Эрозионное удаление электропроводящего материала электрическими разрядами.",
+    "steps": "Позиционирование электрода → обработка → контроль",
+    "checks": "Геометрия, износ электрода, состояние слоя",
+    "materials": [
+      "steel-45",
+      "09g2s"
+    ],
+    "profession": "mechanical-engineer",
+    "sources": [
+      {
+        "title": "NIST — технологии производства: обзор — общий контекст; не техкарта",
+        "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "laser-cutting",
+    "name": "Лазерная резка",
+    "industry": "metals",
+    "category": "forming",
+    "parentId": "cutting",
+    "description": "Разделение заготовки сфокусированным лазерным излучением.",
+    "steps": "Раскрой → резка → отделение деталей → осмотр",
+    "checks": "Кромка, геометрия, термическое влияние",
+    "materials": [
+      "steel-45",
+      "09g2s"
+    ],
+    "profession": "mechanical-engineer",
+    "sources": [
+      {
+        "title": "NIST — технологии производства: обзор — общий контекст; не техкарта",
+        "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "waterjet-cutting",
+    "name": "Гидроабразивная резка",
+    "industry": "metals",
+    "category": "forming",
+    "parentId": "cutting",
+    "description": "Разделение материала струёй воды с абразивом.",
+    "steps": "Закрепление → резка → очистка → измерение",
+    "checks": "Конусность реза, кромка, размер",
+    "materials": [
+      "steel-45",
+      "09g2s"
+    ],
+    "profession": "mechanical-engineer",
+    "sources": [
+      {
+        "title": "NIST — технологии производства: обзор — общий контекст; не техкарта",
+        "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "annealing",
+    "name": "Отжиг",
+    "industry": "metals",
+    "category": "treatment",
+    "parentId": "heat",
+    "description": "Термический цикл нагрева и охлаждения для изменения структуры.",
+    "steps": "Выбор цикла по материалу → обработка → испытания",
+    "checks": "Структура, твёрдость, деформации",
+    "materials": [
+      "steel-45",
+      "09g2s"
+    ],
+    "profession": "mechanical-engineer",
+    "sources": [
+      {
+        "title": "NIST — технологии производства: обзор — общий контекст; не техкарта",
+        "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "quenching",
+    "name": "Закалка сталей",
+    "industry": "metals",
+    "category": "treatment",
+    "parentId": "heat",
+    "description": "Термическая обработка с ускоренным охлаждением для изменения структуры стали.",
+    "steps": "Проверка марки → нагрев → охлаждение → контроль",
+    "checks": "Трещины, коробление и твёрдость",
+    "materials": [
+      "steel-45",
+      "09g2s"
+    ],
+    "profession": "mechanical-engineer",
+    "sources": [
+      {
+        "title": "NIST — технологии производства: обзор — общий контекст; не техкарта",
+        "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "tempering",
+    "name": "Отпуск стали",
+    "industry": "metals",
+    "category": "treatment",
+    "parentId": "heat",
+    "description": "Тепловая обработка закалённой стали для изменения сочетания свойств.",
+    "steps": "Проверка состояния → отпуск → измерения",
+    "checks": "Твёрдость, деформации, требования к свойствам",
+    "materials": [
+      "steel-45",
+      "09g2s"
+    ],
+    "profession": "mechanical-engineer",
+    "sources": [
+      {
+        "title": "NIST — технологии производства: обзор — общий контекст; не техкарта",
+        "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "induction-hardening",
+    "name": "Индукционная поверхностная закалка",
+    "industry": "metals",
+    "category": "treatment",
+    "parentId": "heat",
+    "description": "Локальная закалка с нагревом электромагнитной индукцией.",
+    "steps": "Позиционирование → нагрев → охлаждение → проверка слоя",
+    "checks": "Глубина слоя, трещины, твёрдость",
+    "materials": [
+      "steel-45",
+      "09g2s"
+    ],
+    "profession": "mechanical-engineer",
+    "sources": [
+      {
+        "title": "NIST — технологии производства: обзор — общий контекст; не техкарта",
+        "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "manual-metal-arc",
+    "name": "Ручная дуговая сварка покрытым электродом",
+    "industry": "metals",
+    "category": "joining",
+    "parentId": "welding",
+    "description": "Дуговое соединение с расходуемым покрытым электродом.",
+    "steps": "Подготовка → сборка → сварка → удаление шлака → контроль",
+    "checks": "Несплавление, трещины, включения",
+    "materials": [
+      "09g2s",
+      "al-6061"
+    ],
+    "profession": "mechanical-engineer",
+    "sources": [
+      {
+        "title": "TWI — классификация сварочных технологий — общий контекст; не техкарта",
+        "url": "https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "submerged-arc",
+    "name": "Сварка под флюсом",
+    "industry": "metals",
+    "category": "joining",
+    "parentId": "welding",
+    "description": "Дуговая сварка с защитой дуги гранулированным флюсом.",
+    "steps": "Подготовка стыка → сварка под флюсом → очистка → контроль",
+    "checks": "Включения, поры, геометрия",
+    "materials": [
+      "09g2s",
+      "al-6061"
+    ],
+    "profession": "mechanical-engineer",
+    "sources": [
+      {
+        "title": "TWI — классификация сварочных технологий — общий контекст; не техкарта",
+        "url": "https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "resistance-spot",
+    "name": "Контактная точечная сварка",
+    "industry": "metals",
+    "category": "joining",
+    "parentId": "welding",
+    "description": "Локальное соединение нахлёсточных листов нагревом током и усилием.",
+    "steps": "Совмещение листов → контактный цикл → испытания",
+    "checks": "Размер точки, выплеск, прочность",
+    "materials": [
+      "09g2s",
+      "al-6061"
+    ],
+    "profession": "mechanical-engineer",
+    "sources": [
+      {
+        "title": "TWI — классификация сварочных технологий — общий контекст; не техкарта",
+        "url": "https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "laser-welding",
+    "name": "Лазерная сварка",
+    "industry": "metals",
+    "category": "joining",
+    "parentId": "welding",
+    "description": "Формирование шва концентрированным лазерным источником энергии.",
+    "steps": "Подготовка → позиционирование → сварка → контроль",
+    "checks": "Проплавление, поры, трещины",
+    "materials": [
+      "09g2s",
+      "al-6061"
+    ],
+    "profession": "mechanical-engineer",
+    "sources": [
+      {
+        "title": "TWI — классификация сварочных технологий — общий контекст; не техкарта",
+        "url": "https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "friction-stir-welding",
+    "name": "Сварка трением с перемешиванием",
+    "industry": "metals",
+    "category": "joining",
+    "parentId": "welding",
+    "description": "Твердофазное соединение вращающимся инструментом вдоль линии стыка.",
+    "steps": "Сборка → проход инструмента → контроль соединения",
+    "checks": "Несплошности, проплавление не применимо, геометрия",
+    "materials": [
+      "09g2s",
+      "al-6061"
+    ],
+    "profession": "mechanical-engineer",
+    "sources": [
+      {
+        "title": "TWI — классификация сварочных технологий — общий контекст; не техкарта",
+        "url": "https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "brazing",
+    "name": "Высокотемпературная пайка",
+    "industry": "metals",
+    "category": "joining",
+    "parentId": "assembly",
+    "description": "Соединение основного металла расплавленным припоем без расплавления основы.",
+    "steps": "Очистка → сборка → нагрев → охлаждение → контроль",
+    "checks": "Смачивание, поры, зазор",
+    "materials": [
+      "copper-m1",
+      "aisi-304"
+    ],
+    "profession": "mechanical-engineer",
+    "sources": [
+      {
+        "title": "TWI — сварка и пайка: различия — общий контекст; не техкарта",
+        "url": "https://www.twi-global.com/technical-knowledge/faqs/welding-brazing-and-soldering"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "soft-soldering",
+    "name": "Низкотемпературная пайка",
+    "industry": "metals",
+    "category": "joining",
+    "parentId": "assembly",
+    "description": "Соединение деталей припойным металлом с более низкой температурой плавления.",
+    "steps": "Подготовка → пайка → очистка → проверка",
+    "checks": "Смачивание, загрязнение, прочность",
+    "materials": [
+      "copper-m1",
+      "aisi-304"
+    ],
+    "profession": "mechanical-engineer",
+    "sources": [
+      {
+        "title": "TWI — сварка и пайка: различия — общий контекст; не техкарта",
+        "url": "https://www.twi-global.com/technical-knowledge/faqs/welding-brazing-and-soldering"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "powder-bed-fusion",
+    "name": "Сплавление порошкового слоя",
+    "industry": "general",
+    "category": "forming",
+    "parentId": "additive",
+    "description": "Послойное сплавление порошка направленным источником энергии.",
+    "steps": "Подготовка порошка → построение → извлечение → контроль",
+    "checks": "Пористость, деформации, размер",
+    "materials": [],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "NIST — виды аддитивного производства — общий контекст; не техкарта",
+        "url": "https://www.nist.gov/additive-manufacturing/research-areas/technologies"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "directed-energy-deposition",
+    "name": "Направленное энергетическое осаждение",
+    "industry": "general",
+    "category": "forming",
+    "parentId": "additive",
+    "description": "Подача материала в область локального нагрева и формирования объёма.",
+    "steps": "Подготовка траектории → осаждение → охлаждение → контроль",
+    "checks": "Несплавление, геометрия, трещины",
+    "materials": [],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "NIST — виды аддитивного производства — общий контекст; не техкарта",
+        "url": "https://www.nist.gov/additive-manufacturing/research-areas/technologies"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "binder-jetting",
+    "name": "Струйное нанесение связующего",
+    "industry": "general",
+    "category": "forming",
+    "parentId": "additive",
+    "description": "Выборочное связывание порошковых слоёв жидким связующим.",
+    "steps": "Подача порошка → нанесение связующего → постобработка → контроль",
+    "checks": "Прочность сырца, усадка, плотность",
+    "materials": [],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "NIST — виды аддитивного производства — общий контекст; не техкарта",
+        "url": "https://www.nist.gov/additive-manufacturing/research-areas/technologies"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "material-jetting",
+    "name": "Струйное нанесение материала",
+    "industry": "general",
+    "category": "forming",
+    "parentId": "additive",
+    "description": "Послойное построение изделия дозированными каплями материала.",
+    "steps": "Дозирование капель → построение → отверждение → измерение",
+    "checks": "Слои, геометрия, качество поверхности",
+    "materials": [],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "NIST — виды аддитивного производства — общий контекст; не техкарта",
+        "url": "https://www.nist.gov/additive-manufacturing/research-areas/technologies"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "vat-photopolymerization",
+    "name": "Ванночная фотополимеризация",
+    "industry": "general",
+    "category": "forming",
+    "parentId": "additive",
+    "description": "Послойное световое отверждение фотополимерной смолы.",
+    "steps": "Подготовка модели → экспонирование → очистка и доотверждение → контроль",
+    "checks": "Размеры, остаточная смола, полнота отверждения",
+    "materials": [],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "NIST — виды аддитивного производства — общий контекст; не техкарта",
+        "url": "https://www.nist.gov/additive-manufacturing/research-areas/technologies"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "additive-extrusion",
+    "name": "Аддитивная экструзия материала",
+    "industry": "general",
+    "category": "forming",
+    "parentId": "additive",
+    "description": "Послойная укладка экструдируемого полимерного материала.",
+    "steps": "Подготовка нити → экструзия слоёв → охлаждение → контроль",
+    "checks": "Межслойная связь, геометрия, пористость",
+    "materials": [],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "NIST — виды аддитивного производства — общий контекст; не техкарта",
+        "url": "https://www.nist.gov/additive-manufacturing/research-areas/technologies"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "blow-molding",
+    "name": "Выдувное формование",
+    "industry": "polymers",
+    "category": "forming",
+    "parentId": "injection-molding",
+    "description": "Получение полых термопластичных изделий раздувом заготовки в форме.",
+    "steps": "Формование заготовки → раздув → охлаждение → извлечение",
+    "checks": "Толщина, герметичность, усадка",
+    "materials": [
+      "pe-hd",
+      "pa6"
+    ],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "EPA — отраслевой обзор формования пластмасс — общий контекст; не техкарта",
+        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "rotomolding",
+    "name": "Ротационное формование",
+    "industry": "polymers",
+    "category": "forming",
+    "parentId": "injection-molding",
+    "description": "Получение полого изделия распределением нагретого полимера по вращающейся форме.",
+    "steps": "Загрузка сырья → нагрев и вращение → охлаждение",
+    "checks": "Толщина, поры, коробление",
+    "materials": [
+      "pe-hd",
+      "pa6"
+    ],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "EPA — отраслевой обзор формования пластмасс — общий контекст; не техкарта",
+        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "thermoforming",
+    "name": "Термоформование листа",
+    "industry": "polymers",
+    "category": "forming",
+    "parentId": "injection-molding",
+    "description": "Придание нагретому полимерному листу формы под вакуумом или давлением.",
+    "steps": "Нагрев листа → формование → охлаждение → обрезка",
+    "checks": "Складки, истончение, размеры",
+    "materials": [
+      "pe-hd",
+      "pa6"
+    ],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "EPA — отраслевой обзор формования пластмасс — общий контекст; не техкарта",
+        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "calendering",
+    "name": "Каландрование пластмасс",
+    "industry": "polymers",
+    "category": "forming",
+    "parentId": "extrusion",
+    "description": "Формирование полотна или плёнки прохождением полимерной массы между валками.",
+    "steps": "Подготовка массы → валки → калибрование → контроль",
+    "checks": "Толщина, неоднородность, полосы",
+    "materials": [
+      "pe-hd",
+      "pa6"
+    ],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "EPA — отраслевой обзор формования пластмасс — общий контекст; не техкарта",
+        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "compounding",
+    "name": "Компаундирование полимеров",
+    "industry": "polymers",
+    "category": "treatment",
+    "parentId": "extrusion",
+    "description": "Смешивание полимера с наполнителями и добавками для получения композиции.",
+    "steps": "Дозирование → смешение → гранулирование → испытания",
+    "checks": "Однородность, влажность, распределение добавок",
+    "materials": [
+      "pe-hd",
+      "pa6"
+    ],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "EPA — отраслевой обзор формования пластмасс — общий контекст; не техкарта",
+        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "polymer-foaming",
+    "name": "Вспенивание пластмасс",
+    "industry": "polymers",
+    "category": "forming",
+    "parentId": "injection-molding",
+    "description": "Формирование ячеистой структуры в полимерном материале.",
+    "steps": "Подготовка состава → вспенивание → охлаждение → контроль",
+    "checks": "Плотность, структура ячеек, усадка",
+    "materials": [
+      "pe-hd",
+      "pa6"
+    ],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "EPA — отраслевой обзор формования пластмасс — общий контекст; не техкарта",
+        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "ultrasonic-plastic-welding",
+    "name": "Ультразвуковая сварка термопластов",
+    "industry": "polymers",
+    "category": "joining",
+    "parentId": "assembly",
+    "description": "Соединение подходящих термопластов за счёт высокочастотных механических колебаний.",
+    "steps": "Совмещение → прижатие → воздействие → контроль",
+    "checks": "Прочность, герметичность, перегрев",
+    "materials": [
+      "pe-hd",
+      "pa6"
+    ],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "TWI — методы соединения полимеров — общий контекст; не техкарта",
+        "url": "https://www.twi-global.com/technical-knowledge/faqs/joining-methods-of-polymers?trk=public_post_reshare-text"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "laser-plastic-welding",
+    "name": "Лазерная сварка термопластов",
+    "industry": "polymers",
+    "category": "joining",
+    "parentId": "assembly",
+    "description": "Локальное лазерное соединение оптически совместимых термопластичных деталей.",
+    "steps": "Подготовка сопряжения → лазерное воздействие → контроль",
+    "checks": "Непровар, пережог, прочность",
+    "materials": [
+      "pe-hd",
+      "pa6"
+    ],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "TWI — методы соединения полимеров — общий контекст; не техкарта",
+        "url": "https://www.twi-global.com/technical-knowledge/faqs/joining-methods-of-polymers?trk=public_post_reshare-text"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "hand-layup",
+    "name": "Ручная выкладка композитов",
+    "industry": "composites",
+    "category": "forming",
+    "parentId": "additive",
+    "description": "Выкладка слоёв армирования с пропиткой связующим в оснастке.",
+    "steps": "Подготовка формы → укладка → пропитка → отверждение",
+    "checks": "Поры, сухие зоны, складки",
+    "materials": [
+      "gfrp",
+      "aramid"
+    ],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "DOE — способы изготовления композитов, 2016 — общий контекст; не техкарта",
+        "url": "https://www.energy.gov/sites/prod/files/2016/04/f30/Carbon%20Fiber%20Report.pdf"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "vacuum-infusion",
+    "name": "Вакуумная инфузия",
+    "industry": "composites",
+    "category": "forming",
+    "parentId": "additive",
+    "description": "Пропитка сухого армирующего пакета смолой при перепаде давлений.",
+    "steps": "Выкладка → вакуумный пакет → инфузия → отверждение",
+    "checks": "Непропитка, утечки, поры",
+    "materials": [
+      "gfrp",
+      "aramid"
+    ],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "DOE — способы изготовления композитов, 2016 — общий контекст; не техкарта",
+        "url": "https://www.energy.gov/sites/prod/files/2016/04/f30/Carbon%20Fiber%20Report.pdf"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "resin-transfer-molding",
+    "name": "Трансферное формование композитов (RTM)",
+    "industry": "composites",
+    "category": "forming",
+    "parentId": "additive",
+    "description": "Подача жидкой смолы в закрытую форму с армирующей преформой.",
+    "steps": "Укладка преформы → инжекция смолы → отверждение",
+    "checks": "Пористость, усадка, геометрия",
+    "materials": [
+      "gfrp",
+      "aramid"
+    ],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "DOE — способы изготовления композитов, 2016 — общий контекст; не техкарта",
+        "url": "https://www.energy.gov/sites/prod/files/2016/04/f30/Carbon%20Fiber%20Report.pdf"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "pultrusion",
+    "name": "Пултрузия",
+    "industry": "composites",
+    "category": "forming",
+    "parentId": "additive",
+    "description": "Непрерывное протягивание пропитанных волокон через формующую фильеру.",
+    "steps": "Подача армирования → пропитка → фильера → резка",
+    "checks": "Профиль, содержание волокон, поры",
+    "materials": [
+      "gfrp",
+      "aramid"
+    ],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "DOE — способы изготовления композитов, 2016 — общий контекст; не техкарта",
+        "url": "https://www.energy.gov/sites/prod/files/2016/04/f30/Carbon%20Fiber%20Report.pdf"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "filament-winding",
+    "name": "Намотка композитов",
+    "industry": "composites",
+    "category": "forming",
+    "parentId": "additive",
+    "description": "Размещение армирующих нитей на вращающейся оправке.",
+    "steps": "Подготовка оправки → намотка → отверждение → съём",
+    "checks": "Угол армирования, равномерность, поры",
+    "materials": [
+      "gfrp",
+      "aramid"
+    ],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "DOE — способы изготовления композитов, 2016 — общий контекст; не техкарта",
+        "url": "https://www.energy.gov/sites/prod/files/2016/04/f30/Carbon%20Fiber%20Report.pdf"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "autoclave-composites",
+    "name": "Автоклавное отверждение композитов",
+    "industry": "composites",
+    "category": "treatment",
+    "parentId": "additive",
+    "description": "Отверждение пакета композита при контролируемом тепловом и барическом цикле.",
+    "steps": "Вакуумный пакет → автоклавный цикл → извлечение → контроль",
+    "checks": "Пористость, степень отверждения, деформации",
+    "materials": [
+      "gfrp",
+      "aramid"
+    ],
+    "profession": "materials-engineer",
+    "sources": [
+      {
+        "title": "DOE — способы изготовления композитов, 2016 — общий контекст; не техкарта",
+        "url": "https://www.energy.gov/sites/prod/files/2016/04/f30/Carbon%20Fiber%20Report.pdf"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "solder-paste-printing",
+    "name": "Трафаретное нанесение паяльной пасты",
+    "industry": "electronics",
+    "category": "joining",
+    "parentId": "pcb-assembly",
+    "description": "Дозирование пасты через трафарет на площадки печатной платы.",
+    "steps": "Совмещение → нанесение пасты → контроль рисунка",
+    "checks": "Объём, смещение, мостики пасты",
+    "materials": [
+      "pcb",
+      "solder"
+    ],
+    "profession": "electrical-engineer",
+    "sources": [
+      {
+        "title": "IPC — стандарты сборки электроники (обзор) — общий контекст; не техкарта",
+        "url": "https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "smt-placement",
+    "name": "Автоматическая установка SMD-компонентов",
+    "industry": "electronics",
+    "category": "joining",
+    "parentId": "pcb-assembly",
+    "description": "Автоматическое позиционирование компонентов на площадки платы.",
+    "steps": "Подготовка питателей → установка → оптический контроль",
+    "checks": "Ориентация, смещение, пропуски",
+    "materials": [
+      "pcb",
+      "solder"
+    ],
+    "profession": "electrical-engineer",
+    "sources": [
+      {
+        "title": "IPC — стандарты сборки электроники (обзор) — общий контекст; не техкарта",
+        "url": "https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "reflow-soldering",
+    "name": "Пайка оплавлением",
+    "industry": "electronics",
+    "category": "joining",
+    "parentId": "pcb-assembly",
+    "description": "Образование паяных соединений при нагреве нанесённой пасты.",
+    "steps": "Нанесение → термопрофиль → оплавление → охлаждение",
+    "checks": "Пустоты, непропай, перемычки",
+    "materials": [
+      "pcb",
+      "solder"
+    ],
+    "profession": "electrical-engineer",
+    "sources": [
+      {
+        "title": "IPC — стандарты сборки электроники (обзор) — общий контекст; не техкарта",
+        "url": "https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "wave-soldering",
+    "name": "Пайка волной припоя",
+    "industry": "electronics",
+    "category": "joining",
+    "parentId": "pcb-assembly",
+    "description": "Формирование соединений при контакте платы с волной расплавленного припоя.",
+    "steps": "Флюсование → предварительный нагрев → волна → контроль",
+    "checks": "Перемычки, недостаток припоя, загрязнение",
+    "materials": [
+      "pcb",
+      "solder"
+    ],
+    "profession": "electrical-engineer",
+    "sources": [
+      {
+        "title": "IPC — стандарты сборки электроники (обзор) — общий контекст; не техкарта",
+        "url": "https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "conformal-coating",
+    "name": "Защитное покрытие электронных сборок",
+    "industry": "electronics",
+    "category": "treatment",
+    "parentId": "pcb-assembly",
+    "description": "Нанесение защитной полимерной плёнки на собранную плату.",
+    "steps": "Очистка → маскирование → нанесение → отверждение",
+    "checks": "Толщина, пропуски, пузыри",
+    "materials": [
+      "pcb",
+      "solder"
+    ],
+    "profession": "electrical-engineer",
+    "sources": [
+      {
+        "title": "IPC — стандарты сборки электроники (обзор) — общий контекст; не техкарта",
+        "url": "https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
+  },
+  {
+    "id": "aoi-pcb",
+    "name": "Автоматизированная оптическая инспекция плат",
+    "industry": "electronics",
+    "category": "inspection",
+    "parentId": "electronic-inspection",
+    "description": "Контроль сборки системой машинного зрения по заданным критериям.",
+    "steps": "Настройка эталона → сканирование → проверка обнаружений",
+    "checks": "Ложные срабатывания, пропуски, ошибки размещения",
+    "materials": [
+      "pcb",
+      "solder"
+    ],
+    "profession": "electrical-engineer",
+    "sources": [
+      {
+        "title": "IPC — стандарты сборки электроники (обзор) — общий контекст; не техкарта",
+        "url": "https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"
+      }
+    ],
+    "evidence": {
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
+      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
+      "checkedAt": "2026-10-22"
+    }
   }
 ];
