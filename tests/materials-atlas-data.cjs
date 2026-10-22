@@ -48,7 +48,7 @@ assert.equal(graph.edgeCount,graph.edges.length,'Knowledge graph edge count stal
 for(const m of materials){
  const expected=Array.from(m.process||[]); // Convert vm-realm arrays before strict prototype-sensitive comparison.
  const edges=graph.edges.filter(x=>x.from==='material:'+m.id&&x.relation==='processed_by').map(x=>x.to.slice(8));
- assert.deepEqual(edges,expected,m.id+' graph differs from data');
+ assert.equal(JSON.stringify(edges),JSON.stringify(expected),m.id+' graph differs from data');
 }
 const evidence=registry.recordEvidence.filter(x=>x.recordType==='materials');
 assert.equal(new Set(evidence.map(x=>x.recordId)).size,materials.length,'Some materials lack evidence links');
