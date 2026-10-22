@@ -62,6 +62,8 @@ test('Planner supports one-off tasks and recurring templates across days and wee
  await page.locator('#itemName').fill('Поменять постельное бельё');
  await page.locator('#itemSection').selectOption('home');
  await page.locator('#itemRepeat').selectOption('weekly');
+ const weekday=await page.evaluate(()=>(new Date().getDay()+6)%7);
+ await page.locator('#itemWeekday').selectOption(String(weekday));
  await page.locator('#itemForm button[type=submit]').click();
  await tab(page,'planner');
  await expect(page.locator('#plannerRows')).toContainText('Проверить почту');
