@@ -1,4 +1,4 @@
-// Обзорные описания, не технологические инструкции.
+// Справочные описания, не технологическая инструкция.
 window.engineeringProcesses = [
   {
     "id": "casting",
@@ -34,6 +34,10 @@ window.engineeringProcesses = [
     ],
     "profession": "mechanical-engineer",
     "sources": [
+      {
+        "title": "Техническое описание процесса Дуговая сварка",
+        "url": "https://www.twi-global.com/technical-knowledge/faqs/what-is-fusion-welding"
+      },
       {
         "title": "TWI — классификация сварочных процессов",
         "url": "https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly"
@@ -355,6 +359,10 @@ window.engineeringProcesses = [
     "profession": "materials-engineer",
     "sources": [
       {
+        "title": "Техническое описание процесса Литьё термопластов под давлением",
+        "url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=912839"
+      },
+      {
         "title": "Protolabs — технология литья пластмасс и типовые дефекты",
         "url": "https://www.protolabs.com/en-gb/resources/guides-and-trend-reports/injection-moulding-guide-process-design-tips-materials/"
       }
@@ -373,6 +381,10 @@ window.engineeringProcesses = [
     ],
     "profession": "materials-engineer",
     "sources": [
+      {
+        "title": "Проверенный источник для Обработка резанием",
+        "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
+      },
       {
         "title": "NIST IR 7913 — классификация способов производства",
         "url": "https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes"
@@ -435,6 +447,10 @@ window.engineeringProcesses = [
     "materials": [],
     "profession": "mechanical-engineer",
     "sources": [
+      {
+        "title": "IPC — J-STD-001J и IPC-A-610J: производство электронных сборок",
+        "url": "https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"
+      },
       {
         "title": "NIST IR 7913 — классификация способов производства",
         "url": "https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes"
@@ -764,6 +780,10 @@ window.engineeringProcesses = [
     "materials": [],
     "profession": "chemical-engineer",
     "sources": [
+      {
+        "title": "Техническое описание процесса Промышленная фильтрация",
+        "url": "https://www.epa.gov/system/files/documents/2024-03/ws-commercial-bmp-watersenseatwork_section7.1_waterpurification.pdf"
+      },
       {
         "title": "USGS — фильтрация и разделение твёрдых частиц в водоочистке",
         "url": "https://www.usgs.gov/water-science-school/science/water-use-questions-answers"
