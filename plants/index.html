@@ -69,7 +69,7 @@ edit.onsubmit=e=>{e.preventDefault();p.name=name.value.trim()||'Горшок '+p
 edit.append(nameLabel,noteLabel,waterLabel,save);detail.append(edit);card.append(detail);list.append(card)
 })
 }
-$('search').addEventListener('input',e=>{search=e.target.value.trim();render()});
+$('search').addEventListener('input',e=>{search=e.target.value.trim();if(search)active='all';render()});
 $('export').onclick=()=>{const blob=new Blob([JSON.stringify({version:1,exportedAt:new Date().toISOString(),plants:pots},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=node('a');a.href=url;a.download='rasteniya-72-'+today()+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),2500)};
 $('import').onclick=()=>$('file').click();
 $('file').onchange=async e=>{let f=e.target.files?.[0];if(!f)return;try{if(f.size>500000)throw Error('Слишком большой файл');let incoming=JSON.parse(await f.text());if(!incoming||!Array.isArray(incoming.plants))throw Error('Неверный формат');if(confirm('Заменить записи всех 72 горшков?')){pots=sanitize(incoming.plants);store();render()}}catch(err){alert('Ошибка файла: '+err.message)}finally{e.target.value=''}};
