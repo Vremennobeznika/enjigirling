@@ -1,4 +1,4 @@
-// Curated reference entries. Descriptions are qualitative, not material certificates.
+// Качественные описания материалов; не сертификат на продукцию.
 window.engineeringMaterials = [
   {
     "id": "steel-20",
@@ -10,7 +10,8 @@ window.engineeringMaterials = [
     "process": [
       "cutting",
       "heat",
-      "hardness"
+      "hardness",
+      "stamping"
     ],
     "note": "Для химического состава и механических свойств необходимо выбрать действующий стандарт на конкретный вид проката или изделия."
   },
@@ -25,7 +26,9 @@ window.engineeringMaterials = [
       "cutting",
       "heat",
       "ultrasonic",
-      "hardness"
+      "hardness",
+      "forging",
+      "grinding"
     ],
     "note": "Твёрдость и прочность без указания режима термообработки не приводятся."
   },
@@ -58,7 +61,8 @@ window.engineeringMaterials = [
       "cutting",
       "tig",
       "radiographic",
-      "dye"
+      "dye",
+      "stamping"
     ],
     "note": "AISI — система обозначений; сопоставление с российскими марками требует отдельной проверки по составу и стандартам."
   },
@@ -75,7 +79,8 @@ window.engineeringMaterials = [
       "mig-mag",
       "tig",
       "dye",
-      "hardness"
+      "hardness",
+      "stamping"
     ],
     "note": "Не переносить свойства 6061-T6 на 6061-O или на сварное соединение."
   },
@@ -99,7 +104,9 @@ window.engineeringMaterials = [
     "detail": "Полиэтилен высокой плотности; эксплуатационные свойства зависят от марки, добавок и температуры.",
     "uses": "Трубы, ёмкости, технические детали",
     "process": [
-      "additive"
+      "additive",
+      "injection-molding",
+      "extrusion"
     ],
     "note": "Обозначение HDPE не является достаточной спецификацией для расчёта давления или долговечности."
   },
@@ -112,7 +119,9 @@ window.engineeringMaterials = [
     "uses": "Втулки, шестерни, корпуса",
     "process": [
       "cutting",
-      "additive"
+      "additive",
+      "injection-molding",
+      "extrusion"
     ],
     "note": "При расчёте учитывать влажность, температуру и конкретную модификацию."
   },
