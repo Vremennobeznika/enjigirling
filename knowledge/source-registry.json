@@ -80,6 +80,171 @@
       "appliesTo": "Use of X-rays or gamma rays to visualize internal conditions of components",
       "access": "public_abstract_or_overview",
       "notes": "The public methodological introduction was inspected; not a complete radiation safety protocol."
+    },
+    {
+      "sourceId": "atlas-casting",
+      "title": "NIST IR 7913 — классификация способов производства",
+      "url": "https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes",
+      "publisher": "www.nist.gov",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Обзор технологии или классификация процесса; не устанавливает режимы, критерии приёмки и допуски",
+      "access": "public_abstract_or_overview",
+      "notes": "Ссылка просмотрена на уровне общих сведений. Достоверность конкретных режимов и дефектов этой записью не удостоверяется."
+    },
+    {
+      "sourceId": "atlas-cutting",
+      "title": "Sandvik Coromant — точность и качество обработки резанием",
+      "url": "https://www.sandvik.coromant.com/en-gb/tools/silent-tools/what-is-silent-tools/application-guide-silent-tools/turning-appl-guide",
+      "publisher": "www.sandvik.coromant.com",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Обзор технологии или классификация процесса; не устанавливает режимы, критерии приёмки и допуски",
+      "access": "public_abstract_or_overview",
+      "notes": "Ссылка просмотрена на уровне общих сведений. Достоверность конкретных режимов и дефектов этой записью не удостоверяется."
+    },
+    {
+      "sourceId": "atlas-heat",
+      "title": "Bodycote — технический словарь термической обработки",
+      "url": "https://www.bodycote.com/technical-glossary/",
+      "publisher": "www.bodycote.com",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Обзор технологии или классификация процесса; не устанавливает режимы, критерии приёмки и допуски",
+      "access": "public_abstract_or_overview",
+      "notes": "Ссылка просмотрена на уровне общих сведений. Достоверность конкретных режимов и дефектов этой записью не удостоверяется."
+    },
+    {
+      "sourceId": "atlas-inspection",
+      "title": "ASNT — методы НК",
+      "url": "https://www.asnt.org/what-is-nondestructive-testing/methods",
+      "publisher": "www.asnt.org",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Обзор технологии или классификация процесса; не устанавливает режимы, критерии приёмки и допуски",
+      "access": "public_abstract_or_overview",
+      "notes": "Ссылка просмотрена на уровне общих сведений. Достоверность конкретных режимов и дефектов этой записью не удостоверяется."
+    },
+    {
+      "sourceId": "atlas-hardness",
+      "title": "ASTM E18-25 — определение твёрдости по Роквеллу",
+      "url": "https://store.astm.org/standards/e18",
+      "publisher": "store.astm.org",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Обзор технологии или классификация процесса; не устанавливает режимы, критерии приёмки и допуски",
+      "access": "public_abstract_or_overview",
+      "notes": "Ссылка просмотрена на уровне общих сведений. Достоверность конкретных режимов и дефектов этой записью не удостоверяется."
+    },
+    {
+      "sourceId": "atlas-injection-molding",
+      "title": "Protolabs — технология литья пластмасс и типовые дефекты",
+      "url": "https://www.protolabs.com/en-gb/resources/guides-and-trend-reports/injection-moulding-guide-process-design-tips-materials/",
+      "publisher": "www.protolabs.com",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Обзор технологии или классификация процесса; не устанавливает режимы, критерии приёмки и допуски",
+      "access": "public_abstract_or_overview",
+      "notes": "Ссылка просмотрена на уровне общих сведений. Достоверность конкретных режимов и дефектов этой записью не удостоверяется."
+    },
+    {
+      "sourceId": "atlas-pasteurization",
+      "title": "FAO — технология переработки фруктов и овощей",
+      "url": "https://www.fao.org/4/x0209e/x0209e06.htm",
+      "publisher": "www.fao.org",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Обзор технологии или классификация процесса; не устанавливает режимы, критерии приёмки и допуски",
+      "access": "public_abstract_or_overview",
+      "notes": "Ссылка просмотрена на уровне общих сведений. Достоверность конкретных режимов и дефектов этой записью не удостоверяется."
+    },
+    {
+      "sourceId": "atlas-spinning",
+      "title": "OSHA — основные процессы текстильной промышленности",
+      "url": "https://www.osha.gov/textiles",
+      "publisher": "www.osha.gov",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Обзор технологии или классификация процесса; не устанавливает режимы, критерии приёмки и допуски",
+      "access": "public_abstract_or_overview",
+      "notes": "Ссылка просмотрена на уровне общих сведений. Достоверность конкретных режимов и дефектов этой записью не удостоверяется."
+    },
+    {
+      "sourceId": "atlas-sewing",
+      "title": "Coats — технические дефекты швов и рекомендации для швейного производства",
+      "url": "https://www.coats.com/en/industries/composites/faqs/",
+      "publisher": "www.coats.com",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Обзор технологии или классификация процесса; не устанавливает режимы, критерии приёмки и допуски",
+      "access": "public_abstract_or_overview",
+      "notes": "Ссылка просмотрена на уровне общих сведений. Достоверность конкретных режимов и дефектов этой записью не удостоверяется."
+    },
+    {
+      "sourceId": "atlas-sawmilling",
+      "title": "OSHA — виды лесопильных и строгальных операций",
+      "url": "https://www.osha.gov/sic-manual/2421",
+      "publisher": "www.osha.gov",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Обзор технологии или классификация процесса; не устанавливает режимы, критерии приёмки и допуски",
+      "access": "public_abstract_or_overview",
+      "notes": "Ссылка просмотрена на уровне общих сведений. Достоверность конкретных режимов и дефектов этой записью не удостоверяется."
+    },
+    {
+      "sourceId": "atlas-wood-drying",
+      "title": "US Forest Service — Drying Hardwood Lumber, обзор методов и дефектов",
+      "url": "https://research.fs.usda.gov/treesearch/5710",
+      "publisher": "research.fs.usda.gov",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Обзор технологии или классификация процесса; не устанавливает режимы, критерии приёмки и допуски",
+      "access": "public_abstract_or_overview",
+      "notes": "Ссылка просмотрена на уровне общих сведений. Достоверность конкретных режимов и дефектов этой записью не удостоверяется."
+    },
+    {
+      "sourceId": "atlas-pcb-assembly",
+      "title": "IPC — J-STD-001J и IPC-A-610J: производство электронных сборок",
+      "url": "https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly",
+      "publisher": "www.ipc.org",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Обзор технологии или классификация процесса; не устанавливает режимы, критерии приёмки и допуски",
+      "access": "public_abstract_or_overview",
+      "notes": "Ссылка просмотрена на уровне общих сведений. Достоверность конкретных режимов и дефектов этой записью не удостоверяется."
+    },
+    {
+      "sourceId": "atlas-chemical-mixing",
+      "title": "OSHA — нефтепереработка: смешение продуктов и технологические опасности",
+      "url": "https://www.osha.gov/otm/section-4-safety-hazards/chapter-2",
+      "publisher": "www.osha.gov",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Обзор технологии или классификация процесса; не устанавливает режимы, критерии приёмки и допуски",
+      "access": "public_abstract_or_overview",
+      "notes": "Ссылка просмотрена на уровне общих сведений. Достоверность конкретных режимов и дефектов этой записью не удостоверяется."
+    },
+    {
+      "sourceId": "atlas-distillation",
+      "title": "OSHA — перегонка и риски технологического процесса",
+      "url": "https://www.osha.gov/otm/section-4-safety-hazards/chapter-5",
+      "publisher": "www.osha.gov",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Обзор технологии или классификация процесса; не устанавливает режимы, критерии приёмки и допуски",
+      "access": "public_abstract_or_overview",
+      "notes": "Ссылка просмотрена на уровне общих сведений. Достоверность конкретных режимов и дефектов этой записью не удостоверяется."
+    },
+    {
+      "sourceId": "atlas-industrial-filtration",
+      "title": "USGS — фильтрация и разделение твёрдых частиц в водоочистке",
+      "url": "https://www.usgs.gov/water-science-school/science/water-use-questions-answers",
+      "publisher": "www.usgs.gov",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Обзор технологии или классификация процесса; не устанавливает режимы, критерии приёмки и допуски",
+      "access": "public_abstract_or_overview",
+      "notes": "Ссылка просмотрена на уровне общих сведений. Достоверность конкретных режимов и дефектов этой записью не удостоверяется."
     }
   ],
   "recordEvidence": [
@@ -178,6 +343,238 @@
       "sourceSection": "What Is Radiographic Testing and How Is It Used in NDT?",
       "claimCheckedAt": "2026-10-21",
       "reviewScope": "Не подтверждает допустимость условий облучения или пригодность метода для конкретной детали."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "casting",
+      "sourceId": "atlas-casting",
+      "claimPath": "description",
+      "verificationStatus": "source_located",
+      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена"
+    },
+    {
+      "recordType": "processes",
+      "recordId": "cutting",
+      "sourceId": "atlas-cutting",
+      "claimPath": "description",
+      "verificationStatus": "source_located",
+      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена"
+    },
+    {
+      "recordType": "processes",
+      "recordId": "heat",
+      "sourceId": "atlas-heat",
+      "claimPath": "description",
+      "verificationStatus": "source_located",
+      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена"
+    },
+    {
+      "recordType": "processes",
+      "recordId": "inspection",
+      "sourceId": "atlas-inspection",
+      "claimPath": "description",
+      "verificationStatus": "source_located",
+      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена"
+    },
+    {
+      "recordType": "processes",
+      "recordId": "hardness",
+      "sourceId": "atlas-hardness",
+      "claimPath": "description",
+      "verificationStatus": "source_located",
+      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена"
+    },
+    {
+      "recordType": "processes",
+      "recordId": "forging",
+      "sourceId": "atlas-casting",
+      "claimPath": "description",
+      "verificationStatus": "source_located",
+      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена"
+    },
+    {
+      "recordType": "processes",
+      "recordId": "rolling",
+      "sourceId": "atlas-casting",
+      "claimPath": "description",
+      "verificationStatus": "source_located",
+      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена"
+    },
+    {
+      "recordType": "processes",
+      "recordId": "stamping",
+      "sourceId": "atlas-casting",
+      "claimPath": "description",
+      "verificationStatus": "source_located",
+      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена"
+    },
+    {
+      "recordType": "processes",
+      "recordId": "injection-molding",
+      "sourceId": "atlas-injection-molding",
+      "claimPath": "description",
+      "verificationStatus": "source_located",
+      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена"
+    },
+    {
+      "recordType": "processes",
+      "recordId": "extrusion",
+      "sourceId": "atlas-casting",
+      "claimPath": "description",
+      "verificationStatus": "source_located",
+      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена"
+    },
+    {
+      "recordType": "processes",
+      "recordId": "grinding",
+      "sourceId": "atlas-casting",
+      "claimPath": "description",
+      "verificationStatus": "source_located",
+      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена"
+    },
+    {
+      "recordType": "processes",
+      "recordId": "surface-finishing",
+      "sourceId": "atlas-casting",
+      "claimPath": "description",
+      "verificationStatus": "source_located",
+      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена"
+    },
+    {
+      "recordType": "processes",
+      "recordId": "assembly",
+      "sourceId": "atlas-casting",
+      "claimPath": "description",
+      "verificationStatus": "source_located",
+      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена"
+    },
+    {
+      "recordType": "processes",
+      "recordId": "pasteurization",
+      "sourceId": "atlas-pasteurization",
+      "claimPath": "description",
+      "verificationStatus": "source_located",
+      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена"
+    },
+    {
+      "recordType": "processes",
+      "recordId": "food-drying",
+      "sourceId": "atlas-pasteurization",
+      "claimPath": "description",
+      "verificationStatus": "source_located",
+      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена"
+    },
+    {
+      "recordType": "processes",
+      "recordId": "fermentation",
+      "sourceId": "atlas-pasteurization",
+      "claimPath": "description",
+      "verificationStatus": "source_located",
+      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена"
+    },
+    {
+      "recordType": "processes",
+      "recordId": "food-packaging",
+      "sourceId": "atlas-pasteurization",
+      "claimPath": "description",
+      "verificationStatus": "source_located",
+      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена"
+    },
+    {
+      "recordType": "processes",
+      "recordId": "spinning",
+      "sourceId": "atlas-spinning",
+      "claimPath": "description",
+      "verificationStatus": "source_located",
+      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена"
+    },
+    {
+      "recordType": "processes",
+      "recordId": "weaving",
+      "sourceId": "atlas-spinning",
+      "claimPath": "description",
+      "verificationStatus": "source_located",
+      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена"
+    },
+    {
+      "recordType": "processes",
+      "recordId": "knitting",
+      "sourceId": "atlas-spinning",
+      "claimPath": "description",
+      "verificationStatus": "source_located",
+      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена"
+    },
+    {
+      "recordType": "processes",
+      "recordId": "textile-finishing",
+      "sourceId": "atlas-spinning",
+      "claimPath": "description",
+      "verificationStatus": "source_located",
+      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена"
+    },
+    {
+      "recordType": "processes",
+      "recordId": "sewing",
+      "sourceId": "atlas-sewing",
+      "claimPath": "description",
+      "verificationStatus": "source_located",
+      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена"
+    },
+    {
+      "recordType": "processes",
+      "recordId": "sawmilling",
+      "sourceId": "atlas-sawmilling",
+      "claimPath": "description",
+      "verificationStatus": "source_located",
+      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена"
+    },
+    {
+      "recordType": "processes",
+      "recordId": "wood-drying",
+      "sourceId": "atlas-wood-drying",
+      "claimPath": "description",
+      "verificationStatus": "source_located",
+      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена"
+    },
+    {
+      "recordType": "processes",
+      "recordId": "pcb-assembly",
+      "sourceId": "atlas-pcb-assembly",
+      "claimPath": "description",
+      "verificationStatus": "source_located",
+      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена"
+    },
+    {
+      "recordType": "processes",
+      "recordId": "electronic-inspection",
+      "sourceId": "atlas-pcb-assembly",
+      "claimPath": "description",
+      "verificationStatus": "source_located",
+      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена"
+    },
+    {
+      "recordType": "processes",
+      "recordId": "chemical-mixing",
+      "sourceId": "atlas-chemical-mixing",
+      "claimPath": "description",
+      "verificationStatus": "source_located",
+      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена"
+    },
+    {
+      "recordType": "processes",
+      "recordId": "distillation",
+      "sourceId": "atlas-distillation",
+      "claimPath": "description",
+      "verificationStatus": "source_located",
+      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена"
+    },
+    {
+      "recordType": "processes",
+      "recordId": "industrial-filtration",
+      "sourceId": "atlas-industrial-filtration",
+      "claimPath": "description",
+      "verificationStatus": "source_located",
+      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена"
     }
   ],
   "policy": {
