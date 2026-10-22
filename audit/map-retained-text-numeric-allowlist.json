@@ -1,0 +1,420 @@
+{
+  "scope": "map-data.js numerical text in fields year, verifiedScope, reviewMethod, note, basis, admission",
+  "auditedAt": "2026-10-22",
+  "sampledFields": 238,
+  "dispositionCount": {
+    "RETAINED": 68,
+    "REWRITTEN": 157,
+    "REMOVED": 13
+  },
+  "records": [
+    {
+      "organization": "СПбПУ Петра Великого",
+      "field": "year",
+      "statement": "Опубликованный перечень образовательных программ 2026/27",
+      "sourceUrl": "https://www.spbstu.ru/sveden/education/list-educational-programs/"
+    },
+    {
+      "organization": "ЛЭТИ",
+      "field": "year",
+      "statement": "Правила приёма 2026/27",
+      "sourceUrl": "https://new.etu.ru/news/opublikovany-pravila-priema-na-obuchenie-v-leti-na-2026-2027-uchebnyj-god"
+    },
+    {
+      "organization": "БГТУ «ВОЕНМЕХ» им. Д. Ф. Устинова",
+      "field": "year",
+      "statement": "Приём 2026/27",
+      "sourceUrl": "https://priem.voenmeh.ru/stoimost-obucheniya"
+    },
+    {
+      "organization": "Колледж технологии, моделирования и управления СПбГУПТД",
+      "field": "basis",
+      "statement": "9 классов, очно",
+      "sourceUrl": "https://sutd.ru/ktmu/education/0/37402/"
+    },
+    {
+      "organization": "Политехнический колледж городского хозяйства",
+      "field": "year",
+      "statement": "План приёма 2026/27",
+      "sourceUrl": "https://pkgh.ru/abitur/specialties-plan/"
+    },
+    {
+      "organization": "Политехнический колледж городского хозяйства",
+      "field": "note",
+      "statement": "План приёма Санкт-Петербурга, 50 бюджетных мест; вступительные испытания по этой программе не предусмотрены в таблице.",
+      "sourceUrl": "https://pkgh.ru/abitur/specialties-plan/"
+    },
+    {
+      "organization": "Политехнический колледж городского хозяйства",
+      "field": "basis",
+      "statement": "9 классов, очная форма",
+      "sourceUrl": "https://pkgh.ru/abitur/specialties-plan/"
+    },
+    {
+      "organization": "Прибалтийский судостроительный техникум",
+      "field": "year",
+      "statement": "Набор 2026/27",
+      "sourceUrl": "https://xn--d1ac0akhds.xn--p1ai/priemnaja-komissija.html"
+    },
+    {
+      "organization": "Прибалтийский судостроительный техникум",
+      "field": "note",
+      "statement": "Подтверждён перечнем профессий набора 2026 года. Трудоустройство не гарантируется.",
+      "sourceUrl": "https://xn--d1ac0akhds.xn--p1ai/priemnaja-komissija.html"
+    },
+    {
+      "organization": "Мурманский индустриальный колледж",
+      "field": "year",
+      "statement": "Набор 2026/27",
+      "sourceUrl": "https://murindkol.ru/abiturientu/priemnaya-komissiya-1/nabor-na-obuchenie/"
+    },
+    {
+      "organization": "Мурманский индустриальный колледж",
+      "field": "basis",
+      "statement": "на базе 9 классов, очно",
+      "sourceUrl": "https://murindkol.ru/abiturientu/priemnaya-komissiya-1/nabor-na-obuchenie/"
+    },
+    {
+      "organization": "МГТУ им. Баумана",
+      "field": "year",
+      "statement": "2026/27 учебный год",
+      "sourceUrl": "https://isot.bmstu.ru/edu/cost"
+    },
+    {
+      "organization": "МГТУ «СТАНКИН»",
+      "field": "year",
+      "statement": "Программы приёмной комиссии на 2026",
+      "sourceUrl": "https://priem.stankin.ru/bakalavriatispetsialitet/training_programs/"
+    },
+    {
+      "organization": "Московский техникум космического приборостроения",
+      "field": "year",
+      "statement": "План приёма на 2026 год",
+      "sourceUrl": "https://mtkp.bmstu.ru/entrant/plan-priema"
+    },
+    {
+      "organization": "Московский техникум космического приборостроения",
+      "field": "note",
+      "statement": "60 бюджетных и 40 платных мест по плану приёма 2026/27. Продолжительность 3 года 10 месяцев и конкурс аттестатов — по официальной странице правил поступления.",
+      "sourceUrl": "https://mtkp.bmstu.ru/entrant/plan-priema"
+    },
+    {
+      "organization": "Московский техникум космического приборостроения",
+      "field": "basis",
+      "statement": "на базе 9 классов",
+      "sourceUrl": "https://mtkp.bmstu.ru/entrant/plan-priema"
+    },
+    {
+      "organization": "Воронежский политехнический техникум (реорганизация 2026)",
+      "field": "basis",
+      "statement": "На базе 9 классов, очно",
+      "sourceUrl": "https://profcopp.ru/WhereToGoStudy/GetInfo?spo=7e50cbcc-47b3-48e1-b427-2e89c0eb62d9"
+    },
+    {
+      "organization": "Колледж «Коломна»",
+      "field": "year",
+      "statement": "Учебный план 2026",
+      "sourceUrl": "https://college-kolomna.ru/tehnologiya-mashinostroeniya/"
+    },
+    {
+      "organization": "ДГТУ",
+      "field": "year",
+      "statement": "Образовательная программа начала подготовки 2026",
+      "sourceUrl": "https://itf.donstu.ru/sveden/education/programs/oborudovanie-i-tehnologiya-svarochnogo-proizvodstva-15.03.01.html"
+    },
+    {
+      "organization": "Севастопольский государственный университет (СевГУ)",
+      "field": "year",
+      "statement": "Первый набор в 2026 году",
+      "sourceUrl": "https://t.me/s/sevsu_abiturient"
+    },
+    {
+      "organization": "Ростовский-на-Дону колледж связи и информатики",
+      "field": "basis",
+      "statement": "9 классов, очная форма",
+      "sourceUrl": "https://www.rksi.ru/admission"
+    },
+    {
+      "organization": "Краснодарский монтажный техникум",
+      "field": "year",
+      "statement": "Приёмная кампания 2026",
+      "sourceUrl": "https://krmt-rf.gosuslugi.ru/novosti-i-sobytiya/priemnaya-kampaniya-v-kmt.html"
+    },
+    {
+      "organization": "Краснодарский монтажный техникум",
+      "field": "note",
+      "statement": "Наличие объявленного приёма подтверждено официальной новостью от 07.08.2026; квоты, цена и срок в карточке не приводятся.",
+      "sourceUrl": "https://krmt-rf.gosuslugi.ru/novosti-i-sobytiya/priemnaya-kampaniya-v-kmt.html"
+    },
+    {
+      "organization": "Волгоградский технический колледж",
+      "field": "year",
+      "statement": "Опубликованная программа в правилах приёма, сведения за 2026",
+      "sourceUrl": "https://www.volgtehkol.ru/abiturients/admission-rules"
+    },
+    {
+      "organization": "СКФУ",
+      "field": "year",
+      "statement": "Учебный план: год начала подготовки 2026",
+      "sourceUrl": "https://sveden.pf.ncfu.ru/sveden/education/programs/gorodskoe-stroitelystvo-i-hozyaystvo-ozfo-2026-08.03.01.html"
+    },
+    {
+      "organization": "Грозненский ГНТУ",
+      "field": "year",
+      "statement": "Учебный план для года начала подготовки 2026",
+      "sourceUrl": "https://gstou.ru/sveden/education/programs/ekspluataciya-i-obslughivanie-obyektov-dobychi-nefti-21.03.01_1.html"
+    },
+    {
+      "organization": "Грозненский ГНТУ",
+      "field": "note",
+      "statement": "Для очно-заочной и заочной формы сроки отличаются; 2026 учебный план подтверждён, число бюджетных мест в этот профиль не приписывается.",
+      "sourceUrl": "https://gstou.ru/sveden/education/programs/ekspluataciya-i-obslughivanie-obyektov-dobychi-nefti-21.03.01_1.html"
+    },
+    {
+      "organization": "Ставропольский строительный техникум",
+      "field": "year",
+      "statement": "Учебный план группы ЗС-261(9), 2026–2030",
+      "sourceUrl": "https://www.xn--80aejpylecgdd1b.xn--p1ai/index.php/deyatelnost/dostizheniya/item/4114-2026-2030-08-02-01-stroitelstvo-i-ekspluatatsiya-zdanij-i-sooruzhenij"
+    },
+    {
+      "organization": "Ставропольский строительный техникум",
+      "field": "note",
+      "statement": "Объявленный учебный план 2026–2030 подтверждает код, группу, форму и срок, но не количество бюджетных мест.",
+      "sourceUrl": "https://www.xn--80aejpylecgdd1b.xn--p1ai/index.php/deyatelnost/dostizheniya/item/4114-2026-2030-08-02-01-stroitelstvo-i-ekspluatatsiya-zdanij-i-sooruzhenij"
+    },
+    {
+      "organization": "Ставропольский строительный техникум",
+      "field": "basis",
+      "statement": "После 9 классов, очная форма",
+      "sourceUrl": "https://www.xn--80aejpylecgdd1b.xn--p1ai/index.php/deyatelnost/dostizheniya/item/4114-2026-2030-08-02-01-stroitelstvo-i-ekspluatatsiya-zdanij-i-sooruzhenij"
+    },
+    {
+      "organization": "Международный центр компетенций — Казанский техникум информационных технологий и связи",
+      "field": "year",
+      "statement": "План приёма 2026/27",
+      "sourceUrl": "https://mck-ktits.ru/%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D1%86%D0%B8%D1%84%D1%80%D1%8B-%D0%BF%D1%80%D0%B8%D0%B5%D0%BC%D0%B0/"
+    },
+    {
+      "organization": "Международный центр компетенций — Казанский техникум информационных технологий и связи",
+      "field": "note",
+      "statement": "В источнике 55 мест всего, 25 бюджетных и 30 договорных. Стоимость 56 950 ₽ указана за семестр, не за год.",
+      "sourceUrl": "https://mck-ktits.ru/%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D1%86%D0%B8%D1%84%D1%80%D1%8B-%D0%BF%D1%80%D0%B8%D0%B5%D0%BC%D0%B0/"
+    },
+    {
+      "organization": "Международный центр компетенций — Казанский техникум информационных технологий и связи",
+      "field": "basis",
+      "statement": "9 классов, очная форма",
+      "sourceUrl": "https://mck-ktits.ru/%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D1%86%D0%B8%D1%84%D1%80%D1%8B-%D0%BF%D1%80%D0%B8%D0%B5%D0%BC%D0%B0/"
+    },
+    {
+      "organization": "Уфимский машиностроительный колледж",
+      "field": "year",
+      "statement": "План приёма 2026/27",
+      "sourceUrl": "https://umkufa.ru/abitur/spo/"
+    },
+    {
+      "organization": "Уфимский машиностроительный колледж",
+      "field": "note",
+      "statement": "В таблице для 15.02.16 указаны 125 мест в рамках контрольных цифр приёма, платный набор — 0.",
+      "sourceUrl": "https://umkufa.ru/abitur/spo/"
+    },
+    {
+      "organization": "Уфимский машиностроительный колледж",
+      "field": "basis",
+      "statement": "9 классов, очно",
+      "sourceUrl": "https://umkufa.ru/abitur/spo/"
+    },
+    {
+      "organization": "Нижегородский автотранспортный техникум",
+      "field": "year",
+      "statement": "Приёмная кампания 2026",
+      "sourceUrl": "https://xn--80azqa.xn--p1ai/category/priemnaya-komissiya/"
+    },
+    {
+      "organization": "Нижегородский автотранспортный техникум",
+      "field": "note",
+      "statement": "Официальные объявления приемной комиссии подтверждают набор в 2026 по 23.02.07, включая отдельные предложения очно после 9 классов и заочно после 11. Условия не следует смешивать.",
+      "sourceUrl": "https://xn--80azqa.xn--p1ai/category/priemnaya-komissiya/"
+    },
+    {
+      "organization": "Пермский техникум промышленных и информационных технологий им. Б. Г. Изгагина",
+      "field": "year",
+      "statement": "Программа 2026",
+      "sourceUrl": "https://ptpit.ru/?page_id=6838"
+    },
+    {
+      "organization": "Уральский федеральный университет им. Б. Н. Ельцина (УрФУ)",
+      "field": "year",
+      "statement": "Перечень приёмных программ УрФУ 2026",
+      "sourceUrl": "https://programms.edu.urfu.ru/ru/10936/"
+    },
+    {
+      "organization": "Тюменский Индустриальный Университет",
+      "field": "note",
+      "statement": "У этой программы очно-заочная форма длится 5 лет. Указан отдельный срок только для очной формы.",
+      "sourceUrl": "https://tyuiu.ru/sveden/education/programs/burenie-neftyanyh-i-gazovyh-skvaghin-21.03.01.html"
+    },
+    {
+      "organization": "Курганский государственный университет (КГУ)",
+      "field": "year",
+      "statement": "План приёма КГУ на 2026, очная форма",
+      "sourceUrl": "https://abit.kgsu.ru/page/3"
+    },
+    {
+      "organization": "Екатеринбургский политехникум",
+      "field": "year",
+      "statement": "План приёма 2026/27",
+      "sourceUrl": "https://ekpt.ru/abiturientam/komissiya/kontrolnye_cifry_priema/"
+    },
+    {
+      "organization": "Екатеринбургский политехникум",
+      "field": "note",
+      "statement": "25 мест только для политехнического отделения; программа есть и в механическом отделении.",
+      "sourceUrl": "https://ekpt.ru/abiturientam/komissiya/kontrolnye_cifry_priema/"
+    },
+    {
+      "organization": "Екатеринбургский политехникум",
+      "field": "basis",
+      "statement": "9 классов, очно, политехническое отделение",
+      "sourceUrl": "https://ekpt.ru/abiturientam/komissiya/kontrolnye_cifry_priema/"
+    },
+    {
+      "organization": "Челябинский механико-технологический техникум",
+      "field": "year",
+      "statement": "Контрольные цифры приёма 2026/27",
+      "sourceUrl": "https://chelmtt.ru/index.php/2020-04-23-16-04-19?id=224"
+    },
+    {
+      "organization": "Челябинский механико-технологический техникум",
+      "field": "note",
+      "statement": "95 бюджетных мест всего, из них 80 на базе 9 классов и 15 по заочной форме, согласно таблице техникума.",
+      "sourceUrl": "https://chelmtt.ru/index.php/2020-04-23-16-04-19?id=224"
+    },
+    {
+      "organization": "ИРНИТУ",
+      "field": "year",
+      "statement": "Вступительные испытания 2026",
+      "sourceUrl": "https://www.istu.edu/abiturientu/ege_2026"
+    },
+    {
+      "organization": "ИРНИТУ",
+      "field": "note",
+      "statement": "Перечень для поступающих по ЕГЭ в 2026 году, не прогноз конкурсных баллов.",
+      "sourceUrl": "https://www.istu.edu/abiturientu/ege_2026"
+    },
+    {
+      "organization": "Омский государственный технический университет (ОмГТУ)",
+      "field": "note",
+      "statement": "Официальная страница кафедры ОмГТУ подтверждает направление и четыре года для очного бакалавриата, 5 лет для заочного.",
+      "sourceUrl": "https://www.omgtu.ru/general_information/institutes/engineering_institute/department_quot_equipment_and_technology_of_welding_quot/OiTSP/the-applicant.php"
+    },
+    {
+      "organization": "Сибирский государственный университет телекоммуникаций и информатики (СибГУТИ)",
+      "field": "year",
+      "statement": "Вступительные испытания 2026",
+      "sourceUrl": "https://do.sibsutis.ru/kak_postupit/vstupitelnie_ispitaniya"
+    },
+    {
+      "organization": "Сибирский государственный университет телекоммуникаций и информатики (СибГУТИ)",
+      "field": "note",
+      "statement": "Указанный набор предметов относится к опубликованной таблице 2026 года; для поступающих на базе СПО отдельные испытания.",
+      "sourceUrl": "https://do.sibsutis.ru/kak_postupit/vstupitelnie_ispitaniya"
+    },
+    {
+      "organization": "Кузбасский ГТУ",
+      "field": "year",
+      "statement": "План приёма 2026, головной вуз",
+      "sourceUrl": "https://kuzstu.ru/abiturientu/priemnaya-kampaniya-2026/tsifri-priema/bakalavriat-spetsialitet-golovnoi-vuz/"
+    },
+    {
+      "organization": "Новосибирский техникум железнодорожного транспорта СГУПС",
+      "field": "year",
+      "statement": "Приём 2026/27",
+      "sourceUrl": "https://www.ntgt.ru/abiturient/priyemnaya-kampaniya-2026/"
+    },
+    {
+      "organization": "Новосибирский техникум железнодорожного транспорта СГУПС",
+      "field": "note",
+      "statement": "55 бюджетных и 10 коммерческих мест по очному приёму на базе 9 классов; не суммировать с местами для 11 классов.",
+      "sourceUrl": "https://www.ntgt.ru/abiturient/priyemnaya-kampaniya-2026/"
+    },
+    {
+      "organization": "Новосибирский техникум железнодорожного транспорта СГУПС",
+      "field": "basis",
+      "statement": "9 классов, очно",
+      "sourceUrl": "https://www.ntgt.ru/abiturient/priyemnaya-kampaniya-2026/"
+    },
+    {
+      "organization": "Томский техникум информационных технологий",
+      "field": "year",
+      "statement": "Контрольные цифры приёма 2026",
+      "sourceUrl": "https://tomtit.gosuslugi.ru/abiturientam/"
+    },
+    {
+      "organization": "Томский техникум информационных технологий",
+      "field": "note",
+      "statement": "Для отдельной группы после 11 классов на этой же странице указаны другой срок (2 года 9 месяцев) и ещё 25 мест.",
+      "sourceUrl": "https://tomtit.gosuslugi.ru/abiturientam/"
+    },
+    {
+      "organization": "Томский техникум информационных технологий",
+      "field": "basis",
+      "statement": "9 классов, очная форма",
+      "sourceUrl": "https://tomtit.gosuslugi.ru/abiturientam/"
+    },
+    {
+      "organization": "Красноярский техникум промышленного сервиса",
+      "field": "note",
+      "statement": "50 мест в опубликованной таблице, год её действия следует уточнять по приказу техникума.",
+      "sourceUrl": "https://ktps24.ru/abitur/plan-priema/plan-priema.php"
+    },
+    {
+      "organization": "Красноярский техникум промышленного сервиса",
+      "field": "basis",
+      "statement": "9 классов, очная форма",
+      "sourceUrl": "https://ktps24.ru/abitur/plan-priema/plan-priema.php"
+    },
+    {
+      "organization": "Владивостокский судостроительный колледж",
+      "field": "year",
+      "statement": "Набор 2026/27",
+      "sourceUrl": "https://vstehn.ru/priemnaya_komissiya/nashi-specialnosti-2/sudostroenie/"
+    },
+    {
+      "organization": "Владивостокский судостроительный колледж",
+      "field": "note",
+      "statement": "Стоимость 187 000 ₽/год относится к очной платной форме, для заочной формы на странице иная цена.",
+      "sourceUrl": "https://vstehn.ru/priemnaya_komissiya/nashi-specialnosti-2/sudostroenie/"
+    },
+    {
+      "organization": "Владивостокский судостроительный колледж",
+      "field": "basis",
+      "statement": "на базе 9 классов, очно",
+      "sourceUrl": "https://vstehn.ru/priemnaya_komissiya/nashi-specialnosti-2/sudostroenie/"
+    },
+    {
+      "organization": "Хабаровский техникум транспортных технологий имени А. С. Панова",
+      "field": "year",
+      "statement": "План приёма 2026/27",
+      "sourceUrl": "https://py16dv.ru/abiturientu/kontrolnye-tsifry-prijoma"
+    },
+    {
+      "organization": "Хабаровский техникум транспортных технологий имени А. С. Панова",
+      "field": "note",
+      "statement": "50 бюджетных мест, 25 платных очных. 123 515 ₽ указано за 2026/27 учебный год.",
+      "sourceUrl": "https://py16dv.ru/abiturientu/kontrolnye-tsifry-prijoma"
+    },
+    {
+      "organization": "Хабаровский техникум транспортных технологий имени А. С. Панова",
+      "field": "basis",
+      "statement": "9 классов, очная форма",
+      "sourceUrl": "https://py16dv.ru/abiturientu/kontrolnye-tsifry-prijoma"
+    },
+    {
+      "organization": "Губернаторский авиастроительный колледж г. Комсомольска-на-Амуре (МЦК)",
+      "field": "year",
+      "statement": "План приёма 2026/27",
+      "sourceUrl": "http://gaskk-mck.ru/index.php/abiturientu/itemlist/category/24-professii-i-spetsialnosti"
+    }
+  ]
+}
