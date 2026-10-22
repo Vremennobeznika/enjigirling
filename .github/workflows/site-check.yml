@@ -36,7 +36,7 @@ jobs:
       - name: Install browser test tooling
         run: npm install --no-audit --no-fund
       - name: Install Chromium
-        run: npx playwright install --with-deps chromium
+        run: npx playwright install chromium
       - name: Test site at desktop and mobile widths
         run: npx playwright test
       - name: Save failure screenshots and traces
