@@ -1,7 +1,7 @@
 (()=>{'use strict';
-const M=window.LifeModel,C=window.LIFE_CONFIG,KEY='life.local.v2.'+C.id,SHARED_KEY='week-check-v2',PERSONAL_KEY='__planner_v3',$=id=>document.getElementById(id),DAY=M.DAY_NAMES;
+const M=window.LifeModel,C=window.LIFE_CONFIG,KEY='life.local.v2.'+C.id,SHARED_KEY='week-check-v2',SHOP_KEY='supermarket-shopping-list-v1',PERSONAL_KEY='__planner_v3',$=id=>document.getElementById(id),DAY=M.DAY_NAMES;
 let state;let currentDate=new Date(),page='week',weekFilter='all',shoppingFilter='all',activeReminder=null,reminderQueue=[],statusTimer=null;
-let storageFault=false,rawOnFailure=null;
+let storageFault=false,rawOnFailure=null,shoppingSnapshot=null;
 function newDefault(){return M.normalize({version:2,sections:C.sections,tasks:C.tasks,shopping:[],ledger:[],completions:{},sent:{},snoozes:{},preferences:{quietStart:'23:00',quietEnd:'07:00',currency:'₽',sound:false}});}
 function sharedCalendar(){
  const raw=localStorage.getItem(SHARED_KEY);
@@ -10,36 +10,73 @@ function sharedCalendar(){
  if(!parsed||typeof parsed!=="object"||Array.isArray(parsed))throw Error("Повреждены данные общего календаря");
  return parsed;
 }
+const shopSection=cat=>["home","hygiene","baby","pets"].includes(cat)?"household":cat==="other"?"other":"groceries";
+const shopCategory=section=>section==="household"?"home":section==="groceries"?"grocery":"other";
+function readShop(){
+ const raw=localStorage.getItem(SHOP_KEY),data=raw?JSON.parse(raw):[];
+ if(!Array.isArray(data))throw Error("Повреждён исходный список покупок");
+ return data;
+}
 function load(){
  let raw=null;
  try{
-  const all=sharedCalendar();
-  const nested=Object.prototype.hasOwnProperty.call(all,PERSONAL_KEY)?all[PERSONAL_KEY]:undefined;
+  const all=sharedCalendar(),nested=Object.prototype.hasOwnProperty.call(all,PERSONAL_KEY)?all[PERSONAL_KEY]:undefined;
   raw=nested===undefined?localStorage.getItem(KEY):JSON.stringify(nested);
   const parsed=raw===null||raw===""?null:JSON.parse(raw);
   if(parsed&&(!Array.isArray(parsed.sections)||!Array.isArray(parsed.tasks)))throw Error("Неверная структура");
   const loaded=parsed?M.normalize(parsed):newDefault();
+  const current=readShop();
+  const byId=new Map((loaded.shopping||[]).map(item=>[String(item.id),item]));
+  const sectionIds=new Set(loaded.sections.filter(section=>section.type==="shopping").map(section=>section.id));
+  if(!sectionIds.size)loaded.sections.push({id:"other",title:"Прочее",type:"shopping",visible:true});
+  const fallback=loaded.sections.find(section=>section.type==="shopping")?.id||"other";
+  const merged=current.filter(x=>x&&typeof x.name==="string").map(x=>{
+    const prev=byId.get(String(x.id)),section=sectionIds.has(shopSection(x.cat))?shopSection(x.cat):fallback;
+    return {id:String(x.id),sectionId:section,title:String(x.name).slice(0,120),qty:String(x.qty||"").slice(0,30),
+      done:!!x.done,time:/^([01]\d|2[0-3]):[0-5]\d$/.test(x.time||"")?x.time:prev?.time||"",
+      remind:typeof x.remind==="boolean"?x.remind:!!prev?.remind};
+  });
+  const known=new Set(merged.map(x=>x.id));
+  for(const item of loaded.shopping||[])if(!known.has(String(item.id))){
+    merged.push({...item,sectionId:sectionIds.has(item.sectionId)?item.sectionId:fallback});
+    known.add(String(item.id));
+  }
+  loaded.shopping=merged;
+  shoppingSnapshot=JSON.stringify(current);
   storageFault=false;rawOnFailure=null;
   return loaded;
  }catch(err){
   storageFault=true;rawOnFailure=raw;
-  setTimeout(()=>notice('Не удалось прочитать календарь. Изменения заблокированы, чтобы не затереть записи. Сохрани исходные данные или восстанови резервную копию.'),250);
+  setTimeout(()=>notice("Хранилище календаря или покупок повреждено. Сохранение остановлено, чтобы не потерять данные."),250);
   return newDefault();
  }
 }
 function persist(){
- if(storageFault){notice('Сохранение заблокировано: восстанови данные из резервной копии.');return false}
+ if(storageFault){notice("Сохранение заблокировано: сначала восстанови корректную резервную копию.");return false}
  try{
-  const all=sharedCalendar();
-  const fresh=JSON.stringify(state);
-  if(all[PERSONAL_KEY]&&JSON.stringify(all[PERSONAL_KEY])===fresh)return true;
+  const all=sharedCalendar(),current=readShop();
+  if(shoppingSnapshot!==null&&JSON.stringify(current)!==shoppingSnapshot){
+    state=load();renderPage();notice("Покупки изменились в другой вкладке. Список обновлён без перезаписи.");return false;
+  }
+  const previous=new Map(current.filter(x=>x&&x.id!=null).map(x=>[String(x.id),x]));
+  const canonical=state.shopping.map(item=>{
+    const prev=previous.get(String(item.id))||{};
+    return {id:String(item.id),name:String(item.title).slice(0,120),qty:String(item.qty||"").slice(0,35),
+      cat:typeof prev.cat==="string"?prev.cat:shopCategory(item.sectionId),done:!!item.done,
+      time:M.validTime(item.time)?item.time:"",remind:!!item.remind&&M.validTime(item.time)};
+  });
+  const fresh=JSON.stringify(state),samePlan=all[PERSONAL_KEY]&&JSON.stringify(all[PERSONAL_KEY])===fresh;
+  const sameShop=JSON.stringify(current)===JSON.stringify(canonical);
+  if(samePlan&&sameShop)return true;
   all[PERSONAL_KEY]=state;
   const total=JSON.stringify(all);
-  localStorage.setItem(SHARED_KEY,total);
-  window.dispatchEvent(new Event('life-data-changed'));
-  if(new TextEncoder().encode(total).length>170000)notice('Данные сохранены локально. Общий объём приближается к ограничению облачной функции: регулярно сохраняй JSON-копию. Функция Яндекса может отклонить слишком большой пакет.');
+  if(!sameShop)localStorage.setItem(SHOP_KEY,JSON.stringify(canonical));
+  if(!samePlan)localStorage.setItem(SHARED_KEY,total);
+  shoppingSnapshot=JSON.stringify(canonical);
+  window.dispatchEvent(new Event("life-data-changed"));
+  if(new TextEncoder().encode(total).length>170000)notice("Данные сохранены локально. Объём приближается к лимиту Yandex Cloud. Сохрани резервную копию.");
   return true;
- }catch(err){notice('Не удалось сохранить: '+err.message);return false}
+ }catch(err){notice("Не удалось сохранить: "+err.message);return false}
 }
 const el=(tag,cl='',text)=>{const x=document.createElement(tag);if(cl)x.className=cl;if(text!==undefined)x.textContent=text;return x};
 function btn(text,handler,cl='',title=''){const x=el('button',cl,text);x.type='button';if(title)x.title=title;x.addEventListener('click',handler);return x}
@@ -121,7 +158,7 @@ $('resetAll').onclick=()=>{if(!confirm('Удалить все настройки
 $('reminderDone').onclick=()=>closeReminder('done');$('reminderSnooze').onclick=()=>closeReminder('snooze');$('reminderDismiss').onclick=()=>closeReminder('dismiss');
 $('financeDate').value=M.localDate(new Date());$('financeMonth').value=M.localDate(new Date()).slice(0,7);taskEditorReset();pageOpen('week');openDeepLink();M.trimHistory(state,new Date());persist();
 // Active-page alarms only: browsers cannot guarantee background timers or force focus.
-setInterval(tick,15000);document.addEventListener('visibilitychange',()=>{if(!document.hidden)tick()});window.addEventListener('storage',e=>{if(e.key===SHARED_KEY){state=load();renderPage();notice('Данные обновлены из другой вкладки.')}});window.addEventListener('life-sync-applied',()=>{state=load();renderPage();notice('Облачные изменения применены.')});
+setInterval(tick,15000);document.addEventListener('visibilitychange',()=>{if(!document.hidden)tick()});window.addEventListener('storage',e=>{if(e.key===SHARED_KEY||e.key===SHOP_KEY){state=load();renderPage();notice('Данные обновлены из другой вкладки.')}});window.addEventListener('life-sync-applied',()=>{state=load();renderPage();notice('Облачные изменения применены.')});
 if('serviceWorker' in navigator&&location.protocol==='https:')navigator.serviceWorker.register('../../life-pwa-sw.js',{scope:'../../'}).catch(()=>{});
 if('serviceWorker' in navigator)navigator.serviceWorker.addEventListener('message',e=>{if(e.data?.type==='OPEN_ITEM'){history.replaceState(null,'',e.data.url);openDeepLink()}});
 }
