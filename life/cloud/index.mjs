@@ -8,6 +8,9 @@ import { MetadataCredentialsProvider } from '@ydbjs/auth/metadata';
 const ORIGIN = 'https://vremennobeznika.github.io';
 const BODY_LIMIT = 250000;
 const ID = 'personal';
+// Non-secret deployment values. SHA-256 of a random 48-byte token is not its plaintext.
+const DEFAULT_YDB_CONNECTION = 'grpcs://ydb.serverless.yandexcloud.net:2135/ru-central1/b1gfjk1f2ihikvlkq67s/etnunn9vtmeospfv3c50';
+const DEFAULT_SYNC_TOKEN_SHA256 = 'd218f1b19b8297372b649695b50dd046dc0947e3372fd7a5fc420c18734c58f4';
 let connection;
 
 function json(statusCode, value) {
@@ -28,15 +31,15 @@ function digest(x) { return crypto.createHash('sha256').update(x, 'utf8').digest
 function firstRow(result) { if (!Array.isArray(result)) return null; const first = result[0]; return Array.isArray(first) ? first[0] || null : first || null; }
 function authorized(event) {
   const headers = Object.fromEntries(Object.entries(event.headers || {}).map(([key, value]) => [key.toLowerCase(), String(value)]));
-  const expectedHash = process.env.SYNC_TOKEN_SHA256 || '';
+  const expectedHash = process.env.SYNC_TOKEN_SHA256 || DEFAULT_SYNC_TOKEN_SHA256;
   if (!/^[a-f0-9]{64}$/i.test(expectedHash)) return false;
   const supplied = headers['x-sync-token'] || '';
   return crypto.timingSafeEqual(Buffer.from(expectedHash, 'hex'), digest(supplied));
 }
 async function getDb() {
   if (!connection) connection = (async () => {
-    if (!process.env.YDB_CONNECTION_STRING) throw Error('YDB_CONNECTION_STRING is missing');
-    const driver = new Driver(process.env.YDB_CONNECTION_STRING, {
+    const connectionString = process.env.YDB_CONNECTION_STRING || DEFAULT_YDB_CONNECTION;
+    const driver = new Driver(connectionString, {
       credentialsProvider: new MetadataCredentialsProvider({})
     });
     await driver.ready();
