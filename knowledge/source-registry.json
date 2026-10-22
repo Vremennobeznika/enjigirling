@@ -399,6 +399,182 @@
       "appliesTo": "Только термин assembling: bringing together of components in a functional relationship",
       "access": "public_abstract_or_overview",
       "notes": "Определение без утверждений о способах затяжки, требованиях качества и безопасности."
+    },
+    {
+      "sourceId": "atlas-source-001",
+      "title": "TWI — классификация сварочных технологий — общий контекст; не техкарта",
+      "url": "https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly",
+      "publisher": "The Welding Institute (TWI)",
+      "documentDate": "unspecified",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Broad sector/process-family context; individual steps, defects and manufacturing parameters are not independently verified.",
+      "access": "public_overview_or_source_landing",
+      "notes": "Publisher landing page or public overview located; no assertion of full-standard review."
+    },
+    {
+      "sourceId": "atlas-source-002",
+      "title": "TWI — сварка и пайка: различия — общий контекст; не техкарта",
+      "url": "https://www.twi-global.com/technical-knowledge/faqs/welding-brazing-and-soldering",
+      "publisher": "The Welding Institute (TWI)",
+      "documentDate": "unspecified",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Broad sector/process-family context; individual steps, defects and manufacturing parameters are not independently verified.",
+      "access": "public_overview_or_source_landing",
+      "notes": "Publisher landing page or public overview located; no assertion of full-standard review."
+    },
+    {
+      "sourceId": "atlas-source-003",
+      "title": "NIST — виды аддитивного производства — общий контекст; не техкарта",
+      "url": "https://www.nist.gov/additive-manufacturing/research-areas/technologies",
+      "publisher": "National Institute of Standards and Technology (NIST)",
+      "documentDate": "unspecified",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Broad sector/process-family context; individual steps, defects and manufacturing parameters are not independently verified.",
+      "access": "public_overview_or_source_landing",
+      "notes": "Publisher landing page or public overview located; no assertion of full-standard review."
+    },
+    {
+      "sourceId": "atlas-source-004",
+      "title": "EPA — отраслевой обзор формования пластмасс — общий контекст; не техкарта",
+      "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT",
+      "publisher": "United States Environmental Protection Agency (EPA)",
+      "documentDate": "unspecified",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Broad sector/process-family context; individual steps, defects and manufacturing parameters are not independently verified.",
+      "access": "public_overview_or_source_landing",
+      "notes": "Publisher landing page or public overview located; no assertion of full-standard review."
+    },
+    {
+      "sourceId": "atlas-source-005",
+      "title": "TWI — методы соединения полимеров — общий контекст; не техкарта",
+      "url": "https://www.twi-global.com/technical-knowledge/faqs/joining-methods-of-polymers?trk=public_post_reshare-text",
+      "publisher": "The Welding Institute (TWI)",
+      "documentDate": "unspecified",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Broad sector/process-family context; individual steps, defects and manufacturing parameters are not independently verified.",
+      "access": "public_overview_or_source_landing",
+      "notes": "Publisher landing page or public overview located; no assertion of full-standard review."
+    },
+    {
+      "sourceId": "atlas-source-006",
+      "title": "DOE — способы изготовления композитов, 2016 — общий контекст; не техкарта",
+      "url": "https://www.energy.gov/sites/prod/files/2016/04/f30/Carbon%20Fiber%20Report.pdf",
+      "publisher": "United States Department of Energy (DOE)",
+      "documentDate": "unspecified",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Broad sector/process-family context; individual steps, defects and manufacturing parameters are not independently verified.",
+      "access": "public_overview_or_source_landing",
+      "notes": "Publisher landing page or public overview located; no assertion of full-standard review."
+    },
+    {
+      "sourceId": "atlas-source-007",
+      "title": "US Forest Service — справочник о древесине как инженерном материале — обзор; не технологическая инструкция",
+      "url": "https://research.fs.usda.gov/treesearch/37419",
+      "publisher": "USDA Forest Service",
+      "documentDate": "unspecified",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Broad sector/process-family context; individual steps, defects and manufacturing parameters are not independently verified.",
+      "access": "public_overview_or_source_landing",
+      "notes": "Publisher landing page or public overview located; no assertion of full-standard review."
+    },
+    {
+      "sourceId": "atlas-source-008",
+      "title": "DOE — технологии промышленного нагрева — обзор; не технологическая инструкция",
+      "url": "https://www.energy.gov/cmei/ito/what-are-different-kinds-process-heating-systems",
+      "publisher": "United States Department of Energy (DOE)",
+      "documentDate": "unspecified",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Broad sector/process-family context; individual steps, defects and manufacturing parameters are not independently verified.",
+      "access": "public_overview_or_source_landing",
+      "notes": "Publisher landing page or public overview located; no assertion of full-standard review."
+    },
+    {
+      "sourceId": "atlas-source-009",
+      "title": "OSHA — нормы бетонных и каменных строительных работ — обзор; не технологическая инструкция",
+      "url": "https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.701",
+      "publisher": "Occupational Safety and Health Administration (OSHA)",
+      "documentDate": "unspecified",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Broad sector/process-family context; individual steps, defects and manufacturing parameters are not independently verified.",
+      "access": "public_overview_or_source_landing",
+      "notes": "Publisher landing page or public overview located; no assertion of full-standard review."
+    },
+    {
+      "sourceId": "atlas-source-010",
+      "title": "EPA AP-42 — производство асфальтобетонных смесей — обзор; не технологическая инструкция",
+      "url": "https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0",
+      "publisher": "United States Environmental Protection Agency (EPA)",
+      "documentDate": "unspecified",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Broad sector/process-family context; individual steps, defects and manufacturing parameters are not independently verified.",
+      "access": "public_overview_or_source_landing",
+      "notes": "Publisher landing page or public overview located; no assertion of full-standard review."
+    },
+    {
+      "sourceId": "atlas-source-011",
+      "title": "DOE — промышленные паровые системы — обзор; не технологическая инструкция",
+      "url": "https://www.energy.gov/cmei/ito/steam-systems",
+      "publisher": "United States Department of Energy (DOE)",
+      "documentDate": "unspecified",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Broad sector/process-family context; individual steps, defects and manufacturing parameters are not independently verified.",
+      "access": "public_overview_or_source_landing",
+      "notes": "Publisher landing page or public overview located; no assertion of full-standard review."
+    },
+    {
+      "sourceId": "atlas-source-012",
+      "title": "EPA — обзор технологий очистки воды — обзор; не технологическая инструкция",
+      "url": "https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies",
+      "publisher": "United States Environmental Protection Agency (EPA)",
+      "documentDate": "unspecified",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Broad sector/process-family context; individual steps, defects and manufacturing parameters are not independently verified.",
+      "access": "public_overview_or_source_landing",
+      "notes": "Publisher landing page or public overview located; no assertion of full-standard review."
+    },
+    {
+      "sourceId": "atlas-source-013",
+      "title": "FDA — контроль твёрдых лекарственных форм — обзор; не технологическая инструкция",
+      "url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093",
+      "publisher": "Food and Drug Administration (FDA)",
+      "documentDate": "unspecified",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Broad sector/process-family context; individual steps, defects and manufacturing parameters are not independently verified.",
+      "access": "public_overview_or_source_landing",
+      "notes": "Publisher landing page or public overview located; no assertion of full-standard review."
+    },
+    {
+      "sourceId": "atlas-source-014",
+      "title": "OSHA — отрасли полиграфии, офсет, флексо и трафарет — обзор; не технологическая инструкция",
+      "url": "https://www.osha.gov/printing-industry/industry-segments",
+      "publisher": "Occupational Safety and Health Administration (OSHA)",
+      "documentDate": "unspecified",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Broad sector/process-family context; individual steps, defects and manufacturing parameters are not independently verified.",
+      "access": "public_overview_or_source_landing",
+      "notes": "Publisher landing page or public overview located; no assertion of full-standard review."
+    },
+    {
+      "sourceId": "atlas-source-015",
+      "title": "EPA — руда и обогащение: водоотведение, дробление и сортировка — обзор; не технологическая инструкция",
+      "url": "https://www.epa.gov/eg/ore-mining-and-dressing-effluent-guidelines",
+      "publisher": "United States Environmental Protection Agency (EPA)",
+      "documentDate": "unspecified",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Broad sector/process-family context; individual steps, defects and manufacturing parameters are not independently verified.",
+      "access": "public_overview_or_source_landing",
+      "notes": "Publisher landing page or public overview located; no assertion of full-standard review."
+    },
+    {
+      "sourceId": "atlas-source-016",
+      "title": "OSHA — терминология печати и послепечатных операций — обзор без технологических режимов",
+      "url": "https://www.osha.gov/etools/printing-industry/glossary",
+      "publisher": "Occupational Safety and Health Administration (OSHA)",
+      "documentDate": "unspecified",
+      "checkedAt": "2026-10-22",
+      "appliesTo": "Broad sector/process-family context; individual steps, defects and manufacturing parameters are not independently verified.",
+      "access": "public_overview_or_source_landing",
+      "notes": "Publisher landing page or public overview located; no assertion of full-standard review."
     }
   ],
   "recordEvidence": [
@@ -1089,6 +1265,1382 @@
       "sourceSection": "3.13.1 assembling",
       "claimCheckedAt": "2026-10-22",
       "reviewScope": "Подтверждено только определение, а не способы крепления или нормативные моменты затяжки."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "turning",
+      "sourceId": "validated-cutting",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "milling",
+      "sourceId": "validated-cutting",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "drilling",
+      "sourceId": "validated-cutting",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "boring",
+      "sourceId": "validated-cutting",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "reaming",
+      "sourceId": "validated-cutting",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "broaching",
+      "sourceId": "validated-cutting",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "gear-cutting",
+      "sourceId": "validated-cutting",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "electrodischarge-machining",
+      "sourceId": "validated-cutting",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "laser-cutting",
+      "sourceId": "validated-cutting",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "waterjet-cutting",
+      "sourceId": "validated-cutting",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "annealing",
+      "sourceId": "validated-cutting",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "quenching",
+      "sourceId": "validated-cutting",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "tempering",
+      "sourceId": "validated-cutting",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "induction-hardening",
+      "sourceId": "validated-cutting",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "manual-metal-arc",
+      "sourceId": "atlas-source-001",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "submerged-arc",
+      "sourceId": "atlas-source-001",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "resistance-spot",
+      "sourceId": "atlas-source-001",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "laser-welding",
+      "sourceId": "atlas-source-001",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "friction-stir-welding",
+      "sourceId": "atlas-source-001",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "brazing",
+      "sourceId": "atlas-source-002",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "soft-soldering",
+      "sourceId": "atlas-source-002",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "powder-bed-fusion",
+      "sourceId": "atlas-source-003",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "directed-energy-deposition",
+      "sourceId": "atlas-source-003",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "binder-jetting",
+      "sourceId": "atlas-source-003",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "material-jetting",
+      "sourceId": "atlas-source-003",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "vat-photopolymerization",
+      "sourceId": "atlas-source-003",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "additive-extrusion",
+      "sourceId": "atlas-source-003",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "blow-molding",
+      "sourceId": "atlas-source-004",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "rotomolding",
+      "sourceId": "atlas-source-004",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "thermoforming",
+      "sourceId": "atlas-source-004",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "calendering",
+      "sourceId": "atlas-source-004",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "compounding",
+      "sourceId": "atlas-source-004",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "polymer-foaming",
+      "sourceId": "atlas-source-004",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "ultrasonic-plastic-welding",
+      "sourceId": "atlas-source-005",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "laser-plastic-welding",
+      "sourceId": "atlas-source-005",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "hand-layup",
+      "sourceId": "atlas-source-006",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "vacuum-infusion",
+      "sourceId": "atlas-source-006",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "resin-transfer-molding",
+      "sourceId": "atlas-source-006",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "pultrusion",
+      "sourceId": "atlas-source-006",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "filament-winding",
+      "sourceId": "atlas-source-006",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "autoclave-composites",
+      "sourceId": "atlas-source-006",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "solder-paste-printing",
+      "sourceId": "atlas-pcb-assembly",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "smt-placement",
+      "sourceId": "atlas-pcb-assembly",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "reflow-soldering",
+      "sourceId": "atlas-pcb-assembly",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "wave-soldering",
+      "sourceId": "atlas-pcb-assembly",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "conformal-coating",
+      "sourceId": "atlas-pcb-assembly",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "aoi-pcb",
+      "sourceId": "atlas-pcb-assembly",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "blanching-food",
+      "sourceId": "atlas-pasteurization",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "thermal-sterilization-food",
+      "sourceId": "atlas-pasteurization",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "freezing-food",
+      "sourceId": "atlas-pasteurization",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "spray-drying-food",
+      "sourceId": "atlas-pasteurization",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "food-evaporation",
+      "sourceId": "atlas-pasteurization",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "grain-milling",
+      "sourceId": "atlas-pasteurization",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "food-extrusion",
+      "sourceId": "atlas-pasteurization",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "juice-clarification",
+      "sourceId": "atlas-pasteurization",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "carding",
+      "sourceId": "checked2-spinning",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "combing-textile",
+      "sourceId": "checked2-spinning",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "drawing-textile",
+      "sourceId": "checked2-spinning",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "winding-yarn",
+      "sourceId": "checked2-spinning",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "warping",
+      "sourceId": "checked2-spinning",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "warp-sizing",
+      "sourceId": "checked2-spinning",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "textile-bleaching",
+      "sourceId": "checked2-spinning",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "textile-printing",
+      "sourceId": "checked2-spinning",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "wood-planing",
+      "sourceId": "atlas-source-007",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "veneer-peeling",
+      "sourceId": "atlas-source-007",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "plywood-bonding",
+      "sourceId": "atlas-source-007",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "wood-preservation",
+      "sourceId": "atlas-source-007",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "fiberboard-pressing",
+      "sourceId": "atlas-source-007",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "industrial-evaporation",
+      "sourceId": "atlas-source-008",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "crystallization",
+      "sourceId": "atlas-source-008",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "gas-absorption",
+      "sourceId": "atlas-source-008",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "gas-stripping",
+      "sourceId": "atlas-source-008",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "industrial-centrifugation",
+      "sourceId": "atlas-source-008",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "chemical-membrane",
+      "sourceId": "atlas-source-008",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "catalytic-reaction",
+      "sourceId": "atlas-source-008",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "solvent-extraction",
+      "sourceId": "atlas-source-008",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "concrete-mixing",
+      "sourceId": "atlas-source-009",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "concrete-placing",
+      "sourceId": "atlas-source-009",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "concrete-vibration",
+      "sourceId": "atlas-source-009",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "concrete-curing",
+      "sourceId": "atlas-source-009",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "formwork-erection",
+      "sourceId": "atlas-source-009",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "rebar-installation",
+      "sourceId": "atlas-source-009",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "masonry-works",
+      "sourceId": "atlas-source-009",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "road-asphalt-placement",
+      "sourceId": "atlas-source-009",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "geotechnical-grouting",
+      "sourceId": "atlas-source-009",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "asphalt-mix-production",
+      "sourceId": "atlas-source-010",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "steam-generation",
+      "sourceId": "atlas-source-011",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "condensate-return",
+      "sourceId": "atlas-source-011",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "deaeration-water",
+      "sourceId": "atlas-source-011",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "economizer-heat-recovery",
+      "sourceId": "atlas-source-011",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "steam-trap-monitoring",
+      "sourceId": "atlas-source-011",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "industrial-induction-heating",
+      "sourceId": "atlas-source-008",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "industrial-heat-exchange",
+      "sourceId": "atlas-source-008",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "coagulation-water",
+      "sourceId": "atlas-source-012",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "flocculation-water",
+      "sourceId": "atlas-source-012",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "sedimentation-water",
+      "sourceId": "atlas-source-012",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "granular-filtration",
+      "sourceId": "atlas-source-012",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "carbon-adsorption",
+      "sourceId": "atlas-source-012",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "reverse-osmosis",
+      "sourceId": "atlas-source-012",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "nanofiltration-water",
+      "sourceId": "atlas-source-012",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "ultrafiltration-water",
+      "sourceId": "atlas-source-012",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "ozonation-water",
+      "sourceId": "atlas-source-012",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "sludge-dewatering",
+      "sourceId": "atlas-source-012",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "cement-clinker-firing",
+      "sourceId": "atlas-source-010",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "ceramic-calcination",
+      "sourceId": "atlas-source-010",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "ceramic-sintering",
+      "sourceId": "atlas-source-010",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "slip-casting-ceramics",
+      "sourceId": "atlas-source-010",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "dry-pressing-ceramics",
+      "sourceId": "atlas-source-010",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "brick-extrusion",
+      "sourceId": "atlas-source-010",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "glass-melting",
+      "sourceId": "atlas-source-010",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "glass-annealing",
+      "sourceId": "atlas-source-010",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "wet-granulation-pharma",
+      "sourceId": "atlas-source-013",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "dry-granulation-pharma",
+      "sourceId": "atlas-source-013",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "tablet-compression",
+      "sourceId": "atlas-source-013",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "tablet-coating",
+      "sourceId": "atlas-source-013",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "capsule-filling",
+      "sourceId": "atlas-source-013",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "aseptic-filling",
+      "sourceId": "atlas-source-013",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "pharma-spray-drying",
+      "sourceId": "atlas-source-013",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "pharma-sieving",
+      "sourceId": "atlas-source-013",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "offset-lithography",
+      "sourceId": "atlas-source-014",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "flexography",
+      "sourceId": "atlas-source-014",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "screen-printing",
+      "sourceId": "atlas-source-014",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "gravure-printing",
+      "sourceId": "atlas-source-014",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "print-binding",
+      "sourceId": "atlas-source-014",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "ore-crushing",
+      "sourceId": "atlas-source-015",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "ore-grinding",
+      "sourceId": "atlas-source-015",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "ore-screening",
+      "sourceId": "atlas-source-015",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "ore-flotation",
+      "sourceId": "atlas-source-015",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "magnetic-separation-ore",
+      "sourceId": "atlas-source-015",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "gravity-concentration",
+      "sourceId": "atlas-source-015",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "ore-leaching",
+      "sourceId": "atlas-source-015",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "magnetic-particle-ndt",
+      "sourceId": "atlas-inspection",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "eddy-current-ndt",
+      "sourceId": "atlas-inspection",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "visual-ndt",
+      "sourceId": "atlas-inspection",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "leak-testing",
+      "sourceId": "atlas-inspection",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "acoustic-emission-ndt",
+      "sourceId": "atlas-inspection",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "infrared-thermography",
+      "sourceId": "atlas-inspection",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "ground-penetrating-radar",
+      "sourceId": "atlas-inspection",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "guided-wave-ndt",
+      "sourceId": "atlas-inspection",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "magnetic-flux-leakage",
+      "sourceId": "atlas-inspection",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "neutron-radiography",
+      "sourceId": "atlas-inspection",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "laser-shearography",
+      "sourceId": "atlas-inspection",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "phased-array-ut",
+      "sourceId": "atlas-inspection",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "resistance-seam",
+      "sourceId": "atlas-source-001",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "flash-butt-welding",
+      "sourceId": "atlas-source-001",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "electron-beam-welding",
+      "sourceId": "atlas-source-001",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "plasma-arc-welding",
+      "sourceId": "atlas-source-001",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "stud-welding",
+      "sourceId": "atlas-source-001",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "diffusion-bonding",
+      "sourceId": "atlas-source-001",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "compression-molding-plastics",
+      "sourceId": "atlas-source-004",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "stretch-blow-molding",
+      "sourceId": "atlas-source-004",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "blown-film-extrusion",
+      "sourceId": "atlas-source-004",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "polymer-transfer-molding",
+      "sourceId": "atlas-source-004",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "rubber-vulcanization",
+      "sourceId": "atlas-source-004",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "extrusion-coating",
+      "sourceId": "atlas-source-004",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "needle-punching-nonwovens",
+      "sourceId": "checked2-spinning",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "mercerization",
+      "sourceId": "checked2-spinning",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "heat-setting-textiles",
+      "sourceId": "checked2-spinning",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "textile-calendering",
+      "sourceId": "checked2-spinning",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "industrial-embroidery",
+      "sourceId": "checked2-spinning",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "pcb-drilling",
+      "sourceId": "atlas-pcb-assembly",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "pcb-etching",
+      "sourceId": "atlas-pcb-assembly",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "pcb-plating",
+      "sourceId": "atlas-pcb-assembly",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "selective-soldering",
+      "sourceId": "atlas-pcb-assembly",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "pcb-xray-inspection",
+      "sourceId": "atlas-pcb-assembly",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "pharma-powder-blending",
+      "sourceId": "atlas-source-013",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "pharma-micronization",
+      "sourceId": "atlas-source-013",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "fluid-bed-pharma-drying",
+      "sourceId": "atlas-source-013",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "pharma-inprocess-control",
+      "sourceId": "atlas-source-013",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "printing-plate-making",
+      "sourceId": "atlas-source-016",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "print-die-cutting",
+      "sourceId": "atlas-source-016",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "uv-curing-print",
+      "sourceId": "atlas-source-016",
+      "claimPath": "industry",
+      "verificationStatus": "source_located",
+      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
     }
   ],
   "policy": {
