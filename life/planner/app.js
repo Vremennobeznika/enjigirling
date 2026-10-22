@@ -68,6 +68,10 @@ function persist(){
   const fresh=JSON.stringify(state),samePlan=all[PERSONAL_KEY]&&JSON.stringify(all[PERSONAL_KEY])===fresh;
   const sameShop=JSON.stringify(current)===JSON.stringify(canonical);
   if(samePlan&&sameShop)return true;
+  // Never materialize an untouched blank flexible planner on an empty new device:
+  // the cloud client must still recognize it as empty and download existing data.
+  if(!all[PERSONAL_KEY]&&!localStorage.getItem(KEY)&&sameShop&&
+     JSON.stringify(state)===JSON.stringify(newDefault()))return true;
   all[PERSONAL_KEY]=state;
   const total=JSON.stringify(all);
   if(!sameShop)localStorage.setItem(SHOP_KEY,JSON.stringify(canonical));
@@ -156,7 +160,7 @@ $('importData').onclick=()=>$('restoreFile').click();$('restoreFile').onchange=a
 $('clearDay').onclick=()=>{const day=M.localDate(currentDate);if(!confirm('Очистить отметки за '+day+'?'))return;for(const k of Object.keys(state.completions))if(k.startsWith(day+'::'))delete state.completions[k];persist();renderPage();notice('Отметки очищены за '+day)};
 $('resetAll').onclick=()=>{if(!confirm('Удалить все настройки, покупки, операции и отметки? Это необратимо без JSON-копии.'))return;if(!confirm('Подтвердить полный сброс приложения?'))return;const priorState=state,priorFault=storageFault,priorRaw=rawOnFailure;state=newDefault();storageFault=false;rawOnFailure=null;if(!persist()){state=priorState;storageFault=priorFault;rawOnFailure=priorRaw;return}taskEditorReset();pageOpen('week');notice('Приложение сброшено.')};
 $('reminderDone').onclick=()=>closeReminder('done');$('reminderSnooze').onclick=()=>closeReminder('snooze');$('reminderDismiss').onclick=()=>closeReminder('dismiss');
-$('financeDate').value=M.localDate(new Date());$('financeMonth').value=M.localDate(new Date()).slice(0,7);taskEditorReset();pageOpen('week');openDeepLink();M.trimHistory(state,new Date());persist();
+$('financeDate').value=M.localDate(new Date());$('financeMonth').value=M.localDate(new Date()).slice(0,7);taskEditorReset();pageOpen('week');openDeepLink();const stateBeforeTrim=JSON.stringify(state);M.trimHistory(state,new Date());if(JSON.stringify(state)!==stateBeforeTrim)persist();
 // Active-page alarms only: browsers cannot guarantee background timers or force focus.
 setInterval(tick,15000);document.addEventListener('visibilitychange',()=>{if(!document.hidden)tick()});window.addEventListener('storage',e=>{if(e.key===SHARED_KEY||e.key===SHOP_KEY){state=load();renderPage();notice('Данные обновлены из другой вкладки.')}});window.addEventListener('life-sync-applied',()=>{state=load();renderPage();notice('Облачные изменения применены.')});
 if('serviceWorker' in navigator&&location.protocol==='https:')navigator.serviceWorker.register('../../life-pwa-sw.js',{scope:'../../'}).catch(()=>{});
