@@ -57,7 +57,7 @@ function datasetFor(slug,dataset){
    ...(d.colleges||[]).map(item=>({...item,type:'college',district:d.name}))
   ]);
  }
- if(slug==='calendar')return jsArray('calendar-data.js','holidays');
+ if(slug==='calendar')return jsArray('calendar-data.js','window.engineeringCalendar.holidays');
  if(slug==='resources')return jsArray('resources-data.js','resources');
  if(slug==='calculators'){
   const topics=jsArray('calculator-atlas-data.js','window.calculatorAtlasGroups');
