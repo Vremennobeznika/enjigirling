@@ -272,3 +272,18 @@
 .site-page .material-related-more summary:focus-visible,.profession-modal .related-more summary:focus-visible,.modal-content .related-more summary:focus-visible{outline:3px solid var(--text-primary);outline-offset:2px;}
 .material-related-links{margin:3px 0 12px;}
 .profession-modal .related-more,.modal-content .related-more{padding:3px 0 10px;}
+
+/* Final modal link color guard for all theme states.
+   High-specificity learning/technology links were using --card-text (#111)
+   instead of the required --text-primary (#000) in the light theme. */
+.modal-content a,
+.modal-content a:link,
+.modal-content a:visited,
+.modal-content a:active,
+.modal-content a:hover,
+.modal-content .learning-path-links a,
+.modal-content .technology-links a,
+.modal-content .technology-hub a {
+  color:var(--text-primary)!important;
+  text-decoration-color:currentColor!important;
+}
