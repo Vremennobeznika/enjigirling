@@ -1,4 +1,4 @@
-// Обзорные сведения, не технологические инструкции.
+// Обзорные описания, не производственные инструкции; источники могут подтверждать только часть формулировок.
 window.engineeringProcesses = [
   {
     "id": "casting",
@@ -60,6 +60,10 @@ window.engineeringProcesses = [
     "profession": "mechanical-engineer",
     "sources": [
       {
+        "title": "Проверенный источник для Обработка резанием",
+        "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
+      },
+      {
         "title": "Sandvik Coromant — точность и качество обработки резанием",
         "url": "https://www.sandvik.coromant.com/en-gb/tools/silent-tools/what-is-silent-tools/application-guide-silent-tools/turning-appl-guide"
       }
@@ -99,6 +103,10 @@ window.engineeringProcesses = [
     "profession": "mechanical-engineer",
     "sources": [
       {
+        "title": "Проверенный источник для Аддитивное производство",
+        "url": "https://www.nist.gov/additive-manufacturing/what-additive-manufacturing"
+      },
+      {
         "title": "NIST — аддитивное производство методом экструзии материала",
         "url": "https://www.nist.gov/additive-manufacturing/research-areas/technologies/material-extrusion"
       },
@@ -123,6 +131,10 @@ window.engineeringProcesses = [
     ],
     "profession": "materials-engineer",
     "sources": [
+      {
+        "title": "Проверенный источник для Неразрушающий контроль",
+        "url": "https://www.asnt.org/what-is-nondestructive-testing"
+      },
       {
         "title": "ASNT — методы НК",
         "url": "https://www.asnt.org/what-is-nondestructive-testing/methods"
@@ -184,6 +196,10 @@ window.engineeringProcesses = [
     ],
     "profession": "materials-engineer",
     "sources": [
+      {
+        "title": "Ultrasonic Testing: A Versatile Method for NDT",
+        "url": "https://www.asnt.org/what-is-nondestructive-testing/methods/ultrasonic-testing"
+      },
       {
         "title": "ASNT — ультразвуковой метод НК",
         "url": "https://www.asnt.org/what-is-nondestructive-testing/methods"
@@ -541,6 +557,10 @@ window.engineeringProcesses = [
     "profession": "textile-engineer",
     "sources": [
       {
+        "title": "Проверенный источник для Крашение и отделка текстиля",
+        "url": "https://www.osha.gov/sic-manual/2261"
+      },
+      {
         "title": "OSHA — основные процессы текстильной промышленности",
         "url": "https://www.osha.gov/textiles"
       }
@@ -598,6 +618,10 @@ window.engineeringProcesses = [
     ],
     "profession": "forest-engineer",
     "sources": [
+      {
+        "title": "OSHA — виды лесопильных и строгальных операций",
+        "url": "https://www.osha.gov/sic-manual/2421"
+      },
       {
         "title": "US Forest Service — Drying Hardwood Lumber, обзор методов и дефектов",
         "url": "https://research.fs.usda.gov/treesearch/5710"
