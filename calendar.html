@@ -145,7 +145,7 @@ function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&l
 function render(){
  const q=search.value.trim().toLowerCase(),pid=profession.value,year=Number(yearFilter.value);
  const items=holidays.map(h=>({...h,...calendar.resolveDate(year,h)}))
-   .filter(h=>(!activeMonth||h.month===activeMonth)&&(!pid||h.ids.includes(pid))&&(!q||[h.day,monthGen[h.monthIndex],h.name,h.note,...h.ids.map(id=>pMap.get(id))].join(' ').toLowerCase().includes(q)))
+    .filter(h=>(!h.since||year>=h.since)&&(!activeMonth||h.month===activeMonth)&&(!pid||h.ids.includes(pid))&&(!q||[h.day,monthGen[h.monthIndex],h.name,h.note,...h.ids.map(id=>pMap.get(id))].join(' ').toLowerCase().includes(q)))
    .sort((a,b)=>a.time-b.time||a.name.localeCompare(b.name,'ru'));
  countEl.textContent=`Показано: ${items.length} ${plural(items.length,['праздник','праздника','праздников'])}`;
  hintEl.textContent=[year,activeMonth,pMap.get(pid)].filter(Boolean).join(' · ');
@@ -154,7 +154,7 @@ function render(){
  <h2 class="holiday-title">${esc(h.name)}</h2>
  <div class="holiday-professions">${h.ids.map(id=>`<a class="prof-chip" href="index.html#profession=${encodeURIComponent(id)}">${esc(pMap.get(id))}</a>`).join('')}</div>
  <p class="holiday-note">${esc(h.note)}</p>
- <span class="holiday-status">${h.kind==='documented'?'Дата подтверждена источником':'Редакционная дата · требуется проверка источника'}</span>
+ <span class="holiday-status">${h.kind==='documented'?'Дата приведена в правовом справочнике':'Редакционная дата · требуется проверка источника'}</span>
  ${h.source?`<a class="holiday-source" href="${esc(h.source)}" target="_blank" rel="noopener noreferrer">Источник даты ↗</a>`:''}
  </article>`).join('');
  empty.hidden=items.length!==0;grid.dataset.ready='true';
