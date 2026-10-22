@@ -10,7 +10,7 @@ header:after{content:none}h1{font-size:25px;margin:0 0 8px}.nav{display:grid;gri
 .task:has(input:checked) .name{text-decoration:line-through;color:#888}
 .time{color:#bfbfbf;width:auto;font-size:13px;line-height:1.4;padding-top:4px;font-variant-numeric:tabular-nums}
 .name{display:block;min-width:0;line-height:1.4;overflow-wrap:anywhere}footer{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}.small{font-size:12px;color:#999;line-height:1.5;margin-top:15px} .task.house{border-left:0;box-shadow:none;background:transparent}.task .homebadge{font-size:11px;display:block;color:#aaa;font-weight:500;line-height:1.35;margin-top:5px}.homelegend{font-size:12px;color:#bbb;border:1px solid #3f3f3f;border-radius:12px;padding:10px 12px;margin:12px 0 6px;line-height:1.55}.plant{color:#ccc}.homelegend strong{color:#fff}.calendar-notes{margin-top:22px}.calendar-notes .homelegend{margin:10px 0}.calendar-notes .medicine{margin-top:12px}.medicine{background:#141414;border-color:#777}.medicine a{color:#eee;text-decoration:underline;text-underline-offset:2px}.medicine .ref{display:block;margin-top:6px;font-size:11px}@media(max-width:420px){body{padding:10px 10px 70px}header{padding:8px 0 12px}.task{grid-template-columns:28px 42px minmax(0,1fr);column-gap:9px;padding:12px 5px}.nav{gap:3px}.nav button{padding:11px 2px}footer button{flex:1 1 100px}}
-</style></head><body><header><h1>МОЯ НЕДЕЛЯ</h1><div class="meta"><span id="date"></span><span id="count"></span></div><div class="bar"><div class="fill" id="fill"></div></div><div class="nav" id="nav"></div><div style="display:flex;gap:8px"><button id="prev" style="flex:1">← Неделя</button><button id="today" style="flex:1">Сегодня</button><button id="next" style="flex:1">Неделя →</button></div></header><main id="tasks"></main><footer><button id="export">Сохранить копию</button><button id="import">Восстановить</button><button id="clear">Очистить день</button></footer>
+</style></head><body><header><h1>МОЯ НЕДЕЛЯ</h1><div class="meta"><span id="date"></span><span id="count"></span></div><div class="bar"><div class="fill" id="fill"></div></div><div class="nav" id="nav"></div><div style="display:flex;gap:8px"><button id="prev" style="flex:1">← Неделя</button><button id="today" style="flex:1">Сегодня</button><button id="next" style="flex:1">Неделя →</button></div></header><main id="tasks"></main><footer><button id="export">Сохранить копию</button><button id="import">Восстановить</button><button id="clear">Очистить день</button><button id="exportPillsICS">Таблетки → Календарь (.ics)</button></footer>
 <section class="calendar-notes" aria-label="Пояснения к расписанию">
 <div class="homelegend"><strong>Дом — часть недели:</strong> посудомойка каждый день, стирка и уборка небольшими блоками, 72 горшка — 4 группы по 18. Время приблизительное; пятна после ребёнка убираем сразу, а внеплановую детскую стирку запускаем по мере накопления вещей. <span class="plant">Проверка растений не означает обязательный полив: ориентируйся на влажность и требования конкретного растения.</span> <a href="../plants/" style="color:#fff;text-decoration:underline;text-underline-offset:3px">Журнал всех 72 горшков →</a></div>
 <div class="homelegend medicine" aria-label="Информация о добавках"><strong>Схема из инструкций к четырём препаратам, не назначение:</strong> NOW B1 100 мг — 1 таблетка с завтраком; NOW фолиевая кислота 800 мкг + B12 25 мкг — 1 таблетка с обедом; Летолек железо хелат — 40 мг на 1 капсулу, только по подтверждённым показаниям; VitaMeal магний цитрат + B6 — указано 2 таблетки дважды во время еды (в сумме 400 мг магния и 6 мг B6). <strong>Важно:</strong> полные 400 мг магния из добавки выше обычного верхнего уровня 350 мг/сут для взрослых; согласуй полную дозу с врачом, особенно при болезнях почек. Железо принимай по назначенной схеме и не совмещай с чаем, кофе и молочными продуктами около 2 часов. <span class="ref">Инструкции: <a href="https://vitameal.com/catalog/product-115/" target="_blank" rel="noopener noreferrer">VitaMeal</a>, <a href="https://www.nowfoods.com/products/supplements/vitamin-b-1-100-mg-tablets" target="_blank" rel="noopener noreferrer">NOW B1</a>, <a href="https://www.nowfoods.com/products/supplements/folic-acid-800-mcg-vitamin-b-12-tablets" target="_blank" rel="noopener noreferrer">NOW фолат+B12</a>, <a href="https://ods.od.nih.gov/factsheets/Magnesium-Consumer/" target="_blank" rel="noopener noreferrer">NIH: магний</a>, <a href="https://www.nhs.uk/medicines/ferrous-sulfate/how-and-when-to-take-ferrous-sulfate/" target="_blank" rel="noopener noreferrer">NHS: железо</a>.</span></div>
@@ -38,4 +38,40 @@ label.append(cb,time,name);root.append(label)
 })
 }
 document.getElementById("prev").onclick=()=>{shift--;draw()};document.getElementById("next").onclick=()=>{shift++;draw()};document.getElementById("today").onclick=()=>{shift=0;sel=(new Date().getDay()+6)%7;draw()};document.getElementById("clear").onclick=()=>{if(!confirm("Очистить отметки выбранного дня?"))return;let s=read(),d=key(dt(sel));Object.keys(s).filter(k=>k.startsWith(d+"-")).forEach(k=>delete s[k]);save(s);draw()};function calendarMarks(o){return Object.fromEntries(Object.entries(o||{}).filter(([k,v])=>/^\d{4}-\d{2}-\d{2}-(?:\d+|home-[a-z0-9-]+)$/i.test(k)&&v===true))};
+function buildPillCalendarICS(start=new Date(),days=30){
+ const dateStamp=d=>[d.getFullYear(),String(d.getMonth()+1).padStart(2,"0"),String(d.getDate()).padStart(2,"0")].join("");
+ const stamp=d=>dateStamp(d)+"T"+[d.getHours(),d.getMinutes(),d.getSeconds()].map(v=>String(v).padStart(2,"0")).join("");
+ const utcStamp=new Date().toISOString().replace(/[-:]/g,"").replace(/\.\d{3}/,"");
+ const escapeText=s=>String(s).replace(/\\/g,"\\\\").replace(/\n/g,"\\n").replace(/;/g,"\\;").replace(/,/g,"\\,");
+ const pill=name=>/^(NOW B1|NOW фолиевая|Летолек|VitaMeal)/.test(name);
+ const rows=["BEGIN:VCALENDAR","VERSION:2.0","CALSCALE:GREGORIAN","METHOD:PUBLISH","PRODID:-//ENJIGIRLING//Personal calendar//RU","X-WR-CALNAME:Моё расписание препаратов"];
+ const today=new Date(start.getFullYear(),start.getMonth(),start.getDate(),12);
+ for(let n=0;n<days;n++){
+  const day=new Date(today);day.setDate(day.getDate()+n);
+  const list=[1,2,3,4,5].includes(day.getDay())?wd:we;
+  list.forEach(([time,title],i)=>{
+   if(!pill(title))return;
+   const [hours,mins]=time.split(":").map(Number);
+   const begins=new Date(day.getFullYear(),day.getMonth(),day.getDate(),hours,mins,0);
+   const ends=new Date(day.getFullYear(),day.getMonth(),day.getDate(),hours,mins+5,0);
+   rows.push("BEGIN:VEVENT","UID:life-pill-"+dateStamp(day)+"-"+i+"@enjigirling",
+     "DTSTAMP:"+utcStamp,"DTSTART:"+stamp(begins),"DTEND:"+stamp(ends),
+     "SUMMARY:"+escapeText(title),"DESCRIPTION:"+escapeText("Это старая схема для сверки с назначением и упаковкой; не медицинская рекомендация."),
+     "BEGIN:VALARM","TRIGGER:-PT0M","ACTION:DISPLAY","DESCRIPTION:Проверь расписание препарата","END:VALARM","END:VEVENT");
+  });
+ }
+ rows.push("END:VCALENDAR");
+ return rows.map(line=>{
+  let parts=[],cur="",octets=0;
+  for(const symbol of line){const bytes=new TextEncoder().encode(symbol).length;if(octets+bytes>73){parts.push(cur);cur=" "+symbol;octets=1+bytes}else{cur+=symbol;octets+=bytes}}
+  parts.push(cur);return parts.join("\r\n");
+ }).join("\r\n")+"\r\n";
+}
+document.getElementById("exportPillsICS").onclick=()=>{
+ if(!confirm("Создать копию старого расписания препаратов на следующие 30 дней для системного Календаря? Проверь дозы и назначения до импорта. Повторный импорт может создать дубли."))return;
+ const blob=new Blob([buildPillCalendarICS()],{type:"text/calendar;charset=utf-8"});
+ const url=URL.createObjectURL(blob),link=document.createElement("a");
+ link.href=url;link.download="moi-preparaty-30-dnei.ics";link.click();
+ setTimeout(()=>URL.revokeObjectURL(url),3000);
+};
 document.getElementById("export").onclick=()=>{let a=document.createElement("a"),u=URL.createObjectURL(new Blob([JSON.stringify(calendarMarks(read()))],{type:"application/json"}));a.href=u;a.download="kalendar-otmetki.json";a.click();setTimeout(()=>URL.revokeObjectURL(u),2000)};document.getElementById("import").onclick=()=>document.getElementById("upload").click();document.getElementById("upload").onchange=async e=>{let f=e.target.files[0];if(!f)return;try{let x=JSON.parse(await f.text());if(!x||typeof x!=="object"||Array.isArray(x))throw 0;if(confirm("Заменить текущие отметки?")){const current=read(),keep=current.__planner_v3;const clean=calendarMarks(x);if(keep&&typeof keep==="object")clean.__planner_v3=keep;save(clean);draw()}}catch{alert("Ошибка файла")}};draw();window.addEventListener("life-sync-applied",draw);window.addEventListener("storage",e=>{if(e.key==="week-check-v2")draw()});</script><script src="../life/auto-sync.js"></script></body></html>
