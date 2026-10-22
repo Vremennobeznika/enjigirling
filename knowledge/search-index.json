@@ -1604,9 +1604,7 @@
       "description": "Древесные композиционные панели Панель из ориентированных древесных элементов на связующем; параметры должны соответствовать выбранному классу изделия. Обшивки и панели",
       "url": "https://vremennobeznika.github.io/enjigirling/materials.html#osb-board",
       "dataset": "knowledge/materials.json",
-      "relatedProcesses": [
-        "fiberboard-pressing"
-      ]
+      "relatedProcesses": []
     },
     {
       "id": "material:particleboard",
@@ -1615,9 +1613,7 @@
       "description": "Древесные композиционные панели Плита из древесных частиц на связующем; свойства зависят от рецептуры и плотности. Мебельные и интерьерные панели",
       "url": "https://vremennobeznika.github.io/enjigirling/materials.html#particleboard",
       "dataset": "knowledge/materials.json",
-      "relatedProcesses": [
-        "fiberboard-pressing"
-      ]
+      "relatedProcesses": []
     },
     {
       "id": "material:glulam",
@@ -1626,9 +1622,7 @@
       "description": "Клеёные несущие древесные материалы Материал из соединённых деревянных элементов, характеристики которого задаются сортами и технологией склейки. Несущие конструкции",
       "url": "https://vremennobeznika.github.io/enjigirling/materials.html#glulam",
       "dataset": "knowledge/materials.json",
-      "relatedProcesses": [
-        "plywood-bonding"
-      ]
+      "relatedProcesses": []
     },
     {
       "id": "material:clt",
@@ -1637,9 +1631,7 @@
       "description": "Многослойные деревянные панели Слоистая древесная панель с заданной ориентацией слоёв; расчёт требует проектных и нормативных данных. Строительные панели",
       "url": "https://vremennobeznika.github.io/enjigirling/materials.html#clt",
       "dataset": "knowledge/materials.json",
-      "relatedProcesses": [
-        "plywood-bonding"
-      ]
+      "relatedProcesses": []
     },
     {
       "id": "material:wood-impregnant",
@@ -1659,9 +1651,7 @@
       "description": "Материалы печатных плат Предварительно пропитанная связующим армирующая основа; конечные свойства зависят от спецификации. Многослойные печатные платы",
       "url": "https://vremennobeznika.github.io/enjigirling/materials.html#pcb-prepreg",
       "dataset": "knowledge/materials.json",
-      "relatedProcesses": [
-        "pcb-assembly"
-      ]
+      "relatedProcesses": []
     },
     {
       "id": "material:pcb-laminate",
@@ -1941,7 +1931,7 @@
       "id": "material:asphalt-mix",
       "type": "material",
       "title": "Асфальтобетонная смесь",
-      "description": "minерально-органические смеси Смесь заполнителей и вяжущего; состав и параметры уплотнения устанавливаются рецептурой. Дорожное покрытие",
+      "description": "Минерально-органические строительные смеси Смесь заполнителей и вяжущего; состав и параметры уплотнения устанавливаются рецептурой. Дорожное покрытие",
       "url": "https://vremennobeznika.github.io/enjigirling/materials.html#asphalt-mix",
       "dataset": "knowledge/materials.json",
       "relatedProcesses": [
@@ -1999,7 +1989,7 @@
       "id": "material:graphite-electrode",
       "type": "material",
       "title": "Графитовые электроды промышленного назначения",
-      "description": "minерально-углеродные материалы Углеродный материал для электротермического оборудования; режим применения ограничен стандартом изделия. Металлургическое оборудование",
+      "description": "Минерально-углеродные материалы Углеродный материал для электротермического оборудования; режим применения ограничен стандартом изделия. Металлургическое оборудование",
       "url": "https://vremennobeznika.github.io/enjigirling/materials.html#graphite-electrode",
       "dataset": "knowledge/materials.json",
       "relatedProcesses": [
@@ -2058,9 +2048,7 @@
       "description": "Пористые минеральные сорбенты Адсорбционный материал; ёмкость зависит от примесей и химии обрабатываемой воды. Адсорбционные фильтры",
       "url": "https://vremennobeznika.github.io/enjigirling/materials.html#activated-alumina-adsorbent",
       "dataset": "knowledge/materials.json",
-      "relatedProcesses": [
-        "carbon-adsorption"
-      ]
+      "relatedProcesses": []
     },
     {
       "id": "material:ferric-oxide-media",
@@ -2143,7 +2131,7 @@
       "id": "material:glass-cullet",
       "type": "material",
       "title": "Стеклобой технологический",
-      "description": "minеральное вторичное сырьё Стеклянное вторичное сырьё для варки; загрязнения и совместимость стекол требуют контроля. Стекловарение",
+      "description": "Минеральное вторичное сырьё Стеклянное вторичное сырьё для варки; загрязнения и совместимость стекол требуют контроля. Стекловарение",
       "url": "https://vremennobeznika.github.io/enjigirling/materials.html#glass-cullet",
       "dataset": "knowledge/materials.json",
       "relatedProcesses": [
