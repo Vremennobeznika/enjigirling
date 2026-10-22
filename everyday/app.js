@@ -15,7 +15,7 @@ const hiddenSec=id=>state.sections.find(s=>s.id===id)?.visible===false;
 let state,broken=false;
 try{const old=localStorage.getItem(M.STORE);state=old?M.validate(JSON.parse(old)):M.blank()}
 catch(err){state=M.blank();broken=true;setTimeout(()=>toast("Сохранённые данные повреждены или недоступны. Новые записи заблокированы до восстановления копии.",9000),400)}
-let view="overview",customSection="",selected=M.localDate(),month=M.monthOf(selected),editingTx=null,editingItem=null,toastTimer;
+let view="overview",customSection="",selected=M.localDate(),month=M.monthOf(selected),editingTx=null,editingItem=null,editingSubscription=null,toastTimer;
 function toast(message,ms=4500){
  const node=$("toast");node.textContent=String(message);node.hidden=false;clearTimeout(toastTimer);
  toastTimer=setTimeout(()=>{node.hidden=true},ms);
@@ -192,6 +192,7 @@ function renderMoney(){
   const track=lbl("div",undefined,"bar-track"),fill=lbl("div",undefined,"bar-fill");
   fill.style.width=Math.min(100,Math.round(ratio*100))+"%";track.append(fill);block.append(summary,track);bars.append(block);
  }
+ renderSubscriptions();
  const target=$("txRows");target.replaceChildren();
  const q=$("txSearch").value.trim().toLocaleLowerCase("ru"),type=$("txFilter").value;
  const data=state.transactions.filter(t=>M.monthOf(t.date)===month&&(type==="all"||t.kind===type)&&(!q||[t.note,catName(t.kind,t.category)].some(v=>v.toLocaleLowerCase("ru").includes(q)))).sort((a,b)=>b.date.localeCompare(a.date)||b.id.localeCompare(a.id));
@@ -208,6 +209,26 @@ function renderMoney(){
   target.append(row(t.note||catName(t.kind,t.category),t.date+" · "+catName(t.kind,t.category),{
    actions:[lbl("span",(t.kind==="income"?"+":"−")+M.money(t.amount,state.currency),"row-amount"),edit,del]
   }));
+ }
+}
+function renderSubscriptions(){
+ const out=$("subscriptionRows");out.replaceChildren();
+ const data=state.subscriptions.filter(s=>s.active).slice().sort((a,b)=>a.day-b.day||a.title.localeCompare(b.title,"ru"));
+ if(!data.length)empty(out,"Счета и подписки ещё не настроены. Создай их в настройках.");
+ for(const sub of data){
+  const paid=state.transactions.find(t=>t.kind==="expense"&&t.subscriptionId===sub.id&&M.monthOf(t.date)===month);
+  const date=M.dueDate(month,sub.day);
+  const btn=actionButton(paid?"Оплачено":"Записать оплату",()=>{
+   if(paid)return;
+   if(!ask("Добавить платёж «"+sub.title+"» на "+M.money(sub.amount,state.currency)+" в журнал "+month+"?"))return;
+   const actual=M.monthOf(M.localDate())===month?M.localDate():date;
+   if(change(s=>{
+    if(s.transactions.some(t=>t.subscriptionId===sub.id&&M.monthOf(t.date)===month))throw Error("Уже есть оплата за этот месяц");
+    s.transactions.push({id:M.uid(),kind:"expense",date:actual,amount:sub.amount,category:sub.category,note:sub.title,subscriptionId:sub.id});
+   }))toast("Оплата записана в расходы");
+  },paid?"btn small":"btn small primary");
+  if(paid)btn.disabled=true;
+  out.append(row(sub.title,M.money(sub.amount,state.currency)+" · до "+date+" · "+catName("expense",sub.category),{actions:[btn]}));
  }
 }
 function editTransaction(id){
@@ -326,13 +347,33 @@ function renderSettings(){
    }
    actions.push(removeButton("Удалить категорию",()=>{
     if(state[key].length===1){toast("Нельзя удалить последнюю категорию.");return}
-    const used=key==="expenseCats"?state.transactions.some(t=>t.kind==="expense"&&t.category===c.id):key==="incomeCats"?state.transactions.some(t=>t.kind==="income"&&t.category===c.id):state.shopping.some(v=>v.category===c.id);
+    const used=key==="expenseCats"?(state.transactions.some(t=>t.kind==="expense"&&t.category===c.id)||state.subscriptions.some(t=>t.category===c.id)):key==="incomeCats"?state.transactions.some(t=>t.kind==="income"&&t.category===c.id):state.shopping.some(v=>v.category===c.id);
     if(used){toast("Категория используется в записях. Переименуй её, чтобы сохранить историю.");return}
     if(ask("Удалить категорию «"+c.title+"»?"))change(doc=>{doc[key]=doc[key].filter(x=>x.id!==c.id)});
    }));
    div.append(settingRow(c.title,key==="expenseCats"?"Бюджет действует каждый месяц":"",actions));
   }
  }
+ const subscriptions=$("settingsSubscriptions");subscriptions.replaceChildren();
+ for(const sub of state.subscriptions){
+  const toggle=document.createElement("input");toggle.type="checkbox";toggle.checked=sub.active;
+  toggle.setAttribute("aria-label","Регулярный платёж включён: "+sub.title);
+  toggle.addEventListener("change",()=>change(s=>{s.subscriptions.find(x=>x.id===sub.id).active=toggle.checked}));
+  subscriptions.append(settingRow(sub.title,M.money(sub.amount,state.currency)+" · "+sub.day+"-го числа · "+catName("expense",sub.category),[
+   toggle,
+   actionButton("Изменить",()=>{
+    editingSubscription=sub.id;$("subscriptionName").value=sub.title;$("subscriptionAmount").value=(sub.amount/100).toFixed(2).replace(".",",");
+    $("subscriptionDay").value=sub.day;$("subscriptionCategory").value=sub.category;
+    $("subscriptionSave").textContent="Сохранить изменения";$("subscriptionCancel").hidden=false;$("subscriptionName").focus();
+   }),
+   removeButton("Удалить регулярный платёж",()=>{
+    if(!ask("Удалить шаблон «"+sub.title+"»? Уже записанные расходы останутся в журнале."))return;
+    change(s=>{s.subscriptions=s.subscriptions.filter(x=>x.id!==sub.id);for(const t of s.transactions)if(t.subscriptionId===sub.id)t.subscriptionId=""});
+   })
+  ]));
+ }
+ if(!state.subscriptions.length)empty(subscriptions,"Регулярных платежей нет.");
+ categoryOptions($("subscriptionCategory"),state.expenseCats);
  $("currencySetting").value=state.currency;$("themeSetting").value=state.theme;
  $("restorePrevious").disabled=!localStorage.getItem(M.RECOVERY);
 }
@@ -365,7 +406,7 @@ function bind(){
  $("themeToggle").onclick=()=>change(s=>{s.theme=s.theme==="dark"?"light":"dark"});
  $("themeSetting").onchange=e=>change(s=>{s.theme=e.target.value});
  $("currencySetting").onchange=e=>{
-  if(state.transactions.length){e.target.value=state.currency;toast("Валюта заблокирована: уже есть операции. Суммы не пересчитываются автоматически.");return}
+  if(state.transactions.length||state.subscriptions.length||state.expenseCats.some(c=>c.limit)){e.target.value=state.currency;toast("Валюта зафиксирована: уже есть операции, лимиты или регулярные платежи. Суммы не пересчитываются автоматически.");return}
   change(s=>{s.currency=e.target.value});
  };
  $("prevWeek").onclick=()=>{selected=M.addDays(selected,-7);renderPlanner()};
@@ -386,12 +427,26 @@ function bind(){
   e.preventDefault();
   try{
    const t={id:editingTx||M.uid(),kind:$("txType").value,date:$("txDate").value,
-    amount:M.parseMinor($("txAmount").value),category:$("txCategory").value,note:$("txNote").value.trim().slice(0,160)};
+    amount:M.parseMinor($("txAmount").value),category:$("txCategory").value,note:$("txNote").value.trim().slice(0,160),subscriptionId:editingTx?(state.transactions.find(x=>x.id===editingTx)?.subscriptionId||""):""};
    const successful=change(s=>{if(editingTx){const i=s.transactions.findIndex(x=>x.id===editingTx);if(i<0)throw Error("Операция не найдена");s.transactions[i]=t}else s.transactions.push(t)});
    if(successful){cancelTxEdit();toast("Операция сохранена")}
   }catch(err){toast(err.message)}
  };
  $("txCancel").onclick=cancelTxEdit;
+ $("subscriptionForm").onsubmit=e=>{
+  e.preventDefault();
+  try{
+   const entry={id:editingSubscription||M.uid(),title:$("subscriptionName").value.trim().slice(0,100),
+    amount:M.parseMinor($("subscriptionAmount").value),day:Number($("subscriptionDay").value),
+    category:$("subscriptionCategory").value,active:editingSubscription?state.subscriptions.find(x=>x.id===editingSubscription)?.active!==false:true};
+   if(!Number.isInteger(entry.day)||entry.day<1||entry.day>31)throw Error("Число месяца должно быть от 1 до 31");
+   if(change(s=>{
+    if(editingSubscription){const i=s.subscriptions.findIndex(x=>x.id===editingSubscription);if(i<0)throw Error("Платёж не найден");s.subscriptions[i]=entry}
+    else s.subscriptions.push(entry);
+   })){editingSubscription=null;$("subscriptionForm").reset();$("subscriptionSave").textContent="Добавить платёж";$("subscriptionCancel").hidden=true;toast("Регулярный платёж сохранён")}
+  }catch(err){toast(err.message)}
+ };
+ $("subscriptionCancel").onclick=()=>{editingSubscription=null;$("subscriptionForm").reset();$("subscriptionSave").textContent="Добавить платёж";$("subscriptionCancel").hidden=true};
  $("exportCsv").onclick=()=>download("expenses-"+month+".csv",M.csvTransactions(state,month),"text/csv;charset=utf-8");
  $("shopForm").onsubmit=e=>{
   e.preventDefault();const title=$("shopName").value.trim();if(!title)return;
