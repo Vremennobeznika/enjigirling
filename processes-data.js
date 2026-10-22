@@ -1,4 +1,4 @@
-// Обзорные описания, не производственные инструкции; источники могут подтверждать только часть формулировок.
+// Обзорные описания, не технологические инструкции.
 window.engineeringProcesses = [
   {
     "id": "casting",
@@ -82,6 +82,10 @@ window.engineeringProcesses = [
     ],
     "profession": "materials-engineer",
     "sources": [
+      {
+        "title": "Проверенный источник для Обработка резанием",
+        "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
+      },
       {
         "title": "Bodycote — технический словарь термической обработки",
         "url": "https://www.bodycote.com/technical-glossary/"
@@ -277,6 +281,10 @@ window.engineeringProcesses = [
     "profession": "mechanical-engineer",
     "sources": [
       {
+        "title": "Проверенный источник для Обработка резанием",
+        "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
+      },
+      {
         "title": "NIST IR 7913 — классификация способов производства",
         "url": "https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes"
       },
@@ -300,6 +308,10 @@ window.engineeringProcesses = [
     "profession": "metallurgical-engineer",
     "sources": [
       {
+        "title": "Проверенный источник для Обработка резанием",
+        "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
+      },
+      {
         "title": "NIST IR 7913 — классификация способов производства",
         "url": "https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes"
       }
@@ -319,6 +331,10 @@ window.engineeringProcesses = [
     ],
     "profession": "mechanical-engineer",
     "sources": [
+      {
+        "title": "Проверенный источник для Обработка резанием",
+        "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
+      },
       {
         "title": "NIST IR 7913 — классификация способов производства",
         "url": "https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes"
@@ -376,6 +392,10 @@ window.engineeringProcesses = [
     "profession": "mechanical-engineer",
     "sources": [
       {
+        "title": "Проверенный источник для Обработка резанием",
+        "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
+      },
+      {
         "title": "NIST IR 7913 — классификация способов производства",
         "url": "https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes"
       },
@@ -395,6 +415,10 @@ window.engineeringProcesses = [
     "materials": [],
     "profession": "materials-engineer",
     "sources": [
+      {
+        "title": "Проверенный источник для Обработка резанием",
+        "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
+      },
       {
         "title": "NIST IR 7913 — классификация способов производства",
         "url": "https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes"
@@ -430,6 +454,10 @@ window.engineeringProcesses = [
     "profession": "food-engineer",
     "sources": [
       {
+        "title": "Профильное описание Пастеризация",
+        "url": "https://www.fao.org/4/y5113e/y5113e04.htm"
+      },
+      {
         "title": "FAO — технология переработки фруктов и овощей",
         "url": "https://www.fao.org/4/x0209e/x0209e06.htm"
       }
@@ -447,6 +475,10 @@ window.engineeringProcesses = [
     ],
     "profession": "food-engineer",
     "sources": [
+      {
+        "title": "Профильное описание Пастеризация",
+        "url": "https://www.fao.org/4/y5113e/y5113e04.htm"
+      },
       {
         "title": "FAO — технология переработки фруктов и овощей",
         "url": "https://www.fao.org/4/x0209e/x0209e06.htm"
@@ -485,6 +517,10 @@ window.engineeringProcesses = [
     "profession": "food-engineer",
     "sources": [
       {
+        "title": "Профильное описание Пастеризация",
+        "url": "https://www.fao.org/4/y5113e/y5113e04.htm"
+      },
+      {
         "title": "FAO — технология переработки фруктов и овощей",
         "url": "https://www.fao.org/4/x0209e/x0209e06.htm"
       }
@@ -502,6 +538,10 @@ window.engineeringProcesses = [
     ],
     "profession": "textile-engineer",
     "sources": [
+      {
+        "title": "Профильное описание Прядение",
+        "url": "https://www.osha.gov/data/sic-manual/major-group-22"
+      },
       {
         "title": "OSHA — основные процессы текстильной промышленности",
         "url": "https://www.osha.gov/textiles"
@@ -521,6 +561,10 @@ window.engineeringProcesses = [
     "profession": "textile-engineer",
     "sources": [
       {
+        "title": "Профильное описание Прядение",
+        "url": "https://www.osha.gov/data/sic-manual/major-group-22"
+      },
+      {
         "title": "OSHA — основные процессы текстильной промышленности",
         "url": "https://www.osha.gov/textiles"
       }
@@ -538,6 +582,10 @@ window.engineeringProcesses = [
     ],
     "profession": "textile-engineer",
     "sources": [
+      {
+        "title": "Профильное описание Прядение",
+        "url": "https://www.osha.gov/data/sic-manual/major-group-22"
+      },
       {
         "title": "OSHA — основные процессы текстильной промышленности",
         "url": "https://www.osha.gov/textiles"
@@ -578,6 +626,10 @@ window.engineeringProcesses = [
     ],
     "profession": "textile-engineer",
     "sources": [
+      {
+        "title": "Профильное описание Швейная сборка изделий",
+        "url": "https://www.osha.gov/data/sic-manual/major-group-23"
+      },
       {
         "title": "Coats — технические дефекты швов и рекомендации для швейного производства",
         "url": "https://www.coats.com/en/industries/composites/faqs/"
@@ -692,6 +744,10 @@ window.engineeringProcesses = [
     "materials": [],
     "profession": "chemical-engineer",
     "sources": [
+      {
+        "title": "Профильное описание Дистилляция",
+        "url": "https://www.epa.gov/system/files/documents/2021-07/pretreatment_industrial_assessments.pdf"
+      },
       {
         "title": "OSHA — перегонка и риски технологического процесса",
         "url": "https://www.osha.gov/otm/section-4-safety-hazards/chapter-5"
