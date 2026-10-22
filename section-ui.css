@@ -264,3 +264,11 @@
 .site-page .process-references summary{cursor:pointer;font:700 var(--fs-sm)/1.45 var(--font);min-height:40px;padding:8px 0;}
 .site-page .atlas-card .process-parent{margin:0 0 7px;color:var(--card-muted);font:400 var(--fs-sm)/1.45 var(--font);}
 .site-page .atlas-card .process-parent a{margin:0 0 0 4px;min-height:34px;padding:6px 10px;}
+
+/* Compact bidirectional atlas links in materials and profession overlays. */
+.site-page .material-process-links{font:400 var(--fs-sm)/1.6 var(--font);max-width:100%;overflow-wrap:anywhere;}
+.site-page .material-related-more{margin:10px 0 4px;width:100%;}
+.site-page .material-related-more summary,.profession-modal .related-more summary,.modal-content .related-more summary{cursor:pointer;min-height:42px;padding:9px 0;font-weight:700;color:var(--card-text);}
+.site-page .material-related-more summary:focus-visible,.profession-modal .related-more summary:focus-visible,.modal-content .related-more summary:focus-visible{outline:3px solid var(--text-primary);outline-offset:2px;}
+.material-related-links{margin:3px 0 12px;}
+.profession-modal .related-more,.modal-content .related-more{padding:3px 0 10px;}
