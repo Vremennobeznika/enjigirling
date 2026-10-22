@@ -5,11 +5,13 @@ on:
     branches: [main]
     paths:
       - 'life/**'
+      - 'life-pwa-sw.js'
       - 'calendar/index.html'
       - 'calendar/household.js'
       - 'plants/**'
       - 'shopping/**'
       - 'tests/life-*.cjs'
+      - 'tests/personal-planner.spec.cjs'
       - 'tests/calendar-layout.spec.cjs'
       - 'tests/personal-flows.spec.cjs'
       - 'scripts/all-checks.cjs'
@@ -37,13 +39,18 @@ jobs:
         run: |
           node --check life/auto-sync.js
           node --check life/sw.js
+          node --check life-pwa-sw.js
+          node --check life/planner/model.js
+          node --check life/planner/config.js
+          node --check life/planner/app.js
           node tests/life-sync.cjs
+          node tests/life-planner-parity.cjs
       - name: Install browser test tools
         run: npm install --no-audit --no-fund
       - name: Install Chromium
         run: npx playwright install chromium
       - name: Calendar, dashboard, shopping and plants in Chromium
-        run: npx playwright test tests/calendar-layout.spec.cjs tests/life-layout.spec.cjs tests/personal-flows.spec.cjs --project=chromium-desktop
+        run: npx playwright test tests/calendar-layout.spec.cjs tests/life-layout.spec.cjs tests/personal-flows.spec.cjs tests/personal-planner.spec.cjs --project=chromium-desktop
       - name: Upload screenshots and traces on failure
         if: failure()
         uses: actions/upload-artifact@v4
