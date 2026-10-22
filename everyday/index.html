@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#111111"><meta name="description" content="Локальный органайзер: планы, финансы, покупки и свои разделы. Без аккаунта и облака.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<link rel="icon" type="image/svg+xml" href="./icon.svg"><link rel="manifest" href="./manifest.webmanifest">
+<link rel="stylesheet" href="./style.css"><script src="./app.js" defer></script>
+<title>Обычный день — личный органайзер</title>
+</head>
+<body>
+<a class="skip" href="#content">К содержимому</a>
+<div class="shell">
+<header class="top">
+ <div class="brand"><span class="brandmark" aria-hidden="true">◫</span><div><strong>ОБЫЧНЫЙ ДЕНЬ</strong><small>личный органайзер</small></div></div>
+ <div class="top-right"><span class="local-label"><span aria-hidden="true">●</span> Только на устройстве</span><button type="button" class="icon-btn" id="themeToggle" aria-label="Переключить тему" title="Переключить тему">◐</button></div>
+</header>
+<nav id="mainNav" class="nav" aria-label="Разделы"><!-- filled from settings --></nav>
+<main id="content">
+<section id="page-overview" class="page">
+ <div class="hero"><div><p class="eyebrow">ЛИЧНОЕ ПРОСТРАНСТВО</p><h1>Всё под контролем.</h1><p id="todayText" class="muted"></p></div><p class="hero-note">Дела, деньги и покупки — в одном месте. Ты сама решаешь, какие разделы и пункты нужны.</p></div>
+ <div class="stats"><article class="stat"><span>Задачи на сегодня</span><strong id="todayMetric">0</strong><small id="todayMetricNote"></small></article><article class="stat"><span>Расходы за месяц</span><strong id="spendMetric">0</strong><small id="spendMetricNote"></small></article><article class="stat"><span>Купить</span><strong id="shopMetric">0</strong><small>Неотмеченные товары</small></article></div>
+ <div class="cols"><article class="panel"><div class="panel-head"><div><p class="eyebrow">СЕГОДНЯ</p><h2>Дела и привычки</h2></div><button class="link-btn" type="button" data-go="planner">К календарю →</button></div><div id="overviewTasks" class="rows"></div></article><article class="panel"><div class="panel-head"><div><p class="eyebrow">ФИНАНСЫ</p><h2>Последние операции</h2></div><button class="link-btn" type="button" data-go="money">К расходам →</button></div><div id="overviewMoney" class="rows"></div></article></div>
+ <article class="panel info"><h2>Данные принадлежат тебе</h2><p class="muted">Никаких серверных аккаунтов, банковских подключений и Yandex Cloud. Всё хранится в браузере. Для переноса на другой телефон или компьютер используется резервная копия из настроек.</p><button type="button" class="btn" data-go="settings">Настройки и резервная копия →</button></article>
+</section>
+<section id="page-planner" class="page" hidden>
+ <div class="heading"><p class="eyebrow">ДЕЛА И ПРИВЫЧКИ</p><h1>Моя неделя</h1><p class="muted">Разовые дела добавляются здесь. Повторяющиеся пункты и категории настраиваются отдельно.</p></div>
+ <div class="panel"><div class="weekbar"><button class="btn" id="prevWeek" type="button" aria-label="Предыдущая неделя">←</button><strong id="weekLabel"></strong><button class="btn" id="todayWeek" type="button">Сегодня</button><button class="btn" id="nextWeek" type="button" aria-label="Следующая неделя">→</button></div><div id="weekDays" class="days" aria-label="Дни недели"></div>
+ <form id="taskForm" class="form-grid"><label class="field wide"><span>Дело</span><input id="taskTitle" maxlength="160" placeholder="Например, забрать посылку" required></label><label class="field"><span>Раздел</span><select id="taskSection"></select></label><label class="field"><span>Время (необязательно)</span><input id="taskTime" type="time"></label><button class="btn primary" type="submit">Добавить дело</button></form>
+ <div class="panel-head lower"><h2>План на день</h2><span class="muted" id="plannerCount"></span></div><div id="plannerRows" class="rows"></div></div>
+</section>
+<section id="page-money" class="page" hidden>
+ <div class="heading"><p class="eyebrow">УЧЁТ ДЕНЕГ</p><h1>Доходы и расходы</h1><p class="muted">Операции, лимиты, категории и месячные итоги. Категории и лимиты редактируются в настройках.</p></div>
+ <div class="monthbar"><button class="btn" type="button" id="prevMonth" aria-label="Предыдущий месяц">←</button><strong id="monthTitle"></strong><button class="btn" type="button" id="nextMonth" aria-label="Следующий месяц">→</button></div>
+ <div class="stats"><article class="stat"><span>Доходы</span><strong id="incomeTotal" class="amount">0</strong></article><article class="stat"><span>Расходы</span><strong id="expenseTotal" class="amount">0</strong></article><article class="stat"><span>Баланс месяца</span><strong id="balanceTotal" class="amount">0</strong></article></div>
+ <div class="cols"><article class="panel"><div class="panel-head"><h2 id="txFormTitle">Новая операция</h2></div><form id="txForm" class="form-grid">
+ <label class="field"><span>Тип</span><select id="txType"><option value="expense">Расход</option><option value="income">Доход</option></select></label>
+ <label class="field"><span>Дата</span><input id="txDate" type="date" required></label>
+ <label class="field"><span>Сумма</span><input id="txAmount" inputmode="decimal" placeholder="0,00" maxlength="18" required></label>
+ <label class="field"><span>Категория</span><select id="txCategory"></select></label>
+ <label class="field wide"><span>Описание</span><input id="txNote" maxlength="160" placeholder="Необязательно"></label>
+ <button class="btn primary" type="submit" id="txSubmit">Записать</button><button class="btn" id="txCancel" type="button" hidden>Отменить правку</button></form><p class="muted tiny">Никаких банковских подключений. Валюта единая для всех записей, без автоматического пересчёта.</p></article>
+ <article class="panel"><div class="panel-head"><h2>Расходы по категориям</h2></div><div id="categoryBars" class="bars"></div><p class="muted tiny">Лимиты задаются в разделе «Настройки» и действуют каждый месяц отдельно.</p></article></div>
+ <article class="panel"><div class="panel-head"><h2>Журнал операций</h2><div class="actions"><button class="btn" id="exportCsv" type="button">CSV за месяц</button><span class="muted" id="txCount"></span></div></div>
+ <div class="filters"><label class="field"><span>Поиск</span><input id="txSearch" maxlength="100" placeholder="По категории или описанию"></label><label class="field"><span>Тип</span><select id="txFilter"><option value="all">Все</option><option value="expense">Расходы</option><option value="income">Доходы</option></select></label></div><div id="txRows" class="rows"></div></article>
+</section>
+<section id="page-shopping" class="page" hidden>
+ <div class="heading"><p class="eyebrow">СПИСКИ</p><h1>Покупки</h1><p class="muted">Добавляй товары и отмечай купленные. Категории списка — в настройках.</p></div>
+ <article class="panel"><form id="shopForm" class="form-grid"><label class="field wide"><span>Товар</span><input id="shopName" maxlength="140" placeholder="Например, молоко" required></label><label class="field"><span>Количество</span><input id="shopQty" maxlength="40" placeholder="1 упаковка"></label><label class="field"><span>Категория</span><select id="shopCategory"></select></label><button class="btn primary" type="submit">Добавить</button></form><div class="panel-head lower"><h2>Список</h2><span id="shopCount" class="muted"></span></div><div id="shopRows" class="rows"></div><button class="btn bottom-action" id="clearPurchased" type="button">Удалить купленное</button></article>
+</section>
+<section id="page-home" class="page" hidden>
+ <div class="heading"><p class="eyebrow">ДОМАШНИЕ ДЕЛА</p><h1>Дом</h1><p class="muted">Запасы и растения — без заданного количества горшков или навязанного графика полива.</p></div>
+ <div class="cols">
+ <article class="panel"><div class="panel-head"><h2>Домашние запасы</h2><span id="pantryCount" class="muted"></span></div><form id="pantryForm" class="form-grid"><label class="field wide"><span>Продукт или вещь</span><input id="pantryName" maxlength="140" placeholder="Что уже есть дома" required></label><label class="field"><span>Количество</span><input id="pantryQty" maxlength="40" placeholder="2 шт."></label><button class="btn primary" type="submit">Добавить</button></form><div id="pantryRows" class="rows"></div></article>
+ <article class="panel"><div class="panel-head"><h2>Мои растения</h2><span id="plantCount" class="muted"></span></div><form id="plantForm" class="form-grid"><label class="field wide"><span>Название растения</span><input id="plantName" maxlength="140" placeholder="Фикус" required></label><label class="field wide"><span>Особенности ухода</span><input id="plantNote" maxlength="200" placeholder="Полив по влажности грунта"></label><button class="btn primary" type="submit">Добавить</button></form><div id="plantRows" class="rows"></div></article>
+ </div>
+</section>
+<section id="page-custom" class="page" hidden><div class="heading"><p class="eyebrow">МОЙ РАЗДЕЛ</p><h1 id="customTitle"></h1><p id="customHint" class="muted">Изменить пункты можно в настройках.</p></div><article class="panel"><div id="customRows" class="rows"></div></article></section>
+<section id="page-settings" class="page" hidden>
+ <div class="heading"><p class="eyebrow">ЕДИНЫЙ ЦЕНТР НАСТРОЕК</p><h1>Под себя, а не под шаблон</h1><p class="muted">Здесь настраиваются разделы, повторяющиеся пункты, категории, бюджеты и оформление. В рабочих вкладках нет кнопок настройки структуры.</p></div>
+ <div class="settings-grid">
+ <article class="panel"><h2>Разделы приложения</h2><p class="muted tiny">Переименуй, скрой или добавь собственный список. «Обзор» и «Настройки» всегда доступны.</p><div id="settingsSections" class="settings-list"></div><form id="sectionForm" class="form-grid"><label class="field wide"><span>Новый раздел</span><input id="sectionName" maxlength="36" placeholder="Спорт, дети, питомцы…" required></label><button type="submit" class="btn primary">Создать раздел</button></form></article>
+ <article class="panel"><h2>Пункты и привычки</h2><p class="muted tiny">Это шаблоны, которые появляются в выбранном разделе. Ежедневные отметки не затирают историю предыдущих дат.</p><div id="settingsItems" class="settings-list"></div><form id="itemForm" class="form-grid"><label class="field wide"><span>Название пункта</span><input id="itemName" maxlength="150" placeholder="Например, тренировка" required></label><label class="field"><span>Раздел</span><select id="itemSection"></select></label><label class="field"><span>Повтор</span><select id="itemRepeat"><option value="daily">Ежедневно</option><option value="weekly">Раз в неделю</option><option value="once">Один раз, пока не выполнено</option></select></label><label class="field"><span>Время (необязательно)</span><input id="itemTime" type="time"></label><button type="submit" class="btn primary">Добавить пункт</button></form></article>
+ <article class="panel"><h2>Категории финансов</h2><p class="muted tiny">Для каждой категории расходов можно задать месячный лимит. Редактирование названий не меняет старые суммы.</p><div class="category-settings"><section><h3>Расходы</h3><div id="settingsExpenses" class="settings-list"></div><form class="inline-form" id="expenseCatForm"><input id="expenseCatName" maxlength="40" placeholder="Новая категория расходов" required aria-label="Новая категория расходов"><button class="btn" type="submit">Добавить</button></form></section><section><h3>Доходы</h3><div id="settingsIncomes" class="settings-list"></div><form class="inline-form" id="incomeCatForm"><input id="incomeCatName" maxlength="40" placeholder="Новая категория доходов" required aria-label="Новая категория доходов"><button class="btn" type="submit">Добавить</button></form></section></div></article>
+ <article class="panel"><h2>Категории покупок</h2><p class="muted tiny">Чтобы товары можно было распределять по своим отделам и спискам.</p><div id="settingsShopCats" class="settings-list"></div><form class="inline-form" id="shopCatForm"><input id="shopCatName" maxlength="40" placeholder="Новая категория" required aria-label="Новая категория покупок"><button class="btn" type="submit">Добавить</button></form></article>
+ <article class="panel"><h2>Валюта и внешний вид</h2><label class="field"><span>Валюта для новых записей</span><select id="currencySetting"><option value="RUB">Российский рубль (₽)</option><option value="EUR">Евро (€)</option><option value="USD">Доллар ($)</option><option value="BYN">Белорусский рубль (Br)</option></select></label><p class="muted tiny">После первой финансовой операции валюта фиксируется: существующие суммы нельзя безопасно пересчитать без курса.</p><label class="field"><span>Тема</span><select id="themeSetting"><option value="dark">Тёмная</option><option value="light">Светлая</option></select></label></article>
+ <article class="panel"><h2>Локальные данные и резервные копии</h2><p class="muted tiny">Приложение не создаёт аккаунты и не имеет сервера данных. Очищение хранилища браузера удалит записи. Чтобы перенести данные на другой телефон, скачай файл и загрузи его там.</p><div class="actions"><button id="backupDownload" class="btn primary" type="button">Скачать JSON-копию</button><label class="btn file-btn" for="backupUpload">Восстановить из JSON<input type="file" id="backupUpload" hidden accept=".json,application/json"></label><button id="restorePrevious" type="button" class="btn">Вернуть прошлую копию</button></div><p class="muted tiny">Перед восстановлением предыдущие данные сохраняются в браузере как аварийная копия. Этот запасной вариант не заменяет скачиваемый файл.</p><button type="button" class="btn danger" id="deleteAll">Удалить все данные на этом устройстве</button></article>
+ </div>
+</section>
+</main>
+<footer class="foot"><span>Обычный день · локальный органайзер</span><span>Личные записи не публикуются в GitHub и не отправляются в облако.</span></footer>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body></html>
