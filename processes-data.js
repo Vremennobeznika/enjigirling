@@ -1,4 +1,4 @@
-// Справочные данные, не технологическая инструкция.
+// Процессы: редакционные сведения, нормативные режимы сверять по первоисточникам.
 window.engineeringProcesses = [
   {
     "id": "casting",
@@ -47,6 +47,10 @@ window.engineeringProcesses = [
       {
         "title": "TWI — классификация способов сварки (обзор с прежними редакциями стандартов)",
         "url": "https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly"
+      },
+      {
+        "title": "ISO 4063:2023 — международная номенклатура сварочных процессов (не режимы)",
+        "url": "https://www.iso.org/standard/75108.html"
       }
     ],
     "evidence": {
@@ -145,6 +149,10 @@ window.engineeringProcesses = [
       {
         "title": "ASTM F3489-23 — свойства полимерных изделий при экструзионной 3D-печати",
         "url": "https://store.astm.org/f3489-23.html"
+      },
+      {
+        "title": "ISO/ASTM 52900:2021 — определение и терминология аддитивного производства",
+        "url": "https://www.iso.org/standard/74514.html"
       }
     ],
     "evidence": {
@@ -205,6 +213,10 @@ window.engineeringProcesses = [
       {
         "title": "TWI — различия MIG/MAG и типы защитных газов",
         "url": "https://www.twi-global.com/technical-knowledge/faqs/faq-what-is-the-difference-between-mig-and-mag"
+      },
+      {
+        "title": "ISO 4063:2023 — классификация сварочных процессов, не режимы MIG/MAG",
+        "url": "https://www.iso.org/standard/75108.html"
       }
     ],
     "evidence": {
@@ -230,6 +242,10 @@ window.engineeringProcesses = [
       {
         "title": "TWI — особенности TIG-сварки и защитных газов",
         "url": "https://www.twi-global.com/technical-knowledge/job-knowledge/tungsten-inert-gas-tig-or-gta-welding-006"
+      },
+      {
+        "title": "ISO 4063:2023 — классификация сварочных процессов, не режимы TIG",
+        "url": "https://www.iso.org/standard/75108.html"
       }
     ],
     "evidence": {
@@ -309,6 +325,10 @@ window.engineeringProcesses = [
       {
         "title": "ASNT — капиллярный контроль",
         "url": "https://www.asnt.org/what-is-nondestructive-testing/methods"
+      },
+      {
+        "title": "ASNT — Liquid Penetrant Testing: процесс, применимость, ограничения",
+        "url": "https://www.asnt.org/standards-publications/blog/ndt-method-overview-what-is-liquid-penetrant-testing"
       }
     ],
     "evidence": {
@@ -997,6 +1017,10 @@ window.engineeringProcesses = [
       {
         "title": "EPA WaterSense — фильтрация в системах очистки воды (частный пример)",
         "url": "https://www.epa.gov/system/files/documents/2024-03/ws-commercial-bmp-watersenseatwork_section7.1_waterpurification.pdf"
+      },
+      {
+        "title": "US EPA — водоподготовка: фильтрация, ионный обмен и мембраны (частный пример)",
+        "url": "https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"
       }
     ],
     "evidence": {
