@@ -42,7 +42,7 @@ details{border:1px solid var(--line);background:var(--box);border-radius:17px;pa
 <p class="sub">Синхронизация заработает после создания закрытой базы YDB и облачной функции. Без этого данные остаются в браузере. Адрес и секрет доступны только владельцу.</p>
 <form id="cloudForm"><input class="grow" id="endpoint" type="url" placeholder="HTTPS-адрес Cloud Function" aria-label="URL синхронизации" autocomplete="url"><input class="grow" id="syncToken" type="password" placeholder="Секрет синхронизации" aria-label="Секрет синхронизации" autocomplete="off"><button class="btn soft" type="submit">Применить</button></form>
 <div class="actions"><button class="btn soft" id="pull" type="button">Получить из облака</button><button class="btn soft" id="push" type="button">Отправить в облако</button><button class="btn soft" id="disconnect" type="button">Отключить</button></div><div class="status" id="cloudStatus" role="status">Облако пока не подключено.</div>
-<p class="warn">Синхронизация сейчас запускается вручную кнопками, чтобы избежать потери изменений на разных устройствах. До подключения можно пользоваться всем локально. Секрет хранится только до закрытия вкладки, не в GitHub.</p>
+<p class="warn">Синхронизация запускается вручную кнопками. Если появилась ошибка подключения, проверь <a class="link" href="https://console.yandex.cloud/folders/b1gb2bfrust2n5nnbk30/functions/functions/d4ed26vrlmb1uk22m3b7/editor" target="_blank" rel="noopener noreferrer">версию и сервисный аккаунт</a>, затем <a class="link" href="https://console.yandex.cloud/folders/b1gb2bfrust2n5nnbk30/functions/functions/d4ed26vrlmb1uk22m3b7/overview" target="_blank" rel="noopener noreferrer">доступ на вкладке «Обзор»</a>. Публичный вызов функции возможен только с дополнительным контролем расходов: неизвестные запросы тоже могут потреблять квоты. Данные сохраняются локально; секрет хранится до закрытия вкладки, не в GitHub.</p>
 </details>
 <p class="warn">Код этой страницы публичен, но твои списки не публикуются в GitHub. Хранилище браузера может быть очищено; регулярно сохраняй копию.</p>
 </main><script src="../calendar/household.js"></script><script>
@@ -102,7 +102,22 @@ function updateMode(){$("mode").textContent=endpoint&&token?"Облако нас
 function setting(){const url=$("endpoint").value.trim().replace(/\/+$/,""),t=$("syncToken").value.trim();if(!url||!/^https:\/\//i.test(url))throw Error("Нужен корректный HTTPS-адрес функции");if(!t||t.length<32)throw Error("Секрет должен быть не короче 32 символов");if(endpoint!==url||token!==t){revision=0;sessionStorage.removeItem("life-sync-revision-v1")}endpoint=url;token=t;localStorage.setItem("life-sync-endpoint-v1",endpoint);sessionStorage.setItem("life-sync-secret-v1",token);updateMode();}
 $("cloudForm").onsubmit=e=>{e.preventDefault();try{setting();status("Адрес сохранён. Проверь подключение кнопкой «Получить из облака».")}catch(err){status(err.message)}};
 $("disconnect").onclick=()=>{endpoint=token="";revision=0;localStorage.removeItem("life-sync-endpoint-v1");sessionStorage.removeItem("life-sync-secret-v1");sessionStorage.removeItem("life-sync-revision-v1");$("endpoint").value=$("syncToken").value="";updateMode();status("Облако отключено. Локальные данные не удалены.")};
-async function call(method,payload){if(!endpoint||!token)throw Error("Сначала настрой подключение.");const response=await fetch(endpoint,{method,headers:{"Content-Type":"application/json","X-Sync-Token":token},body:method==="PUT"?JSON.stringify(payload):undefined,cache:"no-store",mode:"cors",credentials:"omit"});let result;try{result=await response.json()}catch{throw Error("Функция вернула неверный ответ.")}if(!response.ok)throw Error(result.error||"Ошибка синхронизации ("+response.status+")");return result;}
+async function call(method,payload){
+if(!endpoint||!token)throw Error("Сначала настрой подключение.");
+let response;
+try{
+  response=await fetch(endpoint,{method,headers:{"X-Sync-Token":token,...(method==="PUT"?{"Content-Type":"application/json"}:{})},body:method==="PUT"?JSON.stringify(payload):undefined,cache:"no-store",mode:"cors",credentials:"omit"});
+}catch(err){
+  if(err instanceof TypeError)throw Error("Нет соединения с функцией Яндекса (сеть, публичный доступ или CORS). На странице функции в Yandex Cloud проверь: 1) новой версии назначен life-sync-sa; 2) на вкладке «Обзор» включена «Публичная функция». Пока не исправлено, данные остаются в браузере.");
+  throw err;
+}
+let result;
+try{result=await response.json()}catch{
+  throw Error("Функция ответила, но не JSON (HTTP "+response.status+"). Проверь состояние версии функции и логи Yandex Cloud.");
+}
+if(!response.ok)throw Error(result.error||"Ошибка синхронизации (HTTP "+response.status+")");
+return result;
+}
 $("pull").onclick=async()=>{try{status("Проверяю облако…");const r=await call("GET");if(!r.data){status("База пуста. Сначала отправь данные из браузера.");return}const counts=Object.values(snapshot()).some(x=>Object.keys(x).length);
 if(counts&&!confirm("Заменить локальные данные облачной копией? Несохранённые изменения будут потеряны.")){status("Отменено.");return}
 restore({data:r.data});revision=Number(r.revision)||0;sessionStorage.setItem("life-sync-revision-v1",String(revision));status("Облачная копия получена. Версия "+revision+".")}catch(err){status("Не удалось получить: "+err.message)}};
