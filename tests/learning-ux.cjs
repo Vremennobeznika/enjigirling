@@ -127,3 +127,16 @@ const actualNumeric=entries.flatMap(({item})=>(item.verifiedPrograms||[]).flatMa
 const stableClaim=row=>JSON.stringify([row.organization,row.code,row.field,row.value,row.sourceUrl]);
 assert.deepEqual(Array.from(actualNumeric,stableClaim).sort(),Array.from(numericGate.records,stableClaim).sort(),'An uncited or unreviewed numeric education claim was added, removed, or changed; regenerate and re-audit the numeric gate before release');
 console.log('PASS: '+actualNumeric.length+' numerically scoped education claims match the reviewed allowlist');
+
+// Numeric text must not silently return after the source-level audit of 238 fields.
+const textGate=JSON.parse(fs.readFileSync('audit/map-retained-text-numeric-allowlist.json','utf8'));
+const sourceFieldNames=['year','verifiedScope','reviewMethod','note','basis','admission'];
+const actualTextNums=entries.flatMap(({item})=>{
+ const scope=[...sourceFieldNames.filter(field=>Object.hasOwn(item,field)&&typeof item[field]==='string'&&/\\d/.test(item[field])).map(field=>({organization:item.name,field,statement:item[field],sourceUrl:(item.verifiedPrograms||[])[0]?.sourceUrl||item.sourceUrl}))];
+ for(const p of item.verifiedPrograms||[]){for(const field of sourceFieldNames){if(typeof p[field]==='string'&&/\\d/.test(p[field]))scope.push({organization:item.name,field,statement:p[field],sourceUrl:p.sourceUrl})}}
+ return scope;
+});
+const canonicalText=row=>JSON.stringify([row.organization,row.field,row.statement,row.sourceUrl]);
+assert.equal(textGate.sampledFields,238,'numeric-text baseline must include 238 source fields');
+assert.deepEqual(actualTextNums.map(canonicalText).sort(),textGate.records.map(canonicalText).sort(),'Unreviewed numeric detail appeared or changed in map card prose: audit primary source and refresh frozen gate');
+console.log('PASS: '+actualTextNums.length+' retained numeric text fields match 238-item final adjudication gate');
