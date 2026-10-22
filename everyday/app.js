@@ -511,6 +511,7 @@ function bind(){
  };
  if("serviceWorker" in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js",{scope:"./"}).catch(()=>{}));
 }
+window.addEventListener("hashchange",()=>{const next=decodeURIComponent(location.hash.slice(1));setView(next||"overview")});
 $("txDate").value=M.localDate();render();bind();
 const target=decodeURIComponent(location.hash.slice(1));
 if(target)setView(target);else setView("overview");
