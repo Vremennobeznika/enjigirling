@@ -1,5 +1,5 @@
 {
-  "passed": 75,
+  "passed": 80,
   "failed": 0,
   "checks": {
     "system English locale detected": {
@@ -225,6 +225,21 @@
       "status": "PASS"
     },
     "rapid language switching no JS crash": {
+      "status": "PASS"
+    },
+    "fresh Russian locale auto-detected": {
+      "status": "PASS"
+    },
+    "legacy standard Russian label appears English": {
+      "status": "PASS"
+    },
+    "legacy standard tag in history appears English": {
+      "status": "PASS"
+    },
+    "legacy data unchanged by translation": {
+      "status": "PASS"
+    },
+    "legacy Russian note preserved": {
       "status": "PASS"
     }
   },
