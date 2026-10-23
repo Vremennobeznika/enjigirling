@@ -1,0 +1,38 @@
+name: SLOI universal PWA checks
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'mood-layers/index.html'
+      - 'mood-layers/app.js'
+      - 'mood-layers/style.css'
+      - 'mood-layers/pwa-ui.js'
+      - 'mood-layers/pwa-style.css'
+      - 'mood-layers/sw.js'
+      - 'mood-layers/manifest.webmanifest'
+      - 'mood-layers/tests/pwa_universal.py'
+      - 'mood-layers/tests/sw_pwa.js'
+      - '.github/workflows/sloi-pwa.yml'
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: |
+          node --check mood-layers/app.js
+          node --check mood-layers/pwa-ui.js
+          node --check mood-layers/sw.js
+          node mood-layers/tests/sw_pwa.js
+      - run: |
+          python -m pip install playwright==1.57.0
+          python -m playwright install --with-deps chromium
+          python mood-layers/tests/pwa_universal.py
