@@ -47,3 +47,6 @@ html,body{max-width:100%}
 .recovery-panel h3,.recovery-panel p{width:100%;margin:0;line-height:1.5}
 @media(max-width:380px){.intro-grid{grid-template-columns:1fr;gap:8px}.intro-item{min-height:0;padding:12px}.intro-no{margin-bottom:5px}.comparison{grid-template-columns:1fr}.topbar{flex-wrap:wrap}.brand{white-space:normal}}
 @media(max-width:320px){.action-row{display:block}.action-row .btn{width:100%;margin-bottom:8px}.palette{grid-template-columns:repeat(2,minmax(0,1fr))}.swatch{min-height:104px}}
+
+/* Compact phones: keep controls readable without horizontal overflow. */
+@media(max-width:650px){.action-row{display:flex;flex-direction:column;align-items:stretch;gap:9px}.action-row .btn,.action-row .btn-primary{flex:0 0 auto;width:100%;max-width:100%;min-width:0;text-align:left;min-height:49px}}
