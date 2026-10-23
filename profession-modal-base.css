@@ -1,1 +1,11 @@
 .modal-overlay{position: fixed;inset: 0;background: rgba(0,0,0,0.6);z-index: 1000;display: none;align-items: flex-start;justify-content: center;padding: 24px 14px;overflow-y: auto;overscroll-behavior: contain;} .modal{position: relative;margin: 0 auto;scrollbar-gutter: stable;box-shadow: 0 18px 60px rgba(0,0,0,.18);width: min(820px,100%);max-width: 820px;max-height: calc(100vh - 32px);padding: 34px;border: 1px solid var(--border);border-radius: 24px !important;overflow-x: hidden !important;background: var(--card-bg,#fff);color: var(--card-text,#111);} .modal-close{position: absolute;top: 12px;right: 16px;background: none;border: none;font-size: 28px;cursor: pointer;color: var(--text-secondary);line-height: 1;} .modal-close:hover{color: var(--text-primary);} .modal-header{display: flex;align-items: center;padding-bottom: 16px;border-bottom: 2px solid var(--text-primary);gap: 16px;padding: 0 42px 22px 0;margin-bottom: 0;} 
+/* Compact profession details on narrow screens. */
+.modal .career-row { grid-template-columns: minmax(0, 1fr) !important; min-height: 48px; }
+.modal .career-row > div { overflow-wrap: anywhere; }
+.modal .profession-extra > summary, .modal .salary-evidence > summary {
+  cursor: pointer; font-weight: 650; line-height: 1.5; padding: 10px 0;
+  color: inherit; overflow-wrap: anywhere;
+}
+.modal .profession-extra[open] > summary, .modal .salary-evidence[open] > summary { margin-bottom: 12px; }
+.modal .pros-cons-title { grid-column: 1 / -1; margin: 0; font-size: var(--fs-md); }
+.modal .salary-evidence { margin-top: 10px; }

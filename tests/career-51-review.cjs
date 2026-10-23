@@ -7,7 +7,7 @@ const cards=ctx.window.professionsData,sources=ctx.window.salarySourceAudit;
 const sourceMap=new Map(sources.map(x=>[x.id,x]));
 const userCriteria=Object.freeze([
  'unique_identifier_and_title','description','educational_notes','career_roles',
- 'illustrative_day','subjective_tradeoffs','salary_source_status',
+ 'no_fabricated_schedule','subjective_tradeoffs','salary_source_status',
  'no_unsupported_statistical_claims','preserved_accessibility'
 ]);
 assert.equal(cards.length,51);
@@ -39,7 +39,7 @@ for(const card of cards){
  assert.ok(Array.isArray(card.education?.courses)&&card.education.courses.length,card.id+' training topics');
  assert.ok(Array.isArray(card.careerGrowth)&&card.careerGrowth.length>=2,card.id+' career roles');
  assert.ok(card.careerGrowth.every(x=>typeof x.title==='string'&&x.title.trim()),card.id+' career roles incomplete');
- for(const key of ['morning','midday','afternoon','evening'])assert.ok(card.typicalDay?.[key],card.id+' example day '+key);
+ assert.ok(!Object.prototype.hasOwnProperty.call(card,'typicalDay'),card.id+' contains invented workday');
  assert.ok(card.easy?.trim()&&card.hard?.trim(),card.id+' subjective pros and challenges');
  const row=sourceMap.get(card.id);
  assert.ok(row,card.id+' salary provenance missing');
@@ -60,13 +60,27 @@ assert.equal((audit.match(/^\| \d+ \|/gm)||[]).length,51,'each reviewed professi
 for(const p of cards)assert.ok(audit.includes('\`'+p.id+'\`'),p.id+' missing reviewed row');
 assert.ok(script.includes('aria-labelledby", title.id'),'title-only accessible card name missing');
 assert.ok(!script.includes('card.append(desc)'),'external card must not show description');
-assert.ok(script.includes('Возможные плюсы (субъективная оценка)'),'subjective data unlabeled');
-assert.ok(script.includes('Время и последовательность действий придуманы'),'unsourced day must be clearly illustrative');
-assert.ok(script.includes('Снимок внешнего источника'),'salary source caveat missing');
+assert.ok(script.includes('Условия и особенности работы'),'work conditions section missing');
+assert.ok(!script.includes('Пример рабочего дня'),'fabricated schedule visible');
+assert.ok(script.includes('Опубликованный диапазон'),'salary attribution missing');
 assert.ok(script.includes('одно значение'),'single salary should not become an open-ended lower bound');
 assert.ok(compare.includes('Страница источника ↗'),'comparison source references missing');
 assert.ok(compare.includes('searchParams.set'),'shareable comparison state missing');
 assert.ok(!college.includes('без ЕГЭ'),'unconditional SPО admission claim remains');
 assert.ok(map.includes('Минобрнауки России, 19.06.2026'),'official 2026 rule reference missing');
+const uiContext=vm.createContext({window:ctx.window,document:{addEventListener(){}}});
+vm.runInContext(script,uiContext,{timeout:5000});
+const encode=x=>String(x).replace(/[&<>"\']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]));
+for(const card of cards){
+ const rendered=vm.runInContext('renderProfession(window.professionsData.find(x=>x.id===' + JSON.stringify(card.id) + '),"Тест")',uiContext);
+ assert.ok(rendered.includes(encode(card.title)),card.id+' title missing in modal');
+ assert.ok(!/Пример рабочего дня|Численность специалистов|Зарплата не подтверждена|Снимок внешнего источника/.test(rendered),card.id+' noisy placeholder');
+ assert.equal(rendered.split(encode(card.shortDesc)).length-1,1,card.id+' duplicated description');
+ assert.equal(rendered.split(encode(card.education.requirements)).length-1,1,card.id+' duplicated education');
+}
+const energy=vm.runInContext('renderProfession(window.professionsData.find(x=>x.id==="power-engineer"),"Энергетика")',uiContext);
+assert.match(energy,/<h4>Программные инструменты<\/h4>/,'energy software not recognised');
+assert.match(energy,/RastrWin/);
+console.log('PASS 51/51 rendered career cards: no fabricated schedules, placeholder statistics or duplicate copy');
 console.log('PASS 51/51 repeated career checks: structure, identifiers, source-status caveats, rendering, comparison and 2026 admissions');
 console.log('Source-status distribution: '+JSON.stringify(classes));

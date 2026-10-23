@@ -45,7 +45,6 @@ const REGION_NAMES = {
   fareast: "ДФО"
 };
 
-const DAY_LABELS = { morning: "Утро", midday: "День", afternoon: "Обед", evening: "Вторая половина дня" };
 
 // ─── Вспомогательное ────────────────────────────────────────────────────────
 const HTML_ESCAPES = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" };
@@ -82,90 +81,50 @@ function renderRows(listClass, rowClass, labels, values) {
   return rows ? `<div class="${listClass}">${rows}</div>` : "";
 }
 
-function renderProfile({ specialists, avgAge, genderRatio } = {}) {
-  const items = [
-    specialists && labeled("Специалистов", Number(specialists).toLocaleString("ru-RU"), "info-item"),
-    avgAge && labeled("Средний возраст", `${escapeHTML(avgAge)} ${plural(Number(avgAge), ["год", "года", "лет"])}`, "info-item"),
-    genderRatio && labeled("Соотношение", escapeHTML(genderRatio), "info-item")
-  ].filter(Boolean).join("");
-  return items && `<div class="info-grid">${items}</div>`;
-}
-
-function renderEducation({ duration, requirements, courses } = {}) {
-  const tags = courses?.length ? courses.map((course) => `<span>${escapeHTML(course)}</span>`).join("") : "";
-  return [
-    `<p class="data-quality-note">Конкретную образовательную программу, её уровень и срок обучения необходимо проверять по учебному плану выбранного вуза. Универсального срока для должности нет.</p>`,
-    requirements && `<p><strong>Рекомендуемые знания (не юридическое требование):</strong> ${escapeHTML(requirements)}</p>`,
-    tags && `<p class="sub-label">Инструменты и направления</p><div class="tag-list">${tags}</div>`
-  ].filter(Boolean).join("");
-}
-
-function renderSalary({ start, median, peak, regions } = {}) {
-  const grid = [["Старт", start], ["Медиана", median], ["Верхний уровень", peak]]
-    .filter(([, value]) => value)
-    .map(([label, value]) => labeled(label, escapeHTML(value)))
-    .join("");
-  const regionRows = regions ? renderRows("region-list", "region-row", REGION_NAMES, regions) : "";
-  return `<div class="salary-grid">${grid}</div>` + (regionRows ? `<p class="sub-label">По регионам</p>${regionRows}` : "");
-}
-
 function renderCareer(steps = []) {
-  const rows = steps.map((step, index) => `
-    <div class="career-row">
-      <span class="career-number">${index + 1}</span>
-      <div><strong>${escapeHTML(step.title)}</strong><small>Последовательность условная; сроки зависят от работодателя и квалификации</small></div>
-      <b class="career-unverified">Зарплата не подтверждена</b>
-    </div>`).join("");
-  return rows && `<div class="career-list">${rows}</div>`;
+  if (!steps.length) return "";
+  return '<p class="data-quality-note">Возможные направления роста; порядок не обязателен.</p>' +
+    '<div class="career-list">' + steps.map(step =>
+      '<div class="career-row"><div><strong>' + escapeHTML(step.title) + '</strong></div></div>'
+    ).join('') + '</div>';
 }
 
 function renderProsCons({ easy, hard }) {
   const parts = [
-    easy && `<div><h3>Возможные плюсы (субъективная оценка)</h3><p>${escapeHTML(easy)}</p></div>`,
-    hard && `<div><h3>Возможные сложности (зависят от условий труда)</h3><p>${escapeHTML(hard)}</p></div>`
-  ].filter(Boolean).join("");
-  return parts && `<section class="profession-section pros-cons">${parts}</section>`;
+    easy && '<div><h3>Особенности</h3><p>' + escapeHTML(easy) + '</p></div>',
+    hard && '<div><h3>Сложности</h3><p>' + escapeHTML(hard) + '</p></div>'
+  ].filter(Boolean).join('');
+  return parts ? '<section class="profession-section pros-cons"><h2 class="pros-cons-title">Условия и особенности работы</h2>' + parts + '</section>' : '';
 }
 
 function renderVerifiedSalarySource(profession) {
-  const entry = (window.salarySourceAudit || []).find(item => item.id === profession.id && item.status === 'source_snapshot');
-  if (!entry) return '<p class="data-quality-note">Зарплатный диапазон для этой точной профессии не подтверждён проверяемым источником на 21.10.2026. Непроверенные цифры скрыты; найденная ссылка и причина доступны в блоке источников ниже.</p>';
-  if (entry.validationStatus === 'adjacent_occupation_checked') return `<p class="data-quality-note">Для этой профессии точная зарплата не подтверждена. Найден источник по смежной должности «${escapeHTML(entry.sourceTitle)}», но его цифры не переносим на профессию каталога. <a href="${escapeHTML(entry.sourceUrl)}" target="_blank" rel="noopener noreferrer">Смежный источник</a>.</p>`;
+  const entry = (window.salarySourceAudit || []).find(item => item.id === profession.id);
+  if (!entry || entry.status !== 'source_snapshot' ||
+      !['source_page_checked', 'employer_vacancy_checked'].includes(entry.validationStatus)) {
+    return '<p>Сопоставимого подтверждённого диапазона нет. Непроверенные цифры скрыты.</p>';
+  }
   const fmt = value => Number(value).toLocaleString('ru-RU');
-  const display = entry.rangeMinRub === entry.rangeMaxRub
-    ? `одно значение ${fmt(entry.rangeMinRub)}`
-    : `диапазон ${fmt(entry.rangeMinRub)}–${fmt(entry.rangeMaxRub)}`;
-  const quality = entry.evidenceLevel === "single_observation"
-    ? "Одна вакансия / одно наблюдение; не медиана профессии."
-    : entry.evidenceLevel === "aggregate_or_range"
-      ? "Опубликованная на указанной странице выборка, зачастую малая и нерепрезентативная для всей профессии."
-      : "Слабое соответствие данных профессии.";
-  return `<p class="data-quality-note"><strong>Снимок внешнего источника:</strong> ${display} ₽/мес. · ${escapeHTML(entry.region)} · дата записи ${escapeHTML(entry.checkedAt)}. ${escapeHTML(entry.metric)}. Тип данных: ${quality} Статус: ${entry.validationStatus === "source_linked_not_independently_verified" ? "ссылка сохранена, страница не проверена" : "числа повторно сопоставлены с отображаемой страницей; методика исходной выборки отдельно не аудирована"}. Должность в источнике: ${escapeHTML(entry.sourceTitle)}. <a href="${escapeHTML(entry.sourceUrl)}" target="_blank" rel="noopener noreferrer">Страница источника</a>. Данные разных регионов, дат и методик напрямую не сравнивать.</p>`;
-}
-
-// Editorial guide derived from existing profession descriptions; not a claim about a specific employer.
-function renderSourceMethodology(profession) {
-  const item = (window.salarySourceAudit || []).find(x => x.id === profession.id);
-  if (!item) return '<p>Проверяемый источник для этой профессии пока не указан.</p>';
-  const evidence = {
-    aggregate_or_range: 'Агрегированный диапазон или статистика с ограничениями выборки',
-    single_observation: 'Одна опубликованная вакансия; не средняя зарплата рынка',
-    adjacent_or_weak: 'Смежная должность или слабое соответствие; сумма не подтверждает зарплату данной профессии',
-    needs_manual_review: 'Требуется дополнительная проверка'
-  };
-  const kind = evidence[item.evidenceLevel] || 'Тип данных не определён';
-  const verified = item.validationStatus === 'source_page_checked' || item.validationStatus === 'employer_vacancy_checked';
-  return '<p><strong>Тип свидетельства:</strong> ' + escapeHTML(kind) + '</p>' +
-    '<p><strong>Проверка:</strong> ' + (verified ? '21.10.2026 проверено совпадение суммы и категории с доступной страницей; выборка и методика не прошли независимый аудит' : 'Полного подтверждения нет') + '</p>' +
-    (item.checkedAt ? '<p><strong>Дата записи:</strong> ' + escapeHTML(item.checkedAt) + '</p>' : '') +
-    (item.notes ? '<p>' + escapeHTML(item.notes) + '</p>' : '') +
-    (item.sourceUrl ? '<p><a href="' + escapeHTML(item.sourceUrl) + '" target="_blank" rel="noopener noreferrer">Открыть страницу источника ↗</a></p>' : '');
+  const amount = entry.rangeMinRub === entry.rangeMaxRub
+    ? 'одно значение ' + fmt(entry.rangeMinRub)
+    : 'Опубликованный диапазон ' + fmt(entry.rangeMinRub) + '–' + fmt(entry.rangeMaxRub);
+  const quality = entry.evidenceLevel === 'single_observation'
+    ? 'одно наблюдение, не характеристика рынка'
+    : 'ограниченная выборка источника, не средняя зарплата по профессии';
+  return '<p><strong>' + amount + ' ₽/мес.</strong></p>' +
+    '<p>' + escapeHTML(entry.metric) + '</p>' +
+    '<p class="data-quality-note">' + escapeHTML(entry.region) + ' · запись от ' + escapeHTML(entry.checkedAt) +
+      '. Данные источника, не гарантированная зарплата.</p>' +
+    '<details class="salary-evidence"><summary>Источник и методика</summary>' +
+      '<p><strong>Тип данных:</strong> ' + quality + '.</p>' +
+      '<p>Публикация: ' + escapeHTML(entry.sourceTitle) + '.</p>' +
+      '<p><a href="' + escapeHTML(entry.sourceUrl) + '" target="_blank" rel="noopener noreferrer">Открыть источник ↗</a></p>' +
+    '</details>';
 }
 
 // The legacy "courses" field mixes software, methods and training topics.
 // Conservative classification: ambiguous entries remain topics, never invented software.
 function classifyLearningItems(items = []) {
-  const software = /\\b(?:AutoCAD|Revit|SketchUp|3ds Max|ЛИРА-САПР|SCAD|КОМПАС|SolidWorks|CATIA|ANSYS|MATLAB|Simulink|Python|SQL|JavaScript|TypeScript|Java|Kotlin|Swift|C\\+\\+|Git|Docker|Kubernetes|Linux|Excel|1C|1С|ETAP|EPLAN|TIA Portal|WinCC|Codesys|AutoCAD Electrical|Civil 3D|ArcGIS|QGIS|Blender|Figma|React|Node\\.js|PostgreSQL|TensorFlow|PyTorch|NX|Creo|Inventor|Abaqus|LabVIEW|Altium|KiCad)\\b/i;
+  const software = /\b(?:AutoCAD|Revit|SketchUp|3ds Max|ЛИРА-САПР|SCAD|КОМПАС|Компас-3D|SolidWorks|CATIA|ANSYS|RastrWin|MATLAB|Simulink|Python|SQL|JavaScript|TypeScript|Java|Kotlin|Swift|Git|Docker|Kubernetes|Linux|Excel|ETAP|EPLAN|TIA Portal|WinCC|Codesys|Civil 3D|ArcGIS|QGIS|Blender|Figma|React|PostgreSQL|TensorFlow|PyTorch|NX|Creo|Inventor|Abaqus|LabVIEW|Altium|KiCad|Petrel|ROXAR|HYSYS|ChemCAD|MCNP|KORSAR)\b/i;
   const tools = [], topics = [];
   for (const item of items) (software.test(item) ? tools : topics).push(item);
   return { tools, topics };
@@ -215,16 +174,14 @@ function renderNormativeReferences(profession) {
 
 function renderPracticalGuide(profession) {
   const requirements = profession.education?.requirements;
-  const tools = profession.education?.courses || [];
-  const tasks = (profession.shortDesc || "").split(/[.;]/).map(x => x.trim()).filter(Boolean);
-  const parts = [];
-  if (tasks.length) parts.push('<h3>Основные задачи</h3><p>' + escapeHTML(tasks.join(". ")) + '</p>');
-  if (requirements) parts.push('<h3>Что изучать</h3><p>' + escapeHTML(requirements) + '</p>');
-  const classified = classifyLearningItems(tools);
-  if (classified.tools.length) parts.push('<h3>Программные инструменты (ориентир)</h3><div class="tag-list">' + classified.tools.map(x => '<span>' + escapeHTML(x) + '</span>').join("") + '</div>');
-  if (classified.topics.length) parts.push('<h3>Методы, дисциплины и темы обучения</h3><div class="tag-list">' + classified.topics.map(x => '<span>' + escapeHTML(x) + '</span>').join("") + '</div>');
-  if (!parts.length) return "";
-  return '<p class="data-quality-note">Редакционная памятка по материалам каталога. Перечень не является исчерпывающим стандартом квалификации или требованием конкретного работодателя.</p>' + parts.join("");
+  const items = classifyLearningItems(profession.education?.courses || []);
+  return [
+    requirements && '<p>' + escapeHTML(requirements) + '</p>',
+    items.tools.length && '<h4>Программные инструменты</h4><div class="tag-list">' +
+      items.tools.map(x => '<span>' + escapeHTML(x) + '</span>').join('') + '</div>',
+    items.topics.length && '<h4>Методы, дисциплины и темы обучения</h4><div class="tag-list">' +
+      items.topics.map(x => '<span>' + escapeHTML(x) + '</span>').join('') + '</div>'
+  ].filter(Boolean).join('');
 }
 
 function renderRelatedProfessions(profession, category) {
@@ -251,33 +208,28 @@ function renderRelatedTechnology(profession) {
   const materialLinks = materialIds.filter(id => materials.has(id)).map(id =>
     '<a href="materials.html#' + encodeURIComponent(id) + '">' + escapeHTML(materials.get(id).name) + '</a>'
   ).join("");
-  return '<p class="data-quality-note">Связи в справочнике редакционные и не являются подтверждением допусков, режимов обработки или требований безопасности.</p>' +
+  return '<p class="data-quality-note">Справочные связи: не инструкция по эксплуатации или безопасности.</p>' +
     '<p class="sub-label">Процессы (' + processes.length + ')</p><div class="technology-links">' + processLinks + '</div>' + extraProcesses +
     (materialLinks ? '<p class="sub-label">Материалы</p><div class="technology-links">' + materialLinks + '</div>' : "");
 }
 
 function renderProfession(profession, category) {
+  const normative = renderNormativeReferences(profession);
+  const related = renderRelatedTechnology(profession);
   return `
     <div class="modal-header">
-      <div>
-        <div class="modal-category">${escapeHTML(category)}</div>
-        <h2 id="modalTitle">${escapeHTML(profession.title)}</h2>
-      </div>
+      <div><div class="modal-category">${escapeHTML(category)}</div>
+        <h2 id="modalTitle">${escapeHTML(profession.title)}</h2></div>
     </div>
-    ${section("Чем занимается", `<p>${valueOrDash(profession.shortDesc)}</p><p class="data-quality-note">Редакционное описание типичных функций, не должностная инструкция и не профстандарт для конкретного работодателя.</p>`, " profession-intro")}
-    <p class="data-quality-note">Численность специалистов, средний возраст и гендерное распределение не публикуются без проверяемых статистических источников.</p>
-    ${section("Практика: задачи, знания и инструменты", renderPracticalGuide(profession))}
-    ${section("Связанные процессы и материалы", renderRelatedTechnology(profession))}
-    ${section("Нормативные документы и профессиональные стандарты", renderNormativeReferences(profession))}
-    ${section("Образование и подготовка (направления, не квалификационные требования)", renderEducation(profession.education))}
+    ${section("Чем занимается", '<p>' + valueOrDash(profession.shortDesc) + '</p>', " profession-intro")}
+    ${section("Что нужно знать и какие инструменты используют", renderPracticalGuide(profession))}
     ${section("Зарплата", renderVerifiedSalarySource(profession))}
-    ${section("Источники и ограничения данных", renderSourceMethodology(profession))}
-    ${section("Возможные карьерные роли (без фиксированных сроков)", renderCareer(profession.careerGrowth))}
-    ${section("Пример рабочего дня (иллюстрация, не фактический график)", profession.typicalDay ? '<p class="data-quality-note">Время и последовательность действий придуманы для ориентира, не получены из наблюдений за этой должностью.</p>' + renderRows("day-list", "day-row", DAY_LABELS, profession.typicalDay) : "")}
+    ${section("Возможные карьерные роли", renderCareer(profession.careerGrowth))}
     ${renderProsCons(profession)}
+    <details class="profession-section profession-extra"><summary>Профессиональные стандарты и нормативные документы</summary>${normative}</details>
+    <details class="profession-section profession-extra"><summary>Связанные процессы и материалы</summary>${related}</details>
     ${section("Другие профессии направления", renderRelatedProfessions(profession, category))}`;
 }
-
 // ─── Страница ───────────────────────────────────────────────────────────────
 document.addEventListener("DOMContentLoaded", () => {
   const grid = document.getElementById("professionsGrid");
