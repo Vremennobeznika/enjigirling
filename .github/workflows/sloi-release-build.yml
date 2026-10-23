@@ -1,0 +1,79 @@
+name: SLOI unsigned stable APK for offline signing
+on:
+  push:
+    paths:
+      - 'mood-layers/android/app/build.gradle'
+      - 'mood-layers/android/app/src/main/**'
+      - 'mood-layers/app.js'
+      - 'mood-layers/index.html'
+      - 'mood-layers/style.css'
+      - 'mood-layers/sw.js'
+      - '.github/workflows/sloi-release-build.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Android SDK path
+        shell: bash
+        run: |
+          set -euo pipefail
+          SDK_ROOT="${ANDROID_HOME:-/usr/local/lib/android/sdk}"
+          SDKMGR="$(find "$SDK_ROOT/cmdline-tools" -type f -name sdkmanager | head -n 1)"
+          test -n "$SDKMGR"
+          echo "ANDROID_HOME=$SDK_ROOT" >> "$GITHUB_ENV"
+          echo "$(dirname "$SDKMGR")" >> "$GITHUB_PATH"
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.13'
+      - name: Install SDK 36
+        run: sdkmanager 'platforms;android-36' 'build-tools;36.0.0'
+      - name: Verify and package local assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check mood-layers/app.js
+          node --check mood-layers/sw.js
+          python3 mood-layers/tests/static_matrix.py
+          mkdir -p mood-layers/android/app/src/main/assets/assets
+          cp mood-layers/index.html mood-layers/style.css mood-layers/app.js mood-layers/sw.js mood-layers/manifest.webmanifest mood-layers/android/app/src/main/assets/
+          cp mood-layers/assets/icon.* mood-layers/assets/icon-*.png mood-layers/android/app/src/main/assets/assets/
+      - name: Compile unsigned stable release
+        working-directory: mood-layers/android
+        run: gradle --no-daemon :app:assembleRelease
+      - name: Confirm APK metadata and bundle signing utility
+        shell: bash
+        run: |
+          set -euo pipefail
+          APK=mood-layers/android/app/build/outputs/apk/release/app-release-unsigned.apk
+          TOOLS="$ANDROID_HOME/build-tools/36.0.0"
+          test -s "$APK"
+          unzip -t "$APK" >/dev/null
+          "$TOOLS/aapt" dump badging "$APK" | tee /tmp/sloi-badging.txt
+          grep -q "name='app.layers.mood.stable'" /tmp/sloi-badging.txt
+          grep -q "sdkVersion:'23'" /tmp/sloi-badging.txt
+          "$TOOLS/aapt" dump permissions "$APK" | tee /tmp/sloi-permissions.txt
+          if grep -q 'uses-permission:' /tmp/sloi-permissions.txt; then echo "Unexpected Android permission"; exit 1; fi
+          for filename in app.js index.html style.css sw.js; do
+            cmp "mood-layers/$filename" <(unzip -p "$APK" "assets/$filename")
+          done
+          mkdir -p /tmp/sloi-output
+          cp "$APK" /tmp/sloi-output/SLOI_1.2.0_stable_unsigned.apk
+          cp "$TOOLS/lib/apksigner.jar" /tmp/sloi-output/apksigner.jar
+          cp "$TOOLS/zipalign" /tmp/sloi-output/zipalign-linux
+          printf 'Built from commit %s\n' "$GITHUB_SHA" > /tmp/sloi-output/BUILD_INFO.txt
+          sha256sum /tmp/sloi-output/* | tee /tmp/sloi-output/SHA256SUMS.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: SLOI-1.2.0-stable-unsigned-and-signing-tool
+          path: /tmp/sloi-output/
+          if-no-files-found: error
+          retention-days: 14
