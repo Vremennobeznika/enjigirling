@@ -213,9 +213,9 @@ const resources = [
     {
         id: "forum-cadcam",
         type: "Форумы",
-        name: "CAD/CAM форум",
-        desc: "Обсуждения CAD/CAM, ЧПУ, станков, технологий обработки, программирования и производственных задач.",
-        link: "https://www.cadcam.ru/"
+        name: "CNC-Club — ЧПУ и CAD/CAM",
+        desc: "Русскоязычный форум о ЧПУ, станках, CAD/CAM-системах, постпроцессорах, G-коде и технологиях обработки.",
+        link: "https://cnc-club.ru/forum/"
     },
     {
         id: "forum-reddit-engineering",
