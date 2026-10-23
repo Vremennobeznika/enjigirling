@@ -1,0 +1,59 @@
+name: CHROMA APK - build and verify
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'chroma/**'
+      - '.github/workflows/chroma-android.yml'
+permissions:
+  contents: read
+jobs:
+  android-apk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+      - name: Setup Gradle 8.13
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.13'
+      - name: Install Android API 36
+        run: sdkmanager 'platforms;android-36' 'build-tools;36.0.0'
+      - name: Check sources and bundled offline app
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check chroma/app.js
+          node --check chroma/sw.js
+          node chroma/tests/check_worker.js
+          mkdir -p chroma/android/app/src/main/assets/assets
+          cp chroma/index.html chroma/styles.css chroma/app.js chroma/sw.js chroma/manifest.webmanifest chroma/android/app/src/main/assets/
+          cp chroma/assets/*.png chroma/android/app/src/main/assets/assets/
+      - name: Compile APK
+        working-directory: chroma/android
+        run: gradle --no-daemon :app:assembleDebug
+      - name: Verify binary archive and debug signature
+        shell: bash
+        run: |
+          set -euo pipefail
+          apk='chroma/android/app/build/outputs/apk/debug/app-debug.apk'
+          test -s "$apk"
+          unzip -t "$apk" >/dev/null
+          unzip -Z1 "$apk" | grep -q '^classes.dex$'
+          unzip -Z1 "$apk" | grep -q '^assets/app.js$'
+          jarsigner -verify "$apk" >/dev/null
+          sha256sum "$apk"
+      - name: Upload debug APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: CHROMA-Android-debug-apk
+          path: chroma/android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+          retention-days: 30
