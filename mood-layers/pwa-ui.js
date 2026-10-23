@@ -1,4 +1,4 @@
-/* SLOI install/update interface: never reads diary values or makes network requests. */
+/* PSHO install/update interface: never reads diary values or makes network requests. */
 (function(){
 'use strict';
 var box=document.getElementById('pwa-panel');
@@ -13,7 +13,7 @@ var isIOS=/iphone|ipad|ipod/.test(ua)||(navigator.platform==='MacIntel'&&navigat
 var isAndroid=/android/.test(ua);
 var isStandalone=window.matchMedia&&window.matchMedia('(display-mode: standalone)').matches||!!navigator.standalone;
 function instruction(){
- if(isIOS)return 'iPhone / iPad: открой эту страницу в Safari, нажми «Поделиться» → «На экран Домой» → «Добавить». Затем запускай СЛОИ с иконки. Если Safari предлагает «Открыть как веб-приложение», включи этот пункт.';
+ if(isIOS)return 'iPhone / iPad: открой эту страницу в Safari, нажми «Поделиться» → «На экран Домой» → «Добавить». Затем запускай PSHO с иконки. Если Safari предлагает «Открыть как веб-приложение», включи этот пункт.';
  if(isAndroid)return 'Android: открой эту страницу в Chrome или поддерживающем PWA браузере. Меню ⋮ → «Установить приложение» либо «Добавить на главный экран». Подтверди установку.';
  return 'Компьютер: открой страницу в Chrome или Edge и используй значок установки в адресной строке либо пункт «Установить приложение» в меню браузера. В Safari на macOS может быть пункт «Добавить в Dock». В других браузерах можно сохранить ссылку в закладки.';
 }
@@ -25,13 +25,13 @@ function updateConnection(){
  else if(navigator.serviceWorker.controller)conn.textContent='Приложение подготовлено к офлайн-запуску. Записи — только на устройстве.';
  else conn.textContent='При первой загрузке нужно подключение. Подготавливаем офлайн-режим…';
 }
-if(isStandalone){action.hidden=true;box.querySelector('.pwa-copy strong').textContent='СЛОИ установлено';}
+if(isStandalone){action.hidden=true;box.querySelector('.pwa-copy strong').textContent='PSHO установлено';}
 action.addEventListener('click',function(){
  if(installEvent){var e=installEvent;installEvent=null;e.prompt();Promise.resolve(e.userChoice).then(function(x){if(x&&x.outcome==='accepted'){action.hidden=true;}else showHelp();},showHelp);return;}
  if(info.hidden)showHelp();else{info.hidden=true;action.setAttribute('aria-expanded','false');}
 });
-window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();installEvent=e;if(!isStandalone)action.textContent='Установить СЛОИ';});
-window.addEventListener('appinstalled',function(){action.hidden=true;info.hidden=true;box.querySelector('.pwa-copy strong').textContent='СЛОИ установлено';});
+window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();installEvent=e;if(!isStandalone)action.textContent='Установить PSHO';});
+window.addEventListener('appinstalled',function(){action.hidden=true;info.hidden=true;box.querySelector('.pwa-copy strong').textContent='PSHO установлено';});
 window.addEventListener('online',updateConnection);
 window.addEventListener('offline',updateConnection);
 function pendingUpdate(){
