@@ -1,8 +1,7 @@
-/* PSHO: private, dependency-free mood journal. No fetch, cookies, beacons or analytics. */
 (function () {
 'use strict';
 if(!String.prototype.includes){String.prototype.includes=function(s,i){return this.indexOf(s,i||0)!==-1;};}
-var VERSION='1.4.2', BASE='sloi-v1-', LIMIT=3000, MAX_BACKUP_BYTES=16000000;
+var VERSION='1.4.3', BASE='sloi-v1-', LIMIT=3000, MAX_BACKUP_BYTES=16000000;
 var MOODS=[['Очень тяжело','◔'],['Тяжело','◕'],['Ниже обычного','◒'],['Нейтрально','◑'],['Терпимо','◕'],['Хорошо','◉'],['Отлично','✺']];
 var I=window.PSHO_I18N||{t:function(x){return x;},getLanguage:function(){return'ru';},locale:function(){return'ru-RU';}};
 function tr(s){return I.t(s);}
@@ -22,8 +21,6 @@ function validRecord(e){return e&&typeof e==='object'&&validText(e.id,75)&&/^[0-
 function validate(x){return x&&typeof x==='object'&&x.version===1&&Number.isInteger(x.rev)&&x.rev>=0&&x.rev<1e9&&Array.isArray(x.entries)&&x.entries.length<=4000&&x.entries.every(validRecord)&&Array.isArray(x.tags)&&x.tags.length<=100&&x.tags.every(function(t){return validText(t,42)&&t.trim().length>0;})&&['dark','light'].indexOf(x.theme)!==-1&&typeof x.remind==='boolean'&&/^([01]\d|2[0-3]):[0-5]\d$/.test(x.remindTime)&&new Set(x.entries.map(function(e){return e.id;})).size===x.entries.length;}
 function pack(x){var body=JSON.stringify(x);return JSON.stringify({body:body,hash:simpleHash(body)});}
 function unpack(raw){try{if(!raw||raw.length>MAX_BACKUP_BYTES)return null;var b=JSON.parse(raw);if(!b||typeof b.body!=='string'||simpleHash(b.body)!==b.hash)return null;var x=JSON.parse(b.body);return validate(x)?x:null;}catch(e){return null;}}
-/* HEAD is the sole authoritative, atomic commit. The a/b slots are recovery copies only.
-   Never silently resurrect deleted notes from stale checkpoints when HEAD is corrupt. */
 function clone(x){return JSON.parse(JSON.stringify(x));}
 function readCommitted(){
   var raw=safeGet(BASE+'head');
