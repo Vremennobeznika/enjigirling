@@ -268,21 +268,28 @@ document.addEventListener("DOMContentLoaded", () => {
   function renderModalWithTechnology(profession) {
     const token=++modalRequest;
     modalContent.innerHTML=renderProfession(profession,getCategory(profession));
+    // Keep heavy process/material datasets unloaded until their collapsed section is opened.
     if(Array.isArray(window.engineeringMaterials) && Array.isArray(window.engineeringProcesses))return;
-    loadTechnology().then(()=>{
-      if(token!==modalRequest||!modalOverlay.classList.contains('active'))return;
-      const modal=modalContent.closest('.modal'),scroll=modal?modal.scrollTop:0;
-      const expanded=[...modalContent.querySelectorAll('details.profession-extra')].map(x=>x.open);
-      modalContent.innerHTML=renderProfession(profession,getCategory(profession));
-      modalContent.querySelectorAll('details.profession-extra').forEach((x,i)=>{x.open=!!expanded[i];});
-      if(modal)modal.scrollTop=scroll;
-    }).catch(()=>{
-      if(token!==modalRequest||!modalOverlay.classList.contains('active'))return;
-      const loading=[...modalContent.querySelectorAll('.data-quality-note')]
-        .find(x=>x.textContent.includes('Загружаем связи с процессами'));
-      if(loading)loading.textContent='Не удалось загрузить связи. Проверьте сеть и откройте карточку повторно.';
+    const technologyDetails=modalContent.querySelectorAll('details.profession-extra')[1];
+    if(!technologyDetails)return;
+    technologyDetails.addEventListener('toggle',()=>{
+      if(!technologyDetails.open)return;
+      loadTechnology().then(()=>{
+        if(token!==modalRequest||!modalOverlay.classList.contains('active'))return;
+        const modal=modalContent.closest('.modal'),scroll=modal?modal.scrollTop:0;
+        const expanded=[...modalContent.querySelectorAll('details.profession-extra')].map(x=>x.open);
+        modalContent.innerHTML=renderProfession(profession,getCategory(profession));
+        modalContent.querySelectorAll('details.profession-extra').forEach((x,i)=>{x.open=!!expanded[i];});
+        if(modal)modal.scrollTop=scroll;
+      }).catch(()=>{
+        if(token!==modalRequest||!modalOverlay.classList.contains('active'))return;
+        const loading=[...modalContent.querySelectorAll('.data-quality-note')]
+          .find(x=>x.textContent.includes('Загружаем связи с процессами'));
+        if(loading)loading.textContent='Не удалось загрузить связи. Проверьте сеть и откройте карточку повторно.';
+      });
     });
   }
+
   let activeCategory = ALL;
   let activeProfessionId = ALL; // выбранная кнопка во второй строке (только для «АСУ ТП»)
   let searchQuery = "";

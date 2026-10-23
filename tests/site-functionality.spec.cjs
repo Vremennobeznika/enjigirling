@@ -223,6 +223,7 @@ test('profession details link back to catalogued processes and materials',async(
  await page.goto('/index.html');
  expect(await page.locator('script[src="materials-data.js"],script[src="processes-data.js"]').count()).toBe(0);
  await page.goto('/index.html#profession=mechanical-engineer');
+ await expect(page.locator('script[src="materials-data.js"],script[src="processes-data.js"]')).toHaveCount(0);
  await page.locator('#modalContent details.profession-extra').last().locator(':scope > summary').click();
  await expect(page.locator('#modalContent .technology-links a').first()).toBeVisible();
  const professionId=await page.evaluate(()=>window.engineeringProcesses[0].profession);
