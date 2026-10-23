@@ -17,7 +17,9 @@ import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -28,6 +30,8 @@ public final class MainActivity extends Activity {
     private static final int FILE_REQUEST = 71;
     private WebView web;
     private byte[] pendingData;
+    private ByteArrayOutputStream streamBuffer;
+    private static final int MAX_EXPORT_BYTES = 16000000;
     private String pendingFilename;
     private long failureWindow;
     private int failureCount;
@@ -93,24 +97,58 @@ public final class MainActivity extends Activity {
             }
         });
         web.addJavascriptInterface(new Object(){
+            @JavascriptInterface public boolean beginSave(String filename){
+                synchronized(MainActivity.this){
+                    if(filename==null || filename.length()>90 || !filename.matches("[A-Za-z0-9._-]+") ||
+                       !(filename.endsWith(".csv") || filename.endsWith(".json")) ||
+                       pendingData!=null || streamBuffer!=null) return false;
+                    streamBuffer=new ByteArrayOutputStream();pendingFilename=filename;
+                    return true;
+                }
+            }
+            @JavascriptInterface public boolean appendSaveChunk(String latin1){
+                synchronized(MainActivity.this){
+                    if(streamBuffer==null || latin1==null || latin1.length()>32768)return false;
+                    byte[] piece=latin1.getBytes(StandardCharsets.ISO_8859_1);
+                    if(streamBuffer.size()+piece.length>MAX_EXPORT_BYTES){streamBuffer=null;pendingFilename=null;return false;}
+                    streamBuffer.write(piece,0,piece.length);return true;
+                }
+            }
+            @JavascriptInterface public boolean finishSave(){
+                final String filename;
+                synchronized(MainActivity.this){
+                    if(streamBuffer==null||pendingFilename==null)return false;
+                    filename=pendingFilename;
+                    pendingData=streamBuffer.toByteArray();streamBuffer=null;
+                }
+                runOnUiThread(()->launchSaveDialog(filename));return true;
+            }
+            @JavascriptInterface public void cancelSave(){
+                synchronized(MainActivity.this){
+                    streamBuffer=null;
+                    if(pendingData==null)pendingFilename=null;
+                }
+            }
             @JavascriptInterface public void saveFile(String filename, String latin1){
                 if (filename==null || filename.length()>90 || !filename.matches("[A-Za-z0-9._-]+") || latin1==null || latin1.length()>1400000) return;
                 byte[] bytes=latin1.getBytes(StandardCharsets.ISO_8859_1);
                 runOnUiThread(()->{
                     if (pendingData!=null) return;
-                    pendingData=bytes;pendingFilename=filename;
-                    try {
-                        Intent intent=new Intent(Intent.ACTION_CREATE_DOCUMENT);
-                        intent.addCategory(Intent.CATEGORY_OPENABLE);
-                        intent.setType(filename.endsWith(".csv")?"text/csv":"application/json");
-                        intent.putExtra(Intent.EXTRA_TITLE,filename);
-                        startActivityForResult(intent,FILE_REQUEST);
-                    }catch(RuntimeException ex){pendingData=null;pendingFilename=null;}
+                    pendingData=bytes;pendingFilename=filename;launchSaveDialog(filename);
                 });
             }
         },"SLOI_NATIVE");
         setContentView(web);
         web.loadUrl(BASE+"index.html?native=1");
+    }
+    private void launchSaveDialog(String filename){
+        try {
+            Intent intent=new Intent(Intent.ACTION_CREATE_DOCUMENT);
+            intent.addCategory(Intent.CATEGORY_OPENABLE);
+            intent.setType(filename.endsWith(".csv")?"text/csv":"application/json");
+            intent.putExtra(Intent.EXTRA_TITLE,filename);
+            startActivityForResult(intent,FILE_REQUEST);
+        }catch(RuntimeException ex){ synchronized(this){pendingData=null;pendingFilename=null;} }
     }
     private void showRecovery(){
         LinearLayout root=new LinearLayout(this); root.setOrientation(LinearLayout.VERTICAL);
@@ -126,11 +164,14 @@ public final class MainActivity extends Activity {
         super.onActivityResult(request,result,data);
         if(request!=FILE_REQUEST)return;
         byte[] bytes=pendingData;pendingData=null;pendingFilename=null;
-        if(result==RESULT_OK && data!=null && data.getData()!=null && bytes!=null){
+        if(result!=RESULT_OK){Toast.makeText(this,"Сохранение файла отменено",Toast.LENGTH_SHORT).show();return;}
+        boolean saved=false;
+        if(data!=null && data.getData()!=null && bytes!=null){
             try(OutputStream output=getContentResolver().openOutputStream(data.getData())){
-                if(output!=null) output.write(bytes);
-            }catch(IOException ignored){}
+                if(output!=null){output.write(bytes);output.flush();saved=true;}
+            }catch(IOException | RuntimeException ex){ saved=false; }
         }
+        Toast.makeText(this,saved?"Файл записан в выбранное место":"Не удалось сохранить файл. Повтори экспорт.",Toast.LENGTH_LONG).show();
     }
     @Override protected void onDestroy(){
         if(web!=null){ web.removeJavascriptInterface("SLOI_NATIVE"); web.destroy();web=null; }
