@@ -131,7 +131,7 @@ with sync_playwright() as p:
             load(page)
 
             yes('caches.match' in (ROOT/'sw.js').read_text())
-            yes('cache.addAll' in (ROOT/'sw.js').read_text())
+            yes('.addAll(' in (ROOT/'sw.js').read_text())
             yes('Response.error' in (ROOT/'sw.js').read_text())
         check('offline worker static fallback (runtime not verified)',offline)
         ctx.close()
