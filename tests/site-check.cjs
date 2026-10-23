@@ -256,8 +256,8 @@ assert.ok(comparisonUi.includes('без гарантированной посл�
 console.log('OK: unsupported career deadlines removed from all 51 engineer detail cards and comparisons');
 
 const educationUi=fs.readFileSync('script.js','utf8');
-assert.ok(educationUi.includes('Универсального срока для должности нет'),'unverified educational durations must be suppressed');
-assert.ok(educationUi.includes('Рекомендуемые знания (не юридическое требование)'),'editorial skills must not be binding requirements');
+assert.ok(!educationUi.includes('renderEducation(profession.education)'), 'unsupported degree-duration section must not render');
+assert.ok(educationUi.includes('profession.education?.requirements'),'editorial knowledge descriptions must remain accessible');
 const audit=fs.readFileSync('audit/professions-51-review-2026-10-20.md','utf8');
 for(const p of professions)assert.ok(audit.includes(p.title),'missing profession in editorial audit: '+p.id);
 console.log('OK: 51-profession editorial evidence inventory and educational qualification disclaimers');
