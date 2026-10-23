@@ -12,7 +12,7 @@ test('career cards show title only and all 51 open with cautious internal text',
   expect(await card.getAttribute('aria-labelledby')).toBe('profession-card-title-'+await card.locator('.eng-title').evaluate(n=>n.id.replace('profession-card-title-','')));
   await card.click();
   await expect(page.locator('#modalTitle')).toHaveText(label);
-  await expect(page.locator('#modalContent')).toContainText('Нормативные документы');
+  await expect(page.locator('#modalContent')).toContainText('Профессиональные стандарты и нормативные документы');
   await expect(page.locator('#modalContent')).toContainText('Зарплата');
   await expect(page.locator('#modalContent')).toContainText('Условия и особенности работы');
   await expect(page.locator('#modalContent')).not.toContainText('Пример рабочего дня');

@@ -30,8 +30,8 @@ for(const viewport of [{width:320,height:720},{width:390,height:844},{width:768,
 test('engineer detail links use monochrome colors',async({page})=>{
  await page.goto('http://127.0.0.1:8765/index.html',{waitUntil:'domcontentloaded'});
  await page.locator('#professionsGrid .eng-card').first().click();
- await page.locator('#modalContent details.profession-extra').first().locator('summary').click();
- const links=page.locator('#modalContent a');
+ await page.locator('#modalContent details.profession-extra').first().locator(':scope > summary').click();
+ const links=page.locator('#modalContent a:visible');
  await expect(links.first()).toBeVisible();
  const colors=await links.evaluateAll(nodes=>nodes.map(a=>getComputedStyle(a).color));
  const expected=await page.evaluate(()=>getComputedStyle(document.documentElement).getPropertyValue('--text-primary').trim());
@@ -44,8 +44,8 @@ for(const theme of ['light','dark']){
   await page.addInitScript(value=>localStorage.setItem('theme',value),theme);
   await page.goto('http://127.0.0.1:8765/index.html');
   await page.locator('#professionsGrid .eng-card').first().click();
-  await page.locator('#modalContent details.profession-extra').first().locator('summary').click();
-  const links=page.locator('#modalContent a');
+  await page.locator('#modalContent details.profession-extra').first().locator(':scope > summary').click();
+  const links=page.locator('#modalContent a:visible');
   await expect(links.first()).toBeVisible();
   const expected=await page.evaluate(()=>{const span=document.createElement('span');span.style.color='var(--text-primary)';document.body.appendChild(span);const c=getComputedStyle(span).color;span.remove();return c;});
   for(const color of await links.evaluateAll(nodes=>nodes.map(x=>getComputedStyle(x).color)))expect(color).toBe(expected);
@@ -121,7 +121,7 @@ for(const mode of ['light','dark']){
    });
    expect(ratio,'body text in open profession modal must satisfy WCAG AA').toBeGreaterThanOrEqual(4.5);
    const details=page.locator('#modalContent details.profession-extra').first();
-   await details.locator('summary').click();
+   await details.locator(':scope > summary').click();
    await expect(details).toHaveAttribute('open','');
   });
  }

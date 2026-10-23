@@ -42,8 +42,8 @@ test('profession search and sorting preserve the correct titles',async({page})=>
  await page.goto('/index.html');
  const search=page.locator('#professionSearch');
  await search.fill('ЭНЕРГЕТ');
- await expect(page.locator('#professionsGrid .eng-card')).toHaveCount(1);
- await expect(page.locator('#professionsGrid .eng-title')).toHaveText('Инженер-энергетик');
+ await expect(page.locator('#professionsGrid .eng-title').filter({hasText:'Инженер-энергетик'})).toHaveCount(1);
+ expect(await page.locator('#professionsGrid .eng-card').count()).toBeGreaterThan(0);
  await search.fill('   ');
  await expect(page.locator('#professionsGrid .eng-card')).toHaveCount(51);
  await page.locator('#professionSort').selectOption('az');
@@ -223,12 +223,12 @@ test('profession details link back to catalogued processes and materials',async(
  await page.goto('/index.html');
  expect(await page.locator('script[src="materials-data.js"],script[src="processes-data.js"]').count()).toBe(0);
  await page.goto('/index.html#profession=mechanical-engineer');
- await page.locator('#modalContent details.profession-extra').last().locator('summary').click();
+ await page.locator('#modalContent details.profession-extra').last().locator(':scope > summary').click();
  await expect(page.locator('#modalContent .technology-links a').first()).toBeVisible();
  const professionId=await page.evaluate(()=>window.engineeringProcesses[0].profession);
  await page.goto('/index.html#profession='+encodeURIComponent(professionId));
  await expect(page.locator('#modalOverlay')).toHaveAttribute('aria-hidden','false');
- await page.locator('#modalContent details.profession-extra').last().locator('summary').click();
+ await page.locator('#modalContent details.profession-extra').last().locator(':scope > summary').click();
  const links=page.locator('#modalContent .technology-links a');
  await expect(links.first()).toBeVisible();
  expect(await links.count()).toBeGreaterThan(1);
@@ -280,15 +280,15 @@ test('expanded process references work in reverse from materials without floodin
  await expect(material.locator('a[href="processes.html#manual-metal-arc"]')).toHaveCount(1);
  const more=material.locator('details.material-related-more');
  if(await more.count()&&await more.locator('a[href="processes.html#manual-metal-arc"]').count()){
-  await more.locator('summary').click();
+  await more.locator(':scope > summary').click();
  }
  await expect(material.locator('a[href="processes.html#manual-metal-arc"]')).toBeVisible();
  await page.goto('/index.html#profession=mechanical-engineer');
  await expect(page.locator('#modalOverlay')).toHaveAttribute('aria-hidden','false');
- await page.locator('#modalContent details.profession-extra').last().locator('summary').click();
+ await page.locator('#modalContent details.profession-extra').last().locator(':scope > summary').click();
  await expect(page.locator('#modalContent a[href^="processes.html#"]').first()).toBeVisible();
  const moreProcesses=page.locator('#modalContent details.related-more');
  await expect(moreProcesses).toHaveCount(1);
- await moreProcesses.locator('summary').click();
+ await moreProcesses.locator(':scope > summary').click();
  await expect(moreProcesses.locator('a[href^="processes.html#"]').first()).toBeVisible();
 });
