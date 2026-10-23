@@ -29,6 +29,8 @@ def run_case(browser,label,width,height):
         })""")
         must(bounds["scroll"]<=bounds["viewport"]+2,"horizontal overflow")
         must(min(bounds["cards"])>=44,"tap targets <44px")
+        crossing=page.evaluate("""() => {const a=[...document.querySelectorAll('.swatch')].map(x=>x.getBoundingClientRect());for(let i=0;i<a.length;i++)for(let j=i+1;j<a.length;j++){if(Math.min(a[i].right,a[j].right)>Math.max(a[i].left,a[j].left)+1&&Math.min(a[i].bottom,a[j].bottom)>Math.max(a[i].top,a[j].top)+1)return [i,j];}return null;}""")
+        must(not crossing,"overlapping cards: "+str(crossing))
         must(not problems,"JS errors: "+str(problems))
         check("UI-"+label,True)
         if width==320 and height==568:
