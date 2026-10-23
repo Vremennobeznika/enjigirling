@@ -1,0 +1,16 @@
+plugins { id 'com.android.application' }
+android {
+ namespace 'app.layers.mood'
+ compileSdk 36
+ defaultConfig {
+  applicationId 'app.layers.mood'
+  minSdk 23
+  targetSdk 36
+  versionCode 1
+  versionName '1.0-preview'
+ }
+ compileOptions {
+  sourceCompatibility JavaVersion.VERSION_17
+  targetCompatibility JavaVersion.VERSION_17
+ }
+}

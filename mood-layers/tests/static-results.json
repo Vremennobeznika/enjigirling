@@ -1,0 +1,28 @@
+{
+  "passed": 22,
+  "failed": 0,
+  "checks": {
+    "html language and viewport": true,
+    "core tabs present": true,
+    "accessible labels": true,
+    "custom emotion limit": true,
+    "no remote data transfer": true,
+    "backup integrity": true,
+    "pre-save readback verification": true,
+    "local storage failure visible": true,
+    "export and import": true,
+    "CSV formula protection": true,
+    "no dangerous innerHTML": true,
+    "explicit no treatment conclusions": true,
+    "offline cache with same origin": true,
+    "no android permissions": true,
+    "android backup off": true,
+    "no android cleartext": true,
+    "blocked external navigation": true,
+    "bounded native renderer recover": true,
+    "native file type constrained": true,
+    "light and dark themes": true,
+    "280px minimum supported": true,
+    "graphic screen and export no libraries": true
+  }
+}

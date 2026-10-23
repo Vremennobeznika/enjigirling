@@ -1,0 +1,63 @@
+name: SLOI Android APK and source checks
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'mood-layers/**'
+      - '.github/workflows/mood-android.yml'
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Android SDK path
+        shell: bash
+        run: |
+          set -euo pipefail
+          SDK_ROOT="${ANDROID_HOME:-/usr/local/lib/android/sdk}"
+          SDKMGR="$(find "$SDK_ROOT/cmdline-tools" -type f -name sdkmanager | head -n 1)"
+          test -n "$SDKMGR"
+          echo "ANDROID_HOME=$SDK_ROOT" >> "$GITHUB_ENV"
+          echo "$(dirname "$SDKMGR")" >> "$GITHUB_PATH"
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.13'
+      - name: Install SDK 36
+        run: sdkmanager 'platforms;android-36' 'build-tools;36.0.0'
+      - name: Static tests and bundle local assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check mood-layers/app.js
+          node --check mood-layers/sw.js
+          python3 mood-layers/tests/static_matrix.py
+          mkdir -p mood-layers/android/app/src/main/assets/assets
+          cp mood-layers/index.html mood-layers/style.css mood-layers/app.js mood-layers/sw.js mood-layers/manifest.webmanifest mood-layers/android/app/src/main/assets/
+          cp mood-layers/assets/icon.* mood-layers/assets/icon-*.png mood-layers/android/app/src/main/assets/assets/
+      - name: Build debug APK
+        working-directory: mood-layers/android
+        run: gradle --no-daemon :app:assembleDebug
+      - name: Verify APK archive/signature
+        shell: bash
+        run: |
+          set -euo pipefail
+          APK=mood-layers/android/app/build/outputs/apk/debug/app-debug.apk
+          test -s "$APK"
+          unzip -t "$APK" > /dev/null
+          unzip -Z1 "$APK" | grep -q '^classes.dex$'
+          unzip -Z1 "$APK" | grep -q '^assets/app.js$'
+          jarsigner -verify "$APK" > /dev/null
+          sha256sum "$APK"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: SLOI-Android-debug-apk
+          path: mood-layers/android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+          retention-days: 30

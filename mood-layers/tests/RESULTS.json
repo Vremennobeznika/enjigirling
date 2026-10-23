@@ -1,0 +1,357 @@
+{
+  "engine": "system Chromium; inline about:blank; mocked localStorage",
+  "passed": 115,
+  "failed": 0,
+  "checks": {
+    "initial mood choices": {
+      "status": "PASS"
+    },
+    "empty history safe": {
+      "status": "PASS"
+    },
+    "navigation: insights": {
+      "status": "PASS"
+    },
+    "navigation: settings": {
+      "status": "PASS"
+    },
+    "navigation: today": {
+      "status": "PASS"
+    },
+    "default date assigned": {
+      "status": "PASS"
+    },
+    "select mood 2": {
+      "status": "PASS"
+    },
+    "custom words input": {
+      "status": "PASS"
+    },
+    "custom tag auto-selected": {
+      "status": "PASS"
+    },
+    "note dictionary off initially": {
+      "status": "PASS"
+    },
+    "note dictionary opt-in": {
+      "status": "PASS"
+    },
+    "save first entry": {
+      "status": "PASS"
+    },
+    "checksum persisted": {
+      "status": "PASS"
+    },
+    "history after save": {
+      "status": "PASS"
+    },
+    "user note XSS-safe text": {
+      "status": "PASS"
+    },
+    "edit existing record": {
+      "status": "PASS"
+    },
+    "edit loads prior mood": {
+      "status": "PASS"
+    },
+    "editing does not duplicate": {
+      "status": "PASS"
+    },
+    "both checkpoints now exist": {
+      "status": "PASS"
+    },
+    "restart restores record": {
+      "status": "PASS"
+    },
+    "restart preserves edited note": {
+      "status": "PASS"
+    },
+    "corrupt newest checkpoint safe fallback": {
+      "status": "PASS"
+    },
+    "both corrupt: no fatal crash": {
+      "status": "PASS"
+    },
+    "both corrupt: visible recovery message": {
+      "status": "PASS"
+    },
+    "both corrupt: no invented entries": {
+      "status": "PASS"
+    },
+    "storage quota failure warns": {
+      "status": "PASS"
+    },
+    "storage quota no false success": {
+      "status": "PASS"
+    },
+    "theme toggles": {
+      "status": "PASS"
+    },
+    "theme persists to backup": {
+      "status": "PASS"
+    },
+    "CSV formula sanitizer present": {
+      "status": "PASS"
+    },
+    "XSS: markup not interpreted": {
+      "status": "PASS"
+    },
+    "XSS: exact user value displayed": {
+      "status": "PASS"
+    },
+    "custom tags in settings": {
+      "status": "PASS"
+    },
+    "layout 280x640 dark today": {
+      "status": "PASS"
+    },
+    "layout 280x640 dark history": {
+      "status": "PASS"
+    },
+    "layout 280x640 dark insights": {
+      "status": "PASS"
+    },
+    "layout 280x640 dark settings": {
+      "status": "PASS"
+    },
+    "layout 280x640 light today": {
+      "status": "PASS"
+    },
+    "layout 280x640 light history": {
+      "status": "PASS"
+    },
+    "layout 280x640 light insights": {
+      "status": "PASS"
+    },
+    "layout 280x640 light settings": {
+      "status": "PASS"
+    },
+    "layout 320x568 dark today": {
+      "status": "PASS"
+    },
+    "layout 320x568 dark history": {
+      "status": "PASS"
+    },
+    "layout 320x568 dark insights": {
+      "status": "PASS"
+    },
+    "layout 320x568 dark settings": {
+      "status": "PASS"
+    },
+    "layout 320x568 light today": {
+      "status": "PASS"
+    },
+    "layout 320x568 light history": {
+      "status": "PASS"
+    },
+    "layout 320x568 light insights": {
+      "status": "PASS"
+    },
+    "layout 320x568 light settings": {
+      "status": "PASS"
+    },
+    "layout 360x740 dark today": {
+      "status": "PASS"
+    },
+    "layout 360x740 dark history": {
+      "status": "PASS"
+    },
+    "layout 360x740 dark insights": {
+      "status": "PASS"
+    },
+    "layout 360x740 dark settings": {
+      "status": "PASS"
+    },
+    "layout 360x740 light today": {
+      "status": "PASS"
+    },
+    "layout 360x740 light history": {
+      "status": "PASS"
+    },
+    "layout 360x740 light insights": {
+      "status": "PASS"
+    },
+    "layout 360x740 light settings": {
+      "status": "PASS"
+    },
+    "layout 375x667 dark today": {
+      "status": "PASS"
+    },
+    "layout 375x667 dark history": {
+      "status": "PASS"
+    },
+    "layout 375x667 dark insights": {
+      "status": "PASS"
+    },
+    "layout 375x667 dark settings": {
+      "status": "PASS"
+    },
+    "layout 375x667 light today": {
+      "status": "PASS"
+    },
+    "layout 375x667 light history": {
+      "status": "PASS"
+    },
+    "layout 375x667 light insights": {
+      "status": "PASS"
+    },
+    "layout 375x667 light settings": {
+      "status": "PASS"
+    },
+    "layout 390x844 dark today": {
+      "status": "PASS"
+    },
+    "layout 390x844 dark history": {
+      "status": "PASS"
+    },
+    "layout 390x844 dark insights": {
+      "status": "PASS"
+    },
+    "layout 390x844 dark settings": {
+      "status": "PASS"
+    },
+    "layout 390x844 light today": {
+      "status": "PASS"
+    },
+    "layout 390x844 light history": {
+      "status": "PASS"
+    },
+    "layout 390x844 light insights": {
+      "status": "PASS"
+    },
+    "layout 390x844 light settings": {
+      "status": "PASS"
+    },
+    "layout 430x932 dark today": {
+      "status": "PASS"
+    },
+    "layout 430x932 dark history": {
+      "status": "PASS"
+    },
+    "layout 430x932 dark insights": {
+      "status": "PASS"
+    },
+    "layout 430x932 dark settings": {
+      "status": "PASS"
+    },
+    "layout 430x932 light today": {
+      "status": "PASS"
+    },
+    "layout 430x932 light history": {
+      "status": "PASS"
+    },
+    "layout 430x932 light insights": {
+      "status": "PASS"
+    },
+    "layout 430x932 light settings": {
+      "status": "PASS"
+    },
+    "layout 568x320 dark today": {
+      "status": "PASS"
+    },
+    "layout 568x320 dark history": {
+      "status": "PASS"
+    },
+    "layout 568x320 dark insights": {
+      "status": "PASS"
+    },
+    "layout 568x320 dark settings": {
+      "status": "PASS"
+    },
+    "layout 568x320 light today": {
+      "status": "PASS"
+    },
+    "layout 568x320 light history": {
+      "status": "PASS"
+    },
+    "layout 568x320 light insights": {
+      "status": "PASS"
+    },
+    "layout 568x320 light settings": {
+      "status": "PASS"
+    },
+    "layout 667x375 dark today": {
+      "status": "PASS"
+    },
+    "layout 667x375 dark history": {
+      "status": "PASS"
+    },
+    "layout 667x375 dark insights": {
+      "status": "PASS"
+    },
+    "layout 667x375 dark settings": {
+      "status": "PASS"
+    },
+    "layout 667x375 light today": {
+      "status": "PASS"
+    },
+    "layout 667x375 light history": {
+      "status": "PASS"
+    },
+    "layout 667x375 light insights": {
+      "status": "PASS"
+    },
+    "layout 667x375 light settings": {
+      "status": "PASS"
+    },
+    "layout 768x1024 dark today": {
+      "status": "PASS"
+    },
+    "layout 768x1024 dark history": {
+      "status": "PASS"
+    },
+    "layout 768x1024 dark insights": {
+      "status": "PASS"
+    },
+    "layout 768x1024 dark settings": {
+      "status": "PASS"
+    },
+    "layout 768x1024 light today": {
+      "status": "PASS"
+    },
+    "layout 768x1024 light history": {
+      "status": "PASS"
+    },
+    "layout 768x1024 light insights": {
+      "status": "PASS"
+    },
+    "layout 768x1024 light settings": {
+      "status": "PASS"
+    },
+    "layout 1024x768 dark today": {
+      "status": "PASS"
+    },
+    "layout 1024x768 dark history": {
+      "status": "PASS"
+    },
+    "layout 1024x768 dark insights": {
+      "status": "PASS"
+    },
+    "layout 1024x768 dark settings": {
+      "status": "PASS"
+    },
+    "layout 1024x768 light today": {
+      "status": "PASS"
+    },
+    "layout 1024x768 light history": {
+      "status": "PASS"
+    },
+    "layout 1024x768 light insights": {
+      "status": "PASS"
+    },
+    "layout 1024x768 light settings": {
+      "status": "PASS"
+    },
+    "200% zoom at effective 320px layout": {
+      "status": "PASS"
+    },
+    "delete with explicit confirmation": {
+      "status": "PASS"
+    }
+  },
+  "limitations": [
+    "Not Safari/WebKit",
+    "Not real Android System WebView",
+    "Offline service worker cannot be fully exercised via about:blank"
+  ]
+}
