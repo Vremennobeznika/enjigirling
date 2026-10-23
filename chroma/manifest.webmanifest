@@ -1,0 +1,20 @@
+{
+  "id": "./",
+  "name": "ХРОМА — Цветовой выбор",
+  "short_name": "ХРОМА",
+  "description": "Цветовые предпочтения",
+  "lang": "ru",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#15171d",
+  "theme_color": "#15171d",
+  "icons": [
+    {
+      "src": "./assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
