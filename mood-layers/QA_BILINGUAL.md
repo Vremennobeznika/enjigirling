@@ -1,4 +1,4 @@
-# PSHO 1.4.0 — RU/EN regression acceptance
+# PSHO 1.4.1 — RU/EN regression acceptance
 
 Date: 2026-10-23. Tested in system Chromium with Playwright, not on physical phones.
 
@@ -19,6 +19,7 @@ Date: 2026-10-23. Tested in system Chromium with Playwright, not on physical pho
 - Added header reflow for 280px and 200% browser zoom; eliminated measured horizontal overflow.
 - Service-worker test included an obsolete cache assertion; corrected to validate both older PSHO/SLOI caches and the new dictionary.
 - Installation text reacts when the UI language changes while an install prompt is pending.
+- Legacy built-in Russian tags display in English without changing their stored values; user-defined labels and note text remain unmodified.
 
 ## Compatibility and safety
 
