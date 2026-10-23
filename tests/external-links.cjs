@@ -4,7 +4,7 @@
 const fs=require('node:fs');
 const vm=require('node:vm');
 const path=require('node:path');
-const sources=['resources-data.js','data.js','map-data.js','salary-sources.js'];
+const sources=['resources-data.js','data.js','map-data.js','salary-sources.js','materials-data.js','processes-data.js','career-standards-data.js','calendar-data.js'];
 const links=new Map();
 function add(url,source){
  if(typeof url!=='string'||!/^https?:\/\//i.test(url))return;
