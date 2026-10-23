@@ -1,0 +1,90 @@
+{
+  "passed": 21,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "layout iPhone SE 1 / 320",
+      "status": "PASS"
+    },
+    {
+      "name": "layout iPhone 8 / 375",
+      "status": "PASS"
+    },
+    {
+      "name": "layout iPhone SE 2 / 375",
+      "status": "PASS"
+    },
+    {
+      "name": "layout iPhone 13 mini / 375",
+      "status": "PASS"
+    },
+    {
+      "name": "layout Android compact / 360",
+      "status": "PASS"
+    },
+    {
+      "name": "layout Android 4-inch / 320",
+      "status": "PASS"
+    },
+    {
+      "name": "layout Android tall / 412",
+      "status": "PASS"
+    },
+    {
+      "name": "layout iPhone Plus / 414",
+      "status": "PASS"
+    },
+    {
+      "name": "layout Tablet / 768",
+      "status": "PASS"
+    },
+    {
+      "name": "layout Desktop / 1280",
+      "status": "PASS"
+    },
+    {
+      "name": "layout Landscape small / 568",
+      "status": "PASS"
+    },
+    {
+      "name": "initial content and semantics",
+      "status": "PASS"
+    },
+    {
+      "name": "theme light dark and reload",
+      "status": "PASS"
+    },
+    {
+      "name": "flow 2x9, undo, persistence, comparison",
+      "status": "PASS"
+    },
+    {
+      "name": "result export TXT",
+      "status": "PASS"
+    },
+    {
+      "name": "install help privacy modal keyboard Escape",
+      "status": "PASS"
+    },
+    {
+      "name": "new experiment reset",
+      "status": "PASS"
+    },
+    {
+      "name": "no third-party network and no JS errors",
+      "status": "PASS"
+    },
+    {
+      "name": "offline worker static fallback (runtime not verified)",
+      "status": "PASS"
+    },
+    {
+      "name": "storage unavailable graceful fallback",
+      "status": "PASS"
+    },
+    {
+      "name": "manifest valid relative paths and icons",
+      "status": "PASS"
+    }
+  ]
+}
