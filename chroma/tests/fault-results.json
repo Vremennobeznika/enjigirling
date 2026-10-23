@@ -1,0 +1,47 @@
+{
+  "passed": 10,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "STATE-primary-corrupt-falls-back-to-latest-valid-copy",
+      "status": "PASS"
+    },
+    {
+      "name": "STATE-backup-corrupt-preserves-primary",
+      "status": "PASS"
+    },
+    {
+      "name": "STATE-all-copies-corrupt-fails-closed",
+      "status": "PASS"
+    },
+    {
+      "name": "STATE-checksum-rejects-tampered-primary",
+      "status": "PASS"
+    },
+    {
+      "name": "STATE-interrupted-primary-write-keeps-newest-checkpoint",
+      "status": "PASS"
+    },
+    {
+      "name": "STATE-storage-unavailable-does-not-break-current-session",
+      "status": "PASS"
+    },
+    {
+      "name": "FAULT-render-throws-once-recovers-current-step",
+      "status": "PASS"
+    },
+    {
+      "name": "FAULT-permanent-render-error-does-not-loop",
+      "status": "PASS"
+    },
+    {
+      "name": "LAYOUT-44-combinations-width-orientation-theme-200percent",
+      "status": "PASS"
+    },
+    {
+      "name": "LAYOUT-results-280-320-375-at-200percent",
+      "status": "PASS"
+    }
+  ],
+  "scope": "Chromium mock storage + layout/zoom only. No native renderer/device proof."
+}
