@@ -109,6 +109,17 @@ for(const mode of ['light','dark']){
    }));
    expect(rect.right).toBeLessThanOrEqual(width+1);
    expect(rect.scrollWidth).toBeLessThanOrEqual(rect.innerWidth+2);
+   const ratio=await page.evaluate(()=>{
+     const text=document.querySelector('#modalContent .profession-intro p');
+     const modal=document.querySelector('.modal');
+     const color=getComputedStyle(text).color.match(/[\\d.]+/g).slice(0,3).map(Number);
+     const bg=getComputedStyle(modal).backgroundColor.match(/[\\d.]+/g).slice(0,3).map(Number);
+     const light=c=>c.map(v=>{v/=255;return v<=.04045?v/12.92:((v+.055)/1.055)**2.4;})
+       .reduce((sum,v,i)=>sum+v*[.2126,.7152,.0722][i],0);
+     const x=light(color),y=light(bg);
+     return (Math.max(x,y)+.05)/(Math.min(x,y)+.05);
+   });
+   expect(ratio,'body text in open profession modal must satisfy WCAG AA').toBeGreaterThanOrEqual(4.5);
    const details=page.locator('#modalContent details.profession-extra').first();
    await details.locator('summary').click();
    await expect(details).toHaveAttribute('open','');

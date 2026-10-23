@@ -37,6 +37,24 @@ test('profession search, sort and category filters really change results',async(
   await expect(page.locator('#professionsGrid .eng-card')).toHaveCount(51);
 });
 
+
+test('profession search and sorting preserve the correct titles',async({page})=>{
+ await page.goto('/index.html');
+ const search=page.locator('#professionSearch');
+ await search.fill('ЭНЕРГЕТ');
+ await expect(page.locator('#professionsGrid .eng-card')).toHaveCount(1);
+ await expect(page.locator('#professionsGrid .eng-title')).toHaveText('Инженер-энергетик');
+ await search.fill('   ');
+ await expect(page.locator('#professionsGrid .eng-card')).toHaveCount(51);
+ await page.locator('#professionSort').selectOption('az');
+ const titles=await page.locator('#professionsGrid .eng-title').allTextContents();
+ expect(titles).toEqual([...titles].sort((a,b)=>a.localeCompare(b,'ru')));
+ await page.locator('#categories .eng-filter-btn').filter({hasText:'АСУ ТП'}).click();
+ await expect(page.locator('#asuSubcategories')).toBeVisible();
+ await page.locator('#asuSubcategories .eng-filter-btn').filter({hasText:'Программист АСУ ТП'}).click();
+ await expect(page.locator('#professionsGrid .eng-card')).toHaveCount(1);
+});
+
 test('comparison adds and removes professions and shows cautious salary data',async({page})=>{
   await page.goto(base+'compare.html');
   await page.locator('#professionPicker').selectOption('civil-engineer');
