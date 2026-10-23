@@ -11,7 +11,7 @@ checks={
 'custom emotion limit':'data.tags.length>=100' in app,
 'no remote data transfer':not re.search(r'\b(?:fetch|XMLHttpRequest|sendBeacon|WebSocket)\s*\(',app),
 'backup integrity':all(x in app for x in ['simpleHash','unpack','BASE+\'a\'','BASE+\'b\'']),
-'pre-save readback verification':'var proof=unpack(safeGet(key))' in app,
+'authoritative snapshot readback verification':"safeGet(BASE+'head')!==written" in app,
 'local storage failure visible':'Данные НЕ сохранены' in app,
 'export and import':all(x in app for x in ['exportJson','exportCsv','importFile','SLOI_BACKUP_V1']),
 'CSV formula protection':"if(/^[\\s\\uFEFF]*[=+@-]/.test(s))" in app,
