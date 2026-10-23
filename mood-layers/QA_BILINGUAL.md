@@ -6,7 +6,7 @@ Date: 2026-10-23. Tested in system Chromium with Playwright, not on physical pho
 
 | Suite | Result | Scope |
 | --- | --- | --- |
-| `tests/bilingual_matrix.py` | 75/75 PASS | RU/EN static+dynamic interface, labels, a11y, graphs, stored note integrity, 7 viewports x 2 languages x 4 tabs, rapid switching |
+| `tests/bilingual_matrix.py` | 80/80 PASS | RU/EN static+dynamic interface, labels, a11y, graphs, stored note integrity, legacy standard tags, 7 viewports x 2 languages x 4 tabs, rapid switching |
 | `tests/language_persistence.py` | 6/6 PASS | Language and entries survive simulated restart, user's raw text preserved, markup neutralized |
 | `tests/dynamic_ui_matrix.py` | 101/101 PASS | Rapid clicks, note save, themes, history, narrow screens and 200% browser zoom |
 | `tests/fault_injection.py` | 11/11 PASS | Guarded storage failure and UI recovery in mocked browser |
