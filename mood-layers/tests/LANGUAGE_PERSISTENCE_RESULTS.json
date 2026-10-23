@@ -1,0 +1,12 @@
+{
+  "passed": 6,
+  "failed": 0,
+  "results": {
+    "en survives re-open": true,
+    "en history after re-open": true,
+    "note unchanged byte-for-byte": true,
+    "markup not executed": true,
+    "ru survives re-open": true,
+    "notes remain independent of UI language": true
+  }
+}

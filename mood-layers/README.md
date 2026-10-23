@@ -1,21 +1,33 @@
-# PSHO — дневник настроения для iPhone, Android и ПК
+# PSHO — Mood Journal / Дневник настроения
 
-PSHO — лёгкое веб-приложение (PWA). Записи настроения, сон, личные состояния, терапия, графики, светлая и тёмная темы. Работает локально после первой загрузки по HTTPS, без аккаунта и отправки заметок разработчику.
+Self-contained, privacy-focused PWA for **iPhone, Android and desktop**. Русская и английская локализации, переключатель **Русский / English** в шапке приложения.
 
-Запуск и установка: https://vremennobeznika.github.io/enjigirling/mood-layers/
+Open: https://vremennobeznika.github.io/enjigirling/mood-layers/
 
-- iPhone: Safari → Поделиться → На экран Домой.
-- Android: Chrome → меню → Установить приложение / Добавить на главный экран.
-- Компьютер: Chrome или Edge → Установить приложение.
+## Installation
 
-## Данные и совместимость
+- **iPhone:** Safari → Share → Add to Home Screen.
+- **Android:** Chrome → menu → Install app / Add to Home screen.
+- **Desktop:** Chrome or Edge → Install app.
 
-**Адрес и ID PWA сохранены прежними**, поэтому переименование «СЛОИ» → **PSHO** не переносит и не удаляет локальные записи. Ключ `sloi-v1-` и формат `SLOI_BACKUP_V1` намеренно оставлены для чтения старых резервных копий — не переименовывать при следующих выпусках без миграции.
+Install once while online; offline shell is then cached by the service worker where the browser supports it. True offline behavior depends on each browser/device, not established by our Chromium emulation.
 
-Записи хранятся в локальном хранилище браузера и **не зашифрованы самим приложением**. Периодически экспортируйте JSON и проверяйте импорт. Очистка данных сайта или удаление приложения может уничтожить журнал. Синхронизации между устройствами нет.
+## Languages / Языки
 
-## Надёжность
+- The selected UI language is kept in `psho-ui-language` (localStorage), **separate from diary data**.
+- System language can be used on first launch (English for English browser, otherwise Russian), or choose manually.
+- The app includes translations for static labels, dynamic mood names, history, charts, notes hints, warnings, confirmation dialogs and PWA installation guidance.
+- **Users' own words and earlier entries are NEVER automatically translated.** Existing saved Russian custom labels remain as entered even while the English UI is selected. English defaults apply to *new* data stores created in English.
+- Legacy storage keys `sloi-v1-*`, backup format `SLOI_BACKUP_V1`, PWA scope and URL remain **unchanged**, to avoid loss of existing diary data.
 
-Исправлено повторное случайное сохранение при быстром нажатии; следующий сознательный ввод доступен сразу. В кэше только статические файлы. Обновление service worker требует подтверждения при наличии активной сессии. Нет фоновых push-уведомлений и клинических диагнозов.
+## Features
 
-Автоматические проверки Chromium: 101/101 динамических, 29/29 интеграционных, отдельная проверка service worker. Они не заменяют реальные испытания Safari/WebKit и физических телефонов.
+Mood ratings (1–7), anxiety/energy/tension/pain (0–10), tags, sleep, notes, optional word hints, therapy/medication/activity/period checkmarks, graph with missing-day gaps, editing, CSV/JSON export, JSON import and light/dark theme. No diagnosis or automated treatment recommendations.
+
+## Privacy and data safety
+
+No account or cloud sync. Notes are stored locally in browser storage, **not separately encrypted by the app**. Another device will not automatically receive your data. Clearing website data/uninstalling a PWA can erase your notes; export and verify a JSON backup regularly. Imported data is not modified when switching the UI language. Exports contain user-provided content as originally entered.
+
+## QA
+
+`python3 tests/bilingual_matrix.py` — 75 checks; `python3 tests/language_persistence.py` — 6; `python3 tests/dynamic_ui_matrix.py` — 101; `python3 tests/fault_injection.py` — 11. Node scripts `node --check` for app/i18n/pwa-ui/sw. Local browser tests use mocked localStorage and Chromium: no claim is made about physical iPhones/Androids. See `QA_BILINGUAL.md` and `tests/*RESULTS.json`.

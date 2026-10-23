@@ -1,0 +1,236 @@
+{
+  "passed": 75,
+  "failed": 0,
+  "checks": {
+    "system English locale detected": {
+      "status": "PASS"
+    },
+    "select locale exists": {
+      "status": "PASS"
+    },
+    "English tabs": {
+      "status": "PASS"
+    },
+    "English static page": {
+      "status": "PASS"
+    },
+    "English custom labels appear": {
+      "status": "PASS"
+    },
+    "English dynamic mood": {
+      "status": "PASS"
+    },
+    "english lang attribute": {
+      "status": "PASS"
+    },
+    "language preference stored separately": {
+      "status": "PASS"
+    },
+    "English success toast": {
+      "status": "PASS"
+    },
+    "English saved history": {
+      "status": "PASS"
+    },
+    "Personal note unchanged": {
+      "status": "PASS"
+    },
+    "Russian restored": {
+      "status": "PASS"
+    },
+    "Same data after language change": {
+      "status": "PASS"
+    },
+    "Language switch does not discard unsaved note": {
+      "status": "PASS"
+    },
+    "English settings and privacy": {
+      "status": "PASS"
+    },
+    "English chart labels": {
+      "status": "PASS"
+    },
+    "English accessibility aria": {
+      "status": "PASS"
+    },
+    "No page exceptions": {
+      "status": "PASS"
+    },
+    "no overflow 280 en today": {
+      "status": "PASS"
+    },
+    "no overflow 280 en history": {
+      "status": "PASS"
+    },
+    "no overflow 280 en insights": {
+      "status": "PASS"
+    },
+    "no overflow 280 en settings": {
+      "status": "PASS"
+    },
+    "no overflow 280 ru today": {
+      "status": "PASS"
+    },
+    "no overflow 280 ru history": {
+      "status": "PASS"
+    },
+    "no overflow 280 ru insights": {
+      "status": "PASS"
+    },
+    "no overflow 280 ru settings": {
+      "status": "PASS"
+    },
+    "no overflow 320 en today": {
+      "status": "PASS"
+    },
+    "no overflow 320 en history": {
+      "status": "PASS"
+    },
+    "no overflow 320 en insights": {
+      "status": "PASS"
+    },
+    "no overflow 320 en settings": {
+      "status": "PASS"
+    },
+    "no overflow 320 ru today": {
+      "status": "PASS"
+    },
+    "no overflow 320 ru history": {
+      "status": "PASS"
+    },
+    "no overflow 320 ru insights": {
+      "status": "PASS"
+    },
+    "no overflow 320 ru settings": {
+      "status": "PASS"
+    },
+    "no overflow 360 en today": {
+      "status": "PASS"
+    },
+    "no overflow 360 en history": {
+      "status": "PASS"
+    },
+    "no overflow 360 en insights": {
+      "status": "PASS"
+    },
+    "no overflow 360 en settings": {
+      "status": "PASS"
+    },
+    "no overflow 360 ru today": {
+      "status": "PASS"
+    },
+    "no overflow 360 ru history": {
+      "status": "PASS"
+    },
+    "no overflow 360 ru insights": {
+      "status": "PASS"
+    },
+    "no overflow 360 ru settings": {
+      "status": "PASS"
+    },
+    "no overflow 375 en today": {
+      "status": "PASS"
+    },
+    "no overflow 375 en history": {
+      "status": "PASS"
+    },
+    "no overflow 375 en insights": {
+      "status": "PASS"
+    },
+    "no overflow 375 en settings": {
+      "status": "PASS"
+    },
+    "no overflow 375 ru today": {
+      "status": "PASS"
+    },
+    "no overflow 375 ru history": {
+      "status": "PASS"
+    },
+    "no overflow 375 ru insights": {
+      "status": "PASS"
+    },
+    "no overflow 375 ru settings": {
+      "status": "PASS"
+    },
+    "no overflow 390 en today": {
+      "status": "PASS"
+    },
+    "no overflow 390 en history": {
+      "status": "PASS"
+    },
+    "no overflow 390 en insights": {
+      "status": "PASS"
+    },
+    "no overflow 390 en settings": {
+      "status": "PASS"
+    },
+    "no overflow 390 ru today": {
+      "status": "PASS"
+    },
+    "no overflow 390 ru history": {
+      "status": "PASS"
+    },
+    "no overflow 390 ru insights": {
+      "status": "PASS"
+    },
+    "no overflow 390 ru settings": {
+      "status": "PASS"
+    },
+    "no overflow 568 en today": {
+      "status": "PASS"
+    },
+    "no overflow 568 en history": {
+      "status": "PASS"
+    },
+    "no overflow 568 en insights": {
+      "status": "PASS"
+    },
+    "no overflow 568 en settings": {
+      "status": "PASS"
+    },
+    "no overflow 568 ru today": {
+      "status": "PASS"
+    },
+    "no overflow 568 ru history": {
+      "status": "PASS"
+    },
+    "no overflow 568 ru insights": {
+      "status": "PASS"
+    },
+    "no overflow 568 ru settings": {
+      "status": "PASS"
+    },
+    "no overflow 768 en today": {
+      "status": "PASS"
+    },
+    "no overflow 768 en history": {
+      "status": "PASS"
+    },
+    "no overflow 768 en insights": {
+      "status": "PASS"
+    },
+    "no overflow 768 en settings": {
+      "status": "PASS"
+    },
+    "no overflow 768 ru today": {
+      "status": "PASS"
+    },
+    "no overflow 768 ru history": {
+      "status": "PASS"
+    },
+    "no overflow 768 ru insights": {
+      "status": "PASS"
+    },
+    "no overflow 768 ru settings": {
+      "status": "PASS"
+    },
+    "rapid language switching no JS crash": {
+      "status": "PASS"
+    }
+  },
+  "limitations": [
+    "Chromium simulation only",
+    "Physical iOS/Android not tested",
+    "Local storage mocked to avoid browser network restrictions"
+  ]
+}

@@ -1,6 +1,6 @@
 /* Static app shell only. Diary entries never enter CacheStorage. */
-var CACHE='psho-pwa-v1.3.0';
-var STATIC=['./','./index.html','./style.css','./pwa-style.css','./app.js','./pwa-ui.js','./manifest.webmanifest','./assets/icon.svg','./assets/icon-180.png','./assets/icon-192.png','./assets/icon-512.png'];
+var CACHE='psho-pwa-v1.4.0';
+var STATIC=['./','./index.html','./style.css','./pwa-style.css','./app.js','./i18n.js','./pwa-ui.js','./manifest.webmanifest','./assets/icon.svg','./assets/icon-180.png','./assets/icon-192.png','./assets/icon-512.png'];
 self.addEventListener('install',function(e){e.waitUntil(caches.open(CACHE).then(function(c){return c.addAll(STATIC);}));});
 self.addEventListener('activate',function(e){e.waitUntil(caches.keys().then(function(keys){return Promise.all(keys.filter(function(k){return (k.indexOf('sloi-pwa-')===0||k.indexOf('psho-pwa-')===0)&&k!==CACHE;}).map(function(k){return caches.delete(k);}));}).then(function(){return self.clients.claim();}));});
 self.addEventListener('message',function(e){if(e.data&&e.data.type==='SKIP_WAITING')self.skipWaiting();});

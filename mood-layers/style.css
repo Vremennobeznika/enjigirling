@@ -7,3 +7,12 @@ html[data-theme=light]{color-scheme:light;--bg:#f4f2ed;--card:#fffefa;--card2:#e
 @media(prefers-reduced-motion:no-preference){button{transition:background .1s,border-color .1s}}@media(forced-colors:active){.mood[aria-checked=true],.tag[aria-pressed=true]{border:3px solid Highlight}}@supports not (color:color-mix(in srgb,white,black)){.mood[aria-checked=true]{background:var(--card2)}}
 /* Reflow under 200% browser zoom: desktop 640px viewport becomes 320px content width. */
 @media(max-width:760px){.hero{display:block}.hero-art{display:none}}
+
+/* PSHO language selection: compact and resistant to 200% font scaling. */
+.psho-language{display:inline-flex;min-width:0;max-width:100%}
+.psho-language select{font:inherit;font-weight:600;font-size:14px;color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:12px;min-height:44px;padding:8px 10px;max-width:100%;cursor:pointer}
+.psho-language select:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+@media(max-width:420px){.header-side{flex-wrap:wrap;gap:6px;justify-content:flex-end}.psho-language select{font-size:13px;padding:7px 8px}.psho-language{flex-shrink:1}}
+/* Browser zoom and small-display safety: header controls may wrap instead of spilling. */
+.psho-language select{color:var(--txt);background:var(--card2)}
+@media(max-width:760px){.header{flex-wrap:wrap;padding:10px 0}.header-side{min-width:0;flex:1 1 185px;gap:6px;flex-wrap:wrap;justify-content:flex-end}.brand{flex:0 1 auto;min-width:0}}

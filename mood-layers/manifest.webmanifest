@@ -1,12 +1,11 @@
 {
-  "name": "PSHO — дневник состояния",
+  "name": "PSHO — Mood Journal / Дневник настроения",
   "short_name": "PSHO",
-  "description": "Приватный офлайн-дневник настроения и самонаблюдения",
+  "description": "Private offline mood journal / Локальный дневник настроения",
   "id": "./",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "lang": "ru",
   "background_color": "#15171b",
   "theme_color": "#15171b",
   "icons": [
