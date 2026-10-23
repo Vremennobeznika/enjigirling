@@ -1,14 +1,5 @@
 name: SLOI unsigned stable APK for offline signing
 on:
-  push:
-    paths:
-      - 'mood-layers/android/app/build.gradle'
-      - 'mood-layers/android/app/src/main/**'
-      - 'mood-layers/app.js'
-      - 'mood-layers/index.html'
-      - 'mood-layers/style.css'
-      - 'mood-layers/sw.js'
-      - '.github/workflows/sloi-release-build.yml'
   workflow_dispatch:
 permissions:
   contents: read
