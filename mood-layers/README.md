@@ -30,4 +30,4 @@ No account or cloud sync. Notes are stored locally in browser storage, **not sep
 
 ## QA
 
-`python3 tests/bilingual_matrix.py` — 75 checks; `python3 tests/language_persistence.py` — 6; `python3 tests/dynamic_ui_matrix.py` — 101; `python3 tests/fault_injection.py` — 11. Node scripts `node --check` for app/i18n/pwa-ui/sw. Local browser tests use mocked localStorage and Chromium: no claim is made about physical iPhones/Androids. See `QA_BILINGUAL.md` and `tests/*RESULTS.json`.
+`python3 tests/bilingual_matrix.py` — 80 checks; `python3 tests/language_persistence.py` — 6; `python3 tests/dynamic_ui_matrix.py` — 101; `python3 tests/fault_injection.py` — 11. Node scripts `node --check` for app/i18n/pwa-ui/sw. Local browser tests use mocked localStorage and Chromium: no claim is made about physical iPhones/Androids. See `QA_BILINGUAL.md` and `tests/*RESULTS.json`.
