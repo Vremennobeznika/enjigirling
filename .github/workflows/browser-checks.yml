@@ -31,6 +31,11 @@ jobs:
         run: |
           npm install --no-audit --no-fund
           npx playwright install --with-deps chromium
+      - name: Generate reference knowledge files required by the site
+        run: |
+          node scripts/build-knowledge.cjs
+          node scripts/build-ai-packs.cjs
+          node scripts/build-quality.cjs
       - name: Create visual-review directory
         run: mkdir -p visual-review
       - name: Run responsive browser tests
