@@ -79,6 +79,7 @@ public final class MainActivity extends Activity {
         if(latin1==null||latin1.length()>32768)return;
         byte[] contents=latin1.getBytes(StandardCharsets.ISO_8859_1);
         runOnUiThread(()->{
+          if(pendingText!=null)return;
           pendingText=contents;
           Intent picker=new Intent(Intent.ACTION_CREATE_DOCUMENT);
           picker.addCategory(Intent.CATEGORY_OPENABLE);
