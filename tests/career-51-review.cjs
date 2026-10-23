@@ -44,7 +44,8 @@ for(const card of cards){
  const row=sourceMap.get(card.id);
  assert.ok(row,card.id+' salary provenance missing');
  assert.equal(row.salaryUnit,'RUB_per_month',card.id+' salary unit');
- assert.match(row.sourceUrl,/^https:\/\//,card.id+' salary source URL');
+ if(row.status==='source_snapshot')assert.match(row.sourceUrl,/^https:\/\//,card.id+' salary source URL');
+ else assert.ok(row.sourceUrl===null||/^https:\/\//.test(row.sourceUrl),card.id+' invalid optional salary source');
  assert.ok(row.checkedAt,card.id+' salary snapshot date');
  assert.ok(row.region,card.id+' salary region');
  assert.ok(['source_page_checked','adjacent_occupation_checked','employer_vacancy_checked','source_linked_not_independently_verified','source_unavailable_for_verification'].includes(row.validationStatus),card.id+' unknown source status');

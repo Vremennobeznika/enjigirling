@@ -271,7 +271,9 @@ document.addEventListener("DOMContentLoaded", () => {
     loadTechnology().then(()=>{
       if(token!==modalRequest||!modalOverlay.classList.contains('active'))return;
       const modal=modalContent.closest('.modal'),scroll=modal?modal.scrollTop:0;
+      const expanded=[...modalContent.querySelectorAll('details.profession-extra')].map(x=>x.open);
       modalContent.innerHTML=renderProfession(profession,getCategory(profession));
+      modalContent.querySelectorAll('details.profession-extra').forEach((x,i)=>{x.open=!!expanded[i];});
       if(modal)modal.scrollTop=scroll;
     }).catch(()=>{
       if(token!==modalRequest||!modalOverlay.classList.contains('active'))return;
@@ -344,7 +346,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function buildCard(profession) {
-    const card = document.createElement("article");
+    const card = document.createElement("div");
     card.className = "eng-card";
     card.tabIndex = 0;
     card.setAttribute("role", "button");

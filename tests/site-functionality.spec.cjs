@@ -13,7 +13,8 @@ test('every profession card opens with provenance and can close with Escape', as
     await expect(page.locator('#modalOverlay')).toHaveAttribute('aria-hidden','false');
     await expect(page.locator('#modalTitle')).not.toBeEmpty();
     await expect(page.locator('#modalContent')).toContainText('Статус нормативной проверки');
-    await expect(page.locator('#modalContent')).toContainText('Источники и ограничения данных');
+    await expect(page.locator('#modalContent details.profession-extra')).toHaveCount(2);
+    await expect(page.locator('#modalContent')).not.toContainText('Пример рабочего дня');
     await page.keyboard.press('Escape');
     await expect(page.locator('#modalOverlay')).toHaveAttribute('aria-hidden','true');
   }
@@ -204,10 +205,12 @@ test('profession details link back to catalogued processes and materials',async(
  await page.goto('/index.html');
  expect(await page.locator('script[src="materials-data.js"],script[src="processes-data.js"]').count()).toBe(0);
  await page.goto('/index.html#profession=mechanical-engineer');
+ await page.locator('#modalContent details.profession-extra').last().locator('summary').click();
  await expect(page.locator('#modalContent .technology-links a').first()).toBeVisible();
  const professionId=await page.evaluate(()=>window.engineeringProcesses[0].profession);
  await page.goto('/index.html#profession='+encodeURIComponent(professionId));
  await expect(page.locator('#modalOverlay')).toHaveAttribute('aria-hidden','false');
+ await page.locator('#modalContent details.profession-extra').last().locator('summary').click();
  const links=page.locator('#modalContent .technology-links a');
  await expect(links.first()).toBeVisible();
  expect(await links.count()).toBeGreaterThan(1);
@@ -264,6 +267,7 @@ test('expanded process references work in reverse from materials without floodin
  await expect(material.locator('a[href="processes.html#manual-metal-arc"]')).toBeVisible();
  await page.goto('/index.html#profession=mechanical-engineer');
  await expect(page.locator('#modalOverlay')).toHaveAttribute('aria-hidden','false');
+ await page.locator('#modalContent details.profession-extra').last().locator('summary').click();
  await expect(page.locator('#modalContent a[href^="processes.html#"]').first()).toBeVisible();
  const moreProcesses=page.locator('#modalContent details.related-more');
  await expect(moreProcesses).toHaveCount(1);

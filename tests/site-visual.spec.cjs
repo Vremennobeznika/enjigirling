@@ -30,6 +30,7 @@ for(const viewport of [{width:320,height:720},{width:390,height:844},{width:768,
 test('engineer detail links use monochrome colors',async({page})=>{
  await page.goto('http://127.0.0.1:8765/index.html',{waitUntil:'domcontentloaded'});
  await page.locator('#professionsGrid .eng-card').first().click();
+ await page.locator('#modalContent details.profession-extra').first().locator('summary').click();
  const links=page.locator('#modalContent a');
  await expect(links.first()).toBeVisible();
  const colors=await links.evaluateAll(nodes=>nodes.map(a=>getComputedStyle(a).color));
@@ -43,6 +44,7 @@ for(const theme of ['light','dark']){
   await page.addInitScript(value=>localStorage.setItem('theme',value),theme);
   await page.goto('http://127.0.0.1:8765/index.html');
   await page.locator('#professionsGrid .eng-card').first().click();
+  await page.locator('#modalContent details.profession-extra').first().locator('summary').click();
   const links=page.locator('#modalContent a');
   await expect(links.first()).toBeVisible();
   const expected=await page.evaluate(()=>{const span=document.createElement('span');span.style.color='var(--text-primary)';document.body.appendChild(span);const c=getComputedStyle(span).color;span.remove();return c;});
@@ -92,4 +94,24 @@ for(const theme of ['light','dark']){
    }
   }
  });
+}
+
+for(const mode of ['light','dark']){
+ for(const width of [320,375,768,1440]){
+  test('profession modal responsive '+mode+' '+width,async({page})=>{
+   await page.addInitScript(value=>localStorage.setItem('theme',value),mode);
+   await page.setViewportSize({width,height:820});
+   await page.goto('/index.html');
+   await page.locator('#professionsGrid .eng-card').first().click();
+   await expect(page.locator('#modalOverlay')).toBeVisible();
+   const rect=await page.locator('.modal').evaluate(el=>({
+    right:el.getBoundingClientRect().right,innerWidth:el.clientWidth,scrollWidth:el.scrollWidth
+   }));
+   expect(rect.right).toBeLessThanOrEqual(width+1);
+   expect(rect.scrollWidth).toBeLessThanOrEqual(rect.innerWidth+2);
+   const details=page.locator('#modalContent details.profession-extra').first();
+   await details.locator('summary').click();
+   await expect(details).toHaveAttribute('open','');
+  });
+ }
 }

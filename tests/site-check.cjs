@@ -237,7 +237,8 @@ assert.equal(salaryEvidenceRows.length,professions.length,'every profession must
 assert.equal(new Set(salaryEvidenceRows.map(x=>x.id)).size,professions.length,'duplicate or missing salary audit ID');
 for(const entry of salaryEvidenceRows){
  assert.ok(ids.includes(entry.id),'unknown profession in salary audit: '+entry.id);
- assert.ok(/^https?:\/\//.test(entry.sourceUrl),'missing salary source URL: '+entry.id);
+ if(entry.status==='source_snapshot')assert.match(entry.sourceUrl,/^https:\/\//,'claimed salary must have source URL: '+entry.id);
+ else assert.ok(entry.sourceUrl===null||/^https?:\/\//.test(entry.sourceUrl),'invalid optional source URL: '+entry.id);
  assert.ok(/^\d{4}-\d{2}-\d{2}$/.test(entry.checkedAt),'missing salary check date: '+entry.id);
  assert.ok(['source_page_checked','adjacent_occupation_checked','employer_vacancy_checked','source_linked_not_independently_verified'].includes(entry.validationStatus),'unknown salary evidence status: '+entry.id);
  if(entry.status==='unverified')assert.ok(entry.rangeMinRub===null&&entry.rangeMaxRub===null,'unverified salary must not have numeric range: '+entry.id);
@@ -248,7 +249,7 @@ assert.ok(fs.readFileSync('compare.js','utf8').includes('salaryById'),'compariso
 console.log('OK: all 51 salary evidence records matched and comparable-source warnings enabled');
 
 const careerUi=fs.readFileSync('script.js','utf8');
-assert.ok(careerUi.includes('Последовательность условная; сроки зависят от работодателя'),'career timelines must not be presented as guaranteed');
+assert.ok(careerUi.includes('Возможные направления роста; порядок не обязателен.'),'career timelines must not be presented as guaranteed');
 assert.ok(!careerUi.includes('<small>${escapeHTML(step.period)}</small>'),'unsupported career duration still visible');
 const comparisonUi=fs.readFileSync('compare.js','utf8');
 assert.ok(comparisonUi.includes('без гарантированной последовательности и сроков'),'comparison must qualify career progression');
