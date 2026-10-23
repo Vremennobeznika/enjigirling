@@ -112,8 +112,8 @@ for(const mode of ['light','dark']){
    const ratio=await page.evaluate(()=>{
      const text=document.querySelector('#modalContent .profession-intro p');
      const modal=document.querySelector('.modal');
-     const color=getComputedStyle(text).color.match(/[\\d.]+/g).slice(0,3).map(Number);
-     const bg=getComputedStyle(modal).backgroundColor.match(/[\\d.]+/g).slice(0,3).map(Number);
+     const color=getComputedStyle(text).color.match(/[0-9.]+/g).slice(0,3).map(Number);
+     const bg=getComputedStyle(modal).backgroundColor.match(/[0-9.]+/g).slice(0,3).map(Number);
      const light=c=>c.map(v=>{v/=255;return v<=.04045?v/12.92:((v+.055)/1.055)**2.4;})
        .reduce((sum,v,i)=>sum+v*[.2126,.7152,.0722][i],0);
      const x=light(color),y=light(bg);
