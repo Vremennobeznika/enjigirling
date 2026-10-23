@@ -1,7 +1,7 @@
 /* SLOI: private, dependency-free mood journal. No fetch, cookies, beacons or analytics. */
 (function () {
 'use strict';
-var VERSION='1.1.2', BASE='sloi-v1-', LIMIT=3000, MAX_BACKUP_BYTES=16000000;
+var VERSION='1.2.0', BASE='sloi-v1-', LIMIT=3000, MAX_BACKUP_BYTES=16000000;
 var MOODS=[['Очень тяжело','◔'],['Тяжело','◕'],['Ниже обычного','◒'],['Нейтрально','◑'],['Терпимо','◕'],['Хорошо','◉'],['Отлично','✺']];
 var DEFAULT_TAGS=['тревожно','устала','пусто','раздражение','грустно','страшно','одиноко','перегруз','спокойно','тепло','радостно','надежда','мне пиздец','выдохнула','раздражают люди','мне нужна пауза','есть силы','непонятно'];
 var byId=function(x){return document.getElementById(x);};
