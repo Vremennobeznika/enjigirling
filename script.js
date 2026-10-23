@@ -124,9 +124,10 @@ function renderVerifiedSalarySource(profession) {
 // The legacy "courses" field mixes software, methods and training topics.
 // Conservative classification: ambiguous entries remain topics, never invented software.
 function classifyLearningItems(items = []) {
-  const software = /\b(?:AutoCAD|Revit|SketchUp|3ds Max|ЛИРА-САПР|SCAD|КОМПАС|Компас-3D|SolidWorks|CATIA|ANSYS|RastrWin|MATLAB|Simulink|Python|SQL|JavaScript|TypeScript|Java|Kotlin|Swift|Git|Docker|Kubernetes|Linux|Excel|ETAP|EPLAN|TIA Portal|WinCC|Codesys|Civil 3D|ArcGIS|QGIS|Blender|Figma|React|PostgreSQL|TensorFlow|PyTorch|NX|Creo|Inventor|Abaqus|LabVIEW|Altium|KiCad|Petrel|ROXAR|HYSYS|ChemCAD|MCNP|KORSAR)\b/i;
+  const software = /\b(?:AutoCAD|Revit|SketchUp|3ds Max|ЛИРА-САПР|SCAD|SolidWorks|CATIA|ANSYS|RastrWin|MATLAB|Simulink|Python|SQL|JavaScript|TypeScript|Java|Kotlin|Swift|Git|Docker|Kubernetes|Linux|Excel|ETAP|EPLAN|TIA Portal|WinCC|Codesys|Civil 3D|ArcGIS|QGIS|Blender|Figma|React|PostgreSQL|TensorFlow|PyTorch|NX|Creo|Inventor|Abaqus|LabVIEW|Altium|KiCad|Petrel|ROXAR|HYSYS|ChemCAD|MCNP|KORSAR|ADAMS|Adobe InDesign|Angular|AWS|Blast-CAD|CREDO|DIALux|IndorCAD|MineFrame|NedGraphics|OpenCV|Photoshop|Postman|Relux|ROS|Selenium|Spark|Spring|Thermo-Calc|Vue|Yandex Cloud|Zulu|nanoCAD)\b/i;
+  const cyrillicSoftware = /(?:Гранд-Смета|Компас-3D|КОМПАС|1С)/i;
   const tools = [], topics = [];
-  for (const item of items) (software.test(item) ? tools : topics).push(item);
+  for (const item of items) ((software.test(item) || cyrillicSoftware.test(item)) ? tools : topics).push(item);
   return { tools, topics };
 }
 

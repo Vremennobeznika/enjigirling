@@ -82,6 +82,12 @@ for(const card of cards){
 const energy=vm.runInContext('renderProfession(window.professionsData.find(x=>x.id==="power-engineer"),"Энергетика")',uiContext);
 assert.match(energy,/<h4>Программные инструменты<\/h4>/,'energy software not recognised');
 assert.match(energy,/RastrWin/);
+const classified=vm.runInContext('classifyLearningItems(["Гранд-Смета","nanoCAD Электро","DIALux","ROS","Postman","Selenium","OSCP","HACCP","ПУЭ","SCADA"])',uiContext);
+for(const name of ['Гранд-Смета','nanoCAD Электро','DIALux','ROS','Postman','Selenium'])
+ assert.ok(classified.tools.includes(name),'software tool mislabeled: '+name);
+for(const name of ['OSCP','HACCP','ПУЭ','SCADA'])
+ assert.ok(classified.topics.includes(name),'standard, certificate or concept mislabeled: '+name);
+
 console.log('PASS 51/51 rendered career cards: no fabricated schedules, placeholder statistics or duplicate copy');
 console.log('PASS 51/51 repeated career checks: structure, identifiers, source-status caveats, rendering, comparison and 2026 admissions');
 console.log('Source-status distribution: '+JSON.stringify(classes));
