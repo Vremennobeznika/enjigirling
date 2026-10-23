@@ -56,3 +56,13 @@
 ## Лицензия
 
 Исходный код выпускается на условиях [MIT](LICENSE). Это не означает предоставления прав на чужие товарные знаки, названия методик или исходные материалы третьих лиц.
+## Android APK / проверка высокого риска
+
+- **APK:** [GitHub Releases](https://github.com/Vremennobeznika/enjigirling/releases) (debug preview, Android 6+).
+- **Исходники Android:** [chroma/android](android). APK работает на локальном WebView, без INTERNET/контактов/геолокации.
+- **Матрица:** [70 риск-контролей](HIGH_ASSURANCE_MATRIX.md), [обычная матрица](TEST_MATRIX.md).
+- **Автоматические скриншоты Chromium:** [320 тёмная](screenshots/screen-320-dark.png), [320 светлая](screenshots/screen-320-light.png), [360 Android viewport](screenshots/screen-360-dark.png), [результат 375](screenshots/screen-375-results.png).
+- **Ограничение:** физические устройства и доступность VoiceOver/TalkBack пока не тестировались; это не психологический диагноз.
+
+![Мобильный экран: тёмная тема](screenshots/screen-320-dark.png)
+![Мобильный экран: светлая тема](screenshots/screen-320-light.png)
