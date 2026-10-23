@@ -23,7 +23,11 @@ jobs:
         run: |
           set -euo pipefail
           echo "ANDROID_HOME=${ANDROID_HOME:-/usr/local/lib/android/sdk}" >> "$GITHUB_ENV"
-          sdkmanager --version
+          SDK_ROOT="${ANDROID_HOME:-/usr/local/lib/android/sdk}"
+          SDKMGR="$(find "$SDK_ROOT/cmdline-tools" -type f -name sdkmanager | head -n 1)"
+          test -n "$SDKMGR"
+          echo "$(dirname "$SDKMGR")" >> "$GITHUB_PATH"
+          "$SDKMGR" --version
       - name: Setup Gradle 8.13
         uses: gradle/actions/setup-gradle@v4
         with:
