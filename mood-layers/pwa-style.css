@@ -5,3 +5,7 @@
 .pwa-howto{grid-column:1/-1;border-top:1px solid var(--line);padding-top:12px;color:var(--txt);line-height:1.55;font-size:14px;white-space:pre-line}
 .pwa-privacy{grid-column:1/-1;margin:0;color:var(--muted);font-size:12px;line-height:1.6;overflow-wrap:anywhere}
 @media(max-width:590px){.pwa-panel{grid-template-columns:minmax(0,1fr);padding:15px 13px}.pwa-actions,.pwa-actions button{width:100%}.pwa-actions{display:grid;grid-template-columns:1fr}.pwa-privacy{grid-column:1}}
+
+/* Old Safari and Chrome do not support gap in flex layouts. */
+.pwa-actions{gap:0}.pwa-actions>*+*{margin-left:8px}
+@media(max-width:590px){.pwa-actions{gap:8px}.pwa-actions>*+*{margin-left:0}}

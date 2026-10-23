@@ -31,3 +31,5 @@ No account or cloud sync. Notes are stored locally in browser storage, **not sep
 ## QA
 
 `python3 tests/bilingual_matrix.py` — 80 checks; `python3 tests/language_persistence.py` — 6; `python3 tests/dynamic_ui_matrix.py` — 101; `python3 tests/fault_injection.py` — 11. Node scripts `node --check` for app/i18n/pwa-ui/sw. Local browser tests use mocked localStorage and Chromium: no claim is made about physical iPhones/Androids. See `QA_BILINGUAL.md` and `tests/*RESULTS.json`.
+## Лёгкая совместимость (1.4.2)
+Исправлены устаревшие CSS-конструкции и зависимость перевода от Node.isConnected. Нет внешних пакетов или серверных функций. Браузеры без Grid используют простой flex-макет. Экспорт JSON обязателен для долгосрочного хранения. PWA с автономным запуском доступно начиная с iOS 11.3 и в поддерживаемых браузерах Android; для более старых устройств возможна только обычная веб-страница при наличии связи. Испытания на физическом старом WebKit/Android требуются отдельно.

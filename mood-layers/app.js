@@ -1,7 +1,8 @@
 /* PSHO: private, dependency-free mood journal. No fetch, cookies, beacons or analytics. */
 (function () {
 'use strict';
-var VERSION='1.4.1', BASE='sloi-v1-', LIMIT=3000, MAX_BACKUP_BYTES=16000000;
+if(!String.prototype.includes){String.prototype.includes=function(s,i){return this.indexOf(s,i||0)!==-1;};}
+var VERSION='1.4.2', BASE='sloi-v1-', LIMIT=3000, MAX_BACKUP_BYTES=16000000;
 var MOODS=[['Очень тяжело','◔'],['Тяжело','◕'],['Ниже обычного','◒'],['Нейтрально','◑'],['Терпимо','◕'],['Хорошо','◉'],['Отлично','✺']];
 var I=window.PSHO_I18N||{t:function(x){return x;},getLanguage:function(){return'ru';},locale:function(){return'ru-RU';}};
 function tr(s){return I.t(s);}
