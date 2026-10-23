@@ -18,8 +18,12 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
+      - name: Use Android SDK preinstalled on GitHub runner
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "ANDROID_HOME=${ANDROID_HOME:-/usr/local/lib/android/sdk}" >> "$GITHUB_ENV"
+          sdkmanager --version
       - name: Setup Gradle 8.13
         uses: gradle/actions/setup-gradle@v4
         with:
