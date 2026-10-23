@@ -30,7 +30,19 @@ for(const file of sources){
 // Professional-standard documents live in the UI script; collect literal URLs without executing DOM code.
 const normativeScript=fs.readFileSync('script.js','utf8');
 for(const match of normativeScript.matchAll(/\burl:\s*["'](https?:\/\/[^"']+)["']/g))add(match[1],'script.js');
-for(const file of fs.readdirSync('.').filter(x=>x.endsWith('.html'))){
+// Include nested standalone tools and personal web apps in the link inventory.
+function htmlPages(dir='.'){
+ const result=[];
+ for(const item of fs.readdirSync(dir,{withFileTypes:true})){
+  const target=path.join(dir,item.name);
+  if(item.isDirectory()){
+   if(!['.git','node_modules','_site','audit','test-results','playwright-report'].includes(item.name))
+    result.push(...htmlPages(target));
+  }else if(item.isFile()&&item.name.endsWith('.html'))result.push(target);
+ }
+ return result;
+}
+for(const file of htmlPages()){
  const html=fs.readFileSync(file,'utf8');
  // Audit navigable external links and images; preconnect hosts are not pages.
  for(const tag of html.matchAll(/<(?:a|img)\b[^>]*>/gi)){

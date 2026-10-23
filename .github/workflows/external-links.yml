@@ -4,6 +4,11 @@ on:
     branches: [main]
     paths:
       - '*.html'
+      - '**/*.html'
+      - 'materials-data.js'
+      - 'processes-data.js'
+      - 'career-standards-data.js'
+      - 'calendar-data.js'
       - 'resources-data.js'
       - 'salary-sources.js'
       - 'script.js'
