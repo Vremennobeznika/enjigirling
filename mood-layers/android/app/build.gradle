@@ -6,8 +6,8 @@ android {
   applicationId 'app.layers.mood'
   minSdk 23
   targetSdk 36
-  versionCode 1
-  versionName '1.0-preview'
+  versionCode 3
+  versionName '1.1.1-preview'
  }
  compileOptions {
   sourceCompatibility JavaVersion.VERSION_17
