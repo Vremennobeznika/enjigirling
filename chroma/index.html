@@ -38,7 +38,7 @@ html[data-theme=light] .workspace,html[data-theme=light] .rank-box,html[data-the
 .round-lede,.workspace-note,.insight,.modal p{color:inherit}
 }
 @supports not (font-size:clamp(20px,10vw,60px)){@media(max-width:650px){.hero h1{font-size:44px}}}
-</style>
+@media(max-width:300px){.palette{grid-template-columns:repeat(2,minmax(0,1fr))}}\n</style>
   <title>ХРОМА — Цветовой выбор</title>
   <script>
     (function(){try{var v=localStorage.getItem('chroma.theme.v1');document.documentElement.setAttribute('data-theme',v==='light'?'light':'dark');}catch(e){document.documentElement.setAttribute('data-theme','dark');}}());
