@@ -6,6 +6,7 @@ const crypto=require('node:crypto');
 const path=require('node:path');
 const root=path.resolve(__dirname,'..');
 const compareExact=['ai.html','ai-transfer.css','ai-transfer.js','atlas-ai-core.js','atlas-ai-download.js','knowledge/sections/index.json','knowledge/sections/all.md','knowledge/sections/professions.md','knowledge/sections/professions.json','knowledge/sections/calendar.md','knowledge/sections/calendar.json','knowledge/sections/resources.md','knowledge/sections/resources.json','knowledge/sections/dictionary.md','knowledge/sections/dictionary.json','knowledge/sections/learning.md','knowledge/sections/learning.json','knowledge/sections/calculators.md','knowledge/sections/calculators.json','knowledge/sections/compare.md','knowledge/sections/compare.json','knowledge/sections/processes.md','knowledge/sections/processes.json','knowledge/sections/materials.md','knowledge/sections/materials.json','knowledge-base.md','knowledge/professions.json','knowledge/materials.json','knowledge/processes.json','knowledge/dictionary.json','knowledge/salary-evidence.json','index.html','calendar.html','resources.html','dictionary.html','map.html','calculator.html','calculator-atlas.html','calculator-atlas-data.js','calculator-atlas.js','calculator-atlas.css','calculator-atlas.csv','compare.html','processes.html','materials.html','knowledge-manifest.json','knowledge/search-index.json','knowledge/graph.json','knowledge/source-registry.json','knowledge/ai-context.md','knowledge/quality.json','llms.txt'];
+const extraPages=["ai-training.html","articles/utopia-math-analysis.html","calendar/index.html","chroma/index.html","everyday/index.html","life/index.html","life/planner/index.html","mood-layers/index.html","plants/index.html","shopping/index.html"];
 const digest=value=>crypto.createHash('sha256').update(value,'utf8').digest('hex');
 const base=(process.env.SITE_URL||'https://vremennobeznika.github.io/enjigirling/').replace(/\/+$/,'')+'/';
 const paths=['ai.html','ai-transfer.css','ai-transfer.js','atlas-ai-core.js','atlas-ai-download.js','knowledge/sections/index.json','knowledge/sections/all.md','knowledge/sections/professions.md','knowledge/sections/professions.json','knowledge/sections/calendar.md','knowledge/sections/calendar.json','knowledge/sections/resources.md','knowledge/sections/resources.json','knowledge/sections/dictionary.md','knowledge/sections/dictionary.json','knowledge/sections/learning.md','knowledge/sections/learning.json','knowledge/sections/calculators.md','knowledge/sections/calculators.json','knowledge/sections/compare.md','knowledge/sections/compare.json','knowledge/sections/processes.md','knowledge/sections/processes.json','knowledge/sections/materials.md','knowledge/sections/materials.json','knowledge-base.md','knowledge/professions.json','knowledge/materials.json','knowledge/processes.json','knowledge/dictionary.json','knowledge/salary-evidence.json','index.html','calendar.html','resources.html','dictionary.html','map.html','calculator.html','calculator-atlas.html','calculator-atlas-data.js','calculator-atlas.js','calculator-atlas.css','calculator-atlas.csv','compare.html','processes.html','materials.html','llms.txt','knowledge-manifest.json','knowledge/search-index.json','knowledge/graph.json','knowledge/source-registry.json','knowledge/ai-context.md','knowledge/quality.json'];
@@ -17,11 +18,11 @@ async function get(path){
  return response.text();
 }
 async function run(){
- const responses=await Promise.all(paths.map(async p=>[p,await get(p)]));
+ const responses=await Promise.all([...paths,...extraPages].map(async p=>[p,await get(p)]));
  const files=Object.fromEntries(responses);
  // Check production resources actually linked from each of the nine HTML pages.
  const assets=new Set();
- for(const name of paths.filter(p=>p.endsWith('.html'))){
+ for(const name of [...paths.filter(p=>p.endsWith('.html')), ...extraPages]){
   for(const match of files[name].replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi,'').matchAll(/(?:href|src)\s*=\s*["']([^"']+)["']/g)){
    const href=match[1].split(/[?#]/)[0];
    if(!href||/^(https?:|mailto:|tel:|data:|\/\/|#)/i.test(href))continue;
@@ -38,12 +39,16 @@ async function run(){
  assert.deepEqual(missingAssets,[],'published HTML contains broken local assets');
  // A stale deployment can have valid JSON and identical record counts. Compare
  // published content against the exact repository revision deployed by Actions.
- for(const name of compareExact){
+ for(const name of [...compareExact,...extraPages]){
   const expected=fs.readFileSync(path.join(root,name),'utf8');
   // Response.text() removes a UTF-8 BOM while fs.readFileSync('utf8') keeps it.
   // Preserve an exact text comparison after accounting solely for that decoding rule.
   const expectedText=name.endsWith('.csv')?expected.replace(/^\uFEFF/,''):expected;
   assert.equal(digest(files[name]),digest(expectedText),name+' is stale or differs from the checked-out commit');
+ }
+ for(const name of extraPages){
+  assert.match(files[name],/<html/i,name+' missing HTML root');
+  assert.match(files[name],/<title/i,name+' missing title');
  }
  for(const name of paths.filter(p=>p.endsWith('.html'))){
   assert.ok(files[name].includes('<main'),name+' missing main landmark');
@@ -87,7 +92,7 @@ async function run(){
  const listed=(files['knowledge/ai-context.md'].match(/^- \*\*.+\*\* — /gm)||[]).length;
  assert.equal(listed,index.records.length,'AI context does not contain every indexed record');
  assert.ok(files['llms.txt'].includes('knowledge-manifest.json'),'AI entrypoint does not mention manifest');
- console.log('LIVE PASS: '+paths.length+' HTTP endpoints, '+assets.size+' local asset paths, '+compareExact.length+' exact SHA-256 content matches, '+index.recordCount+' records, '+graph.edgeCount+' graph edges');
+ console.log('LIVE PASS: '+(paths.length+extraPages.length)+' HTTP endpoints, '+assets.size+' local asset paths, '+(compareExact.length+extraPages.length)+' exact SHA-256 content matches, '+index.recordCount+' records, '+graph.edgeCount+' graph edges');
 }
 async function main(){
  let last;
