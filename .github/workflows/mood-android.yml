@@ -1,10 +1,6 @@
 name: SLOI Android APK and source checks
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - 'mood-layers/**'
-      - '.github/workflows/mood-android.yml'
 permissions:
   contents: read
 jobs:
