@@ -1,0 +1,5 @@
+# Android preview (offline)
+Source: Android Gradle Plugin 8.13.2, Gradle 8.13, JDK 17, compile/target API 36, min SDK 23 (Android 6.0).
+`gradle -p chroma/android :app:assembleDebug` after bundling `chroma/index.html`, `manifest.webmanifest` and `assets/icon.svg` into `android/app/src/main/assets/`. The GitHub Actions workflow handles this.
+No INTERNET or storage permissions. WebView only serves bundled assets; no remote navigation; its single JS bridge method creates a TXT in the system document picker. All clinical interpretations intentionally excluded.
+WARNING: this debug APK uses an ephemeral runner-generated certificate. Download from GitHub Releases for personal testing, not Google Play distribution. Future version with persistent release signing key must be built under a documented key management procedure. Hardware installation, native export and old Android System WebView have not been verified.
