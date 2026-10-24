@@ -29,7 +29,7 @@ ROOT_ASSET_EXT = {
 PUBLIC_DIRS = ("knowledge", "articles")
 PRIVATE_DIRS = (
     "life", "chroma", "everyday", "mood-layers", "plants", "shopping",
-    "calendar", "audit", "docs", "templates", "scripts", "tests", ".github"
+    "calendar", "audit", "docs", "scripts", "tests", ".github"
 )
 EXCLUDE = {
     "package.json", "package-lock.json", "playwright.config.cjs",
@@ -87,6 +87,14 @@ def main():
                 sys.exit("ERROR: build knowledge exports first")
             continue
         shutil.copytree(src, out / name, ignore=shutil.ignore_patterns(".*"))
+    # Three publicly linked blank engineering forms; do not copy template folders wholesale.
+    for filename in ("README.md", "material-evidence-register.csv", "production-defect-review.csv"):
+        source = ROOT / "templates" / filename
+        if not source.is_file():
+            sys.exit("ERROR: required public template missing: " + filename)
+        target = out / "templates" / filename
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(source, target)
     for forbidden in PRIVATE_DIRS:
         if (out / forbidden).exists():
             sys.exit("ERROR: private directory leaked: " + forbidden)
