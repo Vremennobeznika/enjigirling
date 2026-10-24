@@ -37,3 +37,9 @@ No account or cloud sync. Notes are stored locally in browser storage, **not sep
 Версия 1.4.3: словарь переводов уплотнён без изменения строк, исходный суммарный вес 12 статических файлов уменьшен до **109 135 байт** (−50 байт относительно 1.4.1). Повторно проверены язык, сохранение, динамика, отказы, симуляция отсутствия CSS Grid и модуль service worker.
 
 PSHO 1.4.4: заменены четыре вызова NodeList.forEach для старых Chrome/WebKit. Размер 12 статических файлов 109 089 байт (на 96 байт меньше версии 1.4.1). Формат данных не менялся.
+
+## Version 1.5.0: goal tracking
+
+Local goals: weekly frequency, every N days from a fixed start date, or daily habit avoidance. Each goal holds at most one mark per day (idempotent on repeated tapping); unknown days are never treated as failures. An avoidance percentage uses only marked days. Renaming, archiving, restoring and confirmed deletion are supported. Goals use the existing journal backups (SLOI_BACKUP_V1); legacy archives without a goals property remain valid. As before, export JSON before reinstalling or switching Android builds.
+
+Android packaging now includes all bilingual/PWA source scripts plus the goal tracker, and the WebView includes a document picker for JSON import. The APKs from Actions are unverified on physical devices until tested there.

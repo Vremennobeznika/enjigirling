@@ -8,6 +8,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.webkit.JavascriptInterface;
+import android.webkit.WebChromeClient;
+import android.webkit.ValueCallback;
 import android.webkit.RenderProcessGoneDetail;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebResourceResponse;
@@ -28,6 +30,8 @@ import java.nio.charset.StandardCharsets;
 public final class MainActivity extends Activity {
     private static final String BASE = "https://appassets.androidplatform.net/assets/";
     private static final int FILE_REQUEST = 71;
+    private static final int IMPORT_REQUEST = 72;
+    private ValueCallback<Uri[]> importCallback;
     private WebView web;
     private byte[] pendingData;
     private ByteArrayOutputStream streamBuffer;
@@ -53,7 +57,7 @@ public final class MainActivity extends Activity {
         w.setJavaScriptEnabled(true);
         w.setDomStorageEnabled(true);
         w.setAllowFileAccess(false);
-        w.setAllowContentAccess(false);
+        w.setAllowContentAccess(true); // Needed only for user-selected JSON via system picker
         w.setAllowFileAccessFromFileURLs(false);
         w.setAllowUniversalAccessFromFileURLs(false);
         w.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
@@ -66,6 +70,19 @@ public final class MainActivity extends Activity {
                 view.setPadding(bars.left, bars.top, bars.right, bars.bottom); return insets;
             });
         }
+        web.setWebChromeClient(new WebChromeClient() {
+            @Override public boolean onShowFileChooser(WebView view, ValueCallback<Uri[]> callback, FileChooserParams params) {
+                if(importCallback!=null){importCallback.onReceiveValue(null);importCallback=null;}
+                try{
+                    Intent intent=new Intent(Intent.ACTION_OPEN_DOCUMENT);
+                    intent.addCategory(Intent.CATEGORY_OPENABLE);
+                    intent.setType("application/json");
+                    importCallback=callback;
+                    startActivityForResult(intent,IMPORT_REQUEST);
+                    return true;
+                }catch(RuntimeException ex){importCallback=null;return false;}
+            }
+        });
         web.setWebViewClient(new WebViewClient() {
             @Override public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest req) {
                 return !req.getUrl().toString().startsWith(BASE);
@@ -78,7 +95,7 @@ public final class MainActivity extends Activity {
                 String file=path.substring("/assets/".length());
                 if (file.isEmpty()) file="index.html";
                 // Exact local allowlist; no network or arbitrary WebView file access.
-                if (!(file.equals("index.html") || file.equals("style.css") || file.equals("app.js") || file.equals("sw.js") || file.equals("manifest.webmanifest") || file.equals("assets/icon.svg") || file.equals("assets/icon-180.png") || file.equals("assets/icon-192.png") || file.equals("assets/icon-512.png"))) return denied();
+                if (!(file.equals("index.html") || file.equals("style.css") || file.equals("app.js") || file.equals("goals.js") || file.equals("i18n.js") || file.equals("pwa-ui.js") || file.equals("pwa-style.css") || file.equals("sw.js") || file.equals("manifest.webmanifest") || file.equals("assets/icon.svg") || file.equals("assets/icon-180.png") || file.equals("assets/icon-192.png") || file.equals("assets/icon-512.png"))) return denied();
                 try {
                     InputStream stream=getAssets().open(file);
                     String mime=file.endsWith(".html")?"text/html":file.endsWith(".css")?"text/css":file.endsWith(".js")?"application/javascript":file.endsWith(".png")?"image/png":file.endsWith(".svg")?"image/svg+xml":"application/manifest+json";
@@ -162,6 +179,11 @@ public final class MainActivity extends Activity {
     }
     @Override protected void onActivityResult(int request, int result, Intent data){
         super.onActivityResult(request,result,data);
+        if(request==IMPORT_REQUEST){
+            ValueCallback<Uri[]> cb=importCallback;importCallback=null;
+            if(cb!=null)cb.onReceiveValue(result==RESULT_OK&&data!=null&&data.getData()!=null?new Uri[]{data.getData()}:null);
+            return;
+        }
         if(request!=FILE_REQUEST)return;
         byte[] bytes=pendingData;pendingData=null;pendingFilename=null;
         if(result!=RESULT_OK){Toast.makeText(this,"Сохранение файла отменено",Toast.LENGTH_SHORT).show();return;}

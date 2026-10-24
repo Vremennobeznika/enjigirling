@@ -25,3 +25,15 @@ html[data-theme=light]{color-scheme:light;--bg:#f4f2ed;--card:#fffefa;--card2:#e
 .mood-grid{display:flex;flex-wrap:wrap;display:grid}.mood{flex:1 0 12%}
 @media(max-width:530px){.mood{flex-basis:20%}.tabs{display:flex;display:grid;gap:2px}.tabs button{margin:0}.inline-create>*+*,.save-bar>div>*+*{margin:9px 0 0}}
 @media(max-width:340px){.mood{flex-basis:44%}}
+
+
+/* Goal cards: responsive at 280px and 200% zoom. */
+.goal-presets,.goal-actions{display:flex;flex-wrap:wrap;gap:8px}.goal-presets button,.goal-actions button{overflow-wrap:anywhere}
+.goal-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.goal-fields label{display:flex;flex-direction:column;gap:7px;min-width:0;font-weight:600}.goal-fields>[hidden]{display:none}
+.goal-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.goal-head>div{min-width:0}.goal-title{margin:0 0 5px!important;overflow-wrap:anywhere}.goal-rate{font-size:23px;color:var(--accent);white-space:nowrap}
+.goal-progress{display:block;width:100%;height:12px;margin:12px 0;accent-color:var(--accent)}.goal-progress-label{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:14px;margin-bottom:15px}
+.goal-calendar{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;margin-bottom:16px}.goal-day{display:flex;align-items:center;justify-content:center;min-width:0;min-height:27px;border:1px solid var(--line);border-radius:5px;color:var(--muted);font-size:12px}
+.goal-day.is-due{border-color:var(--accent);color:var(--txt)}.goal-day.is-done{background:var(--accent);color:var(--accent-txt)}.goal-day.is-lapse{background:var(--danger);color:white}
+.goal-date-line{display:flex;flex-direction:column;gap:8px;max-width:280px;margin-bottom:14px;font-size:14px;font-weight:600}.goal-date-line input{min-width:0}.goals-archived-title{margin:24px 0}
+@media(max-width:530px){.tabs{grid-template-columns:repeat(5,minmax(0,1fr))}.tabs button{font-size:11px;white-space:normal;overflow-wrap:anywhere;padding:9px 1px}.goal-fields{grid-template-columns:1fr}.goal-actions>*{flex:1 1 auto}}
+@media(max-width:340px){.tabs button{font-size:10px}.goal-actions>*{width:100%}}

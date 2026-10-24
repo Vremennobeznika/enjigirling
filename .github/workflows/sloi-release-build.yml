@@ -1,6 +1,11 @@
 name: SLOI unsigned stable APK for offline signing
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'mood-layers/**'
+      - '.github/workflows/sloi-release-build.yml'
 permissions:
   contents: read
 jobs:
@@ -32,10 +37,13 @@ jobs:
         run: |
           set -euo pipefail
           node --check mood-layers/app.js
+          node --check mood-layers/goals.js
+          node --check mood-layers/i18n.js
+          node --check mood-layers/pwa-ui.js
           node --check mood-layers/sw.js
           python3 mood-layers/tests/static_matrix.py
           mkdir -p mood-layers/android/app/src/main/assets/assets
-          cp mood-layers/index.html mood-layers/style.css mood-layers/app.js mood-layers/sw.js mood-layers/manifest.webmanifest mood-layers/android/app/src/main/assets/
+          cp mood-layers/index.html mood-layers/style.css mood-layers/pwa-style.css mood-layers/app.js mood-layers/goals.js mood-layers/i18n.js mood-layers/pwa-ui.js mood-layers/sw.js mood-layers/manifest.webmanifest mood-layers/android/app/src/main/assets/
           cp mood-layers/assets/icon.* mood-layers/assets/icon-*.png mood-layers/android/app/src/main/assets/assets/
       - name: Compile unsigned stable release
         working-directory: mood-layers/android
@@ -53,18 +61,18 @@ jobs:
           grep -q "sdkVersion:'23'" /tmp/sloi-badging.txt
           "$TOOLS/aapt" dump permissions "$APK" | tee /tmp/sloi-permissions.txt
           if grep -q 'uses-permission:' /tmp/sloi-permissions.txt; then echo "Unexpected Android permission"; exit 1; fi
-          for filename in app.js index.html style.css sw.js; do
+          for filename in app.js goals.js i18n.js pwa-ui.js pwa-style.css index.html style.css sw.js; do
             cmp "mood-layers/$filename" <(unzip -p "$APK" "assets/$filename")
           done
           mkdir -p /tmp/sloi-output
-          cp "$APK" /tmp/sloi-output/SLOI_1.2.0_stable_unsigned.apk
+          cp "$APK" /tmp/sloi-output/SLOI_1.5.0_stable_unsigned.apk
           cp "$TOOLS/lib/apksigner.jar" /tmp/sloi-output/apksigner.jar
           cp "$TOOLS/zipalign" /tmp/sloi-output/zipalign-linux
           printf 'Built from commit %s\n' "$GITHUB_SHA" > /tmp/sloi-output/BUILD_INFO.txt
           sha256sum /tmp/sloi-output/* | tee /tmp/sloi-output/SHA256SUMS.txt
       - uses: actions/upload-artifact@v4
         with:
-          name: SLOI-1.2.0-stable-unsigned-and-signing-tool
+          name: SLOI-1.5.0-stable-unsigned-and-signing-tool
           path: /tmp/sloi-output/
           if-no-files-found: error
           retention-days: 14

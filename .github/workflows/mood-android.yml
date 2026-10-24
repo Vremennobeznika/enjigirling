@@ -1,6 +1,11 @@
 name: SLOI Android APK and source checks
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'mood-layers/**'
+      - '.github/workflows/mood-android.yml'
 permissions:
   contents: read
 jobs:
@@ -32,10 +37,13 @@ jobs:
         run: |
           set -euo pipefail
           node --check mood-layers/app.js
+          node --check mood-layers/goals.js
+          node --check mood-layers/i18n.js
+          node --check mood-layers/pwa-ui.js
           node --check mood-layers/sw.js
           python3 mood-layers/tests/static_matrix.py
           mkdir -p mood-layers/android/app/src/main/assets/assets
-          cp mood-layers/index.html mood-layers/style.css mood-layers/app.js mood-layers/sw.js mood-layers/manifest.webmanifest mood-layers/android/app/src/main/assets/
+          cp mood-layers/index.html mood-layers/style.css mood-layers/pwa-style.css mood-layers/app.js mood-layers/goals.js mood-layers/i18n.js mood-layers/pwa-ui.js mood-layers/sw.js mood-layers/manifest.webmanifest mood-layers/android/app/src/main/assets/
           cp mood-layers/assets/icon.* mood-layers/assets/icon-*.png mood-layers/android/app/src/main/assets/assets/
       - name: Build debug APK
         working-directory: mood-layers/android
@@ -48,7 +56,17 @@ jobs:
           test -s "$APK"
           unzip -t "$APK" > /dev/null
           unzip -Z1 "$APK" | grep -q '^classes.dex$'
-          unzip -Z1 "$APK" | grep -q '^assets/app.js$'
+          unzip -Z1 "$APK" | grep -q '^assets/app.js
+          jarsigner -verify "$APK" > /dev/null
+          sha256sum "$APK"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: SLOI-Android-debug-apk
+          path: mood-layers/android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+          retention-days: 30
+
+          for name in goals.js i18n.js pwa-ui.js pwa-style.css; do unzip -Z1 "$APK" | grep -q "^assets/$name$"; done
           jarsigner -verify "$APK" > /dev/null
           sha256sum "$APK"
       - uses: actions/upload-artifact@v4

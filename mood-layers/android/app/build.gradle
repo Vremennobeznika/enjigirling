@@ -6,8 +6,8 @@ android {
   applicationId 'app.layers.mood'
   minSdk 23
   targetSdk 36
-  versionCode 5
-  versionName '1.2.0'
+  versionCode 6
+  versionName '1.5.0'
  }
  buildTypes {
   debug { manifestPlaceholders = [appLabel: 'СЛОИ · тест'] }
