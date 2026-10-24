@@ -21,12 +21,12 @@ for(const id of ['platform-cyberleninka','platform-elibrary','platform-zhurnaliv
 assert.ok(types.get('Журналы')>=48,'journals catalog too sparse');
 const asuIds=['forum-asutpforum','forum-proasutp','forum-asu-tp-community','forum-cyberforum','forum-delta-electronics','ref-siemens-sieportal'];
 const relatedAsuForumIds=['forum-metrologu','forum-electronix','forum-robotics-se','forum-cadcam','forum-opennet'];
-assert.equal(types.get('АСУ ТП'),asuIds.length,'primary ASU TP resources must be grouped together');
-for(const id of asuIds)assert.equal(items.find(item=>item.id===id)?.type,'АСУ ТП','ASU resource misplaced: '+id);
-for(const id of relatedAsuForumIds){
+assert.equal(types.has('АСУ ТП'),false,'ASU TP must be a subsection within Forums, not a category');
+for(const id of [...asuIds,...relatedAsuForumIds]){
  const item=items.find(item=>item.id===id);
- assert.ok(item&&item.type==='Форумы'&&item.asuRelated===true,'cross-listed ASU forum missing: '+id);
+ assert.ok(item&&item.type==='Форумы'&&item.topic==='АСУ ТП','forum not in ASU TP subsection: '+id);
 }
+assert.equal(items.filter(x=>x.type==='Форумы'&&x.topic==='АСУ ТП').length,11,'unexpected ASU TP subsection count');
 assert.equal(types.has('Платформы для разработок'),false,'code and CAD still merged');
 for(const id of ['dev-github','dev-gitlab','dev-gitverse','dev-gitflic'])assert.equal(items.find(x=>x.id===id).type,'Разработка ПО',id+' wrong category');
 for(const id of ['dev-grabcad','dev-onshape','dev-freecad','cad-kompas','cad-nanocad','cad-tflex'])assert.equal(items.find(x=>x.id===id).type,'САПР и конструирование',id+' wrong category');
@@ -36,7 +36,8 @@ for(const id of ['resourceSearch','resourceSort','resourceGridView','resourceLis
 assert.ok(js.includes('new Intl.Collator'),'alphabetical sorting missing');
 assert.ok(html.includes('class="resource-secondary-controls"'),'toolbar left-alignment missing');
 assert.ok(js.includes('resource-topic-header'),'journal topical grouping missing');
-assert.ok(js.includes("'АСУ ТП'")&&js.includes('activeType === ASU && row.item.asuRelated'),'ASU TP catalog filter or related-forum routing missing');
+assert.ok(js.includes("[ASU,'Другие форумы']")&&js.includes("type === 'Форумы' || type === 'Журналы'")===false,'ASU TP forum subsection missing');
+assert.ok(js.includes("(b.topic===ASU)-(a.topic===ASU)"),'ASU TP subsection must appear first');
 assert.ok(js.includes('nextRendered')&&js.includes('more.addEventListener'),'progressive rendering missing');
 assert.ok(js.includes('searchTimer = setTimeout'),'search debounce missing');
 assert.ok(!/fonts\\.(?:googleapis|gstatic)\\.com/.test(html),'resource page must not require remote fonts');
