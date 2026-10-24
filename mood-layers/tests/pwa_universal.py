@@ -6,8 +6,11 @@ R=Path(__file__).resolve().parents[1]
 h=(R/'index.html').read_text(encoding='utf-8')
 for n in ('style.css','pwa-style.css'):
  h=h.replace('<link rel="stylesheet" href="./'+n+'">','<style>'+(R/n).read_text(encoding='utf-8')+'</style>')
+scripts=''
 for n in ('i18n.js','goals.js','app.js','pwa-ui.js'):
- h=h.replace('<script defer src="./'+n+'"></script>','').replace('</body>','<script>'+(R/n).read_text(encoding='utf-8')+'</script></body>')
+ h=h.replace('<script defer src="./'+n+'"></script>','')
+ scripts+='<script>'+(R/n).read_text(encoding='utf-8')+'</script>'
+h=h.replace('</body>',scripts+'</body>')
 stub="""<script>(function(){var o={};Object.defineProperty(window,'localStorage',{configurable:true,value:{getItem:function(k){return Object.prototype.hasOwnProperty.call(o,k)?o[k]:null;},setItem:function(k,v){o[k]=String(v);},removeItem:function(k){delete o[k];}}});})();</script>"""
 h=h.replace('</head>',stub+'</head>')
 checks=[]
