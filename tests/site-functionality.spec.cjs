@@ -83,6 +83,30 @@ test('catalog filters can show empty results and recover',async({page})=>{
   }
 });
 
+test('forums show five thematic groups without hidden entries',async({page})=>{
+  const errors=[];
+  page.on('pageerror',error=>errors.push(error.message));
+  await page.goto(base+'resources.html');
+  await page.locator('#resourcesFilter .resource-chip').filter({hasText:'Форумы'}).click();
+  const sections=page.locator('#resourcesGrid .resource-topic');
+  const headings=['АСУ ТП','САПР и конструирование','Электроника и микроконтроллеры','ИТ и технологии','Общая инженерия'];
+  const counts=[11,7,4,2,3];
+  await expect(sections).toHaveCount(5);
+  expect(await sections.locator('.resource-topic-header h3').allTextContents()).toEqual(headings);
+  for(let i=0;i<counts.length;i++)await expect(sections.nth(i).locator('.resource-card')).toHaveCount(counts[i]);
+  await expect(page.locator('#resourcesGrid .resource-card')).toHaveCount(27);
+  await expect(page.locator('#resourceShowMore')).toBeHidden();
+  await page.locator('#resourceSort').selectOption('za');
+  const names=await sections.first().locator('.eng-title').allTextContents();
+  const compare=new Intl.Collator('ru-RU',{numeric:true,sensitivity:'base'});
+  expect(names).toEqual([...names].sort((a,b)=>-compare.compare(a,b)));
+  await page.locator('#resourceSearch').fill('SiePortal');
+  await expect(page.locator('#resourcesGrid .resource-card')).toHaveCount(1);
+  await page.locator('#resourceSearch').fill('');
+  await expect(page.locator('#resourcesGrid .resource-card')).toHaveCount(27);
+  expect(errors).toEqual([]);
+});
+
 test('salary reference works without legacy salary objects or invented regional values',async({page})=>{
   const errors=[];page.on('pageerror',e=>errors.push(e.message));
   await page.goto(base+'map.html');
