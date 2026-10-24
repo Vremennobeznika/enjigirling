@@ -36,7 +36,7 @@ for(const id of ['resourceSearch','resourceSort','resourceGridView','resourceLis
 assert.ok(js.includes('new Intl.Collator'),'alphabetical sorting missing');
 assert.ok(html.includes('class="resource-secondary-controls"'),'toolbar left-alignment missing');
 assert.ok(js.includes('resource-topic-header'),'journal topical grouping missing');
-assert.ok(js.includes("[ASU,'Другие форумы']")&&js.includes("type === 'Форумы' || type === 'Журналы'")===false,'ASU TP forum subsection missing');
+assert.ok(js.includes("[ASU,'Другие форумы']")&&js.includes("type === 'Журналы' || type === 'Форумы'"),'ASU TP forum subsection missing');
 assert.ok(js.includes("(b.topic===ASU)-(a.topic===ASU)"),'ASU TP subsection must appear first');
 assert.ok(js.includes('nextRendered')&&js.includes('more.addEventListener'),'progressive rendering missing');
 assert.ok(js.includes('searchTimer = setTimeout'),'search debounce missing');
