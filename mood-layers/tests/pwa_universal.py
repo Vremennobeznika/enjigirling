@@ -30,6 +30,17 @@ with sync_playwright() as p:
    pg.locator('[data-tab="'+tab+'"]').click()
    assert pg.evaluate('document.documentElement.scrollWidth<=innerWidth+2'),(w,tab)
    checks.append(w+len(tab))
+ pg.locator('[data-tab="goals"]').click()
+ pg.locator('[data-goal-preset="draw"]').click()
+ assert pg.locator('#goal-kind').input_value()=='weekly'
+ pg.locator('#goal-form button[type=submit]').click()
+ assert pg.locator('.goal-card').count()==1
+ pg.locator('[data-action="done"]').click()
+ assert '1 / 2' in pg.locator('.goal-progress-label').inner_text()
+ pg.locator('[data-action="done"]').click()
+ assert '1 / 2' in pg.locator('.goal-progress-label').inner_text()
+ pg.locator('[data-action="clear"]').click()
+ assert '0 / 2' in pg.locator('.goal-progress-label').inner_text()
  pg.locator('#theme-btn').click()
  assert pg.evaluate('document.documentElement.dataset.theme==="light"')
  assert pg.locator('#export-json').is_visible()
