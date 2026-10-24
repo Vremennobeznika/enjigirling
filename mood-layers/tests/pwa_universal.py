@@ -44,6 +44,17 @@ with sync_playwright() as p:
  assert '1 / 2' in pg.locator('.goal-progress-label').inner_text()
  pg.locator('[data-action="clear"]').click()
  assert '0 / 2' in pg.locator('.goal-progress-label').inner_text()
+ pg.locator('[data-goal-preset="read"]').click()
+ pg.locator('#goal-form button[type=submit]').click()
+ assert pg.locator('.goal-card').count()==2
+ pg.locator('[data-goal-preset="smoke"]').click()
+ pg.locator('#goal-form button[type=submit]').click()
+ assert pg.locator('.goal-card').count()==3
+ pg.locator('[data-action="lapse"]').click()
+ assert '1' in pg.locator('.goal-card').last.locator('.goal-progress-label').inner_text()
+ pg.set_viewport_size({'width':280,'height':640})
+ assert pg.evaluate('document.documentElement.scrollWidth<=innerWidth+2')
+
  pg.locator('#theme-btn').click()
  assert pg.evaluate('document.documentElement.dataset.theme==="light"')
  assert pg.locator('#export-json').is_visible()
