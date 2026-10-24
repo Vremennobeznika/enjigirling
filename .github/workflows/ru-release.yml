@@ -1,0 +1,53 @@
+name: Build Russian-hosting candidate (never auto-deploy)
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - scripts/prepare_ru_site.py
+      - .github/workflows/ru-release.yml
+      - scripts/build-knowledge.cjs
+      - scripts/build-ai-packs.cjs
+      - knowledge/**
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate and verify knowledge
+        shell: bash
+        run: |
+          set -euo pipefail
+          node scripts/build-knowledge.cjs
+          node scripts/build-knowledge.cjs --check
+          node scripts/build-ai-packs.cjs
+          node scripts/build-ai-packs.cjs --check
+          node scripts/build-quality.cjs
+          node scripts/all-checks.cjs
+      - name: Build Russian public distribution
+        run: python3 scripts/prepare_ru_site.py --url https://enjigirling.ru/
+      - name: Print deploy audit
+        if: always()
+        run: cat ru-deploy-audit.json || true
+      - name: Upload deploy-ready files
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: enjigirling-ru-public
+          path: dist-ru/
+          if-no-files-found: error
+          retention-days: 14
+      - name: Upload staging audit even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: enjigirling-ru-audit
+          path: ru-deploy-audit.json
+          if-no-files-found: warn
