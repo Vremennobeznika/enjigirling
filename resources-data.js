@@ -220,7 +220,7 @@ const resources = [
     {
         id: "forum-cadcam",
         type: "Форумы",
-        topic: "АСУ ТП",
+        topic: "ЧПУ и металлообработка",
         name: "CNC-Club — ЧПУ и CAD/CAM",
         desc: "Русскоязычный форум о ЧПУ, станках, CAD/CAM-системах, постпроцессорах, G-коде и технологиях обработки.",
         link: "https://cnc-club.ru/forum/"
@@ -639,6 +639,198 @@ const resources = [
         "name": "Delta Electronics — форум",
         "desc": "Вопросы по контроллерам, приводам и оборудованию Delta Electronics; ссылка ведёт прямо в действующий раздел форума, а не на главную страницу поставщика.",
         "link": "https://www.delta-forum.ru/viewforum.php?f=2"
+    },
+    {
+        "id": "forum-owen",
+        "type": "Форумы",
+        "topic": "АСУ ТП",
+        "name": "ОВЕН — форум АСУ ТП",
+        "desc": "ПЛК ОВЕН, CODESYS, OWEN Logic, SCADA, КИПиА, датчики, Modbus и наладка оборудования.",
+        "link": "https://owen.ru/forum/index.php"
+    },
+    {
+        "id": "forum-plctalk",
+        "type": "Форумы",
+        "topic": "АСУ ТП",
+        "name": "PLCTalk",
+        "desc": "Вопросы по PLC, HMI, SCADA, промышленным сетям и поиску неисправностей; автоматические запросы иногда блокируются.",
+        "link": "https://www.plctalk.net/forums/"
+    },
+    {
+        "id": "forum-mrplc",
+        "type": "Форумы",
+        "topic": "АСУ ТП",
+        "name": "MrPLC",
+        "desc": "Сообщество по контроллерам Siemens, Allen-Bradley, Omron, Mitsubishi, HMI и робототехнике.",
+        "link": "https://mrplc.com/forums/"
+    },
+    {
+        "id": "forum-control-com",
+        "type": "Форумы",
+        "topic": "АСУ ТП",
+        "name": "Control.com — форумы",
+        "desc": "Промышленная автоматизация, измерения, электроприводы, датчики, управление и инженерная практика; защита может ограничивать автоматический доступ.",
+        "link": "https://control.com/forums/"
+    },
+    {
+        "id": "forum-codesys",
+        "type": "Форумы",
+        "topic": "АСУ ТП",
+        "name": "CODESYS Forge Talk",
+        "desc": "Официальные обсуждения IEC 61131-3, среды CODESYS, визуализации, runtime и промышленного управления.",
+        "link": "https://forge.codesys.com/forge/talk/?f=1"
+    },
+    {
+        "id": "forum-rockwell",
+        "type": "Форумы",
+        "topic": "АСУ ТП",
+        "name": "Rockwell Automation Engage",
+        "desc": "Сообщество пользователей Studio 5000, FactoryTalk, ControlLogix, приводов и сетей промышленной автоматизации.",
+        "link": "https://engage.rockwellautomation.com/home"
+    },
+    {
+        "id": "forum-plcforums",
+        "type": "Форумы",
+        "topic": "АСУ ТП",
+        "name": "PLC Forums",
+        "desc": "Обсуждения оборудования Siemens, Rockwell, Omron, Mitsubishi и других систем автоматизации.",
+        "link": "https://plcforums.com/"
+    },
+    {
+        "id": "forum-krug2000",
+        "type": "Форумы",
+        "topic": "АСУ ТП",
+        "name": "КРУГ-2000 — форум АСУ ТП",
+        "desc": "Форум программно-технических комплексов и SCADA КРУГ-2000, OPC-серверов и промышленного управления; архив обновляется нерегулярно.",
+        "link": "https://www.forum.krug2000.ru/"
+    },
+    {
+        "id": "forum-cccp3d",
+        "type": "Форумы",
+        "topic": "САПР и конструирование",
+        "name": "CCCP3D — CAD/CAM/CAE",
+        "desc": "Русскоязычное сообщество по NX, CATIA, CAM, стойкам ЧПУ, постпроцессорам и проектированию; сайт может ограничивать автоматический доступ.",
+        "link": "https://cccp3d.ru/"
+    },
+    {
+        "id": "forum-onshape",
+        "type": "Форумы",
+        "topic": "САПР и конструирование",
+        "name": "Onshape Forums",
+        "desc": "Сообщество облачной параметрической САПР: детали, сборки, чертежи, FeatureScript, совместная работа.",
+        "link": "https://forum.onshape.com/discussions"
+    },
+    {
+        "id": "forum-freecad-official",
+        "type": "Форумы",
+        "topic": "САПР и конструирование",
+        "name": "FreeCAD Forum",
+        "desc": "Официальный форум свободной САПР FreeCAD: рабочие среды, моделирование, FEM, Python; при открытии возможна антибот-проверка.",
+        "link": "https://forum.freecad.org/"
+    },
+    {
+        "id": "forum-cxem",
+        "type": "Форумы",
+        "topic": "Электроника и микроконтроллеры",
+        "name": "Паяльник — форум схемотехники",
+        "desc": "Русскоязычный форум радиоэлектроники: STM32, AVR, платы, приборы, промышленные контроллеры.",
+        "link": "https://forum.cxem.net/"
+    },
+    {
+        "id": "forum-promelec",
+        "type": "Форумы",
+        "topic": "Электроника и микроконтроллеры",
+        "name": "Промэлектроника — форум",
+        "desc": "Электронные компоненты, микроконтроллеры, программирование, отладка и консультации по оборудованию.",
+        "link": "https://forum.promelec.ru/"
+    },
+    {
+        "id": "forum-rlocman",
+        "type": "Форумы",
+        "topic": "Электроника и микроконтроллеры",
+        "name": "РадиоЛоцман — форум",
+        "desc": "Разработка, диагностика и ремонт электроники, схемотехника, компоненты и измерения.",
+        "link": "https://www.rlocman.ru/forum/"
+    },
+    {
+        "id": "forum-eham",
+        "type": "Форумы",
+        "topic": "Электроника и микроконтроллеры",
+        "name": "eHam — технический форум",
+        "desc": "Вопросы разработчиков по микроконтроллерам, источникам питания, радиотехнике и электронным компонентам.",
+        "link": "https://www.eham.ru/forum"
+    },
+    {
+        "id": "forum-allaboutcircuits",
+        "type": "Форумы",
+        "topic": "Электроника и микроконтроллеры",
+        "name": "All About Circuits Forum",
+        "desc": "Англоязычное сообщество электронщиков: аналоговые схемы, PCB, микроконтроллеры и измерения; автоматический доступ ограничен.",
+        "link": "https://forum.allaboutcircuits.com/"
+    },
+    {
+        "id": "forum-tehnari-electronics",
+        "type": "Форумы",
+        "topic": "Электроника и микроконтроллеры",
+        "name": "Технари — электроника",
+        "desc": "Русскоязычные обсуждения самодельной электроники, схем, источников питания и микроконтроллеров.",
+        "link": "https://tehnari.ru/forums/forum-po-elektronike.39/"
+    },
+    {
+        "id": "forum-chipmaker",
+        "type": "Форумы",
+        "topic": "ЧПУ и металлообработка",
+        "name": "Chipmaker — металлообработка",
+        "desc": "Профессиональные обсуждения токарных и фрезерных станков, сварки, термообработки и ЧПУ; прямая автоматическая проверка сайта ограничена.",
+        "link": "https://chipmaker.ru/"
+    },
+    {
+        "id": "forum-cnc-userforum",
+        "type": "Форумы",
+        "topic": "ЧПУ и металлообработка",
+        "name": "Форум клана ЧПУшников",
+        "desc": "Станки и комплектующие ЧПУ, инструмент, шпиндели, ArtCAM, ремонт и наладка.",
+        "link": "https://cnc.userforum.ru/"
+    },
+    {
+        "id": "forum-lightburn",
+        "type": "Форумы",
+        "topic": "ЧПУ и металлообработка",
+        "name": "LightBurn Software Forum",
+        "desc": "Лазерная резка и гравировка: программа LightBurn, совместимость станков, контроллеры и настройка.",
+        "link": "https://forum.lightburnsoftware.com/"
+    },
+    {
+        "id": "forum-meztool",
+        "type": "Форумы",
+        "topic": "ЧПУ и металлообработка",
+        "name": "Meztool — металлообработка",
+        "desc": "Фрезерование, точение, режущий инструмент, режимы обработки, CAM и технологии производства.",
+        "link": "https://meztool.ru/forums/"
+    },
+    {
+        "id": "forum-alfa-industry",
+        "type": "Форумы",
+        "topic": "ЧПУ и металлообработка",
+        "name": "Альфа-Индастри — сварка и металлообработка",
+        "desc": "TIG, MIG/MAG, MMA, плазменная резка, материалы, оборудование и технологические вопросы.",
+        "link": "https://www.alfa-industry.ru/forum/"
+    },
+    {
+        "id": "forum-metalorezzka",
+        "type": "Форумы",
+        "topic": "ЧПУ и металлообработка",
+        "name": "MetaloRezzka — цеховой форум",
+        "desc": "Практика лазерной и плазменной резки, гибки, DXF, выбора станков и контроля качества.",
+        "link": "https://metalorezzka.ru/"
+    },
+    {
+        "id": "forum-abok",
+        "type": "Форумы",
+        "topic": "Общая инженерия",
+        "name": "АВОК — диалог специалистов",
+        "desc": "Инженерные системы зданий: отопление, вентиляция, автоматизация, электроснабжение, проектирование и нормативы.",
+        "link": "https://forum.abok.ru/"
     },
     {
         "id": "forum-opennet",
