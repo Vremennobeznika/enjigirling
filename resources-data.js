@@ -213,7 +213,7 @@ const resources = [
     {
         id: "forum-cadcam",
         type: "Форумы",
-        asuRelated: true,
+        topic: "АСУ ТП",
         name: "CNC-Club — ЧПУ и CAD/CAM",
         desc: "Русскоязычный форум о ЧПУ, станках, CAD/CAM-системах, постпроцессорах, G-коде и технологиях обработки.",
         link: "https://cnc-club.ru/forum/"
@@ -545,7 +545,7 @@ const resources = [
     {
         "id": "forum-metrologu",
         "type": "Форумы",
-        asuRelated: true,
+        topic: "АСУ ТП",
         "name": "Главный форум метрологов",
         "desc": "Поверка, калибровка, стандарты, измерения и метрологическая документация.",
         "link": "https://metrologu.ru/"
@@ -553,7 +553,7 @@ const resources = [
     {
         "id": "forum-electronix",
         "type": "Форумы",
-        asuRelated: true,
+        topic: "АСУ ТП",
         "name": "Форум ELECTRONIX",
         "desc": "Русскоязычные обсуждения микроконтроллеров, схемотехники, компонентной базы и встраиваемых систем.",
         "link": "https://electronix.ru/forum/"
@@ -582,47 +582,47 @@ const resources = [
     {
         "id": "forum-robotics-se",
         "type": "Форумы",
-        asuRelated: true,
+        topic: "АСУ ТП",
         "name": "Robotics Stack Exchange",
         "desc": "Практические вопросы по робототехнике, приводам, датчикам и алгоритмам управления.",
         "link": "https://robotics.stackexchange.com/"
     },
     {
         "id": "forum-asutpforum",
-        "type": "АСУ ТП",
-        "topic": "АСУ ТП и промышленная автоматизация",
+        "type": "Форумы",
+        "topic": "АСУ ТП",
         "name": "Форум АСУТП",
         "desc": "Обсуждения промышленной автоматики, ПЛК, КИПиА и эксплуатации систем управления; доступность форума не подтверждена при текущей проверке.",
         "link": "https://asutpforum.ru/"
     },
     {
         "id": "forum-proasutp",
-        "type": "АСУ ТП",
-        "topic": "АСУ ТП и промышленная автоматизация",
+        "type": "Форумы",
+        "topic": "АСУ ТП",
         "name": "Форум Про АСУ ТП",
         "desc": "Профессиональная площадка по АСУ ТП, программированию и наладке; содержимое форума при текущей проверке не открылось.",
         "link": "https://forum.proasutp.com/"
     },
     {
         "id": "forum-asu-tp-community",
-        "type": "АСУ ТП",
-        "topic": "АСУ ТП и промышленная автоматизация",
+        "type": "Форумы",
+        "topic": "АСУ ТП",
         "name": "АСУ ТП — сообщество инженеров",
         "desc": "Форум инженеров по ПЛК и автоматизации, статьи из практики, библиотека, вакансии и обсуждения.",
         "link": "https://asu-tp.su/"
     },
     {
         "id": "forum-cyberforum",
-        "type": "АСУ ТП",
-        "topic": "Программирование и ИТ",
+        "type": "Форумы",
+        "topic": "АСУ ТП",
         "name": "КиберФорум",
         "desc": "Русскоязычный форум по программированию, системному администрированию, электронике и техническим задачам.",
         "link": "https://www.cyberforum.ru/"
     },
     {
         "id": "forum-delta-electronics",
-        "type": "АСУ ТП",
-        "topic": "Промышленная автоматика и приводы",
+        "type": "Форумы",
+        "topic": "АСУ ТП",
         "name": "Delta Electronics — форум",
         "desc": "Вопросы по контроллерам, приводам и оборудованию Delta Electronics; ссылка ведёт прямо в действующий раздел форума, а не на главную страницу поставщика.",
         "link": "https://www.delta-forum.ru/viewforum.php?f=2"
@@ -630,7 +630,7 @@ const resources = [
     {
         "id": "forum-opennet",
         "type": "Форумы",
-        asuRelated: true,
+        topic: "АСУ ТП",
         "name": "OpenNET",
         "desc": "Обсуждения Linux, промышленных систем, сетей и открытого программного обеспечения.",
         "link": "https://www.opennet.ru/"
@@ -707,8 +707,8 @@ const resources = [
     },
     {
         "id": "ref-siemens-sieportal",
-        "type": "АСУ ТП",
-        "topic": "Документация производителя",
+        "type": "Форумы",
+        "topic": "АСУ ТП",
         "name": "Siemens SiePortal — поддержка",
         "desc": "Официальная поддержка промышленной продукции Siemens: техническая документация, материалы и обращения по оборудованию; для работы портала требуется JavaScript.",
         "link": "https://sieportal.siemens.com/en-ww/support"
