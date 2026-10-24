@@ -27,6 +27,12 @@ for(const id of [...asuIds,...relatedAsuForumIds]){
  assert.ok(item&&item.type==='Форумы'&&item.topic==='АСУ ТП','forum not in ASU TP subsection: '+id);
 }
 assert.equal(items.filter(x=>x.type==='Форумы'&&x.topic==='АСУ ТП').length,11,'unexpected ASU TP subsection count');
+const forumTopics={'АСУ ТП':11,'САПР и конструирование':7,'Электроника и микроконтроллеры':4,'ИТ и технологии':2,'Общая инженерия':3};
+const forumItems=items.filter(x=>x.type==='Форумы');
+assert.equal(forumItems.length,27,'unexpected forum catalog size');
+for(const [topic,expected] of Object.entries(forumTopics))
+ assert.equal(forumItems.filter(x=>x.topic===topic).length,expected,'wrong forum grouping: '+topic);
+assert.ok(forumItems.every(x=>Object.hasOwn(forumTopics,x.topic)),'unclassified forum or unknown subsection');
 assert.equal(types.has('Платформы для разработок'),false,'code and CAD still merged');
 for(const id of ['dev-github','dev-gitlab','dev-gitverse','dev-gitflic'])assert.equal(items.find(x=>x.id===id).type,'Разработка ПО',id+' wrong category');
 for(const id of ['dev-grabcad','dev-onshape','dev-freecad','cad-kompas','cad-nanocad','cad-tflex'])assert.equal(items.find(x=>x.id===id).type,'САПР и конструирование',id+' wrong category');
@@ -36,8 +42,13 @@ for(const id of ['resourceSearch','resourceSort','resourceGridView','resourceLis
 assert.ok(js.includes('new Intl.Collator'),'alphabetical sorting missing');
 assert.ok(html.includes('class="resource-secondary-controls"'),'toolbar left-alignment missing');
 assert.ok(js.includes('resource-topic-header'),'journal topical grouping missing');
-assert.ok(js.includes("[ASU,'Другие форумы']")&&js.includes("type === 'Журналы' || type === 'Форумы'"),'ASU TP forum subsection missing');
-assert.ok(js.includes("(b.topic===ASU)-(a.topic===ASU)"),'ASU TP subsection must appear first');
+assert.ok(js.includes("type === 'Журналы' || type === 'Форумы'")&&js.includes("type === 'Форумы' ? forumTopics"),'forum subsection headings missing');
+assert.ok(js.includes("forumTopics.indexOf(a.topic)-forumTopics.indexOf(b.topic)"),'forum category order missing');
+assert.ok(js.includes("activeType === 'Форумы' ? 32"),'forum filter must show all 27 without pagination');
+const declared=js.match(/const forumTopics = \[([^\]]+)\]/);
+assert.ok(declared,'forum headings configuration missing');
+const forumOrder=[...declared[1].matchAll(/'([^']+)'/g)].map(x=>x[1]);
+assert.deepEqual(forumOrder,['САПР и конструирование','Электроника и микроконтроллеры','ИТ и технологии','Общая инженерия'],'forum order after ASU TP is incorrect');
 assert.ok(js.includes('nextRendered')&&js.includes('more.addEventListener'),'progressive rendering missing');
 assert.ok(js.includes('searchTimer = setTimeout'),'search debounce missing');
 assert.ok(!/fonts\\.(?:googleapis|gstatic)\\.com/.test(html),'resource page must not require remote fonts');
