@@ -20,16 +20,21 @@ for(const cat of ['Журналы','Форумы','Разработка ПО','�
 for(const id of ['platform-cyberleninka','platform-elibrary','platform-zhurnalivak'])assert.equal(items.find(x=>x.id===id).type,'Научные базы и справочники',id+' wrong group');
 assert.ok(types.get('Журналы')>=48,'journals catalog too sparse');
 const asuIds=['forum-asutpforum','forum-proasutp','forum-asu-tp-community','forum-cyberforum','forum-delta-electronics','ref-siemens-sieportal'];
-const relatedAsuForumIds=['forum-metrologu','forum-electronix','forum-robotics-se','forum-cadcam','forum-opennet'];
+const relatedAsuForumIds=['forum-metrologu','forum-electronix','forum-robotics-se','forum-opennet'];
 assert.equal(types.has('АСУ ТП'),false,'ASU TP must be a subsection within Forums, not a category');
 for(const id of [...asuIds,...relatedAsuForumIds]){
  const item=items.find(item=>item.id===id);
  assert.ok(item&&item.type==='Форумы'&&item.topic==='АСУ ТП','forum not in ASU TP subsection: '+id);
 }
-assert.equal(items.filter(x=>x.type==='Форумы'&&x.topic==='АСУ ТП').length,11,'unexpected ASU TP subsection count');
-const forumTopics={'АСУ ТП':11,'САПР и конструирование':7,'Электроника и микроконтроллеры':4,'ИТ и технологии':2,'Общая инженерия':3};
+assert.equal(items.filter(x=>x.type==='Форумы'&&x.topic==='АСУ ТП').length,18,'unexpected ASU TP subsection count');
+const forumTopics={'АСУ ТП':18,'ЧПУ и металлообработка':7,'САПР и конструирование':10,'Электроника и микроконтроллеры':10,'ИТ и технологии':2,'Общая инженерия':4};
 const forumItems=items.filter(x=>x.type==='Форумы');
-assert.equal(forumItems.length,27,'unexpected forum catalog size');
+assert.equal(forumItems.length,51,'unexpected forum catalog size');
+const newIds=['forum-owen','forum-plctalk','forum-mrplc','forum-control-com','forum-codesys','forum-rockwell','forum-plcforums','forum-krug2000','forum-cccp3d','forum-onshape','forum-freecad-official','forum-cxem','forum-promelec','forum-rlocman','forum-eham','forum-allaboutcircuits','forum-tehnari-electronics','forum-chipmaker','forum-cnc-userforum','forum-lightburn','forum-meztool','forum-alfa-industry','forum-metalorezzka','forum-abok'];
+for(const id of newIds)assert.ok(forumItems.some(x=>x.id===id),'missing researched forum: '+id);
+assert.equal(items.find(x=>x.id==='forum-cadcam').topic,'ЧПУ и металлообработка','CNC-Club must be in machining');
+assert.equal(items.find(x=>x.id==='forum-asu-tp-community').link,'https://asu-tp.su/forum/','ASU community should link to its forum');
+
 for(const [topic,expected] of Object.entries(forumTopics))
  assert.equal(forumItems.filter(x=>x.topic===topic).length,expected,'wrong forum grouping: '+topic);
 assert.ok(forumItems.every(x=>Object.hasOwn(forumTopics,x.topic)),'unclassified forum or unknown subsection');
@@ -44,11 +49,11 @@ assert.ok(html.includes('class="resource-secondary-controls"'),'toolbar left-ali
 assert.ok(js.includes('resource-topic-header'),'journal topical grouping missing');
 assert.ok(js.includes("type === 'Журналы' || type === 'Форумы'")&&js.includes("type === 'Форумы' ? forumTopics"),'forum subsection headings missing');
 assert.ok(js.includes("forumTopics.indexOf(a.topic)-forumTopics.indexOf(b.topic)"),'forum category order missing');
-assert.ok(js.includes("activeType === 'Форумы' ? 32"),'forum filter must show all 27 without pagination');
+assert.ok(js.includes("activeType === 'Форумы' ? 64"),'forum filter must show all 51 without pagination');
 const declared=js.match(/const forumTopics = \[([^\]]+)\]/);
 assert.ok(declared,'forum headings configuration missing');
 const forumOrder=[...declared[1].matchAll(/'([^']+)'/g)].map(x=>x[1]);
-assert.deepEqual(forumOrder,['САПР и конструирование','Электроника и микроконтроллеры','ИТ и технологии','Общая инженерия'],'forum order after ASU TP is incorrect');
+assert.deepEqual(forumOrder,['ЧПУ и металлообработка','САПР и конструирование','Электроника и микроконтроллеры','ИТ и технологии','Общая инженерия'],'forum order after ASU TP is incorrect');
 assert.ok(js.includes('nextRendered')&&js.includes('more.addEventListener'),'progressive rendering missing');
 assert.ok(js.includes('searchTimer = setTimeout'),'search debounce missing');
 assert.ok(!/fonts\\.(?:googleapis|gstatic)\\.com/.test(html),'resource page must not require remote fonts');
