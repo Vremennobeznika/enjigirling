@@ -56,18 +56,10 @@ jobs:
           test -s "$APK"
           unzip -t "$APK" > /dev/null
           unzip -Z1 "$APK" | grep -q '^classes.dex$'
-          unzip -Z1 "$APK" | grep -q '^assets/app.js
-          jarsigner -verify "$APK" > /dev/null
-          sha256sum "$APK"
-      - uses: actions/upload-artifact@v4
-        with:
-          name: SLOI-Android-debug-apk
-          path: mood-layers/android/app/build/outputs/apk/debug/app-debug.apk
-          if-no-files-found: error
-          retention-days: 30
-
-          for name in goals.js i18n.js pwa-ui.js pwa-style.css; do unzip -Z1 "$APK" | grep -q "^assets/$name$"; done
-          jarsigner -verify "$APK" > /dev/null
+          for name in app.js goals.js i18n.js pwa-ui.js pwa-style.css; do
+            unzip -Z1 "$APK" | grep -q "^assets/$name$"
+          done
+          "$ANDROID_HOME/build-tools/36.0.0/apksigner" verify "$APK"
           sha256sum "$APK"
       - uses: actions/upload-artifact@v4
         with:
