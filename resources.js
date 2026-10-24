@@ -14,9 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const ALL = 'Все', ASU = 'АСУ ТП';
   const order = ['Журналы', 'САПР и конструирование', 'Разработка ПО', 'Инструменты и симуляторы', 'Онлайн-измерения', 'Форумы', 'Научные базы и справочники', 'Стандарты и метрология', 'Обучение и курсы', 'Дружественные каналы', 'Чаты в Telegram'];
   const labels = {'Разработка ПО':'Код и Git', 'САПР и конструирование':'САПР и КБ', 'Инструменты и симуляторы':'Симуляторы', 'Онлайн-измерения':'Измерения онлайн', 'Научные базы и справочники':'Библиотеки', 'Стандарты и метрология':'Стандарты', 'Обучение и курсы':'Курсы', 'Дружественные каналы':'Каналы', 'Чаты в Telegram':'Чаты'};
-  const forumTopics = [ASU,'САПР и конструирование','Электроника и микроконтроллеры','ИТ и технологии','Общая инженерия'];
+  const forumTopics = [ASU,'ЧПУ и металлообработка','САПР и конструирование','Электроника и микроконтроллеры','ИТ и технологии','Общая инженерия'];
   const journalTopics = ['Машиностроение и САПР','Автоматизация и электроника','Материалы, контроль и измерения','Энергетика, строительство и транспорт','Пищевая и лёгкая промышленность','Наука и образование'];
-  const htmlEsc = value => String(value == null ? '' : value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  const htmlEsc=value=>String(value==null?'':value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
   const normalize = value => String(value == null ? '' : value).toLocaleLowerCase('ru-RU').replace(/ё/g,'е').replace(/\s+/g,' ').trim();
   const collator = typeof Intl !== 'undefined' && Intl.Collator ? new Intl.Collator('ru-RU', {numeric:true, sensitivity:'base'}) : {compare:(a,b) => String(a).localeCompare(String(b))};
   const index = items.map(item => ({item, terms:normalize([item.name,item.desc,item.type,item.topic || '',item.tags || ''].join(' '))}));
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const types = [ALL,...order.filter(type => counts.has(type)),...[...counts.keys()].filter(type => !order.includes(type)).sort(collator.compare)];
   const buttons = new Map();
   let activeType = ALL, view = 'grid', limit = 4, searchTimer = null;
-  const batchSize = () => activeType === ALL ? 4 : activeType === 'Форумы' ? 32 : 24;
+  const batchSize = () => activeType === ALL ? 4 : activeType === 'Форумы' ? 64 : 24;
   const hostname = href => { try { return new URL(href).hostname.replace(/^www\./,''); } catch { return ''; } };
   const makeCard = item => {
     const href = String(item.link || '');
