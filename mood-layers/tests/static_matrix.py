@@ -6,7 +6,8 @@ R=Path(__file__).resolve().parents[1]
 app=(R/'app.js').read_text();html=(R/'index.html').read_text();css=(R/'style.css').read_text();sw=(R/'sw.js').read_text();android=(R/'android/app/src/main/AndroidManifest.xml').read_text();native=(R/'android/app/src/main/java/app/layers/mood/MainActivity.java').read_text()
 checks={
 'html language and viewport':'lang="ru"' in html and 'viewport-fit=cover' in html,
-'core tabs present':all(f'id="{p}"' in html for p in ['today','history','insights','settings']),
+'core tabs present':all(f'id="{p}"' in html for p in ['today','history','goals','insights','settings']),
+'goals scripts and backup':all(k in app for k in ['PSHO_GOALS.mount','PSHO_GOALS.merge','x.goals===undefined']) and 'goals.js' in html,
 'accessible labels':all(f'id="{p}"' in html for p in ['mood-grid','anxiety','sleep','note','occurred']),
 'custom emotion limit':'data.tags.length>=100' in app,
 'no remote data transfer':not re.search(r'\b(?:fetch|XMLHttpRequest|sendBeacon|WebSocket)\s*\(',app),
