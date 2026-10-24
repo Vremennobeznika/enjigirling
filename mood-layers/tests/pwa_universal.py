@@ -57,6 +57,7 @@ with sync_playwright() as p:
 
  pg.locator('#theme-btn').click()
  assert pg.evaluate('document.documentElement.dataset.theme==="light"')
+ pg.locator('[data-tab="settings"]').click()
  assert pg.locator('#export-json').is_visible()
  b.close()
 print('PASS SLOI PWA install/save/nav/responsive/theme:',len(checks)+7,'checks')
