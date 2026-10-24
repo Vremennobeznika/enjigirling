@@ -6,7 +6,7 @@ R=Path(__file__).resolve().parents[1]
 h=(R/'index.html').read_text(encoding='utf-8')
 for n in ('style.css','pwa-style.css'):
  h=h.replace('<link rel="stylesheet" href="./'+n+'">','<style>'+(R/n).read_text(encoding='utf-8')+'</style>')
-for n in ('app.js','pwa-ui.js'):
+for n in ('i18n.js','goals.js','app.js','pwa-ui.js'):
  h=h.replace('<script defer src="./'+n+'"></script>','').replace('</body>','<script>'+(R/n).read_text(encoding='utf-8')+'</script></body>')
 stub="""<script>(function(){var o={};Object.defineProperty(window,'localStorage',{configurable:true,value:{getItem:function(k){return Object.prototype.hasOwnProperty.call(o,k)?o[k]:null;},setItem:function(k,v){o[k]=String(v);},removeItem:function(k){delete o[k];}}});})();</script>"""
 h=h.replace('</head>',stub+'</head>')
@@ -26,7 +26,7 @@ with sync_playwright() as p:
  assert 'PWA TEST RECORD 143' in pg.locator('.entry').inner_text()
  for w,he in [(280,640),(320,568),(375,667),(568,320)]:
   pg.set_viewport_size({'width':w,'height':he})
-  for tab in ('today','history','insights','settings'):
+  for tab in ('today','history','goals','insights','settings'):
    pg.locator('[data-tab="'+tab+'"]').click()
    assert pg.evaluate('document.documentElement.scrollWidth<=innerWidth+2'),(w,tab)
    checks.append(w+len(tab))
