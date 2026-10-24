@@ -12,9 +12,10 @@ test('resources directory: categories, alphabetical sort, search, reset and list
   const activeColors=await page.locator('#resourceGridView').evaluate(el=>{const c=getComputedStyle(el);return{fg:c.color,bg:c.backgroundColor}});
   expect(activeColors.fg).not.toBe(activeColors.bg);
   const cards=page.locator('#resourcesGrid .resource-card');
+  const catalogSize=await page.evaluate(()=>resources.length);
   await expect(page.locator('#resourcesGrid')).toHaveAttribute('data-ready','true');
   await expect(cards).toHaveCount(51);
-  await expect(page.locator('#resourcesGrid')).toHaveAttribute('data-matches','175');
+  await expect(page.locator('#resourcesGrid')).toHaveAttribute('data-matches',String(catalogSize));
   await expect(page.locator('#resourceShowMore')).toBeVisible();
   await expect(page.locator('#resourcesFilter button')).toHaveCount(12);
   await expect(page.locator('.resource-topic-header')).not.toHaveCount(0);
@@ -53,11 +54,12 @@ test('resources: full indexed search, progressive loading, keyboard and 320px mo
   await page.setViewportSize({width:320,height:700});
   await page.goto('/resources.html');
   const cards=page.locator('#resourcesGrid .resource-card');
+  const catalogSize=await page.evaluate(()=>resources.length);
   const more=page.locator('#resourceShowMore');
   await expect(cards).toHaveCount(51);
   await expect(page.locator('#resourcesGrid .resource-group')).toHaveCount(11);
   await expect(page.locator('#resourcesGrid .resource-group[aria-label="Дружественные каналы"] .resource-card')).toHaveCount(11);
-  await expect(page.locator('#resourcesGrid')).toHaveAttribute('data-matches','175');
+  await expect(page.locator('#resourcesGrid')).toHaveAttribute('data-matches',String(catalogSize));
   expect(await page.locator('#resourcesGrid *').count()).toBeLessThan(900);
   await page.locator('#resourceSearch').fill('KELIBRON');
   await expect(cards).toHaveCount(1);
@@ -73,9 +75,9 @@ test('resources: full indexed search, progressive loading, keyboard and 320px mo
   await expect.poll(()=>cards.count()).toBeGreaterThan(51);
   for(let i=0;i<15 && await more.isVisible();i++)await more.click();
   await expect(more).toBeHidden();
-  await expect(cards).toHaveCount(175);
-  await expect(page.locator('#resourcesGrid')).toHaveAttribute('data-rendered','175');
-  expect(await cards.evaluateAll(els=>new Set(els.map(el=>el.href)).size)).toBe(175);
+  await expect(cards).toHaveCount(catalogSize);
+  await expect(page.locator('#resourcesGrid')).toHaveAttribute('data-rendered',String(catalogSize));
+  expect(await cards.evaluateAll(els=>new Set(els.map(el=>el.href)).size)).toBe(catalogSize);
   expect(await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth)).toBeLessThanOrEqual(2);
   await page.locator('#resourceReset').click();
   await expect(cards).toHaveCount(51);
