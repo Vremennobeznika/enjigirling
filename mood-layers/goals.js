@@ -44,7 +44,7 @@ function summary(g){
  return {done:done,target:scheduled,rate:scheduled?Math.round(done*100/scheduled):null,label:t('period'),other:extra?'+'+extra+' '+t('done').toLowerCase()+' ('+t('unknown')+')':t('unknown')};
 }
 function scheduleText(g){return g.kind==='weekly'?g.target+' '+t('weekly'):g.kind==='interval'?t('every')+' '+g.target+' '+t('days'):t('avoid');}
-function kindChanged(){var k=$('goal-kind').value;$('goal-week-wrap').hidden=k!=='weekly';$('goal-interval-wrap').hidden=k!=='interval';$('goal-schedule-hint').textContent=t(k==='weekly'?'hintWeek':k==='interval'?'hintInterval':'hintAvoid');}
+function kindChanged(){var k=$('goal-kind').value;$('goal-week-wrap').hidden=k!=='weekly';$('goal-interval-wrap').hidden=k!=='interval';$('goal-week-target').required=k==='weekly';$('goal-interval-target').required=k==='interval';$('goal-schedule-hint').textContent=t(k==='weekly'?'hintWeek':k==='interval'?'hintInterval':'hintAvoid');}
 function render(){
  if(!api)return;var host=$('goal-list');if(!host)return;host.textContent='';var list=goals();if(!list.length){host.appendChild(node('div','empty',t('empty')));return;}
  var active=list.filter(function(g){return !g.archived;}),archived=list.filter(function(g){return g.archived;});
