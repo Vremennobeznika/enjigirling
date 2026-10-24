@@ -622,7 +622,7 @@ const resources = [
         "topic": "АСУ ТП",
         "name": "АСУ ТП — сообщество инженеров",
         "desc": "Форум инженеров по ПЛК и автоматизации, статьи из практики, библиотека, вакансии и обсуждения.",
-        "link": "https://asu-tp.su/"
+        "link": "https://asu-tp.su/forum/"
     },
     {
         "id": "forum-cyberforum",
