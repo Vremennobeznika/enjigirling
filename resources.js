@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const viewList = document.getElementById('resourceListView');
   if (!filter || !grid || !search || !sort || !status || !reset || !more || !viewGrid || !viewList) return;
   const ALL = 'Все', ASU = 'АСУ ТП';
-  const order = ['Журналы', 'САПР и конструирование', 'Разработка ПО', 'Инструменты и симуляторы', 'Онлайн-измерения', 'АСУ ТП', 'Форумы', 'Научные базы и справочники', 'Стандарты и метрология', 'Обучение и курсы', 'Дружественные каналы', 'Чаты в Telegram'];
+  const order = ['Журналы', 'САПР и конструирование', 'Разработка ПО', 'Инструменты и симуляторы', 'Онлайн-измерения', 'Форумы', 'Научные базы и справочники', 'Стандарты и метрология', 'Обучение и курсы', 'Дружественные каналы', 'Чаты в Telegram'];
   const labels = {'Разработка ПО':'Код и Git', 'САПР и конструирование':'САПР и КБ', 'Инструменты и симуляторы':'Симуляторы', 'Онлайн-измерения':'Измерения онлайн', 'Научные базы и справочники':'Библиотеки', 'Стандарты и метрология':'Стандарты', 'Обучение и курсы':'Курсы', 'Дружественные каналы':'Каналы', 'Чаты в Telegram':'Чаты'};
   const journalTopics = ['Машиностроение и САПР','Автоматизация и электроника','Материалы, контроль и измерения','Энергетика, строительство и транспорт','Пищевая и лёгкая промышленность','Наука и образование'];
   const htmlEsc = value => String(value == null ? '' : value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const collator = typeof Intl !== 'undefined' && Intl.Collator ? new Intl.Collator('ru-RU', {numeric:true, sensitivity:'base'}) : {compare:(a,b) => String(a).localeCompare(String(b))};
   const index = items.map(item => ({item, terms:normalize([item.name,item.desc,item.type,item.topic || '',item.tags || ''].join(' '))}));
   const counts = new Map();
-  items.forEach(item => { counts.set(item.type, (counts.get(item.type) || 0) + 1); if(item.asuRelated) counts.set(ASU, (counts.get(ASU) || 0) + 1); });
+  items.forEach(item => counts.set(item.type, (counts.get(item.type) || 0) + 1));
   const types = [ALL,...order.filter(type => counts.has(type)),...[...counts.keys()].filter(type => !order.includes(type)).sort(collator.compare)];
   const buttons = new Map();
   let activeType = ALL, view = 'grid', limit = 4, searchTimer = null;
@@ -51,29 +51,28 @@ document.addEventListener('DOMContentLoaded', () => {
   function update() {
     if (searchTimer !== null) { clearTimeout(searchTimer); searchTimer = null; }
     const query = normalize(search.value);
-    const visible = index.filter(row => (activeType === ALL || row.item.type === activeType || (activeType === ASU && row.item.asuRelated)) && row.terms.includes(query)).map(row => row.item);
+    const visible = index.filter(row => (activeType === ALL || row.item.type === activeType) && row.terms.includes(query)).map(row => row.item);
     visible.sort((a,b) => collator.compare(a.name,b.name) * (sort.value === 'za' ? -1 : 1));
     const groups = activeType === ALL ? types.slice(1) : [activeType];
     const byType = new Map();
     for (const item of visible) {
-      const groupType = activeType === ASU ? ASU : item.type;
-      if (!byType.has(groupType)) byType.set(groupType, []);
-      byType.get(groupType).push(item);
+      if (!byType.has(item.type)) byType.set(item.type, []);
+      byType.get(item.type).push(item);
     }
     const html = [];
     let rendered = 0, nextRendered = 0;
     for (const type of groups) {
       const candidates = byType.get(type) || [];
       if (!candidates.length) continue;
-      // Дружественные каналы всегда выводятся полностью, без ограничения числа карточек.
+      if (type === 'Форумы') candidates.sort((a,b)=>(b.topic===ASU)-(a.topic===ASU));
       const shown = type === 'Дружественные каналы' ? candidates : candidates.slice(0, limit);
       rendered += shown.length;
       nextRendered += type === 'Дружественные каналы' ? candidates.length : Math.min(candidates.length, limit + batchSize());
       let cards = `<div class="resource-items">${shown.map(makeCard).join('')}</div>`;
-      if (type === 'Журналы') {
-        const topics = [...journalTopics, ...new Set(shown.map(x => x.topic || 'Без направления').filter(x => !journalTopics.includes(x)))];
+      if (type === 'Журналы' || type === 'Форумы') {
+        const topics = type === 'Форумы' ? [ASU,'Другие форумы'] : [...journalTopics,...new Set(shown.map(x=>x.topic||'Без направления').filter(x=>!journalTopics.includes(x)))];
         cards = topics.map(topic => {
-          const subset = shown.filter(x => (x.topic || 'Без направления') === topic);
+          const subset = shown.filter(x => (type==='Форумы'&&x.topic!==ASU?'Другие форумы':x.topic||'Без направления')===topic);
           return subset.length ? `<section class="resource-topic"><div class="resource-topic-header"><h3>${htmlEsc(topic)}</h3><span>${subset.length}</span></div><div class="resource-items">${subset.map(makeCard).join('')}</div></section>` : '';
         }).join('');
       }
