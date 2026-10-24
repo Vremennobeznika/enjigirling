@@ -19,6 +19,14 @@ assert.ok(types.get('Онлайн-измерения')>=12,'measurement resource
 for(const cat of ['Журналы','Форумы','Разработка ПО','САПР и конструирование','Научные базы и справочники','Стандарты и метрология','Обучение и курсы'])assert.ok(types.get(cat)>=3,'missing category: '+cat);
 for(const id of ['platform-cyberleninka','platform-elibrary','platform-zhurnalivak'])assert.equal(items.find(x=>x.id===id).type,'Научные базы и справочники',id+' wrong group');
 assert.ok(types.get('Журналы')>=48,'journals catalog too sparse');
+const asuIds=['forum-asutpforum','forum-proasutp','forum-asu-tp-community','forum-cyberforum','forum-delta-electronics','ref-siemens-sieportal'];
+const relatedAsuForumIds=['forum-metrologu','forum-electronix','forum-robotics-se','forum-cadcam','forum-opennet'];
+assert.equal(types.get('АСУ ТП'),asuIds.length,'primary ASU TP resources must be grouped together');
+for(const id of asuIds)assert.equal(items.find(item=>item.id===id)?.type,'АСУ ТП','ASU resource misplaced: '+id);
+for(const id of relatedAsuForumIds){
+ const item=items.find(item=>item.id===id);
+ assert.ok(item&&item.type==='Форумы'&&item.asuRelated===true,'cross-listed ASU forum missing: '+id);
+}
 assert.equal(types.has('Платформы для разработок'),false,'code and CAD still merged');
 for(const id of ['dev-github','dev-gitlab','dev-gitverse','dev-gitflic'])assert.equal(items.find(x=>x.id===id).type,'Разработка ПО',id+' wrong category');
 for(const id of ['dev-grabcad','dev-onshape','dev-freecad','cad-kompas','cad-nanocad','cad-tflex'])assert.equal(items.find(x=>x.id===id).type,'САПР и конструирование',id+' wrong category');
@@ -28,6 +36,7 @@ for(const id of ['resourceSearch','resourceSort','resourceGridView','resourceLis
 assert.ok(js.includes('new Intl.Collator'),'alphabetical sorting missing');
 assert.ok(html.includes('class="resource-secondary-controls"'),'toolbar left-alignment missing');
 assert.ok(js.includes('resource-topic-header'),'journal topical grouping missing');
+assert.ok(js.includes("'АСУ ТП'")&&js.includes('activeType === ASU && row.item.asuRelated'),'ASU TP catalog filter or related-forum routing missing');
 assert.ok(js.includes('nextRendered')&&js.includes('more.addEventListener'),'progressive rendering missing');
 assert.ok(js.includes('searchTimer = setTimeout'),'search debounce missing');
 assert.ok(!/fonts\\.(?:googleapis|gstatic)\\.com/.test(html),'resource page must not require remote fonts');
