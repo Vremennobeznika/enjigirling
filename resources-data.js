@@ -125,6 +125,7 @@ const resources = [
     {
         id: "forum-habr",
         type: "Форумы",
+        topic: "ИТ и технологии",
         name: "Хабр",
         desc: "Крупнейшая русскоязычная платформа о технологиях, IT и инженерии. Статьи, вопросы и обсуждения по всем направлениям.",
         link: "https://habr.com"
@@ -132,6 +133,7 @@ const resources = [
     {
         id: "forum-ixbt",
         type: "Форумы",
+        topic: "ИТ и технологии",
         name: "iXBT.com",
         desc: "Площадка о компьютерном железе, электронике, радиотехнике и новых технологиях. Активное сообщество технических энтузиастов.",
         link: "https://forum.ixbt.com"
@@ -178,6 +180,7 @@ const resources = [
     {
         id: "forum-eng-tips",
         type: "Форумы",
+        topic: "Общая инженерия",
         name: "Eng-Tips",
         desc: "Большой международный инженерный форум: механика, машиностроение, электротехника, строительство, производство, CAD и смежные области.",
         link: "https://www.eng-tips.com/"
@@ -185,6 +188,7 @@ const resources = [
     {
         id: "forum-dwg-ru",
         type: "Форумы",
+        topic: "САПР и конструирование",
         name: "DWG.ru",
         desc: "Русскоязычное инженерное сообщество с форумами по AutoCAD, САПР, строительству, проектированию, машиностроению и технической документации.",
         link: "https://forum.dwg.ru/"
@@ -192,6 +196,7 @@ const resources = [
     {
         id: "forum-autodesk",
         type: "Форумы",
+        topic: "САПР и конструирование",
         name: "Autodesk Community",
         desc: "Официальное сообщество Autodesk с форумами по AutoCAD, Inventor, Fusion, Revit, Civil 3D, Mechanical, CFD, CAM и другим инженерным продуктам.",
         link: "https://forums.autodesk.com/"
@@ -199,6 +204,7 @@ const resources = [
     {
         id: "forum-grabcad",
         type: "Форумы",
+        topic: "САПР и конструирование",
         name: "GrabCAD Community",
         desc: "Сообщество инженеров и конструкторов: вопросы по CAD, инженерии и 3D-печати, проекты, группы, модели и обучающие материалы.",
         link: "https://grabcad.com/community"
@@ -206,6 +212,7 @@ const resources = [
     {
         id: "forum-solidworks",
         type: "Форумы",
+        topic: "САПР и конструирование",
         name: "SOLIDWORKS Community",
         desc: "Сообщество пользователей SOLIDWORKS и инженерного ПО: моделирование, чертежи, сборки, Simulation, PDM и автоматизация.",
         link: "https://forum.solidworks.com/"
@@ -221,6 +228,7 @@ const resources = [
     {
         id: "forum-reddit-engineering",
         type: "Форумы",
+        topic: "Общая инженерия",
         name: "Reddit — Engineering",
         desc: "Международное сообщество для обсуждения инженерных задач, профессий, проектов, образования и практического опыта.",
         link: "https://www.reddit.com/r/engineering/"
@@ -311,6 +319,7 @@ const resources = [
     {
         id: "forum-caduser",
         type: "Форумы",
+        topic: "САПР и конструирование",
         name: "CADUser Forum",
         desc: "Русскоязычный форум по САПР с разделами по nanoCAD, машиностроению, строительству и другим прикладным инженерным задачам.",
         link: "https://www.caduser.ru/forum/"
@@ -318,6 +327,7 @@ const resources = [
     {
         id: "forum-ascon",
         type: "Форумы",
+        topic: "САПР и конструирование",
         name: "Форум пользователей ПО АСКОН",
         desc: "Практическое сообщество по КОМПАС-3D, КОМПАС-График, прикладным САПР, параметризации, 2D/3D-моделированию и выпуску документации.",
         link: "https://forum.ascon.ru/"
@@ -561,6 +571,7 @@ const resources = [
     {
         "id": "forum-radiokot",
         "type": "Форумы",
+        topic: "Электроника и микроконтроллеры",
         "name": "РадиоКот",
         "desc": "Схемотехника, ремонт, радиодетали и проекты любительской электроники.",
         "link": "https://www.radiokot.ru/forum/"
@@ -568,6 +579,7 @@ const resources = [
     {
         "id": "forum-kicad",
         "type": "Форумы",
+        topic: "Электроника и микроконтроллеры",
         "name": "KiCad.info",
         "desc": "Сообщество пользователей KiCad: разводка плат, библиотеки, производственные файлы.",
         "link": "https://forum.kicad.info/"
@@ -575,6 +587,7 @@ const resources = [
     {
         "id": "forum-electronics-se",
         "type": "Форумы",
+        topic: "Электроника и микроконтроллеры",
         "name": "Electrical Engineering Stack Exchange",
         "desc": "Вопросы и технические ответы об электронике, цепях, микроконтроллерах и измерениях.",
         "link": "https://electronics.stackexchange.com/"
@@ -1171,6 +1184,7 @@ const resources = [
     {
         "id": "forum-arduino",
         "type": "Форумы",
+        topic: "Электроника и микроконтроллеры",
         "name": "Arduino Forum",
         "desc": "Официальный форум по микроконтроллерам, прошивкам, аппаратуре и отладке Arduino.",
         "link": "https://forum.arduino.cc/"
@@ -1178,6 +1192,7 @@ const resources = [
     {
         "id": "forum-engineering-stackexchange",
         "type": "Форумы",
+        topic: "Общая инженерия",
         "name": "Engineering Stack Exchange",
         "desc": "Профессиональные вопросы и ответы по механике, электротехнике, расчётам и проектированию.",
         "link": "https://engineering.stackexchange.com/"
@@ -1185,6 +1200,7 @@ const resources = [
     {
         "id": "forum-librecad",
         "type": "Форумы",
+        topic: "САПР и конструирование",
         "name": "LibreCAD Forum",
         "desc": "Вопросы пользователей свободной 2D-САПР LibreCAD, чертежи, DXF, настройка и ошибки.",
         "link": "https://discourse.librecad.org/"
