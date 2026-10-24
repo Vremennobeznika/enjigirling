@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const ALL = 'Все', ASU = 'АСУ ТП';
   const order = ['Журналы', 'САПР и конструирование', 'Разработка ПО', 'Инструменты и симуляторы', 'Онлайн-измерения', 'Форумы', 'Научные базы и справочники', 'Стандарты и метрология', 'Обучение и курсы', 'Дружественные каналы', 'Чаты в Telegram'];
   const labels = {'Разработка ПО':'Код и Git', 'САПР и конструирование':'САПР и КБ', 'Инструменты и симуляторы':'Симуляторы', 'Онлайн-измерения':'Измерения онлайн', 'Научные базы и справочники':'Библиотеки', 'Стандарты и метрология':'Стандарты', 'Обучение и курсы':'Курсы', 'Дружественные каналы':'Каналы', 'Чаты в Telegram':'Чаты'};
+  const forumTopics = [ASU,'САПР и конструирование','Электроника и микроконтроллеры','ИТ и технологии','Общая инженерия'];
   const journalTopics = ['Машиностроение и САПР','Автоматизация и электроника','Материалы, контроль и измерения','Энергетика, строительство и транспорт','Пищевая и лёгкая промышленность','Наука и образование'];
   const htmlEsc = value => String(value == null ? '' : value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
   const normalize = value => String(value == null ? '' : value).toLocaleLowerCase('ru-RU').replace(/ё/g,'е').replace(/\s+/g,' ').trim();
@@ -24,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const types = [ALL,...order.filter(type => counts.has(type)),...[...counts.keys()].filter(type => !order.includes(type)).sort(collator.compare)];
   const buttons = new Map();
   let activeType = ALL, view = 'grid', limit = 4, searchTimer = null;
-  const batchSize = () => activeType === ALL ? 4 : 24;
+  const batchSize = () => activeType === ALL ? 4 : activeType === 'Форумы' ? 32 : 24;
   const hostname = href => { try { return new URL(href).hostname.replace(/^www\./,''); } catch { return ''; } };
   const makeCard = item => {
     const href = String(item.link || '');
@@ -64,15 +65,15 @@ document.addEventListener('DOMContentLoaded', () => {
     for (const type of groups) {
       const candidates = byType.get(type) || [];
       if (!candidates.length) continue;
-      if (type === 'Форумы') candidates.sort((a,b)=>(b.topic===ASU)-(a.topic===ASU));
+      if (type === 'Форумы') candidates.sort((a,b)=>forumTopics.indexOf(a.topic)-forumTopics.indexOf(b.topic));
       const shown = type === 'Дружественные каналы' ? candidates : candidates.slice(0, limit);
       rendered += shown.length;
       nextRendered += type === 'Дружественные каналы' ? candidates.length : Math.min(candidates.length, limit + batchSize());
       let cards = `<div class="resource-items">${shown.map(makeCard).join('')}</div>`;
       if (type === 'Журналы' || type === 'Форумы') {
-        const topics = type === 'Форумы' ? [ASU,'Другие форумы'] : [...journalTopics,...new Set(shown.map(x=>x.topic||'Без направления').filter(x=>!journalTopics.includes(x)))];
+        const topics = type === 'Форумы' ? forumTopics : [...journalTopics,...new Set(shown.map(x=>x.topic||'Без направления').filter(x=>!journalTopics.includes(x)))];
         cards = topics.map(topic => {
-          const subset = shown.filter(x => (type==='Форумы'&&x.topic!==ASU?'Другие форумы':x.topic||'Без направления')===topic);
+          const subset = shown.filter(x => (x.topic||'Без направления')===topic);
           return subset.length ? `<section class="resource-topic"><div class="resource-topic-header"><h3>${htmlEsc(topic)}</h3><span>${subset.length}</span></div><div class="resource-items">${subset.map(makeCard).join('')}</div></section>` : '';
         }).join('');
       }
