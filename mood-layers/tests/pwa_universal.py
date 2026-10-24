@@ -24,7 +24,7 @@ with sync_playwright() as p:
  assert pg.locator('.mood').count()==7
  pg.locator('#note').fill('PWA TEST RECORD 143')
  pg.locator('#save-entry').click()
- assert pg.locator('#toast').inner_text().strip(), 'No feedback after saving diary entry'
+ assert pg.locator('#toast').inner_text().strip(), 'No feedback after saving diary entry: '+pg.locator('#status').inner_text()
  pg.locator('[data-tab="history"]').click()
  assert 'PWA TEST RECORD 143' in pg.locator('.entry').inner_text()
  for w,he in [(280,640),(320,568),(375,667),(568,320)]:
