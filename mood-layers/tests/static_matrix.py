@@ -18,7 +18,7 @@ checks={
 'CSV formula protection':"if(/^[\\s\\uFEFF]*[=+@-]/.test(s))" in app,
 'no dangerous innerHTML':not re.search(r'\.innerHTML\s*=',app),
 'explicit no treatment conclusions':'не доказывают причину' in html,
-'offline cache with same origin':'url.origin!==self.location.origin' in sw,
+'offline cache with same origin':"u.origin!==self.location.origin" in sw and 'STATIC.indexOf' in sw,
 'no android permissions':'uses-permission' not in android,
 'android backup off':'allowBackup="false"' in android,
 'no android cleartext':'usesCleartextTraffic="false"' in android,
