@@ -1165,12 +1165,10 @@
       "recordId": "fermentation",
       "sourceId": "atlas-pasteurization",
       "claimPath": "description",
-      "verificationStatus": "claim_checked",
-      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена",
-      "verifiedClaim": "Ферментация применяется как один из способов консервирования пищевых продуктов.",
-      "sourceSection": "Preservation Methods by Chemical Action",
-      "claimCheckedAt": "2026-10-22",
-      "reviewScope": "Проверено только приведённое утверждение, не вся карточка."
+      "verificationStatus": "source_located",
+      "claimScope": "Тематический обзор найден; конкретный ранее заявленный тезис текущим доступным текстом источника не подтверждён",
+      "reviewScope": "Общий документ FAO по переработке пищевых продуктов не удостоверяет биохимический механизм и параметры ферментации.",
+      "reviewedAt": "2026-10-25"
     },
     {
       "recordType": "processes",
@@ -1237,8 +1235,12 @@
       "recordId": "wood-drying",
       "sourceId": "atlas-wood-drying",
       "claimPath": "description",
-      "verificationStatus": "source_located",
-      "claimScope": "Обзорный источник найден; индивидуальная проверка всех утверждений карточки не завершена"
+      "verificationStatus": "claim_checked",
+      "claimScope": "USDA Forest Service прямо описывает методы сушки пиломатериалов и виды дефектов; не подтверждает режимы конкретной породы или камеры",
+      "verifiedClaim": "Сушка пиломатериалов включает управляемое снижение влажности и контроль дефектов; режим зависит от древесины и способа сушки.",
+      "sourceSection": "Abstract: Drying Hardwood Lumber (FPL-GTR-118)",
+      "claimCheckedAt": "2026-10-25",
+      "reviewScope": "Проверен узкий принцип и наличие контроля качества, не текст всей карточки и не численные режимы."
     },
     {
       "recordType": "processes",
@@ -1309,12 +1311,10 @@
       "recordId": "cutting",
       "sourceId": "validated-cutting",
       "claimPath": "description",
-      "verificationStatus": "claim_checked",
-      "claimScope": "Проверен принцип процесса, но не все параметры качества.",
-      "verifiedClaim": "Механическая обработка удаляет материал заготовки для получения требуемой геометрии.",
-      "sourceSection": "Mass reducing processes",
-      "claimCheckedAt": "2026-10-22",
-      "reviewScope": "Проверен принцип процесса, но не все параметры качества."
+      "verificationStatus": "source_located",
+      "claimScope": "Тематический обзор найден; конкретный ранее заявленный тезис текущим доступным текстом источника не подтверждён",
+      "reviewScope": "Обзор NIST выделяет класс mass-reducing, но в открытом реферате не проверена конкретная последовательность механической обработки.",
+      "reviewedAt": "2026-10-25"
     },
     {
       "recordType": "processes",
@@ -1369,60 +1369,50 @@
       "recordId": "wood-drying",
       "sourceId": "atlas-sawmilling",
       "claimPath": "description",
-      "verificationStatus": "claim_checked",
-      "claimScope": "Подтверждено существование процесса, не его технологические режимы.",
-      "verifiedClaim": "Камерная сушка пиломатериалов входит в виды операций лесопильного производства.",
-      "sourceSection": "Description for 2421",
-      "claimCheckedAt": "2026-10-22",
-      "reviewScope": "Подтверждено существование процесса, не его технологические режимы."
+      "verificationStatus": "source_located",
+      "claimScope": "Классификация лесопильных операций; метод камерной сушки этим источником отдельно не подтверждён",
+      "reviewScope": "Подтверждено существование процесса, не его технологические режимы.",
+      "reviewedAt": "2026-10-25"
     },
     {
       "recordType": "processes",
       "recordId": "forging",
       "sourceId": "validated-cutting",
       "claimPath": "description",
-      "verificationStatus": "claim_checked",
-      "claimScope": "Принцип или отраслевое отнесение процесса",
-      "verifiedClaim": "Ковка относится к формообразованию посредством пластической деформации.",
-      "sourceSection": "Shaping processes",
-      "claimCheckedAt": "2026-10-22",
-      "reviewScope": "Проверено только приведённое утверждение, не вся карточка."
+      "verificationStatus": "source_located",
+      "claimScope": "Тематический обзор найден; конкретный ранее заявленный тезис текущим доступным текстом источника не подтверждён",
+      "reviewScope": "Обзор NIST не содержит в открытом реферате отдельной проверки ковки, её механизма и этапов.",
+      "reviewedAt": "2026-10-25"
     },
     {
       "recordType": "processes",
       "recordId": "rolling",
       "sourceId": "validated-cutting",
       "claimPath": "description",
-      "verificationStatus": "claim_checked",
-      "claimScope": "Принцип или отраслевое отнесение процесса",
-      "verifiedClaim": "Прокатка относится к процессам формообразования металлических заготовок.",
-      "sourceSection": "Mass conserving processes",
-      "claimCheckedAt": "2026-10-22",
-      "reviewScope": "Проверено только приведённое утверждение, не вся карточка."
+      "verificationStatus": "source_located",
+      "claimScope": "Тематический обзор найден; конкретный ранее заявленный тезис текущим доступным текстом источника не подтверждён",
+      "reviewScope": "Общая классификация формообразования не подтверждает конкретные утверждения о прокатке.",
+      "reviewedAt": "2026-10-25"
     },
     {
       "recordType": "processes",
       "recordId": "stamping",
       "sourceId": "validated-cutting",
       "claimPath": "description",
-      "verificationStatus": "claim_checked",
-      "claimScope": "Принцип или отраслевое отнесение процесса",
-      "verifiedClaim": "Листовая штамповка входит в процессы формообразования материалов.",
-      "sourceSection": "Shaping processes",
-      "claimCheckedAt": "2026-10-22",
-      "reviewScope": "Проверено только приведённое утверждение, не вся карточка."
+      "verificationStatus": "source_located",
+      "claimScope": "Тематический обзор найден; конкретный ранее заявленный тезис текущим доступным текстом источника не подтверждён",
+      "reviewScope": "Общая классификация формообразования не подтверждает операции листовой штамповки.",
+      "reviewedAt": "2026-10-25"
     },
     {
       "recordType": "processes",
       "recordId": "grinding",
       "sourceId": "validated-cutting",
       "claimPath": "description",
-      "verificationStatus": "claim_checked",
-      "claimScope": "Принцип или отраслевое отнесение процесса",
-      "verifiedClaim": "Абразивное шлифование входит в процессы удаления материала.",
-      "sourceSection": "Mass reducing processes",
-      "claimCheckedAt": "2026-10-22",
-      "reviewScope": "Проверено только приведённое утверждение, не вся карточка."
+      "verificationStatus": "source_located",
+      "claimScope": "Тематический обзор найден; конкретный ранее заявленный тезис текущим доступным текстом источника не подтверждён",
+      "reviewScope": "Общая классификация уменьшения массы не подтверждает специфические сведения об абразивном шлифовании.",
+      "reviewedAt": "2026-10-25"
     },
     {
       "recordType": "processes",
@@ -1465,12 +1455,10 @@
       "recordId": "weaving",
       "sourceId": "checked2-spinning",
       "claimPath": "description",
-      "verificationStatus": "claim_checked",
-      "claimScope": "Принцип или отраслевое отнесение процесса",
-      "verifiedClaim": "Ткачество формирует тканые полотна из пряжи.",
-      "sourceSection": "Major Group 22",
-      "claimCheckedAt": "2026-10-22",
-      "reviewScope": "Проверено только приведённое утверждение, не вся карточка."
+      "verificationStatus": "source_located",
+      "claimScope": "Тематический обзор найден; конкретный ранее заявленный тезис текущим доступным текстом источника не подтверждён",
+      "reviewScope": "Отраслевая категория SIC 22 не подтверждает устройство процесса переплетения основы и утка.",
+      "reviewedAt": "2026-10-25"
     },
     {
       "recordType": "processes",
@@ -1489,12 +1477,10 @@
       "recordId": "sewing",
       "sourceId": "checked2-sewing",
       "claimPath": "description",
-      "verificationStatus": "claim_checked",
-      "claimScope": "Принцип или отраслевое отнесение процесса",
-      "verifiedClaim": "Швейное производство включает раскрой и соединение текстильных материалов.",
-      "sourceSection": "Major Group 23",
-      "claimCheckedAt": "2026-10-22",
-      "reviewScope": "Проверено только приведённое утверждение, не вся карточка."
+      "verificationStatus": "source_located",
+      "claimScope": "Тематический обзор найден; конкретный ранее заявленный тезис текущим доступным текстом источника не подтверждён",
+      "reviewScope": "Отраслевая категория SIC 23 не подтверждает всю последовательность операций раскроя и соединения.",
+      "reviewedAt": "2026-10-25"
     },
     {
       "recordType": "processes",
@@ -1585,12 +1571,10 @@
       "recordId": "extrusion",
       "sourceId": "validated-cutting",
       "claimPath": "description",
-      "claimScope": "Проверка основного принципа процесса",
-      "verificationStatus": "claim_checked",
-      "verifiedClaim": "Экструзия относится к процессам формообразования.",
-      "sourceSection": "Shaping processes",
-      "claimCheckedAt": "2026-10-22",
-      "reviewScope": "Проверен только приведённый частный тезис, а не вся технологическая карточка."
+      "claimScope": "Тематический обзор найден; конкретный ранее заявленный тезис текущим доступным текстом источника не подтверждён",
+      "verificationStatus": "source_located",
+      "reviewScope": "Обзор NIST в открытом реферате не подтверждает конкретные операции полимерной экструзии.",
+      "reviewedAt": "2026-10-25"
     },
     {
       "recordType": "processes",
@@ -2397,24 +2381,36 @@
       "recordId": "carbon-adsorption",
       "sourceId": "atlas-source-012",
       "claimPath": "industry",
-      "verificationStatus": "source_located",
-      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+      "verificationStatus": "claim_checked",
+      "claimScope": "Подтверждён только указанный основной принцип процесса, не технологическая карта или параметры эксплуатации",
+      "verifiedClaim": "Гранулированный активированный уголь применяется как адсорбционная среда для удаления некоторых растворённых загрязнителей из воды.",
+      "sourceSection": "Granular activated carbon: What is granular activated carbon?; Why is it useful?",
+      "claimCheckedAt": "2026-10-25",
+      "reviewScope": "Сверено с открытым разделом EPA Overview of Drinking Water Treatment Technologies, без вывода о качестве очистки в конкретной установке."
     },
     {
       "recordType": "processes",
       "recordId": "reverse-osmosis",
       "sourceId": "atlas-source-012",
       "claimPath": "industry",
-      "verificationStatus": "source_located",
-      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+      "verificationStatus": "claim_checked",
+      "claimScope": "Подтверждён только указанный основной принцип процесса, не технологическая карта или параметры эксплуатации",
+      "verifiedClaim": "Обратный осмос является мембранной технологией разделения воды и растворённых примесей под давлением.",
+      "sourceSection": "Reverse osmosis/nanofiltration: What are reverse osmosis and nanofiltration?",
+      "claimCheckedAt": "2026-10-25",
+      "reviewScope": "Сверено с открытым разделом EPA Overview of Drinking Water Treatment Technologies, без вывода о качестве очистки в конкретной установке."
     },
     {
       "recordType": "processes",
       "recordId": "nanofiltration-water",
       "sourceId": "atlas-source-012",
       "claimPath": "industry",
-      "verificationStatus": "source_located",
-      "claimScope": "Publisher source provides sector or method-family context only, not validation of this record's individual process steps, defects, materials or safety decisions."
+      "verificationStatus": "claim_checked",
+      "claimScope": "Подтверждён только указанный основной принцип процесса, не технологическая карта или параметры эксплуатации",
+      "verifiedClaim": "Нанофильтрация разделяет поток воды через полупроницаемую мембрану, удерживающую часть растворённых загрязнителей.",
+      "sourceSection": "Reverse osmosis/nanofiltration: What are reverse osmosis and nanofiltration?",
+      "claimCheckedAt": "2026-10-25",
+      "reviewScope": "Сверено с открытым разделом EPA Overview of Drinking Water Treatment Technologies, без вывода о качестве очистки в конкретной установке."
     },
     {
       "recordType": "processes",
