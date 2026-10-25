@@ -96,8 +96,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["welding","cutting","inspection","mig-mag","ultrasonic","radiographic"]
 - **note:** Марка сама по себе не определяет категорию проката, ударную вязкость или режим сварки.
 - **industries:** ["metals","construction"]
-- **sources:** [{"title":"USGS — Iron and Steel Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/iron-and-steel-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"context_only","verifiedClaim":"Найден источник по общему классу материала или терминологии.","reviewScope":"Общие сведения о сталях; свойства проката 09Г2С и применимость к конструкции требуют профильного стандарта.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Iron and Steel Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/iron-and-steel-statistics-and-information"},{"title":"ГОСТ 19281–2014 — Прокат повышенной прочности (копия)","url":"https://files.stroyinf.ru/Data/581/58183.pdf"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"09Г2С включена в номенклатуру сталей для проката повышенной прочности в документе, область которого охватывает конструкции со сварными, клёпаными и болтовыми соединениями. Это не подтверждение пригодности конкретной поставки к проекту.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### AISI 304
 - **id:** aisi-304
@@ -135,8 +135,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["cutting"]
 - **note:** Электропроводность и примеси уточняются по документу на конкретный полуфабрикат.
 - **industries:** ["metals","electronics","energy"]
-- **sources:** [{"title":"Copper Development Association — Copper in power systems and its electrical conductivity","url":"https://blog.copper.org/power-grid/how-copper-supports-power-grid-expansion-and-rising-energy-demand"}]
-- **evidence:** {"verificationStatus":"context_only","verifiedClaim":"Найден источник по общему классу материала или терминологии.","reviewScope":"CDA подтверждает высокую электропроводность меди и промышленное применение; точная марка М1 и требования к партии не проверены.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"Copper Development Association — Copper in power systems and its electrical conductivity","url":"https://blog.copper.org/power-grid/how-copper-supports-power-grid-expansion-and-rising-energy-demand"},{"title":"ГОСТ 859–2014 — Медь. Марки (копия с изменением №1)","url":"https://meganorm.ru/Data2/1/4293769/4293769872.pdf"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"М1 — марка литой и деформированной меди; документ отдельно оговаривает изделия для электротехнической промышленности и проверку электропроводности. Название М1 само по себе не подтверждает электропроводность поставки.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### ПЭНД (HDPE)
 - **id:** pe-hd
@@ -174,8 +174,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["additive","inspection"]
 - **note:** Без схемы армирования и условий испытаний единое значение прочности некорректно.
 - **industries:** ["composites","construction","energy"]
-- **sources:** [{"title":"ISO 1043-2:2011 — Усиливающие материалы и наполнители","url":"https://www.iso.org/standard/52829.html"}]
-- **evidence:** {"verificationStatus":"context_only","verifiedClaim":"Найден источник по общему классу материала или терминологии.","reviewScope":"ISO посвящён обозначениям армирующих материалов, а не прочности или пригодности стеклопластика.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"ISO 1043-2:2011 — Усиливающие материалы и наполнители","url":"https://www.iso.org/standard/52829.html"},{"title":"Composite Materials & Manufacturing — Fundamental Manufacturing Processes Study Guide","url":"https://www.sme.org/globalassets/sme.org/media/training-guides/dv02pub2_study_guide.pdf"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Стекловолокно армирует матрицу; ориентация волокон и материалы составляющих влияют на свойства композита.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Оксидная керамика Al₂O₃
 - **id:** alumina
@@ -187,8 +187,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["inspection"]
 - **note:** Не задавать единые значения твёрдости и прочности без марки и метода испытаний.
 - **industries:** ["ceramics","electronics"]
-- **sources:** [{"title":"USGS — Bauxite and Alumina Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/bauxite-and-alumina-statistics-and-information?qt-science_support_page_related_con=0"}]
-- **evidence:** {"verificationStatus":"context_only","verifiedClaim":"Найден источник по общему классу материала или терминологии.","reviewScope":"Источник описывает глинозём Al₂O₃ как промышленный продукт; не подтверждает свойства конкретной конструкционной керамики.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Bauxite and Alumina Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/bauxite-and-alumina-statistics-and-information?qt-science_support_page_related_con=0"},{"title":"Morgan — High Performance Alumina Ceramic Components","url":"https://www.morgantechnicalceramics.com/en-gb/products/alumina-ceramic-components/"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Керамику на основе оксида алюминия применяют в электрических изоляторах и технических износостойких деталях. Рабочие пределы конкретного состава не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Берёзовая фанера
 - **id:** birch-plywood
@@ -213,8 +213,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["inspection"]
 - **note:** Защитные характеристики нельзя утверждать без испытаний готового изделия.
 - **industries:** ["textiles","composites"]
-- **sources:** [{"title":"ISO 2076:2021 — Наименования химических волокон","url":"https://www.iso.org/standard/79685.html"}]
-- **evidence:** {"verificationStatus":"context_only","verifiedClaim":"Найден источник по общему классу материала или терминологии.","reviewScope":"ISO описывает общую номенклатуру химических волокон; свойства и тип арамидной ткани не проверены.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"ISO 2076:2021 — Наименования химических волокон","url":"https://www.iso.org/standard/79685.html"},{"title":"Composite Materials & Manufacturing — Fundamental Manufacturing Processes Study Guide","url":"https://www.sme.org/globalassets/sme.org/media/training-guides/dv02pub2_study_guide.pdf"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Арамидные волокна используются как армирование композитов. Защитные свойства конкретного текстиля не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Пищевое сырьё растительного происхождения
 - **id:** food-raw
@@ -239,8 +239,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["food-packaging"]
 - **note:** Материал и миграционные требования проверяют по применимым регламентам и декларации соответствия.
 - **industries:** ["food","polymers"]
-- **sources:** [{"title":"EFSA — Food Contact Materials safety assessment","url":"https://www.efsa.europa.eu/en/science/scientific-committee-and-panels/fcm"}]
-- **evidence:** {"verificationStatus":"context_only","verifiedClaim":"Найден источник по общему классу материала или терминологии.","reviewScope":"EFSA описывает научную оценку веществ и материалов, контактирующих с пищей, включая упаковку; не подтверждает безопасность конкретного изделия, разрешение или национальную применимость.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"EFSA — Food Contact Materials safety assessment","url":"https://www.efsa.europa.eu/en/science/scientific-committee-and-panels/fcm"},{"title":"FDA — Food Types & Conditions of Use for Food Contact Substances","url":"https://www.fda.gov/food/packaging-food-contact-substances-fcs/food-types-conditions-use-food-contact-substances"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"В справочных таблицах FDA условия контакта упаковочных веществ различаются по типу продукта, тепловой обработке и хранению. Это не разрешение конкретной упаковки; применимость требований в РФ/ЕАЭС не установлена.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Хлопковое волокно
 - **id:** cotton
@@ -317,8 +317,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["pcb-assembly","electronic-inspection"]
 - **note:** Контролировать совместимость сплавов, флюса и технологических ограничений.
 - **industries:** ["electronics","metals"]
-- **sources:** [{"title":"IPC — J-STD-006C requirements for solder alloys (edition shown is older)","url":"https://www.ipc.org/TOC/IPC-J-STD-006C.pdf"}]
-- **evidence:** {"verificationStatus":"context_only","verifiedClaim":"Найден источник по общему классу материала или терминологии.","reviewScope":"Подтверждена спецификация класса электронных припоев; ссылка на старую редакцию, действующую редакцию требуется проверить.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"IPC — J-STD-006C requirements for solder alloys (edition shown is older)","url":"https://www.ipc.org/TOC/IPC-J-STD-006C.pdf"},{"title":"Solder Paste — Flux","url":"https://www.indium.com/blog/solder-paste-flux/"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Разным припойным сплавам требуются совместимые флюсовые рецептуры; конкретный сплав для изделия этим не выбран.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Алюминиевый сплав 6063
 - **id:** al-6063
@@ -356,8 +356,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["casting"]
 - **note:** Установите сортировку, загрязнения, прослеживаемость происхождения и химический состав.
 - **industries:** ["metals","mining"]
-- **sources:** [{"title":"USGS — Iron and Steel Scrap Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/iron-and-steel-scrap-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.","reviewScope":"Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Iron and Steel Scrap Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/iron-and-steel-scrap-statistics-and-information"},{"title":"SGL — Commerzbank German Investment Seminar","url":"https://www.sglcarbon.com/pdf/SGL-Presentation-Commerzbank-German-Investment-Seminar-January-2014-EN.pdf"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Стальной лом используется как металлосодержащая шихта для производства стали в электродуговых печах. Литейная шихта и ограничения по примесям этим не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Железная руда
 - **id:** iron-ore
@@ -369,8 +369,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["ore-crushing","ore-grinding","magnetic-separation-ore"]
 - **note:** Требуются минералогия, гранулометрия, содержание железа и примесей.
 - **industries:** ["mining","metals"]
-- **sources:** [{"title":"USGS — Iron Ore Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/iron-ore-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.","reviewScope":"Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Iron Ore Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/iron-ore-statistics-and-information"},{"title":"Metso — Basics in Minerals Processing, Edition 12","url":"https://www.metso.com/globalassets/insights/ebooks/mo-basics-in-mineral-processing-handbook_lowres.pdf"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Железорудная мелочь после окомкования может служить сырьём для получения железа в металлургической печи. Содержание железа и конкретная шихта не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Боксит
 - **id:** bauxite-ore
@@ -382,8 +382,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["ore-crushing","ore-grinding"]
 - **note:** Проверяются минералогический состав, реакционная способность и примеси.
 - **industries:** ["mining","metals","ceramics"]
-- **sources:** [{"title":"USGS — Bauxite and Alumina Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/bauxite-and-alumina-statistics-and-information?qt-science_support_page_related_con=0"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.","reviewScope":"Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Bauxite and Alumina Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/bauxite-and-alumina-statistics-and-information?qt-science_support_page_related_con=0"},{"title":"Alumina Refining 101","url":"https://www.aluminum.org/alumina-refining-101"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Бокситы перерабатывают в глинозём, который далее используют в производстве первичного алюминия; качество конкретного сырья не аттестовано.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Портландцемент
 - **id:** cement-portland
@@ -434,8 +434,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["glass-melting","granular-filtration"]
 - **note:** Проверяйте содержание SiO₂, оксидов железа, фракционный состав и санитарные требования.
 - **industries:** ["ceramics","mining","water","construction"]
-- **sources:** [{"title":"USGS — Silica Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/silica-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.","reviewScope":"Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Silica Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/silica-statistics-and-information"},{"title":"Metso — Basics in Minerals Processing, Edition 12","url":"https://www.metso.com/globalassets/insights/ebooks/mo-basics-in-mineral-processing-handbook_lowres.pdf"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Кремнезёмистый песок используется в стекольном производстве; в описанном маршруте предусмотрена его промывка. Фракционный и химический допуски не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Активированный уголь гранулированный
 - **id:** water-carbon
@@ -512,8 +512,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["extrusion","calendering"]
 - **note:** Характеристики определяются рецептурой, стабилизаторами и типом изделия.
 - **industries:** ["polymers","construction","chemicals"]
-- **sources:** [{"title":"ISO 1043-1:2011 — Обозначения основных полимеров","url":"https://www.iso.org/ru/standard/50590.html"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.","reviewScope":"Подтверждена только номенклатура, не состав ПВХ-композиции.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"ISO 1043-1:2011 — Обозначения основных полимеров","url":"https://www.iso.org/ru/standard/50590.html"},{"title":"INEOS Inovyn — PVC for Thermoplastic Processing","url":"https://www.ineos.com/businesses/inovyn/products/vinyls/general-purpose-pvc/"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"ПВХ используется для изготовления профилей, труб и напольных покрытий. Рецептура добавок и свойства конкретной композиции не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Промышленные клеевые системы
 - **id:** adhesive
@@ -590,8 +590,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["flexography","offset-lithography","screen-printing"]
 - **note:** Проверяются совместимость с субстратом, тип отверждения, вязкость, миграционные ограничения.
 - **industries:** ["printing","chemicals"]
-- **sources:** [{"title":"OSHA — Printing Industry Glossary","url":"https://www.osha.gov/etools/printing-industry/glossary"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.","reviewScope":"Сведения об охране труда и терминологии не заменяют паспорт безопасности или технологический лист.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"OSHA — Printing Industry Glossary","url":"https://www.osha.gov/etools/printing-industry/glossary"},{"title":"Sun Chemical — Solutions for Flexo and Labels Expo 2024","url":"https://www.sunchemical.com/sun-chemical-to-present-extensive-range-of-sustainable-solutions-for-flexo-and-labels-expo-2024/"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Существуют отдельные красочные системы для флексографской, офсетной и трафаретной печати. Это не универсальная совместимость любой краски со всеми тремя способами.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Печатная бумага и картон
 - **id:** printing-paper
@@ -603,8 +603,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["offset-lithography","flexography","print-binding"]
 - **note:** Указывают массу на м², влажность, гладкость, направление волокон и отделку.
 - **industries:** ["printing","food"]
-- **sources:** [{"title":"OSHA — Printing Industry Glossary","url":"https://www.osha.gov/etools/printing-industry/glossary"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.","reviewScope":"Точный состав и бумажные марки источником не подтверждены.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"OSHA — Printing Industry Glossary","url":"https://www.osha.gov/etools/printing-industry/glossary"},{"title":"UPM — Communication Papers Products and Services","url":"https://www.upmpaper.com/products-services/"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Для печатной продукции выпускают отдельные категории бумаги, в том числе журнальную и газетную. Упаковка, совместимость с покрытием и послепечатная обработка не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Деним (хлопчатобумажная ткань)
 - **id:** cotton-denim
@@ -629,8 +629,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["industrial-heat-exchange","cutting"]
 - **note:** Определите марку, стандарт полуфабриката, совместимость с теплоносителем и допуски.
 - **industries:** ["energy","metals"]
-- **sources:** [{"title":"Copper Development Association — Copper in power systems and its electrical conductivity","url":"https://blog.copper.org/power-grid/how-copper-supports-power-grid-expansion-and-rising-energy-demand"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.","reviewScope":"CDA подтверждает применение меди в электрических системах и низкие потери; пригодность конкретного полуфабриката к теплообменнику требует отдельного источника.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"Copper Development Association — Copper in power systems and its electrical conductivity","url":"https://blog.copper.org/power-grid/how-copper-supports-power-grid-expansion-and-rising-energy-demand"},{"title":"CDA — Small-Diameter Copper Tubes in Advanced Heat Exchanger Design","url":"https://blog.copper.org/hvac/r/small-diameter-copper-tubes-in-advanced-heat-exchanger-design"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Медные трубки применяют как теплопередающие элементы теплообменников. Листовые изделия, марки и пригодность к конкретной среде не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Огнеупорные керамические материалы
 - **id:** refractory-ceramics
@@ -655,8 +655,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["ore-crushing","ore-screening"]
 - **note:** Необходим анализ следовых примесей и требования по чистоте для продукта.
 - **industries:** ["mining","ceramics","electronics"]
-- **sources:** [{"title":"USGS — Silica Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/silica-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.","reviewScope":"Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Silica Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/silica-statistics-and-information"},{"title":"Sibelco — High Purity Quartz","url":"https://www.sibelco.com/en/materials/high-purity-quartz"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Высокочистый кварц служит сырьём для плавленых кварцевых изделий, используемых в полупроводниковом производстве. Любой добытый кварц не приравнивается к высокочистому.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Ферритные нержавеющие стали
 - **id:** stainless-ferritic
@@ -728,26 +728,26 @@ ZIP создаётся прямо в браузере, без облака и п
 - **name:** Серый чугун
 - **group:** metal
 - **family:** Чугунные литейные сплавы
-- **detail:** Класс чугунов; литейные дефекты и свойства нельзя определять только названием класса.
+- **detail:** Серый чугун характеризуется пластинчатой формой графита; свойства и литейные дефекты нельзя определять только названием класса.
 - **uses:** Корпусные литые изделия
 - **process:** ["casting","inspection"]
 - **note:** Марка и химический состав; состояние поставки; вид полуфабриката; нормативная спецификация; требуемые механические и коррозионные свойства.
 - **industries:** ["metals"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"TB Woods — Ductile Iron Defined","url":"https://www.tbwoods.com/en/commercial-castings/ductile-iron"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"В сером чугуне графит имеет пластинчатую форму. Численные свойства и дефекты конкретной отливки не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Чугун с шаровидным графитом
 - **id:** cast-iron-ductile
 - **name:** Чугун с шаровидным графитом
 - **group:** metal
 - **family:** Чугунные литейные сплавы
-- **detail:** Литейный материал, свойства которого зависят от марки, структуры и условий производства.
+- **detail:** Высокопрочный чугун с шаровидным графитом; свойства зависят от марки, металлической матрицы и условий производства.
 - **uses:** Корпуса, арматура, трубная продукция
 - **process:** ["casting","inspection"]
 - **note:** Марка и химический состав; состояние поставки; вид полуфабриката; нормативная спецификация; требуемые механические и коррозионные свойства.
 - **industries:** ["metals"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"TB Woods — Ductile Iron Defined","url":"https://www.tbwoods.com/en/commercial-castings/ductile-iron"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Высокопрочный чугун содержит шаровидный графит; ферритная и перлитная составляющие матрицы влияют на свойства. Свойства конкретной марки не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Латуни
 - **id:** brass-alloys
@@ -785,8 +785,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["cutting","inspection"]
 - **note:** Марка и химический состав; состояние поставки; вид полуфабриката; нормативная спецификация; требуемые механические и коррозионные свойства.
 - **industries:** ["metals","chemicals"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"TIMET — Industrial Titanium","url":"https://www.timet.com/markets/industrial/"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Титан и титановые сплавы используются в промышленном оборудовании и деталях машин, например теплообменных трубках и компонентах двигателей. Стойкость конкретной марки к любой среде не подтверждена.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Никелевые сплавы
 - **id:** nickel-alloys
@@ -798,8 +798,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["welding","cutting"]
 - **note:** Марка и химический состав; состояние поставки; вид полуфабриката; нормативная спецификация; требуемые механические и коррозионные свойства.
 - **industries:** ["metals","energy","chemicals"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"USGS — Nickel Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/nickel-statistics-and-information"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Никелевые суперсплавы применяют в деталях газовых турбин. Коррозионная стойкость всех никелевых сплавов и работоспособность в любой сложной среде не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Цинковые литейные сплавы
 - **id:** zinc-diecast
@@ -811,8 +811,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["casting"]
 - **note:** Марка и химический состав; состояние поставки; вид полуфабриката; нормативная спецификация; требуемые механические и коррозионные свойства.
 - **industries:** ["metals","electronics"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"International Zinc Association — Zinc Alloys in Die Casting","url":"https://diecasting.zinc.org/wp-content/uploads/sites/9/2026/02/Zinc-Alloys-in-Diecasting-Two-Pager-FINAL.pdf"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Цинковые сплавы применяются для литых деталей, в том числе корпусов датчиков. Точность, прочность и прогнозы рынка не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Магниевые конструкционные сплавы
 - **id:** magnesium-alloys
@@ -824,8 +824,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["casting","cutting"]
 - **note:** Марка и химический состав; состояние поставки; вид полуфабриката; нормативная спецификация; требуемые механические и коррозионные свойства.
 - **industries:** ["metals"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"Luxfer MEL — Magnesium alloys research and development","url":"https://www.luxfermeltechnologies.com/magnesium-research-development/"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Магниевые сплавы — семейство лёгких конструкционных материалов, для которых существуют литейные, деформируемые и обрабатываемые исполнения. Безопасность операций и свойства любой марки не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Полиэтилен низкой плотности (LDPE)
 - **id:** ldpe
@@ -850,8 +850,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["blown-film-extrusion","extrusion"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["polymers","food"]
-- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"},{"title":"Linear Low-Density Polyethylene (LLDPE)","url":"https://www.lyondellbasell.com/en/our-solutions/products/polymers/resin-type/lldpe/"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Линейный полиэтилен низкой плотности применяют в плёнках и компаундах; конкретные эксплуатационные параметры не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Полистирол (PS)
 - **id:** ps
@@ -988,52 +988,52 @@ ZIP создаётся прямо в браузере, без облака и п
 - **name:** Этиленвинилацетат (EVA)
 - **group:** organic
 - **family:** Этиленовые сополимеры
-- **detail:** Полимерное семейство с разным составом и диапазоном технологических свойств.
+- **detail:** EVA — сополимер этилена и винилацетата; продукты различаются содержанием винилацетата и текучестью расплава. Применения и переработка требуют выбора конкретной марки.
 - **uses:** Плёночные и вспененные изделия
 - **process:** ["extrusion","polymer-foaming"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["polymers","textiles"]
-- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"},{"title":"Engineered Materials — Solutions Overview","url":"https://www.celanese.com/-/media/cewebjssapp/project/documents/shared/EMMaterialSolutions-001-Portfolio-Bro-EN.pdf"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"EVA — этилен-винилацетатное семейство; продукты имеют разный состав по винилацетату и разную текучесть расплава.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Этиленпропилендиеновый каучук (EPDM)
 - **id:** epdm
 - **name:** Этиленпропилендиеновый каучук (EPDM)
 - **group:** organic
 - **family:** Эластомерные материалы
-- **detail:** Эластомерное сырьё; долговечность уплотнения определяется рецептурой смеси и испытаниями.
+- **detail:** EPDM — синтетический каучук на основе этилена, пропилена и диенового сомономера, позволяющего сшивку. Рабочие свойства уплотнения определяются конкретной рецептурой и испытаниями.
 - **uses:** Уплотнения и техническая резина
 - **process:** ["rubber-vulcanization"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["polymers","construction"]
-- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"},{"title":"Ethylene Propylene Diene Rubber","url":"https://www.arlanxeo.com/en/families/epdm?form=content&id=20"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"EPDM получают из этилена, пропилена и диенового сомономера; он допускает вулканизацию, но универсальная стойкость всех рецептур не подтверждена.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Бутадиенстирольный каучук (SBR)
 - **id:** sbr
 - **name:** Бутадиенстирольный каучук (SBR)
 - **group:** organic
 - **family:** Синтетические каучуки
-- **detail:** Сырьё для резиновых смесей; характеристики зависят от вулканизующей системы и наполнителей.
+- **detail:** SBR — сополимер стирола и бутадиена. Эмульсионные марки различаются, в частности, содержанием стирола, масла и вязкостью; характеристики готовой резины зависят от рецептуры и вулканизации.
 - **uses:** Резинотехнические изделия
 - **process:** ["rubber-vulcanization"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["polymers","construction"]
-- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"},{"title":"Emulsion-Styrene Butadiene Rubbers","url":"https://www.arlanxeo.com/en/families/e-sbr"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"SBR состоит из стирола и бутадиена; эмульсионные марки различаются составом и вязкостью.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Термопластичный полиуретан (TPU)
 - **id:** tpu
 - **name:** Термопластичный полиуретан (TPU)
 - **group:** organic
 - **family:** Термопластичные эластомеры
-- **detail:** Группа формуемых эластомеров; характеристики нельзя выводить из аббревиатуры без марки.
+- **detail:** TPU — термопластичные полиуретаны; существуют варианты на основе простых и сложных эфиров, ароматические и алифатические марки. Характеристики выбирают для конкретной марки.
 - **uses:** Гибкие технические детали
 - **process:** ["extrusion","injection-molding"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["polymers","textiles"]
-- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"},{"title":"Elastollan — thermoplastic polyurethane","url":"https://plastics-rubber.basf.com/global/en/performance_polymers/products/elastollan"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"TPU — семейство термопластичных полиуретанов с различной химической основой и модификациями.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Пшеница продовольственная
 - **id:** grain-wheat
@@ -1045,8 +1045,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["grain-milling"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["food"]
-- **sources:** [{"title":"FAO — GHP/HACCP Toolbox: Primary production","url":"https://www.fao.org/good-hygiene-practices-haccp-toolbox/ghp/primary-production/"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"FAO описывает риски безопасности сырья при первичном производстве, но не удостоверяет видовой состав, параметры и безопасность конкретного пищевого сырья или полуфабриката.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"FAO — GHP/HACCP Toolbox: Primary production","url":"https://www.fao.org/good-hygiene-practices-haccp-toolbox/ghp/primary-production/"},{"title":"Bühler — Wheat Milling","url":"https://www.buhlergroup.com/global/en/industries/Wheat-and-grain/Wheat.html"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Пшеница служит сырьём для помола в муку. Показатели загрязнений и конкретной партии этим не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Пшеничная мука
 - **id:** wheat-flour
@@ -1058,8 +1058,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["food-extrusion"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["food"]
-- **sources:** [{"title":"FAO — GHP/HACCP Toolbox: Primary production","url":"https://www.fao.org/good-hygiene-practices-haccp-toolbox/ghp/primary-production/"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"FAO описывает риски безопасности сырья при первичном производстве, но не удостоверяет видовой состав, параметры и безопасность конкретного пищевого сырья или полуфабриката.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"FAO — GHP/HACCP Toolbox: Primary production","url":"https://www.fao.org/good-hygiene-practices-haccp-toolbox/ghp/primary-production/"},{"title":"Bühler — Wheat Milling","url":"https://www.buhlergroup.com/global/en/industries/Wheat-and-grain/Wheat.html"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Пшеничную муку используют для хлебопечения. Требования к сорту и партии не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Растительные пищевые масла
 - **id:** vegetable-oils
@@ -1071,8 +1071,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["food-packaging"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["food","chemicals"]
-- **sources:** [{"title":"FAO — GHP/HACCP Toolbox: Primary production","url":"https://www.fao.org/good-hygiene-practices-haccp-toolbox/ghp/primary-production/"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"FAO описывает риски безопасности сырья при первичном производстве, но не удостоверяет видовой состав, параметры и безопасность конкретного пищевого сырья или полуфабриката.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"FAO — GHP/HACCP Toolbox: Primary production","url":"https://www.fao.org/good-hygiene-practices-haccp-toolbox/ghp/primary-production/"},{"title":"Codex — Standard for Named Vegetable Oils, CODEX STAN 210-1999","url":"https://www.fao.org/input/download/standards/336/CXS_210e_2015.pdf"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Пищевые растительные масла используются для питания человека; виды масел различаются по растительному сырью. Это не подтверждение пищевой пригодности любого технического масла или качества партии.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Сырое молоко
 - **id:** raw-milk
@@ -1110,8 +1110,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["juice-clarification","pasteurization"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["food"]
-- **sources:** [{"title":"FAO — GHP/HACCP Toolbox: Primary production","url":"https://www.fao.org/good-hygiene-practices-haccp-toolbox/ghp/primary-production/"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"FAO описывает риски безопасности сырья при первичном производстве, но не удостоверяет видовой состав, параметры и безопасность конкретного пищевого сырья или полуфабриката.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"FAO — GHP/HACCP Toolbox: Primary production","url":"https://www.fao.org/good-hygiene-practices-haccp-toolbox/ghp/primary-production/"},{"title":"Alfa Laval — PurePulp series","url":"https://www.alfalaval.com/products/separation/centrifugal-separators/separators/purepulp-series/"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Цитрусовые и некоторые другие фруктовые соки могут быть сырьём для осветления с отделением мякоти. Микробиология и упаковка не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Плодовоягодные пюре
 - **id:** fruit-puree
@@ -1123,8 +1123,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["pasteurization"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["food"]
-- **sources:** [{"title":"FAO — GHP/HACCP Toolbox: Primary production","url":"https://www.fao.org/good-hygiene-practices-haccp-toolbox/ghp/primary-production/"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"FAO описывает риски безопасности сырья при первичном производстве, но не удостоверяет видовой состав, параметры и безопасность конкретного пищевого сырья или полуфабриката.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"FAO — GHP/HACCP Toolbox: Primary production","url":"https://www.fao.org/good-hygiene-practices-haccp-toolbox/ghp/primary-production/"},{"title":"Codex — General Standard for Fruit Juices and Nectars, CODEX STAN 247-2005","url":"https://www.fao.org/input/download/standards/10154/CXS_247e.pdf"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Фруктовое пюре используют при изготовлении соков и нектаров. Применение как иных наполнителей, микробиология, механические включения и консистенция партии не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Сахар-песок
 - **id:** sugar-crystal
@@ -1136,8 +1136,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["food-packaging"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["food"]
-- **sources:** [{"title":"FAO — GHP/HACCP Toolbox: Primary production","url":"https://www.fao.org/good-hygiene-practices-haccp-toolbox/ghp/primary-production/"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"FAO описывает риски безопасности сырья при первичном производстве, но не удостоверяет видовой состав, параметры и безопасность конкретного пищевого сырья или полуфабриката.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"FAO — GHP/HACCP Toolbox: Primary production","url":"https://www.fao.org/good-hygiene-practices-haccp-toolbox/ghp/primary-production/"},{"title":"Codex — Standard for Sugars, CODEX STAN 212-1999","url":"https://www.fao.org/input/download/standards/338/CXS_212e_u.pdf"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Белый кристаллический сахар используется как пищевой ингредиент. Влажность, примеси и соответствие конкретной партии не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Пищевые дрожжи
 - **id:** yeast-food
@@ -1149,8 +1149,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["fermentation"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["food"]
-- **sources:** [{"title":"FAO — GHP/HACCP Toolbox: Primary production","url":"https://www.fao.org/good-hygiene-practices-haccp-toolbox/ghp/primary-production/"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"FAO описывает риски безопасности сырья при первичном производстве, но не удостоверяет видовой состав, параметры и безопасность конкретного пищевого сырья или полуфабриката.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"FAO — GHP/HACCP Toolbox: Primary production","url":"https://www.fao.org/good-hygiene-practices-haccp-toolbox/ghp/primary-production/"},{"title":"Lesaffre — What is Saccharomyces cerevisiae?","url":"https://bakingwithlesaffre.com/what-is-saccharomyces-cerevisiae/"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Хлебопекарные дрожжи S. cerevisiae используют при брожении теста; выделяемый углекислый газ участвует в его разрыхлении. Тезис не распространяется на все пищевые дрожжевые продукты.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Мясное сырьё
 - **id:** meat-raw
@@ -1162,8 +1162,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["food-packaging","freezing-food"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["food"]
-- **sources:** [{"title":"FAO — GHP/HACCP Toolbox: Primary production","url":"https://www.fao.org/good-hygiene-practices-haccp-toolbox/ghp/primary-production/"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"FAO описывает риски безопасности сырья при первичном производстве, но не удостоверяет видовой состав, параметры и безопасность конкретного пищевого сырья или полуфабриката.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"FAO — GHP/HACCP Toolbox: Primary production","url":"https://www.fao.org/good-hygiene-practices-haccp-toolbox/ghp/primary-production/"},{"title":"USDA FSIS — Basics for Handling Food Safely (копия UC ANR)","url":"https://ucanr.edu/media/258081"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Контроль температуры хранения мяса является мерой безопасного обращения в памятке FSIS. Документальная прослеживаемость и промышленная безопасность конкретной партии этим источником не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Шерстяное волокно
 - **id:** wool-fiber
@@ -1175,8 +1175,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["carding","spinning"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["textiles"]
-- **sources:** [{"title":"ISO 6938:2012 — Натуральные волокна: названия и определения","url":"https://www.iso.org/standard/57474.html"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Найден открытый источник по терминологии или технологическому классу. Индивидуальные свойства материала не подтверждены.","reviewScope":"Официальное описание стандарта охватывает номенклатуру натуральных волокон; параметры конкретного волокна и марки не подтверждены.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"ISO 6938:2012 — Натуральные волокна: названия и определения","url":"https://www.iso.org/standard/57474.html"},{"title":"Woolmark — What is the Wool Fibre?","url":"https://www.woolmark.com/fibre/what-is-the-wool-fibre/"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Овечья шерсть — природное волокно животного происхождения, состоящее преимущественно из белка кератина. Характеристики партии не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Льняное волокно
 - **id:** flax-fiber
@@ -1188,8 +1188,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["spinning","weaving"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["textiles"]
-- **sources:** [{"title":"ISO 6938:2012 — Натуральные волокна: названия и определения","url":"https://www.iso.org/standard/57474.html"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Найден открытый источник по терминологии или технологическому классу. Индивидуальные свойства материала не подтверждены.","reviewScope":"Официальное описание стандарта охватывает номенклатуру натуральных волокон; параметры конкретного волокна и марки не подтверждены.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"ISO 6938:2012 — Натуральные волокна: названия и определения","url":"https://www.iso.org/standard/57474.html"},{"title":"Alliance for European Flax-Linen and Hemp — Flax growing and expertise","url":"https://allianceflaxlinenhemp.eu/en/flax-growing-expertise"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Льняное волокно извлекают из стебля растения; подготовка к прядению включает механическое выделение, чесание и смешивание партий. Качество зависит от сырья и подготовки, численные пределы не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Полиэфирное текстильное волокно
 - **id:** polyester-fiber
@@ -1201,8 +1201,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["spinning","weaving"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["textiles","polymers"]
-- **sources:** [{"title":"ISO 2076:2021 — Химические волокна: наименования","url":"https://www.iso.org/standard/79685.html"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Найден открытый источник по терминологии или технологическому классу. Индивидуальные свойства материала не подтверждены.","reviewScope":"Официальная публикация определяет наименования химических волокон, а не их механические свойства и пригодность к производству.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"ISO 2076:2021 — Химические волокна: наименования","url":"https://www.iso.org/standard/79685.html"},{"title":"Toray — Textiles","url":"https://www.toray.com/products/textiles/"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Полиэфирные волокна применяют в текстильных и нетканых материалах. Конкретные свойства волокна не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Полиамидная техническая нить
 - **id:** polyamide-textile-yarn
@@ -1214,21 +1214,21 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["winding-yarn","weaving"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["textiles","composites"]
-- **sources:** [{"title":"ISO 2076:2021 — Химические волокна: наименования","url":"https://www.iso.org/standard/79685.html"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Найден открытый источник по терминологии или технологическому классу. Индивидуальные свойства материала не подтверждены.","reviewScope":"Официальная публикация определяет наименования химических волокон, а не их механические свойства и пригодность к производству.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"ISO 2076:2021 — Химические волокна: наименования","url":"https://www.iso.org/standard/79685.html"},{"title":"Coats — Selecting Your Sewing Threads, Bulletin 07","url":"https://www.coats.com/en-us/info-hub/selecting-your-sewing-threads/"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Нейлоновые многоволоконные нити используются для сшивания технических изделий. Не все полиамидные текстильные нити имеют одинаковое назначение или свойства.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Вискозное волокно
 - **id:** viscose-fiber
 - **name:** Вискозное волокно
 - **group:** organic
 - **family:** Химические волокна целлюлозной природы
-- **detail:** Волокнистый текстильный материал; параметры определяются способом получения и отделкой.
+- **detail:** Вискозное волокно получают регенерацией целлюлозы из прядильного раствора; параметры зависят от процесса и отделки.
 - **uses:** Текстильные полотна
 - **process:** ["spinning","weaving"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["textiles"]
-- **sources:** [{"title":"ISO 2076:2021 — Химические волокна: наименования","url":"https://www.iso.org/standard/79685.html"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Найден открытый источник по терминологии или технологическому классу. Индивидуальные свойства материала не подтверждены.","reviewScope":"Официальная публикация определяет наименования химических волокон, а не их механические свойства и пригодность к производству.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"ISO 2076:2021 — Химические волокна: наименования","url":"https://www.iso.org/standard/79685.html"},{"title":"Lenzing — Fiber production technologies","url":"https://www.lenzing.com/technology-production/technologies/"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Вискоза относится к регенерированным целлюлозным волокнам; описанный процесс включает формование из раствора в кислую ванну. Режимы конкретной марки не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Нетканое полотно
 - **id:** nonwoven-fabric
@@ -1240,8 +1240,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["needle-punching-nonwovens"]
 - **note:** Матрица и армирование, ориентация, доля наполнителя, метод формования, условия отверждения, испытания и дефекты.
 - **industries:** ["textiles","food"]
-- **sources:** [{"title":"CottonWorks — Технологии производства хлопкового текстиля","url":"https://cottonworks.com/learning-hub/"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Найден открытый источник по терминологии или технологическому классу. Индивидуальные свойства материала не подтверждены.","reviewScope":"Технические учебные ресурсы по производству хлопкового текстиля; применимость к другим волокнам и параметры конкретной ткани отдельно не проверены.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"CottonWorks — Технологии производства хлопкового текстиля","url":"https://cottonworks.com/learning-hub/"},{"title":"Sandler — Needlepunch technology","url":"https://www.sandler-group.com/de-en/competencies/needlepunch"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Иглопробивные нетканые полотна применяют для фильтрации и технических изделий. Применимость всей категории к упаковке не проверена.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Трикотажное полотно
 - **id:** knitted-fabric
@@ -1266,8 +1266,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["sewing"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["textiles"]
-- **sources:** [{"title":"CottonWorks — Технологии производства хлопкового текстиля","url":"https://cottonworks.com/learning-hub/"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Найден открытый источник по терминологии или технологическому классу. Индивидуальные свойства материала не подтверждены.","reviewScope":"Технические учебные ресурсы по производству хлопкового текстиля; применимость к другим волокнам и параметры конкретной ткани отдельно не проверены.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"CottonWorks — Технологии производства хлопкового текстиля","url":"https://cottonworks.com/learning-hub/"},{"title":"Coats — Selecting Your Sewing Threads, Bulletin 07","url":"https://www.coats.com/en-us/info-hub/selecting-your-sewing-threads/"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Швейные нитки различаются волокнистым составом, структурой, толщиной и отделкой, влияющими на их поведение при шитье. Численные критерии качества партии не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Основная пряжа
 - **id:** warp-yarn
@@ -1292,8 +1292,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["textile-finishing"]
 - **note:** Состав рецептуры, техническая спецификация, совместимость, условия хранения и переработки, методы контроля и риски применения.
 - **industries:** ["textiles","chemicals"]
-- **sources:** [{"title":"CottonWorks — Технологии производства хлопкового текстиля","url":"https://cottonworks.com/learning-hub/"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Найден открытый источник по терминологии или технологическому классу. Индивидуальные свойства материала не подтверждены.","reviewScope":"Технические учебные ресурсы по производству хлопкового текстиля; применимость к другим волокнам и параметры конкретной ткани отдельно не проверены.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"CottonWorks — Технологии производства хлопкового текстиля","url":"https://cottonworks.com/learning-hub/"},{"title":"DyStar — Textile Dyes and Pigments","url":"https://www.dystar.com/textile-dyes-pigments/"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Для окрашивания текстиля предлагаются различные классы красителей, подобранные под целлюлозные, полиэфирные, полиамидные и шерстяные волокна. Режим фиксации и допуски не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Технический войлок
 - **id:** technical-felt
@@ -1305,8 +1305,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["needle-punching-nonwovens"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["textiles","construction"]
-- **sources:** [{"title":"CottonWorks — Технологии производства хлопкового текстиля","url":"https://cottonworks.com/learning-hub/"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Найден открытый источник по терминологии или технологическому классу. Индивидуальные свойства материала не подтверждены.","reviewScope":"Технические учебные ресурсы по производству хлопкового текстиля; применимость к другим волокнам и параметры конкретной ткани отдельно не проверены.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"CottonWorks — Технологии производства хлопкового текстиля","url":"https://cottonworks.com/learning-hub/"},{"title":"Donaldson — Specialty Bag Filters","url":"https://www.donaldson.com/en/products/bag-filters/specialty-replacement-filters/"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Иглопробивной технический войлок применяется как материал рукавных фильтров. Тезис относится к описанным фильтровальным материалам; прокладки, изоляция и все виды войлока не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Пиломатериалы из ели
 - **id:** spruce-lumber
@@ -1344,8 +1344,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["veneer-peeling","plywood-bonding"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["wood"]
-- **sources:** [{"title":"USDA Forest Service — Wood Handbook, 2021","url":"https://research.fs.usda.gov/fpl/wood-handbook"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"Обзор главы/книги по древесине, её влажности, обработке и инженерным древесным изделиям; физические свойства, сорта и нормативы продукции отдельно не проверены.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USDA Forest Service — Wood Handbook, 2021","url":"https://research.fs.usda.gov/fpl/wood-handbook"},{"title":"USDA FPL-GTR-282 — Chapter 11: Wood-Based Composite Materials","url":"https://research.fs.usda.gov/download/treesearch/62258.pdf"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Шпон используется листовыми слоями при изготовлении фанеры; конкретные толщины и сорта не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Ориентированно-стружечная плита (OSB)
 - **id:** osb-board
@@ -1409,8 +1409,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["wood-preservation"]
 - **note:** Состав рецептуры, техническая спецификация, совместимость, условия хранения и переработки, методы контроля и риски применения.
 - **industries:** ["wood","chemicals"]
-- **sources:** [{"title":"USDA Forest Service — Wood Handbook, 2021","url":"https://research.fs.usda.gov/fpl/wood-handbook"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"Обзор главы/книги по древесине, её влажности, обработке и инженерным древесным изделиям; физические свойства, сорта и нормативы продукции отдельно не проверены.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USDA Forest Service — Wood Handbook, 2021","url":"https://research.fs.usda.gov/fpl/wood-handbook"},{"title":"Wood Handbook 2021 — Chapter 15: Wood Preservatives","url":"https://research.fs.usda.gov/treesearch/download/62259.pdf"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Химические защитные составы применяют для повышения биостойкости древесины; выбор состава и условия применения требуют отдельного подбора.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Препрег для печатных плат
 - **id:** pcb-prepreg
@@ -1422,8 +1422,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** []
 - **note:** Матрица и армирование, ориентация, доля наполнителя, метод формования, условия отверждения, испытания и дефекты.
 - **industries:** ["electronics","composites"]
-- **sources:** [{"title":"IPC — Qualified Products List IPC-4101","url":"https://www.ipc.org/ipc-validation-services-qualified-products-list-qpl-ipc-4101"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"IPC-4101 относится к основам плат (ламинатам и препрегам), но не удостоверяет соответствие неназванного материала или партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"IPC — Qualified Products List IPC-4101","url":"https://www.ipc.org/ipc-validation-services-qualified-products-list-qpl-ipc-4101"},{"title":"Making a PCB — PCB Manufacture Step-by-Step","url":"https://www.eurocircuits.com/technical-guidelines/pcb-manufacturing-technology/making-a-pcb-pcb-manufacture-step-by-step/"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"В описанном маршруте Eurocircuits препрег многослойных плат — стеклоткань с предварительно нанесённой неотверждённой эпоксидной системой; другие системы и конкретная спецификация не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Ламинат для жёстких печатных плат
 - **id:** pcb-laminate
@@ -1435,8 +1435,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["pcb-drilling","pcb-etching"]
 - **note:** Матрица и армирование, ориентация, доля наполнителя, метод формования, условия отверждения, испытания и дефекты.
 - **industries:** ["electronics"]
-- **sources:** [{"title":"IPC — Qualified Products List IPC-4101","url":"https://www.ipc.org/ipc-validation-services-qualified-products-list-qpl-ipc-4101"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"IPC-4101 относится к основам плат (ламинатам и препрегам), но не удостоверяет соответствие неназванного материала или партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"IPC — Qualified Products List IPC-4101","url":"https://www.ipc.org/ipc-validation-services-qualified-products-list-qpl-ipc-4101"},{"title":"Making a PCB — PCB Manufacture Step-by-Step","url":"https://www.eurocircuits.com/technical-guidelines/pcb-manufacturing-technology/making-a-pcb-pcb-manufacture-step-by-step/"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Описанный изготовителем ламинат для жёсткой платы содержит стекловолоконную эпоксидную основу с медной фольгой; другие группы ламинатов не аттестованы.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Медная фольга для печатных плат
 - **id:** pcb-copper-foil
@@ -1448,8 +1448,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["pcb-etching","pcb-plating"]
 - **note:** Марка и химический состав; состояние поставки; вид полуфабриката; нормативная спецификация; требуемые механические и коррозионные свойства.
 - **industries:** ["electronics","metals"]
-- **sources:** [{"title":"IPC — Qualified Products List IPC-4101","url":"https://www.ipc.org/ipc-validation-services-qualified-products-list-qpl-ipc-4101"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"IPC-4101 относится к основам плат (ламинатам и препрегам), но не удостоверяет соответствие неназванного материала или партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"IPC — Qualified Products List IPC-4101","url":"https://www.ipc.org/ipc-validation-services-qualified-products-list-qpl-ipc-4101"},{"title":"Making a PCB — PCB Manufacture Step-by-Step","url":"https://www.eurocircuits.com/technical-guidelines/pcb-manufacturing-technology/making-a-pcb-pcb-manufacture-step-by-step/"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Медная фольга служит проводящим слоем при производстве многослойных печатных плат.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Паяльная паста
 - **id:** solder-paste
@@ -1461,21 +1461,21 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["solder-paste-printing","reflow-soldering"]
 - **note:** Состав рецептуры, техническая спецификация, совместимость, условия хранения и переработки, методы контроля и риски применения.
 - **industries:** ["electronics","chemicals"]
-- **sources:** [{"title":"IPC — IPC-4101 Base Materials","url":"https://www.ipc.org/ipc-validation-services-qualified-products-list-qpl-ipc-4101"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"Нормативный охват касается базовых материалов печатных плат, а не паяльных флюсов или покрытий; свойства последних отдельно не проверены.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"IPC — IPC-4101 Base Materials","url":"https://www.ipc.org/ipc-validation-services-qualified-products-list-qpl-ipc-4101"},{"title":"Solder Paste — Flux","url":"https://www.indium.com/blog/solder-paste-flux/"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Паяльная паста содержит порошок припоя и флюсовую систему; совместимость и хранение зависят от состава.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Флюс для электронного монтажа
 - **id:** solder-flux
 - **name:** Флюс для электронного монтажа
 - **group:** functional
 - **family:** Технологические химические вещества
-- **detail:** Состав, обеспечивающий условия пайки; остатки и совместимость определяются конкретным продуктом.
+- **detail:** Флюсовый состав способствует удалению поверхностных оксидов и ограничению повторного окисления в зоне пайки. Остатки и совместимость определяются конкретным продуктом.
 - **uses:** Пайка электронных сборок
 - **process:** ["wave-soldering","selective-soldering"]
 - **note:** Состав рецептуры, техническая спецификация, совместимость, условия хранения и переработки, методы контроля и риски применения.
 - **industries:** ["electronics","chemicals"]
-- **sources:** [{"title":"IPC — IPC-4101 Base Materials","url":"https://www.ipc.org/ipc-validation-services-qualified-products-list-qpl-ipc-4101"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"Нормативный охват касается базовых материалов печатных плат, а не паяльных флюсов или покрытий; свойства последних отдельно не проверены.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"IPC — IPC-4101 Base Materials","url":"https://www.ipc.org/ipc-validation-services-qualified-products-list-qpl-ipc-4101"},{"title":"Solder Paste — Flux","url":"https://www.indium.com/blog/solder-paste-flux/"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Флюс удаляет поверхностные оксиды и ограничивает повторное окисление при пайке; пригодность конкретных остатков не аттестована.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Компаунд для заливки электронных узлов
 - **id:** electronic-encapsulant
@@ -1487,8 +1487,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["conformal-coating"]
 - **note:** Состав рецептуры, техническая спецификация, совместимость, условия хранения и переработки, методы контроля и риски применения.
 - **industries:** ["electronics","polymers"]
-- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"},{"title":"Henkel — Board-level material solutions","url":"https://next.henkel-adhesives.com/my/en/articles/board-level-material-solutions.html"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Полимерные инкапсулянты, включая эпоксидные, акрилатные и силиконовые системы, применяют для защиты электронных компонентов. Электрические и температурные требования конкретного изделия не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Лак для защитного покрытия плат
 - **id:** conformal-coating-material
@@ -1500,8 +1500,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["conformal-coating"]
 - **note:** Состав рецептуры, техническая спецификация, совместимость, условия хранения и переработки, методы контроля и риски применения.
 - **industries:** ["electronics","polymers"]
-- **sources:** [{"title":"IPC — IPC-4101 Base Materials","url":"https://www.ipc.org/ipc-validation-services-qualified-products-list-qpl-ipc-4101"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"Нормативный охват касается базовых материалов печатных плат, а не паяльных флюсов или покрытий; свойства последних отдельно не проверены.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"IPC — IPC-4101 Base Materials","url":"https://www.ipc.org/ipc-validation-services-qualified-products-list-qpl-ipc-4101"},{"title":"Conformal Coating Automation: The Final Step to Coating Success","url":"https://www.nordson.com/en/about-us/nordson-blog/electronics-solutions-blogs/conformal-coating-automation-the-final-step-to-coating-success"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Материалы conformal coating предназначены для защитного покрытия плат; их подготовка и отверждение требуют согласованного процесса.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Известняк промышленный
 - **id:** lime-stone
@@ -1513,8 +1513,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["ore-crushing"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["chemicals","construction","mining"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"National Lime Association — Frequently Asked Questions","url":"https://www.lime.org/frequently-asked-questions/"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Известняк — карбонатное сырьё для производства извести; он не тождественен негашёной или гидратной извести. Примеси и состав конкретного сырья не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Кальцинированная сода
 - **id:** soda-ash
@@ -1539,8 +1539,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["chemical-mixing"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["chemicals","mining"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"USGS — Sulfur Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/sulfur-statistics-and-information"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Сера используется как промышленное химическое сырьё, прежде всего для получения серной кислоты. Качество и загрязнения партии не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Фосфатное сырьё
 - **id:** phosphate-rock
@@ -1552,21 +1552,21 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["ore-crushing"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["chemicals","mining"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"USGS — Phosphate Rock Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/phosphate-rock-statistics-and-information"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Фосфатные породы служат минеральным сырьём для производства фосфатных удобрений и промышленных продуктов. Минералогия и примеси конкретной партии не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Калийное минеральное сырьё
 - **id:** potash-raw
 - **name:** Калийное минеральное сырьё
 - **group:** inorganic
 - **family:** Калийсодержащие минералы
-- **detail:** Сырьё для промышленной переработки, требующее проверки минерального состава.
+- **detail:** Калийсодержащее сырьё для промышленной переработки, в том числе получения удобрений; пригодность требует проверки минерального состава и спецификации.
 - **uses:** Химические производства
 - **process:** ["crystallization"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["chemicals","mining"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"Potash Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/potash-statistics-and-information"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Калийное сырьё служит источником калия для получения удобрений; конкретная минеральная смесь и качество не аттестованы.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Цеолиты технические
 - **id:** industrial-zeolite
@@ -1578,8 +1578,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["granular-filtration"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["water","chemicals"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"Arkema — Molecular Sieves for Energy & Chemicals","url":"https://www.arkema.com/global/en/products/product-families/molecular-sieves/molecular-sieves-for-energy-chemicals/"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Описанные молекулярные сита на основе цеолитов применяют для селективной адсорбции и очистки газовых и жидких потоков. Все природные цеолиты и конкретная селективность не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Бентонитовая глина
 - **id:** bentonite-clay
@@ -1591,21 +1591,21 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["chemical-mixing"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["chemicals","construction","mining"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"Clariant — Civil Engineering bentonite additives","url":"https://www.clariant.com/en/Business-Units/Additives-and-Adsorbents/Civil-Engineering"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Бентонитовые глины применяют в добавках к буровым и строительным составам. Набухание и минералогия конкретной глины не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Соль техническая
 - **id:** industrial-salt
 - **name:** Соль техническая
 - **group:** inorganic
 - **family:** Хлоридное минеральное сырьё
-- **detail:** Техническая соль; состав и примеси контролируются для целевого процесса.
+- **detail:** Техническая соль — материал на основе хлорида натрия; состав и примеси контролируются для целевого процесса.
 - **uses:** Приготовление технологических растворов
 - **process:** ["chemical-mixing"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["chemicals","water"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"USGS — Salt Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/salt-statistics-and-information"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Соль имеет основу NaCl и используется как химическое сырьё, например для производства хлора и едкого натра. Допуски на примеси не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Углеродное армирующее волокно
 - **id:** carbon-fiber-preform
@@ -1617,8 +1617,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["hand-layup","filament-winding"]
 - **note:** Матрица и армирование, ориентация, доля наполнителя, метод формования, условия отверждения, испытания и дефекты.
 - **industries:** ["composites","energy"]
-- **sources:** [{"title":"ISO 1043-1 — Polymers; general class only","url":"https://www.iso.org/standard/50590.html"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"ISO 1043-1 охватывает полимерную номенклатуру, но не свойства армированных композитов; для отдельных систем требуются данные по матрице, армированию и процессу.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"ISO 1043-1 — Polymers; general class only","url":"https://www.iso.org/standard/50590.html"},{"title":"Composite Materials & Manufacturing — Fundamental Manufacturing Processes Study Guide","url":"https://www.sme.org/globalassets/sme.org/media/training-guides/dv02pub2_study_guide.pdf"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Углеродные волокна и преформы используются для армирования композитных материалов.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Углепластик (CFRP)
 - **id:** carbon-fiber-laminate
@@ -1630,8 +1630,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["vacuum-infusion","autoclave-composites"]
 - **note:** Матрица и армирование, ориентация, доля наполнителя, метод формования, условия отверждения, испытания и дефекты.
 - **industries:** ["composites","metals"]
-- **sources:** [{"title":"ISO 1043-1 — Polymers; general class only","url":"https://www.iso.org/standard/50590.html"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"ISO 1043-1 охватывает полимерную номенклатуру, но не свойства армированных композитов; для отдельных систем требуются данные по матрице, армированию и процессу.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"ISO 1043-1 — Polymers; general class only","url":"https://www.iso.org/standard/50590.html"},{"title":"Composite Materials & Manufacturing — Fundamental Manufacturing Processes Study Guide","url":"https://www.sme.org/globalassets/sme.org/media/training-guides/dv02pub2_study_guide.pdf"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Углеродное армирование совместно с полимерной матрицей образует композит; это не набор универсальных механических свойств.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Сотовый заполнитель
 - **id:** composite-honeycomb
@@ -1643,8 +1643,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["assembly"]
 - **note:** Матрица и армирование, ориентация, доля наполнителя, метод формования, условия отверждения, испытания и дефекты.
 - **industries:** ["composites","construction"]
-- **sources:** [{"title":"ISO 1043-1 — Polymers; general class only","url":"https://www.iso.org/standard/50590.html"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"ISO 1043-1 охватывает полимерную номенклатуру, но не свойства армированных композитов; для отдельных систем требуются данные по матрице, армированию и процессу.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"ISO 1043-1 — Polymers; general class only","url":"https://www.iso.org/standard/50590.html"},{"title":"Hexcel — HexWeb Honeycomb","url":"https://www.hexcel.com/products/honeycomb/hexweb-honeycomb/"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Сотовые заполнители применяют в сэндвич-конструкциях; производитель описывает варианты из алюминия, стекловолокна и арамидной бумаги. Расчётные свойства не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Эпоксидная связующая система
 - **id:** composite-epoxy-resin
@@ -1656,8 +1656,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["vacuum-infusion","resin-transfer-molding"]
 - **note:** Состав рецептуры, техническая спецификация, совместимость, условия хранения и переработки, методы контроля и риски применения.
 - **industries:** ["composites","chemicals"]
-- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"},{"title":"Composite Materials & Manufacturing — Fundamental Manufacturing Processes Study Guide","url":"https://www.sme.org/globalassets/sme.org/media/training-guides/dv02pub2_study_guide.pdf"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Эпоксидные системы применяются в качестве полимерной матрицы композитов. Рецептура и численные режимы не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Препрег для композитов
 - **id:** prepreg-composite
@@ -1669,8 +1669,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["autoclave-composites"]
 - **note:** Матрица и армирование, ориентация, доля наполнителя, метод формования, условия отверждения, испытания и дефекты.
 - **industries:** ["composites"]
-- **sources:** [{"title":"ISO 1043-1 — Polymers; general class only","url":"https://www.iso.org/standard/50590.html"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"ISO 1043-1 охватывает полимерную номенклатуру, но не свойства армированных композитов; для отдельных систем требуются данные по матрице, армированию и процессу.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"ISO 1043-1 — Polymers; general class only","url":"https://www.iso.org/standard/50590.html"},{"title":"Composite Materials & Manufacturing — Fundamental Manufacturing Processes Study Guide","url":"https://www.sme.org/globalassets/sme.org/media/training-guides/dv02pub2_study_guide.pdf"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Препрег — армирующий материал с предварительно нанесённой связующей системой. Условия хранения конкретной марки требуют документации изготовителя.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Базальтовое армирующее волокно
 - **id:** basalt-fiber
@@ -1682,8 +1682,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["pultrusion","filament-winding"]
 - **note:** Матрица и армирование, ориентация, доля наполнителя, метод формования, условия отверждения, испытания и дефекты.
 - **industries:** ["composites","textiles"]
-- **sources:** [{"title":"ISO 1043-1 — Polymers; general class only","url":"https://www.iso.org/standard/50590.html"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"ISO 1043-1 охватывает полимерную номенклатуру, но не свойства армированных композитов; для отдельных систем требуются данные по матрице, армированию и процессу.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"ISO 1043-1 — Polymers; general class only","url":"https://www.iso.org/standard/50590.html"},{"title":"Kamenny Vek — Basalt fiber application","url":"https://basfiber.com/application"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Базальтовое волокно используется для армированных полимерных композитных изделий, в том числе при пропитке тканей и компаундировании. Численные характеристики не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Заполнители для бетона
 - **id:** building-aggregate
@@ -1695,8 +1695,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["concrete-mixing"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["construction","mining"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"FHWA — Portland Cement Concrete Pavement, FHWA-RD-97-148","url":"https://www.fhwa.dot.gov/publications/research/infrastructure/pavements/97148/072.cfm"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Заполнители входят в состав бетонной смеси; гранулометрия, форма частиц и вредные примеси влияют на её свойства. Конкретные пределы не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Щебень строительный
 - **id:** crushed-stone
@@ -1708,8 +1708,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["ore-crushing","concrete-mixing"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["construction","mining"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"FHWA — Portland Cement Concrete Pavement, FHWA-RD-97-148","url":"https://www.fhwa.dot.gov/publications/research/infrastructure/pavements/97148/072.cfm"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Щебень используется как крупный заполнитель бетона. Пригодность конкретной породы и применение в дорожном основании не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Песок строительный
 - **id:** sand-building
@@ -1721,8 +1721,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["concrete-mixing"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["construction","mining"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"FHWA — Portland Cement Concrete Pavement, FHWA-RD-97-148","url":"https://www.fhwa.dot.gov/publications/research/infrastructure/pavements/97148/072.cfm"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Природный песок обычно служит мелким заполнителем бетона; состав и гранулометрия требуют подбора для смеси. Строительные растворы и подосновы не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Битум дорожный
 - **id:** asphalt-binder
@@ -1734,8 +1734,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["asphalt-mix-production"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["construction","chemicals"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"FHWA — Asphalt Concrete Pavement, FHWA-RD-97-148","url":"https://www.fhwa.dot.gov/publications/research/infrastructure/pavements/97148/071.cfm"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Битумное вяжущее обволакивает и связывает частицы заполнителя в дорожной смеси. Марка и требуемые свойства зависят от условий применения.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Асфальтобетонная смесь
 - **id:** asphalt-mix
@@ -1747,8 +1747,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["asphalt-mix-production","road-asphalt-placement"]
 - **note:** Матрица и армирование, ориентация, доля наполнителя, метод формования, условия отверждения, испытания и дефекты.
 - **industries:** ["construction"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"FHWA — Asphalt Concrete Pavement, FHWA-RD-97-148","url":"https://www.fhwa.dot.gov/publications/research/infrastructure/pavements/97148/071.cfm"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Асфальтобетон состоит из минеральных заполнителей и битумного вяжущего и применяется для дорожных покрытий. Рецептура и условия уплотнения не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Арматурный стальной прокат
 - **id:** rebar-steel
@@ -1760,8 +1760,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["rebar-installation"]
 - **note:** Марка и химический состав; состояние поставки; вид полуфабриката; нормативная спецификация; требуемые механические и коррозионные свойства.
 - **industries:** ["construction","metals"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"CRSI — Reinforcing Steel","url":"https://www.crsi.org/reinforcing-basics/reinforcing-steel/"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Стальные арматурные стержни применяют для армирования бетонных конструкций. Марка, класс и требования конкретного проекта не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Бетонная смесь товарная
 - **id:** ready-mix-concrete
@@ -1786,8 +1786,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["needle-punching-nonwovens"]
 - **note:** Матрица и армирование, ориентация, доля наполнителя, метод формования, условия отверждения, испытания и дефекты.
 - **industries:** ["construction","textiles"]
-- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"},{"title":"FHWA — Geotechnical Aspects of Pavements, Chapter 7","url":"https://www.fhwa.dot.gov/engineering/geotech/pubs/05037/07d.cfm"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Геотекстиль применяется в дорожном строительстве для разделения основания и грунта, препятствуя их перемешиванию. Требования к фильтрации конкретного полотна не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Электротехническая листовая сталь
 - **id:** electrical-steel
@@ -1799,8 +1799,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["rolling","stamping"]
 - **note:** Марка и химический состав; состояние поставки; вид полуфабриката; нормативная спецификация; требуемые механические и коррозионные свойства.
 - **industries:** ["energy","electronics","metals"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"thyssenkrupp — Electrical steel portfolio","url":"https://www.thyssenkrupp-steel.com/en/products/electrical-steel/electrical-steel-overview.html"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Неориентированная электротехническая сталь применяется в электродвигателях и генераторах; ориентированная — прежде всего в трансформаторах. Потери и магнитные характеристики конкретной марки не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Графитовые электроды промышленного назначения
 - **id:** graphite-electrode
@@ -1812,8 +1812,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["inspection"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["energy","metals"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"SGL — Commerzbank German Investment Seminar","url":"https://www.sglcarbon.com/pdf/SGL-Presentation-Commerzbank-German-Investment-Seminar-January-2014-EN.pdf"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Графитовые электроды применяются в электродуговой сталеплавильной печи. Режим и стандарт конкретного электрода не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Медный провод электротехнический
 - **id:** copper-electric-wire
@@ -1825,8 +1825,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["inspection"]
 - **note:** Марка и химический состав; состояние поставки; вид полуфабриката; нормативная спецификация; требуемые механические и коррозионные свойства.
 - **industries:** ["energy","electronics"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"Prysmian — Low Voltage Power Cable","url":"https://asean.prysmian.com/sites/asean.prysmian.com/files/media/documents/241218%20-%20Prysmian%20LV%20Power%20Cable.pdf"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Отожжённая медная проволока используется как токопроводящая жила силовых кабелей с полимерной изоляцией. Сечение, допустимый ток и стандарты конкретной поставки не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Минеральная теплоизоляционная вата
 - **id:** thermal-insulation-wool
@@ -1838,8 +1838,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["inspection"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["energy","construction"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"ROCKWOOL — RockTech Section Pipe Insulation","url":"https://www.rockwool.com/siteassets/rw-cn/document-downloads/datasheets/rockwool-rocktech-spi_en_ds_202007.pdf"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Каменная вата — пример волокнистой теплоизоляции, применяемой на технологических трубопроводах. Все виды минеральной ваты и температурные пределы не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Коррозионностойкий прокат для теплообменников
 - **id:** heat-exchanger-steel
@@ -1851,8 +1851,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["welding","industrial-heat-exchange"]
 - **note:** Марка и химический состав; состояние поставки; вид полуфабриката; нормативная спецификация; требуемые механические и коррозионные свойства.
 - **industries:** ["energy","chemicals"]
-- **sources:** [{"title":"worldstainless — Categories, grades and product forms","url":"https://worldstainless.org/about-stainless/what-are-stainless-steels/categories-grades-and-product-forms/"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"Источник различает аустенитную, ферритную, мартенситную и дуплексную группы нержавеющих сталей; не удостоверяет свойства отдельной марки/поставки.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"worldstainless — Categories, grades and product forms","url":"https://worldstainless.org/about-stainless/what-are-stainless-steels/categories-grades-and-product-forms/"},{"title":"Sulzer — Heat exchanger SMR","url":"https://www.sulzer.com/en/shared/products/heat-exchanger-smr"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Для описанного трубного теплообменника предусмотрены исполнения из нержавеющей или углеродистой стали. Пригодность стали к конкретной среде этим не устанавливается.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Мембрана для ультрафильтрации
 - **id:** uf-membrane
@@ -1864,8 +1864,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["ultrafiltration-water"]
 - **note:** Матрица и армирование, ориентация, доля наполнителя, метод формования, условия отверждения, испытания и дефекты.
 - **industries:** ["water","chemicals"]
-- **sources:** [{"title":"US EPA — Overview of Drinking Water Treatment Technologies","url":"https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"Источник описывает классы адсорбентов, ионообменных материалов, фильтрации и мембран; не подтверждает характеристики, эффективность и сертификацию конкретного продукта.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"US EPA — Overview of Drinking Water Treatment Technologies","url":"https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"},{"title":"DuPont — Ultrafiltration (UF)","url":"https://www.dupont.com/water/technologies/ultrafiltration-uf.html"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Ультрафильтрационные мембранные модули применяют при очистке воды, в том числе для предварительной обработки перед обратным осмосом. Спецификация модуля не проверена.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Активированный оксид алюминия (адсорбент)
 - **id:** activated-alumina-adsorbent
@@ -1903,8 +1903,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["flocculation-water"]
 - **note:** Состав рецептуры, техническая спецификация, совместимость, условия хранения и переработки, методы контроля и риски применения.
 - **industries:** ["water","chemicals"]
-- **sources:** [{"title":"US EPA — Overview of Drinking Water Treatment Technologies","url":"https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"Источник описывает классы адсорбентов, ионообменных материалов, фильтрации и мембран; не подтверждает характеристики, эффективность и сертификацию конкретного продукта.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"US EPA — Overview of Drinking Water Treatment Technologies","url":"https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"},{"title":"SNF — Water Treatment Products for Jobsite Management","url":"https://www.snf.com/industry/construction/water-treatment/"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Полимерные флокулянты применяют для обработки воды и обезвоживания осадка. Дозировка и эффективность в конкретном потоке не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Коагулянт на основе соли железа
 - **id:** coagulant-iron
@@ -1929,8 +1929,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["ceramic-sintering"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["ceramics","electronics"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"Morgan — High Performance Alumina Ceramic Components","url":"https://www.morgantechnicalceramics.com/en-gb/products/alumina-ceramic-components/"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Керамику на основе оксида алюминия применяют в электрических изоляторах и технических износостойких деталях. Рабочие пределы конкретного состава не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Кремнезёмистый огнеупор
 - **id:** silica-refractory
@@ -1942,8 +1942,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["ceramic-sintering"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["ceramics","energy"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"RATH — Tailor-made Solutions for the Glass Industry","url":"https://www.rath-group.com/fileadmin/content/Rath-Group/Downloads/Broschueren_Industrien/RATH_GLASS_202209_EN.pdf"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"В схеме RATH кремнезёмистые огнеупоры Silica и LW Silica применяются в слоях свода стекловаренной печи. Состав, температурная стойкость и пригодность к другой печи не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Огнеупорная глина
 - **id:** fireclay-raw
@@ -1955,8 +1955,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["ceramic-calcination"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["ceramics","mining"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"RATH — Tailor-made Solutions for the Glass Industry","url":"https://www.rath-group.com/fileadmin/content/Rath-Group/Downloads/Broschueren_Industrien/RATH_GLASS_202209_EN.pdf"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Шамотное сырьё используется при производстве огнеупорных кирпичей и неформованных материалов для стекловаренных печей. Минералогия и пригодность конкретного сырья не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Каолин технический
 - **id:** kaolin-industrial
@@ -2002,13 +2002,13 @@ ZIP создаётся прямо в браузере, без облака и п
 - **name:** Известь техническая
 - **group:** inorganic
 - **family:** Минеральные вяжущие и реагенты
-- **detail:** Промышленный материал на основе соединений кальция; вид и активность требуют уточнения.
+- **detail:** Техническая известь бывает негашёной, содержащей оксиды кальция и при доломитовом сырье магния, и гидратной — на основе их гидроксидов; вид и активность уточняют по продукту.
 - **uses:** Растворы, очистка, химическая переработка
 - **process:** ["chemical-mixing"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["ceramics","construction","chemicals"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"National Lime Association — Frequently Asked Questions","url":"https://www.lime.org/frequently-asked-questions/"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Негашёная известь образуется при обжиге карбонатного сырья; гидратную получают превращением оксидов в гидроксиды. Активность и спецификация не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Микрокристаллическая целлюлоза фармацевтическая
 - **id:** pharma-mcc
@@ -2046,8 +2046,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["capsule-filling"]
 - **note:** Точная идентификация вещества и формы; применимая фармакопейная монография; паспорт качества, чистота, влажность и совместимость с лекарственной формой.
 - **industries:** ["pharma","food"]
-- **sources:** [{"title":"FDA — Inactive Ingredients Database FAQ","url":"https://www.fda.gov/drugs/drug-approvals-and-databases/inactive-ingredients-approved-drug-products-search-frequently-asked-questions"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"FDA определяет активные и вспомогательные ингредиенты и назначение базы. Состав, нормативное качество и разрешённость конкретного вещества или формы не проверены.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"FDA — Inactive Ingredients Database FAQ","url":"https://www.fda.gov/drugs/drug-approvals-and-databases/inactive-ingredients-approved-drug-products-search-frequently-asked-questions"},{"title":"GELITA — Pharmaceuticals","url":"https://www.gelita.com/en/markets-we-serve/pharma"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Фармацевтический желатин применяют для изготовления твёрдых и мягких капсул. Спецификации, безопасность партии и эффективность препаратов не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Повидон (PVP) фармацевтический
 - **id:** pharma-povidone
@@ -2059,8 +2059,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["wet-granulation-pharma"]
 - **note:** Точная идентификация вещества и формы; применимая фармакопейная монография; паспорт качества, чистота, влажность и совместимость с лекарственной формой.
 - **industries:** ["pharma","chemicals"]
-- **sources:** [{"title":"FDA — Inactive Ingredients Database FAQ","url":"https://www.fda.gov/drugs/drug-approvals-and-databases/inactive-ingredients-approved-drug-products-search-frequently-asked-questions"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"FDA определяет активные и вспомогательные ингредиенты и назначение базы. Состав, нормативное качество и разрешённость конкретного вещества или формы не проверены.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"FDA — Inactive Ingredients Database FAQ","url":"https://www.fda.gov/drugs/drug-approvals-and-databases/inactive-ingredients-approved-drug-products-search-frequently-asked-questions"},{"title":"BASF — Kollidon PVP Portfolio","url":"https://download.basf.com/p1/EN_StaticDocuments_42761/en/Kollidon_PVP_Web_Brochure"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Повидон (PVP) предлагается в марках с различной молекулярной массой и связующим действием для твёрдых пероральных форм. Коповидон и кросповидон в этом тезисе не отождествляются с повидоном.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Гипромеллоза (HPMC) фармацевтическая
 - **id:** pharma-hpmc
@@ -2072,8 +2072,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["tablet-coating"]
 - **note:** Точная идентификация вещества и формы; применимая фармакопейная монография; паспорт качества, чистота, влажность и совместимость с лекарственной формой.
 - **industries:** ["pharma"]
-- **sources:** [{"title":"FDA — Inactive Ingredients Database FAQ","url":"https://www.fda.gov/drugs/drug-approvals-and-databases/inactive-ingredients-approved-drug-products-search-frequently-asked-questions"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"FDA определяет активные и вспомогательные ингредиенты и назначение базы. Состав, нормативное качество и разрешённость конкретного вещества или формы не проверены.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"FDA — Inactive Ingredients Database FAQ","url":"https://www.fda.gov/drugs/drug-approvals-and-databases/inactive-ingredients-approved-drug-products-search-frequently-asked-questions"},{"title":"Colorcon — Using Hypromellose (HPMC) in Matrix Tablets","url":"https://www.colorcon.com/education-insights/using-hypromellose-hpmc-in-matrix-tablets-for-controlled-release"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Гипромеллоза (HPMC) — производное целлюлозы, используемое как полимерный компонент покрытия таблеток. Применимость конкретной марки к конкретной форме не подтверждена.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Крахмал фармацевтический
 - **id:** pharma-starch
@@ -2111,8 +2111,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["screen-printing"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["printing","textiles"]
-- **sources:** [{"title":"OSHA — Printing Industry Glossary","url":"https://www.osha.gov/etools/printing-industry/glossary"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"OSHA раскрывает терминологию форм, красок, печатных материалов и оснастки; не подтверждает свойства, рецептуру и пригодность конкретного материала.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"OSHA — Printing Industry Glossary","url":"https://www.osha.gov/etools/printing-industry/glossary"},{"title":"Sefar — Screen Printing","url":"https://sefar.sg/solutions/products/screen-printing"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Сетки применяются в трафаретной печати на различных материалах. Тип нити, номер сетки и режим натяжения этим обзором не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Офсетное печатное полотно
 - **id:** offset-blanket
@@ -2137,8 +2137,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["uv-curing-print"]
 - **note:** Состав рецептуры, техническая спецификация, совместимость, условия хранения и переработки, методы контроля и риски применения.
 - **industries:** ["printing","chemicals"]
-- **sources:** [{"title":"OSHA — Printing Industry Glossary","url":"https://www.osha.gov/etools/printing-industry/glossary"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"OSHA раскрывает терминологию форм, красок, печатных материалов и оснастки; не подтверждает свойства, рецептуру и пригодность конкретного материала.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"OSHA — Printing Industry Glossary","url":"https://www.osha.gov/etools/printing-industry/glossary"},{"title":"Direct UV cross-linking: UV curing without photoinitiators","url":"https://www.ist-uv.com/en-us/technology/uv-direct-cross-linking"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"UV-отверждаемая красочная система требует согласования реакционноспособной рецептуры и источника излучения; универсального режима для всех составов нет.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Полимерная плёнка для печати
 - **id:** printing-film-substrate
@@ -2150,21 +2150,21 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["flexography"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["printing","polymers","food"]
-- **sources:** [{"title":"OSHA — Flexography","url":"https://www.osha.gov/etools/printing-industry/flexography"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"Источник описывает флексографские формы, краски и субстраты; не удостоверяет характеристики конкретного субстрата или формы.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"OSHA — Flexography","url":"https://www.osha.gov/etools/printing-industry/flexography"},{"title":"BOBST — Wide-web flexo technology for flexible materials","url":"https://www.bobst.com/ru/en/news/1694618401-bobst-s-wide-web-flexo-technology-for-flexible-materials-compendium-of-a-story-75-years-in-the-making"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Полиэтиленовые и полиамидные плёнки используются как подложки при печати гибкой упаковки. Миграция компонентов и совместимость конкретной плёнки с краской не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Медные руды
 - **id:** copper-ore
 - **name:** Медные руды
 - **group:** inorganic
 - **family:** Рудное сырьё цветной металлургии
-- **detail:** Минеральная смесь, требующая химического и минералогического анализа.
+- **detail:** Медная руда содержит медь в различных минеральных формах, в том числе сульфидных и окисленных; выбор переработки требует химического и минералогического анализа.
 - **uses:** Обогащение и металлургия
 - **process:** ["ore-crushing","ore-flotation"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["mining","metals"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"Technical Resource Document: Extraction and Beneficiation of Ores and Minerals, Vol.4 Copper","url":"https://archive.epa.gov/epawaste/nonhaz/industrial/special/web/pdf/copper1a.pdf"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Медные руды различаются минеральной формой меди; минералогия влияет на выбор переработки.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Никелевые руды
 - **id:** nickel-ore
@@ -2176,8 +2176,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["ore-grinding","ore-flotation"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["mining","metals"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"USGS — Nickel Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/nickel-statistics-and-information"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Никель добывают из разных типов руд, в частности латеритных и магматических сульфидных; их минералогия различается. Режим обогащения конкретной руды не подтверждён.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Марганцевые руды
 - **id:** manganese-ore
@@ -2189,8 +2189,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["ore-crushing"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["mining","metals"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"USGS — Manganese Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/manganese-statistics-and-information"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Марганцевое сырьё используется в металлургической цепочке производства ферросплавов и стали. Тип руды, состав и режим подготовки не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Литиевый минеральный концентрат
 - **id:** lithium-concentrate
@@ -2202,21 +2202,21 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["ore-flotation"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["mining","chemicals"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"PLS — P-PLS Chemical Facility","url":"https://www.pls.com/assets/p-pls-chemical-facility"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Сподуменовый концентрат используется как сырьё для химического получения гидроксида лития. Состав и пригодность конкретного концентрата не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Природный графитовый концентрат
 - **id:** graphite-concentrate
 - **name:** Природный графитовый концентрат
 - **group:** inorganic
 - **family:** Углеродное минеральное сырьё
-- **detail:** Концентрат графита; размер частиц и примеси требуют контроля для целевого применения.
+- **detail:** Продукт обогащения графитового сырья; размер частиц и примеси требуют контроля для целевого применения.
 - **uses:** Электротехнические и химические материалы
 - **process:** ["ore-flotation"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["mining","energy"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"Syrah Resources — Balama Graphite Operation","url":"https://www.syrahresources.com.au/our-business/balama-graphite-operation"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"В описанном маршруте графитовый концентрат получают с помощью дробления, измельчения и флотации с последующей обработкой; продукт характеризуется содержанием углерода и размером чешуек. Численные характеристики не перенесены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Концентрат редкоземельного сырья
 - **id:** rare-earth-concentrate
@@ -2228,8 +2228,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["magnetic-separation-ore"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["mining","electronics"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"MP Materials — Mountain Pass Mine and Processing Facility","url":"https://mpmaterials.com/mountain-pass"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"На описанном предприятии редкоземельный концентрат получают обогащением руды и передают на выщелачивание и разделение элементов. Состав, содержание элементов и применимость всех маршрутов не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Плавиковый шпат (флюорит)
 - **id:** fluorite-ore
@@ -2241,8 +2241,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["ore-flotation"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["mining","chemicals"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"Eurofluor — HF production","url":"https://www.eurofluor.org/hf-production/"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Очищенный плавиковый шпат кислотного сорта применяется как сырьё для производства фтороводорода. Неочищенная руда не приравнивается к готовому химическому сырью; спецификация и режим производства не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Тальк промышленный
 - **id:** talc-industrial
@@ -2254,8 +2254,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["ore-grinding"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["mining","polymers"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"Talc and Pyrophyllite — Minerals Yearbook 2002","url":"https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/mineral-pubs/talc/talcmyb02.pdf"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Первичный отраслевой отчёт документирует применение талька как наполнителя пластмасс. Данные 2002 года не подтверждают текущую рыночную статистику или чистоту партии.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Перлит промышленный
 - **id:** perlite-raw
@@ -2275,13 +2275,13 @@ ZIP создаётся прямо в браузере, без облака и п
 - **name:** Диатомит промышленный
 - **group:** inorganic
 - **family:** Кремнезёмистое минеральное сырьё
-- **detail:** Минеральный порошок; фильтрационные свойства устанавливают для партии и степени обработки.
+- **detail:** Диатомит — осадочная порода из останков диатомовых водорослей, используемая в том числе как фильтрующий материал. Параметры промышленного продукта требуют проверки спецификации и степени обработки.
 - **uses:** Фильтрующие и технологические материалы
 - **process:** ["industrial-filtration"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["mining","water"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"Filtration with Diatomaceous Earth","url":"https://www.usgs.gov/media/images/filtration-diatomaceous-earth"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Диатомит имеет осадочное биогенное происхождение и применяется при фильтрации, в том числе пищевых жидкостей; пригодность конкретной партии не проверена.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Цинковый минеральный концентрат
 - **id:** zinc-concentrate
@@ -2293,8 +2293,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["ore-flotation"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["mining","metals"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"Nyrstar — How is zinc produced?","url":"https://www.nyrstar.com/products/zinc-zinc-alloys/how-is-zinc-produced"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Цинковый концентрат служит сырьём для получения цинка; описанный маршрут включает обжиг, выщелачивание и очистку. Содержание металла и допустимые примеси партии не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 
 ## Машиночитаемые исходники

@@ -240,9 +240,10 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Толщина, профиль, плоскостность, состояние поверхности, трещины и остаточные напряжения.
 - **materials:** ["steel-20","steel-45"]
 - **profession:** metallurgical-engineer
-- **sources:** [{"title":"NIST — обзор производственных технологий (общий контекст)","url":"https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"},{"title":"NIST (2013) — обзор оценки устойчивости производственных процессов (общий контекст)","url":"https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes"}]
-- **evidence:** {"verifiedClaim":"Прокатка относится к процессам формообразования металлических заготовок.","reviewScope":"Проверено только приведённое утверждение, не вся карточка.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"NIST — обзор производственных технологий (общий контекст)","url":"https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"},{"title":"NIST (2013) — обзор оценки устойчивости производственных процессов (общий контекст)","url":"https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes"},{"title":"Primetals — Castrip Technology","url":"https://www.primetals.com/en/portfolio/solutions/endless-casting-and-rolling/castrip/"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"В описанном маршруте после валковой разливки стальной лист проходит прокатную клеть для уменьшения толщины. Разливка между охлаждаемыми валками и последующая горячая прокатка — разные этапы; марки сталей и холодная прокатка не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **industry:** metals
+- **reviewStatus:** source_located
 
 ### Листовая штамповка
 - **id:** stamping
@@ -443,9 +444,10 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Прочность швов, пропуски стежков, посадка, смещение срезов, соответствие размеров.
 - **materials:** ["woven-fabric"]
 - **profession:** textile-engineer
-- **sources:** [{"title":"OSHA SIC 23 — классификация швейных производств","url":"https://www.osha.gov/data/sic-manual/major-group-23"},{"title":"Coats — дефекты строчки, сборка швов и причины","url":"https://www.coats.com/en-us/info-hub/solving-your-sewing-problems/"},{"title":"OSHA — основные процессы текстильной промышленности","url":"https://www.osha.gov/textiles"}]
-- **evidence:** {"verifiedClaim":"Швейное производство включает раскрой и соединение текстильных материалов.","reviewScope":"Проверено только приведённое утверждение, не вся карточка.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"OSHA SIC 23 — классификация швейных производств","url":"https://www.osha.gov/data/sic-manual/major-group-23"},{"title":"Coats — дефекты строчки, сборка швов и причины","url":"https://www.coats.com/en-us/info-hub/solving-your-sewing-problems/"},{"title":"OSHA — основные процессы текстильной промышленности","url":"https://www.osha.gov/textiles"},{"title":"Coats — Basic Stitch Types","url":"https://www.coats.com/en-us/info-hub/basic-stitch-types/"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"При машинном шитье игла проводит нить через материал, формируется петля и закрепляется стежок; последовательность стежков образует шов. Выполнение документации конкретного изделия не проверено.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **industry:** textiles
+- **reviewStatus:** source_located
 
 ### Распиловка и обработка древесины
 - **id:** sawmilling
@@ -521,9 +523,10 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Состав фракций, давление, температура, герметичность; опасности воспламеняющихся паров.
 - **materials:** []
 - **profession:** chemical-engineer
-- **sources:** [{"title":"OSHA — перегонка и риски технологического процесса","url":"https://www.osha.gov/otm/section-4-safety-hazards/chapter-5"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"OSHA описывает применение дистилляции и обезвоживания для выделения и очистки этанола после ферментации.","reviewScope":"Проверен частный пример перегонки этанола по руководству OSHA; причинное объяснение разделения всех жидких смесей и выбор режимов этим документом не подтверждены.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"OSHA — перегонка и риски технологического процесса","url":"https://www.osha.gov/otm/section-4-safety-hazards/chapter-5"},{"title":"Distillation Technology","url":"https://solutions.sulzer.com/technologies/distillation-technology"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Дистилляция разделяет жидкую смесь за счёт различной летучести компонентов с испарением и последующей конденсацией.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **industry:** chemicals
+- **reviewStatus:** source_located
 
 ### Промышленная фильтрация
 - **id:** industrial-filtration
@@ -579,8 +582,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Диаметр, увод, положение оси, заусенцы
 - **materials:** ["steel-45","09g2s"]
 - **profession:** mechanical-engineer
-- **sources:** [{"title":"NIST — технологии производства: обзор — общий контекст; не техкарта","url":"https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"},{"title":"Drilling a hole","url":"https://www.sandvik.coromant.com/en-gb/knowledge/drilling"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Диаметр является одним из основных контролируемых требований к отверстию. Увод, положение оси и заусенцы этим абзацем не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
+- **sources:** [{"title":"NIST — технологии производства: обзор — общий контекст; не техкарта","url":"https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"},{"title":"Drilling a hole","url":"https://www.sandvik.coromant.com/en-gb/knowledge/drilling"},{"title":"Cutting Tool Design — Fundamentals of Tool Design Study Guide","url":"https://www.sme.org/globalassets/sme.org/media/training-guides/dv07pub2_study_guide.pdf"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Спиральное сверло формирует отверстие при осевой подаче и относительном вращении инструмента и заготовки.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Растачивание
@@ -624,8 +627,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Профиль, следы зубьев, заусенцы
 - **materials:** ["steel-45","09g2s"]
 - **profession:** mechanical-engineer
-- **sources:** [{"title":"NIST — технологии производства: обзор — общий контекст; не техкарта","url":"https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"NIST — технологии производства: обзор — общий контекст; не техкарта","url":"https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"},{"title":"Cutting Tool Design — Fundamentals of Tool Design Study Guide","url":"https://www.sme.org/globalassets/sme.org/media/training-guides/dv07pub2_study_guide.pdf"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Протяжка формирует профиль последовательными зубьями: черновые снимают припуск постепенно, чистовые завершают поверхность.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Зубонарезание
@@ -653,8 +656,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Геометрия, износ электрода, состояние слоя
 - **materials:** ["steel-45","09g2s"]
 - **profession:** mechanical-engineer
-- **sources:** [{"title":"NIST — технологии производства: обзор — общий контекст; не техкарта","url":"https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"NIST — технологии производства: обзор — общий контекст; не техкарта","url":"https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"},{"title":"Electrical Discharge Machining — Fundamental Manufacturing Processes Study Guide","url":"https://www.sme.org/globalassets/sme.org/media/training-guides/dv03pub14_study_guide.pdf"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"EDM удаляет электропроводящий материал повторяющимися электрическими разрядами между электродом и заготовкой в диэлектрике.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Лазерная резка
@@ -681,8 +684,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Конусность реза, кромка, размер
 - **materials:** ["steel-45","09g2s"]
 - **profession:** mechanical-engineer
-- **sources:** [{"title":"NIST — технологии производства: обзор — общий контекст; не техкарта","url":"https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"NIST — технологии производства: обзор — общий контекст; не техкарта","url":"https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"},{"title":"How Waterjet Works","url":"https://www.flowwaterjet.com/explore/waterjet-basics/how-waterjet-works"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Гидроабразивная резка удаляет материал струёй воды с добавленным абразивом; её следует отличать от резки чистой водой.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Отжиг
@@ -1142,8 +1145,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Объём, смещение, мостики пасты
 - **materials:** ["pcb","solder"]
 - **profession:** electrical-engineer
-- **sources:** [{"title":"IPC — стандарты сборки электроники (обзор) — общий контекст; не техкарта","url":"https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"IPC — стандарты сборки электроники (обзор) — общий контекст; не техкарта","url":"https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"},{"title":"Solder Paste — Flux","url":"https://www.indium.com/blog/solder-paste-flux/"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"При трафаретной печати паста заполняет апертуры трафарета и переносится на площадки; рецептура и размеры апертур требуют отдельного подбора.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Автоматическая установка SMD-компонентов
@@ -1157,8 +1160,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Ориентация, смещение, пропуски
 - **materials:** ["pcb","solder"]
 - **profession:** electrical-engineer
-- **sources:** [{"title":"IPC — стандарты сборки электроники (обзор) — общий контекст; не техкарта","url":"https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"IPC — стандарты сборки электроники (обзор) — общий контекст; не техкарта","url":"https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"},{"title":"Fuji — Component Placement: four key control technologies","url":"https://www.fuji.co.jp/en/news/assets/pdf/2026-01-15_FP_016008M_EN.pdf"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"SMT-автомат захватывает и позиционирует компоненты на печатной плате, контролируя ориентацию и положение. Точность, размеры компонентов и производительность не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Пайка оплавлением
@@ -1172,8 +1175,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Пустоты, непропай, перемычки
 - **materials:** ["pcb","solder"]
 - **profession:** electrical-engineer
-- **sources:** [{"title":"IPC — стандарты сборки электроники (обзор) — общий контекст; не техкарта","url":"https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"IPC — стандарты сборки электроники (обзор) — общий контекст; не техкарта","url":"https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"},{"title":"Ersa — Solder Paste","url":"https://kurtzersa.com/services/solder-wiki/solder-paste"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"При пайке оплавлением сборку нагревают до расплавления металлической составляющей нанесённой паяльной пасты и образования соединений. Профиль нагрева не проверен.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Пайка волной припоя
@@ -1187,8 +1190,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Перемычки, недостаток припоя, загрязнение
 - **materials:** ["pcb","solder"]
 - **profession:** electrical-engineer
-- **sources:** [{"title":"IPC — стандарты сборки электроники (обзор) — общий контекст; не техкарта","url":"https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"IPC — стандарты сборки электроники (обзор) — общий контекст; не техкарта","url":"https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"},{"title":"Ersa Wave Soldering Systems","url":"https://kurtzersa.com/products/electronics-production/soldering-machines/wave-soldering-systems"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Пайка волной формирует соединения при контакте сборки с волной расплавленного припоя; конкретный режим не подтверждён.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Защитное покрытие электронных сборок
@@ -1202,8 +1205,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Толщина, пропуски, пузыри
 - **materials:** ["pcb","solder"]
 - **profession:** electrical-engineer
-- **sources:** [{"title":"IPC — стандарты сборки электроники (обзор) — общий контекст; не техкарта","url":"https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"IPC — стандарты сборки электроники (обзор) — общий контекст; не техкарта","url":"https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"},{"title":"Conformal Coating Automation: The Final Step to Coating Success","url":"https://www.nordson.com/en/about-us/nordson-blog/electronics-solutions-blogs/conformal-coating-automation-the-final-step-to-coating-success"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Защитное покрытие наносится на платы; подходящий процесс сушки/отверждения предотвращает миграцию и дефекты покрытия. Состав и численный режим не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Автоматизированная оптическая инспекция плат
@@ -1217,8 +1220,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Ложные срабатывания, пропуски, ошибки размещения
 - **materials:** ["pcb","solder"]
 - **profession:** electrical-engineer
-- **sources:** [{"title":"IPC — стандарты сборки электроники (обзор) — общий контекст; не техкарта","url":"https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Указан обзорный принцип операции; вся технологическая карточка не проверена.","reviewScope":"Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"IPC — стандарты сборки электроники (обзор) — общий контекст; не техкарта","url":"https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"},{"title":"Automated Inspection — AOI and AXI","url":"https://automation.omron.com/en/us/products/category/automated-inspection"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Автоматическая оптическая инспекция сборки анализирует изображения компонентов и паяных соединений, включая цветовые и 3D-признаки; полнота выявления дефектов не гарантирована.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Бланширование пищевого сырья
@@ -1301,8 +1304,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Гранулометрия, загрязнения, посторонние примеси
 - **materials:** ["food-raw"]
 - **profession:** food-engineer
-- **sources:** [{"title":"FAO — руководство по переработке фруктов и овощей — обзор; не технологическая инструкция","url":"https://www.fao.org/4/x0209e/x0209e06.htm"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"FAO — руководство по переработке фруктов и овощей — обзор; не технологическая инструкция","url":"https://www.fao.org/4/x0209e/x0209e06.htm"},{"title":"Bühler — Wheat Milling","url":"https://www.buhlergroup.com/global/en/industries/Wheat-and-grain/Wheat.html"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"При производстве пшеничной муки применяют измельчение и разделение частей зерна; описаны вальцовые станки и рассевы.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Экструзионная обработка пищевых смесей
@@ -1315,8 +1318,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Структура, форма, равномерность состава
 - **materials:** ["food-raw"]
 - **profession:** food-engineer
-- **sources:** [{"title":"FAO — руководство по переработке фруктов и овощей — обзор; не технологическая инструкция","url":"https://www.fao.org/4/x0209e/x0209e06.htm"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"FAO — руководство по переработке фруктов и овощей — обзор; не технологическая инструкция","url":"https://www.fao.org/4/x0209e/x0209e06.htm"},{"title":"Bühler — Dough Preparation, Extrusion and Shaping","url":"https://www.buhlergroup.com/global/en/process-technologies/Dough-preparation-extrusion-and-shaping.html"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Экструзия применяется при формовании пищевых масс, в том числе пшеничного теста для макарон; холодное и горячее формование различаются по воздействию на сырьё. Режимы и формующий инструмент не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Осветление соков
@@ -1329,8 +1332,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Мутность, осадок, выход и сохранение состава
 - **materials:** ["food-raw"]
 - **profession:** food-engineer
-- **sources:** [{"title":"FAO — руководство по переработке фруктов и овощей — обзор; не технологическая инструкция","url":"https://www.fao.org/4/x0209e/x0209e06.htm"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"FAO — руководство по переработке фруктов и овощей — обзор; не технологическая инструкция","url":"https://www.fao.org/4/x0209e/x0209e06.htm"},{"title":"Alfa Laval — PurePulp series","url":"https://www.alfalaval.com/products/separation/centrifugal-separators/separators/purepulp-series/"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"В описанном центробежном способе осветления сок отделяют от части мякоти и твёрдых включений. Не все методы осветления и критерии мутности проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Кардочесание волокон
@@ -1389,8 +1392,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Натяжение, дефекты нити, масса паковки
 - **materials:** ["cotton","cotton-yarn"]
 - **profession:** textile-engineer
-- **sources:** [{"title":"OSHA — классификация текстильных операций — обзор; не технологическая инструкция","url":"https://www.osha.gov/data/sic-manual/major-group-22"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"OSHA — классификация текстильных операций — обзор; не технологическая инструкция","url":"https://www.osha.gov/data/sic-manual/major-group-22"},{"title":"Saurer — CakeFormingWinder","url":"https://saurer.com/en/products/machines/twisting-and-cabling/glass/cakeformingwinder"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Намотка формирует паковку нити, диаметр которой растёт при укладке. Принцип подтверждён на примере стеклонити; хлопковая пряжа, натяжение и масса паковки не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Снование основы
@@ -1432,8 +1435,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Белизна, прочность, остаточные реагенты
 - **materials:** ["cotton","cotton-yarn"]
 - **profession:** textile-engineer
-- **sources:** [{"title":"OSHA — классификация текстильных операций — обзор; не технологическая инструкция","url":"https://www.osha.gov/data/sic-manual/major-group-22"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"OSHA — классификация текстильных операций — обзор; не технологическая инструкция","url":"https://www.osha.gov/data/sic-manual/major-group-22"},{"title":"Technical & Performance Guide — Nonwovens","url":"https://cottonworks.com/product-innovation/nonwovens/technical-and-performance-guide/"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Отбеливание хлопка окислителем разрушает природные окрашенные вещества. Рецептуры и применимость к другим волокнам не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Печать по ткани
@@ -1461,8 +1464,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Размер, волнистость, сколы
 - **materials:** ["timber","birch-plywood"]
 - **profession:** forest-engineer
-- **sources:** [{"title":"US Forest Service — справочник о древесине как инженерном материале — обзор; не технологическая инструкция","url":"https://research.fs.usda.gov/treesearch/37419"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"US Forest Service — справочник о древесине как инженерном материале — обзор; не технологическая инструкция","url":"https://research.fs.usda.gov/treesearch/37419"},{"title":"USDA — Knife Planing Across the Grain Can be Applied to Hardwoods","url":"https://research.fs.usda.gov/download/treesearch/11374.pdf"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Ножевое строгание обрабатывает древесину резанием со снятием стружки; параметры ножа и подачи влияют на дефекты поверхности. Проверена механическая сущность, не рекомендуемые режимы конкретной породы.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Лущение шпона
@@ -1475,8 +1478,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Толщина шпона, трещины, влажность
 - **materials:** ["timber","birch-plywood"]
 - **profession:** forest-engineer
-- **sources:** [{"title":"US Forest Service — справочник о древесине как инженерном материале — обзор; не технологическая инструкция","url":"https://research.fs.usda.gov/treesearch/37419"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"US Forest Service — справочник о древесине как инженерном материале — обзор; не технологическая инструкция","url":"https://research.fs.usda.gov/treesearch/37419"},{"title":"A guide to manufacturing rotary veneer and products from small logs","url":"https://era.dpi.qld.gov.au/id/eprint/5799/1/A%20guide%20to%20manufacturing%20rotary%20veneer%20ad%20products%20from%20small%20logs.pdf"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"При лущении нож снимает непрерывную тонкую ленту древесины с вращающегося чурака.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Склеивание фанеры
@@ -1489,8 +1492,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Клеевой шов, расслоение, геометрия
 - **materials:** ["timber","birch-plywood"]
 - **profession:** forest-engineer
-- **sources:** [{"title":"US Forest Service — справочник о древесине как инженерном материале — обзор; не технологическая инструкция","url":"https://research.fs.usda.gov/treesearch/37419"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"US Forest Service — справочник о древесине как инженерном материале — обзор; не технологическая инструкция","url":"https://research.fs.usda.gov/treesearch/37419"},{"title":"USDA FPL-GTR-282 — Chapter 11: Wood-Based Composite Materials","url":"https://research.fs.usda.gov/download/treesearch/62258.pdf"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Фанера состоит из соединённых связующим слоёв шпона с заданной ориентацией; качество зависит от шпона, клея и условий склеивания.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Защитная пропитка древесины
@@ -1517,8 +1520,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Плотность, толщина, расслоение
 - **materials:** ["timber","birch-plywood"]
 - **profession:** forest-engineer
-- **sources:** [{"title":"US Forest Service — справочник о древесине как инженерном материале — обзор; не технологическая инструкция","url":"https://research.fs.usda.gov/treesearch/37419"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"US Forest Service — справочник о древесине как инженерном материале — обзор; не технологическая инструкция","url":"https://research.fs.usda.gov/treesearch/37419"},{"title":"USDA FPL-GTR-282 — Chapter 11: Wood-Based Composite Materials","url":"https://research.fs.usda.gov/download/treesearch/62258.pdf"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Подготовленный древесный ковёр уплотняют прессованием в плиту. Волокнистые, стружечные и ориентированно-стружечные плиты требуют разных маршрутов.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Промышленное выпаривание
@@ -1559,8 +1562,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Степень извлечения, перепад давления, унос жидкости
 - **materials:** []
 - **profession:** chemical-engineer
-- **sources:** [{"title":"DOE — технологии промышленного нагрева — обзор; не технологическая инструкция","url":"https://www.energy.gov/cmei/ito/what-are-different-kinds-process-heating-systems"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"DOE — технологии промышленного нагрева — обзор; не технологическая инструкция","url":"https://www.energy.gov/cmei/ito/what-are-different-kinds-process-heating-systems"},{"title":"Mixing and Reaction Technology","url":"https://www.sulzer.com/en/-/media/files/products/separation-technology/brochures/english/mixing_and_reaction_technology_e10605_en_web.pdf"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Газовая абсорбция переносит выбранные компоненты из газа в контактирующую жидкость, физически или с химической реакцией.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Стриппинг растворённых компонентов
@@ -1573,8 +1576,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Остаточная концентрация, унос, баланс потоков
 - **materials:** []
 - **profession:** chemical-engineer
-- **sources:** [{"title":"DOE — технологии промышленного нагрева — обзор; не технологическая инструкция","url":"https://www.energy.gov/cmei/ito/what-are-different-kinds-process-heating-systems"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"DOE — технологии промышленного нагрева — обзор; не технологическая инструкция","url":"https://www.energy.gov/cmei/ito/what-are-different-kinds-process-heating-systems"},{"title":"Stripping Technology","url":"https://solutions.sulzer.com/technologies/stripping-technology"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Стриппинг переносит летучие компоненты из жидкости в газовую или паровую фазу при их контакте.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Промышленное центрифугирование
@@ -1601,8 +1604,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Проницаемость, селективность, загрязнение мембраны
 - **materials:** []
 - **profession:** chemical-engineer
-- **sources:** [{"title":"DOE — технологии промышленного нагрева — обзор; не технологическая инструкция","url":"https://www.energy.gov/cmei/ito/what-are-different-kinds-process-heating-systems"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"DOE — технологии промышленного нагрева — обзор; не технологическая инструкция","url":"https://www.energy.gov/cmei/ito/what-are-different-kinds-process-heating-systems"},{"title":"DuPont — Ultrafiltration (UF)","url":"https://www.dupont.com/water/technologies/ultrafiltration-uf.html"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Ультрафильтрация — пример мембранного разделения, при котором мембрана разделяет взвешенные частицы и растворённые компоненты. Прочие мембранные процессы не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Каталитическая реакция в промышленном реакторе
@@ -1615,8 +1618,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Конверсия, селективность, дезактивация катализатора
 - **materials:** []
 - **profession:** chemical-engineer
-- **sources:** [{"title":"DOE — технологии промышленного нагрева — обзор; не технологическая инструкция","url":"https://www.energy.gov/cmei/ito/what-are-different-kinds-process-heating-systems"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"DOE — технологии промышленного нагрева — обзор; не технологическая инструкция","url":"https://www.energy.gov/cmei/ito/what-are-different-kinds-process-heating-systems"},{"title":"US DOE — DOE Explains Catalysts","url":"https://www.energy.gov/science/doe-explainscatalysts"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Катализатор участвует в изменении пути химической реакции, снижая активационный барьер и изменяя скорость. Режим реактора и стойкость катализатора не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Экстракция растворителем
@@ -1629,8 +1632,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Извлечение, остаточный растворитель, эмульгирование
 - **materials:** []
 - **profession:** chemical-engineer
-- **sources:** [{"title":"DOE — технологии промышленного нагрева — обзор; не технологическая инструкция","url":"https://www.energy.gov/cmei/ito/what-are-different-kinds-process-heating-systems"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"DOE — технологии промышленного нагрева — обзор; не технологическая инструкция","url":"https://www.energy.gov/cmei/ito/what-are-different-kinds-process-heating-systems"},{"title":"Technical Resource Document: Extraction and Beneficiation of Ores and Minerals, Vol.4 Copper","url":"https://archive.epa.gov/epawaste/nonhaz/industrial/special/web/pdf/copper1a.pdf"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Жидкостная экстракция перераспределяет компонент между водной и органической фазами с последующим их разделением.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Приготовление бетонной смеси
@@ -1643,8 +1646,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Однородность, удобоукладываемость, отклонения состава
 - **materials:** ["ready-mix-concrete"]
 - **profession:** civil-engineer
-- **sources:** [{"title":"OSHA — нормы бетонных и каменных строительных работ — обзор; не технологическая инструкция","url":"https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.701"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"OSHA — нормы бетонных и каменных строительных работ — обзор; не технологическая инструкция","url":"https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.701"},{"title":"Guidelines for Detection, Analysis, and Treatment of Materials-Related Distress in Concrete Pavements, Vol.II","url":"https://www.fhwa.dot.gov/publications/research/infrastructure/pavements/pccp/01164/sect3b.cfm"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Дозирование и перемешивание определяют однородность бетонной смеси; сокращение цикла может ухудшить её.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Укладка бетонной смеси
@@ -1657,8 +1660,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Расслоение, пустоты, геометрия
 - **materials:** ["ready-mix-concrete"]
 - **profession:** civil-engineer
-- **sources:** [{"title":"OSHA — нормы бетонных и каменных строительных работ — обзор; не технологическая инструкция","url":"https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.701"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"OSHA — нормы бетонных и каменных строительных работ — обзор; не технологическая инструкция","url":"https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.701"},{"title":"Full-Depth Repairs — Construction Procedure","url":"https://www.fhwa.dot.gov/pavement/concrete/full5.cfm"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Свежую бетонную смесь распределяют в подготовленной области конструкции и уплотняют; при укладке предотвращают расслоение.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Виброуплотнение бетона
@@ -1671,8 +1674,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Пустоты, расслоение, качество уплотнения
 - **materials:** ["ready-mix-concrete"]
 - **profession:** civil-engineer
-- **sources:** [{"title":"OSHA — нормы бетонных и каменных строительных работ — обзор; не технологическая инструкция","url":"https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.701"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"OSHA — нормы бетонных и каменных строительных работ — обзор; не технологическая инструкция","url":"https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.701"},{"title":"Guidelines for Detection, Analysis, and Treatment of Materials-Related Distress in Concrete Pavements, Vol.II","url":"https://www.fhwa.dot.gov/publications/research/infrastructure/pavements/pccp/01164/sect3b.cfm"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Вибрация уплотняет бетон и удаляет захваченный воздух; чрезмерная вибрация может вызвать расслоение и потерю вовлечённого воздуха.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Уход за твердеющим бетоном
@@ -1685,8 +1688,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Температура, влажность, трещинообразование
 - **materials:** ["ready-mix-concrete"]
 - **profession:** civil-engineer
-- **sources:** [{"title":"OSHA — нормы бетонных и каменных строительных работ — обзор; не технологическая инструкция","url":"https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.701"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"OSHA — нормы бетонных и каменных строительных работ — обзор; не технологическая инструкция","url":"https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.701"},{"title":"Guide for Curing of Portland Cement Concrete Pavements — Chapter 1","url":"https://www.fhwa.dot.gov/publications/research/infrastructure/pavements/pccp/02099/chapt1.cfm"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Уход за бетоном предусматривает защиту от раннего высыхания и поддержание температурно-влажностных условий до развития требуемых свойств.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Монтаж опалубки
@@ -1699,8 +1702,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Устойчивость, геометрия, положение креплений
 - **materials:** []
 - **profession:** civil-engineer
-- **sources:** [{"title":"OSHA — нормы бетонных и каменных строительных работ — обзор; не технологическая инструкция","url":"https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.701"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"OSHA — нормы бетонных и каменных строительных работ — обзор; не технологическая инструкция","url":"https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.701"},{"title":"PERI — Slab Formwork","url":"https://www.peri-usa.com/products/products-overview/formwork-homepage/slabformwork.html"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Опалубка перекрытия поддерживает уложенный бетон и сохраняет его форму при твердении; описаны сборка и последующее снятие системы. Расчёт опор и срок распалубливания не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Монтаж арматуры
@@ -1713,8 +1716,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Защитный слой, положение стержней, стыки
 - **materials:** []
 - **profession:** civil-engineer
-- **sources:** [{"title":"OSHA — нормы бетонных и каменных строительных работ — обзор; не технологическая инструкция","url":"https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.701"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"OSHA — нормы бетонных и каменных строительных работ — обзор; не технологическая инструкция","url":"https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.701"},{"title":"CRSI — Reinforcing Bar Placing","url":"https://www.crsi.org/reinforcing-basics/reinforced-concrete/placing-bars/"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Арматурные стержни размещают по монтажным чертежам и фиксируют опорами и связями для сохранения положения. Проект конкретной конструкции не проверен.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Каменная кладка
@@ -1727,8 +1730,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Перевязка, ровность, заполнение швов
 - **materials:** []
 - **profession:** civil-engineer
-- **sources:** [{"title":"OSHA — нормы бетонных и каменных строительных работ — обзор; не технологическая инструкция","url":"https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.701"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"OSHA — нормы бетонных и каменных строительных работ — обзор; не технологическая инструкция","url":"https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.701"},{"title":"Brick Industry Association — Mortars for Brickwork, TN8","url":"https://www.gobrick.com/media/file/8-tn-8-2020-03.pdf"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"В кирпичной кладке раствор связывает отдельные кладочные элементы в единую конструкцию. Проект, прочность и допуски кладки не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Укладка асфальтобетона
@@ -1741,8 +1744,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Плотность, ровность, толщина, температура
 - **materials:** []
 - **profession:** civil-engineer
-- **sources:** [{"title":"OSHA — нормы бетонных и каменных строительных работ — обзор; не технологическая инструкция","url":"https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.701"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"OSHA — нормы бетонных и каменных строительных работ — обзор; не технологическая инструкция","url":"https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.701"},{"title":"FHWA — Asphalt Concrete Pavement, FHWA-RD-97-148","url":"https://www.fhwa.dot.gov/publications/research/infrastructure/pavements/97148/071.cfm"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Горячую или холодную асфальтобетонную смесь укладывают и уплотняют при соответствующих процессу условиях. Температуры, плотность и допуски не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Инъекционное закрепление грунта
@@ -1755,8 +1758,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Распределение состава, проницаемость, смещения
 - **materials:** []
 - **profession:** civil-engineer
-- **sources:** [{"title":"OSHA — нормы бетонных и каменных строительных работ — обзор; не технологическая инструкция","url":"https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.701"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"OSHA — нормы бетонных и каменных строительных работ — обзор; не технологическая инструкция","url":"https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.701"},{"title":"Keller — Permeation grouting","url":"https://www.kellerasean.com/expertise/techniques/permeation-grouting"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"При проникающем инъектировании цементный раствор вводят под давлением в поры и пустоты грунта для образования закреплённого массива. Тезис не охватывает все методы закрепления грунта.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Производство асфальтобетонной смеси
@@ -1769,8 +1772,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Температура, гранулометрия, доля вяжущего
 - **materials:** []
 - **profession:** road-engineer
-- **sources:** [{"title":"EPA AP-42 — производство асфальтобетонных смесей — обзор; не технологическая инструкция","url":"https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"EPA AP-42 — производство асфальтобетонных смесей — обзор; не технологическая инструкция","url":"https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0"},{"title":"FHWA — Asphalt Concrete Pavement, FHWA-RD-97-148","url":"https://www.fhwa.dot.gov/publications/research/infrastructure/pavements/97148/071.cfm"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Асфальтобетонную смесь получают смешиванием мелкого и крупного заполнителей с битумным вяжущим; горячие смеси смешивают в нагретом состоянии.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Генерация технологического пара
@@ -1783,8 +1786,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Качество воды, давление, паропроизводительность
 - **materials:** []
 - **profession:** power-engineer
-- **sources:** [{"title":"DOE — промышленные паровые системы — обзор; не технологическая инструкция","url":"https://www.energy.gov/cmei/ito/steam-systems"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"DOE — промышленные паровые системы — обзор; не технологическая инструкция","url":"https://www.energy.gov/cmei/ito/steam-systems"},{"title":"Spirax Sarco — Shell Boilers","url":"https://www.spiraxsarco.com/learn-about-steam/the-boiler-house/shell-boilers?sc_lang=en-GB"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Пар может производиться в котле путём передачи тепла воде через поверхности нагрева. Проверен принцип на примере жаротрубного котла, не схема конкретной установки.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Возврат конденсата
@@ -1853,8 +1856,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Равномерность нагрева, перегрев, деформации
 - **materials:** []
 - **profession:** power-engineer
-- **sources:** [{"title":"DOE — технологии промышленного теплового нагрева — обзор; не технологическая инструкция","url":"https://www.energy.gov/cmei/ito/what-are-different-kinds-process-heating-systems"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"DOE — технологии промышленного теплового нагрева — обзор; не технологическая инструкция","url":"https://www.energy.gov/cmei/ito/what-are-different-kinds-process-heating-systems"},{"title":"Ambrell — Induction Heating Work Coils","url":"https://www.ambrell.com/hubfs/Ambrell_PDFs/411-0168-10.pdf"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Переменный ток в индукторе создаёт переменное поле, индуцирующее ток в проводящей заготовке; электрические потери вызывают её нагрев. Численные режимы не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Промышленный теплообмен
@@ -1867,8 +1870,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Перепад температур, загрязнение, утечки
 - **materials:** []
 - **profession:** power-engineer
-- **sources:** [{"title":"DOE — технологии промышленного теплового нагрева — обзор; не технологическая инструкция","url":"https://www.energy.gov/cmei/ito/what-are-different-kinds-process-heating-systems"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"DOE — технологии промышленного теплового нагрева — обзор; не технологическая инструкция","url":"https://www.energy.gov/cmei/ito/what-are-different-kinds-process-heating-systems"},{"title":"Alfa Laval — How gasketed plate heat exchangers work","url":"https://www.alfalaval.com/microsites/gphe/tools/how-gphes-work/"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"В описанном поверхностном пластинчатом теплообменнике горячий и холодный потоки проходят по разделённым каналам и обмениваются теплом через пластины.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Коагуляция при водоподготовке
@@ -2151,8 +2154,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Распределение гранул, пыль, однородность
 - **materials:** []
 - **profession:** chemical-engineer
-- **sources:** [{"title":"FDA — контроль твёрдых лекарственных форм — обзор; не технологическая инструкция","url":"https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"FDA — контроль твёрдых лекарственных форм — обзор; не технологическая инструкция","url":"https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"},{"title":"Roller Compaction: Continuous Dry Granulation","url":"https://www.freundglobal.com/technology/roll-compaction-granulation/"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"При валковой сухой грануляции порошок уплотняют в ленту или брикеты, затем измельчают в гранулы; добавление жидкости не является необходимым.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Таблетирование
@@ -2166,7 +2169,7 @@ ZIP создаётся прямо в браузере, без облака и п
 - **materials:** []
 - **profession:** chemical-engineer
 - **sources:** [{"title":"FDA — контроль твёрдых лекарственных форм — обзор; не технологическая инструкция","url":"https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"В ходе таблетирования контролируют массу, твёрдость и распадаемость; критерии конкретного препарата не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Покрытие фармацевтических таблеток
@@ -2194,7 +2197,7 @@ ZIP создаётся прямо в браузере, без облака и п
 - **materials:** []
 - **profession:** chemical-engineer
 - **sources:** [{"title":"FDA — контроль твёрдых лекарственных форм — обзор; не технологическая инструкция","url":"https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Капсулы заполняют подготовленным порошком, частицами или жидкостью; операция требует контроля заполнения. Конкретные дозировки и современные нормативные требования не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Асептическое наполнение стерильных форм
@@ -2235,8 +2238,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Гранулометрия, загрязнения, выход
 - **materials:** []
 - **profession:** chemical-engineer
-- **sources:** [{"title":"FDA — контроль твёрдых лекарственных форм — обзор; не технологическая инструкция","url":"https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"FDA — контроль твёрдых лекарственных форм — обзор; не технологическая инструкция","url":"https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"},{"title":"Russell Finex — Grading sieves","url":"https://www.russellfinex.com/en/separation-equipment/sieving-machines/"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Просеивание порошка разделяет частицы по размеру с помощью сетки; описано применение таких машин в фармацевтическом производстве. Критерии выпуска партии не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Офсетная печать
@@ -2347,8 +2350,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Разделение по крупности, забивание сит
 - **materials:** []
 - **profession:** mining-engineer
-- **sources:** [{"title":"EPA — руда и обогащение: водоотведение, дробление и сортировка — обзор; не технологическая инструкция","url":"https://www.epa.gov/eg/ore-mining-and-dressing-effluent-guidelines"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"EPA — руда и обогащение: водоотведение, дробление и сортировка — обзор; не технологическая инструкция","url":"https://www.epa.gov/eg/ore-mining-and-dressing-effluent-guidelines"},{"title":"Metso — Basics in Minerals Processing, Edition 12","url":"https://www.metso.com/globalassets/insights/ebooks/mo-basics-in-mineral-processing-handbook_lowres.pdf"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Грохочение разделяет материал по размеру на ситовых поверхностях; движение материала позволяет мелким частицам проходить через слой и отверстия.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Флотационное обогащение
@@ -2361,8 +2364,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Извлечение, качество концентрата, реагентный баланс
 - **materials:** []
 - **profession:** mining-engineer
-- **sources:** [{"title":"EPA — руда и обогащение: водоотведение, дробление и сортировка — обзор; не технологическая инструкция","url":"https://www.epa.gov/eg/ore-mining-and-dressing-effluent-guidelines"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"EPA — руда и обогащение: водоотведение, дробление и сортировка — обзор; не технологическая инструкция","url":"https://www.epa.gov/eg/ore-mining-and-dressing-effluent-guidelines"},{"title":"Technical Resource Document: Extraction and Beneficiation of Ores and Minerals, Vol.4 Copper","url":"https://archive.epa.gov/epawaste/nonhaz/industrial/special/web/pdf/copper1a.pdf"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Пенная флотация использует различия поверхностных свойств частиц: гидрофобизированные минералы прикрепляются к пузырькам.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Магнитная сепарация руды
@@ -2389,8 +2392,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Содержание полезного компонента, потери
 - **materials:** []
 - **profession:** mining-engineer
-- **sources:** [{"title":"EPA — руда и обогащение: водоотведение, дробление и сортировка — обзор; не технологическая инструкция","url":"https://www.epa.gov/eg/ore-mining-and-dressing-effluent-guidelines"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"EPA — руда и обогащение: водоотведение, дробление и сортировка — обзор; не технологическая инструкция","url":"https://www.epa.gov/eg/ore-mining-and-dressing-effluent-guidelines"},{"title":"Metso — Basics in Minerals Processing, Edition 12","url":"https://www.metso.com/globalassets/insights/ebooks/mo-basics-in-mineral-processing-handbook_lowres.pdf"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"При гравитационном разделении в воде различается осаждение частиц; на результат влияют размер, форма и плотность. Плотность — не единственный фактор.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Выщелачивание руды
@@ -2403,8 +2406,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Извлечение, примеси, обращение с растворами
 - **materials:** []
 - **profession:** mining-engineer
-- **sources:** [{"title":"EPA — руда и обогащение: водоотведение, дробление и сортировка — обзор; не технологическая инструкция","url":"https://www.epa.gov/eg/ore-mining-and-dressing-effluent-guidelines"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.","reviewScope":"Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"EPA — руда и обогащение: водоотведение, дробление и сортировка — обзор; не технологическая инструкция","url":"https://www.epa.gov/eg/ore-mining-and-dressing-effluent-guidelines"},{"title":"Technical Resource Document: Extraction and Beneficiation of Ores and Minerals, Vol.4 Copper","url":"https://archive.epa.gov/epawaste/nonhaz/industrial/special/web/pdf/copper1a.pdf"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"При выщелачивании медного сырья химическое воздействие переводит извлекаемый компонент в раствор; реагент зависит от минералогии.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Магнитопорошковый контроль
@@ -2655,8 +2658,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Соосность, прочность, подрезы
 - **materials:** ["steel-20","09g2s"]
 - **profession:** mechanical-engineer
-- **sources:** [{"title":"TWI — классификация процессов сварки и соединения — обзор без технологических режимов","url":"https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"TWI — классификация процессов сварки и соединения — обзор без технологических режимов","url":"https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly"},{"title":"Image Industries — What is Stud Welding","url":"https://www.imageindustries.com/resources/what-is-stud-welding/"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Дуговая приварка шпильки присоединяет металлический крепёж к металлической основе с нагревом обеих частей дугой. Контактная разновидность и прочность соединений не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Диффузионная сварка
@@ -2697,8 +2700,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Толщина, прозрачность, геометрия
 - **materials:** ["pe-hd","pa6"]
 - **profession:** materials-engineer
-- **sources:** [{"title":"EPA (2005) — отраслевой обзор производства изделий из резины и пластмасс","url":"https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"EPA (2005) — отраслевой обзор производства изделий из резины и пластмасс","url":"https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"},{"title":"Sidel EvoBLOW Regular — PET blow molding machine","url":"https://www.sidel.com/machines-repository/sidel-evoblow-regular/"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"При вытяжном выдувном формовании PET предварительную заготовку нагревают, вытягивают и раздувают в форме.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Экструзия рукавной плёнки
@@ -2712,8 +2715,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Толщина, складки, пузырь, стабильность рукава
 - **materials:** ["pe-hd","pa6"]
 - **profession:** materials-engineer
-- **sources:** [{"title":"EPA (2005) — отраслевой обзор производства изделий из резины и пластмасс","url":"https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"EPA (2005) — отраслевой обзор производства изделий из резины и пластмасс","url":"https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"},{"title":"Extrusion Processes — Fundamental Manufacturing Processes Study Guide","url":"https://www.sme.org/globalassets/sme.org/media/training-guides/dv04pub12_e_study_guide.pdf"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"При экструзии плёнки с раздувом расплав проходит кольцевую фильеру, рукав раздувается воздухом, охлаждается и складывается перед намоткой.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Трансферное формование реактопластов
@@ -2754,8 +2757,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Толщина, адгезия, сплошность
 - **materials:** ["pe-hd","pa6"]
 - **profession:** materials-engineer
-- **sources:** [{"title":"EPA (2005) — отраслевой обзор производства изделий из резины и пластмасс","url":"https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"EPA (2005) — отраслевой обзор производства изделий из резины и пластмасс","url":"https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"},{"title":"LyondellBasell — A Guide to Polyolefin Extrusion Coating","url":"https://www.lyondellbasell.com/globalassets/lyb/our-solutions/products/documents/polymers-technical-literature/a_guide_to_polyolefin_extrusion_coating.pdf"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Расплав полимера выходит из экструзионной щели плёнкой, наносится на движущуюся подложку и прижимается валками. Проверен принцип для полиолефинов.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Иглопробивное производство нетканых материалов
@@ -2768,8 +2771,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Поверхностная плотность, разрывы, равномерность
 - **materials:** ["cotton","woven-fabric"]
 - **profession:** textile-engineer
-- **sources:** [{"title":"OSHA — отраслевой каталог текстильных процессов — обзор без технологических режимов","url":"https://www.osha.gov/data/sic-manual/major-group-22"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"OSHA — отраслевой каталог текстильных процессов — обзор без технологических режимов","url":"https://www.osha.gov/data/sic-manual/major-group-22"},{"title":"Sandler — Needlepunch technology","url":"https://www.sandler-group.com/de-en/competencies/needlepunch"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Иглы с зазубринами многократно проходят через холст и перепутывают волокна, механически скрепляя нетканое полотно.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Мерсеризация хлопка
@@ -2813,8 +2816,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Складки, равномерность отделки, блеск
 - **materials:** ["cotton","woven-fabric"]
 - **profession:** textile-engineer
-- **sources:** [{"title":"OSHA — отраслевой каталог текстильных процессов — обзор без технологических режимов","url":"https://www.osha.gov/data/sic-manual/major-group-22"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"OSHA — отраслевой каталог текстильных процессов — обзор без технологических режимов","url":"https://www.osha.gov/data/sic-manual/major-group-22"},{"title":"Mechanical Finishing","url":"https://cottonworks.com/learning-hub/finishing/mechanical-finishing/"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Каландрирование механически отделывает ткань пропусканием между валками под давлением; возможны разглаживание и тиснение.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Машинная вышивка
@@ -2828,8 +2831,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Натяжение нитей, смещение, плотность стежков
 - **materials:** ["cotton","woven-fabric"]
 - **profession:** textile-engineer
-- **sources:** [{"title":"OSHA — отраслевой каталог текстильных процессов — обзор без технологических режимов","url":"https://www.osha.gov/data/sic-manual/major-group-22"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"OSHA — отраслевой каталог текстильных процессов — обзор без технологических режимов","url":"https://www.osha.gov/data/sic-manual/major-group-22"},{"title":"Tajima — SAI commercial embroidery machine","url":"https://www.tajima.com/product/sai/"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Описанная коммерческая вышивальная машина формирует рисунок заданными типами стежков и цветными нитями на текстильных изделиях. Режим и качество конкретного изделия не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Сверление отверстий печатных плат
@@ -2842,8 +2845,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Размеры, смещение, заусенцы, повреждение основы
 - **materials:** ["pcb","solder"]
 - **profession:** electrical-engineer
-- **sources:** [{"title":"IPC — сборка плат и границы стандартов — обзор без технологических режимов","url":"https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"IPC — сборка плат и границы стандартов — обзор без технологических режимов","url":"https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"},{"title":"Making a PCB — PCB Manufacture Step-by-Step","url":"https://www.eurocircuits.com/technical-guidelines/pcb-manufacturing-technology/making-a-pcb-pcb-manufacture-step-by-step/"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"В платах сверлят отверстия для выводных компонентов и межслойных переходов.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Травление печатных проводников
@@ -2856,8 +2859,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Подтравливание, ширина дорожек, остатки
 - **materials:** ["pcb","solder"]
 - **profession:** electrical-engineer
-- **sources:** [{"title":"IPC — сборка плат и границы стандартов — обзор без технологических режимов","url":"https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"IPC — сборка плат и границы стандартов — обзор без технологических режимов","url":"https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"},{"title":"Making a PCB — PCB Manufacture Step-by-Step","url":"https://www.eurocircuits.com/technical-guidelines/pcb-manufacturing-technology/making-a-pcb-pcb-manufacture-step-by-step/"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"При травлении удаляют открытые участки медной фольги, сохраняя защищённый рисунок проводников.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Металлизация отверстий печатных плат
@@ -2870,8 +2873,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Сплошность, толщина, пустоты
 - **materials:** ["pcb","solder"]
 - **profession:** electrical-engineer
-- **sources:** [{"title":"IPC — сборка плат и границы стандартов — обзор без технологических режимов","url":"https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"IPC — сборка плат и границы стандартов — обзор без технологических режимов","url":"https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"},{"title":"Making a PCB — PCB Manufacture Step-by-Step","url":"https://www.eurocircuits.com/technical-guidelines/pcb-manufacturing-technology/making-a-pcb-pcb-manufacture-step-by-step/"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"После создания проводящей основы стенки металлизируемых отверстий покрывают медью; источник описывает конкретный маршрут углеродной подготовки и гальваники.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Селективная пайка узлов плат
@@ -2885,8 +2888,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Смачиваемость, перемычки, термовлияние
 - **materials:** ["pcb","solder"]
 - **profession:** electrical-engineer
-- **sources:** [{"title":"IPC — сборка плат и границы стандартов — обзор без технологических режимов","url":"https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"IPC — сборка плат и границы стандартов — обзор без технологических режимов","url":"https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"},{"title":"Ersa — Selective Soldering Systems","url":"https://kurtzersa.com/products/electronics-production/soldering-machines/selective-systems"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Селективная пайка обрабатывает выбранные места соединений выводных компонентов платы, например одной или несколькими локальными волнами припоя.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Рентгеновский контроль электронных сборок
@@ -2900,8 +2903,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Пустоты, перемычки, предел разрешения
 - **materials:** ["pcb","solder"]
 - **profession:** electrical-engineer
-- **sources:** [{"title":"IPC — сборка плат и границы стандартов — обзор без технологических режимов","url":"https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"IPC — сборка плат и границы стандартов — обзор без технологических режимов","url":"https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly"},{"title":"Automated Inspection — AOI and AXI","url":"https://automation.omron.com/en/us/products/category/automated-inspection"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Рентгеновская инспекция позволяет исследовать скрытые паяные соединения; CT-вариант получает послойные изображения.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Смешение фармацевтических порошков
@@ -2915,7 +2918,7 @@ ZIP создаётся прямо в браузере, без облака и п
 - **materials:** []
 - **profession:** chemical-engineer
 - **sources:** [{"title":"FDA — инспекционное руководство по производству твёрдых лекарственных форм — обзор без технологических режимов","url":"https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"При приготовлении твёрдых лекарственных форм проверяют достаточность смешения и предотвращают перекрёстное загрязнение. Валидация конкретной смеси этим не выполнена.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Микронизация фармацевтических веществ
@@ -2928,8 +2931,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Размер частиц, нагрев, загрязнение
 - **materials:** []
 - **profession:** chemical-engineer
-- **sources:** [{"title":"FDA — инспекционное руководство по производству твёрдых лекарственных форм — обзор без технологических режимов","url":"https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"FDA — инспекционное руководство по производству твёрдых лекарственных форм — обзор без технологических режимов","url":"https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"},{"title":"Hosokawa Alpine — Jet Mills","url":"https://www.hosokawa-alpine.com/powder-particle-processing/technologies/grinding-and-classifying/jet-mills/"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Струйная микронизация фармацевтических веществ уменьшает частицы за счёт столкновений в газовом потоке. Отсутствие механических мелющих органов не исключает механического разрушения частиц.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Сушка в псевдоожиженном слое
@@ -2957,7 +2960,7 @@ ZIP создаётся прямо в браузере, без облака и п
 - **materials:** []
 - **profession:** chemical-engineer
 - **sources:** [{"title":"FDA — инспекционное руководство по производству твёрдых лекарственных форм — обзор без технологических режимов","url":"https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Внутрипроизводственные испытания таблеток включают массу, толщину, твёрдость, распадаемость и истираемость. Численные допуски этим не устанавливаются.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Изготовление печатных форм
@@ -2970,8 +2973,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Растровое изображение, приводка, дефекты формы
 - **materials:** []
 - **profession:** polygraph-engineer
-- **sources:** [{"title":"OSHA — терминология печати и послепечатных операций — обзор без технологических режимов","url":"https://www.osha.gov/etools/printing-industry/glossary"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"OSHA — терминология печати и послепечатных операций — обзор без технологических режимов","url":"https://www.osha.gov/etools/printing-industry/glossary"},{"title":"Kodak — Offset CTP","url":"https://www.kodak.com/en/print/page/offset-ctp/"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Описанная термальная технология Computer-to-Plate формирует изображение на печатной пластине с помощью термоголовки. Тезис ограничен этим способом изготовления форм.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### Высечка печатной продукции
@@ -2984,8 +2987,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Размер, заусенцы, совмещение
 - **materials:** []
 - **profession:** polygraph-engineer
-- **sources:** [{"title":"OSHA — терминология печати и послепечатных операций — обзор без технологических режимов","url":"https://www.osha.gov/etools/printing-industry/glossary"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"OSHA — терминология печати и послепечатных операций — обзор без технологических режимов","url":"https://www.osha.gov/etools/printing-industry/glossary"},{"title":"BOBST — Cutting plate in the folding carton die-cutting process","url":"https://www.bobst.com/eu/en/news/1689880801-the-importance-of-the-cutting-plate-in-the-folding-carton-die-cutting-process"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Заусенец реза назван возможным дефектом высечки при износе плиты; проверен смысл контроля заусенцев. Размер и совмещение этим источником не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 ### УФ-отверждение печатных покрытий
@@ -2998,8 +3001,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **checks:** Неполное отверждение, липкость, стойкость
 - **materials:** []
 - **profession:** polygraph-engineer
-- **sources:** [{"title":"OSHA — терминология печати и послепечатных операций — обзор без технологических режимов","url":"https://www.osha.gov/etools/printing-industry/glossary"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.","reviewScope":"Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"OSHA — терминология печати и послепечатных операций — обзор без технологических режимов","url":"https://www.osha.gov/etools/printing-industry/glossary"},{"title":"Direct UV cross-linking: UV curing without photoinitiators","url":"https://www.ist-uv.com/en-us/technology/uv-direct-cross-linking"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Совместимое UV-излучение инициирует полимеризацию или сшивку подходящей системы; результат зависит от рецептуры, спектра и условий процесса.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
 
