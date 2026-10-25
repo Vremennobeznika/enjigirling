@@ -7,6 +7,7 @@ const sections=[
  ['professions','Профессии','index.html','knowledge/professions.json'],
  ['calendar','Календарь инженерных дат','calendar.html',null],
  ['resources','Инженерные ресурсы','resources.html',null],
+ ['ai-code-library','Библиотека программирования для ИИ','resources.html',null],
  ['dictionary','Инженерный словарь','dictionary.html','knowledge/dictionary.json'],
  ['learning','Обучение','map.html',null],
  ['calculators','Инженерные калькуляторы','calculator.html',null],
@@ -59,6 +60,7 @@ function datasetFor(slug,dataset){
  }
  if(slug==='calendar')return jsArray('calendar-data.js','window.engineeringCalendar.holidays');
  if(slug==='resources')return jsArray('resources-data.js','resources');
+ if(slug==='ai-code-library')return jsArray('resources-data.js','resources').filter(x=>x.type==='Библиотека программирования для ИИ');
  if(slug==='calculators'){
   const topics=jsArray('calculator-atlas-data.js','window.calculatorAtlasGroups');
   return topics.map(({id,title,source,items})=>({id,title,source,ideasNotImplemented:items}));
@@ -93,13 +95,13 @@ for(const [slug,title,htmlPath,canonicalJson] of sections){
  +'**Исходная страница:** '+base+htmlPath+'\n\n'
  +'**Статус:** обзорные редакционные материалы; точность и актуальность технических утверждений не гарантированы. Если первичный источник не указан, считайте утверждение непроверенным. Не придумывайте стандарты, цифры и ссылки. Для инженерных решений сверяйтесь с действующими нормативами, методиками и паспортами.\n\n'
  +'**Что загружать в ИИ:** этот Markdown-файл или соответствующий JSON. Для вопросов о других разделах дополнительно используйте index.json и другие пакеты.\n\n'
- +'## Текст и описание раздела\n\n'+humanMain(html)
+ +'## Текст и описание раздела\n\n'+(slug==='ai-code-library'?'Это подборка ссылок на открытые учебные и справочные материалы по программированию. Пакет включает каталог и описания, но не полные тексты внешних источников.\n':humanMain(html))
  +markdownItems(slug,records)
  +'\n## Машиночитаемые исходники\n\n'
  +(canonicalJson?'- Стандартный JSON-справочник: '+base+canonicalJson+'\n':'')
  +'- Пакет JSON этого раздела: '+base+jsonPath+'\n'
  +'- Страница раздела: '+base+htmlPath+'\n';
- const payload={schemaVersion:'1.0',sectionId:slug,title,language:'ru',url:base+htmlPath,quality:'editorial_not_independently_verified',sourceHtml:htmlPath,canonicalDataset:canonicalJson||null,staticPageText:humanMain(html),recordsCount:records.length,records};
+ const payload={schemaVersion:'1.0',sectionId:slug,title,language:'ru',url:base+htmlPath,quality:'editorial_not_independently_verified',sourceHtml:htmlPath,canonicalDataset:canonicalJson||null,staticPageText:slug==='ai-code-library'?'Подборка ссылок и описаний, без полных текстов внешних учебников.':humanMain(html),recordsCount:records.length,records};
  outputs.set(mdPath,content);outputs.set(jsonPath,json(payload));
  manifest.push({id:slug,title,page:htmlPath,markdown:mdPath,json:jsonPath,canonicalDataset:canonicalJson||null,records:records.length});
 }

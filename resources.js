@@ -75,7 +75,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const topics = type === 'Форумы' ? forumTopics : type === AI_LIBRARY ? libraryTopics : [...journalTopics,...new Set(shown.map(x=>x.topic||'Без направления').filter(x=>!journalTopics.includes(x)))];
         cards = topics.map(topic => {
           const subset = shown.filter(x => (x.topic||'Без направления')===topic);
-          return subset.length ? `<section class="resource-topic"><div class="resource-topic-header"><h3>${htmlEsc(topic)}</h3><span>${subset.length}</span></div><div class="resource-items">${subset.map(makeCard).join('')}</div></section>` : '';
+          if (!subset.length) return '';
+          if (type === AI_LIBRARY) {
+            const open = query || !window.matchMedia('(max-width:700px)').matches ? ' open' : '';
+            return `<details class="resource-topic resource-library-topic"${open}><summary class="resource-topic-header"><strong>${htmlEsc(topic)}</strong><span>${subset.length} источн.</span></summary><div class="resource-items">${subset.map(makeCard).join('')}</div></details>`;
+          }
+          return `<section class="resource-topic"><div class="resource-topic-header"><h3>${htmlEsc(topic)}</h3><span>${subset.length}</span></div><div class="resource-items">${subset.map(makeCard).join('')}</div></section>`;
         }).join('');
       }
       html.push(`<section class="resource-group" aria-label="${htmlEsc(type)}"><div class="resource-group-header"><h2>${htmlEsc(type)}</h2><span>${candidates.length}</span></div>${cards}</section>`);

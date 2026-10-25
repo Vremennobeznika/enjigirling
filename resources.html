@@ -58,22 +58,28 @@
 </nav><noscript><style>@media(max-width:860px){.site-nav-wrap>.eng-tabs{display:flex!important}.site-nav-wrap>.site-nav-toggle{display:none!important}}</style></noscript></div>
 
         <main class="site-page" id="main-content">
-<aside class="ai-transfer-bar" aria-label="Передать раздел Ресурсы нейросети"><div><strong>Этот раздел для ИИ</strong><p>Полное содержимое для загрузки в нейросеть: не только ссылка на страницу.</p></div><div class="ai-transfer-links"><a href="knowledge/sections/resources.md" download>Markdown</a><a href="knowledge/sections/resources.json" download>JSON</a><a href="ai.html?section=resources">Как передать ИИ →</a></div></aside>
+
             <header class="page-header"><h1>Ресурсы сообщества</h1><p>Инженерный каталог: журналы, форумы, сервисы, стандарты, справочники и образовательные материалы.</p></header>
-            <p class="measurement-shortcut"><strong>Онлайн-измерения:</strong> <a href="measurement-lab.html">открыть 10 учебных тренажёров прямо на нашем сайте →</a> В категории «Измерения онлайн» собраны сторонние инструменты; некоторые требуют современного браузера или мощного устройства.</p>
+            
             <section class="resource-ai-library" id="ai-library" aria-labelledby="aiLibraryTitle">
               <div class="resource-ai-library-text"><h2 id="aiLibraryTitle">Библиотека программирования для ИИ</h2>
-                <p>25 открытых источников по программированию: Python, HTML/CSS, JavaScript, Git, тестирование, базы данных, Android и безопасность.</p><p><strong>Скачайте все ссылки одним файлом</strong> или скопируйте весь список одним нажатием — без открытия каждой карточки.</p>
-                <p class="resource-ai-library-note">TXT содержит только адреса, MD — ссылки с описаниями. Полные тексты учебников не включены; ИИ-сервис должен уметь читать веб-источники.</p>
+                <p>25 учебных и справочных источников: Python, веб-разработка, Git, тестирование, Android, базы данных и безопасность.</p>
               </div>
-              <div class="resource-ai-library-actions" aria-label="Скачать или скопировать сразу все ссылки">
-                <a href="knowledge/ai-code-library-links.txt" download="ai-programming-links-25.txt" class="eng-filter-btn resource-ai-library-primary">Скачать все 25 ссылок · TXT</a>
-                <button id="resourceCopyAiLinks" type="button" class="eng-filter-btn">Скопировать все 25 ссылок</button>
-                <a href="knowledge/ai-code-library.md" download="ai-programming-library.md" class="eng-filter-btn">Каталог с описаниями · MD</a>
-                <a class="resource-ai-library-open" href="#ai-library-catalog">Посмотреть по темам ↓</a>
+              <div class="resource-ai-library-actions" aria-label="Скачать библиотеку для ИИ">
+                <a href="knowledge/sections/ai-code-library.md" download class="eng-filter-btn resource-ai-library-primary">Передать ИИ · Markdown</a>
+                <a href="knowledge/ai-code-library-links.txt" download class="eng-filter-btn">Скачать 25 ссылок · TXT</a>
+                <button id="resourceCopyAiLinks" type="button" class="eng-filter-btn">Скопировать все ссылки</button>
+                <details class="resource-ai-more"><summary>Другие форматы и пояснения</summary>
+                  <a href="knowledge/sections/ai-code-library.json" download>JSON для базы знаний</a>
+                  <p>Markdown и JSON содержат сведения о 25 источниках и их адреса, а не полные тексты учебников. Чтобы прочитать сами документы, ИИ должен поддерживать веб-источники.</p>
+                  <a href="ai.html#pack-ai-code-library">Этот пакет в центре «Для ИИ»</a>
+                </details>
+                <a class="resource-ai-library-open" href="#ai-library-catalog">Посмотреть источники по темам ↓</a>
                 <p id="resourceCopyAiStatus" class="resource-ai-library-copy-status" role="status" aria-live="polite"></p>
               </div>
             </section>
+            <aside class="ai-transfer-bar" aria-label="Передать раздел Ресурсы нейросети"><div><strong>Этот раздел для ИИ</strong><p>Полное содержимое для загрузки в нейросеть: не только ссылка на страницу.</p></div><div class="ai-transfer-links"><a href="knowledge/sections/resources.md" download>Markdown</a><a href="knowledge/sections/resources.json" download>JSON</a><a href="ai.html?section=resources">Как передать ИИ →</a></div></aside>
+            <p class="measurement-shortcut"><strong>Онлайн-измерения:</strong> <a href="measurement-lab.html">открыть 10 учебных тренажёров прямо на нашем сайте →</a> В категории «Измерения онлайн» собраны сторонние инструменты; некоторые требуют современного браузера или мощного устройства.</p>
             <section class="resource-controls" id="ai-library-catalog" aria-label="Настройки каталога">
               <div class="resource-toolbar">
                 <div class="resource-search-wrap"><label for="resourceSearch">Поиск по каталогу</label><input type="search" id="resourceSearch" class="resource-search" placeholder="Название, тема или направление…" autocomplete="off"></div>
@@ -82,7 +88,7 @@
                   <div class="resource-view-wrap"><span class="resource-control-label">Отображение</span><div class="resource-view-buttons" role="group" aria-label="Режим отображения"><button id="resourceGridView" type="button" aria-pressed="true">Сетка</button><button id="resourceListView" type="button" aria-pressed="false">Список</button></div></div>
                 </div>
               </div>
-              <p class="resource-filter-label">Категории</p>
+              <p class="resource-filter-label">Категории <span class="resource-mobile-hint">· листайте вбок</span></p>
               <div class="eng-filters" id="resourcesFilter" role="group" aria-label="Фильтр по категориям"></div>
               <div class="resource-status-row"><p id="resourcesStatus" class="filter-status" role="status" aria-live="polite"></p><button class="eng-filter-btn filter-reset" id="resourceReset" type="button" hidden>Сбросить фильтры</button></div>
             </section>
