@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   items.forEach(item => counts.set(item.type, (counts.get(item.type) || 0) + 1));
   const types = [ALL,...order.filter(type => counts.has(type)),...[...counts.keys()].filter(type => !order.includes(type)).sort(collator.compare)];
   const buttons = new Map();
-  let activeType = location.hash === '#ai-library-catalog' ? AI_LIBRARY : ALL, view = 'grid', limit = 4, searchTimer = null;
+  let activeType = location.hash === '#ai-library-catalog' ? AI_LIBRARY : ALL, view = 'grid', limit = activeType === AI_LIBRARY ? 32 : 4, searchTimer = null;
   const batchSize = () => activeType === ALL ? 4 : activeType === 'Форумы' ? 64 : activeType === AI_LIBRARY ? 32 : 24;
   const hostname = href => { try { return new URL(href).hostname.replace(/^www\./,''); } catch { return ''; } };
   const makeCard = item => {
