@@ -82,14 +82,15 @@ function getFiltered(){
   list.sort((a,b)=>a.name.localeCompare(b.name,'ru')*(sort.value==='az'?1:-1));
  return list;
 }
-function render(){
+function render(appendFrom=0){
  const list=getFiltered();
  const shown=list.slice(0,visibleLimit);
  status.textContent='Найдено: '+list.length+' из '+entries.length+'. Показано: '+shown.length+'.';
  reset.hidden=!search.value.trim()&&category.value==='all'&&industry.value==='all'&&sort.value==='default';
  more.hidden=shown.length>=list.length;
  if(!more.hidden)more.textContent='Показать ещё '+Math.min(PAGE,list.length-shown.length);
- root.innerHTML=shown.map(cardMarkup).join('')||'<p class="eng-empty">Совпадений нет. Измените запрос или сбросьте фильтры.</p>';
+ if(appendFrom)root.insertAdjacentHTML('beforeend',shown.slice(appendFrom).map(cardMarkup).join(''));
+ else root.innerHTML=shown.map(cardMarkup).join('')||'<p class="eng-empty">Совпадений нет. Измените запрос или сбросьте фильтры.</p>';
  root.dataset.ready='true';
 }
 
@@ -113,7 +114,7 @@ category.addEventListener('change',changeFilter);
 industry.addEventListener('change',changeFilter);
 sort.addEventListener('change',changeFilter);
 reset.addEventListener('click',()=>{resetControls();render();search.focus();});
-more.addEventListener('click',()=>{visibleLimit+=PAGE;render();});
+more.addEventListener('click',()=>{const from=visibleLimit;visibleLimit+=PAGE;render(from);});
 render();openAnchor();
 window.addEventListener('hashchange',openAnchor);
 })();

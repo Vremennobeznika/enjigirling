@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "description": "Static engineering knowledge base checks",
   "scripts": {
-    "test:unit": "node tests/site-check.cjs",
+    "test:unit": "node tests/engineering-lab-unit.cjs && node tests/practical-calculator-unit.cjs && node tests/calendar-rules.cjs && node tests/personal-ics.cjs && node tests/personal-reminders.cjs",
+    "test:profile": "node scripts/profile-site.cjs",
     "test:browser": "playwright test",
     "build:knowledge": "node scripts/build-knowledge.cjs",
     "check:knowledge": "node scripts/build-knowledge.cjs --check",
