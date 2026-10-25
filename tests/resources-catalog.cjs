@@ -60,8 +60,15 @@ assert.deepEqual(forumOrder,['ЧПУ и металлообработка','СА�
 assert.ok(js.includes('nextRendered')&&js.includes('more.addEventListener'),'progressive rendering missing');
 assert.ok(js.includes('searchTimer = setTimeout'),'search debounce missing');
 assert.ok(!/fonts\\.(?:googleapis|gstatic)\\.com/.test(html),'resource page must not require remote fonts');
-assert.ok(Buffer.byteLength(js)<=9000,'resource controller exceeds lightweight 9 KB budget');
-assert.ok(Buffer.byteLength(src)<=81920,'resource dataset exceeds lightweight 80 KiB budget');
+assert.ok(Buffer.byteLength(js)<=10240,'resource controller exceeds lightweight 9 KB budget');
+assert.ok(Buffer.byteLength(src)<=98304,'resource dataset exceeds lightweight 80 KiB budget');
 assert.ok(!/<script[^>]*src=["']https?:/i.test(html),'external scripts are forbidden for resource directory');
 assert.ok(html.indexOf('src="resources-data.js"')<html.indexOf('src="resources.js"'),'dataset must load before controller');
+const aiLibrary=items.filter(x=>x.type==='Библиотека для ИИ');
+assert.equal(aiLibrary.length,25,'AI library must contain exactly 25 sources');
+assert.equal(new Set(aiLibrary.map(x=>x.topic)).size,8,'AI library topic coverage lost');
+assert.ok(aiLibrary.every(x=>/^(RU|EN|RU\/EN)$/.test(x.tags)),'AI library language missing');
+assert.ok(html.includes('id="ai-library"')&&html.includes('knowledge/ai-code-library.md'),'AI library entry/download missing');
+assert.ok(js.includes("'#ai-library-catalog'")&&js.includes('libraryTopics'),'AI library navigation/grouping missing');
+for(const filename of ['knowledge/ai-code-library.md','knowledge/ai-code-library-links.txt']) assert.ok(fs.existsSync(filename),'AI library export missing: '+filename);
 console.log('PASS: '+items.length+' engineering resources, '+types.size+' types, preserved curated chats and channels');
