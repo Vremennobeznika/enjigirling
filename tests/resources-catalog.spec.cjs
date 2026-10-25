@@ -104,6 +104,8 @@ test('AI library: eight topics, 25 documents, files and mobile layout', async ({
   const errors=[];page.on('pageerror',err=>errors.push(err.message));
   await page.setViewportSize({width:320,height:720});
   await page.goto('/resources.html#ai-library-catalog');
+  await expect(page.locator('#ai-library-catalog')).toHaveCount(1);
+  await expect(page.locator('#ai-library-catalog')).toBeInViewport();
   await expect(page.locator('#resourcesFilter button[title="Библиотека для ИИ"]')).toHaveAttribute('aria-pressed','true');
   await expect(page.locator('#resourcesGrid .resource-card')).toHaveCount(25);
   await expect(page.locator('#resourcesGrid .resource-topic-header')).toHaveCount(8);
