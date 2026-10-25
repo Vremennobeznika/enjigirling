@@ -1,5 +1,15 @@
-name: Build Russian-hosting candidate (never auto-deploy)
+name: Build and publish Russian site to Yandex Object Storage
 on:
+  push:
+    branches: [main]
+    paths:
+      - '*'
+      - 'articles/**'
+      - 'knowledge/**'
+      - 'templates/**'
+      - 'scripts/**'
+      - 'tests/**'
+      - '.github/workflows/ru-release.yml'
   workflow_dispatch:
   pull_request:
     paths:
@@ -10,9 +20,12 @@ on:
       - knowledge/**
 permissions:
   contents: read
+concurrency:
+  group: ru-object-storage-${{ github.ref }}
+  cancel-in-progress: false
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -51,3 +64,49 @@ jobs:
           name: enjigirling-ru-audit
           path: ru-deploy-audit.json
           if-no-files-found: warn
+
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+    steps:
+      - name: Download verified Russian site
+        uses: actions/download-artifact@v4
+        with:
+          name: enjigirling-ru-public
+          path: dist-ru
+      - name: Verify distribution before upload
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s dist-ru/index.html
+          test -s dist-ru/sitemap.xml
+          test -s dist-ru/knowledge-manifest.json
+          test "$(find dist-ru -type f | wc -l)" -ge 50
+          echo "Verified files: $(find dist-ru -type f | wc -l)"
+      - name: Publish to Yandex Object Storage
+        shell: bash
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.YC_S3_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.YC_S3_SECRET_KEY }}
+          AWS_DEFAULT_REGION: ru-central1
+          AWS_EC2_METADATA_DISABLED: 'true'
+          AWS_PAGER: ''
+        run: |
+          set -euo pipefail
+          if [[ -z "$AWS_ACCESS_KEY_ID" || -z "$AWS_SECRET_ACCESS_KEY" ]]; then
+            echo "::error::Add YC_S3_KEY_ID and YC_S3_SECRET_KEY in repository Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+          aws --version
+          # No --delete: preserve objects already hosted outside the public distribution.
+          aws --endpoint-url=https://storage.yandexcloud.net \
+            s3 sync dist-ru/ s3://enjigirling.ru/ \
+            --no-progress --only-show-errors --cache-control 'public,max-age=300'
+          aws --endpoint-url=https://storage.yandexcloud.net \
+            s3 cp s3://enjigirling.ru/index.html /tmp/enjigirling-deployed-index.html \
+            --only-show-errors
+          cmp dist-ru/index.html /tmp/enjigirling-deployed-index.html
+          echo "Published to Yandex and verified index.html matches the build."
