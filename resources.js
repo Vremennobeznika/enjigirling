@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const viewGrid = document.getElementById('resourceGridView');
   const viewList = document.getElementById('resourceListView');
   if (!filter || !grid || !search || !sort || !status || !reset || !more || !viewGrid || !viewList) return;
-  const ALL = 'Все', ASU = 'АСУ ТП', AI_LIBRARY = 'Библиотека для ИИ';
+  const ALL = 'Все', ASU = 'АСУ ТП', AI_LIBRARY = 'Библиотека программирования для ИИ';
   const order = [AI_LIBRARY, 'Журналы', 'САПР и конструирование', 'Разработка ПО', 'Инструменты и симуляторы', 'Онлайн-измерения', 'Форумы', 'Научные базы и справочники', 'Стандарты и метрология', 'Обучение и курсы', 'Дружественные каналы', 'Чаты в Telegram'];
   const labels = {'Разработка ПО':'Код и Git', 'САПР и конструирование':'САПР и КБ', 'Инструменты и симуляторы':'Симуляторы', 'Онлайн-измерения':'Измерения онлайн', 'Научные базы и справочники':'Библиотеки', 'Стандарты и метрология':'Стандарты', 'Обучение и курсы':'Курсы', 'Дружественные каналы':'Каналы', 'Чаты в Telegram':'Чаты'};
   const forumTopics = [ASU,'ЧПУ и металлообработка','САПР и конструирование','Электроника и микроконтроллеры','ИТ и технологии','Общая инженерия'];
@@ -107,6 +107,16 @@ document.addEventListener('DOMContentLoaded', () => {
   viewList.addEventListener('click', () => { view = 'list'; update(); });
   more.addEventListener('click', () => { limit += batchSize(); update(); });
   reset.addEventListener('click', () => { activeType = ALL; search.value = ''; sort.value = 'az'; view = 'grid'; limit = 4; update(); });
+  const copyAi = document.getElementById('resourceCopyAiLinks');
+  if (copyAi) copyAi.addEventListener('click', async () => {
+    const status = document.getElementById('resourceCopyAiStatus');
+    try {
+      await navigator.clipboard.writeText(items.filter(x => x.type === AI_LIBRARY).map(x => x.link).join('\n'));
+      status.textContent = 'Все 25 ссылок скопированы.';
+    } catch {
+      status.textContent = 'Копирование недоступно. Скачайте TXT.';
+    }
+  });
   window.addEventListener('hashchange', () => { if (location.hash === '#ai-library-catalog') { activeType = AI_LIBRARY; limit = batchSize(); update(); } });
   update();
 });

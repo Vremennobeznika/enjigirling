@@ -62,14 +62,16 @@
             <header class="page-header"><h1>Ресурсы сообщества</h1><p>Инженерный каталог: журналы, форумы, сервисы, стандарты, справочники и образовательные материалы.</p></header>
             <p class="measurement-shortcut"><strong>Онлайн-измерения:</strong> <a href="measurement-lab.html">открыть 10 учебных тренажёров прямо на нашем сайте →</a> В категории «Измерения онлайн» собраны сторонние инструменты; некоторые требуют современного браузера или мощного устройства.</p>
             <section class="resource-ai-library" id="ai-library" aria-labelledby="aiLibraryTitle">
-              <div class="resource-ai-library-text"><h2 id="aiLibraryTitle">Библиотека для ИИ</h2>
-                <p>25 открытых учебников и справочников по программированию, тестированию, Git, базам данных, Android и безопасности. Используйте ссылки как источники знаний для любой ИИ-системы, поддерживающей работу с веб-страницами.</p>
-                <p class="resource-ai-library-note">Это каталог ссылок, а не копии книг: доступность и охват источников зависят от выбранного ИИ-сервиса.</p>
+              <div class="resource-ai-library-text"><h2 id="aiLibraryTitle">Библиотека программирования для ИИ</h2>
+                <p>25 открытых источников по программированию: Python, HTML/CSS, JavaScript, Git, тестирование, базы данных, Android и безопасность.</p><p><strong>Скачайте все ссылки одним файлом</strong> или скопируйте весь список одним нажатием — без открытия каждой карточки.</p>
+                <p class="resource-ai-library-note">TXT содержит только адреса, MD — ссылки с описаниями. Полные тексты учебников не включены; ИИ-сервис должен уметь читать веб-источники.</p>
               </div>
-              <div class="resource-ai-library-actions">
-                <a href="#ai-library-catalog" class="eng-filter-btn">Открыть 25 источников</a>
-                <a href="knowledge/ai-code-library.md" download class="eng-filter-btn">Скачать каталог · MD</a>
-                <a href="knowledge/ai-code-library-links.txt" download class="eng-filter-btn">Только ссылки · TXT</a>
+              <div class="resource-ai-library-actions" aria-label="Скачать или скопировать сразу все ссылки">
+                <a href="knowledge/ai-code-library-links.txt" download="ai-programming-links-25.txt" class="eng-filter-btn resource-ai-library-primary">Скачать все 25 ссылок · TXT</a>
+                <button id="resourceCopyAiLinks" type="button" class="eng-filter-btn">Скопировать все 25 ссылок</button>
+                <a href="knowledge/ai-code-library.md" download="ai-programming-library.md" class="eng-filter-btn">Каталог с описаниями · MD</a>
+                <a class="resource-ai-library-open" href="#ai-library-catalog">Посмотреть по темам ↓</a>
+                <p id="resourceCopyAiStatus" class="resource-ai-library-copy-status" role="status" aria-live="polite"></p>
               </div>
             </section>
             <section class="resource-controls" id="ai-library-catalog" aria-label="Настройки каталога">

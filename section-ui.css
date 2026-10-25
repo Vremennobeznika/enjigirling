@@ -303,3 +303,9 @@ footer a:not(.footer-btn):link,footer a:not(.footer-btn):visited{color:inherit}
 .resource-ai-library-actions a{display:block;text-align:center;text-decoration:none;white-space:normal;overflow-wrap:anywhere;}
 .resource-ai-library-actions a:focus-visible{outline:3px solid var(--text-primary);outline-offset:3px;}
 @media(max-width:700px){.resource-ai-library{grid-template-columns:minmax(0,1fr);}.resource-ai-library-actions{min-width:0;}}
+
+.resource-ai-library-actions button{font:inherit;cursor:pointer;}
+.resource-ai-library-actions .resource-ai-library-primary{font-weight:750;border-width:2px;}
+.resource-ai-library-actions .resource-ai-library-open{font-size:13px;text-decoration:underline;text-underline-offset:3px;min-height:32px;display:flex;align-items:center;justify-content:center;color:var(--card-text);}
+.resource-ai-library-actions .resource-ai-library-copy-status{margin:0;font-size:13px;min-height:1.2em;color:var(--card-text);}
+.resource-ai-library-actions :is(a,button):focus-visible{outline:3px solid var(--text-primary);outline-offset:3px;}
