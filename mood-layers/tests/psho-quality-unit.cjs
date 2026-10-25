@@ -1,0 +1,35 @@
+/* PSHO goal unit tests: run with node, no third-party packages. */
+'use strict';
+const assert=require('node:assert/strict'),vm=require('node:vm'),fs=require('node:fs');
+const context={window:{},document:{getElementById:()=>{throw Error('Unexpected DOM access');}},console};
+vm.createContext(context);
+vm.runInContext(fs.readFileSync(__dirname+'/../goals.js','utf8'),context,{filename:'goals.js'});
+const api=context.window.PSHO_GOALS,copy=x=>JSON.parse(JSON.stringify(x));
+const goal=(name='Draw',kind='weekly',target=2,start='2026-10-01')=>({id:'g-example-12345',name,kind,target,start,archived:false,marks:{}});
+const tasks=[];
+function test(name,fn){try{fn();tasks.push({name,status:'PASS'});}catch(err){tasks.push({name,status:'FAIL',error:String(err.message)});}}
+test('valid weekly',()=>assert.equal(api.valid(goal()),true));
+test('valid interval',()=>assert.equal(api.valid(goal('Read','interval',2)),true));
+test('valid avoidance',()=>assert.equal(api.valid(goal('No smoking','avoid',1)),true));
+test('invalid calendar date',()=>assert.equal(api.valid(goal('Test','weekly',2,'2026-02-30')),false));
+test('interval over 30 rejected',()=>assert.equal(api.valid(goal('Test','interval',31)),false));
+test('weekly zero rejected',()=>assert.equal(api.valid(goal('Test','weekly',0)),false));
+test('weekly more than seven rejected',()=>assert.equal(api.valid(goal('Test','weekly',8)),false));
+test('negative interval rejected',()=>assert.equal(api.valid(goal('Test','interval',-1)),false));
+test('no lapse on weekly',()=>{const a=goal();a.marks['2026-10-02']='lapse';assert.equal(api.valid(a),false);});
+test('avoidance lapse allowed',()=>{const a=goal('No smoking','avoid',1);a.marks['2026-10-02']='lapse';assert.equal(api.valid(a),true);});
+test('marks earlier than start rejected',()=>{const a=goal();a.marks['2026-09-30']='done';assert.equal(api.valid(a),false);});
+test('control characters rejected',()=>{const a=goal();a.name='ab\u0000cd';assert.equal(api.valid(a),false);});
+test('over 2500 marks rejected',()=>{const a=goal();for(let i=0;i<2501;i++)a.marks[new Date(Date.UTC(2026,0,i+1)).toISOString().slice(0,10)]='done';assert.equal(api.valid(a),false);});
+test('parallel creates merge',()=>{const a=goal(),b=goal('Read');b.id='g-other-12345';assert.equal(copy(api.merge([a],[],[b])).length,2);});
+test('parallel different dates merge',()=>{const old=goal(),live=copy(old),edited=copy(old);live.marks['2026-10-02']='done';edited.marks['2026-10-03']='done';assert.deepEqual(copy(api.merge([live],[old],[edited]))[0].marks,{'2026-10-02':'done','2026-10-03':'done'});});
+test('parallel same day conflicting mark blocked',()=>{const old=goal('No smoking','avoid',1),live=copy(old),edit=copy(old);live.marks['2026-10-02']='lapse';edit.marks['2026-10-02']='done';assert.throws(()=>api.merge([live],[old],[edit]),/conflict/);});
+test('deletion of concurrently edited goal blocked',()=>{const old=goal(),live=copy(old);live.name='Renamed';assert.throws(()=>api.merge([live],[old],[]),/conflict/);});
+test('unchanged goal retained',()=>{const a=goal();assert.equal(copy(api.merge([a],[a],[a])).length,1);});
+const d=new Date(),today=[d.getFullYear(),('0'+(d.getMonth()+1)).slice(-2),('0'+d.getDate()).slice(-2)].join('-');
+test('weekly no marks returns 0%',()=>assert.equal(api.summary(goal('Draw','weekly',2,today)).rate,0));
+test('weekly today mark counts',()=>{const a=goal('Draw','weekly',1,today);a.marks[today]='done';assert.equal(api.summary(a).rate,100);});
+test('avoidance unknown without observations',()=>{const a=goal('No smoking','avoid',1,today),s=api.summary(a);assert.equal(s.rate,null);assert.equal(s.target,0);});
+test('avoidance explicit lapse counts',()=>{const a=goal('No smoking','avoid',1,'2026-10-01');a.marks['2026-10-02']='lapse';a.marks['2026-10-03']='done';assert.equal(api.summary(a).rate,50);});
+const pass=tasks.filter(x=>x.status==='PASS').length,fail=tasks.length-pass;
+console.log(JSON.stringify({passed:pass,failed:fail,tests:tasks},null,2));if(fail)process.exitCode=1;

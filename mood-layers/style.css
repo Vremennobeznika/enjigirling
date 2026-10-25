@@ -37,3 +37,6 @@ html[data-theme=light]{color-scheme:light;--bg:#f4f2ed;--card:#fffefa;--card2:#e
 .goal-date-line{display:flex;flex-direction:column;gap:8px;max-width:280px;margin-bottom:14px;font-size:14px;font-weight:600}.goal-date-line input{min-width:0}.goals-archived-title{margin:24px 0}
 @media(max-width:530px){.tabs{grid-template-columns:repeat(5,minmax(0,1fr))}.tabs button{font-size:11px;white-space:normal;overflow-wrap:anywhere;padding:9px 1px}.goal-fields{grid-template-columns:1fr}.goal-actions>*{flex:1 1 auto}}
 @media(max-width:340px){.tabs button{font-size:10px}.goal-actions>*{width:100%}}
+
+/* At 280–340 px, use readable two-row navigation rather than five 10px labels. */
+@media(max-width:340px){.tabs{grid-template-columns:repeat(3,minmax(0,1fr))}.tabs button{font-size:12px;padding:10px 3px}}
