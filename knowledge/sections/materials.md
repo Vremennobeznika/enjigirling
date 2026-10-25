@@ -148,8 +148,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["additive","injection-molding","extrusion"]
 - **note:** Обозначение HDPE не является достаточной спецификацией для расчёта давления или долговечности.
 - **industries:** ["polymers","food","water"]
-- **sources:** [{"title":"ISO 1043-1:2011 — Обозначения основных полимеров","url":"https://www.iso.org/ru/standard/50590.html"}]
-- **evidence:** {"verificationStatus":"context_only","verifiedClaim":"Найден источник по общему классу материала или терминологии.","reviewScope":"ISO определяет сокращения полимеров; допуск для пищевого контакта или питьевой воды не подтверждён.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"ISO 1043-1:2011 — Обозначения основных полимеров","url":"https://www.iso.org/ru/standard/50590.html"},{"title":"Ensinger — PE plastic / Polyethylene","url":"https://www.ensingerplastics.com/en/thermoplastic-materials/pe-plastic"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"HDPE — полиэтилен высокой плотности; разные типы и модификации PE имеют разные свойства.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Полиамид 6 (PA6)
 - **id:** pa6
@@ -161,8 +161,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["cutting","additive","injection-molding","extrusion"]
 - **note:** При расчёте учитывать влажность, температуру и конкретную модификацию.
 - **industries:** ["polymers","textiles"]
-- **sources:** [{"title":"ISO 1043-1:2011 — Обозначения основных полимеров","url":"https://www.iso.org/ru/standard/50590.html"}]
-- **evidence:** {"verificationStatus":"context_only","verifiedClaim":"Найден источник по общему классу материала или терминологии.","reviewScope":"Подтверждена система сокращений полимеров, но не свойства конкретного PA6-компаунда.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"ISO 1043-1:2011 — Обозначения основных полимеров","url":"https://www.iso.org/ru/standard/50590.html"},{"title":"Ensinger — PA plastic / Polyamide","url":"https://www.ensingerplastics.com/en/thermoplastic-materials/pa-polyamide"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Полиамиды, включая PA6, поглощают воду; это меняет размеры и механические свойства.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Стеклопластик (GFRP)
 - **id:** gfrp
@@ -253,7 +253,7 @@ ZIP создаётся прямо в браузере, без облака и п
 - **note:** Не приписывать единые свойства без класса и метода испытаний.
 - **industries:** ["textiles"]
 - **sources:** [{"title":"USDA AMS — Cotton Classing Services","url":"https://www.ams.usda.gov/services/grading/cotton-classing"}]
-- **evidence:** {"verificationStatus":"context_only","verifiedClaim":"Найден источник по общему классу материала или терминологии.","reviewScope":"USDA приводит показатели оценки хлопкового волокна; свойства конкретной партии здесь не подтверждены.","checkedAt":"2026-10-22"}
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Длину, зрелость/тонину, прочность и засорённость хлопка измеряют для его производственного использования.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Хлопковая пряжа
 - **id:** cotton-yarn
@@ -278,15 +278,15 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["textile-finishing","sewing"]
 - **note:** Состав и отделку проверяют по документам поставки.
 - **industries:** ["textiles"]
-- **sources:** [{"title":"CottonWorks — Weaving Basics","url":"https://cottonworks.com/learning-hub/weaving/weaving-basics/"}]
-- **evidence:** {"verificationStatus":"context_only","verifiedClaim":"Найден источник по общему классу материала или терминологии.","reviewScope":"Источник описывает формирование тканого полотна; свойства конкретной ткани не проверены.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"CottonWorks — Weaving Basics","url":"https://cottonworks.com/learning-hub/weaving/weaving-basics/"},{"title":"CottonWorks — Basic Woven Fabric Designs","url":"https://cottonworks.com/learning-hub/weaving/basic-woven-fabric-designs/"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Переплетение влияет на жёсткость, драпируемость и устойчивость ткани.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Пиломатериалы из древесины
 - **id:** timber
 - **name:** Пиломатериалы из древесины
 - **group:** organic
 - **family:** Древесные материалы
-- **detail:** Геометрия, порода, влажность и сортность определяются спецификацией.
+- **detail:** Влажность влияет на свойства древесины. Геометрия, порода, влажность и сортность определяются спецификацией.
 - **uses:** Раскрой, сушка, изготовление деталей
 - **process:** ["sawmilling","wood-drying"]
 - **note:** Проверять влажность, сорт и дефекты древесины.
@@ -481,26 +481,26 @@ ZIP создаётся прямо в браузере, без облака и п
 - **name:** Полипропилен (PP)
 - **group:** organic
 - **family:** Термопластичные полиолефины
-- **detail:** Полимерное сырьё; потребительские свойства определяются маркой, составом и переработкой.
+- **detail:** PP — полукристаллический термопласт группы полиолефинов; существует несколько модификаций. Потребительские свойства определяются маркой, составом и переработкой.
 - **uses:** Литые и экструзионные изделия
 - **process:** ["injection-molding","extrusion"]
 - **note:** Для выбора нужны марка, ПТР, добавки, температура переработки и ограничения применения.
 - **industries:** ["polymers","food"]
-- **sources:** [{"title":"ISO 1043-1:2011 — Обозначения основных полимеров","url":"https://www.iso.org/ru/standard/50590.html"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.","reviewScope":"Документ об обозначениях не удостоверяет физические свойства, медицинскую или пищевую пригодность.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"ISO 1043-1:2011 — Обозначения основных полимеров","url":"https://www.iso.org/ru/standard/50590.html"},{"title":"Ensinger — PP","url":"https://www.ensingerplastics.com/en/thermoplastic-materials/pp-plastic"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"PP — полукристаллический термопласт группы полиолефинов; существует несколько модификаций продукта.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Полиэтилентерефталат (PET)
 - **id:** polymer-pet
 - **name:** Полиэтилентерефталат (PET)
 - **group:** organic
 - **family:** Полиэфиры
-- **detail:** Полимер, используемый в разных формах, включая упаковочные изделия и волокна, в зависимости от марки.
+- **detail:** PET — полиэфир; существуют аморфные и полукристаллические формы. Упаковочные и иные применения требуют выбора конкретной марки.
 - **uses:** Упаковка и волокнистые изделия
 - **process:** ["stretch-blow-molding","extrusion"]
 - **note:** Уточняйте назначение марки, вязкость, влагосодержание и требования к контакту с продуктом.
 - **industries:** ["polymers","food","textiles"]
-- **sources:** [{"title":"ISO 1043-1:2011 — Обозначения основных полимеров","url":"https://www.iso.org/ru/standard/50590.html"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.","reviewScope":"Конкретная пригодность PET к применению и свойства данным источником не подтверждены.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"ISO 1043-1:2011 — Обозначения основных полимеров","url":"https://www.iso.org/ru/standard/50590.html"},{"title":"Ensinger — PET","url":"https://www.ensingerplastics.com/en/thermoplastic-materials/pet-polyester"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"PET — полиэфир, выпускаемый в аморфном и полукристаллическом состояниях; упаковочное применение зависит от формы материала.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Поливинилхлорид (PVC)
 - **id:** polymer-pvc
@@ -533,7 +533,7 @@ ZIP создаётся прямо в браузере, без облака и п
 - **name:** Древесноволокнистая плита (MDF)
 - **group:** composite
 - **family:** Древесные композитные панели
-- **detail:** Плитный древесный материал; показатели зависят от плотности и типа связующего.
+- **detail:** MDF — древесноволокнистая плита средней плотности; показатели зависят от плотности и типа связующего.
 - **uses:** Мебель, интерьерные панели
 - **process:** ["fiberboard-pressing","wood-planing"]
 - **note:** Важны эмиссия связующего, влажность, толщина и условия эксплуатации.
@@ -616,8 +616,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["weaving","textile-finishing","sewing"]
 - **note:** Проверяются поверхностная плотность, состав, усадка, окрашивание и устойчивость окраски.
 - **industries:** ["textiles"]
-- **sources:** [{"title":"CottonWorks — Basic Woven Fabric Designs","url":"https://cottonworks.com/learning-hub/weaving/basic-woven-fabric-designs/"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.","reviewScope":"Источник описывает саржевые переплетения, применяемые для денима; состав и качество конкретной партии ткани не проверены.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"CottonWorks — Basic Woven Fabric Designs","url":"https://cottonworks.com/learning-hub/weaving/basic-woven-fabric-designs/"},{"title":"CottonWorks — Denim Basics","url":"https://cottonworks.com/learning-hub/denim/denim-basics/"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Конструкция переплетения, размер пряжи и плотность ткани влияют на массу и свойства денима.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Медные полуфабрикаты для теплообменников
 - **id:** energy-copper
@@ -669,7 +669,7 @@ ZIP создаётся прямо в браузере, без облака и п
 - **note:** Марка и химический состав; состояние поставки; вид полуфабриката; нормативная спецификация; требуемые механические и коррозионные свойства.
 - **industries:** ["metals"]
 - **sources:** [{"title":"worldstainless — Categories, grades and product forms","url":"https://worldstainless.org/about-stainless/what-are-stainless-steels/categories-grades-and-product-forms/"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"Источник различает аустенитную, ферритную, мартенситную и дуплексную группы нержавеющих сталей; не удостоверяет свойства отдельной марки/поставки.","checkedAt":"2026-10-22"}
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Ферритные стали выделяются в самостоятельную группу нержавеющих сталей.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Мартенситные нержавеющие стали
 - **id:** stainless-martensitic
@@ -682,7 +682,7 @@ ZIP создаётся прямо в браузере, без облака и п
 - **note:** Марка и химический состав; состояние поставки; вид полуфабриката; нормативная спецификация; требуемые механические и коррозионные свойства.
 - **industries:** ["metals","energy"]
 - **sources:** [{"title":"worldstainless — Categories, grades and product forms","url":"https://worldstainless.org/about-stainless/what-are-stainless-steels/categories-grades-and-product-forms/"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"Источник различает аустенитную, ферритную, мартенситную и дуплексную группы нержавеющих сталей; не удостоверяет свойства отдельной марки/поставки.","checkedAt":"2026-10-22"}
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Мартенситные нержавеющие стали проходят специальные термические обработки.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Дуплексные нержавеющие стали
 - **id:** stainless-duplex
@@ -695,33 +695,33 @@ ZIP создаётся прямо в браузере, без облака и п
 - **note:** Марка и химический состав; состояние поставки; вид полуфабриката; нормативная спецификация; требуемые механические и коррозионные свойства.
 - **industries:** ["metals","chemicals","energy"]
 - **sources:** [{"title":"worldstainless — Categories, grades and product forms","url":"https://worldstainless.org/about-stainless/what-are-stainless-steels/categories-grades-and-product-forms/"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"Источник различает аустенитную, ферритную, мартенситную и дуплексную группы нержавеющих сталей; не удостоверяет свойства отдельной марки/поставки.","checkedAt":"2026-10-22"}
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Дуплексные нержавеющие стали имеют аустенитно-ферритную микроструктуру.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Алюминиевые сплавы серии 5xxx
 - **id:** al-series-5xxx
 - **name:** Алюминиевые сплавы серии 5xxx
 - **group:** metal
 - **family:** Деформируемые алюминиевые сплавы
-- **detail:** Группа алюминиевых материалов, для которых нужно установить сплав и состояние поставки; серии нельзя считать взаимозаменяемыми.
+- **detail:** Серия деформируемых алюминиевых сплавов, в которой основным легирующим элементом является магний. Свойства и применимость уточняются для конкретного сплава и состояния поставки.
 - **uses:** Листовой прокат и металлоконструкции
 - **process:** ["rolling","cutting"]
 - **note:** Марка и химический состав; состояние поставки; вид полуфабриката; нормативная спецификация; требуемые механические и коррозионные свойства.
 - **industries:** ["metals","construction"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"The Aluminum Association — Standards / Aluminum Alloys","url":"https://www.aluminum.org/standards"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Магний — основной легирующий элемент серии 5xxx.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Алюминиевые сплавы серии 7xxx
 - **id:** al-series-7xxx
 - **name:** Алюминиевые сплавы серии 7xxx
 - **group:** metal
 - **family:** Деформируемые алюминиевые сплавы
-- **detail:** Группа алюминиевых сплавов; прочность и коррозионные ограничения зависят от конкретной марки и термообработки.
+- **detail:** Серия алюминиевых сплавов с цинком как основным легирующим элементом. Сочетание состава и термообработки определяет свойства конкретной марки.
 - **uses:** Нагруженные детали и конструкции
 - **process:** ["cutting","inspection"]
 - **note:** Марка и химический состав; состояние поставки; вид полуфабриката; нормативная спецификация; требуемые механические и коррозионные свойства.
 - **industries:** ["metals","composites"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"The Aluminum Association — Standards / Aluminum Alloys","url":"https://www.aluminum.org/standards"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Цинк — основной легирующий элемент серии 7xxx; свойства зависят от состава и обработки.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Серый чугун
 - **id:** cast-iron-gray
@@ -759,21 +759,21 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["cutting","forging"]
 - **note:** Марка и химический состав; состояние поставки; вид полуфабриката; нормативная спецификация; требуемые механические и коррозионные свойства.
 - **industries:** ["metals","electronics"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"About Copper","url":"https://internationalcopper.org/sustainable-copper/about-copper/"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Латунь относится к медно-цинковым сплавам; конкретные механические свойства этим не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Бронзы
 - **id:** bronze-alloys
 - **name:** Бронзы
 - **group:** metal
 - **family:** Медные сплавы
-- **detail:** Семейство медных сплавов без единого набора механических или коррозионных свойств.
+- **detail:** Семейство медных сплавов, включающее оловянные, алюминиевые, кремниевые и бериллиевые бронзы; единого набора механических или коррозионных свойств для семейства нет.
 - **uses:** Втулки, подшипниковые узлы, арматура
 - **process:** ["casting","cutting"]
 - **note:** Марка и химический состав; состояние поставки; вид полуфабриката; нормативная спецификация; требуемые механические и коррозионные свойства.
 - **industries:** ["metals","energy"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"About Copper","url":"https://internationalcopper.org/sustainable-copper/about-copper/"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Бронзы — семейство медных сплавов с различными легирующими компонентами, включая Sn, Al, Si и Be; состав каждой марки проверяют отдельно.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Титан и титановые сплавы
 - **id:** titanium-industrial
@@ -837,8 +837,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["extrusion","blown-film-extrusion"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["polymers","food"]
-- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"},{"title":"Ensinger — PE plastic / Polyethylene","url":"https://www.ensingerplastics.com/en/thermoplastic-materials/pe-plastic"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"LDPE относится к разновидностям полиэтилена низкой плотности.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Линейный полиэтилен низкой плотности (LLDPE)
 - **id:** lldpe
@@ -858,13 +858,13 @@ ZIP создаётся прямо в браузере, без облака и п
 - **name:** Полистирол (PS)
 - **group:** organic
 - **family:** Стирольные термопласты
-- **detail:** Термопластичный полимер; ударные свойства и переработка зависят от типа и марки.
+- **detail:** Полистирол — термопластичный полимер; GPPS перерабатывают литьём под давлением и экструзией. Ударные свойства и условия переработки зависят от типа и марки.
 - **uses:** Корпуса и формованные изделия
 - **process:** ["injection-molding"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["polymers"]
-- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"},{"title":"Polystyrene — the crystal clear polymer","url":"https://chemicals.basf.com/global/en/Petrochemicals/Styrenics-Europe/Polystyrol"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Полистирол GPPS перерабатывается литьём под давлением и экструзией; свойства GPPS не перенесены на все типы PS.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Пенополистирол (EPS)
 - **id:** eps
@@ -876,34 +876,34 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["polymer-foaming"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["polymers","construction"]
-- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"},{"title":"Styropor — The Classic","url":"https://chemicals.basf.com/global/en/Petrochemicals/Styrenics-Europe/EPS-by-BASF/verpacken-und-schuetzen"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Материалы на основе вспениваемого полистирола применяются для теплоизоляции и защитной упаковки. Плотность, пожарный класс и допуск изделия не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Акрилонитрилбутадиенстирол (ABS)
 - **id:** abs
 - **name:** Акрилонитрилбутадиенстирол (ABS)
 - **group:** organic
 - **family:** Стирольные сополимеры
-- **detail:** Сополимерное семейство; отдельные марки могут иметь разные присадки, прочность и термостойкость.
+- **detail:** ABS — сополимерное семейство на основе акрилонитрила, бутадиена и стирола; соотношение компонентов и модификации меняют свойства.
 - **uses:** Литые корпуса приборов
 - **process:** ["injection-molding"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["polymers","electronics"]
-- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"},{"title":"Ensinger — ABS","url":"https://www.ensingerplastics.com/en/thermoplastic-materials/abs-plastic"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"ABS — терполимер акрилонитрила, бутадиена и стирола; соотношение компонентов меняет свойства.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Поликарбонат (PC)
 - **id:** pc
 - **name:** Поликарбонат (PC)
 - **group:** organic
 - **family:** Инженерные термопласты
-- **detail:** Группа полимеров для формования деталей; свойства зависят от марки и технологического состояния.
+- **detail:** Поликарбонат — аморфный термопласт для формования деталей; армирование и конкретная марка влияют на свойства и прозрачность.
 - **uses:** Прозрачные и конструкционные изделия
 - **process:** ["injection-molding","extrusion"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["polymers","electronics"]
-- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"},{"title":"Ensinger — PC","url":"https://www.ensingerplastics.com/en/thermoplastic-materials/pc-polycarbonate"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Поликарбонат — аморфный термопласт; армирование меняет свойства и прозрачность.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Полиметилметакрилат (PMMA)
 - **id:** pmma
@@ -915,8 +915,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["extrusion","thermoforming"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["polymers","construction"]
-- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"},{"title":"PLEXIGLAS GS/XT","url":"https://www.plexiglas.de/en/products/plexiglas/plexiglas-gs-xt"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"PMMA является термопластичным материалом; PLEXIGLAS выпускают, в частности, листами, трубами и стержнями. Это не подтверждает стойкость всех марок.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Полиоксиметилен (POM)
 - **id:** pom
@@ -928,34 +928,34 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["injection-molding","cutting"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["polymers","metals"]
-- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"},{"title":"Ensinger — POM plastic / Polyoxymethylene","url":"https://www.ensingerplastics.com/en/thermoplastic-materials/pom-acetal"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Гомополимер POM-H и сополимер POM-C отличаются строением и свойствами.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Полибутилентерефталат (PBT)
 - **id:** pbt
 - **name:** Полибутилентерефталат (PBT)
 - **group:** organic
 - **family:** Полиэфирные термопласты
-- **detail:** Полимерные композиции для формования; электрические и механические параметры зависят от наполнения.
+- **detail:** PBT — полукристаллический термопластичный полиэфир; доступны стеклонаполненные композиции. Электрические и механические параметры зависят от марки и наполнения.
 - **uses:** Корпуса, электротехнические компоненты
 - **process:** ["injection-molding"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["polymers","electronics"]
-- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"},{"title":"Ensinger — PBT","url":"https://www.ensingerplastics.com/en/thermoplastic-materials/pbt-material"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"PBT — полукристаллический термопластичный полиэфир; доступны стеклонаполненные модификации.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Полифениленсульфид (PPS)
 - **id:** pps
 - **name:** Полифениленсульфид (PPS)
 - **group:** organic
 - **family:** Высокотемпературные термопласты
-- **detail:** Материал для технических изделий; требования по работе при температуре задаются маркой и испытанием.
+- **detail:** PPS — полукристаллический термопласт для технических изделий; выпускаются наполненные модификации. Требования по работе при температуре задаются маркой и испытанием.
 - **uses:** Компоненты технических сборок
 - **process:** ["injection-molding"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["polymers","electronics"]
-- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"},{"title":"Ensinger — PPS","url":"https://www.ensingerplastics.com/en/thermoplastic-materials/pps-plastic"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"PPS — полукристаллический термопласт; выпускаются наполненные и другие специальные модификации.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Полиэфирэфиркетон (PEEK)
 - **id:** peek
@@ -967,21 +967,21 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["cutting","additive"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["polymers","pharma"]
-- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"},{"title":"Ensinger — PEEK","url":"https://www.ensingerplastics.com/en/thermoplastic-materials/peek-plastic"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"PEEK выпускается в различных модификациях, включая специально выделенные медицинские марки; свойства общей группы не заменяют документацию марки.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Политетрафторэтилен (PTFE)
 - **id:** ptfe
 - **name:** Политетрафторэтилен (PTFE)
 - **group:** organic
 - **family:** Фторполимеры
-- **detail:** Полимерный материал, подбираемый под температуру, среду и требования к ползучести.
+- **detail:** PTFE — фторполимер; стеклянные, углеродные и другие наполнители меняют механические свойства. Материал подбирается под температуру, среду и требования к ползучести.
 - **uses:** Уплотнения, детали оборудования
 - **process:** ["cutting"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["polymers","chemicals"]
-- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"ISO 1043-1:2011 — Сокращения и номенклатура полимеров","url":"https://www.iso.org/standard/50590.html"},{"title":"Ensinger — PTFE","url":"https://www.ensingerplastics.com/en/thermoplastic-materials/ptfe-material"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"PTFE — фторполимер; наполнение стеклом, углеродом и другими добавками меняет механические свойства.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Этиленвинилацетат (EVA)
 - **id:** eva-polymer
@@ -1084,8 +1084,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["pasteurization"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["food"]
-- **sources:** [{"title":"FAO — GHP/HACCP Toolbox: Primary production","url":"https://www.fao.org/good-hygiene-practices-haccp-toolbox/ghp/primary-production/"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"FAO описывает риски безопасности сырья при первичном производстве, но не удостоверяет видовой состав, параметры и безопасность конкретного пищевого сырья или полуфабриката.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"FAO — GHP/HACCP Toolbox: Primary production","url":"https://www.fao.org/good-hygiene-practices-haccp-toolbox/ghp/primary-production/"},{"title":"Tetra Pak Dairy Processing Handbook — Raw Milk Quality","url":"https://dairyprocessinghandbook.tetrapak.com/de/node/2482"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Химический состав и микробиологическое качество сырого молока определяют его пригодность для переработки; необходим контроль в цепочке поставки.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Сухое молоко
 - **id:** milk-powder
@@ -1097,8 +1097,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["spray-drying-food"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["food"]
-- **sources:** [{"title":"FAO — GHP/HACCP Toolbox: Primary production","url":"https://www.fao.org/good-hygiene-practices-haccp-toolbox/ghp/primary-production/"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"FAO описывает риски безопасности сырья при первичном производстве, но не удостоверяет видовой состав, параметры и безопасность конкретного пищевого сырья или полуфабриката.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"FAO — GHP/HACCP Toolbox: Primary production","url":"https://www.fao.org/good-hygiene-practices-haccp-toolbox/ghp/primary-production/"},{"title":"Tetra Pak Dairy Processing Handbook — Milk and Whey Powdered Ingredients","url":"https://dairyprocessinghandbook.tetrapak.com/chapter/milk-and-whey-powdered-ingredients"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Стабильность сухого молока зависит от влажности, поглощения воды и упаковки; низкая влажность не гарантирует безопасность сама по себе.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Плодово-ягодные соки как сырьё
 - **id:** fruit-juice-base
@@ -1326,7 +1326,7 @@ ZIP создаётся прямо в браузере, без облака и п
 - **name:** Сосновые пиломатериалы
 - **group:** organic
 - **family:** Хвойная древесина
-- **detail:** Натуральные пиломатериалы, требующие контроля породы, влажности и сортировки.
+- **detail:** Натуральные пиломатериалы; изменение влажности влияет на свойства древесины. Требуются контроль породы, влажности и сортировка.
 - **uses:** Столярные и строительные изделия
 - **process:** ["sawmilling","wood-drying"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
@@ -1521,7 +1521,7 @@ ZIP создаётся прямо в браузере, без облака и п
 - **name:** Кальцинированная сода
 - **group:** inorganic
 - **family:** Неорганические технические вещества
-- **detail:** Сырьё для различных промышленных смесей; чистота и сорт должны соответствовать задаче.
+- **detail:** Кальцинированная сода используется, в частности, как компонент стекольной шихты; чистота и сорт должны соответствовать конкретному производству.
 - **uses:** Стекольные и химические смеси
 - **process:** ["glass-melting","chemical-mixing"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
@@ -1963,7 +1963,7 @@ ZIP создаётся прямо в браузере, без облака и п
 - **name:** Каолин технический
 - **group:** inorganic
 - **family:** Глинистое сырьё
-- **detail:** Классы каолина различаются по чистоте, дисперсности и назначению.
+- **detail:** Каолин — глинистое сырьё, применяемое в керамическом производстве. Классы различаются по чистоте, дисперсности и назначению.
 - **uses:** Керамика и минеральные композиции
 - **process:** ["ceramic-calcination"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
@@ -2020,8 +2020,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["tablet-compression"]
 - **note:** Точная идентификация вещества и формы; применимая фармакопейная монография; паспорт качества, чистота, влажность и совместимость с лекарственной формой.
 - **industries:** ["pharma"]
-- **sources:** [{"title":"FDA — Inactive Ingredients Database FAQ","url":"https://www.fda.gov/drugs/drug-approvals-and-databases/inactive-ingredients-approved-drug-products-search-frequently-asked-questions"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"FDA определяет активные и вспомогательные ингредиенты и назначение базы. Состав, нормативное качество и разрешённость конкретного вещества или формы не проверены.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"FDA — Inactive Ingredients Database FAQ","url":"https://www.fda.gov/drugs/drug-approvals-and-databases/inactive-ingredients-approved-drug-products-search-frequently-asked-questions"},{"title":"DFE Pharma — Pharmacel 101 Product Specification PD-0472","url":"https://dfepharma.com/document/4762/cardid/4YBJ5OKLAREQVFWFTY"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Для конкретной марки MCC Pharmacel 101 изготовитель задаёт идентификацию, физико-химические и микробиологические показатели; это не аттестация всех марок MCC.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Лактоза фармацевтическая
 - **id:** pharma-lactose
@@ -2033,8 +2033,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["pharma-powder-blending"]
 - **note:** Точная идентификация вещества и формы; применимая фармакопейная монография; паспорт качества, чистота, влажность и совместимость с лекарственной формой.
 - **industries:** ["pharma","food"]
-- **sources:** [{"title":"FDA — Inactive Ingredients Database FAQ","url":"https://www.fda.gov/drugs/drug-approvals-and-databases/inactive-ingredients-approved-drug-products-search-frequently-asked-questions"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"FDA определяет активные и вспомогательные ингредиенты и назначение базы. Состав, нормативное качество и разрешённость конкретного вещества или формы не проверены.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"FDA — Inactive Ingredients Database FAQ","url":"https://www.fda.gov/drugs/drug-approvals-and-databases/inactive-ingredients-approved-drug-products-search-frequently-asked-questions"},{"title":"DFE Pharma — Lactochem Crystals","url":"https://dfepharma.com/excipients/lactochem-crystals/"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Фармацевтический моногидрат лактозы выпускается с разным распределением частиц для подбора под лекарственную форму.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Желатин для капсул
 - **id:** pharma-gelatin
@@ -2080,13 +2080,13 @@ ZIP создаётся прямо в браузере, без облака и п
 - **name:** Крахмал фармацевтический
 - **group:** organic
 - **family:** Крахмалосодержащие вспомогательные материалы
-- **detail:** Сырьё для лекарственных форм; качество и назначение определяются фармакопейной монографией.
+- **detail:** Крахмальные вспомогательные вещества используются, в частности, как наполнители и связующие твёрдых пероральных лекарственных форм. Качество конкретного продукта требует отдельной фармакопейной проверки.
 - **uses:** Таблетные и порошковые смеси
 - **process:** ["pharma-powder-blending"]
 - **note:** Точная идентификация вещества и формы; применимая фармакопейная монография; паспорт качества, чистота, влажность и совместимость с лекарственной формой.
 - **industries:** ["pharma","food"]
-- **sources:** [{"title":"FDA — Inactive Ingredients Database FAQ","url":"https://www.fda.gov/drugs/drug-approvals-and-databases/inactive-ingredients-approved-drug-products-search-frequently-asked-questions"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"FDA определяет активные и вспомогательные ингредиенты и назначение базы. Состав, нормативное качество и разрешённость конкретного вещества или формы не проверены.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"FDA — Inactive Ingredients Database FAQ","url":"https://www.fda.gov/drugs/drug-approvals-and-databases/inactive-ingredients-approved-drug-products-search-frequently-asked-questions"},{"title":"DFE Pharma — Inhalation Grade Lactose / company portfolio","url":"https://dfepharma.com/media/2ianc2oo/dpi-corporate-brochure.pdf"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Крахмальные вспомогательные вещества входят в группу наполнителей/связующих для твёрдых пероральных лекарственных форм.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Фотополимерная флексографская форма
 - **id:** flexo-plate
@@ -2098,8 +2098,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["printing-plate-making","flexography"]
 - **note:** Матрица и армирование, ориентация, доля наполнителя, метод формования, условия отверждения, испытания и дефекты.
 - **industries:** ["printing","polymers"]
-- **sources:** [{"title":"OSHA — Flexography","url":"https://www.osha.gov/etools/printing-industry/flexography"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"Источник описывает флексографские формы, краски и субстраты; не удостоверяет характеристики конкретного субстрата или формы.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"OSHA — Flexography","url":"https://www.osha.gov/etools/printing-industry/flexography"},{"title":"Monitoring Information By Industry — Printing and Publishing","url":"https://www.epa.gov/air-emissions-monitoring-knowledge-base/monitoring-information-industry-printing-and-publishing"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Флексографская форма имеет выступающие печатающие участки и выполняется из эластичного пластика или резины.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Сетка для трафаретной печати
 - **id:** screen-print-mesh
@@ -2124,8 +2124,8 @@ ZIP создаётся прямо в браузере, без облака и п
 - **process:** ["offset-lithography"]
 - **note:** Матрица и армирование, ориентация, доля наполнителя, метод формования, условия отверждения, испытания и дефекты.
 - **industries:** ["printing"]
-- **sources:** [{"title":"OSHA — Printing Industry Glossary","url":"https://www.osha.gov/etools/printing-industry/glossary"}]
-- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.","reviewScope":"OSHA раскрывает терминологию форм, красок, печатных материалов и оснастки; не подтверждает свойства, рецептуру и пригодность конкретного материала.","checkedAt":"2026-10-22"}
+- **sources:** [{"title":"OSHA — Printing Industry Glossary","url":"https://www.osha.gov/etools/printing-industry/glossary"},{"title":"Monitoring Information By Industry — Printing and Publishing","url":"https://www.epa.gov/air-emissions-monitoring-knowledge-base/monitoring-information-industry-printing-and-publishing"}]
+- **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Офсетное полотно с резиновой поверхностью передаёт изображение с формы на подложку.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### УФ-отверждаемая печатная краска
 - **id:** uv-curing-ink

@@ -1,43 +1,45 @@
-# Предметная проверка инженерных утверждений — 25.10.2026
+# Индивидуальная проверка инженерных утверждений — 25.10.2026
 
-**Статус: частично выполнено. Полная проверка 342 карточек НЕ завершена.**
+**Частичный результат. Поручение по полной проверке 342 карточек остаётся открытым.**
 
-## Цель и критерий приёмки
+## Цель и приёмка
 
-Для каждой исходной карточки связать проверяемые утверждения с прочитанными первичными документами, указать раздел и границы; исправить обнаруженные ошибки. Наличие URL, HTTP 200, совпадение названия или успешные программные тесты не считаются фактологическим подтверждением. Подтверждение определения не подтверждает этапы, контроль, марки и нормативную применимость.
+Для каждой исходной карточки подтвердить инженерные утверждения прочитанными профильными первичными документами, указать раздел и границы подтверждения, исправить выявленные ошибки. Совпадение названия, доступный URL и успешный программный тест не подтверждают техническое содержание. Проверка определения не подтверждает этапы, контроль, марки и нормативную применимость.
 
-## Реальный результат
+## Фактический объём
 
 | Показатель | Результат |
 |---|---:|
-| Исходная база | 172 материала + 208 процессов = 380 карточек |
-| До этого прохода имели хотя бы один узкий подтверждённый тезис | 38 |
-| Исходный остаток без такого тезиса | 342 |
-| Прочитанные документы/страницы, использованные в этом журнале | 42 |
-| Подтверждённые частные тезисы текущего прохода | 109 у 109 карточек |
-| Впервые получили узкое подтверждение | 105 из исходных 342 |
-| Повторно проверены другие тезисы уже частично подтверждённых карточек | 4 |
-| Итог базы: есть хотя бы один подтверждённый тезис | 143 из 380 |
-| Из исходного остатка всё ещё нет подтверждённого тезиса | 237 из 342 |
-| Исправленные содержательные поля и связи | 29 |
+| База | 172 материала + 208 процессов = 380 |
+| До прохода: карточки с хотя бы одним подтверждённым тезисом | 38 |
+| Исходная очередь | 342 |
+| Подтверждённые частные тезисы прохода | 181 у 181 карточек |
+| Впервые охвачены из исходных 342 | 177 |
+| Другие тезисы повторно проверенных карточек | 4 |
+| Итого в базе есть хотя бы один подтверждённый тезис | 215 из 380 |
+| Без подтверждённого тезиса из исходной очереди | 165 из 342 |
+| Прочитанные и использованные страницы/документы | 88 |
+| Исправленные или уточнённые поля и связи | 49 |
 | Полностью аттестованные карточки | Не заявляются |
 
-**105 карточек нельзя назвать полностью проверенными.** Для них ниже указана только фактически подтверждённая часть. У всех 380 карточек могут оставаться непроверенные технические поля.
+Остаток — не только 165 карточек без подтверждённого тезиса. У частично охваченных карточек также остаются непроверенные поля и части полей. Автоматическая матрица содержит все 342 ID, текущее содержание технических полей, частные подтверждения и явные открытые статусы. Генерация этой матрицы не засчитана как индивидуальная инженерная проверка.
 
 ## Проверки и ограничения
 
-| Направление | Способ | Результат | Остаточный риск |
-|---|---|---|---|
-| Источники | Открытие релевантных первичных разделов ASNT, NIST, DOE, USDA, EPA, TWI, Hydro, Cotton Incorporated, Henkel, ACI, DWI, CDC, GEA, Alfa Laval и текста ГОСТ | 109 предметных связей, разделы приведены ниже | Источники не удостоверяют всю карточку и параметры поставки |
-| Целостность | build-knowledge, build-ai-packs, build-quality, audit-atlas-cards, test:static | 23/23 группы прошли; 102 JS-файла проверены синтаксически | Это структурная и программная проверка |
-| Актуальность подтверждения | SHA-256 текста проверенного поля и сравнение журнала с реестром | 109 записей прошли новый tests/claim-review.cjs | Старые подтверждения предыдущих проходов не все снабжены отпечатками |
-| Негативный сценарий | В отдельной копии изменено проверенное поле без повторной экспертизы | Проверка отклонила устаревшее подтверждение с сообщением text changed; source review required | Изменение удалённого источника не обнаруживается автоматически |
-| Регрессия исправлений | Проверка 29 итоговых значений полей | Пройдена | Не подтверждает оставшиеся связи с марками |
-| Дизайн, мобильная вёрстка, слабый Android | CSS и код интерфейса не изменялись; новый браузерный прогон в этой среде не выполнялся | Не аттестовано этим актом | Не следует переносить старые результаты браузерных тестов на этот коммит |
-| Сеть и доступность | Несколько исходных страниц OSHA вернули 403; отдельные PDF/страницы не извлеклись | Недоступное содержание не засчитано | Альтернативные источники для оставшихся карточек ещё нужно собрать |
-| Право, пищевые и фармакопейные нормы | Полная сверка действующих норм РФ/ЕАЭС, фармакопей и всех изменений стандартов не проводилась | Остаётся открыто | Обзорные определения не являются нормативной инструкцией |
+| Направление | Метод и результат | Ограничение |
+|---|---|---|
+| Предметная проверка | 181 тезисов сопоставлены с релевантным текстом 88 первичных страниц/документов; см. разделы ниже | Только приведённые тезисы |
+| Основные сценарии / целостность / кодировка / внутренние ссылки | Локальная сборка экспортов и test:static: 23/23 группы прошли, синтаксис 102 JS-файлов проверен | Не доказывает истинность инженерных утверждений |
+| Регрессия текста | SHA-256 проверенного поля, равенство журнала и реестра, проверка 49 исправлений | Хеш защищает от незаметной локальной правки, но не отслеживает изменение удалённого источника |
+| Негативный сценарий | Отдельная копия: изменение проверенного поля без новой экспертизы отклонено тестом с text changed; source review required | Содержательность тезиса проверяется человеком/экспертом, не тестом |
+| Браузерная регрессия, ширины, темы, фильтры и ссылки | На опубликованном контрольном коммите 9dddf342: Browser Smoke — 104 passed; Process Atlas Browser QA — success, 4 ширины и 2 темы; Publish — build/deploy success | Эти результаты относятся к указанному коммиту; новый коммит требует нового CI |
+| Слабые устройства / производительность / безопасность | Специальные аппаратные, нагрузочные и атакующие проверки в этом проходе не выполнялись | Не аттестовано |
+| Внешние ссылки | Чтение источников отдельно от проверки доступности. Часть OSHA/USGS вернула 403; отдельные страницы — 401/404/502 или ошибку извлечения | Недоступный текст не засчитан; это не означает недоступности всех оставшихся источников |
+| Нормативная применимость | Не выполнена полная сверка актуальных норм РФ/ЕАЭС, фармакопей, изменений стандартов, конкретных марок и партий | Обзорный источник не заменяет техкарту или допуск |
 
-## Воспроизведение программных проверок
+Промежуточный прогон 20/23 завершился ошибкой из-за преждевременной очистки временных экспортов. После исправления порядка действий полный повторный прогон дал 23/23. Негативный тест повторён на текущих данных: изменение проверенного поля refractory-ceramics отклонено.
+
+## Воспроизведение
 
 ```sh
 node scripts/build-knowledge.cjs
@@ -47,9 +49,9 @@ node scripts/audit-atlas-cards.cjs --write
 npm run test:static
 ```
 
-Исходная версия: `43fd6eaa5a998116207e7fe2affec80368e449aa`. Новые зависимости, CSS и исполняемый код страниц не добавлялись. Журнал и дополнительные проверки не загружаются браузером как код приложения. Для проверки изменённого тезиса требуется повторное чтение источника; обновлять только хеш без проверки нельзя.
+Исходная версия: `43fd6eaa5a998116207e7fe2affec80368e449aa`. Зависимости, CSS и исполняемый код страниц в рамках этого предметного аудита не расширены. Подтверждения ограничены `verifiedClaim` и `sourceSection`. Обновлять хеш после изменения текста без повторного чтения источника нельзя.
 
-## Обнаруженные и исправленные ошибки
+## Исправления и уточнения
 
 | Карточка | Поле | Было | Стало | Основание |
 |---|---|---|---|---|
@@ -82,8 +84,28 @@ npm run test:static
 | compression-molding-plastics | checks | Пустоты, облой, степень отверждения | Пустоты, облой, размеры; для реактопластов — степень отверждения, для термопластов — условия охлаждения. | [review-epa-polymers](https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT); Отверждение не является универсальным критерием для всех пластмасс. |
 | brazing | description | Соединение основного металла расплавленным припоем без расплавления основы. | Соединение без расплавления основного металла с использованием припоя, температура плавления которого выше 450 °C. | [review-twi-solder](https://www.twi-global.com/technical-knowledge/faqs/welding-brazing-and-soldering); Добавлена граница, отличающая высокотемпературную пайку от низкотемпературной. |
 | soft-soldering | description | Соединение деталей припойным металлом с более низкой температурой плавления. | Соединение без расплавления основного металла с использованием припоя, температура плавления которого ниже 450 °C. | [review-twi-solder](https://www.twi-global.com/technical-knowledge/faqs/welding-brazing-and-soldering); Прежнее «более низкая температура» не задавало базу сравнения и отличие от brazing. |
+| al-series-5xxx | detail | Группа алюминиевых материалов, для которых нужно установить сплав и состояние поставки; серии нельзя считать взаимозаменяемыми. | Серия деформируемых алюминиевых сплавов, в которой основным легирующим элементом является магний. Свойства и применимость уточняются для конкретного сплава и состояния поставки. | [review-aa-series](https://www.aluminum.org/standards); Вместо общего описания добавлен подтверждённый отличительный легирующий элемент. |
+| al-series-7xxx | detail | Группа алюминиевых сплавов; прочность и коррозионные ограничения зависят от конкретной марки и термообработки. | Серия алюминиевых сплавов с цинком как основным легирующим элементом. Сочетание состава и термообработки определяет свойства конкретной марки. | [review-aa-series](https://www.aluminum.org/standards); Добавлен подтверждённый признак серии без переноса численных свойств на все марки. |
+| aseptic-filling | description | Наполнение предварительно подготовленной тары стерильным продуктом в контролируемой среде. | Наполнение стерилизованной тары стерильным продуктом с последующей укупоркой в контролируемой асептической среде; подготовка и контроль компонентов зависят от процесса. | [review-fda-aseptic](https://www.fda.gov/media/71026/download); Уточнена стерильность компонентов; одной неопределённой подготовки тары недостаточно. |
+| aseptic-filling | sources | [{"title": "FDA — контроль твёрдых лекарственных форм — обзор; не технологическая инструкция", "url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"}] | [{"title": "Sterile Drug Products Produced by Aseptic Processing — CGMP", "url": "https://www.fda.gov/media/71026/download"}] | [review-fda-aseptic](https://www.fda.gov/media/71026/download); Источник о твёрдых лекарственных формах не подтверждает асептическое наполнение; заменён профильным руководством FDA. |
+| ozonation-water | steps | Генерация озона → контакт с водой → контроль | Генерация озона → контакт с водой → разрушение остаточного озона в отходящем газе → контроль | [review-epa-ozone](https://www.epa.gov/sites/default/files/2015-06/documents/ozon.pdf); В обзорной цепочке отсутствовала обработка отходящего озонсодержащего газа, указанная EPA как необходимая. |
+| bronze-alloys | detail | Семейство медных сплавов без единого набора механических или коррозионных свойств. | Семейство медных сплавов, включающее оловянные, алюминиевые, кремниевые и бериллиевые бронзы; единого набора механических или коррозионных свойств для семейства нет. | [review-ica-copper](https://internationalcopper.org/sustainable-copper/about-copper/); Добавлена предметная идентификация семейства вместо одного общего ограничения. |
+| kaolin-industrial | detail | Классы каолина различаются по чистоте, дисперсности и назначению. | Каолин — глинистое сырьё, применяемое в керамическом производстве. Классы различаются по чистоте, дисперсности и назначению. | [review-epa-ceramics](https://www.epa.gov/system/files/documents/2025-06/c11s07_2025_final.pdf); Уточнение описания по уже прочитанному первичному источнику: подтверждённый тезис должен явно содержаться в поле карточки, а не только в журнале. |
+| soda-ash | detail | Сырьё для различных промышленных смесей; чистота и сорт должны соответствовать задаче. | Кальцинированная сода используется, в частности, как компонент стекольной шихты; чистота и сорт должны соответствовать конкретному производству. | [review-epa-glass](https://www.epa.gov/sites/default/files/2020-10/documents/c11s15.pdf); Уточнение описания по уже прочитанному первичному источнику: подтверждённый тезис должен явно содержаться в поле карточки, а не только в журнале. |
+| mdf | detail | Плитный древесный материал; показатели зависят от плотности и типа связующего. | MDF — древесноволокнистая плита средней плотности; показатели зависят от плотности и типа связующего. | [review-usda-composites](https://research.fs.usda.gov/download/treesearch/62258.pdf); Уточнение описания по уже прочитанному первичному источнику: подтверждённый тезис должен явно содержаться в поле карточки, а не только в журнале. |
+| timber | detail | Геометрия, порода, влажность и сортность определяются спецификацией. | Влажность влияет на свойства древесины. Геометрия, порода, влажность и сортность определяются спецификацией. | [review-usda-moisture](https://research.fs.usda.gov/download/treesearch/62243.pdf); Уточнение описания по уже прочитанному первичному источнику: подтверждённый тезис должен явно содержаться в поле карточки, а не только в журнале. |
+| pine-lumber | detail | Натуральные пиломатериалы, требующие контроля породы, влажности и сортировки. | Натуральные пиломатериалы; изменение влажности влияет на свойства древесины. Требуются контроль породы, влажности и сортировка. | [review-usda-moisture](https://research.fs.usda.gov/download/treesearch/62243.pdf); Уточнение описания по уже прочитанному первичному источнику: подтверждённый тезис должен явно содержаться в поле карточки, а не только в журнале. |
+| abs | detail | Сополимерное семейство; отдельные марки могут иметь разные присадки, прочность и термостойкость. | ABS — сополимерное семейство на основе акрилонитрила, бутадиена и стирола; соотношение компонентов и модификации меняют свойства. | [review-ensinger-abs](https://www.ensingerplastics.com/en/thermoplastic-materials/abs-plastic); Уточнение описания по уже прочитанному первичному источнику: подтверждённый тезис должен явно содержаться в поле карточки, а не только в журнале. |
+| pbt | detail | Полимерные композиции для формования; электрические и механические параметры зависят от наполнения. | PBT — полукристаллический термопластичный полиэфир; доступны стеклонаполненные композиции. Электрические и механические параметры зависят от марки и наполнения. | [review-ensinger-pbt](https://www.ensingerplastics.com/en/thermoplastic-materials/pbt-material); Уточнение описания по уже прочитанному первичному источнику: подтверждённый тезис должен явно содержаться в поле карточки, а не только в журнале. |
+| pc | detail | Группа полимеров для формования деталей; свойства зависят от марки и технологического состояния. | Поликарбонат — аморфный термопласт для формования деталей; армирование и конкретная марка влияют на свойства и прозрачность. | [review-ensinger-pc](https://www.ensingerplastics.com/en/thermoplastic-materials/pc-polycarbonate); Уточнение описания по уже прочитанному первичному источнику: подтверждённый тезис должен явно содержаться в поле карточки, а не только в журнале. |
+| polymer-pet | detail | Полимер, используемый в разных формах, включая упаковочные изделия и волокна, в зависимости от марки. | PET — полиэфир; существуют аморфные и полукристаллические формы. Упаковочные и иные применения требуют выбора конкретной марки. | [review-ensinger-polymer-pet](https://www.ensingerplastics.com/en/thermoplastic-materials/pet-polyester); Уточнение описания по уже прочитанному первичному источнику: подтверждённый тезис должен явно содержаться в поле карточки, а не только в журнале. |
+| polymer-pp | detail | Полимерное сырьё; потребительские свойства определяются маркой, составом и переработкой. | PP — полукристаллический термопласт группы полиолефинов; существует несколько модификаций. Потребительские свойства определяются маркой, составом и переработкой. | [review-ensinger-polymer-pp](https://www.ensingerplastics.com/en/thermoplastic-materials/pp-plastic); Уточнение описания по уже прочитанному первичному источнику: подтверждённый тезис должен явно содержаться в поле карточки, а не только в журнале. |
+| pps | detail | Материал для технических изделий; требования по работе при температуре задаются маркой и испытанием. | PPS — полукристаллический термопласт для технических изделий; выпускаются наполненные модификации. Требования по работе при температуре задаются маркой и испытанием. | [review-ensinger-pps](https://www.ensingerplastics.com/en/thermoplastic-materials/pps-plastic); Уточнение описания по уже прочитанному первичному источнику: подтверждённый тезис должен явно содержаться в поле карточки, а не только в журнале. |
+| ptfe | detail | Полимерный материал, подбираемый под температуру, среду и требования к ползучести. | PTFE — фторполимер; стеклянные, углеродные и другие наполнители меняют механические свойства. Материал подбирается под температуру, среду и требования к ползучести. | [review-ensinger-ptfe](https://www.ensingerplastics.com/en/thermoplastic-materials/ptfe-material); Уточнение описания по уже прочитанному первичному источнику: подтверждённый тезис должен явно содержаться в поле карточки, а не только в журнале. |
+| pharma-starch | detail | Сырьё для лекарственных форм; качество и назначение определяются фармакопейной монографией. | Крахмальные вспомогательные вещества используются, в частности, как наполнители и связующие твёрдых пероральных лекарственных форм. Качество конкретного продукта требует отдельной фармакопейной проверки. | [review-dfe-portfolio](https://dfepharma.com/media/2ianc2oo/dpi-corporate-brochure.pdf); Уточнение описания по уже прочитанному первичному источнику: подтверждённый тезис должен явно содержаться в поле карточки, а не только в журнале. |
+| ps | detail | Термопластичный полимер; ударные свойства и переработка зависят от типа и марки. | Полистирол — термопластичный полимер; GPPS перерабатывают литьём под давлением и экструзией. Ударные свойства и условия переработки зависят от типа и марки. | [review-basf-ps](https://chemicals.basf.com/global/en/Petrochemicals/Styrenics-Europe/Polystyrol); Уточнение описания по уже прочитанному первичному источнику: подтверждённый тезис должен явно содержаться в поле карточки, а не только в журнале. |
 
-## Подтверждённые тезисы — индивидуально
+## Подтверждённые части — индивидуально
 
 | Карточка и поле | Подтверждённая часть | Источник и раздел |
 |---|---|---|
@@ -196,11 +218,256 @@ npm run test:static
 | processes/wet-granulation-pharma · description | Распыление жидкости в псевдоожиженный порошок формирует гранулы. | [GEA — Fluid Bed Processing of Pharmaceuticals](https://www.gea.com/en/products/dryers-particle-processing/fluid-beds/fluid-bed-processors/) · Top Spray Granulator |
 | processes/tablet-coating · description | Псевдоожиженный слой применяется, в частности, для покрытия таблеток. | [GEA — Fluid Bed Processing of Pharmaceuticals](https://www.gea.com/en/products/dryers-particle-processing/fluid-beds/fluid-bed-processors/) · FlexStream |
 | processes/pharma-spray-drying · description | Распыление раствора или суспензии в тёплый воздух сопровождается сушкой продукта. | [GEA — Fluid Bed Processing of Pharmaceuticals](https://www.gea.com/en/products/dryers-particle-processing/fluid-beds/fluid-bed-processors/) · Spray Dryer Granulator |
+| materials/stainless-ferritic · detail | Ферритные стали выделяются в самостоятельную группу нержавеющих сталей. | [worldstainless — Categories, grades and product forms](https://worldstainless.org/about-stainless/what-are-stainless-steels/categories-grades-and-product-forms/) · Ferritic |
+| materials/stainless-martensitic · detail | Мартенситные нержавеющие стали проходят специальные термические обработки. | [worldstainless — Categories, grades and product forms](https://worldstainless.org/about-stainless/what-are-stainless-steels/categories-grades-and-product-forms/) · Martensitic |
+| materials/stainless-duplex · detail | Дуплексные нержавеющие стали имеют аустенитно-ферритную микроструктуру. | [worldstainless — Categories, grades and product forms](https://worldstainless.org/about-stainless/what-are-stainless-steels/categories-grades-and-product-forms/) · Austenitic-Ferritic (Duplex) |
+| materials/al-series-5xxx · detail | Магний — основной легирующий элемент серии 5xxx. | [The Aluminum Association — Standards / Aluminum Alloys](https://www.aluminum.org/standards) · 5xxx |
+| materials/al-series-7xxx · detail | Цинк — основной легирующий элемент серии 7xxx; свойства зависят от состава и обработки. | [The Aluminum Association — Standards / Aluminum Alloys](https://www.aluminum.org/standards) · 7xxx; Hot and Cold |
+| materials/cotton · detail | Длину, зрелость/тонину, прочность и засорённость хлопка измеряют для его производственного использования. | [USDA AMS — Cotton Classing Services](https://www.ams.usda.gov/services/grading/cotton-classing) · Instrument Testing |
+| materials/woven-fabric · detail | Переплетение влияет на жёсткость, драпируемость и устойчивость ткани. | [CottonWorks — Basic Woven Fabric Designs](https://cottonworks.com/learning-hub/weaving/basic-woven-fabric-designs/) · Plain Weaves; Basket Weave; Satin Weaves |
+| materials/cotton-denim · detail | Конструкция переплетения, размер пряжи и плотность ткани влияют на массу и свойства денима. | [CottonWorks — Denim Basics](https://cottonworks.com/learning-hub/denim/denim-basics/) · Denim Construction, Weaves, & Weights |
+| materials/pe-hd · detail | HDPE — полиэтилен высокой плотности; разные типы и модификации PE имеют разные свойства. | [Ensinger — PE plastic / Polyethylene](https://www.ensingerplastics.com/en/thermoplastic-materials/pe-plastic) · Introduction; Manufactured PE products |
+| materials/ldpe · detail | LDPE относится к разновидностям полиэтилена низкой плотности. | [Ensinger — PE plastic / Polyethylene](https://www.ensingerplastics.com/en/thermoplastic-materials/pe-plastic) · Introduction |
+| materials/pa6 · detail | Полиамиды, включая PA6, поглощают воду; это меняет размеры и механические свойства. | [Ensinger — PA plastic / Polyamide](https://www.ensingerplastics.com/en/thermoplastic-materials/pa-polyamide) · Introduction / water absorption; PA 6 |
+| materials/pom · detail | Гомополимер POM-H и сополимер POM-C отличаются строением и свойствами. | [Ensinger — POM plastic / Polyoxymethylene](https://www.ensingerplastics.com/en/thermoplastic-materials/pom-acetal) · Introduction / POM-H and POM-C |
+| materials/abs · detail | ABS — терполимер акрилонитрила, бутадиена и стирола; соотношение компонентов меняет свойства. | [Ensinger — ABS](https://www.ensingerplastics.com/en/thermoplastic-materials/abs-plastic) · Introduction |
+| materials/pbt · detail | PBT — полукристаллический термопластичный полиэфир; доступны стеклонаполненные модификации. | [Ensinger — PBT](https://www.ensingerplastics.com/en/thermoplastic-materials/pbt-material) · Introduction; Manufactured PBT products |
+| materials/pc · detail | Поликарбонат — аморфный термопласт; армирование меняет свойства и прозрачность. | [Ensinger — PC](https://www.ensingerplastics.com/en/thermoplastic-materials/pc-polycarbonate) · Introduction; glass filled PC |
+| materials/polymer-pet · detail | PET — полиэфир, выпускаемый в аморфном и полукристаллическом состояниях; упаковочное применение зависит от формы материала. | [Ensinger — PET](https://www.ensingerplastics.com/en/thermoplastic-materials/pet-polyester) · Introduction |
+| materials/polymer-pp · detail | PP — полукристаллический термопласт группы полиолефинов; существует несколько модификаций продукта. | [Ensinger — PP](https://www.ensingerplastics.com/en/thermoplastic-materials/pp-plastic) · Introduction; Manufactured polypropylene products |
+| materials/pps · detail | PPS — полукристаллический термопласт; выпускаются наполненные и другие специальные модификации. | [Ensinger — PPS](https://www.ensingerplastics.com/en/thermoplastic-materials/pps-plastic) · Introduction; Manufactured PPS products |
+| materials/peek · detail | PEEK выпускается в различных модификациях, включая специально выделенные медицинские марки; свойства общей группы не заменяют документацию марки. | [Ensinger — PEEK](https://www.ensingerplastics.com/en/thermoplastic-materials/peek-plastic) · PEEK variants; Medical grade |
+| materials/ptfe · detail | PTFE — фторполимер; наполнение стеклом, углеродом и другими добавками меняет механические свойства. | [Ensinger — PTFE](https://www.ensingerplastics.com/en/thermoplastic-materials/ptfe-material) · Introduction; PTFE stock shapes |
+| materials/raw-milk · detail | Химический состав и микробиологическое качество сырого молока определяют его пригодность для переработки; необходим контроль в цепочке поставки. | [Tetra Pak Dairy Processing Handbook — Raw Milk Quality](https://dairyprocessinghandbook.tetrapak.com/de/node/2482) · Where can milk quality go wrong? |
+| materials/milk-powder · detail | Стабильность сухого молока зависит от влажности, поглощения воды и упаковки; низкая влажность не гарантирует безопасность сама по себе. | [Tetra Pak Dairy Processing Handbook — Milk and Whey Powdered Ingredients](https://dairyprocessinghandbook.tetrapak.com/chapter/milk-and-whey-powdered-ingredients) · Storage and stability of dried foods |
+| processes/spray-drying-food · description | Жидкость распыляют в мелкие капли, вода испаряется, порошок отделяется от сушильного воздуха. | [Tetra Pak Dairy Processing Handbook — Milk and Whey Powdered Ingredients](https://dairyprocessinghandbook.tetrapak.com/chapter/milk-and-whey-powdered-ingredients) · Spray drying; Principles of spray drying |
+| materials/pharma-lactose · detail | Фармацевтический моногидрат лактозы выпускается с разным распределением частиц для подбора под лекарственную форму. | [DFE Pharma — Lactochem Crystals](https://dfepharma.com/excipients/lactochem-crystals/) · Product information |
+| materials/pharma-mcc · detail | Для конкретной марки MCC Pharmacel 101 изготовитель задаёт идентификацию, физико-химические и микробиологические показатели; это не аттестация всех марок MCC. | [DFE Pharma — Pharmacel 101 Product Specification PD-0472](https://dfepharma.com/document/4762/cardid/4YBJ5OKLAREQVFWFTY) · Product description; Physical-Chemical data; Microbiological data |
+| materials/pharma-starch · detail | Крахмальные вспомогательные вещества входят в группу наполнителей/связующих для твёрдых пероральных лекарственных форм. | [DFE Pharma — Inhalation Grade Lactose / company portfolio](https://dfepharma.com/media/2ianc2oo/dpi-corporate-brochure.pdf) · We are DFE Pharma, p.2 / portfolio |
+| processes/cutting · description | Механическая обработка формирует геометрию удалением материала режущими кромками. | [Current State and Emerging Trends in Advanced Manufacturing: Process Technologies — полный авторский текст](https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=957755) · §2.1, стр.2–3 |
+| processes/grinding · description | Шлифование относится к абразивному удалению материала; применяется для уточнения размеров и поверхности. | [Current State and Emerging Trends in Advanced Manufacturing: Process Technologies — полный авторский текст](https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=957755) · §2.1.3, стр.8 |
+| processes/stamping · description | Формоизменяющая часть штамповки относится к деформированию листа давлением. Разделительные операции этим разделом не подтверждены. | [Current State and Emerging Trends in Advanced Manufacturing: Process Technologies — полный авторский текст](https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=957755) · §2.2.2, стр.11 |
+| processes/friction-stir-welding · description | FSW соединяет материал в твёрдом состоянии вращающимся неплавящимся инструментом, перемещаемым по стыку. | [Friction Stir Welding Services](https://www.twi-global.com/what-we-do/research-and-technology/technologies/welding-joining-and-cutting/friction-welding/friction-stir-welding) · Основной текст перед Benefits |
+| processes/diffusion-bonding · description | Диффузионное соединение обеспечивается контактом поверхностей, повышенной температурой и давлением без плавления основного материала. | [Diffusion Bonding](https://www.twi-global.com/what-we-do/services-and-support/diffusion-bonding) · What is Diffusion Bonding; Bonding Environment and Preparation |
+| processes/submerged-arc · description | Дуга между подаваемым электродом и изделием скрыта слоем флюса, обеспечивающим защиту зоны сварки. | [What is Submerged-arc Welding?](https://www.twi-global.com/technical-knowledge/faqs/faq-what-is-submerged-arc-welding) · Первый и второй абзацы |
+| processes/flash-butt-welding · description | При стыковой сварке оплавлением торцы нагреваются током с оплавлением контактов; затем усилием осадки формируют соединение. | [What is Flash (Butt) Welding?](https://www.twi-global.com/technical-knowledge/faqs/faq-what-is-flash-butt-welding) · Описание нагрева и заключительной осадки |
+| processes/plasma-arc-welding · description | Плазменная сварка использует дугу, сжатую узким медным соплом, и плазмообразующий газ. | [What is Plasma Welding?](https://www.twi-global.com/technical-knowledge/faqs/faq-what-is-plasma-welding) · Первый абзац |
+| processes/laser-welding · description | Лазерный пучок служит концентрированным источником тепла для формирования сварного соединения. | [What is Laser Welding and How Does it Work?](https://www.twi-global.com/technical-knowledge/faqs/faq-how-does-laser-welding-work) · Первый абзац и описание двух режимов |
+| processes/resistance-seam · description | Шовная контактная сварка формирует последовательность перекрывающихся ядер с помощью вращающихся роликовых электродов. | [What is resistance seam welding?](https://www.twi-global.com/technical-knowledge/faqs/faq-what-is-resistance-seam-welding) · Первый и второй абзацы |
+| processes/laser-plastic-welding · description | При просвечивающей лазерной сварке пластмасс верхний материал пропускает излучение, нижний поглощает; локальный нагрев образует соединение. | [What is laser melting?](https://www.twi-global.com/technical-knowledge/faqs/faq-what-is-laser-melting) · Абзац о transmission laser welding |
+| processes/manual-metal-arc · description | Ручная дуговая сварка использует покрытый металлический электрод; стержень расходуется при плавлении. | [Manual Metal Arc Welding (MMA, SMAW or Stick Welding)](https://www.twi-global.com/technical-knowledge/job-knowledge/the-manual-metal-arc-process-mma-welding-002) · Вводное определение Job Knowledge 2 |
+| processes/ultrasonic-plastic-welding · description | Ультразвуковые механические колебания размягчают или плавят термопласт в зоне стыка деталей, удерживаемых под давлением. | [Ultrasonic welding of injection moulded components](https://www.twi-global.com/technical-knowledge/job-knowledge/ultrasonic-welding-of-injection-moulded-components-part-1-process-and-equipment-061) · Process overview |
+| processes/resistance-spot · description | Точечная контактная сварка соединяет нахлёсточные листы пропусканием тока при приложенном усилии между электродами. | [What is resistance seam welding?](https://www.twi-global.com/technical-knowledge/faqs/faq-what-is-resistance-seam-welding) · Первый абзац: механизм spot welding |
+| processes/hand-layup · description | При ручной выкладке армирующие слои помещают в форму и пропитывают смолой кистью или валиком. | [Methods of Composite Manufacture](https://compositesuk.co.uk/composite-materials/processes/) · Wet Lay-Up |
+| processes/vacuum-infusion · description | Сухие слои под герметичным вакуумным пакетом пропитываются смолой из резервуара при перепаде давлений. | [Methods of Composite Manufacture](https://compositesuk.co.uk/composite-materials/processes/) · Vacuum Infusion |
+| processes/resin-transfer-molding · description | При RTM жидкую смолу подают в закрытую форму с сухим армированием. | [Methods of Composite Manufacture](https://compositesuk.co.uk/composite-materials/processes/) · Resin Transfer Moulding |
+| processes/autoclave-composites · description | Автоклавное отверждение препрега сочетает нагрев и давление; конкретный цикл зависит от системы. | [Methods of Composite Manufacture](https://compositesuk.co.uk/composite-materials/processes/) · Prepreg — Autoclave |
+| processes/carding · description | Кардочесание разделяет и ориентирует хлопковые волокна; формирует ленту. | [Fiber Preparation for Spinning](https://cottonworks.com/learning-hub/yarn-manufacturing/fiber-preparation-for-spinning/) · Fiber Carding |
+| processes/drawing-textile · description | Вытяжные пары с различными скоростями утоняют и выравнивают объединённые волокнистые ленты. | [Fiber Preparation for Spinning](https://cottonworks.com/learning-hub/yarn-manufacturing/fiber-preparation-for-spinning/) · Drawing |
+| processes/combing-textile · description | Гребнечесание удаляет короткие волокна и дополнительно упорядочивает волокнистую массу. | [Fiber Preparation for Spinning](https://cottonworks.com/learning-hub/yarn-manufacturing/fiber-preparation-for-spinning/) · Combing |
+| processes/offset-lithography · description | Офсет переносит изображение с формы через промежуточное резиновое полотно на подложку. | [Monitoring Information By Industry — Printing and Publishing](https://www.epa.gov/air-emissions-monitoring-knowledge-base/monitoring-information-industry-printing-and-publishing) · Offset Lithography |
+| processes/flexography · description | Флексография переносит краску выступающими участками эластичной пластиковой или резиновой формы. | [Monitoring Information By Industry — Printing and Publishing](https://www.epa.gov/air-emissions-monitoring-knowledge-base/monitoring-information-industry-printing-and-publishing) · Flexography |
+| processes/gravure-printing · description | Глубокая печать переносит краску из углублённых ячеек цилиндра. | [Monitoring Information By Industry — Printing and Publishing](https://www.epa.gov/air-emissions-monitoring-knowledge-base/monitoring-information-industry-printing-and-publishing) · Publication Rotogravure and Product Rotogravure |
+| processes/screen-printing · description | Трафаретная печать переносит краску через открытые участки сетки; закрытые участки блокирует трафарет. | [Monitoring Information By Industry — Printing and Publishing](https://www.epa.gov/air-emissions-monitoring-knowledge-base/monitoring-information-industry-printing-and-publishing) · Screen Printing |
+| processes/print-binding · description | Послепечатная обработка включает скрепление листов, в том числе шитьё и клеевое скрепление. | [Monitoring Information By Industry — Printing and Publishing](https://www.epa.gov/air-emissions-monitoring-knowledge-base/monitoring-information-industry-printing-and-publishing) · Post-Press Operations |
+| materials/flexo-plate · detail | Флексографская форма имеет выступающие печатающие участки и выполняется из эластичного пластика или резины. | [Monitoring Information By Industry — Printing and Publishing](https://www.epa.gov/air-emissions-monitoring-knowledge-base/monitoring-information-industry-printing-and-publishing) · Flexography |
+| materials/offset-blanket · detail | Офсетное полотно с резиновой поверхностью передаёт изображение с формы на подложку. | [Monitoring Information By Industry — Printing and Publishing](https://www.epa.gov/air-emissions-monitoring-knowledge-base/monitoring-information-industry-printing-and-publishing) · Offset Lithography |
+| processes/wood-preservation · description | Защитный состав вводят в древесину; эффективность зависит от его удержания, проникновения и породы. Универсальная глубина этим не установлена. | [Wood Handbook 2021 — Chapter 15: Wood Preservatives](https://research.fs.usda.gov/treesearch/download/62259.pdf) · Введение, стр.15–1 |
+| processes/aseptic-filling · description | Продукт, тара и укупорка стерилизуются раздельно и объединяются асептически в контролируемой среде. Это не терминальная стерилизация. | [Sterile Drug Products Produced by Aseptic Processing — CGMP](https://www.fda.gov/media/71026/download) · II.B Technical Framework, стр.2–3 |
+| processes/pultrusion · description | При пултрузии волокна проходят пропитку и протягиваются через нагретую формующую фильеру с отверждением смолы. | [Methods of Composite Manufacture](https://compositesuk.co.uk/composite-materials/processes/) · Continuous Processes — Pultrusion |
+| processes/filament-winding · description | При намотке армирующие нити укладываются на вращающуюся оправку с заданной ориентацией. | [Methods of Composite Manufacture](https://compositesuk.co.uk/composite-materials/processes/) · Filament Winding |
+| processes/textile-printing · description | Нанесение рисунка на текстиль возможно через сетчатый трафарет. Источник подтверждает этот вариант, а не все методы печати. | [Monitoring Information By Industry — Printing and Publishing](https://www.epa.gov/air-emissions-monitoring-knowledge-base/monitoring-information-industry-printing-and-publishing) · Screen Printing |
+| processes/laser-cutting · description | Лазерная резка локально воздействует сфокусированным пучком; при резке плавлением расплав удаляется газовой струёй. | [What is laser melting?](https://www.twi-global.com/technical-knowledge/faqs/faq-what-is-laser-melting) · Последние абзацы о laser cutting |
+| processes/sludge-dewatering · description | Обезвоживание осадка отделяет жидкость от твёрдой фазы; центрифугирование является одним из способов получения кека. | [Fact Sheet: Centrifuge Thickening and Dewatering](https://www.epa.gov/biosolids/fact-sheet-centrifuge-thickening-and-dewatering) · Первый абзац |
+| processes/ozonation-water · steps | Озонирование использует окислительную способность озона в воде; остаточный озон в отходящем газе подлежит разрушению. | [Wastewater Technology Fact Sheet: Ozone Disinfection EPA 832-F-99-063](https://www.epa.gov/sites/default/files/2015-06/documents/ozon.pdf) · Description, стр.1–3 |
+| processes/blanching-food · description | Бланширование — предварительная тепловая обработка с последующим охлаждением; одна из целей — инактивация ферментов. | [FAO — технология переработки фруктов и овощей](https://www.fao.org/4/x0209e/x0209e06.htm) · Blanching |
+| processes/thermal-sterilization-food · description | Термическая обработка применяется для микробиологической стабилизации продукта; защита от повторного загрязнения зависит от упаковки. Режимы не подтверждены. | [FAO — технология переработки фруктов и овощей](https://www.fao.org/4/x0209e/x0209e06.htm) · High-Temperature Preservation; Commercial sterilization |
+| processes/milling · description | При фрезеровании режущие кромки периодически входят в заготовку и выходят из неё, снимая материал. | [Cutter path and chip formation in milling](https://www.sandvik.coromant.com/en-gb/knowledge/milling/cutter-path-and-chip-formation) · Введение и три фазы контакта кромки |
+| processes/drilling · checks | Диаметр является одним из основных контролируемых требований к отверстию. Увод, положение оси и заусенцы этим абзацем не проверены. | [Drilling a hole](https://www.sandvik.coromant.com/en-gb/knowledge/drilling) · Initial considerations — The hole |
+| processes/gear-cutting · checks | При контроле зубчатых колёс оценивают точность профиля, отклонение шага и биение; допуски определяет спецификация. | [Gear manufacturing](https://www.sandvik.coromant.com/en-gb/knowledge/milling/gear-manufacturing) · Gear Quality and Process Capability |
+| materials/brass-alloys · detail | Латунь относится к медно-цинковым сплавам; конкретные механические свойства этим не подтверждены. | [About Copper](https://internationalcopper.org/sustainable-copper/about-copper/) · Copper Facts — пункт о сплавах |
+| materials/bronze-alloys · detail | Бронзы — семейство медных сплавов с различными легирующими компонентами, включая Sn, Al, Si и Be; состав каждой марки проверяют отдельно. | [About Copper](https://internationalcopper.org/sustainable-copper/about-copper/) · Copper Facts — пункт о сплавах |
+| materials/ps · detail | Полистирол GPPS перерабатывается литьём под давлением и экструзией; свойства GPPS не перенесены на все типы PS. | [Polystyrene — the crystal clear polymer](https://chemicals.basf.com/global/en/Petrochemicals/Styrenics-Europe/Polystyrol) · Введение и Portfolio |
+| materials/eps · uses | Материалы на основе вспениваемого полистирола применяются для теплоизоляции и защитной упаковки. Плотность, пожарный класс и допуск изделия не подтверждены. | [Styropor — The Classic](https://chemicals.basf.com/global/en/Petrochemicals/Styrenics-Europe/EPS-by-BASF/verpacken-und-schuetzen) · Вводный абзац и Benefits |
+| materials/pmma · detail | PMMA является термопластичным материалом; PLEXIGLAS выпускают, в частности, листами, трубами и стержнями. Это не подтверждает стойкость всех марок. | [PLEXIGLAS GS/XT](https://www.plexiglas.de/en/products/plexiglas/plexiglas-gs-xt) · Описание материала и форм поставки |
 
-## Остаток и честная граница
+## Карточки без подтверждённого тезиса в исходной очереди
 
-237 исходных карточек без подтверждённого тезиса перечислены в машиночитаемом журнале в `remainingBaselineRecords`. Это очередь дальнейшей предметной работы, не список якобы неверных карточек. Все остальные поля частично подтверждённых записей также остаются открытыми.
+Эти карточки остаются открытыми из-за неполного объёма выполненной предметной экспертизы. Для части выбранных документов были ошибки доступа; оснований считать недоступными все возможные источники нет. Это не список ошибочных карточек.
 
-Файлы доказательств: `audit/claim-review-baseline-2026-10-25.json` — исходные ID; `audit/individual-claim-review-2026-10-25.json` — проверенные тезисы, разделы, отпечатки текста, исправления и остаток; `knowledge/source-registry.json` — рабочий реестр.
+| Тип | ID | Название |
+|---|---|---|
+| materials | 09g2s | 09Г2С |
+| materials | alumina | Оксидная керамика Al₂O₃ |
+| materials | alumina-ceramic | Техническая корундовая керамика |
+| materials | aramid | Арамидная ткань |
+| materials | asphalt-binder | Битум дорожный |
+| materials | asphalt-mix | Асфальтобетонная смесь |
+| materials | basalt-fiber | Базальтовое армирующее волокно |
+| materials | bauxite-ore | Боксит |
+| materials | bentonite-clay | Бентонитовая глина |
+| materials | building-aggregate | Заполнители для бетона |
+| materials | carbon-fiber-laminate | Углепластик (CFRP) |
+| materials | carbon-fiber-preform | Углеродное армирующее волокно |
+| materials | cast-iron-ductile | Чугун с шаровидным графитом |
+| materials | cast-iron-gray | Серый чугун |
+| materials | composite-epoxy-resin | Эпоксидная связующая система |
+| materials | composite-honeycomb | Сотовый заполнитель |
+| materials | conformal-coating-material | Лак для защитного покрытия плат |
+| materials | copper-electric-wire | Медный провод электротехнический |
+| materials | copper-m1 | Медь М1 |
+| materials | copper-ore | Медные руды |
+| materials | crushed-stone | Щебень строительный |
+| materials | diatomite-raw | Диатомит промышленный |
+| materials | electrical-steel | Электротехническая листовая сталь |
+| materials | electronic-encapsulant | Компаунд для заливки электронных узлов |
+| materials | energy-copper | Медные полуфабрикаты для теплообменников |
+| materials | epdm | Этиленпропилендиеновый каучук (EPDM) |
+| materials | eva-polymer | Этиленвинилацетат (EVA) |
+| materials | fireclay-raw | Огнеупорная глина |
+| materials | flax-fiber | Льняное волокно |
+| materials | flocculant-polyelectrolyte | Флокулянт-полиэлектролит |
+| materials | fluorite-ore | Плавиковый шпат (флюорит) |
+| materials | food-pack | Пищевые упаковочные материалы |
+| materials | fruit-juice-base | Плодово-ягодные соки как сырьё |
+| materials | fruit-puree | Плодовоягодные пюре |
+| materials | geotextile | Геотекстиль |
+| materials | gfrp | Стеклопластик (GFRP) |
+| materials | grain-wheat | Пшеница продовольственная |
+| materials | graphite-concentrate | Природный графитовый концентрат |
+| materials | graphite-electrode | Графитовые электроды промышленного назначения |
+| materials | heat-exchanger-steel | Коррозионностойкий прокат для теплообменников |
+| materials | industrial-salt | Соль техническая |
+| materials | industrial-silica | Кварцевый песок технический |
+| materials | industrial-sulfur | Сера промышленная |
+| materials | industrial-zeolite | Цеолиты технические |
+| materials | iron-ore | Железная руда |
+| materials | lime-stone | Известняк промышленный |
+| materials | lime-technical | Известь техническая |
+| materials | lithium-concentrate | Литиевый минеральный концентрат |
+| materials | lldpe | Линейный полиэтилен низкой плотности (LLDPE) |
+| materials | magnesium-alloys | Магниевые конструкционные сплавы |
+| materials | manganese-ore | Марганцевые руды |
+| materials | meat-raw | Мясное сырьё |
+| materials | mining-quartz | Кварцевое сырьё высокой чистоты |
+| materials | nickel-alloys | Никелевые сплавы |
+| materials | nickel-ore | Никелевые руды |
+| materials | nonwoven-fabric | Нетканое полотно |
+| materials | pcb-copper-foil | Медная фольга для печатных плат |
+| materials | pcb-laminate | Ламинат для жёстких печатных плат |
+| materials | pcb-prepreg | Препрег для печатных плат |
+| materials | pharma-gelatin | Желатин для капсул |
+| materials | pharma-hpmc | Гипромеллоза (HPMC) фармацевтическая |
+| materials | pharma-povidone | Повидон (PVP) фармацевтический |
+| materials | phosphate-rock | Фосфатное сырьё |
+| materials | polyamide-textile-yarn | Полиамидная техническая нить |
+| materials | polyester-fiber | Полиэфирное текстильное волокно |
+| materials | polymer-pvc | Поливинилхлорид (PVC) |
+| materials | potash-raw | Калийное минеральное сырьё |
+| materials | prepreg-composite | Препрег для композитов |
+| materials | printing-film-substrate | Полимерная плёнка для печати |
+| materials | printing-inks | Полиграфические краски |
+| materials | printing-paper | Печатная бумага и картон |
+| materials | rare-earth-concentrate | Концентрат редкоземельного сырья |
+| materials | rebar-steel | Арматурный стальной прокат |
+| materials | sand-building | Песок строительный |
+| materials | sbr | Бутадиенстирольный каучук (SBR) |
+| materials | screen-print-mesh | Сетка для трафаретной печати |
+| materials | sewing-thread | Швейные нитки |
+| materials | silica-refractory | Кремнезёмистый огнеупор |
+| materials | solder | Материалы для пайки электронных узлов |
+| materials | solder-flux | Флюс для электронного монтажа |
+| materials | solder-paste | Паяльная паста |
+| materials | steel-scrap | Стальной лом |
+| materials | sugar-crystal | Сахар-песок |
+| materials | talc-industrial | Тальк промышленный |
+| materials | technical-dye | Текстильный краситель |
+| materials | technical-felt | Технический войлок |
+| materials | thermal-insulation-wool | Минеральная теплоизоляционная вата |
+| materials | titanium-industrial | Титан и титановые сплавы |
+| materials | tpu | Термопластичный полиуретан (TPU) |
+| materials | uf-membrane | Мембрана для ультрафильтрации |
+| materials | uv-curing-ink | УФ-отверждаемая печатная краска |
+| materials | vegetable-oils | Растительные пищевые масла |
+| materials | viscose-fiber | Вискозное волокно |
+| materials | wheat-flour | Пшеничная мука |
+| materials | wood-impregnant | Древесные защитные составы |
+| materials | wood-veneer | Лущёный шпон |
+| materials | wool-fiber | Шерстяное волокно |
+| materials | yeast-food | Пищевые дрожжи |
+| materials | zinc-concentrate | Цинковый минеральный концентрат |
+| materials | zinc-diecast | Цинковые литейные сплавы |
+| processes | aoi-pcb | Автоматизированная оптическая инспекция плат |
+| processes | asphalt-mix-production | Производство асфальтобетонной смеси |
+| processes | blown-film-extrusion | Экструзия рукавной плёнки |
+| processes | broaching | Протягивание |
+| processes | capsule-filling | Наполнение капсул |
+| processes | catalytic-reaction | Каталитическая реакция в промышленном реакторе |
+| processes | chemical-membrane | Мембранное разделение промышленных смесей |
+| processes | concrete-curing | Уход за твердеющим бетоном |
+| processes | concrete-mixing | Приготовление бетонной смеси |
+| processes | concrete-placing | Укладка бетонной смеси |
+| processes | concrete-vibration | Виброуплотнение бетона |
+| processes | conformal-coating | Защитное покрытие электронных сборок |
+| processes | distillation | Дистилляция |
+| processes | dry-granulation-pharma | Сухая грануляция фармацевтических порошков |
+| processes | electrodischarge-machining | Электроэрозионная обработка |
+| processes | extrusion-coating | Экструзионное покрытие полимером |
+| processes | fiberboard-pressing | Прессование древесных плит |
+| processes | food-extrusion | Экструзионная обработка пищевых смесей |
+| processes | formwork-erection | Монтаж опалубки |
+| processes | gas-absorption | Абсорбция газовых компонентов |
+| processes | gas-stripping | Стриппинг растворённых компонентов |
+| processes | geotechnical-grouting | Инъекционное закрепление грунта |
+| processes | grain-milling | Помол зерна |
+| processes | gravity-concentration | Гравитационное обогащение |
+| processes | industrial-embroidery | Машинная вышивка |
+| processes | industrial-heat-exchange | Промышленный теплообмен |
+| processes | industrial-induction-heating | Индукционный нагрев в производстве |
+| processes | juice-clarification | Осветление соков |
+| processes | masonry-works | Каменная кладка |
+| processes | needle-punching-nonwovens | Иглопробивное производство нетканых материалов |
+| processes | ore-flotation | Флотационное обогащение |
+| processes | ore-leaching | Выщелачивание руды |
+| processes | ore-screening | Грохочение руды |
+| processes | pcb-drilling | Сверление отверстий печатных плат |
+| processes | pcb-etching | Травление печатных проводников |
+| processes | pcb-plating | Металлизация отверстий печатных плат |
+| processes | pcb-xray-inspection | Рентгеновский контроль электронных сборок |
+| processes | pharma-inprocess-control | Внутрипроизводственный контроль таблеток |
+| processes | pharma-micronization | Микронизация фармацевтических веществ |
+| processes | pharma-powder-blending | Смешение фармацевтических порошков |
+| processes | pharma-sieving | Фармацевтическое просеивание |
+| processes | plywood-bonding | Склеивание фанеры |
+| processes | print-die-cutting | Высечка печатной продукции |
+| processes | printing-plate-making | Изготовление печатных форм |
+| processes | rebar-installation | Монтаж арматуры |
+| processes | reflow-soldering | Пайка оплавлением |
+| processes | road-asphalt-placement | Укладка асфальтобетона |
+| processes | rolling | Прокатка |
+| processes | selective-soldering | Селективная пайка узлов плат |
+| processes | sewing | Швейная сборка изделий |
+| processes | smt-placement | Автоматическая установка SMD-компонентов |
+| processes | solder-paste-printing | Трафаретное нанесение паяльной пасты |
+| processes | solvent-extraction | Экстракция растворителем |
+| processes | steam-generation | Генерация технологического пара |
+| processes | stretch-blow-molding | Инжекционно-выдувное формование с вытяжкой |
+| processes | stud-welding | Приварка шпилек |
+| processes | tablet-compression | Таблетирование |
+| processes | textile-bleaching | Отбеливание текстиля |
+| processes | textile-calendering | Каландрование тканей |
+| processes | uv-curing-print | УФ-отверждение печатных покрытий |
+| processes | veneer-peeling | Лущение шпона |
+| processes | waterjet-cutting | Гидроабразивная резка |
+| processes | wave-soldering | Пайка волной припоя |
+| processes | winding-yarn | Перемотка пряжи |
+| processes | wood-planing | Строгание пиломатериалов |
 
-Проверка опубликованной версии и GitHub Actions после будущей отправки коммита этим локальным актом не заявляется.
+## Проверяемые файлы
+
+- `audit/claim-review-baseline-2026-10-25.json` — неизменяемый исходный состав 342 ID.
+- `audit/individual-claim-review-2026-10-25.json` — источники, разделы, тезисы, SHA-256, исправления и остаток.
+- `audit/card-verification-matrix-2026-10-25.json` — автоматическая поимённая инвентаризация всех 342 карточек и открытых полей.
+- `knowledge/source-registry.json` — рабочие связи доказательств.
+
+**Критерий полного завершения не достигнут.** Для закрытия требуется продолжить предметное подтверждение оставшихся утверждений, а не массово менять статусы.

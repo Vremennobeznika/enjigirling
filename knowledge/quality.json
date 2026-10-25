@@ -5,11 +5,11 @@
   "limitations": "A located source is not a verified claim. This report does not check source contents, technical compliance, website availability or browser performance.",
   "totalRecords": 982,
   "recordsWithEvidenceLinks": 380,
-  "recordsWithClaimCheckedLinks": 143,
-  "totalRegisteredSources": 126,
-  "totalEvidenceLinks": 516,
+  "recordsWithClaimCheckedLinks": 215,
+  "totalRegisteredSources": 172,
+  "totalEvidenceLinks": 588,
   "evidenceStatuses": {
-    "claim_checked": 149,
+    "claim_checked": 221,
     "source_located": 367
   },
   "byDataset": {
@@ -21,12 +21,12 @@
     "materials": {
       "records": 172,
       "recordsWithEvidenceLinks": 172,
-      "recordsWithClaimCheckedLinks": 40
+      "recordsWithClaimCheckedLinks": 72
     },
     "processes": {
       "records": 208,
       "recordsWithEvidenceLinks": 208,
-      "recordsWithClaimCheckedLinks": 103
+      "recordsWithClaimCheckedLinks": 143
     },
     "dictionary": {
       "records": 551,

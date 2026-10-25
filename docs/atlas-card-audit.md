@@ -4,7 +4,7 @@
 
 ## Сводка
 
-Всего: 380; процессы: 208; материалы: 172. Приоритеты P0: 0, P1: 302, P2: 78.
+Всего: 380; процессы: 208; материалы: 172. Приоритеты P0: 0, P1: 266, P2: 114.
 
 P0 — битый ID или обязательные поля; P1 — недостаточная доказательная база/спорная полнота; P2 — уточнения. P1 НЕ значит, что запись обязательно неверна.
 
@@ -12,13 +12,14 @@ P0 — битый ID или обязательные поля; P1 — недос
 
 | Код | Количество | Описание |
 |---|---:|---|
-| E01 | 237 | Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника |
+| E02 | 215 | Проверка отдельных тезисов не подтверждает всю карточку |
 | T02 | 179 | Уточнить методы контроля и критерии дефектов |
 | S07 | 177 | Общие источники (R05); они не подтверждают параметры конкретного процесса/марки |
-| E02 | 143 | Проверка отдельных тезисов не подтверждает всю карточку |
-| T03 | 135 | Описание поверхностное; нужны инженерные различия и ограничения |
+| E01 | 165 | Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника |
+| T03 | 122 | Описание поверхностное; нужны инженерные различия и ограничения |
 | L02 | 74 | Нет конкретных материалов: не добавлять неподтверждённых связей |
 | L03 | 7 | Нет достоверно связанного процесса; не подставлять неподходящий |
+| S04 | 1 | Зарегистрировано дополнительных ссылок, не показанных в карточке: 1 |
 
 ## Процессы — каждая карточка
 
@@ -26,7 +27,7 @@ P0 — битый ID или обязательные поля; P1 — недос
 |---|---|---|---|---|
 | [Литьё (casting)](../processes.html#casting) | metals | частный тезис | P1 | S07, E02, L02 |
 | [Дуговая сварка (welding)](../processes.html#welding) | metals | частный тезис | P2 | E02 |
-| [Обработка резанием (cutting)](../processes.html#cutting) | general | только источник | P1 | S07, E01 |
+| [Обработка резанием (cutting)](../processes.html#cutting) | general | частный тезис | P1 | S07, E02 |
 | [Термическая обработка (heat)](../processes.html#heat) | metals | частный тезис | P1 | S07, E02 |
 | [Аддитивное производство (additive)](../processes.html#additive) | general | частный тезис | P2 | E02 |
 | [Неразрушающий контроль (inspection)](../processes.html#inspection) | general | частный тезис | P1 | S07, E02 |
@@ -38,10 +39,10 @@ P0 — битый ID или обязательные поля; P1 — недос
 | [Измерение твёрдости (hardness)](../processes.html#hardness) | general | частный тезис | P2 | E02 |
 | [Ковка и объёмная штамповка (forging)](../processes.html#forging) | metals | частный тезис | P1 | S07, E02 |
 | [Прокатка (rolling)](../processes.html#rolling) | metals | только источник | P1 | S07, E01 |
-| [Листовая штамповка (stamping)](../processes.html#stamping) | metals | только источник | P1 | S07, E01, T02 |
+| [Листовая штамповка (stamping)](../processes.html#stamping) | metals | частный тезис | P1 | S07, E02, T02 |
 | [Литьё термопластов под давлением (injection-molding)](../processes.html#injection-molding) | polymers | частный тезис | P2 | E02 |
 | [Экструзия полимеров (extrusion)](../processes.html#extrusion) | polymers | частный тезис | P1 | S07, E02 |
-| [Шлифование (grinding)](../processes.html#grinding) | metals | только источник | P1 | S07, E01 |
+| [Шлифование (grinding)](../processes.html#grinding) | metals | частный тезис | P1 | S07, E02 |
 | [Покрытия и обработка поверхности (surface-finishing)](../processes.html#surface-finishing) | general | частный тезис | P1 | S07, E02, L02 |
 | [Механическая сборка (assembly)](../processes.html#assembly) | general | частный тезис | P1 | S07, E02, L02 |
 | [Пастеризация (pasteurization)](../processes.html#pasteurization) | food | частный тезис | P1 | S07, E02, T02 |
@@ -61,24 +62,24 @@ P0 — битый ID или обязательные поля; P1 — недос
 | [Дистилляция (distillation)](../processes.html#distillation) | chemicals | только источник | P1 | E01, L02 |
 | [Промышленная фильтрация (industrial-filtration)](../processes.html#industrial-filtration) | chemicals | частный тезис | P1 | S07, E02, L02 |
 | [Точение (turning)](../processes.html#turning) | metals | частный тезис | P1 | S07, E02, T02 |
-| [Фрезерование (milling)](../processes.html#milling) | metals | только источник | P1 | S07, E01, T02 |
-| [Сверление (drilling)](../processes.html#drilling) | metals | только источник | P1 | S07, E01, T02 |
+| [Фрезерование (milling)](../processes.html#milling) | metals | частный тезис | P1 | S07, E02, T02 |
+| [Сверление (drilling)](../processes.html#drilling) | metals | частный тезис | P1 | S07, E02, T02 |
 | [Растачивание (boring)](../processes.html#boring) | metals | частный тезис | P1 | S07, E02, T02 |
 | [Развёртывание (reaming)](../processes.html#reaming) | metals | частный тезис | P1 | S07, E02, T02 |
 | [Протягивание (broaching)](../processes.html#broaching) | metals | только источник | P1 | S07, E01, T02 |
-| [Зубонарезание (gear-cutting)](../processes.html#gear-cutting) | metals | только источник | P1 | S07, E01, T02 |
+| [Зубонарезание (gear-cutting)](../processes.html#gear-cutting) | metals | частный тезис | P1 | S07, E02, T02 |
 | [Электроэрозионная обработка (electrodischarge-machining)](../processes.html#electrodischarge-machining) | metals | только источник | P1 | S07, E01, T02 |
-| [Лазерная резка (laser-cutting)](../processes.html#laser-cutting) | metals | только источник | P1 | S07, E01, T02 |
+| [Лазерная резка (laser-cutting)](../processes.html#laser-cutting) | metals | частный тезис | P1 | S07, E02, T02 |
 | [Гидроабразивная резка (waterjet-cutting)](../processes.html#waterjet-cutting) | metals | только источник | P1 | S07, E01, T02 |
 | [Отжиг (annealing)](../processes.html#annealing) | metals | частный тезис | P1 | S07, E02, T02 |
 | [Закалка сталей (quenching)](../processes.html#quenching) | metals | частный тезис | P1 | S07, E02, T02 |
 | [Отпуск стали (tempering)](../processes.html#tempering) | metals | частный тезис | P1 | S07, E02, T02 |
 | [Индукционная поверхностная закалка (induction-hardening)](../processes.html#induction-hardening) | metals | частный тезис | P1 | S07, E02, T02 |
-| [Ручная дуговая сварка покрытым электродом (manual-metal-arc)](../processes.html#manual-metal-arc) | metals | только источник | P1 | E01, T02 |
-| [Сварка под флюсом (submerged-arc)](../processes.html#submerged-arc) | metals | только источник | P1 | E01, T02 |
-| [Контактная точечная сварка (resistance-spot)](../processes.html#resistance-spot) | metals | только источник | P1 | E01, T02 |
-| [Лазерная сварка (laser-welding)](../processes.html#laser-welding) | metals | только источник | P1 | E01, T02 |
-| [Сварка трением с перемешиванием (friction-stir-welding)](../processes.html#friction-stir-welding) | metals | только источник | P1 | E01, T02 |
+| [Ручная дуговая сварка покрытым электродом (manual-metal-arc)](../processes.html#manual-metal-arc) | metals | частный тезис | P2 | E02, T02 |
+| [Сварка под флюсом (submerged-arc)](../processes.html#submerged-arc) | metals | частный тезис | P2 | E02, T02 |
+| [Контактная точечная сварка (resistance-spot)](../processes.html#resistance-spot) | metals | частный тезис | P2 | E02, T02 |
+| [Лазерная сварка (laser-welding)](../processes.html#laser-welding) | metals | частный тезис | P2 | E02, T02 |
+| [Сварка трением с перемешиванием (friction-stir-welding)](../processes.html#friction-stir-welding) | metals | частный тезис | P2 | E02, T02 |
 | [Высокотемпературная пайка (brazing)](../processes.html#brazing) | metals | частный тезис | P2 | E02, T02 |
 | [Низкотемпературная пайка (soft-soldering)](../processes.html#soft-soldering) | metals | частный тезис | P2 | E02, T02 |
 | [Сплавление порошкового слоя (powder-bed-fusion)](../processes.html#powder-bed-fusion) | general | частный тезис | P2 | E02, L02, T02 |
@@ -93,40 +94,40 @@ P0 — битый ID или обязательные поля; P1 — недос
 | [Каландрование пластмасс (calendering)](../processes.html#calendering) | polymers | частный тезис | P2 | E02, T02 |
 | [Компаундирование полимеров (compounding)](../processes.html#compounding) | polymers | частный тезис | P2 | E02, T02 |
 | [Вспенивание пластмасс (polymer-foaming)](../processes.html#polymer-foaming) | polymers | частный тезис | P2 | E02, T02 |
-| [Ультразвуковая сварка термопластов (ultrasonic-plastic-welding)](../processes.html#ultrasonic-plastic-welding) | polymers | только источник | P1 | E01, T02 |
-| [Лазерная сварка термопластов (laser-plastic-welding)](../processes.html#laser-plastic-welding) | polymers | только источник | P1 | E01, T02 |
-| [Ручная выкладка композитов (hand-layup)](../processes.html#hand-layup) | composites | только источник | P1 | E01, T02 |
-| [Вакуумная инфузия (vacuum-infusion)](../processes.html#vacuum-infusion) | composites | только источник | P1 | E01, T02 |
-| [Трансферное формование композитов (RTM) (resin-transfer-molding)](../processes.html#resin-transfer-molding) | composites | только источник | P1 | E01, T02 |
-| [Пултрузия (pultrusion)](../processes.html#pultrusion) | composites | только источник | P1 | E01, T02 |
-| [Намотка композитов (filament-winding)](../processes.html#filament-winding) | composites | только источник | P1 | E01, T02 |
-| [Автоклавное отверждение композитов (autoclave-composites)](../processes.html#autoclave-composites) | composites | только источник | P1 | E01, T02 |
+| [Ультразвуковая сварка термопластов (ultrasonic-plastic-welding)](../processes.html#ultrasonic-plastic-welding) | polymers | частный тезис | P2 | E02, T02 |
+| [Лазерная сварка термопластов (laser-plastic-welding)](../processes.html#laser-plastic-welding) | polymers | частный тезис | P2 | E02, T02 |
+| [Ручная выкладка композитов (hand-layup)](../processes.html#hand-layup) | composites | частный тезис | P2 | E02, T02 |
+| [Вакуумная инфузия (vacuum-infusion)](../processes.html#vacuum-infusion) | composites | частный тезис | P2 | E02, T02 |
+| [Трансферное формование композитов (RTM) (resin-transfer-molding)](../processes.html#resin-transfer-molding) | composites | частный тезис | P2 | E02, T02 |
+| [Пултрузия (pultrusion)](../processes.html#pultrusion) | composites | частный тезис | P2 | E02, T02 |
+| [Намотка композитов (filament-winding)](../processes.html#filament-winding) | composites | частный тезис | P2 | E02, T02 |
+| [Автоклавное отверждение композитов (autoclave-composites)](../processes.html#autoclave-composites) | composites | частный тезис | P2 | E02, T02 |
 | [Трафаретное нанесение паяльной пасты (solder-paste-printing)](../processes.html#solder-paste-printing) | electronics | только источник | P1 | S07, E01, T02 |
 | [Автоматическая установка SMD-компонентов (smt-placement)](../processes.html#smt-placement) | electronics | только источник | P1 | S07, E01, T02 |
 | [Пайка оплавлением (reflow-soldering)](../processes.html#reflow-soldering) | electronics | только источник | P1 | S07, E01, T02 |
 | [Пайка волной припоя (wave-soldering)](../processes.html#wave-soldering) | electronics | только источник | P1 | S07, E01, T02 |
 | [Защитное покрытие электронных сборок (conformal-coating)](../processes.html#conformal-coating) | electronics | только источник | P1 | S07, E01, T02 |
 | [Автоматизированная оптическая инспекция плат (aoi-pcb)](../processes.html#aoi-pcb) | electronics | только источник | P1 | S07, E01, T02 |
-| [Бланширование пищевого сырья (blanching-food)](../processes.html#blanching-food) | food | только источник | P1 | S07, E01, T02 |
-| [Тепловая стерилизация пищевой продукции (thermal-sterilization-food)](../processes.html#thermal-sterilization-food) | food | только источник | P1 | S07, E01, T02 |
+| [Бланширование пищевого сырья (blanching-food)](../processes.html#blanching-food) | food | частный тезис | P1 | S07, E02, T02 |
+| [Тепловая стерилизация пищевой продукции (thermal-sterilization-food)](../processes.html#thermal-sterilization-food) | food | частный тезис | P1 | S07, E02, T02 |
 | [Промышленное замораживание пищевых продуктов (freezing-food)](../processes.html#freezing-food) | food | частный тезис | P1 | S07, E02, T02 |
-| [Распылительная сушка пищевых жидкостей (spray-drying-food)](../processes.html#spray-drying-food) | food | только источник | P1 | S07, E01, T02 |
+| [Распылительная сушка пищевых жидкостей (spray-drying-food)](../processes.html#spray-drying-food) | food | частный тезис | P1 | S07, E02, T02 |
 | [Выпаривание пищевых растворов (food-evaporation)](../processes.html#food-evaporation) | food | частный тезис | P1 | S07, E02, T02 |
 | [Помол зерна (grain-milling)](../processes.html#grain-milling) | food | только источник | P1 | S07, E01, T02 |
 | [Экструзионная обработка пищевых смесей (food-extrusion)](../processes.html#food-extrusion) | food | только источник | P1 | S07, E01, T02 |
 | [Осветление соков (juice-clarification)](../processes.html#juice-clarification) | food | только источник | P1 | S07, E01, T02 |
-| [Кардочесание волокон (carding)](../processes.html#carding) | textiles | только источник | P1 | S07, E01, T02 |
-| [Гребнечесание волокон (combing-textile)](../processes.html#combing-textile) | textiles | только источник | P1 | S07, E01, T02 |
-| [Вытяжка текстильной ленты (drawing-textile)](../processes.html#drawing-textile) | textiles | только источник | P1 | S07, E01, T02 |
+| [Кардочесание волокон (carding)](../processes.html#carding) | textiles | частный тезис | P1 | S07, E02, T02 |
+| [Гребнечесание волокон (combing-textile)](../processes.html#combing-textile) | textiles | частный тезис | P1 | S07, E02, T02 |
+| [Вытяжка текстильной ленты (drawing-textile)](../processes.html#drawing-textile) | textiles | частный тезис | P1 | S07, E02, T02 |
 | [Перемотка пряжи (winding-yarn)](../processes.html#winding-yarn) | textiles | только источник | P1 | S07, E01, T02 |
 | [Снование основы (warping)](../processes.html#warping) | textiles | частный тезис | P1 | S07, E02, T02 |
 | [Шлихтование основы (warp-sizing)](../processes.html#warp-sizing) | textiles | частный тезис | P1 | S07, E02, T02 |
 | [Отбеливание текстиля (textile-bleaching)](../processes.html#textile-bleaching) | textiles | только источник | P1 | S07, E01, T02 |
-| [Печать по ткани (textile-printing)](../processes.html#textile-printing) | textiles | только источник | P1 | S07, E01, T02 |
+| [Печать по ткани (textile-printing)](../processes.html#textile-printing) | textiles | частный тезис | P1 | S07, E02, T02 |
 | [Строгание пиломатериалов (wood-planing)](../processes.html#wood-planing) | wood | только источник | P1 | E01, T02 |
 | [Лущение шпона (veneer-peeling)](../processes.html#veneer-peeling) | wood | только источник | P1 | E01, T02 |
 | [Склеивание фанеры (plywood-bonding)](../processes.html#plywood-bonding) | wood | только источник | P1 | E01, T02 |
-| [Защитная пропитка древесины (wood-preservation)](../processes.html#wood-preservation) | wood | только источник | P1 | E01, T02 |
+| [Защитная пропитка древесины (wood-preservation)](../processes.html#wood-preservation) | wood | частный тезис | P2 | E02, T02 |
 | [Прессование древесных плит (fiberboard-pressing)](../processes.html#fiberboard-pressing) | wood | только источник | P1 | E01, T02 |
 | [Промышленное выпаривание (industrial-evaporation)](../processes.html#industrial-evaporation) | chemicals | частный тезис | P2 | E02, L02, T02 |
 | [Кристаллизация растворов (crystallization)](../processes.html#crystallization) | chemicals | частный тезис | P2 | E02, L02, T02 |
@@ -161,8 +162,8 @@ P0 — битый ID или обязательные поля; P1 — недос
 | [Обратный осмос (reverse-osmosis)](../processes.html#reverse-osmosis) | water | частный тезис | P1 | S07, E02, L02, T02 |
 | [Нанофильтрация воды (nanofiltration-water)](../processes.html#nanofiltration-water) | water | частный тезис | P1 | S07, E02, L02, T02 |
 | [Ультрафильтрация воды (ultrafiltration-water)](../processes.html#ultrafiltration-water) | water | частный тезис | P1 | S07, E02, L02, T02 |
-| [Озонирование воды (ozonation-water)](../processes.html#ozonation-water) | water | только источник | P1 | S07, E01, L02, T02 |
-| [Обезвоживание осадка (sludge-dewatering)](../processes.html#sludge-dewatering) | water | только источник | P1 | S07, E01, L02, T02 |
+| [Озонирование воды (ozonation-water)](../processes.html#ozonation-water) | water | частный тезис | P1 | S07, E02, L02, T02 |
+| [Обезвоживание осадка (sludge-dewatering)](../processes.html#sludge-dewatering) | water | частный тезис | P1 | S07, E02, L02, T02 |
 | [Обжиг цементного клинкера (cement-clinker-firing)](../processes.html#cement-clinker-firing) | ceramics | частный тезис | P2 | E02, T02 |
 | [Кальцинация керамического сырья (ceramic-calcination)](../processes.html#ceramic-calcination) | ceramics | частный тезис | P2 | E02, T02 |
 | [Спекание керамики (ceramic-sintering)](../processes.html#ceramic-sintering) | ceramics | частный тезис | P2 | E02, T02 |
@@ -176,14 +177,14 @@ P0 — битый ID или обязательные поля; P1 — недос
 | [Таблетирование (tablet-compression)](../processes.html#tablet-compression) | pharma | только источник | P1 | E01, L02, T02 |
 | [Покрытие фармацевтических таблеток (tablet-coating)](../processes.html#tablet-coating) | pharma | частный тезис | P2 | E02, L02, T02 |
 | [Наполнение капсул (capsule-filling)](../processes.html#capsule-filling) | pharma | только источник | P1 | E01, L02, T02 |
-| [Асептическое наполнение стерильных форм (aseptic-filling)](../processes.html#aseptic-filling) | pharma | только источник | P1 | E01, L02, T02 |
+| [Асептическое наполнение стерильных форм (aseptic-filling)](../processes.html#aseptic-filling) | pharma | частный тезис | P1 | S04, E02, L02, T02 |
 | [Распылительная сушка фармацевтических растворов (pharma-spray-drying)](../processes.html#pharma-spray-drying) | pharma | частный тезис | P2 | E02, L02, T02 |
 | [Фармацевтическое просеивание (pharma-sieving)](../processes.html#pharma-sieving) | pharma | только источник | P1 | E01, L02, T02 |
-| [Офсетная печать (offset-lithography)](../processes.html#offset-lithography) | printing | только источник | P1 | E01, L02, T02 |
-| [Флексографская печать (flexography)](../processes.html#flexography) | printing | только источник | P1 | E01, L02, T02 |
-| [Трафаретная печать (screen-printing)](../processes.html#screen-printing) | printing | только источник | P1 | E01, L02, T02 |
-| [Глубокая печать (gravure-printing)](../processes.html#gravure-printing) | printing | только источник | P1 | E01, L02, T02 |
-| [Послепечатная фальцовка и переплёт (print-binding)](../processes.html#print-binding) | printing | только источник | P1 | E01, L02, T02 |
+| [Офсетная печать (offset-lithography)](../processes.html#offset-lithography) | printing | частный тезис | P2 | E02, L02, T02 |
+| [Флексографская печать (flexography)](../processes.html#flexography) | printing | частный тезис | P2 | E02, L02, T02 |
+| [Трафаретная печать (screen-printing)](../processes.html#screen-printing) | printing | частный тезис | P2 | E02, L02, T02 |
+| [Глубокая печать (gravure-printing)](../processes.html#gravure-printing) | printing | частный тезис | P2 | E02, L02, T02 |
+| [Послепечатная фальцовка и переплёт (print-binding)](../processes.html#print-binding) | printing | частный тезис | P2 | E02, L02, T02 |
 | [Дробление руды (ore-crushing)](../processes.html#ore-crushing) | mining | частный тезис | P2 | E02, L02, T02 |
 | [Измельчение руды (ore-grinding)](../processes.html#ore-grinding) | mining | частный тезис | P2 | E02, L02, T02 |
 | [Грохочение руды (ore-screening)](../processes.html#ore-screening) | mining | только источник | P1 | E01, L02, T02 |
@@ -203,12 +204,12 @@ P0 — битый ID или обязательные поля; P1 — недос
 | [Нейтронная радиография (neutron-radiography)](../processes.html#neutron-radiography) | general | частный тезис | P1 | S07, E02, T02 |
 | [Лазерная шерография (laser-shearography)](../processes.html#laser-shearography) | general | частный тезис | P1 | S07, E02, T02 |
 | [Ультразвуковой контроль фазированной решёткой (phased-array-ut)](../processes.html#phased-array-ut) | general | частный тезис | P1 | S07, E02, T02 |
-| [Контактная шовная сварка (resistance-seam)](../processes.html#resistance-seam) | metals | только источник | P1 | E01, T02 |
-| [Стыковая сварка оплавлением (flash-butt-welding)](../processes.html#flash-butt-welding) | metals | только источник | P1 | E01, T02 |
+| [Контактная шовная сварка (resistance-seam)](../processes.html#resistance-seam) | metals | частный тезис | P2 | E02, T02 |
+| [Стыковая сварка оплавлением (flash-butt-welding)](../processes.html#flash-butt-welding) | metals | частный тезис | P2 | E02, T02 |
 | [Электронно-лучевая сварка (electron-beam-welding)](../processes.html#electron-beam-welding) | metals | частный тезис | P2 | E02, T02 |
-| [Плазменная дуговая сварка (plasma-arc-welding)](../processes.html#plasma-arc-welding) | metals | только источник | P1 | E01, T02 |
+| [Плазменная дуговая сварка (plasma-arc-welding)](../processes.html#plasma-arc-welding) | metals | частный тезис | P2 | E02, T02 |
 | [Приварка шпилек (stud-welding)](../processes.html#stud-welding) | metals | только источник | P1 | E01, T02 |
-| [Диффузионная сварка (diffusion-bonding)](../processes.html#diffusion-bonding) | metals | только источник | P1 | E01, T02 |
+| [Диффузионная сварка (diffusion-bonding)](../processes.html#diffusion-bonding) | metals | частный тезис | P2 | E02, T02 |
 | [Компрессионное формование пластмасс (compression-molding-plastics)](../processes.html#compression-molding-plastics) | polymers | частный тезис | P2 | E02 |
 | [Инжекционно-выдувное формование с вытяжкой (stretch-blow-molding)](../processes.html#stretch-blow-molding) | polymers | только источник | P1 | E01, T02 |
 | [Экструзия рукавной плёнки (blown-film-extrusion)](../processes.html#blown-film-extrusion) | polymers | только источник | P1 | E01, T02 |
@@ -243,18 +244,18 @@ P0 — битый ID или обязательные поля; P1 — недос
 | [AISI 304 (aisi-304)](../materials.html#aisi-304) | metals, chemicals, food, energy | частный тезис | P2 | E02 |
 | [Алюминиевый сплав 6061 (al-6061)](../materials.html#al-6061) | metals, construction | частный тезис | P2 | E02, T03 |
 | [Медь М1 (copper-m1)](../materials.html#copper-m1) | metals, electronics, energy | только источник | P1 | E01, T03 |
-| [ПЭНД (HDPE) (pe-hd)](../materials.html#pe-hd) | polymers, food, water | только источник | P1 | S07, E01, T03 |
-| [Полиамид 6 (PA6) (pa6)](../materials.html#pa6) | polymers, textiles | только источник | P1 | S07, E01 |
+| [ПЭНД (HDPE) (pe-hd)](../materials.html#pe-hd) | polymers, food, water | частный тезис | P1 | S07, E02, T03 |
+| [Полиамид 6 (PA6) (pa6)](../materials.html#pa6) | polymers, textiles | частный тезис | P1 | S07, E02 |
 | [Стеклопластик (GFRP) (gfrp)](../materials.html#gfrp) | composites, construction, energy | только источник | P1 | E01 |
 | [Оксидная керамика Al₂O₃ (alumina)](../materials.html#alumina) | ceramics, electronics | только источник | P1 | E01 |
 | [Берёзовая фанера (birch-plywood)](../materials.html#birch-plywood) | wood, construction | частный тезис | P2 | E02 |
 | [Арамидная ткань (aramid)](../materials.html#aramid) | textiles, composites | только источник | P1 | E01, T03 |
 | [Пищевое сырьё растительного происхождения (food-raw)](../materials.html#food-raw) | food | частный тезис | P2 | E02, T03 |
 | [Пищевые упаковочные материалы (food-pack)](../materials.html#food-pack) | food, polymers | только источник | P1 | E01, T03 |
-| [Хлопковое волокно (cotton)](../materials.html#cotton) | textiles | только источник | P1 | E01, T03 |
+| [Хлопковое волокно (cotton)](../materials.html#cotton) | textiles | частный тезис | P2 | E02, T03 |
 | [Хлопковая пряжа (cotton-yarn)](../materials.html#cotton-yarn) | textiles | частный тезис | P2 | E02, T03 |
-| [Ткань текстильная (woven-fabric)](../materials.html#woven-fabric) | textiles | только источник | P1 | E01, T03 |
-| [Пиломатериалы из древесины (timber)](../materials.html#timber) | wood, construction | частный тезис | P2 | E02, T03 |
+| [Ткань текстильная (woven-fabric)](../materials.html#woven-fabric) | textiles | частный тезис | P2 | E02, T03 |
+| [Пиломатериалы из древесины (timber)](../materials.html#timber) | wood, construction | частный тезис | P2 | E02 |
 | [Печатная плата (основание) (pcb)](../materials.html#pcb) | electronics | частный тезис | P2 | E02 |
 | [Материалы для пайки электронных узлов (solder)](../materials.html#solder) | electronics, metals | только источник | P1 | E01, T03 |
 | [Алюминиевый сплав 6063 (al-6063)](../materials.html#al-6063) | metals, construction | частный тезис | P2 | E02, T03 |
@@ -269,45 +270,45 @@ P0 — битый ID или обязательные поля; P1 — недос
 | [Активированный уголь гранулированный (water-carbon)](../materials.html#water-carbon) | water, chemicals | частный тезис | P1 | S07, E02 |
 | [Ионообменная смола (water-resin)](../materials.html#water-resin) | water, chemicals | частный тезис | P1 | S07, E02, L03, T03 |
 | [Мембранный материал обратного осмоса (ro-membrane)](../materials.html#ro-membrane) | water, chemicals | частный тезис | P1 | S07, E02 |
-| [Полипропилен (PP) (polymer-pp)](../materials.html#polymer-pp) | polymers, food | только источник | P1 | S07, E01, T03 |
-| [Полиэтилентерефталат (PET) (polymer-pet)](../materials.html#polymer-pet) | polymers, food, textiles | только источник | P1 | S07, E01 |
+| [Полипропилен (PP) (polymer-pp)](../materials.html#polymer-pp) | polymers, food | частный тезис | P1 | S07, E02 |
+| [Полиэтилентерефталат (PET) (polymer-pet)](../materials.html#polymer-pet) | polymers, food, textiles | частный тезис | P1 | S07, E02 |
 | [Поливинилхлорид (PVC) (polymer-pvc)](../materials.html#polymer-pvc) | polymers, construction, chemicals | только источник | P1 | S07, E01, T03 |
 | [Промышленные клеевые системы (adhesive)](../materials.html#adhesive) | chemicals, composites, wood, construction | частный тезис | P2 | E02 |
-| [Древесноволокнистая плита (MDF) (mdf)](../materials.html#mdf) | wood, construction | частный тезис | P2 | E02, T03 |
+| [Древесноволокнистая плита (MDF) (mdf)](../materials.html#mdf) | wood, construction | частный тезис | P2 | E02 |
 | [Стекольная шихта (glass-raw)](../materials.html#glass-raw) | ceramics | частный тезис | P2 | E02, T03 |
 | [Фармацевтические вспомогательные вещества (pharma-excipients)](../materials.html#pharma-excipients) | pharma | частный тезис | P2 | E02, T03 |
 | [Активные фармацевтические субстанции (АФС) (pharma-api)](../materials.html#pharma-api) | pharma | частный тезис | P2 | E02, T03 |
 | [Полиграфические краски (printing-inks)](../materials.html#printing-inks) | printing, chemicals | только источник | P1 | E01, T03 |
 | [Печатная бумага и картон (printing-paper)](../materials.html#printing-paper) | printing, food | только источник | P1 | E01, T03 |
-| [Деним (хлопчатобумажная ткань) (cotton-denim)](../materials.html#cotton-denim) | textiles | только источник | P1 | E01, T03 |
+| [Деним (хлопчатобумажная ткань) (cotton-denim)](../materials.html#cotton-denim) | textiles | частный тезис | P2 | E02, T03 |
 | [Медные полуфабрикаты для теплообменников (energy-copper)](../materials.html#energy-copper) | energy, metals | только источник | P1 | E01, T03 |
 | [Огнеупорные керамические материалы (refractory-ceramics)](../materials.html#refractory-ceramics) | ceramics, energy, metals | частный тезис | P2 | E02, T03 |
 | [Кварцевое сырьё высокой чистоты (mining-quartz)](../materials.html#mining-quartz) | mining, ceramics, electronics | только источник | P1 | E01, T03 |
-| [Ферритные нержавеющие стали (stainless-ferritic)](../materials.html#stainless-ferritic) | metals | только источник | P1 | E01, T03 |
-| [Мартенситные нержавеющие стали (stainless-martensitic)](../materials.html#stainless-martensitic) | metals, energy | только источник | P1 | E01, T03 |
-| [Дуплексные нержавеющие стали (stainless-duplex)](../materials.html#stainless-duplex) | metals, chemicals, energy | только источник | P1 | E01 |
-| [Алюминиевые сплавы серии 5xxx (al-series-5xxx)](../materials.html#al-series-5xxx) | metals, construction | только источник | P1 | S07, E01 |
-| [Алюминиевые сплавы серии 7xxx (al-series-7xxx)](../materials.html#al-series-7xxx) | metals, composites | только источник | P1 | S07, E01 |
+| [Ферритные нержавеющие стали (stainless-ferritic)](../materials.html#stainless-ferritic) | metals | частный тезис | P2 | E02, T03 |
+| [Мартенситные нержавеющие стали (stainless-martensitic)](../materials.html#stainless-martensitic) | metals, energy | частный тезис | P2 | E02, T03 |
+| [Дуплексные нержавеющие стали (stainless-duplex)](../materials.html#stainless-duplex) | metals, chemicals, energy | частный тезис | P2 | E02 |
+| [Алюминиевые сплавы серии 5xxx (al-series-5xxx)](../materials.html#al-series-5xxx) | metals, construction | частный тезис | P1 | S07, E02 |
+| [Алюминиевые сплавы серии 7xxx (al-series-7xxx)](../materials.html#al-series-7xxx) | metals, composites | частный тезис | P1 | S07, E02 |
 | [Серый чугун (cast-iron-gray)](../materials.html#cast-iron-gray) | metals | только источник | P1 | S07, E01, T03 |
 | [Чугун с шаровидным графитом (cast-iron-ductile)](../materials.html#cast-iron-ductile) | metals | только источник | P1 | S07, E01, T03 |
-| [Латуни (brass-alloys)](../materials.html#brass-alloys) | metals, electronics | только источник | P1 | S07, E01, T03 |
-| [Бронзы (bronze-alloys)](../materials.html#bronze-alloys) | metals, energy | только источник | P1 | S07, E01, T03 |
+| [Латуни (brass-alloys)](../materials.html#brass-alloys) | metals, electronics | частный тезис | P1 | S07, E02, T03 |
+| [Бронзы (bronze-alloys)](../materials.html#bronze-alloys) | metals, energy | частный тезис | P1 | S07, E02 |
 | [Титан и титановые сплавы (titanium-industrial)](../materials.html#titanium-industrial) | metals, chemicals | только источник | P1 | S07, E01, T03 |
 | [Никелевые сплавы (nickel-alloys)](../materials.html#nickel-alloys) | metals, energy, chemicals | только источник | P1 | S07, E01, T03 |
 | [Цинковые литейные сплавы (zinc-diecast)](../materials.html#zinc-diecast) | metals, electronics | только источник | P1 | S07, E01 |
 | [Магниевые конструкционные сплавы (magnesium-alloys)](../materials.html#magnesium-alloys) | metals | только источник | P1 | S07, E01 |
-| [Полиэтилен низкой плотности (LDPE) (ldpe)](../materials.html#ldpe) | polymers, food | только источник | P1 | S07, E01, T03 |
+| [Полиэтилен низкой плотности (LDPE) (ldpe)](../materials.html#ldpe) | polymers, food | частный тезис | P1 | S07, E02, T03 |
 | [Линейный полиэтилен низкой плотности (LLDPE) (lldpe)](../materials.html#lldpe) | polymers, food | только источник | P1 | S07, E01, T03 |
-| [Полистирол (PS) (ps)](../materials.html#ps) | polymers | только источник | P1 | S07, E01, T03 |
-| [Пенополистирол (EPS) (eps)](../materials.html#eps) | polymers, construction | только источник | P1 | S07, E01 |
-| [Акрилонитрилбутадиенстирол (ABS) (abs)](../materials.html#abs) | polymers, electronics | только источник | P1 | S07, E01, T03 |
-| [Поликарбонат (PC) (pc)](../materials.html#pc) | polymers, electronics | только источник | P1 | S07, E01, T03 |
-| [Полиметилметакрилат (PMMA) (pmma)](../materials.html#pmma) | polymers, construction | только источник | P1 | S07, E01 |
-| [Полиоксиметилен (POM) (pom)](../materials.html#pom) | polymers, metals | только источник | P1 | S07, E01 |
-| [Полибутилентерефталат (PBT) (pbt)](../materials.html#pbt) | polymers, electronics | только источник | P1 | S07, E01, T03 |
-| [Полифениленсульфид (PPS) (pps)](../materials.html#pps) | polymers, electronics | только источник | P1 | S07, E01 |
-| [Полиэфирэфиркетон (PEEK) (peek)](../materials.html#peek) | polymers, pharma | только источник | P1 | S07, E01 |
-| [Политетрафторэтилен (PTFE) (ptfe)](../materials.html#ptfe) | polymers, chemicals | только источник | P1 | S07, E01, T03 |
+| [Полистирол (PS) (ps)](../materials.html#ps) | polymers | частный тезис | P1 | S07, E02 |
+| [Пенополистирол (EPS) (eps)](../materials.html#eps) | polymers, construction | частный тезис | P1 | S07, E02 |
+| [Акрилонитрилбутадиенстирол (ABS) (abs)](../materials.html#abs) | polymers, electronics | частный тезис | P1 | S07, E02 |
+| [Поликарбонат (PC) (pc)](../materials.html#pc) | polymers, electronics | частный тезис | P1 | S07, E02 |
+| [Полиметилметакрилат (PMMA) (pmma)](../materials.html#pmma) | polymers, construction | частный тезис | P1 | S07, E02 |
+| [Полиоксиметилен (POM) (pom)](../materials.html#pom) | polymers, metals | частный тезис | P1 | S07, E02 |
+| [Полибутилентерефталат (PBT) (pbt)](../materials.html#pbt) | polymers, electronics | частный тезис | P1 | S07, E02 |
+| [Полифениленсульфид (PPS) (pps)](../materials.html#pps) | polymers, electronics | частный тезис | P1 | S07, E02 |
+| [Полиэфирэфиркетон (PEEK) (peek)](../materials.html#peek) | polymers, pharma | частный тезис | P1 | S07, E02 |
+| [Политетрафторэтилен (PTFE) (ptfe)](../materials.html#ptfe) | polymers, chemicals | частный тезис | P1 | S07, E02 |
 | [Этиленвинилацетат (EVA) (eva-polymer)](../materials.html#eva-polymer) | polymers, textiles | только источник | P1 | S07, E01, T03 |
 | [Этиленпропилендиеновый каучук (EPDM) (epdm)](../materials.html#epdm) | polymers, construction | только источник | P1 | S07, E01, T03 |
 | [Бутадиенстирольный каучук (SBR) (sbr)](../materials.html#sbr) | polymers, construction | только источник | P1 | S07, E01, T03 |
@@ -315,8 +316,8 @@ P0 — битый ID или обязательные поля; P1 — недос
 | [Пшеница продовольственная (grain-wheat)](../materials.html#grain-wheat) | food | только источник | P1 | E01, T03 |
 | [Пшеничная мука (wheat-flour)](../materials.html#wheat-flour) | food | только источник | P1 | E01, T03 |
 | [Растительные пищевые масла (vegetable-oils)](../materials.html#vegetable-oils) | food, chemicals | только источник | P1 | E01, T03 |
-| [Сырое молоко (raw-milk)](../materials.html#raw-milk) | food | только источник | P1 | E01, T03 |
-| [Сухое молоко (milk-powder)](../materials.html#milk-powder) | food | только источник | P1 | E01, T03 |
+| [Сырое молоко (raw-milk)](../materials.html#raw-milk) | food | частный тезис | P2 | E02, T03 |
+| [Сухое молоко (milk-powder)](../materials.html#milk-powder) | food | частный тезис | P2 | E02, T03 |
 | [Плодово-ягодные соки как сырьё (fruit-juice-base)](../materials.html#fruit-juice-base) | food | только источник | P1 | E01, T03 |
 | [Плодовоягодные пюре (fruit-puree)](../materials.html#fruit-puree) | food | только источник | P1 | E01, T03 |
 | [Сахар-песок (sugar-crystal)](../materials.html#sugar-crystal) | food | только источник | P1 | E01, T03 |
@@ -334,7 +335,7 @@ P0 — битый ID или обязательные поля; P1 — недос
 | [Текстильный краситель (technical-dye)](../materials.html#technical-dye) | textiles, chemicals | только источник | P1 | E01, T03 |
 | [Технический войлок (technical-felt)](../materials.html#technical-felt) | textiles, construction | только источник | P1 | E01, T03 |
 | [Пиломатериалы из ели (spruce-lumber)](../materials.html#spruce-lumber) | wood, construction | частный тезис | P2 | E02, T03 |
-| [Сосновые пиломатериалы (pine-lumber)](../materials.html#pine-lumber) | wood, construction | частный тезис | P2 | E02, T03 |
+| [Сосновые пиломатериалы (pine-lumber)](../materials.html#pine-lumber) | wood, construction | частный тезис | P2 | E02 |
 | [Лущёный шпон (wood-veneer)](../materials.html#wood-veneer) | wood | только источник | P1 | E01, T03 |
 | [Ориентированно-стружечная плита (OSB) (osb-board)](../materials.html#osb-board) | wood, construction | частный тезис | P2 | E02, L03 |
 | [Древесно-стружечная плита (ДСП) (particleboard)](../materials.html#particleboard) | wood, construction | частный тезис | P2 | E02, L03, T03 |
@@ -349,7 +350,7 @@ P0 — битый ID или обязательные поля; P1 — недос
 | [Компаунд для заливки электронных узлов (electronic-encapsulant)](../materials.html#electronic-encapsulant) | electronics, polymers | только источник | P1 | S07, E01 |
 | [Лак для защитного покрытия плат (conformal-coating-material)](../materials.html#conformal-coating-material) | electronics, polymers | только источник | P1 | E01, T03 |
 | [Известняк промышленный (lime-stone)](../materials.html#lime-stone) | chemicals, construction, mining | только источник | P1 | S07, E01, T03 |
-| [Кальцинированная сода (soda-ash)](../materials.html#soda-ash) | chemicals, ceramics | частный тезис | P1 | S07, E02, T03 |
+| [Кальцинированная сода (soda-ash)](../materials.html#soda-ash) | chemicals, ceramics | частный тезис | P1 | S07, E02 |
 | [Сера промышленная (industrial-sulfur)](../materials.html#industrial-sulfur) | chemicals, mining | только источник | P1 | S07, E01, T03 |
 | [Фосфатное сырьё (phosphate-rock)](../materials.html#phosphate-rock) | chemicals, mining | только источник | P1 | S07, E01, T03 |
 | [Калийное минеральное сырьё (potash-raw)](../materials.html#potash-raw) | chemicals, mining | только источник | P1 | S07, E01, T03 |
@@ -383,19 +384,19 @@ P0 — битый ID или обязательные поля; P1 — недос
 | [Техническая корундовая керамика (alumina-ceramic)](../materials.html#alumina-ceramic) | ceramics, electronics | только источник | P1 | S07, E01, T03 |
 | [Кремнезёмистый огнеупор (silica-refractory)](../materials.html#silica-refractory) | ceramics, energy | только источник | P1 | S07, E01, T03 |
 | [Огнеупорная глина (fireclay-raw)](../materials.html#fireclay-raw) | ceramics, mining | только источник | P1 | S07, E01, T03 |
-| [Каолин технический (kaolin-industrial)](../materials.html#kaolin-industrial) | ceramics, printing | частный тезис | P1 | S07, E02, T03 |
+| [Каолин технический (kaolin-industrial)](../materials.html#kaolin-industrial) | ceramics, printing | частный тезис | P1 | S07, E02 |
 | [Стеклобой технологический (glass-cullet)](../materials.html#glass-cullet) | ceramics | частный тезис | P1 | S07, E02, T03 |
 | [Керамическая глазурная масса (ceramic-glaze)](../materials.html#ceramic-glaze) | ceramics, chemicals | частный тезис | P1 | S07, E02, T03 |
 | [Известь техническая (lime-technical)](../materials.html#lime-technical) | ceramics, construction, chemicals | только источник | P1 | S07, E01, T03 |
-| [Микрокристаллическая целлюлоза фармацевтическая (pharma-mcc)](../materials.html#pharma-mcc) | pharma | только источник | P1 | E01 |
-| [Лактоза фармацевтическая (pharma-lactose)](../materials.html#pharma-lactose) | pharma, food | только источник | P1 | E01, T03 |
+| [Микрокристаллическая целлюлоза фармацевтическая (pharma-mcc)](../materials.html#pharma-mcc) | pharma | частный тезис | P2 | E02 |
+| [Лактоза фармацевтическая (pharma-lactose)](../materials.html#pharma-lactose) | pharma, food | частный тезис | P2 | E02, T03 |
 | [Желатин для капсул (pharma-gelatin)](../materials.html#pharma-gelatin) | pharma, food | только источник | P1 | E01, T03 |
 | [Повидон (PVP) фармацевтический (pharma-povidone)](../materials.html#pharma-povidone) | pharma, chemicals | только источник | P1 | E01 |
 | [Гипромеллоза (HPMC) фармацевтическая (pharma-hpmc)](../materials.html#pharma-hpmc) | pharma | только источник | P1 | E01, T03 |
-| [Крахмал фармацевтический (pharma-starch)](../materials.html#pharma-starch) | pharma, food | только источник | P1 | E01, T03 |
-| [Фотополимерная флексографская форма (flexo-plate)](../materials.html#flexo-plate) | printing, polymers | только источник | P1 | E01, T03 |
+| [Крахмал фармацевтический (pharma-starch)](../materials.html#pharma-starch) | pharma, food | частный тезис | P2 | E02 |
+| [Фотополимерная флексографская форма (flexo-plate)](../materials.html#flexo-plate) | printing, polymers | частный тезис | P2 | E02, T03 |
 | [Сетка для трафаретной печати (screen-print-mesh)](../materials.html#screen-print-mesh) | printing, textiles | только источник | P1 | E01, T03 |
-| [Офсетное печатное полотно (offset-blanket)](../materials.html#offset-blanket) | printing | только источник | P1 | E01 |
+| [Офсетное печатное полотно (offset-blanket)](../materials.html#offset-blanket) | printing | частный тезис | P2 | E02 |
 | [УФ-отверждаемая печатная краска (uv-curing-ink)](../materials.html#uv-curing-ink) | printing, chemicals | только источник | P1 | E01, T03 |
 | [Полимерная плёнка для печати (printing-film-substrate)](../materials.html#printing-film-substrate) | printing, polymers, food | только источник | P1 | E01, T03 |
 | [Медные руды (copper-ore)](../materials.html#copper-ore) | mining, metals | только источник | P1 | S07, E01, T03 |

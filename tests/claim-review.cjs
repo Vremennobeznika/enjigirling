@@ -26,6 +26,22 @@ for(const e of report.verifiedClaims){
  assert.equal(e.verificationStatus,'claim_checked');
 }
 for(const c of report.changes)assert.deepEqual(datasets[c.type].get(c.id)[c.field],c.after,'reviewed correction regressed: '+c.id+'/'+c.field);
+const scope=new Set(baseline.remainingRecords.map(x=>x.join(':')));
+const reviewed=new Set(report.verifiedClaims.map(e=>[e.recordType,e.recordId].join(':')));
+const remaining=[...scope].filter(k=>!reviewed.has(k)).sort();
+assert.deepEqual(report.remainingBaselineRecords.map(x=>x.join(':')).sort(),remaining,'remaining queue differs from actual evidence');
+assert.equal(report.summary.remainingFrom342,remaining.length);
+assert.equal(report.summary.newlyCoveredFrom342,342-remaining.length);
+assert.equal(report.summary.verifiedClaims,report.verifiedClaims.length);
+assert.equal(report.summary.contentCorrections,report.changes.length);
+assert.equal(report.summary.wholeCardVerification,'not_claimed');
+const matrix=read('audit/card-verification-matrix-2026-10-25.json');
+assert.equal(matrix.records.length,342);
+assert.deepEqual(new Set(matrix.records.map(e=>[e.recordType,e.recordId].join(':'))),scope);
+for(const row of matrix.records){
+ assert.equal(row.wholeCardVerified,false,'narrow evidence cannot certify a card');
+ for(const field of row.openFields)assert.deepEqual(field.currentValue,datasets[row.recordType].get(row.recordId)[field.path],'stale inventory '+row.recordId+'/'+field.path);
+}
 assert.deepEqual(datasets.processes.get('ground-penetrating-radar').materials,[]);
 assert.deepEqual(datasets.processes.get('polymer-transfer-molding').materials,[]);
 assert.deepEqual(datasets.processes.get('rubber-vulcanization').materials,[]);
