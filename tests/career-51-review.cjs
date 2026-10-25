@@ -18,11 +18,24 @@ let sequential=0;
 const revisedAudit=fs.readFileSync('audit/career-51-source-by-source-2026-10-21.md','utf8');
 assert.equal((revisedAudit.match(/^### \d+\. /gm)||[]).length,51,'all 51 must have separate substantive review');
 const sourceCounts={confirmed:0,hidden:0};
+const followUpReviews={
+ 'asu-tp-commissioning':'indexed_source_not_market_25_10_2026',
+ 'patent-engineer':'archived_source_not_market_25_10_2026'
+};
 for(const x of sources){
- assert.equal(x.checkedAt,'2026-10-21',x.id+' not re-reviewed on 21 October');
- assert.ok(['observed_21_10_2026','not_reproducible_21_10_2026'].includes(x.reviewStatus),x.id+' evidence classification missing');
- if(x.status==='source_snapshot'){sourceCounts.confirmed++;assert.equal(x.reviewStatus,'observed_21_10_2026',x.id+' source not re-opened');}
- else {sourceCounts.hidden++;assert.equal(x.reviewStatus,'not_reproducible_21_10_2026');assert.ok(!/Ранее в реестре стояло [\d–]+ ₽/.test(x.notes),x.id+' suppressed salary leaked in modal note');}
+ const followUp=followUpReviews[x.id];
+ assert.equal(x.checkedAt,followUp?'2026-10-25':'2026-10-21',x.id+' last review date');
+ assert.equal(x.reviewStatus,followUp|| (x.status==='source_snapshot'?'observed_21_10_2026':'not_reproducible_21_10_2026'),x.id+' evidence classification missing');
+ if(x.status==='source_snapshot')sourceCounts.confirmed++;
+ else {
+  sourceCounts.hidden++;
+  assert.ok(!/Ранее в реестре стояло [\d–]+ ₽/.test(x.notes),x.id+' suppressed salary leaked in modal note');
+  if(followUp){
+   assert.equal(x.rangeMinRub,null,x.id+' re-indexing must not restore salary figures');
+   assert.equal(x.rangeMaxRub,null,x.id+' re-indexing must not restore salary figures');
+   assert.match(x.notes,/Суммы в карточке скрыты/,x.id+' source index is not evidence of market salary');
+  }
+ }
 }
 assert.equal(sourceCounts.confirmed,23,'reviewed displayable evidence count changed');
 assert.equal(sourceCounts.hidden,28,'withdrawn unsupported salary count changed');
