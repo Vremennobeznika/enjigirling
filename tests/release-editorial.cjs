@@ -13,7 +13,7 @@ function attr(html,name,kind='property'){
 }
 for(const page of pages){
  const html=fs.readFileSync(page+'.html','utf8');
- const charset=html.match(/<meta\\s+charset=["'][^"']+["']\\s*\\/?>/i);
+ const charset=html.match(/<meta\s+charset=["'][^"']+["']\s*\/?>/i);
  assert.ok(charset&&Buffer.byteLength(html.slice(0,charset.index))<=512,page+': charset must precede long social metadata');
  const title=html.match(/<title>([^<]+)<\/title>/i)?.[1];
  const canonical=html.match(/<link rel="canonical" href="([^"]+)"/i)?.[1];
