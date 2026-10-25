@@ -476,7 +476,7 @@ window.engineeringMaterials = [
     "sources": [
       {
         "title": "CottonWorks — Yarn Spinning",
-        "url": "https://cottonworks.com/learning-hub/yarn-manufacturing/yarn-spinning/?highlight=fiber%2Bquality"
+        "url": "https://cottonworks.com/learning-hub/yarn-manufacturing/yarn-spinning/"
       }
     ],
     "evidence": {

@@ -126,9 +126,9 @@ const resources = [
     {
         id: "dev-partcommunity",
         type: "САПР и конструирование",
-        name: "PARTcommunity",
+        name: "3Dfindit / PARTcommunity",
         desc: "Каталог инженерных компонентов с готовыми CAD-моделями производителей для использования в конструкторских системах.",
-        link: "https://www.partcommunity.com/"
+        link: "https://www.3dfindit.com/"
     },
     {
         id: "dev-traceparts",

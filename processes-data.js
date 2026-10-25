@@ -587,7 +587,7 @@ window.engineeringProcesses = [
     "sources": [
       {
         "title": "ISO 10209:2022 — определение сборки",
-        "url": "https://www.iso.org/obp/ui?_escaped_fragment_=iso%3Astd%3Aiso%3A10209%3Aed-2%3Av1%3Aen"
+        "url": "https://www.iso.org/cms/live/live/en/sites/isoorg/contents/data/standard/07/38/73872.html"
       },
       {
         "title": "IPC — J-STD-001J и IPC-A-610J: производство электронных сборок",
@@ -1776,8 +1776,8 @@ window.engineeringProcesses = [
     "profession": "materials-engineer",
     "sources": [
       {
-        "title": "EPA (2000), § 4.2.4 — отраслевой обзор производства изделий из пластмасс",
-        "url": "https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf"
+        "title": "EPA (2005) — отраслевой обзор производства изделий из резины и пластмасс",
+        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
       }
     ],
     "evidence": {
@@ -1803,8 +1803,8 @@ window.engineeringProcesses = [
     "profession": "materials-engineer",
     "sources": [
       {
-        "title": "EPA (2000), § 4.2.4 — отраслевой обзор производства изделий из пластмасс",
-        "url": "https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf"
+        "title": "EPA (2005) — отраслевой обзор производства изделий из резины и пластмасс",
+        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
       }
     ],
     "evidence": {
@@ -1830,8 +1830,8 @@ window.engineeringProcesses = [
     "profession": "materials-engineer",
     "sources": [
       {
-        "title": "EPA (2000), § 4.2.4 — отраслевой обзор производства изделий из пластмасс",
-        "url": "https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf"
+        "title": "EPA (2005) — отраслевой обзор производства изделий из резины и пластмасс",
+        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
       }
     ],
     "evidence": {
@@ -1857,8 +1857,8 @@ window.engineeringProcesses = [
     "profession": "materials-engineer",
     "sources": [
       {
-        "title": "EPA (2000), § 4.2.4 — отраслевой обзор производства изделий из пластмасс",
-        "url": "https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf"
+        "title": "EPA (2005) — отраслевой обзор производства изделий из резины и пластмасс",
+        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
       }
     ],
     "evidence": {
@@ -1884,8 +1884,8 @@ window.engineeringProcesses = [
     "profession": "materials-engineer",
     "sources": [
       {
-        "title": "EPA (2000), § 4.2.4 — отраслевой обзор производства изделий из пластмасс",
-        "url": "https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf"
+        "title": "EPA (2005) — отраслевой обзор производства изделий из резины и пластмасс",
+        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
       }
     ],
     "evidence": {
@@ -1911,8 +1911,8 @@ window.engineeringProcesses = [
     "profession": "materials-engineer",
     "sources": [
       {
-        "title": "EPA (2000), § 4.2.4 — отраслевой обзор производства изделий из пластмасс",
-        "url": "https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf"
+        "title": "EPA (2005) — отраслевой обзор производства изделий из резины и пластмасс",
+        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
       }
     ],
     "evidence": {
@@ -4937,8 +4937,8 @@ window.engineeringProcesses = [
     "profession": "materials-engineer",
     "sources": [
       {
-        "title": "EPA (2000), § 4.2.4 — отраслевой обзор производства изделий из пластмасс",
-        "url": "https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf"
+        "title": "EPA (2005) — отраслевой обзор производства изделий из резины и пластмасс",
+        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
       }
     ],
     "evidence": {
@@ -4964,8 +4964,8 @@ window.engineeringProcesses = [
     "profession": "materials-engineer",
     "sources": [
       {
-        "title": "EPA (2000), § 4.2.4 — отраслевой обзор производства изделий из пластмасс",
-        "url": "https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf"
+        "title": "EPA (2005) — отраслевой обзор производства изделий из резины и пластмасс",
+        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
       }
     ],
     "evidence": {
@@ -4992,8 +4992,8 @@ window.engineeringProcesses = [
     "profession": "materials-engineer",
     "sources": [
       {
-        "title": "EPA (2000), § 4.2.4 — отраслевой обзор производства изделий из пластмасс",
-        "url": "https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf"
+        "title": "EPA (2005) — отраслевой обзор производства изделий из резины и пластмасс",
+        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
       }
     ],
     "evidence": {
@@ -5019,8 +5019,8 @@ window.engineeringProcesses = [
     "profession": "materials-engineer",
     "sources": [
       {
-        "title": "EPA (2000), § 4.2.4 — отраслевой обзор производства изделий из пластмасс",
-        "url": "https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf"
+        "title": "EPA (2005) — отраслевой обзор производства изделий из резины и пластмасс",
+        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
       }
     ],
     "evidence": {
@@ -5046,8 +5046,8 @@ window.engineeringProcesses = [
     "profession": "materials-engineer",
     "sources": [
       {
-        "title": "EPA (2000), § 4.2.4 — отраслевой обзор производства изделий из пластмасс",
-        "url": "https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf"
+        "title": "EPA (2005) — отраслевой обзор производства изделий из резины и пластмасс",
+        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
       }
     ],
     "evidence": {
@@ -5073,8 +5073,8 @@ window.engineeringProcesses = [
     "profession": "materials-engineer",
     "sources": [
       {
-        "title": "EPA (2000), § 4.2.4 — отраслевой обзор производства изделий из пластмасс",
-        "url": "https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf"
+        "title": "EPA (2005) — отраслевой обзор производства изделий из резины и пластмасс",
+        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
       }
     ],
     "evidence": {
