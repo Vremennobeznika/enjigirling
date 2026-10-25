@@ -291,3 +291,5 @@
   color:var(--text-primary)!important;
   text-decoration-color:currentColor!important;
 }
+/* Editorial footer links must retain the monochrome palette in both themes. */
+footer a:not(.footer-btn):link,footer a:not(.footer-btn):visited{color:inherit}
