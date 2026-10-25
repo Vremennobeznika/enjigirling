@@ -429,14 +429,14 @@ check('calculator workshop layout embeds every tool in seven groups',()=>{
 });
 
 
-check('AI training packs expose all nine complete site sections',()=>{
+check('AI training packs expose nine main sections plus the code library',()=>{
  const slug=['professions','calendar','resources','dictionary','learning','calculators','compare','processes','materials'];
  const pages=['index.html','calendar.html','resources.html','dictionary.html','map.html','calculator.html','compare.html','processes.html','materials.html'];
  const hub=fs.readFileSync('ai.html','utf8');
- assert.equal((hub.match(/class="ai-hub-card"/g)||[]).length,9,'AI hub must list nine sections');
+ assert.equal((hub.match(/class="ai-hub-card"/g)||[]).length,10,'AI hub must list the nine main sections and AI code library');
  assert.ok(hub.includes('id="aiPrompt"'),'AI instruction prompt missing');
  const registry=json('knowledge/sections/index.json');
- assert.deepEqual(registry.sections.map(x=>x.id),slug);
+ assert.deepEqual(registry.sections.map(x=>x.id),['professions','calendar','resources','ai-code-library','dictionary','learning','calculators','compare','processes','materials']);
  const all=fs.readFileSync('knowledge/sections/all.md','utf8');
  for(let i=0;i<slug.length;i++){
   const id=slug[i],p=fs.readFileSync(pages[i],'utf8');
@@ -450,8 +450,12 @@ check('AI training packs expose all nine complete site sections',()=>{
   assert.equal(pack.sectionId,id);
   assert.equal(pack.recordsCount,pack.records.length);
   assert.ok(pack.staticPageText.length>100,id+' missing page text');
-  assert.ok(all.includes('# ENJIGIRLING — '+registry.sections[i].title),id+' absent from all.md');
+  assert.ok(all.includes('# ENJIGIRLING — '+registry.sections.find(x=>x.id===id).title),id+' absent from all.md');
  }
+ const codePack=json('knowledge/sections/ai-code-library.json');
+ assert.equal(codePack.recordsCount,25,'AI code library must contain exactly 25 resources');
+ assert.ok(codePack.records.every(x=>x.type==='Библиотека программирования для ИИ'));
+ assert.ok(all.includes('# ENJIGIRLING — Библиотека программирования для ИИ'));
  assert.equal(json('knowledge/sections/professions.json').recordsCount,51);
  assert.equal(json('knowledge/sections/dictionary.json').recordsCount,551);
  assert.ok(json('knowledge/sections/calendar.json').recordsCount>0);
