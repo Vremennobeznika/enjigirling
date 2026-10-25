@@ -88,7 +88,7 @@
  <div class="calc-lab-body">
   <p>Разбор знака, порядка и мантиссы. Можно изменить отдельный бит кнопкой, декодировать HEX или двоичную строку и увидеть разницу с введённым десятичным значением.</p>
   <div class="calc-lab-grid">
-   <div class="calc-lab-field"><label for="ieeeFormat">Формат</label><select id="ieeeFormat"><option value="fp32" selected>FP32 — 32 бита</option><option value="fp64">FP64 — 64 бита</option><option value="fp16">FP16 — 16 бит</option><option value="bf16">bfloat16 — 16 бит</option><option value="tf32">TF32 — 19 значащих битов</option></select></div>
+   <div class="calc-lab-field"><label for="ieeeFormat">Формат</label><select id="ieeeFormat"><option value="fp32" selected>FP32 — 32 бита</option><option value="fp64">FP64 — 64 бита</option><option value="fp16">FP16 — 16 бит</option><option value="bf16">bfloat16 — 16 бит</option><option value="tf32">TF32 — 19 бит в учебной модели</option></select></div>
    <div class="calc-lab-field"><label for="ieeeMode">Исходное представление</label><select id="ieeeMode"><option value="decimal">Десятичное значение</option><option value="hex">HEX-код (побитный)</option><option value="binary">Биты (0/1)</option></select></div>
    <div class="calc-lab-field calc-lab-wide"><label for="ieeeInput">Число или битовый код</label><input type="text" id="ieeeInput" value="0.1" spellcheck="false" autocomplete="off" inputmode="text"></div>
   </div>
@@ -108,7 +108,8 @@
    <div><dt>Ошибка представления относительно десятичного ввода</dt><dd id="ieeeError">—</dd></div>
   </dl>
   <div class="calc-lab-actions"><button type="button" id="ieeeCopyHex">Копировать HEX</button><button type="button" id="ieeeCopyBits">Копировать биты</button></div>
-  <p class="calc-lab-note">Округление: к ближайшему, при равенстве — к чётному. FP16 и bfloat16 рассчитаны программно; FP32 и FP64 используют DataView браузера. NaN, бесконечность, субнормальные числа и −0 поддерживаются. Представление HEX показывается в сетевом порядке (старший байт первым). TF32 представлен логическими 19 битами (1+8+10), а не 32-битной аппаратной раскладкой с пустыми битами.</p>
+  <p class="calc-lab-note">TF32 здесь отображён как учебный 19-битный набор знака, порядка и мантиссы; реальный тип NVIDIA использует 32-битное размещение данных и зависит от аппаратной реализации. <a href="https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____nv__tf32.html" target="_blank" rel="noopener noreferrer">NVIDIA — представление TF32</a>.</p>
+   <p class="calc-lab-note">Округление: к ближайшему, при равенстве — к чётному. FP16 и bfloat16 рассчитаны программно; FP32 и FP64 используют DataView браузера. NaN, бесконечность, субнормальные числа и −0 поддерживаются. Представление HEX показывается в сетевом порядке (старший байт первым). TF32 представлен логическими 19 битами (1+8+10), а не 32-битной аппаратной раскладкой с пустыми битами.</p>
  </div>
 </details>
 
@@ -190,7 +191,7 @@
    <div class="calc-lab-field"><label for="modbusFirst">Регистр 1 (HEX, 16 бит)</label><input id="modbusFirst" type="text" value="3F80" maxlength="6" spellcheck="false" autocomplete="off"></div>
    <div class="calc-lab-field"><label for="modbusSecond">Регистр 2 (HEX, 16 бит)</label><input id="modbusSecond" type="text" value="0000" maxlength="6" spellcheck="false" autocomplete="off"></div>
    <div class="calc-lab-field"><label for="modbusOrder">Порядок байтов в дампе</label><select id="modbusOrder"><option value="ABCD">ABCD (старшее слово первым)</option><option value="BADC">BADC</option><option value="CDAB">CDAB (слова переставлены)</option><option value="DCBA">DCBA</option></select></div>
-   </div><output id="modbusOutput" class="calc-lab-output" aria-live="polite">—</output><p class="calc-lab-note">Modbus не фиксирует порядок двух регистров внутри 32-битного числа. Сверьте упаковку Float32 по документации устройства.</p>
+   </div><output id="modbusOutput" class="calc-lab-output" aria-live="polite">—</output><p class="calc-lab-note">Modbus не фиксирует порядок двух регистров внутри 32-битного числа. Сверьте упаковку Float32 по документации устройства. <a href="https://www.modbus.org/introduction-to-modbus" target="_blank" rel="noopener noreferrer">Modbus Organization — Float32 и порядок байтов</a>.</p>
   </section>
  </div>
 </details>
@@ -229,7 +230,7 @@
                     </div>
                 </div>
             </div>
-<section class="field-guide" aria-labelledby="signalGuideTitle"><h2 id="signalGuideTitle">Пример: из тока 4–20 мА в значение шкалы</h2><p>Для линейно настроенного передатчика используйте долю диапазона: <code>X = Xmin + (I − 4) × (Xmax − Xmin) / 16</code>, где <code>I</code> — ток в мА, а <code>Xmin</code> и <code>Xmax</code> — значения начала и конца шкалы.</p><p><strong>Проверка:</strong> шкала 0–10 условных единиц, измеренный ток 12 мА. Доля диапазона — (12 − 4) / 16 = 0,5; расчётное значение — <strong>5 единиц</strong>. Эти значения уже установлены в калькуляторе выше по умолчанию.</p><p class="field-guide-note">Формула применима к линейной шкале и не определяет состояние датчика при аварийном сигнале. Настройки диапазона, допустимые токи неисправности, единицы и алгоритм обработки проверяйте по документации конкретного прибора.</p></section>
+<section class="field-guide" aria-labelledby="signalGuideTitle"><h2 id="signalGuideTitle">Пример: из тока 4–20 мА в значение шкалы</h2><p>Для линейно настроенного передатчика используйте долю диапазона: <code>X = Xmin + (I − 4) × (Xmax − Xmin) / 16</code>, где <code>I</code> — ток в мА, а <code>Xmin</code> и <code>Xmax</code> — значения начала и конца шкалы. Первоисточник: <a href="https://knowledge.ni.com/KnowledgeArticleDetails?id=kA00Z000000PASfSAO" target="_blank" rel="noopener noreferrer">NI — масштабирование 4–20 мА</a>. Для нелинейных и аварийных сигналов нужна документация передатчика.</p><p><strong>Проверка:</strong> шкала 0–10 условных единиц, измеренный ток 12 мА. Доля диапазона — (12 − 4) / 16 = 0,5; расчётное значение — <strong>5 единиц</strong>. Эти значения уже установлены в калькуляторе выше по умолчанию.</p><p class="field-guide-note">Формула применима к линейной шкале и не определяет состояние датчика при аварийном сигнале. Настройки диапазона, допустимые токи неисправности, единицы и алгоритм обработки проверяйте по документации конкретного прибора.</p></section>
 </div>
 </details>
 </div>
@@ -260,7 +261,7 @@
     <div class="calc-lab-field"><label for="oeeGood">Годных изделий, шт</label><input id="oeeGood" inputmode="decimal" type="text" value="960"></div>
     <div class="calc-lab-field"><label for="oeeIdeal">Идеальный цикл, с/шт</label><input id="oeeIdeal" inputmode="decimal" type="text" value="24"></div>
    </div><output id="oeeOutput" class="calc-lab-output" aria-live="polite">—</output>
-   <p class="calc-lab-note">OEE = доступность × производительность × качество. Если производительность выше 100%, проверьте норматив цикла и границы учёта времени.</p>
+   <p class="calc-lab-note">OEE = доступность × производительность × качество. Расчёт — учебная модель по заданным временны́м границам; сравнимость показателя зависит от методики учёта потерь. Если производительность выше 100%, проверьте идеальный цикл. <a href="https://www.iso.org/standard/54497.html" target="_blank" rel="noopener noreferrer">ISO 22400-2:2014 — описание KPI</a> (стандарт может пересматриваться).</p>
   </section>
   <section class="calc-lab-sub" aria-labelledby="massTitle">
    <h3 id="massTitle">Масса прямоугольной заготовки</h3>
@@ -279,7 +280,7 @@
     <div class="calc-lab-field"><label for="thermalAlpha">Коэффициент расширения, 10⁻⁶/K</label><input id="thermalAlpha" inputmode="decimal" type="text" value="12"></div>
     <div class="calc-lab-field"><label for="thermalDelta">Разница температур, °C</label><input id="thermalDelta" inputmode="decimal" type="text" value="50"></div>
    </div><output id="thermalOutput" class="calc-lab-output" aria-live="polite">—</output>
-   <p class="calc-lab-note">ΔL = αLΔT. Линейная модель с постоянным коэффициентом в рассматриваемом диапазоне; для ответственных расчётов проверяйте зависимость α от температуры.</p>
+   <p class="calc-lab-note">ΔL = αLΔT. Линейная модель с постоянным коэффициентом в рассматриваемом диапазоне; для ответственных расчётов проверяйте зависимость α от температуры. <a href="https://web.mit.edu/2.810/www/files/lectures/lec4-process-performance-2018.pdf" target="_blank" rel="noopener noreferrer">MIT — учебный материал по тепловому расширению</a>.</p>
   </section>
   <section class="calc-lab-sub" aria-labelledby="cutTitle">
    <h3 id="cutTitle">Скорость резания и обороты</h3>
