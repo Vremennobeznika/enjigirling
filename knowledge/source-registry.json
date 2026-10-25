@@ -392,7 +392,7 @@
     {
       "sourceId": "iso-10209-assembly",
       "title": "ISO 10209:2022 — определение сборки",
-      "url": "https://www.iso.org/obp/ui?_escaped_fragment_=iso%3Astd%3Aiso%3A10209%3Aed-2%3Av1%3Aen",
+      "url": "https://www.iso.org/cms/live/live/en/sites/isoorg/contents/data/standard/07/38/73872.html",
       "publisher": "ISO",
       "documentDate": "2022",
       "checkedAt": "2026-10-22",
@@ -435,14 +435,14 @@
     },
     {
       "sourceId": "atlas-source-004",
-      "title": "EPA 745-B-00-017 — Reporting Guidance for Rubber and Plastics Manufacturing, section 4.2.4",
-      "url": "https://ofmpub.epa.gov/apex/guideme_ext/guideme_ext/guideme/file/rubber%20and%20plastics%20manufacturing.pdf",
+      "title": "EPA (2005) — Profile of the Rubber and Plastics Industry, 2nd edition",
+      "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT",
       "publisher": "United States Environmental Protection Agency (EPA)",
-      "documentDate": "2000-05",
+      "documentDate": "2005-02",
       "checkedAt": "2026-10-22",
       "appliesTo": "Plastic-product manufacturing overview including compounding, injection, extrusion, thermoforming, calendering, rotational, compression/transfer and blow molding. Does not set product-specific process parameters.",
       "access": "public_overview_or_source_landing",
-      "notes": "Read section 4.2.4, PDF pp. 120-122, an environmental reporting guide not a shop-floor technical instruction. Official endpoint may redirect."
+      "notes": "EPA Sector Notebook (2005), industry processes and pollution profile; historical contextual source, not a shop-floor instruction and not the former 2000 reporting guide."
     },
     {
       "sourceId": "atlas-source-005",
@@ -689,7 +689,7 @@
     {
       "sourceId": "material-evidence-11",
       "title": "CottonWorks — Yarn Spinning",
-      "url": "https://cottonworks.com/learning-hub/yarn-manufacturing/yarn-spinning/?highlight=fiber%2Bquality",
+      "url": "https://cottonworks.com/learning-hub/yarn-manufacturing/yarn-spinning/",
       "publisher": "cottonworks.com",
       "documentDate": "undated",
       "checkedAt": "2026-10-22",
