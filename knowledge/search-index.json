@@ -850,7 +850,7 @@
       "id": "material:adhesive",
       "type": "material",
       "title": "Промышленные клеевые системы",
-      "description": "Клеи и герметизирующие композиции Многокомпонентные составы для соединения материалов, имеющие разные механизмы отверждения. Сборка, строительные изделия, композиты",
+      "description": "Клеи и герметизирующие композиции Клеевые составы для соединения материалов. Существуют одно- и многокомпонентные системы; механизм отверждения зависит от химии продукта. Сборка, строительные изделия, композиты",
       "url": "https://vremennobeznika.github.io/enjigirling/materials.html#adhesive",
       "dataset": "knowledge/materials.json",
       "relatedProcesses": [
@@ -2376,7 +2376,7 @@
       "id": "material:perlite-raw",
       "type": "material",
       "title": "Перлит промышленный",
-      "description": "Вулканическое минеральное сырьё Пористое минеральное сырьё для технических изделий; свойства зависят от обработки. Строительные и фильтрующие изделия",
+      "description": "Вулканическое минеральное сырьё Природное аморфное вулканическое стекло. При быстром нагреве сырьё вспучивается и превращается в лёгкий пористый материал; сырой и вспученный перлит следует различать. Строительные и фильтрующие изделия",
       "url": "https://vremennobeznika.github.io/enjigirling/materials.html#perlite-raw",
       "dataset": "knowledge/materials.json",
       "relatedProcesses": [
@@ -3106,7 +3106,7 @@
       "id": "process:brazing",
       "type": "process",
       "title": "Высокотемпературная пайка",
-      "description": "Соединение основного металла расплавленным припоем без расплавления основы. Очистка → сборка → нагрев → охлаждение → контроль Смачивание, поры, зазор",
+      "description": "Соединение без расплавления основного металла с использованием припоя, температура плавления которого выше 450 °C. Очистка → сборка → нагрев → охлаждение → контроль Смачивание, поры, зазор",
       "url": "https://vremennobeznika.github.io/enjigirling/processes.html#brazing",
       "dataset": "knowledge/processes.json",
       "relatedMaterials": [
@@ -3119,7 +3119,7 @@
       "id": "process:soft-soldering",
       "type": "process",
       "title": "Низкотемпературная пайка",
-      "description": "Соединение деталей припойным металлом с более низкой температурой плавления. Подготовка → пайка → очистка → проверка Смачивание, загрязнение, прочность",
+      "description": "Соединение без расплавления основного металла с использованием припоя, температура плавления которого ниже 450 °C. Подготовка → пайка → очистка → проверка Смачивание, загрязнение, прочность",
       "url": "https://vremennobeznika.github.io/enjigirling/processes.html#soft-soldering",
       "dataset": "knowledge/processes.json",
       "relatedMaterials": [
@@ -3801,7 +3801,7 @@
       "url": "https://vremennobeznika.github.io/enjigirling/processes.html#concrete-mixing",
       "dataset": "knowledge/processes.json",
       "relatedMaterials": [
-        "09g2s"
+        "ready-mix-concrete"
       ],
       "relatedProfession": "civil-engineer"
     },
@@ -3813,7 +3813,7 @@
       "url": "https://vremennobeznika.github.io/enjigirling/processes.html#concrete-placing",
       "dataset": "knowledge/processes.json",
       "relatedMaterials": [
-        "09g2s"
+        "ready-mix-concrete"
       ],
       "relatedProfession": "civil-engineer"
     },
@@ -3825,7 +3825,7 @@
       "url": "https://vremennobeznika.github.io/enjigirling/processes.html#concrete-vibration",
       "dataset": "knowledge/processes.json",
       "relatedMaterials": [
-        "09g2s"
+        "ready-mix-concrete"
       ],
       "relatedProfession": "civil-engineer"
     },
@@ -3837,7 +3837,7 @@
       "url": "https://vremennobeznika.github.io/enjigirling/processes.html#concrete-curing",
       "dataset": "knowledge/processes.json",
       "relatedMaterials": [
-        "09g2s"
+        "ready-mix-concrete"
       ],
       "relatedProfession": "civil-engineer"
     },
@@ -3848,9 +3848,7 @@
       "description": "Установка временной оснастки для задания формы монолитного бетона. Проверка чертежей → монтаж → закрепление → приёмка Устойчивость, геометрия, положение креплений",
       "url": "https://vremennobeznika.github.io/enjigirling/processes.html#formwork-erection",
       "dataset": "knowledge/processes.json",
-      "relatedMaterials": [
-        "09g2s"
-      ],
+      "relatedMaterials": [],
       "relatedProfession": "civil-engineer"
     },
     {
@@ -3860,9 +3858,7 @@
       "description": "Размещение арматурных элементов по проекту до бетонирования. Проверка арматуры → установка фиксаторов → вязка или крепление → контроль Защитный слой, положение стержней, стыки",
       "url": "https://vremennobeznika.github.io/enjigirling/processes.html#rebar-installation",
       "dataset": "knowledge/processes.json",
-      "relatedMaterials": [
-        "09g2s"
-      ],
+      "relatedMaterials": [],
       "relatedProfession": "civil-engineer"
     },
     {
@@ -3872,9 +3868,7 @@
       "description": "Соединение штучных каменных элементов в конструкцию согласно проекту. Подготовка основания → укладка элементов и раствора → контроль Перевязка, ровность, заполнение швов",
       "url": "https://vremennobeznika.github.io/enjigirling/processes.html#masonry-works",
       "dataset": "knowledge/processes.json",
-      "relatedMaterials": [
-        "09g2s"
-      ],
+      "relatedMaterials": [],
       "relatedProfession": "civil-engineer"
     },
     {
@@ -3884,9 +3878,7 @@
       "description": "Формирование слоя покрытия из горячей или холодной смеси с последующим уплотнением. Подготовка основания → укладка → уплотнение → проверка Плотность, ровность, толщина, температура",
       "url": "https://vremennobeznika.github.io/enjigirling/processes.html#road-asphalt-placement",
       "dataset": "knowledge/processes.json",
-      "relatedMaterials": [
-        "09g2s"
-      ],
+      "relatedMaterials": [],
       "relatedProfession": "civil-engineer"
     },
     {
@@ -3896,9 +3888,7 @@
       "description": "Введение закрепляющего состава в грунтовый массив по проекту. Обследование → инъектирование по проекту → испытания Распределение состава, проницаемость, смещения",
       "url": "https://vremennobeznika.github.io/enjigirling/processes.html#geotechnical-grouting",
       "dataset": "knowledge/processes.json",
-      "relatedMaterials": [
-        "09g2s"
-      ],
+      "relatedMaterials": [],
       "relatedProfession": "civil-engineer"
     },
     {
@@ -4089,7 +4079,7 @@
       "url": "https://vremennobeznika.github.io/enjigirling/processes.html#cement-clinker-firing",
       "dataset": "knowledge/processes.json",
       "relatedMaterials": [
-        "alumina"
+        "cement-clinker"
       ],
       "relatedProfession": "materials-engineer"
     },
@@ -4149,7 +4139,7 @@
       "url": "https://vremennobeznika.github.io/enjigirling/processes.html#brick-extrusion",
       "dataset": "knowledge/processes.json",
       "relatedMaterials": [
-        "alumina"
+        "fireclay-raw"
       ],
       "relatedProfession": "materials-engineer"
     },
@@ -4161,7 +4151,7 @@
       "url": "https://vremennobeznika.github.io/enjigirling/processes.html#glass-melting",
       "dataset": "knowledge/processes.json",
       "relatedMaterials": [
-        "alumina"
+        "glass-raw"
       ],
       "relatedProfession": "materials-engineer"
     },
@@ -4172,9 +4162,7 @@
       "description": "Управляемое охлаждение стекла для снижения остаточных напряжений. Подача изделия → отжиг → охлаждение → контроль Остаточные напряжения, коробление, трещины",
       "url": "https://vremennobeznika.github.io/enjigirling/processes.html#glass-annealing",
       "dataset": "knowledge/processes.json",
-      "relatedMaterials": [
-        "alumina"
-      ],
+      "relatedMaterials": [],
       "relatedProfession": "materials-engineer"
     },
     {
@@ -4462,10 +4450,7 @@
       "description": "Зондирование подповерхностных объектов электромагнитными импульсами. Выбор трассы → зондирование → интерпретация профиля Влажность, глубина, разрешение, помехи",
       "url": "https://vremennobeznika.github.io/enjigirling/processes.html#ground-penetrating-radar",
       "dataset": "knowledge/processes.json",
-      "relatedMaterials": [
-        "09g2s",
-        "steel-45"
-      ],
+      "relatedMaterials": [],
       "relatedProfession": "materials-engineer"
     },
     {
@@ -4615,7 +4600,7 @@
       "id": "process:compression-molding-plastics",
       "type": "process",
       "title": "Компрессионное формование пластмасс",
-      "description": "Формование материала сдавливанием в нагретой пресс-форме. Подготовка навески → прессование → охлаждение → контроль Пустоты, облой, степень отверждения",
+      "description": "Формование материала сдавливанием в нагретой пресс-форме. Подготовка навески → прессование → охлаждение → контроль Пустоты, облой, размеры; для реактопластов — степень отверждения, для термопластов — условия охлаждения.",
       "url": "https://vremennobeznika.github.io/enjigirling/processes.html#compression-molding-plastics",
       "dataset": "knowledge/processes.json",
       "relatedMaterials": [
@@ -4657,10 +4642,7 @@
       "description": "Заполнение формы подготовленным реактопластом из передаточной камеры. Подготовка сырья → передача в форму → отверждение → контроль Недолив, облой, время отверждения",
       "url": "https://vremennobeznika.github.io/enjigirling/processes.html#polymer-transfer-molding",
       "dataset": "knowledge/processes.json",
-      "relatedMaterials": [
-        "pe-hd",
-        "pa6"
-      ],
+      "relatedMaterials": [],
       "relatedProfession": "materials-engineer"
     },
     {
@@ -4670,10 +4652,7 @@
       "description": "Формирование связанной структуры эластомера в предусмотренном цикле. Подготовка смеси → вулканизация → охлаждение → испытания Степень вулканизации, твёрдость, трещины",
       "url": "https://vremennobeznika.github.io/enjigirling/processes.html#rubber-vulcanization",
       "dataset": "knowledge/processes.json",
-      "relatedMaterials": [
-        "pe-hd",
-        "pa6"
-      ],
+      "relatedMaterials": [],
       "relatedProfession": "materials-engineer"
     },
     {
@@ -4719,12 +4698,12 @@
       "id": "process:heat-setting-textiles",
       "type": "process",
       "title": "Термофиксация текстиля",
-      "description": "Тепловая стабилизация структуры подходящего волокнистого материала. Подготовка → термообработка → охлаждение → испытания Усадка, деформации, цвет",
+      "description": "Тепловая стабилизация текстиля с термопластичными волокнами, например полиэфирными или полиамидными. Чистый хлопок не термофиксируется этим механизмом. Подготовка → термообработка → охлаждение → испытания Усадка, деформации, цвет",
       "url": "https://vremennobeznika.github.io/enjigirling/processes.html#heat-setting-textiles",
       "dataset": "knowledge/processes.json",
       "relatedMaterials": [
-        "cotton",
-        "woven-fabric"
+        "polyester-fiber",
+        "polyamide-textile-yarn"
       ],
       "relatedProfession": "textile-engineer"
     },

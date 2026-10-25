@@ -28,7 +28,7 @@ const steps=[
  ['ATLAS each of 380 cards audit state',()=>[['node',['scripts/audit-atlas-cards.cjs','--check']]]],
  ['ATLAS executable-code budget and duplicate exporter guard',()=>[['node',['tests/atlas-code-size.cjs']]]],
  ['ATLAS joint processes/materials/AI exports and ZIP checks',()=>[['node',['tests/atlas-dual-ai.cjs']]]],
- ['S13 source and claim references',()=>[['node',['scripts/check-evidence.cjs']]]],
+ ['S13 source and claim references',()=>[['node',['scripts/check-evidence.cjs']],['node',['tests/claim-review.cjs']]]],
  ['S15 deterministic quality metadata',()=>[['node',['scripts/build-quality.cjs','--check']]]],
  ['S14 evidence structural integrity and completeness report',()=>[['node',['scripts/audit-knowledge.cjs','--strict']]]]
 ];

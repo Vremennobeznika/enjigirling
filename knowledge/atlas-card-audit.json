@@ -7,9 +7,9 @@
     "materials": 172,
     "total": 380,
     "P0": 0,
-    "P1": 364,
-    "P2": 16,
-    "claimCheckedEntries": 44
+    "P1": 302,
+    "P2": 78,
+    "claimCheckedEntries": 143
   },
   "methodology": [
     "обязательные поля и терминология",
@@ -28,11 +28,11 @@
   ],
   "issueCounts": {
     "S07": 177,
-    "E02": 44,
-    "L02": 65,
-    "T02": 180,
-    "E01": 336,
-    "T03": 137,
+    "E02": 143,
+    "L02": 74,
+    "E01": 237,
+    "T02": 179,
+    "T03": 135,
     "L03": 7
   },
   "records": [
@@ -44,14 +44,15 @@
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#casting",
       "priority": "P1",
       "technicalVerification": "не завершена",
-      "sourceCount": 2,
+      "sourceCount": 3,
       "primaryAuthorityLinks": 2,
       "sourceUrls": [
         "https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes",
-        "https://www.asnt.org/what-is-nondestructive-testing/methods"
+        "https://www.asnt.org/what-is-nondestructive-testing/methods",
+        "https://www.bodycote.com/technical-glossary/"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 1,
+      "claimCheckedInRegistry": 2,
       "issues": [
         {
           "code": "S07",
@@ -112,7 +113,7 @@
         "https://www.sandvik.coromant.com/en-gb/tools/silent-tools/what-is-silent-tools/application-guide-silent-tools/turning-appl-guide"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 1,
+      "claimCheckedInRegistry": 0,
       "issues": [
         {
           "code": "S07",
@@ -120,9 +121,9 @@
           "details": "Общие источники (R03); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E02",
-          "level": "P2",
-          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
+          "code": "E01",
+          "level": "P1",
+          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
         }
       ],
       "nextAction": "Сверить «Обработка резанием»: входы/выходы, оборудование, порядок операций, возможные дефекты, контроль и применимые нормативные документы."
@@ -386,12 +387,13 @@
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#forging",
       "priority": "P1",
       "technicalVerification": "не завершена",
-      "sourceCount": 3,
+      "sourceCount": 4,
       "primaryAuthorityLinks": 3,
       "sourceUrls": [
         "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies",
         "https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes",
-        "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.211"
+        "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.211",
+        "https://www.bodycote.com/technical-glossary/"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
@@ -424,7 +426,7 @@
         "https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 1,
+      "claimCheckedInRegistry": 0,
       "issues": [
         {
           "code": "S07",
@@ -432,9 +434,9 @@
           "details": "Общие источники (R03); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E02",
-          "level": "P2",
-          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
+          "code": "E01",
+          "level": "P1",
+          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
         }
       ],
       "nextAction": "Сверить «Прокатка»: входы/выходы, оборудование, порядок операций, возможные дефекты, контроль и применимые нормативные документы."
@@ -454,7 +456,7 @@
         "https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 1,
+      "claimCheckedInRegistry": 0,
       "issues": [
         {
           "code": "S07",
@@ -462,9 +464,9 @@
           "details": "Общие источники (R03); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E02",
-          "level": "P2",
-          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
+          "code": "E01",
+          "level": "P1",
+          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
         },
         {
           "code": "T02",
@@ -507,11 +509,12 @@
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#extrusion",
       "priority": "P1",
       "technicalVerification": "не завершена",
-      "sourceCount": 2,
-      "primaryAuthorityLinks": 2,
+      "sourceCount": 3,
+      "primaryAuthorityLinks": 3,
       "sourceUrls": [
         "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies",
-        "https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes"
+        "https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes",
+        "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
@@ -546,7 +549,7 @@
         "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.215"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 1,
+      "claimCheckedInRegistry": 0,
       "issues": [
         {
           "code": "S07",
@@ -554,9 +557,9 @@
           "details": "Общие источники (R03); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E02",
-          "level": "P2",
-          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
+          "code": "E01",
+          "level": "P1",
+          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
         }
       ],
       "nextAction": "Сверить «Шлифование»: входы/выходы, оборудование, порядок операций, возможные дефекты, контроль и применимые нормативные документы."
@@ -682,7 +685,7 @@
         "https://www.fao.org/4/x0209e/x0209e06.htm"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 1,
+      "claimCheckedInRegistry": 2,
       "issues": [
         {
           "code": "S07",
@@ -769,14 +772,15 @@
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#spinning",
       "priority": "P1",
       "technicalVerification": "не завершена",
-      "sourceCount": 2,
+      "sourceCount": 3,
       "primaryAuthorityLinks": 2,
       "sourceUrls": [
         "https://www.osha.gov/data/sic-manual/major-group-22",
-        "https://www.osha.gov/textiles"
+        "https://www.osha.gov/textiles",
+        "https://cottonworks.com/learning-hub/yarn-manufacturing/yarn-spinning/"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 1,
+      "claimCheckedInRegistry": 2,
       "issues": [
         {
           "code": "S07",
@@ -804,11 +808,12 @@
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#weaving",
       "priority": "P1",
       "technicalVerification": "не завершена",
-      "sourceCount": 2,
+      "sourceCount": 3,
       "primaryAuthorityLinks": 2,
       "sourceUrls": [
         "https://www.osha.gov/data/sic-manual/major-group-22",
-        "https://www.osha.gov/textiles"
+        "https://www.osha.gov/textiles",
+        "https://cottonworks.com/learning-hub/weaving/weaving-basics/"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
@@ -839,14 +844,15 @@
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#knitting",
       "priority": "P1",
       "technicalVerification": "не завершена",
-      "sourceCount": 2,
+      "sourceCount": 3,
       "primaryAuthorityLinks": 2,
       "sourceUrls": [
         "https://www.osha.gov/data/sic-manual/major-group-22",
-        "https://www.osha.gov/textiles"
+        "https://www.osha.gov/textiles",
+        "https://cottonworks.com/learning-hub/knitting/knit-basics/"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 1,
+      "claimCheckedInRegistry": 2,
       "issues": [
         {
           "code": "S07",
@@ -907,7 +913,7 @@
         "https://www.osha.gov/textiles"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 1,
+      "claimCheckedInRegistry": 0,
       "issues": [
         {
           "code": "S07",
@@ -915,9 +921,9 @@
           "details": "Общие источники (R04); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E02",
-          "level": "P2",
-          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
+          "code": "E01",
+          "level": "P1",
+          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
         }
       ],
       "nextAction": "Сверить «Швейная сборка изделий»: входы/выходы, оборудование, порядок операций, возможные дефекты, контроль и применимые нормативные документы."
@@ -1140,13 +1146,14 @@
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#turning",
       "priority": "P1",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 1,
       "sourceUrls": [
-        "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
+        "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies",
+        "https://www.sandvik.coromant.com/en-us/knowledge/general-turning"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -1154,9 +1161,9 @@
           "details": "Общие источники (R03); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -1242,13 +1249,14 @@
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#boring",
       "priority": "P1",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 1,
       "sourceUrls": [
-        "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
+        "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies",
+        "https://www.sandvik.coromant.com/en-us/knowledge/boring"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -1256,9 +1264,9 @@
           "details": "Общие источники (R03); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -1276,13 +1284,14 @@
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#reaming",
       "priority": "P1",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 1,
       "sourceUrls": [
-        "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
+        "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies",
+        "https://www.sandvik.coromant.com/en-us/knowledge/reaming"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -1290,9 +1299,9 @@
           "details": "Общие источники (R03); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -1480,13 +1489,14 @@
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#annealing",
       "priority": "P1",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 1,
       "sourceUrls": [
-        "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
+        "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies",
+        "https://www.bodycote.com/technical-glossary/"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -1494,9 +1504,9 @@
           "details": "Общие источники (R03); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -1514,13 +1524,14 @@
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#quenching",
       "priority": "P1",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 1,
       "sourceUrls": [
-        "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
+        "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies",
+        "https://www.bodycote.com/technical-glossary/"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -1528,9 +1539,9 @@
           "details": "Общие источники (R03); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -1548,13 +1559,14 @@
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#tempering",
       "priority": "P1",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 1,
       "sourceUrls": [
-        "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
+        "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies",
+        "https://www.bodycote.com/technical-glossary/"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -1562,9 +1574,9 @@
           "details": "Общие источники (R03); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -1582,13 +1594,14 @@
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#induction-hardening",
       "priority": "P1",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 1,
       "sourceUrls": [
-        "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
+        "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies",
+        "https://www.bodycote.com/technical-glossary/"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -1596,9 +1609,9 @@
           "details": "Общие источники (R03); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -1759,7 +1772,7 @@
       "type": "processes",
       "industry": "metals",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#brazing",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 1,
       "primaryAuthorityLinks": 0,
@@ -1767,12 +1780,12 @@
         "https://www.twi-global.com/technical-knowledge/faqs/welding-brazing-and-soldering"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -1788,7 +1801,7 @@
       "type": "processes",
       "industry": "metals",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#soft-soldering",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 1,
       "primaryAuthorityLinks": 0,
@@ -1796,12 +1809,12 @@
         "https://www.twi-global.com/technical-knowledge/faqs/welding-brazing-and-soldering"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -1817,7 +1830,7 @@
       "type": "processes",
       "industry": "general",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#powder-bed-fusion",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 1,
       "primaryAuthorityLinks": 1,
@@ -1825,12 +1838,12 @@
         "https://www.nist.gov/additive-manufacturing/research-areas/technologies"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "L02",
@@ -1851,7 +1864,7 @@
       "type": "processes",
       "industry": "general",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#directed-energy-deposition",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 1,
       "primaryAuthorityLinks": 1,
@@ -1859,12 +1872,12 @@
         "https://www.nist.gov/additive-manufacturing/research-areas/technologies"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "L02",
@@ -1885,7 +1898,7 @@
       "type": "processes",
       "industry": "general",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#binder-jetting",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 1,
       "primaryAuthorityLinks": 1,
@@ -1893,12 +1906,12 @@
         "https://www.nist.gov/additive-manufacturing/research-areas/technologies"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "L02",
@@ -1919,7 +1932,7 @@
       "type": "processes",
       "industry": "general",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#material-jetting",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 1,
       "primaryAuthorityLinks": 1,
@@ -1927,12 +1940,12 @@
         "https://www.nist.gov/additive-manufacturing/research-areas/technologies"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "L02",
@@ -1953,7 +1966,7 @@
       "type": "processes",
       "industry": "general",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#vat-photopolymerization",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 1,
       "primaryAuthorityLinks": 1,
@@ -1961,12 +1974,12 @@
         "https://www.nist.gov/additive-manufacturing/research-areas/technologies"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "L02",
@@ -1987,7 +2000,7 @@
       "type": "processes",
       "industry": "general",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#additive-extrusion",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 1,
       "primaryAuthorityLinks": 1,
@@ -1995,12 +2008,12 @@
         "https://www.nist.gov/additive-manufacturing/research-areas/technologies"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "L02",
@@ -2021,7 +2034,7 @@
       "type": "processes",
       "industry": "polymers",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#blow-molding",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 1,
       "primaryAuthorityLinks": 1,
@@ -2029,12 +2042,12 @@
         "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -2050,7 +2063,7 @@
       "type": "processes",
       "industry": "polymers",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#rotomolding",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 1,
       "primaryAuthorityLinks": 1,
@@ -2058,12 +2071,12 @@
         "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -2079,7 +2092,7 @@
       "type": "processes",
       "industry": "polymers",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#thermoforming",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 1,
       "primaryAuthorityLinks": 1,
@@ -2087,12 +2100,12 @@
         "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -2108,7 +2121,7 @@
       "type": "processes",
       "industry": "polymers",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#calendering",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 1,
       "primaryAuthorityLinks": 1,
@@ -2116,12 +2129,12 @@
         "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -2137,7 +2150,7 @@
       "type": "processes",
       "industry": "polymers",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#compounding",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 1,
       "primaryAuthorityLinks": 1,
@@ -2145,12 +2158,12 @@
         "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -2166,7 +2179,7 @@
       "type": "processes",
       "industry": "polymers",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#polymer-foaming",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 1,
       "primaryAuthorityLinks": 1,
@@ -2174,12 +2187,12 @@
         "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -2701,13 +2714,14 @@
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#freezing-food",
       "priority": "P1",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
-      "primaryAuthorityLinks": 1,
+      "sourceCount": 2,
+      "primaryAuthorityLinks": 2,
       "sourceUrls": [
-        "https://www.fao.org/4/x0209e/x0209e06.htm"
+        "https://www.fao.org/4/x0209e/x0209e06.htm",
+        "https://www.fao.org/4/y5979e/y5979e03.htm"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -2715,9 +2729,9 @@
           "details": "Общие источники (R07); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -2769,13 +2783,14 @@
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#food-evaporation",
       "priority": "P1",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 1,
       "sourceUrls": [
-        "https://www.fao.org/4/x0209e/x0209e06.htm"
+        "https://www.fao.org/4/x0209e/x0209e06.htm",
+        "https://www.gea.com/en/assets/170546/"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -2783,9 +2798,9 @@
           "details": "Общие источники (R07); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -3041,13 +3056,14 @@
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#warping",
       "priority": "P1",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 1,
       "sourceUrls": [
-        "https://www.osha.gov/data/sic-manual/major-group-22"
+        "https://www.osha.gov/data/sic-manual/major-group-22",
+        "https://cottonworks.com/learning-hub/weaving/weaving-basics/"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -3055,9 +3071,9 @@
           "details": "Общие источники (R04); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -3075,13 +3091,14 @@
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#warp-sizing",
       "priority": "P1",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 1,
       "sourceUrls": [
-        "https://www.osha.gov/data/sic-manual/major-group-22"
+        "https://www.osha.gov/data/sic-manual/major-group-22",
+        "https://cottonworks.com/learning-hub/weaving/weaving-basics/"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -3089,9 +3106,9 @@
           "details": "Общие источники (R04); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -3320,20 +3337,21 @@
       "type": "processes",
       "industry": "chemicals",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#industrial-evaporation",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.energy.gov/cmei/ito/what-are-different-kinds-process-heating-systems"
+        "https://www.energy.gov/cmei/ito/what-are-different-kinds-process-heating-systems",
+        "https://www.gea.com/en/assets/170546/"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "L02",
@@ -3354,20 +3372,21 @@
       "type": "processes",
       "industry": "chemicals",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#crystallization",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.energy.gov/cmei/ito/what-are-different-kinds-process-heating-systems"
+        "https://www.energy.gov/cmei/ito/what-are-different-kinds-process-heating-systems",
+        "https://www.gea.com/en/products/evaporators-crystallizers/gea-mevap/gea-mevap-crystallization/"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "L02",
@@ -3456,20 +3475,21 @@
       "type": "processes",
       "industry": "chemicals",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#industrial-centrifugation",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.energy.gov/cmei/ito/what-are-different-kinds-process-heating-systems"
+        "https://www.energy.gov/cmei/ito/what-are-different-kinds-process-heating-systems",
+        "https://www.alfalaval.com/products/separation/centrifugal-separators/separators/innovations/separator-innovator/how-separation-works/"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "L02",
@@ -3724,6 +3744,11 @@
           "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
         },
         {
+          "code": "L02",
+          "level": "P2",
+          "details": "Нет конкретных материалов: не добавлять неподтверждённых связей"
+        },
+        {
           "code": "T02",
           "level": "P2",
           "details": "Уточнить методы контроля и критерии дефектов"
@@ -3751,6 +3776,11 @@
           "code": "E01",
           "level": "P1",
           "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+        },
+        {
+          "code": "L02",
+          "level": "P2",
+          "details": "Нет конкретных материалов: не добавлять неподтверждённых связей"
         },
         {
           "code": "T02",
@@ -3782,6 +3812,11 @@
           "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
         },
         {
+          "code": "L02",
+          "level": "P2",
+          "details": "Нет конкретных материалов: не добавлять неподтверждённых связей"
+        },
+        {
           "code": "T02",
           "level": "P2",
           "details": "Уточнить методы контроля и критерии дефектов"
@@ -3811,6 +3846,11 @@
           "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
         },
         {
+          "code": "L02",
+          "level": "P2",
+          "details": "Нет конкретных материалов: не добавлять неподтверждённых связей"
+        },
+        {
           "code": "T02",
           "level": "P2",
           "details": "Уточнить методы контроля и критерии дефектов"
@@ -3838,6 +3878,11 @@
           "code": "E01",
           "level": "P1",
           "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+        },
+        {
+          "code": "L02",
+          "level": "P2",
+          "details": "Нет конкретных материалов: не добавлять неподтверждённых связей"
         },
         {
           "code": "T02",
@@ -3921,20 +3966,21 @@
       "type": "processes",
       "industry": "energy",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#condensate-return",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.energy.gov/cmei/ito/steam-systems"
+        "https://www.energy.gov/cmei/ito/steam-systems",
+        "https://www.energy.gov/sites/prod/files/2014/05/f16/steam8_boiler.pdf"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "L02",
@@ -3955,20 +4001,21 @@
       "type": "processes",
       "industry": "energy",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#deaeration-water",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.energy.gov/cmei/ito/steam-systems"
+        "https://www.energy.gov/cmei/ito/steam-systems",
+        "https://www.energy.gov/sites/prod/files/2014/05/f16/steam18_steam_systems.pdf"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "L02",
@@ -3989,20 +4036,21 @@
       "type": "processes",
       "industry": "energy",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#economizer-heat-recovery",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.energy.gov/cmei/ito/steam-systems"
+        "https://www.energy.gov/cmei/ito/steam-systems",
+        "https://www.energy.gov/sites/prod/files/2014/05/f16/steam3_recovery.pdf"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "L02",
@@ -4023,20 +4071,21 @@
       "type": "processes",
       "industry": "energy",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#steam-trap-monitoring",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.energy.gov/cmei/ito/steam-systems"
+        "https://www.energy.gov/cmei/ito/steam-systems",
+        "https://www.energy.gov/sites/prod/files/2014/05/f16/steam1_traps.pdf"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "L02",
@@ -4127,13 +4176,14 @@
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#coagulation-water",
       "priority": "P1",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 1,
       "sourceUrls": [
-        "https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"
+        "https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies",
+        "https://www.dwi.gov.uk/private-water-supplies/pws-installations/treatment-guide-2/physical-removal-of-contaminants/"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -4141,9 +4191,9 @@
           "details": "Общие источники (R08); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "L02",
@@ -4166,13 +4216,14 @@
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#flocculation-water",
       "priority": "P1",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 1,
       "sourceUrls": [
-        "https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"
+        "https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies",
+        "https://www.cdc.gov/drinking-water/about/how-water-treatment-works.html"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -4180,9 +4231,9 @@
           "details": "Общие источники (R08); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "L02",
@@ -4205,13 +4256,14 @@
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#sedimentation-water",
       "priority": "P1",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 1,
       "sourceUrls": [
-        "https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"
+        "https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies",
+        "https://www.cdc.gov/drinking-water/about/how-water-treatment-works.html"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -4219,9 +4271,9 @@
           "details": "Общие источники (R08); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "L02",
@@ -4244,13 +4296,14 @@
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#granular-filtration",
       "priority": "P1",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 1,
       "sourceUrls": [
-        "https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"
+        "https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies",
+        "https://www.cdc.gov/drinking-water/about/how-water-treatment-works.html"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -4258,9 +4311,9 @@
           "details": "Общие источники (R08); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "L02",
@@ -4289,7 +4342,7 @@
         "https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -4297,9 +4350,9 @@
           "details": "Общие источники (R08); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "L02",
@@ -4328,7 +4381,7 @@
         "https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -4336,9 +4389,9 @@
           "details": "Общие источники (R08); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "L02",
@@ -4367,7 +4420,7 @@
         "https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -4375,9 +4428,9 @@
           "details": "Общие источники (R08); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "L02",
@@ -4400,13 +4453,14 @@
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#ultrafiltration-water",
       "priority": "P1",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 1,
       "sourceUrls": [
-        "https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"
+        "https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies",
+        "https://www.cdc.gov/drinking-water/about/how-water-treatment-works.html"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -4414,9 +4468,9 @@
           "details": "Общие источники (R08); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "L02",
@@ -4515,20 +4569,21 @@
       "type": "processes",
       "industry": "ceramics",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#cement-clinker-firing",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
-      "primaryAuthorityLinks": 1,
+      "sourceCount": 2,
+      "primaryAuthorityLinks": 2,
       "sourceUrls": [
-        "https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0"
+        "https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0",
+        "https://www.epa.gov/system/files/documents/2025-02/c11s06_final_2-2025_0.pdf"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -4544,20 +4599,21 @@
       "type": "processes",
       "industry": "ceramics",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#ceramic-calcination",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
-      "primaryAuthorityLinks": 1,
+      "sourceCount": 2,
+      "primaryAuthorityLinks": 2,
       "sourceUrls": [
-        "https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0"
+        "https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0",
+        "https://www.epa.gov/system/files/documents/2025-06/c11s07_2025_final.pdf"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -4573,20 +4629,21 @@
       "type": "processes",
       "industry": "ceramics",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#ceramic-sintering",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
-      "primaryAuthorityLinks": 1,
+      "sourceCount": 2,
+      "primaryAuthorityLinks": 2,
       "sourceUrls": [
-        "https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0"
+        "https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0",
+        "https://www.epa.gov/system/files/documents/2025-06/c11s07_2025_final.pdf"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -4602,20 +4659,21 @@
       "type": "processes",
       "industry": "ceramics",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#slip-casting-ceramics",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
-      "primaryAuthorityLinks": 1,
+      "sourceCount": 2,
+      "primaryAuthorityLinks": 2,
       "sourceUrls": [
-        "https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0"
+        "https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0",
+        "https://www.epa.gov/system/files/documents/2025-06/c11s07_2025_final.pdf"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -4631,20 +4689,21 @@
       "type": "processes",
       "industry": "ceramics",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#dry-pressing-ceramics",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
-      "primaryAuthorityLinks": 1,
+      "sourceCount": 2,
+      "primaryAuthorityLinks": 2,
       "sourceUrls": [
-        "https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0"
+        "https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0",
+        "https://www.epa.gov/system/files/documents/2025-06/c11s07_2025_final.pdf"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -4660,20 +4719,21 @@
       "type": "processes",
       "industry": "ceramics",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#brick-extrusion",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
-      "primaryAuthorityLinks": 1,
+      "sourceCount": 2,
+      "primaryAuthorityLinks": 2,
       "sourceUrls": [
-        "https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0"
+        "https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0",
+        "https://www.epa.gov/system/files/documents/2025-06/c11s07_2025_final.pdf"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -4689,20 +4749,21 @@
       "type": "processes",
       "industry": "ceramics",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#glass-melting",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
-      "primaryAuthorityLinks": 1,
+      "sourceCount": 2,
+      "primaryAuthorityLinks": 2,
       "sourceUrls": [
-        "https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0"
+        "https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0",
+        "https://www.epa.gov/sites/default/files/2020-10/documents/c11s15.pdf"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -4718,20 +4779,26 @@
       "type": "processes",
       "industry": "ceramics",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#glass-annealing",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
-      "primaryAuthorityLinks": 1,
+      "sourceCount": 2,
+      "primaryAuthorityLinks": 2,
       "sourceUrls": [
-        "https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0"
+        "https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0",
+        "https://www.epa.gov/sites/default/files/2020-10/documents/c11s15.pdf"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
+        },
+        {
+          "code": "L02",
+          "level": "P2",
+          "details": "Нет конкретных материалов: не добавлять неподтверждённых связей"
         },
         {
           "code": "T02",
@@ -4747,20 +4814,21 @@
       "type": "processes",
       "industry": "pharma",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#wet-granulation-pharma",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 1,
       "sourceUrls": [
-        "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"
+        "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093",
+        "https://www.gea.com/en/products/dryers-particle-processing/fluid-beds/fluid-bed-processors/"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "L02",
@@ -4849,20 +4917,21 @@
       "type": "processes",
       "industry": "pharma",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#tablet-coating",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 1,
       "sourceUrls": [
-        "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"
+        "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093",
+        "https://www.gea.com/en/products/dryers-particle-processing/fluid-beds/fluid-bed-processors/"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "L02",
@@ -4951,20 +5020,21 @@
       "type": "processes",
       "industry": "pharma",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#pharma-spray-drying",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 1,
       "sourceUrls": [
-        "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"
+        "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093",
+        "https://www.gea.com/en/products/dryers-particle-processing/fluid-beds/fluid-bed-processors/"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "L02",
@@ -5189,20 +5259,21 @@
       "type": "processes",
       "industry": "mining",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#ore-crushing",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
-      "primaryAuthorityLinks": 1,
+      "sourceCount": 2,
+      "primaryAuthorityLinks": 2,
       "sourceUrls": [
-        "https://www.epa.gov/eg/ore-mining-and-dressing-effluent-guidelines"
+        "https://www.epa.gov/eg/ore-mining-and-dressing-effluent-guidelines",
+        "https://www.epa.gov/sites/default/files/2020-10/documents/c11s24.pdf"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "L02",
@@ -5223,20 +5294,21 @@
       "type": "processes",
       "industry": "mining",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#ore-grinding",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
-      "primaryAuthorityLinks": 1,
+      "sourceCount": 2,
+      "primaryAuthorityLinks": 2,
       "sourceUrls": [
-        "https://www.epa.gov/eg/ore-mining-and-dressing-effluent-guidelines"
+        "https://www.epa.gov/eg/ore-mining-and-dressing-effluent-guidelines",
+        "https://www.epa.gov/sites/default/files/2020-10/documents/c11s24.pdf"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "L02",
@@ -5325,20 +5397,21 @@
       "type": "processes",
       "industry": "mining",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#magnetic-separation-ore",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
-      "primaryAuthorityLinks": 1,
+      "sourceCount": 2,
+      "primaryAuthorityLinks": 2,
       "sourceUrls": [
-        "https://www.epa.gov/eg/ore-mining-and-dressing-effluent-guidelines"
+        "https://www.epa.gov/eg/ore-mining-and-dressing-effluent-guidelines",
+        "https://www.epa.gov/sites/default/files/2020-10/documents/c11s24.pdf"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "L02",
@@ -5435,7 +5508,7 @@
         "https://www.asnt.org/what-is-nondestructive-testing/methods"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -5443,9 +5516,9 @@
           "details": "Общие источники (R05); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -5469,7 +5542,7 @@
         "https://www.asnt.org/what-is-nondestructive-testing/methods"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -5477,9 +5550,9 @@
           "details": "Общие источники (R05); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -5503,7 +5576,7 @@
         "https://www.asnt.org/what-is-nondestructive-testing/methods"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -5511,9 +5584,9 @@
           "details": "Общие источники (R05); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -5537,7 +5610,7 @@
         "https://www.asnt.org/what-is-nondestructive-testing/methods"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -5545,9 +5618,9 @@
           "details": "Общие источники (R05); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -5571,7 +5644,7 @@
         "https://www.asnt.org/what-is-nondestructive-testing/methods"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -5579,9 +5652,9 @@
           "details": "Общие источники (R05); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -5605,7 +5678,7 @@
         "https://www.asnt.org/what-is-nondestructive-testing/methods"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -5613,9 +5686,9 @@
           "details": "Общие источники (R05); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -5639,7 +5712,7 @@
         "https://www.asnt.org/what-is-nondestructive-testing/methods"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -5647,9 +5720,14 @@
           "details": "Общие источники (R05); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
+        },
+        {
+          "code": "L02",
+          "level": "P2",
+          "details": "Нет конкретных материалов: не добавлять неподтверждённых связей"
         },
         {
           "code": "T02",
@@ -5673,7 +5751,7 @@
         "https://www.asnt.org/what-is-nondestructive-testing/methods"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -5681,9 +5759,9 @@
           "details": "Общие источники (R05); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -5707,7 +5785,7 @@
         "https://www.asnt.org/what-is-nondestructive-testing/methods"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -5715,9 +5793,9 @@
           "details": "Общие источники (R05); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -5741,7 +5819,7 @@
         "https://www.asnt.org/what-is-nondestructive-testing/methods"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -5749,9 +5827,9 @@
           "details": "Общие источники (R05); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -5769,13 +5847,14 @@
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#laser-shearography",
       "priority": "P1",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
-      "primaryAuthorityLinks": 1,
+      "sourceCount": 2,
+      "primaryAuthorityLinks": 2,
       "sourceUrls": [
-        "https://www.asnt.org/what-is-nondestructive-testing/methods"
+        "https://www.asnt.org/what-is-nondestructive-testing/methods",
+        "https://www.asnt.org/what-is-nondestructive-testing/methods/laser-methods"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -5783,9 +5862,9 @@
           "details": "Общие источники (R05); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -5803,13 +5882,14 @@
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#phased-array-ut",
       "priority": "P1",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
-      "primaryAuthorityLinks": 1,
+      "sourceCount": 2,
+      "primaryAuthorityLinks": 2,
       "sourceUrls": [
-        "https://www.asnt.org/what-is-nondestructive-testing/methods"
+        "https://www.asnt.org/what-is-nondestructive-testing/methods",
+        "https://www.asnt.org/what-is-nondestructive-testing/methods/ultrasonic-testing"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -5817,9 +5897,9 @@
           "details": "Общие источники (R05); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -5893,20 +5973,21 @@
       "type": "processes",
       "industry": "metals",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#electron-beam-welding",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly"
+        "https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly",
+        "https://www.twi-global.com/what-we-do/research-and-technology/technologies/welding-joining-and-cutting/electron-beam-technology/in-chamber-electron-beam-welding"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -6009,7 +6090,7 @@
       "type": "processes",
       "industry": "polymers",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#compression-molding-plastics",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 1,
       "primaryAuthorityLinks": 1,
@@ -6017,17 +6098,12 @@
         "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
-        },
-        {
-          "code": "T02",
+          "code": "E02",
           "level": "P2",
-          "details": "Уточнить методы контроля и критерии дефектов"
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         }
       ],
       "nextAction": "Сверить «Компрессионное формование пластмасс»: входы/выходы, оборудование, порядок операций, возможные дефекты, контроль и применимые нормативные документы."
@@ -6096,7 +6172,7 @@
       "type": "processes",
       "industry": "polymers",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#polymer-transfer-molding",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 1,
       "primaryAuthorityLinks": 1,
@@ -6104,12 +6180,17 @@
         "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
+        },
+        {
+          "code": "L02",
+          "level": "P2",
+          "details": "Нет конкретных материалов: не добавлять неподтверждённых связей"
         },
         {
           "code": "T02",
@@ -6125,7 +6206,7 @@
       "type": "processes",
       "industry": "polymers",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#rubber-vulcanization",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 1,
       "primaryAuthorityLinks": 1,
@@ -6133,12 +6214,17 @@
         "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
+        },
+        {
+          "code": "L02",
+          "level": "P2",
+          "details": "Нет конкретных материалов: не добавлять неподтверждённых связей"
         },
         {
           "code": "T02",
@@ -6219,13 +6305,14 @@
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#mercerization",
       "priority": "P1",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 1,
       "sourceUrls": [
-        "https://www.osha.gov/data/sic-manual/major-group-22"
+        "https://www.osha.gov/data/sic-manual/major-group-22",
+        "https://cottonworks.com/wp-content/uploads/2018/01/Dyeing_Booklet.pdf"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -6233,9 +6320,9 @@
           "details": "Общие источники (R04); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -6253,13 +6340,14 @@
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#heat-setting-textiles",
       "priority": "P1",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 1,
       "sourceUrls": [
-        "https://www.osha.gov/data/sic-manual/major-group-22"
+        "https://www.osha.gov/data/sic-manual/major-group-22",
+        "https://cottonworks.com/wp-content/uploads/2018/01/Dyeing_Booklet.pdf"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -6267,9 +6355,9 @@
           "details": "Общие источники (R04); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T02",
@@ -6591,20 +6679,21 @@
       "type": "processes",
       "industry": "pharma",
       "page": "https://vremennobeznika.github.io/enjigirling/processes.html#fluid-bed-pharma-drying",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 1,
       "sourceUrls": [
-        "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"
+        "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093",
+        "https://www.gea.com/en/products/dryers-particle-processing/fluid-beds/fluid-bed-processors/"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "L02",
@@ -6764,20 +6853,21 @@
         "general"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#steel-20",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 1,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/iron-and-steel-statistics-and-information"
+        "https://www.usgs.gov/centers/national-minerals-information-center/iron-and-steel-statistics-and-information",
+        "https://mmk-metiz.ru/buyers/product/gost/gost1050-2013.pdf"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         }
       ],
       "nextAction": "Сверить «Сталь 20»: проверить марку, состав, состояние, стандарт полуфабриката и паспорт партии; найти точный первоисточник вместо одного общего каталога."
@@ -6791,20 +6881,21 @@
         "general"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#steel-45",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 1,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/iron-and-steel-statistics-and-information"
+        "https://www.usgs.gov/centers/national-minerals-information-center/iron-and-steel-statistics-and-information",
+        "https://mmk-metiz.ru/buyers/product/gost/gost1050-2013.pdf"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T03",
@@ -6879,20 +6970,21 @@
         "construction"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#al-6061",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.aluminum.org/standards"
+        "https://www.aluminum.org/standards",
+        "https://www.hydro.com/en/global/aluminium/products/extruded-profiles/alloys-for-extruded-profiles/6061-alloy/"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T03",
@@ -7069,20 +7161,21 @@
         "construction"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#birch-plywood",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
-      "primaryAuthorityLinks": 1,
+      "sourceCount": 2,
+      "primaryAuthorityLinks": 2,
       "sourceUrls": [
-        "https://research.fs.usda.gov/fpl/wood-handbook"
+        "https://research.fs.usda.gov/fpl/wood-handbook",
+        "https://research.fs.usda.gov/download/treesearch/62258.pdf"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         }
       ],
       "nextAction": "Сверить «Берёзовая фанера»: проверить полимер/волокно, рецептуру, физические свойства и ограничения марки; найти точный первоисточник вместо одного общего каталога."
@@ -7221,7 +7314,7 @@
         "textiles"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#cotton-yarn",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 1,
       "primaryAuthorityLinks": 0,
@@ -7229,12 +7322,12 @@
         "https://cottonworks.com/learning-hub/yarn-manufacturing/yarn-spinning/"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T03",
@@ -7284,20 +7377,21 @@
         "construction"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#timber",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
-      "primaryAuthorityLinks": 1,
+      "sourceCount": 2,
+      "primaryAuthorityLinks": 2,
       "sourceUrls": [
-        "https://research.fs.usda.gov/fpl/wood-handbook"
+        "https://research.fs.usda.gov/fpl/wood-handbook",
+        "https://research.fs.usda.gov/download/treesearch/62243.pdf"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T03",
@@ -7374,20 +7468,21 @@
         "construction"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#al-6063",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.aluminum.org/standards"
+        "https://www.aluminum.org/standards",
+        "https://www.hydro.com/en/global/aluminium/products/extruded-profiles/alloys-for-extruded-profiles/6063-alloy/"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T03",
@@ -7538,20 +7633,21 @@
         "ceramics"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#cement-portland",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
-      "primaryAuthorityLinks": 1,
+      "sourceCount": 2,
+      "primaryAuthorityLinks": 2,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information"
+        "https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information",
+        "https://www.epa.gov/system/files/documents/2025-02/c11s06_final_2-2025_0.pdf"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T03",
@@ -7570,20 +7666,21 @@
         "construction"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#cement-clinker",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
-      "primaryAuthorityLinks": 1,
+      "sourceCount": 2,
+      "primaryAuthorityLinks": 2,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information"
+        "https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information",
+        "https://www.epa.gov/system/files/documents/2025-02/c11s06_final_2-2025_0.pdf"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T03",
@@ -7603,20 +7700,21 @@
         "mining"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#gypsum",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
-      "primaryAuthorityLinks": 1,
+      "sourceCount": 2,
+      "primaryAuthorityLinks": 2,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/gypsum-statistics-and-information"
+        "https://www.usgs.gov/centers/national-minerals-information-center/gypsum-statistics-and-information",
+        "https://www.epa.gov/system/files/documents/2025-02/c11s06_final_2-2025_0.pdf"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T03",
@@ -7885,25 +7983,21 @@
         "construction"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#adhesive",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.feica.eu/adhesives-sealants-industry/"
+        "https://www.feica.eu/adhesives-sealants-industry/",
+        "https://next.henkel-adhesives.com/fr/en/articles/3-reasons-to-use-single-side-adhesives.html"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
-        },
-        {
-          "code": "T03",
+          "code": "E02",
           "level": "P2",
-          "details": "Описание поверхностное; нужны инженерные различия и ограничения"
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         }
       ],
       "nextAction": "Сверить «Промышленные клеевые системы»: проверить рецептуру, совместимость, паспорт безопасности и рабочую среду; найти точный первоисточник вместо одного общего каталога."
@@ -7917,20 +8011,21 @@
         "construction"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#mdf",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
-      "primaryAuthorityLinks": 1,
+      "sourceCount": 2,
+      "primaryAuthorityLinks": 2,
       "sourceUrls": [
-        "https://research.fs.usda.gov/fpl/wood-handbook"
+        "https://research.fs.usda.gov/fpl/wood-handbook",
+        "https://research.fs.usda.gov/download/treesearch/62258.pdf"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T03",
@@ -7948,20 +8043,21 @@
         "ceramics"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#glass-raw",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
-      "primaryAuthorityLinks": 1,
+      "sourceCount": 2,
+      "primaryAuthorityLinks": 2,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/silica-statistics-and-information"
+        "https://www.usgs.gov/centers/national-minerals-information-center/silica-statistics-and-information",
+        "https://www.epa.gov/sites/default/files/2020-10/documents/c11s15.pdf"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T03",
@@ -8170,20 +8266,21 @@
         "metals"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#refractory-ceramics",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 1,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/bauxite-and-alumina-statistics-and-information?qt-science_support_page_related_con=0"
+        "https://www.usgs.gov/centers/national-minerals-information-center/bauxite-and-alumina-statistics-and-information?qt-science_support_page_related_con=0",
+        "https://www.bodycote.com/technical-glossary/"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T03",
@@ -9739,20 +9836,21 @@
         "textiles"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#knitted-fabric",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://cottonworks.com/learning-hub/"
+        "https://cottonworks.com/learning-hub/",
+        "https://cottonworks.com/learning-hub/knitting/knit-basics/"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T03",
@@ -9801,20 +9899,21 @@
         "textiles"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#warp-yarn",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://cottonworks.com/learning-hub/"
+        "https://cottonworks.com/learning-hub/",
+        "https://cottonworks.com/learning-hub/weaving/weaving-basics/"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         }
       ],
       "nextAction": "Сверить «Основная пряжа»: проверить полимер/волокно, рецептуру, физические свойства и ограничения марки; найти точный первоисточник вместо одного общего каталога."
@@ -9892,20 +9991,21 @@
         "construction"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#spruce-lumber",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
-      "primaryAuthorityLinks": 1,
+      "sourceCount": 2,
+      "primaryAuthorityLinks": 2,
       "sourceUrls": [
-        "https://research.fs.usda.gov/fpl/wood-handbook"
+        "https://research.fs.usda.gov/fpl/wood-handbook",
+        "https://research.fs.usda.gov/download/treesearch/62243.pdf"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T03",
@@ -9924,20 +10024,21 @@
         "construction"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#pine-lumber",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
-      "primaryAuthorityLinks": 1,
+      "sourceCount": 2,
+      "primaryAuthorityLinks": 2,
       "sourceUrls": [
-        "https://research.fs.usda.gov/fpl/wood-handbook"
+        "https://research.fs.usda.gov/fpl/wood-handbook",
+        "https://research.fs.usda.gov/download/treesearch/62243.pdf"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T03",
@@ -9987,20 +10088,21 @@
         "construction"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#osb-board",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
-      "primaryAuthorityLinks": 1,
+      "sourceCount": 2,
+      "primaryAuthorityLinks": 2,
       "sourceUrls": [
-        "https://research.fs.usda.gov/fpl/wood-handbook"
+        "https://research.fs.usda.gov/fpl/wood-handbook",
+        "https://research.fs.usda.gov/download/treesearch/62258.pdf"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "L03",
@@ -10019,20 +10121,21 @@
         "construction"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#particleboard",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
-      "primaryAuthorityLinks": 1,
+      "sourceCount": 2,
+      "primaryAuthorityLinks": 2,
       "sourceUrls": [
-        "https://research.fs.usda.gov/fpl/wood-handbook"
+        "https://research.fs.usda.gov/fpl/wood-handbook",
+        "https://research.fs.usda.gov/download/treesearch/62258.pdf"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "L03",
@@ -10056,20 +10159,21 @@
         "construction"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#glulam",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
-      "primaryAuthorityLinks": 1,
+      "sourceCount": 2,
+      "primaryAuthorityLinks": 2,
       "sourceUrls": [
-        "https://research.fs.usda.gov/fpl/wood-handbook"
+        "https://research.fs.usda.gov/fpl/wood-handbook",
+        "https://research.fs.usda.gov/download/treesearch/62258.pdf"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "L03",
@@ -10088,20 +10192,21 @@
         "construction"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#clt",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
-      "primaryAuthorityLinks": 1,
+      "sourceCount": 2,
+      "primaryAuthorityLinks": 2,
       "sourceUrls": [
-        "https://research.fs.usda.gov/fpl/wood-handbook"
+        "https://research.fs.usda.gov/fpl/wood-handbook",
+        "https://research.fs.usda.gov/download/treesearch/62258.pdf"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "L03",
@@ -10420,13 +10525,14 @@
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#soda-ash",
       "priority": "P1",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
-      "primaryAuthorityLinks": 1,
+      "sourceCount": 2,
+      "primaryAuthorityLinks": 2,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.epa.gov/sites/default/files/2020-10/documents/c11s15.pdf"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -10434,9 +10540,9 @@
           "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T03",
@@ -11111,13 +11217,14 @@
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#ready-mix-concrete",
       "priority": "P1",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 1,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.concrete.org/frequentlyaskedquestions.aspx?faqid=640"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -11125,9 +11232,9 @@
           "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         }
       ],
       "nextAction": "Сверить «Бетонная смесь товарная»: проверить состав матрицы, армирование, технологию отверждения и свойства готового изделия; найти точный первоисточник вместо одного общего каталога."
@@ -11394,7 +11501,7 @@
         "https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -11402,9 +11509,9 @@
           "details": "Общие источники (R08); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "L03",
@@ -11436,7 +11543,7 @@
         "https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -11444,9 +11551,9 @@
           "details": "Общие источники (R08); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T03",
@@ -11504,13 +11611,14 @@
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#coagulant-iron",
       "priority": "P1",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "primaryAuthorityLinks": 1,
       "sourceUrls": [
-        "https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"
+        "https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies",
+        "https://www.dwi.gov.uk/private-water-supplies/pws-installations/treatment-guide-2/physical-removal-of-contaminants/"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -11518,9 +11626,9 @@
           "details": "Общие источники (R08); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T03",
@@ -11652,13 +11760,14 @@
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#kaolin-industrial",
       "priority": "P1",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
-      "primaryAuthorityLinks": 1,
+      "sourceCount": 2,
+      "primaryAuthorityLinks": 2,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.epa.gov/system/files/documents/2025-06/c11s07_2025_final.pdf"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -11666,9 +11775,9 @@
           "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T03",
@@ -11688,13 +11797,14 @@
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#glass-cullet",
       "priority": "P1",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
-      "primaryAuthorityLinks": 1,
+      "sourceCount": 2,
+      "primaryAuthorityLinks": 2,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.epa.gov/sites/default/files/2020-10/documents/c11s15.pdf"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -11702,9 +11812,9 @@
           "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T03",
@@ -11725,13 +11835,14 @@
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#ceramic-glaze",
       "priority": "P1",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
-      "primaryAuthorityLinks": 1,
+      "sourceCount": 2,
+      "primaryAuthorityLinks": 2,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.epa.gov/system/files/documents/2025-06/c11s07_2025_final.pdf"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -11739,9 +11850,9 @@
           "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+          "code": "E02",
+          "level": "P2",
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         },
         {
           "code": "T03",
@@ -12426,13 +12537,14 @@
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#perlite-raw",
       "priority": "P1",
       "technicalVerification": "не завершена",
-      "sourceCount": 1,
-      "primaryAuthorityLinks": 1,
+      "sourceCount": 2,
+      "primaryAuthorityLinks": 2,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.usgs.gov/centers/national-minerals-information-center/perlite-statistics-and-information"
       ],
       "additionalRegistryUrls": [],
-      "claimCheckedInRegistry": 0,
+      "claimCheckedInRegistry": 1,
       "issues": [
         {
           "code": "S07",
@@ -12440,14 +12552,9 @@
           "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
         },
         {
-          "code": "E01",
-          "level": "P1",
-          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
-        },
-        {
-          "code": "T03",
+          "code": "E02",
           "level": "P2",
-          "details": "Описание поверхностное; нужны инженерные различия и ограничения"
+          "details": "Проверка отдельных тезисов не подтверждает всю карточку"
         }
       ],
       "nextAction": "Сверить «Перлит промышленный»: проверить минералогию, примеси, фракционный состав и стандарт сырья; найти точный первоисточник вместо одного общего каталога."

@@ -53,7 +53,7 @@ for(const x of processes){
  assert.equal(knowledgeMeta.verificationStatus,'requires_source_review',x.id+' misleading verified status');
  if(x.reviewStatus==='source_located'||x.evidence?.verificationStatus==='source_located'){
   assert.equal(x.evidence.verificationStatus,'source_located',x.id+' inconsistent source status');
-  assert.ok(evidence.get(x.id).some(y=>y.verificationStatus==='source_located'),x.id+' unlinked source');
+  assert.ok(evidence.get(x.id).some(y=>y.verificationStatus==='source_located'||(y.verificationStatus==='claim_checked'&&y.verifiedClaim&&y.sourceSection)),x.id+' unlinked source');
  }
 }
 for(const process of processes){

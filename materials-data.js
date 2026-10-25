@@ -23,13 +23,17 @@ window.engineeringMaterials = [
       {
         "title": "USGS — Iron and Steel Statistics and Information",
         "url": "https://www.usgs.gov/centers/national-minerals-information-center/iron-and-steel-statistics-and-information"
+      },
+      {
+        "title": "ГОСТ 1050–2013 — Металлопродукция из нелегированных конструкционных качественных и специальных сталей",
+        "url": "https://mmk-metiz.ru/buyers/product/gost/gost1050-2013.pdf"
       }
     ],
     "evidence": {
-      "verificationStatus": "context_only",
-      "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
-      "reviewScope": "USGS подтверждает общий класс чёрных металлов и процессы получения; конкретную марку Сталь 20, состав и свойства не подтверждает.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "partial_claim",
+      "verifiedClaim": "Сталь 20 включена в ГОСТ 1050–2013 как нелегированная конструкционная сталь; условия поставки различаются.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     }
   },
   {
@@ -57,13 +61,17 @@ window.engineeringMaterials = [
       {
         "title": "USGS — Iron and Steel Statistics and Information",
         "url": "https://www.usgs.gov/centers/national-minerals-information-center/iron-and-steel-statistics-and-information"
+      },
+      {
+        "title": "ГОСТ 1050–2013 — Металлопродукция из нелегированных конструкционных качественных и специальных сталей",
+        "url": "https://mmk-metiz.ru/buyers/product/gost/gost1050-2013.pdf"
       }
     ],
     "evidence": {
-      "verificationStatus": "context_only",
-      "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
-      "reviewScope": "Общие сведения о стали; ни марка Сталь 45, ни режимы термообработки источником не проверены.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "partial_claim",
+      "verifiedClaim": "Сталь 45 включена в ГОСТ 1050–2013 как нелегированная конструкционная сталь; условия поставки различаются.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     }
   },
   {
@@ -159,13 +167,17 @@ window.engineeringMaterials = [
       {
         "title": "The Aluminum Association — Standards and alloy series",
         "url": "https://www.aluminum.org/standards"
+      },
+      {
+        "title": "Hydro — 6061 alloy",
+        "url": "https://www.hydro.com/en/global/aluminium/products/extruded-profiles/alloys-for-extruded-profiles/6061-alloy/"
       }
     ],
     "evidence": {
-      "verificationStatus": "source_located",
-      "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
-      "reviewScope": "Подтверждены классификация и общее применение 6061; состояние термообработки и характеристики не проверены.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "partial_claim",
+      "verifiedClaim": "6061 — термоупрочняемый сплав серии 6xxx с магнием и кремнием; состояние поставки имеет значение.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     }
   },
   {
@@ -336,13 +348,17 @@ window.engineeringMaterials = [
       {
         "title": "USDA Forest Service — Wood Handbook (2021)",
         "url": "https://research.fs.usda.gov/fpl/wood-handbook"
+      },
+      {
+        "title": "USDA FPL-GTR-282 — Chapter 11: Wood-Based Composite Materials",
+        "url": "https://research.fs.usda.gov/download/treesearch/62258.pdf"
       }
     ],
     "evidence": {
-      "verificationStatus": "context_only",
-      "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
-      "reviewScope": "USDA описывает фанеру и древесные композиты; не подтверждены свойства берёзовой фанеры конкретного сорта.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "partial_claim",
+      "verifiedClaim": "Фанера — слоистая панель преимущественно из шпона; это определение класса, не паспорт берёзовой фанеры.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     }
   },
   {
@@ -480,10 +496,10 @@ window.engineeringMaterials = [
       }
     ],
     "evidence": {
-      "verificationStatus": "source_located",
-      "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
-      "reviewScope": "CottonWorks описывает прядение хлопка; качество отдельной партии пряжи не проверено.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "partial_claim",
+      "verifiedClaim": "Разные способы прядения дают различную структуру и прочность хлопковой пряжи.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     }
   },
   {
@@ -534,13 +550,17 @@ window.engineeringMaterials = [
       {
         "title": "USDA Forest Service — Wood Handbook (2021)",
         "url": "https://research.fs.usda.gov/fpl/wood-handbook"
+      },
+      {
+        "title": "USDA FPL-GTR-282 — Chapter 4: Moisture Relations and Physical Properties of Wood",
+        "url": "https://research.fs.usda.gov/download/treesearch/62243.pdf"
       }
     ],
     "evidence": {
-      "verificationStatus": "context_only",
-      "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
-      "reviewScope": "Подтверждены свойства древесины как класса; параметры сорта и влажности должны сверяться отдельно.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "partial_claim",
+      "verifiedClaim": "Изменение влажности влияет на свойства древесины; конкретный сорт и порода отдельно не аттестованы.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     }
   },
   {
@@ -619,13 +639,17 @@ window.engineeringMaterials = [
       {
         "title": "The Aluminum Association — Standards and alloy series",
         "url": "https://www.aluminum.org/standards"
+      },
+      {
+        "title": "Hydro — 6063 alloy",
+        "url": "https://www.hydro.com/en/global/aluminium/products/extruded-profiles/alloys-for-extruded-profiles/6063-alloy/"
       }
     ],
     "evidence": {
-      "verificationStatus": "source_located",
-      "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
-      "reviewScope": "Это подтверждение семейства 6xxx; конкретный состав и свойства 6063 по стандарту отдельно не сверены.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "partial_claim",
+      "verifiedClaim": "Сплав 6063 легирован магнием и кремнием и применяется для прессованных профилей.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     }
   },
   {
@@ -769,13 +793,17 @@ window.engineeringMaterials = [
       {
         "title": "USGS — Cement Statistics and Information",
         "url": "https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information"
+      },
+      {
+        "title": "EPA AP-42 11.6 — Portland Cement Manufacturing",
+        "url": "https://www.epa.gov/system/files/documents/2025-02/c11s06_final_2-2025_0.pdf"
       }
     ],
     "evidence": {
-      "verificationStatus": "source_located",
-      "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
-      "reviewScope": "Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "partial_claim",
+      "verifiedClaim": "Портландцемент получают помолом клинкера с добавлением гипса и при необходимости других компонентов.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     }
   },
   {
@@ -797,13 +825,17 @@ window.engineeringMaterials = [
       {
         "title": "USGS — Cement Statistics and Information",
         "url": "https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information"
+      },
+      {
+        "title": "EPA AP-42 11.6 — Portland Cement Manufacturing",
+        "url": "https://www.epa.gov/system/files/documents/2025-02/c11s06_final_2-2025_0.pdf"
       }
     ],
     "evidence": {
-      "verificationStatus": "source_located",
-      "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
-      "reviewScope": "Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "partial_claim",
+      "verifiedClaim": "Клинкер образуется при пиропереработке подготовленной сырьевой смеси.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     }
   },
   {
@@ -826,13 +858,17 @@ window.engineeringMaterials = [
       {
         "title": "USGS — Gypsum Statistics and Information",
         "url": "https://www.usgs.gov/centers/national-minerals-information-center/gypsum-statistics-and-information"
+      },
+      {
+        "title": "EPA AP-42 11.6 — Portland Cement Manufacturing",
+        "url": "https://www.epa.gov/system/files/documents/2025-02/c11s06_final_2-2025_0.pdf"
       }
     ],
     "evidence": {
-      "verificationStatus": "source_located",
-      "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
-      "reviewScope": "Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "partial_claim",
+      "verifiedClaim": "Гипс добавляют на стадии окончательного помола цемента.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     }
   },
   {
@@ -1043,7 +1079,7 @@ window.engineeringMaterials = [
     "name": "Промышленные клеевые системы",
     "group": "functional",
     "family": "Клеи и герметизирующие композиции",
-    "detail": "Многокомпонентные составы для соединения материалов, имеющие разные механизмы отверждения.",
+    "detail": "Клеевые составы для соединения материалов. Существуют одно- и многокомпонентные системы; механизм отверждения зависит от химии продукта.",
     "uses": "Сборка, строительные изделия, композиты",
     "process": [
       "assembly",
@@ -1060,13 +1096,17 @@ window.engineeringMaterials = [
       {
         "title": "FEICA — Adhesives and sealants industry",
         "url": "https://www.feica.eu/adhesives-sealants-industry/"
+      },
+      {
+        "title": "Henkel — Three reasons to use single-side PUR adhesives",
+        "url": "https://next.henkel-adhesives.com/fr/en/articles/3-reasons-to-use-single-side-adhesives.html"
       }
     ],
     "evidence": {
-      "verificationStatus": "source_located",
-      "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
-      "reviewScope": "Не проверены конкретные рецептуры и методы соединения.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "partial_claim",
+      "verifiedClaim": "Существуют однокомпонентные PUR-клеи, отверждаемые влагой.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     }
   },
   {
@@ -1089,13 +1129,17 @@ window.engineeringMaterials = [
       {
         "title": "USDA Forest Service — Wood Handbook (2021)",
         "url": "https://research.fs.usda.gov/fpl/wood-handbook"
+      },
+      {
+        "title": "USDA FPL-GTR-282 — Chapter 11: Wood-Based Composite Materials",
+        "url": "https://research.fs.usda.gov/download/treesearch/62258.pdf"
       }
     ],
     "evidence": {
-      "verificationStatus": "source_located",
-      "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
-      "reviewScope": "Точные характеристики конкретной плиты и соответствие стандарту не проверены.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "partial_claim",
+      "verifiedClaim": "MDF относится к древесноволокнистым плитам; плотность и связующее влияют на свойства.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     }
   },
   {
@@ -1117,13 +1161,17 @@ window.engineeringMaterials = [
       {
         "title": "USGS — Silica Statistics and Information",
         "url": "https://www.usgs.gov/centers/national-minerals-information-center/silica-statistics-and-information"
+      },
+      {
+        "title": "EPA AP-42 11.15 — Glass Manufacturing",
+        "url": "https://www.epa.gov/sites/default/files/2020-10/documents/c11s15.pdf"
       }
     ],
     "evidence": {
-      "verificationStatus": "source_located",
-      "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
-      "reviewScope": "Состав готовой стекольной шихты этим источником не подтверждён.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "partial_claim",
+      "verifiedClaim": "Шихта для натриево-кальциевого стекла включает несколько компонентов.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     }
   },
   {
@@ -1322,13 +1370,17 @@ window.engineeringMaterials = [
       {
         "title": "USGS — Bauxite and Alumina Statistics and Information",
         "url": "https://www.usgs.gov/centers/national-minerals-information-center/bauxite-and-alumina-statistics-and-information?qt-science_support_page_related_con=0"
+      },
+      {
+        "title": "Bodycote — Technical glossary",
+        "url": "https://www.bodycote.com/technical-glossary/"
       }
     ],
     "evidence": {
-      "verificationStatus": "source_located",
-      "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
-      "reviewScope": "Сведения относятся к сырьевой отрасли, а не к подтверждённым параметрам огнеупора.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "partial_claim",
+      "verifiedClaim": "Огнеупоры предназначены для высоких температур; среди примеров — оксид алюминия и кремнезём.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     }
   },
   {
@@ -2652,13 +2704,17 @@ window.engineeringMaterials = [
       {
         "title": "CottonWorks — Технологии производства хлопкового текстиля",
         "url": "https://cottonworks.com/learning-hub/"
+      },
+      {
+        "title": "CottonWorks — Knit Basics",
+        "url": "https://cottonworks.com/learning-hub/knitting/knit-basics/"
       }
     ],
     "evidence": {
-      "verificationStatus": "source_located",
-      "verifiedClaim": "Найден открытый источник по терминологии или технологическому классу. Индивидуальные свойства материала не подтверждены.",
-      "reviewScope": "Технические учебные ресурсы по производству хлопкового текстиля; применимость к другим волокнам и параметры конкретной ткани отдельно не проверены.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "partial_claim",
+      "verifiedClaim": "Структура и длина петли влияют на свойства трикотажного полотна.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     }
   },
   {
@@ -2707,13 +2763,17 @@ window.engineeringMaterials = [
       {
         "title": "CottonWorks — Технологии производства хлопкового текстиля",
         "url": "https://cottonworks.com/learning-hub/"
+      },
+      {
+        "title": "CottonWorks — Weaving Basics",
+        "url": "https://cottonworks.com/learning-hub/weaving/weaving-basics/"
       }
     ],
     "evidence": {
-      "verificationStatus": "source_located",
-      "verifiedClaim": "Найден открытый источник по терминологии или технологическому классу. Индивидуальные свойства материала не подтверждены.",
-      "reviewScope": "Технические учебные ресурсы по производству хлопкового текстиля; применимость к другим волокнам и параметры конкретной ткани отдельно не проверены.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "partial_claim",
+      "verifiedClaim": "Нити основы проходят вдоль ткани и испытывают натяжение и истирание при ткачестве.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     }
   },
   {
@@ -2792,13 +2852,17 @@ window.engineeringMaterials = [
       {
         "title": "USDA Forest Service — Wood Handbook, 2021",
         "url": "https://research.fs.usda.gov/fpl/wood-handbook"
+      },
+      {
+        "title": "USDA FPL-GTR-282 — Chapter 4: Moisture Relations and Physical Properties of Wood",
+        "url": "https://research.fs.usda.gov/download/treesearch/62243.pdf"
       }
     ],
     "evidence": {
-      "verificationStatus": "source_located",
-      "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
-      "reviewScope": "Обзор главы/книги по древесине, её влажности, обработке и инженерным древесным изделиям; физические свойства, сорта и нормативы продукции отдельно не проверены.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "partial_claim",
+      "verifiedClaim": "Изменение влажности влияет на свойства древесины; конкретный сорт и порода отдельно не аттестованы.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     }
   },
   {
@@ -2821,13 +2885,17 @@ window.engineeringMaterials = [
       {
         "title": "USDA Forest Service — Wood Handbook, 2021",
         "url": "https://research.fs.usda.gov/fpl/wood-handbook"
+      },
+      {
+        "title": "USDA FPL-GTR-282 — Chapter 4: Moisture Relations and Physical Properties of Wood",
+        "url": "https://research.fs.usda.gov/download/treesearch/62243.pdf"
       }
     ],
     "evidence": {
-      "verificationStatus": "source_located",
-      "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
-      "reviewScope": "Обзор главы/книги по древесине, её влажности, обработке и инженерным древесным изделиям; физические свойства, сорта и нормативы продукции отдельно не проверены.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "partial_claim",
+      "verifiedClaim": "Изменение влажности влияет на свойства древесины; конкретный сорт и порода отдельно не аттестованы.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     }
   },
   {
@@ -2875,13 +2943,17 @@ window.engineeringMaterials = [
       {
         "title": "USDA Forest Service — Wood Handbook, 2021",
         "url": "https://research.fs.usda.gov/fpl/wood-handbook"
+      },
+      {
+        "title": "USDA FPL-GTR-282 — Chapter 11: Wood-Based Composite Materials",
+        "url": "https://research.fs.usda.gov/download/treesearch/62258.pdf"
       }
     ],
     "evidence": {
-      "verificationStatus": "source_located",
-      "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
-      "reviewScope": "Обзор главы/книги по древесине, её влажности, обработке и инженерным древесным изделиям; физические свойства, сорта и нормативы продукции отдельно не проверены.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "partial_claim",
+      "verifiedClaim": "OSB получают из ориентированных древесных элементов со связующим.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     }
   },
   {
@@ -2901,13 +2973,17 @@ window.engineeringMaterials = [
       {
         "title": "USDA Forest Service — Wood Handbook, 2021",
         "url": "https://research.fs.usda.gov/fpl/wood-handbook"
+      },
+      {
+        "title": "USDA FPL-GTR-282 — Chapter 11: Wood-Based Composite Materials",
+        "url": "https://research.fs.usda.gov/download/treesearch/62258.pdf"
       }
     ],
     "evidence": {
-      "verificationStatus": "source_located",
-      "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
-      "reviewScope": "Обзор главы/книги по древесине, её влажности, обработке и инженерным древесным изделиям; физические свойства, сорта и нормативы продукции отдельно не проверены.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "partial_claim",
+      "verifiedClaim": "ДСП получают соединением древесных частиц клеем и прессованием.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     }
   },
   {
@@ -2927,13 +3003,17 @@ window.engineeringMaterials = [
       {
         "title": "USDA Forest Service — Wood Handbook, 2021",
         "url": "https://research.fs.usda.gov/fpl/wood-handbook"
+      },
+      {
+        "title": "USDA FPL-GTR-282 — Chapter 11: Wood-Based Composite Materials",
+        "url": "https://research.fs.usda.gov/download/treesearch/62258.pdf"
       }
     ],
     "evidence": {
-      "verificationStatus": "source_located",
-      "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
-      "reviewScope": "Обзор главы/книги по древесине, её влажности, обработке и инженерным древесным изделиям; физические свойства, сорта и нормативы продукции отдельно не проверены.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "partial_claim",
+      "verifiedClaim": "Клеёная древесина glulam состоит из склеенных слоёв с параллельным направлением волокон.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     }
   },
   {
@@ -2953,13 +3033,17 @@ window.engineeringMaterials = [
       {
         "title": "USDA Forest Service — Wood Handbook, 2021",
         "url": "https://research.fs.usda.gov/fpl/wood-handbook"
+      },
+      {
+        "title": "USDA FPL-GTR-282 — Chapter 11: Wood-Based Composite Materials",
+        "url": "https://research.fs.usda.gov/download/treesearch/62258.pdf"
       }
     ],
     "evidence": {
-      "verificationStatus": "source_located",
-      "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
-      "reviewScope": "Обзор главы/книги по древесине, её влажности, обработке и инженерным древесным изделиям; физические свойства, сорта и нормативы продукции отдельно не проверены.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "partial_claim",
+      "verifiedClaim": "В CLT соседние слои древесины располагаются с взаимно перпендикулярным направлением волокон.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     }
   },
   {
@@ -3236,13 +3320,17 @@ window.engineeringMaterials = [
       {
         "title": "USGS — Commodity Statistics and Information (2026)",
         "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+      },
+      {
+        "title": "EPA AP-42 11.15 — Glass Manufacturing",
+        "url": "https://www.epa.gov/sites/default/files/2020-10/documents/c11s15.pdf"
       }
     ],
     "evidence": {
-      "verificationStatus": "source_located",
-      "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
-      "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "partial_claim",
+      "verifiedClaim": "Кальцинированная сода используется как компонент стекольной шихты.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     }
   },
   {
@@ -3773,13 +3861,17 @@ window.engineeringMaterials = [
       {
         "title": "USGS — Commodity Statistics and Information (2026)",
         "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+      },
+      {
+        "title": "ACI — Definition of concrete, hydraulic cement, mortar, and grout",
+        "url": "https://www.concrete.org/frequentlyaskedquestions.aspx?faqid=640"
       }
     ],
     "evidence": {
-      "verificationStatus": "source_located",
-      "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
-      "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "partial_claim",
+      "verifiedClaim": "Бетонная смесь содержит цемент, заполнители и воду; возможны добавки.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     }
   },
   {
@@ -4001,10 +4093,10 @@ window.engineeringMaterials = [
       }
     ],
     "evidence": {
-      "verificationStatus": "source_located",
-      "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
-      "reviewScope": "Источник описывает классы адсорбентов, ионообменных материалов, фильтрации и мембран; не подтверждает характеристики, эффективность и сертификацию конкретного продукта.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "partial_claim",
+      "verifiedClaim": "Активированный оксид алюминия используется как адсорбционная загрузка; ёмкость зависит от загрязнителя и химии воды.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     }
   },
   {
@@ -4029,10 +4121,10 @@ window.engineeringMaterials = [
       }
     ],
     "evidence": {
-      "verificationStatus": "source_located",
-      "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
-      "reviewScope": "Источник описывает классы адсорбентов, ионообменных материалов, фильтрации и мембран; не подтверждает характеристики, эффективность и сертификацию конкретного продукта.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "partial_claim",
+      "verifiedClaim": "Гранулированный оксид железа применяется как сорбент; эффективность зависит от среды.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     }
   },
   {
@@ -4082,13 +4174,17 @@ window.engineeringMaterials = [
       {
         "title": "US EPA — Overview of Drinking Water Treatment Technologies",
         "url": "https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"
+      },
+      {
+        "title": "Drinking Water Inspectorate — Physical removal of contaminants",
+        "url": "https://www.dwi.gov.uk/private-water-supplies/pws-installations/treatment-guide-2/physical-removal-of-contaminants/"
       }
     ],
     "evidence": {
-      "verificationStatus": "source_located",
-      "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
-      "reviewScope": "Источник описывает классы адсорбентов, ионообменных материалов, фильтрации и мембран; не подтверждает характеристики, эффективность и сертификацию конкретного продукта.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "partial_claim",
+      "verifiedClaim": "Соли железа применяются как коагулянты; дозу и режим подбирают на испытаниях исходной воды.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     }
   },
   {
@@ -4194,13 +4290,17 @@ window.engineeringMaterials = [
       {
         "title": "USGS — Commodity Statistics and Information (2026)",
         "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+      },
+      {
+        "title": "EPA AP-42 11.7 — Ceramic Products Manufacturing",
+        "url": "https://www.epa.gov/system/files/documents/2025-06/c11s07_2025_final.pdf"
       }
     ],
     "evidence": {
-      "verificationStatus": "source_located",
-      "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
-      "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "partial_claim",
+      "verifiedClaim": "Каолин относится к коммерческому глинистому сырью для производства керамики.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     }
   },
   {
@@ -4221,13 +4321,17 @@ window.engineeringMaterials = [
       {
         "title": "USGS — Commodity Statistics and Information (2026)",
         "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+      },
+      {
+        "title": "EPA AP-42 11.15 — Glass Manufacturing",
+        "url": "https://www.epa.gov/sites/default/files/2020-10/documents/c11s15.pdf"
       }
     ],
     "evidence": {
-      "verificationStatus": "source_located",
-      "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
-      "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "partial_claim",
+      "verifiedClaim": "Стеклобой возвращают в шихту стекловарения.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     }
   },
   {
@@ -4249,13 +4353,17 @@ window.engineeringMaterials = [
       {
         "title": "USGS — Commodity Statistics and Information (2026)",
         "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+      },
+      {
+        "title": "EPA AP-42 11.7 — Ceramic Products Manufacturing",
+        "url": "https://www.epa.gov/system/files/documents/2025-06/c11s07_2025_final.pdf"
       }
     ],
     "evidence": {
-      "verificationStatus": "source_located",
-      "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
-      "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "partial_claim",
+      "verifiedClaim": "Глазурь образует покрытие керамики; сырьё и режим созревания зависят от состава.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     }
   },
   {
@@ -4297,7 +4405,7 @@ window.engineeringMaterials = [
     "process": [
       "tablet-compression"
     ],
-    "note": "Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.",
+    "note": "Точная идентификация вещества и формы; применимая фармакопейная монография; паспорт качества, чистота, влажность и совместимость с лекарственной формой.",
     "industries": [
       "pharma"
     ],
@@ -4324,7 +4432,7 @@ window.engineeringMaterials = [
     "process": [
       "pharma-powder-blending"
     ],
-    "note": "Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.",
+    "note": "Точная идентификация вещества и формы; применимая фармакопейная монография; паспорт качества, чистота, влажность и совместимость с лекарственной формой.",
     "industries": [
       "pharma",
       "food"
@@ -4352,7 +4460,7 @@ window.engineeringMaterials = [
     "process": [
       "capsule-filling"
     ],
-    "note": "Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.",
+    "note": "Точная идентификация вещества и формы; применимая фармакопейная монография; паспорт качества, чистота, влажность и совместимость с лекарственной формой.",
     "industries": [
       "pharma",
       "food"
@@ -4380,7 +4488,7 @@ window.engineeringMaterials = [
     "process": [
       "wet-granulation-pharma"
     ],
-    "note": "Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.",
+    "note": "Точная идентификация вещества и формы; применимая фармакопейная монография; паспорт качества, чистота, влажность и совместимость с лекарственной формой.",
     "industries": [
       "pharma",
       "chemicals"
@@ -4408,7 +4516,7 @@ window.engineeringMaterials = [
     "process": [
       "tablet-coating"
     ],
-    "note": "Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.",
+    "note": "Точная идентификация вещества и формы; применимая фармакопейная монография; паспорт качества, чистота, влажность и совместимость с лекарственной формой.",
     "industries": [
       "pharma"
     ],
@@ -4435,7 +4543,7 @@ window.engineeringMaterials = [
     "process": [
       "pharma-powder-blending"
     ],
-    "note": "Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.",
+    "note": "Точная идентификация вещества и формы; применимая фармакопейная монография; паспорт качества, чистота, влажность и совместимость с лекарственной формой.",
     "industries": [
       "pharma",
       "food"
@@ -4825,7 +4933,7 @@ window.engineeringMaterials = [
     "name": "Перлит промышленный",
     "group": "inorganic",
     "family": "Вулканическое минеральное сырьё",
-    "detail": "Пористое минеральное сырьё для технических изделий; свойства зависят от обработки.",
+    "detail": "Природное аморфное вулканическое стекло. При быстром нагреве сырьё вспучивается и превращается в лёгкий пористый материал; сырой и вспученный перлит следует различать.",
     "uses": "Строительные и фильтрующие изделия",
     "process": [
       "ore-screening"
@@ -4839,13 +4947,17 @@ window.engineeringMaterials = [
       {
         "title": "USGS — Commodity Statistics and Information (2026)",
         "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+      },
+      {
+        "title": "USGS — Perlite Statistics and Information",
+        "url": "https://www.usgs.gov/centers/national-minerals-information-center/perlite-statistics-and-information"
       }
     ],
     "evidence": {
-      "verificationStatus": "source_located",
-      "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
-      "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "partial_claim",
+      "verifiedClaim": "Перлит — вулканическое стекло; лёгкая пористая структура появляется при вспучивании.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     }
   },
   {

@@ -17,14 +17,20 @@ window.engineeringProcesses = [
       {
         "title": "ASNT — возможности и ограничения методов неразрушающего контроля",
         "url": "https://www.asnt.org/what-is-nondestructive-testing/methods"
+      },
+      {
+        "title": "Bodycote — Technical glossary",
+        "url": "https://www.bodycote.com/technical-glossary/"
       }
     ],
     "evidence": {
-      "verifiedClaim": "Объекты литейного производства могут контролироваться радиографическими методами на внутренние дефекты.",
-      "reviewScope": "Метод применим к отливкам; не подтверждены все виды дефектов и режимы литья.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Отливку получают заливкой расплава в форму и затвердеванием.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
-    "industry": "metals"
+    "industry": "metals",
+    "reviewStatus": "source_located"
   },
   {
     "id": "welding",
@@ -387,14 +393,20 @@ window.engineeringProcesses = [
       {
         "title": "OSHA — определения операций ковки и объёмной штамповки",
         "url": "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.211"
+      },
+      {
+        "title": "Bodycote — Technical glossary",
+        "url": "https://www.bodycote.com/technical-glossary/"
       }
     ],
     "evidence": {
-      "verifiedClaim": "Ковка относится к формообразованию посредством пластической деформации.",
-      "reviewScope": "Проверено только приведённое утверждение, не вся карточка.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Ковка формирует металл сжимающим усилием; применяются прессы и молоты.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
-    "industry": "metals"
+    "industry": "metals",
+    "reviewStatus": "source_located"
   },
   {
     "id": "rolling",
@@ -504,14 +516,20 @@ window.engineeringProcesses = [
       {
         "title": "NIST (2013) — обзор оценки устойчивости производственных процессов (общий контекст)",
         "url": "https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes"
+      },
+      {
+        "title": "EPA/310-R-05-003 — Profile of the Rubber and Plastics Industry, 2nd ed.",
+        "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT"
       }
     ],
     "evidence": {
-      "verifiedClaim": "Экструзия относится к процессам формообразования.",
-      "reviewScope": "Проверен только приведённый частный тезис, а не вся технологическая карточка.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Расплав непрерывно формуется через фильеру.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     },
-    "industry": "polymers"
+    "industry": "polymers",
+    "reviewStatus": "source_located"
   },
   {
     "id": "grinding",
@@ -655,11 +673,13 @@ window.engineeringProcesses = [
       }
     ],
     "evidence": {
-      "verifiedClaim": "Сушка уменьшает количество воды в пищевом продукте.",
-      "reviewScope": "Проверено только приведённое утверждение, не вся карточка.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Сушка удаляет воду и снижает активность воды; хранение зависит также от упаковки.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     },
-    "industry": "food"
+    "industry": "food",
+    "reviewStatus": "source_located"
   },
   {
     "id": "fermentation",
@@ -679,11 +699,13 @@ window.engineeringProcesses = [
       }
     ],
     "evidence": {
-      "verifiedClaim": "Ферментация применяется как один из способов консервирования пищевых продуктов.",
-      "reviewScope": "Проверено только приведённое утверждение, не вся карточка.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Пищевая ферментация включает преобразование субстратов микроорганизмами, например образование молочной кислоты.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     },
-    "industry": "food"
+    "industry": "food",
+    "reviewStatus": "source_located"
   },
   {
     "id": "food-packaging",
@@ -733,14 +755,20 @@ window.engineeringProcesses = [
       {
         "title": "OSHA — основные процессы текстильной промышленности",
         "url": "https://www.osha.gov/textiles"
+      },
+      {
+        "title": "CottonWorks — Yarn Spinning",
+        "url": "https://cottonworks.com/learning-hub/yarn-manufacturing/yarn-spinning/"
       }
     ],
     "evidence": {
-      "verifiedClaim": "Прядение является частью текстильного производства и изготовления пряжи.",
-      "reviewScope": "Проверено только приведённое утверждение, не вся карточка.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "source_located",
+      "verifiedClaim": "При прядении подготовленные хлопковые волокна формируются в пряжу с круткой.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
-    "industry": "textiles"
+    "industry": "textiles",
+    "reviewStatus": "source_located"
   },
   {
     "id": "weaving",
@@ -761,14 +789,20 @@ window.engineeringProcesses = [
       {
         "title": "OSHA — основные процессы текстильной промышленности",
         "url": "https://www.osha.gov/textiles"
+      },
+      {
+        "title": "CottonWorks — Weaving Basics",
+        "url": "https://cottonworks.com/learning-hub/weaving/weaving-basics/"
       }
     ],
     "evidence": {
-      "verifiedClaim": "Ткачество формирует тканые полотна из пряжи.",
-      "reviewScope": "Проверено только приведённое утверждение, не вся карточка.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Ткань формируется переплетением основы и утка.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
-    "industry": "textiles"
+    "industry": "textiles",
+    "reviewStatus": "source_located"
   },
   {
     "id": "knitting",
@@ -789,14 +823,20 @@ window.engineeringProcesses = [
       {
         "title": "OSHA — основные процессы текстильной промышленности",
         "url": "https://www.osha.gov/textiles"
+      },
+      {
+        "title": "CottonWorks — Knit Basics",
+        "url": "https://cottonworks.com/learning-hub/knitting/knit-basics/"
       }
     ],
     "evidence": {
-      "verifiedClaim": "Вязальные производства изготовляют трикотажные полотна.",
-      "reviewScope": "Проверено только приведённое утверждение, не вся карточка.",
-      "checkedAt": "2026-10-22"
+      "verificationStatus": "source_located",
+      "verifiedClaim": "Трикотаж образуется системой взаимосвязанных петель.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
-    "industry": "textiles"
+    "industry": "textiles",
+    "reviewStatus": "source_located"
   },
   {
     "id": "textile-finishing",
@@ -1049,13 +1089,17 @@ window.engineeringProcesses = [
       {
         "title": "NIST — технологии производства: обзор — общий контекст; не техкарта",
         "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
+      },
+      {
+        "title": "Sandvik Coromant — General turning",
+        "url": "https://www.sandvik.coromant.com/en-us/knowledge/general-turning"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
-      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "При точении вращается заготовка, а резание выполняет однолезвийный инструмент.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -1133,13 +1177,17 @@ window.engineeringProcesses = [
       {
         "title": "NIST — технологии производства: обзор — общий контекст; не техкарта",
         "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
+      },
+      {
+        "title": "Sandvik Coromant — Boring holes",
+        "url": "https://www.sandvik.coromant.com/en-us/knowledge/boring"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
-      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Растачивание увеличивает или улучшает уже существующее отверстие.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -1161,13 +1209,17 @@ window.engineeringProcesses = [
       {
         "title": "NIST — технологии производства: обзор — общий контекст; не техкарта",
         "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
+      },
+      {
+        "title": "Sandvik Coromant — Reaming",
+        "url": "https://www.sandvik.coromant.com/en-us/knowledge/reaming"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
-      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Развёртывание — чистовая обработка отверстия многолезвийным инструментом.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -1326,13 +1378,17 @@ window.engineeringProcesses = [
       {
         "title": "NIST — технологии производства: обзор — общий контекст; не техкарта",
         "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
+      },
+      {
+        "title": "Bodycote — Technical glossary",
+        "url": "https://www.bodycote.com/technical-glossary/"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
-      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Отжиг включает нагрев и последующее охлаждение для изменения состояния металла.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -1354,13 +1410,17 @@ window.engineeringProcesses = [
       {
         "title": "NIST — технологии производства: обзор — общий контекст; не техкарта",
         "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
+      },
+      {
+        "title": "Bodycote — Technical glossary",
+        "url": "https://www.bodycote.com/technical-glossary/"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
-      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Закалка стали включает ускоренное охлаждение после нагрева.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -1382,13 +1442,17 @@ window.engineeringProcesses = [
       {
         "title": "NIST — технологии производства: обзор — общий контекст; не техкарта",
         "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
+      },
+      {
+        "title": "Bodycote — Technical glossary",
+        "url": "https://www.bodycote.com/technical-glossary/"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
-      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Отпуск изменяет механические свойства стали после закалки.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -1410,13 +1474,17 @@ window.engineeringProcesses = [
       {
         "title": "NIST — технологии производства: обзор — общий контекст; не техкарта",
         "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies"
+      },
+      {
+        "title": "Bodycote — Technical glossary",
+        "url": "https://www.bodycote.com/technical-glossary/"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
-      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Индукционная закалка сочетает индукционный нагрев и последующее охлаждение.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -1562,7 +1630,7 @@ window.engineeringProcesses = [
     "name": "Высокотемпературная пайка",
     "industry": "metals",
     "category": "joining",
-    "description": "Соединение основного металла расплавленным припоем без расплавления основы.",
+    "description": "Соединение без расплавления основного металла с использованием припоя, температура плавления которого выше 450 °C.",
     "steps": "Очистка → сборка → нагрев → охлаждение → контроль",
     "checks": "Смачивание, поры, зазор",
     "materials": [
@@ -1578,9 +1646,9 @@ window.engineeringProcesses = [
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
-      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Высокотемпературная пайка использует припой выше 450 °C без плавления основы.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -1589,7 +1657,7 @@ window.engineeringProcesses = [
     "name": "Низкотемпературная пайка",
     "industry": "metals",
     "category": "joining",
-    "description": "Соединение деталей припойным металлом с более низкой температурой плавления.",
+    "description": "Соединение без расплавления основного металла с использованием припоя, температура плавления которого ниже 450 °C.",
     "steps": "Подготовка → пайка → очистка → проверка",
     "checks": "Смачивание, загрязнение, прочность",
     "materials": [
@@ -1605,9 +1673,9 @@ window.engineeringProcesses = [
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
-      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Низкотемпературная пайка использует припой ниже 450 °C без плавления основы.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -1630,9 +1698,9 @@ window.engineeringProcesses = [
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
-      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Порошковый слой сплавляется источником энергии, например лазером или электронным пучком.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -1655,9 +1723,9 @@ window.engineeringProcesses = [
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
-      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Материал подаётся и плавится направленным источником энергии.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -1680,9 +1748,9 @@ window.engineeringProcesses = [
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
-      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Порошковый материал соединяется выборочным нанесением связующего.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -1705,9 +1773,9 @@ window.engineeringProcesses = [
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
-      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Изделие формируется нанесением капель материала.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -1730,9 +1798,9 @@ window.engineeringProcesses = [
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
-      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Фотополимерная смола отверждается светом при последовательном построении.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -1755,9 +1823,9 @@ window.engineeringProcesses = [
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
-      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Экструдируемый материал укладывается послойно.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -1782,9 +1850,9 @@ window.engineeringProcesses = [
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
-      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Полое изделие формуется раздувом пластиковой заготовки.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -1809,9 +1877,9 @@ window.engineeringProcesses = [
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
-      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Полимер нагревается и распределяется по внутренней поверхности вращающейся формы.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -1836,9 +1904,9 @@ window.engineeringProcesses = [
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
-      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Нагретому листу придают форму давлением или вакуумом.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -1863,9 +1931,9 @@ window.engineeringProcesses = [
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
-      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Тонкая непрерывная плёнка получается между валками.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -1890,9 +1958,9 @@ window.engineeringProcesses = [
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
-      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Добавки смешивают с полимером для изменения свойств.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -1917,9 +1985,9 @@ window.engineeringProcesses = [
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Указан обзорный принцип операции; вся технологическая карточка не проверена.",
-      "reviewScope": "Источник описывает класс процессов или отрасль. Состав этапов, дефекты, применимость к марке и технологические параметры требуют отдельной сверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Вспенивание формирует ячеистую структуру полимера.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -2375,13 +2443,17 @@ window.engineeringProcesses = [
       {
         "title": "FAO — руководство по переработке фруктов и овощей — обзор; не технологическая инструкция",
         "url": "https://www.fao.org/4/x0209e/x0209e06.htm"
+      },
+      {
+        "title": "FAO — Freezing of fruits and vegetables, Chapter 1",
+        "url": "https://www.fao.org/4/y5979e/y5979e03.htm"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.",
-      "reviewScope": "Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Замораживание снижает температуру пищевого продукта с изменением его физического состояния.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -2427,13 +2499,17 @@ window.engineeringProcesses = [
       {
         "title": "FAO — руководство по переработке фруктов и овощей — обзор; не технологическая инструкция",
         "url": "https://www.fao.org/4/x0209e/x0209e06.htm"
+      },
+      {
+        "title": "GEA — Evaporation Technology",
+        "url": "https://www.gea.com/en/assets/170546/"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.",
-      "reviewScope": "Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Выпаривание удаляет часть воды или другого растворителя и повышает концентрацию продукта.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -2644,13 +2720,17 @@ window.engineeringProcesses = [
       {
         "title": "OSHA — классификация текстильных операций — обзор; не технологическая инструкция",
         "url": "https://www.osha.gov/data/sic-manual/major-group-22"
+      },
+      {
+        "title": "CottonWorks — Weaving Basics",
+        "url": "https://cottonworks.com/learning-hub/weaving/weaving-basics/"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.",
-      "reviewScope": "Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Снование объединяет нити в параллельную систему основы.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -2671,13 +2751,17 @@ window.engineeringProcesses = [
       {
         "title": "OSHA — классификация текстильных операций — обзор; не технологическая инструкция",
         "url": "https://www.osha.gov/data/sic-manual/major-group-22"
+      },
+      {
+        "title": "CottonWorks — Weaving Basics",
+        "url": "https://cottonworks.com/learning-hub/weaving/weaving-basics/"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.",
-      "reviewScope": "Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Шлихтование входит в подготовку основы к ткачеству.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -2886,13 +2970,17 @@ window.engineeringProcesses = [
       {
         "title": "DOE — технологии промышленного нагрева — обзор; не технологическая инструкция",
         "url": "https://www.energy.gov/cmei/ito/what-are-different-kinds-process-heating-systems"
+      },
+      {
+        "title": "GEA — Evaporation Technology",
+        "url": "https://www.gea.com/en/assets/170546/"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.",
-      "reviewScope": "Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Выпаривание удаляет часть воды или другого растворителя и повышает концентрацию продукта.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -2910,13 +2998,17 @@ window.engineeringProcesses = [
       {
         "title": "DOE — технологии промышленного нагрева — обзор; не технологическая инструкция",
         "url": "https://www.energy.gov/cmei/ito/what-are-different-kinds-process-heating-systems"
+      },
+      {
+        "title": "GEA — meVap Crystallization",
+        "url": "https://www.gea.com/en/products/evaporators-crystallizers/gea-mevap/gea-mevap-crystallization/"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.",
-      "reviewScope": "Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Пересыщение раствора вызывает образование и рост кристаллов; один из путей — испарение растворителя.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -2982,13 +3074,17 @@ window.engineeringProcesses = [
       {
         "title": "DOE — технологии промышленного нагрева — обзор; не технологическая инструкция",
         "url": "https://www.energy.gov/cmei/ito/what-are-different-kinds-process-heating-systems"
+      },
+      {
+        "title": "Alfa Laval — How centrifugal separation works",
+        "url": "https://www.alfalaval.com/products/separation/centrifugal-separators/separators/innovations/separator-innovator/how-separation-works/"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.",
-      "reviewScope": "Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Центрифуги разделяют твёрдую и жидкие фазы центробежным воздействием при различии плотностей.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -3073,7 +3169,7 @@ window.engineeringProcesses = [
     "steps": "Дозирование → перемешивание → доставка → контроль",
     "checks": "Однородность, удобоукладываемость, отклонения состава",
     "materials": [
-      "09g2s"
+      "ready-mix-concrete"
     ],
     "profession": "civil-engineer",
     "sources": [
@@ -3099,7 +3195,7 @@ window.engineeringProcesses = [
     "steps": "Подготовка захватки → укладка → уплотнение → уход → контроль",
     "checks": "Расслоение, пустоты, геометрия",
     "materials": [
-      "09g2s"
+      "ready-mix-concrete"
     ],
     "profession": "civil-engineer",
     "sources": [
@@ -3125,7 +3221,7 @@ window.engineeringProcesses = [
     "steps": "Подача смеси → виброуплотнение → осмотр поверхности",
     "checks": "Пустоты, расслоение, качество уплотнения",
     "materials": [
-      "09g2s"
+      "ready-mix-concrete"
     ],
     "profession": "civil-engineer",
     "sources": [
@@ -3151,7 +3247,7 @@ window.engineeringProcesses = [
     "steps": "Завершение укладки → поддержание условий твердения → контроль",
     "checks": "Температура, влажность, трещинообразование",
     "materials": [
-      "09g2s"
+      "ready-mix-concrete"
     ],
     "profession": "civil-engineer",
     "sources": [
@@ -3176,9 +3272,7 @@ window.engineeringProcesses = [
     "description": "Установка временной оснастки для задания формы монолитного бетона.",
     "steps": "Проверка чертежей → монтаж → закрепление → приёмка",
     "checks": "Устойчивость, геометрия, положение креплений",
-    "materials": [
-      "09g2s"
-    ],
+    "materials": [],
     "profession": "civil-engineer",
     "sources": [
       {
@@ -3202,9 +3296,7 @@ window.engineeringProcesses = [
     "description": "Размещение арматурных элементов по проекту до бетонирования.",
     "steps": "Проверка арматуры → установка фиксаторов → вязка или крепление → контроль",
     "checks": "Защитный слой, положение стержней, стыки",
-    "materials": [
-      "09g2s"
-    ],
+    "materials": [],
     "profession": "civil-engineer",
     "sources": [
       {
@@ -3228,9 +3320,7 @@ window.engineeringProcesses = [
     "description": "Соединение штучных каменных элементов в конструкцию согласно проекту.",
     "steps": "Подготовка основания → укладка элементов и раствора → контроль",
     "checks": "Перевязка, ровность, заполнение швов",
-    "materials": [
-      "09g2s"
-    ],
+    "materials": [],
     "profession": "civil-engineer",
     "sources": [
       {
@@ -3254,9 +3344,7 @@ window.engineeringProcesses = [
     "description": "Формирование слоя покрытия из горячей или холодной смеси с последующим уплотнением.",
     "steps": "Подготовка основания → укладка → уплотнение → проверка",
     "checks": "Плотность, ровность, толщина, температура",
-    "materials": [
-      "09g2s"
-    ],
+    "materials": [],
     "profession": "civil-engineer",
     "sources": [
       {
@@ -3280,9 +3368,7 @@ window.engineeringProcesses = [
     "description": "Введение закрепляющего состава в грунтовый массив по проекту.",
     "steps": "Обследование → инъектирование по проекту → испытания",
     "checks": "Распределение состава, проницаемость, смещения",
-    "materials": [
-      "09g2s"
-    ],
+    "materials": [],
     "profession": "civil-engineer",
     "sources": [
       {
@@ -3360,13 +3446,17 @@ window.engineeringProcesses = [
       {
         "title": "DOE — промышленные паровые системы — обзор; не технологическая инструкция",
         "url": "https://www.energy.gov/cmei/ito/steam-systems"
+      },
+      {
+        "title": "DOE — Return Condensate to the Boiler, Tip Sheet 8",
+        "url": "https://www.energy.gov/sites/prod/files/2014/05/f16/steam8_boiler.pdf"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.",
-      "reviewScope": "Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Конденсат возвращают в котёл для повторного использования воды и теплоты.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -3384,13 +3474,17 @@ window.engineeringProcesses = [
       {
         "title": "DOE — промышленные паровые системы — обзор; не технологическая инструкция",
         "url": "https://www.energy.gov/cmei/ito/steam-systems"
+      },
+      {
+        "title": "DOE — Deaerators in Industrial Steam Systems, Tip Sheet 18",
+        "url": "https://www.energy.gov/sites/prod/files/2014/05/f16/steam18_steam_systems.pdf"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.",
-      "reviewScope": "Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Деаэратор удаляет растворённые газы из питательной воды котла.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -3408,13 +3502,17 @@ window.engineeringProcesses = [
       {
         "title": "DOE — промышленные паровые системы — обзор; не технологическая инструкция",
         "url": "https://www.energy.gov/cmei/ito/steam-systems"
+      },
+      {
+        "title": "DOE — Use Feedwater Economizers for Waste Heat Recovery, Tip Sheet 3",
+        "url": "https://www.energy.gov/sites/prod/files/2014/05/f16/steam3_recovery.pdf"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.",
-      "reviewScope": "Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Экономайзер передаёт теплоту дымовых газов поступающей питательной воде.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -3432,13 +3530,17 @@ window.engineeringProcesses = [
       {
         "title": "DOE — промышленные паровые системы — обзор; не технологическая инструкция",
         "url": "https://www.energy.gov/cmei/ito/steam-systems"
+      },
+      {
+        "title": "DOE — Inspect and Repair Steam Traps, Tip Sheet 1",
+        "url": "https://www.energy.gov/sites/prod/files/2014/05/f16/steam1_traps.pdf"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.",
-      "reviewScope": "Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Конденсатоотводчики проверяют на исправность и утечку рабочего пара.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -3504,13 +3606,17 @@ window.engineeringProcesses = [
       {
         "title": "EPA — обзор технологий очистки воды — обзор; не технологическая инструкция",
         "url": "https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"
+      },
+      {
+        "title": "Drinking Water Inspectorate — Physical removal of contaminants",
+        "url": "https://www.dwi.gov.uk/private-water-supplies/pws-installations/treatment-guide-2/physical-removal-of-contaminants/"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.",
-      "reviewScope": "Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Коагулянт помогает удалить мелкие взвешенные частицы; эффект зависит от химии воды, дозы и pH.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -3528,13 +3634,17 @@ window.engineeringProcesses = [
       {
         "title": "EPA — обзор технологий очистки воды — обзор; не технологическая инструкция",
         "url": "https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"
+      },
+      {
+        "title": "CDC — How Water Treatment Works",
+        "url": "https://www.cdc.gov/drinking-water/about/how-water-treatment-works.html"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.",
-      "reviewScope": "Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Мягкое перемешивание способствует образованию крупных хлопьев.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -3552,13 +3662,17 @@ window.engineeringProcesses = [
       {
         "title": "EPA — обзор технологий очистки воды — обзор; не технологическая инструкция",
         "url": "https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"
+      },
+      {
+        "title": "CDC — How Water Treatment Works",
+        "url": "https://www.cdc.gov/drinking-water/about/how-water-treatment-works.html"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.",
-      "reviewScope": "Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Более тяжёлые хлопья оседают под действием тяжести.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -3577,13 +3691,17 @@ window.engineeringProcesses = [
       {
         "title": "EPA — обзор технологий очистки воды — обзор; не технологическая инструкция",
         "url": "https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"
+      },
+      {
+        "title": "CDC — How Water Treatment Works",
+        "url": "https://www.cdc.gov/drinking-water/about/how-water-treatment-works.html"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.",
-      "reviewScope": "Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Воду пропускают через фильтры, в том числе песчаные и гравийные.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -3676,13 +3794,17 @@ window.engineeringProcesses = [
       {
         "title": "EPA — обзор технологий очистки воды — обзор; не технологическая инструкция",
         "url": "https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"
+      },
+      {
+        "title": "CDC — How Water Treatment Works",
+        "url": "https://www.cdc.gov/drinking-water/about/how-water-treatment-works.html"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.",
-      "reviewScope": "Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Ультрафильтрация использует мелкопористый барьер, пропускающий воду и малые растворённые компоненты.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -3743,20 +3865,24 @@ window.engineeringProcesses = [
     "steps": "Подготовка шихты → обжиг → охлаждение → контроль",
     "checks": "Минеральный состав, степень обжига, выбросы",
     "materials": [
-      "alumina"
+      "cement-clinker"
     ],
     "profession": "materials-engineer",
     "sources": [
       {
         "title": "EPA AP-42 — производство керамики, кирпича, цемента и стекла — обзор; не технологическая инструкция",
         "url": "https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0"
+      },
+      {
+        "title": "EPA AP-42 11.6 — Portland Cement Manufacturing",
+        "url": "https://www.epa.gov/system/files/documents/2025-02/c11s06_final_2-2025_0.pdf"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.",
-      "reviewScope": "Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Подготовленная минеральная смесь преобразуется в клинкер при обжиге.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -3776,13 +3902,17 @@ window.engineeringProcesses = [
       {
         "title": "EPA AP-42 — производство керамики, кирпича, цемента и стекла — обзор; не технологическая инструкция",
         "url": "https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0"
+      },
+      {
+        "title": "EPA AP-42 11.7 — Ceramic Products Manufacturing",
+        "url": "https://www.epa.gov/system/files/documents/2025-06/c11s07_2025_final.pdf"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.",
-      "reviewScope": "Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Кальцинация удаляет газообразные компоненты и изменяет состояние керамического сырья.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -3802,13 +3932,17 @@ window.engineeringProcesses = [
       {
         "title": "EPA AP-42 — производство керамики, кирпича, цемента и стекла — обзор; не технологическая инструкция",
         "url": "https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0"
+      },
+      {
+        "title": "EPA AP-42 11.7 — Ceramic Products Manufacturing",
+        "url": "https://www.epa.gov/system/files/documents/2025-06/c11s07_2025_final.pdf"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.",
-      "reviewScope": "Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Спекание термически уплотняет керамическую заготовку.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -3828,13 +3962,17 @@ window.engineeringProcesses = [
       {
         "title": "EPA AP-42 — производство керамики, кирпича, цемента и стекла — обзор; не технологическая инструкция",
         "url": "https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0"
+      },
+      {
+        "title": "EPA AP-42 11.7 — Ceramic Products Manufacturing",
+        "url": "https://www.epa.gov/system/files/documents/2025-06/c11s07_2025_final.pdf"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.",
-      "reviewScope": "Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Шликерное литьё использует керамическую суспензию и пористую форму.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -3854,13 +3992,17 @@ window.engineeringProcesses = [
       {
         "title": "EPA AP-42 — производство керамики, кирпича, цемента и стекла — обзор; не технологическая инструкция",
         "url": "https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0"
+      },
+      {
+        "title": "EPA AP-42 11.7 — Ceramic Products Manufacturing",
+        "url": "https://www.epa.gov/system/files/documents/2025-06/c11s07_2025_final.pdf"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.",
-      "reviewScope": "Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Сухое формование совмещает уплотнение и придание формы порошку.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -3873,20 +4015,24 @@ window.engineeringProcesses = [
     "steps": "Подготовка массы → экструзия → резка → сушка",
     "checks": "Геометрия, трещины, неоднородность",
     "materials": [
-      "alumina"
+      "fireclay-raw"
     ],
     "profession": "materials-engineer",
     "sources": [
       {
         "title": "EPA AP-42 — производство керамики, кирпича, цемента и стекла — обзор; не технологическая инструкция",
         "url": "https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0"
+      },
+      {
+        "title": "EPA AP-42 11.7 — Ceramic Products Manufacturing",
+        "url": "https://www.epa.gov/system/files/documents/2025-06/c11s07_2025_final.pdf"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.",
-      "reviewScope": "Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Экструзия применяется для конструкционных глиняных изделий.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -3899,20 +4045,24 @@ window.engineeringProcesses = [
     "steps": "Подготовка шихты → плавление → осветление → контроль",
     "checks": "Пузырьки, включения, состав",
     "materials": [
-      "alumina"
+      "glass-raw"
     ],
     "profession": "materials-engineer",
     "sources": [
       {
         "title": "EPA AP-42 — производство керамики, кирпича, цемента и стекла — обзор; не технологическая инструкция",
         "url": "https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0"
+      },
+      {
+        "title": "EPA AP-42 11.15 — Glass Manufacturing",
+        "url": "https://www.epa.gov/sites/default/files/2020-10/documents/c11s15.pdf"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.",
-      "reviewScope": "Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Подготовленная стекольная шихта расплавляется в печи.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -3924,21 +4074,23 @@ window.engineeringProcesses = [
     "description": "Управляемое охлаждение стекла для снижения остаточных напряжений.",
     "steps": "Подача изделия → отжиг → охлаждение → контроль",
     "checks": "Остаточные напряжения, коробление, трещины",
-    "materials": [
-      "alumina"
-    ],
+    "materials": [],
     "profession": "materials-engineer",
     "sources": [
       {
         "title": "EPA AP-42 — производство керамики, кирпича, цемента и стекла — обзор; не технологическая инструкция",
         "url": "https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0"
+      },
+      {
+        "title": "EPA AP-42 11.15 — Glass Manufacturing",
+        "url": "https://www.epa.gov/sites/default/files/2020-10/documents/c11s15.pdf"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.",
-      "reviewScope": "Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Отжиг применяется для снятия нежелательных напряжений в стекле.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -3956,13 +4108,17 @@ window.engineeringProcesses = [
       {
         "title": "FDA — контроль твёрдых лекарственных форм — обзор; не технологическая инструкция",
         "url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"
+      },
+      {
+        "title": "GEA — Fluid Bed Processing of Pharmaceuticals",
+        "url": "https://www.gea.com/en/products/dryers-particle-processing/fluid-beds/fluid-bed-processors/"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.",
-      "reviewScope": "Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Распыление жидкости в псевдоожиженный порошок формирует гранулы.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -4028,13 +4184,17 @@ window.engineeringProcesses = [
       {
         "title": "FDA — контроль твёрдых лекарственных форм — обзор; не технологическая инструкция",
         "url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"
+      },
+      {
+        "title": "GEA — Fluid Bed Processing of Pharmaceuticals",
+        "url": "https://www.gea.com/en/products/dryers-particle-processing/fluid-beds/fluid-bed-processors/"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.",
-      "reviewScope": "Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Псевдоожиженный слой применяется, в частности, для покрытия таблеток.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -4100,13 +4260,17 @@ window.engineeringProcesses = [
       {
         "title": "FDA — контроль твёрдых лекарственных форм — обзор; не технологическая инструкция",
         "url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"
+      },
+      {
+        "title": "GEA — Fluid Bed Processing of Pharmaceuticals",
+        "url": "https://www.gea.com/en/products/dryers-particle-processing/fluid-beds/fluid-bed-processors/"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.",
-      "reviewScope": "Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Распыление раствора или суспензии в тёплый воздух сопровождается сушкой продукта.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -4268,13 +4432,17 @@ window.engineeringProcesses = [
       {
         "title": "EPA — руда и обогащение: водоотведение, дробление и сортировка — обзор; не технологическая инструкция",
         "url": "https://www.epa.gov/eg/ore-mining-and-dressing-effluent-guidelines"
+      },
+      {
+        "title": "EPA AP-42 11.24 — Metallic Minerals Processing",
+        "url": "https://www.epa.gov/sites/default/files/2020-10/documents/c11s24.pdf"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.",
-      "reviewScope": "Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Дробление уменьшает крупность руды.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -4292,13 +4460,17 @@ window.engineeringProcesses = [
       {
         "title": "EPA — руда и обогащение: водоотведение, дробление и сортировка — обзор; не технологическая инструкция",
         "url": "https://www.epa.gov/eg/ore-mining-and-dressing-effluent-guidelines"
+      },
+      {
+        "title": "EPA AP-42 11.24 — Metallic Minerals Processing",
+        "url": "https://www.epa.gov/sites/default/files/2020-10/documents/c11s24.pdf"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.",
-      "reviewScope": "Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Измельчение уменьшает крупность руды, в том числе в шаровых и стержневых мельницах.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -4364,13 +4536,17 @@ window.engineeringProcesses = [
       {
         "title": "EPA — руда и обогащение: водоотведение, дробление и сортировка — обзор; не технологическая инструкция",
         "url": "https://www.epa.gov/eg/ore-mining-and-dressing-effluent-guidelines"
+      },
+      {
+        "title": "EPA AP-42 11.24 — Metallic Minerals Processing",
+        "url": "https://www.epa.gov/sites/default/files/2020-10/documents/c11s24.pdf"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Технологическая схема является обзорной редакционной моделью, не нормативно проверенной процедурой.",
-      "reviewScope": "Открыт официальный источник, подтверждающий отраслевую группу или существование операции; отдельные этапы, дефекты и применимость требуют независимого предметного аудита.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Магнитные методы применяются при обогащении части железистых и титансодержащих минералов.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -4444,9 +4620,9 @@ window.engineeringProcesses = [
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
-      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Магнитопорошковый контроль выявляет поверхностные и близкие к поверхности несплошности ферромагнетиков.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -4472,9 +4648,9 @@ window.engineeringProcesses = [
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
-      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Вихретоковый контроль использует электромагнитную индукцию в проводящих материалах.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -4500,9 +4676,9 @@ window.engineeringProcesses = [
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
-      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Визуальный контроль выполняется непосредственно или с оптическими средствами.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -4528,9 +4704,9 @@ window.engineeringProcesses = [
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
-      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Контроль герметичности включает методы перепада давления и индикаторного газа.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -4556,9 +4732,9 @@ window.engineeringProcesses = [
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
-      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Акустическая эмиссия регистрирует высвобождение энергии при изменениях нагруженного материала.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -4584,9 +4760,9 @@ window.engineeringProcesses = [
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
-      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Инфракрасный контроль выявляет температурные неоднородности.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -4599,10 +4775,7 @@ window.engineeringProcesses = [
     "description": "Зондирование подповерхностных объектов электромагнитными импульсами.",
     "steps": "Выбор трассы → зондирование → интерпретация профиля",
     "checks": "Влажность, глубина, разрешение, помехи",
-    "materials": [
-      "09g2s",
-      "steel-45"
-    ],
+    "materials": [],
     "profession": "materials-engineer",
     "sources": [
       {
@@ -4612,9 +4785,9 @@ window.engineeringProcesses = [
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
-      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Георадар использует радиолокационные импульсы для обследования подповерхностных объектов.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -4640,9 +4813,9 @@ window.engineeringProcesses = [
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
-      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Направленные ультразвуковые волны распространяются вдоль протяжённой конструкции.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -4668,9 +4841,9 @@ window.engineeringProcesses = [
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
-      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Метод регистрирует поле рассеяния около несплошностей намагниченной стали.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -4696,9 +4869,9 @@ window.engineeringProcesses = [
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
-      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Нейтронная радиография использует нейтроны для получения изображения объекта.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -4720,13 +4893,17 @@ window.engineeringProcesses = [
       {
         "title": "ASNT — каталог методов неразрушающего контроля — обзор без технологических режимов",
         "url": "https://www.asnt.org/what-is-nondestructive-testing/methods"
+      },
+      {
+        "title": "ASNT — Laser Testing Methods",
+        "url": "https://www.asnt.org/what-is-nondestructive-testing/methods/laser-methods"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
-      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Шерография выявляет изменения поверхности при приложенной нагрузке, в том числе у композитов и клеевых соединений.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -4748,13 +4925,17 @@ window.engineeringProcesses = [
       {
         "title": "ASNT — каталог методов неразрушающего контроля — обзор без технологических режимов",
         "url": "https://www.asnt.org/what-is-nondestructive-testing/methods"
+      },
+      {
+        "title": "ASNT — Ultrasonic Testing",
+        "url": "https://www.asnt.org/what-is-nondestructive-testing/methods/ultrasonic-testing"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
-      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Фазированная решётка использует несколько элементов для формирования и фокусировки ультразвукового пучка.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -4829,13 +5010,17 @@ window.engineeringProcesses = [
       {
         "title": "TWI — классификация процессов сварки и соединения — обзор без технологических режимов",
         "url": "https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly"
+      },
+      {
+        "title": "TWI — In-Chamber Electron Beam Welding",
+        "url": "https://www.twi-global.com/what-we-do/research-and-technology/technologies/welding-joining-and-cutting/electron-beam-technology/in-chamber-electron-beam-welding"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
-      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Электронно-лучевая сварка плавит материал сфокусированным потоком ускоренных электронов.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -4929,7 +5114,7 @@ window.engineeringProcesses = [
     "industry": "polymers",
     "description": "Формование материала сдавливанием в нагретой пресс-форме.",
     "steps": "Подготовка навески → прессование → охлаждение → контроль",
-    "checks": "Пустоты, облой, степень отверждения",
+    "checks": "Пустоты, облой, размеры; для реактопластов — степень отверждения, для термопластов — условия охлаждения.",
     "materials": [
       "pe-hd",
       "pa6"
@@ -4943,9 +5128,9 @@ window.engineeringProcesses = [
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
-      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Материал формуется нагревом и сдавливанием в полости формы.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -5012,10 +5197,7 @@ window.engineeringProcesses = [
     "description": "Заполнение формы подготовленным реактопластом из передаточной камеры.",
     "steps": "Подготовка сырья → передача в форму → отверждение → контроль",
     "checks": "Недолив, облой, время отверждения",
-    "materials": [
-      "pe-hd",
-      "pa6"
-    ],
+    "materials": [],
     "profession": "materials-engineer",
     "sources": [
       {
@@ -5025,9 +5207,9 @@ window.engineeringProcesses = [
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
-      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Материал перемещается из отдельной камеры в закрытую форму.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -5039,10 +5221,7 @@ window.engineeringProcesses = [
     "description": "Формирование связанной структуры эластомера в предусмотренном цикле.",
     "steps": "Подготовка смеси → вулканизация → охлаждение → испытания",
     "checks": "Степень вулканизации, твёрдость, трещины",
-    "materials": [
-      "pe-hd",
-      "pa6"
-    ],
+    "materials": [],
     "profession": "materials-engineer",
     "sources": [
       {
@@ -5052,9 +5231,9 @@ window.engineeringProcesses = [
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
-      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "При вулканизации формируются поперечные связи полимерных цепей.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -5130,13 +5309,17 @@ window.engineeringProcesses = [
       {
         "title": "OSHA — отраслевой каталог текстильных процессов — обзор без технологических режимов",
         "url": "https://www.osha.gov/data/sic-manual/major-group-22"
+      },
+      {
+        "title": "Cotton Incorporated — Textile Dyeing",
+        "url": "https://cottonworks.com/wp-content/uploads/2018/01/Dyeing_Booklet.pdf"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
-      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Мерсеризация обрабатывает хлопок щёлочью под натяжением и изменяет структуру волокон.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -5146,25 +5329,29 @@ window.engineeringProcesses = [
     "category": "treatment",
     "industry": "textiles",
     "parentId": "textile-finishing",
-    "description": "Тепловая стабилизация структуры подходящего волокнистого материала.",
+    "description": "Тепловая стабилизация текстиля с термопластичными волокнами, например полиэфирными или полиамидными. Чистый хлопок не термофиксируется этим механизмом.",
     "steps": "Подготовка → термообработка → охлаждение → испытания",
     "checks": "Усадка, деформации, цвет",
     "materials": [
-      "cotton",
-      "woven-fabric"
+      "polyester-fiber",
+      "polyamide-textile-yarn"
     ],
     "profession": "textile-engineer",
     "sources": [
       {
         "title": "OSHA — отраслевой каталог текстильных процессов — обзор без технологических режимов",
         "url": "https://www.osha.gov/data/sic-manual/major-group-22"
+      },
+      {
+        "title": "Cotton Incorporated — Textile Dyeing",
+        "url": "https://cottonworks.com/wp-content/uploads/2018/01/Dyeing_Booklet.pdf"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
-      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Термофиксация относится к термопластичным волокнам; чистый хлопок не термопластичен.",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },
@@ -5423,13 +5610,17 @@ window.engineeringProcesses = [
       {
         "title": "FDA — инспекционное руководство по производству твёрдых лекарственных форм — обзор без технологических режимов",
         "url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"
+      },
+      {
+        "title": "GEA — Fluid Bed Processing of Pharmaceuticals",
+        "url": "https://www.gea.com/en/products/dryers-particle-processing/fluid-beds/fluid-bed-processors/"
       }
     ],
     "evidence": {
       "verificationStatus": "source_located",
-      "verifiedClaim": "Обзорное описание отдельного метода, без независимо подтверждённой технологической карты.",
-      "reviewScope": "Открыта страница издателя о классе методов. Режимы, частные дефекты и применимость к изделию требуют отдельной проверки.",
-      "checkedAt": "2026-10-22"
+      "verifiedClaim": "Воздух проходит через распределитель и высушивает материал до заданной остаточной влажности.",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "checkedAt": "2026-10-25"
     },
     "reviewStatus": "source_located"
   },

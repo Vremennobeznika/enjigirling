@@ -3,7 +3,7 @@
   "language": "ru",
   "status": "editorial_relationships",
   "nodeCount": 431,
-  "edgeCount": 749,
+  "edgeCount": 737,
   "edges": [
     {
       "from": "material:steel-20",
@@ -2847,7 +2847,7 @@
     },
     {
       "from": "process:concrete-mixing",
-      "to": "material:09g2s",
+      "to": "material:ready-mix-concrete",
       "relation": "uses_material"
     },
     {
@@ -2857,7 +2857,7 @@
     },
     {
       "from": "process:concrete-placing",
-      "to": "material:09g2s",
+      "to": "material:ready-mix-concrete",
       "relation": "uses_material"
     },
     {
@@ -2867,7 +2867,7 @@
     },
     {
       "from": "process:concrete-vibration",
-      "to": "material:09g2s",
+      "to": "material:ready-mix-concrete",
       "relation": "uses_material"
     },
     {
@@ -2877,7 +2877,7 @@
     },
     {
       "from": "process:concrete-curing",
-      "to": "material:09g2s",
+      "to": "material:ready-mix-concrete",
       "relation": "uses_material"
     },
     {
@@ -2887,18 +2887,8 @@
     },
     {
       "from": "process:formwork-erection",
-      "to": "material:09g2s",
-      "relation": "uses_material"
-    },
-    {
-      "from": "process:formwork-erection",
       "to": "profession:civil-engineer",
       "relation": "associated_profession"
-    },
-    {
-      "from": "process:rebar-installation",
-      "to": "material:09g2s",
-      "relation": "uses_material"
     },
     {
       "from": "process:rebar-installation",
@@ -2907,28 +2897,13 @@
     },
     {
       "from": "process:masonry-works",
-      "to": "material:09g2s",
-      "relation": "uses_material"
-    },
-    {
-      "from": "process:masonry-works",
       "to": "profession:civil-engineer",
       "relation": "associated_profession"
     },
     {
       "from": "process:road-asphalt-placement",
-      "to": "material:09g2s",
-      "relation": "uses_material"
-    },
-    {
-      "from": "process:road-asphalt-placement",
       "to": "profession:civil-engineer",
       "relation": "associated_profession"
-    },
-    {
-      "from": "process:geotechnical-grouting",
-      "to": "material:09g2s",
-      "relation": "uses_material"
     },
     {
       "from": "process:geotechnical-grouting",
@@ -3027,7 +3002,7 @@
     },
     {
       "from": "process:cement-clinker-firing",
-      "to": "material:alumina",
+      "to": "material:cement-clinker",
       "relation": "uses_material"
     },
     {
@@ -3077,7 +3052,7 @@
     },
     {
       "from": "process:brick-extrusion",
-      "to": "material:alumina",
+      "to": "material:fireclay-raw",
       "relation": "uses_material"
     },
     {
@@ -3087,18 +3062,13 @@
     },
     {
       "from": "process:glass-melting",
-      "to": "material:alumina",
+      "to": "material:glass-raw",
       "relation": "uses_material"
     },
     {
       "from": "process:glass-melting",
       "to": "profession:materials-engineer",
       "relation": "associated_profession"
-    },
-    {
-      "from": "process:glass-annealing",
-      "to": "material:alumina",
-      "relation": "uses_material"
     },
     {
       "from": "process:glass-annealing",
@@ -3297,16 +3267,6 @@
     },
     {
       "from": "process:ground-penetrating-radar",
-      "to": "material:09g2s",
-      "relation": "uses_material"
-    },
-    {
-      "from": "process:ground-penetrating-radar",
-      "to": "material:steel-45",
-      "relation": "uses_material"
-    },
-    {
-      "from": "process:ground-penetrating-radar",
       "to": "profession:materials-engineer",
       "relation": "associated_profession"
     },
@@ -3522,28 +3482,8 @@
     },
     {
       "from": "process:polymer-transfer-molding",
-      "to": "material:pe-hd",
-      "relation": "uses_material"
-    },
-    {
-      "from": "process:polymer-transfer-molding",
-      "to": "material:pa6",
-      "relation": "uses_material"
-    },
-    {
-      "from": "process:polymer-transfer-molding",
       "to": "profession:materials-engineer",
       "relation": "associated_profession"
-    },
-    {
-      "from": "process:rubber-vulcanization",
-      "to": "material:pe-hd",
-      "relation": "uses_material"
-    },
-    {
-      "from": "process:rubber-vulcanization",
-      "to": "material:pa6",
-      "relation": "uses_material"
     },
     {
       "from": "process:rubber-vulcanization",
@@ -3597,12 +3537,12 @@
     },
     {
       "from": "process:heat-setting-textiles",
-      "to": "material:cotton",
+      "to": "material:polyester-fiber",
       "relation": "uses_material"
     },
     {
       "from": "process:heat-setting-textiles",
-      "to": "material:woven-fabric",
+      "to": "material:polyamide-textile-yarn",
       "relation": "uses_material"
     },
     {

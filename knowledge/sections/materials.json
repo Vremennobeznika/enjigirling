@@ -1,10 +1,13 @@
 {
-  "schemaVersion": "1.1",
+  "schemaVersion": "1.0",
   "sectionId": "materials",
-  "title": "Справочник материалов",
+  "title": "Инженерные материалы",
   "language": "ru",
-  "quality": "editorial_not_independently_verified",
   "url": "https://vremennobeznika.github.io/enjigirling/materials.html",
+  "quality": "editorial_not_independently_verified",
+  "sourceHtml": "materials.html",
+  "canonicalDataset": "knowledge/materials.json",
+  "staticPageText": "[ENJIGIRLING / ENGINEERING INDEX](https://vremennobeznika.github.io/enjigirling/index.html)[Для ИИ](https://vremennobeznika.github.io/enjigirling/ai.html?section=materials) ☾\nРазделы сайта\nКарьера\n[Профессии](https://vremennobeznika.github.io/enjigirling/index.html)\n[Сравнение](https://vremennobeznika.github.io/enjigirling/compare.html)\n[Обучение](https://vremennobeznika.github.io/enjigirling/map.html)\nТехнологии\n[Процессы](https://vremennobeznika.github.io/enjigirling/processes.html)\n[Материалы](https://vremennobeznika.github.io/enjigirling/materials.html)\nИнструменты\n[Калькуляторы инженера](https://vremennobeznika.github.io/enjigirling/calculator.html)\nБаза знаний\n[Словарь инженера](https://vremennobeznika.github.io/enjigirling/dictionary.html)\nСообщество\n[Календарь праздников](https://vremennobeznika.github.io/enjigirling/calendar.html)\n[Ресурсы сообщества 18+](https://vremennobeznika.github.io/enjigirling/resources.html)\nСПРАВОЧНИК / 03\n## Справочник материалов.\nГруппы материалов и области применения. Численные характеристики появятся только с указанием марки, состояния, единиц и проверяемого источника.\n### Единый поиск по технологиям\nНайдите материал или производственный процесс в обоих каталогах, не переключаясь между страницами.\nНазвание, применение, операция или дефект Введите не менее двух символов.\nКаталоги: [процессы](https://vremennobeznika.github.io/enjigirling/processes.html) · [материалы](https://vremennobeznika.github.io/enjigirling/materials.html)\nПоиск по материалам\nОтрасль Все отрасли Металлы и машиностроение Полимеры Пищевая промышленность Текстиль и швейное производство Деревообработка Электроника Химическое производство Межотраслевые процессы Композиты Строительство и дороги Энергетика и теплообмен Водоподготовка и очистка Керамика, цемент и стекло Фармацевтическое производство Полиграфия Горное производство\nКласс материала\nВсе классы Металлы и сплавы Органические и полимерные Неорганические Композиты Функциональные смеси и вещества\nСортировка По названию А — Я По названию Я — А По каталогу\nОдна карточка может относиться к нескольким отраслям. Связи с процессами — навигационные, а не технологический допуск. Численные свойства без марки, состояния и источника не приводятся.\nПакет для ИИ: процессы + материалы\nОдна отрасль — один файл с обоими каталогами. Можно скачать весь атлас без повторов или ZIP со всеми 16 отраслевыми пакетами. Источники и пределы проверки сохраняются.\nОтрасль пакета Выберите отрасль Все отрасли — целиком без дублей\nСостав файла Процессы + материалы Только процессы Только материалы\nMarkdown для чата\nJSON\nJSONL для базы\nКопировать\nZIP: все 16 отраслей\nВыберите отрасль.\nZIP создаётся прямо в браузере, без облака и платного сервиса. Для ИИ прикрепите Markdown или JSON; большие базы удобнее загружать по отраслям.\nЗдесь нет усреднённых значений прочности или плотности для целых классов материалов: такие цифры без конкретной марки и условий могут вводить в заблуждение.\n### Как проверить материал перед применением\nОдинаковое название группы ещё не означает одинаковых характеристик. До расчёта или выбора технологии зафиксируйте исходные условия.\n- Идентификация: точная марка, стандарт, состояние поставки и известная история обработки.\n- Условия работы: нагрузка, температура, среда, срок эксплуатации и необходимые свойства.\n- Доказательства: паспорт партии, протокол испытаний, актуальный документ и единицы измерения.\n- Технология: сопоставьте материал со связанными [производственными процессами](https://vremennobeznika.github.io/enjigirling/processes.html) и ограничениями производства.\nПример навигации: [сталь 20](https://vremennobeznika.github.io/enjigirling/materials.html#steel-20) → [обработка резанием](https://vremennobeznika.github.io/enjigirling/processes.html#cutting) → [инженер-металлург](https://vremennobeznika.github.io/enjigirling/index.html#profession=metallurgical-engineer). Связь в справочнике не подтверждает технологическую пригодность конкретной партии.\n[Скачать CSV-реестр проверки свойств материалов](https://vremennobeznika.github.io/enjigirling/templates/material-evidence-register.csv) · [Инструкция по заполнению](https://vremennobeznika.github.io/enjigirling/templates/README.md)\n",
   "recordsCount": 172,
   "records": [
     {
@@ -30,13 +33,22 @@
         {
           "title": "USGS — Iron and Steel Statistics and Information",
           "url": "https://www.usgs.gov/centers/national-minerals-information-center/iron-and-steel-statistics-and-information"
+        },
+        {
+          "title": "ГОСТ 1050–2013 — Металлопродукция из нелегированных конструкционных качественных и специальных сталей",
+          "url": "https://mmk-metiz.ru/buyers/product/gost/gost1050-2013.pdf"
         }
       ],
       "evidence": {
-        "verificationStatus": "context_only",
-        "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
-        "reviewScope": "USGS подтверждает общий класс чёрных металлов и процессы получения; конкретную марку Сталь 20, состав и свойства не подтверждает.",
-        "checkedAt": "2026-10-22"
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "Сталь 20 включена в ГОСТ 1050–2013 как нелегированная конструкционная сталь; условия поставки различаются.",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+        "checkedAt": "2026-10-25"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#steel-20"
       }
     },
     {
@@ -64,13 +76,22 @@
         {
           "title": "USGS — Iron and Steel Statistics and Information",
           "url": "https://www.usgs.gov/centers/national-minerals-information-center/iron-and-steel-statistics-and-information"
+        },
+        {
+          "title": "ГОСТ 1050–2013 — Металлопродукция из нелегированных конструкционных качественных и специальных сталей",
+          "url": "https://mmk-metiz.ru/buyers/product/gost/gost1050-2013.pdf"
         }
       ],
       "evidence": {
-        "verificationStatus": "context_only",
-        "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
-        "reviewScope": "Общие сведения о стали; ни марка Сталь 45, ни режимы термообработки источником не проверены.",
-        "checkedAt": "2026-10-22"
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "Сталь 45 включена в ГОСТ 1050–2013 как нелегированная конструкционная сталь; условия поставки различаются.",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+        "checkedAt": "2026-10-25"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#steel-45"
       }
     },
     {
@@ -104,6 +125,11 @@
         "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
         "reviewScope": "Общие сведения о сталях; свойства проката 09Г2С и применимость к конструкции требуют профильного стандарта.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#09g2s"
       }
     },
     {
@@ -139,6 +165,11 @@
         "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
         "reviewScope": "Источник описывает семейство аустенитных сталей и марку 304; не подтверждает параметры конкретной поставки и разрешённость контакта с пищей.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#aisi-304"
       }
     },
     {
@@ -166,13 +197,22 @@
         {
           "title": "The Aluminum Association — Standards and alloy series",
           "url": "https://www.aluminum.org/standards"
+        },
+        {
+          "title": "Hydro — 6061 alloy",
+          "url": "https://www.hydro.com/en/global/aluminium/products/extruded-profiles/alloys-for-extruded-profiles/6061-alloy/"
         }
       ],
       "evidence": {
-        "verificationStatus": "source_located",
-        "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
-        "reviewScope": "Подтверждены классификация и общее применение 6061; состояние термообработки и характеристики не проверены.",
-        "checkedAt": "2026-10-22"
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "6061 — термоупрочняемый сплав серии 6xxx с магнием и кремнием; состояние поставки имеет значение.",
+        "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+        "checkedAt": "2026-10-25"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#al-6061"
       }
     },
     {
@@ -202,6 +242,11 @@
         "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
         "reviewScope": "CDA подтверждает высокую электропроводность меди и промышленное применение; точная марка М1 и требования к партии не проверены.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#copper-m1"
       }
     },
     {
@@ -233,6 +278,11 @@
         "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
         "reviewScope": "ISO определяет сокращения полимеров; допуск для пищевого контакта или питьевой воды не подтверждён.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#pe-hd"
       }
     },
     {
@@ -264,6 +314,11 @@
         "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
         "reviewScope": "Подтверждена система сокращений полимеров, но не свойства конкретного PA6-компаунда.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#pa6"
       }
     },
     {
@@ -294,6 +349,11 @@
         "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
         "reviewScope": "ISO посвящён обозначениям армирующих материалов, а не прочности или пригодности стеклопластика.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#gfrp"
       }
     },
     {
@@ -322,6 +382,11 @@
         "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
         "reviewScope": "Источник описывает глинозём Al₂O₃ как промышленный продукт; не подтверждает свойства конкретной конструкционной керамики.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#alumina"
       }
     },
     {
@@ -343,13 +408,22 @@
         {
           "title": "USDA Forest Service — Wood Handbook (2021)",
           "url": "https://research.fs.usda.gov/fpl/wood-handbook"
+        },
+        {
+          "title": "USDA FPL-GTR-282 — Chapter 11: Wood-Based Composite Materials",
+          "url": "https://research.fs.usda.gov/download/treesearch/62258.pdf"
         }
       ],
       "evidence": {
-        "verificationStatus": "context_only",
-        "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
-        "reviewScope": "USDA описывает фанеру и древесные композиты; не подтверждены свойства берёзовой фанеры конкретного сорта.",
-        "checkedAt": "2026-10-22"
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "Фанера — слоистая панель преимущественно из шпона; это определение класса, не паспорт берёзовой фанеры.",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+        "checkedAt": "2026-10-25"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#birch-plywood"
       }
     },
     {
@@ -378,6 +452,11 @@
         "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
         "reviewScope": "ISO описывает общую номенклатуру химических волокон; свойства и тип арамидной ткани не проверены.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#aramid"
       }
     },
     {
@@ -408,6 +487,11 @@
         "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
         "reviewScope": "FAO подтверждает необходимость анализа опасностей первичного пищевого сырья, не качество конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#food-raw"
       }
     },
     {
@@ -436,6 +520,11 @@
         "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
         "reviewScope": "EFSA описывает научную оценку веществ и материалов, контактирующих с пищей, включая упаковку; не подтверждает безопасность конкретного изделия, разрешение или национальную применимость.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#food-pack"
       }
     },
     {
@@ -463,6 +552,11 @@
         "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
         "reviewScope": "USDA приводит показатели оценки хлопкового волокна; свойства конкретной партии здесь не подтверждены.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#cotton"
       }
     },
     {
@@ -483,14 +577,19 @@
       "sources": [
         {
           "title": "CottonWorks — Yarn Spinning",
-          "url": "https://cottonworks.com/learning-hub/yarn-manufacturing/yarn-spinning/?highlight=fiber%2Bquality"
+          "url": "https://cottonworks.com/learning-hub/yarn-manufacturing/yarn-spinning/"
         }
       ],
       "evidence": {
-        "verificationStatus": "source_located",
-        "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
-        "reviewScope": "CottonWorks описывает прядение хлопка; качество отдельной партии пряжи не проверено.",
-        "checkedAt": "2026-10-22"
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "Разные способы прядения дают различную структуру и прочность хлопковой пряжи.",
+        "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+        "checkedAt": "2026-10-25"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#cotton-yarn"
       }
     },
     {
@@ -519,6 +618,11 @@
         "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
         "reviewScope": "Источник описывает формирование тканого полотна; свойства конкретной ткани не проверены.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#woven-fabric"
       }
     },
     {
@@ -541,13 +645,22 @@
         {
           "title": "USDA Forest Service — Wood Handbook (2021)",
           "url": "https://research.fs.usda.gov/fpl/wood-handbook"
+        },
+        {
+          "title": "USDA FPL-GTR-282 — Chapter 4: Moisture Relations and Physical Properties of Wood",
+          "url": "https://research.fs.usda.gov/download/treesearch/62243.pdf"
         }
       ],
       "evidence": {
-        "verificationStatus": "context_only",
-        "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
-        "reviewScope": "Подтверждены свойства древесины как класса; параметры сорта и влажности должны сверяться отдельно.",
-        "checkedAt": "2026-10-22"
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "Изменение влажности влияет на свойства древесины; конкретный сорт и порода отдельно не аттестованы.",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+        "checkedAt": "2026-10-25"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#timber"
       }
     },
     {
@@ -576,6 +689,11 @@
         "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
         "reviewScope": "IPC-4101 описывает базовые ламинаты для плат; параметры конкретной печатной платы не проверены.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#pcb"
       }
     },
     {
@@ -605,6 +723,11 @@
         "verifiedClaim": "Найден источник по общему классу материала или терминологии.",
         "reviewScope": "Подтверждена спецификация класса электронных припоев; ссылка на старую редакцию, действующую редакцию требуется проверить.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#solder"
       }
     },
     {
@@ -626,13 +749,22 @@
         {
           "title": "The Aluminum Association — Standards and alloy series",
           "url": "https://www.aluminum.org/standards"
+        },
+        {
+          "title": "Hydro — 6063 alloy",
+          "url": "https://www.hydro.com/en/global/aluminium/products/extruded-profiles/alloys-for-extruded-profiles/6063-alloy/"
         }
       ],
       "evidence": {
-        "verificationStatus": "source_located",
-        "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
-        "reviewScope": "Это подтверждение семейства 6xxx; конкретный состав и свойства 6063 по стандарту отдельно не сверены.",
-        "checkedAt": "2026-10-22"
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "Сплав 6063 легирован магнием и кремнием и применяется для прессованных профилей.",
+        "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+        "checkedAt": "2026-10-25"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#al-6063"
       }
     },
     {
@@ -666,6 +798,11 @@
         "verifiedClaim": "Описана классификация аустенитных нержавеющих сталей.",
         "reviewScope": "Не проверяет стойкость выбранной марки в конкретной среде.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#stainless-austenitic"
       }
     },
     {
@@ -694,6 +831,11 @@
         "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
         "reviewScope": "Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#steel-scrap"
       }
     },
     {
@@ -724,6 +866,11 @@
         "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
         "reviewScope": "Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#iron-ore"
       }
     },
     {
@@ -754,6 +901,11 @@
         "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
         "reviewScope": "Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#bauxite-ore"
       }
     },
     {
@@ -776,13 +928,22 @@
         {
           "title": "USGS — Cement Statistics and Information",
           "url": "https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information"
+        },
+        {
+          "title": "EPA AP-42 11.6 — Portland Cement Manufacturing",
+          "url": "https://www.epa.gov/system/files/documents/2025-02/c11s06_final_2-2025_0.pdf"
         }
       ],
       "evidence": {
-        "verificationStatus": "source_located",
-        "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
-        "reviewScope": "Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.",
-        "checkedAt": "2026-10-22"
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "Портландцемент получают помолом клинкера с добавлением гипса и при необходимости других компонентов.",
+        "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+        "checkedAt": "2026-10-25"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#cement-portland"
       }
     },
     {
@@ -804,13 +965,22 @@
         {
           "title": "USGS — Cement Statistics and Information",
           "url": "https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information"
+        },
+        {
+          "title": "EPA AP-42 11.6 — Portland Cement Manufacturing",
+          "url": "https://www.epa.gov/system/files/documents/2025-02/c11s06_final_2-2025_0.pdf"
         }
       ],
       "evidence": {
-        "verificationStatus": "source_located",
-        "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
-        "reviewScope": "Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.",
-        "checkedAt": "2026-10-22"
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "Клинкер образуется при пиропереработке подготовленной сырьевой смеси.",
+        "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+        "checkedAt": "2026-10-25"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#cement-clinker"
       }
     },
     {
@@ -833,13 +1003,22 @@
         {
           "title": "USGS — Gypsum Statistics and Information",
           "url": "https://www.usgs.gov/centers/national-minerals-information-center/gypsum-statistics-and-information"
+        },
+        {
+          "title": "EPA AP-42 11.6 — Portland Cement Manufacturing",
+          "url": "https://www.epa.gov/system/files/documents/2025-02/c11s06_final_2-2025_0.pdf"
         }
       ],
       "evidence": {
-        "verificationStatus": "source_located",
-        "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
-        "reviewScope": "Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.",
-        "checkedAt": "2026-10-22"
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "Гипс добавляют на стадии окончательного помола цемента.",
+        "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+        "checkedAt": "2026-10-25"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#gypsum"
       }
     },
     {
@@ -871,6 +1050,11 @@
         "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
         "reviewScope": "Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#industrial-silica"
       }
     },
     {
@@ -899,6 +1083,11 @@
         "verifiedClaim": "EPA описывает гранулированный активированный уголь как адсорбционный материал.",
         "reviewScope": "Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#water-carbon"
       }
     },
     {
@@ -925,6 +1114,11 @@
         "verifiedClaim": "EPA описывает анионо- и катионообменные смолы для водоподготовки.",
         "reviewScope": "Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#water-resin"
       }
     },
     {
@@ -954,6 +1148,11 @@
         "verifiedClaim": "EPA относит обратный осмос к мембранным технологиям водоподготовки.",
         "reviewScope": "Проверен принцип мембранной сепарации; состав конкретной мембраны и рабочие параметры не подтверждены.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#ro-membrane"
       }
     },
     {
@@ -983,6 +1182,11 @@
         "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
         "reviewScope": "Документ об обозначениях не удостоверяет физические свойства, медицинскую или пищевую пригодность.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#polymer-pp"
       }
     },
     {
@@ -1013,6 +1217,11 @@
         "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
         "reviewScope": "Конкретная пригодность PET к применению и свойства данным источником не подтверждены.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#polymer-pet"
       }
     },
     {
@@ -1043,6 +1252,11 @@
         "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
         "reviewScope": "Подтверждена только номенклатура, не состав ПВХ-композиции.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#polymer-pvc"
       }
     },
     {
@@ -1050,7 +1264,7 @@
       "name": "Промышленные клеевые системы",
       "group": "functional",
       "family": "Клеи и герметизирующие композиции",
-      "detail": "Многокомпонентные составы для соединения материалов, имеющие разные механизмы отверждения.",
+      "detail": "Клеевые составы для соединения материалов. Существуют одно- и многокомпонентные системы; механизм отверждения зависит от химии продукта.",
       "uses": "Сборка, строительные изделия, композиты",
       "process": [
         "assembly",
@@ -1067,13 +1281,22 @@
         {
           "title": "FEICA — Adhesives and sealants industry",
           "url": "https://www.feica.eu/adhesives-sealants-industry/"
+        },
+        {
+          "title": "Henkel — Three reasons to use single-side PUR adhesives",
+          "url": "https://next.henkel-adhesives.com/fr/en/articles/3-reasons-to-use-single-side-adhesives.html"
         }
       ],
       "evidence": {
-        "verificationStatus": "source_located",
-        "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
-        "reviewScope": "Не проверены конкретные рецептуры и методы соединения.",
-        "checkedAt": "2026-10-22"
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "Существуют однокомпонентные PUR-клеи, отверждаемые влагой.",
+        "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+        "checkedAt": "2026-10-25"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#adhesive"
       }
     },
     {
@@ -1096,13 +1319,22 @@
         {
           "title": "USDA Forest Service — Wood Handbook (2021)",
           "url": "https://research.fs.usda.gov/fpl/wood-handbook"
+        },
+        {
+          "title": "USDA FPL-GTR-282 — Chapter 11: Wood-Based Composite Materials",
+          "url": "https://research.fs.usda.gov/download/treesearch/62258.pdf"
         }
       ],
       "evidence": {
-        "verificationStatus": "source_located",
-        "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
-        "reviewScope": "Точные характеристики конкретной плиты и соответствие стандарту не проверены.",
-        "checkedAt": "2026-10-22"
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "MDF относится к древесноволокнистым плитам; плотность и связующее влияют на свойства.",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+        "checkedAt": "2026-10-25"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#mdf"
       }
     },
     {
@@ -1124,13 +1356,22 @@
         {
           "title": "USGS — Silica Statistics and Information",
           "url": "https://www.usgs.gov/centers/national-minerals-information-center/silica-statistics-and-information"
+        },
+        {
+          "title": "EPA AP-42 11.15 — Glass Manufacturing",
+          "url": "https://www.epa.gov/sites/default/files/2020-10/documents/c11s15.pdf"
         }
       ],
       "evidence": {
-        "verificationStatus": "source_located",
-        "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
-        "reviewScope": "Состав готовой стекольной шихты этим источником не подтверждён.",
-        "checkedAt": "2026-10-22"
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "Шихта для натриево-кальциевого стекла включает несколько компонентов.",
+        "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+        "checkedAt": "2026-10-25"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#glass-raw"
       }
     },
     {
@@ -1160,6 +1401,11 @@
         "verifiedClaim": "FDA описывает классификацию вспомогательных ингредиентов в одобренных препаратах.",
         "reviewScope": "Это не разрешение любого ингредиента в любой лекарственной форме.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#pharma-excipients"
       }
     },
     {
@@ -1189,6 +1435,11 @@
         "verifiedClaim": "FDA разграничивает активные и неактивные ингредиенты.",
         "reviewScope": "Не подтверждено качество какой-либо АФС или разрешение на её применение.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#pharma-api"
       }
     },
     {
@@ -1219,6 +1470,11 @@
         "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
         "reviewScope": "Сведения об охране труда и терминологии не заменяют паспорт безопасности или технологический лист.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#printing-inks"
       }
     },
     {
@@ -1249,6 +1505,11 @@
         "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
         "reviewScope": "Точный состав и бумажные марки источником не подтверждены.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#printing-paper"
       }
     },
     {
@@ -1278,6 +1539,11 @@
         "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
         "reviewScope": "Источник описывает саржевые переплетения, применяемые для денима; состав и качество конкретной партии ткани не проверены.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#cotton-denim"
       }
     },
     {
@@ -1307,6 +1573,11 @@
         "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
         "reviewScope": "CDA подтверждает применение меди в электрических системах и низкие потери; пригодность конкретного полуфабриката к теплообменнику требует отдельного источника.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#energy-copper"
       }
     },
     {
@@ -1329,13 +1600,22 @@
         {
           "title": "USGS — Bauxite and Alumina Statistics and Information",
           "url": "https://www.usgs.gov/centers/national-minerals-information-center/bauxite-and-alumina-statistics-and-information?qt-science_support_page_related_con=0"
+        },
+        {
+          "title": "Bodycote — Technical glossary",
+          "url": "https://www.bodycote.com/technical-glossary/"
         }
       ],
       "evidence": {
-        "verificationStatus": "source_located",
-        "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
-        "reviewScope": "Сведения относятся к сырьевой отрасли, а не к подтверждённым параметрам огнеупора.",
-        "checkedAt": "2026-10-22"
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "Огнеупоры предназначены для высоких температур; среди примеров — оксид алюминия и кремнезём.",
+        "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+        "checkedAt": "2026-10-25"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#refractory-ceramics"
       }
     },
     {
@@ -1366,6 +1646,11 @@
         "verifiedClaim": "Источник найден по теме материала; частный технический тезис не подтверждён первичным документом в рамках текущего аудита.",
         "reviewScope": "Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#mining-quartz"
       }
     },
     {
@@ -1394,6 +1679,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "Источник различает аустенитную, ферритную, мартенситную и дуплексную группы нержавеющих сталей; не удостоверяет свойства отдельной марки/поставки.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#stainless-ferritic"
       }
     },
     {
@@ -1423,6 +1713,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "Источник различает аустенитную, ферритную, мартенситную и дуплексную группы нержавеющих сталей; не удостоверяет свойства отдельной марки/поставки.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#stainless-martensitic"
       }
     },
     {
@@ -1453,6 +1748,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "Источник различает аустенитную, ферритную, мартенситную и дуплексную группы нержавеющих сталей; не удостоверяет свойства отдельной марки/поставки.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#stainless-duplex"
       }
     },
     {
@@ -1482,6 +1782,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#al-series-5xxx"
       }
     },
     {
@@ -1511,6 +1816,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#al-series-7xxx"
       }
     },
     {
@@ -1539,6 +1849,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#cast-iron-gray"
       }
     },
     {
@@ -1567,6 +1882,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#cast-iron-ductile"
       }
     },
     {
@@ -1596,6 +1916,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#brass-alloys"
       }
     },
     {
@@ -1625,6 +1950,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#bronze-alloys"
       }
     },
     {
@@ -1654,6 +1984,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#titanium-industrial"
       }
     },
     {
@@ -1684,6 +2019,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#nickel-alloys"
       }
     },
     {
@@ -1712,6 +2052,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#zinc-diecast"
       }
     },
     {
@@ -1740,6 +2085,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#magnesium-alloys"
       }
     },
     {
@@ -1769,6 +2119,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#ldpe"
       }
     },
     {
@@ -1798,6 +2153,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#lldpe"
       }
     },
     {
@@ -1825,6 +2185,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#ps"
       }
     },
     {
@@ -1853,6 +2218,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#eps"
       }
     },
     {
@@ -1881,6 +2251,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#abs"
       }
     },
     {
@@ -1910,6 +2285,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#pc"
       }
     },
     {
@@ -1939,6 +2319,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#pmma"
       }
     },
     {
@@ -1968,6 +2353,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#pom"
       }
     },
     {
@@ -1996,6 +2386,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#pbt"
       }
     },
     {
@@ -2024,6 +2419,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#pps"
       }
     },
     {
@@ -2053,6 +2453,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#peek"
       }
     },
     {
@@ -2081,6 +2486,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#ptfe"
       }
     },
     {
@@ -2110,6 +2520,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#eva-polymer"
       }
     },
     {
@@ -2138,6 +2553,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#epdm"
       }
     },
     {
@@ -2166,6 +2586,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#sbr"
       }
     },
     {
@@ -2195,6 +2620,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#tpu"
       }
     },
     {
@@ -2222,6 +2652,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "FAO описывает риски безопасности сырья при первичном производстве, но не удостоверяет видовой состав, параметры и безопасность конкретного пищевого сырья или полуфабриката.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#grain-wheat"
       }
     },
     {
@@ -2249,6 +2684,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "FAO описывает риски безопасности сырья при первичном производстве, но не удостоверяет видовой состав, параметры и безопасность конкретного пищевого сырья или полуфабриката.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#wheat-flour"
       }
     },
     {
@@ -2277,6 +2717,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "FAO описывает риски безопасности сырья при первичном производстве, но не удостоверяет видовой состав, параметры и безопасность конкретного пищевого сырья или полуфабриката.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#vegetable-oils"
       }
     },
     {
@@ -2304,6 +2749,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "FAO описывает риски безопасности сырья при первичном производстве, но не удостоверяет видовой состав, параметры и безопасность конкретного пищевого сырья или полуфабриката.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#raw-milk"
       }
     },
     {
@@ -2331,6 +2781,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "FAO описывает риски безопасности сырья при первичном производстве, но не удостоверяет видовой состав, параметры и безопасность конкретного пищевого сырья или полуфабриката.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#milk-powder"
       }
     },
     {
@@ -2359,6 +2814,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "FAO описывает риски безопасности сырья при первичном производстве, но не удостоверяет видовой состав, параметры и безопасность конкретного пищевого сырья или полуфабриката.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#fruit-juice-base"
       }
     },
     {
@@ -2386,6 +2846,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "FAO описывает риски безопасности сырья при первичном производстве, но не удостоверяет видовой состав, параметры и безопасность конкретного пищевого сырья или полуфабриката.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#fruit-puree"
       }
     },
     {
@@ -2413,6 +2878,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "FAO описывает риски безопасности сырья при первичном производстве, но не удостоверяет видовой состав, параметры и безопасность конкретного пищевого сырья или полуфабриката.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#sugar-crystal"
       }
     },
     {
@@ -2440,6 +2910,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "FAO описывает риски безопасности сырья при первичном производстве, но не удостоверяет видовой состав, параметры и безопасность конкретного пищевого сырья или полуфабриката.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#yeast-food"
       }
     },
     {
@@ -2468,6 +2943,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "FAO описывает риски безопасности сырья при первичном производстве, но не удостоверяет видовой состав, параметры и безопасность конкретного пищевого сырья или полуфабриката.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#meat-raw"
       }
     },
     {
@@ -2496,6 +2976,11 @@
         "verifiedClaim": "Найден открытый источник по терминологии или технологическому классу. Индивидуальные свойства материала не подтверждены.",
         "reviewScope": "Официальное описание стандарта охватывает номенклатуру натуральных волокон; параметры конкретного волокна и марки не подтверждены.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#wool-fiber"
       }
     },
     {
@@ -2524,6 +3009,11 @@
         "verifiedClaim": "Найден открытый источник по терминологии или технологическому классу. Индивидуальные свойства материала не подтверждены.",
         "reviewScope": "Официальное описание стандарта охватывает номенклатуру натуральных волокон; параметры конкретного волокна и марки не подтверждены.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#flax-fiber"
       }
     },
     {
@@ -2553,6 +3043,11 @@
         "verifiedClaim": "Найден открытый источник по терминологии или технологическому классу. Индивидуальные свойства материала не подтверждены.",
         "reviewScope": "Официальная публикация определяет наименования химических волокон, а не их механические свойства и пригодность к производству.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#polyester-fiber"
       }
     },
     {
@@ -2582,6 +3077,11 @@
         "verifiedClaim": "Найден открытый источник по терминологии или технологическому классу. Индивидуальные свойства материала не подтверждены.",
         "reviewScope": "Официальная публикация определяет наименования химических волокон, а не их механические свойства и пригодность к производству.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#polyamide-textile-yarn"
       }
     },
     {
@@ -2610,6 +3110,11 @@
         "verifiedClaim": "Найден открытый источник по терминологии или технологическому классу. Индивидуальные свойства материала не подтверждены.",
         "reviewScope": "Официальная публикация определяет наименования химических волокон, а не их механические свойства и пригодность к производству.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#viscose-fiber"
       }
     },
     {
@@ -2638,6 +3143,11 @@
         "verifiedClaim": "Найден открытый источник по терминологии или технологическому классу. Индивидуальные свойства материала не подтверждены.",
         "reviewScope": "Технические учебные ресурсы по производству хлопкового текстиля; применимость к другим волокнам и параметры конкретной ткани отдельно не проверены.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#nonwoven-fabric"
       }
     },
     {
@@ -2659,13 +3169,22 @@
         {
           "title": "CottonWorks — Технологии производства хлопкового текстиля",
           "url": "https://cottonworks.com/learning-hub/"
+        },
+        {
+          "title": "CottonWorks — Knit Basics",
+          "url": "https://cottonworks.com/learning-hub/knitting/knit-basics/"
         }
       ],
       "evidence": {
-        "verificationStatus": "source_located",
-        "verifiedClaim": "Найден открытый источник по терминологии или технологическому классу. Индивидуальные свойства материала не подтверждены.",
-        "reviewScope": "Технические учебные ресурсы по производству хлопкового текстиля; применимость к другим волокнам и параметры конкретной ткани отдельно не проверены.",
-        "checkedAt": "2026-10-22"
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "Структура и длина петли влияют на свойства трикотажного полотна.",
+        "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+        "checkedAt": "2026-10-25"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#knitted-fabric"
       }
     },
     {
@@ -2693,6 +3212,11 @@
         "verifiedClaim": "Найден открытый источник по терминологии или технологическому классу. Индивидуальные свойства материала не подтверждены.",
         "reviewScope": "Технические учебные ресурсы по производству хлопкового текстиля; применимость к другим волокнам и параметры конкретной ткани отдельно не проверены.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#sewing-thread"
       }
     },
     {
@@ -2714,13 +3238,22 @@
         {
           "title": "CottonWorks — Технологии производства хлопкового текстиля",
           "url": "https://cottonworks.com/learning-hub/"
+        },
+        {
+          "title": "CottonWorks — Weaving Basics",
+          "url": "https://cottonworks.com/learning-hub/weaving/weaving-basics/"
         }
       ],
       "evidence": {
-        "verificationStatus": "source_located",
-        "verifiedClaim": "Найден открытый источник по терминологии или технологическому классу. Индивидуальные свойства материала не подтверждены.",
-        "reviewScope": "Технические учебные ресурсы по производству хлопкового текстиля; применимость к другим волокнам и параметры конкретной ткани отдельно не проверены.",
-        "checkedAt": "2026-10-22"
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "Нити основы проходят вдоль ткани и испытывают натяжение и истирание при ткачестве.",
+        "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+        "checkedAt": "2026-10-25"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#warp-yarn"
       }
     },
     {
@@ -2749,6 +3282,11 @@
         "verifiedClaim": "Найден открытый источник по терминологии или технологическому классу. Индивидуальные свойства материала не подтверждены.",
         "reviewScope": "Технические учебные ресурсы по производству хлопкового текстиля; применимость к другим волокнам и параметры конкретной ткани отдельно не проверены.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#technical-dye"
       }
     },
     {
@@ -2777,6 +3315,11 @@
         "verifiedClaim": "Найден открытый источник по терминологии или технологическому классу. Индивидуальные свойства материала не подтверждены.",
         "reviewScope": "Технические учебные ресурсы по производству хлопкового текстиля; применимость к другим волокнам и параметры конкретной ткани отдельно не проверены.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#technical-felt"
       }
     },
     {
@@ -2799,13 +3342,22 @@
         {
           "title": "USDA Forest Service — Wood Handbook, 2021",
           "url": "https://research.fs.usda.gov/fpl/wood-handbook"
+        },
+        {
+          "title": "USDA FPL-GTR-282 — Chapter 4: Moisture Relations and Physical Properties of Wood",
+          "url": "https://research.fs.usda.gov/download/treesearch/62243.pdf"
         }
       ],
       "evidence": {
-        "verificationStatus": "source_located",
-        "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
-        "reviewScope": "Обзор главы/книги по древесине, её влажности, обработке и инженерным древесным изделиям; физические свойства, сорта и нормативы продукции отдельно не проверены.",
-        "checkedAt": "2026-10-22"
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "Изменение влажности влияет на свойства древесины; конкретный сорт и порода отдельно не аттестованы.",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+        "checkedAt": "2026-10-25"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#spruce-lumber"
       }
     },
     {
@@ -2828,13 +3380,22 @@
         {
           "title": "USDA Forest Service — Wood Handbook, 2021",
           "url": "https://research.fs.usda.gov/fpl/wood-handbook"
+        },
+        {
+          "title": "USDA FPL-GTR-282 — Chapter 4: Moisture Relations and Physical Properties of Wood",
+          "url": "https://research.fs.usda.gov/download/treesearch/62243.pdf"
         }
       ],
       "evidence": {
-        "verificationStatus": "source_located",
-        "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
-        "reviewScope": "Обзор главы/книги по древесине, её влажности, обработке и инженерным древесным изделиям; физические свойства, сорта и нормативы продукции отдельно не проверены.",
-        "checkedAt": "2026-10-22"
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "Изменение влажности влияет на свойства древесины; конкретный сорт и порода отдельно не аттестованы.",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+        "checkedAt": "2026-10-25"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#pine-lumber"
       }
     },
     {
@@ -2863,6 +3424,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "Обзор главы/книги по древесине, её влажности, обработке и инженерным древесным изделиям; физические свойства, сорта и нормативы продукции отдельно не проверены.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#wood-veneer"
       }
     },
     {
@@ -2882,13 +3448,22 @@
         {
           "title": "USDA Forest Service — Wood Handbook, 2021",
           "url": "https://research.fs.usda.gov/fpl/wood-handbook"
+        },
+        {
+          "title": "USDA FPL-GTR-282 — Chapter 11: Wood-Based Composite Materials",
+          "url": "https://research.fs.usda.gov/download/treesearch/62258.pdf"
         }
       ],
       "evidence": {
-        "verificationStatus": "source_located",
-        "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
-        "reviewScope": "Обзор главы/книги по древесине, её влажности, обработке и инженерным древесным изделиям; физические свойства, сорта и нормативы продукции отдельно не проверены.",
-        "checkedAt": "2026-10-22"
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "OSB получают из ориентированных древесных элементов со связующим.",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+        "checkedAt": "2026-10-25"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#osb-board"
       }
     },
     {
@@ -2908,13 +3483,22 @@
         {
           "title": "USDA Forest Service — Wood Handbook, 2021",
           "url": "https://research.fs.usda.gov/fpl/wood-handbook"
+        },
+        {
+          "title": "USDA FPL-GTR-282 — Chapter 11: Wood-Based Composite Materials",
+          "url": "https://research.fs.usda.gov/download/treesearch/62258.pdf"
         }
       ],
       "evidence": {
-        "verificationStatus": "source_located",
-        "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
-        "reviewScope": "Обзор главы/книги по древесине, её влажности, обработке и инженерным древесным изделиям; физические свойства, сорта и нормативы продукции отдельно не проверены.",
-        "checkedAt": "2026-10-22"
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "ДСП получают соединением древесных частиц клеем и прессованием.",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+        "checkedAt": "2026-10-25"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#particleboard"
       }
     },
     {
@@ -2934,13 +3518,22 @@
         {
           "title": "USDA Forest Service — Wood Handbook, 2021",
           "url": "https://research.fs.usda.gov/fpl/wood-handbook"
+        },
+        {
+          "title": "USDA FPL-GTR-282 — Chapter 11: Wood-Based Composite Materials",
+          "url": "https://research.fs.usda.gov/download/treesearch/62258.pdf"
         }
       ],
       "evidence": {
-        "verificationStatus": "source_located",
-        "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
-        "reviewScope": "Обзор главы/книги по древесине, её влажности, обработке и инженерным древесным изделиям; физические свойства, сорта и нормативы продукции отдельно не проверены.",
-        "checkedAt": "2026-10-22"
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "Клеёная древесина glulam состоит из склеенных слоёв с параллельным направлением волокон.",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+        "checkedAt": "2026-10-25"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#glulam"
       }
     },
     {
@@ -2960,13 +3553,22 @@
         {
           "title": "USDA Forest Service — Wood Handbook, 2021",
           "url": "https://research.fs.usda.gov/fpl/wood-handbook"
+        },
+        {
+          "title": "USDA FPL-GTR-282 — Chapter 11: Wood-Based Composite Materials",
+          "url": "https://research.fs.usda.gov/download/treesearch/62258.pdf"
         }
       ],
       "evidence": {
-        "verificationStatus": "source_located",
-        "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
-        "reviewScope": "Обзор главы/книги по древесине, её влажности, обработке и инженерным древесным изделиям; физические свойства, сорта и нормативы продукции отдельно не проверены.",
-        "checkedAt": "2026-10-22"
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "В CLT соседние слои древесины располагаются с взаимно перпендикулярным направлением волокон.",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+        "checkedAt": "2026-10-25"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#clt"
       }
     },
     {
@@ -2995,6 +3597,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "Обзор главы/книги по древесине, её влажности, обработке и инженерным древесным изделиям; физические свойства, сорта и нормативы продукции отдельно не проверены.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#wood-impregnant"
       }
     },
     {
@@ -3021,6 +3628,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "IPC-4101 относится к основам плат (ламинатам и препрегам), но не удостоверяет соответствие неназванного материала или партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#pcb-prepreg"
       }
     },
     {
@@ -3049,6 +3661,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "IPC-4101 относится к основам плат (ламинатам и препрегам), но не удостоверяет соответствие неназванного материала или партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#pcb-laminate"
       }
     },
     {
@@ -3078,6 +3695,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "IPC-4101 относится к основам плат (ламинатам и препрегам), но не удостоверяет соответствие неназванного материала или партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#pcb-copper-foil"
       }
     },
     {
@@ -3107,6 +3729,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "Нормативный охват касается базовых материалов печатных плат, а не паяльных флюсов или покрытий; свойства последних отдельно не проверены.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#solder-paste"
       }
     },
     {
@@ -3136,6 +3763,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "Нормативный охват касается базовых материалов печатных плат, а не паяльных флюсов или покрытий; свойства последних отдельно не проверены.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#solder-flux"
       }
     },
     {
@@ -3164,6 +3796,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#electronic-encapsulant"
       }
     },
     {
@@ -3192,6 +3829,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "Нормативный охват касается базовых материалов печатных плат, а не паяльных флюсов или покрытий; свойства последних отдельно не проверены.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#conformal-coating-material"
       }
     },
     {
@@ -3221,6 +3863,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#lime-stone"
       }
     },
     {
@@ -3243,13 +3890,22 @@
         {
           "title": "USGS — Commodity Statistics and Information (2026)",
           "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+        },
+        {
+          "title": "EPA AP-42 11.15 — Glass Manufacturing",
+          "url": "https://www.epa.gov/sites/default/files/2020-10/documents/c11s15.pdf"
         }
       ],
       "evidence": {
-        "verificationStatus": "source_located",
-        "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
-        "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
-        "checkedAt": "2026-10-22"
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "Кальцинированная сода используется как компонент стекольной шихты.",
+        "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+        "checkedAt": "2026-10-25"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#soda-ash"
       }
     },
     {
@@ -3278,6 +3934,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#industrial-sulfur"
       }
     },
     {
@@ -3306,6 +3967,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#phosphate-rock"
       }
     },
     {
@@ -3334,6 +4000,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#potash-raw"
       }
     },
     {
@@ -3362,6 +4033,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#industrial-zeolite"
       }
     },
     {
@@ -3391,6 +4067,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#bentonite-clay"
       }
     },
     {
@@ -3419,6 +4100,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#industrial-salt"
       }
     },
     {
@@ -3448,6 +4134,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "ISO 1043-1 охватывает полимерную номенклатуру, но не свойства армированных композитов; для отдельных систем требуются данные по матрице, армированию и процессу.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#carbon-fiber-preform"
       }
     },
     {
@@ -3477,6 +4168,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "ISO 1043-1 охватывает полимерную номенклатуру, но не свойства армированных композитов; для отдельных систем требуются данные по матрице, армированию и процессу.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#carbon-fiber-laminate"
       }
     },
     {
@@ -3505,6 +4201,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "ISO 1043-1 охватывает полимерную номенклатуру, но не свойства армированных композитов; для отдельных систем требуются данные по матрице, армированию и процессу.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#composite-honeycomb"
       }
     },
     {
@@ -3534,6 +4235,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#composite-epoxy-resin"
       }
     },
     {
@@ -3561,6 +4267,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "ISO 1043-1 охватывает полимерную номенклатуру, но не свойства армированных композитов; для отдельных систем требуются данные по матрице, армированию и процессу.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#prepreg-composite"
       }
     },
     {
@@ -3590,6 +4301,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "ISO 1043-1 охватывает полимерную номенклатуру, но не свойства армированных композитов; для отдельных систем требуются данные по матрице, армированию и процессу.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#basalt-fiber"
       }
     },
     {
@@ -3618,6 +4334,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#building-aggregate"
       }
     },
     {
@@ -3647,6 +4368,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#crushed-stone"
       }
     },
     {
@@ -3675,6 +4401,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#sand-building"
       }
     },
     {
@@ -3703,6 +4434,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#asphalt-binder"
       }
     },
     {
@@ -3731,6 +4467,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#asphalt-mix"
       }
     },
     {
@@ -3759,6 +4500,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#rebar-steel"
       }
     },
     {
@@ -3780,13 +4526,22 @@
         {
           "title": "USGS — Commodity Statistics and Information (2026)",
           "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+        },
+        {
+          "title": "ACI — Definition of concrete, hydraulic cement, mortar, and grout",
+          "url": "https://www.concrete.org/frequentlyaskedquestions.aspx?faqid=640"
         }
       ],
       "evidence": {
-        "verificationStatus": "source_located",
-        "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
-        "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
-        "checkedAt": "2026-10-22"
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "Бетонная смесь содержит цемент, заполнители и воду; возможны добавки.",
+        "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+        "checkedAt": "2026-10-25"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#ready-mix-concrete"
       }
     },
     {
@@ -3815,6 +4570,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "Открыт официальный каталог стандарта ISO 1043-1:2011. Он регламентирует сокращения для базовых полимеров, но не содержит подтверждённых здесь свойств конкретной марки, рецептуры либо её допуска.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#geotextile"
       }
     },
     {
@@ -3845,6 +4605,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#electrical-steel"
       }
     },
     {
@@ -3873,6 +4638,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#graphite-electrode"
       }
     },
     {
@@ -3901,6 +4671,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#copper-electric-wire"
       }
     },
     {
@@ -3929,6 +4704,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#thermal-insulation-wool"
       }
     },
     {
@@ -3958,6 +4738,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "Источник различает аустенитную, ферритную, мартенситную и дуплексную группы нержавеющих сталей; не удостоверяет свойства отдельной марки/поставки.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#heat-exchanger-steel"
       }
     },
     {
@@ -3986,6 +4771,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "Источник описывает классы адсорбентов, ионообменных материалов, фильтрации и мембран; не подтверждает характеристики, эффективность и сертификацию конкретного продукта.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#uf-membrane"
       }
     },
     {
@@ -4008,10 +4798,15 @@
         }
       ],
       "evidence": {
-        "verificationStatus": "source_located",
-        "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
-        "reviewScope": "Источник описывает классы адсорбентов, ионообменных материалов, фильтрации и мембран; не подтверждает характеристики, эффективность и сертификацию конкретного продукта.",
-        "checkedAt": "2026-10-22"
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "Активированный оксид алюминия используется как адсорбционная загрузка; ёмкость зависит от загрязнителя и химии воды.",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+        "checkedAt": "2026-10-25"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#activated-alumina-adsorbent"
       }
     },
     {
@@ -4036,10 +4831,15 @@
         }
       ],
       "evidence": {
-        "verificationStatus": "source_located",
-        "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
-        "reviewScope": "Источник описывает классы адсорбентов, ионообменных материалов, фильтрации и мембран; не подтверждает характеристики, эффективность и сертификацию конкретного продукта.",
-        "checkedAt": "2026-10-22"
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "Гранулированный оксид железа применяется как сорбент; эффективность зависит от среды.",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+        "checkedAt": "2026-10-25"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#ferric-oxide-media"
       }
     },
     {
@@ -4068,6 +4868,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "Источник описывает классы адсорбентов, ионообменных материалов, фильтрации и мембран; не подтверждает характеристики, эффективность и сертификацию конкретного продукта.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#flocculant-polyelectrolyte"
       }
     },
     {
@@ -4089,13 +4894,22 @@
         {
           "title": "US EPA — Overview of Drinking Water Treatment Technologies",
           "url": "https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies"
+        },
+        {
+          "title": "Drinking Water Inspectorate — Physical removal of contaminants",
+          "url": "https://www.dwi.gov.uk/private-water-supplies/pws-installations/treatment-guide-2/physical-removal-of-contaminants/"
         }
       ],
       "evidence": {
-        "verificationStatus": "source_located",
-        "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
-        "reviewScope": "Источник описывает классы адсорбентов, ионообменных материалов, фильтрации и мембран; не подтверждает характеристики, эффективность и сертификацию конкретного продукта.",
-        "checkedAt": "2026-10-22"
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "Соли железа применяются как коагулянты; дозу и режим подбирают на испытаниях исходной воды.",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+        "checkedAt": "2026-10-25"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#coagulant-iron"
       }
     },
     {
@@ -4124,6 +4938,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#alumina-ceramic"
       }
     },
     {
@@ -4152,6 +4971,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#silica-refractory"
       }
     },
     {
@@ -4180,6 +5004,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#fireclay-raw"
       }
     },
     {
@@ -4201,13 +5030,22 @@
         {
           "title": "USGS — Commodity Statistics and Information (2026)",
           "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+        },
+        {
+          "title": "EPA AP-42 11.7 — Ceramic Products Manufacturing",
+          "url": "https://www.epa.gov/system/files/documents/2025-06/c11s07_2025_final.pdf"
         }
       ],
       "evidence": {
-        "verificationStatus": "source_located",
-        "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
-        "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
-        "checkedAt": "2026-10-22"
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "Каолин относится к коммерческому глинистому сырью для производства керамики.",
+        "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+        "checkedAt": "2026-10-25"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#kaolin-industrial"
       }
     },
     {
@@ -4228,13 +5066,22 @@
         {
           "title": "USGS — Commodity Statistics and Information (2026)",
           "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+        },
+        {
+          "title": "EPA AP-42 11.15 — Glass Manufacturing",
+          "url": "https://www.epa.gov/sites/default/files/2020-10/documents/c11s15.pdf"
         }
       ],
       "evidence": {
-        "verificationStatus": "source_located",
-        "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
-        "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
-        "checkedAt": "2026-10-22"
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "Стеклобой возвращают в шихту стекловарения.",
+        "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+        "checkedAt": "2026-10-25"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#glass-cullet"
       }
     },
     {
@@ -4256,13 +5103,22 @@
         {
           "title": "USGS — Commodity Statistics and Information (2026)",
           "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+        },
+        {
+          "title": "EPA AP-42 11.7 — Ceramic Products Manufacturing",
+          "url": "https://www.epa.gov/system/files/documents/2025-06/c11s07_2025_final.pdf"
         }
       ],
       "evidence": {
-        "verificationStatus": "source_located",
-        "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
-        "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
-        "checkedAt": "2026-10-22"
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "Глазурь образует покрытие керамики; сырьё и режим созревания зависят от состава.",
+        "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+        "checkedAt": "2026-10-25"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#ceramic-glaze"
       }
     },
     {
@@ -4292,6 +5148,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#lime-technical"
       }
     },
     {
@@ -4304,7 +5165,7 @@
       "process": [
         "tablet-compression"
       ],
-      "note": "Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.",
+      "note": "Точная идентификация вещества и формы; применимая фармакопейная монография; паспорт качества, чистота, влажность и совместимость с лекарственной формой.",
       "industries": [
         "pharma"
       ],
@@ -4319,6 +5180,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "FDA определяет активные и вспомогательные ингредиенты и назначение базы. Состав, нормативное качество и разрешённость конкретного вещества или формы не проверены.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#pharma-mcc"
       }
     },
     {
@@ -4331,7 +5197,7 @@
       "process": [
         "pharma-powder-blending"
       ],
-      "note": "Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.",
+      "note": "Точная идентификация вещества и формы; применимая фармакопейная монография; паспорт качества, чистота, влажность и совместимость с лекарственной формой.",
       "industries": [
         "pharma",
         "food"
@@ -4347,6 +5213,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "FDA определяет активные и вспомогательные ингредиенты и назначение базы. Состав, нормативное качество и разрешённость конкретного вещества или формы не проверены.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#pharma-lactose"
       }
     },
     {
@@ -4359,7 +5230,7 @@
       "process": [
         "capsule-filling"
       ],
-      "note": "Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.",
+      "note": "Точная идентификация вещества и формы; применимая фармакопейная монография; паспорт качества, чистота, влажность и совместимость с лекарственной формой.",
       "industries": [
         "pharma",
         "food"
@@ -4375,6 +5246,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "FDA определяет активные и вспомогательные ингредиенты и назначение базы. Состав, нормативное качество и разрешённость конкретного вещества или формы не проверены.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#pharma-gelatin"
       }
     },
     {
@@ -4387,7 +5263,7 @@
       "process": [
         "wet-granulation-pharma"
       ],
-      "note": "Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.",
+      "note": "Точная идентификация вещества и формы; применимая фармакопейная монография; паспорт качества, чистота, влажность и совместимость с лекарственной формой.",
       "industries": [
         "pharma",
         "chemicals"
@@ -4403,6 +5279,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "FDA определяет активные и вспомогательные ингредиенты и назначение базы. Состав, нормативное качество и разрешённость конкретного вещества или формы не проверены.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#pharma-povidone"
       }
     },
     {
@@ -4415,7 +5296,7 @@
       "process": [
         "tablet-coating"
       ],
-      "note": "Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.",
+      "note": "Точная идентификация вещества и формы; применимая фармакопейная монография; паспорт качества, чистота, влажность и совместимость с лекарственной формой.",
       "industries": [
         "pharma"
       ],
@@ -4430,6 +5311,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "FDA определяет активные и вспомогательные ингредиенты и назначение базы. Состав, нормативное качество и разрешённость конкретного вещества или формы не проверены.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#pharma-hpmc"
       }
     },
     {
@@ -4442,7 +5328,7 @@
       "process": [
         "pharma-powder-blending"
       ],
-      "note": "Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.",
+      "note": "Точная идентификация вещества и формы; применимая фармакопейная монография; паспорт качества, чистота, влажность и совместимость с лекарственной формой.",
       "industries": [
         "pharma",
         "food"
@@ -4458,6 +5344,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "FDA определяет активные и вспомогательные ингредиенты и назначение базы. Состав, нормативное качество и разрешённость конкретного вещества или формы не проверены.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#pharma-starch"
       }
     },
     {
@@ -4487,6 +5378,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "Источник описывает флексографские формы, краски и субстраты; не удостоверяет характеристики конкретного субстрата или формы.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#flexo-plate"
       }
     },
     {
@@ -4515,6 +5411,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "OSHA раскрывает терминологию форм, красок, печатных материалов и оснастки; не подтверждает свойства, рецептуру и пригодность конкретного материала.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#screen-print-mesh"
       }
     },
     {
@@ -4542,6 +5443,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "OSHA раскрывает терминологию форм, красок, печатных материалов и оснастки; не подтверждает свойства, рецептуру и пригодность конкретного материала.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#offset-blanket"
       }
     },
     {
@@ -4570,6 +5476,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "OSHA раскрывает терминологию форм, красок, печатных материалов и оснастки; не подтверждает свойства, рецептуру и пригодность конкретного материала.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#uv-curing-ink"
       }
     },
     {
@@ -4599,6 +5510,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "Источник описывает флексографские формы, краски и субстраты; не удостоверяет характеристики конкретного субстрата или формы.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#printing-film-substrate"
       }
     },
     {
@@ -4628,6 +5544,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#copper-ore"
       }
     },
     {
@@ -4657,6 +5578,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#nickel-ore"
       }
     },
     {
@@ -4685,6 +5611,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#manganese-ore"
       }
     },
     {
@@ -4713,6 +5644,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#lithium-concentrate"
       }
     },
     {
@@ -4741,6 +5677,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#graphite-concentrate"
       }
     },
     {
@@ -4769,6 +5710,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#rare-earth-concentrate"
       }
     },
     {
@@ -4797,6 +5743,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#fluorite-ore"
       }
     },
     {
@@ -4825,6 +5776,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#talc-industrial"
       }
     },
     {
@@ -4832,7 +5788,7 @@
       "name": "Перлит промышленный",
       "group": "inorganic",
       "family": "Вулканическое минеральное сырьё",
-      "detail": "Пористое минеральное сырьё для технических изделий; свойства зависят от обработки.",
+      "detail": "Природное аморфное вулканическое стекло. При быстром нагреве сырьё вспучивается и превращается в лёгкий пористый материал; сырой и вспученный перлит следует различать.",
       "uses": "Строительные и фильтрующие изделия",
       "process": [
         "ore-screening"
@@ -4846,13 +5802,22 @@
         {
           "title": "USGS — Commodity Statistics and Information (2026)",
           "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+        },
+        {
+          "title": "USGS — Perlite Statistics and Information",
+          "url": "https://www.usgs.gov/centers/national-minerals-information-center/perlite-statistics-and-information"
         }
       ],
       "evidence": {
-        "verificationStatus": "source_located",
-        "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
-        "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
-        "checkedAt": "2026-10-22"
+        "verificationStatus": "partial_claim",
+        "verifiedClaim": "Перлит — вулканическое стекло; лёгкая пористая структура появляется при вспучивании.",
+        "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+        "checkedAt": "2026-10-25"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#perlite-raw"
       }
     },
     {
@@ -4881,6 +5846,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#diatomite-raw"
       }
     },
     {
@@ -4909,6 +5879,11 @@
         "verifiedClaim": "Источник найден по классу или номенклатуре материала; конкретная запись не признана технически проверенной.",
         "reviewScope": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
         "checkedAt": "2026-10-22"
+      },
+      "knowledgeMeta": {
+        "verificationStatus": "requires_source_review",
+        "sourceRecord": "materials-data.js",
+        "recordUrl": "https://vremennobeznika.github.io/enjigirling/materials.html#zinc-concentrate"
       }
     }
   ]
