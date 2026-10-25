@@ -19,7 +19,7 @@ assert.ok(types.get('Онлайн-измерения')>=12,'measurement resource
 for(const cat of ['Журналы','Форумы','Разработка ПО','САПР и конструирование','Научные базы и справочники','Стандарты и метрология','Обучение и курсы'])assert.ok(types.get(cat)>=3,'missing category: '+cat);
 for(const id of ['platform-cyberleninka','platform-elibrary','platform-zhurnalivak'])assert.equal(items.find(x=>x.id===id).type,'Научные базы и справочники',id+' wrong group');
 assert.ok(types.get('Журналы')>=48,'journals catalog too sparse');
-const asuIds=['forum-asutpforum','forum-proasutp','forum-asu-tp-community','forum-cyberforum','forum-delta-electronics','ref-siemens-sieportal'];
+const asuIds=['forum-inductive-automation','forum-proasutp','forum-asu-tp-community','forum-cyberforum','forum-delta-electronics','ref-siemens-sieportal'];
 const relatedAsuForumIds=['forum-metrologu','forum-electronix','forum-robotics-se','forum-opennet'];
 assert.equal(types.has('АСУ ТП'),false,'ASU TP must be a subsection within Forums, not a category');
 for(const id of [...asuIds,...relatedAsuForumIds]){
@@ -34,6 +34,9 @@ const newIds=['forum-owen','forum-plctalk','forum-mrplc','forum-control-com','fo
 for(const id of newIds)assert.ok(forumItems.some(x=>x.id===id),'missing researched forum: '+id);
 assert.equal(items.find(x=>x.id==='forum-cadcam').topic,'ЧПУ и металлообработка','CNC-Club must be in machining');
 assert.equal(items.find(x=>x.id==='forum-asu-tp-community').link,'https://asu-tp.su/forum/','ASU community should link to its forum');
+assert.equal(items.find(x=>x.id==='forum-inductive-automation').link,'https://forum.inductiveautomation.com/','inactive automation forum replacement failed');
+assert.equal(items.find(x=>x.id==='dev-grabcad').link,'https://grabcad.com/library','CAD resource should open model library, not marketing home');
+assert.ok(items.find(x=>x.id==='dev-hub-mos').desc.includes('размещения кода'),'Mos.Hub description must reflect actual platform function');
 
 for(const [topic,expected] of Object.entries(forumTopics))
  assert.equal(forumItems.filter(x=>x.topic===topic).length,expected,'wrong forum grouping: '+topic);

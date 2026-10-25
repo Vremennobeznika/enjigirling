@@ -46,7 +46,7 @@ const resources = [
         id: "dev-hub-mos",
         type: "Разработка ПО",
         name: "Hub.Mos",
-        desc: "Московская платформа для обсуждения проектов и идей развития города. Площадка для инженеров и инициативных жителей.",
+        desc: "Мос.Хаб — платформа совместной разработки и размещения кода ДИТ Москвы; возможна проверка доступа.",
         link: "https://hub.mos.ru/"
     },
     {
@@ -68,7 +68,7 @@ const resources = [
     {id: "forum-eng-tips",type: "Форумы",topic: "Общая инженерия",name: "Eng-Tips",desc: "Большой международный инженерный форум: механика, машиностроение, электротехника, строительство, производство, CAD и смежные области.",link: "https://www.eng-tips.com/"},
     {id: "forum-dwg-ru",type: "Форумы",topic: "САПР и конструирование",name: "DWG.ru",desc: "Русскоязычное инженерное сообщество с форумами по AutoCAD, САПР, строительству, проектированию, машиностроению и технической документации.",link: "https://forum.dwg.ru/"},
     {id: "forum-autodesk",type: "Форумы",topic: "САПР и конструирование",name: "Autodesk Community",desc: "Официальное сообщество Autodesk с форумами по AutoCAD, Inventor, Fusion, Revit, Civil 3D, Mechanical, CFD, CAM и другим инженерным продуктам.",link: "https://forums.autodesk.com/"},
-    {id: "forum-grabcad",type: "Форумы",topic: "САПР и конструирование",name: "GrabCAD Community",desc: "Сообщество инженеров и конструкторов: вопросы по CAD, инженерии и 3D-печати, проекты, группы, модели и обучающие материалы.",link: "https://grabcad.com/community"},
+    {id: "forum-grabcad",type: "Форумы",topic: "САПР и конструирование",name: "GrabCAD Community",desc: "Вопросы по CAD, модели и группы инженеров; прямой доступ иногда ограничен антибот-защитой.",link: "https://grabcad.com/community"},
     {id: "forum-solidworks",type: "Форумы",topic: "САПР и конструирование",name: "SOLIDWORKS Community",desc: "Сообщество пользователей SOLIDWORKS и инженерного ПО: моделирование, чертежи, сборки, Simulation, PDM и автоматизация.",link: "https://forum.solidworks.com/"},
     {id: "forum-cadcam",type: "Форумы",topic: "ЧПУ и металлообработка",name: "CNC-Club — ЧПУ и CAD/CAM",desc: "Русскоязычный форум о ЧПУ, станках, CAD/CAM-системах, постпроцессорах, G-коде и технологиях обработки.",link: "https://cnc-club.ru/forum/"},
     {id: "forum-reddit-engineering",type: "Форумы",topic: "Общая инженерия",name: "Reddit — Engineering",desc: "Международное сообщество для обсуждения инженерных задач, профессий, проектов, образования и практического опыта.",link: "https://www.reddit.com/r/engineering/"},
@@ -98,9 +98,9 @@ const resources = [
     {
         id: "dev-grabcad",
         type: "САПР и конструирование",
-        name: "GrabCAD",
-        desc: "Инженерная платформа с библиотекой CAD-моделей, проектами, группами и материалами для конструкторов и разработчиков.",
-        link: "https://grabcad.com/"
+        name: "GrabCAD Library",
+        desc: "Библиотека CAD-моделей сообщества; для просмотра требуется JavaScript, возможны авторизация и антибот-защита.",
+        link: "https://grabcad.com/library"
     },
     {
         id: "dev-onshape",
@@ -341,7 +341,7 @@ const resources = [
     {"id": "forum-kicad","type": "Форумы",topic: "Электроника и микроконтроллеры","name": "KiCad.info","desc": "Сообщество пользователей KiCad: разводка плат, библиотеки, производственные файлы.","link": "https://forum.kicad.info/"},
     {"id": "forum-electronics-se","type": "Форумы",topic: "Электроника и микроконтроллеры","name": "Electrical Engineering Stack Exchange","desc": "Вопросы и технические ответы об электронике, цепях, микроконтроллерах и измерениях.","link": "https://electronics.stackexchange.com/"},
     {"id": "forum-robotics-se","type": "Форумы",topic: "АСУ ТП","name": "Robotics Stack Exchange","desc": "Практические вопросы по робототехнике, приводам, датчикам и алгоритмам управления.","link": "https://robotics.stackexchange.com/"},
-    {"id": "forum-asutpforum","type": "Форумы","topic": "АСУ ТП","name": "Форум АСУТП","desc": "Обсуждения промышленной автоматики, ПЛК, КИПиА и эксплуатации систем управления; доступность форума не подтверждена при текущей проверке.","link": "https://asutpforum.ru/"},
+    {"id": "forum-inductive-automation","type": "Форумы","topic": "АСУ ТП","name": "Inductive Automation Forum","desc": "Действующий форум по Ignition SCADA, OPC UA, интеграции ПЛК и промышленным сетям.","link": "https://forum.inductiveautomation.com/"},
     {"id": "forum-proasutp","type": "Форумы","topic": "АСУ ТП","name": "Форум Про АСУ ТП","desc": "Профессиональная площадка по АСУ ТП, программированию и наладке; содержимое форума при текущей проверке не открылось.","link": "https://forum.proasutp.com/"},
     {"id": "forum-asu-tp-community","type": "Форумы","topic": "АСУ ТП","name": "АСУ ТП — сообщество инженеров","desc": "Форум инженеров по ПЛК и автоматизации, статьи из практики, библиотека, вакансии и обсуждения.","link": "https://asu-tp.su/forum/"},
     {"id": "forum-cyberforum","type": "Форумы","topic": "АСУ ТП","name": "КиберФорум","desc": "Русскоязычный форум по программированию, системному администрированию, электронике и техническим задачам.","link": "https://www.cyberforum.ru/"},
