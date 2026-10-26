@@ -3,11 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const emptyMsg = document.getElementById('dictionaryEmpty');
     const searchInput = document.getElementById('searchInput');
 
-    const searchable=dictionary.map(item=>({item,text:(item.term+' '+item.def).toLocaleLowerCase('ru-RU')}));
+    const collator = new Intl.Collator('ru', { numeric: true, sensitivity: 'base' });
+    const orderedTerms = [...dictionary].sort((a, b) => collator.compare(a.term, b.term));
+    const searchable=orderedTerms.map(item=>({item,text:(item.term+' '+item.def).toLocaleLowerCase('ru-RU')}));
     const status=document.createElement('p');status.className='filter-status';status.setAttribute('role','status');status.setAttribute('aria-live','polite');
     const reset=document.createElement('button');reset.type='button';reset.className='eng-filter-btn filter-reset';reset.textContent='Сбросить поиск';
     searchInput.insertAdjacentElement('afterend',reset);reset.insertAdjacentElement('afterend',status);
-    reset.addEventListener('click',()=>{searchInput.value='';renderTerms(dictionary);searchInput.focus();});
+    reset.addEventListener('click',()=>{searchInput.value='';renderTerms(orderedTerms);searchInput.focus();});
     function renderTerms(items) {
         status.textContent='Найдено: '+items.length+' из '+dictionary.length;
         reset.hidden=!searchInput.value.trim();
@@ -37,5 +39,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const requested=new URLSearchParams(location.search).get('q');
     if(requested){searchInput.value=requested;searchInput.dispatchEvent(new Event('input',{bubbles:true}));}
-    else renderTerms(dictionary);
+    else renderTerms(orderedTerms);
 });
