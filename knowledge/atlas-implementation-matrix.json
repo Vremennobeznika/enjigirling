@@ -2428,7 +2428,7 @@
       "status": "implemented",
       "calculatorId": "g2-16",
       "href": "calculator.html?atlasTool=g2-16#labAtlasTools",
-      "formula": "Удельный расход = л/мин × 1000 / (60 × см²).",
+      "formula": "Удельный расход = л/мин × 10 000 / (60 × см²).",
       "outputUnit": "мм/с",
       "trigger": "live",
       "inputs": [
@@ -2465,10 +2465,10 @@
       ],
       "limits": "Только пересчёт результата измерения; перепад давления и метод испытания задаются отдельно.",
       "reference": {
-        "expected": 10,
-        "actual": 10,
+        "expected": 100,
+        "actual": 100,
         "unit": "мм/с",
-        "tolerance": 1e-7,
+        "tolerance": 0.000001,
         "status": "passed"
       },
       "researchSource": "https://textilenotes.com/calculators"

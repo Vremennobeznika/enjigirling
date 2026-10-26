@@ -63,3 +63,10 @@ test('catalogue stays light under 4x CPU, opens engines once, and searches offli
   console.log('Catalogue search under 4x CPU, ms:',searchMs);
  }finally{await page.context().setOffline(false);await session.detach();}
 });
+test('air permeability uses SI conversion: 60 L/min over 100 cm² is 100 mm/s',async({page})=>{
+ await page.goto('/calculator.html?atlasTool=g2-16#labAtlasTools');
+ await expect(page.locator('#atlasToolResult')).toHaveText('100 мм/с');
+ await page.locator('#atlasInput-area').fill('200');
+ await expect(page.locator('#atlasToolResult')).toHaveText('50 мм/с');
+ await expect(page.locator('#atlasToolFormula')).toContainText('10 000');
+});
