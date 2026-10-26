@@ -17,6 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OLD = "https://vremennobeznika.github.io/enjigirling/"
 PAGES = (
     "index.html", "calendar.html", "resources.html", "dictionary.html",
+    "coding.html", "robotics.html",
     "robotics.html",
     "map.html", "calculator.html", "compare.html", "processes.html",
     "materials.html", "ai.html", "ai-training.html",

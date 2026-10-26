@@ -3,7 +3,7 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const root=path.resolve(__dirname,'..');
 const read=p=>fs.readFileSync(path.join(root,p),'utf8');
-const pages=['index','calendar','resources','dictionary','map','calculator','compare','processes','materials','ai','ai-training','measurement-lab','calculator-atlas'];
+const pages=['index','calendar','resources','dictionary','map','calculator','compare','processes','materials','ai','ai-training','measurement-lab','calculator-atlas','coding','robotics'];
 let routes=0;
 for(const name of pages){
  const file=name+'.html'; if(!fs.existsSync(path.join(root,file)))continue;
@@ -20,6 +20,7 @@ for(const name of pages){
  }
  // Budgets refer to uncompressed source bytes, not network transfer.
  assert.ok(bytes<=1100*1024,file+': startup source budget exceeded '+bytes+' bytes');
+ if(name==='coding'||name==='robotics') assert.ok(bytes<=160*1024,file+': standalone lab too heavy for low-end devices '+bytes+' bytes');
  console.log('PERF '+file+': '+Math.round(bytes/1024)+' KiB initial local source, '+local.length+' assets');
  routes++;
 }
