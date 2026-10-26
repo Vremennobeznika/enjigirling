@@ -1,0 +1,59 @@
+name: Low-end coding and robotics QA
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'coding.html'
+      - 'coding.css'
+      - 'coding.js'
+      - 'coding-data.js'
+      - 'robotics.html'
+      - 'robotics.css'
+      - 'robotics.js'
+      - 'resources.html'
+      - 'resources.js'
+      - 'resources-data.js'
+      - 'tests/low-end-labs.spec.cjs'
+      - 'tests/navigation-promotion.cjs'
+      - '.github/workflows/low-end-qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate public site assets
+        run: |
+          node scripts/build-knowledge.cjs
+          node scripts/build-ai-packs.cjs
+          python -m pip install --disable-pip-version-check 'reportlab==4.4.4'
+          python scripts/build-resource-pdfs.py
+      - name: Static isolation, data integrity and source budgets
+        run: |
+          node tests/navigation-promotion.cjs
+          node tests/resources-catalog.cjs
+          node tests/robotics-lab.cjs
+          node tests/performance-budget.cjs
+      - name: Install Chromium for isolated mobile and CPU tests
+        run: |
+          npm install --no-audit --no-fund
+          npx playwright install --with-deps chromium
+      - name: Test 320px layouts and 4x CPU throttling
+        run: |
+          npx playwright test tests/low-end-labs.spec.cjs tests/robotics-lab.spec.cjs tests/resources-catalog.spec.cjs tests/ai-section-packs.spec.cjs --project=chromium-desktop --workers=2 --reporter=line
+      - name: Save diagnostics
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: low-end-diagnostics
+          path: test-results/
+          if-no-files-found: ignore
