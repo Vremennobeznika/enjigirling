@@ -7,7 +7,7 @@ for(const path of pages){
     const errors=[];
     page.on('pageerror',e=>errors.push(e.message));
     await page.goto('/'+path);
-    await expect(page.locator('nav.eng-tabs a')).toHaveCount(9);
+    await expect(page.locator('nav.eng-tabs a')).toHaveCount(12);
     const nav=page.locator('.site-nav-toggle');
     await expect(nav).toBeVisible();
     await nav.click();
@@ -32,7 +32,7 @@ for(const path of pages){
   const page=await context.newPage();
   try{
    await page.goto('/'+path);
-   await expect(page.locator('.site-nav-wrap > nav.eng-tabs a')).toHaveCount(9);
+   await expect(page.locator('.site-nav-wrap > nav.eng-tabs a')).toHaveCount(12);
    await expect(page.locator('.site-nav-wrap > nav.eng-tabs a').first()).toBeVisible();
    await expect(page.locator('.site-nav-toggle')).toBeHidden();
   }finally{await context.close();}

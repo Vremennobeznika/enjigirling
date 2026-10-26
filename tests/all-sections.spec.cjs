@@ -11,7 +11,7 @@ for(const section of sections){
   });
   await page.goto('/'+section,{waitUntil:'load'});
   await expect(page.locator('main')).toHaveCount(1);
-  await expect(page.locator('nav.eng-tabs a')).toHaveCount(9);
+  await expect(page.locator('nav.eng-tabs a')).toHaveCount(12);
   const main=page.locator('main');
   await expect(main).toBeVisible();
   const dimensions=await page.evaluate(()=>({document:document.documentElement.scrollWidth,viewport:document.documentElement.clientWidth}));
@@ -22,11 +22,11 @@ for(const section of sections){
 }
 test('shared navigation reaches every section without 404',async({page})=>{
  await page.goto('/index.html');
- const expected=new Set(sections);
+ const expected=new Set([...sections,'robotics.html','coding.html','ai.html']);
  const links=page.locator('nav.eng-tabs a');
  const urls=await links.evaluateAll(nodes=>nodes.map(a=>(a.getAttribute('href')||'').split('#')[0]));
  expect(new Set(urls)).toEqual(expected);
- for(const section of sections){
+ for(const section of expected){
   const link=page.locator('nav.eng-tabs a[href="'+section+'"]');
   await link.click();
   await expect(page).toHaveURL(new RegExp('/'+section.replace('.','\\.')+'$'));

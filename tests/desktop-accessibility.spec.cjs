@@ -7,7 +7,7 @@ for(const name of pages){
   page.on('pageerror',e=>errors.push(e.message));
   await page.goto('/'+name);
   await expect(page.locator('main')).toHaveCount(1);
-  await expect(page.locator('nav.eng-tabs a')).toHaveCount(9);
+  await expect(page.locator('nav.eng-tabs a')).toHaveCount(12);
   const skip=page.locator('.skip-link');
   await expect(skip).toHaveCount(1);
   await skip.focus();

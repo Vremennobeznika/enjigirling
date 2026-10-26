@@ -142,7 +142,7 @@ assert.match(designCSS,/\.site-page \.atlas-card a/,'reference button links miss
 assert.match(designCSS,/\.site-page \.eng-tabs \.eng-tab/,'navigation button style missing');
 console.log('OK: monochrome palette, unique navigation, standardized controls and links');
 
-const allPages=['index.html','calendar.html','resources.html','dictionary.html','map.html','calculator.html','compare.html','processes.html','materials.html'];
+const allPages=['index.html','calendar.html','resources.html','dictionary.html','map.html','calculator.html','compare.html','processes.html','materials.html','robotics.html','coding.html','ai.html'];
 for(const page of allPages){
   const markup=fs.readFileSync(page,'utf8');
   const navStart=markup.indexOf('<nav');
@@ -153,8 +153,9 @@ for(const page of allPages){
   for(const href of allPages) assert.equal(nav.split('href="'+href+'"').length-1,1,page+': missing or duplicated '+href);
   assert.ok(markup.toLowerCase().includes('charset="utf-8"'),page+': missing UTF-8 declaration');
 }
-assert.ok(fs.readFileSync('index.html','utf8').includes('<strong>9</strong> разделов'),'homepage section count is stale');
-console.log('OK: all nine pages retain complete navigation, UTF-8 declarations and accurate section count');
+assert.ok(fs.readFileSync('index.html','utf8').includes('<strong>9</strong> разделов'),'nine core reference sections still count as nine');
+assert.ok(fs.readFileSync('index.html','utf8').includes('href="robotics.html"')&&fs.readFileSync('index.html','utf8').includes('href="coding.html"')&&fs.readFileSync('index.html','utf8').includes('href="ai.html"'),'missing standalone top-level destinations');
+console.log('OK: all 12 destinations retain complete navigation, UTF-8 declarations and accurate section count');
 
 for(const page of allPages){
   const html=fs.readFileSync(page,'utf8');
@@ -341,14 +342,14 @@ for (const file of ['index.html','calendar.html','resources.html','dictionary.ht
   assert.match(html, /src="navigation\.js"/, file + ': missing common navigation');
   assert.match(html, /href="section-ui\.css"/, file + ': missing shared responsive styles');
   const navItems = (html.match(/class="eng-tab(?: active)?"/g) || []).length;
-  assert.equal(navItems, 9, file + ': expected exactly nine section tabs');
+  assert.equal(navItems, 12, file + ': expected nine core tabs and three standalone tabs');
 }
 assert.match(sharedShell, /skip\.className='skip-link'/, 'site shell must add skip link where missing');
 assert.match(navigation, /aria-expanded/, 'mobile menu must report expanded state');
 assert.match(navigation, /document\.addEventListener\('click'/, 'mobile menu must close on outside click');
 assert.match(sharedStyles, /focus-visible/, 'keyboard focus style missing');
 assert.match(sharedStyles, /@media\(max-width:600px\)/, 'narrow-viewport rule missing');
-console.log('OK: nine-page shared shell, navigation, focus and responsive checks');
+console.log('OK: 12-destination shared shell, navigation, focus and responsive checks');
 
 /* Discoverability files should resolve to actual published resources. */
 const sitemap = fs.readFileSync('sitemap.xml','utf8');

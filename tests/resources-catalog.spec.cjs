@@ -14,7 +14,7 @@ test('resources directory: categories, alphabetical sort, search, reset and list
   const cards=page.locator('#resourcesGrid .resource-card');
   const catalogSize=await page.evaluate(()=>resources.length);
   await expect(page.locator('#resourcesGrid')).toHaveAttribute('data-ready','true');
-  await expect(cards).toHaveCount(54);
+  await expect(cards).toHaveCount(51);
   await expect(page.locator('#resourcesGrid')).toHaveAttribute('data-matches',String(catalogSize));
   await expect(page.locator('#resourceShowMore')).toBeVisible();
   await expect(page.locator('#resourcesFilter button')).toHaveCount(12);
@@ -36,7 +36,7 @@ test('resources directory: categories, alphabetical sort, search, reset and list
   await page.locator('#resourceSearch').fill('ISO');
   await expect(cards).toHaveCount(1);
   await page.locator('#resourceReset').click();
-  await expect(cards).toHaveCount(54);
+  await expect(cards).toHaveCount(51);
   await expect(page.locator('#resourceShowMore')).toBeVisible();
   await page.locator('#resourceSort').selectOption('za');
   const names=await page.locator('#resourcesGrid .resource-group').first().locator('.resource-card .eng-title').allTextContents();
@@ -56,7 +56,7 @@ test('resources: full indexed search, progressive loading, keyboard and 320px mo
   const cards=page.locator('#resourcesGrid .resource-card');
   const catalogSize=await page.evaluate(()=>resources.length);
   const more=page.locator('#resourceShowMore');
-  await expect(cards).toHaveCount(54);
+  await expect(cards).toHaveCount(51);
   await expect(page.locator('#resourcesGrid .resource-group')).toHaveCount(12);
   await expect(page.locator('#resourcesGrid .resource-group[aria-label="Дружественные каналы"] .resource-card')).toHaveCount(11);
   await expect(page.locator('#resourcesGrid')).toHaveAttribute('data-matches',String(catalogSize));
@@ -69,7 +69,7 @@ test('resources: full indexed search, progressive loading, keyboard and 320px mo
   await expect(cards).toHaveCount(1);
   await expect(cards.first()).toContainText('чёрной');
   await page.locator('#resourceSearch').press('Escape');
-  await expect(cards).toHaveCount(54);
+  await expect(cards).toHaveCount(51);
   await expect(more).toBeVisible();
   await more.focus();await page.keyboard.press('Enter');
   await expect.poll(()=>cards.count()).toBeGreaterThan(51);
@@ -80,7 +80,7 @@ test('resources: full indexed search, progressive loading, keyboard and 320px mo
   expect(await cards.evaluateAll(els=>new Set(els.map(el=>el.href)).size)).toBe(catalogSize);
   expect(await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth)).toBeLessThanOrEqual(2);
   await page.locator('#resourceReset').click();
-  await expect(cards).toHaveCount(54);
+  await expect(cards).toHaveCount(51);
   for (const width of [320,375,390,768]) {
     await page.setViewportSize({width,height:700});
     const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);

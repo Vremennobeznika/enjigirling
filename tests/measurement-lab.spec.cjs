@@ -2,7 +2,7 @@ const {test,expect}=require('@playwright/test');
 test('all ten measuring instruments run locally and provide actual controls',async({page})=>{
  const errors=[];page.on('pageerror',err=>errors.push(err.message));
  await page.goto('/measurement-lab.html');
- await expect(page.locator('nav.eng-tabs a')).toHaveCount(9);
+ await expect(page.locator('nav.eng-tabs a')).toHaveCount(12);
  await expect(page.locator('main iframe')).toHaveCount(0);
  await expect(page.locator('#measurementExternalGrid')).toHaveCount(0);
  for(const id of ['vernier','dialcal','digital','depth','ruler','micrometer','dial-indicator','protractor','multimeter','oscilloscope']){

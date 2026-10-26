@@ -1,34 +1,34 @@
 const {test,expect}=require('@playwright/test');
 const sections=[['index.html','professions'],['calendar.html','calendar'],['resources.html','resources'],['dictionary.html','dictionary'],['map.html','learning'],['calculator.html','calculators'],['compare.html','compare'],['processes.html','processes'],['materials.html','materials']];
-test('resource introduction stays readable in both themes and all AI downloads are centralized',async({page,request})=>{
+test('coding files and AI data exports stay separated on weak screens',async({page,request})=>{
  for(const width of [320,390,768,1366]){
-  await page.setViewportSize({width,height:900});
-  await page.goto('/resources.html');
-  for(const theme of ['dark','light']){
-   await page.evaluate(value=>{localStorage.setItem('theme',value);},theme);
-   await page.reload();
-   const card=await page.locator('#ai-library').boundingBox();
-   const title=await page.locator('#aiLibraryTitle').boundingBox();
-   expect(title.width).toBeGreaterThan(Math.min(240,card.width-55));
-   expect(title.height).toBeLessThan(130);
-   await expect(page.locator('#ai-library [download],#resourceCopyAiLinks')).toHaveCount(0);
-   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2)).toBeTruthy();
+  await page.setViewportSize({width,height:800});
+  for(const target of ['/resources.html','/coding.html','/ai.html']){
+   await page.goto(target);
+   const difference=await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);
+   expect(difference,target+' at '+width).toBeLessThanOrEqual(2);
   }
+  await expect(page.locator('a[href="downloads/ai-llm-guide.pdf"]')).toHaveCount(0);
+  await page.goto('/resources.html');
+  await expect(page.locator('#ai-library')).toHaveCount(0);
+  await expect(page.locator('[href*="ai-llm-guide.pdf"]')).toHaveCount(0);
  }
+ await page.goto('/coding.html');
+ await expect(page.locator('#codingCatalog .coding-card')).toHaveCount(25);
+ await expect(page.locator('a[href="downloads/ai-llm-guide.pdf"]')).toBeVisible();
  await page.goto('/ai.html');
- await page.evaluate(()=>{Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async text=>{window.__copiedAiLinks=text;}}});});
- await page.locator('#resourceCopyAiLinks').click();
- await expect(page.locator('#resourceCopyAiStatus')).toContainText('25 ссылок скопированы');
- const links=(await (await request.get('/knowledge/ai-code-library-links.txt')).text()).trim();
- expect(await page.evaluate(()=>window.__copiedAiLinks)).toBe(links);
- await page.goto('/ai-training.html');
- await expect(page.locator('a[download]')).toHaveCount(0);
- await expect(page.getByRole('link',{name:'Перейти к скачиванию разделов для ИИ →'})).toHaveAttribute('href','ai.html');
+ await expect(page.locator('#atlasAiPackage')).toBeVisible();
+ await expect(page.locator('#pack-ai-code-library')).toHaveCount(0);
+ const links=await request.get('/knowledge/ai-code-library-links.txt');
+ expect(links.ok()).toBeTruthy();
+ expect((await links.text()).trim().split('\n')).toHaveLength(25);
 });
 test('all nine sections use one AI center without inline download panels',async({page})=>{
  for(const [name] of sections){
   await page.goto('/'+name);
-  await expect(page.locator('.site-ai-link')).toHaveAttribute('href','ai.html');
+  await expect(page.locator('nav.eng-tabs a[href="ai.html"]')).toHaveCount(1);
+  await expect(page.locator('nav.eng-tabs a[href="coding.html"]')).toHaveCount(1);
+  await expect(page.locator('.site-ai-link')).toHaveCount(0);
   await expect(page.locator('.ai-transfer-bar,#atlasAiPackage')).toHaveCount(0);
   await expect(page.locator('a[download][href*="knowledge/"]')).toHaveCount(0);
  }
@@ -36,8 +36,8 @@ test('all nine sections use one AI center without inline download panels',async(
 test('dedicated AI upload hub lists all nine sections at 320px',async({page})=>{
  await page.setViewportSize({width:320,height:720});
  await page.goto('/ai.html?section=calendar');
- await expect(page.locator('.ai-hub-card')).toHaveCount(10);
- await expect(page.locator('#pack-ai-code-library')).toBeVisible();
+ await expect(page.locator('.ai-hub-card')).toHaveCount(9);
+ await expect(page.locator('#pack-ai-code-library')).toHaveCount(0);
  await expect(page.locator('#pack-calendar')).toBeVisible();
  await expect(page.locator('a[href="knowledge/ai-context.md"]')).toHaveCount(1);
  await expect(page.locator('#atlasAiPackage')).toBeVisible();

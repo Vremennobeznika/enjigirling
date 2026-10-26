@@ -181,7 +181,7 @@ test('processes link directly to a relevant profession without losing the catalo
 
 test('unified search links to professions, materials, processes and dictionary without removing sections',async({page})=>{
  await page.goto(base+'index.html');
- await expect(page.locator('nav.eng-tabs a')).toHaveCount(9);
+ await expect(page.locator('nav.eng-tabs a')).toHaveCount(12);
  const input=page.locator('#globalSearch');
  for(const [query,target] of [['Сталь 20','materials.html#'],['Дуговая сварка','processes.html#'],['Инженер-механик','index.html#profession='],['квалификация','dictionary.html?q=']]){
   await input.fill(query);
@@ -198,7 +198,7 @@ test('unified search links to professions, materials, processes and dictionary w
 
 test('material cards connect to existing engineer profiles', async ({page})=>{
  await page.goto(base+'materials.html');
- await expect(page.locator('nav.eng-tabs a')).toHaveCount(9);
+ await expect(page.locator('nav.eng-tabs a')).toHaveCount(12);
  const links=page.locator('#materialGrid a[href^="index.html#profession="]');
  expect(await links.count()).toBeGreaterThan(0);
  await links.first().click();
@@ -229,14 +229,14 @@ test('catalog layout placeholders are removed after rendering',async({page})=>{
 });
 
 
-test('five grouped navigation sections retain all nine page destinations on mobile',async({page})=>{
+test('six grouped navigation sections retain all twelve destinations on mobile',async({page})=>{
  await page.setViewportSize({width:375,height:812});
  await page.goto('/index.html');
  const toggle=page.locator('.site-nav-toggle');
  await toggle.click();
  const nav=page.locator('#site-main-navigation');
- await expect(nav.locator('.nav-cluster')).toHaveCount(5);
- await expect(nav.locator('a.eng-tab')).toHaveCount(9);
+ await expect(nav.locator('.nav-cluster')).toHaveCount(6);
+ await expect(nav.locator('a.eng-tab')).toHaveCount(12);
  for(const group of await nav.locator('.nav-cluster').all()){
   await expect(group).toBeVisible();
   expect(await group.locator('a.eng-tab').count()).toBeGreaterThan(0);
