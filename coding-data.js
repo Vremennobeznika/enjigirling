@@ -26,3 +26,112 @@ const codingResources = [
     {"id":"ai-library-24","type":"Библиотека программирования для ИИ","topic":"Android","name":"Android — производительность","desc":"Память, производительность, запуск и оптимизация приложений. Язык: RU/EN.","link":"https://developer.android.com/topic/performance/overview?hl=ru","tags":"RU/EN"},
     {"id":"ai-library-25","type":"Библиотека программирования для ИИ","topic":"Безопасность","name":"OWASP Cheat Sheet Series","desc":"Практические рекомендации по безопасности приложений. Язык: EN.","link":"https://cheatsheetseries.owasp.org/","tags":"EN"},
 ];
+
+/* Git platforms and collaborative code hosting are kept separately from engineering communities. */
+const codingPlatforms = [
+    {
+        id: "dev-github",
+        type: "Разработка ПО",
+        name: "GitHub",
+        desc: "Крупнейшая в мире платформа для хостинга кода, совместной разработки и управления проектами.",
+        link: "https://github.com/"
+    },
+    {
+        id: "dev-gitflic",
+        type: "Разработка ПО",
+        name: "GitFlic",
+        desc: "Российская платформа для хранения и совместной разработки кода. Аналог GitHub для работы над инженерными и программными проектами.",
+        link: "https://gitflic.ru/"
+    },
+    {
+        id: "dev-hub-mos",
+        type: "Разработка ПО",
+        name: "Hub.Mos",
+        desc: "Мос.Хаб — платформа совместной разработки и размещения кода ДИТ Москвы; возможна проверка доступа.",
+        link: "https://hub.mos.ru/"
+    },
+    {
+        id: "dev-gitee",
+        type: "Разработка ПО",
+        name: "Gitee",
+        desc: "Крупнейшая китайская платформа для хостинга кода и совместной разработки. Популярная альтернатива GitHub.",
+        link: "https://gitee.com/"
+    },
+    {
+        id: "dev-gitcode",
+        type: "Разработка ПО",
+        name: "GitCode",
+        desc: "Китайская платформа для хранения и совместной разработки кода, ориентированная на программные и инженерные проекты.",
+        link: "https://gitcode.com/"
+    },
+    {
+        id: "dev-gitlab",
+        type: "Разработка ПО",
+        name: "GitLab",
+        desc: "Платформа для хранения кода, контроля версий, совместной разработки, CI/CD, issue tracking и DevOps.",
+        link: "https://gitlab.com/"
+    },
+    {
+        id: "dev-codeberg",
+        type: "Разработка ПО",
+        name: "Codeberg",
+        desc: "Некоммерческая европейская платформа для размещения Git-репозиториев и совместной разработки проектов с открытым исходным кодом.",
+        link: "https://codeberg.org/"
+    },
+    {
+        id: "dev-sourcecraft",
+        type: "Разработка ПО",
+        name: "SourceCraft",
+        desc: "Российская платформа для хранения исходного кода, совместной разработки и работы с Git-репозиториями.",
+        link: "https://sourcecraft.dev/"
+    },
+    {
+        "id": "dev-gitverse",
+        "type": "Разработка ПО",
+        "name": "GitVerse",
+        "desc": "Российский сервис Git-репозиториев и совместной разработки; условия сервиса могут изменяться.",
+        "link": "https://gitverse.ru/"
+    },
+    {
+        "id": "dev-forgejo",
+        "type": "Разработка ПО",
+        "name": "Forgejo",
+        "desc": "Свободная платформа для размещения собственных Git-сервисов и управления разработкой.",
+        "link": "https://forgejo.org/"
+    },
+    {
+        "id": "dev-gitea",
+        "type": "Разработка ПО",
+        "name": "Gitea",
+        "desc": "Самостоятельно разворачиваемый Git-сервис с задачами, ревью и CI/CD.",
+        "link": "https://about.gitea.com/"
+    },
+    {
+        "id": "dev-platformio",
+        "type": "Разработка ПО",
+        "name": "PlatformIO",
+        "desc": "Инструменты для проектов с микроконтроллерами, библиотеками и отладкой встроенного ПО.",
+        "link": "https://platformio.org/"
+    },
+    {
+        "id": "dev-jupyter",
+        "type": "Разработка ПО",
+        "name": "Project Jupyter",
+        "desc": "Интерактивные блокноты для Python, аналитики, расчётов и исследований.",
+        "link": "https://jupyter.org/"
+    },
+    {
+        "id": "dev-sourceforge",
+        "type": "Разработка ПО",
+        "name": "SourceForge",
+        "desc": "Хостинг, совместная разработка, распространение и каталог программ с открытым исходным кодом.",
+        "link": "https://sourceforge.net/"
+    },
+    {
+        "id": "dev-launchpad",
+        "type": "Разработка ПО",
+        "name": "Launchpad",
+        "desc": "Платформа разработки с Git-репозиториями, задачами, ревью и пакетами для Ubuntu.",
+        "link": "https://launchpad.net/"
+    },
+];

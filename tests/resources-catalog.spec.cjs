@@ -14,10 +14,10 @@ test('resources directory: categories, alphabetical sort, search, reset and list
   const cards=page.locator('#resourcesGrid .resource-card');
   const catalogSize=await page.evaluate(()=>resources.length);
   await expect(page.locator('#resourcesGrid')).toHaveAttribute('data-ready','true');
-  await expect(cards).toHaveCount(51);
+  await expect(cards).toHaveCount(47);
   await expect(page.locator('#resourcesGrid')).toHaveAttribute('data-matches',String(catalogSize));
   await expect(page.locator('#resourceShowMore')).toBeVisible();
-  await expect(page.locator('#resourcesFilter button')).toHaveCount(12);
+  await expect(page.locator('#resourcesFilter button')).toHaveCount(11);
   await expect(page.locator('.resource-topic-header')).not.toHaveCount(0);
   await page.locator('#resourcesFilter button[title="Онлайн-измерения"]').click();
   await expect(cards).toHaveCount(13);
@@ -27,16 +27,15 @@ test('resources directory: categories, alphabetical sort, search, reset and list
   await expect(cards.first()).toBeVisible();
   await expect(page.locator('#resourcesGrid')).toContainText('КОМПАС-3D');
   await expect(page.locator('#resourcesGrid')).not.toContainText('GitVerse');
-  await page.locator('#resourcesFilter button[title="Разработка ПО"]').click();
-  await expect(page.locator('#resourcesGrid')).toContainText('GitVerse');
-  await expect(page.locator('#resourcesGrid')).not.toContainText('КОМПАС-3D');
+  await expect(page.locator('#resourcesFilter button[title="Разработка ПО"]')).toHaveCount(0);
+  await expect(page.locator('#resourcesGrid')).not.toContainText('GitVerse');
   await page.locator('#resourcesFilter button[title="Стандарты и метрология"]').click();
   await expect(page.locator('#resourcesGrid .resource-group')).toHaveCount(1);
   await expect(cards).toHaveCount(7);
   await page.locator('#resourceSearch').fill('ISO');
   await expect(cards).toHaveCount(1);
   await page.locator('#resourceReset').click();
-  await expect(cards).toHaveCount(51);
+  await expect(cards).toHaveCount(47);
   await expect(page.locator('#resourceShowMore')).toBeVisible();
   await page.locator('#resourceSort').selectOption('za');
   const names=await page.locator('#resourcesGrid .resource-group').first().locator('.resource-card .eng-title').allTextContents();
@@ -56,7 +55,7 @@ test('resources: full indexed search, progressive loading, keyboard and 320px mo
   const cards=page.locator('#resourcesGrid .resource-card');
   const catalogSize=await page.evaluate(()=>resources.length);
   const more=page.locator('#resourceShowMore');
-  await expect(cards).toHaveCount(51);
+  await expect(cards).toHaveCount(47);
   await expect(page.locator('#resourcesGrid .resource-group')).toHaveCount(11);
   await expect(page.locator('#resourcesGrid .resource-group[aria-label="Дружественные каналы"] .resource-card')).toHaveCount(11);
   await expect(page.locator('#resourcesGrid')).toHaveAttribute('data-matches',String(catalogSize));
@@ -69,10 +68,10 @@ test('resources: full indexed search, progressive loading, keyboard and 320px mo
   await expect(cards).toHaveCount(1);
   await expect(cards.first()).toContainText('чёрной');
   await page.locator('#resourceSearch').press('Escape');
-  await expect(cards).toHaveCount(51);
+  await expect(cards).toHaveCount(47);
   await expect(more).toBeVisible();
   await more.focus();await page.keyboard.press('Enter');
-  await expect.poll(()=>cards.count()).toBeGreaterThan(51);
+  await expect.poll(()=>cards.count()).toBeGreaterThan(47);
   for(let i=0;i<15 && await more.isVisible();i++)await more.click();
   await expect(more).toBeHidden();
   await expect(cards).toHaveCount(catalogSize);
@@ -80,7 +79,7 @@ test('resources: full indexed search, progressive loading, keyboard and 320px mo
   expect(await cards.evaluateAll(els=>new Set(els.map(el=>el.href)).size)).toBe(catalogSize);
   expect(await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth)).toBeLessThanOrEqual(2);
   await page.locator('#resourceReset').click();
-  await expect(cards).toHaveCount(51);
+  await expect(cards).toHaveCount(47);
   for (const width of [320,375,390,768]) {
     await page.setViewportSize({width,height:700});
     const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);
@@ -106,7 +105,8 @@ test('coding library: 25 sources, eight groups, downloads, mobile filtering',asy
  await page.setViewportSize({width:320,height:720});
  await page.goto('/coding.html');
  await expect(page.locator('#codingCatalog')).toHaveAttribute('data-ready','true');
- await expect(page.locator('#codingCatalog .coding-card')).toHaveCount(25);
+ await expect(page.locator('#codingCatalog .coding-card')).toHaveCount(40);
+ await expect(page.locator('#codingCatalog')).toContainText('GitVerse');
  await expect(page.locator('.coding-topic')).toHaveCount(8);
  await expect(page.locator('#codingSearch')).toBeVisible();
  await expect(page.locator('a[href="downloads/ai-llm-guide.pdf"]')).toBeVisible();
@@ -117,7 +117,7 @@ test('coding library: 25 sources, eight groups, downloads, mobile filtering',asy
  await page.locator('#codingSearch').fill('Playwright');
  await expect(page.locator('#codingCatalog .coding-card')).toHaveCount(1);
  await page.locator('#codingClear').click();
- await expect(page.locator('#codingCatalog .coding-card')).toHaveCount(25);
+ await expect(page.locator('#codingCatalog .coding-card')).toHaveCount(40);
  const src=await page.evaluate(()=>performance.getEntriesByType('resource').map(x=>x.name));
  expect(src.some(x=>x.endsWith('/resources-data.js'))).toBe(false);
  for(const width of [320,360,390,768]){

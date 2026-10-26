@@ -14,7 +14,7 @@ test('coding files and AI data exports stay separated on weak screens',async({pa
   await expect(page.locator('[href*="ai-llm-guide.pdf"]')).toHaveCount(0);
  }
  await page.goto('/coding.html');
- await expect(page.locator('#codingCatalog .coding-card')).toHaveCount(25);
+ await expect(page.locator('#codingCatalog .coding-card')).toHaveCount(40);
  await expect(page.locator('a[href="downloads/ai-llm-guide.pdf"]')).toBeVisible();
  await page.goto('/ai.html');
  await expect(page.locator('#atlasAiPackage')).toBeVisible();

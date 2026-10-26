@@ -27,42 +27,6 @@ const resources = [
     {id: "forum-habr",type: "Форумы",topic: "ИТ и технологии",name: "Хабр",desc: "Крупнейшая русскоязычная платформа о технологиях, IT и инженерии. Статьи, вопросы и обсуждения по всем направлениям.",link: "https://habr.com"},
     {id: "forum-ixbt",type: "Форумы",topic: "ИТ и технологии",name: "iXBT.com",desc: "Площадка о компьютерном железе, электронике, радиотехнике и новых технологиях. Активное сообщество технических энтузиастов.",link: "https://forum.ixbt.com"},
 
-    // ===== Платформы для разработок =====
-    {
-        id: "dev-github",
-        type: "Разработка ПО",
-        name: "GitHub",
-        desc: "Крупнейшая в мире платформа для хостинга кода, совместной разработки и управления проектами.",
-        link: "https://github.com/"
-    },
-    {
-        id: "dev-gitflic",
-        type: "Разработка ПО",
-        name: "GitFlic",
-        desc: "Российская платформа для хранения и совместной разработки кода. Аналог GitHub для работы над инженерными и программными проектами.",
-        link: "https://gitflic.ru/"
-    },
-    {
-        id: "dev-hub-mos",
-        type: "Разработка ПО",
-        name: "Hub.Mos",
-        desc: "Мос.Хаб — платформа совместной разработки и размещения кода ДИТ Москвы; возможна проверка доступа.",
-        link: "https://hub.mos.ru/"
-    },
-    {
-        id: "dev-gitee",
-        type: "Разработка ПО",
-        name: "Gitee",
-        desc: "Крупнейшая китайская платформа для хостинга кода и совместной разработки. Популярная альтернатива GitHub.",
-        link: "https://gitee.com/"
-    },
-    {
-        id: "dev-gitcode",
-        type: "Разработка ПО",
-        name: "GitCode",
-        desc: "Китайская платформа для хранения и совместной разработки кода, ориентированная на программные и инженерные проекты.",
-        link: "https://gitcode.com/"
-    },
 
     // ===== Форумы =====
     {id: "forum-eng-tips",type: "Форумы",topic: "Общая инженерия",name: "Eng-Tips",desc: "Большой международный инженерный форум: механика, машиностроение, электротехника, строительство, производство, CAD и смежные области.",link: "https://www.eng-tips.com/"},
@@ -73,28 +37,6 @@ const resources = [
     {id: "forum-cadcam",type: "Форумы",topic: "ЧПУ и металлообработка",name: "CNC-Club — ЧПУ и CAD/CAM",desc: "Русскоязычный форум о ЧПУ, станках, CAD/CAM-системах, постпроцессорах, G-коде и технологиях обработки.",link: "https://cnc-club.ru/forum/"},
     {id: "forum-reddit-engineering",type: "Форумы",topic: "Общая инженерия",name: "Reddit — Engineering",desc: "Международное сообщество для обсуждения инженерных задач, профессий, проектов, образования и практического опыта.",link: "https://www.reddit.com/r/engineering/"},
 
-    // ===== Платформы для разработок =====
-    {
-        id: "dev-gitlab",
-        type: "Разработка ПО",
-        name: "GitLab",
-        desc: "Платформа для хранения кода, контроля версий, совместной разработки, CI/CD, issue tracking и DevOps.",
-        link: "https://gitlab.com/"
-    },
-    {
-        id: "dev-codeberg",
-        type: "Разработка ПО",
-        name: "Codeberg",
-        desc: "Некоммерческая европейская платформа для размещения Git-репозиториев и совместной разработки проектов с открытым исходным кодом.",
-        link: "https://codeberg.org/"
-    },
-    {
-        id: "dev-sourcecraft",
-        type: "Разработка ПО",
-        name: "SourceCraft",
-        desc: "Российская платформа для хранения исходного кода, совместной разработки и работы с Git-репозиториями.",
-        link: "https://sourcecraft.dev/"
-    },
     {
         id: "dev-grabcad",
         type: "САПР и конструирование",
@@ -371,41 +313,6 @@ const resources = [
     {"id": "forum-metalorezzka","type": "Форумы","topic": "ЧПУ и металлообработка","name": "MetaloRezzka — цеховой форум","desc": "Практика лазерной и плазменной резки, гибки, DXF, выбора станков и контроля качества.","link": "https://metalorezzka.ru/"},
     {"id": "forum-abok","type": "Форумы","topic": "Общая инженерия","name": "АВОК — диалог специалистов","desc": "Инженерные системы зданий: отопление, вентиляция, автоматизация, электроснабжение, проектирование и нормативы.","link": "https://forum.abok.ru/"},
     {"id": "forum-opennet","type": "Форумы",topic: "АСУ ТП","name": "OpenNET","desc": "Обсуждения Linux, промышленных систем, сетей и открытого программного обеспечения.","link": "https://www.opennet.ru/"},
-    {
-        "id": "dev-gitverse",
-        "type": "Разработка ПО",
-        "name": "GitVerse",
-        "desc": "Российский сервис Git-репозиториев и совместной разработки; условия сервиса могут изменяться.",
-        "link": "https://gitverse.ru/"
-    },
-    {
-        "id": "dev-forgejo",
-        "type": "Разработка ПО",
-        "name": "Forgejo",
-        "desc": "Свободная платформа для размещения собственных Git-сервисов и управления разработкой.",
-        "link": "https://forgejo.org/"
-    },
-    {
-        "id": "dev-gitea",
-        "type": "Разработка ПО",
-        "name": "Gitea",
-        "desc": "Самостоятельно разворачиваемый Git-сервис с задачами, ревью и CI/CD.",
-        "link": "https://about.gitea.com/"
-    },
-    {
-        "id": "dev-platformio",
-        "type": "Разработка ПО",
-        "name": "PlatformIO",
-        "desc": "Инструменты для проектов с микроконтроллерами, библиотеками и отладкой встроенного ПО.",
-        "link": "https://platformio.org/"
-    },
-    {
-        "id": "dev-jupyter",
-        "type": "Разработка ПО",
-        "name": "Project Jupyter",
-        "desc": "Интерактивные блокноты для Python, аналитики, расчётов и исследований.",
-        "link": "https://jupyter.org/"
-    },
     {
         "id": "dev-kicad",
         "type": "САПР и конструирование",
@@ -872,20 +779,6 @@ const resources = [
     {"id": "forum-arduino","type": "Форумы",topic: "Электроника и микроконтроллеры","name": "Arduino Forum","desc": "Официальный форум по микроконтроллерам, прошивкам, аппаратуре и отладке Arduino.","link": "https://forum.arduino.cc/"},
     {"id": "forum-engineering-stackexchange","type": "Форумы",topic: "Общая инженерия","name": "Engineering Stack Exchange","desc": "Профессиональные вопросы и ответы по механике, электротехнике, расчётам и проектированию.","link": "https://engineering.stackexchange.com/"},
     {"id": "forum-librecad","type": "Форумы",topic: "САПР и конструирование","name": "LibreCAD Forum","desc": "Вопросы пользователей свободной 2D-САПР LibreCAD, чертежи, DXF, настройка и ошибки.","link": "https://discourse.librecad.org/"},
-    {
-        "id": "dev-sourceforge",
-        "type": "Разработка ПО",
-        "name": "SourceForge",
-        "desc": "Хостинг, совместная разработка, распространение и каталог программ с открытым исходным кодом.",
-        "link": "https://sourceforge.net/"
-    },
-    {
-        "id": "dev-launchpad",
-        "type": "Разработка ПО",
-        "name": "Launchpad",
-        "desc": "Платформа разработки с Git-репозиториями, задачами, ревью и пакетами для Ubuntu.",
-        "link": "https://launchpad.net/"
-    },
     {
         "id": "cad-librecad",
         "type": "САПР и конструирование",

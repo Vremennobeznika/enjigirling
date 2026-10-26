@@ -16,7 +16,7 @@ assert.ok(items.length>=148,'resource catalog unexpectedly small');
 assert.ok(types.get('Чаты в Telegram')>=12,'Telegram chat category unexpectedly shrank');
 assert.equal(types.get('Дружественные каналы'),11,'curated friendly channels must remain unchanged');
 assert.ok(types.get('Онлайн-измерения')>=12,'measurement resources unexpectedly shrank');
-for(const cat of ['Журналы','Форумы','Разработка ПО','САПР и конструирование','Научные базы и справочники','Стандарты и метрология','Обучение и курсы'])assert.ok(types.get(cat)>=3,'missing category: '+cat);
+for(const cat of ['Журналы','Форумы','САПР и конструирование','Научные базы и справочники','Стандарты и метрология','Обучение и курсы'])assert.ok(types.get(cat)>=3,'missing category: '+cat);
 for(const id of ['platform-cyberleninka','platform-elibrary','platform-zhurnalivak'])assert.equal(items.find(x=>x.id===id).type,'Научные базы и справочники',id+' wrong group');
 assert.ok(types.get('Журналы')>=48,'journals catalog too sparse');
 const asuIds=['forum-inductive-automation','forum-proasutp','forum-asu-tp-community','forum-cyberforum','forum-delta-electronics','ref-siemens-sieportal'];
@@ -36,13 +36,13 @@ assert.equal(items.find(x=>x.id==='forum-cadcam').topic,'ЧПУ и металл�
 assert.equal(items.find(x=>x.id==='forum-asu-tp-community').link,'https://asu-tp.su/forum/','ASU community should link to its forum');
 assert.equal(items.find(x=>x.id==='forum-inductive-automation').link,'https://forum.inductiveautomation.com/','inactive automation forum replacement failed');
 assert.equal(items.find(x=>x.id==='dev-grabcad').link,'https://grabcad.com/library','CAD resource should open model library, not marketing home');
-assert.ok(items.find(x=>x.id==='dev-hub-mos').desc.includes('размещения кода'),'Mos.Hub description must reflect actual platform function');
+// Code-hosting platforms moved to dedicated coding page; verified below.
 
 for(const [topic,expected] of Object.entries(forumTopics))
  assert.equal(forumItems.filter(x=>x.topic===topic).length,expected,'wrong forum grouping: '+topic);
 assert.ok(forumItems.every(x=>Object.hasOwn(forumTopics,x.topic)),'unclassified forum or unknown subsection');
 assert.equal(types.has('Платформы для разработок'),false,'code and CAD still merged');
-for(const id of ['dev-github','dev-gitlab','dev-gitverse','dev-gitflic'])assert.equal(items.find(x=>x.id===id).type,'Разработка ПО',id+' wrong category');
+assert.equal(types.has('Разработка ПО'),false,'platforms leaked into engineering resources');
 for(const id of ['dev-grabcad','dev-onshape','dev-freecad','cad-kompas','cad-nanocad','cad-tflex'])assert.equal(items.find(x=>x.id===id).type,'САПР и конструирование',id+' wrong category');
 assert.ok(items.filter(x=>x.type==='Журналы' && x.topic).length>=48,'journal topics incomplete');
 const html=fs.readFileSync('resources.html','utf8'),js=fs.readFileSync('resources.js','utf8');
@@ -67,6 +67,12 @@ assert.ok(html.indexOf('src="resources-data.js"')<html.indexOf('src="resources.j
 const code=fs.readFileSync('coding-data.js','utf8');
 const codingContext={};vm.runInNewContext(code+';globalThis.__library=codingResources;',codingContext,{timeout:5000});
 const aiLibrary=JSON.parse(JSON.stringify(codingContext.__library));
+const platformContext={};vm.runInNewContext(code+';globalThis.__platforms=codingPlatforms;',platformContext,{timeout:5000});
+const platforms=JSON.parse(JSON.stringify(platformContext.__platforms));
+assert.equal(platforms.length,15,'15 code-hosting platforms required');
+assert.ok(platforms.find(x=>x.id==='dev-hub-mos').desc.includes('размещения кода'),'Mos.Hub description lost');
+for(const id of ['dev-github','dev-gitlab','dev-gitverse','dev-gitflic'])assert.equal(platforms.find(x=>x.id===id).type,'Разработка ПО',id+' wrong category');
+assert.ok(platforms.every(x=>!items.some(y=>y.id===x.id)),'cross-catalog duplicate platform');
 assert.equal(aiLibrary.length,25,'25 source documents required');
 assert.equal(new Set(aiLibrary.map(x=>x.topic)).size,8,'8 topical groups needed');
 assert.ok(aiLibrary.every(x=>/^(RU|EN|RU\/EN)$/.test(x.tags)),'language tags missing');
