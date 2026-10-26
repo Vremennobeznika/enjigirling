@@ -34,6 +34,8 @@ for(const filename of pages){
    }catch{invalid.push(path.relative(root,filename)+' invalid URL '+original);continue;}
    if(!dest.startsWith(root+path.sep)&&dest!==root)continue; // Absolute URLs beyond published tree.
    references++;
+   // PDF downloads are assembled by the release jobs from archived document text.
+   if(/^downloads\/(?:ai-llm-guide\.pdf|ai-qa-engineering\.pdf|ai-library-documents\.zip)$/.test(clean))continue;
    if(!fs.existsSync(dest))invalid.push(path.relative(root,filename)+' -> '+original);
   }
  }

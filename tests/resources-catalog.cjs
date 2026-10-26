@@ -69,6 +69,7 @@ assert.equal(aiLibrary.length,25,'AI library must contain exactly 25 sources');
 assert.equal(new Set(aiLibrary.map(x=>x.topic)).size,8,'AI library topic coverage lost');
 assert.ok(aiLibrary.every(x=>/^(RU|EN|RU\/EN)$/.test(x.tags)),'AI library language missing');
 assert.ok(html.includes('id="ai-library"')&&html.includes('href="#ai-library-catalog"'),'AI library catalog entry missing');
+for(const file of ['ai-llm-guide.pdf','ai-qa-engineering.pdf','ai-library-documents.zip'])assert.ok(html.includes('href="downloads/'+file+'"'),'Missing document download: '+file);
 assert.ok(!html.includes('resource-ai-library-actions')&&!html.includes('knowledge/sections/ai-code-library.md'),'Downloads must live only in the AI center');
 const hub=fs.readFileSync('ai.html','utf8');
 assert.ok(hub.includes('knowledge/ai-code-library-links.txt')&&hub.includes('resourceCopyAiLinks'),'centralized bulk download and copy missing');

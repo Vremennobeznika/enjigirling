@@ -42,6 +42,8 @@ jobs:
           node scripts/build-knowledge.cjs --check
           node scripts/build-ai-packs.cjs
           node scripts/build-ai-packs.cjs --check
+          python3 -m pip install --disable-pip-version-check 'reportlab==4.4.4'
+          python3 scripts/build-resource-pdfs.py
           node scripts/build-quality.cjs
           node scripts/all-checks.cjs
       - name: Build Russian public distribution
@@ -84,6 +86,9 @@ jobs:
           test -s dist-ru/index.html
           test -s dist-ru/sitemap.xml
           test -s dist-ru/knowledge-manifest.json
+          test -s dist-ru/downloads/ai-llm-guide.pdf
+          test -s dist-ru/downloads/ai-qa-engineering.pdf
+          test -s dist-ru/downloads/ai-library-documents.zip
           test "$(find dist-ru -type f | wc -l)" -ge 50
           echo "Verified files: $(find dist-ru -type f | wc -l)"
       - name: Publish to Yandex Object Storage

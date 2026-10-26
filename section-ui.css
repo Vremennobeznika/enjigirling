@@ -318,9 +318,19 @@ footer a:not(.footer-btn):link,footer a:not(.footer-btn):visited{color:inherit}
  .resource-library-topic .resource-card .eng-desc{font-size:13px;line-height:1.45;}
 }
 
-/* Catalog introduction has one readable column; AI downloads live only in ai.html. */
+/* Catalog introduction has one readable column; downloadable user documents remain alongside the code library. */
 .resource-ai-library{box-sizing:border-box;display:block;max-width:100%;min-width:0;padding:clamp(16px,2.5vw,24px);margin:20px 0;border:1px solid var(--card-border);border-radius:16px;background:var(--soft-bg);color:var(--card-text)}
 .resource-ai-library h2{max-width:42ch;margin:0 0 10px;font-size:clamp(20px,2.4vw,26px);line-height:1.3;overflow-wrap:break-word}
 .resource-ai-library p{max-width:76ch;margin:0 0 12px;line-height:1.55}
 .resource-ai-library-open{display:inline-flex;align-items:center;min-height:44px;color:inherit;text-underline-offset:3px}
 .resource-ai-library-open:focus-visible{outline:3px solid var(--text-primary);outline-offset:3px}
+
+/* Two downloadable reader documents in the existing AI library. */
+.resource-ai-documents{margin:14px 0;padding:14px;border:1px solid var(--card-border);border-radius:12px;min-width:0;background:var(--card-bg,var(--soft-bg))}
+.resource-ai-documents h3{font-size:1.08rem;margin:0 0 8px;line-height:1.4}
+.resource-ai-documents ul{margin:0 0 10px;padding-left:20px}
+.resource-ai-documents li{margin:0 0 10px;overflow-wrap:anywhere;line-height:1.5}
+.resource-ai-documents li span{display:block;font-size:.87rem;opacity:.78}
+.resource-ai-documents a{color:inherit;text-underline-offset:3px}
+.resource-ai-documents a:focus-visible{outline:3px solid var(--text-primary);outline-offset:3px}
+.resource-ai-documents .resource-ai-document-note{font-size:.82rem;line-height:1.45;margin:8px 0 0;opacity:.78}

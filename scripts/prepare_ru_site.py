@@ -26,7 +26,7 @@ ROOT_ASSET_EXT = {
     ".png", ".jpg", ".jpeg", ".webp", ".woff", ".woff2",
     ".ico", ".webmanifest",
 }
-PUBLIC_DIRS = ("knowledge", "articles")
+PUBLIC_DIRS = ("knowledge", "articles", "downloads")
 PRIVATE_DIRS = (
     "life", "chroma", "everyday", "mood-layers", "plants", "shopping",
     "calendar", "audit", "docs", "scripts", "tests", ".github"
@@ -80,6 +80,8 @@ def main():
         if not src.is_file():
             sys.exit("ERROR: missing required root file: " + name)
         shutil.copy2(src, out / name)
+    if any(not (ROOT / "downloads" / name).is_file() for name in ("ai-llm-guide.pdf", "ai-qa-engineering.pdf", "ai-library-documents.zip")):
+        sys.exit("ERROR: PDF downloads are missing; run scripts/build-resource-pdfs.py")
     for name in PUBLIC_DIRS:
         src = ROOT / name
         if not src.is_dir():
