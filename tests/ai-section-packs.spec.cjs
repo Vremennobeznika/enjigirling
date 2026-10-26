@@ -30,7 +30,12 @@ test('all nine sections use one AI center without inline download panels',async(
   await expect(page.locator('nav.eng-tabs a[href="coding.html"]')).toHaveCount(1);
   await expect(page.locator('.site-ai-link')).toHaveCount(0);
   await expect(page.locator('.ai-transfer-bar,#atlasAiPackage')).toHaveCount(0);
-  await expect(page.locator('a[download][href*="knowledge/"]')).toHaveCount(0);
+  const downloads=page.locator('a[download][href*="knowledge/"]');
+  if(name==='calculator.html'){
+   await expect(downloads).toHaveCount(1);
+   await expect(downloads).toHaveAttribute('href','knowledge/atlas-implementation-matrix.json');
+   await expect(page.locator('.calculator-reference').filter({has:downloads})).toHaveCount(1);
+  }else await expect(downloads).toHaveCount(0);
  }
 });
 test('dedicated AI upload hub lists all nine sections at 320px',async({page})=>{
