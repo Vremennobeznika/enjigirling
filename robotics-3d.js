@@ -9,7 +9,7 @@ const canvas=document.createElement('canvas');canvas.id='robotics3d';canvas.setA
 canvas.setAttribute('aria-label','Трёхмерная модель оригинального женского андроида. Перетаскивайте для поворота, колесо для масштаба; выбирайте системы кнопками справа.');
 const ctx=canvas.getContext('2d',{alpha:false});if(!ctx)return;
 svg.parentNode.insertBefore(canvas,svg);svg.hidden=true;
-let yaw=22,pitch=6,zoom=1,active='frame',drag=null,raf=0,hit=[];
+let yaw=22,pitch=6,zoom=1,active='frame',drag=null,raf=0,hit=[],visible=true;
 const parts=[
  ['frame',0,2.31,0,.37,.43,.23,'torso'],['frame',0,1.91,0,.39,.21,.25,'pelvis'],
  ['sensor',0,3.12,0,.225,.295,.19,'head'],['frame',0,2.78,0,.085,.14,.09,'neck'],
@@ -37,6 +37,8 @@ for(let i=0;i<9;i++){const x=(i-4)*.045;extras.push(['sensor',x,3.36-Math.abs(x)
 for(const sign of [-1,1])for(let i=0;i<3;i++){extras.push(['hand',sign*(.65+(i-1)*.045),1.34,.055,.023,.095,.025,'finger']);}
 const all=parts.concat(extras);
 const mesh=[];
+const lowEnd=(navigator.hardwareConcurrency&&navigator.hardwareConcurrency<=4)||(navigator.deviceMemory&&navigator.deviceMemory<=4)||matchMedia('(max-width:600px)').matches;
+const motionAllowed=!matchMedia('(prefers-reduced-motion: reduce)').matches;
 function material(type,key){
  if(type==='eye')return [128,199,217];
  if(type==='mouth')return [65,82,94];
@@ -88,7 +90,7 @@ function project(v,w,h){
 }
 function render(){
  raf=0;const w=canvas.clientWidth||640,h=canvas.clientHeight||560;
- const dpr=Math.min(devicePixelRatio||1,2),pw=Math.round(w*dpr),ph=Math.round(h*dpr);
+ const dpr=Math.min(devicePixelRatio||1,lowEnd?1:1.5),pw=Math.round(w*dpr),ph=Math.round(h*dpr);
  if(canvas.width!==pw||canvas.height!==ph){canvas.width=pw;canvas.height=ph;}
  ctx.setTransform(dpr,0,0,dpr,0,0);
  const dark=document.documentElement.classList.contains('theme-dark');
@@ -122,9 +124,9 @@ function render(){
   hit.push({p,key:tr.face.key});
  }
  ctx.fillStyle=dark?'#9aaab5':'#536674';ctx.font='11px system-ui';ctx.fillText('ENJIGIRLING / ANDROID STUDY · 3D',14,22);
- ctx.fillText('YAW '+Math.round(yaw)+'°  /  ZOOM '+Math.round(zoom*100)+'%',14,h-14);
+ ctx.fillText('YAW '+Math.round(yaw)+'°  /  ZOOM '+Math.round(zoom*100)+'%'+(lowEnd?'  /  ECO':''),14,h-14);
 }
-function schedule(){if(!raf)raf=requestAnimationFrame(render);}
+function schedule(){if(!visible||document.hidden)return;if(!raf)raf=requestAnimationFrame(render);}
 function setYaw(v){yaw=Math.max(-180,Math.min(180,v));slider.value=String(Math.round(yaw));const out=document.getElementById('roboticsYawValue');if(out){out.value=Math.round(yaw)+'°';out.textContent=out.value;}schedule();}
 slider.addEventListener('input',()=>{yaw=Number(slider.value);schedule();});
 document.querySelectorAll('[data-robotics-part]').forEach(b=>b.addEventListener('click',()=>{active=b.dataset.roboticsPart;schedule();}));
@@ -144,6 +146,10 @@ canvas.addEventListener('pointerup',e=>{
 });
 canvas.addEventListener('pointercancel',()=>{drag=null;});
 canvas.addEventListener('wheel',e=>{e.preventDefault();zoom=Math.max(.7,Math.min(1.75,zoom*(e.deltaY>0?.92:1.08)));schedule();},{passive:false});
+if(typeof IntersectionObserver!=='undefined'){
+ new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;if(visible)schedule();else if(raf){cancelAnimationFrame(raf);raf=0;}},{threshold:0}).observe(canvas);
+}
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)schedule();else if(raf){cancelAnimationFrame(raf);raf=0;}});
 if(typeof ResizeObserver!=='undefined')new ResizeObserver(schedule).observe(canvas);
 else window.addEventListener('resize',schedule);
 schedule();
