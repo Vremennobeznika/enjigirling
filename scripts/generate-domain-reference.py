@@ -101,6 +101,9 @@ for a,b in [(1e-10,1e12),(1e-200,1e6),(10,10),(10,10.000000001)]:
     da,db=D(a),D(b);expected=da if da==db else (da-db)/(da.ln()-db.ln())
     for model in ['g19-17','g20-11']:
         for x,y in [(a,b),(b,a)]:case(model,dict(dt1=x,dt2=y),expected,'Decimal symmetric logarithmic mean')
+# Hand-authored independent non-default problems close the per-model coverage gaps.
+import runpy
+cases.extend(runpy.run_path(str(Path(__file__).resolve().parent/'independent-all-models.py'))['cases'])
 out=Path(__file__).resolve().parent.parent/'tests/fixtures/calculator-domain-reference.json'
 out.parent.mkdir(exist_ok=True)
 out.write_text(json.dumps(dict(schemaVersion=1,generator='SciPy 1.17 / NumPy / Python Decimal; seed 264734',cases=cases),ensure_ascii=False,separators=(',',':'))+'\n')
