@@ -1,0 +1,108 @@
+[
+  {
+    "key": "pcb",
+    "url": "https://www.rezonit.ru/directory/baza-znaniy/pechatnye-platy-rasshirennyy-spravochnik/kak-delayut-pechatnye-platy-proizvodstvo-pechatnykh-plat/",
+    "status": 200,
+    "chars": 16294
+  },
+  {
+    "key": "smt",
+    "url": "https://www.rezonit.ru/directory/baza-znaniy/pechatnye-platy-rasshirennyy-spravochnik/kak-proizvoditsya-avtomaticheskiy-montazh-pechatnykh-plat-vidy-montazha-/",
+    "status": 200,
+    "chars": 11762
+  },
+  {
+    "key": "hdi",
+    "url": "https://www.rezonit.ru/directory/baza-znaniy/glossariy/hdi_pechatnye_platy/",
+    "status": 200,
+    "chars": 4336
+  },
+  {
+    "key": "aoi",
+    "url": "https://necompany.ru/poleznaya-informatsiya/chto-takoe-avtomaticheskaya-opticheskaya-inspektsiya-aoi-i-zachem-ona-nuzhna/",
+    "status": 200,
+    "chars": 5753
+  },
+  {
+    "key": "dfm",
+    "url": "https://en.wikipedia.org/wiki/Design_for_manufacturability",
+    "status": 200,
+    "chars": 23945
+  },
+  {
+    "key": "dft",
+    "url": "https://en.wikipedia.org/wiki/Design_for_testing",
+    "status": 200,
+    "chars": 14717
+  },
+  {
+    "key": "dfa",
+    "url": "https://en.wikipedia.org/wiki/Design_for_assembly",
+    "status": 200,
+    "chars": 13734
+  },
+  {
+    "key": "emc",
+    "url": "https://ru.wikipedia.org/wiki/%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BC%D0%B0%D0%B3%D0%BD%D0%B8%D1%82%D0%BD%D0%B0%D1%8F_%D1%81%D0%BE%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C",
+    "status": 200,
+    "chars": 9351
+  },
+  {
+    "key": "fdm",
+    "url": "https://en.wikipedia.org/wiki/Fused_filament_fabrication",
+    "status": 200,
+    "chars": 43361
+  },
+  {
+    "key": "cleanroom",
+    "url": "https://ru.wikipedia.org/wiki/%D0%A7%D0%B8%D1%81%D1%82%D0%BE%D0%B5_%D0%BF%D0%BE%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D0%B5",
+    "status": 200,
+    "chars": 21699
+  },
+  {
+    "key": "verification",
+    "url": "https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0",
+    "status": 200,
+    "chars": 7942
+  },
+  {
+    "key": "vim",
+    "url": "https://jcgm.bipm.org/vim/en/2.13.html",
+    "status": 200,
+    "chars": 6309
+  },
+  {
+    "key": "error",
+    "url": "https://jcgm.bipm.org/vim/en/2.16.html",
+    "status": 200,
+    "chars": 5667
+  },
+  {
+    "key": "instrument",
+    "url": "https://jcgm.bipm.org/vim/en/3.1.html",
+    "status": 200,
+    "chars": 4892
+  },
+  {
+    "key": "ci",
+    "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda352.htm",
+    "status": 200,
+    "chars": 6051
+  },
+  {
+    "key": "median",
+    "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm",
+    "status": 200,
+    "chars": 9390
+  },
+  {
+    "key": "eskd",
+    "url": "https://ru.wikipedia.org/wiki/Единая_система_конструкторской_документации",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "key": "roughness",
+    "url": "https://ru.wikipedia.org/wiki/Шероховатость_поверхности",
+    "error": "HTTP Error 403: Forbidden"
+  }
+]

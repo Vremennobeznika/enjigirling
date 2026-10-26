@@ -41,7 +41,7 @@
 02 / ТЕХНОЛОГИИ
 #### Разобраться с производством
 Посмотрите процесс, связанные материалы и профессии. Описания обзорные: параметры и безопасность определяет документация конкретного производства.
-[208 процессов](https://vremennobeznika.github.io/enjigirling/processes.html)[172 материала](https://vremennobeznika.github.io/enjigirling/materials.html)[Термины](https://vremennobeznika.github.io/enjigirling/dictionary.html)
+[210 процессов](https://vremennobeznika.github.io/enjigirling/processes.html)[172 материала](https://vremennobeznika.github.io/enjigirling/materials.html)[Термины](https://vremennobeznika.github.io/enjigirling/dictionary.html)
 03 / ИНСТРУМЕНТЫ
 #### Рассчитать и проверить
 Переводите единицы и разбирайте инженерные сигналы. Результат калькулятора проверяйте по исходным данным, допущениям и применяемым стандартам.

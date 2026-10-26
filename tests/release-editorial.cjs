@@ -29,7 +29,7 @@ for(const page of pages){
  assert.ok(!/name="robots"\s+content="noindex"/i.test(html),page+': accidentally blocked indexing');
 }
 const home=fs.readFileSync('index.html','utf8');
-assert.match(home,/>208 процессов<\/a>/,'homepage process count outdated');
+assert.match(home,/>210 процессов<\/a>/,'homepage process count outdated');
 assert.match(home,/>172 материала<\/a>/,'homepage material count outdated');
 assert.doesNotMatch(home,/>12 процессов<\/a>|>12 групп материалов<\/a>/,'legacy catalog statistics');
 assert.match(home,/t\.me\/enjigirling/,'editorial Telegram contact missing');

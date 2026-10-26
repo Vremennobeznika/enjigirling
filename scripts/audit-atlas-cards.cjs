@@ -72,7 +72,7 @@ const records=[...processes.map(x=>audit(x,'processes')),...materials.map(x=>aud
 assert.equal(new Set(records.map(x=>x.type+':'+x.id)).size,records.length);
 const levels=Object.fromEntries(['P0','P1','P2'].map(k=>[k,records.filter(x=>x.priority===k).length]));
 const codes={};for(const x of records)for(const p of x.issues)codes[p.code]=(codes[p.code]||0)+1;
-const report={schemaVersion:'1.0',date:'2026-10-22',purpose:'per-card editorial triage; NOT a scientific verification of all claims',
+const report={schemaVersion:'1.0',date:'2026-10-27',purpose:'per-card editorial triage; NOT a scientific verification of all claims',
  scope:{processes:processes.length,materials:materials.length,total:records.length,...levels,claimCheckedEntries:records.filter(x=>x.claimCheckedInRegistry).length},
  methodology:['обязательные поля и терминология','взаимные ссылки и ID','содержание этапов/описаний','источники карточки и реестра','границы доказательств','отрасль и класс','достоверность отраслевой ссылки','пригодность для отраслевой выгрузки в ИИ'],
  disclaimers:['URL может вести на общий индекс, а не на подтверждение отдельной технической характеристики','Статус claim_checked относится к узкому тезису','Все карточки требуют индивидуальной предметной проверки содержимого документов'],

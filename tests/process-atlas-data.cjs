@@ -12,7 +12,7 @@ const materials=new Set(ctx.window.engineeringMaterials.map(x=>x.id));
 const ids=new Set(processes.map(x=>x.id));
 const allowedIndustries=new Set(['metals','polymers','food','textiles','wood','electronics','chemicals','general','composites','construction','energy','water','ceramics','pharma','printing','mining']);
 const allowedCategories=new Set(['forming','joining','treatment','inspection']);
-assert.equal(processes.length,208,'process count changed: review expected coverage explicitly');
+assert.equal(processes.length,210,'process count changed: review expected coverage explicitly');
 assert.equal(ids.size,processes.length,'duplicate process ID');
 const html=fs.readFileSync('processes.html','utf8');
 for(const industry of allowedIndustries)assert.ok(html.includes('value="'+industry+'"'),industry+' sector option missing');

@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const collator = new Intl.Collator('ru', { numeric: true, sensitivity: 'base' });
     const orderedTerms = [...dictionary].sort((a, b) => collator.compare(a.term, b.term));
-    const searchable=orderedTerms.map(item=>({item,text:(item.term+' '+item.def).toLocaleLowerCase('ru-RU')}));
+    const searchable=orderedTerms.map(item=>({item,text:([item.term,item.def,...(item.aliases||[])].join(' ')).toLocaleLowerCase('ru-RU')}));
     const status=document.createElement('p');status.className='filter-status';status.setAttribute('role','status');status.setAttribute('aria-live','polite');
     const reset=document.createElement('button');reset.type='button';reset.className='eng-filter-btn filter-reset';reset.textContent='Сбросить поиск';
     searchInput.insertAdjacentElement('afterend',reset);reset.insertAdjacentElement('afterend',status);
@@ -26,6 +26,18 @@ document.addEventListener('DOMContentLoaded', () => {
             const title=document.createElement('h2');title.className='eng-title';title.textContent=item.term;
             const description=document.createElement('p');description.className='eng-desc';description.textContent=item.def;
             card.append(title,description);
+            const sources = (item.sources || []).filter(source => /^https:\/\//i.test(source.url || ''));
+            if (sources.length) {
+                const details = document.createElement('details');
+                const summary = document.createElement('summary');summary.textContent = 'Источники';details.append(summary);
+                const list = document.createElement('ul');
+                for (const source of sources) {
+                    const row = document.createElement('li'), link = document.createElement('a');
+                    link.textContent = source.title;link.href = source.url;link.target = '_blank';link.rel = 'noopener noreferrer';
+                    row.append(link);list.append(row);
+                }
+                details.append(list);card.append(details);
+            }
             grid.appendChild(card);
         });
         grid.dataset.ready = 'true';

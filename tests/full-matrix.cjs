@@ -457,7 +457,7 @@ check('AI training packs expose nine main sections plus the code library',()=>{
  assert.ok(codePack.records.every(x=>x.type==='Библиотека программирования для ИИ'));
  assert.ok(all.includes('# ENJIGIRLING — Библиотека программирования для ИИ'));
  assert.equal(json('knowledge/sections/professions.json').recordsCount,54);
- assert.equal(json('knowledge/sections/dictionary.json').recordsCount,551);
+ assert.equal(json('knowledge/sections/dictionary.json').recordsCount,562);
  assert.ok(json('knowledge/sections/calendar.json').recordsCount>0);
  assert.ok(json('knowledge/sections/resources.json').recordsCount>0);
  assert.equal(json('knowledge/sections/calculators.json').recordsCount,34);

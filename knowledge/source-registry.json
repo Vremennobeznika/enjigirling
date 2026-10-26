@@ -3193,6 +3193,204 @@
       "appliesTo": "Storage, PDF p.1",
       "access": "public_text",
       "notes": "Прочитана памятка первичного автора USDA FSIS на университетском хостинге. Официальный URL FSIS вернул 403. Памятка для потребителей, не промышленная техкарта; численные режимы не перенесены."
+    },
+    {
+      "sourceId": "addition-2026-10-27-pcb",
+      "title": "Резонит — Как делают печатные платы? Производство печатных плат",
+      "url": "https://www.rezonit.ru/directory/baza-znaniy/pechatnye-platy-rasshirennyy-spravochnik/kak-delayut-pechatnye-platy-proizvodstvo-pechatnykh-plat/",
+      "publisher": "Резонит",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-27",
+      "appliesTo": "Редакционное определение или обзор технологического маршрута; не подтверждает применимость к конкретному изделию.",
+      "access": "public_overview",
+      "notes": "Открытый текст прочитан; полные стандарты и критерии соответствия не проверялись."
+    },
+    {
+      "sourceId": "addition-2026-10-27-smt",
+      "title": "Резонит — Как производится автоматический монтаж печатных плат? Виды монтажа",
+      "url": "https://www.rezonit.ru/directory/baza-znaniy/pechatnye-platy-rasshirennyy-spravochnik/kak-proizvoditsya-avtomaticheskiy-montazh-pechatnykh-plat-vidy-montazha-/",
+      "publisher": "Резонит",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-27",
+      "appliesTo": "Редакционное определение или обзор технологического маршрута; не подтверждает применимость к конкретному изделию.",
+      "access": "public_overview",
+      "notes": "Открытый текст прочитан; полные стандарты и критерии соответствия не проверялись."
+    },
+    {
+      "sourceId": "addition-2026-10-27-hdi",
+      "title": "HDI-печатные платы",
+      "url": "https://www.rezonit.ru/directory/baza-znaniy/glossariy/hdi_pechatnye_platy/",
+      "publisher": "Резонит",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-27",
+      "appliesTo": "Редакционное определение или обзор технологического маршрута; не подтверждает применимость к конкретному изделию.",
+      "access": "public_overview",
+      "notes": "Открытый текст прочитан; полные стандарты и критерии соответствия не проверялись."
+    },
+    {
+      "sourceId": "addition-2026-10-27-aoi",
+      "title": "AOI — автоматическая оптическая инспекция",
+      "url": "https://necompany.ru/poleznaya-informatsiya/chto-takoe-avtomaticheskaya-opticheskaya-inspektsiya-aoi-i-zachem-ona-nuzhna/",
+      "publisher": "NECompany",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-27",
+      "appliesTo": "Редакционное определение или обзор технологического маршрута; не подтверждает применимость к конкретному изделию.",
+      "access": "public_overview",
+      "notes": "Открытый текст прочитан; полные стандарты и критерии соответствия не проверялись."
+    },
+    {
+      "sourceId": "addition-2026-10-27-dfm",
+      "title": "DFM — проектирование с учётом изготовления",
+      "url": "https://en.wikipedia.org/wiki/Design_for_manufacturability",
+      "publisher": "Wikipedia contributors",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-27",
+      "appliesTo": "Редакционное определение или обзор технологического маршрута; не подтверждает применимость к конкретному изделию.",
+      "access": "public_overview",
+      "notes": "Открытый текст прочитан; полные стандарты и критерии соответствия не проверялись."
+    },
+    {
+      "sourceId": "addition-2026-10-27-dft",
+      "title": "DFT — проектирование с учётом тестирования",
+      "url": "https://en.wikipedia.org/wiki/Design_for_testing",
+      "publisher": "Wikipedia contributors",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-27",
+      "appliesTo": "Редакционное определение или обзор технологического маршрута; не подтверждает применимость к конкретному изделию.",
+      "access": "public_overview",
+      "notes": "Открытый текст прочитан; полные стандарты и критерии соответствия не проверялись."
+    },
+    {
+      "sourceId": "addition-2026-10-27-dfa",
+      "title": "DFA — проектирование с учётом сборки",
+      "url": "https://en.wikipedia.org/wiki/Design_for_assembly",
+      "publisher": "Wikipedia contributors",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-27",
+      "appliesTo": "Редакционное определение или обзор технологического маршрута; не подтверждает применимость к конкретному изделию.",
+      "access": "public_overview",
+      "notes": "Открытый текст прочитан; полные стандарты и критерии соответствия не проверялись."
+    },
+    {
+      "sourceId": "addition-2026-10-27-emc",
+      "title": "ЭМС — электромагнитная совместимость",
+      "url": "https://ru.wikipedia.org/wiki/%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BC%D0%B0%D0%B3%D0%BD%D0%B8%D1%82%D0%BD%D0%B0%D1%8F_%D1%81%D0%BE%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C",
+      "publisher": "Wikipedia contributors",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-27",
+      "appliesTo": "Редакционное определение или обзор технологического маршрута; не подтверждает применимость к конкретному изделию.",
+      "access": "public_overview",
+      "notes": "Открытый текст прочитан; полные стандарты и критерии соответствия не проверялись."
+    },
+    {
+      "sourceId": "addition-2026-10-27-fdm",
+      "title": "FDM/FFF — печать методом экструзии нити",
+      "url": "https://en.wikipedia.org/wiki/Fused_filament_fabrication",
+      "publisher": "Wikipedia contributors",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-27",
+      "appliesTo": "Редакционное определение или обзор технологического маршрута; не подтверждает применимость к конкретному изделию.",
+      "access": "public_overview",
+      "notes": "Открытый текст прочитан; полные стандарты и критерии соответствия не проверялись."
+    },
+    {
+      "sourceId": "addition-2026-10-27-cleanroom",
+      "title": "Чистое помещение",
+      "url": "https://ru.wikipedia.org/wiki/%D0%A7%D0%B8%D1%81%D1%82%D0%BE%D0%B5_%D0%BF%D0%BE%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D0%B5",
+      "publisher": "Wikipedia contributors",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-27",
+      "appliesTo": "Редакционное определение или обзор технологического маршрута; не подтверждает применимость к конкретному изделию.",
+      "access": "public_overview",
+      "notes": "Открытый текст прочитан; полные стандарты и критерии соответствия не проверялись."
+    },
+    {
+      "sourceId": "addition-2026-10-27-verification",
+      "title": "Поверка",
+      "url": "https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0",
+      "publisher": "Wikipedia contributors",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-27",
+      "appliesTo": "Редакционное определение или обзор технологического маршрута; не подтверждает применимость к конкретному изделию.",
+      "access": "public_overview",
+      "notes": "Открытый текст прочитан; полные стандарты и критерии соответствия не проверялись."
+    },
+    {
+      "sourceId": "addition-2026-10-27-vim",
+      "title": "Точность результата измерений",
+      "url": "https://jcgm.bipm.org/vim/en/2.13.html",
+      "publisher": "BIPM / JCGM",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-27",
+      "appliesTo": "Редакционное определение или обзор технологического маршрута; не подтверждает применимость к конкретному изделию.",
+      "access": "public_overview",
+      "notes": "Открытый текст прочитан; полные стандарты и критерии соответствия не проверялись."
+    },
+    {
+      "sourceId": "addition-2026-10-27-error",
+      "title": "Погрешность измерения",
+      "url": "https://jcgm.bipm.org/vim/en/2.16.html",
+      "publisher": "BIPM / JCGM",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-27",
+      "appliesTo": "Редакционное определение или обзор технологического маршрута; не подтверждает применимость к конкретному изделию.",
+      "access": "public_overview",
+      "notes": "Открытый текст прочитан; полные стандарты и критерии соответствия не проверялись."
+    },
+    {
+      "sourceId": "addition-2026-10-27-instrument",
+      "title": "Средство измерений",
+      "url": "https://jcgm.bipm.org/vim/en/3.1.html",
+      "publisher": "BIPM / JCGM",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-27",
+      "appliesTo": "Редакционное определение или обзор технологического маршрута; не подтверждает применимость к конкретному изделию.",
+      "access": "public_overview",
+      "notes": "Открытый текст прочитан; полные стандарты и критерии соответствия не проверялись."
+    },
+    {
+      "sourceId": "addition-2026-10-27-ci",
+      "title": "Доверительный интервал",
+      "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda352.htm",
+      "publisher": "NIST",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-27",
+      "appliesTo": "Редакционное определение или обзор технологического маршрута; не подтверждает применимость к конкретному изделию.",
+      "access": "public_overview",
+      "notes": "Открытый текст прочитан; полные стандарты и критерии соответствия не проверялись."
+    },
+    {
+      "sourceId": "addition-2026-10-27-median",
+      "title": "Медиана",
+      "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm",
+      "publisher": "NIST",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-27",
+      "appliesTo": "Редакционное определение или обзор технологического маршрута; не подтверждает применимость к конкретному изделию.",
+      "access": "public_overview",
+      "notes": "Открытый текст прочитан; полные стандарты и критерии соответствия не проверялись."
+    },
+    {
+      "sourceId": "addition-2026-10-27-eskd",
+      "title": "ЕСКД",
+      "url": "https://ru.wikipedia.org/wiki/Единая_система_конструкторской_документации",
+      "publisher": "Wikipedia contributors",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-27",
+      "appliesTo": "Редакционное определение или обзор технологического маршрута; не подтверждает применимость к конкретному изделию.",
+      "access": "http_403",
+      "notes": "HTTP 403: текст не прочитан, ссылка только для дальнейшей проверки."
+    },
+    {
+      "sourceId": "addition-2026-10-27-roughness",
+      "title": "Шероховатость",
+      "url": "https://ru.wikipedia.org/wiki/Шероховатость_поверхности",
+      "publisher": "Wikipedia contributors",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-27",
+      "appliesTo": "Редакционное определение или обзор технологического маршрута; не подтверждает применимость к конкретному изделию.",
+      "access": "http_403",
+      "notes": "HTTP 403: текст не прочитан, ссылка только для дальнейшей проверки."
     }
   ],
   "recordEvidence": [
@@ -11379,6 +11577,150 @@
       "claimCheckedAt": "2026-10-25",
       "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
       "reviewedTextSha256": "57d0b78244122f7fbd69ed79acd33d5b6275131ff16800daf76ad2a420f35883"
+    },
+    {
+      "recordType": "processes",
+      "recordId": "multilayer-pcb-manufacturing",
+      "sourceId": "addition-2026-10-27-pcb",
+      "claimPath": "description",
+      "verificationStatus": "source_located",
+      "claimScope": "Сопоставлены этапы открытого описания производства Резонит. Это пример технологического маршрута, а не универсальная инструкция; режимы и применимость к конкретному стеку не проверены."
+    },
+    {
+      "recordType": "processes",
+      "recordId": "automated-smt-assembly",
+      "sourceId": "addition-2026-10-27-smt",
+      "claimPath": "description",
+      "verificationStatus": "source_located",
+      "claimScope": "Проверена последовательность в обзоре Резонит. Состав линии, режимы, производительность и критерии приёмки конкретного изделия не подтверждены."
+    },
+    {
+      "recordType": "dictionary",
+      "recordId": "HDI-печатные платы",
+      "sourceId": "addition-2026-10-27-hdi",
+      "claimPath": "def",
+      "verificationStatus": "source_located",
+      "claimScope": "Прочитано открытое справочное описание; формулировка редакционная, нормативное соответствие отдельно не проверялось."
+    },
+    {
+      "recordType": "dictionary",
+      "recordId": "AOI — автоматическая оптическая инспекция",
+      "sourceId": "addition-2026-10-27-aoi",
+      "claimPath": "def",
+      "verificationStatus": "source_located",
+      "claimScope": "Прочитано открытое справочное описание; формулировка редакционная, нормативное соответствие отдельно не проверялось."
+    },
+    {
+      "recordType": "dictionary",
+      "recordId": "DFM — проектирование с учётом изготовления",
+      "sourceId": "addition-2026-10-27-dfm",
+      "claimPath": "def",
+      "verificationStatus": "source_located",
+      "claimScope": "Прочитано открытое справочное описание; формулировка редакционная, нормативное соответствие отдельно не проверялось."
+    },
+    {
+      "recordType": "dictionary",
+      "recordId": "DFT — проектирование с учётом тестирования",
+      "sourceId": "addition-2026-10-27-dft",
+      "claimPath": "def",
+      "verificationStatus": "source_located",
+      "claimScope": "Прочитано открытое справочное описание; формулировка редакционная, нормативное соответствие отдельно не проверялось."
+    },
+    {
+      "recordType": "dictionary",
+      "recordId": "DFA — проектирование с учётом сборки",
+      "sourceId": "addition-2026-10-27-dfa",
+      "claimPath": "def",
+      "verificationStatus": "source_located",
+      "claimScope": "Прочитано открытое справочное описание; формулировка редакционная, нормативное соответствие отдельно не проверялось."
+    },
+    {
+      "recordType": "dictionary",
+      "recordId": "ЭМС — электромагнитная совместимость",
+      "sourceId": "addition-2026-10-27-emc",
+      "claimPath": "def",
+      "verificationStatus": "source_located",
+      "claimScope": "Прочитано открытое справочное описание; формулировка редакционная, нормативное соответствие отдельно не проверялось."
+    },
+    {
+      "recordType": "dictionary",
+      "recordId": "ЕСКД",
+      "sourceId": "addition-2026-10-27-eskd",
+      "claimPath": "def",
+      "verificationStatus": "unverified",
+      "claimScope": "Ссылка не открылась (HTTP 403); определение редакционное, без заявления проверки источника."
+    },
+    {
+      "recordType": "dictionary",
+      "recordId": "Шероховатость",
+      "sourceId": "addition-2026-10-27-roughness",
+      "claimPath": "def",
+      "verificationStatus": "unverified",
+      "claimScope": "Ссылка не открылась (HTTP 403); определение редакционное, без заявления проверки источника."
+    },
+    {
+      "recordType": "dictionary",
+      "recordId": "Средство измерений",
+      "sourceId": "addition-2026-10-27-instrument",
+      "claimPath": "def",
+      "verificationStatus": "source_located",
+      "claimScope": "Прочитано открытое справочное описание; формулировка редакционная, нормативное соответствие отдельно не проверялось."
+    },
+    {
+      "recordType": "dictionary",
+      "recordId": "FDM/FFF — печать методом экструзии нити",
+      "sourceId": "addition-2026-10-27-fdm",
+      "claimPath": "def",
+      "verificationStatus": "source_located",
+      "claimScope": "Прочитано открытое справочное описание; формулировка редакционная, нормативное соответствие отдельно не проверялось."
+    },
+    {
+      "recordType": "dictionary",
+      "recordId": "Чистое помещение",
+      "sourceId": "addition-2026-10-27-cleanroom",
+      "claimPath": "def",
+      "verificationStatus": "source_located",
+      "claimScope": "Прочитано открытое справочное описание; формулировка редакционная, нормативное соответствие отдельно не проверялось."
+    },
+    {
+      "recordType": "dictionary",
+      "recordId": "Поверка",
+      "sourceId": "addition-2026-10-27-verification",
+      "claimPath": "def",
+      "verificationStatus": "source_located",
+      "claimScope": "Прочитано открытое справочное описание; формулировка редакционная, нормативное соответствие отдельно не проверялось."
+    },
+    {
+      "recordType": "dictionary",
+      "recordId": "Точность результата измерений",
+      "sourceId": "addition-2026-10-27-vim",
+      "claimPath": "def",
+      "verificationStatus": "source_located",
+      "claimScope": "Прочитано открытое справочное описание; формулировка редакционная, нормативное соответствие отдельно не проверялось."
+    },
+    {
+      "recordType": "dictionary",
+      "recordId": "Погрешность измерения",
+      "sourceId": "addition-2026-10-27-error",
+      "claimPath": "def",
+      "verificationStatus": "source_located",
+      "claimScope": "Прочитано открытое справочное описание; формулировка редакционная, нормативное соответствие отдельно не проверялось."
+    },
+    {
+      "recordType": "dictionary",
+      "recordId": "Медиана",
+      "sourceId": "addition-2026-10-27-median",
+      "claimPath": "def",
+      "verificationStatus": "source_located",
+      "claimScope": "Прочитано открытое справочное описание; формулировка редакционная, нормативное соответствие отдельно не проверялось."
+    },
+    {
+      "recordType": "dictionary",
+      "recordId": "Доверительный интервал",
+      "sourceId": "addition-2026-10-27-ci",
+      "claimPath": "def",
+      "verificationStatus": "source_located",
+      "claimScope": "Прочитано открытое справочное описание; формулировка редакционная, нормативное соответствие отдельно не проверялось."
     }
   ],
   "policy": {

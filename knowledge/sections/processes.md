@@ -8,7 +8,7 @@
 
 ## Текст и описание раздела
 
-[ENJIGIRLING / ENGINEERING INDEX](https://vremennobeznika.github.io/enjigirling/index.html)[Для ИИ](https://vremennobeznika.github.io/enjigirling/ai.html) ☾
+[ENJIGIRLING / ENGINEERING INDEX](https://vremennobeznika.github.io/enjigirling/index.html) ☾
 Разделы сайта
 Карьера
 [Профессии](https://vremennobeznika.github.io/enjigirling/index.html)
@@ -24,6 +24,10 @@
 Сообщество
 [Календарь праздников](https://vremennobeznika.github.io/enjigirling/calendar.html)
 [Ресурсы сообщества 18+](https://vremennobeznika.github.io/enjigirling/resources.html)
+Лаборатории
+[Робототехника](https://vremennobeznika.github.io/enjigirling/robotics.html)
+[Кодинг](https://vremennobeznika.github.io/enjigirling/coding.html)
+[Для ИИ](https://vremennobeznika.github.io/enjigirling/ai.html)
 СПРАВОЧНИК / 02
 ## Атлас производственных процессов.
 Технологические цепочки, типовые дефекты и связь с профессиями. Обзорные описания, не технологические инструкции.
@@ -46,7 +50,7 @@
 Пример цепочки из каталога: [дуговая сварка](https://vremennobeznika.github.io/enjigirling/processes.html#welding) → [сталь 09Г2С](https://vremennobeznika.github.io/enjigirling/materials.html#09g2s) → [инженер-механик](https://vremennobeznika.github.io/enjigirling/index.html#profession=mechanical-engineer). Описание здесь обзорное, не инструкция по выполнению опасных работ.
 [Скачать CSV-карту анализа производственного дефекта](https://vremennobeznika.github.io/enjigirling/templates/production-defect-review.csv) · [Инструкция по заполнению](https://vremennobeznika.github.io/enjigirling/templates/README.md)
 
-## Полные записи справочника (208 записей/групп)
+## Полные записи справочника (210 записей/групп)
 
 ### Литьё
 - **id:** casting
@@ -2992,6 +2996,35 @@
 - **profession:** polygraph-engineer
 - **sources:** [{"title":"OSHA — терминология печати и послепечатных операций — обзор без технологических режимов","url":"https://www.osha.gov/etools/printing-industry/glossary"},{"title":"Direct UV cross-linking: UV curing without photoinitiators","url":"https://www.ist-uv.com/en-us/technology/uv-direct-cross-linking"}]
 - **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Совместимое UV-излучение инициирует полимеризацию или сшивку подходящей системы; результат зависит от рецептуры, спектра и условий процесса.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
+- **reviewStatus:** source_located
+
+### Производство многослойных печатных плат
+- **id:** multilayer-pcb-manufacturing
+- **name:** Производство многослойных печатных плат
+- **category:** forming
+- **industry:** electronics
+- **description:** Изготовление платы с несколькими проводящими слоями, разделёнными диэлектриком и соединёнными переходными отверстиями. Формирование внутренних слоёв и их прессование предшествуют обработке наружных слоёв.
+- **steps:** Подготовка производственных данных и стека слоёв → фотолитография и травление внутренних слоёв → AOI внутренних слоёв → совмещение слоёв и прессование с препрегом → сверление и подготовка отверстий → металлизация отверстий и формирование наружных проводников → нанесение паяльной маски и финишного покрытия → обработка контура → электрический и итоговый контроль
+- **checks:** Совмещение слоёв, целостность проводников и изоляции, качество металлизации отверстий, расслоения и геометрия. Стек, материал, импеданс и критерии приёмки задаются документацией. Последовательность обзорная для типовой многослойной платы; HDI может требовать микроотверстий и дополнительных циклов ламинирования.
+- **materials:** ["pcb"]
+- **profession:** pcb-layout-engineer
+- **sources:** [{"title":"Резонит — Как делают печатные платы? Производство печатных плат","url":"https://www.rezonit.ru/directory/baza-znaniy/pechatnye-platy-rasshirennyy-spravochnik/kak-delayut-pechatnye-platy-proizvodstvo-pechatnykh-plat/"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"В описанном производстве многослойной платы внутренние слои проходят фотолитографию, травление и AOI до сборки пакета и прессования.","reviewScope":"Сопоставлены этапы открытого описания производства Резонит. Это пример технологического маршрута, а не универсальная инструкция; режимы и применимость к конкретному стеку не проверены.","checkedAt":"2026-10-27"}
+- **reviewStatus:** source_located
+
+### Автоматический поверхностный монтаж печатных плат (SMT)
+- **id:** automated-smt-assembly
+- **name:** Автоматический поверхностный монтаж печатных плат (SMT)
+- **category:** joining
+- **industry:** electronics
+- **parentId:** pcb-assembly
+- **description:** Автоматизированная сборка электронных узлов с компонентами поверхностного монтажа: нанесение паяльной пасты, установка компонентов автоматом и пайка оплавлением. Это монтаж на готовой плате, а не изготовление её проводящих слоёв.
+- **steps:** Подготовка платы, компонентов, трафарета и программы линии → нанесение паяльной пасты → проверка нанесения пасты (SPI) → автоматическая установка компонентов → пайка оплавлением → автоматическая оптическая инспекция (AOI) → при необходимости рентгеновский контроль скрытых соединений и электрические испытания
+- **checks:** Объём и положение пасты, наличие и ориентация компонентов, смещения, перемычки и качество пайки. Температурный профиль задают по пасте, плате и компонентам. AOI контролирует доступные оптическому наблюдению признаки и не заменяет рентген скрытых соединений или функциональные испытания. Для второй стороны маршрут повторяют с учётом конструкции.
+- **materials:** ["pcb","solder"]
+- **profession:** circuit-design-engineer
+- **sources:** [{"title":"Резонит — Как производится автоматический монтаж печатных плат? Виды монтажа","url":"https://www.rezonit.ru/directory/baza-znaniy/pechatnye-platy-rasshirennyy-spravochnik/kak-proizvoditsya-avtomaticheskiy-montazh-pechatnykh-plat-vidy-montazha-/"}]
+- **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Описанная SMT-линия включает нанесение пасты, SPI, установку компонентов, конвекционную пайку и AOI; рентген указан как опция.","reviewScope":"Проверена последовательность в обзоре Резонит. Состав линии, режимы, производительность и критерии приёмки конкретного изделия не подтверждены.","checkedAt":"2026-10-27"}
 - **reviewStatus:** source_located
 
 

@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0",
-  "date": "2026-10-22",
+  "date": "2026-10-27",
   "purpose": "per-card editorial triage; NOT a scientific verification of all claims",
   "scope": {
-    "processes": 208,
+    "processes": 210,
     "materials": 172,
-    "total": 380,
+    "total": 382,
     "P0": 0,
-    "P1": 178,
+    "P1": 180,
     "P2": 202,
     "claimCheckedEntries": 380
   },
@@ -32,6 +32,7 @@
     "L02": 74,
     "T02": 179,
     "S04": 1,
+    "E01": 2,
     "T03": 108,
     "L03": 7
   },
@@ -6949,6 +6950,54 @@
         }
       ],
       "nextAction": "Сверить «УФ-отверждение печатных покрытий»: входы/выходы, оборудование, порядок операций, возможные дефекты, контроль и применимые нормативные документы."
+    },
+    {
+      "id": "multilayer-pcb-manufacturing",
+      "name": "Производство многослойных печатных плат",
+      "type": "processes",
+      "industry": "electronics",
+      "page": "https://vremennobeznika.github.io/enjigirling/processes.html#multilayer-pcb-manufacturing",
+      "priority": "P1",
+      "technicalVerification": "не завершена",
+      "sourceCount": 1,
+      "primaryAuthorityLinks": 0,
+      "sourceUrls": [
+        "https://www.rezonit.ru/directory/baza-znaniy/pechatnye-platy-rasshirennyy-spravochnik/kak-delayut-pechatnye-platy-proizvodstvo-pechatnykh-plat/"
+      ],
+      "additionalRegistryUrls": [],
+      "claimCheckedInRegistry": 0,
+      "issues": [
+        {
+          "code": "E01",
+          "level": "P1",
+          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+        }
+      ],
+      "nextAction": "Сверить «Производство многослойных печатных плат»: входы/выходы, оборудование, порядок операций, возможные дефекты, контроль и применимые нормативные документы."
+    },
+    {
+      "id": "automated-smt-assembly",
+      "name": "Автоматический поверхностный монтаж печатных плат (SMT)",
+      "type": "processes",
+      "industry": "electronics",
+      "page": "https://vremennobeznika.github.io/enjigirling/processes.html#automated-smt-assembly",
+      "priority": "P1",
+      "technicalVerification": "не завершена",
+      "sourceCount": 1,
+      "primaryAuthorityLinks": 0,
+      "sourceUrls": [
+        "https://www.rezonit.ru/directory/baza-znaniy/pechatnye-platy-rasshirennyy-spravochnik/kak-proizvoditsya-avtomaticheskiy-montazh-pechatnykh-plat-vidy-montazha-/"
+      ],
+      "additionalRegistryUrls": [],
+      "claimCheckedInRegistry": 0,
+      "issues": [
+        {
+          "code": "E01",
+          "level": "P1",
+          "details": "Частный проверенный тезис в реестре отсутствует; нужна предметная проверка первоисточника"
+        }
+      ],
+      "nextAction": "Сверить «Автоматический поверхностный монтаж печатных плат (SMT)»: входы/выходы, оборудование, порядок операций, возможные дефекты, контроль и применимые нормативные документы."
     },
     {
       "id": "steel-20",

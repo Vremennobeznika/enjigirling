@@ -2,8 +2,8 @@
   "schemaVersion": "1.0",
   "language": "ru",
   "status": "editorial_relationships",
-  "nodeCount": 434,
-  "edgeCount": 737,
+  "nodeCount": 436,
+  "edgeCount": 742,
   "edges": [
     {
       "from": "material:steel-20",
@@ -3688,6 +3688,31 @@
     {
       "from": "process:uv-curing-print",
       "to": "profession:polygraph-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:multilayer-pcb-manufacturing",
+      "to": "material:pcb",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:multilayer-pcb-manufacturing",
+      "to": "profession:pcb-layout-engineer",
+      "relation": "associated_profession"
+    },
+    {
+      "from": "process:automated-smt-assembly",
+      "to": "material:pcb",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:automated-smt-assembly",
+      "to": "material:solder",
+      "relation": "uses_material"
+    },
+    {
+      "from": "process:automated-smt-assembly",
+      "to": "profession:circuit-design-engineer",
       "relation": "associated_profession"
     }
   ]
