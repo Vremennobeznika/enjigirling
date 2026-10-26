@@ -66,14 +66,14 @@
 </header>
 <nav class="robotics-quick" aria-label="Разделы лаборатории"><a href="#robotics-model">Схема</a><a href="#robotics-components">Узлы</a><a href="#robotics-math">Расчёты</a><a href="#robotics-materials">Материалы</a><a href="#robotics-sources">Источники</a></nav>
 <section id="robotics-model" class="robotics-panel" aria-labelledby="modelTitle">
-<div class="robotics-section-heading"><div><span class="robotics-kicker">01 / КОНСТРУКЦИЯ</span><h2 id="modelTitle">Пространственная схема</h2></div><p>Собственная геометрия. Вращение вокруг вертикальной оси, без загруженных моделей и библиотек.</p></div>
+<div class="robotics-section-heading"><div><span class="robotics-kicker">01 / КОНСТРУКЦИЯ</span><h2 id="modelTitle">Пространственная схема</h2></div><p>Оригинальная трёхмерная геометрия с освещением, вращением и масштабированием. Без внешних моделей и библиотек.</p></div>
 <div class="robotics-model-layout">
 <div class="robotics-stage">
 <svg id="roboticsDrawing" viewBox="0 0 640 560" role="group" aria-label="Интерактивная схематичная модель двуногого робота. Выбирайте узлы мышью, касанием или клавиатурой.">
 <text x="320" y="280" text-anchor="middle" fill="currentColor">Для интерактивной модели включите JavaScript.</text>
 </svg>
 <div class="robotics-slider"><label for="roboticsYaw">Поворот схемы</label><input id="roboticsYaw" type="range" min="-180" max="180" value="22" step="1"><output id="roboticsYawValue" for="roboticsYaw">22°</output></div>
-<p class="robotics-hint">Перемещайте ползунок или ведите по схеме влево и вправо. Управление с клавиатуры также доступно.</p>
+<p class="robotics-hint">Вращайте модель перетаскиванием, изменяйте масштаб колесом мыши. Выбор узлов доступен и с клавиатуры.</p>
 </div>
 <div class="robotics-inspector">
 <h3>Исследовать узел</h3>
@@ -141,6 +141,7 @@
 </div>
 <footer><div class="container"><p>© 2026 ENJIGIRLING · Лаборатория робототехники. <a href="index.html">Вернуться в справочник</a>.</p></div></footer>
 <script defer src="robotics.js"></script>
+<script defer src="robotics-3d.js"></script>
 <script src="theme.js"></script>
 <script src="site-shell.js"></script><script src="navigation.js"></script>
 </body>
