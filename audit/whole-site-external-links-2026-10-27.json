@@ -1,0 +1,1975 @@
+{
+  "summary": {
+    "ok": 357,
+    "broken_response": 0,
+    "unverified": 36,
+    "total": 393
+  },
+  "results": [
+    {
+      "url": "https://fulledu.ru/professii/stroitelstvo/inzhener-pgs/zarplata/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://career.hh.ru/profession/216",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://career.hh.ru/profession/195",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://hh.ru/vacancies/inzhener-pto-dorozhnogo-stroitelstva",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://hh.ru/vacancies/inzhener-proektirovschik-avtomobilnyh-dorog",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://career.hh.ru/profession/215",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://togliatti.hh.ru/vacancies/inzhener_konstruktor",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://dreamjob.ru/salary/inzhener-energetik",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://dreamjob.ru/salary/inzhener-elektrik",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://career.hh.ru/profession/218",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://nesiditsa.ru/vacancy/131507995",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://hh.ru/vacancies/inzhener-konstruktor-shemotehnik/polnaya_zanyatost?hhtmFrom=vacancy_search_list&page=0&search_session_id=03afd539-c875-4243-87df-72fd36175a86",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://nesiditsa.ru/vacancy/137874704",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://career.hh.ru/profession/221",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://energybase.ru/vacancy/1151761",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://career.hh.ru/profession/268",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://career.hh.ru/profession/222",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://hh.ru/vacancies/inzhener_medicinskogo_oborudovaniya/za_poslednie_tri_dnya",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://hh.ru/vacancies/inzhener-robototehnik",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://dreamjob.ru/salary/inzhener-proektirovschik-asu-tp",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://dreamjob.ru/salary/inzhener-programmist-asu-tp",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://finder.work/vacancies/36329692",
+      "status": 403,
+      "result": "unverified"
+    },
+    {
+      "url": "https://career.hh.ru/profession/206",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://career.hh.ru/profession/253",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://hh.ru/vacancies/tehnolog-na-shvejnoe-proizvodstvo?hhtmFrom=vacancy_search_list&page=1&search_session_id=4f831988-fcd4-4345-b1ea-16e313cd9ade",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://career.hh.ru/profession/440",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://career.hh.ru/profession/211",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://dreamjob.ru/employers/2842675/vakansii/134506411",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://nesiditsa.ru/vacancy/137958986",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://synergyonline.ru/professions/silovye_struktury/voennyy-inzhener",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.redstarprint.ru/vacancies/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://nesiditsa.ru/vacancy/138601476",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://xn----8sbnjg0adinpefc8b1e6c.xn--p1ai/vacancies/164438-inzhener-po-grazhdanskoy-oborone-i-chrezvychaynym/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://career.hh.ru/profession/359",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://hh.ru/vacancy/79388861",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://hh.ru/vacancies/inzhener-pto-inzhenernye-sistemy/polnaya_zanyatost?hhtmFrom=vacancy_search_list&page=1&search_session_id=7cd70e19-9a40-44a9-b953-f7b64bbed65d",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://finder.work/vacancies/36865369",
+      "status": 403,
+      "result": "unverified"
+    },
+    {
+      "url": "https://finder.work/vacancies/36457189",
+      "status": 403,
+      "result": "unverified"
+    },
+    {
+      "url": "https://career.hh.ru/profession/7",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://career.hh.ru/profession/53",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://career.hh.ru/profession/117",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://career.hh.ru/profession/68",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://hirehi.ru/salary/cloud",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://hirehi.ru/salary/embedded-developer",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://career.hh.ru/profession/40",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://career.hh.ru/profession/43",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://career.hh.ru/profession/72",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://career.hh.ru/profession/42",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.usgs.gov/centers/national-minerals-information-center/iron-and-steel-statistics-and-information",
+      "status": 403,
+      "result": "unverified"
+    },
+    {
+      "url": "https://mmk-metiz.ru/buyers/product/gost/gost1050-2013.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://files.stroyinf.ru/Data/581/58183.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://worldstainless.org/about-stainless/what-are-stainless-steels/categories-grades-and-product-forms/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.aluminum.org/standards",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.hydro.com/en/global/aluminium/products/extruded-profiles/alloys-for-extruded-profiles/6061-alloy/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://blog.copper.org/power-grid/how-copper-supports-power-grid-expansion-and-rising-energy-demand",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://meganorm.ru/Data2/1/4293769/4293769872.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.iso.org/ru/standard/50590.html",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.ensingerplastics.com/en/thermoplastic-materials/pe-plastic",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.ensingerplastics.com/en/thermoplastic-materials/pa-polyamide",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.iso.org/standard/52829.html",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.sme.org/globalassets/sme.org/media/training-guides/dv02pub2_study_guide.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.usgs.gov/centers/national-minerals-information-center/bauxite-and-alumina-statistics-and-information?qt-science_support_page_related_con=0",
+      "status": 403,
+      "result": "unverified"
+    },
+    {
+      "url": "https://www.morgantechnicalceramics.com/en-gb/products/alumina-ceramic-components/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://research.fs.usda.gov/fpl/wood-handbook",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://research.fs.usda.gov/download/treesearch/62258.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.iso.org/standard/79685.html",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.fao.org/good-hygiene-practices-haccp-toolbox/ghp/primary-production/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.efsa.europa.eu/en/science/scientific-committee-and-panels/fcm",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.fda.gov/food/packaging-food-contact-substances-fcs/food-types-conditions-use-food-contact-substances",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.ams.usda.gov/services/grading/cotton-classing",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://cottonworks.com/learning-hub/yarn-manufacturing/yarn-spinning/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://cottonworks.com/learning-hub/weaving/weaving-basics/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://cottonworks.com/learning-hub/weaving/basic-woven-fabric-designs/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://research.fs.usda.gov/download/treesearch/62243.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.ipc.org/ipc-validation-services-qualified-products-list-qpl-ipc-4101",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.ipc.org/TOC/IPC-J-STD-006C.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.indium.com/blog/solder-paste-flux/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.hydro.com/en/global/aluminium/products/extruded-profiles/alloys-for-extruded-profiles/6063-alloy/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.usgs.gov/centers/national-minerals-information-center/iron-and-steel-scrap-statistics-and-information",
+      "status": 403,
+      "result": "unverified"
+    },
+    {
+      "url": "https://www.sglcarbon.com/pdf/SGL-Presentation-Commerzbank-German-Investment-Seminar-January-2014-EN.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.usgs.gov/centers/national-minerals-information-center/iron-ore-statistics-and-information",
+      "status": 403,
+      "result": "unverified"
+    },
+    {
+      "url": "https://www.metso.com/globalassets/insights/ebooks/mo-basics-in-mineral-processing-handbook_lowres.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.aluminum.org/alumina-refining-101",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information",
+      "status": 403,
+      "result": "unverified"
+    },
+    {
+      "url": "https://www.epa.gov/system/files/documents/2025-02/c11s06_final_2-2025_0.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.usgs.gov/centers/national-minerals-information-center/gypsum-statistics-and-information",
+      "status": 403,
+      "result": "unverified"
+    },
+    {
+      "url": "https://www.usgs.gov/centers/national-minerals-information-center/silica-statistics-and-information",
+      "status": 403,
+      "result": "unverified"
+    },
+    {
+      "url": "https://www.epa.gov/sdwa/overview-drinking-water-treatment-technologies",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.ensingerplastics.com/en/thermoplastic-materials/pp-plastic",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.ensingerplastics.com/en/thermoplastic-materials/pet-polyester",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.ineos.com/businesses/inovyn/products/vinyls/general-purpose-pvc/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.feica.eu/adhesives-sealants-industry/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://next.henkel-adhesives.com/fr/en/articles/3-reasons-to-use-single-side-adhesives.html",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.epa.gov/sites/default/files/2020-10/documents/c11s15.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.fda.gov/drugs/drug-approvals-and-databases/inactive-ingredients-approved-drug-products-search-frequently-asked-questions",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.osha.gov/etools/printing-industry/glossary",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.sunchemical.com/sun-chemical-to-present-extensive-range-of-sustainable-solutions-for-flexo-and-labels-expo-2024/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.upmpaper.com/products-services/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://cottonworks.com/learning-hub/denim/denim-basics/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://blog.copper.org/hvac/r/small-diameter-copper-tubes-in-advanced-heat-exchanger-design",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.bodycote.com/technical-glossary/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.sibelco.com/en/materials/high-purity-quartz",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+      "status": 403,
+      "result": "unverified"
+    },
+    {
+      "url": "https://www.tbwoods.com/en/commercial-castings/ductile-iron",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://internationalcopper.org/sustainable-copper/about-copper/",
+      "status": 403,
+      "result": "unverified"
+    },
+    {
+      "url": "https://www.timet.com/markets/industrial/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.usgs.gov/centers/national-minerals-information-center/nickel-statistics-and-information",
+      "status": 403,
+      "result": "unverified"
+    },
+    {
+      "url": "https://diecasting.zinc.org/wp-content/uploads/sites/9/2026/02/Zinc-Alloys-in-Diecasting-Two-Pager-FINAL.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.luxfermeltechnologies.com/magnesium-research-development/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.iso.org/standard/50590.html",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.lyondellbasell.com/en/our-solutions/products/polymers/resin-type/lldpe/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://chemicals.basf.com/global/en/Petrochemicals/Styrenics-Europe/Polystyrol",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://chemicals.basf.com/global/en/Petrochemicals/Styrenics-Europe/EPS-by-BASF/verpacken-und-schuetzen",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.ensingerplastics.com/en/thermoplastic-materials/abs-plastic",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.ensingerplastics.com/en/thermoplastic-materials/pc-polycarbonate",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.plexiglas.de/en/products/plexiglas/plexiglas-gs-xt",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.ensingerplastics.com/en/thermoplastic-materials/pom-acetal",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.ensingerplastics.com/en/thermoplastic-materials/pbt-material",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.ensingerplastics.com/en/thermoplastic-materials/pps-plastic",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.ensingerplastics.com/en/thermoplastic-materials/peek-plastic",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.ensingerplastics.com/en/thermoplastic-materials/ptfe-material",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.celanese.com/-/media/cewebjssapp/project/documents/shared/EMMaterialSolutions-001-Portfolio-Bro-EN.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.arlanxeo.com/en/families/epdm?form=content&id=20",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.arlanxeo.com/en/families/e-sbr",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://plastics-rubber.basf.com/global/en/performance_polymers/products/elastollan",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.buhlergroup.com/global/en/industries/Wheat-and-grain/Wheat.html",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.fao.org/input/download/standards/336/CXS_210e_2015.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://dairyprocessinghandbook.tetrapak.com/de/node/2482",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://dairyprocessinghandbook.tetrapak.com/chapter/milk-and-whey-powdered-ingredients",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.alfalaval.com/products/separation/centrifugal-separators/separators/purepulp-series/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.fao.org/input/download/standards/10154/CXS_247e.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.fao.org/input/download/standards/338/CXS_212e_u.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://bakingwithlesaffre.com/what-is-saccharomyces-cerevisiae/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://ucanr.edu/media/258081",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.iso.org/standard/57474.html",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.woolmark.com/fibre/what-is-the-wool-fibre/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://allianceflaxlinenhemp.eu/en/flax-growing-expertise",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.toray.com/products/textiles/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.coats.com/en-us/info-hub/selecting-your-sewing-threads/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.lenzing.com/technology-production/technologies/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://cottonworks.com/learning-hub/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.sandler-group.com/de-en/competencies/needlepunch",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://cottonworks.com/learning-hub/knitting/knit-basics/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.dystar.com/textile-dyes-pigments/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.donaldson.com/en/products/bag-filters/specialty-replacement-filters/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://research.fs.usda.gov/treesearch/download/62259.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.eurocircuits.com/technical-guidelines/pcb-manufacturing-technology/making-a-pcb-pcb-manufacture-step-by-step/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://next.henkel-adhesives.com/my/en/articles/board-level-material-solutions.html",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.nordson.com/en/about-us/nordson-blog/electronics-solutions-blogs/conformal-coating-automation-the-final-step-to-coating-success",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.lime.org/frequently-asked-questions/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.usgs.gov/centers/national-minerals-information-center/sulfur-statistics-and-information",
+      "status": 403,
+      "result": "unverified"
+    },
+    {
+      "url": "https://www.usgs.gov/centers/national-minerals-information-center/phosphate-rock-statistics-and-information",
+      "status": 403,
+      "result": "unverified"
+    },
+    {
+      "url": "https://www.usgs.gov/centers/national-minerals-information-center/potash-statistics-and-information",
+      "status": 403,
+      "result": "unverified"
+    },
+    {
+      "url": "https://www.arkema.com/global/en/products/product-families/molecular-sieves/molecular-sieves-for-energy-chemicals/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.clariant.com/en/Business-Units/Additives-and-Adsorbents/Civil-Engineering",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.usgs.gov/centers/national-minerals-information-center/salt-statistics-and-information",
+      "status": 403,
+      "result": "unverified"
+    },
+    {
+      "url": "https://www.hexcel.com/products/honeycomb/hexweb-honeycomb/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://basfiber.com/application",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.fhwa.dot.gov/publications/research/infrastructure/pavements/97148/072.cfm",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.fhwa.dot.gov/publications/research/infrastructure/pavements/97148/071.cfm",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.crsi.org/reinforcing-basics/reinforcing-steel/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.concrete.org/frequentlyaskedquestions.aspx?faqid=640",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.fhwa.dot.gov/engineering/geotech/pubs/05037/07d.cfm",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.thyssenkrupp-steel.com/en/products/electrical-steel/electrical-steel-overview.html",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://asean.prysmian.com/sites/asean.prysmian.com/files/media/documents/241218%20-%20Prysmian%20LV%20Power%20Cable.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.rockwool.com/siteassets/rw-cn/document-downloads/datasheets/rockwool-rocktech-spi_en_ds_202007.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.sulzer.com/en/shared/products/heat-exchanger-smr",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.dupont.com/water/technologies/ultrafiltration-uf.html",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.snf.com/industry/construction/water-treatment/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.dwi.gov.uk/private-water-supplies/pws-installations/treatment-guide-2/physical-removal-of-contaminants/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.rath-group.com/fileadmin/content/Rath-Group/Downloads/Broschueren_Industrien/RATH_GLASS_202209_EN.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.epa.gov/system/files/documents/2025-06/c11s07_2025_final.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://dfepharma.com/document/4762/cardid/4YBJ5OKLAREQVFWFTY",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://dfepharma.com/excipients/lactochem-crystals/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.gelita.com/en/markets-we-serve/pharma",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://download.basf.com/p1/EN_StaticDocuments_42761/en/Kollidon_PVP_Web_Brochure",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.colorcon.com/education-insights/using-hypromellose-hpmc-in-matrix-tablets-for-controlled-release",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://dfepharma.com/media/2ianc2oo/dpi-corporate-brochure.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.osha.gov/etools/printing-industry/flexography",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.epa.gov/air-emissions-monitoring-knowledge-base/monitoring-information-industry-printing-and-publishing",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://sefar.sg/solutions/products/screen-printing",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.ist-uv.com/en-us/technology/uv-direct-cross-linking",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.bobst.com/ru/en/news/1694618401-bobst-s-wide-web-flexo-technology-for-flexible-materials-compendium-of-a-story-75-years-in-the-making",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://archive.epa.gov/epawaste/nonhaz/industrial/special/web/pdf/copper1a.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.usgs.gov/centers/national-minerals-information-center/manganese-statistics-and-information",
+      "status": 403,
+      "result": "unverified"
+    },
+    {
+      "url": "https://www.pls.com/assets/p-pls-chemical-facility",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.syrahresources.com.au/our-business/balama-graphite-operation",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://mpmaterials.com/mountain-pass",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.eurofluor.org/hf-production/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/mineral-pubs/talc/talcmyb02.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.usgs.gov/centers/national-minerals-information-center/perlite-statistics-and-information",
+      "status": 403,
+      "result": "unverified"
+    },
+    {
+      "url": "https://www.usgs.gov/media/images/filtration-diatomaceous-earth",
+      "status": 403,
+      "result": "unverified"
+    },
+    {
+      "url": "https://www.nyrstar.com/products/zinc-zinc-alloys/how-is-zinc-produced",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.nist.gov/publications/review-sustainability-characterization-manufacturing-processes",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.asnt.org/what-is-nondestructive-testing/methods",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.twi-global.com/technical-knowledge/faqs/what-is-fusion-welding",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.twi-global.com/technical-knowledge/job-knowledge/welding-and-joining-process-classification-001?vAction=swpTextOnly",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.iso.org/standard/75108.html",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.nist.gov/publications/current-state-and-emerging-trends-advanced-manufacturing-process-technologies",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.sandvik.coromant.com/en-gb/tools/silent-tools/what-is-silent-tools/application-guide-silent-tools/turning-appl-guide",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=957755",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.nist.gov/additive-manufacturing/what-additive-manufacturing",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.nist.gov/additive-manufacturing/research-areas/technologies/material-extrusion",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://store.astm.org/f3489-23.html",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.iso.org/standard/74514.html",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.asnt.org/what-is-nondestructive-testing",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://committee.iso.org/cms/live/live/en/sites/isoorg/contents/data/standard/07/56/75614.html",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.twi-global.com/technical-knowledge/faqs/faq-what-is-the-difference-between-mig-and-mag",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.twi-global.com/technical-knowledge/job-knowledge/tungsten-inert-gas-tig-or-gta-welding-006",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.asnt.org/what-is-nondestructive-testing/methods/ultrasonic-testing",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.asnt.org/what-is-nondestructive-testing/methods/radiographic-testing",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.asnt.org/standards-publications/blog/ndt-method-overview-what-is-liquid-penetrant-testing",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://store.astm.org/standards/e18",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.211",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.primetals.com/en/portfolio/solutions/endless-casting-and-rolling/castrip/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=912839",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.protolabs.com/en-gb/resources/guides-and-trend-reports/injection-moulding-guide-process-design-tips-materials/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=30006HA1.TXT",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.osha.gov/metalworking-fluids/manual",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.215",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.iso.org/cms/live/live/en/sites/isoorg/contents/data/standard/07/38/73872.html",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.ipc.org/news-release/ipc-releases-j-revisions-two-leading-standards-electronics-assembly",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.fao.org/4/y5113e/y5113e04.htm",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.fao.org/4/x0209e/x0209e06.htm",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.osha.gov/data/sic-manual/major-group-22",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.osha.gov/textiles",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.osha.gov/sic-manual/2261",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.osha.gov/data/sic-manual/major-group-23",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.coats.com/en-us/info-hub/solving-your-sewing-problems/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.coats.com/en-us/info-hub/basic-stitch-types/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.osha.gov/sic-manual/2421",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://research.fs.usda.gov/treesearch/5710",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.osha.gov/otm/section-4-safety-hazards/chapter-2",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.osha.gov/otm/section-4-safety-hazards/chapter-5",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://solutions.sulzer.com/technologies/distillation-technology",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.epa.gov/system/files/documents/2024-03/ws-commercial-bmp-watersenseatwork_section7.1_waterpurification.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.sandvik.coromant.com/en-us/knowledge/general-turning",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.sandvik.coromant.com/en-gb/knowledge/milling/cutter-path-and-chip-formation",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.sandvik.coromant.com/en-gb/knowledge/drilling",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.sme.org/globalassets/sme.org/media/training-guides/dv07pub2_study_guide.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.sandvik.coromant.com/en-us/knowledge/boring",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.sandvik.coromant.com/en-us/knowledge/reaming",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.sandvik.coromant.com/en-gb/knowledge/milling/gear-manufacturing",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.sme.org/globalassets/sme.org/media/training-guides/dv03pub14_study_guide.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.twi-global.com/technical-knowledge/faqs/faq-what-is-laser-melting",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.flowwaterjet.com/explore/waterjet-basics/how-waterjet-works",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.twi-global.com/technical-knowledge/job-knowledge/the-manual-metal-arc-process-mma-welding-002",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.twi-global.com/technical-knowledge/faqs/faq-what-is-submerged-arc-welding",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.twi-global.com/technical-knowledge/faqs/faq-what-is-resistance-seam-welding",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.twi-global.com/technical-knowledge/faqs/faq-how-does-laser-welding-work",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.twi-global.com/what-we-do/research-and-technology/technologies/welding-joining-and-cutting/friction-welding/friction-stir-welding",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.twi-global.com/technical-knowledge/faqs/welding-brazing-and-soldering",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.nist.gov/additive-manufacturing/research-areas/technologies",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.twi-global.com/technical-knowledge/faqs/joining-methods-of-polymers?trk=public_post_reshare-text",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.twi-global.com/technical-knowledge/job-knowledge/ultrasonic-welding-of-injection-moulded-components-part-1-process-and-equipment-061",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.energy.gov/sites/prod/files/2016/04/f30/Carbon%20Fiber%20Report.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://compositesuk.co.uk/composite-materials/processes/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.fuji.co.jp/en/news/assets/pdf/2026-01-15_FP_016008M_EN.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://kurtzersa.com/services/solder-wiki/solder-paste",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://kurtzersa.com/products/electronics-production/soldering-machines/wave-soldering-systems",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://automation.omron.com/en/us/products/category/automated-inspection",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.fao.org/4/y5979e/y5979e03.htm",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.gea.com/en/assets/170546/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.buhlergroup.com/global/en/process-technologies/Dough-preparation-extrusion-and-shaping.html",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://cottonworks.com/learning-hub/yarn-manufacturing/fiber-preparation-for-spinning/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://saurer.com/en/products/machines/twisting-and-cabling/glass/cakeformingwinder",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://cottonworks.com/product-innovation/nonwovens/technical-and-performance-guide/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://research.fs.usda.gov/treesearch/37419",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://research.fs.usda.gov/download/treesearch/11374.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://era.dpi.qld.gov.au/id/eprint/5799/1/A%20guide%20to%20manufacturing%20rotary%20veneer%20ad%20products%20from%20small%20logs.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.energy.gov/cmei/ito/what-are-different-kinds-process-heating-systems",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.gea.com/en/products/evaporators-crystallizers/gea-mevap/gea-mevap-crystallization/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.sulzer.com/en/-/media/files/products/separation-technology/brochures/english/mixing_and_reaction_technology_e10605_en_web.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://solutions.sulzer.com/technologies/stripping-technology",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.alfalaval.com/products/separation/centrifugal-separators/separators/innovations/separator-innovator/how-separation-works/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.energy.gov/science/doe-explainscatalysts",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.701",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.fhwa.dot.gov/publications/research/infrastructure/pavements/pccp/01164/sect3b.cfm",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.fhwa.dot.gov/pavement/concrete/full5.cfm",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.fhwa.dot.gov/publications/research/infrastructure/pavements/pccp/02099/chapt1.cfm",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.peri-usa.com/products/products-overview/formwork-homepage/slabformwork.html",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.crsi.org/reinforcing-basics/reinforced-concrete/placing-bars/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.gobrick.com/media/file/8-tn-8-2020-03.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.kellerasean.com/expertise/techniques/permeation-grouting",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.energy.gov/cmei/ito/steam-systems",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.spiraxsarco.com/learn-about-steam/the-boiler-house/shell-boilers?sc_lang=en-GB",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.energy.gov/sites/prod/files/2014/05/f16/steam8_boiler.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.energy.gov/sites/prod/files/2014/05/f16/steam18_steam_systems.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.energy.gov/sites/prod/files/2014/05/f16/steam3_recovery.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.energy.gov/sites/prod/files/2014/05/f16/steam1_traps.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.ambrell.com/hubfs/Ambrell_PDFs/411-0168-10.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.alfalaval.com/microsites/gphe/tools/how-gphes-work/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.cdc.gov/drinking-water/about/how-water-treatment-works.html",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.epa.gov/sites/default/files/2015-06/documents/ozon.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.epa.gov/biosolids/fact-sheet-centrifuge-thickening-and-dewatering",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.gea.com/en/products/dryers-particle-processing/fluid-beds/fluid-bed-processors/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.freundglobal.com/technology/roll-compaction-granulation/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.fda.gov/media/71026/download",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.russellfinex.com/en/separation-equipment/sieving-machines/",
+      "status": 403,
+      "result": "unverified"
+    },
+    {
+      "url": "https://www.osha.gov/printing-industry/industry-segments",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.epa.gov/eg/ore-mining-and-dressing-effluent-guidelines",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.epa.gov/sites/default/files/2020-10/documents/c11s24.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.asnt.org/what-is-nondestructive-testing/methods/laser-methods",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.twi-global.com/technical-knowledge/faqs/faq-what-is-flash-butt-welding",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.twi-global.com/what-we-do/research-and-technology/technologies/welding-joining-and-cutting/electron-beam-technology/in-chamber-electron-beam-welding",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.twi-global.com/technical-knowledge/faqs/faq-what-is-plasma-welding",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.imageindustries.com/resources/what-is-stud-welding/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.twi-global.com/what-we-do/services-and-support/diffusion-bonding",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.sidel.com/machines-repository/sidel-evoblow-regular/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.sme.org/globalassets/sme.org/media/training-guides/dv04pub12_e_study_guide.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.lyondellbasell.com/globalassets/lyb/our-solutions/products/documents/polymers-technical-literature/a_guide_to_polyolefin_extrusion_coating.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://cottonworks.com/wp-content/uploads/2018/01/Dyeing_Booklet.pdf",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://cottonworks.com/learning-hub/finishing/mechanical-finishing/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.tajima.com/product/sai/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://kurtzersa.com/products/electronics-production/soldering-machines/selective-systems",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.hosokawa-alpine.com/powder-particle-processing/technologies/grinding-and-classifying/jet-mills/",
+      "status": 500,
+      "result": "unverified"
+    },
+    {
+      "url": "https://www.kodak.com/en/print/page/offset-ctp/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.bobst.com/eu/en/news/1689880801-the-importance-of-the-cutting-plate-in-the-folding-carton-die-cutting-process",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.rezonit.ru/directory/baza-znaniy/pechatnye-platy-rasshirennyy-spravochnik/kak-delayut-pechatnye-platy-proizvodstvo-pechatnykh-plat/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.rezonit.ru/directory/baza-znaniy/pechatnye-platy-rasshirennyy-spravochnik/kak-proizvoditsya-avtomaticheskiy-montazh-pechatnykh-plat-vidy-montazha-/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_34683/e76d6076ad800a12efcec206f99ad6c59b58517e/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_51040/6da623a7da211d885c1eaccefb2ef34b26fc141a/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://mintrud.gov.ru/ministry/programms/22/3",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://vcot.info/standards",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/2349",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/2725",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/2338",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/2329",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/2397",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/2326",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/2389",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/2254",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/2147",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/2161",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/2246",
+      "status": 503,
+      "result": "unverified"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/2414",
+      "status": 503,
+      "result": "unverified"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/2374",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/2042",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/1612",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/2347",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/3261",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/3258",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/3209",
+      "status": 503,
+      "result": "unverified"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/2579",
+      "status": 503,
+      "result": "unverified"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/1631",
+      "status": 503,
+      "result": "unverified"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/2403",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/2332",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/1696",
+      "status": 503,
+      "result": "unverified"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/2258",
+      "status": 503,
+      "result": "unverified"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/2346",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/1712",
+      "status": 503,
+      "result": "unverified"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/2323",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/2173",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/2256",
+      "status": 503,
+      "result": "unverified"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/2673",
+      "status": 503,
+      "result": "unverified"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/2169",
+      "status": 503,
+      "result": "unverified"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/1546",
+      "status": 503,
+      "result": "unverified"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/2723",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/1649",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/2446",
+      "status": 503,
+      "result": "unverified"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/2550",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/2513",
+      "status": 503,
+      "result": "unverified"
+    },
+    {
+      "url": "https://mintrud.gov.ru/docs/mintrud/orders/2083",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_19238/371218a8f0a51387dda4851a9f2c60ee3ea4f50a/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_19238/f5a8b78d9ae402a6cec7bb36d4139c04ade439ed/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_19238/7b12f2b414af5bf2418701b65ca6d15c3831736b/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_19238/8ade43b77c61b79cd7f3e83eba63c21bc342172b/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_19238/cbac5a6bc4dd9b0c2071e944f242c39cd049887b/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_19238/b639e2cc9a9e57d3279a7211871cdc95050416f9/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_19238/4b53aabae6a5a7b59afdb8c7d8c3936cf0afbd51/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_19238/03546940881010f9b6f1d0fa5e37a7b671d0d9b0/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_19238/7ad3fb7f9b36f0d02d4d89bf3d6b4510ab8235cb/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_19238/fcc2ec0188bf033e594177355ba29e0d57ae8720/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_19238/0a83ffbf8d87cdf8043ea18f370c674d04c5906c/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.consultant.ru/law/hotdocs/91872.html",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://ru.wikipedia.org/wiki/%D0%A8%D0%B5%D1%80%D0%BE%D1%85%D0%BE%D0%B2%D0%B0%D1%82%D0%BE%D1%81%D1%82%D1%8C_%D0%BF%D0%BE%D0%B2%D0%B5%D1%80%D1%85%D0%BD%D0%BE%D1%81%D1%82%D0%B8",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://ru.wikipedia.org/wiki/%D0%95%D0%B4%D0%B8%D0%BD%D0%B0%D1%8F_%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D0%BA%D0%BE%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D0%BE%D1%80%D1%81%D0%BA%D0%BE%D0%B9_%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://jcgm.bipm.org/vim/en/3.1.html",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://jcgm.bipm.org/vim/en/2.16.html",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.rezonit.ru/directory/baza-znaniy/glossariy/hdi_pechatnye_platy/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://necompany.ru/poleznaya-informatsiya/chto-takoe-avtomaticheskaya-opticheskaya-inspektsiya-aoi-i-zachem-ona-nuzhna/",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Design_for_manufacturability",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Design_for_testing",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Design_for_assembly",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://ru.wikipedia.org/wiki/%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BC%D0%B0%D0%B3%D0%BD%D0%B8%D1%82%D0%BD%D0%B0%D1%8F_%D1%81%D0%BE%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Fused_filament_fabrication",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://ru.wikipedia.org/wiki/%D0%A7%D0%B8%D1%81%D1%82%D0%BE%D0%B5_%D0%BF%D0%BE%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D0%B5",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://jcgm.bipm.org/vim/en/2.13.html",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm",
+      "status": 200,
+      "result": "ok"
+    },
+    {
+      "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda352.htm",
+      "status": 200,
+      "result": "ok"
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "method": "Local Chromium profiling, CPU 6x, 1.6Mbps, 150ms; parallel browser runs may affect timing; not physical device testing",
+  "navigationSamples": 24,
+  "slowLcpRangeMs": [
+    1228,
+    1908
+  ],
+  "maxLongTaskMs": 576,
+  "interactionPaintP95Ms": {
+    "index": 37,
+    "processes": 272,
+    "materials": 236
+  },
+  "httpLoad": {
+    "requestsPerLevel": 120,
+    "clients": [
+      1,
+      8,
+      32
+    ],
+    "errors": 0,
+    "scope": "local Python server only"
+  },
+  "comparisonBefore": [
+    {
+      "page": "compare",
+      "sample": 1,
+      "mode": "desktop-local",
+      "longTasks": [],
+      "lcp": 240,
+      "cls": 0.0015203408156239284,
+      "domContentLoadedMs": 221.40000000002328,
+      "loadMs": 274.80000000004657,
+      "domNodes": 146,
+      "resourceBytes": 229238,
+      "largestResources": [
+        {
+          "path": "/salary-sources.js",
+          "bytes": 70260,
+          "durationMs": 8.5
+        },
+        {
+          "path": "/data.js",
+          "bytes": 66822,
+          "durationMs": 7.199999999953434
+        },
+        {
+          "path": "/style-reference.min.css",
+          "bytes": 35107,
+          "durationMs": 6
+        },
+        {
+          "path": "/section-ui.css",
+          "bytes": 27422,
+          "durationMs": 8.70000000006985
+        },
+        {
+          "path": "/ai-transfer.css",
+          "bytes": 9505,
+          "durationMs": 10
+        }
+      ],
+      "errors": []
+    },
+    {
+      "page": "compare",
+      "sample": 1,
+      "mode": "cpu6x-network1.6Mbps-150ms",
+      "longTasks": [
+        176
+      ],
+      "lcp": 1304,
+      "cls": 0.10445387469135803,
+      "domContentLoadedMs": 1793,
+      "loadMs": 1837.8000000000466,
+      "domNodes": 146,
+      "resourceBytes": 229238,
+      "largestResources": [
+        {
+          "path": "/salary-sources.js",
+          "bytes": 70260,
+          "durationMs": 1454.3000000000466
+        },
+        {
+          "path": "/data.js",
+          "bytes": 66822,
+          "durationMs": 1388.8000000000466
+        },
+        {
+          "path": "/style-reference.min.css",
+          "bytes": 35107,
+          "durationMs": 938.6000000000931
+        },
+        {
+          "path": "/section-ui.css",
+          "bytes": 27422,
+          "durationMs": 832.5999999999767
+        },
+        {
+          "path": "/ai-transfer.css",
+          "bytes": 9505,
+          "durationMs": 426.9000000000233
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "comparisonAfter": [
+    {
+      "page": "compare",
+      "sample": 1,
+      "mode": "desktop-local",
+      "longTasks": [],
+      "lcp": 220,
+      "cls": 0.0011647517200360084,
+      "domContentLoadedMs": 204.09999999997672,
+      "loadMs": 277,
+      "domNodes": 146,
+      "resourceBytes": 229238,
+      "largestResources": [
+        {
+          "path": "/salary-sources.js",
+          "bytes": 70260,
+          "durationMs": 8.5
+        },
+        {
+          "path": "/data.js",
+          "bytes": 66822,
+          "durationMs": 7.900000000023283
+        },
+        {
+          "path": "/style-reference.min.css",
+          "bytes": 35107,
+          "durationMs": 7.5
+        },
+        {
+          "path": "/section-ui.css",
+          "bytes": 27422,
+          "durationMs": 6
+        },
+        {
+          "path": "/ai-transfer.css",
+          "bytes": 9505,
+          "durationMs": 6.300000000046566
+        }
+      ],
+      "errors": []
+    },
+    {
+      "page": "compare",
+      "sample": 1,
+      "mode": "cpu6x-network1.6Mbps-150ms",
+      "longTasks": [
+        130
+      ],
+      "lcp": 1260,
+      "cls": 0.013782671604938273,
+      "domContentLoadedMs": 1808.2999999999302,
+      "loadMs": 1839.5999999999767,
+      "domNodes": 146,
+      "resourceBytes": 229238,
+      "largestResources": [
+        {
+          "path": "/salary-sources.js",
+          "bytes": 70260,
+          "durationMs": 1470.6999999999534
+        },
+        {
+          "path": "/data.js",
+          "bytes": 66822,
+          "durationMs": 1404.0999999999767
+        },
+        {
+          "path": "/style-reference.min.css",
+          "bytes": 35107,
+          "durationMs": 936.7000000000698
+        },
+        {
+          "path": "/section-ui.css",
+          "bytes": 27422,
+          "durationMs": 823.6999999999534
+        },
+        {
+          "path": "/ai-transfer.css",
+          "bytes": 9505,
+          "durationMs": 425.0999999999767
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

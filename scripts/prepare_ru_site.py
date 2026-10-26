@@ -35,7 +35,7 @@ PRIVATE_DIRS = (
 )
 EXCLUDE = {
     "package.json", "package-lock.json", "playwright.config.cjs",
-    "life-pwa-sw.js", ".nojekyll"
+    "life-pwa-sw.js", ".nojekyll", "ru-deploy-audit.json"
 }
 SPECIAL = ("knowledge-base.md", "llms.txt", "favicon.svg", "knowledge-manifest.json")
 

@@ -22,7 +22,8 @@ def render(source, target, label):
     pages = source.read_text(encoding='utf-8').split('\f')
     if not pages or not pages[0].strip():
         raise ValueError(f'Empty source: {source}')
-    pdf = canvas.Canvas(str(target), pagesize=A4, pageCompression=1)
+    pdf = canvas.Canvas(str(target), pagesize=A4, pageCompression=1, invariant=1)
+    pdf.setCreator("ENJIGIRLING reference document builder")
     pdf.setTitle(label)
     pdf.setAuthor('ENJIGIRLING — текстовая редакция пользовательского документа')
     count, y = 0, 0
@@ -82,7 +83,10 @@ def main():
     archive=dest/'ai-library-documents.zip'
     with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED) as zf:
         for file in built:
-            zf.write(file,file.name)
+            info=zipfile.ZipInfo(file.name, date_time=(2000,1,1,0,0,0))
+            info.compress_type=zipfile.ZIP_DEFLATED
+            info.external_attr=0o644 << 16
+            zf.writestr(info,file.read_bytes())
     with zipfile.ZipFile(archive) as zf:
         assert zf.testzip() is None
         assert sorted(zf.namelist())==sorted(p.name for p in built)

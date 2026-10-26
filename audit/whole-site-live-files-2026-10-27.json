@@ -1,0 +1,652 @@
+[
+  {
+    "path": "robots.txt",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "style.css",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "calculator-lab.css",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "dictionary.html",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "learning-experience.css",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "dictionary-data.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "social-preview.webp",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "calculator-atlas.css",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "calendar.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "global-search.css",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "resources.html",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge-manifest.json",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "processes.html",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "style-reference.min.css",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "favicon.svg",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "calculator-practical-core.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "coding.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "career-standards-data.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "atlas-ai-core.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "calculator-loader.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "ai-transfer.css",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "calculator-atlas-redirect.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "measurement-lab.css",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "calculator-atlas.csv",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "coding.html",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "engineering-lab-ui.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "calculator-atlas-data.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "robotics.css",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "calculator-practical.css",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "compare.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "processes.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "map-data.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "compare.html",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "calculator-practical.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "ai-training.html",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "data.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "resources.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "atlas-extended.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "measurement-builtins.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "sitemap.xml",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "manufacturing-cost.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "section-ui.css",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "coding.css",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "ai-transfer.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "index.html",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "robotics.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "llms.txt",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "materials.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "measurement-lab.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "engineer-calculators.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "salary-sources.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "style-core.min.css",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge-base.md",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "materials.html",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "robotics.html",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "style.min.css",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "atlas-tools.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "atlas-ai-download.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "theme.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "calendar.html",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "navigation.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "measurement-electronics.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "coding-data.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "calendar-data.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "dictionary.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "technology-search.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "calculator.html",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "ai.html",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "engineering-lab-core.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "map-calc.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "processes-data.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "script.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "map.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "map.html",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "materials-data.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "calculator-atlas.html",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "resources-data.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "calculator-atlas.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "global-search.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "holiday-map.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "measurement-lab.html",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "profession-modal-base.css",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "site-shell.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "templates/production-defect-review.csv",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "templates/material-evidence-register.csv",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "templates/README.md",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "downloads/ai-llm-guide.pdf",
+    "status": 200,
+    "matches": false
+  },
+  {
+    "path": "downloads/ai-qa-engineering.pdf",
+    "status": 200,
+    "matches": false
+  },
+  {
+    "path": "downloads/ai-library-documents.zip",
+    "status": 200,
+    "matches": false
+  },
+  {
+    "path": "articles/utopia-math-analysis.html",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "articles/utopia-math-analysis.md",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/ai-code-library-links.txt",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/ai-code-library.md",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/ai-context.md",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/atlas-card-audit.json",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/atlas-implementation-matrix.json",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/career-standards-audit.json",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/dictionary.json",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/graph.json",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/materials.json",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/processes.json",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/professions.json",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/quality.json",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/salary-evidence.json",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/search-index.json",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/source-registry.json",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/sections/calculator.md",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/sections/calendar.json",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/sections/calendar.md",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/sections/compare.md",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/sections/dictionary.md",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/sections/learning.json",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/sections/learning.md",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/sections/materials.json",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/sections/materials.md",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/sections/processes.json",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/sections/processes.md",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/sections/professions.md",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/sections/resources.md",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/sections/training.md",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/sections/professions.json",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/sections/resources.json",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/sections/ai-code-library.md",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/sections/ai-code-library.json",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/sections/dictionary.json",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/sections/calculators.md",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/sections/calculators.json",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/sections/compare.json",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/sections/index.json",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "path": "knowledge/sections/all.md",
+    "status": 200,
+    "matches": true
+  }
+]
