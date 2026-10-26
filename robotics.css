@@ -16,7 +16,7 @@
 .robotics-section-heading p{max-width:45ch;font-size:13px;margin:0;line-height:1.5}
 .robotics-model-layout{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(240px,.7fr);gap:22px}
 .robotics-stage{border:1px solid var(--card-border);border-radius:12px;padding:10px;min-width:0;background:var(--soft-bg,var(--bg-block))}
-#roboticsDrawing{display:block;width:100%;height:auto;max-height:560px;color:var(--card-text)}
+#roboticsDrawing{display:block;width:100%;height:auto;max-height:560px;color:var(--card-text);touch-action:pan-y}
 #roboticsDrawing [data-robotics-box]{cursor:pointer}
 #roboticsDrawing [data-robotics-box]:focus-visible{outline:none;filter:drop-shadow(0 0 5px currentColor)}
 #roboticsDrawing [data-robotics-box]:focus-visible polygon{stroke-width:4}

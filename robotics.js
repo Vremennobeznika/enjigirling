@@ -110,12 +110,19 @@
   reset.addEventListener('click',()=>{changeAngle(22);selectPart('frame');});
   partButtons.forEach(button=>button.addEventListener('click',()=>selectPart(button.dataset.roboticsPart)));
   let startX=null,startAngle=0,moved=false;
+  // Coalesce drag events into one SVG update per animation frame on low-end CPUs.
+  let queuedAngle=null,dragFrame=0;
+  const scheduleDrag=value=>{
+    queuedAngle=value;
+    if(dragFrame)return;
+    dragFrame=requestAnimationFrame(()=>{dragFrame=0;changeAngle(queuedAngle);});
+  };
   model.addEventListener('pointerdown',event=>{if(event.pointerType==='mouse'&&event.button!==0)return;startX=event.clientX;startAngle=angle;moved=false;});
   model.addEventListener('pointermove',event=>{
     if(startX===null)return;
     const delta=event.clientX-startX;
     if(Math.abs(delta)>7)moved=true;
-    if(moved)changeAngle(startAngle+delta*.8);
+    if(moved)scheduleDrag(startAngle+delta*.8);
   });
   const endDrag=()=>{startX=null;};
   model.addEventListener('pointerup',endDrag);

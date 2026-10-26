@@ -89,6 +89,9 @@ jobs:
           test -s dist-ru/downloads/ai-llm-guide.pdf
           test -s dist-ru/downloads/ai-qa-engineering.pdf
           test -s dist-ru/downloads/ai-library-documents.zip
+          for asset in coding.html coding.js coding-data.js coding.css robotics.html robotics.js robotics.css; do
+            test -s "dist-ru/$asset"
+          done
           test "$(find dist-ru -type f | wc -l)" -ge 50
           echo "Verified files: $(find dist-ru -type f | wc -l)"
       - name: Publish to Yandex Object Storage
@@ -114,4 +117,10 @@ jobs:
             s3 cp s3://enjigirling.ru/index.html /tmp/enjigirling-deployed-index.html \
             --only-show-errors
           cmp dist-ru/index.html /tmp/enjigirling-deployed-index.html
+          # Check the two newly promoted labs as deployed objects, not just the index.
+          for asset in coding.html coding.js coding-data.js robotics.html robotics.js; do
+            aws --endpoint-url=https://storage.yandexcloud.net \
+              s3 cp "s3://enjigirling.ru/$asset" "/tmp/enjigirling-${asset}" --only-show-errors
+            cmp "dist-ru/$asset" "/tmp/enjigirling-${asset}"
+          done
           echo "Published to Yandex and verified index.html matches the build."
