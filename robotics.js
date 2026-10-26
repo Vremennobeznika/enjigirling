@@ -44,25 +44,25 @@
   // upper/lower limbs, ankle assemblies and a broad load-bearing foot platform.
   // Units are schematic; every solid remains a selectable subsystem.
   const blocks=[
-    ['frame',0,2.49,-.01,.82,.67,.42],
-    ['frame',0,2.13,0,.62,.30,.39],
-    ['frame',0,1.82,0,.67,.29,.44],
+    ['frame',0,2.48,-.01,.76,.64,.39],
+    ['frame',0,2.11,0,.48,.34,.35],
+    ['frame',0,1.83,0,.75,.32,.43],
     ['frame',0,2.91,0,.17,.18,.17],
-    ['sensor',0,3.21,0,.42,.40,.34],
+    ['sensor',0,3.22,0,.43,.48,.36],
     ['compute',0,2.51,.225,.42,.29,.11],
     ['battery',0,2.05,.22,.44,.24,.13],
-    ['frame',-.53,2.72,0,.32,.19,.35],
-    ['frame',.53,2.72,0,.32,.19,.35],
-    ['drive',-.70,2.57,0,.32,.29,.34],
-    ['drive',.70,2.57,0,.32,.29,.34],
-    ['frame',-.72,2.30,0,.24,.43,.27],
-    ['frame',.72,2.30,0,.24,.43,.27],
-    ['joint',-.73,2.04,0,.26,.23,.30],
-    ['joint',.73,2.04,0,.26,.23,.30],
-    ['frame',-.74,1.80,0,.20,.37,.25],
-    ['frame',.74,1.80,0,.20,.37,.25],
-    ['hand',-.74,1.51,.025,.26,.25,.28],
-    ['hand',.74,1.51,.025,.26,.25,.28],
+    ['frame',-.50,2.72,0,.29,.17,.34],
+    ['frame',.50,2.72,0,.29,.17,.34],
+    ['drive',-.64,2.57,0,.29,.27,.32],
+    ['drive',.64,2.57,0,.29,.27,.32],
+    ['frame',-.66,2.30,0,.24,.43,.27],
+    ['frame',.66,2.30,0,.24,.43,.27],
+    ['joint',-.67,2.04,0,.26,.23,.30],
+    ['joint',.67,2.04,0,.26,.23,.30],
+    ['frame',-.68,1.80,0,.20,.37,.25],
+    ['frame',.68,1.80,0,.20,.37,.25],
+    ['hand',-.68,1.51,.025,.26,.25,.28],
+    ['hand',.68,1.51,.025,.26,.25,.28],
     ['drive',-.27,1.64,0,.31,.27,.37],
     ['drive',.27,1.64,0,.31,.27,.37],
     ['frame',-.28,1.27,0,.30,.61,.34],
@@ -130,6 +130,15 @@
       for(let i=-2;i<=2;i++)line([-w*.30,i*h*.12],[w*.30,i*h*.12],i%2===0?bright:stroke,1.4);
     }
     if(key==='frame'&&w>.55&&y>2.2){
+      // Anatomically shaped armour, divided into curved independent plates.
+      const p=P(0,0);
+      for(const side of [-1,1]){
+        group.appendChild(el('path',{d:`M ${p.x+side*3} ${p.y-20} Q ${p.x+side*29} ${p.y-26} ${p.x+side*32} ${p.y-4} Q ${p.x+side*28} ${p.y+14} ${p.x+side*8} ${p.y+13} L ${p.x+side*2} ${p.y+3} Z`,fill:'#c7d2d9',stroke:'#354752','stroke-width':2}));
+      }
+      group.appendChild(el('path',{d:`M ${p.x-11} ${p.y+17} L ${p.x} ${p.y+25} L ${p.x+11} ${p.y+17}`,fill:'none',stroke:'#93aab7','stroke-width':2}));
+    }
+
+    if(false&&key==='frame'&&w>.55&&y>2.2){
       const p=P(0,0);
       group.appendChild(el('polygon',{points:[
         [p.x-22,p.y-21],[p.x+22,p.y-21],[p.x+30,p.y+6],
@@ -157,10 +166,26 @@
       for(let i=0;i<4;i++){const t=i*Math.PI/2;group.appendChild(el('circle',{cx:center.x+Math.cos(t)*(r+1),cy:center.y+Math.sin(t)*(r+1),r:1.5,fill:'#d9e3e8'}));}
     }
     if(key==='sensor'){
-      const p=P(0,h*.06);
-      group.appendChild(el('rect',{x:p.x-20,y:p.y-8,width:40,height:16,rx:7,fill:'#17232d',stroke:bright,'stroke-width':1.6}));
-      for(const dx of [-10,10])group.appendChild(el('circle',{cx:p.x+dx,cy:p.y,r:5,fill:'#86aebf',stroke:'#e4edf1','stroke-width':1}));
-      line([-w*.27,-h*.30],[w*.27,-h*.30],bright,1.5);
+      // Original synthetic face, with camera optics, articulated jaw and
+      // asymmetric swept-back fibre-optic hair. No character/asset copying.
+      const p=P(0,0),eyeY=p.y-3;
+      group.appendChild(el('path',{d:`M ${p.x-24} ${p.y-16} Q ${p.x-24} ${p.y-29} ${p.x-6} ${p.y-32} Q ${p.x+18} ${p.y-32} ${p.x+25} ${p.y-13} L ${p.x+22} ${p.y+13} Q ${p.x+4} ${p.y+30} ${p.x-18} ${p.y+12} Z`,fill:'#aab7c0',stroke:'#25353f','stroke-width':2}));
+      group.appendChild(el('path',{d:`M ${p.x-21} ${eyeY} Q ${p.x} ${eyeY-10} ${p.x+21} ${eyeY} L ${p.x+18} ${eyeY+10} Q ${p.x} ${eyeY+13} ${p.x-19} ${eyeY+10} Z`,fill:'#16232c',stroke:bright,'stroke-width':1.6}));
+      for(const dx of [-10,10]){
+        group.appendChild(el('ellipse',{cx:p.x+dx,cy:eyeY+3,rx:4.2,ry:2.7,fill:'#9ec8d6'}));
+        group.appendChild(el('circle',{cx:p.x+dx,cy:eyeY+3,r:1.3,fill:'#f1fbff'}));
+      }
+      group.appendChild(el('path',{d:`M ${p.x-7} ${p.y+17} Q ${p.x} ${p.y+21} ${p.x+7} ${p.y+17}`,fill:'none',stroke:'#41525c','stroke-width':1.6,'stroke-linecap':'round'}));
+      // Layered sculpted hair follows the head rather than a flat decal.
+      for(let i=0;i<7;i++){
+        const shift=i*3.6;
+        group.appendChild(el('path',{d:`M ${p.x-25+shift} ${p.y-18} Q ${p.x-30+shift} ${p.y-44-i%2*3} ${p.x+3+shift*.35} ${p.y-38} Q ${p.x+26+shift*.25} ${p.y-34} ${p.x+28+shift*.35} ${p.y-10+i*2}`,fill:'none',stroke:i%2?'#263740':'#dae0e2','stroke-width':i%2?3.5:4.5,'stroke-linecap':'round'}));
+      }
+      for(const side of [-1,1]){
+        const x=p.x+side*24;
+        group.appendChild(el('circle',{cx:x,cy:p.y+2,r:6,fill:'#24343e',stroke:bright,'stroke-width':2}));
+        group.appendChild(el('circle',{cx:x,cy:p.y+2,r:2.5,fill:'#9ec8d6'}));
+      }
     }
     if(key==='compute'){
       const p=P(0,0);
