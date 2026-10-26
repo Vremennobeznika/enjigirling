@@ -28,8 +28,8 @@ for(const id of ['activated-alumina-adsorbent','osb-board','particleboard','glul
 assert.ok(!materials.find(x=>x.id==='grain-wheat').industries.includes('mining'),'Grain is not mining material');
 const html=read('materials.html');
 assert.doesNotMatch(html,/Этот раздел для ИИ/,'Old full-site banner remains');
-assert.ok(html.indexOf('id="materialIndustry"')<html.indexOf('id="atlasAiPackage"'),'Export must follow filters');
-for(const id of ['materialCategory','materialSearch','materialSort','atlasAiMd','atlasAiJson','atlasAiCopy'])assert.ok(html.includes('id="'+id+'"'),id+' missing');
+assert.ok(!html.includes('id="atlasAiPackage"')&&html.includes('href="ai.html"'),'AI downloads must live in the shared center');
+for(const id of ['materialCategory','materialSearch','materialSort'])assert.ok(html.includes('id="'+id+'"'),id+' missing');
 const code=read('materials.js');
 new Function(code);
 assert.ok(read('atlas-ai-core.js').includes("sector==='all'"),'Export must select full industry data');

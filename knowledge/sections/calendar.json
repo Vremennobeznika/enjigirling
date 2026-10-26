@@ -1,10 +1,15 @@
 {
-  "meta": {
-    "reviewed": "2026-10-22",
-    "source": "calendar-data.js",
-    "rules": "256=256-й день года, N@D=N-й день недели, -1@D=последний день недели (0=воскресенье)"
-  },
-  "holidays": [
+  "schemaVersion": "1.0",
+  "sectionId": "calendar",
+  "title": "Календарь инженерных дат",
+  "language": "ru",
+  "url": "https://vremennobeznika.github.io/enjigirling/calendar.html",
+  "quality": "editorial_not_independently_verified",
+  "sourceHtml": "calendar.html",
+  "canonicalDataset": null,
+  "staticPageText": "## Календарь инженерных праздников\nПрофессиональные и памятные даты. Не каждый повод является официальным праздником или выходным днём. Неподтверждённые даты обозначены отдельно.\nГод\nПоиск\nПрофессия\nВсе профессии\nСбросить\nНичего не найдено.\n",
+  "recordsCount": 58,
+  "records": [
     {
       "rule": "13 января",
       "month": "Январь",

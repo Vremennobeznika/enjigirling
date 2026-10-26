@@ -68,9 +68,11 @@ const aiLibrary=items.filter(x=>x.type==='Библиотека программ�
 assert.equal(aiLibrary.length,25,'AI library must contain exactly 25 sources');
 assert.equal(new Set(aiLibrary.map(x=>x.topic)).size,8,'AI library topic coverage lost');
 assert.ok(aiLibrary.every(x=>/^(RU|EN|RU\/EN)$/.test(x.tags)),'AI library language missing');
-assert.ok(html.includes('id="ai-library"')&&html.includes('knowledge/sections/ai-code-library.md'),'AI library entry/download missing');
-assert.ok(html.includes('Скачать 25 ссылок')&&html.includes('resourceCopyAiLinks'),'bulk download and copy missing');
-assert.ok(js.includes('navigator.clipboard.writeText'),'clipboard handler missing');
+assert.ok(html.includes('id="ai-library"')&&html.includes('href="#ai-library-catalog"'),'AI library catalog entry missing');
+assert.ok(!html.includes('resource-ai-library-actions')&&!html.includes('knowledge/sections/ai-code-library.md'),'Downloads must live only in the AI center');
+const hub=fs.readFileSync('ai.html','utf8');
+assert.ok(hub.includes('knowledge/ai-code-library-links.txt')&&hub.includes('resourceCopyAiLinks'),'centralized bulk download and copy missing');
+assert.ok(fs.readFileSync('ai-transfer.js','utf8').includes('navigator.clipboard.writeText'),'central clipboard handler missing');
 assert.ok(js.includes("'#ai-library-catalog'")&&js.includes('libraryTopics')&&js.includes('resource-library-topic'),'AI library navigation/grouping missing');
 for(const filename of ['knowledge/ai-code-library.md','knowledge/ai-code-library-links.txt']) assert.ok(fs.existsSync(filename),'AI library export missing: '+filename);
 console.log('PASS: '+items.length+' engineering resources, '+types.size+' types, preserved curated chats and channels');

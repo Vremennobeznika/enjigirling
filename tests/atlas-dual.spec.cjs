@@ -7,10 +7,13 @@ for(const [pageName,filterId,expectedP,expectedM] of [
  test(pageName+' — choose food sector, export both catalogs, retain filtering',async({page})=>{
   const errors=[];page.on('pageerror',e=>errors.push(e.message));
   await page.goto(pageName);
-  await expect(page.locator('#atlasAiPackage')).toBeVisible();
-  await expect(page.locator('#atlasAiMd')).toBeDisabled();
+  await expect(page.locator('#atlasAiPackage')).toHaveCount(0);
   await page.locator('#'+filterId).selectOption('food');
-  await expect(page.locator('#atlasAiSector')).toHaveValue('food');
+  await expect(page.locator('#'+filterId)).toHaveValue('food');
+  await page.locator('.site-ai-link').click();
+  await expect(page).toHaveURL(/ai\.html$/);
+  await expect(page.locator('#atlasAiMd')).toBeDisabled();
+  await page.locator('#atlasAiSector').selectOption('food');
   await expect(page.locator('#atlasAiStatus')).toContainText(expectedP+' процессов');
   await expect(page.locator('#atlasAiStatus')).toContainText(expectedM+' материалов');
   const [md]=await Promise.all([page.waitForEvent('download'),page.locator('#atlasAiMd').click()]);

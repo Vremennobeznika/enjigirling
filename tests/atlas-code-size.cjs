@@ -13,15 +13,16 @@ for(const [file,base] of Object.entries(baseline))
 for(const page of ['materials.html','processes.html']){
  const html=read(page),shared=(html.match(/id="atlasAiPackage"/g)||[]).length;
  const legacy=page==='materials.html'?(html.match(/class="material-export"/g)||[]).length:(html.match(/class="process-export"/g)||[]).length;
- assert.equal(shared,1,page+' must have exactly one common export panel');
+ assert.equal(shared,0,page+' must not duplicate the AI center');
  assert.equal(legacy,0,page+' must not duplicate the common export panel');
- assert.ok(html.includes('src="atlas-ai-core.js"')&&html.includes('src="atlas-ai-download.js"'),page+' must reuse common exporter');
+ assert.ok(!html.includes('src="atlas-ai-core.js"')&&!html.includes('src="atlas-ai-download.js"'),page+' must not load unused exporter code');
+ assert.ok(read('ai.html').includes('src="atlas-ai-core.js"')&&read('ai.html').includes('src="atlas-ai-download.js"'),'AI center must retain common exporter');
  assert.ok(!/<script[^>]+src=["']https?:\/\//i.test(html),page+' introduces remote script');
 }
 for(const page of ['materials.html','processes.html']){
  const html=read(page);
  const scripts=[...html.matchAll(/<script\s+[^>]*src="([^"]+)"[^>]*>/g)];
- const atlas=['materials-data.js','processes-data.js','data.js',page==='materials.html'?'materials.js':'processes.js','atlas-ai-core.js','atlas-ai-download.js'];
+ const atlas=['materials-data.js','processes-data.js','data.js',page==='materials.html'?'materials.js':'processes.js'];
  for(const file of atlas){
   const tag=scripts.find(m=>m[1]===file)?.[0];
   assert.ok(tag&&/\sdefer(?:\s|>)/.test(tag),page+' must defer '+file+' without reordering dependent scripts');

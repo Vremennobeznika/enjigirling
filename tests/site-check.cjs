@@ -392,6 +392,6 @@ const compareHeader=compareMarkup.indexOf('class="site-topbar"');
 const compareNavigation=compareMarkup.indexOf('id="site-main-navigation"');
 const compareAiBar=compareMarkup.indexOf('class="ai-transfer-bar"');
 const compareMainTitle=compareMarkup.indexOf('class="page-header"');
-assert.ok(compareHeader>=0&&compareNavigation>compareHeader&&compareAiBar>compareNavigation&&compareMainTitle>compareAiBar,
-  'compare AI panel must follow header/nav and precede title');
-console.log('OK: compare AI download panel follows shared navigation');
+assert.ok(compareHeader>=0&&compareNavigation>compareHeader&&compareAiBar===-1&&compareMainTitle>compareNavigation,
+  'compare title must follow navigation without a duplicated AI panel');
+console.log('OK: compare uses shared AI center without an inline panel');

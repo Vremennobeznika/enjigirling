@@ -129,16 +129,17 @@ for(const mode of ['light','dark']){
 
 
 for(const width of [390,1440]){
- test('compare AI export panel follows site navigation at '+width+'px',async({page})=>{
+ test('compare content follows navigation without AI panels at '+width+'px',async({page})=>{
   await page.setViewportSize({width,height:900});
   await page.goto('/compare.html');
   const top=await page.locator('.site-topbar').boundingBox();
   const nav=await page.locator('.site-nav-wrap').boundingBox();
-  const exportBar=await page.locator('aside.ai-transfer-bar').boundingBox();
+  const title=await page.locator('.page-header').boundingBox();
+  await expect(page.locator('aside.ai-transfer-bar')).toHaveCount(0);
   expect(top).toBeTruthy();
   expect(nav).toBeTruthy();
-  expect(exportBar).toBeTruthy();
+  expect(title).toBeTruthy();
   expect(nav.y,'navigation appears before the page export panel').toBeGreaterThanOrEqual(top.y+top.height-2);
-  expect(exportBar.y,'export panel must follow navigation').toBeGreaterThanOrEqual(nav.y+nav.height-2);
+  expect(title.y,'title must follow navigation').toBeGreaterThanOrEqual(nav.y+nav.height-2);
  });
 }

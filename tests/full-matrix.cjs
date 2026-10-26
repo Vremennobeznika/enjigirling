@@ -440,10 +440,10 @@ check('AI training packs expose nine main sections plus the code library',()=>{
  const all=fs.readFileSync('knowledge/sections/all.md','utf8');
  for(let i=0;i<slug.length;i++){
   const id=slug[i],p=fs.readFileSync(pages[i],'utf8');
-  assert.ok(p.includes('href="ai.html?section='+id+'"'),pages[i]+' no AI navigation');
-  if(id==='processes'||id==='materials'){
-   for(const ext of ['Md','Json'])assert.ok(p.includes('id="atlasAi'+ext+'"'),pages[i]+' missing unified AI '+ext+' control');
-  }else for(const ext of ['md','json'])assert.ok(p.includes('href="knowledge/sections/'+id+'.'+ext+'"'),pages[i]+' no '+ext+' download');
+  assert.ok(p.includes('href="ai.html"'),pages[i]+' no shared AI navigation');
+  assert.ok(!p.includes('class="ai-transfer-bar"')&&!p.includes('id="atlasAiPackage"'),pages[i]+' still duplicates download panels');
+  const hub=fs.readFileSync('ai.html','utf8');
+  for(const ext of ['md','json'])assert.ok(hub.includes('href="knowledge/sections/'+id+'.'+ext+'"'),'AI center missing '+id+' '+ext);
   const md=fs.readFileSync('knowledge/sections/'+id+'.md','utf8');
   const pack=json('knowledge/sections/'+id+'.json');
   assert.ok(md.includes('## Текст и описание раздела')&&md.length>500,id+' incomplete Markdown');

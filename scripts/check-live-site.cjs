@@ -76,7 +76,7 @@ async function run(){
  for(const id of ['atlasAiPackage','atlasAiSector','atlasAiMd','atlasAiJson','atlasAiJsonl','atlasAiZip'])
   assert.ok(files['ai.html'].includes('id="'+id+'"'),'AI hub missing combined export control: '+id);
  for(const page of ['processes.html','materials.html'])
-  assert.ok(files[page].includes('id="atlasAiPackage"'),page+' missing combined atlas export');
+  assert.ok(!files[page].includes('id="atlasAiPackage"')&&files[page].includes('href="ai.html"'),page+' must use the shared AI center');
  const manifest=JSON.parse(files['knowledge-manifest.json']);
  assert.equal(manifest.type,'engineering-knowledge-base');
  const index=JSON.parse(files['knowledge/search-index.json']);

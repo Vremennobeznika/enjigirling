@@ -79,7 +79,8 @@ function markdownItems(slug,records){
   for(const [key,value] of Object.entries(item)){
    if(value==null)continue;
    const v=typeof value==='string'?value:JSON.stringify(value);
-   out+='- **'+key+':** '+String(v).replace(/[\r\n]+/g,' ').trim()+'\n';
+   const formatted=String(v).replace(/[\r\n]+/g,' ').trim();
+   out+='- **'+key+':**'+(formatted?' '+formatted:'')+'\n';
   }
   out+='\n';
  }

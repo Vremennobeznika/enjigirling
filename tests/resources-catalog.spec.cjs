@@ -114,19 +114,13 @@ test('AI library: eight topics, 25 documents, files and mobile layout', async ({
   await page.locator('.resource-library-topic summary').first().click();
   await expect(page.locator('.resource-library-topic').first()).toHaveAttribute('open','');
   await expect(page.locator('#resourcesFilter')).toHaveCSS('flex-wrap','nowrap');
-  await expect(page.locator('#resourceCopyAiLinks')).toBeVisible();
-  await expect(page.locator('a[href="knowledge/sections/ai-code-library.md"]')).toBeVisible();
+  await expect(page.locator('#resourceCopyAiLinks')).toHaveCount(0);
+  await expect(page.locator('a[download]')).toHaveCount(0);
   await expect(page.locator('#resourceShowMore')).toBeHidden();
   await expect(page.locator('#aiLibraryTitle')).toContainText('программирования');
-  await expect(page.locator('.resource-ai-library-primary')).toHaveAttribute('href','knowledge/sections/ai-code-library.md');
+  await expect(page.locator('.resource-ai-library-open')).toHaveAttribute('href','#ai-library-catalog');
   const urls=await (await request.get('/knowledge/ai-code-library-links.txt')).text();
   expect(urls.trim().split('\n')).toHaveLength(25);
-  await page.evaluate(() => {
-    Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async value=>{window.__copiedAiLinks=value;}}});
-  });
-  await page.locator('#resourceCopyAiLinks').click();
-  await expect(page.locator('#resourceCopyAiStatus')).toContainText('25 ссылок скопированы');
-  expect(await page.evaluate(()=>window.__copiedAiLinks)).toBe(urls.trim());
   for (const path of ['/knowledge/sections/ai-code-library.md','/knowledge/sections/ai-code-library.json','/knowledge/ai-code-library-links.txt']) {
     const response=await request.get(path);expect(response.ok(),path).toBeTruthy();
     expect(await response.text()).toContain('https://docs.python.org/ru/3/tutorial/');

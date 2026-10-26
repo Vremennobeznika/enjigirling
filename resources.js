@@ -112,16 +112,6 @@ document.addEventListener('DOMContentLoaded', () => {
   viewList.addEventListener('click', () => { view = 'list'; update(); });
   more.addEventListener('click', () => { limit += batchSize(); update(); });
   reset.addEventListener('click', () => { activeType = ALL; search.value = ''; sort.value = 'az'; view = 'grid'; limit = 4; update(); });
-  const copyAi = document.getElementById('resourceCopyAiLinks');
-  if (copyAi) copyAi.addEventListener('click', async () => {
-    const status = document.getElementById('resourceCopyAiStatus');
-    try {
-      await navigator.clipboard.writeText(items.filter(x => x.type === AI_LIBRARY).map(x => x.link).join('\n'));
-      status.textContent = 'Все 25 ссылок скопированы.';
-    } catch {
-      status.textContent = 'Копирование недоступно. Скачайте TXT.';
-    }
-  });
   window.addEventListener('hashchange', () => { if (location.hash === '#ai-library-catalog') { activeType = AI_LIBRARY; limit = batchSize(); update(); } });
   update();
 });

@@ -1,19 +1,36 @@
 const {test,expect}=require('@playwright/test');
 const sections=[['index.html','professions'],['calendar.html','calendar'],['resources.html','resources'],['dictionary.html','dictionary'],['map.html','learning'],['calculator.html','calculators'],['compare.html','compare'],['processes.html','processes'],['materials.html','materials']];
-test('all nine pages provide AI exports, with per-industry controls for materials and processes',async({page})=>{
- for(const [name,slug] of sections){
-  await page.goto('/'+name);
-  await expect(page.locator('.site-ai-link')).toHaveAttribute('href','ai.html?section='+slug);
-  if(slug==='processes'||slug==='materials'){
-   await expect(page.locator('#atlasAiPackage')).toHaveCount(1);
-   await expect(page.locator('#atlasAiMd')).toHaveCount(1);
-   await expect(page.locator('#atlasAiJson')).toHaveCount(1);
-   await expect(page.locator('#atlasAiSector')).toHaveCount(1);
-   continue;
+test('resource introduction stays readable in both themes and all AI downloads are centralized',async({page,request})=>{
+ for(const width of [320,390,768,1366]){
+  await page.setViewportSize({width,height:900});
+  await page.goto('/resources.html');
+  for(const theme of ['dark','light']){
+   await page.evaluate(value=>{localStorage.setItem('theme',value);},theme);
+   await page.reload();
+   const card=await page.locator('#ai-library').boundingBox();
+   const title=await page.locator('#aiLibraryTitle').boundingBox();
+   expect(title.width).toBeGreaterThan(Math.min(240,card.width-55));
+   expect(title.height).toBeLessThan(130);
+   await expect(page.locator('#ai-library [download],#resourceCopyAiLinks')).toHaveCount(0);
+   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2)).toBeTruthy();
   }
-  await expect(page.locator('.ai-transfer-bar')).toHaveCount(1);
-  await expect(page.locator('.ai-transfer-bar a[href="knowledge/sections/'+slug+'.md"]')).toHaveCount(1);
-  await expect(page.locator('.ai-transfer-bar a[href="knowledge/sections/'+slug+'.json"]')).toHaveCount(1);
+ }
+ await page.goto('/ai.html');
+ await page.evaluate(()=>{Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async text=>{window.__copiedAiLinks=text;}}});});
+ await page.locator('#resourceCopyAiLinks').click();
+ await expect(page.locator('#resourceCopyAiStatus')).toContainText('25 ссылок скопированы');
+ const links=(await (await request.get('/knowledge/ai-code-library-links.txt')).text()).trim();
+ expect(await page.evaluate(()=>window.__copiedAiLinks)).toBe(links);
+ await page.goto('/ai-training.html');
+ await expect(page.locator('a[download]')).toHaveCount(0);
+ await expect(page.getByRole('link',{name:'Перейти к скачиванию разделов для ИИ →'})).toHaveAttribute('href','ai.html');
+});
+test('all nine sections use one AI center without inline download panels',async({page})=>{
+ for(const [name] of sections){
+  await page.goto('/'+name);
+  await expect(page.locator('.site-ai-link')).toHaveAttribute('href','ai.html');
+  await expect(page.locator('.ai-transfer-bar,#atlasAiPackage')).toHaveCount(0);
+  await expect(page.locator('a[download][href*="knowledge/"]')).toHaveCount(0);
  }
 });
 test('dedicated AI upload hub lists all nine sections at 320px',async({page})=>{

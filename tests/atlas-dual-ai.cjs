@@ -129,12 +129,13 @@ gate('AI04-AI06 Markdown/JSON/JSONL integrity and provenance',()=>{
  for(const key of keys){const b=core.build(materials,processes,key);assert.equal(core.jsonl(b).trimEnd().split('\n').length,b.counts.total);}
 });
 gate('AI08-AI12 browser controls and no API dependencies',()=>{
- for(const page of ['materials.html','processes.html','ai.html']){
+ for(const page of ['ai.html']){
   const h=read(page);
   for(const id of ['atlasAiPackage','atlasAiSector','atlasAiScope','atlasAiMd','atlasAiJson','atlasAiJsonl','atlasAiZip','atlasAiCopy','atlasAiStatus'])
    assert.ok(h.includes('id="'+id+'"'),page+': missing '+id);
   assert.ok(h.indexOf('atlas-ai-core.js')<h.indexOf('atlas-ai-download.js'),page+' order');
  }
+ for(const page of ['materials.html','processes.html']) assert.ok(!read(page).includes('id="atlasAiPackage"'),page+' still duplicates AI exports');
  const ui=read('atlas-ai-download.js');
  assert.ok(!/fetch\s*\(|XMLHttpRequest|localStorage|apiKey|WebSocket/.test(ui));
  const css=read('ai-transfer.css');
