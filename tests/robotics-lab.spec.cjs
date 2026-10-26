@@ -5,6 +5,8 @@ test('independent robotics lab: controls, computations, keyboard, small screens'
   const external=[];page.on('request',r=>{if(!r.url().startsWith('http://127.0.0.1:8765/'))external.push(r.url());});
   await page.goto('/robotics.html');
   await expect(page.locator('h1')).toContainText('Робототехника');
+  await expect(page.locator('nav.eng-tabs a')).toHaveCount(12);
+  await expect(page.locator('nav.eng-tabs a.active')).toHaveAttribute('href','robotics.html');
   await expect(page.locator('#roboticsDrawing [data-robotics-box]')).not.toHaveCount(0);
   const first=await page.locator('#roboticsDrawing polygon').first().getAttribute('points');
   await page.locator('#roboticsYaw').evaluate(input=>{input.value='-74';input.dispatchEvent(new Event('input',{bubbles:true}));});

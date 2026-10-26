@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   'use strict';
+  // Retain old bookmark behavior after moving this library to Coding.
+  if (location.hash === '#ai-library' || location.hash === '#ai-library-catalog') { location.replace('coding.html'); return; }
   const items = typeof resources !== 'undefined' && Array.isArray(resources) ? resources : [];
   const filter = document.getElementById('resourcesFilter');
   const grid = document.getElementById('resourcesGrid');
