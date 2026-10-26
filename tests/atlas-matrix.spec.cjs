@@ -4,7 +4,7 @@ test('every implemented atlas model initializes and produces a finite result in 
  test.setTimeout(180000);
  const errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto('/calculator.html#labAtlasTools');
- await expect(page.locator('#atlasToolSelect option')).toHaveCount(definitions.length);
+ await page.locator('#atlasToolChooser').evaluate(n=>n.open=true);await expect(page.locator('#atlasToolSelect option')).toHaveCount(definitions.length);
  for(const d of definitions){
   await page.locator('#atlasToolSelect').selectOption(d.id);
   await expect(page.locator('#atlasToolResult'),d.id+' '+d.topic).toHaveAttribute('data-valid','true');
@@ -16,9 +16,9 @@ test('every implemented atlas model initializes and produces a finite result in 
 test('atlas matrix filters, graphics, manual costly models and stale-result clearing',async({page})=>{
  await page.setViewportSize({width:320,height:740});
  await page.goto('/calculator.html#labAtlasTools');
- await expect(page.locator('#atlasToolSelect option')).toHaveCount(definitions.length);
+ await page.locator('#atlasToolChooser').evaluate(n=>n.open=true);await expect(page.locator('#atlasToolSelect option')).toHaveCount(definitions.length);
  await page.locator('#atlasToolGroup').selectOption('g12');
- await expect(page.locator('#atlasToolSelect option')).toHaveCount(22);
+ await page.locator('#atlasToolChooser').evaluate(n=>n.open=true);await expect(page.locator('#atlasToolSelect option')).toHaveCount(22);
  await page.locator('#atlasToolSearch').fill('H7/g6');
  await expect(page.locator('#atlasToolSelect')).toHaveValue('g12-4');
  await expect(page.locator('#atlasToolResult')).toContainText('7 мкм');
@@ -48,7 +48,7 @@ test('atlas tools respond under 4x CPU throttling and calculate offline after lo
  const session=await page.context().newCDPSession(page);await session.send('Emulation.setCPUThrottlingRate',{rate:4});
  await page.setViewportSize({width:320,height:740});await page.goto('/calculator.html');
  await page.evaluate(()=>{window.__atlasStart=performance.now();document.getElementById('labAtlasTools').open=true;});
- await expect(page.locator('#atlasToolSelect option')).toHaveCount(definitions.length,{timeout:15000});
+ await page.locator('#atlasToolChooser').evaluate(n=>n.open=true);await expect(page.locator('#atlasToolSelect option')).toHaveCount(definitions.length,{timeout:15000});
  const elapsed=await page.evaluate(()=>performance.now()-window.__atlasStart);
  expect(elapsed).toBeLessThan(3000);
  await page.context().setOffline(true);
@@ -63,7 +63,7 @@ test('atlas tools respond under 4x CPU throttling and calculate offline after lo
 });
 
 test('concordance, separator volume and a stepped energy profile use the named quantity',async({page})=>{
- await page.goto('/calculator.html#labAtlasTools');await expect(page.locator('#atlasToolSelect option')).toHaveCount(definitions.length);
+ await page.goto('/calculator.html#labAtlasTools');await page.locator('#atlasToolChooser').evaluate(n=>n.open=true);await expect(page.locator('#atlasToolSelect option')).toHaveCount(definitions.length);
  await page.locator('#atlasToolSelect').selectOption('g24-19');await expect(page.locator('#atlasToolResult')).toContainText('CCC Lin');
  await page.locator('#atlasToolSelect').selectOption('g20-20');await expect(page.locator('#atlasToolResult')).toContainText('м³ полезного объёма');
  await page.locator('#atlasToolSelect').selectOption('g23-2');await expect(page.locator('[data-atlas-plot] svg')).toBeVisible();

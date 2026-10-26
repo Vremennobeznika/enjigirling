@@ -3,6 +3,7 @@ test('manufacturing costs load on demand, calculate and preserve the existing ca
  const errors=[],requests=[];page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>requests.push(r.url()));
  await page.goto('/calculator.html');
  expect(requests.some(x=>x.endsWith('/manufacturing-cost.js'))).toBe(false);
+ await page.locator('.calculator-directory > summary').click();
  await page.getByRole('link',{name:'Изготовление и прокат',exact:true}).click();
  await expect(page.locator('#labManufacturing')).toHaveAttribute('open','');
  await expect(page.locator('#manufacturingProcess option')).toHaveCount(12);

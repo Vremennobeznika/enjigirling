@@ -85,6 +85,7 @@ function drawPlot(plot){
 }
 function choose(){
  const d=definitions.find(d=>d.id===select.value);fields.replaceChildren();
+ document.querySelector('#labAtlasTools > summary strong').textContent=d.topic;
  for(const f of d.fields){
   const wrap=document.createElement('div');wrap.className='calc-lab-field';
   const label=document.createElement('label');label.htmlFor='atlasInput-'+f.key;label.textContent=f.label;
@@ -97,7 +98,7 @@ function choose(){
  document.getElementById('atlasToolNote').textContent=d.note;
  update();
 }
-select.addEventListener('change',choose);form.addEventListener('input',()=>{if(definitions.find(d=>d.id===select.value)?.manual){form.querySelector('[data-atlas-plot]')?.remove();output.textContent='Данные изменены. Нажмите «Рассчитать».';output.dataset.valid='pending';}else update();});form.addEventListener('submit',e=>{e.preventDefault();update();});
+select.addEventListener('change',choose);form.addEventListener('input',event=>{if(event.target.closest('#atlasToolChooser'))return;if(definitions.find(d=>d.id===select.value)?.manual){form.querySelector('[data-atlas-plot]')?.remove();output.textContent='Данные изменены. Нажмите «Рассчитать».';output.dataset.valid='pending';}else update();});form.addEventListener('submit',e=>{e.preventDefault();update();});
 const requested=new URLSearchParams(location.search).get('atlasTool');if(definitions.some(d=>d.id===requested))select.value=requested;
 const search=document.getElementById('atlasToolSearch'),groupSelect=document.getElementById('atlasToolGroup');
 if(search&&groupSelect){

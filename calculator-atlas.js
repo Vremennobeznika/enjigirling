@@ -1,82 +1,52 @@
-/* ENJIGIRLING calculator atlas — searchable catalogue linked to the implemented calculation registry. */
+/* Lightweight catalogue: calculation engines load only after a tool is selected. */
 (function(){
 'use strict';
-const input=document.getElementById('atlasQuery');
-const select=document.getElementById('atlasCategory');
-const result=document.getElementById('atlasResults');
-const count=document.getElementById('atlasCount');
-const copy=document.getElementById('atlasCopy');
-const all=Array.isArray(window.calculatorAtlasGroups)?window.calculatorAtlasGroups:[];
-if(!input||!select||!result||!count||!copy||!all.length)return;
-const normalize=s=>String(s).toLocaleLowerCase('ru-RU').replace(/ё/g,'е');
-const groups=all.map(group=>({...group,entries:group.items.map(name=>({name,search:normalize(name)}))}));
-const total=groups.reduce((sum,g)=>sum+g.items.length,0);
-const ready=new Map((window.AtlasTools?window.AtlasTools.definitions:[]).map(d=>[d.topic,d.id]));
-document.querySelectorAll('[data-atlas-ready-count]').forEach(el=>el.textContent=String(ready.size));
-const existing=document.querySelectorAll('.atlas-links a').length;let matched=[];
-const label=(tag,className,txt)=>{const n=document.createElement(tag);if(className)n.className=className;if(txt)n.textContent=txt;return n;};
-for(const group of groups){const option=document.createElement('option');option.value=group.id;option.textContent=group.title+' ('+group.items.length+')';select.appendChild(option);}
-function makeSection(group,entries,filtering){
- const details=document.createElement('details');details.className='atlas-group';details.id=group.id;
- const summary=label('summary','atlas-group-head',group.title+' — '+entries.length);
- details.append(summary);
- const content=label('div','atlas-group-body');
- const source=label('p','atlas-source','Источник для изучения формул: ');
- const a=document.createElement('a');a.href=group.source;a.target='_blank';a.rel='noopener noreferrer';a.textContent=new URL(group.source).hostname;source.append(a);
- content.append(source);
- const list=document.createElement('ol');list.className='atlas-topic-list';
- const short=filtering&&entries.length>80?entries.slice(0,80):entries;
- for(const entry of short){const item=label('li','atlas-topic',entry.name);if(ready.has(entry.name)){const link=document.createElement('a');link.href='calculator.html?atlasTool='+ready.get(entry.name)+'#labAtlasTools';link.className='atlas-ready-link';link.textContent='Рассчитать →';item.append(' ',link);}list.append(item);}
- content.append(list);
- if(short.length!==entries.length)content.append(label('p','atlas-more','Показаны первые 80 совпадений группы. Уточните запрос.'));
- details.append(content);
- if(filtering)details.open=true;
- return details;
-}
+const input=document.getElementById('atlasQuery'),select=document.getElementById('atlasCategory'),result=document.getElementById('atlasResults'),count=document.getElementById('atlasCount');
+const all=window.calculatorAtlasGroups;
+if(!input||!select||!result||!count||!all)return;
+const base={"Плотность ткани GSM по образцу":"gsm","Масса ткани по метражу":"fabric-mass","Линейная плотность нити tex":"tex","Длина рулона по массе GSM":"roll-length","Время передачи файла":"transfer","Размер PCM-аудио":"pcm","Объём древесины в брусе":"timber","Расход клея г/м²":"glue"};
+const normalize=s=>s.toLocaleLowerCase('ru-RU').replace(/ё/g,'е');
+const groups=all.map(g=>({...g,entries:g.items.map((topic,i)=>({topic,id:base[topic]||g.id+'-'+(i+1),search:normalize(topic)}))}));
+for(const g of groups){const o=document.createElement('option');o.value=g.id;o.textContent=g.title;select.append(o);}
+const params=new URLSearchParams(location.search);
+if(groups.some(g=>g.id===params.get('industry')))select.value=params.get('industry');
 function refresh(){
- const q=normalize(input.value.trim()),cat=select.value;
- matched=[];
- const fragment=document.createDocumentFragment();
- let visibleGroups=0;
- for(const group of groups){
-  if(cat&&cat!==group.id)continue;
-  const entries=q?group.entries.filter(x=>x.search.includes(q)):group.entries;
-  if(!entries.length)continue;
-  visibleGroups++;
-  matched.push(...entries.map(x=>group.title+': '+x.name));
-  if(q||cat){
-   fragment.append(makeSection(group,entries,true));
-  }else{
-   // Only render child items on demand, not all 734 at startup.
-   const details=document.createElement('details');details.className='atlas-group';details.id=group.id;
-   details.append(label('summary','atlas-group-head',group.title+' — '+entries.length));
-   details.addEventListener('toggle',()=>{
-    if(details.open&&!details.querySelector('.atlas-group-body')){
-     const rendered=makeSection(group,entries,false);
-     details.append(rendered.querySelector('.atlas-group-body'));
+ const q=normalize(input.value.trim()),category=select.value;
+ result.replaceChildren();
+ if(!q&&!category){count.textContent='734 расчёта в 34 отраслях. Введите название или выберите отрасль.';return;}
+ const fragment=document.createDocumentFragment();let total=0,shown=0;
+ for(const g of groups){
+  if(category&&category!==g.id)continue;
+  const entries=g.entries.filter(e=>!q||e.search.includes(q));total+=entries.length;
+  if(!entries.length||shown>=80)continue;
+  const section=document.createElement('section'),heading=document.createElement('h3'),list=document.createElement('ul');
+  section.className='atlas-group';heading.className='atlas-group-head';heading.textContent=g.title;
+  list.className='atlas-topic-list';
+  for(const entry of entries){
+   if(shown>=80)break;
+   const li=document.createElement('li'),a=document.createElement('a');li.className='atlas-topic';a.className='atlas-ready-link';
+   a.textContent=entry.topic;a.href='?atlasTool='+encodeURIComponent(entry.id)+'#labAtlasTools';
+   a.addEventListener('click',e=>{
+    if(e.button!==0||e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;
+    e.preventDefault();
+    const panel=document.getElementById('labAtlasTools');
+    history.replaceState(null,'',a.href);
+    const picker=document.getElementById('atlasToolSelect');
+    // A loaded form can be reused without reloading the page or the engine.
+    if(window.AtlasTools&&picker){
+     document.getElementById('atlasToolSearch').value='';
+     const filter=document.getElementById('atlasToolGroup');filter.value='';filter.dispatchEvent(new Event('change'));
+     picker.value=entry.id;picker.dispatchEvent(new Event('change'));
     }
-   },{once:false});
-   fragment.append(details);
+    panel.open=true;panel.querySelector('summary').focus({preventScroll:true});panel.scrollIntoView({block:'start'});
+   });
+   li.append(a);list.append(li);shown++;
   }
+  section.append(heading,list);fragment.append(section);
  }
- result.replaceChildren(fragment);
- count.textContent='Найдено '+matched.length+' из '+total+' тем в '+visibleGroups+' группах. Готовые мастерские на основном сайте — '+existing+' точек входа. Реализованных тем атласа: '+ready.size+'.';
- copy.disabled=!matched.length;
+ result.append(fragment);
+ count.textContent=total?'Найдено: '+total+(shown<total?'. Показаны первые '+shown+'; уточните запрос.':'. Выберите расчёт.'):'Ничего не найдено. Измените запрос или выберите другую отрасль.';
 }
-let raf=0;
-input.addEventListener('input',()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(refresh);});
-select.addEventListener('change',refresh);
-copy.addEventListener('click',()=>{
- const str=matched.join('\n');
- if(navigator.clipboard&&window.isSecureContext){
-  navigator.clipboard.writeText(str).then(()=>{copy.textContent='Скопировано';}).catch(()=>{copy.textContent='Не удалось скопировать';});
- }else{
-  const box=document.createElement('textarea');box.value=str;document.body.append(box);box.select();
-  try{document.execCommand('copy');copy.textContent='Скопировано';}catch{copy.textContent='Выделите вручную';}
-  box.remove();
- }
-});
-const requested=location.hash.slice(1);
-if(requested&&groups.some(x=>x.id===requested)){select.value=requested;}
+let frame=0;input.addEventListener('input',()=>{cancelAnimationFrame(frame);frame=requestAnimationFrame(refresh);});select.addEventListener('change',refresh);
 refresh();
 })();

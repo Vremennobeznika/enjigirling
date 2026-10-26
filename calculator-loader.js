@@ -5,6 +5,7 @@ const details=document.querySelectorAll('details[data-lab],details.calc-legacy,d
 if(!details.length)return;
 const modules=new Map(),initialized=new WeakSet(),waiting=new WeakSet();
 function script(src){
+ if(src==='calculator-atlas-data.js'&&window.calculatorAtlasGroups)return Promise.resolve();
  if(!modules.has(src)){
   const promise=new Promise((resolve,reject)=>{
    const tag=document.createElement('script');

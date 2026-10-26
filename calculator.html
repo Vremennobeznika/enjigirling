@@ -31,6 +31,7 @@
 <link rel="stylesheet" href="section-ui.css">
 <link rel="stylesheet" href="ai-transfer.css">
 <link rel="stylesheet" href="calculator-lab.css">
+<link rel="stylesheet" href="calculator-atlas.css">
 <link rel="stylesheet" href="calculator-practical.css">
 <link rel="canonical" href="https://vremennobeznika.github.io/enjigirling/calculator.html">
 </head>
@@ -72,23 +73,41 @@
 </nav><noscript><style>@media(max-width:860px){.site-nav-wrap>.eng-tabs{display:flex!important}.site-nav-wrap>.site-nav-toggle{display:none!important}}</style></noscript></div>
 
         <main class="site-page" id="main-content">
-<h1 class="sr-only">Инженерные калькуляторы</h1>
+<h1 class="calculator-title">Калькуляторы</h1>
+<p class="calculator-intro">Найдите задачу или выберите отрасль. Расчёты выполняются на вашем устройстве; введённые значения не отправляются на сервер.</p>
 
-<section class="calculator-directory" aria-labelledby="calcDirectoryTitle">
-  <h2 id="calcDirectoryTitle">Мастерская расчётов ENJIGIRLING</h2>
-  <p>От бита до цеха: вычисления на вашем устройстве без отправки введённых значений на сервер. Раскройте только нужную мастерскую. Скрипт вычислений загрузится только при открытии выбранного инструмента.</p>
+<section id="calculatorCatalog" aria-labelledby="catalogTitle">
+<h2 id="catalogTitle">Найти расчёт</h2>
+<div class="atlas-filters">
+<div><label for="atlasQuery">Что нужно рассчитать?</label><input id="atlasQuery" type="search" maxlength="128" placeholder="Например: расход клея, усадка, мощность" autocomplete="off"></div>
+<div><label for="atlasCategory">Отрасль</label><select id="atlasCategory"><option value="">Все отрасли</option></select></div>
+</div>
+<p id="atlasCount" class="atlas-count" role="status" aria-live="polite">734 расчёта в 34 отраслях. Введите название или выберите отрасль.</p>
+<div id="atlasResults" class="atlas-results"></div>
+<noscript><p>Для расчётов нужен JavaScript. <a href="calculator-atlas.csv">Скачать список расчётов</a>.</p></noscript>
+</section>
+<details class="calc-lab atlas-tools-lab" id="labAtlasTools">
+<summary><strong>Выбранный расчёт</strong><small>Исходные данные, результат и формула</small></summary>
+<div class="calc-lab-body"><p>Значения в полях — примеры. Замените их своими; единицы указаны у каждого поля. Большинство результатов обновляется при вводе.</p>
+<form id="atlasToolForm" novalidate><details id="atlasToolChooser" class="calculator-reference"><summary>Сменить расчёт</summary><div class="calc-lab-grid"><div class="calc-lab-field"><label for="atlasToolSearch">Поиск по расчётам</label><input id="atlasToolSearch" type="search" maxlength="128" placeholder="Тема или величина…"></div><div class="calc-lab-field"><label for="atlasToolGroup">Отрасль</label><select id="atlasToolGroup"></select></div></div>
+<div class="calc-lab-field"><label for="atlasToolSelect">Что рассчитать</label><select id="atlasToolSelect"></select></div>
+</details><div id="atlasToolFields" class="calc-lab-grid"></div><button type="submit" class="calc-practical-copy">Рассчитать</button>
+<output id="atlasToolResult" class="calc-lab-output" role="status" aria-live="polite">Раскройте блок для загрузки расчётов.</output>
+<p id="atlasToolFormula" class="calc-lab-note"></p><p id="atlasToolNote" class="calc-lab-note"></p></form>
+<p><a href="#calculatorCatalog">← Найти другой расчёт</a></p></div></details>
+<details class="calculator-directory"><summary id="calcDirectoryTitle">Специальные инструменты и конвертеры</summary>
   <nav aria-label="Группы калькуляторов" class="calculator-groups">
 <div class="calculator-group"><h3>Цифровые данные</h3><a href="#labIEEE">Битоскоп</a><a href="#calcBases">Системы счисления</a></div>
 <div class="calculator-group"><h3>Электротехника</h3><a href="#labElectronics">Электроцех</a><a href="#calcSignal">Сигнал 4–20 мА</a></div>
-<div class="calculator-group"><h3>Производство</h3><a href="#labProduction">Цеховой расчёт</a><a href="#labManufacturing">Изготовление и прокат</a><a href="#labAtlasTools">Рабочие расчёты из атласа</a></div>
+<div class="calculator-group"><h3>Производство</h3><a href="#labProduction">Цеховой расчёт</a><a href="#labManufacturing">Изготовление и прокат</a></div>
 <div class="calculator-group"><h3>Практические расчёты</h3><a href="#labPractical">Электросеть и заготовка</a></div>
 <div class="calculator-group"><h3>Швейное дело</h3><a href="#labSewing">Раскрой и поток</a><a href="#labMoreSewing">Настил и усадка</a></div>
 <div class="calculator-group"><h3>Море и суда</h3><a href="#labMarine">Морской блокнот</a><a href="#labMoreMarine">Корпус и течение</a></div>
 <div class="calculator-group"><h3>Единицы и измерения</h3><a href="#calcUnits">Инженерный конвертер</a></div>
 </nav>
 <p class="atlas-direct-link"><a href="measurement-lab.html">Измерительные приборы онлайн: 10 полноценных интерактивных тренажёров на сайте →</a> <span>Модели для обучения чтению шкал, не реальные измерения деталей.</span></p>
-<p class="atlas-direct-link"><a href="calculator-atlas.html">Атлас: 734 расчётные модели по 34 отраслям →</a> <span>Поиск по темам и отраслям, формулы, ограничения, матрица проверок и CSV.</span></p>
-</section>
+
+</details>
 
 <section class="calculator-workshop-section" id="group-digital" aria-labelledby="group-digital-heading">
 <header class="calculator-workshop-heading"><div><h2 id="group-digital-heading">Цифровые данные</h2><p>Форматы чисел и перевод систем счисления</p></div><span>2 инструмента</span></header>
@@ -247,7 +266,7 @@
 </section>
 
 <section class="calculator-workshop-section" id="group-production" aria-labelledby="group-production-heading">
-<header class="calculator-workshop-heading"><div><h2 id="group-production-heading">Производственные расчёты</h2><p>Оборудование, такт, материалы и технологические режимы</p></div><span>3 инструмента</span></header>
+<header class="calculator-workshop-heading"><div><h2 id="group-production-heading">Производственные расчёты</h2><p>Оборудование, такт, материалы и технологические режимы</p></div><span>2 инструмента</span></header>
 <div class="calculator-workshop-grid">
 <details class="calc-lab manufacturing-lab" id="labManufacturing">
 <summary><strong>Стоимость изготовления и металлопроката</strong><small>12 технологий · себестоимость партии · масса проката · наценка</small></summary>
@@ -288,15 +307,7 @@
 <p class="calc-lab-note">Направления расчётов: <a href="https://makerrate.cc/" target="_blank" rel="noopener noreferrer">MakerRate</a>. Формулы и интерфейс реализованы самостоятельно. Импорт STL/STEP/DXF и автоматический анализ геометрии не выполняются.</p>
 </div></details>
 
-<details class="calc-lab atlas-tools-lab" id="labAtlasTools">
-<summary><strong>Рабочие расчёты из атласа</strong><small>Текстиль · нити · передача данных · PCM · древесина · клей</small></summary>
-<div class="calc-lab-body"><p>Реализованные темы атласа с формулами, единицами и ограничениями. Выберите расчёт; значения в полях — примеры, их можно заменить. Результат обновляется при вводе.</p>
-<div class="calc-lab-grid"><div class="calc-lab-field"><label for="atlasToolSearch">Поиск по расчётам</label><input id="atlasToolSearch" type="search" maxlength="128" placeholder="Тема или величина…"></div><div class="calc-lab-field"><label for="atlasToolGroup">Отрасль</label><select id="atlasToolGroup"></select></div></div>
-<form id="atlasToolForm" novalidate><div class="calc-lab-field"><label for="atlasToolSelect">Что рассчитать</label><select id="atlasToolSelect"></select></div>
-<div id="atlasToolFields" class="calc-lab-grid"></div><button type="submit" class="calc-practical-copy">Рассчитать</button>
-<output id="atlasToolResult" class="calc-lab-output" role="status" aria-live="polite">Раскройте блок для загрузки расчётов.</output>
-<p id="atlasToolFormula" class="calc-lab-note"></p><p id="atlasToolNote" class="calc-lab-note"></p></form>
-<p><a href="calculator-atlas.html">Открыть атлас и выбрать другую тему →</a></p></div></details>
+
 
 <details class="calc-lab production-panel" id="labProduction" data-lab="production">
  <summary><strong>Цеховой расчёт — производственная панель</strong><small>Такт · OEE · масса заготовки · удлинение · резание · расход</small></summary>
@@ -364,7 +375,7 @@
 </section>
 
 <section class="calculator-workshop-section" id="group-practical" aria-labelledby="group-practical-heading">
-<header class="calculator-workshop-heading"><div><h2 id="group-practical-heading">Практические расчёты</h2><p>Электроснабжение и геометрия заготовок</p></div><span>3 инструмента</span></header>
+<header class="calculator-workshop-heading"><div><h2 id="group-practical-heading">Практические расчёты</h2><p>Электроснабжение и геометрия заготовок</p></div><span>2 инструмента</span></header>
 <div class="calculator-workshop-grid"><details class="calc-lab practical-lab" id="labPractical"><summary><strong>Электросеть и заготовка</strong><small>Трёхфазная мощность · падение напряжения · масса цилиндра</small></summary><div class="calc-lab-body">
 <section class="calc-lab-sub"><h3>Трёхфазная мощность симметричной нагрузки</h3><div class="calc-lab-grid"><div class="calc-lab-field"><label for="threeVoltage">Линейное напряжение, В</label><input id="threeVoltage" type="text" inputmode="decimal" value="400"></div><div class="calc-lab-field"><label for="threeCurrent">Линейный ток, А</label><input id="threeCurrent" type="text" inputmode="decimal" value="10"></div><div class="calc-lab-field"><label for="threePF">cos φ</label><input id="threePF" type="text" inputmode="decimal" value="0.8"></div></div><output id="threeOutput" class="calc-lab-output" aria-live="polite">—</output><button type="button" class="calc-practical-copy" data-copy-for="threeOutput">Копировать результат</button><p class="calc-lab-note">S = √3 UI; P = S·cos φ; Q = S·sin φ. Только симметричная синусоидальная нагрузка, без гармоник и искажений. Для несинусоидальных режимов нужен учёт полного коэффициента мощности.</p></section>
 <section class="calc-lab-sub"><h3>Оценка падения напряжения в линии</h3><div class="calc-lab-grid"><div class="calc-lab-field"><label for="voltageSystem">Система</label><select id="voltageSystem"><option value="dc">Постоянный ток, двухпроводная</option><option value="single">Однофазная AC</option><option value="three" selected>Трёхфазная AC, симметричная</option></select></div><div class="calc-lab-field"><label for="voltageNominal">Напряжение, В</label><input id="voltageNominal" type="text" inputmode="decimal" value="400"></div><div class="calc-lab-field"><label for="voltageCurrent">Ток, А</label><input id="voltageCurrent" type="text" inputmode="decimal" value="20"></div><div class="calc-lab-field"><label for="voltageLength">Длина линии в одну сторону, м</label><input id="voltageLength" type="text" inputmode="decimal" value="50"></div><div class="calc-lab-field"><label for="voltageSection">Сечение проводника, мм²</label><input id="voltageSection" type="text" inputmode="decimal" value="4"></div><div class="calc-lab-field"><label for="voltageRho">Удельное сопротивление, Ом·мм²/м</label><input id="voltageRho" type="text" inputmode="decimal" value="0.0175"></div><div class="calc-lab-field"><label id="voltagePFLabel" for="voltagePF">cos φ нагрузки</label><input id="voltagePF" type="text" inputmode="decimal" value="0.9"></div></div><output id="voltageOutput" class="calc-lab-output" aria-live="polite">—</output><button type="button" class="calc-practical-copy" data-copy-for="voltageOutput">Копировать результат</button><p class="calc-lab-note">Упрощённая резистивная оценка: 2·I·ρ·L/A (DC), 2·I·ρ·L·cosφ/A (однофазная AC), √3·I·ρ·L·cosφ/A (трёхфазная AC). Не учтены реактивность, нагрев жил, контакты, гармоники и реальные схемы прокладки. Не использовать как проектный расчёт защиты или выбора кабеля.</p></section>
@@ -457,6 +468,7 @@
 </div>
 </section>
 
+<details class="calculator-reference"><summary>Точность, источники и список расчётов</summary><p>Учебные и приближённые модели не заменяют нормативную или проектную проверку. Проверяйте формулу, единицы и ограничения выбранного расчёта.</p><p><a href="knowledge/atlas-implementation-matrix.json" download>Формулы и контрольные примеры · JSON</a> · <a href="calculator-atlas.csv" download="enjigirling-calculator-atlas.csv">Список расчётов · CSV</a></p></details>
 </main>
     </div>
 
@@ -484,6 +496,8 @@
     <script src="theme.js"></script>
 <script src="site-shell.js"></script>
 <script src="navigation.js"></script>
+<script src="calculator-atlas-data.js"></script>
+<script src="calculator-atlas.js"></script>
 <script src="calculator-loader.js"></script>
 
 

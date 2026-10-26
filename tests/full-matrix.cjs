@@ -325,7 +325,7 @@ check('independent lazy engineering calculators and original tools preserved', (
 
 check('originally named workshops and six dimensioned production tools', () => {
  const html=fs.readFileSync('calculator.html','utf8');
- for(const label of ['Битоскоп','Электроцех','Цеховой расчёт','Мастерская расчётов ENJIGIRLING']){
+ for(const label of ['Битоскоп','Электроцех','Цеховой расчёт','Специальные инструменты и конвертеры']){
   assert.ok(html.includes(label),'missing named tool '+label);
  }
  const sections=[...html.matchAll(/data-lab="([^"]+)"/g)].map(x=>x[1]);
@@ -383,12 +383,12 @@ check('734 unique calculator concepts across 34 research groups have honest stat
   assert.ok(group.title&&group.id&&group.source.startsWith('https://'),group.id+' invalid metadata');
   assert.ok(group.items.length>=10,group.id+' has too few topics');
  }
- const page=fs.readFileSync('calculator-atlas.html','utf8');
- assert.ok(page.includes('734 темы'),'atlas must label topics as ideas');
- assert.ok(page.includes('учебные и приближённые модели не заменяют нормативную или проектную проверку'),'atlas must state model limits');
+ const page=fs.readFileSync('calculator.html','utf8');
+ assert.ok(page.includes('734 расчёта'),'catalogue count missing');
+ assert.ok(page.includes('Учебные и приближённые модели не заменяют нормативную или проектную проверку'),'atlas must state model limits');
  for(const filename of ['calculator-atlas.js','calculator-atlas-data.js','calculator-atlas.css','calculator-atlas.csv'])
    assert.ok(page.includes(filename),'atlas missing '+filename);
- assert.ok(fs.readFileSync('calculator.html','utf8').includes('href="calculator-atlas.html"'),'calculator section has no catalog link');
+ assert.ok(fs.readFileSync('calculator-atlas.html','utf8').includes('calculator-atlas-redirect.js'),'old catalogue link must redirect');
  const csv=fs.readFileSync('calculator-atlas.csv','utf8');
  assert.ok(csv.startsWith('\uFEFF'),'CSV must be UTF-8 with BOM');
  assert.equal(csv.trimEnd().split('\n').length,735,'CSV rows');
@@ -401,7 +401,7 @@ check('calculator workshop layout embeds every tool in seven groups',()=>{
  const g=[
   ['group-digital',['labIEEE','calcBases']],
   ['group-electrical',['labElectronics','calcSignal']],
-  ['group-production',['labManufacturing','labAtlasTools','labProduction']],
+  ['group-production',['labManufacturing','labProduction']],
   ['group-practical',['labPractical']],
   ['group-sewing',['labSewing','labMoreSewing']],
   ['group-marine',['labMarine','labMoreMarine']],
