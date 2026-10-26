@@ -109,3 +109,4 @@
 /* Education evidence status and distinct safe source links. */
 .site-page .education-card-status{font-size:12px;line-height:1.5;font-weight:600;margin:0;color:var(--text-secondary)}
 .site-page .education-card-details .education-site{display:flex;width:fit-content;max-width:100%;margin-top:8px;overflow-wrap:anywhere}
+.learning-practice-link{display:inline-flex;align-items:center;min-height:44px;padding:8px 0;box-sizing:border-box;overflow-wrap:anywhere}

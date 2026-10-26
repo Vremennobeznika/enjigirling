@@ -75,14 +75,21 @@ test('embedded instruments have no horizontal overflow at 320px',async({page})=>
  const dims=await page.evaluate(()=>({scroll:document.documentElement.scrollWidth,width:document.documentElement.clientWidth}));
  expect(dims.scroll).toBeLessThanOrEqual(dims.width+2);
 });
-test('community and calculator entry points lead to the internal workshop',async({page})=>{
+test('training belongs to education and calculators have no duplicate atlas or instruments',async({page})=>{
+ await page.setViewportSize({width:320,height:720});
  await page.goto('/calculator.html');
- await expect(page.locator('a[href="measurement-lab.html"]').first()).toBeVisible();
- await page.goto('/resources.html');
- await expect(page.locator('a[href="measurement-lab.html"]').first()).toBeVisible();
- await page.locator('a[href="measurement-lab.html"]').first().click();
- await expect(page).toHaveURL(/measurement-lab\.html/);
+ await expect(page.locator('a[href="measurement-lab.html"],a[href="calculator-atlas.html"]')).toHaveCount(0);
+ await page.goto('/map.html#education-practice');
+ await expect(page.locator('#measurementTrainingTitle')).toBeVisible();
+ await page.locator('#education-practice a[href="measurement-lab.html"]').click();
  await expect(page.locator('#vernierSvg line').first()).toHaveCount(1);
+ await expect(page.locator('a[href="map.html"].active')).toHaveText('Обучение');
+ await page.getByRole('link',{name:'← Обучение',exact:true}).click();
+ await expect(page).toHaveURL(/map\.html#education-practice$/);
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(2);
+ await page.goto('/resources.html');
+ await page.locator('a[href="map.html#education-practice"]').click();
+ await expect(page.locator('#measurementTrainingTitle')).toBeVisible();
 });
 
 test('oscilloscope does not draw aliased waves at excessive cycles per screen',async({page})=>{

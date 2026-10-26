@@ -130,8 +130,7 @@ test('measurement lab link and extended industry calculations',async({page})=>{
  await page.setViewportSize({width:375,height:812});
  await page.goto('/calculator.html');
  await expect(page.locator('#labCaliper')).toHaveCount(0);
- await page.locator('.calculator-directory > summary').click();
- await expect(page.locator('a[href="measurement-lab.html"]').first()).toBeVisible();
+ await expect(page.locator('a[href="measurement-lab.html"]')).toHaveCount(0);
  await page.locator('#labMoreSewing > summary').click();
  await expect(page.locator('#shrinkOutput')).toContainText('3 %');
  await expect(page.locator('#layOutput')).toContainText('51 м');
