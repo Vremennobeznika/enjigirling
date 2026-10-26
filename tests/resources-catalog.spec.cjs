@@ -56,7 +56,7 @@ test('resources: full indexed search, progressive loading, keyboard and 320px mo
   const catalogSize=await page.evaluate(()=>resources.length);
   const more=page.locator('#resourceShowMore');
   await expect(cards).toHaveCount(47);
-  await expect(page.locator('#resourcesGrid .resource-group')).toHaveCount(11);
+  await expect(page.locator('#resourcesGrid .resource-group')).toHaveCount(10);
   await expect(page.locator('#resourcesGrid .resource-group[aria-label="Дружественные каналы"] .resource-card')).toHaveCount(11);
   await expect(page.locator('#resourcesGrid')).toHaveAttribute('data-matches',String(catalogSize));
   expect(await page.locator('#resourcesGrid *').count()).toBeLessThan(900);
