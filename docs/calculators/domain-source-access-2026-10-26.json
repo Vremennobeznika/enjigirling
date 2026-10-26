@@ -1,0 +1,36 @@
+[
+  {
+    "id": "nist-t",
+    "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda3672.htm",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "id": "nist-capability",
+    "url": "https://www.itl.nist.gov/div898/handbook/pmc/section1/pmc16.htm",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "id": "nasa-atmosphere",
+    "url": "https://www.grc.nasa.gov/www/k-12/airplane/atmosmet.html",
+    "http": 200,
+    "bytes": 14691
+  },
+  {
+    "id": "bipm-si",
+    "url": "https://www.bipm.org/en/publications/si-brochure",
+    "http": 200,
+    "bytes": 259935
+  },
+  {
+    "id": "gum",
+    "url": "https://www.bipm.org/en/committees/jc/jcgm/publications",
+    "http": 200,
+    "bytes": 174090
+  },
+  {
+    "id": "crc",
+    "url": "https://reveng.sourceforge.io/crc-catalogue/16.htm",
+    "http": 200,
+    "bytes": 81069
+  }
+]

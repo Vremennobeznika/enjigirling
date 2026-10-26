@@ -70,3 +70,37 @@ test('air permeability uses SI conversion: 60 L/min over 100 cm² is 100 mm/s',a
  await expect(page.locator('#atlasToolResult')).toHaveText('50 мм/с');
  await expect(page.locator('#atlasToolFormula')).toContainText('10 000');
 });
+test('reviewed scope names, exact bags and applicability errors reach the user',async({page})=>{
+ await page.setViewportSize({width:320,height:740});
+ await page.goto('/calculator.html?atlasTool=g21-2#labAtlasTools');
+ await page.locator('#atlasInput-volume').fill('0.14');await page.locator('#atlasInput-cement').fill('100');await page.locator('#atlasInput-bag').fill('7');
+ await expect(page.locator('#atlasToolResult')).toHaveText('2 мешков');
+ await page.locator('#atlasQuery').fill('Пропускная способность по Шеннону');
+ await page.locator('#atlasResults a').click();
+ await expect(page.locator('#labAtlasTools > summary strong')).toHaveText('Пропускная способность по Шеннону');
+ await page.locator('#atlasToolChooser').evaluate(n=>n.open=true);await page.locator('#atlasToolSelect').selectOption('g19-12');
+ await page.locator('#atlasInput-temp').fill('-45');await page.locator('#atlasInput-rh').fill('1');
+ await expect(page.locator('#atlasToolResult')).toHaveAttribute('data-valid','false');
+ await expect(page.locator('#atlasToolResult')).toContainText('вне проверенного диапазона');
+ await page.locator('#atlasToolSelect').selectOption('g29-4');await page.locator('#atlasInput-x').fill('0;2;0;2');await page.locator('#atlasInput-y').fill('0;2;2;0');
+ await expect(page.locator('#atlasToolResult')).toHaveAttribute('data-valid','false');
+ await expect(page.locator('#atlasToolResult')).toContainText('Самопересечение');
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(2);
+});
+test('simple polygon validation stays bounded at 200 vertices under 4x CPU',async({page})=>{
+ const session=await page.context().newCDPSession(page);await session.send('Emulation.setCPUThrottlingRate',{rate:4});
+ await page.goto('/calculator.html?atlasTool=g29-4#labAtlasTools');
+ await expect(page.locator('#atlasToolResult')).toHaveAttribute('data-valid','true');
+ const n=200,r=10,x=[],y=[];for(let i=0;i<n;i++){x.push(r*Math.cos(2*Math.PI*i/n));y.push(r*Math.sin(2*Math.PI*i/n));}
+ await page.locator('#atlasInput-x').fill(x.join(';'));
+ const start=Date.now();await page.locator('#atlasInput-y').fill(y.join(';'));
+ await expect(page.locator('#atlasToolResult')).toHaveAttribute('data-valid','true');
+ const elapsed=Date.now()-start;expect(elapsed).toBeLessThan(1500);
+ const expected=n*r*r*Math.sin(2*Math.PI/n)/2;
+ const actual=await page.locator('#atlasToolResult').textContent();
+ expect(Number(actual.split(' ')[0].replace(',','.'))).toBeCloseTo(expected,5);
+ x.push(0);y.push(0);await page.locator('#atlasInput-x').fill(x.join(';'));await page.locator('#atlasInput-y').fill(y.join(';'));
+ await expect(page.locator('#atlasToolResult')).toHaveAttribute('data-valid','false');
+ await expect(page.locator('#atlasToolResult')).toContainText('200');
+ console.log('200-vertex topology and area at 4x CPU, ms:',elapsed);await session.detach();
+});

@@ -52,7 +52,8 @@ function calculate(id,values){
  const x=Object.fromEntries(definition.fields.map(f=>[f.key,parse(values[f.key],f)]));
  if(definition.validate)definition.validate(x);
  const result=definition.run(x);
- if(!Number.isFinite(result.value)||Math.abs(result.value)>Number.MAX_SAFE_INTEGER)throw Error('Результат вне поддерживаемого диапазона.');
+ const finite=value=>typeof value==='number'?Number.isFinite(value):Array.isArray(value)?value.every(finite):value&&typeof value==='object'?Object.values(value).every(finite):true;
+ if(!Number.isFinite(result.value)||Math.abs(result.value)>Number.MAX_SAFE_INTEGER||!finite(result))throw Error('Результат вне поддерживаемого диапазона.');
  return result;
 }
 const baseGroups={gsm:'g2','fabric-mass':'g2',tex:'g2','roll-length':'g2',transfer:'g33',pcm:'g33',timber:'g34',glue:'g34'};for(const d of definitions)if(!d.group)d.group=baseGroups[d.id];

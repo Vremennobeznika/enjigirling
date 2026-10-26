@@ -1,5 +1,5 @@
 """Independent Decimal/SI oracle; no calculator formulas or expected values imported."""
-import json, math, random, subprocess
+import json, math, random, subprocess, sys
 from decimal import Decimal, getcontext
 from pathlib import Path
 getcontext().prec = 40
@@ -42,4 +42,7 @@ assert len(actual) == len(cases)
 for case, value in zip(cases, actual):
     expected = float(case['expected'])
     assert math.isfinite(value) and math.isclose(value, expected, rel_tol=1e-10, abs_tol=1e-10), (case, value)
-print(f'PASS independent Decimal/SI: {len(cases)} cases across {len(set(c["id"] for c in cases))} models; not certification of the remaining models')
+if '--json' in sys.argv:
+    print(json.dumps({'cases': len(cases), 'byModel': {model: sum(c['id'] == model for c in cases) for model in sorted(set(c['id'] for c in cases))}}))
+else:
+    print(f'PASS independent Decimal/SI: {len(cases)} cases across {len(set(c["id"] for c in cases))} models; not certification of the remaining models')
