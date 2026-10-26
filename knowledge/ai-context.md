@@ -16,7 +16,7 @@
 - Реестр доказательств: knowledge/source-registry.json
 - Данные о зарплатах и статусах: knowledge/salary-evidence.json
 
-## Краткий каталог (982 записей)
+## Краткий каталог (985 записей)
 
 ### Профессии
 - **Инженер-строитель (ПГС)** — Организация и контроль строительства зданий и сооружений на объекте: ведение работ, исполнительная документация, сметы. Подробнее: https://vremennobeznika.github.io/enjigirling/index.html#profession=civil-engineer
@@ -70,6 +70,9 @@
 - **Backend-разработчик** — Разработка серверной логики и API веб-приложений. Подробнее: https://vremennobeznika.github.io/enjigirling/index.html#profession=backend-engineer
 - **QA-инженер** — Обеспечение качества и тестирование программного обеспечения. Подробнее: https://vremennobeznika.github.io/enjigirling/index.html#profession=qa-engineer
 - **Mobile-разработчик** — Разработка мобильных приложений для iOS и Android. Подробнее: https://vremennobeznika.github.io/enjigirling/index.html#profession=mobile-engineer
+- **Инженер-схемотехник** — Разрабатывает электрические принципиальные схемы электронных устройств: выбирает компоненты, рассчитывает аналоговые и цифровые узлы, моделирует и испытывает прототипы.. Подробнее: https://vremennobeznika.github.io/enjigirling/index.html#profession=circuit-design-engineer
+- **Инженер-тополог** — Проектирует топологию печатных плат: размещает компоненты, трассирует соединения, задаёт стек слоёв и готовит производственные данные. Топология интегральных микросхем — отдельная специализация.. Подробнее: https://vremennobeznika.github.io/enjigirling/index.html#profession=pcb-layout-engineer
+- **Инженер-метролог** — Обеспечивает единство и требуемую точность измерений: ведёт парк средств измерений, организует поверку и калибровку, анализирует погрешности и неопределённость, участвует в разработке методик.. Подробнее: https://vremennobeznika.github.io/enjigirling/index.html#profession=metrology-engineer
 
 ### Материалы
 - **Сталь 20** — Конструкционные углеродистые стали Применяется для деталей машин и трубной продукции в зависимости от требований к поставке и обработке. Не путать обозначение марки с гарантированными свойствами любог…. Подробнее: https://vremennobeznika.github.io/enjigirling/materials.html#steel-20

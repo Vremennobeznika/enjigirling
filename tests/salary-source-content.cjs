@@ -6,7 +6,7 @@ const vm=require('node:vm');
 const sandbox={window:{}};
 vm.runInNewContext(fs.readFileSync('salary-sources.js','utf8'),sandbox,{timeout:5000});
 const rows=sandbox.window.salarySourceAudit;
-if(!Array.isArray(rows)||rows.length!==51)throw Error('Expected all 51 professions');
+if(!Array.isArray(rows)||rows.length!==54)throw Error('Expected all 51 professions');
 const results=Array(rows.length);
 let cursor=0;
 async function verify(entry){

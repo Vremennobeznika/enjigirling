@@ -18,10 +18,10 @@ const CATEGORY_PROFESSIONS = {
   "АСУ ТП": ["asu-tp-designer", "asu-tp-programmer", "asu-tp-commissioning", "kipia-engineer"],
   "Электротехника и светотехника": ["lighting-engineer"],
   "Промышленное производство": ["food-engineer", "textile-engineer", "polygraph-engineer"],
-  "Связь и электроника": ["telecom-engineer", "embedded-engineer"],
+  "Связь и электроника": ["telecom-engineer", "embedded-engineer", "circuit-design-engineer", "pcb-layout-engineer"],
   "Безопасность и ГО": ["military-engineer", "civil-defense-engineer"],
   "Геодезия и картография": ["geodetic-engineer"],
-  "Наука и техническая экспертиза": ["astronomer-engineer", "restoration-engineer", "standardization-engineer", "patent-engineer"],
+  "Наука и техническая экспертиза": ["astronomer-engineer", "restoration-engineer", "standardization-engineer", "patent-engineer", "metrology-engineer"],
   "IT и данные": ["data-engineer", "devops-engineer", "ml-engineer", "security-engineer", "cloud-engineer", "frontend-engineer", "backend-engineer", "qa-engineer", "mobile-engineer"]
 };
 
@@ -124,7 +124,7 @@ function renderVerifiedSalarySource(profession) {
 // The legacy "courses" field mixes software, methods and training topics.
 // Conservative classification: ambiguous entries remain topics, never invented software.
 function classifyLearningItems(items = []) {
-  const software = /\b(?:AutoCAD|Revit|SketchUp|3ds Max|ЛИРА-САПР|SCAD|SolidWorks|CATIA|ANSYS|RastrWin|MATLAB|Simulink|Python|SQL|JavaScript|TypeScript|Java|Kotlin|Swift|Git|Docker|Kubernetes|Linux|Excel|ETAP|EPLAN|TIA Portal|WinCC|Codesys|Civil 3D|ArcGIS|QGIS|Blender|Figma|React|PostgreSQL|TensorFlow|PyTorch|NX|Creo|Inventor|Abaqus|LabVIEW|Altium|KiCad|Petrel|ROXAR|HYSYS|ChemCAD|MCNP|KORSAR|ADAMS|Adobe InDesign|Angular|AWS|Blast-CAD|CREDO|DIALux|IndorCAD|MineFrame|NedGraphics|OpenCV|Photoshop|Postman|Relux|ROS|Selenium|Spark|Spring|Thermo-Calc|Vue|Yandex Cloud|Zulu|nanoCAD)\b/i;
+  const software = /\b(?:AutoCAD|Revit|SketchUp|3ds Max|ЛИРА-САПР|SCAD|SolidWorks|CATIA|ANSYS|RastrWin|MATLAB|Simulink|Python|SQL|JavaScript|TypeScript|Java|Kotlin|Swift|Git|Docker|Kubernetes|Linux|Excel|ETAP|EPLAN|TIA Portal|WinCC|Codesys|Civil 3D|ArcGIS|QGIS|Blender|Figma|React|PostgreSQL|TensorFlow|PyTorch|NX|Creo|Inventor|Abaqus|LabVIEW|Altium|KiCad|LTspice|Petrel|ROXAR|HYSYS|ChemCAD|MCNP|KORSAR|ADAMS|Adobe InDesign|Angular|AWS|Blast-CAD|CREDO|DIALux|IndorCAD|MineFrame|NedGraphics|OpenCV|Photoshop|Postman|Relux|ROS|Selenium|Spark|Spring|Thermo-Calc|Vue|Yandex Cloud|Zulu|nanoCAD)\b/i;
   const cyrillicSoftware = /(?:Гранд-Смета|Компас-3D|КОМПАС|1С)/i;
   const tools = [], topics = [];
   for (const item of items) ((software.test(item) || cyrillicSoftware.test(item)) ? tools : topics).push(item);
@@ -293,7 +293,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let activeCategory = ALL;
   let activeProfessionId = ALL; // выбранная кнопка во второй строке (только для «АСУ ТП»)
   let searchQuery = "";
-  let sortMode = "default";
+  let sortMode = "az";
 
   const getCategory = (profession) => categoryById[profession.id] || "Прочее";
 

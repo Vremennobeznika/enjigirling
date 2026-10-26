@@ -52,7 +52,7 @@ test('school details remain compact, official sites accessible and map keyboard 
  await expect(page.locator('#educationDistrict')).toHaveValue('');
  await page.locator('a[href="#education-calculators"]').click();
  await expect(page.locator('#education-calculators')).toHaveAttribute('open','');
- await expect(page.locator('#salaryProfession option')).toHaveCount(51);
+ await expect(page.locator('#salaryProfession option')).toHaveCount(54);
  await page.locator('a[href="#education-benefits"]').click();
  await expect(page.locator('#education-benefits .benefit-card')).toHaveCount(16);
  await page.locator('a[href="#education-courses"]').click();

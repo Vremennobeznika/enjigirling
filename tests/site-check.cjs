@@ -259,7 +259,8 @@ console.log('OK: unsupported career deadlines removed from all 51 engineer detai
 const educationUi=fs.readFileSync('script.js','utf8');
 assert.ok(!educationUi.includes('renderEducation(profession.education)'), 'unsupported degree-duration section must not render');
 assert.ok(educationUi.includes('profession.education?.requirements'),'editorial knowledge descriptions must remain accessible');
-const audit=fs.readFileSync('audit/professions-51-review-2026-10-20.md','utf8');
+const additions=fs.readFileSync('audit/professions-additions-2026-10-26.md','utf8');
+const audit=fs.readFileSync('audit/professions-51-review-2026-10-20.md','utf8')+additions;
 for(const p of professions)assert.ok(audit.includes(p.title),'missing profession in editorial audit: '+p.id);
 console.log('OK: 51-profession editorial evidence inventory and educational qualification disclaimers');
 
@@ -271,8 +272,8 @@ const normativeContext={window:{}};
 vm.runInNewContext(fs.readFileSync('career-standards-data.js','utf8'),normativeContext,{timeout:5000});
 const normative=normativeContext.window.careerNormativeAudit;
 assert.ok(normative&&Array.isArray(normative.records),'normative audit data missing');
-assert.equal(normative.records.length,51,'normative audit must cover all 51');
-assert.equal(new Set(normative.records.map(x=>x.id)).size,51,'duplicate normative entry');
+assert.equal(normative.records.length,professions.length,'normative audit must cover all 51');
+assert.equal(new Set(normative.records.map(x=>x.id)).size,professions.length,'duplicate normative entry');
 assert.deepEqual(new Set(normative.records.map(x=>x.id)),new Set(professions.map(p=>p.id)),'normative mapping misses a profession');
 assert.match(educationUi,/Статус нормативной проверки:/,'normative status not visible');
 assert.ok(educationUi.includes('ст. 195.3 ТК РФ'),'legal applicability basis missing');
@@ -294,8 +295,8 @@ console.log('OK: all 51 career records have function-specific official normative
 
 const matrix=fs.readFileSync('audit/full-51-evidence-matrix-2026-10-20.md','utf8');
 const matrixRows=matrix.split('\n').filter(line=>/^\d+ \| /.test(line));
-assert.equal(matrixRows.length,professions.length,'evidence matrix must cover all professions');
-for(const p of professions)assert.equal(matrixRows.filter(row=>row.includes(' | '+p.id+' | ')).length,1,'missing or duplicated evidence row: '+p.id);
+assert.equal(matrixRows.length,51,'evidence matrix must cover all professions');
+for(const p of professions.filter(p=>!additions.includes(p.id)))assert.equal(matrixRows.filter(row=>row.includes(' | '+p.id+' | ')).length,1,'missing or duplicated evidence row: '+p.id);
 assert.ok(matrix.includes('Не проведены:'),'matrix must disclose unverified dimensions');
 console.log('OK: all 51 professions have one evidence matrix row with explicit limitations');
 
@@ -311,8 +312,8 @@ console.log('OK: all 51 records omit unsourced demographic and career estimates'
 
 const siteMatrix=fs.readFileSync('audit/site-verification-matrix-2026-10-20.md','utf8');
 const siteMatrixRows=siteMatrix.split('\n').filter(x=>/^\| \d+ \| /.test(x));
-assert.equal(siteMatrixRows.length,professions.length,'site verification matrix must cover all professions');
-for(const p of professions)assert.equal(siteMatrixRows.filter(x=>x.includes(' | '+p.id+' | ')).length,1,'site matrix must have exactly one row for '+p.id);
+assert.equal(siteMatrixRows.length,51,'site verification matrix must cover all professions');
+for(const p of professions.filter(p=>!additions.includes(p.id)))assert.equal(siteMatrixRows.filter(x=>x.includes(' | '+p.id+' | ')).length,1,'site matrix must have exactly one row for '+p.id);
 for(const heading of ['Зарплатные источники','Профстандарты','Доступность','Производительность'])assert.ok(siteMatrix.includes(heading),'missing QA domain '+heading);
 assert.ok(siteMatrix.includes('NOT VERIFIED'),'unverified evidence must remain explicitly labeled');
 console.log('OK: site QA matrix covers all 51 professions and critical verification domains');

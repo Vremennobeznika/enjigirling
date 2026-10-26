@@ -6,9 +6,9 @@ test('every profession card opens with provenance and can close with Escape', as
   page.on('pageerror',err=>errors.push(err.message));
   await page.goto(base+'index.html');
   const cards=page.locator('#professionsGrid .eng-card');
-  await expect(cards).toHaveCount(51);
-  await expect(page.locator('#professionCount')).toHaveText('51 из 51');
-  for(let i=0;i<51;i++){
+  await expect(cards).toHaveCount(54);
+  await expect(page.locator('#professionCount')).toHaveText('54 из 54');
+  for(let i=0;i<54;i++){
     await cards.nth(i).click();
     await expect(page.locator('#modalOverlay')).toHaveAttribute('aria-hidden','false');
     await expect(page.locator('#modalTitle')).not.toBeEmpty();
@@ -25,16 +25,16 @@ test('profession search, sort and category filters really change results',async(
   await page.goto(base+'index.html');
   await page.locator('#professionSearch').fill('___no_such_profession___');
   await expect(page.locator('#professionsGrid .eng-card')).toHaveCount(0);
-  await expect(page.locator('#professionCount')).toHaveText('0 из 51');
+  await expect(page.locator('#professionCount')).toHaveText('0 из 54');
   await page.locator('#professionSearch').fill('');
   await page.locator('#professionSort').selectOption('az');
-  await expect(page.locator('#professionsGrid .eng-card')).toHaveCount(51);
+  await expect(page.locator('#professionsGrid .eng-card')).toHaveCount(54);
   await page.locator('#categories .eng-filter-btn').nth(1).click();
   const filtered=await page.locator('#professionsGrid .eng-card').count();
   expect(filtered).toBeGreaterThan(0);
-  expect(filtered).toBeLessThan(51);
+  expect(filtered).toBeLessThan(54);
   await page.locator('#categories .eng-filter-btn').first().click();
-  await expect(page.locator('#professionsGrid .eng-card')).toHaveCount(51);
+  await expect(page.locator('#professionsGrid .eng-card')).toHaveCount(54);
 });
 
 
@@ -45,7 +45,7 @@ test('profession search and sorting preserve the correct titles',async({page})=>
  await expect(page.locator('#professionsGrid .eng-title').filter({hasText:'Инженер-энергетик'})).toHaveCount(1);
  expect(await page.locator('#professionsGrid .eng-card').count()).toBeGreaterThan(0);
  await search.fill('   ');
- await expect(page.locator('#professionsGrid .eng-card')).toHaveCount(51);
+ await expect(page.locator('#professionsGrid .eng-card')).toHaveCount(54);
  await page.locator('#professionSort').selectOption('az');
  const titles=await page.locator('#professionsGrid .eng-title').allTextContents();
  expect(titles).toEqual([...titles].sort((a,b)=>a.localeCompare(b,'ru')));
@@ -110,7 +110,7 @@ test('forums show five thematic groups without hidden entries',async({page})=>{
 test('salary reference works without legacy salary objects or invented regional values',async({page})=>{
   const errors=[];page.on('pageerror',e=>errors.push(e.message));
   await page.goto(base+'map.html');
-  await expect(page.locator('#salaryProfession option')).toHaveCount(51);
+  await expect(page.locator('#salaryProfession option')).toHaveCount(54);
   await expect(page.locator('#salaryRegion')).toHaveCount(0);
   await page.locator('#salaryProfession').selectOption('civil-engineer');
   await expect(page.locator('#salaryResultValue')).toContainText('₽');
@@ -173,7 +173,7 @@ test('processes link directly to a relevant profession without losing the catalo
  await links.first().click();
  await expect(page).toHaveURL(/index.html#profession=/);
  await expect(page.locator('#modalOverlay')).toHaveAttribute('aria-hidden','false');
- await expect(page.locator('#professionsGrid .eng-card')).toHaveCount(51);
+ await expect(page.locator('#professionsGrid .eng-card')).toHaveCount(54);
  await page.keyboard.press('Escape');
  await expect(page.locator('#modalOverlay')).toHaveAttribute('aria-hidden','true');
 });
@@ -190,7 +190,7 @@ test('unified search links to professions, materials, processes and dictionary w
  }
  await input.fill('zzzzzxq987');
  await expect(page.locator('#globalSearchStatus')).toContainText('Ничего не найдено');
- await expect(page.locator('#professionsGrid .eng-card')).toHaveCount(51);
+ await expect(page.locator('#professionsGrid .eng-card')).toHaveCount(54);
  await page.goto(base+'dictionary.html?q='+encodeURIComponent('квалификация'));
  await expect(page.locator('#searchInput')).toHaveValue('квалификация');
 });
@@ -203,7 +203,7 @@ test('material cards connect to existing engineer profiles', async ({page})=>{
  expect(await links.count()).toBeGreaterThan(0);
  await links.first().click();
  await expect(page.locator('#modalOverlay')).toHaveAttribute('aria-hidden','false');
- await expect(page.locator('#professionsGrid .eng-card')).toHaveCount(51);
+ await expect(page.locator('#professionsGrid .eng-card')).toHaveCount(54);
 });
 
 

@@ -1,11 +1,11 @@
 const {test,expect}=require('@playwright/test');
-test('all 51 career dialogs render their own dated primary normative assessment',async({page})=>{
+test('all 54 career dialogs render their own dated primary normative assessment',async({page})=>{
  test.setTimeout(120000);
  const errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto('/index.html');
  const cards=page.locator('#professionsGrid .eng-card');
- await expect(cards).toHaveCount(51);
- for(let i=0;i<51;i++){
+ await expect(cards).toHaveCount(54);
+ for(let i=0;i<54;i++){
   const card=cards.nth(i);
   const name=await card.locator('h3').textContent();
   await card.click();

@@ -1,11 +1,11 @@
 const {test,expect}=require('@playwright/test');
-test('career cards show title only and all 51 open with cautious internal text',async({page})=>{
+test('career cards show title only and all 54 open with cautious internal text',async({page})=>{
  test.setTimeout(120000);
  const errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto('/index.html');
  const cards=page.locator('#professionsGrid .eng-card');
- await expect(cards).toHaveCount(51);
- for(let i=0;i<51;i++){
+ await expect(cards).toHaveCount(54);
+ for(let i=0;i<54;i++){
   const card=cards.nth(i);
   const label=await card.locator('.eng-title').textContent();
   expect((await card.innerText()).trim(),String(i)).toBe(label.trim());

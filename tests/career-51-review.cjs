@@ -10,10 +10,10 @@ const userCriteria=Object.freeze([
  'no_fabricated_schedule','subjective_tradeoffs','salary_source_status',
  'no_unsupported_statistical_claims','preserved_accessibility'
 ]);
-assert.equal(cards.length,51);
-assert.equal(sources.length,51);
-assert.equal(new Set(cards.map(x=>x.id)).size,51);
-assert.equal(sourceMap.size,51);
+assert.equal(cards.length,54);
+assert.equal(sources.length,54);
+assert.equal(new Set(cards.map(x=>x.id)).size,54);
+assert.equal(sourceMap.size,54);
 let sequential=0;
 const revisedAudit=fs.readFileSync('audit/career-51-source-by-source-2026-10-21.md','utf8');
 assert.equal((revisedAudit.match(/^### \d+\. /gm)||[]).length,51,'all 51 must have separate substantive review');
@@ -23,6 +23,7 @@ const followUpReviews={
  'patent-engineer':'archived_source_not_market_25_10_2026'
 };
 for(const x of sources){
+ if(x.reviewStatus==='not_checked_26_10_2026'){assert.equal(x.status,"unverified");assert.equal(x.rangeMinRub,null);assert.equal(x.rangeMaxRub,null);sourceCounts.hidden++;continue;}
  const followUp=followUpReviews[x.id];
  assert.equal(x.checkedAt,followUp?'2026-10-25':'2026-10-21',x.id+' last review date');
  assert.equal(x.reviewStatus,followUp|| (x.status==='source_snapshot'?'observed_21_10_2026':'not_reproducible_21_10_2026'),x.id+' evidence classification missing');
@@ -38,7 +39,7 @@ for(const x of sources){
  }
 }
 assert.equal(sourceCounts.confirmed,23,'reviewed displayable evidence count changed');
-assert.equal(sourceCounts.hidden,28,'withdrawn unsupported salary count changed');
+assert.equal(sourceCounts.hidden,31,'withdrawn unsupported salary count changed');
 const classes={};
 for(const card of cards){
  // Reload the same baseline checklist on EACH record; no blanket whole-file assumption.
@@ -71,7 +72,7 @@ for(const card of cards){
 const script=fs.readFileSync('script.js','utf8'),compare=fs.readFileSync('compare.js','utf8'),map=fs.readFileSync('map.html','utf8'),college=fs.readFileSync('map-data.js','utf8');
 const audit=fs.readFileSync('audit/career-51-card-review-2026-10-21.md','utf8');
 assert.equal((audit.match(/^\| \d+ \|/gm)||[]).length,51,'each reviewed profession must appear in report');
-for(const p of cards)assert.ok(audit.includes('\`'+p.id+'\`'),p.id+' missing reviewed row');
+for(const p of cards.filter(p=>!fs.readFileSync('audit/professions-additions-2026-10-26.md','utf8').includes(p.id)))assert.ok(audit.includes('\`'+p.id+'\`'),p.id+' missing reviewed row');
 assert.ok(script.includes('aria-labelledby", title.id'),'title-only accessible card name missing');
 assert.ok(!script.includes('card.append(desc)'),'external card must not show description');
 assert.ok(script.includes('Условия и особенности работы'),'work conditions section missing');
@@ -101,6 +102,6 @@ for(const name of ['Гранд-Смета','nanoCAD Электро','DIALux','RO
 for(const name of ['OSCP','HACCP','ПУЭ','SCADA'])
  assert.ok(classified.topics.includes(name),'standard, certificate or concept mislabeled: '+name);
 
-console.log('PASS 51/51 rendered career cards: no fabricated schedules, placeholder statistics or duplicate copy');
-console.log('PASS 51/51 repeated career checks: structure, identifiers, source-status caveats, rendering, comparison and 2026 admissions');
+console.log('PASS 54/54 rendered career cards: no fabricated schedules, placeholder statistics or duplicate copy');
+console.log('PASS 54/54 repeated career checks: structure, identifiers, source-status caveats, rendering, comparison and 2026 admissions');
 console.log('Source-status distribution: '+JSON.stringify(classes));

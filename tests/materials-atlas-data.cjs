@@ -43,7 +43,7 @@ const registry=json('knowledge/source-registry.json');
 assert.equal(knowledge.items.length,materials.length,'Canonical knowledge stale');
 assert.equal(section.records.length,materials.length,'Section JSON stale');
 assert.equal(index.records.filter(x=>x.type==='material').length,materials.length,'Search index stale');
-assert.equal(graph.nodeCount,51+materials.length+processes.length,'Knowledge graph node count stale');
+assert.equal(graph.nodeCount,54+materials.length+processes.length,'Knowledge graph node count stale');
 assert.equal(graph.edgeCount,graph.edges.length,'Knowledge graph edge count stale');
 for(const m of materials){
  const expected=Array.from(m.process||[]); // Convert vm-realm arrays before strict prototype-sensitive comparison.

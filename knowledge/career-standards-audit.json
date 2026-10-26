@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "scope": "Per-occupation standards located on government sites; publication verified, legal applicability requires exact work function and employment context.",
   "reviewDate": "2026-10-22",
-  "totalRecords": 51,
+  "totalRecords": 54,
   "legalBasis": {
     "article1953": "https://www.consultant.ru/document/cons_doc_LAW_34683/e76d6076ad800a12efcec206f99ad6c59b58517e/",
     "construction55": "https://www.consultant.ru/document/cons_doc_LAW_51040/6da623a7da211d885c1eaccefb2ef34b26fc141a/",
@@ -981,6 +981,33 @@
           "relationship": "functional_overlap"
         }
       ]
+    },
+    {
+      "id": "circuit-design-engineer",
+      "title": "Инженер-схемотехник",
+      "reviewDate": "2026-10-26",
+      "assessment": "Разработка принципиальных схем и испытания электронных узлов требуют сопоставления конкретных трудовых функций с действующим документом. Приказы и сроки их действия для этой новой карточки отдельно не проверены.",
+      "evidenceStatus": "role_must_be_specified",
+      "legalObligationStatus": "not_determined_for_unspecified_employer_role",
+      "documents": []
+    },
+    {
+      "id": "pcb-layout-engineer",
+      "title": "Инженер-тополог",
+      "reviewDate": "2026-10-26",
+      "assessment": "В этой карточке тополог означает проектировщика печатных плат. Разработка топологии интегральных микросхем имеет иной набор задач; переносить нормативные требования между этими специализациями без проверки нельзя.",
+      "evidenceStatus": "role_must_be_specified",
+      "legalObligationStatus": "not_determined_for_unspecified_employer_role",
+      "documents": []
+    },
+    {
+      "id": "metrology-engineer",
+      "title": "Инженер-метролог",
+      "reviewDate": "2026-10-26",
+      "assessment": "Организация поверки, выполнение калибровки и разработка методик измерений — разные функции. Для поверки требуется учитывать область аккредитации организации. Конкретные приказы и их сроки для новой карточки отдельно не проверены.",
+      "evidenceStatus": "role_must_be_specified",
+      "legalObligationStatus": "not_determined_for_unspecified_employer_role",
+      "documents": []
     }
   ]
 }

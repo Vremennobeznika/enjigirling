@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "language": "ru",
   "generatedFrom": "repository editorial datasets",
-  "recordCount": 982,
+  "recordCount": 985,
   "records": [
     {
       "id": "profession:civil-engineer",
@@ -410,6 +410,30 @@
       "title": "Mobile-разработчик",
       "description": "Разработка мобильных приложений для iOS и Android",
       "url": "https://vremennobeznika.github.io/enjigirling/index.html#profession=mobile-engineer",
+      "dataset": "knowledge/professions.json"
+    },
+    {
+      "id": "profession:circuit-design-engineer",
+      "type": "profession",
+      "title": "Инженер-схемотехник",
+      "description": "Разрабатывает электрические принципиальные схемы электронных устройств: выбирает компоненты, рассчитывает аналоговые и цифровые узлы, моделирует и испытывает прототипы.",
+      "url": "https://vremennobeznika.github.io/enjigirling/index.html#profession=circuit-design-engineer",
+      "dataset": "knowledge/professions.json"
+    },
+    {
+      "id": "profession:pcb-layout-engineer",
+      "type": "profession",
+      "title": "Инженер-тополог",
+      "description": "Проектирует топологию печатных плат: размещает компоненты, трассирует соединения, задаёт стек слоёв и готовит производственные данные. Топология интегральных микросхем — отдельная специализация.",
+      "url": "https://vremennobeznika.github.io/enjigirling/index.html#profession=pcb-layout-engineer",
+      "dataset": "knowledge/professions.json"
+    },
+    {
+      "id": "profession:metrology-engineer",
+      "type": "profession",
+      "title": "Инженер-метролог",
+      "description": "Обеспечивает единство и требуемую точность измерений: ведёт парк средств измерений, организует поверку и калибровку, анализирует погрешности и неопределённость, участвует в разработке методик.",
+      "url": "https://vremennobeznika.github.io/enjigirling/index.html#profession=metrology-engineer",
       "dataset": "knowledge/professions.json"
     },
     {

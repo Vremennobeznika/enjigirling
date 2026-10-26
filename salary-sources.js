@@ -912,5 +912,56 @@ window.salarySourceAudit = [
     "salaryUnit": "RUB_per_month",
     "validationStatus": "adjacent_occupation_checked",
     "reviewStatus": "not_reproducible_21_10_2026"
-  }
+  },
+{
+  "id": "circuit-design-engineer",
+  "title": "Инженер-схемотехник",
+  "status": "unverified",
+  "sourceTitle": null,
+  "sourceUrl": null,
+  "rangeMinRub": null,
+  "rangeMaxRub": null,
+  "region": "Россия",
+  "metric": null,
+  "checkedAt": "2026-10-26",
+  "notes": "Числовые данные о зарплате не добавлены: отдельная проверка источника для новой профессии не проведена.",
+  "evidenceLevel": "needs_manual_review",
+  "salaryUnit": "RUB_per_month",
+  "validationStatus": "source_linked_not_independently_verified",
+  "reviewStatus": "not_checked_26_10_2026"
+},
+{
+  "id": "pcb-layout-engineer",
+  "title": "Инженер-тополог",
+  "status": "unverified",
+  "sourceTitle": null,
+  "sourceUrl": null,
+  "rangeMinRub": null,
+  "rangeMaxRub": null,
+  "region": "Россия",
+  "metric": null,
+  "checkedAt": "2026-10-26",
+  "notes": "Числовые данные о зарплате не добавлены: отдельная проверка источника для новой профессии не проведена.",
+  "evidenceLevel": "needs_manual_review",
+  "salaryUnit": "RUB_per_month",
+  "validationStatus": "source_linked_not_independently_verified",
+  "reviewStatus": "not_checked_26_10_2026"
+},
+{
+  "id": "metrology-engineer",
+  "title": "Инженер-метролог",
+  "status": "unverified",
+  "sourceTitle": null,
+  "sourceUrl": null,
+  "rangeMinRub": null,
+  "rangeMaxRub": null,
+  "region": "Россия",
+  "metric": null,
+  "checkedAt": "2026-10-26",
+  "notes": "Числовые данные о зарплате не добавлены: отдельная проверка источника для новой профессии не проведена.",
+  "evidenceLevel": "needs_manual_review",
+  "salaryUnit": "RUB_per_month",
+  "validationStatus": "source_linked_not_independently_verified",
+  "reviewStatus": "not_checked_26_10_2026"
+}
 ];
