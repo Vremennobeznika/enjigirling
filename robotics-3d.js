@@ -4,7 +4,7 @@
 (function(){
 'use strict';
 const svg=document.getElementById('roboticsDrawing'),slider=document.getElementById('roboticsYaw');
-if(!svg||!slider)return;
+if(!svg||!slider||document.getElementById('robotics3d'))return;
 const canvas=document.createElement('canvas');canvas.id='robotics3d';canvas.setAttribute('role','img');
 canvas.setAttribute('aria-label','Трёхмерная модель оригинального женского андроида. Перетаскивайте для поворота, колесо для масштаба; выбирайте системы кнопками справа.');
 const ctx=canvas.getContext('2d',{alpha:false});if(!ctx)return;
@@ -33,9 +33,37 @@ const extras=[
  ['sensor',0,3.025,.177,.075,.035,.027,'mouth'],
  ['sensor',-.20,3.12,0,.047,.095,.065,'ear'],['sensor',.20,3.12,0,.047,.095,.065,'ear']
 ];
-for(let i=0;i<9;i++){const x=(i-4)*.045;extras.push(['sensor',x,3.36-Math.abs(x)*.30,-.02-(i%3)*.018,.045,.12+(i%3)*.04,.15,'hair']);}
-for(const sign of [-1,1])for(let i=0;i<3;i++){extras.push(['hand',sign*(.65+(i-1)*.045),1.34,.055,.023,.095,.025,'finger']);}
+// Distinctive asymmetrical swept-back hair with layered nape and side locks.
+for(let i=0;i<13;i++){
+ const x=(i-6)*.037;
+ extras.push(['sensor',x,3.365-Math.abs(x)*.23,-.065-(i%3)*.014,.032,.115+(i%4)*.021,.12,'hair']);
+}
+for(let i=0;i<5;i++){
+ const y=3.18-i*.075;
+ extras.push(['sensor',-.205-i*.005,y,-.035,.038,.060,.092,'hair']);
+}
+for(let i=0;i<7;i++){
+ const x=(i-3)*.055;
+ extras.push(['sensor',x,3.04-(i%2)*.06,-.135,.041,.08,.048,'hair']);
+}
+// Layered armour, waist pistons, collar ribs and finger articulation.
+for(const sign of [-1,1]){
+ for(let j=0;j<4;j++){
+  extras.push(['frame',sign*(.17+j*.035),2.15-j*.055,.215,.038,.028,.022,'plate']);
+ }
+ for(let j=0;j<3;j++){
+  extras.push(['drive',sign*(.31+j*.045),1.75-j*.09,-.17,.024,.105,.025,'joint']);
+ }
+ extras.push(['frame',sign*.30,2.79,.06,.13,.04,.09,'plate']);
+ extras.push(['frame',sign*.48,2.65,.11,.095,.04,.12,'plate']);
+ extras.push(['frame',sign*.27,1.13,.13,.12,.20,.045,'plate']);
+ extras.push(['frame',sign*.25,.55,.12,.085,.20,.035,'plate']);
+}
+
+for(const sign of [-1,1])for(let i=0;i<4;i++){extras.push(['hand',sign*(.65+(i-1.5)*.038),1.34-(i%2)*.012,.065,.018,.092,.022,'finger']);}
 const all=parts.concat(extras);
+const stats={meshTriangles:0,frames:0,lastFrameMs:0,maxFrameMs:0,mode:'3d'};
+window.__enjigirlingRobot3dStats=stats;
 const mesh=[];
 const lowEnd=(navigator.hardwareConcurrency&&navigator.hardwareConcurrency<=4)||(navigator.deviceMemory&&navigator.deviceMemory<=4)||matchMedia('(max-width:600px)').matches;
 const motionAllowed=!matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -77,7 +105,7 @@ function build(){
   }
  }
 }
-build();
+build();stats.meshTriangles=mesh.length;
 function camera(v){
  const a=yaw*Math.PI/180,b=pitch*Math.PI/180;
  const x=v[0]*Math.cos(a)+v[2]*Math.sin(a);
@@ -89,6 +117,7 @@ function project(v,w,h){
  return [w/2+v[0]*scale,h/2-v[1]*scale,d];
 }
 function render(){
+ const frameStart=performance.now();stats.frames++;
  raf=0;const w=canvas.clientWidth||640,h=canvas.clientHeight||560;
  const dpr=Math.min(devicePixelRatio||1,lowEnd?1:1.5),pw=Math.round(w*dpr),ph=Math.round(h*dpr);
  if(canvas.width!==pw||canvas.height!==ph){canvas.width=pw;canvas.height=ph;}
@@ -125,6 +154,7 @@ function render(){
  }
  ctx.fillStyle=dark?'#9aaab5':'#536674';ctx.font='11px system-ui';ctx.fillText('ENJIGIRLING / ANDROID STUDY · 3D',14,22);
  ctx.fillText('YAW '+Math.round(yaw)+'°  /  ZOOM '+Math.round(zoom*100)+'%'+(lowEnd?'  /  ECO':''),14,h-14);
+ stats.lastFrameMs=performance.now()-frameStart;stats.maxFrameMs=Math.max(stats.maxFrameMs,stats.lastFrameMs);
 }
 function schedule(){if(!visible||document.hidden)return;if(!raf)raf=requestAnimationFrame(render);}
 function setYaw(v){yaw=Math.max(-180,Math.min(180,v));slider.value=String(Math.round(yaw));const out=document.getElementById('roboticsYawValue');if(out){out.value=Math.round(yaw)+'°';out.textContent=out.value;}schedule();}
