@@ -14,7 +14,7 @@ for(const id of ids){
 assert.ok(!html.includes('measurementExternalGrid'),'third-party link grid must not replace instruments');
 assert.ok(!html.includes('src="resources-data.js"'),'embedded instruments must run without catalog download');
 assert.ok(!html.includes('<iframe'),'do not embed uncontrolled third-party frames');
-assert.equal((html.match(/class="eng-tab"/g)||[]).length,9,'nine primary nav links preserved');
+assert.equal((html.match(/class="eng-tab"/g)||[]).length,12,'12 navigation links preserved');
 for(const file of ['measurement-lab.css','measurement-lab.js','measurement-builtins.js','measurement-electronics.js','site-shell.js','navigation.js','theme.js']){
  assert.ok(html.includes('src="'+file+'"')||html.includes('href="'+file+'"'),'missing dependency '+file);
 }

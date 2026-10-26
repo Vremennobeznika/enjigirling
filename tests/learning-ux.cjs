@@ -11,7 +11,7 @@ assert.equal(entries.length,80,'institution catalog changed unexpectedly');
 assert.ok(entries.filter(x=>x.type==='uni').length===51,'universities missing');
 assert.ok(entries.filter(x=>x.type==='college').length>=24,'colleges missing');
 assert.equal((html.match(/<h1\b/g)||[]).length,1,'exactly one visible h1');
-assert.equal((html.match(/class="eng-tab(?: active)?"/g)||[]).length,9,'nine navigation entries retained');
+assert.equal((html.match(/class="eng-tab(?: active)?"/g)||[]).length,12,'12 navigation entries retained');
 assert.equal((html.match(/class="learning-accordion"/g)||[]).length,4,'all optional sections kept');
 const nodes=['education-directory','educationSearch','educationDistrict','educationType','educationSort','educationStatus','educationResults','educationMore','educationClear','education-map','education-calculators','education-benefits','education-courses','russiaMap','districtInfo','mapReset'];
 for(const id of nodes)assert.ok(html.includes('id="'+id+'"'),'missing '+id);

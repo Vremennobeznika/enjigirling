@@ -15,7 +15,7 @@ check('all nine HTML pages and shared navigation', () => {
   assert.equal((h.match(/<main\b/gi)||[]).length,1,name+' main');
   assert.ok(h.includes('class="skip-link" href="#main-content"'),name+' missing skip link');
   assert.ok(h.includes('id="main-content"'),name+' missing main target');
-  assert.equal((h.match(/class="eng-tab(?: active)?"/g)||[]).length,9,name+' navigation');
+  assert.equal((h.match(/class="eng-tab(?: active)?"/g)||[]).length,12,name+' navigation');
   const ids = [...h.matchAll(/\bid=["']([^"']+)["']/g)].map(x=>x[1]);
   assert.equal(ids.length,new Set(ids).size,name+' duplicate DOM id');
  }
@@ -228,7 +228,7 @@ check('parallel font loading and nonduplicated main CI checks', () => {
 
 
 check('five navigation groups preserve all nine original page routes', () => {
- const expectedGroups=['Карьера','Технологии','Инструменты','База знаний','Сообщество'];
+ const expectedGroups=['Карьера','Технологии','Инструменты','База знаний','Сообщество','Лаборатории'];
  for(const page of pages){
   const markup=fs.readFileSync(page,'utf8');
   const match=markup.match(/<nav id="site-main-navigation"[^>]*>([\s\S]*?)<\/nav>/);
@@ -236,9 +236,9 @@ check('five navigation groups preserve all nine original page routes', () => {
   const groups=[...match[1].matchAll(/class="nav-cluster" role="group" aria-label="([^"]+)"/g)].map(x=>x[1]);
   assert.deepEqual(groups,expectedGroups,page+' incorrect navigation groups');
   const hrefs=[...match[1].matchAll(/<a href="([^"]+)" class="eng-tab(?: active)?"/g)].map(x=>x[1]);
-  assert.equal(hrefs.length,9,page+' must retain exactly nine links');
-  assert.equal(new Set(hrefs).size,9,page+' repeated nav destinations');
-  assert.deepEqual(new Set(hrefs),new Set(pages),page+' old route missing');
+  assert.equal(hrefs.length,12,page+' must expose the nine original routes and three standalone destinations');
+  assert.equal(new Set(hrefs).size,12,page+' repeated nav destinations');
+  assert.deepEqual(new Set(hrefs),new Set([...pages,'robotics.html','coding.html','ai.html']),page+' missing route');
  }
  const home=fs.readFileSync('index.html','utf8');
  assert.ok(home.includes('class="learning-paths"'),'landing task routes missing');
@@ -433,7 +433,7 @@ check('AI training packs expose nine main sections plus the code library',()=>{
  const slug=['professions','calendar','resources','dictionary','learning','calculators','compare','processes','materials'];
  const pages=['index.html','calendar.html','resources.html','dictionary.html','map.html','calculator.html','compare.html','processes.html','materials.html'];
  const hub=fs.readFileSync('ai.html','utf8');
- assert.equal((hub.match(/class="ai-hub-card"/g)||[]).length,10,'AI hub must list the nine main sections and AI code library');
+ assert.equal((hub.match(/class="ai-hub-card"/g)||[]).length,9,'AI hub must list the nine engineering sections; coding is separate');
  assert.ok(hub.includes('id="aiPrompt"'),'AI instruction prompt missing');
  const registry=json('knowledge/sections/index.json');
  assert.deepEqual(registry.sections.map(x=>x.id),['professions','calendar','resources','ai-code-library','dictionary','learning','calculators','compare','processes','materials']);
