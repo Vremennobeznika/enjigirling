@@ -1,0 +1,52 @@
+name: Public domain DNS and HTTPS diagnostics
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/domain-diagnostics.yml'
+permissions:
+  contents: read
+jobs:
+  diagnose:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Diagnose authoritative and public DNS
+        shell: bash
+        run: |
+          set +e
+          echo '==== PUBLIC NS'
+          dig +time=3 +tries=1 @1.1.1.1 enjigirling.ru NS +short
+          dig +time=3 +tries=1 @8.8.8.8 enjigirling.ru NS +short
+          echo '==== PUBLIC A'
+          dig +time=3 +tries=1 @1.1.1.1 enjigirling.ru A +short
+          dig +time=3 +tries=1 @8.8.8.8 enjigirling.ru A +short
+          echo '==== PUBLIC AAAA'
+          dig +time=3 +tries=1 @1.1.1.1 enjigirling.ru AAAA +short
+          echo '==== WWW RECORD'
+          dig +time=3 +tries=1 @1.1.1.1 www.enjigirling.ru CNAME +short
+          dig +time=3 +tries=1 @1.1.1.1 www.enjigirling.ru A +short
+          echo '==== AUTHORITY'
+          dig +time=3 +tries=1 +trace enjigirling.ru NS | tail -40
+      - name: Probe bucket website and custom domain independently
+        shell: bash
+        run: |
+          set +e
+          for url in \
+            'https://website.yandexcloud.net/enjigirling.ru/' \
+            'http://enjigirling.ru.website.yandexcloud.net/' \
+            'http://enjigirling.ru/' \
+            'https://enjigirling.ru/' \
+            'https://enjigirling.ru/coding.html' \
+            'https://enjigirling.ru/robotics.html'; do
+            echo "==== PROBE $url"
+            curl -sS -L -o /dev/null --max-time 12 --connect-timeout 6 \
+              -w 'http=%{http_code} remote_ip=%{remote_ip} ssl_verify=%{ssl_verify_result} redirects=%{num_redirects} final=%{url_effective} errmsg=%{errormsg}\n' "$url"
+            echo "curl_exit=$?"
+          done
+      - name: Check active HTTPS certificate if DNS resolves
+        shell: bash
+        run: |
+          set +e
+          echo | timeout 8 openssl s_client -connect enjigirling.ru:443 -servername enjigirling.ru 2>&1 | grep -Ei 'subject=|issuer=|Verify return|connect:errno|Name or service|certificate' | head -20
