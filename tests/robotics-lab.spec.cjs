@@ -7,14 +7,6 @@ test('independent robotics lab: controls, computations, keyboard, small screens'
   await expect(page.locator('h1')).toContainText('Робототехника');
   await expect(page.locator('nav.eng-tabs a')).toHaveCount(12);
   await expect(page.locator('nav.eng-tabs a.active')).toHaveAttribute('href','robotics.html');
-  await expect(page.locator('#roboticsDrawing [data-robotics-box]')).not.toHaveCount(0);
-  const first=await page.locator('#roboticsDrawing polygon').first().getAttribute('points');
-  await page.locator('#roboticsYaw').evaluate(input=>{input.value='-74';input.dispatchEvent(new Event('input',{bubbles:true}));});
-  await expect(page.locator('#roboticsYawValue')).toContainText('-74°');
-  const changed=await page.locator('#roboticsDrawing polygon').first().getAttribute('points');
-  expect(changed).not.toBe(first);
-  await page.getByRole('button',{name:'Питание',exact:true}).click();
-  await expect(page.locator('#roboticsPartTitle')).toHaveText('Электропитание');
   await page.locator('#roboticsForce').fill('200');
   await page.locator('#roboticsLever').fill('0.2');
   await page.getByRole('button',{name:'Рассчитать момент'}).click();
@@ -29,8 +21,6 @@ test('independent robotics lab: controls, computations, keyboard, small screens'
   await page.locator('#roboticsPower').fill('0');
   await page.getByRole('button',{name:'Рассчитать время'}).click();
   await expect(page.locator('#roboticsEnergyResult')).toContainText('Укажите');
-  await page.locator('#roboticsReset').click();
-  await expect(page.locator('#roboticsYawValue')).toContainText('22°');
   for(const width of [320,390,768,1280]){
     await page.setViewportSize({width,height:760});
     const metrics=await page.evaluate(()=>({scroll:document.documentElement.scrollWidth,view:document.documentElement.clientWidth}));
@@ -40,45 +30,13 @@ test('independent robotics lab: controls, computations, keyboard, small screens'
   expect(errors).toEqual([]);
 });
 
-test('3D is opt-in, preserves SVG fallback and respects low-end budget',async({page})=>{
- const errors=[];page.on('pageerror',e=>errors.push(e.message));
- const loaded=[];page.on('request',r=>{if(r.url().includes('robotics-3d.js'))loaded.push(r.url());});
- await page.setViewportSize({width:320,height:640});
+test('robotics keeps its content without any model or renderer',async({page})=>{
+ const models=[];page.on('request',r=>{if(r.url().includes('robotics-3d'))models.push(r.url());});
  await page.goto('/robotics.html');
- await expect(page.locator('#roboticsDrawing')).toBeVisible();
- await expect(page.locator('#robotics3d')).toHaveCount(0);
- expect(loaded).toHaveLength(0);
- await page.locator('#roboticsEnable3d').click();
- await expect(page.locator('#robotics3d')).toBeVisible();
- await expect(page.locator('#roboticsDrawing')).toBeHidden();
- expect(loaded).toHaveLength(1);
- const stats=await page.evaluate(()=>window.__enjigirlingRobot3dStats);
- expect(stats.meshTriangles).toBeGreaterThan(1000);
- expect(stats.meshTriangles).toBeLessThan(10000);
- await page.locator('#roboticsYaw').fill('-35');
- await expect(page.locator('#roboticsYawValue')).toContainText('-35°');
- const before=await page.evaluate(()=>window.__enjigirlingRobot3dStats.frames);
- await page.waitForTimeout(200);
- const after=await page.evaluate(()=>window.__enjigirlingRobot3dStats.frames);
- expect(after-before).toBeLessThanOrEqual(1);
- await page.locator('#roboticsReset').click();
- await expect(page.locator('#roboticsYawValue')).toContainText('22°');
- expect(errors).toEqual([]);
-});
-
-test('3D to SVG to 3D switching remains usable and does not redownload renderer',async({page})=>{
- const requests=[];page.on('request',r=>{if(r.url().includes('robotics-3d.js'))requests.push(r.url());});
- await page.goto('/robotics.html');
- const toggle=page.locator('#roboticsEnable3d');
- await expect(toggle).toBeVisible();
- await toggle.click();
- await expect(page.locator('#robotics3d')).toBeVisible();
- await expect(toggle).toContainText('Вернуться');
- await toggle.click();
- await expect(page.locator('#robotics3d')).toBeHidden();
- await expect(page.locator('#roboticsDrawing')).toBeVisible();
- await expect(toggle).toContainText('Включить');
- await toggle.click();
- await expect(page.locator('#robotics3d')).toBeVisible();
- expect(requests).toHaveLength(1);
+ await expect(page.locator('#robotics-model, #roboticsDrawing, #robotics3d, #roboticsEnable3d, #roboticsYaw')).toHaveCount(0);
+ for(const id of ['robotics-components','robotics-math','robotics-materials','robotics-sources'])await expect(page.locator('#'+id)).toBeVisible();
+ for(const link of await page.locator('.robotics-quick a').all()){
+   const href=await link.getAttribute('href');await expect(page.locator(href)).toHaveCount(1);
+ }
+ expect(models).toEqual([]);
 });

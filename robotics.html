@@ -7,11 +7,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Редакция ENJIGIRLING">
-<meta name="description" content="Самостоятельная учебная лаборатория робототехники: интерактивная пространственная схема робота, компоненты, материалы и расчёты.">
+<meta name="description" content="Учебная лаборатория робототехники: компоненты, материалы и инженерные расчёты.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:title" content="Робототехника — лаборатория ENJIGIRLING">
-<meta property="og:description" content="Интерактивная инженерная модель без чужих 3D-ассетов и зависимостей.">
+<meta property="og:description" content="Устройство роботов, инженерные материалы и учебные расчёты.">
 <meta property="og:url" content="https://vremennobeznika.github.io/enjigirling/robotics.html">
 <link rel="canonical" href="https://vremennobeznika.github.io/enjigirling/robotics.html">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -61,44 +61,12 @@
 <header class="robotics-hero">
 <span class="robotics-kicker">ИНЖЕНЕРНАЯ ЛАБОРАТОРИЯ / 01</span>
 <h1>Робототехника: устройство, материалы, расчёты</h1>
-<p>Исследуйте условную конструкцию двуногого робота. Поверните модель, выберите узел и изучите его функцию, затем рассчитайте простой механический или энергетический сценарий.</p>
-<p class="robotics-disclaimer"><strong>Учебная модель, не цифровой двойник.</strong> Размеры, состав, расположение узлов и параметры не относятся к конкретному изделию. Результаты расчётов не заменяют проектную проверку.</p>
+<p>Изучайте системы робота, назначение компонентов и материалы, затем рассчитывайте простые механические и энергетические сценарии.</p>
+<p class="robotics-disclaimer"><strong>Учебные материалы.</strong> Состав систем и параметры зависят от конкретного изделия. Результаты расчётов не заменяют проектную проверку.</p>
 </header>
-<nav class="robotics-quick" aria-label="Разделы лаборатории"><a href="#robotics-model">Схема</a><a href="#robotics-components">Узлы</a><a href="#robotics-math">Расчёты</a><a href="#robotics-materials">Материалы</a><a href="#robotics-sources">Источники</a></nav>
-<section id="robotics-model" class="robotics-panel" aria-labelledby="modelTitle">
-<div class="robotics-section-heading"><div><span class="robotics-kicker">01 / КОНСТРУКЦИЯ</span><h2 id="modelTitle">Пространственная схема</h2></div><p>Оригинальная трёхмерная геометрия с освещением, вращением и масштабированием. Без внешних моделей и библиотек.</p></div>
-<div class="robotics-model-layout">
-<div class="robotics-stage">
-<div class="robotics-mode"><button id="roboticsEnable3d" type="button" aria-pressed="false">Включить детальную 3D-модель</button><span id="roboticsModeStatus" role="status">По умолчанию — облегчённая SVG-схема. 3D загружается только по запросу.</span></div>
-<svg id="roboticsDrawing" viewBox="0 0 640 560" role="group" aria-label="Интерактивная схематичная модель двуногого робота. Выбирайте узлы мышью, касанием или клавиатурой.">
-<text x="320" y="280" text-anchor="middle" fill="currentColor">Для интерактивной модели включите JavaScript.</text>
-</svg>
-<div class="robotics-slider"><label for="roboticsYaw">Поворот схемы</label><input id="roboticsYaw" type="range" min="-180" max="180" value="22" step="1"><output id="roboticsYawValue" for="roboticsYaw">22°</output></div>
-<p class="robotics-hint">Вращайте модель перетаскиванием, изменяйте масштаб колесом мыши. Выбор узлов доступен и с клавиатуры.</p>
-</div>
-<div class="robotics-inspector">
-<h3>Исследовать узел</h3>
-<div class="robotics-part-choices" id="roboticsPartChoices" role="group" aria-label="Выбор системы робота">
-<button type="button" data-robotics-part="frame" aria-pressed="true">Каркас</button>
-<button type="button" data-robotics-part="drive" aria-pressed="false">Приводы</button>
-<button type="button" data-robotics-part="joint" aria-pressed="false">Суставы</button>
-<button type="button" data-robotics-part="sensor" aria-pressed="false">Датчики</button>
-<button type="button" data-robotics-part="compute" aria-pressed="false">Контроллер</button>
-<button type="button" data-robotics-part="battery" aria-pressed="false">Питание</button>
-<button type="button" data-robotics-part="hand" aria-pressed="false">Захват</button>
-</div>
-<div class="robotics-inspector-content" aria-live="polite">
-<p class="robotics-eyebrow">Выбранная система</p>
-<h3 id="roboticsPartTitle">Несущая конструкция</h3>
-<p id="roboticsPartDetail">Соединяет узлы и передаёт нагрузки. Геометрия условная, реальные материалы и размеры задаются проектом.</p>
-<p id="roboticsPartCheck"><strong>Что проверять:</strong> массу, жёсткость, соединения, усталость и условия работы.</p>
-</div>
-<button id="roboticsReset" type="button" class="robotics-reset">Вернуть исходный ракурс</button>
-</div>
-</div>
-</section>
+<nav class="robotics-quick" aria-label="Разделы лаборатории"><a href="#robotics-components">Узлы</a><a href="#robotics-math">Расчёты</a><a href="#robotics-materials">Материалы</a><a href="#robotics-sources">Источники</a></nav>
 <section class="robotics-panel" id="robotics-components" aria-labelledby="partsTitle">
-<div class="robotics-section-heading"><div><span class="robotics-kicker">02 / АРХИТЕКТУРА</span><h2 id="partsTitle">Из каких систем состоит робот</h2></div><p>Не каталог конкретных моделей: только инженерное назначение подсистем и границы применимости.</p></div>
+<div class="robotics-section-heading"><div><span class="robotics-kicker">01 / АРХИТЕКТУРА</span><h2 id="partsTitle">Из каких систем состоит робот</h2></div><p>Не каталог конкретных моделей: только инженерное назначение подсистем и границы применимости.</p></div>
 <div class="robotics-cards">
 <article><h3>Механика и приводы</h3><p>Звенья, шарниры, электродвигатели и передачи формируют движение. Для расчёта нужны нагрузки, скорости, режимы и тепловые ограничения.</p></article>
 <article><h3>Измерение состояния</h3><p>Энкодеры измеряют положение осей; инерциальные датчики помогают оценить движения корпуса. Измерения требуют калибровки и фильтрации.</p></article>
@@ -107,7 +75,7 @@
 </div>
 </section>
 <section class="robotics-panel" id="robotics-math" aria-labelledby="mathTitle">
-<div class="robotics-section-heading"><div><span class="robotics-kicker">03 / РАСЧЁТЫ</span><h2 id="mathTitle">Две проверяемые формулы</h2></div><p>Без псевдоточных характеристик чужих изделий. Значения задаёте вы.</p></div>
+<div class="robotics-section-heading"><div><span class="robotics-kicker">02 / РАСЧЁТЫ</span><h2 id="mathTitle">Две проверяемые формулы</h2></div><p>Без псевдоточных характеристик чужих изделий. Значения задаёте вы.</p></div>
 <div class="robotics-calc-grid">
 <form id="roboticsTorqueForm" novalidate><h3>Статический момент силы</h3><p>M = F × L при перпендикулярном плече. Без ускорения, инерции и коэффициента запаса.</p>
 <label for="roboticsForce">Сила, Н</label><input id="roboticsForce" type="number" inputmode="decimal" min="0" max="1000000" step="any" value="120" required>
@@ -120,7 +88,7 @@
 </div>
 </section>
 <section class="robotics-panel" id="robotics-materials" aria-labelledby="materialsTitle">
-<div class="robotics-section-heading"><div><span class="robotics-kicker">04 / МАТЕРИАЛЫ</span><h2 id="materialsTitle">Пример технологической цепочки</h2></div><p>Это варианты технологического пути, не подтверждённые поставки конкретного производителя.</p></div>
+<div class="robotics-section-heading"><div><span class="robotics-kicker">03 / МАТЕРИАЛЫ</span><h2 id="materialsTitle">Пример технологической цепочки</h2></div><p>Это варианты технологического пути, не подтверждённые поставки конкретного производителя.</p></div>
 <div class="robotics-material-grid">
 <article><h3>Металлический каркас</h3><ol><li>Заготовка из выбранного конструкционного сплава</li><li>Механическая обработка и соединения</li><li>Контроль размеров и свойств</li><li>Монтаж несущих деталей</li></ol><p>Марка сплава определяется нагрузками и технологией.</p></article>
 <article><h3>Электропривод</h3><ol><li>Материалы обмоток и магнитопровода</li><li>Изготовление и сборка двигателя</li><li>Передача и измерение положения</li><li>Испытание узла под нагрузкой</li></ol><p>Конструкция зависит от типа двигателя и передачи.</p></article>
@@ -128,9 +96,9 @@
 </div>
 </section>
 <section class="robotics-panel robotics-sources" id="robotics-sources" aria-labelledby="sourcesTitle">
-<span class="robotics-kicker">05 / ПРОИСХОЖДЕНИЕ И ДОКАЗАТЕЛЬСТВА</span>
+<span class="robotics-kicker">04 / ПРОИСХОЖДЕНИЕ И ДОКАЗАТЕЛЬСТВА</span>
 <h2 id="sourcesTitle">Проверяемые источники и ограничения</h2>
-<p>Технические пояснения написаны самостоятельно. Здесь нет скопированных 3D-моделей, изображений, кода или каталога устройств стороннего сайта. Визуализация — геометрическая схема, а не модель реального изделия. Сведения не являются инструкцией по безопасному изготовлению или эксплуатации робота.</p>
+<p>Технические пояснения написаны самостоятельно. Сведения не являются инструкцией по безопасному изготовлению или эксплуатации робота.</p>
 <ul>
 <li><a href="https://robotis.us/pages/faq" target="_blank" rel="noopener noreferrer">ROBOTIS — FAQ</a>: примеры состава приводов, энкодеров и типичных параметров управления.</li>
 <li><a href="https://www.energy.gov/sites/default/files/2023-09/2_Technology%20Strategy%20Assessment%20-%202%20Lithium-ion_508.pdf" target="_blank" rel="noopener noreferrer">U.S. DOE — Lithium-ion Batteries (2023)</a>: химия ячеек и батарейные подсистемы.</li>
@@ -142,40 +110,6 @@
 </div>
 <footer><div class="container"><p>© 2026 ENJIGIRLING · Лаборатория робототехники. <a href="index.html">Вернуться в справочник</a>.</p></div></footer>
 <script defer src="robotics.js"></script>
-<script>
-(function(){
- const button=document.getElementById('roboticsEnable3d');
- const status=document.getElementById('roboticsModeStatus');
- if(!button||!status)return;
- let loaded=false,loading=false;
- function mode(is3d){
-  const svg=document.getElementById('roboticsDrawing');
-  const canvas=document.getElementById('robotics3d');
-  if(!canvas)return;
-  canvas.hidden=!is3d;
-  svg.hidden=is3d;
-  button.textContent=is3d?'Вернуться к облегчённой схеме':'Включить детальную 3D-модель';
-  button.setAttribute('aria-pressed',String(is3d));
-  status.textContent=is3d?'3D включена. Перетаскивание — поворот, колесо — масштаб.':'Облегчённая SVG-схема. 3D отключена.';
-  if(window.__enjigirlingRobot3dSetActive)window.__enjigirlingRobot3dSetActive(is3d);
- }
- button.addEventListener('click',function(){
-  if(loading)return;
-  if(loaded){mode(document.getElementById('robotics3d').hidden);return;}
-  loading=true;button.disabled=true;status.textContent='Загрузка 3D…';
-  const script=document.createElement('script');
-  script.src='robotics-3d.js';
-  script.onload=function(){
-   loading=false;button.disabled=false;
-   loaded=!!document.getElementById('robotics3d');
-   if(loaded)mode(true);
-   else status.textContent='3D недоступна. Облегчённая схема работает.';
-  };
-  script.onerror=function(){loading=false;button.disabled=false;status.textContent='Ошибка загрузки 3D. Облегчённая схема работает.';};
-  document.head.appendChild(script);
- });
-})();
-</script>
 <script src="theme.js"></script>
 <script src="site-shell.js"></script><script src="navigation.js"></script>
 </body>

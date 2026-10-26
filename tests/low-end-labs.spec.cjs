@@ -24,10 +24,8 @@ test('low-end 4x CPU: isolated coding and robotics, 320px, no large atlas fetch'
   await page.locator('#codingClear').click();
   await expect(page.locator('#codingCatalog .coding-card')).toHaveCount(40);
   await page.goto('/robotics.html');
-  await expect(page.locator('#roboticsDrawing [data-robotics-box]')).not.toHaveCount(0);
-  await page.locator('#roboticsYaw').focus();
-  await page.keyboard.press('ArrowRight');
-  await expect(page.locator('#roboticsYawValue')).toContainText('23°');
+  await expect(page.locator('#roboticsTorqueForm')).toBeVisible();
+  await expect(page.locator('#roboticsDrawing, #robotics3d')).toHaveCount(0);
   const requests=await page.evaluate(()=>performance.getEntriesByType('resource').map(r=>new URL(r.name).pathname));
   for(const heavy of ['/resources-data.js','/materials-data.js','/processes-data.js']){
    expect(requests,heavy+' should not load for robotics').not.toContain(heavy);

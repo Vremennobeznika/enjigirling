@@ -12,20 +12,19 @@ assert.equal(math.idealHours(0,300),0);
 assert.equal(math.idealHours(500,0),null);
 assert.equal(math.idealHours(600,-5),null);
 assert.equal(math.idealHours('x',5),null);
-for(const a of [-180,-90,0,35,180]){
- const p=math.projected(0,2,0,a);
- assert.ok(Number.isFinite(p.x)&&Number.isFinite(p.y)&&Number.isFinite(p.depth));
-}
 const html=fs.readFileSync('robotics.html','utf8');
 const home=fs.readFileSync('index.html','utf8');
 const css=fs.readFileSync('robotics.css','utf8');
 const ru=fs.readFileSync('scripts/prepare_ru_site.py','utf8');
 assert.ok(home.includes('href="robotics.html"'),'missing standalone entry');
 assert.ok(ru.includes('"robotics.html"'),'missing Russian distribution entry');
-for(const token of ['id="roboticsDrawing"','id="roboticsTorqueForm"','id="roboticsEnergyForm"','href="robotics.css"','src="robotics.js"','role="status"'])
+for(const token of ['id="roboticsTorqueForm"','id="roboticsEnergyForm"','href="robotics.css"','src="robotics.js"','role="status"'])
  assert.ok(html.includes(token),'missing page element: '+token);
 assert.ok(css.includes('@media(max-width:520px)'),'mobile layout missing');
 assert.ok(!/robodienst|unitree|tesla bot/i.test(html),'third-party brand should not appear in standalone UI');
 assert.ok(!/https?:\/\/[^"' )]+(?:\.js|\.css|\.glb|\.gltf|\.obj)/.test(html),'no external runtime assets');
 assert.ok(!fs.readFileSync('resources-data.js','utf8').includes('id:"robotics-self"'),'robotics must remain outside the resources catalog');
 console.log('PASS: robotics lab formulas, boundaries, isolation and static assets');
+
+assert.ok(!/roboticsDrawing|roboticsEnable3d|robotics-3d\.js|roboticsYaw/.test(html),'model UI must be removed');
+assert.ok(!fs.existsSync('robotics-3d.js'),'renderer must be removed');
