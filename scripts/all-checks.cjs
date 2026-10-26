@@ -11,6 +11,7 @@ const steps=[
  ['CALENDAR date and evidence matrix',()=>[['node',['tests/calendar-rules.cjs']]]],
  ['ROBOTICS independent interactive lab and formula limits',()=>[['node',['tests/robotics-lab.cjs']]]],
  ['NAV standalone labs, coding split, low-end source budgets',()=>[['node',['tests/navigation-promotion.cjs']]]],
+ ['THEME prepaint bootstrap across 15 engineering pages',()=>[['node',['tests/theme-bootstrap.cjs']]]],
  ['PAGES all HTML and nested local resource references',()=>[['node',['tests/all-html-assets.cjs']]]],
  ['S00 JavaScript syntax across application and QA',()=>files.map(file=>['node',['--check',file]])],
  ['PERF start-up payload budgets and deferred home search',()=>[['node',['tests/performance-budget.cjs']]]],

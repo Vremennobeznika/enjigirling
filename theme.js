@@ -7,7 +7,9 @@
   const initialDark = saved === 'light' ? false : true;
   function apply(dark) {
     document.documentElement.classList.toggle('theme-dark', dark);
+    document.documentElement.classList.toggle('theme-light', !dark);
     document.body.classList.toggle('theme-dark', dark);
+    document.body.classList.toggle('theme-light', !dark);
     document.documentElement.style.colorScheme = dark ? 'dark' : 'light';
     document.querySelectorAll('.theme-toggle').forEach(button => {
       button.textContent = dark ? '☀' : '☾';

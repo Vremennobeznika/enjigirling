@@ -3,6 +3,13 @@ on:
   push:
     branches: [main]
     paths:
+      - 'theme.js'
+      - 'index.html'
+      - 'calendar.html'
+      - 'style-core.min.css'
+      - 'style-reference.min.css'
+      - 'tests/theme-bootstrap.cjs'
+      - 'tests/theme-bootstrap.spec.cjs'
       - 'coding.html'
       - 'coding.css'
       - 'coding.js'
@@ -42,6 +49,7 @@ jobs:
           python scripts/build-resource-pdfs.py
       - name: Static isolation, data integrity and source budgets
         run: |
+          node tests/theme-bootstrap.cjs
           node tests/navigation-promotion.cjs
           node tests/resources-catalog.cjs
           node tests/robotics-lab.cjs
@@ -52,7 +60,7 @@ jobs:
           npx playwright install --with-deps chromium
       - name: Test 320px layouts and 4x CPU throttling
         run: |
-          npx playwright test tests/low-end-labs.spec.cjs tests/robotics-lab.spec.cjs tests/resources-catalog.spec.cjs tests/ai-section-packs.spec.cjs --project=chromium-desktop --workers=2 --reporter=line
+          npx playwright test tests/low-end-labs.spec.cjs tests/robotics-lab.spec.cjs tests/resources-catalog.spec.cjs tests/ai-section-packs.spec.cjs tests/theme-bootstrap.spec.cjs --project=chromium-desktop --workers=2 --reporter=line
       - name: Save diagnostics
         if: failure()
         uses: actions/upload-artifact@v4
