@@ -69,6 +69,7 @@
 <div class="robotics-section-heading"><div><span class="robotics-kicker">01 / КОНСТРУКЦИЯ</span><h2 id="modelTitle">Пространственная схема</h2></div><p>Оригинальная трёхмерная геометрия с освещением, вращением и масштабированием. Без внешних моделей и библиотек.</p></div>
 <div class="robotics-model-layout">
 <div class="robotics-stage">
+<div class="robotics-mode"><button id="roboticsEnable3d" type="button" aria-pressed="false">Включить детальную 3D-модель</button><span id="roboticsModeStatus" role="status">По умолчанию — облегчённая SVG-схема. 3D загружается только по запросу.</span></div>
 <svg id="roboticsDrawing" viewBox="0 0 640 560" role="group" aria-label="Интерактивная схематичная модель двуногого робота. Выбирайте узлы мышью, касанием или клавиатурой.">
 <text x="320" y="280" text-anchor="middle" fill="currentColor">Для интерактивной модели включите JavaScript.</text>
 </svg>
@@ -141,7 +142,26 @@
 </div>
 <footer><div class="container"><p>© 2026 ENJIGIRLING · Лаборатория робототехники. <a href="index.html">Вернуться в справочник</a>.</p></div></footer>
 <script defer src="robotics.js"></script>
-<script defer src="robotics-3d.js"></script>
+<script>
+(function(){
+ const button=document.getElementById('roboticsEnable3d');
+ const status=document.getElementById('roboticsModeStatus');
+ if(!button)return;
+ button.addEventListener('click',function(){
+   if(button.disabled)return;
+   button.disabled=true;status.textContent='Загрузка 3D…';
+   const script=document.createElement('script');script.src='robotics-3d.js';
+   script.onload=function(){
+     const canvas=document.getElementById('robotics3d');
+     if(!canvas){button.disabled=false;status.textContent='3D недоступна. SVG-схема сохранена.';return;}
+     button.textContent='3D-модель включена';button.setAttribute('aria-pressed','true');
+     status.textContent='Перетаскивайте для поворота, колесо — масштаб. На слабых устройствах используйте SVG.';
+   };
+   script.onerror=function(){button.disabled=false;status.textContent='Не удалось загрузить 3D. SVG-схема работает.';};
+   document.head.appendChild(script);
+ });
+})();
+</script>
 <script src="theme.js"></script>
 <script src="site-shell.js"></script><script src="navigation.js"></script>
 </body>
