@@ -39,3 +39,29 @@ test('independent robotics lab: controls, computations, keyboard, small screens'
   expect(external).toEqual([]);
   expect(errors).toEqual([]);
 });
+
+test('3D is opt-in, preserves SVG fallback and respects low-end budget',async({page})=>{
+ const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ const loaded=[];page.on('request',r=>{if(r.url().includes('robotics-3d.js'))loaded.push(r.url());});
+ await page.setViewportSize({width:320,height:640});
+ await page.goto('/robotics.html');
+ await expect(page.locator('#roboticsDrawing')).toBeVisible();
+ await expect(page.locator('#robotics3d')).toHaveCount(0);
+ expect(loaded).toHaveLength(0);
+ await page.locator('#roboticsEnable3d').click();
+ await expect(page.locator('#robotics3d')).toBeVisible();
+ await expect(page.locator('#roboticsDrawing')).toBeHidden();
+ expect(loaded).toHaveLength(1);
+ const stats=await page.evaluate(()=>window.__enjigirlingRobot3dStats);
+ expect(stats.meshTriangles).toBeGreaterThan(1000);
+ expect(stats.meshTriangles).toBeLessThan(10000);
+ await page.locator('#roboticsYaw').fill('-35');
+ await expect(page.locator('#roboticsYawValue')).toContainText('-35°');
+ const before=await page.evaluate(()=>window.__enjigirlingRobot3dStats.frames);
+ await page.waitForTimeout(200);
+ const after=await page.evaluate(()=>window.__enjigirlingRobot3dStats.frames);
+ expect(after-before).toBeLessThanOrEqual(1);
+ await page.locator('#roboticsReset').click();
+ await expect(page.locator('#roboticsYawValue')).toContainText('22°');
+ expect(errors).toEqual([]);
+});
