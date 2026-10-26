@@ -16,3 +16,10 @@ close(stockMass('rectTube',{density:7850,length:1000,width:100,height:50,wall:3}
 for(const [shape,x] of [['tube',{diameter:50,wall:25}],['rectTube',{width:50,height:20,wall:10}],['sheet',{width:0,height:20}],['round',{diameter:0}]])assert.throws(()=>stockMass(shape,{density:7850,length:1000,...x}));
 assert.throws(()=>stockMass('sheet',{density:7850,length:0,width:100,height:10}));
 console.log('PASS manufacturing cost: batch allocation, rubles/tonne, rejects, markup, 4 stock sections and invalid inputs');
+
+// Exact decimal boundaries: no extra blank at an exact yield threshold,
+// but a genuinely positive remainder still requires one more blank.
+for(const [quantity,reject,expected] of [[9,90,90],[10,80,50],[3,40,5],[7,30,10],[1,0,1],[9,90.000001,91],[9,89.999999,90],[1,1e-7,2],[1,1e-16,2],[1000000,90,10000000]]){
+ const result=estimate({...base,quantity,reject});
+ assert.equal(result.blanks,expected,`${quantity} good / ${reject}% rejects`);
+}

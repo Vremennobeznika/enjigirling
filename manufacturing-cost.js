@@ -3,6 +3,18 @@
 'use strict';
 const processes={fdm:'FDM-печать',sla:'SLA / печать смолой',sls:'SLS-печать',mjf:'MJF-печать',polyjet:'PolyJet',metal:'Металлическая 3D-печать',milling:'Фрезерование ЧПУ',turning:'Точение ЧПУ',routing:'Фрезерование листовых материалов',laser:'Лазерная резка',bending:'Гибка',molding:'Литьё под давлением'};
 function number(value){if(typeof value==='boolean'||value==null||String(value).trim()==='')throw Error('Заполните все исходные значения.');const n=Number(String(value).trim().replace(',','.'));if(!Number.isFinite(n)||n<0||n>1e12)throw Error('Введите конечные неотрицательные числа в допустимых пределах.');return n;}
+// Divide decimal percentages exactly: binary floats can turn 9 / 0.1 into
+// 90.00000000000001 and incorrectly add another paid blank.
+function plannedBlanks(quantity,reject){
+ const [mantissa,exponent='0']=String(reject).split('e');
+ const places=(mantissa.split('.')[1]||'').length-Number(exponent);
+ const scale=10n**BigInt(Math.max(0,places));
+ const rejected=BigInt(mantissa.replace('.',''))*10n**BigInt(Math.max(0,-places));
+ const numerator=BigInt(quantity)*100n*scale,denominator=100n*scale-rejected;
+ const count=(numerator+denominator-1n)/denominator;
+ if(count>10000000n)throw Error('Слишком много заготовок; проверьте процент брака.');
+ return Number(count);
+}
 function estimate(input){
  const x=Object.fromEntries(Object.entries(input).map(([k,v])=>[k,number(v)]));
  const required=['quantity','mass','priceTonne','minutes','machineRate','laborMinutes','laborRate','setup','tooling','reject','overhead','markup'];
@@ -10,8 +22,7 @@ function estimate(input){
  if(!Number.isSafeInteger(x.quantity)||x.quantity<1||x.quantity>1000000)throw Error('Размер партии: целое число от 1 до 1 000 000.');
  if(x.reject>=100)throw Error('Плановый брак должен быть меньше 100%.');
  if(x.priceTonne<=0)throw Error('Укажите цену материала за тонну.');
- const blanks=Math.ceil(x.quantity/(1-x.reject/100));
- if(blanks>10000000)throw Error('Слишком много заготовок; проверьте процент брака.');
+ const blanks=plannedBlanks(x.quantity,x.reject);
  const material=blanks*x.mass*x.priceTonne/1000;
  const machine=blanks*x.minutes*x.machineRate/60;
  const labor=blanks*x.laborMinutes*x.laborRate/60;

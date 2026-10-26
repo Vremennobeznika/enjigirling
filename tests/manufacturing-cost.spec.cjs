@@ -30,3 +30,14 @@ test('metal stock estimate, geometry validation and 320px layout',async({page})=
  for(const width of [320,390,768,1280]){await page.setViewportSize({width,height:700});expect(await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth)).toBeLessThanOrEqual(2);}
  await expect(page.locator('#labManufacturing')).toContainText('Автозагрузка цен не подключена');
 });
+
+test('exact reject boundary does not add a charged blank',async({page})=>{
+ await page.goto('/calculator.html#labManufacturing');
+ await expect(page.locator('#manufacturingProcess option')).toHaveCount(12);
+ await page.locator('#manufacturingQuantity').fill('9');
+ await page.locator('#manufacturingPrice').fill('1000');
+ await page.locator('#manufacturingReject').fill('90');
+ await page.locator('#manufacturingForm button[type=submit]').click();
+ await expect(page.locator('#manufacturingResult')).toContainText('План заготовок: 90.');
+ await expect(page.locator('#manufacturingResult')).toContainText('Материал: 90 ₽');
+});
