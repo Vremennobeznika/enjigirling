@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1.0",
-  "scope": "Per-occupation standards located on government sites; publication verified, legal applicability requires exact work function and employment context.",
+  "scope": "Per-occupation standards and their labeled accessible copies; legal applicability requires exact work function and employment context.",
   "reviewDate": "2026-10-22",
   "totalRecords": 54,
   "legalBasis": {
     "article1953": "https://www.consultant.ru/document/cons_doc_LAW_34683/e76d6076ad800a12efcec206f99ad6c59b58517e/",
     "construction55": "https://www.consultant.ru/document/cons_doc_LAW_51040/6da623a7da211d885c1eaccefb2ef34b26fc141a/",
-    "mintrud": "https://mintrud.gov.ru/ministry/programms/22/3",
+    "mintrud": "https://www.consultant.ru/document/cons_doc_LAW_34683/e76d6076ad800a12efcec206f99ad6c59b58517e/",
     "registry": "https://vcot.info/standards"
   },
   "records": [
@@ -21,20 +21,24 @@
         {
           "name": "Специалист по организации строительства",
           "order": "231н от 21.04.2022",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2349",
+          "url": "https://www.consultant.ru/document/cons_doc_LAW_418026/",
           "effectiveFrom": "2022-09-01",
           "effectiveUntil": "2028-09-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "functional_overlap"
+          "relationship": "functional_overlap",
+          "sourceLabel": "КонсультантПлюс — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         },
         {
           "name": "Организация строительства жилищно-гражданского комплекса",
           "order": "585н от 13.07.2023",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2725",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/1/prikaz_mintruda_rossii_ot_13_07_2023_N_585n_ob_utverzhdenii.html",
           "effectiveFrom": "2024-09-01",
           "effectiveUntil": "2030-09-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "functional_overlap"
+          "relationship": "functional_overlap",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -49,11 +53,13 @@
         {
           "name": "Специалист по организации архитектурно-строительного проектирования",
           "order": "228н от 21.04.2022",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2338",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_21_04_2022_N_228n_ob_utverzhdenii.html",
           "effectiveFrom": "2022-09-01",
           "effectiveUntil": "2027-03-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "functional_overlap"
+          "relationship": "functional_overlap",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -68,20 +74,24 @@
         {
           "name": "Архитектор",
           "order": "202н от 06.04.2022",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2329",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_06_04_2022_N_202n_ob_utverzhdenii.html",
           "effectiveFrom": "2022-09-01",
           "effectiveUntil": "2028-09-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "related_or_narrower_function"
+          "relationship": "related_or_narrower_function",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         },
         {
           "name": "Специалист по организации архитектурно-строительного проектирования",
           "order": "228н от 21.04.2022",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2338",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_21_04_2022_N_228n_ob_utverzhdenii.html",
           "effectiveFrom": "2022-09-01",
           "effectiveUntil": "2027-03-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "related_or_narrower_function"
+          "relationship": "related_or_narrower_function",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -96,11 +106,13 @@
         {
           "name": "Специалист по организации строительства",
           "order": "231н от 21.04.2022",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2349",
+          "url": "https://www.consultant.ru/document/cons_doc_LAW_418026/",
           "effectiveFrom": "2022-09-01",
           "effectiveUntil": "2028-09-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "functional_overlap"
+          "relationship": "functional_overlap",
+          "sourceLabel": "КонсультантПлюс — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -115,11 +127,13 @@
         {
           "name": "Специалист в области проектирования автомобильных дорог",
           "order": "401н от 07.07.2022",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2397",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_07_07_2022_N_401n_ob_utverzhdenii.html",
           "effectiveFrom": "2023-03-01",
           "effectiveUntil": "2029-03-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "functional_overlap"
+          "relationship": "functional_overlap",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -134,11 +148,13 @@
         {
           "name": "Специалист по автоматизации и механизации механосборочного производства",
           "order": "190н от 31.03.2022",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2326",
+          "url": "https://www.consultant.ru/document/cons_doc_LAW_416630/",
           "effectiveFrom": "2022-09-01",
           "effectiveUntil": "2028-09-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "related_or_narrower_function"
+          "relationship": "related_or_narrower_function",
+          "sourceLabel": "КонсультантПлюс — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -153,11 +169,13 @@
         {
           "name": "Конструктор в автомобилестроении",
           "order": "403н от 07.07.2022",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2389",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/2/prikaz_mintruda_rossii_ot_07_07_2022_N_403n_ob_utverzhdenii.html",
           "effectiveFrom": "2023-03-01",
           "effectiveUntil": "2029-03-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "functional_overlap"
+          "relationship": "functional_overlap",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -181,11 +199,13 @@
         {
           "name": "Специалист по проектированию систем электроснабжения объектов капитального строительства",
           "order": "590н от 30.08.2021",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2254",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/1/prikaz_mintruda_rossii_ot_30_08_2021_N_590n_ob_utverzhdenii.html",
           "effectiveFrom": "2022-03-01",
           "effectiveUntil": "2028-03-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "related_or_narrower_function"
+          "relationship": "related_or_narrower_function",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -200,11 +220,13 @@
         {
           "name": "Специалист по проектированию систем электроснабжения объектов капитального строительства",
           "order": "590н от 30.08.2021",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2254",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/1/prikaz_mintruda_rossii_ot_30_08_2021_N_590n_ob_utverzhdenii.html",
           "effectiveFrom": "2022-03-01",
           "effectiveUntil": "2028-03-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "functional_overlap"
+          "relationship": "functional_overlap",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -219,11 +241,13 @@
         {
           "name": "Специалист по проектированию схем первичных соединений электроснабжения объектов использования атомной энергии",
           "order": "699н от 11.10.2021",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2147",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/1/prikaz_mintruda_rossii_ot_11_10_2021_N_699n_ob_utverzhdenii.html",
           "effectiveFrom": "2022-03-01",
           "effectiveUntil": "2028-03-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "related_or_narrower_function"
+          "relationship": "related_or_narrower_function",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -238,11 +262,13 @@
         {
           "name": "Специалист по проектированию и конструированию авиационной техники",
           "order": "753н от 21.10.2021",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2161",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/2/prikaz_mintruda_rossii_ot_21_10_2021_N_753n_ob_utverzhdenii.html",
           "effectiveFrom": "2022-03-01",
           "effectiveUntil": "2028-03-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "functional_overlap"
+          "relationship": "functional_overlap",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -257,11 +283,13 @@
         {
           "name": "Инженер-исследователь по динамике, баллистике, управлению движением космических аппаратов",
           "order": "587н от 30.08.2021",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2246",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/1/prikaz_mintruda_rossii_ot_30_08_2021_N_587n_ob_utverzhdenii.html",
           "effectiveFrom": "2022-03-01",
           "effectiveUntil": "2028-03-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "related_or_narrower_function"
+          "relationship": "related_or_narrower_function",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -276,11 +304,13 @@
         {
           "name": "Специалист по производству химических волокон",
           "order": "461н от 04.08.2022",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2414",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/2/prikaz_mintruda_rossii_ot_04_08_2022_N_461n_ob_utverzhdenii.html",
           "effectiveFrom": "2023-03-01",
           "effectiveUntil": "2029-03-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "related_or_narrower_function"
+          "relationship": "related_or_narrower_function",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -295,11 +325,13 @@
         {
           "name": "Специалист по диспетчерско-технологическому управлению нефтегазовой отрасли",
           "order": "382н от 30.06.2022",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2374",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/1/prikaz_mintruda_rossii_ot_30_06_2022_N_382n_ob_utverzhdenii.html",
           "effectiveFrom": "2023-03-01",
           "effectiveUntil": "2029-03-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "related_or_narrower_function"
+          "relationship": "related_or_narrower_function",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -314,11 +346,13 @@
         {
           "name": "Специалист по техническому контролю качества продукции",
           "order": "480н от 15.07.2021",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2042",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/2/prikaz_mintruda_rossii_ot_15_07_2021_N_480n_ob_utverzhdenii.html",
           "effectiveFrom": "2022-03-01",
           "effectiveUntil": "2028-03-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "related_or_narrower_function"
+          "relationship": "related_or_narrower_function",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -342,29 +376,35 @@
         {
           "name": "Специалист по экологической безопасности (в промышленности)",
           "order": "569н от 07.09.2020",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/1612",
+          "url": "https://www.consultant.ru/document/cons_doc_LAW_363578/",
           "effectiveFrom": "2020-09-07",
           "effectiveUntil": null,
           "periodStatus": "in_force_on_review_date",
-          "relationship": "functional_overlap"
+          "relationship": "functional_overlap",
+          "sourceLabel": "КонсультантПлюс — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         },
         {
           "name": "Специалист в области разработки мероприятий по охране окружающей среды объектов капитального строительства",
           "order": "219н от 18.04.2022",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2347",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_18_04_2022_N_219n_ob_utverzhdenii.html",
           "effectiveFrom": "2022-09-01",
           "effectiveUntil": "2028-09-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "functional_overlap"
+          "relationship": "functional_overlap",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         },
         {
           "name": "Специалист в области охраны окружающей среды и обеспечения экологической безопасности",
           "order": "365н от 24.08.2026",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/3261",
+          "url": "https://www.consultant.ru/document/cons_doc_LAW_545775/",
           "effectiveFrom": "2027-03-01",
           "effectiveUntil": "2033-03-01",
           "periodStatus": "not_yet_effective",
-          "relationship": "functional_overlap"
+          "relationship": "functional_overlap",
+          "sourceLabel": "КонсультантПлюс — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -379,11 +419,13 @@
         {
           "name": "Инженер-биомеханик",
           "order": "323н от 30.07.2026",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/3258",
+          "url": "https://www.consultant.ru/document/cons_doc_LAW_543728/",
           "effectiveFrom": "2027-03-01",
           "effectiveUntil": "2033-03-01",
           "periodStatus": "not_yet_effective",
-          "relationship": "related_or_narrower_function"
+          "relationship": "related_or_narrower_function",
+          "sourceLabel": "КонсультантПлюс — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -398,11 +440,13 @@
         {
           "name": "Специалист по автоматизации и механизации механосборочного производства",
           "order": "190н от 31.03.2022",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2326",
+          "url": "https://www.consultant.ru/document/cons_doc_LAW_416630/",
           "effectiveFrom": "2022-09-01",
           "effectiveUntil": "2028-09-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "related_or_narrower_function"
+          "relationship": "related_or_narrower_function",
+          "sourceLabel": "КонсультантПлюс — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -417,11 +461,13 @@
         {
           "name": "Специалист по содержанию и ремонту железнодорожного пути и искусственных сооружений",
           "order": "155н от 13.04.2026",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/3209",
+          "url": "https://www.consultant.ru/document/cons_doc_LAW_534303/",
           "effectiveFrom": "2026-09-01",
           "effectiveUntil": "2032-09-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "related_or_narrower_function"
+          "relationship": "related_or_narrower_function",
+          "sourceLabel": "КонсультантПлюс — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -436,11 +482,13 @@
         {
           "name": "Специалист по подготовке производства в судостроении",
           "order": "13н от 16.01.2023",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2579",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/2/prikaz_mintruda_rossii_ot_16_01_2023_N_13n_ob_utverzhdenii.html",
           "effectiveFrom": "2023-09-01",
           "effectiveUntil": "2029-09-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "related_or_narrower_function"
+          "relationship": "related_or_narrower_function",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -455,11 +503,13 @@
         {
           "name": "Специалист по автоматизированным системам управления машиностроительным предприятием",
           "order": "658н от 28.09.2020",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/1631",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/2/prikaz_mintruda_rossii_ot_28_09_2020_N_658n_ob_utverzhdenii.html",
           "effectiveFrom": "2020-09-28",
           "effectiveUntil": null,
           "periodStatus": "in_force_on_review_date",
-          "relationship": "related_or_narrower_function"
+          "relationship": "related_or_narrower_function",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -474,11 +524,13 @@
         {
           "name": "Программист",
           "order": "424н от 20.07.2022",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2403",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_20_07_2022_N_424n_ob_utverzhdenii.html",
           "effectiveFrom": "2023-03-01",
           "effectiveUntil": "2029-03-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "related_or_narrower_function"
+          "relationship": "related_or_narrower_function",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -493,11 +545,13 @@
         {
           "name": "Специалист по автоматизированным системам управления машиностроительным предприятием",
           "order": "658н от 28.09.2020",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/1631",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/2/prikaz_mintruda_rossii_ot_28_09_2020_N_658n_ob_utverzhdenii.html",
           "effectiveFrom": "2020-09-28",
           "effectiveUntil": null,
           "periodStatus": "in_force_on_review_date",
-          "relationship": "related_or_narrower_function"
+          "relationship": "related_or_narrower_function",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -512,11 +566,13 @@
         {
           "name": "Специалист по метрологии",
           "order": "229н от 21.04.2022",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2332",
+          "url": "https://nangs.org/docs/mintrud-rossii-prikaz-ot-21-04-2022-229n-ob-utverzhdenii-professionalnogo-standarta-spetsialist-po-metrologii-pdf",
           "effectiveFrom": "2022-09-01",
           "effectiveUntil": "2028-09-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "related_or_narrower_function"
+          "relationship": "related_or_narrower_function",
+          "sourceLabel": "НАНГС — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -531,11 +587,13 @@
         {
           "name": "Специалист по безопасности, прослеживаемости и качеству пищевой продукции на всех этапах ее производства",
           "order": "556н от 02.09.2020",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/1696",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/1/prikaz_mintruda_rossii_ot_02_09_2020_N_556n_ob_utverzhdenii.html",
           "effectiveFrom": null,
           "effectiveUntil": null,
           "periodStatus": "publication_found_effective_date_requires_confirmation",
-          "relationship": "related_or_narrower_function"
+          "relationship": "related_or_narrower_function",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -550,11 +608,13 @@
         {
           "name": "Специалист по производству химических волокон",
           "order": "461н от 04.08.2022",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2414",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/2/prikaz_mintruda_rossii_ot_04_08_2022_N_461n_ob_utverzhdenii.html",
           "effectiveFrom": "2023-03-01",
           "effectiveUntil": "2029-03-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "related_or_narrower_function"
+          "relationship": "related_or_narrower_function",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -578,11 +638,13 @@
         {
           "name": "Инженер-радиоэлектронщик в области радиотехники и телекоммуникаций",
           "order": "600н от 31.08.2021",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2258",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_31_08_2021_N_600n_ob_utverzhdenii.html",
           "effectiveFrom": "2022-03-01",
           "effectiveUntil": "2028-03-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "related_or_narrower_function"
+          "relationship": "related_or_narrower_function",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -597,11 +659,13 @@
         {
           "name": "Специалист в области проектирования наружных сетей водоснабжения, водоотведения и канализации",
           "order": "216н от 18.04.2022",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2346",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_18_04_2022_N_216n_ob_utverzhdenii.html",
           "effectiveFrom": "2022-09-01",
           "effectiveUntil": "2028-09-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "related_or_narrower_function"
+          "relationship": "related_or_narrower_function",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -616,11 +680,13 @@
         {
           "name": "Специалист по проектированию систем электроснабжения объектов капитального строительства",
           "order": "590н от 30.08.2021",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2254",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/1/prikaz_mintruda_rossii_ot_30_08_2021_N_590n_ob_utverzhdenii.html",
           "effectiveFrom": "2022-03-01",
           "effectiveUntil": "2028-03-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "related_or_narrower_function"
+          "relationship": "related_or_narrower_function",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -653,11 +719,13 @@
         {
           "name": "Специалист по техническому контролю качества продукции",
           "order": "480н от 15.07.2021",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2042",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/2/prikaz_mintruda_rossii_ot_15_07_2021_N_480n_ob_utverzhdenii.html",
           "effectiveFrom": "2022-03-01",
           "effectiveUntil": "2028-03-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "functional_overlap"
+          "relationship": "functional_overlap",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -672,11 +740,13 @@
         {
           "name": "Специалист по гражданской обороне",
           "order": "748н от 27.10.2020",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/1712",
+          "url": "https://www.consultant.ru/document/cons_doc_LAW_370148/",
           "effectiveFrom": null,
           "effectiveUntil": null,
           "periodStatus": "publication_found_effective_date_requires_confirmation",
-          "relationship": "functional_overlap"
+          "relationship": "functional_overlap",
+          "sourceLabel": "КонсультантПлюс — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -691,20 +761,24 @@
         {
           "name": "Специалист в области геодезии",
           "order": "168н от 24.03.2022",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2323",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_24_03_2022_N_168n_ob_utverzhdenii.html",
           "effectiveFrom": "2022-09-01",
           "effectiveUntil": "2028-09-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "functional_overlap"
+          "relationship": "functional_overlap",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         },
         {
           "name": "Специалист в области инженерно-геодезических изысканий для градостроительной деятельности",
           "order": "746н от 21.10.2021",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2173",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_21_10_2021_N_746n_ob_utverzhdenii.html",
           "effectiveFrom": "2022-03-01",
           "effectiveUntil": "2028-03-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "functional_overlap"
+          "relationship": "functional_overlap",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -728,11 +802,13 @@
         {
           "name": "Архитектор-реставратор",
           "order": "612н от 31.08.2021",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2256",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_31_08_2021_N_612n_ob_utverzhdenii.html",
           "effectiveFrom": "2022-03-01",
           "effectiveUntil": "2028-03-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "related_or_narrower_function"
+          "relationship": "related_or_narrower_function",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -747,11 +823,13 @@
         {
           "name": "Специалист по стандартизации",
           "order": "346н от 27.04.2023",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2673",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/3/prikaz_mintruda_rossii_ot_27_04_2023_N_346n_ob_utverzhdenii.html",
           "effectiveFrom": "2023-09-01",
           "effectiveUntil": "2029-09-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "functional_overlap"
+          "relationship": "functional_overlap",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -766,11 +844,13 @@
         {
           "name": "Специалист по патентоведению",
           "order": "748н от 21.10.2021",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2169",
+          "url": "https://nangs.org/docs/mintrud-rossii-prikaz-ot-21-10-2021-748n-ob-utverzhdenii-professionalnogo-standarta-spetsialist-po-patentovedeniyu-pdf",
           "effectiveFrom": "2022-03-01",
           "effectiveUntil": null,
           "periodStatus": "in_force_on_review_date",
-          "relationship": "functional_overlap"
+          "relationship": "functional_overlap",
+          "sourceLabel": "НАНГС — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -785,20 +865,24 @@
         {
           "name": "Специалист по большим данным",
           "order": "405н от 06.07.2020",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/1546",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_06_07_2020_N_405n_ob_utverzhdenii.html",
           "effectiveFrom": "2020-07-06",
           "effectiveUntil": null,
           "periodStatus": "in_force_on_review_date",
-          "relationship": "related_or_narrower_function"
+          "relationship": "related_or_narrower_function",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         },
         {
           "name": "Специалист по информационным системам",
           "order": "586н от 13.07.2023",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2723",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_13_07_2023_N_586n_ob_utverzhdenii.html",
           "effectiveFrom": "2024-03-01",
           "effectiveUntil": null,
           "periodStatus": "in_force_on_review_date",
-          "relationship": "related_or_narrower_function"
+          "relationship": "related_or_narrower_function",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -813,11 +897,13 @@
         {
           "name": "Системный программист",
           "order": "678н от 29.09.2020",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/1649",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_29_09_2020_N_678n_ob_utverzhdenii.html",
           "effectiveFrom": "2020-09-29",
           "effectiveUntil": null,
           "periodStatus": "in_force_on_review_date",
-          "relationship": "related_or_narrower_function"
+          "relationship": "related_or_narrower_function",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -832,11 +918,13 @@
         {
           "name": "Специалист по большим данным",
           "order": "405н от 06.07.2020",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/1546",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_06_07_2020_N_405n_ob_utverzhdenii.html",
           "effectiveFrom": "2020-07-06",
           "effectiveUntil": null,
           "periodStatus": "in_force_on_review_date",
-          "relationship": "related_or_narrower_function"
+          "relationship": "related_or_narrower_function",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -851,20 +939,24 @@
         {
           "name": "Специалист по защите информации в автоматизированных системах",
           "order": "525н от 14.09.2022",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2446",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_14_09_2022_N_525n_ob_utverzhdenii.html",
           "effectiveFrom": "2023-03-01",
           "effectiveUntil": "2029-03-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "functional_overlap"
+          "relationship": "functional_overlap",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         },
         {
           "name": "Специалист по информационной безопасности в кредитно-финансовой сфере",
           "order": "739н от 28.11.2022",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2550",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_28_11_2022_N_739n_ob_utverzhdenii.html",
           "effectiveFrom": "2023-09-01",
           "effectiveUntil": "2029-09-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "functional_overlap"
+          "relationship": "functional_overlap",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -879,11 +971,13 @@
         {
           "name": "Специалист по информационным системам",
           "order": "586н от 13.07.2023",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2723",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_13_07_2023_N_586n_ob_utverzhdenii.html",
           "effectiveFrom": "2024-03-01",
           "effectiveUntil": null,
           "periodStatus": "in_force_on_review_date",
-          "relationship": "related_or_narrower_function"
+          "relationship": "related_or_narrower_function",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -898,11 +992,13 @@
         {
           "name": "Инженер-программист радиоэлектронных средств и комплексов",
           "order": "618н от 04.10.2022",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2513",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_04_10_2022_N_618n_ob_utverzhdenii.html",
           "effectiveFrom": "2023-03-01",
           "effectiveUntil": "2029-03-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "related_or_narrower_function"
+          "relationship": "related_or_narrower_function",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -917,11 +1013,13 @@
         {
           "name": "Программист",
           "order": "424н от 20.07.2022",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2403",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_20_07_2022_N_424n_ob_utverzhdenii.html",
           "effectiveFrom": "2023-03-01",
           "effectiveUntil": "2029-03-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "functional_overlap"
+          "relationship": "functional_overlap",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -936,11 +1034,13 @@
         {
           "name": "Программист",
           "order": "424н от 20.07.2022",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2403",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_20_07_2022_N_424n_ob_utverzhdenii.html",
           "effectiveFrom": "2023-03-01",
           "effectiveUntil": "2029-03-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "functional_overlap"
+          "relationship": "functional_overlap",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -955,11 +1055,13 @@
         {
           "name": "Специалист по тестированию в области информационных технологий",
           "order": "531н от 02.08.2021",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2083",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_02_08_2021_N_531n_ob_utverzhdenii.html",
           "effectiveFrom": "2022-03-01",
           "effectiveUntil": null,
           "periodStatus": "in_force_on_review_date",
-          "relationship": "functional_overlap"
+          "relationship": "functional_overlap",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },
@@ -974,11 +1076,13 @@
         {
           "name": "Программист",
           "order": "424н от 20.07.2022",
-          "url": "https://mintrud.gov.ru/docs/mintrud/orders/2403",
+          "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_20_07_2022_N_424n_ob_utverzhdenii.html",
           "effectiveFrom": "2023-03-01",
           "effectiveUntil": "2029-03-01",
           "periodStatus": "in_force_on_review_date",
-          "relationship": "functional_overlap"
+          "relationship": "functional_overlap",
+          "sourceLabel": "Меганорм — копия текста приказа Минтруда",
+          "linkCheckedAt": "2026-10-27"
         }
       ]
     },

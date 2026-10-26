@@ -23,7 +23,10 @@ const followUpReviews={
  'patent-engineer':'archived_source_not_market_25_10_2026'
 };
 for(const x of sources){
+ if(x.reviewStatus==='source_relinked_27_10_2026'){assert.equal(x.checkedAt,'2026-10-27');assert.equal(x.status,'unverified');assert.equal(x.rangeMinRub,null);assert.equal(x.rangeMaxRub,null);sourceCounts.hidden++;continue;}
  if(x.reviewStatus==='not_checked_26_10_2026'){assert.equal(x.status,"unverified");assert.equal(x.rangeMinRub,null);assert.equal(x.rangeMaxRub,null);sourceCounts.hidden++;continue;}
+ if(x.reviewStatus==='salary_histogram_rejected_27_10_2026'){assert.equal(x.checkedAt,'2026-10-27');assert.equal(x.status,'unverified');assert.equal(x.rangeMinRub,null);assert.equal(x.rangeMaxRub,null);sourceCounts.hidden++;continue;}
+ if(x.reviewStatus==='salary_scope_checked_27_10_2026'){assert.equal(x.checkedAt,'2026-10-27');assert.equal(x.status,'source_snapshot');assert.ok(x.displayLabel);sourceCounts.confirmed++;continue;}
  const followUp=followUpReviews[x.id];
  assert.equal(x.checkedAt,followUp?'2026-10-25':'2026-10-21',x.id+' last review date');
  assert.equal(x.reviewStatus,followUp|| (x.status==='source_snapshot'?'observed_21_10_2026':'not_reproducible_21_10_2026'),x.id+' evidence classification missing');
@@ -38,8 +41,16 @@ for(const x of sources){
   }
  }
 }
-assert.equal(sourceCounts.confirmed,23,'reviewed displayable evidence count changed');
-assert.equal(sourceCounts.hidden,31,'withdrawn unsupported salary count changed');
+assert.equal(sourceCounts.confirmed,9,'reviewed displayable evidence count changed');
+assert.equal(sourceCounts.hidden,45,'withdrawn unsupported salary count changed');
+const salaryScope=JSON.parse(fs.readFileSync('audit/salary-scope-review-2026-10-27.json','utf8'));
+assert.equal(salaryScope.recordsReviewed,cards.length);
+assert.equal(salaryScope.hhPagesRead,14);
+for(const inspected of salaryScope.hhEvidence){
+ const current=sourceMap.get(inspected.id);
+ assert.equal(current.status,'unverified',inspected.id+' restricted histogram must not become a profession range');
+ assert.equal(current.rangeMinRub,null);assert.equal(current.rangeMaxRub,null);
+}
 const classes={};
 for(const card of cards){
  // Reload the same baseline checklist on EACH record; no blanket whole-file assumption.

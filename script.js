@@ -105,8 +105,8 @@ function renderVerifiedSalarySource(profession) {
   }
   const fmt = value => Number(value).toLocaleString('ru-RU');
   const amount = entry.rangeMinRub === entry.rangeMaxRub
-    ? 'одно значение ' + fmt(entry.rangeMinRub)
-    : 'Опубликованный диапазон ' + fmt(entry.rangeMinRub) + '–' + fmt(entry.rangeMaxRub);
+    ? (entry.displayLabel ? escapeHTML(entry.displayLabel) + ': ' : 'одно значение ') + fmt(entry.rangeMinRub)
+    : (entry.displayLabel ? escapeHTML(entry.displayLabel) : 'Опубликованный диапазон') + ' ' + fmt(entry.rangeMinRub) + '–' + fmt(entry.rangeMaxRub);
   const quality = entry.evidenceLevel === 'single_observation'
     ? 'одно наблюдение, не характеристика рынка'
     : 'ограниченная выборка источника, не средняя зарплата по профессии';
@@ -136,7 +136,7 @@ function classifyLearningItems(items = []) {
 // A relevant official standard does not establish a binding requirement for every job with a similar name.
 const PROFESSIONAL_REFERENCE_DIRECTORIES = [
   {label:"Официальный реестр профстандартов",url:"https://vcot.info/standards"},
-  {label:"Минтруд: как применять профстандарты",url:"https://mintrud.gov.ru/ministry/programms/22/3"}
+  {label:"ТК РФ: применение профстандартов (статья 195.3)",url:"https://www.consultant.ru/document/cons_doc_LAW_34683/e76d6076ad800a12efcec206f99ad6c59b58517e/"}
 ];
 function renderNormativeReferences(profession) {
   const audit = (window.careerNormativeAudit || {}).records || [];
@@ -159,7 +159,7 @@ function renderNormativeReferences(profession) {
       ? 'Частичная/смежная функция, без автоматического переноса на всю профессию.'
       : 'Соответствие функций оценивается для конкретной должности.';
     return '<li><a href="'+escapeHTML(doc.url)+'" target="_blank" rel="noopener noreferrer">'+
-      escapeHTML(doc.name)+'</a><p>'+escapeHTML(doc.order)+'. '+when+'. '+limits+'</p></li>';
+      escapeHTML(doc.name)+'</a><p>'+escapeHTML(doc.order)+(doc.sourceLabel?' · '+escapeHTML(doc.sourceLabel):'')+'. '+when+'. '+limits+'</p></li>';
   }).join('');
   const details = rows
     ? '<p>Профессиональные стандарты и документы для сопоставления трудовых функций:</p><ul>'+rows+'</ul>'

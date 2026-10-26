@@ -7,7 +7,7 @@
   "quality": "editorial_not_independently_verified",
   "sourceHtml": "materials.html",
   "canonicalDataset": "knowledge/materials.json",
-  "staticPageText": "[ENJIGIRLING / ENGINEERING INDEX](https://vremennobeznika.github.io/enjigirling/index.html)[Для ИИ](https://vremennobeznika.github.io/enjigirling/ai.html) ☾\nРазделы сайта\nКарьера\n[Профессии](https://vremennobeznika.github.io/enjigirling/index.html)\n[Сравнение](https://vremennobeznika.github.io/enjigirling/compare.html)\n[Обучение](https://vremennobeznika.github.io/enjigirling/map.html)\nТехнологии\n[Процессы](https://vremennobeznika.github.io/enjigirling/processes.html)\n[Материалы](https://vremennobeznika.github.io/enjigirling/materials.html)\nИнструменты\n[Калькуляторы инженера](https://vremennobeznika.github.io/enjigirling/calculator.html)\nБаза знаний\n[Словарь инженера](https://vremennobeznika.github.io/enjigirling/dictionary.html)\nСообщество\n[Календарь праздников](https://vremennobeznika.github.io/enjigirling/calendar.html)\n[Ресурсы сообщества 18+](https://vremennobeznika.github.io/enjigirling/resources.html)\nСПРАВОЧНИК / 03\n## Справочник материалов.\nГруппы материалов и области применения. Численные характеристики появятся только с указанием марки, состояния, единиц и проверяемого источника.\n### Единый поиск по технологиям\nНайдите материал или производственный процесс в обоих каталогах, не переключаясь между страницами.\nНазвание, применение, операция или дефект Введите не менее двух символов.\nКаталоги: [процессы](https://vremennobeznika.github.io/enjigirling/processes.html) · [материалы](https://vremennobeznika.github.io/enjigirling/materials.html)\nПоиск по материалам\nОтрасль Все отрасли Металлы и машиностроение Полимеры Пищевая промышленность Текстиль и швейное производство Деревообработка Электроника Химическое производство Межотраслевые процессы Композиты Строительство и дороги Энергетика и теплообмен Водоподготовка и очистка Керамика, цемент и стекло Фармацевтическое производство Полиграфия Горное производство\nКласс материала\nВсе классы Металлы и сплавы Органические и полимерные Неорганические Композиты Функциональные смеси и вещества\nСортировка По названию А — Я По названию Я — А По каталогу\nОдна карточка может относиться к нескольким отраслям. Связи с процессами — навигационные, а не технологический допуск. Численные свойства без марки, состояния и источника не приводятся.\nЗдесь нет усреднённых значений прочности или плотности для целых классов материалов: такие цифры без конкретной марки и условий могут вводить в заблуждение.\n### Как проверить материал перед применением\nОдинаковое название группы ещё не означает одинаковых характеристик. До расчёта или выбора технологии зафиксируйте исходные условия.\n- Идентификация: точная марка, стандарт, состояние поставки и известная история обработки.\n- Условия работы: нагрузка, температура, среда, срок эксплуатации и необходимые свойства.\n- Доказательства: паспорт партии, протокол испытаний, актуальный документ и единицы измерения.\n- Технология: сопоставьте материал со связанными [производственными процессами](https://vremennobeznika.github.io/enjigirling/processes.html) и ограничениями производства.\nПример навигации: [сталь 20](https://vremennobeznika.github.io/enjigirling/materials.html#steel-20) → [обработка резанием](https://vremennobeznika.github.io/enjigirling/processes.html#cutting) → [инженер-металлург](https://vremennobeznika.github.io/enjigirling/index.html#profession=metallurgical-engineer). Связь в справочнике не подтверждает технологическую пригодность конкретной партии.\n[Скачать CSV-реестр проверки свойств материалов](https://vremennobeznika.github.io/enjigirling/templates/material-evidence-register.csv) · [Инструкция по заполнению](https://vremennobeznika.github.io/enjigirling/templates/README.md)\n",
+  "staticPageText": "[ENJIGIRLING / ENGINEERING INDEX](https://vremennobeznika.github.io/enjigirling/index.html) ☾\nРазделы сайта\nКарьера\n[Профессии](https://vremennobeznika.github.io/enjigirling/index.html)\n[Сравнение](https://vremennobeznika.github.io/enjigirling/compare.html)\n[Обучение](https://vremennobeznika.github.io/enjigirling/map.html)\nТехнологии\n[Процессы](https://vremennobeznika.github.io/enjigirling/processes.html)\n[Материалы](https://vremennobeznika.github.io/enjigirling/materials.html)\nИнструменты\n[Калькуляторы инженера](https://vremennobeznika.github.io/enjigirling/calculator.html)\nБаза знаний\n[Словарь инженера](https://vremennobeznika.github.io/enjigirling/dictionary.html)\nСообщество\n[Календарь праздников](https://vremennobeznika.github.io/enjigirling/calendar.html)\n[Ресурсы сообщества 18+](https://vremennobeznika.github.io/enjigirling/resources.html)\nЛаборатории\n[Робототехника](https://vremennobeznika.github.io/enjigirling/robotics.html)\n[Кодинг](https://vremennobeznika.github.io/enjigirling/coding.html)\n[Для ИИ](https://vremennobeznika.github.io/enjigirling/ai.html)\nСПРАВОЧНИК / 03\n## Справочник материалов.\nГруппы материалов и области применения. Численные характеристики появятся только с указанием марки, состояния, единиц и проверяемого источника.\n### Единый поиск по технологиям\nНайдите материал или производственный процесс в обоих каталогах, не переключаясь между страницами.\nНазвание, применение, операция или дефект Введите не менее двух символов.\nКаталоги: [процессы](https://vremennobeznika.github.io/enjigirling/processes.html) · [материалы](https://vremennobeznika.github.io/enjigirling/materials.html)\nПоиск по материалам\nОтрасль Все отрасли Металлы и машиностроение Полимеры Пищевая промышленность Текстиль и швейное производство Деревообработка Электроника Химическое производство Межотраслевые процессы Композиты Строительство и дороги Энергетика и теплообмен Водоподготовка и очистка Керамика, цемент и стекло Фармацевтическое производство Полиграфия Горное производство\nКласс материала\nВсе классы Металлы и сплавы Органические и полимерные Неорганические Композиты Функциональные смеси и вещества\nСортировка По названию А — Я По названию Я — А По каталогу\nОдна карточка может относиться к нескольким отраслям. Связи с процессами — навигационные, а не технологический допуск. Численные свойства без марки, состояния и источника не приводятся.\nЗдесь нет усреднённых значений прочности или плотности для целых классов материалов: такие цифры без конкретной марки и условий могут вводить в заблуждение.\n### Как проверить материал перед применением\nОдинаковое название группы ещё не означает одинаковых характеристик. До расчёта или выбора технологии зафиксируйте исходные условия.\n- Идентификация: точная марка, стандарт, состояние поставки и известная история обработки.\n- Условия работы: нагрузка, температура, среда, срок эксплуатации и необходимые свойства.\n- Доказательства: паспорт партии, протокол испытаний, актуальный документ и единицы измерения.\n- Технология: сопоставьте материал со связанными [производственными процессами](https://vremennobeznika.github.io/enjigirling/processes.html) и ограничениями производства.\nПример навигации: [сталь 20](https://vremennobeznika.github.io/enjigirling/materials.html#steel-20) → [обработка резанием](https://vremennobeznika.github.io/enjigirling/processes.html#cutting) → [инженер-металлург](https://vremennobeznika.github.io/enjigirling/index.html#profession=metallurgical-engineer). Связь в справочнике не подтверждает технологическую пригодность конкретной партии.\n[Скачать CSV-реестр проверки свойств материалов](https://vremennobeznika.github.io/enjigirling/templates/material-evidence-register.csv) · [Инструкция по заполнению](https://vremennobeznika.github.io/enjigirling/templates/README.md)\n",
   "recordsCount": 172,
   "records": [
     {
@@ -31,8 +31,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Iron and Steel Statistics and Information",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/iron-and-steel-statistics-and-information"
+          "title": "BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)",
+          "url": "https://nora.nerc.ac.uk/id/eprint/541620/"
         },
         {
           "title": "ГОСТ 1050–2013 — Металлопродукция из нелегированных конструкционных качественных и специальных сталей",
@@ -74,8 +74,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Iron and Steel Statistics and Information",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/iron-and-steel-statistics-and-information"
+          "title": "BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)",
+          "url": "https://nora.nerc.ac.uk/id/eprint/541620/"
         },
         {
           "title": "ГОСТ 1050–2013 — Металлопродукция из нелегированных конструкционных качественных и специальных сталей",
@@ -116,8 +116,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Iron and Steel Statistics and Information",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/iron-and-steel-statistics-and-information"
+          "title": "BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)",
+          "url": "https://nora.nerc.ac.uk/id/eprint/541620/"
         },
         {
           "title": "ГОСТ 19281–2014 — Прокат повышенной прочности (копия)",
@@ -393,8 +393,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Bauxite and Alumina Statistics and Information",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/bauxite-and-alumina-statistics-and-information?qt-science_support_page_related_con=0"
+          "title": "BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)",
+          "url": "https://nora.nerc.ac.uk/id/eprint/541620/"
         },
         {
           "title": "Morgan — High Performance Alumina Ceramic Components",
@@ -862,8 +862,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Iron and Steel Scrap Statistics and Information",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/iron-and-steel-scrap-statistics-and-information"
+          "title": "BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)",
+          "url": "https://nora.nerc.ac.uk/id/eprint/541620/"
         },
         {
           "title": "SGL — Commerzbank German Investment Seminar",
@@ -901,8 +901,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Iron Ore Statistics and Information",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/iron-ore-statistics-and-information"
+          "title": "BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)",
+          "url": "https://nora.nerc.ac.uk/id/eprint/541620/"
         },
         {
           "title": "Metso — Basics in Minerals Processing, Edition 12",
@@ -940,8 +940,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Bauxite and Alumina Statistics and Information",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/bauxite-and-alumina-statistics-and-information?qt-science_support_page_related_con=0"
+          "title": "BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)",
+          "url": "https://nora.nerc.ac.uk/id/eprint/541620/"
         },
         {
           "title": "Alumina Refining 101",
@@ -978,8 +978,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Cement Statistics and Information",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information"
+          "title": "BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)",
+          "url": "https://nora.nerc.ac.uk/id/eprint/541620/"
         },
         {
           "title": "EPA AP-42 11.6 — Portland Cement Manufacturing",
@@ -1015,8 +1015,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Cement Statistics and Information",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information"
+          "title": "BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)",
+          "url": "https://nora.nerc.ac.uk/id/eprint/541620/"
         },
         {
           "title": "EPA AP-42 11.6 — Portland Cement Manufacturing",
@@ -1053,8 +1053,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Gypsum Statistics and Information",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/gypsum-statistics-and-information"
+          "title": "BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)",
+          "url": "https://nora.nerc.ac.uk/id/eprint/541620/"
         },
         {
           "title": "EPA AP-42 11.6 — Portland Cement Manufacturing",
@@ -1093,8 +1093,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Silica Statistics and Information",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/silica-statistics-and-information"
+          "title": "BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)",
+          "url": "https://nora.nerc.ac.uk/id/eprint/541620/"
         },
         {
           "title": "Metso — Basics in Minerals Processing, Edition 12",
@@ -1422,8 +1422,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Silica Statistics and Information",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/silica-statistics-and-information"
+          "title": "BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)",
+          "url": "https://nora.nerc.ac.uk/id/eprint/541620/"
         },
         {
           "title": "EPA AP-42 11.15 — Glass Manufacturing",
@@ -1682,8 +1682,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Bauxite and Alumina Statistics and Information",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/bauxite-and-alumina-statistics-and-information?qt-science_support_page_related_con=0"
+          "title": "BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)",
+          "url": "https://nora.nerc.ac.uk/id/eprint/541620/"
         },
         {
           "title": "Bodycote — Technical glossary",
@@ -1721,8 +1721,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Silica Statistics and Information",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/silica-statistics-and-information"
+          "title": "BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)",
+          "url": "https://nora.nerc.ac.uk/id/eprint/541620/"
         },
         {
           "title": "Sibelco — High Purity Quartz",
@@ -1861,8 +1861,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
           "title": "The Aluminum Association — Standards / Aluminum Alloys",
@@ -1899,8 +1899,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
           "title": "The Aluminum Association — Standards / Aluminum Alloys",
@@ -1936,8 +1936,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
           "title": "TB Woods — Ductile Iron Defined",
@@ -1973,8 +1973,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
           "title": "TB Woods — Ductile Iron Defined",
@@ -2011,12 +2011,12 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
-          "title": "About Copper",
-          "url": "https://internationalcopper.org/sustainable-copper/about-copper/"
+          "title": "Wikipedia — List of copper alloys (справочный обзор)",
+          "url": "https://en.wikipedia.org/wiki/List_of_copper_alloys"
         }
       ],
       "evidence": {
@@ -2049,12 +2049,12 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
-          "title": "About Copper",
-          "url": "https://internationalcopper.org/sustainable-copper/about-copper/"
+          "title": "Wikipedia — List of copper alloys (справочный обзор)",
+          "url": "https://en.wikipedia.org/wiki/List_of_copper_alloys"
         }
       ],
       "evidence": {
@@ -2087,8 +2087,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
           "title": "TIMET — Industrial Titanium",
@@ -2126,12 +2126,12 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
-          "title": "USGS — Nickel Statistics and Information",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/nickel-statistics-and-information"
+          "title": "BGS — Nickel: mineral profile",
+          "url": "https://nora.nerc.ac.uk/id/eprint/8725/1/0910_Nickel_Profile.pdf"
         }
       ],
       "evidence": {
@@ -2163,8 +2163,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
           "title": "International Zinc Association — Zinc Alloys in Die Casting",
@@ -2200,8 +2200,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
           "title": "Luxfer MEL — Magnesium alloys research and development",
@@ -4158,8 +4158,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
           "title": "National Lime Association — Frequently Asked Questions",
@@ -4196,8 +4196,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
           "title": "EPA AP-42 11.15 — Glass Manufacturing",
@@ -4233,12 +4233,12 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
-          "title": "USGS — Sulfur Statistics and Information",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/sulfur-statistics-and-information"
+          "title": "Wikipedia — Sulfur (справочный обзор)",
+          "url": "https://en.wikipedia.org/wiki/Sulfur"
         }
       ],
       "evidence": {
@@ -4270,12 +4270,12 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
-          "title": "USGS — Phosphate Rock Statistics and Information",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/phosphate-rock-statistics-and-information"
+          "title": "Wikipedia — Phosphorite (справочный обзор)",
+          "url": "https://en.wikipedia.org/wiki/Phosphate_rock"
         }
       ],
       "evidence": {
@@ -4307,12 +4307,12 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
-          "title": "Potash Statistics and Information",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/potash-statistics-and-information"
+          "title": "Wikipedia — Potash (справочный обзор)",
+          "url": "https://en.wikipedia.org/wiki/Potash"
         }
       ],
       "evidence": {
@@ -4344,8 +4344,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
           "title": "Arkema — Molecular Sieves for Energy & Chemicals",
@@ -4382,8 +4382,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
           "title": "Clariant — Civil Engineering bentonite additives",
@@ -4419,12 +4419,12 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
-          "title": "USGS — Salt Statistics and Information",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/salt-statistics-and-information"
+          "title": "Wikipedia — Sodium chloride (справочный обзор)",
+          "url": "https://en.wikipedia.org/wiki/Sodium_chloride"
         }
       ],
       "evidence": {
@@ -4681,8 +4681,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
           "title": "FHWA — Portland Cement Concrete Pavement, FHWA-RD-97-148",
@@ -4719,8 +4719,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
           "title": "FHWA — Portland Cement Concrete Pavement, FHWA-RD-97-148",
@@ -4756,8 +4756,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
           "title": "FHWA — Portland Cement Concrete Pavement, FHWA-RD-97-148",
@@ -4793,8 +4793,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
           "title": "FHWA — Asphalt Concrete Pavement, FHWA-RD-97-148",
@@ -4830,8 +4830,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
           "title": "FHWA — Asphalt Concrete Pavement, FHWA-RD-97-148",
@@ -4867,8 +4867,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
           "title": "CRSI — Reinforcing Steel",
@@ -4904,8 +4904,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
           "title": "ACI — Definition of concrete, hydraulic cement, mortar, and grout",
@@ -4980,8 +4980,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
           "title": "thyssenkrupp — Electrical steel portfolio",
@@ -5017,8 +5017,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
           "title": "SGL — Commerzbank German Investment Seminar",
@@ -5054,8 +5054,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
           "title": "Prysmian — Low Voltage Power Cable",
@@ -5091,8 +5091,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
           "title": "ROCKWOOL — RockTech Section Pipe Insulation",
@@ -5341,8 +5341,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
           "title": "Morgan — High Performance Alumina Ceramic Components",
@@ -5378,8 +5378,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
           "title": "RATH — Tailor-made Solutions for the Glass Industry",
@@ -5415,8 +5415,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
           "title": "RATH — Tailor-made Solutions for the Glass Industry",
@@ -5452,8 +5452,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
           "title": "EPA AP-42 11.7 — Ceramic Products Manufacturing",
@@ -5488,8 +5488,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
           "title": "EPA AP-42 11.15 — Glass Manufacturing",
@@ -5525,8 +5525,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
           "title": "EPA AP-42 11.7 — Ceramic Products Manufacturing",
@@ -5563,8 +5563,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
           "title": "National Lime Association — Frequently Asked Questions",
@@ -6007,8 +6007,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
           "title": "Technical Resource Document: Extraction and Beneficiation of Ores and Minerals, Vol.4 Copper",
@@ -6045,12 +6045,12 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
-          "title": "USGS — Nickel Statistics and Information",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/nickel-statistics-and-information"
+          "title": "BGS — Nickel: mineral profile",
+          "url": "https://nora.nerc.ac.uk/id/eprint/8725/1/0910_Nickel_Profile.pdf"
         }
       ],
       "evidence": {
@@ -6082,12 +6082,12 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
-          "title": "USGS — Manganese Statistics and Information",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/manganese-statistics-and-information"
+          "title": "Wikipedia — Manganese (справочный обзор)",
+          "url": "https://en.wikipedia.org/wiki/Manganese"
         }
       ],
       "evidence": {
@@ -6119,8 +6119,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
           "title": "PLS — P-PLS Chemical Facility",
@@ -6156,8 +6156,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
           "title": "Syrah Resources — Balama Graphite Operation",
@@ -6193,8 +6193,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
           "title": "MP Materials — Mountain Pass Mine and Processing Facility",
@@ -6230,8 +6230,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
           "title": "Eurofluor — HF production",
@@ -6267,8 +6267,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
           "title": "Talc and Pyrophyllite — Minerals Yearbook 2002",
@@ -6304,12 +6304,12 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
-          "title": "USGS — Perlite Statistics and Information",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/perlite-statistics-and-information"
+          "title": "Perlite Institute — Why Perlite Works",
+          "url": "https://www.perlite.org/wp-content/uploads/2018/03/why-perlite-works.pdf"
         }
       ],
       "evidence": {
@@ -6341,12 +6341,12 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
-          "title": "Filtration with Diatomaceous Earth",
-          "url": "https://www.usgs.gov/media/images/filtration-diatomaceous-earth"
+          "title": "Geology.com — Diatomite (справочный обзор)",
+          "url": "https://geology.com/rocks/diatomite.shtml"
         }
       ],
       "evidence": {
@@ -6378,8 +6378,8 @@
       ],
       "sources": [
         {
-          "title": "USGS — Commodity Statistics and Information (2026)",
-          "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"
+          "title": "BGS — World mineral statistics (обзор статистики сырья)",
+          "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"
         },
         {
           "title": "Nyrstar — How is zinc produced?",

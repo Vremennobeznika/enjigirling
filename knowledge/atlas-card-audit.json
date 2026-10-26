@@ -7,8 +7,8 @@
     "materials": 172,
     "total": 382,
     "P0": 0,
-    "P1": 180,
-    "P2": 202,
+    "P1": 133,
+    "P2": 249,
     "claimCheckedEntries": 380
   },
   "methodology": [
@@ -27,7 +27,7 @@
     "Все карточки требуют индивидуальной предметной проверки содержимого документов"
   ],
   "issueCounts": {
-    "S07": 177,
+    "S07": 130,
     "E02": 380,
     "L02": 74,
     "T02": 179,
@@ -5138,7 +5138,7 @@
       "primaryAuthorityLinks": 1,
       "sourceUrls": [
         "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093",
-        "https://www.russellfinex.com/en/separation-equipment/sieving-machines/"
+        "https://www.sweco.com/swecoapps/sweco-separators-pharmaceutical.php"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
@@ -6754,7 +6754,7 @@
       "primaryAuthorityLinks": 1,
       "sourceUrls": [
         "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093",
-        "https://www.hosokawa-alpine.com/powder-particle-processing/technologies/grinding-and-classifying/jet-mills/"
+        "https://sturtevantinc.com/wp-content/uploads/2023/09/S_Micronizer_Sanitary_Product_Bulletin.pdf"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
@@ -7011,9 +7011,9 @@
       "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/iron-and-steel-statistics-and-information",
+        "https://nora.nerc.ac.uk/id/eprint/541620/",
         "https://mmk-metiz.ru/buyers/product/gost/gost1050-2013.pdf"
       ],
       "additionalRegistryUrls": [],
@@ -7039,9 +7039,9 @@
       "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/iron-and-steel-statistics-and-information",
+        "https://nora.nerc.ac.uk/id/eprint/541620/",
         "https://mmk-metiz.ru/buyers/product/gost/gost1050-2013.pdf"
       ],
       "additionalRegistryUrls": [],
@@ -7072,9 +7072,9 @@
       "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/iron-and-steel-statistics-and-information",
+        "https://nora.nerc.ac.uk/id/eprint/541620/",
         "https://files.stroyinf.ru/Data/581/58183.pdf"
       ],
       "additionalRegistryUrls": [],
@@ -7297,9 +7297,9 @@
       "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/bauxite-and-alumina-statistics-and-information?qt-science_support_page_related_con=0",
+        "https://nora.nerc.ac.uk/id/eprint/541620/",
         "https://www.morgantechnicalceramics.com/en-gb/products/alumina-ceramic-components/"
       ],
       "additionalRegistryUrls": [],
@@ -7699,9 +7699,9 @@
       "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/iron-and-steel-scrap-statistics-and-information",
+        "https://nora.nerc.ac.uk/id/eprint/541620/",
         "https://www.sglcarbon.com/pdf/SGL-Presentation-Commerzbank-German-Investment-Seminar-January-2014-EN.pdf"
       ],
       "additionalRegistryUrls": [],
@@ -7732,9 +7732,9 @@
       "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/iron-ore-statistics-and-information",
+        "https://nora.nerc.ac.uk/id/eprint/541620/",
         "https://www.metso.com/globalassets/insights/ebooks/mo-basics-in-mineral-processing-handbook_lowres.pdf"
       ],
       "additionalRegistryUrls": [],
@@ -7766,9 +7766,9 @@
       "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/bauxite-and-alumina-statistics-and-information?qt-science_support_page_related_con=0",
+        "https://nora.nerc.ac.uk/id/eprint/541620/",
         "https://www.aluminum.org/alumina-refining-101"
       ],
       "additionalRegistryUrls": [],
@@ -7799,9 +7799,9 @@
       "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 2,
+      "primaryAuthorityLinks": 1,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information",
+        "https://nora.nerc.ac.uk/id/eprint/541620/",
         "https://www.epa.gov/system/files/documents/2025-02/c11s06_final_2-2025_0.pdf"
       ],
       "additionalRegistryUrls": [],
@@ -7832,9 +7832,9 @@
       "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 2,
+      "primaryAuthorityLinks": 1,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information",
+        "https://nora.nerc.ac.uk/id/eprint/541620/",
         "https://www.epa.gov/system/files/documents/2025-02/c11s06_final_2-2025_0.pdf"
       ],
       "additionalRegistryUrls": [],
@@ -7866,9 +7866,9 @@
       "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 2,
+      "primaryAuthorityLinks": 1,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/gypsum-statistics-and-information",
+        "https://nora.nerc.ac.uk/id/eprint/541620/",
         "https://www.epa.gov/system/files/documents/2025-02/c11s06_final_2-2025_0.pdf"
       ],
       "additionalRegistryUrls": [],
@@ -7901,9 +7901,9 @@
       "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/silica-statistics-and-information",
+        "https://nora.nerc.ac.uk/id/eprint/541620/",
         "https://www.metso.com/globalassets/insights/ebooks/mo-basics-in-mineral-processing-handbook_lowres.pdf"
       ],
       "additionalRegistryUrls": [],
@@ -8203,9 +8203,9 @@
       "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 2,
+      "primaryAuthorityLinks": 1,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/silica-statistics-and-information",
+        "https://nora.nerc.ac.uk/id/eprint/541620/",
         "https://www.epa.gov/sites/default/files/2020-10/documents/c11s15.pdf"
       ],
       "additionalRegistryUrls": [],
@@ -8430,9 +8430,9 @@
       "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/bauxite-and-alumina-statistics-and-information?qt-science_support_page_related_con=0",
+        "https://nora.nerc.ac.uk/id/eprint/541620/",
         "https://www.bodycote.com/technical-glossary/"
       ],
       "additionalRegistryUrls": [],
@@ -8464,9 +8464,9 @@
       "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/silica-statistics-and-information",
+        "https://nora.nerc.ac.uk/id/eprint/541620/",
         "https://www.sibelco.com/en/materials/high-purity-quartz"
       ],
       "additionalRegistryUrls": [],
@@ -8585,22 +8585,17 @@
         "construction"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#al-series-5xxx",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
         "https://www.aluminum.org/standards"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -8618,22 +8613,17 @@
         "composites"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#al-series-7xxx",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
         "https://www.aluminum.org/standards"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -8650,22 +8640,17 @@
         "metals"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#cast-iron-gray",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
         "https://www.tbwoods.com/en/commercial-castings/ductile-iron"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -8682,22 +8667,17 @@
         "metals"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#cast-iron-ductile",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
         "https://www.tbwoods.com/en/commercial-castings/ductile-iron"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -8715,22 +8695,17 @@
         "electronics"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#brass-alloys",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
-        "https://internationalcopper.org/sustainable-copper/about-copper/"
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
+        "https://en.wikipedia.org/wiki/List_of_copper_alloys"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -8753,22 +8728,17 @@
         "energy"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#bronze-alloys",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
-        "https://internationalcopper.org/sustainable-copper/about-copper/"
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
+        "https://en.wikipedia.org/wiki/List_of_copper_alloys"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -8786,22 +8756,17 @@
         "chemicals"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#titanium-industrial",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
         "https://www.timet.com/markets/industrial/"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -8825,22 +8790,17 @@
         "chemicals"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#nickel-alloys",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 2,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
-        "https://www.usgs.gov/centers/national-minerals-information-center/nickel-statistics-and-information"
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
+        "https://nora.nerc.ac.uk/id/eprint/8725/1/0910_Nickel_Profile.pdf"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -8863,22 +8823,17 @@
         "electronics"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#zinc-diecast",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
         "https://diecasting.zinc.org/wp-content/uploads/sites/9/2026/02/Zinc-Alloys-in-Diecasting-Two-Pager-FINAL.pdf"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -8895,22 +8850,17 @@
         "metals"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#magnesium-alloys",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
         "https://www.luxfermeltechnologies.com/magnesium-research-development/"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -10627,22 +10577,17 @@
         "mining"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#lime-stone",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
         "https://www.lime.org/frequently-asked-questions/"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -10665,22 +10610,17 @@
         "ceramics"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#soda-ash",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 2,
+      "primaryAuthorityLinks": 1,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
         "https://www.epa.gov/sites/default/files/2020-10/documents/c11s15.pdf"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -10698,22 +10638,17 @@
         "mining"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#industrial-sulfur",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 2,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
-        "https://www.usgs.gov/centers/national-minerals-information-center/sulfur-statistics-and-information"
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
+        "https://en.wikipedia.org/wiki/Sulfur"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -10736,22 +10671,17 @@
         "mining"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#phosphate-rock",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 2,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
-        "https://www.usgs.gov/centers/national-minerals-information-center/phosphate-rock-statistics-and-information"
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
+        "https://en.wikipedia.org/wiki/Phosphate_rock"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -10774,22 +10704,17 @@
         "mining"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#potash-raw",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 2,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
-        "https://www.usgs.gov/centers/national-minerals-information-center/potash-statistics-and-information"
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
+        "https://en.wikipedia.org/wiki/Potash"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -10807,22 +10732,17 @@
         "chemicals"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#industrial-zeolite",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
         "https://www.arkema.com/global/en/products/product-families/molecular-sieves/molecular-sieves-for-energy-chemicals/"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -10846,22 +10766,17 @@
         "mining"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#bentonite-clay",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
         "https://www.clariant.com/en/Business-Units/Additives-and-Adsorbents/Civil-Engineering"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -10884,22 +10799,17 @@
         "water"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#industrial-salt",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 2,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
-        "https://www.usgs.gov/centers/national-minerals-information-center/salt-statistics-and-information"
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
+        "https://en.wikipedia.org/wiki/Sodium_chloride"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -11134,22 +11044,17 @@
         "mining"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#building-aggregate",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
         "https://www.fhwa.dot.gov/publications/research/infrastructure/pavements/97148/072.cfm"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -11172,22 +11077,17 @@
         "mining"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#crushed-stone",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
         "https://www.fhwa.dot.gov/publications/research/infrastructure/pavements/97148/072.cfm"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -11210,22 +11110,17 @@
         "mining"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#sand-building",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
         "https://www.fhwa.dot.gov/publications/research/infrastructure/pavements/97148/072.cfm"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -11248,22 +11143,17 @@
         "chemicals"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#asphalt-binder",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
         "https://www.fhwa.dot.gov/publications/research/infrastructure/pavements/97148/071.cfm"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -11285,22 +11175,17 @@
         "construction"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#asphalt-mix",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
         "https://www.fhwa.dot.gov/publications/research/infrastructure/pavements/97148/071.cfm"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -11323,22 +11208,17 @@
         "metals"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#rebar-steel",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
         "https://www.crsi.org/reinforcing-basics/reinforcing-steel/"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -11360,22 +11240,17 @@
         "construction"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#ready-mix-concrete",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
         "https://www.concrete.org/frequentlyaskedquestions.aspx?faqid=640"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -11432,22 +11307,17 @@
         "metals"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#electrical-steel",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
         "https://www.thyssenkrupp-steel.com/en/products/electrical-steel/electrical-steel-overview.html"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -11470,22 +11340,17 @@
         "metals"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#graphite-electrode",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
         "https://www.sglcarbon.com/pdf/SGL-Presentation-Commerzbank-German-Investment-Seminar-January-2014-EN.pdf"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -11503,22 +11368,17 @@
         "electronics"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#copper-electric-wire",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
         "https://asean.prysmian.com/sites/asean.prysmian.com/files/media/documents/241218%20-%20Prysmian%20LV%20Power%20Cable.pdf"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -11541,22 +11401,17 @@
         "construction"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#thermal-insulation-wool",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
         "https://www.rockwool.com/siteassets/rw-cn/document-downloads/datasheets/rockwool-rocktech-spi_en_ds_202007.pdf"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -11800,22 +11655,17 @@
         "electronics"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#alumina-ceramic",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
         "https://www.morgantechnicalceramics.com/en-gb/products/alumina-ceramic-components/"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -11838,22 +11688,17 @@
         "energy"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#silica-refractory",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
         "https://www.rath-group.com/fileadmin/content/Rath-Group/Downloads/Broschueren_Industrien/RATH_GLASS_202209_EN.pdf"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -11876,22 +11721,17 @@
         "mining"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#fireclay-raw",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
         "https://www.rath-group.com/fileadmin/content/Rath-Group/Downloads/Broschueren_Industrien/RATH_GLASS_202209_EN.pdf"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -11914,22 +11754,17 @@
         "printing"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#kaolin-industrial",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 2,
+      "primaryAuthorityLinks": 1,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
         "https://www.epa.gov/system/files/documents/2025-06/c11s07_2025_final.pdf"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -11946,22 +11781,17 @@
         "ceramics"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#glass-cullet",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 2,
+      "primaryAuthorityLinks": 1,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
         "https://www.epa.gov/sites/default/files/2020-10/documents/c11s15.pdf"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -11984,22 +11814,17 @@
         "chemicals"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#ceramic-glaze",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 2,
+      "primaryAuthorityLinks": 1,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
         "https://www.epa.gov/system/files/documents/2025-06/c11s07_2025_final.pdf"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -12023,22 +11848,17 @@
         "chemicals"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#lime-technical",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
         "https://www.lime.org/frequently-asked-questions/"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -12397,22 +12217,17 @@
         "metals"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#copper-ore",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 2,
+      "primaryAuthorityLinks": 1,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
         "https://archive.epa.gov/epawaste/nonhaz/industrial/special/web/pdf/copper1a.pdf"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -12430,22 +12245,17 @@
         "metals"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#nickel-ore",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 2,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
-        "https://www.usgs.gov/centers/national-minerals-information-center/nickel-statistics-and-information"
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
+        "https://nora.nerc.ac.uk/id/eprint/8725/1/0910_Nickel_Profile.pdf"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -12468,22 +12278,17 @@
         "metals"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#manganese-ore",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 2,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
-        "https://www.usgs.gov/centers/national-minerals-information-center/manganese-statistics-and-information"
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
+        "https://en.wikipedia.org/wiki/Manganese"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -12506,22 +12311,17 @@
         "chemicals"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#lithium-concentrate",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
         "https://www.pls.com/assets/p-pls-chemical-facility"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -12544,22 +12344,17 @@
         "energy"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#graphite-concentrate",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
         "https://www.syrahresources.com.au/our-business/balama-graphite-operation"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -12577,22 +12372,17 @@
         "electronics"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#rare-earth-concentrate",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
         "https://mpmaterials.com/mountain-pass"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -12615,22 +12405,17 @@
         "chemicals"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#fluorite-ore",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
         "https://www.eurofluor.org/hf-production/"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -12653,22 +12438,17 @@
         "polymers"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#talc-industrial",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
         "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/mineral-pubs/talc/talcmyb02.pdf"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -12686,22 +12466,17 @@
         "construction"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#perlite-raw",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 2,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
-        "https://www.usgs.gov/centers/national-minerals-information-center/perlite-statistics-and-information"
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
+        "https://www.perlite.org/wp-content/uploads/2018/03/why-perlite-works.pdf"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -12719,22 +12494,17 @@
         "water"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#diatomite-raw",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 2,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
-        "https://www.usgs.gov/media/images/filtration-diatomaceous-earth"
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
+        "https://geology.com/rocks/diatomite.shtml"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",
@@ -12752,22 +12522,17 @@
         "metals"
       ],
       "page": "https://vremennobeznika.github.io/enjigirling/materials.html#zinc-concentrate",
-      "priority": "P1",
+      "priority": "P2",
       "technicalVerification": "не завершена",
       "sourceCount": 2,
-      "primaryAuthorityLinks": 1,
+      "primaryAuthorityLinks": 0,
       "sourceUrls": [
-        "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+        "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
         "https://www.nyrstar.com/products/zinc-zinc-alloys/how-is-zinc-produced"
       ],
       "additionalRegistryUrls": [],
       "claimCheckedInRegistry": 1,
       "issues": [
-        {
-          "code": "S07",
-          "level": "P1",
-          "details": "Общие источники (R01); они не подтверждают параметры конкретного процесса/марки"
-        },
         {
           "code": "E02",
           "level": "P2",

@@ -5,8 +5,8 @@ const resources = [
     {id: "mag-avtomatizaciya-sovremennye-tehnologii",type: "Журналы",topic: "Автоматизация и электроника",name: "Автоматизация. Современные технологии",desc: "Научно-технический журнал об автоматизации и механизации производственных процессов, проектировании, информационных технологиях, системах управления и инновационном машиностроении.",link: "https://ast.izdatelstvo24.ru/"},
     {id: "mag-spravochnik-engineer",type: "Журналы",topic: "Машиностроение и САПР",name: "Справочник. Инженерный журнал",desc: "Инженерное издание о механике, динамике, технологии машиностроения, конструировании, расчётах, автоматизации инженерного труда, материалах и внедрении ИИ.",link: "https://www.handbook-j.ru/"},
     {id: "mag-avtomatizaciya-v-promyshlennosti",type: "Журналы",topic: "Автоматизация и электроника",name: "Автоматизация в промышленности",desc: "Ежемесячный научно-технический и производственный журнал для специалистов по промышленной автоматизации, АСУ ТП, КИПиА, инжинирингу и производственным системам.",link: "https://avtprom.ru/"},
-    {id: "mag-avtomatizaciya-modelirovanie",type: "Журналы",topic: "Автоматизация и электроника",name: "Автоматизация и моделирование в проектировании и управлении",desc: "Открытый научный журнал по автоматизации и управлению технологическими процессами и производствами, системам автоматизации проектирования и моделированию.",link: "https://journals.rcsi.science/2658-3488/index/index/ru_RU"},
-    {id: "mag-vestnik-stankin",type: "Журналы",topic: "Машиностроение и САПР",name: "Вестник МГТУ «Станкин»",desc: "Научный журнал по машиностроению, автоматизации, технологическим процессам и инженерным разработкам. Открытый доступ, входит в ВАК и РИНЦ.",link: "https://journals.rcsi.science/2072-3172/index/index/ru_RU"},
+    {"id": "mag-avtomatizaciya-modelirovanie", "type": "Журналы", "topic": "Автоматизация и электроника", "name": "Автоматизация и моделирование в проектировании и управлении", "desc": "Открытые статьи журнала «Автоматизация и моделирование в проектировании и управлении» в КиберЛенинке: управление технологическими процессами, автоматизация и моделирование.", "link": "https://cyberleninka.ru/journal/n/avtomatizatsiya-i-modelirovanie-v-proektirovanii-i-upravlenii"},
+    {"id": "mag-vestnik-stankin", "type": "Журналы", "topic": "Машиностроение и САПР", "name": "Вестник МГТУ «Станкин»", "desc": "Официальный сайт научного журнала «Вестник МГТУ «Станкин»»: машиностроение, автоматизация, технологические процессы и инженерные разработки.", "link": "https://vestnik.stankin.ru/"},
     {id: "mag-zagotovitelnoe-proizvodstvo",type: "Журналы",topic: "Машиностроение и САПР",name: "Заготовительные производства в машиностроении",desc: "Издание о литейном, сварочном, кузнечно-штамповочном и прокатном производстве, материалах, оснастке, САПР технологических процессов и автоматизации.",link: "https://www.mashin.ru/eshop/journals/zagotovitel_nye_proizvodstva_v_mashinostroenii/"},
     // ===== Журналы =====
     {id: "mag-science-life",type: "Журналы",topic: "Наука и образование",name: "Наука и жизнь",desc: "Классический научно-популярный журнал с материалами по физике, химии, биологии и технике. Один из старейших изданий для инженеров.",link: "https://nkj.ru"},
@@ -30,12 +30,12 @@ const resources = [
 
     // ===== Форумы =====
     {id: "forum-eng-tips",type: "Форумы",topic: "Общая инженерия",name: "Eng-Tips",desc: "Большой международный инженерный форум: механика, машиностроение, электротехника, строительство, производство, CAD и смежные области.",link: "https://www.eng-tips.com/"},
-    {id: "forum-dwg-ru",type: "Форумы",topic: "САПР и конструирование",name: "DWG.ru",desc: "Русскоязычное инженерное сообщество с форумами по AutoCAD, САПР, строительству, проектированию, машиностроению и технической документации.",link: "https://forum.dwg.ru/"},
+
     {id: "forum-autodesk",type: "Форумы",topic: "САПР и конструирование",name: "Autodesk Community",desc: "Официальное сообщество Autodesk с форумами по AutoCAD, Inventor, Fusion, Revit, Civil 3D, Mechanical, CFD, CAM и другим инженерным продуктам.",link: "https://forums.autodesk.com/"},
     {id: "forum-grabcad",type: "Форумы",topic: "САПР и конструирование",name: "GrabCAD Community",desc: "Вопросы по CAD, модели и группы инженеров; прямой доступ иногда ограничен антибот-защитой.",link: "https://grabcad.com/community"},
-    {id: "forum-solidworks",type: "Форумы",topic: "САПР и конструирование",name: "SOLIDWORKS Community",desc: "Сообщество пользователей SOLIDWORKS и инженерного ПО: моделирование, чертежи, сборки, Simulation, PDM и автоматизация.",link: "https://forum.solidworks.com/"},
-    {id: "forum-cadcam",type: "Форумы",topic: "ЧПУ и металлообработка",name: "CNC-Club — ЧПУ и CAD/CAM",desc: "Русскоязычный форум о ЧПУ, станках, CAD/CAM-системах, постпроцессорах, G-коде и технологиях обработки.",link: "https://cnc-club.ru/forum/"},
-    {id: "forum-reddit-engineering",type: "Форумы",topic: "Общая инженерия",name: "Reddit — Engineering",desc: "Международное сообщество для обсуждения инженерных задач, профессий, проектов, образования и практического опыта.",link: "https://www.reddit.com/r/engineering/"},
+    {"id": "forum-solidworks", "type": "Форумы", "topic": "САПР и конструирование", "name": "SOLIDWORKS Community", "desc": "Официальная страница сообществ пользователей SOLIDWORKS: обсуждения, пользовательские группы, обучение и переходы в сообщества производителя.", "link": "https://www.solidworks.com/community"},
+
+
 
     {
         id: "dev-grabcad",
@@ -99,13 +99,7 @@ const resources = [
         desc: "Российская научная электронная библиотека и информационно-аналитическая система по научным публикациям и цитированию.",
         link: "https://elibrary.ru/"
     },
-    {
-        id: "platform-zhurnalivak",
-        type: "Научные базы и справочники",
-        name: "Открытый каталог журналов ВАК",
-        desc: "Каталог научных журналов по техническим наукам с поиском по направлениям, включая машиностроение, строительство, ИТ и энергетику.",
-        link: "https://www.zhurnalivak.ru/"
-    },
+
 
     // ===== Чаты в Telegram =====
     {
@@ -137,13 +131,6 @@ const resources = [
         link: "https://t.me/russianphoneclub"
     },
     {
-        id: "tg-solidsovet",
-        type: "Чаты в Telegram",
-        name: "SolidSovet",
-        desc: "Сообщество пользователей САПР SolidWorks: обсуждение моделирования, чертежей и проектирования.",
-        link: "https://t.me/solidsovet"
-    },
-    {
         id: "tg-decadentia-chat",
         type: "Чаты в Telegram",
         name: "DeCADentia Chat",
@@ -168,7 +155,7 @@ const resources = [
         id: "tg-cadmeetup",
         type: "Чаты в Telegram",
         name: "CAD Meetup",
-        desc: "Telegram-чат о САПР и инженерном проектировании: встречи, обсуждения и обмен опытом.",
+        desc: "Инженерное сообщество CAD Meetup: Telegram-чат о САПР и проектировании, встречи, обсуждения и обмен опытом.",
         link: "https://t.me/cadmeetup"
     },
     {
@@ -303,10 +290,10 @@ const resources = [
     {"id": "forum-promelec","type": "Форумы","topic": "Электроника и микроконтроллеры","name": "Промэлектроника — форум","desc": "Электронные компоненты, микроконтроллеры, программирование, отладка и консультации по оборудованию.","link": "https://forum.promelec.ru/"},
     {"id": "forum-rlocman","type": "Форумы","topic": "Электроника и микроконтроллеры","name": "РадиоЛоцман — форум","desc": "Разработка, диагностика и ремонт электроники, схемотехника, компоненты и измерения.","link": "https://www.rlocman.ru/forum/"},
     {"id": "forum-eham","type": "Форумы","topic": "Электроника и микроконтроллеры","name": "eHam — технический форум","desc": "Вопросы разработчиков по микроконтроллерам, источникам питания, радиотехнике и электронным компонентам.","link": "https://www.eham.ru/forum"},
-    {"id": "forum-allaboutcircuits","type": "Форумы","topic": "Электроника и микроконтроллеры","name": "All About Circuits Forum","desc": "Англоязычное сообщество электронщиков: аналоговые схемы, PCB, микроконтроллеры и измерения; автоматический доступ ограничен.","link": "https://forum.allaboutcircuits.com/"},
+
     {"id": "forum-tehnari-electronics","type": "Форумы","topic": "Электроника и микроконтроллеры","name": "Технари — электроника","desc": "Русскоязычные обсуждения самодельной электроники, схем, источников питания и микроконтроллеров.","link": "https://tehnari.ru/forums/forum-po-elektronike.39/"},
     {"id": "forum-chipmaker","type": "Форумы","topic": "ЧПУ и металлообработка","name": "Chipmaker — металлообработка","desc": "Профессиональные обсуждения токарных и фрезерных станков, сварки, термообработки и ЧПУ; прямая автоматическая проверка сайта ограничена.","link": "https://chipmaker.ru/"},
-    {"id": "forum-cnc-userforum","type": "Форумы","topic": "ЧПУ и металлообработка","name": "Форум клана ЧПУшников","desc": "Станки и комплектующие ЧПУ, инструмент, шпиндели, ArtCAM, ремонт и наладка.","link": "https://cnc.userforum.ru/"},
+
     {"id": "forum-lightburn","type": "Форумы","topic": "ЧПУ и металлообработка","name": "LightBurn Software Forum","desc": "Лазерная резка и гравировка: программа LightBurn, совместимость станков, контроллеры и настройка.","link": "https://forum.lightburnsoftware.com/"},
     {"id": "forum-meztool","type": "Форумы","topic": "ЧПУ и металлообработка","name": "Meztool — металлообработка","desc": "Фрезерование, точение, режущий инструмент, режимы обработки, CAM и технологии производства.","link": "https://meztool.ru/forums/"},
     {"id": "forum-alfa-industry","type": "Форумы","topic": "ЧПУ и металлообработка","name": "Альфа-Индастри — сварка и металлообработка","desc": "TIG, MIG/MAG, MMA, плазменная резка, материалы, оборудование и технологические вопросы.","link": "https://www.alfa-industry.ru/forum/"},
@@ -348,7 +335,7 @@ const resources = [
         "desc": "Облачное инженерное моделирование, включая CFD и расчёты конструкций; доступ зависит от тарифов.",
         "link": "https://www.simscale.com/"
     },
-    {"id": "ref-siemens-sieportal","type": "Форумы","topic": "АСУ ТП","name": "Siemens SiePortal — поддержка","desc": "Официальная поддержка промышленной продукции Siemens: техническая документация, материалы и обращения по оборудованию; для работы портала требуется JavaScript.","link": "https://sieportal.siemens.com/en-ww/support"},
+
     {
         "id": "ref-engineering-toolbox",
         "type": "Научные базы и справочники",
@@ -842,13 +829,7 @@ const resources = [
         "desc": "Публичная база химических соединений, структуры и физико-химических свойств; требует JavaScript.",
         "link": "https://pubchem.ncbi.nlm.nih.gov/"
     },
-    {
-        "id": "ref-allaboutcircuits",
-        "type": "Научные базы и справочники",
-        "name": "All About Circuits — учебник",
-        "desc": "Открытый учебник по цепям постоянного и переменного тока, схемотехнике и электронике.",
-        "link": "https://www.allaboutcircuits.com/textbook/product/ac-circuits/"
-    },
+    {"id": "ref-allaboutcircuits", "type": "Научные базы и справочники", "name": "OpenStax — цепи переменного тока", "desc": "Глава 15 открытого учебника University Physics, Volume 2: цепи переменного тока, реактивные элементы, импеданс и резонанс. Английский язык, свободное чтение.", "link": "https://openstax.org/books/university-physics-volume-2/pages/15-introduction"},
     {
         "id": "std-bipm-si",
         "type": "Стандарты и метрология",
@@ -905,13 +886,7 @@ const resources = [
         "desc": "Бесплатные официальные уроки по схемам, микроконтроллерам, интерфейсам и программированию.",
         "link": "https://docs.arduino.cc/learn"
     },
-    {
-        "id": "learn-allaboutcircuits",
-        "type": "Обучение и курсы",
-        "name": "All About Circuits — DC Circuits",
-        "desc": "Бесплатный последовательный учебник по электрическим цепям постоянного тока.",
-        "link": "https://www.allaboutcircuits.com/TEXTBOOK/product/dc-circuits/"
-    },
+    {"id": "learn-allaboutcircuits", "type": "Обучение и курсы", "name": "OpenStax — цепи постоянного тока", "desc": "Глава 10 открытого учебника University Physics, Volume 2: цепи постоянного тока, электродвижущая сила, законы Кирхгофа и RC-цепи. Английский язык, свободное чтение.", "link": "https://openstax.org/books/university-physics-volume-2/pages/10-introduction"},
     {
         "id": "measurement-kelibron",
         "type": "Онлайн-измерения",

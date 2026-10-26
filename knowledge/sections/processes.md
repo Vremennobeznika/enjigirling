@@ -2231,7 +2231,7 @@
 - **checks:** Гранулометрия, загрязнения, выход
 - **materials:** []
 - **profession:** chemical-engineer
-- **sources:** [{"title":"FDA — контроль твёрдых лекарственных форм — обзор; не технологическая инструкция","url":"https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"},{"title":"Russell Finex — Grading sieves","url":"https://www.russellfinex.com/en/separation-equipment/sieving-machines/"}]
+- **sources:** [{"title":"FDA — контроль твёрдых лекарственных форм — обзор; не технологическая инструкция","url":"https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"},{"title":"SWECO — Pharmaceutical Industry Separators","url":"https://www.sweco.com/swecoapps/sweco-separators-pharmaceutical.php"}]
 - **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Просеивание порошка разделяет частицы по размеру с помощью сетки; описано применение таких машин в фармацевтическом производстве. Критерии выпуска партии не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 
@@ -2924,7 +2924,7 @@
 - **checks:** Размер частиц, нагрев, загрязнение
 - **materials:** []
 - **profession:** chemical-engineer
-- **sources:** [{"title":"FDA — инспекционное руководство по производству твёрдых лекарственных форм — обзор без технологических режимов","url":"https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"},{"title":"Hosokawa Alpine — Jet Mills","url":"https://www.hosokawa-alpine.com/powder-particle-processing/technologies/grinding-and-classifying/jet-mills/"}]
+- **sources:** [{"title":"FDA — инспекционное руководство по производству твёрдых лекарственных форм — обзор без технологических режимов","url":"https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"},{"title":"Sturtevant — Sanitary Micronizer: fluid energy jet mill","url":"https://sturtevantinc.com/wp-content/uploads/2023/09/S_Micronizer_Sanitary_Product_Bulletin.pdf"}]
 - **evidence:** {"verificationStatus":"source_located","verifiedClaim":"Струйная микронизация фармацевтических веществ уменьшает частицы за счёт столкновений в газовом потоке. Отсутствие механических мелющих органов не исключает механического разрушения частиц.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 - **reviewStatus:** source_located
 

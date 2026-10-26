@@ -1,0 +1,253 @@
+{
+  "archived": [
+    {
+      "record": {
+        "id": "ref-siemens-sieportal",
+        "type": "Форумы",
+        "topic": "АСУ ТП",
+        "name": "Siemens SiePortal — поддержка",
+        "desc": "Официальная поддержка промышленной продукции Siemens: техническая документация, материалы и обращения по оборудованию; для работы портала требуется JavaScript.",
+        "link": "https://sieportal.siemens.com/en-ww/support"
+      },
+      "reason": "Повторные запросы и проверка канонических адресов не подтвердили доступ к содержимому; запись исключена из активных рекомендаций, сохранена для повторной проверки.",
+      "lastProbe": {
+        "url": "https://sieportal.siemens.com/en-ww/support",
+        "result": "failed",
+        "attempts": [
+          {
+            "error": "HTTP Error 403: Forbidden"
+          },
+          {
+            "error": "HTTP Error 403: Forbidden"
+          }
+        ]
+      }
+    },
+    {
+      "record": {
+        "id": "forum-cnc-userforum",
+        "type": "Форумы",
+        "topic": "ЧПУ и металлообработка",
+        "name": "Форум клана ЧПУшников",
+        "desc": "Станки и комплектующие ЧПУ, инструмент, шпиндели, ArtCAM, ремонт и наладка.",
+        "link": "https://cnc.userforum.ru/"
+      },
+      "reason": "Повторные запросы и проверка канонических адресов не подтвердили доступ к содержимому; запись исключена из активных рекомендаций, сохранена для повторной проверки.",
+      "lastProbe": {
+        "url": "https://cnc.userforum.ru/",
+        "result": "failed",
+        "attempts": [
+          {
+            "error": "HTTP Error 404: Not Found"
+          },
+          {
+            "error": "HTTP Error 404: Not Found"
+          }
+        ]
+      }
+    },
+    {
+      "record": {
+        "id": "forum-allaboutcircuits",
+        "type": "Форумы",
+        "topic": "Электроника и микроконтроллеры",
+        "name": "All About Circuits Forum",
+        "desc": "Англоязычное сообщество электронщиков: аналоговые схемы, PCB, микроконтроллеры и измерения; автоматический доступ ограничен.",
+        "link": "https://forum.allaboutcircuits.com/"
+      },
+      "reason": "Повторные запросы и проверка канонических адресов не подтвердили доступ к содержимому; запись исключена из активных рекомендаций, сохранена для повторной проверки.",
+      "lastProbe": {
+        "url": "https://forum.allaboutcircuits.com/",
+        "result": "failed",
+        "attempts": [
+          {
+            "error": "HTTP Error 403: Forbidden"
+          },
+          {
+            "error": "HTTP Error 403: Forbidden"
+          }
+        ]
+      }
+    },
+    {
+      "record": {
+        "id": "platform-zhurnalivak",
+        "type": "Научные базы и справочники",
+        "name": "Открытый каталог журналов ВАК",
+        "desc": "Каталог научных журналов по техническим наукам с поиском по направлениям, включая машиностроение, строительство, ИТ и энергетику.",
+        "link": "https://www.zhurnalivak.ru/"
+      },
+      "reason": "Повторные запросы и проверка канонических адресов не подтвердили доступ к содержимому; запись исключена из активных рекомендаций, сохранена для повторной проверки.",
+      "lastProbe": {
+        "url": "https://www.zhurnalivak.ru/",
+        "result": "failed",
+        "attempts": [
+          {
+            "error": "HTTP Error 503: Service Unavailable"
+          },
+          {
+            "error": "HTTP Error 503: Service Unavailable"
+          }
+        ]
+      }
+    },
+    {
+      "record": {
+        "id": "forum-reddit-engineering",
+        "type": "Форумы",
+        "topic": "Общая инженерия",
+        "name": "Reddit — Engineering",
+        "desc": "Международное сообщество для обсуждения инженерных задач, профессий, проектов, образования и практического опыта.",
+        "link": "https://www.reddit.com/r/engineering/"
+      },
+      "reason": "Повторные запросы и проверка канонических адресов не подтвердили доступ к содержимому; запись исключена из активных рекомендаций, сохранена для повторной проверки.",
+      "lastProbe": {
+        "url": "https://www.reddit.com/r/engineering/",
+        "result": "failed",
+        "attempts": [
+          {
+            "error": "HTTP Error 403: Forbidden"
+          },
+          {
+            "error": "HTTP Error 403: Forbidden"
+          }
+        ]
+      }
+    },
+    {
+      "record": {
+        "id": "forum-cadcam",
+        "type": "Форумы",
+        "topic": "ЧПУ и металлообработка",
+        "name": "CNC-Club — ЧПУ и CAD/CAM",
+        "desc": "Русскоязычный форум о ЧПУ, станках, CAD/CAM-системах, постпроцессорах, G-коде и технологиях обработки.",
+        "link": "https://cnc-club.ru/forum/"
+      },
+      "reason": "Повторные запросы и проверка канонических адресов не подтвердили доступ к содержимому; запись исключена из активных рекомендаций, сохранена для повторной проверки.",
+      "lastProbe": {
+        "url": "https://cnc-club.ru/forum/",
+        "result": "failed",
+        "attempts": [
+          {
+            "error": "HTTP Error 502: Bad Gateway"
+          },
+          {
+            "error": "The read operation timed out"
+          }
+        ]
+      }
+    },
+    {
+      "record": {
+        "id": "forum-dwg-ru",
+        "type": "Форумы",
+        "topic": "САПР и конструирование",
+        "name": "DWG.ru",
+        "desc": "Русскоязычное инженерное сообщество с форумами по AutoCAD, САПР, строительству, проектированию, машиностроению и технической документации.",
+        "link": "https://forum.dwg.ru/"
+      },
+      "reason": "Повторные запросы и проверка канонических адресов не подтвердили доступ к содержимому; запись исключена из активных рекомендаций, сохранена для повторной проверки.",
+      "lastProbe": {
+        "url": "https://forum.dwg.ru/",
+        "result": "failed",
+        "attempts": [
+          {
+            "error": "HTTP Error 503: Service Unavailable"
+          },
+          {
+            "error": "HTTP Error 503: Service Unavailable"
+          }
+        ]
+      }
+    }
+  ],
+  "relinked": [
+    {
+      "previous": {
+        "id": "learn-allaboutcircuits",
+        "type": "Обучение и курсы",
+        "name": "All About Circuits — DC Circuits",
+        "desc": "Бесплатный последовательный учебник по электрическим цепям постоянного тока.",
+        "link": "https://www.allaboutcircuits.com/TEXTBOOK/product/dc-circuits/"
+      },
+      "current": {
+        "id": "learn-allaboutcircuits",
+        "type": "Обучение и курсы",
+        "name": "OpenStax — цепи постоянного тока",
+        "desc": "Глава 10 открытого учебника University Physics, Volume 2: цепи постоянного тока, электродвижущая сила, законы Кирхгофа и RC-цепи. Английский язык, свободное чтение.",
+        "link": "https://openstax.org/books/university-physics-volume-2/pages/10-introduction"
+      }
+    },
+    {
+      "previous": {
+        "id": "ref-allaboutcircuits",
+        "type": "Научные базы и справочники",
+        "name": "All About Circuits — учебник",
+        "desc": "Открытый учебник по цепям постоянного и переменного тока, схемотехнике и электронике.",
+        "link": "https://www.allaboutcircuits.com/textbook/product/ac-circuits/"
+      },
+      "current": {
+        "id": "ref-allaboutcircuits",
+        "type": "Научные базы и справочники",
+        "name": "OpenStax — цепи переменного тока",
+        "desc": "Глава 15 открытого учебника University Physics, Volume 2: цепи переменного тока, реактивные элементы, импеданс и резонанс. Английский язык, свободное чтение.",
+        "link": "https://openstax.org/books/university-physics-volume-2/pages/15-introduction"
+      }
+    },
+    {
+      "previous": {
+        "id": "forum-solidworks",
+        "type": "Форумы",
+        "topic": "САПР и конструирование",
+        "name": "SOLIDWORKS Community",
+        "desc": "Сообщество пользователей SOLIDWORKS и инженерного ПО: моделирование, чертежи, сборки, Simulation, PDM и автоматизация.",
+        "link": "https://forum.solidworks.com/"
+      },
+      "current": {
+        "id": "forum-solidworks",
+        "type": "Форумы",
+        "topic": "САПР и конструирование",
+        "name": "SOLIDWORKS Community",
+        "desc": "Официальная страница сообществ пользователей SOLIDWORKS: обсуждения, пользовательские группы, обучение и переходы в сообщества производителя.",
+        "link": "https://www.solidworks.com/community"
+      }
+    },
+    {
+      "previous": {
+        "id": "mag-vestnik-stankin",
+        "type": "Журналы",
+        "topic": "Машиностроение и САПР",
+        "name": "Вестник МГТУ «Станкин»",
+        "desc": "Научный журнал по машиностроению, автоматизации, технологическим процессам и инженерным разработкам. Открытый доступ, входит в ВАК и РИНЦ.",
+        "link": "https://journals.rcsi.science/2072-3172/index/index/ru_RU"
+      },
+      "current": {
+        "id": "mag-vestnik-stankin",
+        "type": "Журналы",
+        "topic": "Машиностроение и САПР",
+        "name": "Вестник МГТУ «Станкин»",
+        "desc": "Официальный сайт научного журнала «Вестник МГТУ «Станкин»»: машиностроение, автоматизация, технологические процессы и инженерные разработки.",
+        "link": "https://vestnik.stankin.ru/"
+      }
+    },
+    {
+      "previous": {
+        "id": "mag-avtomatizaciya-modelirovanie",
+        "type": "Журналы",
+        "topic": "Автоматизация и электроника",
+        "name": "Автоматизация и моделирование в проектировании и управлении",
+        "desc": "Открытый научный журнал по автоматизации и управлению технологическими процессами и производствами, системам автоматизации проектирования и моделированию.",
+        "link": "https://journals.rcsi.science/2658-3488/index/index/ru_RU"
+      },
+      "current": {
+        "id": "mag-avtomatizaciya-modelirovanie",
+        "type": "Журналы",
+        "topic": "Автоматизация и электроника",
+        "name": "Автоматизация и моделирование в проектировании и управлении",
+        "desc": "Открытые статьи журнала «Автоматизация и моделирование в проектировании и управлении» в КиберЛенинке: управление технологическими процессами, автоматизация и моделирование.",
+        "link": "https://cyberleninka.ru/journal/n/avtomatizatsiya-i-modelirovanie-v-proektirovanii-i-upravlenii"
+      }
+    }
+  ],
+  "reasonForExpansion": "Расширенный обход 600 адресов выявил 12 дополнительных проблемных ресурсов сверх исходных 36."
+}

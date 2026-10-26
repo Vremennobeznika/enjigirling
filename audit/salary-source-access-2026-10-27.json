@@ -1,0 +1,209 @@
+[
+  {
+    "id": "civil-engineer",
+    "url": "https://fulledu.ru/professii/stroitelstvo/inzhener-pgs/zarplata/",
+    "status": 200,
+    "title": [
+      "Сколько зарабатывает инженер пгс в России в 2026 году: 52–90 тыс. ₽/мес"
+    ],
+    "length": 2900
+  },
+  {
+    "id": "mechanical-engineer",
+    "url": "https://career.hh.ru/profession/215",
+    "status": 200,
+    "title": [
+      "Профессия: «Инженер-механик». Обучающие курсы, зарплаты, вакансии, чем занимается и что должен уметь"
+    ],
+    "length": 34326
+  },
+  {
+    "id": "power-engineer",
+    "url": "https://dreamjob.ru/salary/inzhener-energetik",
+    "status": 200,
+    "title": [
+      "Средняя зарплата на должности Инженер-энергетик, сколько зарабатывает Инженер-энергетик в России? | Dream Job"
+    ],
+    "length": 6926
+  },
+  {
+    "id": "electrical-engineer",
+    "url": "https://dreamjob.ru/salary/inzhener-elektrik",
+    "status": 200,
+    "title": [
+      "Средняя зарплата на должности Инженер-электрик, сколько зарабатывает Инженер-электрик в России? | Dream Job"
+    ],
+    "length": 7137
+  },
+  {
+    "id": "electrical-designer",
+    "url": "https://career.hh.ru/profession/218",
+    "status": 200,
+    "title": [
+      "Профессия: «Инженер-проектировщик систем электроснабжения». Обучающие курсы, зарплаты, вакансии, чем занимается и что должен уметь"
+    ],
+    "length": 27488
+  },
+  {
+    "id": "environmental-engineer",
+    "url": "https://career.hh.ru/profession/222",
+    "status": 200,
+    "title": [
+      "Профессия: «Инженер-эколог». Обучающие курсы, зарплаты, вакансии, чем занимается и что должен уметь"
+    ],
+    "length": 34638
+  },
+  {
+    "id": "asu-tp-designer",
+    "url": "https://dreamjob.ru/salary/inzhener-proektirovschik-asu-tp",
+    "status": 200,
+    "title": [
+      "Средняя зарплата на должности Инженер-проектировщик АСУ ТП, сколько зарабатывает Инженер-проектировщик АСУ ТП в России? | Dream Job"
+    ],
+    "length": 5781
+  },
+  {
+    "id": "asu-tp-programmer",
+    "url": "https://dreamjob.ru/salary/inzhener-programmist-asu-tp",
+    "status": 200,
+    "title": [
+      "Средняя зарплата на должности Инженер-программист АСУ ТП, сколько зарабатывает Инженер-программист АСУ ТП в России? | Dream Job"
+    ],
+    "length": 6241
+  },
+  {
+    "id": "kipia-engineer",
+    "url": "https://career.hh.ru/profession/206",
+    "status": 200,
+    "title": [
+      "Профессия: «Инженер КИПиА». Обучающие курсы, зарплаты, вакансии, чем занимается и что должен уметь"
+    ],
+    "length": 34568
+  },
+  {
+    "id": "forest-engineer",
+    "url": "https://career.hh.ru/profession/440",
+    "status": 200,
+    "title": [
+      "Профессия: «Инженер лесного хозяйства». Обучающие курсы, зарплаты, вакансии, чем занимается и что должен уметь"
+    ],
+    "length": 26551
+  },
+  {
+    "id": "telecom-engineer",
+    "url": "https://career.hh.ru/profession/211",
+    "status": 200,
+    "title": [
+      "Профессия: «Инженер слаботочных систем/Инженер связи». Обучающие курсы, зарплаты, вакансии, чем занимается и что должен уметь"
+    ],
+    "length": 26914
+  },
+  {
+    "id": "water-engineer",
+    "url": "https://dreamjob.ru/employers/2842675/vakansii/134506411",
+    "status": 200,
+    "title": [
+      "[Вакансия в архиве] Вакансия Инженер по эксплуатации систем водоснабжения и водоотведения, в компании ИДЕАЛ"
+    ],
+    "length": 5318
+  },
+  {
+    "id": "lighting-engineer",
+    "url": "https://nesiditsa.ru/vacancy/137958986",
+    "status": 200,
+    "title": [
+      "Вакансия №137958986 Инженер-светотехник, работа в компании НПО ЛИТ"
+    ],
+    "length": 3181
+  },
+  {
+    "id": "geodetic-engineer",
+    "url": "https://career.hh.ru/profession/359",
+    "status": 200,
+    "title": [
+      "Профессия: «Геодезист». Обучающие курсы, зарплаты, вакансии, чем занимается и что должен уметь"
+    ],
+    "length": 26486
+  },
+  {
+    "id": "data-engineer",
+    "url": "https://career.hh.ru/profession/7",
+    "status": 200,
+    "title": [
+      "Профессия Инженер данных: зарплата, требования к должности, вакансии, обучение"
+    ],
+    "length": 35231
+  },
+  {
+    "id": "devops-engineer",
+    "url": "https://career.hh.ru/profession/53",
+    "status": 200,
+    "title": [
+      "Профессия DevOps-инженер: зарплата девопс-специалиста, требования, вакансии, обучение"
+    ],
+    "length": 36068
+  },
+  {
+    "id": "ml-engineer",
+    "url": "https://career.hh.ru/profession/117",
+    "status": 200,
+    "title": [
+      "Профессия ML-инженер: зарплата machine learning engineer, обязанности, вакансии, обучение"
+    ],
+    "length": 32901
+  },
+  {
+    "id": "security-engineer",
+    "url": "https://career.hh.ru/profession/68",
+    "status": 200,
+    "title": [
+      "Профессия Специалист по информационной безопасности: зарплата, требования к специалисту по кибербезопасности, обучение"
+    ],
+    "length": 39393
+  },
+  {
+    "id": "cloud-engineer",
+    "url": "https://hirehi.ru/salary/cloud",
+    "status": 200,
+    "title": [
+      "Зарплата Cloud-инженера в 2026 году: сколько зарабатывает Cloud-инженер | HireHi"
+    ],
+    "length": 9952
+  },
+  {
+    "id": "embedded-engineer",
+    "url": "https://hirehi.ru/salary/embedded-developer",
+    "status": 200,
+    "title": [
+      "Зарплата Embedded-разработчика в 2026 году: сколько зарабатывает Embedded-разработчик | HireHi"
+    ],
+    "length": 10973
+  },
+  {
+    "id": "frontend-engineer",
+    "url": "https://career.hh.ru/profession/40",
+    "status": 200,
+    "title": [
+      "Профессия Frontend-разработчик: зарплата фронтенд-разработчика, требования к должности, вакансии, обучение"
+    ],
+    "length": 35008
+  },
+  {
+    "id": "backend-engineer",
+    "url": "https://career.hh.ru/profession/43",
+    "status": 200,
+    "title": [
+      "Профессия Backend-разработчик: средняя зарплата в бэкенд-разработке, требования, вакансии, обучение"
+    ],
+    "length": 33537
+  },
+  {
+    "id": "qa-engineer",
+    "url": "https://career.hh.ru/profession/72",
+    "status": 200,
+    "title": [
+      "Профессия Тестировщик: зарплата, требования к должности, вакансии, обучение"
+    ],
+    "length": 35591
+  }
+]

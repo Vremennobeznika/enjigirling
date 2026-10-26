@@ -9,6 +9,8 @@ const registry=read('knowledge/source-registry.json');
 const datasets=Object.fromEntries(['materials','processes'].map(t=>[t,new Map(read('knowledge/'+t+'.json').items.map(x=>[x.id,x]))]));
 const key=e=>[e.recordType,e.recordId,e.claimPath,e.sourceId].join(':');
 const recorded=new Map(registry.recordEvidence.map(e=>[key(e),e]));
+const repairs=read('audit/source-link-repairs-2026-10-27.json');
+const superseded=new Map(repairs.reviewedClaims.map(r=>[r.key,r]));
 const sourceIds=new Set(report.sources.map(s=>s.sourceId));
 assert.equal(baseline.remainingRecords.length,342,'original scope must remain reproducible');
 assert.equal(new Set(baseline.remainingRecords.map(x=>x.join(':'))).size,342,'duplicate scope ID');
@@ -18,7 +20,16 @@ for(const e of report.verifiedClaims){
  const k=key(e),item=datasets[e.recordType]?.get(e.recordId);
  assert.ok(item,'orphan reviewed record '+k);
  assert.ok(!seen.has(k),'duplicate reviewed claim '+k);seen.add(k);
- assert.deepEqual(recorded.get(k),e,'registry and review differ: '+k);
+ const replacement=superseded.get(k);
+ if(replacement){
+  assert.deepEqual(replacement.previous,e,'repair must preserve the exact original judgment');
+  assert.equal(replacement.current.verifiedClaim,e.verifiedClaim,'repair must not broaden a claim');
+  assert.equal(replacement.current.reviewedTextSha256,e.reviewedTextSha256,'repair must retain reviewed text hash');
+  assert.equal(replacement.current.verificationStatus,'claim_checked');
+  assert.equal(replacement.current.claimCheckedAt,'2026-10-27');
+  assert.equal(registry.sources.find(s=>s.sourceId===e.sourceId).url,replacement.url);
+ }
+ assert.deepEqual(recorded.get(k),replacement?replacement.current:e,'registry and review differ: '+k);
  assert.ok(sourceIds.has(e.sourceId),'missing inspected source '+k);
  for(const field of ['verifiedClaim','sourceSection','reviewScope','claimCheckedAt'])assert.ok(e[field]?.trim(),'missing '+field+': '+k);
  assert.equal(typeof item[e.claimPath],'string','reviewed path must be a text field: '+k);

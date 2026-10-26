@@ -283,7 +283,7 @@ assert.ok(educationUi.includes('window.careerNormativeAudit'),'modals must read 
 assert.ok(!educationUi.includes('CANDIDATE_PROFESSION_DOCUMENTS'),'obsolete normative candidates must be replaced');
 const links=normative.records.flatMap(x=>x.documents);
 assert.ok(links.length>=40,'too few function-specific references');
-assert.ok(links.every(x=>/^https:\/\/mintrud\.gov\.ru\/docs\/mintrud\/orders\/\d+$/.test(x.url)),'source URL must point to primary ministry order');
+assert.ok(links.every(x=>{const u=new URL(x.url);return u.protocol==='https:'&&['mintrud.gov.ru','meganorm.ru','nangs.org','www.consultant.ru'].includes(u.hostname)&&(u.hostname==='mintrud.gov.ru'||x.sourceLabel?.includes('копия'));}),'legal sources must be approved and mirrors explicitly labeled');
 assert.ok(normative.records.some(x=>x.id==='environmental-engineer'&&x.documents.some(y=>y.periodStatus==='not_yet_effective')),'future environmental standard must be separated');
 assert.ok(normative.records.some(x=>x.id==='biomedical-engineer'&&x.documents.some(y=>y.periodStatus==='not_yet_effective')),'future biomechanics standard must be separated');
 assert.ok(normative.records.some(x=>x.id==='civil-engineer'&&x.legalObligationStatus==='conditional_statutory_construction_roles'),'construction obligations must be conditional');

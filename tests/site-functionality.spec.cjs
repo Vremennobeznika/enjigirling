@@ -90,20 +90,20 @@ test('forums show five thematic groups without hidden entries',async({page})=>{
   await page.locator('#resourcesFilter .resource-chip').filter({hasText:'Форумы'}).click();
   const sections=page.locator('#resourcesGrid .resource-topic');
   const headings=['АСУ ТП','ЧПУ и металлообработка','САПР и конструирование','Электроника и микроконтроллеры','ИТ и технологии','Общая инженерия'];
-  const counts=[18,7,10,10,2,4];
+  const counts=[17,5,9,9,2,3];
   await expect(sections).toHaveCount(6);
   expect(await sections.locator('.resource-topic-header h3').allTextContents()).toEqual(headings);
   for(let i=0;i<counts.length;i++)await expect(sections.nth(i).locator('.resource-card')).toHaveCount(counts[i]);
-  await expect(page.locator('#resourcesGrid .resource-card')).toHaveCount(51);
+  await expect(page.locator('#resourcesGrid .resource-card')).toHaveCount(45);
   await expect(page.locator('#resourceShowMore')).toBeHidden();
   await page.locator('#resourceSort').selectOption('za');
   const names=await sections.first().locator('.eng-title').allTextContents();
   const compare=new Intl.Collator('ru-RU',{numeric:true,sensitivity:'base'});
   expect(names).toEqual([...names].sort((a,b)=>-compare.compare(a,b)));
-  await page.locator('#resourceSearch').fill('SiePortal');
+  await page.locator('#resourceSearch').fill('Inductive');
   await expect(page.locator('#resourcesGrid .resource-card')).toHaveCount(1);
   await page.locator('#resourceSearch').fill('');
-  await expect(page.locator('#resourcesGrid .resource-card')).toHaveCount(51);
+  await expect(page.locator('#resourcesGrid .resource-card')).toHaveCount(45);
   expect(errors).toEqual([]);
 });
 

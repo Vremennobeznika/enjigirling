@@ -21,7 +21,7 @@ function evidence(p){
  if(!x||x.status!=='source_snapshot'||x.validationStatus==='adjacent_occupation_checked'||x.evidenceLevel==='adjacent_or_weak')return 'Числовые данные не подтверждены для этой профессии: источник может быть смежным, динамическим или недоступным; цифры исключены.';
  if(!Number.isFinite(x.rangeMinRub)||!Number.isFinite(x.rangeMaxRub))return 'Числовых данных нет';
  const range=x.rangeMinRub===x.rangeMaxRub?'Одно наблюдение '+fmt(x.rangeMinRub):fmt(x.rangeMinRub)+'–'+fmt(x.rangeMaxRub);
- return range+' ₽/мес. · '+x.region+' · '+x.checkedAt+' · '+(x.evidenceLevel==='single_observation'?'одна вакансия':'опубликованные данные')+'. Не общий рейтинг зарплат.';
+ return (x.displayLabel?x.displayLabel+': ':'')+range+' ₽/мес. · '+x.region+' · '+x.checkedAt+' · '+(x.evidenceLevel==='single_observation'?'одна вакансия':'опубликованные данные')+'. Не общий рейтинг зарплат.';
 }
 function source(p){
  const x=salaryById.get(p.id);

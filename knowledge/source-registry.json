@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "language": "ru",
-  "purpose": "Registry of independently verified primary sources for technical claims",
+  "purpose": "Registry of editorial sources and narrowly scoped claim checks; publisher provenance and limitations are recorded individually",
   "status": "partially_claim_checked",
   "sources": [
     {
@@ -578,14 +578,14 @@
     },
     {
       "sourceId": "material-evidence-1",
-      "title": "USGS — Iron and Steel Statistics and Information",
-      "url": "https://www.usgs.gov/centers/national-minerals-information-center/iron-and-steel-statistics-and-information",
-      "publisher": "www.usgs.gov",
-      "documentDate": "undated",
-      "checkedAt": "2026-10-22",
-      "appliesTo": "USGS подтверждает общий класс чёрных металлов и процессы получения; конкретную марку Сталь 20, состав и свойства не подтверждает.",
-      "access": "public_abstract_or_overview",
-      "notes": "Контекстный источник; не свидетельствует о проверке всех технических характеристик."
+      "title": "BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)",
+      "url": "https://nora.nerc.ac.uk/id/eprint/541620/",
+      "publisher": "British Geological Survey",
+      "documentDate": "2026",
+      "checkedAt": "2026-10-27",
+      "appliesTo": "Общий статистический контекст добычи и выпуска сырья по BGS; не подтверждает состав, свойства конкретной марки, процессы её изготовления или пригодность партии.",
+      "access": "public_document_or_overview",
+      "notes": "Ссылка заменена после повторной проверки доступности и содержания. Статистика сырья не подтверждает свойства конкретной марки."
     },
     {
       "sourceId": "material-evidence-2",
@@ -622,14 +622,14 @@
     },
     {
       "sourceId": "material-evidence-5",
-      "title": "USGS — Bauxite and Alumina Statistics and Information",
-      "url": "https://www.usgs.gov/centers/national-minerals-information-center/bauxite-and-alumina-statistics-and-information?qt-science_support_page_related_con=0",
-      "publisher": "www.usgs.gov",
-      "documentDate": "undated",
-      "checkedAt": "2026-10-22",
-      "appliesTo": "Источник описывает глинозём Al₂O₃ как промышленный продукт; не подтверждает свойства конкретной конструкционной керамики.",
-      "access": "public_abstract_or_overview",
-      "notes": "Контекстный источник; не свидетельствует о проверке всех технических характеристик."
+      "title": "BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)",
+      "url": "https://nora.nerc.ac.uk/id/eprint/541620/",
+      "publisher": "British Geological Survey",
+      "documentDate": "2026",
+      "checkedAt": "2026-10-27",
+      "appliesTo": "Общий статистический контекст добычи и выпуска сырья по BGS; не подтверждает состав, свойства конкретной марки, процессы её изготовления или пригодность партии.",
+      "access": "public_document_or_overview",
+      "notes": "Ссылка заменена после повторной проверки доступности и содержания. Статистика сырья не подтверждает свойства конкретной марки."
     },
     {
       "sourceId": "material-evidence-6",
@@ -732,58 +732,58 @@
     },
     {
       "sourceId": "material-evidence-15",
-      "title": "USGS — Iron and Steel Scrap Statistics and Information",
-      "url": "https://www.usgs.gov/centers/national-minerals-information-center/iron-and-steel-scrap-statistics-and-information",
-      "publisher": "www.usgs.gov",
-      "documentDate": "undated",
-      "checkedAt": "2026-10-22",
-      "appliesTo": "Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.",
-      "access": "public_abstract_or_overview",
-      "notes": "Контекстный источник; не свидетельствует о проверке всех технических характеристик."
+      "title": "BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)",
+      "url": "https://nora.nerc.ac.uk/id/eprint/541620/",
+      "publisher": "British Geological Survey",
+      "documentDate": "2026",
+      "checkedAt": "2026-10-27",
+      "appliesTo": "Общий статистический контекст добычи и выпуска сырья по BGS; не подтверждает состав, свойства конкретной марки, процессы её изготовления или пригодность партии.",
+      "access": "public_document_or_overview",
+      "notes": "Ссылка заменена после повторной проверки доступности и содержания. Статистика сырья не подтверждает свойства конкретной марки."
     },
     {
       "sourceId": "material-evidence-16",
-      "title": "USGS — Iron Ore Statistics and Information",
-      "url": "https://www.usgs.gov/centers/national-minerals-information-center/iron-ore-statistics-and-information",
-      "publisher": "www.usgs.gov",
-      "documentDate": "undated",
-      "checkedAt": "2026-10-22",
-      "appliesTo": "Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.",
-      "access": "public_abstract_or_overview",
-      "notes": "Контекстный источник; не свидетельствует о проверке всех технических характеристик."
+      "title": "BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)",
+      "url": "https://nora.nerc.ac.uk/id/eprint/541620/",
+      "publisher": "British Geological Survey",
+      "documentDate": "2026",
+      "checkedAt": "2026-10-27",
+      "appliesTo": "Общий статистический контекст добычи и выпуска сырья по BGS; не подтверждает состав, свойства конкретной марки, процессы её изготовления или пригодность партии.",
+      "access": "public_document_or_overview",
+      "notes": "Ссылка заменена после повторной проверки доступности и содержания. Статистика сырья не подтверждает свойства конкретной марки."
     },
     {
       "sourceId": "material-evidence-17",
-      "title": "USGS — Cement Statistics and Information",
-      "url": "https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information",
-      "publisher": "www.usgs.gov",
-      "documentDate": "undated",
-      "checkedAt": "2026-10-22",
-      "appliesTo": "Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.",
-      "access": "public_abstract_or_overview",
-      "notes": "Контекстный источник; не свидетельствует о проверке всех технических характеристик."
+      "title": "BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)",
+      "url": "https://nora.nerc.ac.uk/id/eprint/541620/",
+      "publisher": "British Geological Survey",
+      "documentDate": "2026",
+      "checkedAt": "2026-10-27",
+      "appliesTo": "Общий статистический контекст добычи и выпуска сырья по BGS; не подтверждает состав, свойства конкретной марки, процессы её изготовления или пригодность партии.",
+      "access": "public_document_or_overview",
+      "notes": "Ссылка заменена после повторной проверки доступности и содержания. Статистика сырья не подтверждает свойства конкретной марки."
     },
     {
       "sourceId": "material-evidence-18",
-      "title": "USGS — Gypsum Statistics and Information",
-      "url": "https://www.usgs.gov/centers/national-minerals-information-center/gypsum-statistics-and-information",
-      "publisher": "www.usgs.gov",
-      "documentDate": "undated",
-      "checkedAt": "2026-10-22",
-      "appliesTo": "Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.",
-      "access": "public_abstract_or_overview",
-      "notes": "Контекстный источник; не свидетельствует о проверке всех технических характеристик."
+      "title": "BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)",
+      "url": "https://nora.nerc.ac.uk/id/eprint/541620/",
+      "publisher": "British Geological Survey",
+      "documentDate": "2026",
+      "checkedAt": "2026-10-27",
+      "appliesTo": "Общий статистический контекст добычи и выпуска сырья по BGS; не подтверждает состав, свойства конкретной марки, процессы её изготовления или пригодность партии.",
+      "access": "public_document_or_overview",
+      "notes": "Ссылка заменена после повторной проверки доступности и содержания. Статистика сырья не подтверждает свойства конкретной марки."
     },
     {
       "sourceId": "material-evidence-19",
-      "title": "USGS — Silica Statistics and Information",
-      "url": "https://www.usgs.gov/centers/national-minerals-information-center/silica-statistics-and-information",
-      "publisher": "www.usgs.gov",
-      "documentDate": "undated",
-      "checkedAt": "2026-10-22",
-      "appliesTo": "Проверен общий класс и область применения; марка, партия и режимы требуют отдельной документации.",
-      "access": "public_abstract_or_overview",
-      "notes": "Контекстный источник; не свидетельствует о проверке всех технических характеристик."
+      "title": "BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)",
+      "url": "https://nora.nerc.ac.uk/id/eprint/541620/",
+      "publisher": "British Geological Survey",
+      "documentDate": "2026",
+      "checkedAt": "2026-10-27",
+      "appliesTo": "Общий статистический контекст добычи и выпуска сырья по BGS; не подтверждает состав, свойства конкретной марки, процессы её изготовления или пригодность партии.",
+      "access": "public_document_or_overview",
+      "notes": "Ссылка заменена после повторной проверки доступности и содержания. Статистика сырья не подтверждает свойства конкретной марки."
     },
     {
       "sourceId": "material-evidence-20",
@@ -820,14 +820,14 @@
     },
     {
       "sourceId": "material-source-expanded-1",
-      "title": "USGS — Commodity Statistics and Information (2026)",
-      "url": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
-      "publisher": "US Geological Survey",
-      "documentDate": "undated",
-      "checkedAt": "2026-10-22",
-      "appliesTo": "USGS публикует перечень промышленных минеральных товарных групп. Страница не удостоверяет состав, пригодность, свойства и классификацию конкретной партии.",
-      "access": "public_abstract_or_overview",
-      "notes": "Открытый источник по классу материалов. Наличие ссылки не является проверкой технической карточки."
+      "title": "BGS — World mineral statistics (обзор статистики сырья)",
+      "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
+      "publisher": "British Geological Survey",
+      "documentDate": "2026",
+      "checkedAt": "2026-10-27",
+      "appliesTo": "Общий статистический контекст добычи и выпуска сырья по BGS; не подтверждает состав, свойства конкретной марки, процессы её изготовления или пригодность партии.",
+      "access": "public_document_or_overview",
+      "notes": "Ссылка заменена после повторной проверки доступности и содержания. Статистика сырья не подтверждает свойства конкретной марки."
     },
     {
       "sourceId": "material-source-expanded-2",
@@ -1128,14 +1128,14 @@
     },
     {
       "sourceId": "review-usgs-perlite",
-      "title": "USGS — Perlite Statistics and Information",
-      "url": "https://www.usgs.gov/centers/national-minerals-information-center/perlite-statistics-and-information",
-      "publisher": "USGS",
+      "title": "Perlite Institute — Why Perlite Works",
+      "url": "https://www.perlite.org/wp-content/uploads/2018/03/why-perlite-works.pdf",
+      "publisher": "Perlite Institute",
       "documentDate": "undated",
-      "checkedAt": "2026-10-25",
-      "appliesTo": "Introductory mineral description",
-      "access": "public_text",
-      "notes": "Содержание релевантного раздела открыто 25.10.2026; область подтверждения указана в каждой связи. Платный стандарт или паспорт конкретной партии не проверялся."
+      "checkedAt": "2026-10-27",
+      "appliesTo": "Повторно сопоставлены только следующие тезисы: Перлит — вулканическое стекло; лёгкая пористая структура появляется при вспучивании.",
+      "access": "public_document_or_overview",
+      "notes": "Ссылка заменена после повторной проверки доступности и содержания. Проверка относится к узкому тезису, не ко всем полям карточки. История замены — в audit/source-link-repairs-2026-10-27.json."
     },
     {
       "sourceId": "review-henkel-adhesive",
@@ -1854,14 +1854,14 @@
     },
     {
       "sourceId": "review-ica-copper",
-      "title": "About Copper",
-      "url": "https://internationalcopper.org/sustainable-copper/about-copper/",
-      "publisher": "International Copper Association",
+      "title": "Wikipedia — List of copper alloys (справочный обзор)",
+      "url": "https://en.wikipedia.org/wiki/List_of_copper_alloys",
+      "publisher": "Wikipedia contributors",
       "documentDate": "undated",
-      "checkedAt": "2026-10-25",
-      "appliesTo": "Copper Facts — пункт о семействах сплавов",
-      "access": "public_text",
-      "notes": "Прочитан релевантный текст. Не подтверждает нормативные режимы или применимость к конкретной марке."
+      "checkedAt": "2026-10-27",
+      "appliesTo": "Повторно сопоставлены только следующие тезисы: Латунь относится к медно-цинковым сплавам; конкретные механические свойства этим не подтверждены. Бронзы — семейство медных сплавов с различными легирующими компонентами, включая Sn, Al, Si и Be; состав каждой марки проверяют отдельно.",
+      "access": "public_document_or_overview",
+      "notes": "Ссылка заменена после повторной проверки доступности и содержания. Вторичный справочный обзор; не нормативный документ и не паспорт конкретной марки."
     },
     {
       "sourceId": "review-basf-ps",
@@ -2140,25 +2140,25 @@
     },
     {
       "sourceId": "review-usgs-diatomite",
-      "title": "Filtration with Diatomaceous Earth",
-      "url": "https://www.usgs.gov/media/images/filtration-diatomaceous-earth",
-      "publisher": "USGS",
-      "documentDate": "2014-08-15",
-      "checkedAt": "2026-10-25",
-      "appliesTo": "Detailed Description",
-      "access": "public_text",
-      "notes": "Прочитан релевантный текст. Не подтверждает нормативные режимы или применимость к конкретной марке."
+      "title": "Geology.com — Diatomite (справочный обзор)",
+      "url": "https://geology.com/rocks/diatomite.shtml",
+      "publisher": "Geology.com",
+      "documentDate": "undated",
+      "checkedAt": "2026-10-27",
+      "appliesTo": "Повторно сопоставлены только следующие тезисы: Диатомит имеет осадочное биогенное происхождение и применяется при фильтрации, в том числе пищевых жидкостей; пригодность конкретной партии не проверена.",
+      "access": "public_document_or_overview",
+      "notes": "Ссылка заменена после повторной проверки доступности и содержания. Вторичный справочный обзор; не нормативный документ и не паспорт конкретной марки."
     },
     {
       "sourceId": "review-usgs-potash",
-      "title": "Potash Statistics and Information",
-      "url": "https://www.usgs.gov/centers/national-minerals-information-center/potash-statistics-and-information",
-      "publisher": "USGS",
+      "title": "Wikipedia — Potash (справочный обзор)",
+      "url": "https://en.wikipedia.org/wiki/Potash",
+      "publisher": "Wikipedia contributors",
       "documentDate": "undated",
-      "checkedAt": "2026-10-25",
-      "appliesTo": "Вводный текст о калии и удобрениях",
-      "access": "public_text",
-      "notes": "Прочитан релевантный текст. Не подтверждает нормативные режимы или применимость к конкретной марке."
+      "checkedAt": "2026-10-27",
+      "appliesTo": "Повторно сопоставлены только следующие тезисы: Калийное сырьё служит источником калия для получения удобрений; конкретная минеральная смесь и качество не аттестованы.",
+      "access": "public_document_or_overview",
+      "notes": "Ссылка заменена после повторной проверки доступности и содержания. Вторичный справочный обзор; не нормативный документ и не паспорт конкретной марки."
     },
     {
       "sourceId": "review-usgs-talc2002",
@@ -2371,25 +2371,25 @@
     },
     {
       "sourceId": "review-hosokawa-jet",
-      "title": "Hosokawa Alpine — Jet Mills",
-      "url": "https://www.hosokawa-alpine.com/powder-particle-processing/technologies/grinding-and-classifying/jet-mills/",
-      "publisher": "Hosokawa Alpine",
+      "title": "Sturtevant — Sanitary Micronizer: fluid energy jet mill",
+      "url": "https://sturtevantinc.com/wp-content/uploads/2023/09/S_Micronizer_Sanitary_Product_Bulletin.pdf",
+      "publisher": "Sturtevant",
       "documentDate": "undated",
-      "checkedAt": "2026-10-25",
-      "appliesTo": "Spiral jet mills; Principle of operation",
-      "access": "public_text",
-      "notes": "Прочитан релевантный текст. Не подтверждает нормативные режимы или применимость к конкретной марке."
+      "checkedAt": "2026-10-27",
+      "appliesTo": "Повторно сопоставлены только следующие тезисы: Струйная микронизация фармацевтических веществ уменьшает частицы за счёт столкновений в газовом потоке. Отсутствие механических мелющих органов не исключает механического разрушения частиц.",
+      "access": "public_document_or_overview",
+      "notes": "Ссылка заменена после повторной проверки доступности и содержания. Проверка относится к узкому тезису, не ко всем полям карточки. История замены — в audit/source-link-repairs-2026-10-27.json."
     },
     {
       "sourceId": "review-russell-grading",
-      "title": "Russell Finex — Grading sieves",
-      "url": "https://www.russellfinex.com/en/separation-equipment/sieving-machines/",
-      "publisher": "Russell Finex",
+      "title": "SWECO — Pharmaceutical Industry Separators",
+      "url": "https://www.sweco.com/swecoapps/sweco-separators-pharmaceutical.php",
+      "publisher": "SWECO",
       "documentDate": "undated",
-      "checkedAt": "2026-10-25",
-      "appliesTo": "FAQ: What is a sieving machine and how does it work?; Which industries use sieving machines?",
-      "access": "public_text",
-      "notes": "Прочитан релевантный текст. Не подтверждает нормативные режимы или применимость к конкретной марке."
+      "checkedAt": "2026-10-27",
+      "appliesTo": "Повторно сопоставлены только следующие тезисы: Просеивание порошка разделяет частицы по размеру с помощью сетки; описано применение таких машин в фармацевтическом производстве. Критерии выпуска партии не подтверждены.",
+      "access": "public_document_or_overview",
+      "notes": "Ссылка заменена после повторной проверки доступности и содержания. Проверка относится к узкому тезису, не ко всем полям карточки. История замены — в audit/source-link-repairs-2026-10-27.json."
     },
     {
       "sourceId": "review-ersa-selective",
@@ -2800,58 +2800,58 @@
     },
     {
       "sourceId": "review-usgs-nickel",
-      "title": "USGS — Nickel Statistics and Information",
-      "url": "https://www.usgs.gov/centers/national-minerals-information-center/nickel-statistics-and-information",
-      "publisher": "US Geological Survey",
-      "documentDate": "undated",
-      "checkedAt": "2026-10-25",
-      "appliesTo": "Introductory technical text: ore deposits and uses",
-      "access": "public_text",
-      "notes": "Прочитан релевантный текст. Не подтверждает нормативные режимы или применимость к конкретной марке."
+      "title": "BGS — Nickel: mineral profile",
+      "url": "https://nora.nerc.ac.uk/id/eprint/8725/1/0910_Nickel_Profile.pdf",
+      "publisher": "British Geological Survey",
+      "documentDate": "2009",
+      "checkedAt": "2026-10-27",
+      "appliesTo": "Повторно сопоставлены только следующие тезисы: Никель добывают из разных типов руд, в частности латеритных и магматических сульфидных; их минералогия различается. Режим обогащения конкретной руды не подтверждён. Никелевые суперсплавы применяют в деталях газовых турбин. Коррозионная стойкость всех никелевых сплавов и работоспособность в любой сложной среде не подтверждены.",
+      "access": "public_document_or_overview",
+      "notes": "Ссылка заменена после повторной проверки доступности и содержания. Проверка относится к узкому тезису, не ко всем полям карточки. История замены — в audit/source-link-repairs-2026-10-27.json."
     },
     {
       "sourceId": "review-usgs-phosphate",
-      "title": "USGS — Phosphate Rock Statistics and Information",
-      "url": "https://www.usgs.gov/centers/national-minerals-information-center/phosphate-rock-statistics-and-information",
-      "publisher": "US Geological Survey",
+      "title": "Wikipedia — Phosphorite (справочный обзор)",
+      "url": "https://en.wikipedia.org/wiki/Phosphate_rock",
+      "publisher": "Wikipedia contributors",
       "documentDate": "undated",
-      "checkedAt": "2026-10-25",
-      "appliesTo": "Introductory commodity description",
-      "access": "public_text",
-      "notes": "Прочитан релевантный текст. Не подтверждает нормативные режимы или применимость к конкретной марке."
+      "checkedAt": "2026-10-27",
+      "appliesTo": "Повторно сопоставлены только следующие тезисы: Фосфатные породы служат минеральным сырьём для производства фосфатных удобрений и промышленных продуктов. Минералогия и примеси конкретной партии не проверены.",
+      "access": "public_document_or_overview",
+      "notes": "Ссылка заменена после повторной проверки доступности и содержания. Вторичный справочный обзор; не нормативный документ и не паспорт конкретной марки."
     },
     {
       "sourceId": "review-usgs-manganese",
-      "title": "USGS — Manganese Statistics and Information",
-      "url": "https://www.usgs.gov/centers/national-minerals-information-center/manganese-statistics-and-information",
-      "publisher": "US Geological Survey",
+      "title": "Wikipedia — Manganese (справочный обзор)",
+      "url": "https://en.wikipedia.org/wiki/Manganese",
+      "publisher": "Wikipedia contributors",
       "documentDate": "undated",
-      "checkedAt": "2026-10-25",
-      "appliesTo": "Introductory commodity description: metallurgical uses",
-      "access": "public_text",
-      "notes": "Прочитан релевантный текст. Не подтверждает нормативные режимы или применимость к конкретной марке."
+      "checkedAt": "2026-10-27",
+      "appliesTo": "Повторно сопоставлены только следующие тезисы: Марганцевое сырьё используется в металлургической цепочке производства ферросплавов и стали. Тип руды, состав и режим подготовки не подтверждены.",
+      "access": "public_document_or_overview",
+      "notes": "Ссылка заменена после повторной проверки доступности и содержания. Вторичный справочный обзор; не нормативный документ и не паспорт конкретной марки."
     },
     {
       "sourceId": "review-usgs-sulfur",
-      "title": "USGS — Sulfur Statistics and Information",
-      "url": "https://www.usgs.gov/centers/national-minerals-information-center/sulfur-statistics-and-information",
-      "publisher": "US Geological Survey",
+      "title": "Wikipedia — Sulfur (справочный обзор)",
+      "url": "https://en.wikipedia.org/wiki/Sulfur",
+      "publisher": "Wikipedia contributors",
       "documentDate": "undated",
-      "checkedAt": "2026-10-25",
-      "appliesTo": "Introductory commodity description",
-      "access": "public_text",
-      "notes": "Прочитан релевантный текст. Не подтверждает нормативные режимы или применимость к конкретной марке."
+      "checkedAt": "2026-10-27",
+      "appliesTo": "Повторно сопоставлены только следующие тезисы: Сера используется как промышленное химическое сырьё, прежде всего для получения серной кислоты. Качество и загрязнения партии не проверены.",
+      "access": "public_document_or_overview",
+      "notes": "Ссылка заменена после повторной проверки доступности и содержания. Вторичный справочный обзор; не нормативный документ и не паспорт конкретной марки."
     },
     {
       "sourceId": "review-usgs-salt",
-      "title": "USGS — Salt Statistics and Information",
-      "url": "https://www.usgs.gov/centers/national-minerals-information-center/salt-statistics-and-information",
-      "publisher": "US Geological Survey",
+      "title": "Wikipedia — Sodium chloride (справочный обзор)",
+      "url": "https://en.wikipedia.org/wiki/Sodium_chloride",
+      "publisher": "Wikipedia contributors",
       "documentDate": "undated",
-      "checkedAt": "2026-10-25",
-      "appliesTo": "Introductory commodity description",
-      "access": "public_text",
-      "notes": "Прочитан релевантный текст. Не подтверждает нормативные режимы или применимость к конкретной марке."
+      "checkedAt": "2026-10-27",
+      "appliesTo": "Повторно сопоставлены только следующие тезисы: Соль имеет основу NaCl и используется как химическое сырьё, например для производства хлора и едкого натра. Допуски на примеси не подтверждены.",
+      "access": "public_document_or_overview",
+      "notes": "Ссылка заменена после повторной проверки доступности и содержания. Вторичный справочный обзор; не нормативный документ и не паспорт конкретной марки."
     },
     {
       "sourceId": "review-mp-concentrate",
@@ -7803,9 +7803,9 @@
       "verificationStatus": "claim_checked",
       "claimScope": "Перлит — вулканическое стекло; лёгкая пористая структура появляется при вспучивании.",
       "verifiedClaim": "Перлит — вулканическое стекло; лёгкая пористая структура появляется при вспучивании.",
-      "sourceSection": "Introductory mineral description",
-      "claimCheckedAt": "2026-10-25",
-      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+      "sourceSection": "Повторно прочитанный материал: Perlite Institute — Why Perlite Works",
+      "claimCheckedAt": "2026-10-27",
+      "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными. Ссылка и подтверждающий узкий тезис повторно сопоставлены 27.10.2026; источник: Perlite Institute.",
       "reviewedTextSha256": "affee94fa5b696d51301992cbc7f7deecd1a4c40fe0d63659f1e07b5740943c6"
     },
     {
@@ -9363,9 +9363,9 @@
       "verificationStatus": "claim_checked",
       "claimScope": "Латунь относится к медно-цинковым сплавам; конкретные механические свойства этим не подтверждены.",
       "verifiedClaim": "Латунь относится к медно-цинковым сплавам; конкретные механические свойства этим не подтверждены.",
-      "sourceSection": "Copper Facts — пункт о сплавах",
-      "claimCheckedAt": "2026-10-25",
-      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "sourceSection": "Повторно прочитанный материал: Wikipedia — List of copper alloys (справочный обзор)",
+      "claimCheckedAt": "2026-10-27",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены. Ссылка и подтверждающий узкий тезис повторно сопоставлены 27.10.2026; источник: Wikipedia contributors.",
       "reviewedTextSha256": "94613c794df72047a52a0be1967a0340a0d800f7fdd8f1af8cbdb42e5ce555a8"
     },
     {
@@ -9376,9 +9376,9 @@
       "verificationStatus": "claim_checked",
       "claimScope": "Бронзы — семейство медных сплавов с различными легирующими компонентами, включая Sn, Al, Si и Be; состав каждой марки проверяют отдельно.",
       "verifiedClaim": "Бронзы — семейство медных сплавов с различными легирующими компонентами, включая Sn, Al, Si и Be; состав каждой марки проверяют отдельно.",
-      "sourceSection": "Copper Facts — пункт о сплавах",
-      "claimCheckedAt": "2026-10-25",
-      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "sourceSection": "Повторно прочитанный материал: Wikipedia — List of copper alloys (справочный обзор)",
+      "claimCheckedAt": "2026-10-27",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены. Ссылка и подтверждающий узкий тезис повторно сопоставлены 27.10.2026; источник: Wikipedia contributors.",
       "reviewedTextSha256": "45157dadc10dd1d564043bf78fd51bcd69faeae41b63ef2275282d00de2ba9b0"
     },
     {
@@ -9883,9 +9883,9 @@
       "verificationStatus": "claim_checked",
       "claimScope": "Диатомит имеет осадочное биогенное происхождение и применяется при фильтрации, в том числе пищевых жидкостей; пригодность конкретной партии не проверена.",
       "verifiedClaim": "Диатомит имеет осадочное биогенное происхождение и применяется при фильтрации, в том числе пищевых жидкостей; пригодность конкретной партии не проверена.",
-      "sourceSection": "Detailed Description",
-      "claimCheckedAt": "2026-10-25",
-      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "sourceSection": "Повторно прочитанный материал: Geology.com — Diatomite (справочный обзор)",
+      "claimCheckedAt": "2026-10-27",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены. Ссылка и подтверждающий узкий тезис повторно сопоставлены 27.10.2026; источник: Geology.com.",
       "reviewedTextSha256": "d9ee1bafdc1bdb7d16eb055e0fb7d11302d9ba8f2c37867e76377742b70f463f"
     },
     {
@@ -9896,9 +9896,9 @@
       "verificationStatus": "claim_checked",
       "claimScope": "Калийное сырьё служит источником калия для получения удобрений; конкретная минеральная смесь и качество не аттестованы.",
       "verifiedClaim": "Калийное сырьё служит источником калия для получения удобрений; конкретная минеральная смесь и качество не аттестованы.",
-      "sourceSection": "Вводный текст о калии и удобрениях",
-      "claimCheckedAt": "2026-10-25",
-      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "sourceSection": "Повторно прочитанный материал: Wikipedia — Potash (справочный обзор)",
+      "claimCheckedAt": "2026-10-27",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены. Ссылка и подтверждающий узкий тезис повторно сопоставлены 27.10.2026; источник: Wikipedia contributors.",
       "reviewedTextSha256": "3f910edc880830d98d50dfcd418f6fe4d92b78b264739d0962e5a056ce6a998e"
     },
     {
@@ -10416,9 +10416,9 @@
       "verificationStatus": "claim_checked",
       "claimScope": "Струйная микронизация фармацевтических веществ уменьшает частицы за счёт столкновений в газовом потоке. Отсутствие механических мелющих органов не исключает механического разрушения частиц.",
       "verifiedClaim": "Струйная микронизация фармацевтических веществ уменьшает частицы за счёт столкновений в газовом потоке. Отсутствие механических мелющих органов не исключает механического разрушения частиц.",
-      "sourceSection": "Spiral jet mills; Principle of operation",
-      "claimCheckedAt": "2026-10-25",
-      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "sourceSection": "Повторно прочитанный материал: Sturtevant — Sanitary Micronizer: fluid energy jet mill",
+      "claimCheckedAt": "2026-10-27",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены. Ссылка и подтверждающий узкий тезис повторно сопоставлены 27.10.2026; источник: Sturtevant.",
       "reviewedTextSha256": "e0e82c2b081169124b4a040619221eb9f741dda5a8e21cd21e48aaf70766cbfe"
     },
     {
@@ -10429,9 +10429,9 @@
       "verificationStatus": "claim_checked",
       "claimScope": "Просеивание порошка разделяет частицы по размеру с помощью сетки; описано применение таких машин в фармацевтическом производстве. Критерии выпуска партии не подтверждены.",
       "verifiedClaim": "Просеивание порошка разделяет частицы по размеру с помощью сетки; описано применение таких машин в фармацевтическом производстве. Критерии выпуска партии не подтверждены.",
-      "sourceSection": "FAQ: What is a sieving machine and how does it work?; Which industries use sieving machines?",
-      "claimCheckedAt": "2026-10-25",
-      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "sourceSection": "Повторно прочитанный материал: SWECO — Pharmaceutical Industry Separators",
+      "claimCheckedAt": "2026-10-27",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены. Ссылка и подтверждающий узкий тезис повторно сопоставлены 27.10.2026; источник: SWECO.",
       "reviewedTextSha256": "8fae0d09f6ffe26cc36ed1f590bd4e1467605b1bfc3b65330ffee3b77197eca0"
     },
     {
@@ -11066,9 +11066,9 @@
       "verificationStatus": "claim_checked",
       "claimScope": "Никель добывают из разных типов руд, в частности латеритных и магматических сульфидных; их минералогия различается. Режим обогащения конкретной руды не подтверждён.",
       "verifiedClaim": "Никель добывают из разных типов руд, в частности латеритных и магматических сульфидных; их минералогия различается. Режим обогащения конкретной руды не подтверждён.",
-      "sourceSection": "Introductory technical text: ore deposits",
-      "claimCheckedAt": "2026-10-25",
-      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "sourceSection": "Повторно прочитанный материал: BGS — Nickel: mineral profile",
+      "claimCheckedAt": "2026-10-27",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены. Ссылка и подтверждающий узкий тезис повторно сопоставлены 27.10.2026; источник: British Geological Survey.",
       "reviewedTextSha256": "1ce2ce033f9e26206a6561c55a43d3a068074074c467651f0548459695d17887"
     },
     {
@@ -11079,9 +11079,9 @@
       "verificationStatus": "claim_checked",
       "claimScope": "Никелевые суперсплавы применяют в деталях газовых турбин. Коррозионная стойкость всех никелевых сплавов и работоспособность в любой сложной среде не подтверждены.",
       "verifiedClaim": "Никелевые суперсплавы применяют в деталях газовых турбин. Коррозионная стойкость всех никелевых сплавов и работоспособность в любой сложной среде не подтверждены.",
-      "sourceSection": "Introductory technical text: uses",
-      "claimCheckedAt": "2026-10-25",
-      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "sourceSection": "Повторно прочитанный материал: BGS — Nickel: mineral profile",
+      "claimCheckedAt": "2026-10-27",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены. Ссылка и подтверждающий узкий тезис повторно сопоставлены 27.10.2026; источник: British Geological Survey.",
       "reviewedTextSha256": "0b52b1add29920c2f23bfd98a6c316ffc1bc0bf4177018aa158f527a5959a750"
     },
     {
@@ -11092,9 +11092,9 @@
       "verificationStatus": "claim_checked",
       "claimScope": "Фосфатные породы служат минеральным сырьём для производства фосфатных удобрений и промышленных продуктов. Минералогия и примеси конкретной партии не проверены.",
       "verifiedClaim": "Фосфатные породы служат минеральным сырьём для производства фосфатных удобрений и промышленных продуктов. Минералогия и примеси конкретной партии не проверены.",
-      "sourceSection": "Introductory commodity description",
-      "claimCheckedAt": "2026-10-25",
-      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "sourceSection": "Повторно прочитанный материал: Wikipedia — Phosphorite (справочный обзор)",
+      "claimCheckedAt": "2026-10-27",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены. Ссылка и подтверждающий узкий тезис повторно сопоставлены 27.10.2026; источник: Wikipedia contributors.",
       "reviewedTextSha256": "327a7ac0c19621c7cbf0ce4e5b45f28e847390d9f766e09213a39e608ccffde6"
     },
     {
@@ -11105,9 +11105,9 @@
       "verificationStatus": "claim_checked",
       "claimScope": "Марганцевое сырьё используется в металлургической цепочке производства ферросплавов и стали. Тип руды, состав и режим подготовки не подтверждены.",
       "verifiedClaim": "Марганцевое сырьё используется в металлургической цепочке производства ферросплавов и стали. Тип руды, состав и режим подготовки не подтверждены.",
-      "sourceSection": "Introductory commodity description: metallurgical uses",
-      "claimCheckedAt": "2026-10-25",
-      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "sourceSection": "Повторно прочитанный материал: Wikipedia — Manganese (справочный обзор)",
+      "claimCheckedAt": "2026-10-27",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены. Ссылка и подтверждающий узкий тезис повторно сопоставлены 27.10.2026; источник: Wikipedia contributors.",
       "reviewedTextSha256": "b022dc507310c3cee1a66af8780f6411179979d92ba122bcbd1887322f2665fb"
     },
     {
@@ -11118,9 +11118,9 @@
       "verificationStatus": "claim_checked",
       "claimScope": "Сера используется как промышленное химическое сырьё, прежде всего для получения серной кислоты. Качество и загрязнения партии не проверены.",
       "verifiedClaim": "Сера используется как промышленное химическое сырьё, прежде всего для получения серной кислоты. Качество и загрязнения партии не проверены.",
-      "sourceSection": "Introductory commodity description",
-      "claimCheckedAt": "2026-10-25",
-      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "sourceSection": "Повторно прочитанный материал: Wikipedia — Sulfur (справочный обзор)",
+      "claimCheckedAt": "2026-10-27",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены. Ссылка и подтверждающий узкий тезис повторно сопоставлены 27.10.2026; источник: Wikipedia contributors.",
       "reviewedTextSha256": "041ced25f344603f7fac1568886a414d2693a5e6702e50732a143611f4db4883"
     },
     {
@@ -11131,9 +11131,9 @@
       "verificationStatus": "claim_checked",
       "claimScope": "Соль имеет основу NaCl и используется как химическое сырьё, например для производства хлора и едкого натра. Допуски на примеси не подтверждены.",
       "verifiedClaim": "Соль имеет основу NaCl и используется как химическое сырьё, например для производства хлора и едкого натра. Допуски на примеси не подтверждены.",
-      "sourceSection": "Introductory commodity description",
-      "claimCheckedAt": "2026-10-25",
-      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+      "sourceSection": "Повторно прочитанный материал: Wikipedia — Sodium chloride (справочный обзор)",
+      "claimCheckedAt": "2026-10-27",
+      "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены. Ссылка и подтверждающий узкий тезис повторно сопоставлены 27.10.2026; источник: Wikipedia contributors.",
       "reviewedTextSha256": "354e5ae479541cdde676a783dcdf94ed99995b4e72b9ff141fc705ba39cf8cfc"
     },
     {

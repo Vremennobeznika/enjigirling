@@ -17,22 +17,26 @@ assert.ok(types.get('Чаты в Telegram')>=12,'Telegram chat category unexpect
 assert.equal(types.get('Дружественные каналы'),11,'curated friendly channels must remain unchanged');
 assert.ok(types.get('Онлайн-измерения')>=12,'measurement resources unexpectedly shrank');
 for(const cat of ['Журналы','Форумы','САПР и конструирование','Научные базы и справочники','Стандарты и метрология','Обучение и курсы'])assert.ok(types.get(cat)>=3,'missing category: '+cat);
-for(const id of ['platform-cyberleninka','platform-elibrary','platform-zhurnalivak'])assert.equal(items.find(x=>x.id===id).type,'Научные базы и справочники',id+' wrong group');
+for(const id of ['platform-cyberleninka','platform-elibrary'])assert.equal(items.find(x=>x.id===id).type,'Научные базы и справочники',id+' wrong group');
 assert.ok(types.get('Журналы')>=48,'journals catalog too sparse');
-const asuIds=['forum-inductive-automation','forum-proasutp','forum-asu-tp-community','forum-cyberforum','forum-delta-electronics','ref-siemens-sieportal'];
+const asuIds=['forum-inductive-automation','forum-proasutp','forum-asu-tp-community','forum-cyberforum','forum-delta-electronics'];
 const relatedAsuForumIds=['forum-metrologu','forum-electronix','forum-robotics-se','forum-opennet'];
 assert.equal(types.has('АСУ ТП'),false,'ASU TP must be a subsection within Forums, not a category');
 for(const id of [...asuIds,...relatedAsuForumIds]){
  const item=items.find(item=>item.id===id);
  assert.ok(item&&item.type==='Форумы'&&item.topic==='АСУ ТП','forum not in ASU TP subsection: '+id);
 }
-assert.equal(items.filter(x=>x.type==='Форумы'&&x.topic==='АСУ ТП').length,18,'unexpected ASU TP subsection count');
-const forumTopics={'АСУ ТП':18,'ЧПУ и металлообработка':7,'САПР и конструирование':10,'Электроника и микроконтроллеры':10,'ИТ и технологии':2,'Общая инженерия':4};
+assert.equal(items.filter(x=>x.type==='Форумы'&&x.topic==='АСУ ТП').length,17,'unexpected ASU TP subsection count');
+const forumTopics={'АСУ ТП':17,'ЧПУ и металлообработка':5,'САПР и конструирование':9,'Электроника и микроконтроллеры':9,'ИТ и технологии':2,'Общая инженерия':3};
 const forumItems=items.filter(x=>x.type==='Форумы');
-assert.equal(forumItems.length,51,'unexpected forum catalog size');
-const newIds=['forum-owen','forum-plctalk','forum-mrplc','forum-control-com','forum-codesys','forum-rockwell','forum-plcforums','forum-krug2000','forum-cccp3d','forum-onshape','forum-freecad-official','forum-cxem','forum-promelec','forum-rlocman','forum-eham','forum-allaboutcircuits','forum-tehnari-electronics','forum-chipmaker','forum-cnc-userforum','forum-lightburn','forum-meztool','forum-alfa-industry','forum-metalorezzka','forum-abok'];
+assert.equal(forumItems.length,45,'unexpected forum catalog size');
+const newIds=['forum-owen','forum-plctalk','forum-mrplc','forum-control-com','forum-codesys','forum-rockwell','forum-plcforums','forum-krug2000','forum-cccp3d','forum-onshape','forum-freecad-official','forum-cxem','forum-promelec','forum-rlocman','forum-eham','forum-tehnari-electronics','forum-chipmaker','forum-lightburn','forum-meztool','forum-alfa-industry','forum-metalorezzka','forum-abok'];
 for(const id of newIds)assert.ok(forumItems.some(x=>x.id===id),'missing researched forum: '+id);
-assert.equal(items.find(x=>x.id==='forum-cadcam').topic,'ЧПУ и металлообработка','CNC-Club must be in machining');
+const archived=JSON.parse(fs.readFileSync('audit/additional-resource-link-review-2026-10-27.json','utf8')).archived;
+assert.equal(archived.length,7);
+for(const entry of archived){assert.ok(entry.record.id&&entry.record.link&&entry.reason);assert.ok(!items.some(x=>x.id===entry.record.id),'unavailable record is still recommended');}
+assert.ok(!items.some(x=>x.id==='tg-solidsovet'));
+assert.match(items.find(x=>x.id==='tg-cadmeetup').desc,/Инженерное сообщество/);
 assert.equal(items.find(x=>x.id==='forum-asu-tp-community').link,'https://asu-tp.su/forum/','ASU community should link to its forum');
 assert.equal(items.find(x=>x.id==='forum-inductive-automation').link,'https://forum.inductiveautomation.com/','inactive automation forum replacement failed');
 assert.equal(items.find(x=>x.id==='dev-grabcad').link,'https://grabcad.com/library','CAD resource should open model library, not marketing home');

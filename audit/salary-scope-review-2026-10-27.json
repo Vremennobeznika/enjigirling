@@ -1,0 +1,832 @@
+{
+  "date": "2026-10-27",
+  "recordsReviewed": 54,
+  "numericSourcePagesRead": 23,
+  "hhPagesRead": 14,
+  "firstBinMisinterpretations": 7,
+  "remainingDisplayable": 9,
+  "hhEvidence": [
+    {
+      "id": "mechanical-engineer",
+      "url": "https://career.hh.ru/profession/215",
+      "pageTitle": "Инженер-механик",
+      "selectedGrade": "JUNIOR",
+      "statisticsBlurred": true,
+      "oldRange": [
+        65250,
+        170000
+      ],
+      "firstHistogramBin": {
+        "from": 65250,
+        "to": 170000
+      },
+      "oldRangeEqualsFirstBin": true,
+      "contentSha256": "857719fa92d07dc83d16b1048515247ac064f4740e55524b7a4f33538bb7b036"
+    },
+    {
+      "id": "electrical-designer",
+      "url": "https://career.hh.ru/profession/218",
+      "pageTitle": "Инженер-проектировщик систем электроснабжения",
+      "selectedGrade": "NO_GRADE",
+      "statisticsBlurred": true,
+      "oldRange": [
+        80000,
+        176000
+      ],
+      "firstHistogramBin": null,
+      "oldRangeEqualsFirstBin": false,
+      "contentSha256": "db5c46427ae192286150d407c34fd35b402613623196b08bb7d2296046a2139d"
+    },
+    {
+      "id": "environmental-engineer",
+      "url": "https://career.hh.ru/profession/222",
+      "pageTitle": "Инженер-эколог",
+      "selectedGrade": "JUNIOR",
+      "statisticsBlurred": true,
+      "oldRange": [
+        34800,
+        55000
+      ],
+      "firstHistogramBin": {
+        "from": 34800,
+        "to": 55000
+      },
+      "oldRangeEqualsFirstBin": true,
+      "contentSha256": "a059e57c292dea8ab82facd155ff130b4e1c5bbe9a9972dd21b73e06c0a912f8"
+    },
+    {
+      "id": "kipia-engineer",
+      "url": "https://career.hh.ru/profession/206",
+      "pageTitle": "Инженер КИПиА",
+      "selectedGrade": "JUNIOR",
+      "statisticsBlurred": true,
+      "oldRange": [
+        125000,
+        162500
+      ],
+      "firstHistogramBin": {
+        "from": 28710,
+        "to": 61000
+      },
+      "oldRangeEqualsFirstBin": false,
+      "contentSha256": "b7796a16729dd87f7fcdf97fb476ebffb4c58595164c56beab1ecedb70d42fb1"
+    },
+    {
+      "id": "forest-engineer",
+      "url": "https://career.hh.ru/profession/440",
+      "pageTitle": "Инженер лесного хозяйства",
+      "selectedGrade": "NO_GRADE",
+      "statisticsBlurred": true,
+      "oldRange": [
+        45000,
+        147000
+      ],
+      "firstHistogramBin": null,
+      "oldRangeEqualsFirstBin": false,
+      "contentSha256": "eb699408405831bda8d6a62c27e17cbcf419a986b7375920cf34fcb3798bc4b0"
+    },
+    {
+      "id": "telecom-engineer",
+      "url": "https://career.hh.ru/profession/211",
+      "pageTitle": "Инженер слаботочных систем/Инженер связи",
+      "selectedGrade": "NO_GRADE",
+      "statisticsBlurred": true,
+      "oldRange": [
+        55000,
+        130000
+      ],
+      "firstHistogramBin": null,
+      "oldRangeEqualsFirstBin": false,
+      "contentSha256": "6daf12da4465ac02ed5d1156e095a787a392077c2db2b0110579c48beeb036fa"
+    },
+    {
+      "id": "geodetic-engineer",
+      "url": "https://career.hh.ru/profession/359",
+      "pageTitle": "Геодезист",
+      "selectedGrade": "NO_GRADE",
+      "statisticsBlurred": true,
+      "oldRange": [
+        111000,
+        230000
+      ],
+      "firstHistogramBin": null,
+      "oldRangeEqualsFirstBin": false,
+      "contentSha256": "478559c6b091d9c3a094a96748cc4c16063d1a9e6b188a2d69f0a80e819e1a5c"
+    },
+    {
+      "id": "data-engineer",
+      "url": "https://career.hh.ru/profession/7",
+      "pageTitle": "Data Engineer",
+      "selectedGrade": "JUNIOR",
+      "statisticsBlurred": true,
+      "oldRange": [
+        65250,
+        91350
+      ],
+      "firstHistogramBin": {
+        "from": 47850,
+        "to": 65250
+      },
+      "oldRangeEqualsFirstBin": false,
+      "contentSha256": "76f41ef8110dc4134a5d8d3ce9a35d3c9d250cbca7b516e959e0de6cbcd6cba5"
+    },
+    {
+      "id": "devops-engineer",
+      "url": "https://career.hh.ru/profession/53",
+      "pageTitle": "DevOps-инженер",
+      "selectedGrade": "JUNIOR",
+      "statisticsBlurred": true,
+      "oldRange": [
+        60000,
+        65250
+      ],
+      "firstHistogramBin": {
+        "from": 60000,
+        "to": 65250
+      },
+      "oldRangeEqualsFirstBin": true,
+      "contentSha256": "03f47d58beb3a2d245f4a0394e048235ac00fe3ac3c4acfd5f01c50726c471ad"
+    },
+    {
+      "id": "ml-engineer",
+      "url": "https://career.hh.ru/profession/117",
+      "pageTitle": "ML-инженер",
+      "selectedGrade": "JUNIOR",
+      "statisticsBlurred": true,
+      "oldRange": [
+        57500,
+        113100
+      ],
+      "firstHistogramBin": {
+        "from": 57500,
+        "to": 113100
+      },
+      "oldRangeEqualsFirstBin": true,
+      "contentSha256": "befafdf92a462f710bee8a53da317e5e38d79de890e36eae7a345e6d0819cf5b"
+    },
+    {
+      "id": "security-engineer",
+      "url": "https://career.hh.ru/profession/68",
+      "pageTitle": "Специалист по информационной безопасности",
+      "selectedGrade": "JUNIOR",
+      "statisticsBlurred": true,
+      "oldRange": [
+        40000,
+        47850
+      ],
+      "firstHistogramBin": {
+        "from": 23490,
+        "to": 40000
+      },
+      "oldRangeEqualsFirstBin": false,
+      "contentSha256": "a839e32d6c99dba7275e1d85a3b936d6694f17a020b933a94c980aeeb2eb3d1e"
+    },
+    {
+      "id": "frontend-engineer",
+      "url": "https://career.hh.ru/profession/40",
+      "pageTitle": "Frontend-разработчик",
+      "selectedGrade": "JUNIOR",
+      "statisticsBlurred": true,
+      "oldRange": [
+        30000,
+        40000
+      ],
+      "firstHistogramBin": {
+        "from": 30000,
+        "to": 40000
+      },
+      "oldRangeEqualsFirstBin": true,
+      "contentSha256": "0f7f8971b6a47f7941cf606ef5d68b3f55a8cdb8e9550db5c36652c86619e120"
+    },
+    {
+      "id": "backend-engineer",
+      "url": "https://career.hh.ru/profession/43",
+      "pageTitle": "Backend-разработчик",
+      "selectedGrade": "JUNIOR",
+      "statisticsBlurred": true,
+      "oldRange": [
+        50025,
+        55245
+      ],
+      "firstHistogramBin": {
+        "from": 50025,
+        "to": 55245
+      },
+      "oldRangeEqualsFirstBin": true,
+      "contentSha256": "22ba68ea81b5aa7664ecb9b5db42149c220d42283c2aa6543ae08f31b9ce640f"
+    },
+    {
+      "id": "qa-engineer",
+      "url": "https://career.hh.ru/profession/72",
+      "pageTitle": "Тестировщик",
+      "selectedGrade": "JUNIOR",
+      "statisticsBlurred": true,
+      "oldRange": [
+        25000,
+        50000
+      ],
+      "firstHistogramBin": {
+        "from": 25000,
+        "to": 50000
+      },
+      "oldRangeEqualsFirstBin": true,
+      "contentSha256": "0033027a1a036009fd9437c68461129c75f051b402a64f5566618cc1e94dfc96"
+    }
+  ],
+  "records": [
+    {
+      "id": "civil-engineer",
+      "title": "Инженер-строитель (ПГС)",
+      "sourceUrl": "https://fulledu.ru/professii/stroitelstvo/inzhener-pgs/zarplata/",
+      "previousStatus": "source_snapshot",
+      "currentStatus": "source_snapshot",
+      "displayLabel": "Межквартильный диапазон (P25–P75)",
+      "rangeMinRub": 51788,
+      "rangeMaxRub": 90263,
+      "reason": "FullEdu по вакансиям Trudvsem: 42 вакансии с зарплатой; обновление источника 25.10.2026. Суммы на руки по методике сайта."
+    },
+    {
+      "id": "pgs-designer",
+      "title": "Инженер-проектировщик (ПГС)",
+      "sourceUrl": "https://career.hh.ru/profession/216",
+      "previousStatus": "unverified",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Числа ранее не подтверждены и по-прежнему не публикуются."
+    },
+    {
+      "id": "architect-engineer",
+      "title": "Инженер-архитектор",
+      "sourceUrl": "https://career.hh.ru/profession/195",
+      "previousStatus": "unverified",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Числа ранее не подтверждены и по-прежнему не публикуются."
+    },
+    {
+      "id": "road-engineer",
+      "title": "Инженер-дорожник",
+      "sourceUrl": "https://hh.ru/vacancies/inzhener-pto-dorozhnogo-stroitelstva",
+      "previousStatus": "unverified",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Числа ранее не подтверждены и по-прежнему не публикуются."
+    },
+    {
+      "id": "road-designer",
+      "title": "Инженер-проектировщик автомобильных дорог",
+      "sourceUrl": "https://hh.ru/vacancies/inzhener-proektirovschik-avtomobilnyh-dorog",
+      "previousStatus": "unverified",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Числа ранее не подтверждены и по-прежнему не публикуются."
+    },
+    {
+      "id": "mechanical-engineer",
+      "title": "Инженер-механик",
+      "sourceUrl": "https://career.hh.ru/profession/215",
+      "previousStatus": "source_snapshot",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Корректный сопоставимый зарплатный показатель по открытому источнику не подтверждён."
+    },
+    {
+      "id": "automotive-engineer",
+      "title": "Инженер-автомобилестроитель",
+      "sourceUrl": "https://togliatti.hh.ru/vacancies/inzhener_konstruktor",
+      "previousStatus": "unverified",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Числа ранее не подтверждены и по-прежнему не публикуются."
+    },
+    {
+      "id": "power-engineer",
+      "title": "Инженер-энергетик",
+      "sourceUrl": "https://dreamjob.ru/salary/inzhener-energetik",
+      "previousStatus": "source_snapshot",
+      "currentStatus": "source_snapshot",
+      "displayLabel": "Часто встречающийся диапазон по отзывам",
+      "rangeMinRub": 82000,
+      "rangeMaxRub": 126000,
+      "reason": "Dream Job, 2026 год: 25 отзывов о зарплатах. Пользовательские данные, не репрезентативная выборка всех работников."
+    },
+    {
+      "id": "electrical-engineer",
+      "title": "Инженер-электрик",
+      "sourceUrl": "https://dreamjob.ru/salary/inzhener-elektrik",
+      "previousStatus": "source_snapshot",
+      "currentStatus": "source_snapshot",
+      "displayLabel": "Часто встречающийся диапазон по отзывам",
+      "rangeMinRub": 90000,
+      "rangeMaxRub": 165000,
+      "reason": "Dream Job, 2026 год: 26 отзывов о зарплатах. Пользовательские данные, не репрезентативная выборка всех работников."
+    },
+    {
+      "id": "electrical-designer",
+      "title": "Инженер-проектировщик электроснабжения",
+      "sourceUrl": "https://career.hh.ru/profession/218",
+      "previousStatus": "source_snapshot",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Корректный сопоставимый зарплатный показатель по открытому источнику не подтверждён."
+    },
+    {
+      "id": "nuclear-engineer",
+      "title": "Инженер-атомщик",
+      "sourceUrl": "https://nesiditsa.ru/vacancy/131507995",
+      "previousStatus": "unverified",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Числа ранее не подтверждены и по-прежнему не публикуются."
+    },
+    {
+      "id": "aerospace-engineer",
+      "title": "Инженер-авиастроитель",
+      "sourceUrl": "https://hh.ru/vacancies/inzhener-konstruktor-shemotehnik/polnaya_zanyatost?hhtmFrom=vacancy_search_list&page=0&search_session_id=03afd539-c875-4243-87df-72fd36175a86",
+      "previousStatus": "unverified",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Числа ранее не подтверждены и по-прежнему не публикуются."
+    },
+    {
+      "id": "space-engineer",
+      "title": "Космический инженер (ракетостроитель)",
+      "sourceUrl": "https://nesiditsa.ru/vacancy/137874704",
+      "previousStatus": "unverified",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Числа ранее не подтверждены и по-прежнему не публикуются."
+    },
+    {
+      "id": "chemical-engineer",
+      "title": "Инженер-химик-технолог",
+      "sourceUrl": "https://career.hh.ru/profession/221",
+      "previousStatus": "unverified",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Числа ранее не подтверждены и по-прежнему не публикуются."
+    },
+    {
+      "id": "oil-gas-engineer",
+      "title": "Инженер-нефтяник",
+      "sourceUrl": "https://energybase.ru/vacancy/1151761",
+      "previousStatus": "unverified",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Числа ранее не подтверждены и по-прежнему не публикуются."
+    },
+    {
+      "id": "metallurgical-engineer",
+      "title": "Инженер-металлург",
+      "sourceUrl": null,
+      "previousStatus": "unverified",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Числа ранее не подтверждены и по-прежнему не публикуются."
+    },
+    {
+      "id": "mining-engineer",
+      "title": "Горный инженер",
+      "sourceUrl": "https://career.hh.ru/profession/268",
+      "previousStatus": "unverified",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Числа ранее не подтверждены и по-прежнему не публикуются."
+    },
+    {
+      "id": "environmental-engineer",
+      "title": "Инженер-эколог",
+      "sourceUrl": "https://career.hh.ru/profession/222",
+      "previousStatus": "source_snapshot",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Корректный сопоставимый зарплатный показатель по открытому источнику не подтверждён."
+    },
+    {
+      "id": "biomedical-engineer",
+      "title": "Инженер-биомедик",
+      "sourceUrl": "https://hh.ru/vacancies/inzhener_medicinskogo_oborudovaniya/za_poslednie_tri_dnya",
+      "previousStatus": "unverified",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Числа ранее не подтверждены и по-прежнему не публикуются."
+    },
+    {
+      "id": "robotics-engineer",
+      "title": "Инженер-робототехник",
+      "sourceUrl": "https://hh.ru/vacancies/inzhener-robototehnik",
+      "previousStatus": "unverified",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Числа ранее не подтверждены и по-прежнему не публикуются."
+    },
+    {
+      "id": "railway-engineer",
+      "title": "Инженер-железнодорожник",
+      "sourceUrl": null,
+      "previousStatus": "unverified",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Числа ранее не подтверждены и по-прежнему не публикуются."
+    },
+    {
+      "id": "shipbuilding-engineer",
+      "title": "Инженер-кораблестроитель",
+      "sourceUrl": null,
+      "previousStatus": "unverified",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Числа ранее не подтверждены и по-прежнему не публикуются."
+    },
+    {
+      "id": "asu-tp-designer",
+      "title": "Проектировщик АСУ ТП",
+      "sourceUrl": "https://dreamjob.ru/salary/inzhener-proektirovschik-asu-tp",
+      "previousStatus": "source_snapshot",
+      "currentStatus": "source_snapshot",
+      "displayLabel": "Часто встречающийся диапазон по отзывам",
+      "rangeMinRub": 107000,
+      "rangeMaxRub": 155000,
+      "reason": "Dream Job, 2026 год: всего 4 отзыва о зарплатах; крайне малая выборка."
+    },
+    {
+      "id": "asu-tp-programmer",
+      "title": "Программист АСУ ТП",
+      "sourceUrl": "https://dreamjob.ru/salary/inzhener-programmist-asu-tp",
+      "previousStatus": "source_snapshot",
+      "currentStatus": "source_snapshot",
+      "displayLabel": "Часто встречающийся диапазон по отзывам",
+      "rangeMinRub": 100000,
+      "rangeMaxRub": 140000,
+      "reason": "Dream Job, 2026 год: всего 5 отзывов о зарплатах; крайне малая выборка."
+    },
+    {
+      "id": "asu-tp-commissioning",
+      "title": "Пуско-наладчик АСУ ТП",
+      "sourceUrl": "https://khabarovsk.hh.ru/vacancy/137413636",
+      "previousStatus": "unverified",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Числа ранее не подтверждены и по-прежнему не публикуются."
+    },
+    {
+      "id": "kipia-engineer",
+      "title": "Инженер КИПиА",
+      "sourceUrl": "https://career.hh.ru/profession/206",
+      "previousStatus": "source_snapshot",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Корректный сопоставимый зарплатный показатель по открытому источнику не подтверждён."
+    },
+    {
+      "id": "food-engineer",
+      "title": "Инженер-технолог пищевой промышленности",
+      "sourceUrl": "https://career.hh.ru/profession/253",
+      "previousStatus": "unverified",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Числа ранее не подтверждены и по-прежнему не публикуются."
+    },
+    {
+      "id": "textile-engineer",
+      "title": "Инженер-текстильщик",
+      "sourceUrl": "https://hh.ru/vacancies/tehnolog-na-shvejnoe-proizvodstvo?hhtmFrom=vacancy_search_list&page=1&search_session_id=4f831988-fcd4-4345-b1ea-16e313cd9ade",
+      "previousStatus": "unverified",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Числа ранее не подтверждены и по-прежнему не публикуются."
+    },
+    {
+      "id": "forest-engineer",
+      "title": "Инженер лесного хозяйства",
+      "sourceUrl": "https://career.hh.ru/profession/440",
+      "previousStatus": "source_snapshot",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Корректный сопоставимый зарплатный показатель по открытому источнику не подтверждён."
+    },
+    {
+      "id": "telecom-engineer",
+      "title": "Инженер связи",
+      "sourceUrl": "https://career.hh.ru/profession/211",
+      "previousStatus": "source_snapshot",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Корректный сопоставимый зарплатный показатель по открытому источнику не подтверждён."
+    },
+    {
+      "id": "water-engineer",
+      "title": "Инженер водоснабжения и водоотведения",
+      "sourceUrl": "https://dreamjob.ru/employers/2842675/vakansii/134506411",
+      "previousStatus": "source_snapshot",
+      "currentStatus": "source_snapshot",
+      "displayLabel": "Предложение в архивной вакансии",
+      "rangeMinRub": 110000,
+      "rangeMaxRub": 130000,
+      "reason": "Архивное объявление ИДЕАЛ от 14.07.2026; одна должность по эксплуатации водоснабжения и водоотведения. Не текущая рыночная статистика; учёт налогов не подтверждён."
+    },
+    {
+      "id": "lighting-engineer",
+      "title": "Инженер-светотехник",
+      "sourceUrl": "https://nesiditsa.ru/vacancy/137958986",
+      "previousStatus": "source_snapshot",
+      "currentStatus": "source_snapshot",
+      "displayLabel": "Предложение одного работодателя",
+      "rangeMinRub": 150000,
+      "rangeMaxRub": 150000,
+      "reason": "Объявление НПО ЛИТ для инженера-светотехника: сумма на руки. Это одна вакансия, не средняя зарплата по профессии."
+    },
+    {
+      "id": "military-engineer",
+      "title": "Военный инженер",
+      "sourceUrl": "https://synergyonline.ru/professions/silovye_struktury/voennyy-inzhener",
+      "previousStatus": "unverified",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Числа ранее не подтверждены и по-прежнему не публикуются."
+    },
+    {
+      "id": "polygraph-engineer",
+      "title": "Инженер полиграфии",
+      "sourceUrl": "https://www.redstarprint.ru/vacancies/",
+      "previousStatus": "unverified",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Числа ранее не подтверждены и по-прежнему не публикуются."
+    },
+    {
+      "id": "materials-engineer",
+      "title": "Инженер-материаловед",
+      "sourceUrl": "https://nesiditsa.ru/vacancy/138601476",
+      "previousStatus": "unverified",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Числа ранее не подтверждены и по-прежнему не публикуются."
+    },
+    {
+      "id": "civil-defense-engineer",
+      "title": "Инженер ГО и ЧС",
+      "sourceUrl": "https://xn----8sbnjg0adinpefc8b1e6c.xn--p1ai/vacancies/164438-inzhener-po-grazhdanskoy-oborone-i-chrezvychaynym/",
+      "previousStatus": "unverified",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Числа ранее не подтверждены и по-прежнему не публикуются."
+    },
+    {
+      "id": "geodetic-engineer",
+      "title": "Инженер-геодезист",
+      "sourceUrl": "https://career.hh.ru/profession/359",
+      "previousStatus": "source_snapshot",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Корректный сопоставимый зарплатный показатель по открытому источнику не подтверждён."
+    },
+    {
+      "id": "astronomer-engineer",
+      "title": "Инженер-астроном",
+      "sourceUrl": "https://hh.ru/vacancy/79388861",
+      "previousStatus": "unverified",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Числа ранее не подтверждены и по-прежнему не публикуются."
+    },
+    {
+      "id": "restoration-engineer",
+      "title": "Инженер-реставратор",
+      "sourceUrl": "https://hh.ru/vacancies/inzhener-pto-inzhenernye-sistemy/polnaya_zanyatost?hhtmFrom=vacancy_search_list&page=1&search_session_id=7cd70e19-9a40-44a9-b953-f7b64bbed65d",
+      "previousStatus": "unverified",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Числа ранее не подтверждены и по-прежнему не публикуются."
+    },
+    {
+      "id": "standardization-engineer",
+      "title": "Инженер по стандартизации",
+      "sourceUrl": "https://dreamjob.ru/employers/6154236/vakansii/138013702",
+      "previousStatus": "unverified",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Числа ранее не подтверждены и по-прежнему не публикуются."
+    },
+    {
+      "id": "patent-engineer",
+      "title": "Инженер-патентовед",
+      "sourceUrl": "https://dreamjob.ru/employers/2401785/vakansii",
+      "previousStatus": "unverified",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Числа ранее не подтверждены и по-прежнему не публикуются."
+    },
+    {
+      "id": "data-engineer",
+      "title": "Инженер данных (Data Engineer)",
+      "sourceUrl": "https://career.hh.ru/profession/7",
+      "previousStatus": "source_snapshot",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Корректный сопоставимый зарплатный показатель по открытому источнику не подтверждён."
+    },
+    {
+      "id": "devops-engineer",
+      "title": "DevOps-инженер",
+      "sourceUrl": "https://career.hh.ru/profession/53",
+      "previousStatus": "source_snapshot",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Корректный сопоставимый зарплатный показатель по открытому источнику не подтверждён."
+    },
+    {
+      "id": "ml-engineer",
+      "title": "Инженер машинного обучения (ML Engineer)",
+      "sourceUrl": "https://career.hh.ru/profession/117",
+      "previousStatus": "source_snapshot",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Корректный сопоставимый зарплатный показатель по открытому источнику не подтверждён."
+    },
+    {
+      "id": "security-engineer",
+      "title": "Инженер по информационной безопасности",
+      "sourceUrl": "https://career.hh.ru/profession/68",
+      "previousStatus": "source_snapshot",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Корректный сопоставимый зарплатный показатель по открытому источнику не подтверждён."
+    },
+    {
+      "id": "cloud-engineer",
+      "title": "Cloud-инженер",
+      "sourceUrl": "https://hirehi.ru/salary/cloud",
+      "previousStatus": "source_snapshot",
+      "currentStatus": "source_snapshot",
+      "displayLabel": "Межквартильный диапазон (P25–P75)",
+      "rangeMinRub": 327000,
+      "rangeMaxRub": 473000,
+      "reason": "HireHi: 10 вакансий за последние 12 месяцев, включая закрытые; суммы на руки. Методика сайта также упоминает анонимные ответы; выборка мала и не подтверждает весь рынок."
+    },
+    {
+      "id": "embedded-engineer",
+      "title": "Инженер встраиваемых систем (Embedded)",
+      "sourceUrl": "https://hirehi.ru/salary/embedded-developer",
+      "previousStatus": "source_snapshot",
+      "currentStatus": "source_snapshot",
+      "displayLabel": "Межквартильный диапазон (P25–P75)",
+      "rangeMinRub": 155000,
+      "rangeMaxRub": 250000,
+      "reason": "HireHi: 52 вакансии за последние 12 месяцев, включая закрытые; суммы на руки. Методика сайта также упоминает анонимные ответы; это данные источника, не весь рынок."
+    },
+    {
+      "id": "frontend-engineer",
+      "title": "Frontend-разработчик",
+      "sourceUrl": "https://career.hh.ru/profession/40",
+      "previousStatus": "source_snapshot",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Корректный сопоставимый зарплатный показатель по открытому источнику не подтверждён."
+    },
+    {
+      "id": "backend-engineer",
+      "title": "Backend-разработчик",
+      "sourceUrl": "https://career.hh.ru/profession/43",
+      "previousStatus": "source_snapshot",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Корректный сопоставимый зарплатный показатель по открытому источнику не подтверждён."
+    },
+    {
+      "id": "qa-engineer",
+      "title": "QA-инженер",
+      "sourceUrl": "https://career.hh.ru/profession/72",
+      "previousStatus": "source_snapshot",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Корректный сопоставимый зарплатный показатель по открытому источнику не подтверждён."
+    },
+    {
+      "id": "mobile-engineer",
+      "title": "Mobile-разработчик",
+      "sourceUrl": "https://career.hh.ru/profession/42",
+      "previousStatus": "unverified",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Числа ранее не подтверждены и по-прежнему не публикуются."
+    },
+    {
+      "id": "circuit-design-engineer",
+      "title": "Инженер-схемотехник",
+      "sourceUrl": null,
+      "previousStatus": "unverified",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Числа ранее не подтверждены и по-прежнему не публикуются."
+    },
+    {
+      "id": "pcb-layout-engineer",
+      "title": "Инженер-тополог",
+      "sourceUrl": null,
+      "previousStatus": "unverified",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Числа ранее не подтверждены и по-прежнему не публикуются."
+    },
+    {
+      "id": "metrology-engineer",
+      "title": "Инженер-метролог",
+      "sourceUrl": null,
+      "previousStatus": "unverified",
+      "currentStatus": "unverified",
+      "displayLabel": null,
+      "rangeMinRub": null,
+      "rangeMaxRub": null,
+      "reason": "Числа ранее не подтверждены и по-прежнему не публикуются."
+    }
+  ]
+}

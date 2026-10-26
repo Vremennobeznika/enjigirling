@@ -4,7 +4,7 @@
 const fs=require('node:fs');
 const vm=require('node:vm');
 const path=require('node:path');
-const sources=['resources-data.js','data.js','map-data.js','salary-sources.js','materials-data.js','processes-data.js','career-standards-data.js','calendar-data.js'];
+const sources=['resources-data.js','data.js','map-data.js','salary-sources.js','materials-data.js','processes-data.js','career-standards-data.js','calendar-data.js','dictionary-data.js','coding-data.js'];
 const links=new Map();
 function add(url,source){
  if(typeof url!=='string'||!/^https?:\/\//i.test(url))return;
@@ -16,7 +16,7 @@ for(const file of sources){
  const code=fs.readFileSync(file,'utf8');
  const sandbox={window:{}};
  try{
-   vm.runInNewContext(code,sandbox,{timeout:3000});
+   vm.runInNewContext(code+(file==='dictionary-data.js'?'\nwindow.dictionary=dictionary;':''),sandbox,{timeout:3000});
    const walk=(v,depth=0)=>{
      if(depth>12||v==null)return;
      if(typeof v==='string'){add(v,file);return;}
@@ -25,6 +25,7 @@ for(const file of sources){
    };
    walk(sandbox.window);
    if(file==='resources-data.js')walk(vm.runInNewContext(code+'\nresources',{}, {timeout:3000}));
+   if(file==='coding-data.js')walk(vm.runInNewContext(code+'\ncodingResources',{}, {timeout:3000}));
  }catch(e){console.error('Cannot parse '+file+': '+e.message);process.exitCode=1;}
 }
 // Professional-standard documents live in the UI script; collect literal URLs without executing DOM code.

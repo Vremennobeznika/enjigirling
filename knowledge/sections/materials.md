@@ -8,7 +8,7 @@
 
 ## Текст и описание раздела
 
-[ENJIGIRLING / ENGINEERING INDEX](https://vremennobeznika.github.io/enjigirling/index.html)[Для ИИ](https://vremennobeznika.github.io/enjigirling/ai.html) ☾
+[ENJIGIRLING / ENGINEERING INDEX](https://vremennobeznika.github.io/enjigirling/index.html) ☾
 Разделы сайта
 Карьера
 [Профессии](https://vremennobeznika.github.io/enjigirling/index.html)
@@ -24,6 +24,10 @@
 Сообщество
 [Календарь праздников](https://vremennobeznika.github.io/enjigirling/calendar.html)
 [Ресурсы сообщества 18+](https://vremennobeznika.github.io/enjigirling/resources.html)
+Лаборатории
+[Робототехника](https://vremennobeznika.github.io/enjigirling/robotics.html)
+[Кодинг](https://vremennobeznika.github.io/enjigirling/coding.html)
+[Для ИИ](https://vremennobeznika.github.io/enjigirling/ai.html)
 СПРАВОЧНИК / 03
 ## Справочник материалов.
 Группы материалов и области применения. Численные характеристики появятся только с указанием марки, состояния, единиц и проверяемого источника.
@@ -59,7 +63,7 @@
 - **process:** ["cutting","heat","hardness","stamping","rolling"]
 - **note:** Для химического состава и механических свойств необходимо выбрать действующий стандарт на конкретный вид проката или изделия.
 - **industries:** ["metals","general"]
-- **sources:** [{"title":"USGS — Iron and Steel Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/iron-and-steel-statistics-and-information"},{"title":"ГОСТ 1050–2013 — Металлопродукция из нелегированных конструкционных качественных и специальных сталей","url":"https://mmk-metiz.ru/buyers/product/gost/gost1050-2013.pdf"}]
+- **sources:** [{"title":"BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)","url":"https://nora.nerc.ac.uk/id/eprint/541620/"},{"title":"ГОСТ 1050–2013 — Металлопродукция из нелегированных конструкционных качественных и специальных сталей","url":"https://mmk-metiz.ru/buyers/product/gost/gost1050-2013.pdf"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Сталь 20 включена в ГОСТ 1050–2013 как нелегированная конструкционная сталь; условия поставки различаются.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Сталь 45
@@ -72,7 +76,7 @@
 - **process:** ["cutting","heat","ultrasonic","hardness","forging","grinding","rolling"]
 - **note:** Твёрдость и прочность без указания режима термообработки не приводятся.
 - **industries:** ["metals","general"]
-- **sources:** [{"title":"USGS — Iron and Steel Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/iron-and-steel-statistics-and-information"},{"title":"ГОСТ 1050–2013 — Металлопродукция из нелегированных конструкционных качественных и специальных сталей","url":"https://mmk-metiz.ru/buyers/product/gost/gost1050-2013.pdf"}]
+- **sources:** [{"title":"BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)","url":"https://nora.nerc.ac.uk/id/eprint/541620/"},{"title":"ГОСТ 1050–2013 — Металлопродукция из нелегированных конструкционных качественных и специальных сталей","url":"https://mmk-metiz.ru/buyers/product/gost/gost1050-2013.pdf"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Сталь 45 включена в ГОСТ 1050–2013 как нелегированная конструкционная сталь; условия поставки различаются.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### 09Г2С
@@ -85,7 +89,7 @@
 - **process:** ["welding","cutting","inspection","mig-mag","ultrasonic","radiographic"]
 - **note:** Марка сама по себе не определяет категорию проката, ударную вязкость или режим сварки.
 - **industries:** ["metals","construction"]
-- **sources:** [{"title":"USGS — Iron and Steel Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/iron-and-steel-statistics-and-information"},{"title":"ГОСТ 19281–2014 — Прокат повышенной прочности (копия)","url":"https://files.stroyinf.ru/Data/581/58183.pdf"}]
+- **sources:** [{"title":"BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)","url":"https://nora.nerc.ac.uk/id/eprint/541620/"},{"title":"ГОСТ 19281–2014 — Прокат повышенной прочности (копия)","url":"https://files.stroyinf.ru/Data/581/58183.pdf"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"09Г2С включена в номенклатуру сталей для проката повышенной прочности в документе, область которого охватывает конструкции со сварными, клёпаными и болтовыми соединениями. Это не подтверждение пригодности конкретной поставки к проекту.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### AISI 304
@@ -176,7 +180,7 @@
 - **process:** ["inspection"]
 - **note:** Не задавать единые значения твёрдости и прочности без марки и метода испытаний.
 - **industries:** ["ceramics","electronics"]
-- **sources:** [{"title":"USGS — Bauxite and Alumina Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/bauxite-and-alumina-statistics-and-information?qt-science_support_page_related_con=0"},{"title":"Morgan — High Performance Alumina Ceramic Components","url":"https://www.morgantechnicalceramics.com/en-gb/products/alumina-ceramic-components/"}]
+- **sources:** [{"title":"BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)","url":"https://nora.nerc.ac.uk/id/eprint/541620/"},{"title":"Morgan — High Performance Alumina Ceramic Components","url":"https://www.morgantechnicalceramics.com/en-gb/products/alumina-ceramic-components/"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Керамику на основе оксида алюминия применяют в электрических изоляторах и технических износостойких деталях. Рабочие пределы конкретного состава не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Берёзовая фанера
@@ -345,7 +349,7 @@
 - **process:** ["casting"]
 - **note:** Установите сортировку, загрязнения, прослеживаемость происхождения и химический состав.
 - **industries:** ["metals","mining"]
-- **sources:** [{"title":"USGS — Iron and Steel Scrap Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/iron-and-steel-scrap-statistics-and-information"},{"title":"SGL — Commerzbank German Investment Seminar","url":"https://www.sglcarbon.com/pdf/SGL-Presentation-Commerzbank-German-Investment-Seminar-January-2014-EN.pdf"}]
+- **sources:** [{"title":"BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)","url":"https://nora.nerc.ac.uk/id/eprint/541620/"},{"title":"SGL — Commerzbank German Investment Seminar","url":"https://www.sglcarbon.com/pdf/SGL-Presentation-Commerzbank-German-Investment-Seminar-January-2014-EN.pdf"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Стальной лом используется как металлосодержащая шихта для производства стали в электродуговых печах. Литейная шихта и ограничения по примесям этим не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Железная руда
@@ -358,7 +362,7 @@
 - **process:** ["ore-crushing","ore-grinding","magnetic-separation-ore"]
 - **note:** Требуются минералогия, гранулометрия, содержание железа и примесей.
 - **industries:** ["mining","metals"]
-- **sources:** [{"title":"USGS — Iron Ore Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/iron-ore-statistics-and-information"},{"title":"Metso — Basics in Minerals Processing, Edition 12","url":"https://www.metso.com/globalassets/insights/ebooks/mo-basics-in-mineral-processing-handbook_lowres.pdf"}]
+- **sources:** [{"title":"BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)","url":"https://nora.nerc.ac.uk/id/eprint/541620/"},{"title":"Metso — Basics in Minerals Processing, Edition 12","url":"https://www.metso.com/globalassets/insights/ebooks/mo-basics-in-mineral-processing-handbook_lowres.pdf"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Железорудная мелочь после окомкования может служить сырьём для получения железа в металлургической печи. Содержание железа и конкретная шихта не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Боксит
@@ -371,7 +375,7 @@
 - **process:** ["ore-crushing","ore-grinding"]
 - **note:** Проверяются минералогический состав, реакционная способность и примеси.
 - **industries:** ["mining","metals","ceramics"]
-- **sources:** [{"title":"USGS — Bauxite and Alumina Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/bauxite-and-alumina-statistics-and-information?qt-science_support_page_related_con=0"},{"title":"Alumina Refining 101","url":"https://www.aluminum.org/alumina-refining-101"}]
+- **sources:** [{"title":"BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)","url":"https://nora.nerc.ac.uk/id/eprint/541620/"},{"title":"Alumina Refining 101","url":"https://www.aluminum.org/alumina-refining-101"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Бокситы перерабатывают в глинозём, который далее используют в производстве первичного алюминия; качество конкретного сырья не аттестовано.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Портландцемент
@@ -384,7 +388,7 @@
 - **process:** ["concrete-mixing","concrete-curing"]
 - **note:** Вид, класс прочности, сроки схватывания и совместимость добавок подтверждаются паспортом и стандартом.
 - **industries:** ["construction","ceramics"]
-- **sources:** [{"title":"USGS — Cement Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information"},{"title":"EPA AP-42 11.6 — Portland Cement Manufacturing","url":"https://www.epa.gov/system/files/documents/2025-02/c11s06_final_2-2025_0.pdf"}]
+- **sources:** [{"title":"BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)","url":"https://nora.nerc.ac.uk/id/eprint/541620/"},{"title":"EPA AP-42 11.6 — Portland Cement Manufacturing","url":"https://www.epa.gov/system/files/documents/2025-02/c11s06_final_2-2025_0.pdf"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Портландцемент получают помолом клинкера с добавлением гипса и при необходимости других компонентов.","reviewScope":"Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.","checkedAt":"2026-10-25"}
 
 ### Цементный клинкер
@@ -397,7 +401,7 @@
 - **process:** ["cement-clinker-firing"]
 - **note:** Проверяются минералогия, свободная известь, тонкость помола после переработки.
 - **industries:** ["ceramics","construction"]
-- **sources:** [{"title":"USGS — Cement Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information"},{"title":"EPA AP-42 11.6 — Portland Cement Manufacturing","url":"https://www.epa.gov/system/files/documents/2025-02/c11s06_final_2-2025_0.pdf"}]
+- **sources:** [{"title":"BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)","url":"https://nora.nerc.ac.uk/id/eprint/541620/"},{"title":"EPA AP-42 11.6 — Portland Cement Manufacturing","url":"https://www.epa.gov/system/files/documents/2025-02/c11s06_final_2-2025_0.pdf"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Клинкер образуется при пиропереработке подготовленной сырьевой смеси.","reviewScope":"Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.","checkedAt":"2026-10-25"}
 
 ### Гипс природный
@@ -410,7 +414,7 @@
 - **process:** ["ore-crushing"]
 - **note:** Требуются фазовый состав, примеси, влажность и назначение.
 - **industries:** ["ceramics","construction","mining"]
-- **sources:** [{"title":"USGS — Gypsum Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/gypsum-statistics-and-information"},{"title":"EPA AP-42 11.6 — Portland Cement Manufacturing","url":"https://www.epa.gov/system/files/documents/2025-02/c11s06_final_2-2025_0.pdf"}]
+- **sources:** [{"title":"BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)","url":"https://nora.nerc.ac.uk/id/eprint/541620/"},{"title":"EPA AP-42 11.6 — Portland Cement Manufacturing","url":"https://www.epa.gov/system/files/documents/2025-02/c11s06_final_2-2025_0.pdf"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Гипс добавляют на стадии окончательного помола цемента.","reviewScope":"Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.","checkedAt":"2026-10-25"}
 
 ### Кварцевый песок технический
@@ -423,7 +427,7 @@
 - **process:** ["glass-melting","granular-filtration"]
 - **note:** Проверяйте содержание SiO₂, оксидов железа, фракционный состав и санитарные требования.
 - **industries:** ["ceramics","mining","water","construction"]
-- **sources:** [{"title":"USGS — Silica Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/silica-statistics-and-information"},{"title":"Metso — Basics in Minerals Processing, Edition 12","url":"https://www.metso.com/globalassets/insights/ebooks/mo-basics-in-mineral-processing-handbook_lowres.pdf"}]
+- **sources:** [{"title":"BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)","url":"https://nora.nerc.ac.uk/id/eprint/541620/"},{"title":"Metso — Basics in Minerals Processing, Edition 12","url":"https://www.metso.com/globalassets/insights/ebooks/mo-basics-in-mineral-processing-handbook_lowres.pdf"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Кремнезёмистый песок используется в стекольном производстве; в описанном маршруте предусмотрена его промывка. Фракционный и химический допуски не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Активированный уголь гранулированный
@@ -540,7 +544,7 @@
 - **process:** ["glass-melting","glass-annealing"]
 - **note:** Контролируйте гранулометрию, химический состав, загрязнения и состав рецептуры.
 - **industries:** ["ceramics"]
-- **sources:** [{"title":"USGS — Silica Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/silica-statistics-and-information"},{"title":"EPA AP-42 11.15 — Glass Manufacturing","url":"https://www.epa.gov/sites/default/files/2020-10/documents/c11s15.pdf"}]
+- **sources:** [{"title":"BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)","url":"https://nora.nerc.ac.uk/id/eprint/541620/"},{"title":"EPA AP-42 11.15 — Glass Manufacturing","url":"https://www.epa.gov/sites/default/files/2020-10/documents/c11s15.pdf"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Шихта для натриево-кальциевого стекла включает несколько компонентов.","reviewScope":"Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.","checkedAt":"2026-10-25"}
 
 ### Фармацевтические вспомогательные вещества
@@ -631,7 +635,7 @@
 - **process:** ["ceramic-sintering"]
 - **note:** Температура службы, химическая стойкость и теплопроводность зависят от состава и изделия.
 - **industries:** ["ceramics","energy","metals"]
-- **sources:** [{"title":"USGS — Bauxite and Alumina Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/bauxite-and-alumina-statistics-and-information?qt-science_support_page_related_con=0"},{"title":"Bodycote — Technical glossary","url":"https://www.bodycote.com/technical-glossary/"}]
+- **sources:** [{"title":"BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)","url":"https://nora.nerc.ac.uk/id/eprint/541620/"},{"title":"Bodycote — Technical glossary","url":"https://www.bodycote.com/technical-glossary/"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Огнеупоры предназначены для высоких температур; среди примеров — оксид алюминия и кремнезём.","reviewScope":"Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.","checkedAt":"2026-10-25"}
 
 ### Кварцевое сырьё высокой чистоты
@@ -644,7 +648,7 @@
 - **process:** ["ore-crushing","ore-screening"]
 - **note:** Необходим анализ следовых примесей и требования по чистоте для продукта.
 - **industries:** ["mining","ceramics","electronics"]
-- **sources:** [{"title":"USGS — Silica Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/silica-statistics-and-information"},{"title":"Sibelco — High Purity Quartz","url":"https://www.sibelco.com/en/materials/high-purity-quartz"}]
+- **sources:** [{"title":"BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)","url":"https://nora.nerc.ac.uk/id/eprint/541620/"},{"title":"Sibelco — High Purity Quartz","url":"https://www.sibelco.com/en/materials/high-purity-quartz"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Высокочистый кварц служит сырьём для плавленых кварцевых изделий, используемых в полупроводниковом производстве. Любой добытый кварц не приравнивается к высокочистому.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Ферритные нержавеющие стали
@@ -696,7 +700,7 @@
 - **process:** ["rolling","cutting"]
 - **note:** Марка и химический состав; состояние поставки; вид полуфабриката; нормативная спецификация; требуемые механические и коррозионные свойства.
 - **industries:** ["metals","construction"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"The Aluminum Association — Standards / Aluminum Alloys","url":"https://www.aluminum.org/standards"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"The Aluminum Association — Standards / Aluminum Alloys","url":"https://www.aluminum.org/standards"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Магний — основной легирующий элемент серии 5xxx.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Алюминиевые сплавы серии 7xxx
@@ -709,7 +713,7 @@
 - **process:** ["cutting","inspection"]
 - **note:** Марка и химический состав; состояние поставки; вид полуфабриката; нормативная спецификация; требуемые механические и коррозионные свойства.
 - **industries:** ["metals","composites"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"The Aluminum Association — Standards / Aluminum Alloys","url":"https://www.aluminum.org/standards"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"The Aluminum Association — Standards / Aluminum Alloys","url":"https://www.aluminum.org/standards"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Цинк — основной легирующий элемент серии 7xxx; свойства зависят от состава и обработки.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Серый чугун
@@ -722,7 +726,7 @@
 - **process:** ["casting","inspection"]
 - **note:** Марка и химический состав; состояние поставки; вид полуфабриката; нормативная спецификация; требуемые механические и коррозионные свойства.
 - **industries:** ["metals"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"TB Woods — Ductile Iron Defined","url":"https://www.tbwoods.com/en/commercial-castings/ductile-iron"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"TB Woods — Ductile Iron Defined","url":"https://www.tbwoods.com/en/commercial-castings/ductile-iron"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"В сером чугуне графит имеет пластинчатую форму. Численные свойства и дефекты конкретной отливки не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Чугун с шаровидным графитом
@@ -735,7 +739,7 @@
 - **process:** ["casting","inspection"]
 - **note:** Марка и химический состав; состояние поставки; вид полуфабриката; нормативная спецификация; требуемые механические и коррозионные свойства.
 - **industries:** ["metals"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"TB Woods — Ductile Iron Defined","url":"https://www.tbwoods.com/en/commercial-castings/ductile-iron"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"TB Woods — Ductile Iron Defined","url":"https://www.tbwoods.com/en/commercial-castings/ductile-iron"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Высокопрочный чугун содержит шаровидный графит; ферритная и перлитная составляющие матрицы влияют на свойства. Свойства конкретной марки не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Латуни
@@ -748,7 +752,7 @@
 - **process:** ["cutting","forging"]
 - **note:** Марка и химический состав; состояние поставки; вид полуфабриката; нормативная спецификация; требуемые механические и коррозионные свойства.
 - **industries:** ["metals","electronics"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"About Copper","url":"https://internationalcopper.org/sustainable-copper/about-copper/"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"Wikipedia — List of copper alloys (справочный обзор)","url":"https://en.wikipedia.org/wiki/List_of_copper_alloys"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Латунь относится к медно-цинковым сплавам; конкретные механические свойства этим не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Бронзы
@@ -761,7 +765,7 @@
 - **process:** ["casting","cutting"]
 - **note:** Марка и химический состав; состояние поставки; вид полуфабриката; нормативная спецификация; требуемые механические и коррозионные свойства.
 - **industries:** ["metals","energy"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"About Copper","url":"https://internationalcopper.org/sustainable-copper/about-copper/"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"Wikipedia — List of copper alloys (справочный обзор)","url":"https://en.wikipedia.org/wiki/List_of_copper_alloys"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Бронзы — семейство медных сплавов с различными легирующими компонентами, включая Sn, Al, Si и Be; состав каждой марки проверяют отдельно.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Титан и титановые сплавы
@@ -774,7 +778,7 @@
 - **process:** ["cutting","inspection"]
 - **note:** Марка и химический состав; состояние поставки; вид полуфабриката; нормативная спецификация; требуемые механические и коррозионные свойства.
 - **industries:** ["metals","chemicals"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"TIMET — Industrial Titanium","url":"https://www.timet.com/markets/industrial/"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"TIMET — Industrial Titanium","url":"https://www.timet.com/markets/industrial/"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Титан и титановые сплавы используются в промышленном оборудовании и деталях машин, например теплообменных трубках и компонентах двигателей. Стойкость конкретной марки к любой среде не подтверждена.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Никелевые сплавы
@@ -787,7 +791,7 @@
 - **process:** ["welding","cutting"]
 - **note:** Марка и химический состав; состояние поставки; вид полуфабриката; нормативная спецификация; требуемые механические и коррозионные свойства.
 - **industries:** ["metals","energy","chemicals"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"USGS — Nickel Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/nickel-statistics-and-information"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"BGS — Nickel: mineral profile","url":"https://nora.nerc.ac.uk/id/eprint/8725/1/0910_Nickel_Profile.pdf"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Никелевые суперсплавы применяют в деталях газовых турбин. Коррозионная стойкость всех никелевых сплавов и работоспособность в любой сложной среде не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Цинковые литейные сплавы
@@ -800,7 +804,7 @@
 - **process:** ["casting"]
 - **note:** Марка и химический состав; состояние поставки; вид полуфабриката; нормативная спецификация; требуемые механические и коррозионные свойства.
 - **industries:** ["metals","electronics"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"International Zinc Association — Zinc Alloys in Die Casting","url":"https://diecasting.zinc.org/wp-content/uploads/sites/9/2026/02/Zinc-Alloys-in-Diecasting-Two-Pager-FINAL.pdf"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"International Zinc Association — Zinc Alloys in Die Casting","url":"https://diecasting.zinc.org/wp-content/uploads/sites/9/2026/02/Zinc-Alloys-in-Diecasting-Two-Pager-FINAL.pdf"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Цинковые сплавы применяются для литых деталей, в том числе корпусов датчиков. Точность, прочность и прогнозы рынка не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Магниевые конструкционные сплавы
@@ -813,7 +817,7 @@
 - **process:** ["casting","cutting"]
 - **note:** Марка и химический состав; состояние поставки; вид полуфабриката; нормативная спецификация; требуемые механические и коррозионные свойства.
 - **industries:** ["metals"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"Luxfer MEL — Magnesium alloys research and development","url":"https://www.luxfermeltechnologies.com/magnesium-research-development/"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"Luxfer MEL — Magnesium alloys research and development","url":"https://www.luxfermeltechnologies.com/magnesium-research-development/"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Магниевые сплавы — семейство лёгких конструкционных материалов, для которых существуют литейные, деформируемые и обрабатываемые исполнения. Безопасность операций и свойства любой марки не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Полиэтилен низкой плотности (LDPE)
@@ -1502,7 +1506,7 @@
 - **process:** ["ore-crushing"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["chemicals","construction","mining"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"National Lime Association — Frequently Asked Questions","url":"https://www.lime.org/frequently-asked-questions/"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"National Lime Association — Frequently Asked Questions","url":"https://www.lime.org/frequently-asked-questions/"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Известняк — карбонатное сырьё для производства извести; он не тождественен негашёной или гидратной извести. Примеси и состав конкретного сырья не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Кальцинированная сода
@@ -1515,7 +1519,7 @@
 - **process:** ["glass-melting","chemical-mixing"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["chemicals","ceramics"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"EPA AP-42 11.15 — Glass Manufacturing","url":"https://www.epa.gov/sites/default/files/2020-10/documents/c11s15.pdf"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"EPA AP-42 11.15 — Glass Manufacturing","url":"https://www.epa.gov/sites/default/files/2020-10/documents/c11s15.pdf"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Кальцинированная сода используется как компонент стекольной шихты.","reviewScope":"Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.","checkedAt":"2026-10-25"}
 
 ### Сера промышленная
@@ -1528,7 +1532,7 @@
 - **process:** ["chemical-mixing"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["chemicals","mining"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"USGS — Sulfur Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/sulfur-statistics-and-information"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"Wikipedia — Sulfur (справочный обзор)","url":"https://en.wikipedia.org/wiki/Sulfur"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Сера используется как промышленное химическое сырьё, прежде всего для получения серной кислоты. Качество и загрязнения партии не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Фосфатное сырьё
@@ -1541,7 +1545,7 @@
 - **process:** ["ore-crushing"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["chemicals","mining"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"USGS — Phosphate Rock Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/phosphate-rock-statistics-and-information"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"Wikipedia — Phosphorite (справочный обзор)","url":"https://en.wikipedia.org/wiki/Phosphate_rock"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Фосфатные породы служат минеральным сырьём для производства фосфатных удобрений и промышленных продуктов. Минералогия и примеси конкретной партии не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Калийное минеральное сырьё
@@ -1554,7 +1558,7 @@
 - **process:** ["crystallization"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["chemicals","mining"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"Potash Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/potash-statistics-and-information"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"Wikipedia — Potash (справочный обзор)","url":"https://en.wikipedia.org/wiki/Potash"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Калийное сырьё служит источником калия для получения удобрений; конкретная минеральная смесь и качество не аттестованы.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Цеолиты технические
@@ -1567,7 +1571,7 @@
 - **process:** ["granular-filtration"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["water","chemicals"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"Arkema — Molecular Sieves for Energy & Chemicals","url":"https://www.arkema.com/global/en/products/product-families/molecular-sieves/molecular-sieves-for-energy-chemicals/"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"Arkema — Molecular Sieves for Energy & Chemicals","url":"https://www.arkema.com/global/en/products/product-families/molecular-sieves/molecular-sieves-for-energy-chemicals/"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Описанные молекулярные сита на основе цеолитов применяют для селективной адсорбции и очистки газовых и жидких потоков. Все природные цеолиты и конкретная селективность не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Бентонитовая глина
@@ -1580,7 +1584,7 @@
 - **process:** ["chemical-mixing"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["chemicals","construction","mining"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"Clariant — Civil Engineering bentonite additives","url":"https://www.clariant.com/en/Business-Units/Additives-and-Adsorbents/Civil-Engineering"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"Clariant — Civil Engineering bentonite additives","url":"https://www.clariant.com/en/Business-Units/Additives-and-Adsorbents/Civil-Engineering"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Бентонитовые глины применяют в добавках к буровым и строительным составам. Набухание и минералогия конкретной глины не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Соль техническая
@@ -1593,7 +1597,7 @@
 - **process:** ["chemical-mixing"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["chemicals","water"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"USGS — Salt Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/salt-statistics-and-information"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"Wikipedia — Sodium chloride (справочный обзор)","url":"https://en.wikipedia.org/wiki/Sodium_chloride"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Соль имеет основу NaCl и используется как химическое сырьё, например для производства хлора и едкого натра. Допуски на примеси не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Углеродное армирующее волокно
@@ -1684,7 +1688,7 @@
 - **process:** ["concrete-mixing"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["construction","mining"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"FHWA — Portland Cement Concrete Pavement, FHWA-RD-97-148","url":"https://www.fhwa.dot.gov/publications/research/infrastructure/pavements/97148/072.cfm"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"FHWA — Portland Cement Concrete Pavement, FHWA-RD-97-148","url":"https://www.fhwa.dot.gov/publications/research/infrastructure/pavements/97148/072.cfm"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Заполнители входят в состав бетонной смеси; гранулометрия, форма частиц и вредные примеси влияют на её свойства. Конкретные пределы не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Щебень строительный
@@ -1697,7 +1701,7 @@
 - **process:** ["ore-crushing","concrete-mixing"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["construction","mining"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"FHWA — Portland Cement Concrete Pavement, FHWA-RD-97-148","url":"https://www.fhwa.dot.gov/publications/research/infrastructure/pavements/97148/072.cfm"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"FHWA — Portland Cement Concrete Pavement, FHWA-RD-97-148","url":"https://www.fhwa.dot.gov/publications/research/infrastructure/pavements/97148/072.cfm"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Щебень используется как крупный заполнитель бетона. Пригодность конкретной породы и применение в дорожном основании не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Песок строительный
@@ -1710,7 +1714,7 @@
 - **process:** ["concrete-mixing"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["construction","mining"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"FHWA — Portland Cement Concrete Pavement, FHWA-RD-97-148","url":"https://www.fhwa.dot.gov/publications/research/infrastructure/pavements/97148/072.cfm"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"FHWA — Portland Cement Concrete Pavement, FHWA-RD-97-148","url":"https://www.fhwa.dot.gov/publications/research/infrastructure/pavements/97148/072.cfm"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Природный песок обычно служит мелким заполнителем бетона; состав и гранулометрия требуют подбора для смеси. Строительные растворы и подосновы не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Битум дорожный
@@ -1723,7 +1727,7 @@
 - **process:** ["asphalt-mix-production"]
 - **note:** Обозначение полимера/волокна; конкретная рецептура и добавки; условия переработки; свойства партии и ограничения применения.
 - **industries:** ["construction","chemicals"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"FHWA — Asphalt Concrete Pavement, FHWA-RD-97-148","url":"https://www.fhwa.dot.gov/publications/research/infrastructure/pavements/97148/071.cfm"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"FHWA — Asphalt Concrete Pavement, FHWA-RD-97-148","url":"https://www.fhwa.dot.gov/publications/research/infrastructure/pavements/97148/071.cfm"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Битумное вяжущее обволакивает и связывает частицы заполнителя в дорожной смеси. Марка и требуемые свойства зависят от условий применения.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Асфальтобетонная смесь
@@ -1736,7 +1740,7 @@
 - **process:** ["asphalt-mix-production","road-asphalt-placement"]
 - **note:** Матрица и армирование, ориентация, доля наполнителя, метод формования, условия отверждения, испытания и дефекты.
 - **industries:** ["construction"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"FHWA — Asphalt Concrete Pavement, FHWA-RD-97-148","url":"https://www.fhwa.dot.gov/publications/research/infrastructure/pavements/97148/071.cfm"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"FHWA — Asphalt Concrete Pavement, FHWA-RD-97-148","url":"https://www.fhwa.dot.gov/publications/research/infrastructure/pavements/97148/071.cfm"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Асфальтобетон состоит из минеральных заполнителей и битумного вяжущего и применяется для дорожных покрытий. Рецептура и условия уплотнения не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Арматурный стальной прокат
@@ -1749,7 +1753,7 @@
 - **process:** ["rebar-installation"]
 - **note:** Марка и химический состав; состояние поставки; вид полуфабриката; нормативная спецификация; требуемые механические и коррозионные свойства.
 - **industries:** ["construction","metals"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"CRSI — Reinforcing Steel","url":"https://www.crsi.org/reinforcing-basics/reinforcing-steel/"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"CRSI — Reinforcing Steel","url":"https://www.crsi.org/reinforcing-basics/reinforcing-steel/"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Стальные арматурные стержни применяют для армирования бетонных конструкций. Марка, класс и требования конкретного проекта не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Бетонная смесь товарная
@@ -1762,7 +1766,7 @@
 - **process:** ["concrete-mixing","concrete-placing"]
 - **note:** Матрица и армирование, ориентация, доля наполнителя, метод формования, условия отверждения, испытания и дефекты.
 - **industries:** ["construction"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"ACI — Definition of concrete, hydraulic cement, mortar, and grout","url":"https://www.concrete.org/frequentlyaskedquestions.aspx?faqid=640"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"ACI — Definition of concrete, hydraulic cement, mortar, and grout","url":"https://www.concrete.org/frequentlyaskedquestions.aspx?faqid=640"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Бетонная смесь содержит цемент, заполнители и воду; возможны добавки.","reviewScope":"Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.","checkedAt":"2026-10-25"}
 
 ### Геотекстиль
@@ -1788,7 +1792,7 @@
 - **process:** ["rolling","stamping"]
 - **note:** Марка и химический состав; состояние поставки; вид полуфабриката; нормативная спецификация; требуемые механические и коррозионные свойства.
 - **industries:** ["energy","electronics","metals"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"thyssenkrupp — Electrical steel portfolio","url":"https://www.thyssenkrupp-steel.com/en/products/electrical-steel/electrical-steel-overview.html"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"thyssenkrupp — Electrical steel portfolio","url":"https://www.thyssenkrupp-steel.com/en/products/electrical-steel/electrical-steel-overview.html"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Неориентированная электротехническая сталь применяется в электродвигателях и генераторах; ориентированная — прежде всего в трансформаторах. Потери и магнитные характеристики конкретной марки не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Графитовые электроды промышленного назначения
@@ -1801,7 +1805,7 @@
 - **process:** ["inspection"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["energy","metals"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"SGL — Commerzbank German Investment Seminar","url":"https://www.sglcarbon.com/pdf/SGL-Presentation-Commerzbank-German-Investment-Seminar-January-2014-EN.pdf"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"SGL — Commerzbank German Investment Seminar","url":"https://www.sglcarbon.com/pdf/SGL-Presentation-Commerzbank-German-Investment-Seminar-January-2014-EN.pdf"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Графитовые электроды применяются в электродуговой сталеплавильной печи. Режим и стандарт конкретного электрода не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Медный провод электротехнический
@@ -1814,7 +1818,7 @@
 - **process:** ["inspection"]
 - **note:** Марка и химический состав; состояние поставки; вид полуфабриката; нормативная спецификация; требуемые механические и коррозионные свойства.
 - **industries:** ["energy","electronics"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"Prysmian — Low Voltage Power Cable","url":"https://asean.prysmian.com/sites/asean.prysmian.com/files/media/documents/241218%20-%20Prysmian%20LV%20Power%20Cable.pdf"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"Prysmian — Low Voltage Power Cable","url":"https://asean.prysmian.com/sites/asean.prysmian.com/files/media/documents/241218%20-%20Prysmian%20LV%20Power%20Cable.pdf"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Отожжённая медная проволока используется как токопроводящая жила силовых кабелей с полимерной изоляцией. Сечение, допустимый ток и стандарты конкретной поставки не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Минеральная теплоизоляционная вата
@@ -1827,7 +1831,7 @@
 - **process:** ["inspection"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["energy","construction"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"ROCKWOOL — RockTech Section Pipe Insulation","url":"https://www.rockwool.com/siteassets/rw-cn/document-downloads/datasheets/rockwool-rocktech-spi_en_ds_202007.pdf"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"ROCKWOOL — RockTech Section Pipe Insulation","url":"https://www.rockwool.com/siteassets/rw-cn/document-downloads/datasheets/rockwool-rocktech-spi_en_ds_202007.pdf"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Каменная вата — пример волокнистой теплоизоляции, применяемой на технологических трубопроводах. Все виды минеральной ваты и температурные пределы не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Коррозионностойкий прокат для теплообменников
@@ -1918,7 +1922,7 @@
 - **process:** ["ceramic-sintering"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["ceramics","electronics"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"Morgan — High Performance Alumina Ceramic Components","url":"https://www.morgantechnicalceramics.com/en-gb/products/alumina-ceramic-components/"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"Morgan — High Performance Alumina Ceramic Components","url":"https://www.morgantechnicalceramics.com/en-gb/products/alumina-ceramic-components/"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Керамику на основе оксида алюминия применяют в электрических изоляторах и технических износостойких деталях. Рабочие пределы конкретного состава не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Кремнезёмистый огнеупор
@@ -1931,7 +1935,7 @@
 - **process:** ["ceramic-sintering"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["ceramics","energy"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"RATH — Tailor-made Solutions for the Glass Industry","url":"https://www.rath-group.com/fileadmin/content/Rath-Group/Downloads/Broschueren_Industrien/RATH_GLASS_202209_EN.pdf"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"RATH — Tailor-made Solutions for the Glass Industry","url":"https://www.rath-group.com/fileadmin/content/Rath-Group/Downloads/Broschueren_Industrien/RATH_GLASS_202209_EN.pdf"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"В схеме RATH кремнезёмистые огнеупоры Silica и LW Silica применяются в слоях свода стекловаренной печи. Состав, температурная стойкость и пригодность к другой печи не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Огнеупорная глина
@@ -1944,7 +1948,7 @@
 - **process:** ["ceramic-calcination"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["ceramics","mining"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"RATH — Tailor-made Solutions for the Glass Industry","url":"https://www.rath-group.com/fileadmin/content/Rath-Group/Downloads/Broschueren_Industrien/RATH_GLASS_202209_EN.pdf"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"RATH — Tailor-made Solutions for the Glass Industry","url":"https://www.rath-group.com/fileadmin/content/Rath-Group/Downloads/Broschueren_Industrien/RATH_GLASS_202209_EN.pdf"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Шамотное сырьё используется при производстве огнеупорных кирпичей и неформованных материалов для стекловаренных печей. Минералогия и пригодность конкретного сырья не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Каолин технический
@@ -1957,7 +1961,7 @@
 - **process:** ["ceramic-calcination"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["ceramics","printing"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"EPA AP-42 11.7 — Ceramic Products Manufacturing","url":"https://www.epa.gov/system/files/documents/2025-06/c11s07_2025_final.pdf"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"EPA AP-42 11.7 — Ceramic Products Manufacturing","url":"https://www.epa.gov/system/files/documents/2025-06/c11s07_2025_final.pdf"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Каолин относится к коммерческому глинистому сырью для производства керамики.","reviewScope":"Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.","checkedAt":"2026-10-25"}
 
 ### Стеклобой технологический
@@ -1970,7 +1974,7 @@
 - **process:** ["glass-melting"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["ceramics"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"EPA AP-42 11.15 — Glass Manufacturing","url":"https://www.epa.gov/sites/default/files/2020-10/documents/c11s15.pdf"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"EPA AP-42 11.15 — Glass Manufacturing","url":"https://www.epa.gov/sites/default/files/2020-10/documents/c11s15.pdf"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Стеклобой возвращают в шихту стекловарения.","reviewScope":"Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.","checkedAt":"2026-10-25"}
 
 ### Керамическая глазурная масса
@@ -1983,7 +1987,7 @@
 - **process:** ["ceramic-sintering"]
 - **note:** Состав рецептуры, техническая спецификация, совместимость, условия хранения и переработки, методы контроля и риски применения.
 - **industries:** ["ceramics","chemicals"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"EPA AP-42 11.7 — Ceramic Products Manufacturing","url":"https://www.epa.gov/system/files/documents/2025-06/c11s07_2025_final.pdf"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"EPA AP-42 11.7 — Ceramic Products Manufacturing","url":"https://www.epa.gov/system/files/documents/2025-06/c11s07_2025_final.pdf"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Глазурь образует покрытие керамики; сырьё и режим созревания зависят от состава.","reviewScope":"Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.","checkedAt":"2026-10-25"}
 
 ### Известь техническая
@@ -1996,7 +2000,7 @@
 - **process:** ["chemical-mixing"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["ceramics","construction","chemicals"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"National Lime Association — Frequently Asked Questions","url":"https://www.lime.org/frequently-asked-questions/"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"National Lime Association — Frequently Asked Questions","url":"https://www.lime.org/frequently-asked-questions/"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Негашёная известь образуется при обжиге карбонатного сырья; гидратную получают превращением оксидов в гидроксиды. Активность и спецификация не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Микрокристаллическая целлюлоза фармацевтическая
@@ -2152,7 +2156,7 @@
 - **process:** ["ore-crushing","ore-flotation"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["mining","metals"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"Technical Resource Document: Extraction and Beneficiation of Ores and Minerals, Vol.4 Copper","url":"https://archive.epa.gov/epawaste/nonhaz/industrial/special/web/pdf/copper1a.pdf"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"Technical Resource Document: Extraction and Beneficiation of Ores and Minerals, Vol.4 Copper","url":"https://archive.epa.gov/epawaste/nonhaz/industrial/special/web/pdf/copper1a.pdf"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Медные руды различаются минеральной формой меди; минералогия влияет на выбор переработки.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Никелевые руды
@@ -2165,7 +2169,7 @@
 - **process:** ["ore-grinding","ore-flotation"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["mining","metals"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"USGS — Nickel Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/nickel-statistics-and-information"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"BGS — Nickel: mineral profile","url":"https://nora.nerc.ac.uk/id/eprint/8725/1/0910_Nickel_Profile.pdf"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Никель добывают из разных типов руд, в частности латеритных и магматических сульфидных; их минералогия различается. Режим обогащения конкретной руды не подтверждён.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Марганцевые руды
@@ -2178,7 +2182,7 @@
 - **process:** ["ore-crushing"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["mining","metals"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"USGS — Manganese Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/manganese-statistics-and-information"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"Wikipedia — Manganese (справочный обзор)","url":"https://en.wikipedia.org/wiki/Manganese"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Марганцевое сырьё используется в металлургической цепочке производства ферросплавов и стали. Тип руды, состав и режим подготовки не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Литиевый минеральный концентрат
@@ -2191,7 +2195,7 @@
 - **process:** ["ore-flotation"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["mining","chemicals"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"PLS — P-PLS Chemical Facility","url":"https://www.pls.com/assets/p-pls-chemical-facility"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"PLS — P-PLS Chemical Facility","url":"https://www.pls.com/assets/p-pls-chemical-facility"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Сподуменовый концентрат используется как сырьё для химического получения гидроксида лития. Состав и пригодность конкретного концентрата не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Природный графитовый концентрат
@@ -2204,7 +2208,7 @@
 - **process:** ["ore-flotation"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["mining","energy"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"Syrah Resources — Balama Graphite Operation","url":"https://www.syrahresources.com.au/our-business/balama-graphite-operation"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"Syrah Resources — Balama Graphite Operation","url":"https://www.syrahresources.com.au/our-business/balama-graphite-operation"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"В описанном маршруте графитовый концентрат получают с помощью дробления, измельчения и флотации с последующей обработкой; продукт характеризуется содержанием углерода и размером чешуек. Численные характеристики не перенесены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Концентрат редкоземельного сырья
@@ -2217,7 +2221,7 @@
 - **process:** ["magnetic-separation-ore"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["mining","electronics"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"MP Materials — Mountain Pass Mine and Processing Facility","url":"https://mpmaterials.com/mountain-pass"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"MP Materials — Mountain Pass Mine and Processing Facility","url":"https://mpmaterials.com/mountain-pass"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"На описанном предприятии редкоземельный концентрат получают обогащением руды и передают на выщелачивание и разделение элементов. Состав, содержание элементов и применимость всех маршрутов не подтверждены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Плавиковый шпат (флюорит)
@@ -2230,7 +2234,7 @@
 - **process:** ["ore-flotation"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["mining","chemicals"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"Eurofluor — HF production","url":"https://www.eurofluor.org/hf-production/"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"Eurofluor — HF production","url":"https://www.eurofluor.org/hf-production/"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Очищенный плавиковый шпат кислотного сорта применяется как сырьё для производства фтороводорода. Неочищенная руда не приравнивается к готовому химическому сырью; спецификация и режим производства не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Тальк промышленный
@@ -2243,7 +2247,7 @@
 - **process:** ["ore-grinding"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["mining","polymers"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"Talc and Pyrophyllite — Minerals Yearbook 2002","url":"https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/mineral-pubs/talc/talcmyb02.pdf"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"Talc and Pyrophyllite — Minerals Yearbook 2002","url":"https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/mineral-pubs/talc/talcmyb02.pdf"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Первичный отраслевой отчёт документирует применение талька как наполнителя пластмасс. Данные 2002 года не подтверждают текущую рыночную статистику или чистоту партии.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Перлит промышленный
@@ -2256,7 +2260,7 @@
 - **process:** ["ore-screening"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["mining","construction"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"USGS — Perlite Statistics and Information","url":"https://www.usgs.gov/centers/national-minerals-information-center/perlite-statistics-and-information"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"Perlite Institute — Why Perlite Works","url":"https://www.perlite.org/wp-content/uploads/2018/03/why-perlite-works.pdf"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Перлит — вулканическое стекло; лёгкая пористая структура появляется при вспучивании.","reviewScope":"Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.","checkedAt":"2026-10-25"}
 
 ### Диатомит промышленный
@@ -2269,7 +2273,7 @@
 - **process:** ["industrial-filtration"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["mining","water"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"Filtration with Diatomaceous Earth","url":"https://www.usgs.gov/media/images/filtration-diatomaceous-earth"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"Geology.com — Diatomite (справочный обзор)","url":"https://geology.com/rocks/diatomite.shtml"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Диатомит имеет осадочное биогенное происхождение и применяется при фильтрации, в том числе пищевых жидкостей; пригодность конкретной партии не проверена.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 ### Цинковый минеральный концентрат
@@ -2282,7 +2286,7 @@
 - **process:** ["ore-flotation"]
 - **note:** Минералогия, химический состав, примеси, гранулометрия, влажность, технический стандарт и паспорт партии.
 - **industries:** ["mining","metals"]
-- **sources:** [{"title":"USGS — Commodity Statistics and Information (2026)","url":"https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information"},{"title":"Nyrstar — How is zinc produced?","url":"https://www.nyrstar.com/products/zinc-zinc-alloys/how-is-zinc-produced"}]
+- **sources:** [{"title":"BGS — World mineral statistics (обзор статистики сырья)","url":"https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/"},{"title":"Nyrstar — How is zinc produced?","url":"https://www.nyrstar.com/products/zinc-zinc-alloys/how-is-zinc-produced"}]
 - **evidence:** {"verificationStatus":"partial_claim","verifiedClaim":"Цинковый концентрат служит сырьём для получения цинка; описанный маршрут включает обжиг, выщелачивание и очистку. Содержание металла и допустимые примеси партии не проверены.","reviewScope":"Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.","checkedAt":"2026-10-25"}
 
 

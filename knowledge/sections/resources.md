@@ -10,10 +10,7 @@
 
 ## Ресурсы сообщества
 Инженерный каталог: журналы, форумы, сервисы, стандарты, справочники и образовательные материалы.
-### Библиотека программирования для ИИ
-25 учебных и справочных источников: Python, веб-разработка, Git, тестирование, Android, базы данных и безопасность.
-[Посмотреть источники по темам ↓](#ai-library-catalog)
-Онлайн-измерения: [открыть 10 учебных тренажёров прямо на нашем сайте →](https://vremennobeznika.github.io/enjigirling/measurement-lab.html) В категории «Измерения онлайн» собраны сторонние инструменты; некоторые требуют современного браузера или мощного устройства.
+Онлайн-измерения: [учебные тренажёры в разделе «Обучение» →](https://vremennobeznika.github.io/enjigirling/map.html#education-practice) В категории «Измерения онлайн» собраны сторонние инструменты; некоторые требуют современного браузера или мощного устройства.
 Поиск по каталогу
 Сортировка По алфавиту А–Я По алфавиту Я–А
 Отображение Сетка Список
@@ -22,7 +19,7 @@
 Показать ещё
 Для поиска по каталогу нужен JavaScript. [Список ресурсов в Markdown](https://vremennobeznika.github.io/enjigirling/knowledge/sections/resources.md).
 
-## Полные записи справочника (230 записей/групп)
+## Полные записи справочника (182 записей/групп)
 
 ### CADmaster
 - **id:** mag-cadmaster
@@ -69,16 +66,16 @@
 - **type:** Журналы
 - **topic:** Автоматизация и электроника
 - **name:** Автоматизация и моделирование в проектировании и управлении
-- **desc:** Открытый научный журнал по автоматизации и управлению технологическими процессами и производствами, системам автоматизации проектирования и моделированию.
-- **link:** https://journals.rcsi.science/2658-3488/index/index/ru_RU
+- **desc:** Открытые статьи журнала «Автоматизация и моделирование в проектировании и управлении» в КиберЛенинке: управление технологическими процессами, автоматизация и моделирование.
+- **link:** https://cyberleninka.ru/journal/n/avtomatizatsiya-i-modelirovanie-v-proektirovanii-i-upravlenii
 
 ### Вестник МГТУ «Станкин»
 - **id:** mag-vestnik-stankin
 - **type:** Журналы
 - **topic:** Машиностроение и САПР
 - **name:** Вестник МГТУ «Станкин»
-- **desc:** Научный журнал по машиностроению, автоматизации, технологическим процессам и инженерным разработкам. Открытый доступ, входит в ВАК и РИНЦ.
-- **link:** https://journals.rcsi.science/2072-3172/index/index/ru_RU
+- **desc:** Официальный сайт научного журнала «Вестник МГТУ «Станкин»»: машиностроение, автоматизация, технологические процессы и инженерные разработки.
+- **link:** https://vestnik.stankin.ru/
 
 ### Заготовительные производства в машиностроении
 - **id:** mag-zagotovitelnoe-proizvodstvo
@@ -159,41 +156,6 @@
 - **desc:** Площадка о компьютерном железе, электронике, радиотехнике и новых технологиях. Активное сообщество технических энтузиастов.
 - **link:** https://forum.ixbt.com
 
-### GitHub
-- **id:** dev-github
-- **type:** Разработка ПО
-- **name:** GitHub
-- **desc:** Крупнейшая в мире платформа для хостинга кода, совместной разработки и управления проектами.
-- **link:** https://github.com/
-
-### GitFlic
-- **id:** dev-gitflic
-- **type:** Разработка ПО
-- **name:** GitFlic
-- **desc:** Российская платформа для хранения и совместной разработки кода. Аналог GitHub для работы над инженерными и программными проектами.
-- **link:** https://gitflic.ru/
-
-### Hub.Mos
-- **id:** dev-hub-mos
-- **type:** Разработка ПО
-- **name:** Hub.Mos
-- **desc:** Мос.Хаб — платформа совместной разработки и размещения кода ДИТ Москвы; возможна проверка доступа.
-- **link:** https://hub.mos.ru/
-
-### Gitee
-- **id:** dev-gitee
-- **type:** Разработка ПО
-- **name:** Gitee
-- **desc:** Крупнейшая китайская платформа для хостинга кода и совместной разработки. Популярная альтернатива GitHub.
-- **link:** https://gitee.com/
-
-### GitCode
-- **id:** dev-gitcode
-- **type:** Разработка ПО
-- **name:** GitCode
-- **desc:** Китайская платформа для хранения и совместной разработки кода, ориентированная на программные и инженерные проекты.
-- **link:** https://gitcode.com/
-
 ### Eng-Tips
 - **id:** forum-eng-tips
 - **type:** Форумы
@@ -201,14 +163,6 @@
 - **name:** Eng-Tips
 - **desc:** Большой международный инженерный форум: механика, машиностроение, электротехника, строительство, производство, CAD и смежные области.
 - **link:** https://www.eng-tips.com/
-
-### DWG.ru
-- **id:** forum-dwg-ru
-- **type:** Форумы
-- **topic:** САПР и конструирование
-- **name:** DWG.ru
-- **desc:** Русскоязычное инженерное сообщество с форумами по AutoCAD, САПР, строительству, проектированию, машиностроению и технической документации.
-- **link:** https://forum.dwg.ru/
 
 ### Autodesk Community
 - **id:** forum-autodesk
@@ -231,45 +185,8 @@
 - **type:** Форумы
 - **topic:** САПР и конструирование
 - **name:** SOLIDWORKS Community
-- **desc:** Сообщество пользователей SOLIDWORKS и инженерного ПО: моделирование, чертежи, сборки, Simulation, PDM и автоматизация.
-- **link:** https://forum.solidworks.com/
-
-### CNC-Club — ЧПУ и CAD/CAM
-- **id:** forum-cadcam
-- **type:** Форумы
-- **topic:** ЧПУ и металлообработка
-- **name:** CNC-Club — ЧПУ и CAD/CAM
-- **desc:** Русскоязычный форум о ЧПУ, станках, CAD/CAM-системах, постпроцессорах, G-коде и технологиях обработки.
-- **link:** https://cnc-club.ru/forum/
-
-### Reddit — Engineering
-- **id:** forum-reddit-engineering
-- **type:** Форумы
-- **topic:** Общая инженерия
-- **name:** Reddit — Engineering
-- **desc:** Международное сообщество для обсуждения инженерных задач, профессий, проектов, образования и практического опыта.
-- **link:** https://www.reddit.com/r/engineering/
-
-### GitLab
-- **id:** dev-gitlab
-- **type:** Разработка ПО
-- **name:** GitLab
-- **desc:** Платформа для хранения кода, контроля версий, совместной разработки, CI/CD, issue tracking и DevOps.
-- **link:** https://gitlab.com/
-
-### Codeberg
-- **id:** dev-codeberg
-- **type:** Разработка ПО
-- **name:** Codeberg
-- **desc:** Некоммерческая европейская платформа для размещения Git-репозиториев и совместной разработки проектов с открытым исходным кодом.
-- **link:** https://codeberg.org/
-
-### SourceCraft
-- **id:** dev-sourcecraft
-- **type:** Разработка ПО
-- **name:** SourceCraft
-- **desc:** Российская платформа для хранения исходного кода, совместной разработки и работы с Git-репозиториями.
-- **link:** https://sourcecraft.dev/
+- **desc:** Официальная страница сообществ пользователей SOLIDWORKS: обсуждения, пользовательские группы, обучение и переходы в сообщества производителя.
+- **link:** https://www.solidworks.com/community
 
 ### GrabCAD Library
 - **id:** dev-grabcad
@@ -359,13 +276,6 @@
 - **desc:** Российская научная электронная библиотека и информационно-аналитическая система по научным публикациям и цитированию.
 - **link:** https://elibrary.ru/
 
-### Открытый каталог журналов ВАК
-- **id:** platform-zhurnalivak
-- **type:** Научные базы и справочники
-- **name:** Открытый каталог журналов ВАК
-- **desc:** Каталог научных журналов по техническим наукам с поиском по направлениям, включая машиностроение, строительство, ИТ и энергетику.
-- **link:** https://www.zhurnalivak.ru/
-
 ### Electronix
 - **id:** tg-electronix
 - **type:** Чаты в Telegram
@@ -394,13 +304,6 @@
 - **desc:** Telegram-чат о телефонах, мобильных устройствах и связанных с ними технологиях.
 - **link:** https://t.me/russianphoneclub
 
-### SolidSovet
-- **id:** tg-solidsovet
-- **type:** Чаты в Telegram
-- **name:** SolidSovet
-- **desc:** Сообщество пользователей САПР SolidWorks: обсуждение моделирования, чертежей и проектирования.
-- **link:** https://t.me/solidsovet
-
 ### DeCADentia Chat
 - **id:** tg-decadentia-chat
 - **type:** Чаты в Telegram
@@ -426,7 +329,7 @@
 - **id:** tg-cadmeetup
 - **type:** Чаты в Telegram
 - **name:** CAD Meetup
-- **desc:** Telegram-чат о САПР и инженерном проектировании: встречи, обсуждения и обмен опытом.
+- **desc:** Инженерное сообщество CAD Meetup: Telegram-чат о САПР и проектировании, встречи, обсуждения и обмен опытом.
 - **link:** https://t.me/cadmeetup
 
 ### RU IoT
@@ -767,14 +670,6 @@
 - **desc:** Вопросы разработчиков по микроконтроллерам, источникам питания, радиотехнике и электронным компонентам.
 - **link:** https://www.eham.ru/forum
 
-### All About Circuits Forum
-- **id:** forum-allaboutcircuits
-- **type:** Форумы
-- **topic:** Электроника и микроконтроллеры
-- **name:** All About Circuits Forum
-- **desc:** Англоязычное сообщество электронщиков: аналоговые схемы, PCB, микроконтроллеры и измерения; автоматический доступ ограничен.
-- **link:** https://forum.allaboutcircuits.com/
-
 ### Технари — электроника
 - **id:** forum-tehnari-electronics
 - **type:** Форумы
@@ -790,14 +685,6 @@
 - **name:** Chipmaker — металлообработка
 - **desc:** Профессиональные обсуждения токарных и фрезерных станков, сварки, термообработки и ЧПУ; прямая автоматическая проверка сайта ограничена.
 - **link:** https://chipmaker.ru/
-
-### Форум клана ЧПУшников
-- **id:** forum-cnc-userforum
-- **type:** Форумы
-- **topic:** ЧПУ и металлообработка
-- **name:** Форум клана ЧПУшников
-- **desc:** Станки и комплектующие ЧПУ, инструмент, шпиндели, ArtCAM, ремонт и наладка.
-- **link:** https://cnc.userforum.ru/
 
 ### LightBurn Software Forum
 - **id:** forum-lightburn
@@ -847,41 +734,6 @@
 - **desc:** Обсуждения Linux, промышленных систем, сетей и открытого программного обеспечения.
 - **link:** https://www.opennet.ru/
 
-### GitVerse
-- **id:** dev-gitverse
-- **type:** Разработка ПО
-- **name:** GitVerse
-- **desc:** Российский сервис Git-репозиториев и совместной разработки; условия сервиса могут изменяться.
-- **link:** https://gitverse.ru/
-
-### Forgejo
-- **id:** dev-forgejo
-- **type:** Разработка ПО
-- **name:** Forgejo
-- **desc:** Свободная платформа для размещения собственных Git-сервисов и управления разработкой.
-- **link:** https://forgejo.org/
-
-### Gitea
-- **id:** dev-gitea
-- **type:** Разработка ПО
-- **name:** Gitea
-- **desc:** Самостоятельно разворачиваемый Git-сервис с задачами, ревью и CI/CD.
-- **link:** https://about.gitea.com/
-
-### PlatformIO
-- **id:** dev-platformio
-- **type:** Разработка ПО
-- **name:** PlatformIO
-- **desc:** Инструменты для проектов с микроконтроллерами, библиотеками и отладкой встроенного ПО.
-- **link:** https://platformio.org/
-
-### Project Jupyter
-- **id:** dev-jupyter
-- **type:** Разработка ПО
-- **name:** Project Jupyter
-- **desc:** Интерактивные блокноты для Python, аналитики, расчётов и исследований.
-- **link:** https://jupyter.org/
-
 ### KiCad
 - **id:** dev-kicad
 - **type:** САПР и конструирование
@@ -916,14 +768,6 @@
 - **name:** SimScale
 - **desc:** Облачное инженерное моделирование, включая CFD и расчёты конструкций; доступ зависит от тарифов.
 - **link:** https://www.simscale.com/
-
-### Siemens SiePortal — поддержка
-- **id:** ref-siemens-sieportal
-- **type:** Форумы
-- **topic:** АСУ ТП
-- **name:** Siemens SiePortal — поддержка
-- **desc:** Официальная поддержка промышленной продукции Siemens: техническая документация, материалы и обращения по оборудованию; для работы портала требуется JavaScript.
-- **link:** https://sieportal.siemens.com/en-ww/support
 
 ### Engineering ToolBox
 - **id:** ref-engineering-toolbox
@@ -1398,20 +1242,6 @@
 - **desc:** Вопросы пользователей свободной 2D-САПР LibreCAD, чертежи, DXF, настройка и ошибки.
 - **link:** https://discourse.librecad.org/
 
-### SourceForge
-- **id:** dev-sourceforge
-- **type:** Разработка ПО
-- **name:** SourceForge
-- **desc:** Хостинг, совместная разработка, распространение и каталог программ с открытым исходным кодом.
-- **link:** https://sourceforge.net/
-
-### Launchpad
-- **id:** dev-launchpad
-- **type:** Разработка ПО
-- **name:** Launchpad
-- **desc:** Платформа разработки с Git-репозиториями, задачами, ревью и пакетами для Ubuntu.
-- **link:** https://launchpad.net/
-
 ### LibreCAD
 - **id:** cad-librecad
 - **type:** САПР и конструирование
@@ -1475,12 +1305,12 @@
 - **desc:** Публичная база химических соединений, структуры и физико-химических свойств; требует JavaScript.
 - **link:** https://pubchem.ncbi.nlm.nih.gov/
 
-### All About Circuits — учебник
+### OpenStax — цепи переменного тока
 - **id:** ref-allaboutcircuits
 - **type:** Научные базы и справочники
-- **name:** All About Circuits — учебник
-- **desc:** Открытый учебник по цепям постоянного и переменного тока, схемотехнике и электронике.
-- **link:** https://www.allaboutcircuits.com/textbook/product/ac-circuits/
+- **name:** OpenStax — цепи переменного тока
+- **desc:** Глава 15 открытого учебника University Physics, Volume 2: цепи переменного тока, реактивные элементы, импеданс и резонанс. Английский язык, свободное чтение.
+- **link:** https://openstax.org/books/university-physics-volume-2/pages/15-introduction
 
 ### BIPM — Брошюра SI
 - **id:** std-bipm-si
@@ -1538,12 +1368,12 @@
 - **desc:** Бесплатные официальные уроки по схемам, микроконтроллерам, интерфейсам и программированию.
 - **link:** https://docs.arduino.cc/learn
 
-### All About Circuits — DC Circuits
+### OpenStax — цепи постоянного тока
 - **id:** learn-allaboutcircuits
 - **type:** Обучение и курсы
-- **name:** All About Circuits — DC Circuits
-- **desc:** Бесплатный последовательный учебник по электрическим цепям постоянного тока.
-- **link:** https://www.allaboutcircuits.com/TEXTBOOK/product/dc-circuits/
+- **name:** OpenStax — цепи постоянного тока
+- **desc:** Глава 10 открытого учебника University Physics, Volume 2: цепи постоянного тока, электродвижущая сила, законы Кирхгофа и RC-цепи. Английский язык, свободное чтение.
+- **link:** https://openstax.org/books/university-physics-volume-2/pages/10-introduction
 
 ### KELIBRON — 3D метрологическая лаборатория
 - **id:** measurement-kelibron
@@ -1573,231 +1403,6 @@
 - **name:** Поколение Python — чат
 - **desc:** Обсуждение программирования и учебного сообщества «Поколение Python»; правила и модерация указаны в группе.
 - **link:** https://t.me/pygen_ru_comments
-
-### Руководство по Python
-- **id:** ai-library-01
-- **type:** Библиотека программирования для ИИ
-- **topic:** Python
-- **name:** Руководство по Python
-- **desc:** Синтаксис, функции, структуры данных, классы и модули. Язык: RU.
-- **link:** https://docs.python.org/ru/3/tutorial/
-- **tags:** RU
-
-### Стандартная библиотека Python
-- **id:** ai-library-02
-- **type:** Библиотека программирования для ИИ
-- **topic:** Python
-- **name:** Стандартная библиотека Python
-- **desc:** API модулей Python, работа с файлами, JSON и асинхронностью. Язык: RU/EN.
-- **link:** https://docs.python.org/ru/3/library/index.html
-- **tags:** RU/EN
-
-### PEP 8 — стиль Python
-- **id:** ai-library-03
-- **type:** Библиотека программирования для ИИ
-- **topic:** Python
-- **name:** PEP 8 — стиль Python
-- **desc:** Правила оформления читаемого Python-кода. Язык: EN.
-- **link:** https://peps.python.org/pep-0008/
-- **tags:** EN
-
-### pytest — документация
-- **id:** ai-library-04
-- **type:** Библиотека программирования для ИИ
-- **topic:** Python
-- **name:** pytest — документация
-- **desc:** Тесты, фикстуры, параметризация, диагностика ошибок. Язык: EN.
-- **link:** https://docs.pytest.org/en/stable/
-- **tags:** EN
-
-### MDN — HTML
-- **id:** ai-library-05
-- **type:** Библиотека программирования для ИИ
-- **topic:** Веб-разработка
-- **name:** MDN — HTML
-- **desc:** Семантическая разметка, формы и HTML-элементы. Язык: RU/EN.
-- **link:** https://developer.mozilla.org/ru/docs/Web/HTML
-- **tags:** RU/EN
-
-### MDN — CSS
-- **id:** ai-library-06
-- **type:** Библиотека программирования для ИИ
-- **topic:** Веб-разработка
-- **name:** MDN — CSS
-- **desc:** Адаптивная вёрстка, Flexbox, Grid и стили. Язык: RU/EN.
-- **link:** https://developer.mozilla.org/ru/docs/Web/CSS
-- **tags:** RU/EN
-
-### MDN — JavaScript
-- **id:** ai-library-07
-- **type:** Библиотека программирования для ИИ
-- **topic:** Веб-разработка
-- **name:** MDN — JavaScript
-- **desc:** JavaScript, DOM, браузерные API, асинхронность. Язык: RU/EN.
-- **link:** https://developer.mozilla.org/ru/docs/Web/JavaScript
-- **tags:** RU/EN
-
-### Современный учебник JavaScript
-- **id:** ai-library-08
-- **type:** Библиотека программирования для ИИ
-- **topic:** Веб-разработка
-- **name:** Современный учебник JavaScript
-- **desc:** Пошаговый учебник JavaScript и браузерной разработки. Язык: RU.
-- **link:** https://learn.javascript.ru/
-- **tags:** RU
-
-### React — учебник
-- **id:** ai-library-09
-- **type:** Библиотека программирования для ИИ
-- **topic:** Веб-разработка
-- **name:** React — учебник
-- **desc:** Компоненты, состояние, хуки и рендеринг React. Язык: RU.
-- **link:** https://ru.react.dev/learn
-- **tags:** RU
-
-### TypeScript Handbook
-- **id:** ai-library-10
-- **type:** Библиотека программирования для ИИ
-- **topic:** Веб-разработка
-- **name:** TypeScript Handbook
-- **desc:** Типы, интерфейсы и типизированная разработка. Язык: EN.
-- **link:** https://www.typescriptlang.org/docs/handbook/
-- **tags:** EN
-
-### Node.js — обучение
-- **id:** ai-library-11
-- **type:** Библиотека программирования для ИИ
-- **topic:** Веб-разработка
-- **name:** Node.js — обучение
-- **desc:** Серверный JavaScript, npm, запуск и отладка. Язык: EN.
-- **link:** https://nodejs.org/learn
-- **tags:** EN
-
-### web.dev — производительность
-- **id:** ai-library-12
-- **type:** Библиотека программирования для ИИ
-- **topic:** Качество веба
-- **name:** web.dev — производительность
-- **desc:** Ускорение сайта, оптимизация загрузки и работы браузера. Язык: EN.
-- **link:** https://web.dev/learn/performance
-- **tags:** EN
-
-### MDN — доступность
-- **id:** ai-library-13
-- **type:** Библиотека программирования для ИИ
-- **topic:** Качество веба
-- **name:** MDN — доступность
-- **desc:** Доступные интерфейсы, клавиатура, семантика и формы. Язык: RU/EN.
-- **link:** https://developer.mozilla.org/ru/docs/Learn_web_development/Core/Accessibility
-- **tags:** RU/EN
-
-### Pro Git — открытая книга
-- **id:** ai-library-14
-- **type:** Библиотека программирования для ИИ
-- **topic:** Git и публикация
-- **name:** Pro Git — открытая книга
-- **desc:** Коммиты, ветки, слияния, конфликты и совместная работа. Язык: RU.
-- **link:** https://git-scm.com/book/ru/v2
-- **tags:** RU
-
-### GitHub Docs
-- **id:** ai-library-15
-- **type:** Библиотека программирования для ИИ
-- **topic:** Git и публикация
-- **name:** GitHub Docs
-- **desc:** Репозитории, pull requests, управление проектом. Язык: RU.
-- **link:** https://docs.github.com/ru
-- **tags:** RU
-
-### GitHub Actions
-- **id:** ai-library-16
-- **type:** Библиотека программирования для ИИ
-- **topic:** Git и публикация
-- **name:** GitHub Actions
-- **desc:** Непрерывная интеграция, тестирование и автоматическая сборка. Язык: RU.
-- **link:** https://docs.github.com/ru/actions
-- **tags:** RU
-
-### GitHub Pages
-- **id:** ai-library-17
-- **type:** Библиотека программирования для ИИ
-- **topic:** Git и публикация
-- **name:** GitHub Pages
-- **desc:** Размещение статических сайтов, домены и HTTPS. Язык: RU.
-- **link:** https://docs.github.com/ru/pages
-- **tags:** RU
-
-### Playwright — документация
-- **id:** ai-library-18
-- **type:** Библиотека программирования для ИИ
-- **topic:** Тестирование и инфраструктура
-- **name:** Playwright — документация
-- **desc:** Автоматизация браузера, E2E-тесты, скриншоты. Язык: EN.
-- **link:** https://playwright.dev/docs/intro
-- **tags:** EN
-
-### Docker — введение
-- **id:** ai-library-19
-- **type:** Библиотека программирования для ИИ
-- **topic:** Тестирование и инфраструктура
-- **name:** Docker — введение
-- **desc:** Контейнеры, Dockerfile, воспроизводимые окружения. Язык: EN.
-- **link:** https://docs.docker.com/get-started/
-- **tags:** EN
-
-### PostgreSQL — документация
-- **id:** ai-library-20
-- **type:** Библиотека программирования для ИИ
-- **topic:** Базы данных
-- **name:** PostgreSQL — документация
-- **desc:** SQL, транзакции, запросы, индексы и схемы. Язык: RU.
-- **link:** https://postgrespro.ru/docs/postgresql/current
-- **tags:** RU
-
-### SQLite — документация
-- **id:** ai-library-21
-- **type:** Библиотека программирования для ИИ
-- **topic:** Базы данных
-- **name:** SQLite — документация
-- **desc:** Встроенная СУБД, SQL и работа с локальными данными. Язык: EN.
-- **link:** https://www.sqlite.org/docs.html
-- **tags:** EN
-
-### Android Developers
-- **id:** ai-library-22
-- **type:** Библиотека программирования для ИИ
-- **topic:** Android
-- **name:** Android Developers
-- **desc:** Android API, разработка, сборки и публикация приложений. Язык: RU/EN.
-- **link:** https://developer.android.com/develop?hl=ru
-- **tags:** RU/EN
-
-### Kotlin — документация
-- **id:** ai-library-23
-- **type:** Библиотека программирования для ИИ
-- **topic:** Android
-- **name:** Kotlin — документация
-- **desc:** Синтаксис и средства языка Kotlin. Язык: EN.
-- **link:** https://kotlinlang.org/docs/
-- **tags:** EN
-
-### Android — производительность
-- **id:** ai-library-24
-- **type:** Библиотека программирования для ИИ
-- **topic:** Android
-- **name:** Android — производительность
-- **desc:** Память, производительность, запуск и оптимизация приложений. Язык: RU/EN.
-- **link:** https://developer.android.com/topic/performance/overview?hl=ru
-- **tags:** RU/EN
-
-### OWASP Cheat Sheet Series
-- **id:** ai-library-25
-- **type:** Библиотека программирования для ИИ
-- **topic:** Безопасность
-- **name:** OWASP Cheat Sheet Series
-- **desc:** Практические рекомендации по безопасности приложений. Язык: EN.
-- **link:** https://cheatsheetseries.owasp.org/
-- **tags:** EN
 
 
 ## Машиночитаемые исходники

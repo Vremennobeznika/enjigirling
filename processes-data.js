@@ -4577,8 +4577,8 @@ window.engineeringProcesses = [
         "url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"
       },
       {
-        "title": "Russell Finex — Grading sieves",
-        "url": "https://www.russellfinex.com/en/separation-equipment/sieving-machines/"
+        "title": "SWECO — Pharmaceutical Industry Separators",
+        "url": "https://www.sweco.com/swecoapps/sweco-separators-pharmaceutical.php"
       }
     ],
     "evidence": {
@@ -5979,8 +5979,8 @@ window.engineeringProcesses = [
         "url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093"
       },
       {
-        "title": "Hosokawa Alpine — Jet Mills",
-        "url": "https://www.hosokawa-alpine.com/powder-particle-processing/technologies/grinding-and-classifying/jet-mills/"
+        "title": "Sturtevant — Sanitary Micronizer: fluid energy jet mill",
+        "url": "https://sturtevantinc.com/wp-content/uploads/2023/09/S_Micronizer_Sanitary_Product_Bulletin.pdf"
       }
     ],
     "evidence": {

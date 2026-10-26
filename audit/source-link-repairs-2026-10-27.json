@@ -1,0 +1,1441 @@
+{
+  "date": "2026-10-27",
+  "scope": 36,
+  "replacements": [
+    {
+      "index": 0,
+      "oldUrl": "https://finder.work/vacancies/36329692",
+      "url": "https://khabarovsk.hh.ru/vacancy/137413636",
+      "title": "Инженер-пусконаладчик АСУ ТП — Микротерм плюс (архивная вакансия)",
+      "publisher": "HeadHunter",
+      "kind": "same_employer_role_archived"
+    },
+    {
+      "index": 1,
+      "oldUrl": "https://finder.work/vacancies/36865369",
+      "url": "https://dreamjob.ru/employers/6154236/vakansii/138013702",
+      "title": "Инженер по стандартизации / нормоконтролёр — Звезда",
+      "publisher": "Dream Job",
+      "kind": "same_employer_role"
+    },
+    {
+      "index": 2,
+      "oldUrl": "https://finder.work/vacancies/36457189",
+      "url": "https://dreamjob.ru/employers/2401785/vakansii",
+      "title": "Каталог вакансий НИИП имени В. В. Тихомирова — не источник зарплаты патентоведа",
+      "publisher": "Dream Job",
+      "kind": "employer_directory_not_original_vacancy"
+    },
+    {
+      "index": 3,
+      "oldUrl": "https://www.usgs.gov/centers/national-minerals-information-center/iron-and-steel-statistics-and-information",
+      "url": "https://nora.nerc.ac.uk/id/eprint/541620/",
+      "title": "BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)",
+      "publisher": "British Geological Survey",
+      "kind": "equivalent_statistics"
+    },
+    {
+      "index": 4,
+      "oldUrl": "https://www.usgs.gov/centers/national-minerals-information-center/bauxite-and-alumina-statistics-and-information?qt-science_support_page_related_con=0",
+      "url": "https://nora.nerc.ac.uk/id/eprint/541620/",
+      "title": "BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)",
+      "publisher": "British Geological Survey",
+      "kind": "equivalent_statistics"
+    },
+    {
+      "index": 5,
+      "oldUrl": "https://www.usgs.gov/centers/national-minerals-information-center/iron-and-steel-scrap-statistics-and-information",
+      "url": "https://nora.nerc.ac.uk/id/eprint/541620/",
+      "title": "BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)",
+      "publisher": "British Geological Survey",
+      "kind": "equivalent_statistics"
+    },
+    {
+      "index": 6,
+      "oldUrl": "https://www.usgs.gov/centers/national-minerals-information-center/iron-ore-statistics-and-information",
+      "url": "https://nora.nerc.ac.uk/id/eprint/541620/",
+      "title": "BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)",
+      "publisher": "British Geological Survey",
+      "kind": "equivalent_statistics"
+    },
+    {
+      "index": 7,
+      "oldUrl": "https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information",
+      "url": "https://nora.nerc.ac.uk/id/eprint/541620/",
+      "title": "BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)",
+      "publisher": "British Geological Survey",
+      "kind": "equivalent_statistics"
+    },
+    {
+      "index": 8,
+      "oldUrl": "https://www.usgs.gov/centers/national-minerals-information-center/gypsum-statistics-and-information",
+      "url": "https://nora.nerc.ac.uk/id/eprint/541620/",
+      "title": "BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)",
+      "publisher": "British Geological Survey",
+      "kind": "equivalent_statistics"
+    },
+    {
+      "index": 9,
+      "oldUrl": "https://www.usgs.gov/centers/national-minerals-information-center/silica-statistics-and-information",
+      "url": "https://nora.nerc.ac.uk/id/eprint/541620/",
+      "title": "BGS — World mineral production 2020–24 (статистика сырья, не свойства марки)",
+      "publisher": "British Geological Survey",
+      "kind": "equivalent_statistics"
+    },
+    {
+      "index": 10,
+      "oldUrl": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+      "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
+      "title": "BGS — World mineral statistics (обзор статистики сырья)",
+      "publisher": "British Geological Survey",
+      "kind": "equivalent_statistics"
+    },
+    {
+      "index": 11,
+      "oldUrl": "https://internationalcopper.org/sustainable-copper/about-copper/",
+      "url": "https://en.wikipedia.org/wiki/List_of_copper_alloys",
+      "title": "Wikipedia — List of copper alloys (справочный обзор)",
+      "publisher": "Wikipedia contributors",
+      "kind": "secondary_overview"
+    },
+    {
+      "index": 12,
+      "oldUrl": "https://www.usgs.gov/centers/national-minerals-information-center/nickel-statistics-and-information",
+      "url": "https://nora.nerc.ac.uk/id/eprint/8725/1/0910_Nickel_Profile.pdf",
+      "title": "BGS — Nickel: mineral profile",
+      "publisher": "British Geological Survey",
+      "kind": "equivalent_reference"
+    },
+    {
+      "index": 13,
+      "oldUrl": "https://www.usgs.gov/centers/national-minerals-information-center/sulfur-statistics-and-information",
+      "url": "https://en.wikipedia.org/wiki/Sulfur",
+      "title": "Wikipedia — Sulfur (справочный обзор)",
+      "publisher": "Wikipedia contributors",
+      "kind": "secondary_overview"
+    },
+    {
+      "index": 14,
+      "oldUrl": "https://www.usgs.gov/centers/national-minerals-information-center/phosphate-rock-statistics-and-information",
+      "url": "https://en.wikipedia.org/wiki/Phosphate_rock",
+      "title": "Wikipedia — Phosphorite (справочный обзор)",
+      "publisher": "Wikipedia contributors",
+      "kind": "secondary_overview"
+    },
+    {
+      "index": 15,
+      "oldUrl": "https://www.usgs.gov/centers/national-minerals-information-center/potash-statistics-and-information",
+      "url": "https://en.wikipedia.org/wiki/Potash",
+      "title": "Wikipedia — Potash (справочный обзор)",
+      "publisher": "Wikipedia contributors",
+      "kind": "secondary_overview"
+    },
+    {
+      "index": 16,
+      "oldUrl": "https://www.usgs.gov/centers/national-minerals-information-center/salt-statistics-and-information",
+      "url": "https://en.wikipedia.org/wiki/Sodium_chloride",
+      "title": "Wikipedia — Sodium chloride (справочный обзор)",
+      "publisher": "Wikipedia contributors",
+      "kind": "secondary_overview"
+    },
+    {
+      "index": 17,
+      "oldUrl": "https://www.usgs.gov/centers/national-minerals-information-center/manganese-statistics-and-information",
+      "url": "https://en.wikipedia.org/wiki/Manganese",
+      "title": "Wikipedia — Manganese (справочный обзор)",
+      "publisher": "Wikipedia contributors",
+      "kind": "secondary_overview"
+    },
+    {
+      "index": 18,
+      "oldUrl": "https://www.usgs.gov/centers/national-minerals-information-center/perlite-statistics-and-information",
+      "url": "https://www.perlite.org/wp-content/uploads/2018/03/why-perlite-works.pdf",
+      "title": "Perlite Institute — Why Perlite Works",
+      "publisher": "Perlite Institute",
+      "kind": "equivalent_reference"
+    },
+    {
+      "index": 19,
+      "oldUrl": "https://www.usgs.gov/media/images/filtration-diatomaceous-earth",
+      "url": "https://geology.com/rocks/diatomite.shtml",
+      "title": "Geology.com — Diatomite (справочный обзор)",
+      "publisher": "Geology.com",
+      "kind": "secondary_overview"
+    },
+    {
+      "index": 20,
+      "oldUrl": "https://www.russellfinex.com/en/separation-equipment/sieving-machines/",
+      "url": "https://www.sweco.com/swecoapps/sweco-separators-pharmaceutical.php",
+      "title": "SWECO — Pharmaceutical Industry Separators",
+      "publisher": "SWECO",
+      "kind": "equivalent_reference"
+    },
+    {
+      "index": 21,
+      "oldUrl": "https://www.hosokawa-alpine.com/powder-particle-processing/technologies/grinding-and-classifying/jet-mills/",
+      "url": "https://sturtevantinc.com/wp-content/uploads/2023/09/S_Micronizer_Sanitary_Product_Bulletin.pdf",
+      "title": "Sturtevant — Sanitary Micronizer: fluid energy jet mill",
+      "publisher": "Sturtevant",
+      "kind": "equivalent_reference"
+    },
+    {
+      "index": 22,
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2246",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/1/prikaz_mintruda_rossii_ot_30_08_2021_N_587n_ob_utverzhdenii.html",
+      "title": "Меганорм — копия текста приказа Минтруда",
+      "publisher": "Меганорм",
+      "kind": "mirror_same_order"
+    },
+    {
+      "index": 23,
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2414",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/2/prikaz_mintruda_rossii_ot_04_08_2022_N_461n_ob_utverzhdenii.html",
+      "title": "Меганорм — копия текста приказа Минтруда",
+      "publisher": "Меганорм",
+      "kind": "mirror_same_order"
+    },
+    {
+      "index": 24,
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/3209",
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_534303/",
+      "title": "КонсультантПлюс — копия текста приказа Минтруда",
+      "publisher": "КонсультантПлюс",
+      "kind": "mirror_same_order"
+    },
+    {
+      "index": 25,
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2579",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/2/prikaz_mintruda_rossii_ot_16_01_2023_N_13n_ob_utverzhdenii.html",
+      "title": "Меганорм — копия текста приказа Минтруда",
+      "publisher": "Меганорм",
+      "kind": "mirror_same_order"
+    },
+    {
+      "index": 26,
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/1631",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/2/prikaz_mintruda_rossii_ot_28_09_2020_N_658n_ob_utverzhdenii.html",
+      "title": "Меганорм — копия текста приказа Минтруда",
+      "publisher": "Меганорм",
+      "kind": "mirror_same_order"
+    },
+    {
+      "index": 27,
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/1696",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/1/prikaz_mintruda_rossii_ot_02_09_2020_N_556n_ob_utverzhdenii.html",
+      "title": "Меганорм — копия текста приказа Минтруда",
+      "publisher": "Меганорм",
+      "kind": "mirror_same_order"
+    },
+    {
+      "index": 28,
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2258",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_31_08_2021_N_600n_ob_utverzhdenii.html",
+      "title": "Меганорм — копия текста приказа Минтруда",
+      "publisher": "Меганорм",
+      "kind": "mirror_same_order"
+    },
+    {
+      "index": 29,
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/1712",
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_370148/",
+      "title": "КонсультантПлюс — копия текста приказа Минтруда",
+      "publisher": "КонсультантПлюс",
+      "kind": "mirror_same_order"
+    },
+    {
+      "index": 30,
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2256",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_31_08_2021_N_612n_ob_utverzhdenii.html",
+      "title": "Меганорм — копия текста приказа Минтруда",
+      "publisher": "Меганорм",
+      "kind": "mirror_same_order"
+    },
+    {
+      "index": 31,
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2673",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/3/prikaz_mintruda_rossii_ot_27_04_2023_N_346n_ob_utverzhdenii.html",
+      "title": "Меганорм — копия текста приказа Минтруда",
+      "publisher": "Меганорм",
+      "kind": "mirror_same_order"
+    },
+    {
+      "index": 32,
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2169",
+      "url": "https://nangs.org/docs/mintrud-rossii-prikaz-ot-21-10-2021-748n-ob-utverzhdenii-professionalnogo-standarta-spetsialist-po-patentovedeniyu-pdf",
+      "title": "НАНГС — копия текста приказа Минтруда",
+      "publisher": "НАНГС",
+      "kind": "mirror_same_order"
+    },
+    {
+      "index": 33,
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/1546",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_06_07_2020_N_405n_ob_utverzhdenii.html",
+      "title": "Меганорм — копия текста приказа Минтруда",
+      "publisher": "Меганорм",
+      "kind": "mirror_same_order"
+    },
+    {
+      "index": 34,
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2446",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_14_09_2022_N_525n_ob_utverzhdenii.html",
+      "title": "Меганорм — копия текста приказа Минтруда",
+      "publisher": "Меганорм",
+      "kind": "mirror_same_order"
+    },
+    {
+      "index": 35,
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2513",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_04_10_2022_N_618n_ob_utverzhdenii.html",
+      "title": "Меганорм — копия текста приказа Минтруда",
+      "publisher": "Меганорм",
+      "kind": "mirror_same_order"
+    }
+  ],
+  "reviewedClaims": [
+    {
+      "key": "materials:perlite-raw:detail:review-usgs-perlite",
+      "previous": {
+        "recordType": "materials",
+        "recordId": "perlite-raw",
+        "sourceId": "review-usgs-perlite",
+        "claimPath": "detail",
+        "verificationStatus": "claim_checked",
+        "claimScope": "Перлит — вулканическое стекло; лёгкая пористая структура появляется при вспучивании.",
+        "verifiedClaim": "Перлит — вулканическое стекло; лёгкая пористая структура появляется при вспучивании.",
+        "sourceSection": "Introductory mineral description",
+        "claimCheckedAt": "2026-10-25",
+        "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными.",
+        "reviewedTextSha256": "affee94fa5b696d51301992cbc7f7deecd1a4c40fe0d63659f1e07b5740943c6"
+      },
+      "current": {
+        "recordType": "materials",
+        "recordId": "perlite-raw",
+        "sourceId": "review-usgs-perlite",
+        "claimPath": "detail",
+        "verificationStatus": "claim_checked",
+        "claimScope": "Перлит — вулканическое стекло; лёгкая пористая структура появляется при вспучивании.",
+        "verifiedClaim": "Перлит — вулканическое стекло; лёгкая пористая структура появляется при вспучивании.",
+        "sourceSection": "Повторно прочитанный материал: Perlite Institute — Why Perlite Works",
+        "claimCheckedAt": "2026-10-27",
+        "reviewScope": "Подтверждён только указанный тезис. Остальные поля, технологическая применимость к маркам и критерии приёмки остаются непроверенными. Ссылка и подтверждающий узкий тезис повторно сопоставлены 27.10.2026; источник: Perlite Institute.",
+        "reviewedTextSha256": "affee94fa5b696d51301992cbc7f7deecd1a4c40fe0d63659f1e07b5740943c6"
+      },
+      "url": "https://www.perlite.org/wp-content/uploads/2018/03/why-perlite-works.pdf"
+    },
+    {
+      "key": "materials:brass-alloys:detail:review-ica-copper",
+      "previous": {
+        "recordType": "materials",
+        "recordId": "brass-alloys",
+        "sourceId": "review-ica-copper",
+        "claimPath": "detail",
+        "verificationStatus": "claim_checked",
+        "claimScope": "Латунь относится к медно-цинковым сплавам; конкретные механические свойства этим не подтверждены.",
+        "verifiedClaim": "Латунь относится к медно-цинковым сплавам; конкретные механические свойства этим не подтверждены.",
+        "sourceSection": "Copper Facts — пункт о сплавах",
+        "claimCheckedAt": "2026-10-25",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+        "reviewedTextSha256": "94613c794df72047a52a0be1967a0340a0d800f7fdd8f1af8cbdb42e5ce555a8"
+      },
+      "current": {
+        "recordType": "materials",
+        "recordId": "brass-alloys",
+        "sourceId": "review-ica-copper",
+        "claimPath": "detail",
+        "verificationStatus": "claim_checked",
+        "claimScope": "Латунь относится к медно-цинковым сплавам; конкретные механические свойства этим не подтверждены.",
+        "verifiedClaim": "Латунь относится к медно-цинковым сплавам; конкретные механические свойства этим не подтверждены.",
+        "sourceSection": "Повторно прочитанный материал: Wikipedia — List of copper alloys (справочный обзор)",
+        "claimCheckedAt": "2026-10-27",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены. Ссылка и подтверждающий узкий тезис повторно сопоставлены 27.10.2026; источник: Wikipedia contributors.",
+        "reviewedTextSha256": "94613c794df72047a52a0be1967a0340a0d800f7fdd8f1af8cbdb42e5ce555a8"
+      },
+      "url": "https://en.wikipedia.org/wiki/List_of_copper_alloys"
+    },
+    {
+      "key": "materials:bronze-alloys:detail:review-ica-copper",
+      "previous": {
+        "recordType": "materials",
+        "recordId": "bronze-alloys",
+        "sourceId": "review-ica-copper",
+        "claimPath": "detail",
+        "verificationStatus": "claim_checked",
+        "claimScope": "Бронзы — семейство медных сплавов с различными легирующими компонентами, включая Sn, Al, Si и Be; состав каждой марки проверяют отдельно.",
+        "verifiedClaim": "Бронзы — семейство медных сплавов с различными легирующими компонентами, включая Sn, Al, Si и Be; состав каждой марки проверяют отдельно.",
+        "sourceSection": "Copper Facts — пункт о сплавах",
+        "claimCheckedAt": "2026-10-25",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+        "reviewedTextSha256": "45157dadc10dd1d564043bf78fd51bcd69faeae41b63ef2275282d00de2ba9b0"
+      },
+      "current": {
+        "recordType": "materials",
+        "recordId": "bronze-alloys",
+        "sourceId": "review-ica-copper",
+        "claimPath": "detail",
+        "verificationStatus": "claim_checked",
+        "claimScope": "Бронзы — семейство медных сплавов с различными легирующими компонентами, включая Sn, Al, Si и Be; состав каждой марки проверяют отдельно.",
+        "verifiedClaim": "Бронзы — семейство медных сплавов с различными легирующими компонентами, включая Sn, Al, Si и Be; состав каждой марки проверяют отдельно.",
+        "sourceSection": "Повторно прочитанный материал: Wikipedia — List of copper alloys (справочный обзор)",
+        "claimCheckedAt": "2026-10-27",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены. Ссылка и подтверждающий узкий тезис повторно сопоставлены 27.10.2026; источник: Wikipedia contributors.",
+        "reviewedTextSha256": "45157dadc10dd1d564043bf78fd51bcd69faeae41b63ef2275282d00de2ba9b0"
+      },
+      "url": "https://en.wikipedia.org/wiki/List_of_copper_alloys"
+    },
+    {
+      "key": "materials:diatomite-raw:detail:review-usgs-diatomite",
+      "previous": {
+        "recordType": "materials",
+        "recordId": "diatomite-raw",
+        "sourceId": "review-usgs-diatomite",
+        "claimPath": "detail",
+        "verificationStatus": "claim_checked",
+        "claimScope": "Диатомит имеет осадочное биогенное происхождение и применяется при фильтрации, в том числе пищевых жидкостей; пригодность конкретной партии не проверена.",
+        "verifiedClaim": "Диатомит имеет осадочное биогенное происхождение и применяется при фильтрации, в том числе пищевых жидкостей; пригодность конкретной партии не проверена.",
+        "sourceSection": "Detailed Description",
+        "claimCheckedAt": "2026-10-25",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+        "reviewedTextSha256": "d9ee1bafdc1bdb7d16eb055e0fb7d11302d9ba8f2c37867e76377742b70f463f"
+      },
+      "current": {
+        "recordType": "materials",
+        "recordId": "diatomite-raw",
+        "sourceId": "review-usgs-diatomite",
+        "claimPath": "detail",
+        "verificationStatus": "claim_checked",
+        "claimScope": "Диатомит имеет осадочное биогенное происхождение и применяется при фильтрации, в том числе пищевых жидкостей; пригодность конкретной партии не проверена.",
+        "verifiedClaim": "Диатомит имеет осадочное биогенное происхождение и применяется при фильтрации, в том числе пищевых жидкостей; пригодность конкретной партии не проверена.",
+        "sourceSection": "Повторно прочитанный материал: Geology.com — Diatomite (справочный обзор)",
+        "claimCheckedAt": "2026-10-27",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены. Ссылка и подтверждающий узкий тезис повторно сопоставлены 27.10.2026; источник: Geology.com.",
+        "reviewedTextSha256": "d9ee1bafdc1bdb7d16eb055e0fb7d11302d9ba8f2c37867e76377742b70f463f"
+      },
+      "url": "https://geology.com/rocks/diatomite.shtml"
+    },
+    {
+      "key": "materials:potash-raw:detail:review-usgs-potash",
+      "previous": {
+        "recordType": "materials",
+        "recordId": "potash-raw",
+        "sourceId": "review-usgs-potash",
+        "claimPath": "detail",
+        "verificationStatus": "claim_checked",
+        "claimScope": "Калийное сырьё служит источником калия для получения удобрений; конкретная минеральная смесь и качество не аттестованы.",
+        "verifiedClaim": "Калийное сырьё служит источником калия для получения удобрений; конкретная минеральная смесь и качество не аттестованы.",
+        "sourceSection": "Вводный текст о калии и удобрениях",
+        "claimCheckedAt": "2026-10-25",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+        "reviewedTextSha256": "3f910edc880830d98d50dfcd418f6fe4d92b78b264739d0962e5a056ce6a998e"
+      },
+      "current": {
+        "recordType": "materials",
+        "recordId": "potash-raw",
+        "sourceId": "review-usgs-potash",
+        "claimPath": "detail",
+        "verificationStatus": "claim_checked",
+        "claimScope": "Калийное сырьё служит источником калия для получения удобрений; конкретная минеральная смесь и качество не аттестованы.",
+        "verifiedClaim": "Калийное сырьё служит источником калия для получения удобрений; конкретная минеральная смесь и качество не аттестованы.",
+        "sourceSection": "Повторно прочитанный материал: Wikipedia — Potash (справочный обзор)",
+        "claimCheckedAt": "2026-10-27",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены. Ссылка и подтверждающий узкий тезис повторно сопоставлены 27.10.2026; источник: Wikipedia contributors.",
+        "reviewedTextSha256": "3f910edc880830d98d50dfcd418f6fe4d92b78b264739d0962e5a056ce6a998e"
+      },
+      "url": "https://en.wikipedia.org/wiki/Potash"
+    },
+    {
+      "key": "processes:pharma-micronization:description:review-hosokawa-jet",
+      "previous": {
+        "recordType": "processes",
+        "recordId": "pharma-micronization",
+        "sourceId": "review-hosokawa-jet",
+        "claimPath": "description",
+        "verificationStatus": "claim_checked",
+        "claimScope": "Струйная микронизация фармацевтических веществ уменьшает частицы за счёт столкновений в газовом потоке. Отсутствие механических мелющих органов не исключает механического разрушения частиц.",
+        "verifiedClaim": "Струйная микронизация фармацевтических веществ уменьшает частицы за счёт столкновений в газовом потоке. Отсутствие механических мелющих органов не исключает механического разрушения частиц.",
+        "sourceSection": "Spiral jet mills; Principle of operation",
+        "claimCheckedAt": "2026-10-25",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+        "reviewedTextSha256": "e0e82c2b081169124b4a040619221eb9f741dda5a8e21cd21e48aaf70766cbfe"
+      },
+      "current": {
+        "recordType": "processes",
+        "recordId": "pharma-micronization",
+        "sourceId": "review-hosokawa-jet",
+        "claimPath": "description",
+        "verificationStatus": "claim_checked",
+        "claimScope": "Струйная микронизация фармацевтических веществ уменьшает частицы за счёт столкновений в газовом потоке. Отсутствие механических мелющих органов не исключает механического разрушения частиц.",
+        "verifiedClaim": "Струйная микронизация фармацевтических веществ уменьшает частицы за счёт столкновений в газовом потоке. Отсутствие механических мелющих органов не исключает механического разрушения частиц.",
+        "sourceSection": "Повторно прочитанный материал: Sturtevant — Sanitary Micronizer: fluid energy jet mill",
+        "claimCheckedAt": "2026-10-27",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены. Ссылка и подтверждающий узкий тезис повторно сопоставлены 27.10.2026; источник: Sturtevant.",
+        "reviewedTextSha256": "e0e82c2b081169124b4a040619221eb9f741dda5a8e21cd21e48aaf70766cbfe"
+      },
+      "url": "https://sturtevantinc.com/wp-content/uploads/2023/09/S_Micronizer_Sanitary_Product_Bulletin.pdf"
+    },
+    {
+      "key": "processes:pharma-sieving:description:review-russell-grading",
+      "previous": {
+        "recordType": "processes",
+        "recordId": "pharma-sieving",
+        "sourceId": "review-russell-grading",
+        "claimPath": "description",
+        "verificationStatus": "claim_checked",
+        "claimScope": "Просеивание порошка разделяет частицы по размеру с помощью сетки; описано применение таких машин в фармацевтическом производстве. Критерии выпуска партии не подтверждены.",
+        "verifiedClaim": "Просеивание порошка разделяет частицы по размеру с помощью сетки; описано применение таких машин в фармацевтическом производстве. Критерии выпуска партии не подтверждены.",
+        "sourceSection": "FAQ: What is a sieving machine and how does it work?; Which industries use sieving machines?",
+        "claimCheckedAt": "2026-10-25",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+        "reviewedTextSha256": "8fae0d09f6ffe26cc36ed1f590bd4e1467605b1bfc3b65330ffee3b77197eca0"
+      },
+      "current": {
+        "recordType": "processes",
+        "recordId": "pharma-sieving",
+        "sourceId": "review-russell-grading",
+        "claimPath": "description",
+        "verificationStatus": "claim_checked",
+        "claimScope": "Просеивание порошка разделяет частицы по размеру с помощью сетки; описано применение таких машин в фармацевтическом производстве. Критерии выпуска партии не подтверждены.",
+        "verifiedClaim": "Просеивание порошка разделяет частицы по размеру с помощью сетки; описано применение таких машин в фармацевтическом производстве. Критерии выпуска партии не подтверждены.",
+        "sourceSection": "Повторно прочитанный материал: SWECO — Pharmaceutical Industry Separators",
+        "claimCheckedAt": "2026-10-27",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены. Ссылка и подтверждающий узкий тезис повторно сопоставлены 27.10.2026; источник: SWECO.",
+        "reviewedTextSha256": "8fae0d09f6ffe26cc36ed1f590bd4e1467605b1bfc3b65330ffee3b77197eca0"
+      },
+      "url": "https://www.sweco.com/swecoapps/sweco-separators-pharmaceutical.php"
+    },
+    {
+      "key": "materials:nickel-ore:detail:review-usgs-nickel",
+      "previous": {
+        "recordType": "materials",
+        "recordId": "nickel-ore",
+        "sourceId": "review-usgs-nickel",
+        "claimPath": "detail",
+        "verificationStatus": "claim_checked",
+        "claimScope": "Никель добывают из разных типов руд, в частности латеритных и магматических сульфидных; их минералогия различается. Режим обогащения конкретной руды не подтверждён.",
+        "verifiedClaim": "Никель добывают из разных типов руд, в частности латеритных и магматических сульфидных; их минералогия различается. Режим обогащения конкретной руды не подтверждён.",
+        "sourceSection": "Introductory technical text: ore deposits",
+        "claimCheckedAt": "2026-10-25",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+        "reviewedTextSha256": "1ce2ce033f9e26206a6561c55a43d3a068074074c467651f0548459695d17887"
+      },
+      "current": {
+        "recordType": "materials",
+        "recordId": "nickel-ore",
+        "sourceId": "review-usgs-nickel",
+        "claimPath": "detail",
+        "verificationStatus": "claim_checked",
+        "claimScope": "Никель добывают из разных типов руд, в частности латеритных и магматических сульфидных; их минералогия различается. Режим обогащения конкретной руды не подтверждён.",
+        "verifiedClaim": "Никель добывают из разных типов руд, в частности латеритных и магматических сульфидных; их минералогия различается. Режим обогащения конкретной руды не подтверждён.",
+        "sourceSection": "Повторно прочитанный материал: BGS — Nickel: mineral profile",
+        "claimCheckedAt": "2026-10-27",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены. Ссылка и подтверждающий узкий тезис повторно сопоставлены 27.10.2026; источник: British Geological Survey.",
+        "reviewedTextSha256": "1ce2ce033f9e26206a6561c55a43d3a068074074c467651f0548459695d17887"
+      },
+      "url": "https://nora.nerc.ac.uk/id/eprint/8725/1/0910_Nickel_Profile.pdf"
+    },
+    {
+      "key": "materials:nickel-alloys:uses:review-usgs-nickel",
+      "previous": {
+        "recordType": "materials",
+        "recordId": "nickel-alloys",
+        "sourceId": "review-usgs-nickel",
+        "claimPath": "uses",
+        "verificationStatus": "claim_checked",
+        "claimScope": "Никелевые суперсплавы применяют в деталях газовых турбин. Коррозионная стойкость всех никелевых сплавов и работоспособность в любой сложной среде не подтверждены.",
+        "verifiedClaim": "Никелевые суперсплавы применяют в деталях газовых турбин. Коррозионная стойкость всех никелевых сплавов и работоспособность в любой сложной среде не подтверждены.",
+        "sourceSection": "Introductory technical text: uses",
+        "claimCheckedAt": "2026-10-25",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+        "reviewedTextSha256": "0b52b1add29920c2f23bfd98a6c316ffc1bc0bf4177018aa158f527a5959a750"
+      },
+      "current": {
+        "recordType": "materials",
+        "recordId": "nickel-alloys",
+        "sourceId": "review-usgs-nickel",
+        "claimPath": "uses",
+        "verificationStatus": "claim_checked",
+        "claimScope": "Никелевые суперсплавы применяют в деталях газовых турбин. Коррозионная стойкость всех никелевых сплавов и работоспособность в любой сложной среде не подтверждены.",
+        "verifiedClaim": "Никелевые суперсплавы применяют в деталях газовых турбин. Коррозионная стойкость всех никелевых сплавов и работоспособность в любой сложной среде не подтверждены.",
+        "sourceSection": "Повторно прочитанный материал: BGS — Nickel: mineral profile",
+        "claimCheckedAt": "2026-10-27",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены. Ссылка и подтверждающий узкий тезис повторно сопоставлены 27.10.2026; источник: British Geological Survey.",
+        "reviewedTextSha256": "0b52b1add29920c2f23bfd98a6c316ffc1bc0bf4177018aa158f527a5959a750"
+      },
+      "url": "https://nora.nerc.ac.uk/id/eprint/8725/1/0910_Nickel_Profile.pdf"
+    },
+    {
+      "key": "materials:phosphate-rock:uses:review-usgs-phosphate",
+      "previous": {
+        "recordType": "materials",
+        "recordId": "phosphate-rock",
+        "sourceId": "review-usgs-phosphate",
+        "claimPath": "uses",
+        "verificationStatus": "claim_checked",
+        "claimScope": "Фосфатные породы служат минеральным сырьём для производства фосфатных удобрений и промышленных продуктов. Минералогия и примеси конкретной партии не проверены.",
+        "verifiedClaim": "Фосфатные породы служат минеральным сырьём для производства фосфатных удобрений и промышленных продуктов. Минералогия и примеси конкретной партии не проверены.",
+        "sourceSection": "Introductory commodity description",
+        "claimCheckedAt": "2026-10-25",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+        "reviewedTextSha256": "327a7ac0c19621c7cbf0ce4e5b45f28e847390d9f766e09213a39e608ccffde6"
+      },
+      "current": {
+        "recordType": "materials",
+        "recordId": "phosphate-rock",
+        "sourceId": "review-usgs-phosphate",
+        "claimPath": "uses",
+        "verificationStatus": "claim_checked",
+        "claimScope": "Фосфатные породы служат минеральным сырьём для производства фосфатных удобрений и промышленных продуктов. Минералогия и примеси конкретной партии не проверены.",
+        "verifiedClaim": "Фосфатные породы служат минеральным сырьём для производства фосфатных удобрений и промышленных продуктов. Минералогия и примеси конкретной партии не проверены.",
+        "sourceSection": "Повторно прочитанный материал: Wikipedia — Phosphorite (справочный обзор)",
+        "claimCheckedAt": "2026-10-27",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены. Ссылка и подтверждающий узкий тезис повторно сопоставлены 27.10.2026; источник: Wikipedia contributors.",
+        "reviewedTextSha256": "327a7ac0c19621c7cbf0ce4e5b45f28e847390d9f766e09213a39e608ccffde6"
+      },
+      "url": "https://en.wikipedia.org/wiki/Phosphate_rock"
+    },
+    {
+      "key": "materials:manganese-ore:uses:review-usgs-manganese",
+      "previous": {
+        "recordType": "materials",
+        "recordId": "manganese-ore",
+        "sourceId": "review-usgs-manganese",
+        "claimPath": "uses",
+        "verificationStatus": "claim_checked",
+        "claimScope": "Марганцевое сырьё используется в металлургической цепочке производства ферросплавов и стали. Тип руды, состав и режим подготовки не подтверждены.",
+        "verifiedClaim": "Марганцевое сырьё используется в металлургической цепочке производства ферросплавов и стали. Тип руды, состав и режим подготовки не подтверждены.",
+        "sourceSection": "Introductory commodity description: metallurgical uses",
+        "claimCheckedAt": "2026-10-25",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+        "reviewedTextSha256": "b022dc507310c3cee1a66af8780f6411179979d92ba122bcbd1887322f2665fb"
+      },
+      "current": {
+        "recordType": "materials",
+        "recordId": "manganese-ore",
+        "sourceId": "review-usgs-manganese",
+        "claimPath": "uses",
+        "verificationStatus": "claim_checked",
+        "claimScope": "Марганцевое сырьё используется в металлургической цепочке производства ферросплавов и стали. Тип руды, состав и режим подготовки не подтверждены.",
+        "verifiedClaim": "Марганцевое сырьё используется в металлургической цепочке производства ферросплавов и стали. Тип руды, состав и режим подготовки не подтверждены.",
+        "sourceSection": "Повторно прочитанный материал: Wikipedia — Manganese (справочный обзор)",
+        "claimCheckedAt": "2026-10-27",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены. Ссылка и подтверждающий узкий тезис повторно сопоставлены 27.10.2026; источник: Wikipedia contributors.",
+        "reviewedTextSha256": "b022dc507310c3cee1a66af8780f6411179979d92ba122bcbd1887322f2665fb"
+      },
+      "url": "https://en.wikipedia.org/wiki/Manganese"
+    },
+    {
+      "key": "materials:industrial-sulfur:uses:review-usgs-sulfur",
+      "previous": {
+        "recordType": "materials",
+        "recordId": "industrial-sulfur",
+        "sourceId": "review-usgs-sulfur",
+        "claimPath": "uses",
+        "verificationStatus": "claim_checked",
+        "claimScope": "Сера используется как промышленное химическое сырьё, прежде всего для получения серной кислоты. Качество и загрязнения партии не проверены.",
+        "verifiedClaim": "Сера используется как промышленное химическое сырьё, прежде всего для получения серной кислоты. Качество и загрязнения партии не проверены.",
+        "sourceSection": "Introductory commodity description",
+        "claimCheckedAt": "2026-10-25",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+        "reviewedTextSha256": "041ced25f344603f7fac1568886a414d2693a5e6702e50732a143611f4db4883"
+      },
+      "current": {
+        "recordType": "materials",
+        "recordId": "industrial-sulfur",
+        "sourceId": "review-usgs-sulfur",
+        "claimPath": "uses",
+        "verificationStatus": "claim_checked",
+        "claimScope": "Сера используется как промышленное химическое сырьё, прежде всего для получения серной кислоты. Качество и загрязнения партии не проверены.",
+        "verifiedClaim": "Сера используется как промышленное химическое сырьё, прежде всего для получения серной кислоты. Качество и загрязнения партии не проверены.",
+        "sourceSection": "Повторно прочитанный материал: Wikipedia — Sulfur (справочный обзор)",
+        "claimCheckedAt": "2026-10-27",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены. Ссылка и подтверждающий узкий тезис повторно сопоставлены 27.10.2026; источник: Wikipedia contributors.",
+        "reviewedTextSha256": "041ced25f344603f7fac1568886a414d2693a5e6702e50732a143611f4db4883"
+      },
+      "url": "https://en.wikipedia.org/wiki/Sulfur"
+    },
+    {
+      "key": "materials:industrial-salt:detail:review-usgs-salt",
+      "previous": {
+        "recordType": "materials",
+        "recordId": "industrial-salt",
+        "sourceId": "review-usgs-salt",
+        "claimPath": "detail",
+        "verificationStatus": "claim_checked",
+        "claimScope": "Соль имеет основу NaCl и используется как химическое сырьё, например для производства хлора и едкого натра. Допуски на примеси не подтверждены.",
+        "verifiedClaim": "Соль имеет основу NaCl и используется как химическое сырьё, например для производства хлора и едкого натра. Допуски на примеси не подтверждены.",
+        "sourceSection": "Introductory commodity description",
+        "claimCheckedAt": "2026-10-25",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены.",
+        "reviewedTextSha256": "354e5ae479541cdde676a783dcdf94ed99995b4e72b9ff141fc705ba39cf8cfc"
+      },
+      "current": {
+        "recordType": "materials",
+        "recordId": "industrial-salt",
+        "sourceId": "review-usgs-salt",
+        "claimPath": "detail",
+        "verificationStatus": "claim_checked",
+        "claimScope": "Соль имеет основу NaCl и используется как химическое сырьё, например для производства хлора и едкого натра. Допуски на примеси не подтверждены.",
+        "verifiedClaim": "Соль имеет основу NaCl и используется как химическое сырьё, например для производства хлора и едкого натра. Допуски на примеси не подтверждены.",
+        "sourceSection": "Повторно прочитанный материал: Wikipedia — Sodium chloride (справочный обзор)",
+        "claimCheckedAt": "2026-10-27",
+        "reviewScope": "Проверен только сформулированный тезис. Остальные поля, режимы, марки и критерии приёмки не подтверждены. Ссылка и подтверждающий узкий тезис повторно сопоставлены 27.10.2026; источник: Wikipedia contributors.",
+        "reviewedTextSha256": "354e5ae479541cdde676a783dcdf94ed99995b4e72b9ff141fc705ba39cf8cfc"
+      },
+      "url": "https://en.wikipedia.org/wiki/Sodium_chloride"
+    }
+  ],
+  "limitations": [
+    "Каталог НИИП не является восстановленным объявлением патентоведа или источником зарплаты.",
+    "Доступность и узкие тезисы повторно проверены; полнота предметной или нормативной аттестации не заявляется.",
+    "Wikipedia и Geology.com подписаны как вторичные справочные обзоры."
+  ],
+  "additionalReplacements": [
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2349",
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_418026/",
+      "order": "231н от 21.04.2022",
+      "name": "Специалист по организации строительства",
+      "publisher": "КонсультантПлюс",
+      "status": 200,
+      "title": [
+        "Приказ Минтруда России от 21.04.2022 N 231н\n\"Об утверждении профессионального стандарта \"Специалист по организации строительства\"\n(Зарегистрировано в Минюсте России 26.05.2022 N 68601) \\ КонсультантПлюс"
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2725",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/1/prikaz_mintruda_rossii_ot_13_07_2023_N_585n_ob_utverzhdenii.html",
+      "order": "585н от 13.07.2023",
+      "name": "Организация строительства жилищно-гражданского комплекса",
+      "publisher": "Меганорм",
+      "status": 200,
+      "title": [
+        "Приказ Минтруда России от 13.07.2023 N 585н\r\n\"Об утверждении профессионального стандарта \"Специалист по организации строительства объектов жилищно-гражданского комплекса\"\r\n(Зарегистрировано в Минюсте России 16.08.2023 N 74816)"
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2338",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_21_04_2022_N_228n_ob_utverzhdenii.html",
+      "order": "228н от 21.04.2022",
+      "name": "Специалист по организации архитектурно-строительного проектирования",
+      "publisher": "Меганорм",
+      "status": 200,
+      "title": [
+        "Приказ Минтруда России от 21.04.2022 N 228н\r\n\"Об утверждении профессионального стандарта \"Специалист по организации архитектурно-строительного проектирования\"\r\n(Зарегистрировано в Минюсте России 24.05.2022 N 68568)"
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2329",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_06_04_2022_N_202n_ob_utverzhdenii.html",
+      "order": "202н от 06.04.2022",
+      "name": "Архитектор",
+      "publisher": "Меганорм",
+      "status": 200,
+      "title": [
+        "Приказ Минтруда России от 06.04.2022 N 202н\r\n\"Об утверждении профессионального стандарта \"Архитектор\"\r\n(Зарегистрировано в Минюсте России 06.05.2022 N 68436)"
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2397",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_07_07_2022_N_401n_ob_utverzhdenii.html",
+      "order": "401н от 07.07.2022",
+      "name": "Специалист в области проектирования автомобильных дорог",
+      "publisher": "Меганорм",
+      "status": 200,
+      "title": [
+        "Приказ Минтруда России от 07.07.2022 N 401н\r\n\"Об утверждении профессионального стандарта \"Специалист в области проектирования автомобильных дорог\"\r\n(Зарегистрировано в Минюсте России 05.08.2022 N 69541)"
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2326",
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_416630/",
+      "order": "190н от 31.03.2022",
+      "name": "Специалист по автоматизации и механизации механосборочного производства",
+      "publisher": "КонсультантПлюс",
+      "status": 200,
+      "title": [
+        "Приказ Минтруда России от 31.03.2022 N 190н\n(ред. от 21.04.2022)\n\"Об утверждении профессионального стандарта \"Специалист по автоматизации и механизации механосборочного производства\"\n(Зарегистрировано в Минюсте России 06.05.2022 N 68435) \\ КонсультантПлюс"
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2389",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/2/prikaz_mintruda_rossii_ot_07_07_2022_N_403n_ob_utverzhdenii.html",
+      "order": "403н от 07.07.2022",
+      "name": "Конструктор в автомобилестроении",
+      "publisher": "Меганорм",
+      "status": 200,
+      "title": [
+        "Приказ Минтруда России от 07.07.2022 N 403н\r\n\"Об утверждении профессионального стандарта \"Конструктор в автомобилестроении\"\r\n(Зарегистрировано в Минюсте России 08.08.2022 N 69566)"
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2254",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/1/prikaz_mintruda_rossii_ot_30_08_2021_N_590n_ob_utverzhdenii.html",
+      "order": "590н от 30.08.2021",
+      "name": "Специалист по проектированию систем электроснабжения объектов капитального строительства",
+      "publisher": "Меганорм",
+      "status": 200,
+      "title": [
+        "Приказ Минтруда России от 30.08.2021 N 590н\r\n\"Об утверждении профессионального стандарта \"Специалист по проектированию систем электроснабжения объектов капитального строительства\"\r\n(Зарегистрировано в Минюсте России 04.10.2021 N 65246)"
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2147",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/1/prikaz_mintruda_rossii_ot_11_10_2021_N_699n_ob_utverzhdenii.html",
+      "order": "699н от 11.10.2021",
+      "name": "Специалист по проектированию схем первичных соединений электроснабжения объектов использования атомной энергии",
+      "publisher": "Меганорм",
+      "status": 200,
+      "title": [
+        "Приказ Минтруда России от 11.10.2021 N 699н\r\n\"Об утверждении профессионального стандарта \"Специалист по проектированию схем первичных соединений электроснабжения объектов использования атомной энергии\"\r\n(Зарегистрировано в Минюсте России 15.11.2021 N 65818)"
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2161",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/2/prikaz_mintruda_rossii_ot_21_10_2021_N_753n_ob_utverzhdenii.html",
+      "order": "753н от 21.10.2021",
+      "name": "Специалист по проектированию и конструированию авиационной техники",
+      "publisher": "Меганорм",
+      "status": 200,
+      "title": [
+        "Приказ Минтруда России от 21.10.2021 N 753н\r\n\"Об утверждении профессионального стандарта \"Специалист по проектированию и конструированию авиационной техники\"\r\n(Зарегистрировано в Минюсте России 19.11.2021 N 65913)"
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2374",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/1/prikaz_mintruda_rossii_ot_30_06_2022_N_382n_ob_utverzhdenii.html",
+      "order": "382н от 30.06.2022",
+      "name": "Специалист по диспетчерско-технологическому управлению нефтегазовой отрасли",
+      "publisher": "Меганорм",
+      "status": 200,
+      "title": [
+        "Приказ Минтруда России от 30.06.2022 N 382н\r\n\"Об утверждении профессионального стандарта \"Специалист по диспетчерско-технологическому управлению нефтегазовой отрасли\"\r\n(Зарегистрировано в Минюсте России 29.07.2022 N 69445)"
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2042",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/2/prikaz_mintruda_rossii_ot_15_07_2021_N_480n_ob_utverzhdenii.html",
+      "order": "480н от 15.07.2021",
+      "name": "Специалист по техническому контролю качества продукции",
+      "publisher": "Меганорм",
+      "status": 200,
+      "title": [
+        "Приказ Минтруда России от 15.07.2021 N 480н\r\n\"Об утверждении профессионального стандарта \"Специалист по техническому контролю качества продукции\"\r\n(Зарегистрировано в Минюсте России 18.08.2021 N 64684)"
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/1612",
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_363578/",
+      "order": "569н от 07.09.2020",
+      "name": "Специалист по экологической безопасности (в промышленности)",
+      "publisher": "КонсультантПлюс",
+      "status": 200,
+      "title": [
+        "Приказ Минтруда России от 07.09.2020 N 569н\n\"Об утверждении профессионального стандарта \"Специалист по экологической безопасности (в промышленности)\"\n(Зарегистрировано в Минюсте России 25.09.2020 N 60033) \\ КонсультантПлюс"
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2347",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_18_04_2022_N_219n_ob_utverzhdenii.html",
+      "order": "219н от 18.04.2022",
+      "name": "Специалист в области разработки мероприятий по охране окружающей среды объектов капитального строительства",
+      "publisher": "Меганорм",
+      "status": 200,
+      "title": [
+        "Приказ Минтруда России от 18.04.2022 N 219н\r\n\"Об утверждении профессионального стандарта \"Специалист в области разработки мероприятий по охране окружающей среды объектов капитального строительства\"\r\n(Зарегистрировано в Минюсте России 20.05.2022 N 68540)"
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/3261",
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_545775/",
+      "order": "365н от 24.08.2026",
+      "name": "Специалист в области охраны окружающей среды и обеспечения экологической безопасности",
+      "publisher": "КонсультантПлюс",
+      "status": 200,
+      "title": [
+        "Приказ Минтруда России от 24.08.2026 N 365н\n\"Об утверждении профессионального стандарта \"Специалист в области охраны окружающей среды и обеспечения экологической безопасности\"\n(Зарегистрировано в Минюсте России 28.09.2026 N 88488) \\ КонсультантПлюс"
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/3258",
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_543728/",
+      "order": "323н от 30.07.2026",
+      "name": "Инженер-биомеханик",
+      "publisher": "КонсультантПлюс",
+      "status": 200,
+      "title": [
+        "Приказ Минтруда России от 30.07.2026 N 323н\n\"Об утверждении профессионального стандарта \"Инженер-биомеханик\"\n(Зарегистрировано в Минюсте России 02.09.2026 N 88110) \\ КонсультантПлюс"
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2403",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_20_07_2022_N_424n_ob_utverzhdenii.html",
+      "order": "424н от 20.07.2022",
+      "name": "Программист",
+      "publisher": "Меганорм",
+      "status": 200,
+      "title": [
+        "Приказ Минтруда России от 20.07.2022 N 424н\r\n\"Об утверждении профессионального стандарта \"Программист\"\r\n(Зарегистрировано в Минюсте России 22.08.2022 N 69720)"
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2332",
+      "url": "https://nangs.org/docs/mintrud-rossii-prikaz-ot-21-04-2022-229n-ob-utverzhdenii-professionalnogo-standarta-spetsialist-po-metrologii-pdf",
+      "order": "229н от 21.04.2022",
+      "name": "Специалист по метрологии",
+      "publisher": "НАНГС",
+      "status": 200,
+      "title": [
+        "Минтруд России: Приказ от 21.04.2022 №229н &quot;Об утверждении профессионального стандарта &quot;Специалист по метрологии&quot; &quot; (pdf)"
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2346",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_18_04_2022_N_216n_ob_utverzhdenii.html",
+      "order": "216н от 18.04.2022",
+      "name": "Специалист в области проектирования наружных сетей водоснабжения, водоотведения и канализации",
+      "publisher": "Меганорм",
+      "status": 200,
+      "title": [
+        "Приказ Минтруда России от 18.04.2022 N 216н\r\n\"Об утверждении профессионального стандарта \"Специалист в области проектирования наружных сетей водоснабжения, водоотведения и канализации\"\r\n(Зарегистрировано в Минюсте России 20.05.2022 N 68542)"
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2323",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_24_03_2022_N_168n_ob_utverzhdenii.html",
+      "order": "168н от 24.03.2022",
+      "name": "Специалист в области геодезии",
+      "publisher": "Меганорм",
+      "status": 200,
+      "title": [
+        "Приказ Минтруда России от 24.03.2022 N 168н\r\n\"Об утверждении профессионального стандарта \"Специалист в области геодезии\"\r\n(Зарегистрировано в Минюсте России 27.04.2022 N 68342)"
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2173",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_21_10_2021_N_746n_ob_utverzhdenii.html",
+      "order": "746н от 21.10.2021",
+      "name": "Специалист в области инженерно-геодезических изысканий для градостроительной деятельности",
+      "publisher": "Меганорм",
+      "status": 200,
+      "title": [
+        "Приказ Минтруда России от 21.10.2021 N 746н\r\n\"Об утверждении профессионального стандарта \"Специалист в области инженерно-геодезических изысканий для градостроительной деятельности\"\r\n(Зарегистрировано в Минюсте России 23.11.2021 N 65946)"
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2723",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_13_07_2023_N_586n_ob_utverzhdenii.html",
+      "order": "586н от 13.07.2023",
+      "name": "Специалист по информационным системам",
+      "publisher": "Меганорм",
+      "status": 200,
+      "title": [
+        "Приказ Минтруда России от 13.07.2023 N 586н\r\n\"Об утверждении профессионального стандарта \"Специалист по информационным системам\"\r\n(Зарегистрировано в Минюсте России 16.08.2023 N 74817)"
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/1649",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_29_09_2020_N_678n_ob_utverzhdenii.html",
+      "order": "678н от 29.09.2020",
+      "name": "Системный программист",
+      "publisher": "Меганорм",
+      "status": 200,
+      "title": [
+        "Приказ Минтруда России от 29.09.2020 N 678н\r\n\"Об утверждении профессионального стандарта \"Системный программист\"\r\n(Зарегистрировано в Минюсте России 26.10.2020 N 60582)"
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2550",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_28_11_2022_N_739n_ob_utverzhdenii.html",
+      "order": "739н от 28.11.2022",
+      "name": "Специалист по информационной безопасности в кредитно-финансовой сфере",
+      "publisher": "Меганорм",
+      "status": 200,
+      "title": [
+        "Приказ Минтруда России от 28.11.2022 N 739н\r\n\"Об утверждении профессионального стандарта \"Специалист по информационной безопасности в кредитно-финансовой сфере\"\r\n(Зарегистрировано в Минюсте России 22.12.2022 N 71784)"
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2083",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_02_08_2021_N_531n_ob_utverzhdenii.html",
+      "order": "531н от 02.08.2021",
+      "name": "Специалист по тестированию в области информационных технологий",
+      "publisher": "Меганорм",
+      "status": 200,
+      "title": [
+        "Приказ Минтруда России от 02.08.2021 N 531н\r\n\"Об утверждении профессионального стандарта \"Специалист по тестированию в области информационных технологий\"\r\n(Зарегистрировано в Минюсте России 03.09.2021 N 64866)"
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/ministry/programms/22/3",
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_34683/e76d6076ad800a12efcec206f99ad6c59b58517e/",
+      "publisher": "КонсультантПлюс",
+      "kind": "applicable_legal_basis",
+      "status": 200
+    }
+  ],
+  "original36Checks": [
+    {
+      "oldUrl": "https://finder.work/vacancies/36329692",
+      "url": "https://khabarovsk.hh.ru/vacancy/137413636",
+      "status": 200,
+      "title": [
+        "Вакансия Инженер-пусконаладчик АСУ ТП в Хабаровске, работа в компании Микротерм плюс (вакансия в архиве c 16 октября 2026)"
+      ],
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://finder.work/vacancies/36865369",
+      "url": "https://dreamjob.ru/employers/6154236/vakansii/138013702",
+      "status": 200,
+      "title": [
+        "Вакансия Инженер по стандартизации / нормоконтролер, в компании Звезда"
+      ],
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://finder.work/vacancies/36457189",
+      "url": "https://dreamjob.ru/employers/2401785/vakansii",
+      "status": 200,
+      "title": [
+        "Вакансии в НИИП имени В.В.Тихомирова ᐈ Работа в НИИП имени В.В.Тихомирова, открытые вакансии компании"
+      ],
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://www.usgs.gov/centers/national-minerals-information-center/iron-and-steel-statistics-and-information",
+      "url": "https://nora.nerc.ac.uk/id/eprint/541620/",
+      "status": 200,
+      "title": [
+        " World mineral production 2020-24  - NERC Open Research Archive"
+      ],
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://www.usgs.gov/centers/national-minerals-information-center/bauxite-and-alumina-statistics-and-information?qt-science_support_page_related_con=0",
+      "url": "https://nora.nerc.ac.uk/id/eprint/541620/",
+      "status": 200,
+      "title": [
+        " World mineral production 2020-24  - NERC Open Research Archive"
+      ],
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://www.usgs.gov/centers/national-minerals-information-center/iron-and-steel-scrap-statistics-and-information",
+      "url": "https://nora.nerc.ac.uk/id/eprint/541620/",
+      "status": 200,
+      "title": [
+        " World mineral production 2020-24  - NERC Open Research Archive"
+      ],
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://www.usgs.gov/centers/national-minerals-information-center/iron-ore-statistics-and-information",
+      "url": "https://nora.nerc.ac.uk/id/eprint/541620/",
+      "status": 200,
+      "title": [
+        " World mineral production 2020-24  - NERC Open Research Archive"
+      ],
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information",
+      "url": "https://nora.nerc.ac.uk/id/eprint/541620/",
+      "status": 200,
+      "title": [
+        " World mineral production 2020-24  - NERC Open Research Archive"
+      ],
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://www.usgs.gov/centers/national-minerals-information-center/gypsum-statistics-and-information",
+      "url": "https://nora.nerc.ac.uk/id/eprint/541620/",
+      "status": 200,
+      "title": [
+        " World mineral production 2020-24  - NERC Open Research Archive"
+      ],
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://www.usgs.gov/centers/national-minerals-information-center/silica-statistics-and-information",
+      "url": "https://nora.nerc.ac.uk/id/eprint/541620/",
+      "status": 200,
+      "title": [
+        " World mineral production 2020-24  - NERC Open Research Archive"
+      ],
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://www.usgs.gov/centers/national-minerals-information-center/commodity-statistics-and-information",
+      "url": "https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/",
+      "status": 200,
+      "title": [
+        "World mineral statistics - MineralsUK"
+      ],
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://internationalcopper.org/sustainable-copper/about-copper/",
+      "url": "https://en.wikipedia.org/wiki/List_of_copper_alloys",
+      "status": 200,
+      "title": [
+        "List of copper alloys - Wikipedia"
+      ],
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://www.usgs.gov/centers/national-minerals-information-center/nickel-statistics-and-information",
+      "url": "https://nora.nerc.ac.uk/id/eprint/8725/1/0910_Nickel_Profile.pdf",
+      "status": 200,
+      "title": [],
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://www.usgs.gov/centers/national-minerals-information-center/sulfur-statistics-and-information",
+      "url": "https://en.wikipedia.org/wiki/Sulfur",
+      "status": 200,
+      "title": [
+        "Sulfur - Wikipedia"
+      ],
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://www.usgs.gov/centers/national-minerals-information-center/phosphate-rock-statistics-and-information",
+      "url": "https://en.wikipedia.org/wiki/Phosphate_rock",
+      "status": 200,
+      "title": [
+        "Phosphorite - Wikipedia"
+      ],
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://www.usgs.gov/centers/national-minerals-information-center/potash-statistics-and-information",
+      "url": "https://en.wikipedia.org/wiki/Potash",
+      "status": 200,
+      "title": [
+        "Potash - Wikipedia"
+      ],
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://www.usgs.gov/centers/national-minerals-information-center/salt-statistics-and-information",
+      "url": "https://en.wikipedia.org/wiki/Sodium_chloride",
+      "status": 200,
+      "title": [
+        "Sodium chloride - Wikipedia"
+      ],
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://www.usgs.gov/centers/national-minerals-information-center/manganese-statistics-and-information",
+      "url": "https://en.wikipedia.org/wiki/Manganese",
+      "status": 200,
+      "title": [
+        "Manganese - Wikipedia"
+      ],
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://www.usgs.gov/centers/national-minerals-information-center/perlite-statistics-and-information",
+      "url": "https://www.perlite.org/wp-content/uploads/2018/03/why-perlite-works.pdf",
+      "status": 200,
+      "title": [],
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://www.usgs.gov/media/images/filtration-diatomaceous-earth",
+      "url": "https://geology.com/rocks/diatomite.shtml",
+      "status": 200,
+      "title": [
+        "Diatomite and Diatomaceous Earth"
+      ],
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://www.russellfinex.com/en/separation-equipment/sieving-machines/",
+      "url": "https://www.sweco.com/swecoapps/sweco-separators-pharmaceutical.php",
+      "status": 200,
+      "title": [
+        "SWECO Pharmaceutical Industry Separators"
+      ],
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://www.hosokawa-alpine.com/powder-particle-processing/technologies/grinding-and-classifying/jet-mills/",
+      "url": "https://sturtevantinc.com/wp-content/uploads/2023/09/S_Micronizer_Sanitary_Product_Bulletin.pdf",
+      "status": 200,
+      "title": [],
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2246",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/1/prikaz_mintruda_rossii_ot_30_08_2021_N_587n_ob_utverzhdenii.html",
+      "status": 200,
+      "title": [
+        "Приказ Минтруда России от 30.08.2021 N 587н\r\n\"Об утверждении профессионального стандарта \"Инженер-исследователь по динамике, баллистике, управлению движением космических аппаратов\"\r\n(Зарегистрировано в Минюсте России 01.10.2021 N 65227)"
+      ],
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2414",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/2/prikaz_mintruda_rossii_ot_04_08_2022_N_461n_ob_utverzhdenii.html",
+      "status": 200,
+      "title": [
+        "Приказ Минтруда России от 04.08.2022 N 461н\r\n\"Об утверждении профессионального стандарта \"Специалист по производству химических волокон\"\r\n(Зарегистрировано в Минюсте России 06.09.2022 N 69950)"
+      ],
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/3209",
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_534303/",
+      "status": 200,
+      "title": [
+        "Приказ Минтруда России от 13.04.2026 N 155н\n\"Об утверждении профессионального стандарта \"Специалист по содержанию и ремонту железнодорожного пути и искусственных сооружений\"\n(Зарегистрировано в Минюсте России 14.05.2026 N 86454) \\ КонсультантПлюс"
+      ],
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2579",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/2/prikaz_mintruda_rossii_ot_16_01_2023_N_13n_ob_utverzhdenii.html",
+      "status": 200,
+      "title": [
+        "Приказ Минтруда России от 16.01.2023 N 13н\r\n\"Об утверждении профессионального стандарта \"Специалист по подготовке производства в судостроении\"\r\n(Зарегистрировано в Минюсте России 16.02.2023 N 72394)"
+      ],
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/1631",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/2/prikaz_mintruda_rossii_ot_28_09_2020_N_658n_ob_utverzhdenii.html",
+      "status": 200,
+      "title": [
+        "Приказ Минтруда России от 28.09.2020 N 658н\r\n\"Об утверждении профессионального стандарта \"Специалист по автоматизированным системам управления машиностроительным предприятием\"\r\n(Зарегистрировано в Минюсте России 23.10.2020 N 60532)"
+      ],
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/1696",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/1/prikaz_mintruda_rossii_ot_02_09_2020_N_556n_ob_utverzhdenii.html",
+      "status": 200,
+      "title": [
+        "Приказ Минтруда России от 02.09.2020 N 556н\r\n\"Об утверждении профессионального стандарта \"Специалист по безопасности, прослеживаемости и качеству пищевой продукции на всех этапах ее производства\"\r\n(Зарегистрировано в Минюсте России 20.11.2020 N 61030)"
+      ],
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2258",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_31_08_2021_N_600n_ob_utverzhdenii.html",
+      "status": 200,
+      "title": [
+        "Приказ Минтруда России от 31.08.2021 N 600н\r\n\"Об утверждении профессионального стандарта \"Инженер-радиоэлектронщик в области радиотехники и телекоммуникаций\"\r\n(Зарегистрировано в Минюсте России 04.10.2021 N 65245)"
+      ],
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/1712",
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_370148/",
+      "status": 200,
+      "title": [
+        "Приказ Минтруда России от 27.10.2020 N 748н\n\"Об утверждении профессионального стандарта \"Специалист по гражданской обороне\"\n(Зарегистрировано в Минюсте России 02.12.2020 N 61199) \\ КонсультантПлюс"
+      ],
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2256",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_31_08_2021_N_612n_ob_utverzhdenii.html",
+      "status": 200,
+      "title": [
+        "Приказ Минтруда России от 31.08.2021 N 612н\r\n\"Об утверждении профессионального стандарта \"Архитектор-реставратор\"\r\n(Зарегистрировано в Минюсте России 04.10.2021 N 65257)"
+      ],
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2673",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/3/prikaz_mintruda_rossii_ot_27_04_2023_N_346n_ob_utverzhdenii.html",
+      "status": 200,
+      "title": [
+        "Приказ Минтруда России от 27.04.2023 N 346н\r\n\"Об утверждении профессионального стандарта \"Специалист по стандартизации\"\r\n(Зарегистрировано в Минюсте России 29.05.2023 N 73533)"
+      ],
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2169",
+      "url": "https://nangs.org/docs/mintrud-rossii-prikaz-ot-21-10-2021-748n-ob-utverzhdenii-professionalnogo-standarta-spetsialist-po-patentovedeniyu-pdf",
+      "status": 200,
+      "title": [
+        "Минтруд России: Приказ от 21.10.2021 №748н &quot;Об утверждении профессионального стандарта &quot;Специалист по патентоведению&quot; (pdf)"
+      ],
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/1546",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_06_07_2020_N_405n_ob_utverzhdenii.html",
+      "status": 200,
+      "title": [
+        "Приказ Минтруда России от 06.07.2020 N 405н\r\n\"Об утверждении профессионального стандарта \"Специалист по большим данным\"\r\n(Зарегистрировано в Минюсте России 05.08.2020 N 59174)"
+      ],
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2446",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_14_09_2022_N_525n_ob_utverzhdenii.html",
+      "status": 200,
+      "title": [
+        "Приказ Минтруда России от 14.09.2022 N 525н\r\n\"Об утверждении профессионального стандарта \"Специалист по защите информации в автоматизированных системах\"\r\n(Зарегистрировано в Минюсте России 14.10.2022 N 70543)"
+      ],
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "oldUrl": "https://mintrud.gov.ru/docs/mintrud/orders/2513",
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_04_10_2022_N_618n_ob_utverzhdenii.html",
+      "status": 200,
+      "title": [
+        "Приказ Минтруда России от 04.10.2022 N 618н\r\n\"Об утверждении профессионального стандарта \"Инженер-программист радиоэлектронных средств и комплексов\"\r\n(Зарегистрировано в Минюсте России 08.11.2022 N 70862)"
+      ],
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    }
+  ],
+  "activeOriginalUrlsRemaining": 0,
+  "reviewedClaimsLimit": "13 неизменённых узких тезисов повторно сопоставлены с новыми источниками; полные карточки и нормативная применимость не аттестованы."
+}

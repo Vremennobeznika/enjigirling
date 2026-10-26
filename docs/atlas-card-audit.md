@@ -4,7 +4,7 @@
 
 ## Сводка
 
-Всего: 382; процессы: 210; материалы: 172. Приоритеты P0: 0, P1: 180, P2: 202.
+Всего: 382; процессы: 210; материалы: 172. Приоритеты P0: 0, P1: 133, P2: 249.
 
 P0 — битый ID или обязательные поля; P1 — недостаточная доказательная база/спорная полнота; P2 — уточнения. P1 НЕ значит, что запись обязательно неверна.
 
@@ -14,7 +14,7 @@ P0 — битый ID или обязательные поля; P1 — недос
 |---|---:|---|
 | E02 | 380 | Проверка отдельных тезисов не подтверждает всю карточку |
 | T02 | 179 | Уточнить методы контроля и критерии дефектов |
-| S07 | 177 | Общие источники (R05); они не подтверждают параметры конкретного процесса/марки |
+| S07 | 130 | Общие источники (R05); они не подтверждают параметры конкретного процесса/марки |
 | T03 | 108 | Описание поверхностное; нужны инженерные различия и ограничения |
 | L02 | 74 | Нет конкретных материалов: не добавлять неподтверждённых связей |
 | L03 | 7 | Нет достоверно связанного процесса; не подставлять неподходящий |
@@ -289,16 +289,16 @@ P0 — битый ID или обязательные поля; P1 — недос
 | [Ферритные нержавеющие стали (stainless-ferritic)](../materials.html#stainless-ferritic) | metals | частный тезис | P2 | E02, T03 |
 | [Мартенситные нержавеющие стали (stainless-martensitic)](../materials.html#stainless-martensitic) | metals, energy | частный тезис | P2 | E02, T03 |
 | [Дуплексные нержавеющие стали (stainless-duplex)](../materials.html#stainless-duplex) | metals, chemicals, energy | частный тезис | P2 | E02 |
-| [Алюминиевые сплавы серии 5xxx (al-series-5xxx)](../materials.html#al-series-5xxx) | metals, construction | частный тезис | P1 | S07, E02 |
-| [Алюминиевые сплавы серии 7xxx (al-series-7xxx)](../materials.html#al-series-7xxx) | metals, composites | частный тезис | P1 | S07, E02 |
-| [Серый чугун (cast-iron-gray)](../materials.html#cast-iron-gray) | metals | частный тезис | P1 | S07, E02 |
-| [Чугун с шаровидным графитом (cast-iron-ductile)](../materials.html#cast-iron-ductile) | metals | частный тезис | P1 | S07, E02 |
-| [Латуни (brass-alloys)](../materials.html#brass-alloys) | metals, electronics | частный тезис | P1 | S07, E02, T03 |
-| [Бронзы (bronze-alloys)](../materials.html#bronze-alloys) | metals, energy | частный тезис | P1 | S07, E02 |
-| [Титан и титановые сплавы (titanium-industrial)](../materials.html#titanium-industrial) | metals, chemicals | частный тезис | P1 | S07, E02, T03 |
-| [Никелевые сплавы (nickel-alloys)](../materials.html#nickel-alloys) | metals, energy, chemicals | частный тезис | P1 | S07, E02, T03 |
-| [Цинковые литейные сплавы (zinc-diecast)](../materials.html#zinc-diecast) | metals, electronics | частный тезис | P1 | S07, E02 |
-| [Магниевые конструкционные сплавы (magnesium-alloys)](../materials.html#magnesium-alloys) | metals | частный тезис | P1 | S07, E02 |
+| [Алюминиевые сплавы серии 5xxx (al-series-5xxx)](../materials.html#al-series-5xxx) | metals, construction | частный тезис | P2 | E02 |
+| [Алюминиевые сплавы серии 7xxx (al-series-7xxx)](../materials.html#al-series-7xxx) | metals, composites | частный тезис | P2 | E02 |
+| [Серый чугун (cast-iron-gray)](../materials.html#cast-iron-gray) | metals | частный тезис | P2 | E02 |
+| [Чугун с шаровидным графитом (cast-iron-ductile)](../materials.html#cast-iron-ductile) | metals | частный тезис | P2 | E02 |
+| [Латуни (brass-alloys)](../materials.html#brass-alloys) | metals, electronics | частный тезис | P2 | E02, T03 |
+| [Бронзы (bronze-alloys)](../materials.html#bronze-alloys) | metals, energy | частный тезис | P2 | E02 |
+| [Титан и титановые сплавы (titanium-industrial)](../materials.html#titanium-industrial) | metals, chemicals | частный тезис | P2 | E02, T03 |
+| [Никелевые сплавы (nickel-alloys)](../materials.html#nickel-alloys) | metals, energy, chemicals | частный тезис | P2 | E02, T03 |
+| [Цинковые литейные сплавы (zinc-diecast)](../materials.html#zinc-diecast) | metals, electronics | частный тезис | P2 | E02 |
+| [Магниевые конструкционные сплавы (magnesium-alloys)](../materials.html#magnesium-alloys) | metals | частный тезис | P2 | E02 |
 | [Полиэтилен низкой плотности (LDPE) (ldpe)](../materials.html#ldpe) | polymers, food | частный тезис | P1 | S07, E02, T03 |
 | [Линейный полиэтилен низкой плотности (LLDPE) (lldpe)](../materials.html#lldpe) | polymers, food | частный тезис | P1 | S07, E02, T03 |
 | [Полистирол (PS) (ps)](../materials.html#ps) | polymers | частный тезис | P1 | S07, E02 |
@@ -351,45 +351,45 @@ P0 — битый ID или обязательные поля; P1 — недос
 | [Флюс для электронного монтажа (solder-flux)](../materials.html#solder-flux) | electronics, chemicals | частный тезис | P2 | E02 |
 | [Компаунд для заливки электронных узлов (electronic-encapsulant)](../materials.html#electronic-encapsulant) | electronics, polymers | частный тезис | P1 | S07, E02 |
 | [Лак для защитного покрытия плат (conformal-coating-material)](../materials.html#conformal-coating-material) | electronics, polymers | частный тезис | P2 | E02, T03 |
-| [Известняк промышленный (lime-stone)](../materials.html#lime-stone) | chemicals, construction, mining | частный тезис | P1 | S07, E02, T03 |
-| [Кальцинированная сода (soda-ash)](../materials.html#soda-ash) | chemicals, ceramics | частный тезис | P1 | S07, E02 |
-| [Сера промышленная (industrial-sulfur)](../materials.html#industrial-sulfur) | chemicals, mining | частный тезис | P1 | S07, E02, T03 |
-| [Фосфатное сырьё (phosphate-rock)](../materials.html#phosphate-rock) | chemicals, mining | частный тезис | P1 | S07, E02, T03 |
-| [Калийное минеральное сырьё (potash-raw)](../materials.html#potash-raw) | chemicals, mining | частный тезис | P1 | S07, E02 |
-| [Цеолиты технические (industrial-zeolite)](../materials.html#industrial-zeolite) | water, chemicals | частный тезис | P1 | S07, E02, T03 |
-| [Бентонитовая глина (bentonite-clay)](../materials.html#bentonite-clay) | chemicals, construction, mining | частный тезис | P1 | S07, E02, T03 |
-| [Соль техническая (industrial-salt)](../materials.html#industrial-salt) | chemicals, water | частный тезис | P1 | S07, E02 |
+| [Известняк промышленный (lime-stone)](../materials.html#lime-stone) | chemicals, construction, mining | частный тезис | P2 | E02, T03 |
+| [Кальцинированная сода (soda-ash)](../materials.html#soda-ash) | chemicals, ceramics | частный тезис | P2 | E02 |
+| [Сера промышленная (industrial-sulfur)](../materials.html#industrial-sulfur) | chemicals, mining | частный тезис | P2 | E02, T03 |
+| [Фосфатное сырьё (phosphate-rock)](../materials.html#phosphate-rock) | chemicals, mining | частный тезис | P2 | E02, T03 |
+| [Калийное минеральное сырьё (potash-raw)](../materials.html#potash-raw) | chemicals, mining | частный тезис | P2 | E02 |
+| [Цеолиты технические (industrial-zeolite)](../materials.html#industrial-zeolite) | water, chemicals | частный тезис | P2 | E02, T03 |
+| [Бентонитовая глина (bentonite-clay)](../materials.html#bentonite-clay) | chemicals, construction, mining | частный тезис | P2 | E02, T03 |
+| [Соль техническая (industrial-salt)](../materials.html#industrial-salt) | chemicals, water | частный тезис | P2 | E02 |
 | [Углеродное армирующее волокно (carbon-fiber-preform)](../materials.html#carbon-fiber-preform) | composites, energy | частный тезис | P1 | S07, E02 |
 | [Углепластик (CFRP) (carbon-fiber-laminate)](../materials.html#carbon-fiber-laminate) | composites, metals | частный тезис | P1 | S07, E02, T03 |
 | [Сотовый заполнитель (composite-honeycomb)](../materials.html#composite-honeycomb) | composites, construction | частный тезис | P1 | S07, E02, T03 |
 | [Эпоксидная связующая система (composite-epoxy-resin)](../materials.html#composite-epoxy-resin) | composites, chemicals | частный тезис | P1 | S07, E02, T03 |
 | [Препрег для композитов (prepreg-composite)](../materials.html#prepreg-composite) | composites | частный тезис | P1 | S07, E02, T03 |
 | [Базальтовое армирующее волокно (basalt-fiber)](../materials.html#basalt-fiber) | composites, textiles | частный тезис | P1 | S07, E02 |
-| [Заполнители для бетона (building-aggregate)](../materials.html#building-aggregate) | construction, mining | частный тезис | P1 | S07, E02, T03 |
-| [Щебень строительный (crushed-stone)](../materials.html#crushed-stone) | construction, mining | частный тезис | P1 | S07, E02, T03 |
-| [Песок строительный (sand-building)](../materials.html#sand-building) | construction, mining | частный тезис | P1 | S07, E02, T03 |
-| [Битум дорожный (asphalt-binder)](../materials.html#asphalt-binder) | construction, chemicals | частный тезис | P1 | S07, E02, T03 |
-| [Асфальтобетонная смесь (asphalt-mix)](../materials.html#asphalt-mix) | construction | частный тезис | P1 | S07, E02, T03 |
-| [Арматурный стальной прокат (rebar-steel)](../materials.html#rebar-steel) | construction, metals | частный тезис | P1 | S07, E02, T03 |
-| [Бетонная смесь товарная (ready-mix-concrete)](../materials.html#ready-mix-concrete) | construction | частный тезис | P1 | S07, E02 |
+| [Заполнители для бетона (building-aggregate)](../materials.html#building-aggregate) | construction, mining | частный тезис | P2 | E02, T03 |
+| [Щебень строительный (crushed-stone)](../materials.html#crushed-stone) | construction, mining | частный тезис | P2 | E02, T03 |
+| [Песок строительный (sand-building)](../materials.html#sand-building) | construction, mining | частный тезис | P2 | E02, T03 |
+| [Битум дорожный (asphalt-binder)](../materials.html#asphalt-binder) | construction, chemicals | частный тезис | P2 | E02, T03 |
+| [Асфальтобетонная смесь (asphalt-mix)](../materials.html#asphalt-mix) | construction | частный тезис | P2 | E02, T03 |
+| [Арматурный стальной прокат (rebar-steel)](../materials.html#rebar-steel) | construction, metals | частный тезис | P2 | E02, T03 |
+| [Бетонная смесь товарная (ready-mix-concrete)](../materials.html#ready-mix-concrete) | construction | частный тезис | P2 | E02 |
 | [Геотекстиль (geotextile)](../materials.html#geotextile) | construction, textiles | частный тезис | P1 | S07, E02, T03 |
-| [Электротехническая листовая сталь (electrical-steel)](../materials.html#electrical-steel) | energy, electronics, metals | частный тезис | P1 | S07, E02, T03 |
-| [Графитовые электроды промышленного назначения (graphite-electrode)](../materials.html#graphite-electrode) | energy, metals | частный тезис | P1 | S07, E02 |
-| [Медный провод электротехнический (copper-electric-wire)](../materials.html#copper-electric-wire) | energy, electronics | частный тезис | P1 | S07, E02, T03 |
-| [Минеральная теплоизоляционная вата (thermal-insulation-wool)](../materials.html#thermal-insulation-wool) | energy, construction | частный тезис | P1 | S07, E02, T03 |
+| [Электротехническая листовая сталь (electrical-steel)](../materials.html#electrical-steel) | energy, electronics, metals | частный тезис | P2 | E02, T03 |
+| [Графитовые электроды промышленного назначения (graphite-electrode)](../materials.html#graphite-electrode) | energy, metals | частный тезис | P2 | E02 |
+| [Медный провод электротехнический (copper-electric-wire)](../materials.html#copper-electric-wire) | energy, electronics | частный тезис | P2 | E02, T03 |
+| [Минеральная теплоизоляционная вата (thermal-insulation-wool)](../materials.html#thermal-insulation-wool) | energy, construction | частный тезис | P2 | E02, T03 |
 | [Коррозионностойкий прокат для теплообменников (heat-exchanger-steel)](../materials.html#heat-exchanger-steel) | energy, chemicals | частный тезис | P2 | E02 |
 | [Мембрана для ультрафильтрации (uf-membrane)](../materials.html#uf-membrane) | water, chemicals | частный тезис | P1 | S07, E02, T03 |
 | [Активированный оксид алюминия (адсорбент) (activated-alumina-adsorbent)](../materials.html#activated-alumina-adsorbent) | water, ceramics | частный тезис | P1 | S07, E02, L03, T03 |
 | [Гранулированный сорбент на основе оксидов железа (ferric-oxide-media)](../materials.html#ferric-oxide-media) | water, chemicals | частный тезис | P1 | S07, E02, T03 |
 | [Флокулянт-полиэлектролит (flocculant-polyelectrolyte)](../materials.html#flocculant-polyelectrolyte) | water, chemicals | частный тезис | P1 | S07, E02, T03 |
 | [Коагулянт на основе соли железа (coagulant-iron)](../materials.html#coagulant-iron) | water, chemicals | частный тезис | P1 | S07, E02, T03 |
-| [Техническая корундовая керамика (alumina-ceramic)](../materials.html#alumina-ceramic) | ceramics, electronics | частный тезис | P1 | S07, E02, T03 |
-| [Кремнезёмистый огнеупор (silica-refractory)](../materials.html#silica-refractory) | ceramics, energy | частный тезис | P1 | S07, E02, T03 |
-| [Огнеупорная глина (fireclay-raw)](../materials.html#fireclay-raw) | ceramics, mining | частный тезис | P1 | S07, E02, T03 |
-| [Каолин технический (kaolin-industrial)](../materials.html#kaolin-industrial) | ceramics, printing | частный тезис | P1 | S07, E02 |
-| [Стеклобой технологический (glass-cullet)](../materials.html#glass-cullet) | ceramics | частный тезис | P1 | S07, E02, T03 |
-| [Керамическая глазурная масса (ceramic-glaze)](../materials.html#ceramic-glaze) | ceramics, chemicals | частный тезис | P1 | S07, E02, T03 |
-| [Известь техническая (lime-technical)](../materials.html#lime-technical) | ceramics, construction, chemicals | частный тезис | P1 | S07, E02 |
+| [Техническая корундовая керамика (alumina-ceramic)](../materials.html#alumina-ceramic) | ceramics, electronics | частный тезис | P2 | E02, T03 |
+| [Кремнезёмистый огнеупор (silica-refractory)](../materials.html#silica-refractory) | ceramics, energy | частный тезис | P2 | E02, T03 |
+| [Огнеупорная глина (fireclay-raw)](../materials.html#fireclay-raw) | ceramics, mining | частный тезис | P2 | E02, T03 |
+| [Каолин технический (kaolin-industrial)](../materials.html#kaolin-industrial) | ceramics, printing | частный тезис | P2 | E02 |
+| [Стеклобой технологический (glass-cullet)](../materials.html#glass-cullet) | ceramics | частный тезис | P2 | E02, T03 |
+| [Керамическая глазурная масса (ceramic-glaze)](../materials.html#ceramic-glaze) | ceramics, chemicals | частный тезис | P2 | E02, T03 |
+| [Известь техническая (lime-technical)](../materials.html#lime-technical) | ceramics, construction, chemicals | частный тезис | P2 | E02 |
 | [Микрокристаллическая целлюлоза фармацевтическая (pharma-mcc)](../materials.html#pharma-mcc) | pharma | частный тезис | P2 | E02 |
 | [Лактоза фармацевтическая (pharma-lactose)](../materials.html#pharma-lactose) | pharma, food | частный тезис | P2 | E02, T03 |
 | [Желатин для капсул (pharma-gelatin)](../materials.html#pharma-gelatin) | pharma, food | частный тезис | P2 | E02, T03 |
@@ -401,17 +401,17 @@ P0 — битый ID или обязательные поля; P1 — недос
 | [Офсетное печатное полотно (offset-blanket)](../materials.html#offset-blanket) | printing | частный тезис | P2 | E02 |
 | [УФ-отверждаемая печатная краска (uv-curing-ink)](../materials.html#uv-curing-ink) | printing, chemicals | частный тезис | P2 | E02, T03 |
 | [Полимерная плёнка для печати (printing-film-substrate)](../materials.html#printing-film-substrate) | printing, polymers, food | частный тезис | P2 | E02, T03 |
-| [Медные руды (copper-ore)](../materials.html#copper-ore) | mining, metals | частный тезис | P1 | S07, E02 |
-| [Никелевые руды (nickel-ore)](../materials.html#nickel-ore) | mining, metals | частный тезис | P1 | S07, E02, T03 |
-| [Марганцевые руды (manganese-ore)](../materials.html#manganese-ore) | mining, metals | частный тезис | P1 | S07, E02, T03 |
-| [Литиевый минеральный концентрат (lithium-concentrate)](../materials.html#lithium-concentrate) | mining, chemicals | частный тезис | P1 | S07, E02, T03 |
-| [Природный графитовый концентрат (graphite-concentrate)](../materials.html#graphite-concentrate) | mining, energy | частный тезис | P1 | S07, E02 |
-| [Концентрат редкоземельного сырья (rare-earth-concentrate)](../materials.html#rare-earth-concentrate) | mining, electronics | частный тезис | P1 | S07, E02, T03 |
-| [Плавиковый шпат (флюорит) (fluorite-ore)](../materials.html#fluorite-ore) | mining, chemicals | частный тезис | P1 | S07, E02, T03 |
-| [Тальк промышленный (talc-industrial)](../materials.html#talc-industrial) | mining, polymers | частный тезис | P1 | S07, E02 |
-| [Перлит промышленный (perlite-raw)](../materials.html#perlite-raw) | mining, construction | частный тезис | P1 | S07, E02 |
-| [Диатомит промышленный (diatomite-raw)](../materials.html#diatomite-raw) | mining, water | частный тезис | P1 | S07, E02 |
-| [Цинковый минеральный концентрат (zinc-concentrate)](../materials.html#zinc-concentrate) | mining, metals | частный тезис | P1 | S07, E02, T03 |
+| [Медные руды (copper-ore)](../materials.html#copper-ore) | mining, metals | частный тезис | P2 | E02 |
+| [Никелевые руды (nickel-ore)](../materials.html#nickel-ore) | mining, metals | частный тезис | P2 | E02, T03 |
+| [Марганцевые руды (manganese-ore)](../materials.html#manganese-ore) | mining, metals | частный тезис | P2 | E02, T03 |
+| [Литиевый минеральный концентрат (lithium-concentrate)](../materials.html#lithium-concentrate) | mining, chemicals | частный тезис | P2 | E02, T03 |
+| [Природный графитовый концентрат (graphite-concentrate)](../materials.html#graphite-concentrate) | mining, energy | частный тезис | P2 | E02 |
+| [Концентрат редкоземельного сырья (rare-earth-concentrate)](../materials.html#rare-earth-concentrate) | mining, electronics | частный тезис | P2 | E02, T03 |
+| [Плавиковый шпат (флюорит) (fluorite-ore)](../materials.html#fluorite-ore) | mining, chemicals | частный тезис | P2 | E02, T03 |
+| [Тальк промышленный (talc-industrial)](../materials.html#talc-industrial) | mining, polymers | частный тезис | P2 | E02 |
+| [Перлит промышленный (perlite-raw)](../materials.html#perlite-raw) | mining, construction | частный тезис | P2 | E02 |
+| [Диатомит промышленный (diatomite-raw)](../materials.html#diatomite-raw) | mining, water | частный тезис | P2 | E02 |
+| [Цинковый минеральный концентрат (zinc-concentrate)](../materials.html#zinc-concentrate) | mining, metals | частный тезис | P2 | E02, T03 |
 
 ## Индивидуальные рекомендации и источники
 

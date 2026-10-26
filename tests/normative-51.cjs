@@ -19,7 +19,16 @@ for(const card of cards){
  assert.ok(['role_must_be_specified','published_standards_for_specific_functions'].includes(row.evidenceStatus),'unknown evidence status');
  assert.ok(['not_determined_for_unspecified_employer_role','conditional_statutory_construction_roles'].includes(row.legalObligationStatus),'unqualified legal claim');
  for(const doc of row.documents){
-  assert.match(doc.url,/^https:\/\/mintrud\.gov\.ru\/docs\/mintrud\/orders\/\d+$/);
+  const target=new URL(doc.url);
+  assert.equal(target.protocol,'https:');
+  const legalPaths={
+   'mintrud.gov.ru':/^\/docs\/mintrud\/orders\/\d+$/,
+   'meganorm.ru':/\/prikaz_mintruda_rossii_ot_\d{2}_\d{2}_\d{4}_N_\d+n_ob_utverzhdenii\.html$/,
+   'nangs.org':/^\/docs\/mintrud-rossii-prikaz-ot-/,
+   'www.consultant.ru':/^\/document\/cons_doc_LAW_\d+\/$/
+  };
+  assert.ok(legalPaths[target.hostname]?.test(target.pathname),'unapproved legal document path');
+  if(target.hostname!=='mintrud.gov.ru')assert.ok(doc.sourceLabel&&doc.sourceLabel.includes('копия'),'mirror must be labeled');
   if(doc.effectiveFrom){
    assert.match(doc.effectiveFrom,/^\d{4}-\d{2}-\d{2}$/);
    assert.equal(doc.periodStatus,doc.effectiveFrom>dataset.reviewDate?'not_yet_effective':'in_force_on_review_date','effective date contradiction '+card.id);
