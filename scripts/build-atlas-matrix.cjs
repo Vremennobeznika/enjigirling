@@ -12,7 +12,9 @@ for(const d of definitions){
  if(expected===undefined)throw Error('Missing independent reference answer for '+d.id);
  const result=calculate(d.id,Object.fromEntries(d.fields.map(f=>[f.key,f.value])));
  if(Math.abs(result.value-expected)>(d.tolerance??1e-8*Math.max(1,Math.abs(expected))))throw Error('Reference test failed for '+d.id);
- referenceResults.set(d.topic,{actual:result.value,unit:result.unit,tolerance:d.tolerance??1e-8*Math.max(1,Math.abs(expected))});
+ // Serialize 12 significant digits: V8 math differs in trailing bits across Node releases.
+ // The full-precision result has already passed its reference tolerance above.
+ referenceResults.set(d.topic,{actual:Number(result.value.toPrecision(12)),unit:result.unit,tolerance:d.tolerance??1e-8*Math.max(1,Math.abs(expected))});
  byTopic.set(d.topic,d);
 }
 const needsReference={
