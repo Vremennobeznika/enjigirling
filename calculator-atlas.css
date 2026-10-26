@@ -38,3 +38,5 @@
 .atlas-page :is(a,button,input,select,summary):focus-visible{outline:3px solid var(--text-primary);outline-offset:3px}
 @media(max-width:760px){.atlas-results{grid-template-columns:minmax(0,1fr)}.atlas-filters{grid-template-columns:minmax(0,1fr)}}
 @media(prefers-reduced-motion:reduce){.atlas-page *{animation:none!important;transition:none!important}}
+
+.atlas-ready-link{display:inline-block;min-height:44px;padding:10px 6px;font-weight:700;text-underline-offset:3px;box-sizing:border-box}

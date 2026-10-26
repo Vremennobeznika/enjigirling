@@ -6,11 +6,9 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Атлас ENJIGIRLING: 734 идеи инженерных калькуляторов по 34 отраслям. Поиск, источники, таблица CSV, ссылки на работающие инструменты.">
+<meta name="description" content="Атлас ENJIGIRLING: 734 инженерные расчётные модели по 34 отраслям: формы, формулы, ограничения, поиск, матрица проверок и CSV.">
 <title>Атлас калькуляторов — ENJIGIRLING</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap">
 <link rel="stylesheet" href="style.min.css">
 <link rel="stylesheet" href="section-ui.css">
@@ -57,13 +55,13 @@
 <section class="atlas-hero" aria-labelledby="atlasTitle">
 <p class="atlas-eyebrow">ENJIGIRLING / ENGINEERING CALCULATOR ATLAS</p>
 <h1 id="atlasTitle">Атлас инженерных калькуляторов</h1>
-<p>Собрано <strong>734 темы в 34 отраслях</strong>: от швейного настила и судовых механизмов до радиотехники, геодезии и автоматизации. Здесь — идеи для следующих инструментов и проверяемые отправные источники, а не 734 якобы работающих калькулятора.</p>
-<div class="atlas-stats"><div class="atlas-stat"><strong>734</strong><span>тем для разработки</span></div><div class="atlas-stat"><strong>34</strong><span>отраслевых группы</span></div><div class="atlas-stat"><strong>11</strong><span>входов к готовым мастерским</span></div></div>
+<p>Собрано <strong>734 темы в 34 отраслях</strong>: от швейного настила и судовых механизмов до радиотехники, геодезии и автоматизации. Все 734 темы сопоставлены с расчётными формами: откройте группу или найдите тему и нажмите «Рассчитать». Формулы, единицы и ограничения показаны у результата; учебные и приближённые модели не заменяют нормативную или проектную проверку.</p>
+<div class="atlas-stats"><div class="atlas-stat"><strong>734</strong><span>тем в каталоге</span></div><div class="atlas-stat"><strong>34</strong><span>отраслевых группы</span></div><div class="atlas-stat"><strong data-atlas-ready-count>—</strong><span>тем атласа уже работают</span></div></div>
 <a class="atlas-back" href="calculator.html">← К действующим калькуляторам ENJIGIRLING</a>
 </section>
 <section class="atlas-existing" aria-labelledby="existingTitle">
 <h2 id="existingTitle">Уже работают на сайте</h2>
-<div class="atlas-links"><a href="calculator.html#labIEEE">Битоскоп</a>
+<div class="atlas-links"><a href="calculator.html#labAtlasTools">Рабочие расчёты из атласа</a><a href="calculator.html#labIEEE">Битоскоп</a>
 <a href="calculator.html#labElectronics">Электроцех</a>
 <a href="calculator.html#labProduction">Цеховой расчёт</a>
 <a href="calculator.html#labSewing">Раскрой и поток</a>
@@ -76,14 +74,14 @@
 <a href="calculator.html#calcSignal">4–20 мА</a></div>
 </section>
 <section aria-labelledby="ideasTitle">
-<h2 id="ideasTitle">Темы для новых инструментов</h2>
-<p>Название в списке — <strong>проектная идея</strong>. Пока нет проверенной формулы, ограничений и тестов, она не считается реализованным калькулятором. Для каждого раздела указан каталог-источник; это не подтверждение корректности каждой будущей реализации.</p>
+<h2 id="ideasTitle">Все темы: готовые и запланированные</h2>
+<p>Ссылка «Рассчитать» ведёт к работающему инструменту. Для каждой темы доступны формула, исходные данные, ограничения и контрольный пример в матрице реализации. Для каждого раздела указан каталог-источник; это не подтверждение корректности каждой будущей реализации.</p>
 <div class="atlas-filters">
  <div><label for="atlasQuery">Поиск по названию расчёта</label><input id="atlasQuery" type="search" placeholder="Например: судно, ткань, сварка, Модбас…" autocomplete="off"></div>
  <div><label for="atlasCategory">Отрасль</label><select id="atlasCategory"><option value="">Все 34 группы</option></select></div>
- <div class="atlas-actions"><button id="atlasCopy" type="button">Скопировать найденные темы</button><a href="calculator-atlas.csv" download="enjigirling-calculator-atlas.csv">Скачать CSV-реестр</a><a href="calculator.html">Открыть калькуляторы</a></div>
+ <div class="atlas-actions"><a href="knowledge/atlas-implementation-matrix.json" download>Матрица реализации · JSON</a><button id="atlasCopy" type="button">Скопировать найденные темы</button><a href="calculator-atlas.csv" download="enjigirling-calculator-atlas.csv">Скачать CSV-реестр</a><a href="calculator.html">Открыть калькуляторы</a></div>
 </div>
-<p id="atlasCount" class="atlas-count" role="status" aria-live="polite">34 группы, 734 темы для разработки</p>
+<p id="atlasCount" class="atlas-count" role="status" aria-live="polite">34 группы, 734 темы; 734 расчётные модели</p>
 <div id="atlasResults" class="atlas-results"></div>
 <noscript><div class="atlas-notes">Для поиска по 734 идеям нужен JavaScript. Источники доступны напрямую: <a href="https://www.textileschool.com/calculators/">текстиль</a>, <a href="https://metacad.io/en/">судостроение</a>, <a href="https://www.engineercalculators.com/">инженерия</a>, <a href="https://buildrefs.com/calculators/">строительство</a>, <a href="https://processfunda.com/calculator-library/">процессы</a>.</div></noscript>
 </section>
@@ -108,6 +106,8 @@
         </div>
     </footer>
 <script src="calculator-atlas-data.js" defer></script>
+<script src="atlas-extended.js" defer></script>
+<script src="atlas-tools.js" defer></script>
 <script src="calculator-atlas.js" defer></script>
 <script src="theme.js" defer></script>
 <script src="site-shell.js" defer></script>

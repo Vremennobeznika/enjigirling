@@ -385,7 +385,7 @@ check('734 unique calculator concepts across 34 research groups have honest stat
  }
  const page=fs.readFileSync('calculator-atlas.html','utf8');
  assert.ok(page.includes('734 темы'),'atlas must label topics as ideas');
- assert.ok(page.includes('не 734 якобы работающих калькулятора'),'atlas must not mislead');
+ assert.ok(page.includes('учебные и приближённые модели не заменяют нормативную или проектную проверку'),'atlas must state model limits');
  for(const filename of ['calculator-atlas.js','calculator-atlas-data.js','calculator-atlas.css','calculator-atlas.csv'])
    assert.ok(page.includes(filename),'atlas missing '+filename);
  assert.ok(fs.readFileSync('calculator.html','utf8').includes('href="calculator-atlas.html"'),'calculator section has no catalog link');
@@ -401,7 +401,7 @@ check('calculator workshop layout embeds every tool in seven groups',()=>{
  const g=[
   ['group-digital',['labIEEE','calcBases']],
   ['group-electrical',['labElectronics','calcSignal']],
-  ['group-production',['labManufacturing','labProduction']],
+  ['group-production',['labManufacturing','labAtlasTools','labProduction']],
   ['group-practical',['labPractical']],
   ['group-sewing',['labSewing','labMoreSewing']],
   ['group-marine',['labMarine','labMoreMarine']],

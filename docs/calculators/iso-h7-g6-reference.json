@@ -1,0 +1,93 @@
+{
+  "scope": "0 < nominal diameter <= 500 mm; interval lower boundary excluded, upper included",
+  "units": "all deviations in micrometres",
+  "columns": [
+    "maxNominalMm",
+    "IT6",
+    "IT7",
+    "shaftGUpperDeviation"
+  ],
+  "source": "https://amesweb.info/fits-tolerances/tolerance-calculator.aspx",
+  "itGradeCrossReference": "https://www.engineersedge.com/international_tol.htm",
+  "checkedDate": "2026-10-26",
+  "rows": [
+    [
+      3.0,
+      6,
+      10,
+      -2
+    ],
+    [
+      6.0,
+      8,
+      12,
+      -4
+    ],
+    [
+      10.0,
+      9,
+      15,
+      -5
+    ],
+    [
+      18.0,
+      11,
+      18,
+      -6
+    ],
+    [
+      30.0,
+      13,
+      21,
+      -7
+    ],
+    [
+      50.0,
+      16,
+      25,
+      -9
+    ],
+    [
+      80.0,
+      19,
+      30,
+      -10
+    ],
+    [
+      120.0,
+      22,
+      35,
+      -12
+    ],
+    [
+      180.0,
+      25,
+      40,
+      -14
+    ],
+    [
+      250.0,
+      29,
+      46,
+      -15
+    ],
+    [
+      315.0,
+      32,
+      52,
+      -17
+    ],
+    [
+      400.0,
+      36,
+      57,
+      -18
+    ],
+    [
+      500.0,
+      40,
+      63,
+      -20
+    ]
+  ]
+}

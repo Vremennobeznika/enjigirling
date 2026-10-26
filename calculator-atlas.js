@@ -1,4 +1,4 @@
-/* ENJIGIRLING calculator atlas — grouped backlog, not a library of executable calculators. */
+/* ENJIGIRLING calculator atlas — searchable catalogue linked to the implemented calculation registry. */
 (function(){
 'use strict';
 const input=document.getElementById('atlasQuery');
@@ -11,7 +11,9 @@ if(!input||!select||!result||!count||!copy||!all.length)return;
 const normalize=s=>String(s).toLocaleLowerCase('ru-RU').replace(/ё/g,'е');
 const groups=all.map(group=>({...group,entries:group.items.map(name=>({name,search:normalize(name)}))}));
 const total=groups.reduce((sum,g)=>sum+g.items.length,0);
-const existing=11;let matched=[];
+const ready=new Map((window.AtlasTools?window.AtlasTools.definitions:[]).map(d=>[d.topic,d.id]));
+document.querySelectorAll('[data-atlas-ready-count]').forEach(el=>el.textContent=String(ready.size));
+const existing=document.querySelectorAll('.atlas-links a').length;let matched=[];
 const label=(tag,className,txt)=>{const n=document.createElement(tag);if(className)n.className=className;if(txt)n.textContent=txt;return n;};
 for(const group of groups){const option=document.createElement('option');option.value=group.id;option.textContent=group.title+' ('+group.items.length+')';select.appendChild(option);}
 function makeSection(group,entries,filtering){
@@ -24,7 +26,7 @@ function makeSection(group,entries,filtering){
  content.append(source);
  const list=document.createElement('ol');list.className='atlas-topic-list';
  const short=filtering&&entries.length>80?entries.slice(0,80):entries;
- for(const entry of short){const item=label('li','atlas-topic',entry.name);list.append(item);}
+ for(const entry of short){const item=label('li','atlas-topic',entry.name);if(ready.has(entry.name)){const link=document.createElement('a');link.href='calculator.html?atlasTool='+ready.get(entry.name)+'#labAtlasTools';link.className='atlas-ready-link';link.textContent='Рассчитать →';item.append(' ',link);}list.append(item);}
  content.append(list);
  if(short.length!==entries.length)content.append(label('p','atlas-more','Показаны первые 80 совпадений группы. Уточните запрос.'));
  details.append(content);
@@ -58,7 +60,7 @@ function refresh(){
   }
  }
  result.replaceChildren(fragment);
- count.textContent='Найдено '+matched.length+' из '+total+' тем в '+visibleGroups+' группах. Готовые мастерские на основном сайте — '+existing+' точек входа.';
+ count.textContent='Найдено '+matched.length+' из '+total+' тем в '+visibleGroups+' группах. Готовые мастерские на основном сайте — '+existing+' точек входа. Реализованных тем атласа: '+ready.size+'.';
  copy.disabled=!matched.length;
 }
 let raf=0;

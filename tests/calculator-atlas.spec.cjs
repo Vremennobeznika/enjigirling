@@ -28,7 +28,7 @@ test('atlas links to actual calculators and keeps 320px width',async({page})=>{
  await expect(page.locator('#atlasCategory')).toHaveValue('g1');
  await expect(page.locator('.atlas-group')).toHaveCount(1);
  await expect(page.locator('#atlasCount')).toContainText('26');
- await expect(page.locator('.atlas-links a')).toHaveCount(11);
+ await expect(page.locator('.atlas-links a')).toHaveCount(12);
  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+2)).toBeTruthy();
  await page.locator('#atlasQuery').fill('усад');
  await expect(page.locator('#atlasResults li').first()).toBeVisible();

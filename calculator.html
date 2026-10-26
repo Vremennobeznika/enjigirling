@@ -80,14 +80,14 @@
   <nav aria-label="Группы калькуляторов" class="calculator-groups">
 <div class="calculator-group"><h3>Цифровые данные</h3><a href="#labIEEE">Битоскоп</a><a href="#calcBases">Системы счисления</a></div>
 <div class="calculator-group"><h3>Электротехника</h3><a href="#labElectronics">Электроцех</a><a href="#calcSignal">Сигнал 4–20 мА</a></div>
-<div class="calculator-group"><h3>Производство</h3><a href="#labProduction">Цеховой расчёт</a><a href="#labManufacturing">Изготовление и прокат</a></div>
+<div class="calculator-group"><h3>Производство</h3><a href="#labProduction">Цеховой расчёт</a><a href="#labManufacturing">Изготовление и прокат</a><a href="#labAtlasTools">Рабочие расчёты из атласа</a></div>
 <div class="calculator-group"><h3>Практические расчёты</h3><a href="#labPractical">Электросеть и заготовка</a></div>
 <div class="calculator-group"><h3>Швейное дело</h3><a href="#labSewing">Раскрой и поток</a><a href="#labMoreSewing">Настил и усадка</a></div>
 <div class="calculator-group"><h3>Море и суда</h3><a href="#labMarine">Морской блокнот</a><a href="#labMoreMarine">Корпус и течение</a></div>
 <div class="calculator-group"><h3>Единицы и измерения</h3><a href="#calcUnits">Инженерный конвертер</a></div>
 </nav>
 <p class="atlas-direct-link"><a href="measurement-lab.html">Измерительные приборы онлайн: 10 полноценных интерактивных тренажёров на сайте →</a> <span>Модели для обучения чтению шкал, не реальные измерения деталей.</span></p>
-<p class="atlas-direct-link"><a href="calculator-atlas.html">Атлас идей: 734 калькулятора по 34 отраслям →</a> <span>Поиск, источники и CSV. Пока это каталог идей, а не готовые 734 расчёта.</span></p>
+<p class="atlas-direct-link"><a href="calculator-atlas.html">Атлас: 734 расчётные модели по 34 отраслям →</a> <span>Поиск по темам и отраслям, формулы, ограничения, матрица проверок и CSV.</span></p>
 </section>
 
 <section class="calculator-workshop-section" id="group-digital" aria-labelledby="group-digital-heading">
@@ -247,7 +247,7 @@
 </section>
 
 <section class="calculator-workshop-section" id="group-production" aria-labelledby="group-production-heading">
-<header class="calculator-workshop-heading"><div><h2 id="group-production-heading">Производственные расчёты</h2><p>Оборудование, такт, материалы и технологические режимы</p></div><span>2 инструмента</span></header>
+<header class="calculator-workshop-heading"><div><h2 id="group-production-heading">Производственные расчёты</h2><p>Оборудование, такт, материалы и технологические режимы</p></div><span>3 инструмента</span></header>
 <div class="calculator-workshop-grid">
 <details class="calc-lab manufacturing-lab" id="labManufacturing">
 <summary><strong>Стоимость изготовления и металлопроката</strong><small>12 технологий · себестоимость партии · масса проката · наценка</small></summary>
@@ -287,6 +287,16 @@
 <p class="calc-lab-note">План заготовок = округление вверх N/(1 − брак/100). Это плановая оценка, не гарантия выхода годных. Себестоимость = (материал + станок + труд + подготовка + оснастка) × (1 + накладные/100). Цена = себестоимость × (1 + наценка/100). Наценка не равна маржинальности. Не учитывайте повторно труд или энергию, уже включённые в ставку станка.</p>
 <p class="calc-lab-note">Направления расчётов: <a href="https://makerrate.cc/" target="_blank" rel="noopener noreferrer">MakerRate</a>. Формулы и интерфейс реализованы самостоятельно. Импорт STL/STEP/DXF и автоматический анализ геометрии не выполняются.</p>
 </div></details>
+
+<details class="calc-lab atlas-tools-lab" id="labAtlasTools">
+<summary><strong>Рабочие расчёты из атласа</strong><small>Текстиль · нити · передача данных · PCM · древесина · клей</small></summary>
+<div class="calc-lab-body"><p>Реализованные темы атласа с формулами, единицами и ограничениями. Выберите расчёт; значения в полях — примеры, их можно заменить. Результат обновляется при вводе.</p>
+<div class="calc-lab-grid"><div class="calc-lab-field"><label for="atlasToolSearch">Поиск по расчётам</label><input id="atlasToolSearch" type="search" maxlength="128" placeholder="Тема или величина…"></div><div class="calc-lab-field"><label for="atlasToolGroup">Отрасль</label><select id="atlasToolGroup"></select></div></div>
+<form id="atlasToolForm" novalidate><div class="calc-lab-field"><label for="atlasToolSelect">Что рассчитать</label><select id="atlasToolSelect"></select></div>
+<div id="atlasToolFields" class="calc-lab-grid"></div><button type="submit" class="calc-practical-copy">Рассчитать</button>
+<output id="atlasToolResult" class="calc-lab-output" role="status" aria-live="polite">Раскройте блок для загрузки расчётов.</output>
+<p id="atlasToolFormula" class="calc-lab-note"></p><p id="atlasToolNote" class="calc-lab-note"></p></form>
+<p><a href="calculator-atlas.html">Открыть атлас и выбрать другую тему →</a></p></div></details>
 
 <details class="calc-lab production-panel" id="labProduction" data-lab="production">
  <summary><strong>Цеховой расчёт — производственная панель</strong><small>Такт · OEE · масса заготовки · удлинение · резание · расход</small></summary>
