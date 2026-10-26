@@ -65,3 +65,20 @@ test('3D is opt-in, preserves SVG fallback and respects low-end budget',async({p
  await expect(page.locator('#roboticsYawValue')).toContainText('22°');
  expect(errors).toEqual([]);
 });
+
+test('3D to SVG to 3D switching remains usable and does not redownload renderer',async({page})=>{
+ const requests=[];page.on('request',r=>{if(r.url().includes('robotics-3d.js'))requests.push(r.url());});
+ await page.goto('/robotics.html');
+ const toggle=page.locator('#roboticsEnable3d');
+ await expect(toggle).toBeVisible();
+ await toggle.click();
+ await expect(page.locator('#robotics3d')).toBeVisible();
+ await expect(toggle).toContainText('Вернуться');
+ await toggle.click();
+ await expect(page.locator('#robotics3d')).toBeHidden();
+ await expect(page.locator('#roboticsDrawing')).toBeVisible();
+ await expect(toggle).toContainText('Включить');
+ await toggle.click();
+ await expect(page.locator('#robotics3d')).toBeVisible();
+ expect(requests).toHaveLength(1);
+});

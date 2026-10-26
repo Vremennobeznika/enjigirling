@@ -9,7 +9,8 @@ const canvas=document.createElement('canvas');canvas.id='robotics3d';canvas.setA
 canvas.setAttribute('aria-label','Трёхмерная модель оригинального женского андроида. Перетаскивайте для поворота, колесо для масштаба; выбирайте системы кнопками справа.');
 const ctx=canvas.getContext('2d',{alpha:false});if(!ctx)return;
 svg.parentNode.insertBefore(canvas,svg);svg.hidden=true;
-let yaw=22,pitch=6,zoom=1,active='frame',drag=null,raf=0,hit=[],visible=true;
+let yaw=22,pitch=6,zoom=1,active='frame',drag=null,raf=0,hit=[],visible=true,enabled=true;
+window.__enjigirlingRobot3dSetActive=function(on){enabled=!!on;if(!enabled&&raf){cancelAnimationFrame(raf);raf=0;}if(enabled)schedule();};
 const parts=[
  ['frame',0,2.31,0,.37,.43,.23,'torso'],['frame',0,1.91,0,.39,.21,.25,'pelvis'],
  ['sensor',0,3.12,0,.225,.295,.19,'head'],['frame',0,2.78,0,.085,.14,.09,'neck'],
@@ -156,12 +157,12 @@ function render(){
  ctx.fillText('YAW '+Math.round(yaw)+'°  /  ZOOM '+Math.round(zoom*100)+'%'+(lowEnd?'  /  ECO':''),14,h-14);
  stats.lastFrameMs=performance.now()-frameStart;stats.maxFrameMs=Math.max(stats.maxFrameMs,stats.lastFrameMs);
 }
-function schedule(){if(!visible||document.hidden)return;if(!raf)raf=requestAnimationFrame(render);}
+function schedule(){if(!enabled||!visible||document.hidden)return;if(!raf)raf=requestAnimationFrame(render);}
 function setYaw(v){yaw=Math.max(-180,Math.min(180,v));slider.value=String(Math.round(yaw));const out=document.getElementById('roboticsYawValue');if(out){out.value=Math.round(yaw)+'°';out.textContent=out.value;}schedule();}
 slider.addEventListener('input',()=>{yaw=Number(slider.value);schedule();});
 document.querySelectorAll('[data-robotics-part]').forEach(b=>b.addEventListener('click',()=>{active=b.dataset.roboticsPart;schedule();}));
 document.getElementById('roboticsReset').addEventListener('click',()=>{pitch=6;zoom=1;active='frame';setYaw(22);});
-canvas.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse'&&e.button!==0)return;drag={x:e.clientX,y:e.clientY,yaw,pitch,moved:false};canvas.setPointerCapture(e.pointerId);});
+canvas.addEventListener('pointerdown',e=>{if(!enabled)return;if(e.pointerType==='mouse'&&e.button!==0)return;drag={x:e.clientX,y:e.clientY,yaw,pitch,moved:false};canvas.setPointerCapture(e.pointerId);});
 canvas.addEventListener('pointermove',e=>{if(!drag)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(Math.abs(dx)+Math.abs(dy)>5)drag.moved=true;setYaw(drag.yaw+dx*.65);pitch=Math.max(-30,Math.min(30,drag.pitch+dy*.25));schedule();});
 canvas.addEventListener('pointerup',e=>{
  if(!drag)return;

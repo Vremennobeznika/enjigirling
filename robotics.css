@@ -61,3 +61,12 @@
 #robotics3d:active{cursor:grabbing}
 #roboticsDrawing[hidden]{display:none!important}
 @media(max-width:520px){#robotics3d{aspect-ratio:4/5}}
+
+/* Explicit accessible 3D/SVG switch; prevent hidden canvas from consuming layout. */
+.robotics-mode{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 12px}
+#roboticsEnable3d{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 16px;border:1px solid #8b9aa4;border-radius:10px;background:#252d33;color:#f5f7f8;font:600 14px/1.3 inherit;cursor:pointer}
+#roboticsEnable3d:hover,#roboticsEnable3d:focus-visible{outline:2px solid #7db3c9;outline-offset:2px}
+#roboticsEnable3d:disabled{opacity:.6;cursor:wait}
+#roboticsModeStatus{font-size:12px;line-height:1.4;opacity:.8}
+#robotics3d[hidden],#roboticsDrawing[hidden]{display:none!important}
+@media(max-width:520px){.robotics-mode{align-items:stretch;flex-direction:column}#roboticsEnable3d{width:100%}}

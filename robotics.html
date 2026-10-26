@@ -146,19 +146,33 @@
 (function(){
  const button=document.getElementById('roboticsEnable3d');
  const status=document.getElementById('roboticsModeStatus');
- if(!button)return;
+ if(!button||!status)return;
+ let loaded=false,loading=false;
+ function mode(is3d){
+  const svg=document.getElementById('roboticsDrawing');
+  const canvas=document.getElementById('robotics3d');
+  if(!canvas)return;
+  canvas.hidden=!is3d;
+  svg.hidden=is3d;
+  button.textContent=is3d?'Вернуться к облегчённой схеме':'Включить детальную 3D-модель';
+  button.setAttribute('aria-pressed',String(is3d));
+  status.textContent=is3d?'3D включена. Перетаскивание — поворот, колесо — масштаб.':'Облегчённая SVG-схема. 3D отключена.';
+  if(window.__enjigirlingRobot3dSetActive)window.__enjigirlingRobot3dSetActive(is3d);
+ }
  button.addEventListener('click',function(){
-   if(button.disabled)return;
-   button.disabled=true;status.textContent='Загрузка 3D…';
-   const script=document.createElement('script');script.src='robotics-3d.js';
-   script.onload=function(){
-     const canvas=document.getElementById('robotics3d');
-     if(!canvas){button.disabled=false;status.textContent='3D недоступна. SVG-схема сохранена.';return;}
-     button.textContent='3D-модель включена';button.setAttribute('aria-pressed','true');
-     status.textContent='Перетаскивайте для поворота, колесо — масштаб. На слабых устройствах используйте SVG.';
-   };
-   script.onerror=function(){button.disabled=false;status.textContent='Не удалось загрузить 3D. SVG-схема работает.';};
-   document.head.appendChild(script);
+  if(loading)return;
+  if(loaded){mode(document.getElementById('robotics3d').hidden);return;}
+  loading=true;button.disabled=true;status.textContent='Загрузка 3D…';
+  const script=document.createElement('script');
+  script.src='robotics-3d.js';
+  script.onload=function(){
+   loading=false;button.disabled=false;
+   loaded=!!document.getElementById('robotics3d');
+   if(loaded)mode(true);
+   else status.textContent='3D недоступна. Облегчённая схема работает.';
+  };
+  script.onerror=function(){loading=false;button.disabled=false;status.textContent='Ошибка загрузки 3D. Облегчённая схема работает.';};
+  document.head.appendChild(script);
  });
 })();
 </script>
