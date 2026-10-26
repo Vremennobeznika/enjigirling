@@ -68,5 +68,5 @@ test('map redesigned for 320px: filters accessible and no horizontal overflow',a
  await expect(page.locator('#russiaMap')).toBeVisible();
  const dims=await page.evaluate(()=>({content:document.documentElement.scrollWidth,viewport:document.documentElement.clientWidth}));
  expect(dims.content).toBeLessThanOrEqual(dims.viewport+2);
- await expect(page.locator('nav.eng-tabs a')).toHaveCount(9);
+ await expect(page.locator('nav.eng-tabs a')).toHaveCount(12);
 });

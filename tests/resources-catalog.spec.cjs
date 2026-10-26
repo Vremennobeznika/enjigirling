@@ -100,14 +100,14 @@ test('resources offer a readable fallback without JavaScript',async({browser})=>
 
 
 
-test('coding library: 25 sources, eight groups, downloads, mobile filtering',async({page,request})=>{
+test('coding library: 25 guides plus 15 platforms, nine groups, downloads, mobile filtering',async({page,request})=>{
  const errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.setViewportSize({width:320,height:720});
  await page.goto('/coding.html');
  await expect(page.locator('#codingCatalog')).toHaveAttribute('data-ready','true');
  await expect(page.locator('#codingCatalog .coding-card')).toHaveCount(40);
  await expect(page.locator('#codingCatalog')).toContainText('GitVerse');
- await expect(page.locator('.coding-topic')).toHaveCount(8);
+ await expect(page.locator('.coding-topic')).toHaveCount(9);
  await expect(page.locator('#codingSearch')).toBeVisible();
  await expect(page.locator('a[href="downloads/ai-llm-guide.pdf"]')).toBeVisible();
  await expect(page.locator('a[href="downloads/ai-qa-engineering.pdf"]')).toBeVisible();

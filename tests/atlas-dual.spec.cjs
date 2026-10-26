@@ -10,7 +10,7 @@ for(const [pageName,filterId,expectedP,expectedM] of [
   await expect(page.locator('#atlasAiPackage')).toHaveCount(0);
   await page.locator('#'+filterId).selectOption('food');
   await expect(page.locator('#'+filterId)).toHaveValue('food');
-  await page.locator('.site-ai-link').click();
+  await page.locator('nav.eng-tabs a[href="ai.html"]').click();
   await expect(page).toHaveURL(/ai\.html$/);
   await expect(page.locator('#atlasAiMd')).toBeDisabled();
   await page.locator('#atlasAiSector').selectOption('food');
