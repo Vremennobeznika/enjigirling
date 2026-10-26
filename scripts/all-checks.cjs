@@ -9,6 +9,7 @@ const tests=fs.readdirSync(path.join(root,'tests')).filter(name=>name.endsWith('
 const files=[...new Set([...rootJs,...scripts,...tests,'playwright.config.cjs'])];
 const steps=[
  ['CALENDAR date and evidence matrix',()=>[['node',['tests/calendar-rules.cjs']]]],
+ ['ROBOTICS independent interactive lab and formula limits',()=>[['node',['tests/robotics-lab.cjs']]]],
  ['PAGES all HTML and nested local resource references',()=>[['node',['tests/all-html-assets.cjs']]]],
  ['S00 JavaScript syntax across application and QA',()=>files.map(file=>['node',['--check',file]])],
  ['PERF start-up payload budgets and deferred home search',()=>[['node',['tests/performance-budget.cjs']]]],
