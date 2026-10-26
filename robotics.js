@@ -72,6 +72,61 @@
       [0,1,2,3],[4,5,6,7],[0,4,7,3],[1,5,6,2],[3,2,6,7],[0,1,5,4]
     ].map((ids,n)=>({points:ids.map(i=>pts[i].x.toFixed(1)+','+pts[i].y.toFixed(1)).join(' '),depth:ids.reduce((s,i)=>s+pts[i].depth,0)/4,tone:n===4?'#dedede':n===2||n===3?'#bfbfbf':'#f1f1f1'}));
   }
+
+  // Lightweight projected mechanical details: no textures, external assets or WebGL.
+  function mechanicalDetail(group,block,key,selected){
+    const x=block[1],y=block[2],z=block[3],w=block[4],h=block[5],d=block[6];
+    const front=z+d/2+.008;
+    const P=(dx,dy,dz)=>projected(x+dx,y+dy,front+(dz||0),angle);
+    const stroke=selected?'#f5f5f5':'#59626a';
+    const bright=selected?'#ffffff':'#a8b7bf';
+    function line(a,b,color,width,dash){
+      const p=P(a[0],a[1]),q=P(b[0],b[1]);
+      group.appendChild(el('line',{x1:p.x,y1:p.y,x2:q.x,y2:q.y,stroke:color||stroke,'stroke-width':width||1.4,'stroke-linecap':'round',...(dash?{'stroke-dasharray':dash}:{})}));
+    }
+    function circle(dx,dy,r,color,fill){
+      const p=P(dx,dy);
+      group.appendChild(el('circle',{cx:p.x,cy:p.y,r:r,fill:fill||'#1b2329',stroke:color||bright,'stroke-width':1.5}));
+    }
+    // Recessed face panels with fine structural seams.
+    if(key==='frame'&&h>.25){
+      const inset=Math.min(.055,w*.17);
+      line([-w/2+inset,h*.35],[w/2-inset,h*.35],stroke,1.3);
+      line([-w/2+inset,-h*.35],[w/2-inset,-h*.35],stroke,1.3);
+      line([-w*.25,-h*.30],[-w*.25,h*.30],stroke,1);
+      line([w*.25,-h*.30],[w*.25,h*.30],stroke,1);
+      if(w>.4){circle(-w*.34,h*.35,1.8);circle(w*.34,h*.35,1.8);}
+    }
+    if(key==='joint'||key==='drive'){
+      const center=P(0,0),r=Math.max(5,Math.min(16,w*150*.24));
+      group.appendChild(el('circle',{cx:center.x,cy:center.y,r:r+3,fill:'#303a42',stroke:bright,'stroke-width':2}));
+      group.appendChild(el('circle',{cx:center.x,cy:center.y,r:r*.64,fill:selected?'#9eacb6':'#667985',stroke:'#202a31','stroke-width':2}));
+      circle(0,0,2.6,'#e1e7eb','#dce5eb');
+      for(let i=0;i<4;i++){const t=i*Math.PI/2;group.appendChild(el('circle',{cx:center.x+Math.cos(t)*(r+1),cy:center.y+Math.sin(t)*(r+1),r:1.5,fill:'#d9e3e8'}));}
+    }
+    if(key==='sensor'){
+      const p=P(0,h*.06);
+      group.appendChild(el('rect',{x:p.x-20,y:p.y-8,width:40,height:16,rx:7,fill:'#17232d',stroke:bright,'stroke-width':1.6}));
+      for(const dx of [-10,10])group.appendChild(el('circle',{cx:p.x+dx,cy:p.y,r:5,fill:'#86aebf',stroke:'#e4edf1','stroke-width':1}));
+      line([-w*.27,-h*.30],[w*.27,-h*.30],bright,1.5);
+    }
+    if(key==='compute'){
+      const p=P(0,0);
+      group.appendChild(el('rect',{x:p.x-16,y:p.y-10,width:32,height:20,rx:2,fill:'#26363f',stroke:bright,'stroke-width':1.4}));
+      for(let i=-2;i<=2;i++){const a=p.x+i*5;group.appendChild(el('line',{x1:a,y1:p.y-13,x2:a,y2:p.y-10,stroke:bright,'stroke-width':1.2}));}
+      circle(0,0,3,'#a6d5df','#a6d5df');
+    }
+    if(key==='battery'){
+      const p=P(0,0);
+      group.appendChild(el('rect',{x:p.x-21,y:p.y-8,width:42,height:16,rx:2,fill:'#26363f',stroke:bright,'stroke-width':1.4}));
+      for(let i=0;i<4;i++)group.appendChild(el('rect',{x:p.x-16+i*9,y:p.y-4,width:6,height:8,rx:1,fill:i===3?'#9db9c5':'#617b89'}));
+    }
+    if(key==='hand'){
+      for(let i=-1;i<=1;i++)line([i*w*.20,-h*.07],[i*w*.25,-h*.43],bright,2.2);
+      line([-w*.32,h*.15],[w*.32,h*.15],stroke,2);
+    }
+  }
+
   function selectPart(name){
     if(!parts[name])return;
     active=name;
@@ -86,6 +141,13 @@
     model.appendChild(el('rect',{x:0,y:0,width:640,height:560,fill:'transparent'}));
     const plane=el('ellipse',{cx:320,cy:525,rx:195,ry:18,fill:'none',stroke:'currentColor','stroke-opacity':.23,'stroke-dasharray':'6 6'});
     model.appendChild(plane);
+    // Subtle technical reference axes reinforce the engineering-lab aesthetic.
+    for(let n=-3;n<=3;n++){
+      const a=projected(n*.36,0,-.9,angle),b=projected(n*.36,0,.9,angle);
+      model.appendChild(el('line',{x1:a.x,y1:a.y,x2:b.x,y2:b.y,stroke:'currentColor','stroke-opacity':.075,'stroke-width':1}));
+      const c=projected(-1.1,0,n*.28,angle),d=projected(1.1,0,n*.28,angle);
+      model.appendChild(el('line',{x1:c.x,y1:c.y,x2:d.x,y2:d.y,stroke:'currentColor','stroke-opacity':.075,'stroke-width':1}));
+    }
     const sortable=blocks.map((block,index)=>({block:block,index:index,depth:projected(block[1],block[2],block[3],angle).depth}));
     sortable.sort((a,b)=>b.depth-a.depth);
     for(const entry of sortable){
@@ -95,6 +157,7 @@
       for(const face of faces){
         group.appendChild(el('polygon',{points:face.points,fill:selected?'#333333':face.tone,stroke:selected?'#ffffff':'#555555','stroke-width':selected?2:1.5,'stroke-linejoin':'round'}));
       }
+      mechanicalDetail(group,block,key,selected);
       group.appendChild(el('title',{},parts[key].title));
       group.addEventListener('click',()=>selectPart(key));
       group.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();selectPart(key);}});
