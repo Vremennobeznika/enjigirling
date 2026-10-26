@@ -1,0 +1,57 @@
+/* Independent robotics lab. All selectors are scoped to its page or one home entry point. */
+.robotics-page{max-width:1180px;margin:auto;padding:20px clamp(12px,3vw,30px) 44px;color:var(--card-text,var(--text-body))}
+.robotics-page *, .robotics-launch *{box-sizing:border-box}
+.robotics-back{display:flex;gap:12px;align-items:center;font-size:13px;margin:8px 0 22px}
+.robotics-back a,.robotics-page a,.robotics-launch a{color:inherit;text-underline-offset:3px}
+.robotics-hero{border:2px solid var(--card-border,var(--border));padding:clamp(20px,4vw,46px);background:var(--card-bg,var(--bg));border-radius:16px;margin-bottom:16px}
+.robotics-hero h1{font-size:clamp(26px,3.5vw,42px);line-height:1.15;margin:10px 0 14px;max-width:22ch;overflow-wrap:anywhere}
+.robotics-hero p{max-width:78ch;line-height:1.65}
+.robotics-kicker,.robotics-launch-label,.robotics-eyebrow{display:block;font-size:11px;letter-spacing:.09em;font-weight:750}
+.robotics-disclaimer{padding:13px 15px;border-left:3px solid currentColor;background:var(--soft-bg,var(--bg-block));font-size:13px}
+.robotics-quick{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+.robotics-quick a{display:inline-flex;align-items:center;min-height:44px;padding:8px 13px;border:1px solid var(--card-border);border-radius:8px;text-decoration:none;font-weight:650;font-size:13px}
+.robotics-panel{border:1px solid var(--card-border,var(--border));border-radius:16px;padding:clamp(14px,2.5vw,28px);margin:20px 0;background:var(--card-bg,var(--bg));min-width:0}
+.robotics-section-heading{display:flex;justify-content:space-between;gap:24px;align-items:end;border-bottom:1px solid var(--card-border);padding-bottom:16px;margin-bottom:18px}
+.robotics-section-heading h2,.robotics-sources h2{font-size:clamp(20px,2.3vw,28px);line-height:1.2;margin:6px 0}
+.robotics-section-heading p{max-width:45ch;font-size:13px;margin:0;line-height:1.5}
+.robotics-model-layout{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(240px,.7fr);gap:22px}
+.robotics-stage{border:1px solid var(--card-border);border-radius:12px;padding:10px;min-width:0;background:var(--soft-bg,var(--bg-block))}
+#roboticsDrawing{display:block;width:100%;height:auto;max-height:560px;color:var(--card-text)}
+#roboticsDrawing [data-robotics-box]{cursor:pointer}
+#roboticsDrawing [data-robotics-box]:focus-visible{outline:none;filter:drop-shadow(0 0 5px currentColor)}
+#roboticsDrawing [data-robotics-box]:focus-visible polygon{stroke-width:4}
+.robotics-slider{display:grid;grid-template-columns:auto minmax(50px,1fr) auto;align-items:center;gap:10px;padding:12px 5px}
+.robotics-slider label{font-size:12px;font-weight:650}
+.robotics-slider input{width:100%;accent-color:var(--text-primary)}
+.robotics-slider output{min-width:48px;text-align:right;font-size:13px}
+.robotics-hint{font-size:12px;line-height:1.5;margin:0 6px 8px;opacity:.8}
+.robotics-inspector{min-width:0}
+.robotics-inspector>h3{margin:3px 0 12px}
+.robotics-part-choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+.robotics-part-choices button,.robotics-reset,.robotics-calc-grid button{font:inherit;cursor:pointer;border:1px solid var(--card-border);border-radius:8px;min-height:44px;padding:8px 10px;color:var(--card-text);background:var(--soft-bg);overflow-wrap:anywhere}
+.robotics-part-choices button[aria-pressed="true"]{background:var(--card-text);color:var(--card-bg);font-weight:700}
+.robotics-inspector-content{border-left:2px solid var(--card-text);padding:10px 0 8px 14px;margin:18px 0}
+.robotics-inspector-content h3{font-size:20px;margin:4px 0 12px}
+.robotics-inspector-content p{line-height:1.6;overflow-wrap:anywhere}
+.robotics-inspector-content .robotics-eyebrow{font-size:11px}
+.robotics-reset{width:100%}
+.robotics-cards,.robotics-calc-grid,.robotics-material-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.robotics-cards article,.robotics-material-grid article,.robotics-calc-grid form{border:1px solid var(--card-border);border-radius:12px;padding:18px;min-width:0}
+.robotics-cards h3,.robotics-material-grid h3,.robotics-calc-grid h3{font-size:18px;margin:0 0 9px}
+.robotics-cards p,.robotics-material-grid p,.robotics-calc-grid p{line-height:1.55;font-size:14px}
+.robotics-material-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.robotics-material-grid ol{padding-left:21px;line-height:1.6}
+.robotics-calc-grid form{display:flex;flex-direction:column;gap:8px}
+.robotics-calc-grid label{font-size:13px;font-weight:650;margin-top:5px}
+.robotics-calc-grid input{width:100%;max-width:100%;min-height:44px;font:inherit;color:var(--card-text);background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;padding:9px}
+.robotics-calc-grid button{margin-top:6px;font-weight:700}
+.robotics-calc-grid output{display:block;border-left:2px solid var(--card-text);padding:10px;background:var(--soft-bg);min-height:44px;line-height:1.5;overflow-wrap:anywhere}
+.robotics-sources li{margin:8px 0;line-height:1.6;overflow-wrap:anywhere}
+.robotics-sources p{line-height:1.6}
+.robotics-page :is(button,input,a):focus-visible,.robotics-launch a:focus-visible{outline:3px solid var(--card-text);outline-offset:3px}
+.robotics-launch{margin:18px 0;padding:clamp(18px,2.5vw,30px);border:2px solid var(--card-border,var(--border));border-radius:16px;background:var(--soft-bg,var(--bg-block));color:var(--card-text,var(--text-body))}
+.robotics-launch h2{font-size:clamp(20px,2.4vw,28px);margin:7px 0}
+.robotics-launch p{line-height:1.55;max-width:70ch}
+.robotics-launch a{display:inline-block;padding:10px 0;min-height:44px;font-weight:750}
+@media(max-width:800px){.robotics-model-layout{grid-template-columns:minmax(0,1fr)}.robotics-section-heading{display:block}.robotics-section-heading p{margin-top:10px}.robotics-material-grid{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:520px){.robotics-cards,.robotics-calc-grid{grid-template-columns:minmax(0,1fr)}.robotics-slider{grid-template-columns:minmax(0,1fr) auto}.robotics-slider label{grid-column:1/-1}.robotics-hero{padding:18px}.robotics-part-choices{grid-template-columns:repeat(2,minmax(0,1fr))}}
