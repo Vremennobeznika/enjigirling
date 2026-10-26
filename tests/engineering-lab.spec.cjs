@@ -148,7 +148,7 @@ test('all calculator tools sit inside seven consistent visual groups',async({pag
  const expected=[
  ['group-digital',['labIEEE','calcBases']],
  ['group-electrical',['labElectronics','calcSignal']],
- ['group-production',['labProduction']],
+ ['group-production',['labManufacturing','labProduction']],
  ['group-sewing',['labSewing','labMoreSewing']],
  ['group-marine',['labMarine','labMoreMarine']],
  ['group-measurements',['calcUnits']]

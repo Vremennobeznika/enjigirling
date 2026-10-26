@@ -401,7 +401,7 @@ check('calculator workshop layout embeds every tool in seven groups',()=>{
  const g=[
   ['group-digital',['labIEEE','calcBases']],
   ['group-electrical',['labElectronics','calcSignal']],
-  ['group-production',['labProduction']],
+  ['group-production',['labManufacturing','labProduction']],
   ['group-practical',['labPractical']],
   ['group-sewing',['labSewing','labMoreSewing']],
   ['group-marine',['labMarine','labMoreMarine']],

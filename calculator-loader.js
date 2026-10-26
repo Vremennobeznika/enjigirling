@@ -1,7 +1,7 @@
 /* One small boot script. Heavy calculation engines load only when a panel is opened. */
 (function(){
 'use strict';
-const details=document.querySelectorAll('details[data-lab],details.calc-legacy,details.practical-lab');
+const details=document.querySelectorAll('details[data-lab],details.calc-legacy,details.practical-lab,details.manufacturing-lab');
 if(!details.length)return;
 const modules=new Map(),initialized=new WeakSet(),waiting=new WeakSet();
 function script(src){
@@ -30,7 +30,7 @@ function activate(panel){
  }
  if(status)status.textContent='Загрузка калькулятора…';
  const isLab=panel.hasAttribute('data-lab');
- const promise=isLab?loadEngine():panel.classList.contains('practical-lab')?loadPractical():loadLegacy();
+ const promise=panel.classList.contains('manufacturing-lab')?script('manufacturing-cost.js'):isLab?loadEngine():panel.classList.contains('practical-lab')?loadPractical():loadLegacy();
  promise.then(()=>{
   if(isLab)window.initEngineeringLab(panel.dataset.lab);
   initialized.add(panel);

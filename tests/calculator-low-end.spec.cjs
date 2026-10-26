@@ -4,7 +4,7 @@ test('initial page avoids remote webfonts and all unused calculator engines',asy
  await page.goto('/calculator.html');
  await expect(page.locator('#calcDirectoryTitle')).toBeVisible();
  await page.waitForLoadState('networkidle');
- for(const asset of ['engineering-lab-core.js','engineering-lab-ui.js','engineer-calculators.js','calculator-practical-core.js','calculator-practical.js']){
+ for(const asset of ['manufacturing-cost.js','engineering-lab-core.js','engineering-lab-ui.js','engineer-calculators.js','calculator-practical-core.js','calculator-practical.js']){
   expect(seen.some(url=>url.endsWith('/'+asset)),asset+' fetched before needed').toBe(false);
  }
  expect(seen.some(url=>/fonts\.(?:googleapis|gstatic)\.com/.test(url)),'external font request').toBe(false);
