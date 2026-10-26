@@ -1,0 +1,18 @@
+[
+  {
+    "browser": "chromium",
+    "theme": "light",
+    "width": 320,
+    "cpu": 4,
+    "dictionaryLoadMs": 879,
+    "emptyAndResetMs": 274
+  },
+  {
+    "browser": "chromium",
+    "theme": "dark",
+    "width": 320,
+    "cpu": 4,
+    "dictionaryLoadMs": 661,
+    "emptyAndResetMs": 263
+  }
+]

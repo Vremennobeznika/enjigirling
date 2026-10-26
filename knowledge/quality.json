@@ -10,8 +10,7 @@
   "totalEvidenceLinks": 772,
   "evidenceStatuses": {
     "claim_checked": 387,
-    "source_located": 383,
-    "unverified": 2
+    "source_located": 385
   },
   "byDataset": {
     "professions": {
