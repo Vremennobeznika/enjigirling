@@ -63,13 +63,13 @@ function datasetFor(slug,dataset){
  if(slug==='ai-code-library')return jsArray('coding-data.js','codingResources');
  if(slug==='calculators'){
   const topics=jsArray('calculator-atlas-data.js','window.calculatorAtlasGroups');
-  return topics.map(({id,title,source,items})=>({id,title,source,ideasNotImplemented:items}));
+  return topics.map(({id,title,source,items})=>({id,title,source,calculatorTopics:items}));
  }
  return dataset?canonical[dataset]:[];
 }
 function markdownItems(slug,records){
  if(!records.length)return '';
- const title=slug==='calculators'?'Идеи будущих калькуляторов (не готовые инструменты)':'Полные записи справочника';
+ const title=slug==='calculators'?'Темы реализованных калькуляторов':'Полные записи справочника';
  let out='\n## '+title+' ('+records.length+' записей/групп)\n\n';
  for(const [i,record] of records.entries()){
   const item={...record};
@@ -123,3 +123,7 @@ for(const [filename,content] of outputs){
 }
 if(bad)process.exitCode=1;
 else console.log('AI packs: '+sections.length+' sections, '+outputs.size+' deterministic exports'+(check?', current':''));
+if(!bad){
+ const result=require('node:child_process').spawnSync('python3',['scripts/build-reading.py',...(check?['--check']:[])],{cwd:root,stdio:'inherit'});
+ if(result.error||result.status!==0)process.exitCode=1;
+}
