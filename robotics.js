@@ -40,19 +40,41 @@
     battery:{title:'Электропитание',detail:'Источник энергии и аппаратура питания обеспечивают нагрузку. Защита и мониторинг батареи — отдельная часть проекта.',check:'полезная энергия, пики тока, тепловой режим, BMS'},
     hand:{title:'Рабочий орган',detail:'Захват или инструмент обеспечивает взаимодействие со средой. Он может отличаться от антропоморфной кисти.',check:'допустимое усилие, геометрия, захват и защита'}
   };
+  // Proportioned industrial humanoid study: tapered body silhouette, articulated
+  // upper/lower limbs, ankle assemblies and a broad load-bearing foot platform.
+  // Units are schematic; every solid remains a selectable subsystem.
   const blocks=[
-    ['frame',0,2.3,0,.78,1.02,.45],['frame',0,1.72,0,.76,.30,.44],
-    ['sensor',0,3.18,0,.39,.48,.34],['compute',0,2.49,.30,.37,.36,.15],
-    ['battery',0,2.00,.30,.40,.26,.15],['frame',-.62,2.56,0,.30,.28,.31],
-    ['frame',.62,2.56,0,.30,.28,.31],['drive',-.66,2.27,0,.34,.34,.34],
-    ['drive',.66,2.27,0,.34,.34,.34],
-    ['frame',-.69,1.84,0,.21,.51,.25],['frame',.69,1.84,0,.21,.51,.25],
-    ['hand',-.69,1.43,0,.30,.28,.28],['hand',.69,1.43,0,.30,.28,.28],
-    ['joint',-.24,1.48,0,.27,.24,.33],['joint',.24,1.48,0,.27,.24,.33],
-    ['frame',-.24,1.09,0,.30,.66,.35],['frame',.24,1.09,0,.30,.66,.35],
-    ['joint',-.24,.73,0,.30,.21,.34],['joint',.24,.73,0,.30,.21,.34],
-    ['frame',-.24,.38,0,.26,.61,.33],['frame',.24,.38,0,.26,.61,.33],
-    ['frame',-.24,.08,.17,.36,.14,.62],['frame',.24,.08,.17,.36,.14,.62]
+    ['frame',0,2.49,-.01,.82,.67,.42],
+    ['frame',0,2.13,0,.62,.30,.39],
+    ['frame',0,1.82,0,.67,.29,.44],
+    ['frame',0,2.91,0,.17,.18,.17],
+    ['sensor',0,3.21,0,.42,.40,.34],
+    ['compute',0,2.51,.225,.42,.29,.11],
+    ['battery',0,2.05,.22,.44,.24,.13],
+    ['frame',-.53,2.72,0,.32,.19,.35],
+    ['frame',.53,2.72,0,.32,.19,.35],
+    ['drive',-.70,2.57,0,.32,.29,.34],
+    ['drive',.70,2.57,0,.32,.29,.34],
+    ['frame',-.72,2.30,0,.24,.43,.27],
+    ['frame',.72,2.30,0,.24,.43,.27],
+    ['joint',-.73,2.04,0,.26,.23,.30],
+    ['joint',.73,2.04,0,.26,.23,.30],
+    ['frame',-.74,1.80,0,.20,.37,.25],
+    ['frame',.74,1.80,0,.20,.37,.25],
+    ['hand',-.74,1.51,.025,.26,.25,.28],
+    ['hand',.74,1.51,.025,.26,.25,.28],
+    ['drive',-.27,1.64,0,.31,.27,.37],
+    ['drive',.27,1.64,0,.31,.27,.37],
+    ['frame',-.28,1.27,0,.30,.61,.34],
+    ['frame',.28,1.27,0,.30,.61,.34],
+    ['joint',-.28,.92,.02,.31,.23,.36],
+    ['joint',.28,.92,.02,.31,.23,.36],
+    ['frame',-.28,.53,-.035,.26,.65,.30],
+    ['frame',.28,.53,-.035,.26,.65,.30],
+    ['joint',-.28,.19,0,.25,.20,.30],
+    ['joint',.28,.19,0,.25,.20,.30],
+    ['frame',-.28,.09,.19,.39,.15,.70],
+    ['frame',.28,.09,.19,.39,.15,.70]
   ];
   let active='frame',angle=22;
   function el(tag,attrs,text){
@@ -63,14 +85,28 @@
   }
   function boxFaces(block){
     const x=block[1],y=block[2],z=block[3],w=block[4]/2,h=block[5]/2,d=block[6]/2;
-    const xyz=[
-      [x-w,y-h,z-d],[x+w,y-h,z-d],[x+w,y+h,z-d],[x-w,y+h,z-d],
-      [x-w,y-h,z+d],[x+w,y-h,z+d],[x+w,y+h,z+d],[x-w,y+h,z+d]
+    // Chamfered housings: unlike simple cubes, each part has bevelled corners
+    // and an inset central panel. The geometry rotates with the 3D projection.
+    const k=Math.min(w*.20,h*.20,.065);
+    const ring=(depth)=>[
+      [x-w+k,y-h,z+depth],[x+w-k,y-h,z+depth],
+      [x+w,y-h+k,z+depth],[x+w,y+h-k,z+depth],
+      [x+w-k,y+h,z+depth],[x-w+k,y+h,z+depth],
+      [x-w,y+h-k,z+depth],[x-w,y-h+k,z+depth]
     ];
-    const pts=xyz.map(v=>projected(v[0],v[1],v[2],angle));
-    return [
-      [0,1,2,3],[4,5,6,7],[0,4,7,3],[1,5,6,2],[3,2,6,7],[0,1,5,4]
-    ].map((ids,n)=>({points:ids.map(i=>pts[i].x.toFixed(1)+','+pts[i].y.toFixed(1)).join(' '),depth:ids.reduce((s,i)=>s+pts[i].depth,0)/4,tone:n===4?'#dedede':n===2||n===3?'#bfbfbf':'#f1f1f1'}));
+    const verts=ring(-d).concat(ring(d));
+    const pts=verts.map(v=>projected(v[0],v[1],v[2],angle));
+    const polygons=[{ids:[0,1,2,3,4,5,6,7],tone:'#6b7983'},
+      {ids:[8,9,10,11,12,13,14,15],tone:'#d5dce0'}];
+    for(let i=0;i<8;i++){
+      polygons.push({ids:[i,(i+1)%8,(i+1)%8+8,i+8],
+        tone:i===0||i===4?'#b3bec5':i===2||i===6?'#7b8a94':'#9daab3'});
+    }
+    return polygons.map(face=>({
+      points:face.ids.map(i=>pts[i].x.toFixed(1)+','+pts[i].y.toFixed(1)).join(' '),
+      depth:face.ids.reduce((v,i)=>v+pts[i].depth,0)/face.ids.length,
+      tone:face.tone
+    }));
   }
 
   // Lightweight projected mechanical details: no textures, external assets or WebGL.
@@ -89,6 +125,22 @@
       group.appendChild(el('circle',{cx:p.x,cy:p.y,r:r,fill:fill||'#1b2329',stroke:color||bright,'stroke-width':1.5}));
     }
     // Recessed face panels with fine structural seams.
+    // Ribbed actuator sleeves and inset central torso armour.
+    if(key==='frame'&&h>.35&&w<.35){
+      for(let i=-2;i<=2;i++)line([-w*.30,i*h*.12],[w*.30,i*h*.12],i%2===0?bright:stroke,1.4);
+    }
+    if(key==='frame'&&w>.55&&y>2.2){
+      const p=P(0,0);
+      group.appendChild(el('polygon',{points:[
+        [p.x-22,p.y-21],[p.x+22,p.y-21],[p.x+30,p.y+6],
+        [p.x+16,p.y+25],[p.x-16,p.y+25],[p.x-30,p.y+6]
+      ].map(v=>v.join(',')).join(' '),fill:'#40535e',stroke:bright,'stroke-width':1.6}));
+      group.appendChild(el('rect',{x:p.x-9,y:p.y-4,width:18,height:8,rx:2,fill:'#8daebd'}));
+    }
+    if(key==='frame'&&y<.2){
+      const p=P(0,0);
+      group.appendChild(el('line',{x1:p.x-19,y1:p.y-4,x2:p.x+19,y2:p.y-4,stroke:bright,'stroke-width':2}));
+    }
     if(key==='frame'&&h>.25){
       const inset=Math.min(.055,w*.17);
       line([-w/2+inset,h*.35],[w/2-inset,h*.35],stroke,1.3);
@@ -155,7 +207,7 @@
       const group=el('g',{'data-robotics-box':key,tabindex:0,role:'button','aria-label':parts[key].title,'aria-pressed':String(selected)});
       const faces=boxFaces(block).sort((a,b)=>b.depth-a.depth);
       for(const face of faces){
-        group.appendChild(el('polygon',{points:face.points,fill:selected?'#333333':face.tone,stroke:selected?'#ffffff':'#555555','stroke-width':selected?2:1.5,'stroke-linejoin':'round'}));
+        group.appendChild(el('polygon',{points:face.points,fill:selected?'#344650':face.tone,stroke:selected?'#e7f1f5':'#34434d','stroke-width':selected?2:1.5,'stroke-linejoin':'round'}));
       }
       mechanicalDetail(group,block,key,selected);
       group.appendChild(el('title',{},parts[key].title));
