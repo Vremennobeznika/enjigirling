@@ -11,11 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const viewGrid = document.getElementById('resourceGridView');
   const viewList = document.getElementById('resourceListView');
   if (!filter || !grid || !search || !sort || !status || !reset || !more || !viewGrid || !viewList) return;
-  const ALL = 'Все', ASU = 'АСУ ТП', AI_LIBRARY = 'Библиотека программирования для ИИ';
-  const order = [AI_LIBRARY, 'Журналы', 'САПР и конструирование', 'Разработка ПО', 'Инструменты и симуляторы', 'Онлайн-измерения', 'Форумы', 'Научные базы и справочники', 'Стандарты и метрология', 'Обучение и курсы', 'Дружественные каналы', 'Чаты в Telegram'];
+  const ALL = 'Все', ASU = 'АСУ ТП';
+  const order = ['Журналы', 'САПР и конструирование', 'Разработка ПО', 'Инструменты и симуляторы', 'Онлайн-измерения', 'Форумы', 'Научные базы и справочники', 'Стандарты и метрология', 'Обучение и курсы', 'Дружественные каналы', 'Чаты в Telegram'];
   const labels = {'Разработка ПО':'Код и Git', 'САПР и конструирование':'САПР и КБ', 'Инструменты и симуляторы':'Симуляторы', 'Онлайн-измерения':'Измерения онлайн', 'Научные базы и справочники':'Библиотеки', 'Стандарты и метрология':'Стандарты', 'Обучение и курсы':'Курсы', 'Дружественные каналы':'Каналы', 'Чаты в Telegram':'Чаты'};
   const forumTopics = [ASU,'ЧПУ и металлообработка','САПР и конструирование','Электроника и микроконтроллеры','ИТ и технологии','Общая инженерия'];
-  const libraryTopics = ["Python","Веб-разработка","Качество веба","Git и публикация","Тестирование и инфраструктура","Базы данных","Android","Безопасность"];
   const journalTopics = ['Машиностроение и САПР','Автоматизация и электроника','Материалы, контроль и измерения','Энергетика, строительство и транспорт','Пищевая и лёгкая промышленность','Наука и образование'];
   const htmlEsc=value=>String(value==null?'':value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
   const normalize = value => String(value == null ? '' : value).toLocaleLowerCase('ru-RU').replace(/ё/g,'е').replace(/\s+/g,' ').trim();
@@ -25,8 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
   items.forEach(item => counts.set(item.type, (counts.get(item.type) || 0) + 1));
   const types = [ALL,...order.filter(type => counts.has(type)),...[...counts.keys()].filter(type => !order.includes(type)).sort(collator.compare)];
   const buttons = new Map();
-  let activeType = location.hash === '#ai-library-catalog' ? AI_LIBRARY : ALL, view = 'grid', limit = activeType === AI_LIBRARY ? 32 : 4, searchTimer = null;
-  const batchSize = () => activeType === ALL ? 4 : activeType === 'Форумы' ? 64 : activeType === AI_LIBRARY ? 32 : 24;
+  let activeType = ALL, view = 'grid', limit = 4, searchTimer = null;
+  const batchSize = () => activeType === ALL ? 4 : activeType === 'Форумы' ? 64 : 24;
   const hostname = href => { try { return new URL(href).hostname.replace(/^www\./,''); } catch { return ''; } };
   const makeCard = item => {
     const href = String(item.link || '');
@@ -71,15 +70,11 @@ document.addEventListener('DOMContentLoaded', () => {
       rendered += shown.length;
       nextRendered += type === 'Дружественные каналы' ? candidates.length : Math.min(candidates.length, limit + batchSize());
       let cards = `<div class="resource-items">${shown.map(makeCard).join('')}</div>`;
-      if (type === 'Журналы' || type === 'Форумы' || type === AI_LIBRARY) {
-        const topics = type === 'Форумы' ? forumTopics : type === AI_LIBRARY ? libraryTopics : [...journalTopics,...new Set(shown.map(x=>x.topic||'Без направления').filter(x=>!journalTopics.includes(x)))];
+      if (type === 'Журналы' || type === 'Форумы') {
+        const topics = type === 'Форумы' ? forumTopics : [...journalTopics,...new Set(shown.map(x=>x.topic||'Без направления').filter(x=>!journalTopics.includes(x)))];
         cards = topics.map(topic => {
           const subset = shown.filter(x => (x.topic||'Без направления')===topic);
           if (!subset.length) return '';
-          if (type === AI_LIBRARY) {
-            const open = query || !window.matchMedia('(max-width:700px)').matches ? ' open' : '';
-            return `<details class="resource-topic resource-library-topic"${open}><summary class="resource-topic-header"><strong>${htmlEsc(topic)}</strong><span>${subset.length} источн.</span></summary><div class="resource-items">${subset.map(makeCard).join('')}</div></details>`;
-          }
           return `<section class="resource-topic"><div class="resource-topic-header"><h3>${htmlEsc(topic)}</h3><span>${subset.length}</span></div><div class="resource-items">${subset.map(makeCard).join('')}</div></section>`;
         }).join('');
       }
@@ -112,6 +107,5 @@ document.addEventListener('DOMContentLoaded', () => {
   viewList.addEventListener('click', () => { view = 'list'; update(); });
   more.addEventListener('click', () => { limit += batchSize(); update(); });
   reset.addEventListener('click', () => { activeType = ALL; search.value = ''; sort.value = 'az'; view = 'grid'; limit = 4; update(); });
-  window.addEventListener('hashchange', () => { if (location.hash === '#ai-library-catalog') { activeType = AI_LIBRARY; limit = batchSize(); update(); } });
   update();
 });

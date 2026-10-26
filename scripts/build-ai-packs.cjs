@@ -7,7 +7,7 @@ const sections=[
  ['professions','Профессии','index.html','knowledge/professions.json'],
  ['calendar','Календарь инженерных дат','calendar.html',null],
  ['resources','Инженерные ресурсы','resources.html',null],
- ['ai-code-library','Библиотека программирования для ИИ','resources.html',null],
+ ['ai-code-library','Библиотека программирования для ИИ','coding.html',null],
  ['dictionary','Инженерный словарь','dictionary.html','knowledge/dictionary.json'],
  ['learning','Обучение','map.html',null],
  ['calculators','Инженерные калькуляторы','calculator.html',null],
@@ -60,7 +60,7 @@ function datasetFor(slug,dataset){
  }
  if(slug==='calendar')return jsArray('calendar-data.js','window.engineeringCalendar.holidays');
  if(slug==='resources')return jsArray('resources-data.js','resources');
- if(slug==='ai-code-library')return jsArray('resources-data.js','resources').filter(x=>x.type==='Библиотека программирования для ИИ');
+ if(slug==='ai-code-library')return jsArray('coding-data.js','codingResources');
  if(slug==='calculators'){
   const topics=jsArray('calculator-atlas-data.js','window.calculatorAtlasGroups');
   return topics.map(({id,title,source,items})=>({id,title,source,ideasNotImplemented:items}));

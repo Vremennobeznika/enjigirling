@@ -1,0 +1,25 @@
+/* Standalone coding library, scoped to avoid affecting nine engineering sections. */
+.coding-page{max-width:1180px;margin:0 auto;padding:20px clamp(12px,3vw,28px) 48px;min-width:0}
+.coding-page *{box-sizing:border-box}
+.coding-page a{color:inherit;text-underline-offset:3px;overflow-wrap:anywhere}
+.coding-page :is(a,button,input,summary):focus-visible{outline:3px solid var(--text-primary);outline-offset:3px}
+.coding-documents,.coding-library{border:1px solid var(--card-border);background:var(--card-bg);color:var(--card-text);border-radius:16px;padding:clamp(14px,3vw,26px);margin:16px 0;min-width:0}
+.coding-documents h2,.coding-library h2{font-size:clamp(19px,2.5vw,27px);margin:0 0 12px}
+.coding-file-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.coding-file-grid article{border:1px solid var(--card-border);border-radius:10px;padding:15px;min-width:0}
+.coding-file-grid h3{font-size:17px;margin:0 0 9px}
+.coding-file-grid p,.coding-library p{line-height:1.5}
+.coding-file-grid a{display:inline-flex;min-height:44px;align-items:center;font-weight:750}
+.coding-fineprint{font-size:12px;opacity:.8}
+.coding-toolbar{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;margin:18px 0 10px;align-items:end}
+.coding-toolbar label{grid-column:1/-1;font-size:13px;font-weight:700}
+.coding-toolbar input{width:100%;min-width:0;min-height:44px;font:inherit;border:1px solid var(--card-border);border-radius:8px;padding:10px;background:var(--card-bg);color:var(--card-text)}
+.coding-toolbar button{min-height:44px;padding:8px 12px;font:inherit;border:1px solid var(--card-border);border-radius:8px;background:var(--soft-bg);color:var(--card-text);cursor:pointer}
+.coding-topic{border:1px solid var(--card-border);border-radius:12px;margin:11px 0;min-width:0;padding:0 12px 12px}
+.coding-topic summary{cursor:pointer;font-weight:750;min-height:44px;padding:12px 2px}
+.coding-topic-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:10px}
+.coding-card{display:flex;flex-direction:column;min-height:128px;padding:14px;border:1px solid var(--card-border);border-radius:8px;text-decoration:none}
+.coding-card strong{font-size:15px;line-height:1.35}
+.coding-card span{font-size:13px;line-height:1.5;margin-top:7px}
+.coding-card small{margin-top:auto;padding-top:8px}
+@media(max-width:580px){.coding-file-grid{grid-template-columns:1fr}.coding-topic-list{grid-template-columns:1fr}.coding-documents,.coding-library{padding:12px}}
