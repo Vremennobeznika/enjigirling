@@ -276,7 +276,11 @@
 <div class="calc-lab-field"><label for="manufacturingProcess">Технология</label><select id="manufacturingProcess"></select></div>
 <div class="calc-lab-field"><label for="manufacturingQuantity">Годных изделий в партии, шт</label><input id="manufacturingQuantity" name="quantity" type="text" inputmode="numeric" value="10"></div>
 <div class="calc-lab-field"><label for="manufacturingMass">Материал на одну заготовку, кг</label><input id="manufacturingMass" name="mass" type="text" inputmode="decimal" value="1"></div>
-<div class="calc-lab-field"><label for="manufacturingPrice">Цена материала, ₽/т</label><input id="manufacturingPrice" name="priceTonne" type="text" inputmode="decimal" placeholder="Введите цену из прайса"></div>
+<div class="calc-lab-field"><label for="mcPriceMode">Источник цены</label><select id="mcPriceMode"><option value="mc">mc.ru — автоматический прайс</option><option value="manual">Собственная ставка</option></select></div>
+<div class="calc-lab-field"><label for="mcPriceGroup">Группа прайса — Москва</label><select id="mcPriceGroup" disabled><option value="">Все четыре группы</option></select></div>
+<div class="calc-lab-field"><label for="mcPriceSearch">Найти металл, марку или размер</label><input id="mcPriceSearch" type="search" placeholder="Например: Ст3 10" disabled></div>
+<div class="calc-lab-field"><label for="mcPriceItem">Позиция mc.ru</label><select id="mcPriceItem" disabled aria-describedby="mcPriceDetails"><option value="">Получаем прайс…</option></select></div>
+<div class="calc-lab-field"><label for="manufacturingPrice">Цена материала с НДС, ₽/т</label><input id="manufacturingPrice" name="priceTonne" type="text" inputmode="decimal" readonly placeholder="Подставится из выбранной позиции" aria-describedby="mcPriceDetails"></div>
 <div class="calc-lab-field"><label for="manufacturingMinutes">Машинное время на заготовку, мин</label><input id="manufacturingMinutes" name="minutes" type="text" inputmode="decimal" value="15"></div>
 <div class="calc-lab-field"><label for="manufacturingMachineRate">Ставка станка, ₽/ч</label><input id="manufacturingMachineRate" name="machineRate" type="text" inputmode="decimal" value="0"></div>
 <div class="calc-lab-field"><label for="manufacturingLaborMinutes">Труд на заготовку, мин</label><input id="manufacturingLaborMinutes" name="laborMinutes" type="text" inputmode="decimal" value="0"></div>
@@ -289,7 +293,9 @@
 </div><button type="submit" class="calc-practical-copy">Рассчитать стоимость партии</button>
 <output id="manufacturingResult" class="calc-lab-output" role="status" aria-live="polite">Введите цену материала и свои ставки, затем выполните расчёт.</output>
 </form>
-<p class="calc-lab-note">Цена проката: <a href="https://mc.ru/" target="_blank" rel="noopener noreferrer">проверить прайс mc.ru ↗</a>. Автозагрузка цен не подключена. Введите цену нужной марки, размера, склада и объёма заказа. Согласуйте учёт НДС во всех ставках. Доставка, резка поставщиком и минимальная сумма заказа отдельно не добавляются.</p>
+<p id="mcPriceStatus" class="calc-lab-note" role="status" aria-live="polite">Прайс mc.ru загружается автоматически при открытии расчёта.</p>
+<p id="mcPriceDetails" class="calc-lab-note"></p>
+<p class="calc-lab-note"><a id="mcPriceSource" href="http://mc.ru:8080/prices/metserv.zip" target="_blank" rel="noopener noreferrer">Официальный прайс mc.ru ↗</a>. Обновление на сервере каждые 6 часов; файл загружать не нужно. Поддерживаются четыре группы московского прайса и только цены за фактическую тонну. Склад и полный типоразмер в файле не указаны; одинаковые строки не объединяются. Согласуйте НДС во всех ставках. Доставка и резка отдельно не добавляются. Прайс старше 72 часов не применяется.</p>
 <details><summary>Рассчитать массу заготовки из проката</summary>
 <form id="manufacturingStockForm" novalidate><div class="calc-lab-grid">
 <div class="calc-lab-field"><label for="stockShape">Форма проката</label><select id="stockShape"><option value="sheet">Лист / прямоугольная заготовка</option><option value="round">Круг</option><option value="tube">Круглая труба</option><option value="rectTube">Прямоугольная труба</option></select></div>

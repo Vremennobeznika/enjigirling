@@ -1,4 +1,4 @@
-/* Original manufacturing cost estimates. No uploaded files or external services. */
+/* Original manufacturing estimates, with optional same-origin supplier snapshots. */
 (function(){
 'use strict';
 const processes={fdm:'FDM-печать',sla:'SLA / печать смолой',sls:'SLS-печать',mjf:'MJF-печать',polyjet:'PolyJet',metal:'Металлическая 3D-печать',milling:'Фрезерование ЧПУ',turning:'Точение ЧПУ',routing:'Фрезерование листовых материалов',laser:'Лазерная резка',bending:'Гибка',molding:'Литьё под давлением'};
@@ -61,6 +61,7 @@ function calculate(){
  const out=document.getElementById('manufacturingResult');
  try{
   const input=Object.fromEntries(Array.from(form.querySelectorAll('input[name]'),el=>[el.name,el.value]));const r=estimate(input);
+  if(window.MCPrices&&window.MCPrices.beforeResult)window.MCPrices.beforeResult(r,input);
   out.textContent=processes[process.value]+': '+fmt(r.unitCost)+' ₽/шт себестоимость; '+fmt(r.unitQuote)+' ₽/шт с наценкой. Партия: '+fmt(r.quote)+' ₽. План заготовок: '+r.blanks+'. Материал: '+fmt(r.material)+' ₽; станок: '+fmt(r.machine)+' ₽; труд: '+fmt(r.labor)+' ₽; подготовка: '+fmt(r.setup)+' ₽; оснастка: '+fmt(r.tooling)+' ₽; накладные: '+fmt(r.overhead)+' ₽.';
  }catch(e){out.textContent=e.message;}
 }

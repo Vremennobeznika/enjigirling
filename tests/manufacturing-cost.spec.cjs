@@ -7,6 +7,7 @@ test('manufacturing costs load on demand, calculate and preserve the existing ca
  await page.getByRole('link',{name:'Изготовление и прокат',exact:true}).click();
  await expect(page.locator('#labManufacturing')).toHaveAttribute('open','');
  await expect(page.locator('#manufacturingProcess option')).toHaveCount(12);
+ await page.locator('#mcPriceMode').selectOption('manual');
  await page.locator('#manufacturingForm button[type=submit]').click();
  await expect(page.locator('#manufacturingResult')).toContainText('Заполните');
  for(const [id,value] of Object.entries({manufacturingQuantity:'10',manufacturingMass:'2',manufacturingPrice:'60000',manufacturingMinutes:'30',manufacturingMachineRate:'1200',manufacturingLaborMinutes:'10',manufacturingLaborRate:'600',manufacturingSetup:'1000',manufacturingTooling:'2000',manufacturingReject:'20',manufacturingOverhead:'10',manufacturingMarkup:'20'}))await page.locator('#'+id).fill(value);
@@ -29,12 +30,13 @@ test('metal stock estimate, geometry validation and 320px layout',async({page})=
  await page.locator('#stockWall').fill('25');await page.locator('#manufacturingStockForm button[type=submit]').click();
  await expect(page.locator('#manufacturingStockResult')).toContainText('меньше половины');
  for(const width of [320,390,768,1280]){await page.setViewportSize({width,height:700});expect(await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth)).toBeLessThanOrEqual(2);}
- await expect(page.locator('#labManufacturing')).toContainText('Автозагрузка цен не подключена');
+ await expect(page.locator('#labManufacturing')).toContainText('файл загружать не нужно');
 });
 
 test('exact reject boundary does not add a charged blank',async({page})=>{
  await page.goto('/calculator.html#labManufacturing');
  await expect(page.locator('#manufacturingProcess option')).toHaveCount(12);
+ await page.locator('#mcPriceMode').selectOption('manual');
  await page.locator('#manufacturingQuantity').fill('9');
  await page.locator('#manufacturingPrice').fill('1000');
  await page.locator('#manufacturingReject').fill('90');

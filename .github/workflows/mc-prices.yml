@@ -1,26 +1,75 @@
-name: MC official price source discovery
+name: Update official MC prices
 on:
+  schedule:
+    - cron: '23 */6 * * *'
   push:
-    branches: [codex/mc-price-automation]
+    branches: [main, codex/mc-price-automation]
     paths:
       - .github/workflows/mc-prices.yml
-      - scripts/probe-mc-price.py
+      - scripts/update-mc-prices.py
+      - tests/mc-price-import.py
+      - tests/mc-prices.cjs
+      - tests/fixtures/mc-synthetic.zip
   workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: mc-prices-${{ github.ref }}
+  cancel-in-progress: false
 jobs:
-  discover:
+  update:
     runs-on: ubuntu-24.04
-    timeout-minutes: 4
+    timeout-minutes: 8
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python3 scripts/probe-mc-price.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install XLS reader
+        run: python3 -m pip install --disable-pip-version-check 'xlrd==2.0.2'
+      - name: Verify importer and price guards
+        run: |
+          python3 tests/mc-price-import.py
+          node tests/mc-prices.cjs
+          node tests/manufacturing-cost.cjs
+      - name: Fetch and validate current official supplier archive
+        run: |
+          python3 scripts/update-mc-prices.py
+          node tests/mc-prices.cjs
+      - name: Preserve the successful snapshot in source
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add mc-prices.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh dated official MC price snapshot'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Publish current prices to the Russian site
+        if: github.ref == 'refs/heads/main'
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.YC_S3_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.YC_S3_SECRET_KEY }}
+          AWS_DEFAULT_REGION: ru-central1
+          AWS_EC2_METADATA_DISABLED: 'true'
+          AWS_PAGER: ''
+        run: |
+          set -euo pipefail
+          test -n "$AWS_ACCESS_KEY_ID"
+          test -n "$AWS_SECRET_ACCESS_KEY"
+          aws --endpoint-url=https://storage.yandexcloud.net s3 cp mc-prices.json s3://enjigirling.ru/mc-prices.json --content-type 'application/json; charset=utf-8' --cache-control 'public,max-age=300' --only-show-errors
+          aws --endpoint-url=https://storage.yandexcloud.net s3 cp s3://enjigirling.ru/mc-prices.json /tmp/mc-prices-published.json --only-show-errors
+          cmp mc-prices.json /tmp/mc-prices-published.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: mc-official-source-discovery
-          path: mc-probe/
-          retention-days: 1
+          name: mc-price-snapshot
+          path: mc-prices.json
+          retention-days: 7
