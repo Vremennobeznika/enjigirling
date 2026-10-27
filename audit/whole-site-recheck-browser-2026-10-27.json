@@ -1,0 +1,2760 @@
+{
+  "sourceCommit": "231871062bc7f5ee750cc933cb7c68b0efe9831d",
+  "stats": {
+    "startTime": "2026-10-27T00:25:00.143Z",
+    "duration": 284737.722,
+    "expected": 391,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "byProject": {
+    "chromium-desktop": 265,
+    "webkit-site-audit": 87,
+    "chromium-mobile": 39
+  },
+  "tests": [
+    {
+      "title": "index.html accessibility audit light",
+      "file": "accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 1380
+    },
+    {
+      "title": "calendar.html accessibility audit light",
+      "file": "accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 424
+    },
+    {
+      "title": "resources.html accessibility audit light",
+      "file": "accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 369
+    },
+    {
+      "title": "dictionary.html accessibility audit light",
+      "file": "accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 497
+    },
+    {
+      "title": "map.html accessibility audit light",
+      "file": "accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 392
+    },
+    {
+      "title": "calculator.html accessibility audit light",
+      "file": "accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 328
+    },
+    {
+      "title": "compare.html accessibility audit light",
+      "file": "accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 268
+    },
+    {
+      "title": "processes.html accessibility audit light",
+      "file": "accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 417
+    },
+    {
+      "title": "materials.html accessibility audit light",
+      "file": "accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 389
+    },
+    {
+      "title": "index.html accessibility audit dark",
+      "file": "accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 274
+    },
+    {
+      "title": "calendar.html accessibility audit dark",
+      "file": "accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 349
+    },
+    {
+      "title": "resources.html accessibility audit dark",
+      "file": "accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 272
+    },
+    {
+      "title": "dictionary.html accessibility audit dark",
+      "file": "accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 367
+    },
+    {
+      "title": "map.html accessibility audit dark",
+      "file": "accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 347
+    },
+    {
+      "title": "calculator.html accessibility audit dark",
+      "file": "accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 370
+    },
+    {
+      "title": "compare.html accessibility audit dark",
+      "file": "accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 235
+    },
+    {
+      "title": "processes.html accessibility audit dark",
+      "file": "accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 292
+    },
+    {
+      "title": "materials.html accessibility audit dark",
+      "file": "accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 276
+    },
+    {
+      "title": "map.html has correctly nested primary calculator headings",
+      "file": "accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 309
+    },
+    {
+      "title": "calculator.html has correctly nested primary calculator headings",
+      "file": "accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 288
+    },
+    {
+      "title": "index.html keyboard skip link and navigation references",
+      "file": "accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 226
+    },
+    {
+      "title": "calendar.html keyboard skip link and navigation references",
+      "file": "accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 276
+    },
+    {
+      "title": "resources.html keyboard skip link and navigation references",
+      "file": "accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 263
+    },
+    {
+      "title": "dictionary.html keyboard skip link and navigation references",
+      "file": "accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 325
+    },
+    {
+      "title": "map.html keyboard skip link and navigation references",
+      "file": "accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 361
+    },
+    {
+      "title": "calculator.html keyboard skip link and navigation references",
+      "file": "accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 299
+    },
+    {
+      "title": "compare.html keyboard skip link and navigation references",
+      "file": "accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 216
+    },
+    {
+      "title": "processes.html keyboard skip link and navigation references",
+      "file": "accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 329
+    },
+    {
+      "title": "materials.html keyboard skip link and navigation references",
+      "file": "accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 321
+    },
+    {
+      "title": "index.html accessibility audit light",
+      "file": "accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1525
+    },
+    {
+      "title": "calendar.html accessibility audit light",
+      "file": "accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1724
+    },
+    {
+      "title": "resources.html accessibility audit light",
+      "file": "accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1493
+    },
+    {
+      "title": "dictionary.html accessibility audit light",
+      "file": "accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1547
+    },
+    {
+      "title": "map.html accessibility audit light",
+      "file": "accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 2353
+    },
+    {
+      "title": "calculator.html accessibility audit light",
+      "file": "accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1365
+    },
+    {
+      "title": "compare.html accessibility audit light",
+      "file": "accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 693
+    },
+    {
+      "title": "processes.html accessibility audit light",
+      "file": "accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1242
+    },
+    {
+      "title": "materials.html accessibility audit light",
+      "file": "accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1178
+    },
+    {
+      "title": "index.html accessibility audit dark",
+      "file": "accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1435
+    },
+    {
+      "title": "calendar.html accessibility audit dark",
+      "file": "accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1406
+    },
+    {
+      "title": "resources.html accessibility audit dark",
+      "file": "accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1570
+    },
+    {
+      "title": "dictionary.html accessibility audit dark",
+      "file": "accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 2297
+    },
+    {
+      "title": "map.html accessibility audit dark",
+      "file": "accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1575
+    },
+    {
+      "title": "calculator.html accessibility audit dark",
+      "file": "accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1364
+    },
+    {
+      "title": "compare.html accessibility audit dark",
+      "file": "accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 764
+    },
+    {
+      "title": "processes.html accessibility audit dark",
+      "file": "accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1159
+    },
+    {
+      "title": "materials.html accessibility audit dark",
+      "file": "accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1348
+    },
+    {
+      "title": "map.html has correctly nested primary calculator headings",
+      "file": "accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 2192
+    },
+    {
+      "title": "calculator.html has correctly nested primary calculator headings",
+      "file": "accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 3210
+    },
+    {
+      "title": "index.html keyboard skip link and navigation references",
+      "file": "accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1062
+    },
+    {
+      "title": "calendar.html keyboard skip link and navigation references",
+      "file": "accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 885
+    },
+    {
+      "title": "resources.html keyboard skip link and navigation references",
+      "file": "accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 994
+    },
+    {
+      "title": "dictionary.html keyboard skip link and navigation references",
+      "file": "accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 970
+    },
+    {
+      "title": "map.html keyboard skip link and navigation references",
+      "file": "accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1521
+    },
+    {
+      "title": "calculator.html keyboard skip link and navigation references",
+      "file": "accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 2067
+    },
+    {
+      "title": "compare.html keyboard skip link and navigation references",
+      "file": "accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1223
+    },
+    {
+      "title": "processes.html keyboard skip link and navigation references",
+      "file": "accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 2434
+    },
+    {
+      "title": "materials.html keyboard skip link and navigation references",
+      "file": "accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1346
+    },
+    {
+      "title": "coding files and AI data exports stay separated on weak screens",
+      "file": "ai-section-packs.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 3287
+    },
+    {
+      "title": "all nine sections use one AI center without inline download panels",
+      "file": "ai-section-packs.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 2027
+    },
+    {
+      "title": "dedicated AI upload hub lists all nine sections at 320px",
+      "file": "ai-section-packs.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 361
+    },
+    {
+      "title": "AI Markdown and JSON are complete, valid and published",
+      "file": "ai-section-packs.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 161
+    },
+    {
+      "title": "AI programming library is a standalone export, not the full community catalog",
+      "file": "ai-section-packs.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 19
+    },
+    {
+      "title": "reading editions work offline without JavaScript at 320px and enlarged text",
+      "file": "ai-section-packs.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 8920
+    },
+    {
+      "title": "coding files and AI data exports stay separated on weak screens",
+      "file": "ai-section-packs.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 6798
+    },
+    {
+      "title": "all nine sections use one AI center without inline download panels",
+      "file": "ai-section-packs.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 3981
+    },
+    {
+      "title": "dedicated AI upload hub lists all nine sections at 320px",
+      "file": "ai-section-packs.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1191
+    },
+    {
+      "title": "AI Markdown and JSON are complete, valid and published",
+      "file": "ai-section-packs.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 154
+    },
+    {
+      "title": "AI programming library is a standalone export, not the full community catalog",
+      "file": "ai-section-packs.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 13
+    },
+    {
+      "title": "reading editions work offline without JavaScript at 320px and enlarged text",
+      "file": "ai-section-packs.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 11543
+    },
+    {
+      "title": "desktop smoke: index.html",
+      "file": "all-sections.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 262
+    },
+    {
+      "title": "desktop smoke: calendar.html",
+      "file": "all-sections.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 288
+    },
+    {
+      "title": "desktop smoke: resources.html",
+      "file": "all-sections.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 268
+    },
+    {
+      "title": "desktop smoke: dictionary.html",
+      "file": "all-sections.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 351
+    },
+    {
+      "title": "desktop smoke: map.html",
+      "file": "all-sections.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 353
+    },
+    {
+      "title": "desktop smoke: calculator.html",
+      "file": "all-sections.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 361
+    },
+    {
+      "title": "desktop smoke: compare.html",
+      "file": "all-sections.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 214
+    },
+    {
+      "title": "desktop smoke: processes.html",
+      "file": "all-sections.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 326
+    },
+    {
+      "title": "desktop smoke: materials.html",
+      "file": "all-sections.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 303
+    },
+    {
+      "title": "shared navigation reaches every section without 404",
+      "file": "all-sections.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 2411
+    },
+    {
+      "title": "desktop smoke: index.html",
+      "file": "all-sections.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1024
+    },
+    {
+      "title": "desktop smoke: calendar.html",
+      "file": "all-sections.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1493
+    },
+    {
+      "title": "desktop smoke: resources.html",
+      "file": "all-sections.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1283
+    },
+    {
+      "title": "desktop smoke: dictionary.html",
+      "file": "all-sections.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1628
+    },
+    {
+      "title": "desktop smoke: map.html",
+      "file": "all-sections.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 2456
+    },
+    {
+      "title": "desktop smoke: calculator.html",
+      "file": "all-sections.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1290
+    },
+    {
+      "title": "desktop smoke: compare.html",
+      "file": "all-sections.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 694
+    },
+    {
+      "title": "desktop smoke: processes.html",
+      "file": "all-sections.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1037
+    },
+    {
+      "title": "desktop smoke: materials.html",
+      "file": "all-sections.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1170
+    },
+    {
+      "title": "shared navigation reaches every section without 404",
+      "file": "all-sections.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 7908
+    },
+    {
+      "title": "processes.html — choose food sector, export both catalogs, retain filtering",
+      "file": "atlas-dual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 811
+    },
+    {
+      "title": "materials.html — choose food sector, export both catalogs, retain filtering",
+      "file": "atlas-dual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 793
+    },
+    {
+      "title": "AI hub — ZIP includes all sectors without network services",
+      "file": "atlas-dual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 637
+    },
+    {
+      "title": "Material and process cards preserve deep-link navigation",
+      "file": "atlas-dual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 431
+    },
+    {
+      "title": "every implemented atlas model initializes and produces a finite result in the browser",
+      "file": "atlas-matrix.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 48629
+    },
+    {
+      "title": "atlas matrix filters, graphics, manual costly models and stale-result clearing",
+      "file": "atlas-matrix.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 1125
+    },
+    {
+      "title": "atlas tools respond under 4x CPU throttling and calculate offline after loading",
+      "file": "atlas-matrix.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 1556
+    },
+    {
+      "title": "concordance, separator volume and a stepped energy profile use the named quantity",
+      "file": "atlas-matrix.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 586
+    },
+    {
+      "title": "materials pagination keeps the open card and resets after filtering",
+      "file": "atlas-pagination-state.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 672
+    },
+    {
+      "title": "processes pagination keeps the open card and resets after filtering",
+      "file": "atlas-pagination-state.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 714
+    },
+    {
+      "title": "atlas search opens the selected working calculator and computes GSM",
+      "file": "atlas-tools.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 649
+    },
+    {
+      "title": "eight calculators calculate, reject invalid inputs and fit narrow screens",
+      "file": "atlas-tools.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 1396
+    },
+    {
+      "title": "atlas calculator module is lazy and reused",
+      "file": "atlas-tools.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 506
+    },
+    {
+      "title": "one catalogue searches all industries and opens calculations without navigating away",
+      "file": "calculator-atlas.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 772
+    },
+    {
+      "title": "all 734 catalogue links match the implemented registry, with bounded DOM",
+      "file": "calculator-atlas.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 1945
+    },
+    {
+      "title": "old atlas industry links lead into the single calculator section",
+      "file": "calculator-atlas.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 343
+    },
+    {
+      "title": "catalogue fits 320px, light theme and 200 percent text, and supports keyboard selection",
+      "file": "calculator-atlas.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 511
+    },
+    {
+      "title": "catalogue stays light under 4x CPU, opens engines once, and searches offline",
+      "file": "calculator-atlas.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 2009
+    },
+    {
+      "title": "air permeability uses SI conversion: 60 L/min over 100 cm² is 100 mm/s",
+      "file": "calculator-atlas.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 424
+    },
+    {
+      "title": "reviewed scope names, exact bags and applicability errors reach the user",
+      "file": "calculator-atlas.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 1042
+    },
+    {
+      "title": "simple polygon validation stays bounded at 200 vertices under 4x CPU",
+      "file": "calculator-atlas.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 1648
+    },
+    {
+      "title": "initial page avoids remote webfonts and all unused calculator engines",
+      "file": "calculator-low-end.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 712
+    },
+    {
+      "title": "expanding a practical panel loads only that engine, once",
+      "file": "calculator-low-end.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 531
+    },
+    {
+      "title": "legacy and advanced tools initialize on demand after page load",
+      "file": "calculator-low-end.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 630
+    },
+    {
+      "title": "calculator usability at 320px: accessible tool output and no lateral scroll",
+      "file": "calculator-low-end.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 526
+    },
+    {
+      "title": "Calendar visual matrix: no zebra/side stripes, same checkbox columns, no clipped sticky header",
+      "file": "calendar-layout.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 805
+    },
+    {
+      "title": "Calendar function matrix: save, uncheck, navigate and reload without changing item keys",
+      "file": "calendar-layout.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 664
+    },
+    {
+      "title": "смена года: программист и високосный 2024",
+      "file": "calendar.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 372
+    },
+    {
+      "title": "месяц, профессия, сброс фильтров и переход к карточке",
+      "file": "calendar.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 485
+    },
+    {
+      "title": "на ширинах 320 и 375 нет горизонтальной прокрутки, фильтры доступны",
+      "file": "calendar.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 713
+    },
+    {
+      "title": "редакционные даты видны, не выданы за официальный праздник",
+      "file": "calendar.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 302
+    },
+    {
+      "title": "год 2024 не выдаёт введённый в 2025 праздник за действовавший ранее",
+      "file": "calendar.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 427
+    },
+    {
+      "title": "смена года: программист и високосный 2024",
+      "file": "calendar.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 991
+    },
+    {
+      "title": "месяц, профессия, сброс фильтров и переход к карточке",
+      "file": "calendar.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1283
+    },
+    {
+      "title": "на ширинах 320 и 375 нет горизонтальной прокрутки, фильтры доступны",
+      "file": "calendar.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1556
+    },
+    {
+      "title": "редакционные даты видны, не выданы за официальный праздник",
+      "file": "calendar.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 999
+    },
+    {
+      "title": "год 2024 не выдаёт введённый в 2025 праздник за действовавший ранее",
+      "file": "calendar.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1423
+    },
+    {
+      "title": "career cards show title only and all 54 open with cautious internal text",
+      "file": "career-51-review.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 10944
+    },
+    {
+      "title": "comparison links to sources and preserves selected IDs in URL",
+      "file": "career-51-review.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 489
+    },
+    {
+      "title": "education admission guidance reflects 2026 profile-only college exams",
+      "file": "career-51-review.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 450
+    },
+    {
+      "title": "desktop 1440px, theme and keyboard landmarks: index.html",
+      "file": "desktop-accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 592
+    },
+    {
+      "title": "desktop 1440px, theme and keyboard landmarks: calendar.html",
+      "file": "desktop-accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 651
+    },
+    {
+      "title": "desktop 1440px, theme and keyboard landmarks: resources.html",
+      "file": "desktop-accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 570
+    },
+    {
+      "title": "desktop 1440px, theme and keyboard landmarks: dictionary.html",
+      "file": "desktop-accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 1037
+    },
+    {
+      "title": "desktop 1440px, theme and keyboard landmarks: map.html",
+      "file": "desktop-accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 776
+    },
+    {
+      "title": "desktop 1440px, theme and keyboard landmarks: calculator.html",
+      "file": "desktop-accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 717
+    },
+    {
+      "title": "desktop 1440px, theme and keyboard landmarks: compare.html",
+      "file": "desktop-accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 432
+    },
+    {
+      "title": "desktop 1440px, theme and keyboard landmarks: processes.html",
+      "file": "desktop-accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 841
+    },
+    {
+      "title": "desktop 1440px, theme and keyboard landmarks: materials.html",
+      "file": "desktop-accessibility.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 721
+    },
+    {
+      "title": "desktop 1440px, theme and keyboard landmarks: index.html",
+      "file": "desktop-accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1669
+    },
+    {
+      "title": "desktop 1440px, theme and keyboard landmarks: calendar.html",
+      "file": "desktop-accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1691
+    },
+    {
+      "title": "desktop 1440px, theme and keyboard landmarks: resources.html",
+      "file": "desktop-accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1712
+    },
+    {
+      "title": "desktop 1440px, theme and keyboard landmarks: dictionary.html",
+      "file": "desktop-accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 3170
+    },
+    {
+      "title": "desktop 1440px, theme and keyboard landmarks: map.html",
+      "file": "desktop-accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 3438
+    },
+    {
+      "title": "desktop 1440px, theme and keyboard landmarks: calculator.html",
+      "file": "desktop-accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1812
+    },
+    {
+      "title": "desktop 1440px, theme and keyboard landmarks: compare.html",
+      "file": "desktop-accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1233
+    },
+    {
+      "title": "desktop 1440px, theme and keyboard landmarks: processes.html",
+      "file": "desktop-accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1624
+    },
+    {
+      "title": "desktop 1440px, theme and keyboard landmarks: materials.html",
+      "file": "desktop-accessibility.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 2495
+    },
+    {
+      "title": "IEEE754 is lazy, decodes FP32, FP64, FP16 and allows bit changes",
+      "file": "engineering-lab.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 933
+    },
+    {
+      "title": "electronics modules run on demand without the salary catalog",
+      "file": "engineering-lab.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 592
+    },
+    {
+      "title": "new calculators do not break 320px viewports",
+      "file": "engineering-lab.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 439
+    },
+    {
+      "title": "renamed original workbench names and six manufacturing calculators work on demand",
+      "file": "engineering-lab.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 632
+    },
+    {
+      "title": "production workshop remains usable at narrow viewport",
+      "file": "engineering-lab.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 365
+    },
+    {
+      "title": "sewing studio calculates marker, cloth, thread and SMV efficiency",
+      "file": "engineering-lab.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 448
+    },
+    {
+      "title": "marine studio calculates voyage, fuel, hull-speed estimate and draft",
+      "file": "engineering-lab.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 415
+    },
+    {
+      "title": "sewing and marine calculators fit a slow 320px mobile layout",
+      "file": "engineering-lab.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 480
+    },
+    {
+      "title": "measurement lab link and extended industry calculations",
+      "file": "engineering-lab.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 540
+    },
+    {
+      "title": "all calculator tools sit inside seven consistent visual groups",
+      "file": "engineering-lab.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 573
+    },
+    {
+      "title": "legacy calculators open from their unchanged deep links and compute",
+      "file": "engineering-lab.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 498
+    },
+    {
+      "title": "all seven calculator groups have no horizontal overflow on 320px screens",
+      "file": "engineering-lab.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 1735
+    },
+    {
+      "title": "maritime vector cancellation has no fictitious course",
+      "file": "engineering-lab.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 521
+    },
+    {
+      "title": "fuel, loading and NE43 cases are visibly refused rather than showing false readings",
+      "file": "engineering-lab.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 780
+    },
+    {
+      "title": "legacy converters preserve tiny values and reject oversized integers on weak devices",
+      "file": "engineering-lab.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 469
+    },
+    {
+      "title": "home page loads atlas catalogs only after global search",
+      "file": "global-search-lazy.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 437
+    },
+    {
+      "title": "global search retries a failed dataset request",
+      "file": "global-search-lazy.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 366
+    },
+    {
+      "title": "retired college sources do not imply a verified programme or an old check date",
+      "file": "learning-ux.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 450
+    },
+    {
+      "title": "education search, college filter, reset and more results work",
+      "file": "learning-ux.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 889
+    },
+    {
+      "title": "school details remain compact, official sites accessible and map keyboard selectable",
+      "file": "learning-ux.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 1025
+    },
+    {
+      "title": "map redesigned for 320px: filters accessible and no horizontal overflow",
+      "file": "learning-ux.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 745
+    },
+    {
+      "title": "retired college sources do not imply a verified programme or an old check date",
+      "file": "learning-ux.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 2892
+    },
+    {
+      "title": "education search, college filter, reset and more results work",
+      "file": "learning-ux.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 3463
+    },
+    {
+      "title": "school details remain compact, official sites accessible and map keyboard selectable",
+      "file": "learning-ux.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 3007
+    },
+    {
+      "title": "map redesigned for 320px: filters accessible and no horizontal overflow",
+      "file": "learning-ux.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1949
+    },
+    {
+      "title": "Personal dashboard: disclosure and forms have no marker or overflow",
+      "file": "life-layout.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 4849
+    },
+    {
+      "title": "Compact iPhone selectors fit and do not overlap even with the keyboard visible",
+      "file": "life-layout.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 544
+    },
+    {
+      "title": "Entering Russian task text does not stretch date/time selectors while field focused",
+      "file": "life-layout.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 257
+    },
+    {
+      "title": "Personal dashboard: disclosure and forms have no marker or overflow",
+      "file": "life-layout.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 6688
+    },
+    {
+      "title": "Compact iPhone selectors fit and do not overlap even with the keyboard visible",
+      "file": "life-layout.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1404
+    },
+    {
+      "title": "Entering Russian task text does not stretch date/time selectors while field focused",
+      "file": "life-layout.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 880
+    },
+    {
+      "title": "low-end 4x CPU: isolated coding and robotics, 320px, no large atlas fetch",
+      "file": "low-end-labs.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 6893
+    },
+    {
+      "title": "manufacturing costs load on demand, calculate and preserve the existing calculators",
+      "file": "manufacturing-cost.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 1050
+    },
+    {
+      "title": "metal stock estimate, geometry validation and 320px layout",
+      "file": "manufacturing-cost.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 723
+    },
+    {
+      "title": "exact reject boundary does not add a charged blank",
+      "file": "manufacturing-cost.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 1446
+    },
+    {
+      "title": "all ten measuring instruments run locally and provide actual controls",
+      "file": "measurement-lab.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 2756
+    },
+    {
+      "title": "embedded instruments have no horizontal overflow at 320px",
+      "file": "measurement-lab.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 465
+    },
+    {
+      "title": "training belongs to education and calculators have no duplicate atlas or instruments",
+      "file": "measurement-lab.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 1308
+    },
+    {
+      "title": "oscilloscope does not draw aliased waves at excessive cycles per screen",
+      "file": "measurement-lab.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 407
+    },
+    {
+      "title": "nested route serves a usable viewport: ai-training.html at 320px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 168
+    },
+    {
+      "title": "nested route serves a usable viewport: ai-training.html at 390px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 170
+    },
+    {
+      "title": "nested route serves a usable viewport: ai-training.html at 1440px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 227
+    },
+    {
+      "title": "nested route serves a usable viewport: ai.html at 320px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 258
+    },
+    {
+      "title": "nested route serves a usable viewport: ai.html at 390px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 231
+    },
+    {
+      "title": "nested route serves a usable viewport: ai.html at 1440px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 248
+    },
+    {
+      "title": "nested route serves a usable viewport: articles/utopia-math-analysis.html at 320px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 240
+    },
+    {
+      "title": "nested route serves a usable viewport: articles/utopia-math-analysis.html at 390px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 213
+    },
+    {
+      "title": "nested route serves a usable viewport: articles/utopia-math-analysis.html at 1440px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 255
+    },
+    {
+      "title": "nested route serves a usable viewport: calculator-atlas.html at 320px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 359
+    },
+    {
+      "title": "nested route serves a usable viewport: calculator-atlas.html at 390px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 366
+    },
+    {
+      "title": "nested route serves a usable viewport: calculator-atlas.html at 1440px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 417
+    },
+    {
+      "title": "nested route serves a usable viewport: calendar/index.html at 320px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 208
+    },
+    {
+      "title": "nested route serves a usable viewport: calendar/index.html at 390px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 218
+    },
+    {
+      "title": "nested route serves a usable viewport: calendar/index.html at 1440px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 597
+    },
+    {
+      "title": "nested route serves a usable viewport: chroma/index.html at 320px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 484
+    },
+    {
+      "title": "nested route serves a usable viewport: chroma/index.html at 390px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 477
+    },
+    {
+      "title": "nested route serves a usable viewport: chroma/index.html at 1440px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 301
+    },
+    {
+      "title": "nested route serves a usable viewport: everyday/index.html at 320px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 297
+    },
+    {
+      "title": "nested route serves a usable viewport: everyday/index.html at 390px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 240
+    },
+    {
+      "title": "nested route serves a usable viewport: everyday/index.html at 1440px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 690
+    },
+    {
+      "title": "nested route serves a usable viewport: life/index.html at 320px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 283
+    },
+    {
+      "title": "nested route serves a usable viewport: life/index.html at 390px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 361
+    },
+    {
+      "title": "nested route serves a usable viewport: life/index.html at 1440px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 335
+    },
+    {
+      "title": "nested route serves a usable viewport: life/planner/index.html at 320px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 292
+    },
+    {
+      "title": "nested route serves a usable viewport: life/planner/index.html at 390px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 276
+    },
+    {
+      "title": "nested route serves a usable viewport: life/planner/index.html at 1440px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 315
+    },
+    {
+      "title": "nested route serves a usable viewport: measurement-lab.html at 320px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 379
+    },
+    {
+      "title": "nested route serves a usable viewport: measurement-lab.html at 390px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 334
+    },
+    {
+      "title": "nested route serves a usable viewport: measurement-lab.html at 1440px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 466
+    },
+    {
+      "title": "nested route serves a usable viewport: mood-layers/index.html at 320px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 252
+    },
+    {
+      "title": "nested route serves a usable viewport: mood-layers/index.html at 390px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 278
+    },
+    {
+      "title": "nested route serves a usable viewport: mood-layers/index.html at 1440px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 328
+    },
+    {
+      "title": "nested route serves a usable viewport: plants/index.html at 320px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 209
+    },
+    {
+      "title": "nested route serves a usable viewport: plants/index.html at 390px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 209
+    },
+    {
+      "title": "nested route serves a usable viewport: plants/index.html at 1440px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 276
+    },
+    {
+      "title": "nested route serves a usable viewport: shopping/index.html at 320px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 176
+    },
+    {
+      "title": "nested route serves a usable viewport: shopping/index.html at 390px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 225
+    },
+    {
+      "title": "nested route serves a usable viewport: shopping/index.html at 1440px",
+      "file": "nested-site-routes.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 198
+    },
+    {
+      "title": "all 54 career dialogs render their own dated primary normative assessment",
+      "file": "normative-51.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 12787
+    },
+    {
+      "title": "2027 standards are not misrepresented as effective in October 2026",
+      "file": "normative-51.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 826
+    },
+    {
+      "title": "construction requirements are conditional and obsolete standards no longer shown",
+      "file": "normative-51.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 1084
+    },
+    {
+      "title": "Personal pages: tasks, pantry and shopping persist after navigation without cloud token",
+      "file": "personal-flows.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 2303
+    },
+    {
+      "title": "72 plants: no automatic blank write; group check marks and unmarks calendar",
+      "file": "personal-flows.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 786
+    },
+    {
+      "title": "Shopping All filter stays selected when adding an uncategorized item",
+      "file": "personal-flows.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 552
+    },
+    {
+      "title": "Calendar clear day preserves marks of other dates and allows JSON export",
+      "file": "personal-flows.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 1217
+    },
+    {
+      "title": "Dashboard backup import restores data and disables automatic sync",
+      "file": "personal-flows.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 2412
+    },
+    {
+      "title": "Plant rename, note, water record and search survive reload",
+      "file": "personal-flows.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 528
+    },
+    {
+      "title": "Today can schedule tasks for future dates and calendar shows them on the selected day",
+      "file": "personal-flows.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 1558
+    },
+    {
+      "title": "Legacy undated tasks survive and task dates can be moved without breaking the narrow iPhone layout",
+      "file": "personal-flows.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 367
+    },
+    {
+      "title": "Full personal planner keeps tablet marks, adds one-off task and finance, and restores from backup",
+      "file": "personal-planner.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 5890
+    },
+    {
+      "title": "Full planner has no horizontal overflow at iPhone width",
+      "file": "personal-planner.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 380
+    },
+    {
+      "title": "One shopping list: old categories and reminders are shared with flexible planner and backups",
+      "file": "personal-planner.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 1753
+    },
+    {
+      "title": "Personal planner saved local data does not silently overwrite a newer shopping list",
+      "file": "personal-planner.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 994
+    },
+    {
+      "title": "An untouched new device remains empty so first Yandex pull is not blocked",
+      "file": "personal-planner.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 502
+    },
+    {
+      "title": "Every personal app subpage has a responsive return to main menu",
+      "file": "personal-planner.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 6989
+    },
+    {
+      "title": "practical engineering calculators display accurate initial results and validate fields",
+      "file": "practical-calculator.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 455
+    },
+    {
+      "title": "practical tools do not overflow 320px viewport",
+      "file": "practical-calculator.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 703
+    },
+    {
+      "title": "alphabetical default and added professions work on a narrow slow device",
+      "file": "profession-catalog-order.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 3697
+    },
+    {
+      "title": "resources directory: categories, alphabetical sort, search, reset and list mode",
+      "file": "resources-catalog.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 3625
+    },
+    {
+      "title": "resources: full indexed search, progressive loading, keyboard and 320px mobile",
+      "file": "resources-catalog.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 4233
+    },
+    {
+      "title": "resources offer a readable fallback without JavaScript",
+      "file": "resources-catalog.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 228
+    },
+    {
+      "title": "coding library: 25 guides plus 15 platforms, nine groups, downloads, mobile filtering",
+      "file": "resources-catalog.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 494
+    },
+    {
+      "title": "independent robotics lab: controls, computations, keyboard, small screens",
+      "file": "robotics-lab.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 725
+    },
+    {
+      "title": "robotics keeps its content without any model or renderer",
+      "file": "robotics-lab.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 356
+    },
+    {
+      "title": "every profession card opens with provenance and can close with Escape",
+      "file": "site-functionality.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 12066
+    },
+    {
+      "title": "profession search, sort and category filters really change results",
+      "file": "site-functionality.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 392
+    },
+    {
+      "title": "profession search and sorting preserve the correct titles",
+      "file": "site-functionality.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 482
+    },
+    {
+      "title": "comparison adds and removes professions and shows cautious salary data",
+      "file": "site-functionality.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 369
+    },
+    {
+      "title": "catalog filters can show empty results and recover",
+      "file": "site-functionality.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 2335
+    },
+    {
+      "title": "forums show five thematic groups without hidden entries",
+      "file": "site-functionality.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 1072
+    },
+    {
+      "title": "salary reference works without legacy salary objects or invented regional values",
+      "file": "site-functionality.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 863
+    },
+    {
+      "title": "engineering unit converter validates and computes actual values",
+      "file": "site-functionality.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 1165
+    },
+    {
+      "title": "holiday calendar search can be reset",
+      "file": "site-functionality.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 691
+    },
+    {
+      "title": "modal isolates the background and traps keyboard focus",
+      "file": "site-functionality.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 404
+    },
+    {
+      "title": "processes link directly to a relevant profession without losing the catalog",
+      "file": "site-functionality.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 426
+    },
+    {
+      "title": "unified search links to professions, materials, processes and dictionary without removing sections",
+      "file": "site-functionality.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 624
+    },
+    {
+      "title": "material cards connect to existing engineer profiles",
+      "file": "site-functionality.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 457
+    },
+    {
+      "title": "closing a deep-linked profession clears stale URL fragment",
+      "file": "site-functionality.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 312
+    },
+    {
+      "title": "catalog layout placeholders are removed after rendering",
+      "file": "site-functionality.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 615
+    },
+    {
+      "title": "six grouped navigation sections retain all twelve destinations on mobile",
+      "file": "site-functionality.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 408
+    },
+    {
+      "title": "profession details link back to catalogued processes and materials",
+      "file": "site-functionality.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 565
+    },
+    {
+      "title": "technology search connects processes and materials without losing deep links",
+      "file": "site-functionality.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 631
+    },
+    {
+      "title": "five secondary pages pre-render topbar without moving theme control",
+      "file": "site-functionality.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 3098
+    },
+    {
+      "title": "materials and processes catalogues signal readiness after rendering",
+      "file": "site-functionality.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 1258
+    },
+    {
+      "title": "expanded process references work in reverse from materials without flooding the UI",
+      "file": "site-functionality.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 1511
+    },
+    {
+      "title": "every profession card opens with provenance and can close with Escape",
+      "file": "site-functionality.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 11675
+    },
+    {
+      "title": "profession search, sort and category filters really change results",
+      "file": "site-functionality.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1732
+    },
+    {
+      "title": "profession search and sorting preserve the correct titles",
+      "file": "site-functionality.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 2235
+    },
+    {
+      "title": "comparison adds and removes professions and shows cautious salary data",
+      "file": "site-functionality.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1004
+    },
+    {
+      "title": "catalog filters can show empty results and recover",
+      "file": "site-functionality.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 2385
+    },
+    {
+      "title": "forums show five thematic groups without hidden entries",
+      "file": "site-functionality.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1762
+    },
+    {
+      "title": "salary reference works without legacy salary objects or invented regional values",
+      "file": "site-functionality.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1444
+    },
+    {
+      "title": "engineering unit converter validates and computes actual values",
+      "file": "site-functionality.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 2037
+    },
+    {
+      "title": "holiday calendar search can be reset",
+      "file": "site-functionality.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1098
+    },
+    {
+      "title": "modal isolates the background and traps keyboard focus",
+      "file": "site-functionality.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 2120
+    },
+    {
+      "title": "processes link directly to a relevant profession without losing the catalog",
+      "file": "site-functionality.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1980
+    },
+    {
+      "title": "unified search links to professions, materials, processes and dictionary without removing sections",
+      "file": "site-functionality.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1257
+    },
+    {
+      "title": "material cards connect to existing engineer profiles",
+      "file": "site-functionality.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1479
+    },
+    {
+      "title": "closing a deep-linked profession clears stale URL fragment",
+      "file": "site-functionality.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1031
+    },
+    {
+      "title": "catalog layout placeholders are removed after rendering",
+      "file": "site-functionality.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1420
+    },
+    {
+      "title": "six grouped navigation sections retain all twelve destinations on mobile",
+      "file": "site-functionality.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1750
+    },
+    {
+      "title": "profession details link back to catalogued processes and materials",
+      "file": "site-functionality.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1853
+    },
+    {
+      "title": "technology search connects processes and materials without losing deep links",
+      "file": "site-functionality.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 2039
+    },
+    {
+      "title": "five secondary pages pre-render topbar without moving theme control",
+      "file": "site-functionality.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 3008
+    },
+    {
+      "title": "materials and processes catalogues signal readiness after rendering",
+      "file": "site-functionality.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1162
+    },
+    {
+      "title": "expanded process references work in reverse from materials without flooding the UI",
+      "file": "site-functionality.spec.cjs",
+      "project": "webkit-site-audit",
+      "status": "expected",
+      "durationMs": 1921
+    },
+    {
+      "title": "index.html at 320px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 394
+    },
+    {
+      "title": "calendar.html at 320px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 496
+    },
+    {
+      "title": "resources.html at 320px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 866
+    },
+    {
+      "title": "dictionary.html at 320px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 1772
+    },
+    {
+      "title": "map.html at 320px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 1559
+    },
+    {
+      "title": "calculator.html at 320px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 1841
+    },
+    {
+      "title": "compare.html at 320px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 337
+    },
+    {
+      "title": "processes.html at 320px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 479
+    },
+    {
+      "title": "materials.html at 320px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 431
+    },
+    {
+      "title": "index.html at 390px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 691
+    },
+    {
+      "title": "calendar.html at 390px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 1199
+    },
+    {
+      "title": "resources.html at 390px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 919
+    },
+    {
+      "title": "dictionary.html at 390px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 4695
+    },
+    {
+      "title": "map.html at 390px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 854
+    },
+    {
+      "title": "calculator.html at 390px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 1614
+    },
+    {
+      "title": "compare.html at 390px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 499
+    },
+    {
+      "title": "processes.html at 390px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 1508
+    },
+    {
+      "title": "materials.html at 390px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 1292
+    },
+    {
+      "title": "index.html at 768px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 422
+    },
+    {
+      "title": "calendar.html at 768px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 432
+    },
+    {
+      "title": "resources.html at 768px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 373
+    },
+    {
+      "title": "dictionary.html at 768px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 609
+    },
+    {
+      "title": "map.html at 768px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 545
+    },
+    {
+      "title": "calculator.html at 768px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 504
+    },
+    {
+      "title": "compare.html at 768px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 364
+    },
+    {
+      "title": "processes.html at 768px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 629
+    },
+    {
+      "title": "materials.html at 768px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 1742
+    },
+    {
+      "title": "index.html at 1440px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 1629
+    },
+    {
+      "title": "calendar.html at 1440px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 1895
+    },
+    {
+      "title": "resources.html at 1440px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 1185
+    },
+    {
+      "title": "dictionary.html at 1440px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 3577
+    },
+    {
+      "title": "map.html at 1440px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 1090
+    },
+    {
+      "title": "calculator.html at 1440px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 621
+    },
+    {
+      "title": "compare.html at 1440px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 946
+    },
+    {
+      "title": "processes.html at 1440px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 2719
+    },
+    {
+      "title": "materials.html at 1440px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 2442
+    },
+    {
+      "title": "engineer detail links use monochrome colors",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 432
+    },
+    {
+      "title": "engineer modal links light theme and visited state",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 403
+    },
+    {
+      "title": "engineer modal links dark theme and visited state",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 405
+    },
+    {
+      "title": "skip link is available to keyboard users",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 302
+    },
+    {
+      "title": "all nine pages have unique main landmark and visible focus light",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 1780
+    },
+    {
+      "title": "all nine pages have unique main landmark and visible focus dark",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 1843
+    },
+    {
+      "title": "all nine sections keep visible links monochrome in light theme",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 2534
+    },
+    {
+      "title": "all nine sections keep visible links monochrome in dark theme",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 3784
+    },
+    {
+      "title": "profession modal responsive light 320",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 442
+    },
+    {
+      "title": "profession modal responsive light 375",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 406
+    },
+    {
+      "title": "profession modal responsive light 768",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 441
+    },
+    {
+      "title": "profession modal responsive light 1440",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 411
+    },
+    {
+      "title": "profession modal responsive dark 320",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 377
+    },
+    {
+      "title": "profession modal responsive dark 375",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 381
+    },
+    {
+      "title": "profession modal responsive dark 768",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 415
+    },
+    {
+      "title": "profession modal responsive dark 1440",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 459
+    },
+    {
+      "title": "compare content follows navigation without AI panels at 390px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 284
+    },
+    {
+      "title": "compare content follows navigation without AI panels at 1440px",
+      "file": "site-visual.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 248
+    },
+    {
+      "title": "15 routes start in dark without incorrect background",
+      "file": "theme-bootstrap.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 3373
+    },
+    {
+      "title": "15 routes start in light without incorrect background",
+      "file": "theme-bootstrap.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 1464
+    },
+    {
+      "title": "dark background appears before delayed CSS response",
+      "file": "theme-bootstrap.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 877
+    },
+    {
+      "title": "user theme toggle persists after navigation",
+      "file": "theme-bootstrap.spec.cjs",
+      "project": "chromium-desktop",
+      "status": "expected",
+      "durationMs": 475
+    },
+    {
+      "title": "materials.html — mobile layout and AI package controls",
+      "file": "atlas-mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 771
+    },
+    {
+      "title": "processes.html — mobile layout and AI package controls",
+      "file": "atlas-mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 967
+    },
+    {
+      "title": "ai.html — mobile layout and AI package controls",
+      "file": "atlas-mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 990
+    },
+    {
+      "title": "responsive navigation and no horizontal overflow at 320px: index.html",
+      "file": "mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 320
+    },
+    {
+      "title": "responsive navigation and no horizontal overflow at 320px: calendar.html",
+      "file": "mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 344
+    },
+    {
+      "title": "responsive navigation and no horizontal overflow at 320px: resources.html",
+      "file": "mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 1244
+    },
+    {
+      "title": "responsive navigation and no horizontal overflow at 320px: dictionary.html",
+      "file": "mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 1179
+    },
+    {
+      "title": "responsive navigation and no horizontal overflow at 320px: map.html",
+      "file": "mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 531
+    },
+    {
+      "title": "responsive navigation and no horizontal overflow at 320px: calculator.html",
+      "file": "mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 569
+    },
+    {
+      "title": "responsive navigation and no horizontal overflow at 320px: compare.html",
+      "file": "mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 299
+    },
+    {
+      "title": "responsive navigation and no horizontal overflow at 320px: processes.html",
+      "file": "mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 445
+    },
+    {
+      "title": "responsive navigation and no horizontal overflow at 320px: materials.html",
+      "file": "mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 456
+    },
+    {
+      "title": "responsive navigation and no horizontal overflow at 375px: index.html",
+      "file": "mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 348
+    },
+    {
+      "title": "responsive navigation and no horizontal overflow at 375px: calendar.html",
+      "file": "mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 405
+    },
+    {
+      "title": "responsive navigation and no horizontal overflow at 375px: resources.html",
+      "file": "mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 362
+    },
+    {
+      "title": "responsive navigation and no horizontal overflow at 375px: dictionary.html",
+      "file": "mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 547
+    },
+    {
+      "title": "responsive navigation and no horizontal overflow at 375px: map.html",
+      "file": "mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 501
+    },
+    {
+      "title": "responsive navigation and no horizontal overflow at 375px: calculator.html",
+      "file": "mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 524
+    },
+    {
+      "title": "responsive navigation and no horizontal overflow at 375px: compare.html",
+      "file": "mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 306
+    },
+    {
+      "title": "responsive navigation and no horizontal overflow at 375px: processes.html",
+      "file": "mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 463
+    },
+    {
+      "title": "responsive navigation and no horizontal overflow at 375px: materials.html",
+      "file": "mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 476
+    },
+    {
+      "title": "responsive navigation and no horizontal overflow at 768px: index.html",
+      "file": "mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 691
+    },
+    {
+      "title": "responsive navigation and no horizontal overflow at 768px: calendar.html",
+      "file": "mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 661
+    },
+    {
+      "title": "responsive navigation and no horizontal overflow at 768px: resources.html",
+      "file": "mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 502
+    },
+    {
+      "title": "responsive navigation and no horizontal overflow at 768px: dictionary.html",
+      "file": "mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 624
+    },
+    {
+      "title": "responsive navigation and no horizontal overflow at 768px: map.html",
+      "file": "mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 540
+    },
+    {
+      "title": "responsive navigation and no horizontal overflow at 768px: calculator.html",
+      "file": "mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 1210
+    },
+    {
+      "title": "responsive navigation and no horizontal overflow at 768px: compare.html",
+      "file": "mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 821
+    },
+    {
+      "title": "responsive navigation and no horizontal overflow at 768px: processes.html",
+      "file": "mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 870
+    },
+    {
+      "title": "responsive navigation and no horizontal overflow at 768px: materials.html",
+      "file": "mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 490
+    },
+    {
+      "title": "no-JavaScript navigation remains accessible on 320px: index.html",
+      "file": "mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 271
+    },
+    {
+      "title": "no-JavaScript navigation remains accessible on 320px: calendar.html",
+      "file": "mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 220
+    },
+    {
+      "title": "no-JavaScript navigation remains accessible on 320px: resources.html",
+      "file": "mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 186
+    },
+    {
+      "title": "no-JavaScript navigation remains accessible on 320px: dictionary.html",
+      "file": "mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 221
+    },
+    {
+      "title": "no-JavaScript navigation remains accessible on 320px: map.html",
+      "file": "mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 262
+    },
+    {
+      "title": "no-JavaScript navigation remains accessible on 320px: calculator.html",
+      "file": "mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 286
+    },
+    {
+      "title": "no-JavaScript navigation remains accessible on 320px: compare.html",
+      "file": "mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 191
+    },
+    {
+      "title": "no-JavaScript navigation remains accessible on 320px: processes.html",
+      "file": "mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 225
+    },
+    {
+      "title": "no-JavaScript navigation remains accessible on 320px: materials.html",
+      "file": "mobile-smoke.spec.cjs",
+      "project": "chromium-mobile",
+      "status": "expected",
+      "durationMs": 203
+    }
+  ],
+  "initialWebKitRun": {
+    "passed": 82,
+    "failed": 1,
+    "reason": "Desktop navigation test clicked a collapsed mobile menu. Test now opens the menu before clicking; final full run passed."
+  }
+}

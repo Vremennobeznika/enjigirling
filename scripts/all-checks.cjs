@@ -23,6 +23,7 @@ const steps=[
  ['PERSONAL calendar, backups, multi-device conflict safety',()=>[['node',['tests/life-sync.cjs']]]],
  ['MEASUREMENT instruments assets',()=>[['node',['tests/measurement-lab.cjs']]]],
  ['RESOURCES catalog data and accessibility',()=>[['node',['tests/resources-catalog.cjs']]]],
+ ['LINKS education source inventory completeness',()=>[['node',['tests/external-link-inventory.cjs']]]],
  ['RELEASE engineering sources, author and social preview',()=>[['node',['tests/release-editorial.cjs']]]],
  ['S01-S10 S16 HTML, navigation and editorial data',()=>[['node',['tests/site-check.cjs']]]],
  ['FULL P01-P06 D01-D09 A01-A03 S03',()=>[['node',['tests/full-matrix.cjs']],['node',['tests/engineering-lab-unit.cjs']],['node',['tests/practical-calculator-unit.cjs']]]],

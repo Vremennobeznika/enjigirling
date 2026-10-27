@@ -28,6 +28,7 @@ test('shared navigation reaches every section without 404',async({page})=>{
  expect(new Set(urls)).toEqual(expected);
  for(const section of expected){
   const link=page.locator('nav.eng-tabs a[href="'+section+'"]');
+  if(!await link.isVisible())await page.locator('.site-nav-toggle').click();
   await link.click();
   await expect(page).toHaveURL(new RegExp('/'+section.replace('.','\\.')+'$'));
   await expect(page.locator('main')).toBeVisible();

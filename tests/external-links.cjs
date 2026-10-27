@@ -26,6 +26,7 @@ for(const file of sources){
    walk(sandbox.window);
    if(file==='resources-data.js')walk(vm.runInNewContext(code+'\nresources',{}, {timeout:3000}));
    if(file==='coding-data.js')walk(vm.runInNewContext(code+'\ncodingResources',{}, {timeout:3000}));
+   if(file==='map-data.js')walk(vm.runInNewContext(code+'\nfederalDistricts',{}, {timeout:3000}));
  }catch(e){console.error('Cannot parse '+file+': '+e.message);process.exitCode=1;}
 }
 // Professional-standard documents live in the UI script; collect literal URLs without executing DOM code.
@@ -72,7 +73,9 @@ async function check(url){
  finally{clearTimeout(timer);}
 }
 async function worker(){while(cursor<urls.length){const i=cursor++;results[i]=await check(urls[i]);}}
-(async()=>{
+if(process.argv.includes('--inventory')){
+ console.log(JSON.stringify([...links].map(([url,sources])=>({url,sources:[...sources]})),null,2));
+}else (async()=>{
  await Promise.all(Array.from({length:5},worker));
  const summary={checked:results.length,ok:results.filter(x=>x.result==='ok').length,broken:results.filter(x=>x.result==='broken').length,unverified:results.filter(x=>x.result==='unverified').length,generatedAt:new Date().toISOString()};
  fs.mkdirSync('audit',{recursive:true});

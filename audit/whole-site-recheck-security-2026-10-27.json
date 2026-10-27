@@ -1,0 +1,5 @@
+{
+  "method": "Pattern scan of tracked UTF-8 text files for private-key blocks, GitHub tokens and AWS access-key IDs. No secret values printed; not a complete security audit.",
+  "files": 407,
+  "findings": []
+}

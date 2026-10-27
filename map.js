@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const pageSize=12;
   let shown=pageSize,filtered=[];
   const validLink=url=>{try{const parsed=new URL(String(url));return (parsed.protocol==='https:'||(parsed.protocol==='http:'&&parsed.hostname==='gaskk-mck.ru'))?parsed.href:'';}catch{return '';}};
+  const checkedDate=value=>/^\d{4}-\d{2}-\d{2}$/.test(value||'')?value.split('-').reverse().join('.'):'Дата не указана';
   function renderCard(record){
     const {item,district,type}=record;
     const source=validLink(item.sourceUrl),site=validLink(item.site);
@@ -55,8 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
       ['Описание направлений',programs.length?'Ниже приведены сведения о программах с указанными источниками. Независимая сверка каждого утверждения не гарантирована; остальные направления — редакционный ориентир.':'Направление — редакционный ориентир; наличие конкретной программы приёма не подтверждено.'],
       ['Сроки, стоимость, бюджет и экзамены','Зависят от программы и года приёма. Без проверенного документа не приводятся.'],
       ['Статус',hasSource?item.verifiedScope:'Правила набора по этой организации индивидуально не проверены.'],
-      ...(item.sourceFetchStatus?[['Доступность страницы источника',item.sourceFetchStatus==='fetched'?'22.10.2026: документ или сайт открылся. Содержательная точность остальных сведений не следует из этого факта.':'22.10.2026: проверить ссылку не удалось (тайм-аут или ошибка доступа). Это не доказательство закрытия организации.']]:[]),
-      ...(item.siteFetchStatus?[['Доступность сайта из исходного каталога',item.siteFetchStatus==='fetched'?'22.10.2026: сайт открылся. Это не подтверждает программы и набор.':'22.10.2026: отдельная попытка открыть сайт не удалась. Адрес мог быть недоступен только для проверяющего клиента.']]:[]),
+      ...(item.sourceFetchStatus?[['Доступность страницы источника',checkedDate(item.sourceFetchCheckedAt)+': '+(item.sourceFetchStatus==='fetched'?'документ или сайт открылся. Содержательная точность остальных сведений не следует из этого факта.':'проверить ссылку не удалось (тайм-аут или ошибка доступа). Это не доказательство закрытия организации.')]]:[]),
+      ...(item.siteFetchStatus?[['Доступность сайта из исходного каталога',checkedDate(item.siteFetchCheckedAt)+': '+(item.siteFetchStatus==='fetched'?'сайт открылся. Это не подтверждает программы и набор.':'отдельная попытка открыть сайт не удалась. Адрес мог быть недоступен только для проверяющего клиента.')]]:[]),
 
       ...programDetails.map(p=>[p.label,p.value])
     ].map(([label,value])=>'<div class="education-fact"><dt>'+escapeHtml(label)+'</dt><dd>'+escapeHtml(value)+'</dd></div>').join('');

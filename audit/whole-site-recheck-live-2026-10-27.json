@@ -1,0 +1,1235 @@
+{
+  "checkedAt": "2026-10-27T00:15:05Z",
+  "summary": {
+    "total": 152,
+    "http200": 152,
+    "exactMatches": 152
+  },
+  "results": [
+    {
+      "file": "robots.txt",
+      "status": 200,
+      "mime": "text/plain",
+      "matches": true,
+      "remoteSha256": "a515d121b0448173a828921d3bcea759cd670197adcc70c0cb5d7ec408da4483",
+      "buildSha256": "a515d121b0448173a828921d3bcea759cd670197adcc70c0cb5d7ec408da4483"
+    },
+    {
+      "file": "site-shell.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "cde9e415b61ba4d3b842b51d3f7704a5e726e75f48d3aaac0ce69bf6f7c5fc92",
+      "buildSha256": "cde9e415b61ba4d3b842b51d3f7704a5e726e75f48d3aaac0ce69bf6f7c5fc92"
+    },
+    {
+      "file": "materials.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "09af932266901f060b321d0e601fe6bac21b7c9075229ce85afd5641fa5df9ac",
+      "buildSha256": "09af932266901f060b321d0e601fe6bac21b7c9075229ce85afd5641fa5df9ac"
+    },
+    {
+      "file": "style.css",
+      "status": 200,
+      "mime": "text/css",
+      "matches": true,
+      "remoteSha256": "c093abe44cf22f5900dfa00b42d51c9cee0aedf5402ee58a5daf45c973524221",
+      "buildSha256": "c093abe44cf22f5900dfa00b42d51c9cee0aedf5402ee58a5daf45c973524221"
+    },
+    {
+      "file": "engineer-calculators.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "71cbfc5c603077e1d0afb53d74875603d6463157192c9f60287a039ea4fcbf7f",
+      "buildSha256": "71cbfc5c603077e1d0afb53d74875603d6463157192c9f60287a039ea4fcbf7f"
+    },
+    {
+      "file": "calculator-practical.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "27ee3a27e199bb545f3b072e37a199cd7d5262f88083c049bbbd2e318fd22a1f",
+      "buildSha256": "27ee3a27e199bb545f3b072e37a199cd7d5262f88083c049bbbd2e318fd22a1f"
+    },
+    {
+      "file": "calculator-loader.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "b4947e307301ed3642efdceace49a4e48493692f47d9dc5ddd45c2c854391247",
+      "buildSha256": "b4947e307301ed3642efdceace49a4e48493692f47d9dc5ddd45c2c854391247"
+    },
+    {
+      "file": "index.html",
+      "status": 200,
+      "mime": "text/html",
+      "matches": true,
+      "remoteSha256": "ba05a76e9ec8578aefc8ece5c46e4ab88de9df244cb90a3db4c80dca65877f4b",
+      "buildSha256": "ba05a76e9ec8578aefc8ece5c46e4ab88de9df244cb90a3db4c80dca65877f4b"
+    },
+    {
+      "file": "measurement-lab.html",
+      "status": 200,
+      "mime": "text/html",
+      "matches": true,
+      "remoteSha256": "6a69272bcb59c884bc35f43bff5a7802488994fed058af22b747bca27f7ead17",
+      "buildSha256": "6a69272bcb59c884bc35f43bff5a7802488994fed058af22b747bca27f7ead17"
+    },
+    {
+      "file": "calendar-data.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "fda7b232cd2ca1d04fa9213edc7b2c511467a985b91676d6a94596f16682776f",
+      "buildSha256": "fda7b232cd2ca1d04fa9213edc7b2c511467a985b91676d6a94596f16682776f"
+    },
+    {
+      "file": "career-standards-data.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "63eebaccd659800affa57fcae2e3a44625eb2beb5ca69453481d100a67ea8090",
+      "buildSha256": "63eebaccd659800affa57fcae2e3a44625eb2beb5ca69453481d100a67ea8090"
+    },
+    {
+      "file": "style-core.min.css",
+      "status": 200,
+      "mime": "text/css",
+      "matches": true,
+      "remoteSha256": "08125289cb30060698ac9a56c836aecef29eb652791882e8e279db29ddbdfc93",
+      "buildSha256": "08125289cb30060698ac9a56c836aecef29eb652791882e8e279db29ddbdfc93"
+    },
+    {
+      "file": "calculator-atlas-redirect.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "0172ec75c5aba26bac6165bdce8d4f1d72f9cade831b0b1e4b9804f1b3bad4ac",
+      "buildSha256": "0172ec75c5aba26bac6165bdce8d4f1d72f9cade831b0b1e4b9804f1b3bad4ac"
+    },
+    {
+      "file": "manufacturing-cost.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "3db00e2a23639faf8cb242633def9a4c0e71b34ebe439ed09f109fc1b8ed490b",
+      "buildSha256": "3db00e2a23639faf8cb242633def9a4c0e71b34ebe439ed09f109fc1b8ed490b"
+    },
+    {
+      "file": "robotics.css",
+      "status": 200,
+      "mime": "text/css",
+      "matches": true,
+      "remoteSha256": "00fb50258dde6f427bafb629bbdbc22a0296e964db54ea8ab0783d90cd130552",
+      "buildSha256": "00fb50258dde6f427bafb629bbdbc22a0296e964db54ea8ab0783d90cd130552"
+    },
+    {
+      "file": "atlas-tools.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "fd832eb2fecc4406c33fd865a14adfd4f8c7db97ee8232a615e34de3c652db10",
+      "buildSha256": "fd832eb2fecc4406c33fd865a14adfd4f8c7db97ee8232a615e34de3c652db10"
+    },
+    {
+      "file": "coding-data.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "ff77b8c260f8e2e1bacbdab37442f2e64bcd6b1a6ef490e6bac9adc7c8d93f48",
+      "buildSha256": "ff77b8c260f8e2e1bacbdab37442f2e64bcd6b1a6ef490e6bac9adc7c8d93f48"
+    },
+    {
+      "file": "coding.html",
+      "status": 200,
+      "mime": "text/html",
+      "matches": true,
+      "remoteSha256": "53a6b165d92738a46b65ef3ec3672dead13657fbbee54b1738a550bc0e246acc",
+      "buildSha256": "53a6b165d92738a46b65ef3ec3672dead13657fbbee54b1738a550bc0e246acc"
+    },
+    {
+      "file": "profession-modal-base.css",
+      "status": 200,
+      "mime": "text/css",
+      "matches": true,
+      "remoteSha256": "3fa9f71c9d69563cc52dec3e8e29911a680734b8289a45ed79c034144ad0b9bb",
+      "buildSha256": "3fa9f71c9d69563cc52dec3e8e29911a680734b8289a45ed79c034144ad0b9bb"
+    },
+    {
+      "file": "calculator-atlas.html",
+      "status": 200,
+      "mime": "text/html",
+      "matches": true,
+      "remoteSha256": "36b38c25f66221a723233fd5f1f1df2ceaba554badd698629e6719d2efb93549",
+      "buildSha256": "36b38c25f66221a723233fd5f1f1df2ceaba554badd698629e6719d2efb93549"
+    },
+    {
+      "file": "measurement-lab.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "0c053016af3d58e6d4cdce46b95a482ccce813ca0e48ab5e8889bc568f48ab2b",
+      "buildSha256": "0c053016af3d58e6d4cdce46b95a482ccce813ca0e48ab5e8889bc568f48ab2b"
+    },
+    {
+      "file": "calculator-atlas-data.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "95cedcdcfd266d88cf7757db28302d192a4d437de9a923e5cbcde76a23662d38",
+      "buildSha256": "95cedcdcfd266d88cf7757db28302d192a4d437de9a923e5cbcde76a23662d38"
+    },
+    {
+      "file": "robotics.html",
+      "status": 200,
+      "mime": "text/html",
+      "matches": true,
+      "remoteSha256": "c225a814627cabe1a7b323945ce9757b6bea455b9370fe08a23145aea321266f",
+      "buildSha256": "c225a814627cabe1a7b323945ce9757b6bea455b9370fe08a23145aea321266f"
+    },
+    {
+      "file": "calculator-practical.css",
+      "status": 200,
+      "mime": "text/css",
+      "matches": true,
+      "remoteSha256": "b3e772e3146ddbfa7e99cc58bd28e14491cd50702aa9c1da0e28287b4c6f1243",
+      "buildSha256": "b3e772e3146ddbfa7e99cc58bd28e14491cd50702aa9c1da0e28287b4c6f1243"
+    },
+    {
+      "file": "coding.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "395963a93276bd697c57414cba170adcca369d2629509540ce23b6440d88cc04",
+      "buildSha256": "395963a93276bd697c57414cba170adcca369d2629509540ce23b6440d88cc04"
+    },
+    {
+      "file": "atlas-ai-download.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "56712c848a89b47299d12d0e73fdc538d9a1b203324cceb11ec16b26ab66ae55",
+      "buildSha256": "56712c848a89b47299d12d0e73fdc538d9a1b203324cceb11ec16b26ab66ae55"
+    },
+    {
+      "file": "dictionary.html",
+      "status": 200,
+      "mime": "text/html",
+      "matches": true,
+      "remoteSha256": "324c1a5aa5e0dd7f8d5f68bc0b3c1322a7efd90b16b8440eac36a3c235d734f6",
+      "buildSha256": "324c1a5aa5e0dd7f8d5f68bc0b3c1322a7efd90b16b8440eac36a3c235d734f6"
+    },
+    {
+      "file": "processes-data.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "be1270b1458f552b62df2d30b670d626434596ce679b1717c4a1d6a75290a13e",
+      "buildSha256": "be1270b1458f552b62df2d30b670d626434596ce679b1717c4a1d6a75290a13e"
+    },
+    {
+      "file": "calendar.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "7774f1b5ccacd28e307a1257e5e8328668e19e35a5e4efdfe69923183e2054bf",
+      "buildSha256": "7774f1b5ccacd28e307a1257e5e8328668e19e35a5e4efdfe69923183e2054bf"
+    },
+    {
+      "file": "calculator-atlas.csv",
+      "status": 200,
+      "mime": "text/csv",
+      "matches": true,
+      "remoteSha256": "427d35324e9aefa6a65fa612c005fe8c3d9e66c3c0a94c969ac2a410e6297ff5",
+      "buildSha256": "427d35324e9aefa6a65fa612c005fe8c3d9e66c3c0a94c969ac2a410e6297ff5"
+    },
+    {
+      "file": "holiday-map.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "31fba6c1542114b52c23edda21be7bec1316948e27f13ab8a6e39a0b192e3a34",
+      "buildSha256": "31fba6c1542114b52c23edda21be7bec1316948e27f13ab8a6e39a0b192e3a34"
+    },
+    {
+      "file": "map-data.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "dc0d35b15af30b49760158cbaafc1b9eaf39b7ac771fc86e4ad7ec7f1f8de704",
+      "buildSha256": "dc0d35b15af30b49760158cbaafc1b9eaf39b7ac771fc86e4ad7ec7f1f8de704"
+    },
+    {
+      "file": "llms.txt",
+      "status": 200,
+      "mime": "text/plain",
+      "matches": true,
+      "remoteSha256": "fe2df2b3b8bd90cd1e6b2b6ad24113add565366b031d2ca4f2873aeb9e990d79",
+      "buildSha256": "fe2df2b3b8bd90cd1e6b2b6ad24113add565366b031d2ca4f2873aeb9e990d79"
+    },
+    {
+      "file": "calculator-atlas.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "98e05ead65e005507502834bf5573743941352faf0dd117b0a11b413e726c1d4",
+      "buildSha256": "98e05ead65e005507502834bf5573743941352faf0dd117b0a11b413e726c1d4"
+    },
+    {
+      "file": "ai-transfer.css",
+      "status": 200,
+      "mime": "text/css",
+      "matches": true,
+      "remoteSha256": "38ba518483b009ad0c065187c6ea1c83270a2ce02f356eea699611807e2e51e6",
+      "buildSha256": "38ba518483b009ad0c065187c6ea1c83270a2ce02f356eea699611807e2e51e6"
+    },
+    {
+      "file": "ai-transfer.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "4d318395247153f3738ed8294c390fe61262dcaafd7032c7e4cf72ccfe367264",
+      "buildSha256": "4d318395247153f3738ed8294c390fe61262dcaafd7032c7e4cf72ccfe367264"
+    },
+    {
+      "file": "dictionary.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "fd5bbc362fbcdeb3e1f73ed70d0754a90bdaa97f85d0d1026f5b681128d26c87",
+      "buildSha256": "fd5bbc362fbcdeb3e1f73ed70d0754a90bdaa97f85d0d1026f5b681128d26c87"
+    },
+    {
+      "file": "processes.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "b30ac5cd8160b212bd0ac27479e83a877b42ed2dd23a6dae8eb5dd0cd0bb8738",
+      "buildSha256": "b30ac5cd8160b212bd0ac27479e83a877b42ed2dd23a6dae8eb5dd0cd0bb8738"
+    },
+    {
+      "file": "dictionary-data.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "bab5f6dca65f069d5d38e0f9c0b53734b164d28dbaf3d3a6b94137a048cd253d",
+      "buildSha256": "bab5f6dca65f069d5d38e0f9c0b53734b164d28dbaf3d3a6b94137a048cd253d"
+    },
+    {
+      "file": "materials-data.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "0746c1bcbde1c71396d1db71137a4510e3f21e750d74c878d5633334bd6d3304",
+      "buildSha256": "0746c1bcbde1c71396d1db71137a4510e3f21e750d74c878d5633334bd6d3304"
+    },
+    {
+      "file": "map.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "0b306bcc9d338efec803c7aeb3fdf94bfe38885889d8e1f382303d0315d3fb38",
+      "buildSha256": "0b306bcc9d338efec803c7aeb3fdf94bfe38885889d8e1f382303d0315d3fb38"
+    },
+    {
+      "file": "social-preview.webp",
+      "status": 200,
+      "mime": "image/webp",
+      "matches": true,
+      "remoteSha256": "edc3de4d3315ad1207d1915c75bf45c94510eddf6ebb2ee655efc9598e232075",
+      "buildSha256": "edc3de4d3315ad1207d1915c75bf45c94510eddf6ebb2ee655efc9598e232075"
+    },
+    {
+      "file": "resources.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "cbf5382f635dc4482b4dcab3b99ea175fe821fae8cb29718ec470777285cae1c",
+      "buildSha256": "cbf5382f635dc4482b4dcab3b99ea175fe821fae8cb29718ec470777285cae1c"
+    },
+    {
+      "file": "style.min.css",
+      "status": 200,
+      "mime": "text/css",
+      "matches": true,
+      "remoteSha256": "7ee0ca2122bf1c9b27d63eca4dc12ba067fb72429f8745194eabc017921eb845",
+      "buildSha256": "7ee0ca2122bf1c9b27d63eca4dc12ba067fb72429f8745194eabc017921eb845"
+    },
+    {
+      "file": "compare.html",
+      "status": 200,
+      "mime": "text/html",
+      "matches": true,
+      "remoteSha256": "9d4f447c85369cc1c8c72017f4aed4837c5a3f8818ba23d85ed402a0b65e03c2",
+      "buildSha256": "9d4f447c85369cc1c8c72017f4aed4837c5a3f8818ba23d85ed402a0b65e03c2"
+    },
+    {
+      "file": "calculator-practical-core.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "06c08a5de88c867a5288c5364641e7c9aa148c93dca6e5136f961026a5217c00",
+      "buildSha256": "06c08a5de88c867a5288c5364641e7c9aa148c93dca6e5136f961026a5217c00"
+    },
+    {
+      "file": "engineering-lab-core.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "9d4ba9d0337fee6affbe34f8d88edcd9992529fd4a25b4c5371e9911605937b9",
+      "buildSha256": "9d4ba9d0337fee6affbe34f8d88edcd9992529fd4a25b4c5371e9911605937b9"
+    },
+    {
+      "file": "technology-search.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "5329a0176ca906603bffa31fa2e113d3ef0f18463886bd959ca7447ed36ad748",
+      "buildSha256": "5329a0176ca906603bffa31fa2e113d3ef0f18463886bd959ca7447ed36ad748"
+    },
+    {
+      "file": "measurement-electronics.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "d0347214658fe79fb55c7ebdc201f45ef87e1d3f67119d52cd31b8c0d50a7ab3",
+      "buildSha256": "d0347214658fe79fb55c7ebdc201f45ef87e1d3f67119d52cd31b8c0d50a7ab3"
+    },
+    {
+      "file": "section-ui.css",
+      "status": 200,
+      "mime": "text/css",
+      "matches": true,
+      "remoteSha256": "bb65b73fd50d5585d3b20d63fcda758f0fdd077cdf24e284894fe45e3122f454",
+      "buildSha256": "bb65b73fd50d5585d3b20d63fcda758f0fdd077cdf24e284894fe45e3122f454"
+    },
+    {
+      "file": "resources-data.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "543ba19323d103e66e465fbb2f56dfef31615d2dee76b3f6a8b537bc3c31436b",
+      "buildSha256": "543ba19323d103e66e465fbb2f56dfef31615d2dee76b3f6a8b537bc3c31436b"
+    },
+    {
+      "file": "data.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "c2e293b6cc1283e88d7c6542cf6ca5631300e823cb144560941e9760ffa63f30",
+      "buildSha256": "c2e293b6cc1283e88d7c6542cf6ca5631300e823cb144560941e9760ffa63f30"
+    },
+    {
+      "file": "salary-sources.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "7c98c9399f7f7177d16af521b70a6d90a3b3e6d15afd610139bffd2d8e4693f2",
+      "buildSha256": "7c98c9399f7f7177d16af521b70a6d90a3b3e6d15afd610139bffd2d8e4693f2"
+    },
+    {
+      "file": "calendar.html",
+      "status": 200,
+      "mime": "text/html",
+      "matches": true,
+      "remoteSha256": "0922411378c56f1888cc22211dc496bbf3cfcbba7b627f50615dfbc3e60f8352",
+      "buildSha256": "0922411378c56f1888cc22211dc496bbf3cfcbba7b627f50615dfbc3e60f8352"
+    },
+    {
+      "file": "calculator.html",
+      "status": 200,
+      "mime": "text/html",
+      "matches": true,
+      "remoteSha256": "505d594c20643cb04d32f183232bf5ea7be6e207acc099b102f271a8c451aad7",
+      "buildSha256": "505d594c20643cb04d32f183232bf5ea7be6e207acc099b102f271a8c451aad7"
+    },
+    {
+      "file": "coding.css",
+      "status": 200,
+      "mime": "text/css",
+      "matches": true,
+      "remoteSha256": "f36b28568cb9b7598d6f25cd23596bfb2e042d1f3080c6418efbb2966df26929",
+      "buildSha256": "f36b28568cb9b7598d6f25cd23596bfb2e042d1f3080c6418efbb2966df26929"
+    },
+    {
+      "file": "style-reference.min.css",
+      "status": 200,
+      "mime": "text/css",
+      "matches": true,
+      "remoteSha256": "ee2cf4082c325a37bea46a9a903a6f92ce49333cae4bb86ad91eeb89918930be",
+      "buildSha256": "ee2cf4082c325a37bea46a9a903a6f92ce49333cae4bb86ad91eeb89918930be"
+    },
+    {
+      "file": "engineering-lab-ui.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "ab5ba085dcf731d93c7637908df37117c16b86b4487d2d9fc58de638b273195f",
+      "buildSha256": "ab5ba085dcf731d93c7637908df37117c16b86b4487d2d9fc58de638b273195f"
+    },
+    {
+      "file": "processes.html",
+      "status": 200,
+      "mime": "text/html",
+      "matches": true,
+      "remoteSha256": "faf1f3c0848c31524eb4993227611e25f4db95a9e91c72941d02f166b3e1b505",
+      "buildSha256": "faf1f3c0848c31524eb4993227611e25f4db95a9e91c72941d02f166b3e1b505"
+    },
+    {
+      "file": "measurement-lab.css",
+      "status": 200,
+      "mime": "text/css",
+      "matches": true,
+      "remoteSha256": "364d83b933068a67aaac85c7dabeb861c4164498141da7b8a01d4402f435a079",
+      "buildSha256": "364d83b933068a67aaac85c7dabeb861c4164498141da7b8a01d4402f435a079"
+    },
+    {
+      "file": "knowledge-base.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "matches": true,
+      "remoteSha256": "f1337d00f0bcc3af0d532dd5332ded76b3a8b7d82996aa4a554cd52a1b401f03",
+      "buildSha256": "f1337d00f0bcc3af0d532dd5332ded76b3a8b7d82996aa4a554cd52a1b401f03"
+    },
+    {
+      "file": "script.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "8b97479d43d8872786acbd6e746f604791153c89f58e5c051e12707b68a4d8b0",
+      "buildSha256": "8b97479d43d8872786acbd6e746f604791153c89f58e5c051e12707b68a4d8b0"
+    },
+    {
+      "file": "ai-training.html",
+      "status": 200,
+      "mime": "text/html",
+      "matches": true,
+      "remoteSha256": "6524d3d05b5da1656882e67fcdf9d5b1e889af388f2a77d3b7905cd36652b882",
+      "buildSha256": "6524d3d05b5da1656882e67fcdf9d5b1e889af388f2a77d3b7905cd36652b882"
+    },
+    {
+      "file": "atlas-extended.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "167b555d704192cad9b14645392838ea7016b7a4e3ceabc1255b8ead4e2b8dd3",
+      "buildSha256": "167b555d704192cad9b14645392838ea7016b7a4e3ceabc1255b8ead4e2b8dd3"
+    },
+    {
+      "file": "measurement-builtins.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "4fb783a64ab9de19204d5652ecf604de5d309f6b90ed9c451c64c40d041a0183",
+      "buildSha256": "4fb783a64ab9de19204d5652ecf604de5d309f6b90ed9c451c64c40d041a0183"
+    },
+    {
+      "file": "resources.html",
+      "status": 200,
+      "mime": "text/html",
+      "matches": true,
+      "remoteSha256": "6165de452806631d6950fc5418361b2e2784a53b393f332a0cb53aa41fcbaf70",
+      "buildSha256": "6165de452806631d6950fc5418361b2e2784a53b393f332a0cb53aa41fcbaf70"
+    },
+    {
+      "file": "learning-experience.css",
+      "status": 200,
+      "mime": "text/css",
+      "matches": true,
+      "remoteSha256": "1e065b8fa636935f0c3de70dcc8bc6c56f983ac6f0bd0978b4fe39136a8d97f8",
+      "buildSha256": "1e065b8fa636935f0c3de70dcc8bc6c56f983ac6f0bd0978b4fe39136a8d97f8"
+    },
+    {
+      "file": "theme.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "0f074af9cba64eb08ef41eb06e1764e04598df175ac31bb12221d07af65e07ba",
+      "buildSha256": "0f074af9cba64eb08ef41eb06e1764e04598df175ac31bb12221d07af65e07ba"
+    },
+    {
+      "file": "ai.html",
+      "status": 200,
+      "mime": "text/html",
+      "matches": true,
+      "remoteSha256": "6daf8feab93fc2c18b22b25256dadbde67a8073b9c26acb989212fb57c845d8b",
+      "buildSha256": "6daf8feab93fc2c18b22b25256dadbde67a8073b9c26acb989212fb57c845d8b"
+    },
+    {
+      "file": "knowledge-manifest.json",
+      "status": 200,
+      "mime": "application/json",
+      "matches": true,
+      "remoteSha256": "faf921d16b201cce03de5536c677d5d6cd2278fa573c3d5729442940b9d660b3",
+      "buildSha256": "faf921d16b201cce03de5536c677d5d6cd2278fa573c3d5729442940b9d660b3"
+    },
+    {
+      "file": "calculator-atlas.css",
+      "status": 200,
+      "mime": "text/css",
+      "matches": true,
+      "remoteSha256": "d96811ad4ac158461400726ed40a17250d55ba672c1ef8ea5459de37b2780dbe",
+      "buildSha256": "d96811ad4ac158461400726ed40a17250d55ba672c1ef8ea5459de37b2780dbe"
+    },
+    {
+      "file": "calculator-lab.css",
+      "status": 200,
+      "mime": "text/css",
+      "matches": true,
+      "remoteSha256": "1677e73da95c1bab4f3dbcb8de8335e8005588e515a386bb78589b3feff3a5fe",
+      "buildSha256": "1677e73da95c1bab4f3dbcb8de8335e8005588e515a386bb78589b3feff3a5fe"
+    },
+    {
+      "file": "atlas-ai-core.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "4ea7b27750a493f0365a319a2e7750287da4e3e5248ebe7b6449988c4e43de92",
+      "buildSha256": "4ea7b27750a493f0365a319a2e7750287da4e3e5248ebe7b6449988c4e43de92"
+    },
+    {
+      "file": "global-search.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "658611fedbf016495940d7d766c0a78bac08d098d0880ca61f0bed5a7c980cc9",
+      "buildSha256": "658611fedbf016495940d7d766c0a78bac08d098d0880ca61f0bed5a7c980cc9"
+    },
+    {
+      "file": "materials.html",
+      "status": 200,
+      "mime": "text/html",
+      "matches": true,
+      "remoteSha256": "33c040baa5bd7957491b1bfb61492534bc15dc19175bf14c5c81a5b0d3944e0c",
+      "buildSha256": "33c040baa5bd7957491b1bfb61492534bc15dc19175bf14c5c81a5b0d3944e0c"
+    },
+    {
+      "file": "robotics.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "fd90a05b6747a9ceca61f81fddc328d3ec025eb6a43b12bf0c671d03e19d9ea8",
+      "buildSha256": "fd90a05b6747a9ceca61f81fddc328d3ec025eb6a43b12bf0c671d03e19d9ea8"
+    },
+    {
+      "file": "global-search.css",
+      "status": 200,
+      "mime": "text/css",
+      "matches": true,
+      "remoteSha256": "28779f99f9bccfd45e44d0866fdbeefb3c69701c2f481649732d89a8fd5ed2e5",
+      "buildSha256": "28779f99f9bccfd45e44d0866fdbeefb3c69701c2f481649732d89a8fd5ed2e5"
+    },
+    {
+      "file": "map-calc.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "4e63bb0c3824d701e50d278b8e2775c34e61315eecb3551923a305a1b78cf231",
+      "buildSha256": "4e63bb0c3824d701e50d278b8e2775c34e61315eecb3551923a305a1b78cf231"
+    },
+    {
+      "file": "sitemap.xml",
+      "status": 200,
+      "mime": "application/xml",
+      "matches": true,
+      "remoteSha256": "7d181ab586a531aad2d86bbca2366d12dd263612287992e0d093da5421c2930c",
+      "buildSha256": "7d181ab586a531aad2d86bbca2366d12dd263612287992e0d093da5421c2930c"
+    },
+    {
+      "file": "navigation.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "332889a09af16a734dd6d6edbb59ff83351165cda593d58b18bc79f908444225",
+      "buildSha256": "332889a09af16a734dd6d6edbb59ff83351165cda593d58b18bc79f908444225"
+    },
+    {
+      "file": "compare.js",
+      "status": 200,
+      "mime": "text/javascript",
+      "matches": true,
+      "remoteSha256": "7c22a1f478620faa29c428f6e303dd3f54f0f30a94c397e4bc371a595ef9406a",
+      "buildSha256": "7c22a1f478620faa29c428f6e303dd3f54f0f30a94c397e4bc371a595ef9406a"
+    },
+    {
+      "file": "map.html",
+      "status": 200,
+      "mime": "text/html",
+      "matches": true,
+      "remoteSha256": "c571166b90da42c82f1140c18cc49e6f5343bb32152ae8a633d7b4e8095dbf98",
+      "buildSha256": "c571166b90da42c82f1140c18cc49e6f5343bb32152ae8a633d7b4e8095dbf98"
+    },
+    {
+      "file": "favicon.svg",
+      "status": 200,
+      "mime": "image/svg+xml",
+      "matches": true,
+      "remoteSha256": "ef85d81cb7f443d9447b22c86a5e80b698c62e1a4a8678578940b2c6b0547918",
+      "buildSha256": "ef85d81cb7f443d9447b22c86a5e80b698c62e1a4a8678578940b2c6b0547918"
+    },
+    {
+      "file": "templates/production-defect-review.csv",
+      "status": 200,
+      "mime": "text/csv",
+      "matches": true,
+      "remoteSha256": "baeb1de03d37a7b5217a7a43795528e2e6b3857fd7d107b438760929b6671fc0",
+      "buildSha256": "baeb1de03d37a7b5217a7a43795528e2e6b3857fd7d107b438760929b6671fc0"
+    },
+    {
+      "file": "templates/material-evidence-register.csv",
+      "status": 200,
+      "mime": "text/csv",
+      "matches": true,
+      "remoteSha256": "8447f912a8a2eaefceb68cca8225f8a1c656d185fe5fa010ea2eb191793fbe9a",
+      "buildSha256": "8447f912a8a2eaefceb68cca8225f8a1c656d185fe5fa010ea2eb191793fbe9a"
+    },
+    {
+      "file": "templates/README.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "matches": true,
+      "remoteSha256": "2c38c34afb922f194046bc2b5b38a10d5bb2192383941c7a5437ebdca76131ab",
+      "buildSha256": "2c38c34afb922f194046bc2b5b38a10d5bb2192383941c7a5437ebdca76131ab"
+    },
+    {
+      "file": "downloads/ai-llm-guide.pdf",
+      "status": 200,
+      "mime": "application/pdf",
+      "matches": true,
+      "remoteSha256": "f6484aa189a601791bb6ba3d3d8fd7f7b01251167613c4e60639cc501b9a6f4d",
+      "buildSha256": "f6484aa189a601791bb6ba3d3d8fd7f7b01251167613c4e60639cc501b9a6f4d",
+      "initialBuildSha256": "90eb243c54fee49ca2eaec7241f4c4bcaca938aca4ebf615f5b281cad9353e5b"
+    },
+    {
+      "file": "downloads/ai-qa-engineering.pdf",
+      "status": 200,
+      "mime": "application/pdf",
+      "matches": true,
+      "remoteSha256": "81c68ec442ccb47a679f284fce027f1158053a11a5180b303b06fcd55ac60d79",
+      "buildSha256": "81c68ec442ccb47a679f284fce027f1158053a11a5180b303b06fcd55ac60d79",
+      "initialBuildSha256": "0bcef2e8cec7a6bdb21f6daa751e9eccf27acda74b9c1f792d02c2e75f94749a"
+    },
+    {
+      "file": "downloads/ai-library-documents.zip",
+      "status": 200,
+      "mime": "application/zip",
+      "matches": true,
+      "remoteSha256": "b99875ab0d4d82fcf029aec16bf1b97425407e37e70a3c092dae582698c98002",
+      "buildSha256": "b99875ab0d4d82fcf029aec16bf1b97425407e37e70a3c092dae582698c98002",
+      "initialBuildSha256": "d25d1e79f3bab90b55cfd4e7de4b6b3b30e782e7fc7bef5bbbfb57b9fd4dc346"
+    },
+    {
+      "file": "articles/utopia-math-analysis.html",
+      "status": 200,
+      "mime": "text/html",
+      "matches": true,
+      "remoteSha256": "92889b1dd328cbfb06456e2d7a3753258e830c22ff32e68ba74d16ae9c12be69",
+      "buildSha256": "92889b1dd328cbfb06456e2d7a3753258e830c22ff32e68ba74d16ae9c12be69"
+    },
+    {
+      "file": "articles/utopia-math-analysis.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "matches": true,
+      "remoteSha256": "d3cb48ac0e409fc61b35049d32461db418f36b1862637efcfc6be4e449d7dc97",
+      "buildSha256": "d3cb48ac0e409fc61b35049d32461db418f36b1862637efcfc6be4e449d7dc97"
+    },
+    {
+      "file": "knowledge/ai-code-library-links.txt",
+      "status": 200,
+      "mime": "text/plain",
+      "matches": true,
+      "remoteSha256": "8c67e8b7c267aec03e0a2a759acd298a4927c2c480ea854de0ccdb1af8e08d21",
+      "buildSha256": "8c67e8b7c267aec03e0a2a759acd298a4927c2c480ea854de0ccdb1af8e08d21"
+    },
+    {
+      "file": "knowledge/ai-code-library.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "matches": true,
+      "remoteSha256": "ffd29c69b39b3895d37aeed8bffe867b72f33f85ef3a8e6d555491aefdce2d0e",
+      "buildSha256": "ffd29c69b39b3895d37aeed8bffe867b72f33f85ef3a8e6d555491aefdce2d0e"
+    },
+    {
+      "file": "knowledge/ai-context.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "matches": true,
+      "remoteSha256": "3917be95b7cbdb2a5414b0e35bfa81738cdfb53cc581e2909133da7fa8d7619a",
+      "buildSha256": "3917be95b7cbdb2a5414b0e35bfa81738cdfb53cc581e2909133da7fa8d7619a"
+    },
+    {
+      "file": "knowledge/atlas-card-audit.json",
+      "status": 200,
+      "mime": "application/json",
+      "matches": true,
+      "remoteSha256": "9fc1fd38e0dbd05fbe2b079cec27cd1a3153ff4100dcbe0fec8f9497698a6705",
+      "buildSha256": "9fc1fd38e0dbd05fbe2b079cec27cd1a3153ff4100dcbe0fec8f9497698a6705"
+    },
+    {
+      "file": "knowledge/atlas-implementation-matrix.json",
+      "status": 200,
+      "mime": "application/json",
+      "matches": true,
+      "remoteSha256": "6f732b11edf1ed21adde711d99feb626265920945a3f4ed94d3e09f276afe883",
+      "buildSha256": "6f732b11edf1ed21adde711d99feb626265920945a3f4ed94d3e09f276afe883"
+    },
+    {
+      "file": "knowledge/career-standards-audit.json",
+      "status": 200,
+      "mime": "application/json",
+      "matches": true,
+      "remoteSha256": "f6d16d93d98255af3a90601aaa0336ee0731d4d2148c21da476c912ca9d93350",
+      "buildSha256": "f6d16d93d98255af3a90601aaa0336ee0731d4d2148c21da476c912ca9d93350"
+    },
+    {
+      "file": "knowledge/dictionary.json",
+      "status": 200,
+      "mime": "application/json",
+      "matches": true,
+      "remoteSha256": "f8a5d57d88fcb9e67da8517514f52e29e57dc507da37af40d8b9ae755edaad51",
+      "buildSha256": "f8a5d57d88fcb9e67da8517514f52e29e57dc507da37af40d8b9ae755edaad51"
+    },
+    {
+      "file": "knowledge/graph.json",
+      "status": 200,
+      "mime": "application/json",
+      "matches": true,
+      "remoteSha256": "98ae2f9a0b0b1bba78cd668c0ab31329258d5461a7f0d3d5e23aeb1876545967",
+      "buildSha256": "98ae2f9a0b0b1bba78cd668c0ab31329258d5461a7f0d3d5e23aeb1876545967"
+    },
+    {
+      "file": "knowledge/materials.json",
+      "status": 200,
+      "mime": "application/json",
+      "matches": true,
+      "remoteSha256": "f382f910d684003dad1f034c3b5be221403eb9821f162dfaa3996329639ca220",
+      "buildSha256": "f382f910d684003dad1f034c3b5be221403eb9821f162dfaa3996329639ca220"
+    },
+    {
+      "file": "knowledge/processes.json",
+      "status": 200,
+      "mime": "application/json",
+      "matches": true,
+      "remoteSha256": "cc55c56c781bc531c66d69fd4a385b6c47b40b2c2d236d99a5acf16ffc12d58a",
+      "buildSha256": "cc55c56c781bc531c66d69fd4a385b6c47b40b2c2d236d99a5acf16ffc12d58a"
+    },
+    {
+      "file": "knowledge/professions.json",
+      "status": 200,
+      "mime": "application/json",
+      "matches": true,
+      "remoteSha256": "9bbaf111940a05f28d34b94b2eeab702d5cabdad02f95102aca70ec1e18c9607",
+      "buildSha256": "9bbaf111940a05f28d34b94b2eeab702d5cabdad02f95102aca70ec1e18c9607"
+    },
+    {
+      "file": "knowledge/quality.json",
+      "status": 200,
+      "mime": "application/json",
+      "matches": true,
+      "remoteSha256": "61d9d06a1aa53db76429d0922f13d2f0bce4527e4f23c50d9aed544e7c4c65cf",
+      "buildSha256": "61d9d06a1aa53db76429d0922f13d2f0bce4527e4f23c50d9aed544e7c4c65cf"
+    },
+    {
+      "file": "knowledge/salary-evidence.json",
+      "status": 200,
+      "mime": "application/json",
+      "matches": true,
+      "remoteSha256": "9e2bb549c927c62c9374e929170e988b5da034cf32ee02a82e7e3b7949f8eb4f",
+      "buildSha256": "9e2bb549c927c62c9374e929170e988b5da034cf32ee02a82e7e3b7949f8eb4f"
+    },
+    {
+      "file": "knowledge/search-index.json",
+      "status": 200,
+      "mime": "application/json",
+      "matches": true,
+      "remoteSha256": "ffeb6ef92c7f5427bea76282b0f9c8f744213406b8930fe08fca64adcd6a6e50",
+      "buildSha256": "ffeb6ef92c7f5427bea76282b0f9c8f744213406b8930fe08fca64adcd6a6e50"
+    },
+    {
+      "file": "knowledge/source-registry.json",
+      "status": 200,
+      "mime": "application/json",
+      "matches": true,
+      "remoteSha256": "ecac7a9a285cbbae5da60f45336509901c21b6d81bc37b02a425c41f17937d4b",
+      "buildSha256": "ecac7a9a285cbbae5da60f45336509901c21b6d81bc37b02a425c41f17937d4b"
+    },
+    {
+      "file": "knowledge/sections/calculator.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "matches": true,
+      "remoteSha256": "1a4b4dafaae72b3b25b72da60eb1ca36694c324f699d269f5a36eb51d2dcb230",
+      "buildSha256": "1a4b4dafaae72b3b25b72da60eb1ca36694c324f699d269f5a36eb51d2dcb230"
+    },
+    {
+      "file": "knowledge/sections/calendar.json",
+      "status": 200,
+      "mime": "application/json",
+      "matches": true,
+      "remoteSha256": "34f228a0472db7a49ef203793b05914f223108a41616eba7ac73dc5cee0b507e",
+      "buildSha256": "34f228a0472db7a49ef203793b05914f223108a41616eba7ac73dc5cee0b507e"
+    },
+    {
+      "file": "knowledge/sections/calendar.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "matches": true,
+      "remoteSha256": "80bac266ad528dfe3382e9498491cba901172040295a600634a9cbe81878bfe0",
+      "buildSha256": "80bac266ad528dfe3382e9498491cba901172040295a600634a9cbe81878bfe0"
+    },
+    {
+      "file": "knowledge/sections/compare.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "matches": true,
+      "remoteSha256": "cf3a7180fbe757f2b2f242551466e7e767bd074a54badd769a773415f6b13b0c",
+      "buildSha256": "cf3a7180fbe757f2b2f242551466e7e767bd074a54badd769a773415f6b13b0c"
+    },
+    {
+      "file": "knowledge/sections/dictionary.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "matches": true,
+      "remoteSha256": "e7dfe9fb1230f985912348c3c86729301e088f1ab60b0bde1e5998764a3616f7",
+      "buildSha256": "e7dfe9fb1230f985912348c3c86729301e088f1ab60b0bde1e5998764a3616f7"
+    },
+    {
+      "file": "knowledge/sections/learning.json",
+      "status": 200,
+      "mime": "application/json",
+      "matches": true,
+      "remoteSha256": "8bc600fbd88ebb7fd38ea524661e692d1dd58162960180ca60c24b2be5963966",
+      "buildSha256": "8bc600fbd88ebb7fd38ea524661e692d1dd58162960180ca60c24b2be5963966"
+    },
+    {
+      "file": "knowledge/sections/learning.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "matches": true,
+      "remoteSha256": "37e0278dfe52cea51389b12fa5807073f75258ff280cb8637b91944ed647e239",
+      "buildSha256": "37e0278dfe52cea51389b12fa5807073f75258ff280cb8637b91944ed647e239"
+    },
+    {
+      "file": "knowledge/sections/materials.json",
+      "status": 200,
+      "mime": "application/json",
+      "matches": true,
+      "remoteSha256": "716b1a3349c597a35e5687b78dc20f3d1fe4c45e6f7d5996e0462259753cca03",
+      "buildSha256": "716b1a3349c597a35e5687b78dc20f3d1fe4c45e6f7d5996e0462259753cca03"
+    },
+    {
+      "file": "knowledge/sections/materials.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "matches": true,
+      "remoteSha256": "6b480c2e9d449ab3735ba8bd2e9813e73d10c3cd1f8f742595e99b7a0418d329",
+      "buildSha256": "6b480c2e9d449ab3735ba8bd2e9813e73d10c3cd1f8f742595e99b7a0418d329"
+    },
+    {
+      "file": "knowledge/sections/processes.json",
+      "status": 200,
+      "mime": "application/json",
+      "matches": true,
+      "remoteSha256": "8d3f8b89671d93b264f7ca2ef7b91b5f873cc28de61c2c90d6396118355b7802",
+      "buildSha256": "8d3f8b89671d93b264f7ca2ef7b91b5f873cc28de61c2c90d6396118355b7802"
+    },
+    {
+      "file": "knowledge/sections/processes.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "matches": true,
+      "remoteSha256": "eb4630cf2656a2f2cabd9ff103ce5b55ca66bf68e913ed82957d91fde9bc0b9c",
+      "buildSha256": "eb4630cf2656a2f2cabd9ff103ce5b55ca66bf68e913ed82957d91fde9bc0b9c"
+    },
+    {
+      "file": "knowledge/sections/professions.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "matches": true,
+      "remoteSha256": "97201c83cf27a1fe2b31fc4b2b0337b936f27c42351ca17f51adc31239962e60",
+      "buildSha256": "97201c83cf27a1fe2b31fc4b2b0337b936f27c42351ca17f51adc31239962e60"
+    },
+    {
+      "file": "knowledge/sections/resources.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "matches": true,
+      "remoteSha256": "f86cff3321e7c5448544f858940e26bc97bfdb458137860bad56d1c91e9dcd38",
+      "buildSha256": "f86cff3321e7c5448544f858940e26bc97bfdb458137860bad56d1c91e9dcd38"
+    },
+    {
+      "file": "knowledge/sections/training.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "matches": true,
+      "remoteSha256": "52e13f363d6b59d06446d347b70517cfb246ce5d7f1b071253f0f6b42c0ea1b2",
+      "buildSha256": "52e13f363d6b59d06446d347b70517cfb246ce5d7f1b071253f0f6b42c0ea1b2"
+    },
+    {
+      "file": "knowledge/sections/professions.json",
+      "status": 200,
+      "mime": "application/json",
+      "matches": true,
+      "remoteSha256": "64e69e8a7537de44b330aaa0e8976ecaf55cc9b1a32fedbd5b83089ab7ef86e7",
+      "buildSha256": "64e69e8a7537de44b330aaa0e8976ecaf55cc9b1a32fedbd5b83089ab7ef86e7"
+    },
+    {
+      "file": "knowledge/sections/resources.json",
+      "status": 200,
+      "mime": "application/json",
+      "matches": true,
+      "remoteSha256": "c79243c41ff8304ecf0430a6df4c96dff5f74c67c5a821f419d8d80b8e6c6c49",
+      "buildSha256": "c79243c41ff8304ecf0430a6df4c96dff5f74c67c5a821f419d8d80b8e6c6c49"
+    },
+    {
+      "file": "knowledge/sections/ai-code-library.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "matches": true,
+      "remoteSha256": "ab001710723ebcb323e55d5469b0e1ed0604efb4e8f50f0dca19caf0c7195114",
+      "buildSha256": "ab001710723ebcb323e55d5469b0e1ed0604efb4e8f50f0dca19caf0c7195114"
+    },
+    {
+      "file": "knowledge/sections/ai-code-library.json",
+      "status": 200,
+      "mime": "application/json",
+      "matches": true,
+      "remoteSha256": "57dfe4abcca5e8ac504ca7a102e7fa88e57f11498abb80d575b0e95ce7d719ce",
+      "buildSha256": "57dfe4abcca5e8ac504ca7a102e7fa88e57f11498abb80d575b0e95ce7d719ce"
+    },
+    {
+      "file": "knowledge/sections/dictionary.json",
+      "status": 200,
+      "mime": "application/json",
+      "matches": true,
+      "remoteSha256": "0f1dff385fb28236d07085582539e6f3b50382ead191992611b228a8279f3556",
+      "buildSha256": "0f1dff385fb28236d07085582539e6f3b50382ead191992611b228a8279f3556"
+    },
+    {
+      "file": "knowledge/sections/calculators.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "matches": true,
+      "remoteSha256": "af205a53e1945c333c84d299c77c74bbf14f65822f48786402fddcffbfb608ae",
+      "buildSha256": "af205a53e1945c333c84d299c77c74bbf14f65822f48786402fddcffbfb608ae"
+    },
+    {
+      "file": "knowledge/sections/calculators.json",
+      "status": 200,
+      "mime": "application/json",
+      "matches": true,
+      "remoteSha256": "56b788fe0665550485a727799b84f111ba464bbf45a6a343540840edd3ad82dc",
+      "buildSha256": "56b788fe0665550485a727799b84f111ba464bbf45a6a343540840edd3ad82dc"
+    },
+    {
+      "file": "knowledge/sections/compare.json",
+      "status": 200,
+      "mime": "application/json",
+      "matches": true,
+      "remoteSha256": "790ee79210e874c5189b24f8c284c4c5b813047e9cc0db2b9e6dee4819f427e2",
+      "buildSha256": "790ee79210e874c5189b24f8c284c4c5b813047e9cc0db2b9e6dee4819f427e2"
+    },
+    {
+      "file": "knowledge/sections/index.json",
+      "status": 200,
+      "mime": "application/json",
+      "matches": true,
+      "remoteSha256": "566809ab929c03210b047fdabb9015c43bc00076711a5c6885c19c66d04055df",
+      "buildSha256": "566809ab929c03210b047fdabb9015c43bc00076711a5c6885c19c66d04055df"
+    },
+    {
+      "file": "knowledge/sections/all.md",
+      "status": 200,
+      "mime": "text/markdown",
+      "matches": true,
+      "remoteSha256": "cde6cefc913f9dc965b577c5dcf166d1fb070f487f286d38da4ab3a25ccd644b",
+      "buildSha256": "cde6cefc913f9dc965b577c5dcf166d1fb070f487f286d38da4ab3a25ccd644b"
+    },
+    {
+      "file": "knowledge/reading/professions.html",
+      "status": 200,
+      "mime": "text/html",
+      "matches": true,
+      "remoteSha256": "054169befc2957667649d4017b4ca9e50ef2506dd9fccc3342b0cb6e89881104",
+      "buildSha256": "054169befc2957667649d4017b4ca9e50ef2506dd9fccc3342b0cb6e89881104"
+    },
+    {
+      "file": "knowledge/reading/professions.epub",
+      "status": 200,
+      "mime": "application/epub+zip",
+      "matches": true,
+      "remoteSha256": "e541b92e3605ef6c5913ae99fd83265f9b90f2abdab89fbc20126fdb1c98d4d1",
+      "buildSha256": "e541b92e3605ef6c5913ae99fd83265f9b90f2abdab89fbc20126fdb1c98d4d1"
+    },
+    {
+      "file": "knowledge/reading/calendar.html",
+      "status": 200,
+      "mime": "text/html",
+      "matches": true,
+      "remoteSha256": "e257b922247fd09f1cf0dfce6bb9f62c095f228edbcc764d9064ea798a7f7c25",
+      "buildSha256": "e257b922247fd09f1cf0dfce6bb9f62c095f228edbcc764d9064ea798a7f7c25"
+    },
+    {
+      "file": "knowledge/reading/calendar.epub",
+      "status": 200,
+      "mime": "application/epub+zip",
+      "matches": true,
+      "remoteSha256": "9e18e4557a51d8783bc7412f74d1f0fc7690c649099b67d4eb272240087de663",
+      "buildSha256": "9e18e4557a51d8783bc7412f74d1f0fc7690c649099b67d4eb272240087de663"
+    },
+    {
+      "file": "knowledge/reading/resources.html",
+      "status": 200,
+      "mime": "text/html",
+      "matches": true,
+      "remoteSha256": "5f1cb6bda6aadec1914ed687d4af6cf8e82233f4ab43ddaf75e5099d0e0392ec",
+      "buildSha256": "5f1cb6bda6aadec1914ed687d4af6cf8e82233f4ab43ddaf75e5099d0e0392ec"
+    },
+    {
+      "file": "knowledge/reading/resources.epub",
+      "status": 200,
+      "mime": "application/epub+zip",
+      "matches": true,
+      "remoteSha256": "3b5427f8e66ff00f89ff1ed00a88c2f6e339fcd72686bf20ee4e9b5b8f1c2b70",
+      "buildSha256": "3b5427f8e66ff00f89ff1ed00a88c2f6e339fcd72686bf20ee4e9b5b8f1c2b70"
+    },
+    {
+      "file": "knowledge/reading/ai-code-library.html",
+      "status": 200,
+      "mime": "text/html",
+      "matches": true,
+      "remoteSha256": "3f22c0e07fa6cba2d17fde9433a8e9bbe9ebb1518c8becdc6de5fd8cccaac94e",
+      "buildSha256": "3f22c0e07fa6cba2d17fde9433a8e9bbe9ebb1518c8becdc6de5fd8cccaac94e"
+    },
+    {
+      "file": "knowledge/reading/ai-code-library.epub",
+      "status": 200,
+      "mime": "application/epub+zip",
+      "matches": true,
+      "remoteSha256": "1f7c057a950b026bd6ff74d97de79dac70f3f3c7575306b29be4f415b42ebd69",
+      "buildSha256": "1f7c057a950b026bd6ff74d97de79dac70f3f3c7575306b29be4f415b42ebd69"
+    },
+    {
+      "file": "knowledge/reading/dictionary.html",
+      "status": 200,
+      "mime": "text/html",
+      "matches": true,
+      "remoteSha256": "c52b0c08ffa1d1588072fcdb49bebcbaa749dace667850510f724517d57a5ca3",
+      "buildSha256": "c52b0c08ffa1d1588072fcdb49bebcbaa749dace667850510f724517d57a5ca3"
+    },
+    {
+      "file": "knowledge/reading/dictionary.epub",
+      "status": 200,
+      "mime": "application/epub+zip",
+      "matches": true,
+      "remoteSha256": "f4ac71f8b7211e849b5f224282007b0d98c67d807471fb2a9fd7af45608c49ec",
+      "buildSha256": "f4ac71f8b7211e849b5f224282007b0d98c67d807471fb2a9fd7af45608c49ec"
+    },
+    {
+      "file": "knowledge/reading/learning.html",
+      "status": 200,
+      "mime": "text/html",
+      "matches": true,
+      "remoteSha256": "91dec58306e606e4d4094b81b1a032471f272224e56ec172443e5d47faf5e358",
+      "buildSha256": "91dec58306e606e4d4094b81b1a032471f272224e56ec172443e5d47faf5e358"
+    },
+    {
+      "file": "knowledge/reading/learning.epub",
+      "status": 200,
+      "mime": "application/epub+zip",
+      "matches": true,
+      "remoteSha256": "474afacb9b8d6e791c7d5f5c02a02795477149dbf65d8f7883791e58aa0e515a",
+      "buildSha256": "474afacb9b8d6e791c7d5f5c02a02795477149dbf65d8f7883791e58aa0e515a"
+    },
+    {
+      "file": "knowledge/reading/calculators.html",
+      "status": 200,
+      "mime": "text/html",
+      "matches": true,
+      "remoteSha256": "af699516e06ff827f2ffe9794b8212d6a24227d64699481b997d4bfca6e6fb84",
+      "buildSha256": "af699516e06ff827f2ffe9794b8212d6a24227d64699481b997d4bfca6e6fb84"
+    },
+    {
+      "file": "knowledge/reading/calculators.epub",
+      "status": 200,
+      "mime": "application/epub+zip",
+      "matches": true,
+      "remoteSha256": "53361131cab6747b955ef856904e09d32f40001d981e308a829e672c2fc59563",
+      "buildSha256": "53361131cab6747b955ef856904e09d32f40001d981e308a829e672c2fc59563"
+    },
+    {
+      "file": "knowledge/reading/compare.html",
+      "status": 200,
+      "mime": "text/html",
+      "matches": true,
+      "remoteSha256": "41bd8a2a6ecfae31322c15fb3ce9076b954b3b43a424ca84b398910453e06f25",
+      "buildSha256": "41bd8a2a6ecfae31322c15fb3ce9076b954b3b43a424ca84b398910453e06f25"
+    },
+    {
+      "file": "knowledge/reading/compare.epub",
+      "status": 200,
+      "mime": "application/epub+zip",
+      "matches": true,
+      "remoteSha256": "0684da8473da1a0c612abc7b1ba525b10b1c038fff40f8688c9c11c66f1054da",
+      "buildSha256": "0684da8473da1a0c612abc7b1ba525b10b1c038fff40f8688c9c11c66f1054da"
+    },
+    {
+      "file": "knowledge/reading/processes.html",
+      "status": 200,
+      "mime": "text/html",
+      "matches": true,
+      "remoteSha256": "51a7e25ebf8d6be2abfbd825064db6d403afb6fdf08a9bd46b47232875e09946",
+      "buildSha256": "51a7e25ebf8d6be2abfbd825064db6d403afb6fdf08a9bd46b47232875e09946"
+    },
+    {
+      "file": "knowledge/reading/processes.epub",
+      "status": 200,
+      "mime": "application/epub+zip",
+      "matches": true,
+      "remoteSha256": "74551380e9fb140690c2bb5b35abbfe3169a89021e4cddd22cdeb1b4ccf58335",
+      "buildSha256": "74551380e9fb140690c2bb5b35abbfe3169a89021e4cddd22cdeb1b4ccf58335"
+    },
+    {
+      "file": "knowledge/reading/materials.html",
+      "status": 200,
+      "mime": "text/html",
+      "matches": true,
+      "remoteSha256": "f8d89926232f6985cd510efdefcaee580e6760d5c9fddd05e9a10c61d229c017",
+      "buildSha256": "f8d89926232f6985cd510efdefcaee580e6760d5c9fddd05e9a10c61d229c017"
+    },
+    {
+      "file": "knowledge/reading/materials.epub",
+      "status": 200,
+      "mime": "application/epub+zip",
+      "matches": true,
+      "remoteSha256": "ebbabd396efd3a658bcbefb8bdf92e9a6cd5ad5a55c9f3cff29d43e2847586e2",
+      "buildSha256": "ebbabd396efd3a658bcbefb8bdf92e9a6cd5ad5a55c9f3cff29d43e2847586e2"
+    },
+    {
+      "file": "knowledge/reading/index.html",
+      "status": 200,
+      "mime": "text/html",
+      "matches": true,
+      "remoteSha256": "39daefa3615f40cd2d2c993e07444f9cdd7fbd15609f9a164f2ab60661d24ba1",
+      "buildSha256": "39daefa3615f40cd2d2c993e07444f9cdd7fbd15609f9a164f2ab60661d24ba1"
+    },
+    {
+      "file": "knowledge/reading/all.epub",
+      "status": 200,
+      "mime": "application/epub+zip",
+      "matches": true,
+      "remoteSha256": "4b84cd1e5ed65f0e7ff249295de942b5c64a3973f83ab82f8eaf2b9b94be1fea",
+      "buildSha256": "4b84cd1e5ed65f0e7ff249295de942b5c64a3973f83ab82f8eaf2b9b94be1fea"
+    }
+  ],
+  "initialSummary": {
+    "total": 152,
+    "http200": 152,
+    "exactMatches": 149
+  },
+  "environmentCorrection": "Initial local PDF build used ReportLab 4.4.9. Rebuilt using release-pinned 4.4.4; extracted text already matched. Remote hashes retained from initial full download, no claim of fresh network success during later proxy failure."
+}

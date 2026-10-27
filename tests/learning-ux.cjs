@@ -113,12 +113,19 @@ for(const {item} of verified){
 assert.ok(js.includes('item.verifiedPrograms')&&js.includes('programDetails'),'program evidence is rendered');
 assert.ok(js.includes('program_verified_with_access_limit'),'UI must disclose programme document fetch limitations');
 assert.ok(js.includes('item.verifiedPrograms||[]'),'program codes included in search');
-console.log('PASS: 80 programme leads structurally valid (not all independently verified)');
+console.log('PASS: '+verified.length+' programme leads structurally valid (not all independently verified)');
 
-assert.equal(entries.filter(x=>x.item.sourceFetchStatus==='fetched').length,77,'77 evidence pages fetched after source URL repair');
-assert.equal(entries.filter(x=>x.item.sourceFetchStatus==='fetch_failed').length,3,'3 links require retry, not deletion');
-for(const row of entries)assert.equal(row.item.sourceFetchCheckedAt,'2026-10-22',row.item.name+': absent network audit date');
+const tyumen=entries.find(x=>x.item.name==='Тюменский техникум строительной индустрии и городского хозяйства').item;
+assert.equal(tyumen.sourceUrl,'https://tci72.ru/');
+assert.equal(tyumen.sourceFetchStatus,'fetch_failed');
+assert.equal(tyumen.sourceFetchCheckedAt,'2026-10-27');
+assert.equal(tyumen.verifiedPrograms.length,0,'a missing programme document must not retain a verification claim');
+assert.ok(!raw.includes('tci72.ru/enrollees/'),'retired 404 links returned to the active catalogue');
+assert.equal(entries.filter(x=>x.item.sourceFetchStatus==='fetched').length,76,'76 historical fetch successes remain');
+assert.equal(entries.filter(x=>x.item.sourceFetchStatus==='fetch_failed').length,4,'four source links require follow-up');
+for(const row of entries.filter(x=>x.item!==tyumen))assert.equal(row.item.sourceFetchCheckedAt,'2026-10-22',row.item.name+': historical network audit date changed');
 assert.ok(js.includes('item.sourceFetchStatus'),'UI must expose URL fetch result to readers');
+assert.ok(js.includes('checkedDate(item.sourceFetchCheckedAt)'),'source audit dates must come from data');
 
 // Numeric claims are release-controlled separately from editorial sources and links.
 const numericGate=JSON.parse(fs.readFileSync('audit/map-visible-numeric-allowlist.json','utf8'));
