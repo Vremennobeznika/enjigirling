@@ -80,3 +80,35 @@ test('AI programming library is a standalone export, not the full community cata
   expect(text).toContain('https://docs.python.org/ru/3/tutorial/');
   expect(text).not.toContain('CADmaster');
 });
+test('reading editions work offline without JavaScript at 320px and enlarged text',async({browser,baseURL})=>{
+ test.setTimeout(60000);
+ const context=await browser.newContext({baseURL,javaScriptEnabled:false,viewport:{width:320,height:720}});
+ const page=await context.newPage(),external=[];
+ await context.route('**/*',route=>{
+  if(new URL(route.request().url()).origin===new URL(baseURL).origin)return route.continue();
+  external.push(route.request().url());return route.abort();
+ });
+ try{
+  await page.goto('/ai.html');
+  await page.locator('a[href="knowledge/reading/index.html"]').click();
+  const chapters=await page.locator('main nav a[href$=".html"]').evaluateAll(links=>links.map(a=>a.getAttribute('href')));
+  expect(chapters).toHaveLength(10);
+  for(const chapter of chapters){
+   await page.goto('/knowledge/reading/'+chapter);
+   await expect(page.locator('h1')).toBeVisible();
+   expect(await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth),chapter).toBeLessThanOrEqual(2);
+   await page.evaluate(()=>{document.body.style.fontSize='2.25em';});
+   expect(await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth),chapter+' enlarged').toBeLessThanOrEqual(2);
+  }
+  await page.goto('/knowledge/reading/calculators.html');
+  await expect(page.locator('article')).toHaveCount(734);
+  await expect(page.locator('main')).toContainText('Только целые числа.');
+  await page.goto('/knowledge/reading/index.html');
+  const downloadPromise=page.waitForEvent('download');
+  await page.locator('a[href="all.epub"]').click();
+  const download=await downloadPromise;
+  expect(download.suggestedFilename()).toBe('all.epub');
+  expect(await download.failure()).toBeNull();
+  expect(external).toEqual([]);
+ }finally{await context.close();}
+});

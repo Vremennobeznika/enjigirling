@@ -28,6 +28,7 @@ const steps=[
  ['FULL P01-P06 D01-D09 A01-A03 S03',()=>[['node',['tests/full-matrix.cjs']],['node',['tests/engineering-lab-unit.cjs']],['node',['tests/practical-calculator-unit.cjs']]]],
  ['SAFETY marine, industrial, electrical and numeric matrix',()=>[['node',['tests/engineering-safety-matrix.cjs']]]],
  ['S11-S12 JSON exports and graph',()=>[['node',['scripts/build-knowledge.cjs','--check']]]],
+ ['READING HTML/EPUB source fidelity and offline structure',()=>[['python3',['tests/reading-formats.py']]]],
  ['PROCESS ATLAS 208 integrity and evidence scope',()=>[['node',['tests/process-atlas-data.cjs']]]],
  ['MATERIAL ATLAS sector coverage and source boundaries',()=>[['node',['tests/materials-atlas-data.cjs']]]],
  ['ATLAS each of 380 cards audit state',()=>[['node',['scripts/audit-atlas-cards.cjs','--check']]]],
