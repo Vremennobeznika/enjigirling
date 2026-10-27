@@ -57,7 +57,7 @@ jobs:
           path: static-qa.log
           if-no-files-found: ignore
       - name: Install browser test dependencies
-        run: npm install --no-audit --no-fund
+        run: npm ci --no-audit --no-fund
       - name: Install Chromium and WebKit for browser tests
         run: npx playwright install --with-deps chromium webkit
       - name: Validate desktop and mobile layouts

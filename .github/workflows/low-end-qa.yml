@@ -56,7 +56,7 @@ jobs:
           node tests/performance-budget.cjs
       - name: Install Chromium for isolated mobile and CPU tests
         run: |
-          npm install --no-audit --no-fund
+          npm ci --no-audit --no-fund
           npx playwright install --with-deps chromium
       - name: Test 320px layouts and 4x CPU throttling
         run: |
