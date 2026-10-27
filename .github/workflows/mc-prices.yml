@@ -1,0 +1,26 @@
+name: MC official price source discovery
+on:
+  push:
+    branches: [codex/mc-price-automation]
+    paths:
+      - .github/workflows/mc-prices.yml
+      - scripts/probe-mc-price.py
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  discover:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 scripts/probe-mc-price.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mc-official-source-discovery
+          path: mc-probe/
+          retention-days: 1
