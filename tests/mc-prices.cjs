@@ -2,7 +2,7 @@ const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const {validate,guard}=require('../mc-prices.js');
 const saved=JSON.parse(fs.readFileSync('mc-prices.json','utf8'));
-const now=Date.parse(saved.retrievedAt)+3600000;
+const now=Date.parse(saved.retrievedAt);
 assert.equal(validate(saved,now),saved);
 const row=saved.items.find(r=>r.document==='sortovojprokat.xls');
 assert.throws(()=>guard(saved,row,{blanks:1},1,now),/от 5 т/);
