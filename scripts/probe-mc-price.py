@@ -7,6 +7,8 @@ import urllib.error
 import urllib.request
 
 URLS = [
+    'http://mc.ru:8080/prices/metserv.zip',
+    'http://en.mc.ru/prices/metserv.zip',
     'http://mc.ru/robots.txt',
     'http://mc.ru/',
     'http://www.mc.ru/',
