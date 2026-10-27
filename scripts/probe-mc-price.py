@@ -7,6 +7,12 @@ import urllib.error
 import urllib.request
 
 URLS = [
+    'http://mc.ru/robots.txt',
+    'http://mc.ru/',
+    'http://www.mc.ru/',
+    'http://mc.ru/index.asp/multiprice/msk',
+    'http://www.mc.ru/index.asp/multiprice/msk',
+    'http://mc.ru/page.asp?q=subscr_go',
     'https://mc.ru/robots.txt',
     'https://mc.ru/',
     'https://www.mc.ru/',
