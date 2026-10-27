@@ -89,7 +89,7 @@ jobs:
           test -s dist-ru/downloads/ai-llm-guide.pdf
           test -s dist-ru/downloads/ai-qa-engineering.pdf
           test -s dist-ru/downloads/ai-library-documents.zip
-          for asset in coding.html coding.js coding-data.js coding.css robotics.html robotics.js robotics.css; do
+          for asset in coding.html coding.js coding-data.js coding.css robotics.html robotics.js robotics.css mc-prices.js mc-prices.json; do
             test -s "dist-ru/$asset"
           done
           test "$(find dist-ru -type f | wc -l)" -ge 50
@@ -112,7 +112,15 @@ jobs:
           # No --delete: preserve objects already hosted outside the public distribution.
           aws --endpoint-url=https://storage.yandexcloud.net \
             s3 sync dist-ru/ s3://enjigirling.ru/ \
-            --no-progress --only-show-errors --cache-control 'public,max-age=300'
+            --exclude 'mc-prices.json' --no-progress --only-show-errors --cache-control 'public,max-age=300'
+          # Price updates own this object: a slower site build must not overwrite a newer quote snapshot.
+          # Seed it on the first deployment only; subsequent updates are handled by mc-prices.yml.
+          if ! aws --endpoint-url=https://storage.yandexcloud.net s3api head-object \
+            --bucket enjigirling.ru --key mc-prices.json >/dev/null 2>&1; then
+            aws --endpoint-url=https://storage.yandexcloud.net s3 cp dist-ru/mc-prices.json \
+              s3://enjigirling.ru/mc-prices.json --content-type 'application/json; charset=utf-8' \
+              --cache-control 'public,max-age=300' --only-show-errors
+          fi
           aws --endpoint-url=https://storage.yandexcloud.net \
             s3 cp s3://enjigirling.ru/index.html /tmp/enjigirling-deployed-index.html \
             --only-show-errors

@@ -31,7 +31,7 @@ function activate(panel){
  }
  if(status)status.textContent='Загрузка калькулятора…';
  const isLab=panel.hasAttribute('data-lab');
- const promise=panel.classList.contains('atlas-tools-lab')?script('calculator-atlas-data.js').then(()=>script('engineering-lab-core.js')).then(()=>script('atlas-extended.js')).then(()=>script('atlas-tools.js')):panel.classList.contains('manufacturing-lab')?script('manufacturing-cost.js'):isLab?loadEngine():panel.classList.contains('practical-lab')?loadPractical():loadLegacy();
+ const promise=panel.classList.contains('atlas-tools-lab')?script('calculator-atlas-data.js').then(()=>script('engineering-lab-core.js')).then(()=>script('atlas-extended.js')).then(()=>script('atlas-tools.js')):panel.classList.contains('manufacturing-lab')?script('mc-prices.js').then(()=>script('manufacturing-cost.js')):isLab?loadEngine():panel.classList.contains('practical-lab')?loadPractical():loadLegacy();
  promise.then(()=>{
   if(isLab)window.initEngineeringLab(panel.dataset.lab);
   initialized.add(panel);

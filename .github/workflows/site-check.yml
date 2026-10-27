@@ -12,6 +12,13 @@ jobs:
           node-version: '22'
       - name: Generate AI section exports
         run: node scripts/build-ai-packs.cjs
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build linked PDF downloads before validating local assets
+        run: |
+          python3 -m pip install --disable-pip-version-check 'reportlab==4.4.4'
+          python3 scripts/build-resource-pdfs.py
       - name: Run complete static QA matrix
         shell: bash
         run: |
@@ -33,6 +40,13 @@ jobs:
           node-version: '22'
       - name: Generate AI section exports
         run: node scripts/build-ai-packs.cjs
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build linked PDF downloads for browser scenarios
+        run: |
+          python3 -m pip install --disable-pip-version-check 'reportlab==4.4.4'
+          python3 scripts/build-resource-pdfs.py
       - name: Install browser test tooling
         run: npm install --no-audit --no-fund
       - name: Install Chromium and WebKit

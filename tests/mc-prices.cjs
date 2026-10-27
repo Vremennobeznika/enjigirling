@@ -1,0 +1,17 @@
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const {validate,guard}=require('../mc-prices.js');
+const saved=JSON.parse(fs.readFileSync('mc-prices.json','utf8'));
+const now=Date.parse(saved.retrievedAt);
+assert.equal(validate(saved,now),saved);
+const row=saved.items.find(r=>r.document==='sortovojprokat.xls');
+assert.throws(()=>guard(saved,row,{blanks:1},1,now),/от 5 т/);
+assert.equal(guard(saved,row,{blanks:1000},5,now),row.priceRUBPerTonne);
+assert.throws(()=>validate(saved,now+73*3600000),/старше 72/);
+const copy=()=>JSON.parse(JSON.stringify(saved));
+let x=copy();x.items[0].unit='теор.т';assert.throws(()=>validate(x,now),/позиции/);
+x=copy();x.items[0].priceRUBPerTonne=0;assert.throws(()=>validate(x,now));
+x=copy();x.documents[0].sourceUrl='javascript:alert(1)';assert.throws(()=>validate(x,now));
+x=copy();x.items.push(x.items[0]);assert.throws(()=>validate(x,now));
+x=copy();x.documents[0].minTonnes='5';assert.throws(()=>validate(x,now));
+console.log('PASS MC prices: snapshot, units, stale data, source URLs and 5-tonne threshold');

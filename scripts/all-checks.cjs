@@ -9,7 +9,7 @@ const tests=fs.readdirSync(path.join(root,'tests')).filter(name=>name.endsWith('
 const files=[...new Set([...rootJs,...scripts,...tests,'playwright.config.cjs'])];
 const steps=[
  ['ATLAS working tools, matrix and catalogue links',()=>[['node',['tests/atlas-tools.cjs']],['node',['tests/atlas-matrix.cjs']],['node',['tests/atlas-special-models.cjs']],['python3',['tests/atlas-independent-si.py']],['node',['tests/calculator-domain-reference.cjs']],['node',['tests/calculator-domain-boundaries.cjs']],['node',['scripts/build-atlas-matrix.cjs','--check']],['node',['scripts/build-calculator-review.cjs','--check']]]],
- ['MANUFACTURING batch cost and metal stock mass',()=>[['node',['tests/manufacturing-cost.cjs']]]],
+ ['MANUFACTURING batch cost and metal stock mass',()=>[['node',['tests/manufacturing-cost.cjs']],['node',['tests/mc-prices.cjs']]]],
  ['CALENDAR date and evidence matrix',()=>[['node',['tests/calendar-rules.cjs']]]],
  ['ROBOTICS independent interactive lab and formula limits',()=>[['node',['tests/robotics-lab.cjs']]]],
  ['NAV standalone labs, coding split, low-end source budgets',()=>[['node',['tests/navigation-promotion.cjs']]]],
