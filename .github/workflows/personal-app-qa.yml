@@ -53,7 +53,7 @@ jobs:
           node tests/personal-reminders.cjs
           node tests/personal-ics.cjs
       - name: Install browser test tools
-        run: npm install --no-audit --no-fund
+        run: npm ci --no-audit --no-fund
       - name: Install Chromium and WebKit
         run: npx playwright install --with-deps chromium webkit
       - name: Calendar, dashboard, shopping and plants in Chromium

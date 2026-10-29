@@ -1,0 +1,133 @@
+{
+  "date": "2026-10-27",
+  "timezone": "Europe/Moscow",
+  "baselineCommit": "55d19b442b29c0823046e48b42667e4b413c817c",
+  "baselineIncludesPriorWorkingChanges": [
+    "resources-data.js",
+    "knowledge/sections/resources.md"
+  ],
+  "documentsReviewed": [
+    {
+      "filename": "bazovyi_prompt_inzheneriya_QA.pdf",
+      "pages": 3,
+      "sections": 16,
+      "tagged": false,
+      "embeddedFiles": 0,
+      "javascript": false,
+      "encrypted": false
+    },
+    {
+      "filename": "epistemic-discipline.md",
+      "bytes": 8426,
+      "role": "audit material; not a separate action or authority override"
+    }
+  ],
+  "verificationScope": "Technical and functional QA; not scientific/normative certification of every record or proof over every model input.",
+  "testResults": {
+    "mainBrowser": {
+      "startTime": "2026-10-27T05:01:51.933Z",
+      "duration": 560124.0689999999,
+      "expected": 307,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "everydayBrowser": {
+      "startTime": "2026-10-27T05:04:43.458Z",
+      "duration": 94418.867,
+      "expected": 11,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "Chroma": {
+      "logSHA256": "9aaaa849127d3d959434c623ea76f68d60783715e655cdf665e4b2eb27f4501e",
+      "tail": [
+        "PASS manifest valid relative paths and icons",
+        "",
+        " 21 passed, 0 failed"
+      ]
+    },
+    "ChromaFaults": {
+      "logSHA256": "1284d2b28f3e7659919b0d2149384f9a0696f2fda4073efeed8c1e660056f193",
+      "tail": [
+        "PASS LAYOUT-44-combinations-width-orientation-theme-200percent",
+        "PASS LAYOUT-results-280-320-375-at-200percent",
+        "SUMMARY 10 0"
+      ]
+    },
+    "ChromaHighAssurance": {
+      "logSHA256": "dcfd93f75f227a1a90fe254a1e8c86e91c7ded0da4eb0fa53a5f19bbcea6049d",
+      "tail": [
+        "PASS STATE-cancelled-reset-preserves-progress",
+        "PASS LAYOUT-7-critical-viewports-and-44px",
+        "SUMMARY 10 passed; 0 failed"
+      ]
+    },
+    "MoodBrowser": {
+      "logSHA256": "6b4303640cd7874c0febb5b9b342884215b5dc6ecf8c6f84a2883e10a7ddc7a2",
+      "tail": [
+        "PASS 200% zoom at effective 320px layout",
+        "PASS delete with explicit confirmation",
+        "SUMMARY 115 PASS 0 FAIL"
+      ]
+    },
+    "MoodBilingual": {
+      "logSHA256": "d0c6ac97db376edb873994d5ad0ba931fec1db618ed5a7bb6fe4712393774127",
+      "tail": [
+        "  \"failed\": 0,",
+        "  \"fails\": {}",
+        "}"
+      ]
+    },
+    "PshoBrowser": {
+      "logSHA256": "0a708ed14eeb0538e96813efe14c39485dad09e626e4273ff93ce3661a0d6674",
+      "tail": [
+        "PASS no uncaught JS exceptions",
+        "PASS load 4000 entries / 60 goals / 4x CPU",
+        "RESULT 53 PASS 0 FAIL {'reload_ms': 1463.8, 'render_4x_cpu_median_ms': 361.6, 'entries': 4000, 'goals': 60, 'bytes': 816850}"
+      ]
+    },
+    "Static": {
+      "logSHA256": "b81bb15d71f327b5aab63d5c03c60548279b978b71da7ca7907e3d1b59e2df20",
+      "tail": [
+        "PASS: S14 evidence structural integrity and completeness report",
+        "",
+        "Static QA: 29/29 gates passed; 132 JavaScript files syntax-checked."
+      ]
+    },
+    "MCImporter": {
+      "logSHA256": "b317d1cf5dede24fcff9b53affb1fe0f09e17c4c86d15aa7568044419ca3b0bf",
+      "tail": [
+        "",
+        "OK",
+        "{\"updated\": false, \"retainedPrevious\": true, \"errors\": [{\"source\": \"http://mc.ru:8080/prices/metserv.zip\", \"error\": \"network unavailable\"}, {\"source\": \"http://en.mc.ru/prices/metserv.zip\", \"error\": \"network unavailable\"}]}"
+      ]
+    },
+    "LiveBaseline": {
+      "logSHA256": "c4c13f0b2f9117b417ad2b567893fd4029a265d647afd21c9fc143b13465a787",
+      "tail": [
+        "LIVE PASS: 76 HTTP endpoints, 102 local asset paths, 75 exact SHA-256 content matches, 998 records, 742 graph edges"
+      ]
+    }
+  },
+  "limits": [
+    "Local Chromium uses system Chromium 154 with Playwright 1.56.1; local WebKit could not start because seven libraries are absent.",
+    "No physical devices, installed APKs, long-duration soak tests or human UX participants.",
+    "Cloud synchronization and access control are simulated; real private credentials/sessions not provided.",
+    "External URL availability is not factual validation; 64 URLs remain unverified.",
+    "Performance is local lab emulation; not field Core Web Vitals or production-host load testing."
+  ],
+  "externalLinks": {
+    "ok": 1522,
+    "broken": 0,
+    "unverified": 64,
+    "checked": 1586
+  },
+  "supplierQuotes": {
+    "rows": 1372,
+    "archiveMatchesLiveSupplier": true,
+    "supplierDate": "2026-10-26",
+    "dateIsNotReplacedByRetrievalTime": true
+  }
+}

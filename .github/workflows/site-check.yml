@@ -48,7 +48,7 @@ jobs:
           python3 -m pip install --disable-pip-version-check 'reportlab==4.4.4'
           python3 scripts/build-resource-pdfs.py
       - name: Install browser test tooling
-        run: npm install --no-audit --no-fund
+        run: npm ci --no-audit --no-fund
       - name: Install Chromium and WebKit
         run: npx playwright install --with-deps chromium webkit
       - name: Test site at desktop and mobile widths
