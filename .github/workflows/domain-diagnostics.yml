@@ -1,6 +1,12 @@
 name: Public domain DNS and HTTPS diagnostics
 on:
   workflow_dispatch:
+    inputs:
+      restore_home_read:
+        description: Restore public read of index.html while preserving existing ACL grants
+        required: false
+        default: false
+        type: boolean
   push:
     branches: [main]
     paths:
@@ -49,6 +55,32 @@ jobs:
                       result['bytes']=data.get('ContentLength')
                       result['contentType']=data.get('ContentType')
               print(json.dumps(result),flush=True)
+          PY
+      - name: Restore public read of the home page when requested
+        if: github.event_name == 'workflow_dispatch' && inputs.restore_home_read
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.YC_S3_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.YC_S3_SECRET_KEY }}
+          AWS_DEFAULT_REGION: ru-central1
+          AWS_EC2_METADATA_DISABLED: 'true'
+          AWS_PAGER: ''
+        run: |
+          python3 - <<'PY'
+          import json, subprocess
+          from pathlib import Path
+          base=['aws','--endpoint-url=https://storage.yandexcloud.net','s3api']
+          target=['--bucket','enjigirling.ru','--key','index.html']
+          before=json.loads(subprocess.check_output(base+['get-object-acl']+target,text=True))
+          Path('/tmp/index-acl-before.json').write_text(json.dumps(before))
+          grants=list(before.get('Grants',[]))
+          public='http://acs.amazonaws.com/groups/global/AllUsers'
+          if not any(g.get('Grantee',{}).get('URI')==public and g.get('Permission') in ('READ','FULL_CONTROL') for g in grants):
+              grants.append({'Grantee':{'Type':'Group','URI':public},'Permission':'READ'})
+              Path('/tmp/index-acl-public.json').write_text(json.dumps({'Owner':before['Owner'],'Grants':grants}))
+              subprocess.run(base+['put-object-acl']+target+['--access-control-policy','file:///tmp/index-acl-public.json'],check=True)
+              print('Public read added to index.html; existing grants retained.')
+          else:
+              print('Public read already present; no ACL change.')
           PY
       - name: Diagnose authoritative and public DNS
         shell: bash
