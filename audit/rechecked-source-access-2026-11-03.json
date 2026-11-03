@@ -1,0 +1,2263 @@
+{
+  "summary": {
+    "scope": "previously_unverified",
+    "retryReport": "audit/site-review-links-all-2026-11-03.json",
+    "checked": 250,
+    "ok": 174,
+    "broken": 0,
+    "unverified": 76,
+    "generatedAt": "2026-11-03T10:26:27.157Z"
+  },
+  "results": [
+    {
+      "url": "https://www.mashin.ru/eshop/journals/vestnik_mashinostroeniya/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "resources-data.js"
+      ]
+    },
+    {
+      "url": "https://ast.izdatelstvo24.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "resources-data.js"
+      ]
+    },
+    {
+      "url": "https://www.mashin.ru/eshop/journals/zagotovitel_nye_proizvodstva_v_mashinostroenii/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "resources-data.js"
+      ]
+    },
+    {
+      "url": "https://elibrary.ru/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "resources-data.js"
+      ]
+    },
+    {
+      "url": "https://izvuzmash.bmstu.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "resources-data.js"
+      ]
+    },
+    {
+      "url": "https://forum.proasutp.com/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "resources-data.js"
+      ]
+    },
+    {
+      "url": "https://asu-tp.su/forum/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "resources-data.js"
+      ]
+    },
+    {
+      "url": "https://www.plctalk.net/forums/",
+      "status": 403,
+      "result": "unverified",
+      "reason": "",
+      "sources": [
+        "resources-data.js"
+      ]
+    },
+    {
+      "url": "https://www.alfa-industry.ru/forum/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "resources-data.js"
+      ]
+    },
+    {
+      "url": "https://metalorezzka.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "resources-data.js"
+      ]
+    },
+    {
+      "url": "https://power-e.ru/journal/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "resources-data.js"
+      ]
+    },
+    {
+      "url": "https://kit-e.ru/about/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "resources-data.js"
+      ]
+    },
+    {
+      "url": "https://www.voenmeh.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://mauniver.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://mauniver.ru/info/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://mauniver.ru/student/education/programs/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://www.klgtu.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://abit.petrsu.ru/guest/competition-lists/5",
+      "status": 502,
+      "result": "unverified",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://sutd.ru/abitur/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://sutd.ru/ktmu/education/0/37402/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://www.pkgh.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://pkgh.ru/abitur/specialties-plan/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://bmstu.ru/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://mai.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://priem.mai.ru/base/programs/index.php/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://www.mirea.ru/",
+      "status": 403,
+      "result": "unverified",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://mgsu.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "This operation was aborted",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://iiesm.mgsu.ru/postupayushchim/Bakalavriat-spetsialitet/Napravleniya-podgotovki-spetsialnosti/stroitelstvo_bakalavriat/promyshlennoe-i-grazhdanskoe-stroitelstvo.php",
+      "status": null,
+      "result": "unverified",
+      "reason": "This operation was aborted",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://madi.ru/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://pk.madi.ru/59-plan-priema.html",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://www.gubkin.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://gubkin.ru/faculty/oil_and_gas_development/informatsiya-dlya-studentov_novaya/bachelor.php",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://cchgeu.ru/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://pkgodovikov.mskobr.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://pkgodovikov.mskobr.ru/postuplenie-v-kolledzh/specialnosti-professii",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://itmoscow.mskobr.ru/postuplenie-v-kolledzh/specialnosti-professii",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://vpt.obrvrn.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://donstu.ru/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://itf.donstu.ru/sveden/education/programs/oborudovanie-i-tehnologiya-svarochnogo-proizvodstva-15.03.01.html",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://kubstu.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://www.mo_odle.kubstu.ru/sveden/education/9387",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://www.npi-tu.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://npi-tu.ru/sveden/education/eduaccred",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://astu.org/",
+      "status": null,
+      "result": "unverified",
+      "reason": "This operation was aborted",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://astu.org/Content/abiturent",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://www.sevsu.ru/",
+      "status": 403,
+      "result": "unverified",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://крмт.рф/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://krmt-rf.gosuslugi.ru/novosti-i-sobytiya/priemnaya-kampaniya-v-kmt.html",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://www.volgtehkol.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://www.volgtehkol.ru/abiturients/admission-rules",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://gstou.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://gstou.ru/sveden/education/programs/ekspluataciya-i-obslughivanie-obyektov-dobychi-nefti-21.03.01_1.html",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://dstu.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "This operation was aborted",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://www.xn--80aejpylecgdd1b.xn--p1ai/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://www.xn--80aejpylecgdd1b.xn--p1ai/index.php/common",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://www.xn--80aejpylecgdd1b.xn--p1ai/index.php/deyatelnost/dostizheniya/item/4114-2026-2030-08-02-01-stroitelstvo-i-ekspluatatsiya-zdanij-i-sooruzhenij",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://chgsk.edu95.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://www.kstu.ru/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://pstu.ru/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://pstu.ru/sveden/education/?act=discip&key=%7Be9ad059f-f525-4553-8de7-374b701c1c37%7D",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://www.chuvsu.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://www.chuvsu.ru/sveden/education/programs/inghenernoe-konstruirovanie-i-tehnologiya-sozdaniya-elektricheskih-apparatov-13.03.02.html",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://urfu.ru/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://ksu.edu.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://omgtu.ru/",
+      "status": 403,
+      "result": "unverified",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://www.omgtu.ru/general_information/institutes/engineering_institute/department_quot_equipment_and_technology_of_welding_quot/OiTSP/the-applicant.php",
+      "status": 403,
+      "result": "unverified",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://sibsutis.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://kuzstu.ru/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://tomtit.gosuslugi.ru/abiturientam/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://kemgtt.kemobl.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://krirpo.ru/servisy/spravochnik-poo-s-interaktivnoj-kartoj/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://kemgtt.kemobl.ru/abiturientu/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://pnu.edu.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://togudv.ru/ru/applicant/count-reception-places/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://www.s-vfu.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://abit.s-vfu.ru/rating/2396",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://www.py16dv.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://nesiditsa.ru/vacancy/131507995",
+      "status": 403,
+      "result": "unverified",
+      "reason": "",
+      "sources": [
+        "salary-sources.js"
+      ]
+    },
+    {
+      "url": "https://nesiditsa.ru/vacancy/137874704",
+      "status": 403,
+      "result": "unverified",
+      "reason": "",
+      "sources": [
+        "salary-sources.js"
+      ]
+    },
+    {
+      "url": "https://nesiditsa.ru/vacancy/137958986",
+      "status": 403,
+      "result": "unverified",
+      "reason": "",
+      "sources": [
+        "salary-sources.js"
+      ]
+    },
+    {
+      "url": "https://www.redstarprint.ru/vacancies/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "salary-sources.js"
+      ]
+    },
+    {
+      "url": "https://nesiditsa.ru/vacancy/138601476",
+      "status": 403,
+      "result": "unverified",
+      "reason": "",
+      "sources": [
+        "salary-sources.js"
+      ]
+    },
+    {
+      "url": "https://xn----8sbnjg0adinpefc8b1e6c.xn--p1ai/vacancies/164438-inzhener-po-grazhdanskoy-oborone-i-chrezvychaynym/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "salary-sources.js"
+      ]
+    },
+    {
+      "url": "https://era.dpi.qld.gov.au/id/eprint/5799/1/A%20guide%20to%20manufacturing%20rotary%20veneer%20ad%20products%20from%20small%20logs.pdf",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://www.gea.com/en/products/evaporators-crystallizers/gea-mevap/gea-mevap-crystallization/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://www.alfalaval.com/products/separation/centrifugal-separators/separators/innovations/separator-innovator/how-separation-works/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926.701",
+      "status": 403,
+      "result": "unverified",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://www.fhwa.dot.gov/publications/research/infrastructure/pavements/pccp/01164/sect3b.cfm",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://www.peri-usa.com/products/products-overview/formwork-homepage/slabformwork.html",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://www.crsi.org/reinforcing-basics/reinforced-concrete/placing-bars/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://www.gobrick.com/media/file/8-tn-8-2020-03.pdf",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://www.kellerasean.com/expertise/techniques/permeation-grouting",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://www.epa.gov/air-emissions-factors-and-quantification/ap-42-fifth-edition-volume-i-chapter-11-mineral-products-0",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://www.energy.gov/cmei/ito/steam-systems",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://www.spiraxsarco.com/learn-about-steam/the-boiler-house/shell-boilers?sc_lang=en-GB",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://www.energy.gov/sites/prod/files/2014/05/f16/steam8_boiler.pdf",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://www.energy.gov/sites/prod/files/2014/05/f16/steam18_steam_systems.pdf",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://www.energy.gov/sites/prod/files/2014/05/f16/steam3_recovery.pdf",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://www.energy.gov/sites/prod/files/2014/05/f16/steam1_traps.pdf",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://www.ambrell.com/hubfs/Ambrell_PDFs/411-0168-10.pdf",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://www.alfalaval.com/microsites/gphe/tools/how-gphes-work/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://www.cdc.gov/drinking-water/about/how-water-treatment-works.html",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://www.epa.gov/sites/default/files/2015-06/documents/ozon.pdf",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-guides/dosage-form-drug-manufacturers-cgmps-1093",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://www.gea.com/en/products/dryers-particle-processing/fluid-beds/fluid-bed-processors/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://www.freundglobal.com/technology/roll-compaction-granulation/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://www.fda.gov/media/71026/download",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://www.sweco.com/swecoapps/sweco-separators-pharmaceutical.php",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://www.epa.gov/eg/ore-mining-and-dressing-effluent-guidelines",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://www.epa.gov/sites/default/files/2020-10/documents/c11s24.pdf",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://www.asnt.org/what-is-nondestructive-testing/methods/laser-methods",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://www.imageindustries.com/resources/what-is-stud-welding/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://www.sidel.com/machines-repository/sidel-evoblow-regular/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://www.sme.org/globalassets/sme.org/media/training-guides/dv04pub12_e_study_guide.pdf",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://www.lyondellbasell.com/globalassets/lyb/our-solutions/products/documents/polymers-technical-literature/a_guide_to_polyolefin_extrusion_coating.pdf",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://cottonworks.com/wp-content/uploads/2018/01/Dyeing_Booklet.pdf",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://www.tajima.com/product/sai/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://kurtzersa.com/products/electronics-production/soldering-machines/selective-systems",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://sturtevantinc.com/wp-content/uploads/2023/09/S_Micronizer_Sanitary_Product_Bulletin.pdf",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://www.kodak.com/en/print/page/offset-ctp/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://www.rezonit.ru/directory/baza-znaniy/pechatnye-platy-rasshirennyy-spravochnik/kak-delayut-pechatnye-platy-proizvodstvo-pechatnykh-plat/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://www.rezonit.ru/directory/baza-znaniy/pechatnye-platy-rasshirennyy-spravochnik/kak-proizvoditsya-avtomaticheskiy-montazh-pechatnykh-plat-vidy-montazha-/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "processes-data.js"
+      ]
+    },
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_34683/e76d6076ad800a12efcec206f99ad6c59b58517e/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "career-standards-data.js",
+        "script.js",
+        "index.html"
+      ]
+    },
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_51040/6da623a7da211d885c1eaccefb2ef34b26fc141a/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "career-standards-data.js"
+      ]
+    },
+    {
+      "url": "https://vcot.info/standards",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "career-standards-data.js",
+        "script.js"
+      ]
+    },
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_418026/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "career-standards-data.js"
+      ]
+    },
+    {
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/1/prikaz_mintruda_rossii_ot_13_07_2023_N_585n_ob_utverzhdenii.html",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "career-standards-data.js"
+      ]
+    },
+    {
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_07_07_2022_N_401n_ob_utverzhdenii.html",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "career-standards-data.js"
+      ]
+    },
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_416630/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "career-standards-data.js"
+      ]
+    },
+    {
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/2/prikaz_mintruda_rossii_ot_07_07_2022_N_403n_ob_utverzhdenii.html",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "career-standards-data.js"
+      ]
+    },
+    {
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/1/prikaz_mintruda_rossii_ot_30_08_2021_N_590n_ob_utverzhdenii.html",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "career-standards-data.js"
+      ]
+    },
+    {
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/2/prikaz_mintruda_rossii_ot_04_08_2022_N_461n_ob_utverzhdenii.html",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "career-standards-data.js"
+      ]
+    },
+    {
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/1/prikaz_mintruda_rossii_ot_30_06_2022_N_382n_ob_utverzhdenii.html",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "career-standards-data.js"
+      ]
+    },
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_363578/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "career-standards-data.js"
+      ]
+    },
+    {
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_18_04_2022_N_219n_ob_utverzhdenii.html",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "career-standards-data.js"
+      ]
+    },
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_545775/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "career-standards-data.js"
+      ]
+    },
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_543728/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "career-standards-data.js"
+      ]
+    },
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_534303/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "career-standards-data.js"
+      ]
+    },
+    {
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/2/prikaz_mintruda_rossii_ot_28_09_2020_N_658n_ob_utverzhdenii.html",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "career-standards-data.js"
+      ]
+    },
+    {
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_20_07_2022_N_424n_ob_utverzhdenii.html",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "career-standards-data.js"
+      ]
+    },
+    {
+      "url": "https://nangs.org/docs/mintrud-rossii-prikaz-ot-21-04-2022-229n-ob-utverzhdenii-professionalnogo-standarta-spetsialist-po-metrologii-pdf",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "career-standards-data.js"
+      ]
+    },
+    {
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_31_08_2021_N_600n_ob_utverzhdenii.html",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "career-standards-data.js"
+      ]
+    },
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_370148/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "career-standards-data.js"
+      ]
+    },
+    {
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_21_10_2021_N_746n_ob_utverzhdenii.html",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "career-standards-data.js"
+      ]
+    },
+    {
+      "url": "https://nangs.org/docs/mintrud-rossii-prikaz-ot-21-10-2021-748n-ob-utverzhdenii-professionalnogo-standarta-spetsialist-po-patentovedeniyu-pdf",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "career-standards-data.js"
+      ]
+    },
+    {
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_29_09_2020_N_678n_ob_utverzhdenii.html",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "career-standards-data.js"
+      ]
+    },
+    {
+      "url": "https://meganorm.ru/mega_doc/dop1/11/spravochnaya_informatsiya_professionalnye_standarty_i/0/prikaz_mintruda_rossii_ot_28_11_2022_N_739n_ob_utverzhdenii.html",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "career-standards-data.js"
+      ]
+    },
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_19238/371218a8f0a51387dda4851a9f2c60ee3ea4f50a/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "calendar-data.js"
+      ]
+    },
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_19238/f5a8b78d9ae402a6cec7bb36d4139c04ade439ed/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "calendar-data.js"
+      ]
+    },
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_19238/7b12f2b414af5bf2418701b65ca6d15c3831736b/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "calendar-data.js"
+      ]
+    },
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_19238/8ade43b77c61b79cd7f3e83eba63c21bc342172b/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "calendar-data.js"
+      ]
+    },
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_19238/cbac5a6bc4dd9b0c2071e944f242c39cd049887b/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "calendar-data.js"
+      ]
+    },
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_19238/b639e2cc9a9e57d3279a7211871cdc95050416f9/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "calendar-data.js"
+      ]
+    },
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_19238/4b53aabae6a5a7b59afdb8c7d8c3936cf0afbd51/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "calendar-data.js"
+      ]
+    },
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_19238/03546940881010f9b6f1d0fa5e37a7b671d0d9b0/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "calendar-data.js"
+      ]
+    },
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_19238/7ad3fb7f9b36f0d02d4d89bf3d6b4510ab8235cb/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "calendar-data.js"
+      ]
+    },
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_19238/fcc2ec0188bf033e594177355ba29e0d57ae8720/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "calendar-data.js"
+      ]
+    },
+    {
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_19238/0a83ffbf8d87cdf8043ea18f370c674d04c5906c/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "calendar-data.js"
+      ]
+    },
+    {
+      "url": "https://www.consultant.ru/law/hotdocs/91872.html",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "calendar-data.js"
+      ]
+    },
+    {
+      "url": "https://ru.wikipedia.org/wiki/Шероховатость_поверхности",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "dictionary-data.js"
+      ]
+    },
+    {
+      "url": "https://ru.wikipedia.org/wiki/Единая_система_конструкторской_документации",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "dictionary-data.js"
+      ]
+    },
+    {
+      "url": "https://jcgm.bipm.org/vim/en/3.1.html",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "dictionary-data.js"
+      ]
+    },
+    {
+      "url": "https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "dictionary-data.js"
+      ]
+    },
+    {
+      "url": "https://jcgm.bipm.org/vim/en/2.16.html",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "dictionary-data.js"
+      ]
+    },
+    {
+      "url": "https://www.rezonit.ru/directory/baza-znaniy/glossariy/hdi_pechatnye_platy/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "dictionary-data.js"
+      ]
+    },
+    {
+      "url": "https://necompany.ru/poleznaya-informatsiya/chto-takoe-avtomaticheskaya-opticheskaya-inspektsiya-aoi-i-zachem-ona-nuzhna/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "dictionary-data.js"
+      ]
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Design_for_manufacturability",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "dictionary-data.js"
+      ]
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Design_for_testing",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "dictionary-data.js"
+      ]
+    },
+    {
+      "url": "https://ru.wikipedia.org/wiki/%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BC%D0%B0%D0%B3%D0%BD%D0%B8%D1%82%D0%BD%D0%B0%D1%8F_%D1%81%D0%BE%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "dictionary-data.js"
+      ]
+    },
+    {
+      "url": "https://ru.wikipedia.org/wiki/%D0%A7%D0%B8%D1%81%D1%82%D0%BE%D0%B5_%D0%BF%D0%BE%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D0%B5",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "dictionary-data.js"
+      ]
+    },
+    {
+      "url": "https://jcgm.bipm.org/vim/en/2.13.html",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "dictionary-data.js"
+      ]
+    },
+    {
+      "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "dictionary-data.js"
+      ]
+    },
+    {
+      "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda352.htm",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "dictionary-data.js"
+      ]
+    },
+    {
+      "url": "https://docs.python.org/ru/3/tutorial/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "coding-data.js"
+      ]
+    },
+    {
+      "url": "https://docs.python.org/ru/3/library/index.html",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "coding-data.js"
+      ]
+    },
+    {
+      "url": "https://peps.python.org/pep-0008/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "coding-data.js"
+      ]
+    },
+    {
+      "url": "https://docs.pytest.org/en/stable/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "coding-data.js"
+      ]
+    },
+    {
+      "url": "https://developer.mozilla.org/ru/docs/Web/HTML",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "coding-data.js"
+      ]
+    },
+    {
+      "url": "https://developer.mozilla.org/ru/docs/Web/CSS",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "coding-data.js"
+      ]
+    },
+    {
+      "url": "https://developer.mozilla.org/ru/docs/Web/JavaScript",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "coding-data.js"
+      ]
+    },
+    {
+      "url": "https://learn.javascript.ru/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "coding-data.js"
+      ]
+    },
+    {
+      "url": "https://ru.react.dev/learn",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "coding-data.js"
+      ]
+    },
+    {
+      "url": "https://www.typescriptlang.org/docs/handbook/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "coding-data.js"
+      ]
+    },
+    {
+      "url": "https://nodejs.org/learn",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "coding-data.js"
+      ]
+    },
+    {
+      "url": "https://web.dev/learn/performance",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "coding-data.js"
+      ]
+    },
+    {
+      "url": "https://developer.mozilla.org/ru/docs/Learn_web_development/Core/Accessibility",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "coding-data.js"
+      ]
+    },
+    {
+      "url": "https://git-scm.com/book/ru/v2",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "coding-data.js"
+      ]
+    },
+    {
+      "url": "https://docs.github.com/ru",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "coding-data.js"
+      ]
+    },
+    {
+      "url": "https://docs.github.com/ru/actions",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "coding-data.js"
+      ]
+    },
+    {
+      "url": "https://docs.github.com/ru/pages",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "coding-data.js"
+      ]
+    },
+    {
+      "url": "https://playwright.dev/docs/intro",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "coding-data.js"
+      ]
+    },
+    {
+      "url": "https://docs.docker.com/get-started/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "coding-data.js"
+      ]
+    },
+    {
+      "url": "https://postgrespro.ru/docs/postgresql/current",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "coding-data.js"
+      ]
+    },
+    {
+      "url": "https://www.sqlite.org/docs.html",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "coding-data.js"
+      ]
+    },
+    {
+      "url": "https://developer.android.com/develop?hl=ru",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "coding-data.js"
+      ]
+    },
+    {
+      "url": "https://kotlinlang.org/docs/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "coding-data.js"
+      ]
+    },
+    {
+      "url": "https://developer.android.com/topic/performance/overview?hl=ru",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "coding-data.js"
+      ]
+    },
+    {
+      "url": "https://cheatsheetseries.owasp.org/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "coding-data.js"
+      ]
+    },
+    {
+      "url": "https://t.me/evosif",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "ai.html",
+        "calculator-atlas.html",
+        "calculator.html",
+        "calendar.html",
+        "dictionary.html",
+        "map.html",
+        "resources.html"
+      ]
+    },
+    {
+      "url": "https://vk.ru/engigirling",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "ai.html",
+        "calculator-atlas.html",
+        "calculator.html",
+        "calendar.html",
+        "dictionary.html",
+        "map.html",
+        "resources.html"
+      ]
+    },
+    {
+      "url": "https://t.me/enjigirling",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "ai.html",
+        "calculator-atlas.html",
+        "calculator.html",
+        "calendar.html",
+        "dictionary.html",
+        "index.html",
+        "map.html",
+        "resources.html"
+      ]
+    },
+    {
+      "url": "https://web.tribute.tg/d/Mue",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "ai.html",
+        "calculator-atlas.html",
+        "calculator.html",
+        "calendar.html",
+        "dictionary.html",
+        "map.html",
+        "resources.html"
+      ]
+    },
+    {
+      "url": "https://pay.cloudtips.ru/p/72472d16",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "ai.html",
+        "calculator-atlas.html",
+        "calculator.html",
+        "calendar.html",
+        "dictionary.html",
+        "map.html",
+        "resources.html"
+      ]
+    },
+    {
+      "url": "https://t.me/ivanwritesbook/282",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "articles/utopia-math-analysis.html"
+      ]
+    },
+    {
+      "url": "https://t.me/ivanwritesbook/286",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "articles/utopia-math-analysis.html"
+      ]
+    },
+    {
+      "url": "https://www.larousse.fr/encyclopedie/oeuvre/la_Cit%C3%A9_du_Soleil/113721",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "articles/utopia-math-analysis.html"
+      ]
+    },
+    {
+      "url": "https://doi.org/10.5325/utopianstudies.30.3.0422",
+      "status": 403,
+      "result": "unverified",
+      "reason": "",
+      "sources": [
+        "articles/utopia-math-analysis.html"
+      ]
+    },
+    {
+      "url": "https://academic.oup.com/isq/article-abstract/32/4/421/1805484",
+      "status": 403,
+      "result": "unverified",
+      "reason": "",
+      "sources": [
+        "articles/utopia-math-analysis.html"
+      ]
+    },
+    {
+      "url": "https://profiles.umsl.edu/en/publications/utopian-literature-in-english-an-annotated-bibliography-from-1516/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "articles/utopia-math-analysis.html"
+      ]
+    },
+    {
+      "url": "https://sciety.org/articles/activity/10.31235/osf.io/tng23_v1",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "articles/utopia-math-analysis.html"
+      ]
+    },
+    {
+      "url": "https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/struct____nv__tf32.html",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "calculator.html"
+      ]
+    },
+    {
+      "url": "https://www.modbus.org/introduction-to-modbus",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "calculator.html"
+      ]
+    },
+    {
+      "url": "https://knowledge.ni.com/KnowledgeArticleDetails?id=kA00Z000000PASfSAO",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "calculator.html"
+      ]
+    },
+    {
+      "url": "http://mc.ru:8080/prices/metserv.zip",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "calculator.html"
+      ]
+    },
+    {
+      "url": "https://makerrate.cc/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "calculator.html"
+      ]
+    },
+    {
+      "url": "https://www.iso.org/standard/54497.html",
+      "status": 403,
+      "result": "unverified",
+      "reason": "",
+      "sources": [
+        "calculator.html"
+      ]
+    },
+    {
+      "url": "https://web.mit.edu/2.810/www/files/lectures/lec4-process-performance-2018.pdf",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "calculator.html"
+      ]
+    },
+    {
+      "url": "https://textilenotes.com/formulas/marker-efficiency",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "calculator.html"
+      ]
+    },
+    {
+      "url": "https://textilenotes.com/calculators/woven-fabric-consumption",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "calculator.html"
+      ]
+    },
+    {
+      "url": "https://textilenotes.com/formulas/line-efficiency",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "calculator.html"
+      ]
+    },
+    {
+      "url": "https://oceanservice.noaa.gov/facts/nautical-mile-knot.html",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "calculator.html"
+      ]
+    },
+    {
+      "url": "https://puc.overheid.nl/nsi/doc/PUC_1462_14/1/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "calculator.html"
+      ]
+    },
+    {
+      "url": "https://engineering.mit.edu/ask-an-engineer/what-is-the-relationship-between-the-length-of-a-boat-and-its-maximum-speed",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "calculator.html"
+      ]
+    },
+    {
+      "url": "https://tc.canada.ca/en/marine-transportation/publications/tp-14609-study-guide-applicants-fourth-class-engineer-certificate-stcw-endorsement",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "calculator.html"
+      ]
+    },
+    {
+      "url": "https://vitameal.com/catalog/product-115/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "calendar/index.html"
+      ]
+    },
+    {
+      "url": "https://www.nowfoods.com/products/supplements/vitamin-b-1-100-mg-tablets",
+      "status": 403,
+      "result": "unverified",
+      "reason": "",
+      "sources": [
+        "calendar/index.html"
+      ]
+    },
+    {
+      "url": "https://www.nowfoods.com/products/supplements/folic-acid-800-mcg-vitamin-b-12-tablets",
+      "status": 403,
+      "result": "unverified",
+      "reason": "",
+      "sources": [
+        "calendar/index.html"
+      ]
+    },
+    {
+      "url": "https://ods.od.nih.gov/factsheets/Magnesium-Consumer/",
+      "status": 403,
+      "result": "unverified",
+      "reason": "",
+      "sources": [
+        "calendar/index.html"
+      ]
+    },
+    {
+      "url": "https://www.nhs.uk/medicines/ferrous-sulfate/how-and-when-to-take-ferrous-sulfate/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "calendar/index.html"
+      ]
+    },
+    {
+      "url": "https://github.com/Vremennobeznika/enjigirling",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "index.html"
+      ]
+    },
+    {
+      "url": "https://github.com/Vremennobeznika/enjigirling/blob/main/audit/release-engineering-and-links-2026-10-25.md",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "index.html"
+      ]
+    },
+    {
+      "url": "https://www.textileschool.com/calculators/",
+      "status": 403,
+      "result": "unverified",
+      "reason": "",
+      "sources": []
+    },
+    {
+      "url": "https://textilenotes.com/calculators",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": []
+    },
+    {
+      "url": "https://shipcalculators.com/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": []
+    },
+    {
+      "url": "https://metacad.io/en/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": []
+    },
+    {
+      "url": "https://btengineering.net/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": []
+    },
+    {
+      "url": "https://uscalculators.com/machining/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": []
+    },
+    {
+      "url": "https://metricmech.com/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": []
+    },
+    {
+      "url": "https://www.engineercalculators.com/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": []
+    },
+    {
+      "url": "https://rfcalclab.com/en",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": []
+    },
+    {
+      "url": "https://processfunda.com/calculator-library/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": []
+    },
+    {
+      "url": "https://turn2engineering.com/calculators",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": []
+    },
+    {
+      "url": "https://buildrefs.com/calculators/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": []
+    },
+    {
+      "url": "https://pvwatts.nrel.gov/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": []
+    },
+    {
+      "url": "https://e6bcalculator.com/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": []
+    },
+    {
+      "url": "https://supplychain.tools/calculators",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": []
+    },
+    {
+      "url": "https://lazytools.io/3d-printing/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": []
+    },
+    {
+      "url": "https://agriculturecalculators.com/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": []
+    },
+    {
+      "url": "https://m.minobrnauki.gov.ru/press-center/news/novosti-ministerstva/100850/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map.html"
+      ]
+    },
+    {
+      "url": "https://stepik.org/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map.html"
+      ]
+    }
+  ]
+}

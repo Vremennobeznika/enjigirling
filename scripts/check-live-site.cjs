@@ -53,7 +53,7 @@ async function run(){
  for(const name of paths.filter(p=>p.endsWith('.html'))){
   assert.ok(files[name].includes('<main'),name+' missing main landmark');
   assert.ok(files[name].includes('navigation.js'),name+' missing shared navigation');
-  const canonical=base+(name==='index.html'?'':name);
+  const canonical=base+(name==='index.html'?'':name==='calculator-atlas.html'?'calculator.html':name);
   assert.ok(files[name].includes('rel="canonical" href="'+canonical+'"'),name+' canonical URL missing or mismatched');
  }
  const packIndex=JSON.parse(files['knowledge/sections/index.json']);
