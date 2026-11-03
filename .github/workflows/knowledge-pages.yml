@@ -22,6 +22,8 @@ jobs:
     # independent Yandex upload failed. Always rebuild the public mirror from
     # trusted main; the client continues rejecting stale supplier dates.
     runs-on: ubuntu-latest
+    outputs:
+      pages_mode: ${{ steps.pages_mode.outputs.mode }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -73,6 +75,35 @@ jobs:
           if-no-files-found: ignore
       - name: Prepare Pages
         uses: actions/configure-pages@v5
+      - name: Read the configured Pages publishing mode
+        id: pages_mode
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api "repos/$GITHUB_REPOSITORY/pages" > /tmp/pages-settings.json
+          python3 - <<'PY'
+          import json, os
+          settings=json.load(open('/tmp/pages-settings.json'))
+          mode=settings['build_type']
+          if mode not in ('legacy','workflow'):
+              raise SystemExit('Unsupported Pages publishing mode')
+          if mode=='legacy' and settings.get('source')!={'branch':'main','path':'/'}:
+              raise SystemExit('Unexpected legacy source; no files will be published')
+          with open(os.environ['GITHUB_OUTPUT'],'a') as out:
+              out.write('mode='+mode+'\n')
+          PY
+      - name: Verify generated reading files in the configured legacy source
+        if: steps.pages_mode.outputs.mode == 'legacy'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git diff --exit-code -- knowledge downloads knowledge-base.md knowledge-manifest.json llms.txt
+          if [[ -n "$(git ls-files --others --exclude-standard -- knowledge downloads)" ]]; then
+            echo 'Generated public files are missing from the source. Include the validated output in the pull request.'
+            exit 1
+          fi
+          gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds"
       - name: Stage static site without test dependencies
         run: |
           mkdir -p _site
@@ -97,6 +128,7 @@ jobs:
         with:
           path: _site
   deploy:
+    if: needs.build.outputs.pages_mode == 'workflow'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url || steps.retry_deployment.outputs.page_url || steps.final_deployment.outputs.page_url }}
@@ -134,3 +166,31 @@ jobs:
         env:
           SITE_URL: ${{ steps.deployment.outputs.page_url || steps.retry_deployment.outputs.page_url || steps.final_deployment.outputs.page_url }}
         run: node scripts/check-live-site.cjs
+  verify_legacy:
+    if: needs.build.outputs.pages_mode == 'legacy'
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Wait for the requested legacy Pages build
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for attempt in {1..24}; do
+            state=$(gh api "repos/$GITHUB_REPOSITORY/pages/builds/latest" --jq '.status')
+            if [[ "$state" == 'built' ]]; then exit 0; fi
+            if [[ "$state" == 'errored' ]]; then exit 1; fi
+            sleep 10
+          done
+          exit 1
+      - name: Verify deployed site and generated downloads
+        env:
+          SITE_URL: https://vremennobeznika.github.io/enjigirling/
+        run: |
+          node scripts/check-live-site.cjs
+          python3 scripts/check-public-access.py --base-url "$SITE_URL" knowledge/reading/index.html mc-prices.json

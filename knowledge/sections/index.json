@@ -1,0 +1,97 @@
+{
+  "schemaVersion": "1.0",
+  "quality": "editorial_not_independently_verified",
+  "howToUse": "Download a section Markdown or JSON and provide the file to a model; a bare URL may not be accessible to every model.",
+  "sections": [
+    {
+      "id": "professions",
+      "title": "Профессии",
+      "page": "index.html",
+      "markdown": "knowledge/sections/professions.md",
+      "json": "knowledge/sections/professions.json",
+      "canonicalDataset": "knowledge/professions.json",
+      "records": 54
+    },
+    {
+      "id": "calendar",
+      "title": "Календарь инженерных дат",
+      "page": "calendar.html",
+      "markdown": "knowledge/sections/calendar.md",
+      "json": "knowledge/sections/calendar.json",
+      "canonicalDataset": null,
+      "records": 58
+    },
+    {
+      "id": "resources",
+      "title": "Инженерные ресурсы",
+      "page": "resources.html",
+      "markdown": "knowledge/sections/resources.md",
+      "json": "knowledge/sections/resources.json",
+      "canonicalDataset": null,
+      "records": 182
+    },
+    {
+      "id": "ai-code-library",
+      "title": "Библиотека программирования для ИИ",
+      "page": "coding.html",
+      "markdown": "knowledge/sections/ai-code-library.md",
+      "json": "knowledge/sections/ai-code-library.json",
+      "canonicalDataset": null,
+      "records": 25
+    },
+    {
+      "id": "dictionary",
+      "title": "Инженерный словарь",
+      "page": "dictionary.html",
+      "markdown": "knowledge/sections/dictionary.md",
+      "json": "knowledge/sections/dictionary.json",
+      "canonicalDataset": "knowledge/dictionary.json",
+      "records": 562
+    },
+    {
+      "id": "learning",
+      "title": "Обучение",
+      "page": "map.html",
+      "markdown": "knowledge/sections/learning.md",
+      "json": "knowledge/sections/learning.json",
+      "canonicalDataset": null,
+      "records": 80
+    },
+    {
+      "id": "calculators",
+      "title": "Инженерные калькуляторы",
+      "page": "calculator.html",
+      "markdown": "knowledge/sections/calculators.md",
+      "json": "knowledge/sections/calculators.json",
+      "canonicalDataset": null,
+      "records": 34
+    },
+    {
+      "id": "compare",
+      "title": "Сравнение профессий",
+      "page": "compare.html",
+      "markdown": "knowledge/sections/compare.md",
+      "json": "knowledge/sections/compare.json",
+      "canonicalDataset": "knowledge/professions.json",
+      "records": 54
+    },
+    {
+      "id": "processes",
+      "title": "Производственные процессы",
+      "page": "processes.html",
+      "markdown": "knowledge/sections/processes.md",
+      "json": "knowledge/sections/processes.json",
+      "canonicalDataset": "knowledge/processes.json",
+      "records": 210
+    },
+    {
+      "id": "materials",
+      "title": "Инженерные материалы",
+      "page": "materials.html",
+      "markdown": "knowledge/sections/materials.md",
+      "json": "knowledge/sections/materials.json",
+      "canonicalDataset": "knowledge/materials.json",
+      "records": 172
+    }
+  ]
+}
