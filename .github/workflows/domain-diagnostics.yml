@@ -12,6 +12,44 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 5
     steps:
+      - name: Inspect storage access without changing bucket permissions
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.YC_S3_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.YC_S3_SECRET_KEY }}
+          AWS_DEFAULT_REGION: ru-central1
+          AWS_EC2_METADATA_DISABLED: 'true'
+          AWS_PAGER: ''
+        run: |
+          python3 - <<'PY'
+          import json, subprocess
+          base=['aws','--endpoint-url=https://storage.yandexcloud.net','s3api']
+          for command in [
+              ['head-bucket','--bucket','enjigirling.ru'],
+              ['head-object','--bucket','enjigirling.ru','--key','index.html'],
+              ['get-object-acl','--bucket','enjigirling.ru','--key','index.html'],
+              ['get-bucket-policy','--bucket','enjigirling.ru'],
+              ['get-bucket-website','--bucket','enjigirling.ru']]:
+              r=subprocess.run(base+command,capture_output=True,text=True,timeout=20)
+              result={'operation':command[0],'exitCode':r.returncode}
+              if r.returncode:
+                  result['error']=r.stderr.strip()[:700]
+              else:
+                  data=json.loads(r.stdout or '{}')
+                  if command[0]=='get-object-acl':
+                      result['anonymousRead']=any(g.get('Grantee',{}).get('URI','').endswith('/AllUsers') and g.get('Permission') in ('READ','FULL_CONTROL') for g in data.get('Grants',[]))
+                  elif command[0]=='get-bucket-policy':
+                      statements=json.loads(data['Policy']).get('Statement',[])
+                      if isinstance(statements,dict): statements=[statements]
+                      result['statementCount']=len(statements)
+                      result['effects']=[s.get('Effect') for s in statements]
+                      result['conditionKeys']=[list(s.get('Condition',{})) for s in statements]
+                  elif command[0]=='get-bucket-website':
+                      result['indexDocument']=data.get('IndexDocument',{}).get('Suffix')
+                  elif command[0]=='head-object':
+                      result['bytes']=data.get('ContentLength')
+                      result['contentType']=data.get('ContentType')
+              print(json.dumps(result),flush=True)
+          PY
       - name: Diagnose authoritative and public DNS
         shell: bash
         run: |
