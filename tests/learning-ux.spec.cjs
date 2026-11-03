@@ -1,4 +1,16 @@
 const {test,expect}=require('@playwright/test');
+test('retired college sources do not imply a verified programme or an old check date',async({page})=>{
+ await page.goto('/map.html');
+ await page.locator('#educationSearch').fill('техникум строительной индустрии');
+ const card=page.locator('#educationResults .education-card');
+ await expect(card).toHaveCount(1);
+ await card.locator('summary').click();
+ await expect(card).toContainText('27.10.2026: проверить ссылку не удалось');
+ await expect(card).toContainText('наличие конкретной программы и условия набора не подтверждены');
+ await expect(card.locator('a.education-site')).toHaveAttribute('href','https://tci72.ru/');
+ await expect(card.locator('a[href*="/enrollees/"]')).toHaveCount(0);
+ await expect(card).not.toContainText('Программа по источнику');
+});
 test('education search, college filter, reset and more results work',async({page})=>{
  const errors=[];
  page.on('pageerror',err=>errors.push(err.message));

@@ -74,6 +74,10 @@ jobs:
     permissions:
       contents: read
     steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: scripts/check-public-access.py
+          sparse-checkout-cone-mode: false
       - name: Download verified Russian site
         uses: actions/download-artifact@v4
         with:
@@ -132,3 +136,5 @@ jobs:
             cmp "dist-ru/$asset" "/tmp/enjigirling-${asset}"
           done
           echo "Published to Yandex and verified index.html matches the build."
+      - name: Verify anonymous visitor access after publishing
+        run: python3 scripts/check-public-access.py

@@ -67,6 +67,9 @@ jobs:
           aws --endpoint-url=https://storage.yandexcloud.net s3 cp mc-prices.json s3://enjigirling.ru/mc-prices.json --content-type 'application/json; charset=utf-8' --cache-control 'public,max-age=300' --only-show-errors
           aws --endpoint-url=https://storage.yandexcloud.net s3 cp s3://enjigirling.ru/mc-prices.json /tmp/mc-prices-published.json --only-show-errors
           cmp mc-prices.json /tmp/mc-prices-published.json
+      - name: Verify anonymous access to the current price snapshot
+        if: github.ref == 'refs/heads/main'
+        run: python3 scripts/check-public-access.py mc-prices.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:

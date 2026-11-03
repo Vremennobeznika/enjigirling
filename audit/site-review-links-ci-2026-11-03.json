@@ -1,0 +1,933 @@
+{
+  "summary": {
+    "scope": "previously_unverified",
+    "retryReport": "audit/whole-site-recheck-links-2026-10-27.json",
+    "checked": 102,
+    "ok": 55,
+    "broken": 0,
+    "unverified": 47,
+    "generatedAt": "2026-11-03T08:43:21.440Z"
+  },
+  "results": [
+    {
+      "url": "https://www.rath-group.com/fileadmin/content/Rath-Group/Downloads/Broschueren_Industrien/RATH_GLASS_202209_EN.pdf",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "materials-data.js"
+      ]
+    },
+    {
+      "url": "https://vk.ru/engigirling",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "ai.html",
+        "calculator-atlas.html",
+        "calculator.html",
+        "calendar.html",
+        "dictionary.html",
+        "map.html",
+        "resources.html"
+      ]
+    },
+    {
+      "url": "https://doi.org/10.5325/utopianstudies.30.3.0422",
+      "status": 403,
+      "result": "unverified",
+      "reason": "",
+      "sources": [
+        "articles/utopia-math-analysis.html"
+      ]
+    },
+    {
+      "url": "https://academic.oup.com/isq/article-abstract/32/4/421/1805484",
+      "status": 403,
+      "result": "unverified",
+      "reason": "",
+      "sources": [
+        "articles/utopia-math-analysis.html"
+      ]
+    },
+    {
+      "url": "https://knowledge.ni.com/KnowledgeArticleDetails?id=kA00Z000000PASfSAO",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "calculator.html"
+      ]
+    },
+    {
+      "url": "https://mc.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": []
+    },
+    {
+      "url": "https://pvwatts.nrel.gov/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": []
+    },
+    {
+      "url": "https://www.voenmeh.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://mauniver.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://mauniver.ru/info/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://mauniver.ru/student/education/programs/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://www.klgtu.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://abit.petrsu.ru/guest/competition-lists/5",
+      "status": 502,
+      "result": "unverified",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://mai.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://priem.mai.ru/base/programs/index.php/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://www.mirea.ru/",
+      "status": 403,
+      "result": "unverified",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://mgsu.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "This operation was aborted",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://iiesm.mgsu.ru/postupayushchim/Bakalavriat-spetsialitet/Napravleniya-podgotovki-spetsialnosti/stroitelstvo_bakalavriat/promyshlennoe-i-grazhdanskoe-stroitelstvo.php",
+      "status": null,
+      "result": "unverified",
+      "reason": "This operation was aborted",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://madi.ru/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://pk.madi.ru/59-plan-priema.html",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://www.gubkin.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://gubkin.ru/faculty/oil_and_gas_development/informatsiya-dlya-studentov_novaya/bachelor.php",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://cchgeu.ru/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://www.tstu.tver.ru/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://new.tstu.tver.ru/sveden/vacant/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://pkgodovikov.mskobr.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://pkgodovikov.mskobr.ru/postuplenie-v-kolledzh/specialnosti-professii",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://itmoscow.mskobr.ru/postuplenie-v-kolledzh/specialnosti-professii",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://vpt.obrvrn.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://donstu.ru/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://itf.donstu.ru/sveden/education/programs/oborudovanie-i-tehnologiya-svarochnogo-proizvodstva-15.03.01.html",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://kubstu.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://www.mo_odle.kubstu.ru/sveden/education/9387",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://www.npi-tu.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://npi-tu.ru/sveden/education/eduaccred",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://astu.org/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://astu.org/Content/abiturent",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://www.sevsu.ru/",
+      "status": 403,
+      "result": "unverified",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://крмт.рф/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://krmt-rf.gosuslugi.ru/novosti-i-sobytiya/priemnaya-kampaniya-v-kmt.html",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://chgsk.edu95.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://www.kstu.ru/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://pstu.ru/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://pstu.ru/sveden/education/?act=discip&key=%7Be9ad059f-f525-4553-8de7-374b701c1c37%7D",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://www.chuvsu.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://www.chuvsu.ru/sveden/education/programs/inghenernoe-konstruirovanie-i-tehnologiya-sozdaniya-elektricheskih-apparatov-13.03.02.html",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://urfu.ru/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://ksu.edu.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://abit.kgsu.ru/page/3",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://tpu.ru/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://abiturient.tpu.ru/programmy/upravlenie-obektami-elektroenergeticheskikh-sistem-1873/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://www.istu.edu/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://www.istu.edu/abiturientu/ege_2026",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://omgtu.ru/",
+      "status": 403,
+      "result": "unverified",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://www.omgtu.ru/general_information/institutes/engineering_institute/department_quot_equipment_and_technology_of_welding_quot/OiTSP/the-applicant.php",
+      "status": 403,
+      "result": "unverified",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://sibsutis.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://do.sibsutis.ru/kak_postupit/vstupitelnie_ispitaniya",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://kuzstu.ru/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://kuzstu.ru/abiturientu/priemnaya-kampaniya-2026/tsifri-priema/bakalavriat-spetsialitet-golovnoi-vuz/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://sfu.ru/",
+      "status": 403,
+      "result": "unverified",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://sfu.ru/ru/about/sfu-history",
+      "status": 403,
+      "result": "unverified",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://sfu.ru/ru/admission/bachelor/exams-destinations",
+      "status": 403,
+      "result": "unverified",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://www.stu.ru/abiturient/index.php?page=1237",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://www.ntgt.ru/abiturient/priyemnaya-kampaniya-2026/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://tomtit.gosuslugi.ru/abiturientam/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://kemgtt.kemobl.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://krirpo.ru/servisy/spravochnik-poo-s-interaktivnoj-kartoj/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://kemgtt.kemobl.ru/abiturientu/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://ktps24.ru/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://ktps24.ru/abitur/plan-priema/plan-priema.php",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://www.dvfu.ru/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://postupi.dvfu.ru/upload/medialibrary/98f/7eztblkj553n8y8xr9a7xqqhospix2fr/15.03.01%20%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%B8%D0%B5.PDF",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://knastu.ru/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://abit.knastu.ru/profiles/15.03.01/1838/141/1",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://pnu.edu.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://togudv.ru/ru/applicant/count-reception-places/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://www.s-vfu.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://abit.s-vfu.ru/rating/2396",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://vstehn.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://vstehn.ru/kontakty/rekvezity/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://vstehn.ru/priemnaya_komissiya/nashi-specialnosti-2/sudostroenie/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://www.py16dv.ru/",
+      "status": null,
+      "result": "unverified",
+      "reason": "fetch failed",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://py16dv.ru/abiturientu/pravila-prijoma",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://py16dv.ru/abiturientu/kontrolnye-tsifry-prijoma",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://obr-khv.ru/prof-education-system/professionalnye-obrazovatelnye-uchrezhdeniya.php",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "http://gaskk-mck.ru/index.php/abiturientu/itemlist/category/24-professii-i-spetsialnosti",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map-data.js"
+      ]
+    },
+    {
+      "url": "https://m.minobrnauki.gov.ru/press-center/news/novosti-ministerstva/100850/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map.html"
+      ]
+    },
+    {
+      "url": "https://openedu.ru/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map.html"
+      ]
+    },
+    {
+      "url": "https://edu.itmo.ru/ru/edu_online/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map.html"
+      ]
+    },
+    {
+      "url": "https://stepik.org/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map.html"
+      ]
+    },
+    {
+      "url": "https://www.lektorium.tv/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map.html"
+      ]
+    },
+    {
+      "url": "https://www.coursera.org/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map.html"
+      ]
+    },
+    {
+      "url": "https://intuit.ru/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map.html"
+      ]
+    },
+    {
+      "url": "https://education.yandex.ru/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map.html"
+      ]
+    },
+    {
+      "url": "https://ru.hexlet.io/",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map.html"
+      ]
+    },
+    {
+      "url": "https://www.autodesk.com/certification/overview",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map.html"
+      ]
+    },
+    {
+      "url": "https://sochisirius.ru/obuchenie/distant",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "map.html"
+      ]
+    },
+    {
+      "url": "https://robotis.us/pages/faq",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "robotics.html"
+      ]
+    },
+    {
+      "url": "https://www.energy.gov/sites/default/files/2023-09/2_Technology%20Strategy%20Assessment%20-%202%20Lithium-ion_508.pdf",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "robotics.html"
+      ]
+    },
+    {
+      "url": "https://docs.ros.org/en/ros2_packages/rolling/api/joint_state_publisher/index.html",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "robotics.html"
+      ]
+    },
+    {
+      "url": "https://console.yandex.cloud/folders/b1gb2bfrust2n5nnbk30/functions/functions/d4ed26vrlmb1uk22m3b7/editor",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "life/index.html"
+      ]
+    },
+    {
+      "url": "https://console.yandex.cloud/folders/b1gb2bfrust2n5nnbk30/functions/functions/d4ed26vrlmb1uk22m3b7/overview",
+      "status": 200,
+      "result": "ok",
+      "reason": "",
+      "sources": [
+        "life/index.html"
+      ]
+    }
+  ]
+}

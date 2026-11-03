@@ -16,6 +16,12 @@ on:
       - 'tests/external-links.cjs'
       - '.github/workflows/external-links.yml'
   workflow_dispatch:
+    inputs:
+      retry_report:
+        description: Optional repository JSON report; retry only its unverified URLs
+        required: false
+        default: ''
+        type: string
   schedule:
     - cron: '0 7 * * 1'
 permissions:
@@ -30,7 +36,14 @@ jobs:
         with:
           node-version: '22'
       - name: Audit external resources
-        run: node tests/external-links.cjs
+        env:
+          RETRY_REPORT: ${{ inputs.retry_report }}
+        run: |
+          if [[ -n "$RETRY_REPORT" ]]; then
+            node tests/external-links.cjs "--retry-unverified=$RETRY_REPORT"
+          else
+            node tests/external-links.cjs
+          fi
       - name: Upload report
         if: always()
         uses: actions/upload-artifact@v4
