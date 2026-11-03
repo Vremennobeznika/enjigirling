@@ -58,7 +58,8 @@ for(const file of htmlPages()){
 // unverified rather than claiming the site is definitively broken.
 const manualBrowserChecked=new Set(['https://www.trv-science.ru/home-2/']);
 const results=[];
-const urls=[...links.keys()];
+const retryReport=process.argv.find(arg=>arg.startsWith('--retry-unverified='))?.split('=').slice(1).join('=');
+const urls=retryReport?[...new Set(JSON.parse(fs.readFileSync(retryReport,'utf8')).results.filter(row=>row.result==='unverified').map(row=>row.url))]:[...links.keys()];
 let cursor=0;
 async function check(url){
  const controller=new AbortController();
@@ -68,8 +69,8 @@ async function check(url){
    const status=response.status;
    if(response.body)await response.body.cancel().catch(()=>{});
    const siteAccessRestricted=manualBrowserChecked.has(url)&&(status===404||status===410);
-   return {url,status,result:siteAccessRestricted?'unverified':status>=200&&status<400?'ok':status===404||status===410?'broken':'unverified',reason:siteAccessRestricted?'HTTP 404 from CI client; publisher page opened independently 2026-10-21 (not validated by CI)':'',sources:[...links.get(url)]};
- }catch(e){return {url,status:null,result:'unverified',reason:String(e.message||e).slice(0,140),sources:[...links.get(url)]};}
+   return {url,status,result:siteAccessRestricted?'unverified':status>=200&&status<400?'ok':status===404||status===410?'broken':'unverified',reason:siteAccessRestricted?'HTTP 404 from CI client; publisher page opened independently 2026-10-21 (not validated by CI)':'',sources:[...(links.get(url)||[])]};
+ }catch(e){return {url,status:null,result:'unverified',reason:String(e.message||e).slice(0,140),sources:[...(links.get(url)||[])]};}
  finally{clearTimeout(timer);}
 }
 async function worker(){while(cursor<urls.length){const i=cursor++;results[i]=await check(urls[i]);}}
@@ -77,7 +78,7 @@ if(process.argv.includes('--inventory')){
  console.log(JSON.stringify([...links].map(([url,sources])=>({url,sources:[...sources]})),null,2));
 }else (async()=>{
  await Promise.all(Array.from({length:5},worker));
- const summary={checked:results.length,ok:results.filter(x=>x.result==='ok').length,broken:results.filter(x=>x.result==='broken').length,unverified:results.filter(x=>x.result==='unverified').length,generatedAt:new Date().toISOString()};
+ const summary={scope:retryReport?'previously_unverified':'full_inventory',retryReport:retryReport||null,checked:results.length,ok:results.filter(x=>x.result==='ok').length,broken:results.filter(x=>x.result==='broken').length,unverified:results.filter(x=>x.result==='unverified').length,generatedAt:new Date().toISOString()};
  fs.mkdirSync('audit',{recursive:true});
  fs.writeFileSync('audit/external-links.json',JSON.stringify({summary,results},null,2)+'\n');
  const report=['# External link audit','',...Object.entries(summary).map(([k,v])=>'- '+k+': '+v),'','## Broken (HTTP 404 / 410)','',...results.filter(x=>x.result==='broken').map(x=>'- '+x.status+' '+x.url+' ('+x.sources.join(', ')+')'),'','## Unverified (network errors, anti-bot or other HTTP status)','',...results.filter(x=>x.result==='unverified').map(x=>'- '+(x.status||x.reason)+' '+x.url)];
