@@ -17,7 +17,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: npm install --no-audit --no-fund
+      - run: npm ci --no-audit --no-fund
       - run: npx playwright install --with-deps chromium
       - run: node -e "console.log('Playwright version:', require('playwright/package.json').version)"
       - run: python3 -m http.server 8765 --bind 127.0.0.1 &

@@ -19,7 +19,7 @@
 Показать ещё
 Для поиска по каталогу нужен JavaScript. [Список ресурсов в Markdown](https://vremennobeznika.github.io/enjigirling/knowledge/sections/resources.md).
 
-## Полные записи справочника (182 записей/групп)
+## Полные записи справочника (184 записей/групп)
 
 ### CADmaster
 - **id:** mag-cadmaster
@@ -1255,6 +1255,20 @@
 - **name:** SolveSpace
 - **desc:** Свободная параметрическая 2D/3D-САПР для деталей, сборочных ограничений и экспорта STEP.
 - **link:** https://solvespace.com/index.pl
+
+### Mini QR — генератор QR-кодов
+- **id:** tool-mini-qr
+- **type:** Инструменты и симуляторы
+- **name:** Mini QR — генератор QR-кодов
+- **desc:** QR-коды для ссылок на инженерные карточки, инструкции и печатные материалы: экспорт PNG/SVG, пакетная генерация из CSV. Репозиторий r3bers — форк lyqht/mini-qr; лицензия GPL-3.0-or-later. Ссылка ведёт на исходный код и описание запуска.
+- **link:** https://github.com/r3bers/mini-qr
+
+### NGINX Config — настройка веб-сервера
+- **id:** tool-nginx-config
+- **type:** Инструменты и симуляторы
+- **name:** NGINX Config — настройка веб-сервера
+- **desc:** Генератор конфигурации Nginx: HTTPS, кеширование, сжатие и обратный прокси. Для собственного хостинга с Nginx. Репозиторий r3bers — форк digitalocean/nginxconfig.io; лицензия MIT. Ссылка ведёт на исходный код и описание запуска.
+- **link:** https://github.com/r3bers/nginxconfig.io
 
 ### PhET
 - **id:** tool-phet

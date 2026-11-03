@@ -27,7 +27,7 @@ jobs:
           node --check everyday/sw.js
           node everyday/tests/model.test.cjs
       - name: Install Playwright
-        run: npm install --no-audit --no-fund
+        run: npm ci --no-audit --no-fund
       - name: Install Chromium
         run: npx playwright install chromium
       - name: Test public app in Chromium including mobile widths

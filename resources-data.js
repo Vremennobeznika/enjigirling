@@ -781,6 +781,20 @@ const resources = [
         "link": "https://solvespace.com/index.pl"
     },
     {
+        "id": "tool-mini-qr",
+        "type": "Инструменты и симуляторы",
+        "name": "Mini QR — генератор QR-кодов",
+        "desc": "QR-коды для ссылок на инженерные карточки, инструкции и печатные материалы: экспорт PNG/SVG, пакетная генерация из CSV. Репозиторий r3bers — форк lyqht/mini-qr; лицензия GPL-3.0-or-later. Ссылка ведёт на исходный код и описание запуска.",
+        "link": "https://github.com/r3bers/mini-qr"
+    },
+    {
+        "id": "tool-nginx-config",
+        "type": "Инструменты и симуляторы",
+        "name": "NGINX Config — настройка веб-сервера",
+        "desc": "Генератор конфигурации Nginx: HTTPS, кеширование, сжатие и обратный прокси. Для собственного хостинга с Nginx. Репозиторий r3bers — форк digitalocean/nginxconfig.io; лицензия MIT. Ссылка ведёт на исходный код и описание запуска.",
+        "link": "https://github.com/r3bers/nginxconfig.io"
+    },
+    {
         "id": "tool-phet",
         "type": "Инструменты и симуляторы",
         "name": "PhET",

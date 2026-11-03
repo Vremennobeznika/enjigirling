@@ -19,7 +19,7 @@ jobs:
           node-version: '22'
       - name: Install Playwright
         run: |
-          npm install --no-audit --no-fund
+          npm ci --no-audit --no-fund
           npx playwright install --with-deps chromium
       - name: Start local website
         run: |

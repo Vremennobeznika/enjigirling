@@ -1,0 +1,359 @@
+{
+  "checkedAt": "2026-10-27T05:16:14.763Z",
+  "base": "http://127.0.0.1:8777/",
+  "environment": {
+    "platform": "linux",
+    "node": "v24.19.0",
+    "cpus": 3,
+    "browser": "154.0.8037.57"
+  },
+  "limits": [
+    "Synthetic local measurements; not real-user UX research",
+    "HTTP capacity belongs to the local Python server, not the production CDN",
+    "6x CPU slowdown and shaped network are emulation, not a physical low-end device"
+  ],
+  "navigation": [
+    {
+      "page": "index",
+      "sample": 1,
+      "mode": "desktop-local",
+      "longTasks": [
+        51
+      ],
+      "lcp": 348,
+      "cls": 0,
+      "domContentLoadedMs": 295.90000000037253,
+      "loadMs": 334.2000000011176,
+      "domNodes": 292,
+      "resourceBytes": 313425,
+      "largestResources": [
+        {
+          "path": "/salary-sources.js",
+          "bytes": 69199,
+          "durationMs": 29.40000000037253
+        },
+        {
+          "path": "/data.js",
+          "bytes": 66822,
+          "durationMs": 24.799999998882413
+        },
+        {
+          "path": "/career-standards-data.js",
+          "bytes": 60080,
+          "durationMs": 30.800000000745058
+        },
+        {
+          "path": "/style-core.min.css",
+          "bytes": 36380,
+          "durationMs": 20.600000001490116
+        },
+        {
+          "path": "/script.js",
+          "bytes": 29377,
+          "durationMs": 39.09999999962747
+        }
+      ],
+      "errors": []
+    },
+    {
+      "page": "index",
+      "sample": 1,
+      "mode": "cpu6x-network1.6Mbps-150ms",
+      "longTasks": [
+        63,
+        58,
+        52,
+        265,
+        106
+      ],
+      "lcp": 1920,
+      "cls": 0,
+      "domContentLoadedMs": 2472.4000000003725,
+      "loadMs": 2567.5999999996275,
+      "domNodes": 292,
+      "resourceBytes": 313425,
+      "largestResources": [
+        {
+          "path": "/salary-sources.js",
+          "bytes": 69199,
+          "durationMs": 1582.800000000745
+        },
+        {
+          "path": "/data.js",
+          "bytes": 66822,
+          "durationMs": 1541.5999999996275
+        },
+        {
+          "path": "/career-standards-data.js",
+          "bytes": 60080,
+          "durationMs": 1638.4000000003725
+        },
+        {
+          "path": "/style-core.min.css",
+          "bytes": 36380,
+          "durationMs": 953.1999999992549
+        },
+        {
+          "path": "/script.js",
+          "bytes": 29377,
+          "durationMs": 1278.199999999255
+        }
+      ],
+      "errors": []
+    },
+    {
+      "page": "index",
+      "sample": 2,
+      "mode": "cpu6x-network1.6Mbps-150ms",
+      "longTasks": [
+        70,
+        185
+      ],
+      "lcp": 1492,
+      "cls": 0,
+      "domContentLoadedMs": 2333.39999999851,
+      "loadMs": 2388.89999999851,
+      "domNodes": 292,
+      "resourceBytes": 313425,
+      "largestResources": [
+        {
+          "path": "/salary-sources.js",
+          "bytes": 69199,
+          "durationMs": 1593.5999999996275
+        },
+        {
+          "path": "/data.js",
+          "bytes": 66822,
+          "durationMs": 1577.7999999988824
+        },
+        {
+          "path": "/career-standards-data.js",
+          "bytes": 60080,
+          "durationMs": 1534.4000000003725
+        },
+        {
+          "path": "/style-core.min.css",
+          "bytes": 36380,
+          "durationMs": 933.9000000003725
+        },
+        {
+          "path": "/script.js",
+          "bytes": 29377,
+          "durationMs": 1096
+        }
+      ],
+      "errors": []
+    },
+    {
+      "page": "index",
+      "sample": 3,
+      "mode": "cpu6x-network1.6Mbps-150ms",
+      "longTasks": [
+        107
+      ],
+      "lcp": 1584,
+      "cls": 0,
+      "domContentLoadedMs": 2252.0999999996275,
+      "loadMs": 2292.5,
+      "domNodes": 292,
+      "resourceBytes": 313425,
+      "largestResources": [
+        {
+          "path": "/salary-sources.js",
+          "bytes": 69199,
+          "durationMs": 1690.4000000003725
+        },
+        {
+          "path": "/data.js",
+          "bytes": 66822,
+          "durationMs": 1638.699999999255
+        },
+        {
+          "path": "/career-standards-data.js",
+          "bytes": 60080,
+          "durationMs": 1653.0999999996275
+        },
+        {
+          "path": "/style-core.min.css",
+          "bytes": 36380,
+          "durationMs": 1081.699999999255
+        },
+        {
+          "path": "/script.js",
+          "bytes": 29377,
+          "durationMs": 1211.300000000745
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "interaction": [
+    {
+      "page": "index",
+      "samples": 30,
+      "handlerP95Ms": 7.399999998509884,
+      "paintP95Ms": 62.90000000037253,
+      "timings": [
+        {
+          "handlerMs": 4,
+          "paintMs": 30
+        },
+        {
+          "handlerMs": 0.19999999925494194,
+          "paintMs": 25.40000000037253
+        },
+        {
+          "handlerMs": 6.099999999627471,
+          "paintMs": 36.09999999962747
+        },
+        {
+          "handlerMs": 0.5,
+          "paintMs": 39.19999999925494
+        },
+        {
+          "handlerMs": 5,
+          "paintMs": 29.200000001117587
+        },
+        {
+          "handlerMs": 1,
+          "paintMs": 28.90000000037253
+        },
+        {
+          "handlerMs": 6.699999999254942,
+          "paintMs": 40.5
+        },
+        {
+          "handlerMs": 7.399999998509884,
+          "paintMs": 25.399999998509884
+        },
+        {
+          "handlerMs": 1.200000001117587,
+          "paintMs": 33.20000000111759
+        },
+        {
+          "handlerMs": 0.7999999988824129,
+          "paintMs": 40.29999999888241
+        },
+        {
+          "handlerMs": 0.8000000007450581,
+          "paintMs": 27.100000001490116
+        },
+        {
+          "handlerMs": 1.099999999627471,
+          "paintMs": 32.59999999962747
+        },
+        {
+          "handlerMs": 0.09999999962747097,
+          "paintMs": 33.19999999925494
+        },
+        {
+          "handlerMs": 0.09999999962747097,
+          "paintMs": 203.2000000011176
+        },
+        {
+          "handlerMs": 0.19999999925494194,
+          "paintMs": 30
+        },
+        {
+          "handlerMs": 0.19999999925494194,
+          "paintMs": 34.09999999962747
+        },
+        {
+          "handlerMs": 0.2999999988824129,
+          "paintMs": 36.90000000037253
+        },
+        {
+          "handlerMs": 1,
+          "paintMs": 30.799999998882413
+        },
+        {
+          "handlerMs": 1,
+          "paintMs": 32.70000000111759
+        },
+        {
+          "handlerMs": 1,
+          "paintMs": 32.399999998509884
+        },
+        {
+          "handlerMs": 1.5,
+          "paintMs": 33.40000000037253
+        },
+        {
+          "handlerMs": 0.09999999962747097,
+          "paintMs": 33.70000000111759
+        },
+        {
+          "handlerMs": 0.19999999925494194,
+          "paintMs": 41
+        },
+        {
+          "handlerMs": 0.09999999962747097,
+          "paintMs": 24.699999999254942
+        },
+        {
+          "handlerMs": 0.09999999962747097,
+          "paintMs": 34.90000000037253
+        },
+        {
+          "handlerMs": 6.699999999254942,
+          "paintMs": 62.90000000037253
+        },
+        {
+          "handlerMs": 13.099999999627471,
+          "paintMs": 40.29999999888241
+        },
+        {
+          "handlerMs": 0.09999999962747097,
+          "paintMs": 29.09999999962747
+        },
+        {
+          "handlerMs": 0,
+          "paintMs": 34
+        },
+        {
+          "handlerMs": 0.10000000149011612,
+          "paintMs": 33.20000000111759
+        }
+      ]
+    }
+  ],
+  "catalogStress": [],
+  "httpLoad": [
+    {
+      "concurrency": 1,
+      "requests": 120,
+      "completed": 120,
+      "bytes": 16882416,
+      "durationMs": 425.01404100000036,
+      "requestsPerSecond": 282.3436132078279,
+      "p50Ms": 2.0862749999996595,
+      "p95Ms": 13.151475999999093,
+      "maxMs": 26.135018000000855,
+      "errors": []
+    },
+    {
+      "concurrency": 8,
+      "requests": 120,
+      "completed": 120,
+      "bytes": 16882416,
+      "durationMs": 1245.7890000000007,
+      "requestsPerSecond": 96.3244979687571,
+      "p50Ms": 13.919337999999698,
+      "p95Ms": 40.7308009999997,
+      "maxMs": 1035.2429690000008,
+      "errors": []
+    },
+    {
+      "concurrency": 32,
+      "requests": 120,
+      "completed": 120,
+      "bytes": 16882416,
+      "durationMs": 1438.9164420000016,
+      "requestsPerSecond": 83.39608645600553,
+      "p50Ms": 28.67521399999896,
+      "p95Ms": 1231.5755439999994,
+      "maxMs": 1435.1628950000013,
+      "errors": []
+    }
+  ]
+}

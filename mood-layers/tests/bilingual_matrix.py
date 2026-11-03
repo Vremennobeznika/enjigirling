@@ -7,7 +7,7 @@ html=(R/'index.html').read_text(encoding='utf-8')
 css=(R/'style.css').read_text(encoding='utf-8')+(R/'pwa-style.css').read_text(encoding='utf-8')
 html=html.replace('<link rel="stylesheet" href="./style.css">','<style>'+css+'</style>')
 html=html.replace('<link rel="stylesheet" href="./pwa-style.css">','')
-for name in ('i18n','app','pwa-ui'):
+for name in ('i18n','goals','app','pwa-ui'):
     html=html.replace('<script defer src="./'+name+'.js"></script>','')
 mock="""<script>window.__store={};Object.defineProperty(window,'localStorage',{configurable:true,value:{
  getItem:function(k){return Object.prototype.hasOwnProperty.call(window.__store,k)?window.__store[k]:null;},
@@ -15,7 +15,7 @@ mock="""<script>window.__store={};Object.defineProperty(window,'localStorage',{c
  removeItem:function(k){delete window.__store[k];},clear:function(){window.__store={};},
  get length(){return Object.keys(window.__store).length;}
 }});</script>"""
-script=''.join('<script>'+ (R/(name+'.js')).read_text(encoding='utf-8')+'</script>' for name in ('i18n','app','pwa-ui'))
+script=''.join('<script>'+ (R/(name+'.js')).read_text(encoding='utf-8')+'</script>' for name in ('i18n','goals','app','pwa-ui'))
 html=html.replace('</body>',mock+script+'</body>')
 results={}
 def check(name,fn):

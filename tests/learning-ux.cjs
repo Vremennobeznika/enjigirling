@@ -117,7 +117,11 @@ console.log('PASS: 80 programme leads structurally valid (not all independently 
 
 assert.equal(entries.filter(x=>x.item.sourceFetchStatus==='fetched').length,77,'77 evidence pages fetched after source URL repair');
 assert.equal(entries.filter(x=>x.item.sourceFetchStatus==='fetch_failed').length,3,'3 links require retry, not deletion');
-for(const row of entries)assert.equal(row.item.sourceFetchCheckedAt,'2026-10-22',row.item.name+': absent network audit date');
+for(const row of entries){
+ assert.match(row.item.sourceFetchCheckedAt,/^\d{4}-\d{2}-\d{2}$/,row.item.name+': absent network audit date');
+ const checked=Date.parse(row.item.sourceFetchCheckedAt+'T00:00:00Z');
+ assert.ok(Number.isFinite(checked)&&new Date(checked).toISOString().slice(0,10)===row.item.sourceFetchCheckedAt&&row.item.sourceFetchCheckedAt>='2026-10-22'&&checked<=Date.now()+86400000,row.item.name+': invalid network audit date');
+}
 assert.ok(js.includes('item.sourceFetchStatus'),'UI must expose URL fetch result to readers');
 
 // Numeric claims are release-controlled separately from editorial sources and links.

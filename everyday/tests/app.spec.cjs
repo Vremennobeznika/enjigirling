@@ -7,9 +7,9 @@ async function openSettings(page){
 }
 async function tab(page,id){await page.locator('#mainNav .nav-btn[data-view="'+id+'"]').click();}
 
-test('Public application is independent, empty by default and local-only',async({page})=>{
+test('Public application is independent, empty by default and local-only',async({page,baseURL})=>{
  const outbound=[];
- page.on('request',req=>{if(new URL(req.url()).origin!=='http://127.0.0.1:8765')outbound.push(req.url())});
+ page.on('request',req=>{if(new URL(req.url()).origin!==new URL(baseURL).origin)outbound.push(req.url())});
  await page.goto(APP);
  await expect(page).toHaveTitle(/Обычный день/);
  await expect(page.locator('#mainNav .nav-btn')).toHaveCount(6);
@@ -197,9 +197,9 @@ test('Responsive visual matrix at 320, 375, 768 and 1366px has no overflow or mi
  }
 });
 
-test('Offline static shell opens after installation without sending user data off-device',async({page,context})=>{
+test('Offline static shell opens after installation without sending user data off-device',async({page,context,baseURL})=>{
  const outbound=[];
- page.on('request',req=>{if(new URL(req.url()).origin!=='http://127.0.0.1:8765')outbound.push(req.url())});
+ page.on('request',req=>{if(new URL(req.url()).origin!==new URL(baseURL).origin)outbound.push(req.url())});
  await page.goto(APP);
  await expect(page.locator('#page-overview')).toBeVisible();
  await page.evaluate(()=>navigator.serviceWorker.ready);

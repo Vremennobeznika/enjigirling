@@ -4,10 +4,12 @@ import json,sys
 from playwright.sync_api import sync_playwright
 ROOT=Path(__file__).resolve().parents[1]
 HTML=(ROOT/'index.html').read_text(encoding='utf-8')
-CSS=(ROOT/'style.css').read_text(encoding='utf-8')
-JS=(ROOT/'app.js').read_text(encoding='utf-8')
+CSS=(ROOT/'style.css').read_text(encoding='utf-8')+(ROOT/'pwa-style.css').read_text(encoding='utf-8')
+JS=''.join('<script>'+(ROOT/(name+'.js')).read_text(encoding='utf-8')+'</script>' for name in ('i18n','goals','app','pwa-ui'))
 HTML=HTML.replace('<link rel="stylesheet" href="./style.css">','<style>'+CSS+'</style>')
-HTML=HTML.replace('<script defer src="./app.js"></script>','')
+HTML=HTML.replace('<link rel="stylesheet" href="./pwa-style.css">','')
+for name in ('i18n','goals','app','pwa-ui'):
+ HTML=HTML.replace('<script defer src="./'+name+'.js"></script>','')
 BASE="""<script>
 (function(){
  var entries=window.__seedEntries||{};
@@ -23,7 +25,7 @@ BASE="""<script>
 })();
 </script>"""
 HTML=HTML.replace('</head>',BASE+'</head>')
-HTML=HTML.replace('</body>','<script>'+JS+'</script></body>')
+HTML=HTML.replace('</body>',JS+'</body>')
 checks={}
 def run(label,fn):
  try:
@@ -41,7 +43,7 @@ def nooverflow(page):
  assert d['x']<=d['window']+2 and d['body']<=d['window']+2,d
  return True
 def load(browser,width=375,height=812,seed=None):
- page=browser.new_page(viewport={'width':width,'height':height},device_scale_factor=1)
+ page=browser.new_page(viewport={'width':width,'height':height},device_scale_factor=1,locale='ru-RU')
  page.on('pageerror',lambda err: print('JS_ERROR:',str(err)[:150]))
  doc=HTML.replace('var entries=window.__seedEntries||{};','var entries='+json.dumps(seed or {})+';')
  page.set_content(doc,wait_until='load',timeout=30000)
