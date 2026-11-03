@@ -120,10 +120,11 @@ test('mobile LLM and QA readers reflow at narrow widths without external assets'
   const response=await request.get(url);
   expect(response.ok(),url).toBeTruthy();
   const content=await response.text();
+  expect(Buffer.byteLength(content,'utf8'),name+' lightweight standalone page').toBeLessThan(120000);
   expect(content).toContain('<article>');
   expect(content).not.toContain('white-space:pre-wrap');
-  expect(content).not.toMatch(/<(?:script|link)[\\s>]/i);
-  for(const width of [320,375,390,768]){
+  expect(content).not.toMatch(/<(?:script|link)[\s>]/i);
+  for(const width of [280,320,375,390,768]){
    await page.setViewportSize({width,height:760});
    await page.goto(url);
    await expect(page.locator('main h1')).toBeVisible();
@@ -135,11 +136,33 @@ test('mobile LLM and QA readers reflow at narrow widths without external assets'
     paragraphs:document.querySelectorAll('article p').length
    }));
    expect(metrics.overflow,name+' overflow at '+width).toBeLessThanOrEqual(2);
-   expect(metrics.font,name+' font at '+width).toBeGreaterThanOrEqual(16);
+   expect(metrics.font,name+' font at '+width).toBeGreaterThanOrEqual(18);
    expect(metrics.paragraphs,name+' paragraphs').toBeGreaterThan(10);
   }
  }
  await page.goto('/coding.html');
  await expect(page.locator('a[href="downloads/ai-llm-guide.html"]')).toBeVisible();
  await expect(page.locator('a[href="downloads/ai-qa-engineering.html"]')).toBeVisible();
+});
+test('document contents and table rows remain readable without JavaScript and with enlarged text',async({browser,baseURL})=>{
+ const context=await browser.newContext({baseURL,javaScriptEnabled:false,viewport:{width:320,height:740}});
+ const page=await context.newPage(),external=[];
+ page.on('request',r=>{if(new URL(r.url()).origin!==new URL(baseURL).origin)external.push(r.url());});
+ try{
+  for(const [name,count] of [['llm-guide',19],['qa-engineering',16]]){
+   await page.goto('/downloads/ai-'+name+'.html');
+   await page.locator('.toc summary').click();
+   await expect(page.locator('.toc a')).toHaveCount(count);
+   await page.locator('.toc a').last().click();
+   await expect(page.locator('h2').last()).toBeInViewport();
+   await page.evaluate(()=>{document.documentElement.style.fontSize='200%';});
+   expect(await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth)).toBeLessThanOrEqual(2);
+   await page.emulateMedia({colorScheme:'dark'});
+   if(name==='llm-guide'){
+    await expect(page.locator('table').first().locator('tbody tr').first()).toContainText('Большой набор однотипных документов');
+    expect(await page.locator('table').first().locator('td').first().evaluate(el=>getComputedStyle(el).display)).toBe('block');
+   }
+  }
+  expect(external).toEqual([]);
+ }finally{await context.close();}
 });
