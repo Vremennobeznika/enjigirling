@@ -1,0 +1,125 @@
+{
+  "sourceCommit": "5f279f7528ffd65346575d2f10fa7f89702918df",
+  "branch": "qa/site-2026-11-03",
+  "staticGates": {
+    "passed": 30,
+    "total": 30,
+    "jsFiles": 133
+  },
+  "browserRuns": [
+    {
+      "file": "site-nov3-browser.json",
+      "stats": {
+        "startTime": "2026-11-03T08:34:47.365Z",
+        "duration": 155712.06199999998,
+        "expected": 308,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    },
+    {
+      "file": "site-nov3-webkit.json",
+      "stats": {
+        "startTime": "2026-11-03T08:45:19.209Z",
+        "duration": 98319.016,
+        "expected": 94,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    }
+  ],
+  "previous102": {
+    "confirmedAtLeastOnce": 59,
+    "unconfirmed": 43,
+    "remaining": [
+      "https://doi.org/10.5325/utopianstudies.30.3.0422",
+      "https://academic.oup.com/isq/article-abstract/32/4/421/1805484",
+      "https://knowledge.ni.com/KnowledgeArticleDetails?id=kA00Z000000PASfSAO",
+      "https://mc.ru/",
+      "https://pvwatts.nrel.gov/",
+      "https://www.voenmeh.ru/",
+      "https://mauniver.ru/",
+      "https://mauniver.ru/info/",
+      "https://mauniver.ru/student/education/programs/",
+      "https://www.klgtu.ru/",
+      "https://abit.petrsu.ru/guest/competition-lists/5",
+      "https://mai.ru/",
+      "https://priem.mai.ru/base/programs/index.php/",
+      "https://www.mirea.ru/",
+      "https://mgsu.ru/",
+      "https://iiesm.mgsu.ru/postupayushchim/Bakalavriat-spetsialitet/Napravleniya-podgotovki-spetsialnosti/stroitelstvo_bakalavriat/promyshlennoe-i-grazhdanskoe-stroitelstvo.php",
+      "https://www.gubkin.ru/",
+      "https://gubkin.ru/faculty/oil_and_gas_development/informatsiya-dlya-studentov_novaya/bachelor.php",
+      "https://pkgodovikov.mskobr.ru/",
+      "https://pkgodovikov.mskobr.ru/postuplenie-v-kolledzh/specialnosti-professii",
+      "https://itmoscow.mskobr.ru/postuplenie-v-kolledzh/specialnosti-professii",
+      "https://vpt.obrvrn.ru/",
+      "https://kubstu.ru/",
+      "https://www.mo_odle.kubstu.ru/sveden/education/9387",
+      "https://www.npi-tu.ru/",
+      "https://npi-tu.ru/sveden/education/eduaccred",
+      "https://www.sevsu.ru/",
+      "https://крмт.рф/",
+      "https://chgsk.edu95.ru/",
+      "https://www.chuvsu.ru/",
+      "https://www.chuvsu.ru/sveden/education/programs/inghenernoe-konstruirovanie-i-tehnologiya-sozdaniya-elektricheskih-apparatov-13.03.02.html",
+      "https://ksu.edu.ru/",
+      "https://omgtu.ru/",
+      "https://www.omgtu.ru/general_information/institutes/engineering_institute/department_quot_equipment_and_technology_of_welding_quot/OiTSP/the-applicant.php",
+      "https://sibsutis.ru/",
+      "https://kemgtt.kemobl.ru/",
+      "https://krirpo.ru/servisy/spravochnik-poo-s-interaktivnoj-kartoj/",
+      "https://kemgtt.kemobl.ru/abiturientu/",
+      "https://pnu.edu.ru/",
+      "https://togudv.ru/ru/applicant/count-reception-places/",
+      "https://www.s-vfu.ru/",
+      "https://abit.s-vfu.ru/rating/2396",
+      "https://www.py16dv.ru/"
+    ]
+  },
+  "hosting": {
+    "status": "P0 AccessDenied",
+    "testedPublicRoutes": [
+      "/",
+      "/index.html",
+      "/calculator.html",
+      "/ai.html",
+      "/mc-prices.json",
+      "/sitemap.xml",
+      "/robots.txt"
+    ],
+    "httpStatus": 403,
+    "diagnosticRun": "https://github.com/Vremennobeznika/enjigirling/actions/runs/41604431664",
+    "mcPublishFailure": "https://github.com/Vremennobeznika/enjigirling/actions/runs/41593257925",
+    "storageOperations": [
+      {
+        "operation": "head-bucket",
+        "exitCode": 0
+      },
+      {
+        "operation": "head-object",
+        "exitCode": 254,
+        "error": "aws: [ERROR]: An error occurred (403) when calling the HeadObject operation: Forbidden"
+      },
+      {
+        "operation": "get-object-acl",
+        "exitCode": 0,
+        "anonymousRead": false
+      },
+      {
+        "operation": "get-bucket-policy",
+        "exitCode": 254,
+        "error": "aws: [ERROR]: An error occurred (AccessDenied) when calling the GetBucketPolicy operation: Access Denied"
+      },
+      {
+        "operation": "get-bucket-website",
+        "exitCode": 0,
+        "indexDocument": "index.html"
+      }
+    ],
+    "rootCauseLimit": "Object is not anonymously readable; signed head/get content and put are also denied. The exact IAM/policy/account restriction has not been established.",
+    "permissionChange": "Not executed; automatic approval review rejected public ACL modification without explicit user approval."
+  }
+}

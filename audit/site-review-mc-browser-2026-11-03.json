@@ -1,0 +1,14 @@
+{
+  "mode": "Chromium, CPU6x, 1.6Mbps, 150ms, 320px; local distribution, real unmodified MC snapshot",
+  "readyMs": 4067,
+  "rows": 1552,
+  "selectedId": "listovojprokat.xls:7:1",
+  "sourceUnit": "т",
+  "priceRubPerTonne": 60990,
+  "result": "FDM-печать: 60,99 ₽/шт себестоимость; 73,19 ₽/шт с наценкой. Партия: 731,88 ₽. План заготовок: 10. Материал: 609,9 ₽; станок: 0 ₽; труд: 0 ₽; подготовка: 0 ₽; оснастка: 0 ₽; накладные: 0 ₽.",
+  "layout": {
+    "width": 320,
+    "scrollWidth": 320
+  },
+  "errors": []
+}

@@ -1,0 +1,43 @@
+{
+  "sourceUrl": "http://mc.ru:8080/prices/metserv.zip",
+  "archiveSha256": "9f7f7ad537f6ebe6cca64451cb3382d3c41ef2dcac38e05779046e9e738be882",
+  "bytes": 418693,
+  "parsedRows": 1552,
+  "checkedAgainstSnapshot": "2026-11-03T06:58:45.976939+00:00",
+  "archiveMatchesSnapshot": true,
+  "rowsMatchSnapshot": true,
+  "documents": [
+    {
+      "file": "listovojprokat.xls",
+      "title": "Листовой прокат",
+      "publishedAt": "2026-11-02T10:45:00+03:00",
+      "sha256": "ad4d98803fc6bd9343f7a5d6a7394d64d3b07efa8fc9e40e04d7aad5deb3ce7a",
+      "minTonnes": null,
+      "sourceUrl": "http://mc.ru:8080/prices/listovojprokat.zip"
+    },
+    {
+      "file": "sortovojprokat.xls",
+      "title": "Сортовой прокат (цена от 5 т.)",
+      "publishedAt": "2026-11-02T10:58:00+03:00",
+      "sha256": "9bd6208bfd52f29044c99751d7d0169c52d2bc86ce9a4ee36018f71a94d5b52f",
+      "minTonnes": 5.0,
+      "sourceUrl": "http://mc.ru:8080/prices/sortovojprokat.zip"
+    },
+    {
+      "file": "kachestvst.xls",
+      "title": "Качественный прокат",
+      "publishedAt": "2026-11-02T10:24:00+03:00",
+      "sha256": "b420d56039ce3ec77a369ca0f38aa24a6bb1d0cd5168e2dd832cb84aec56a8fd",
+      "minTonnes": null,
+      "sourceUrl": "http://mc.ru:8080/prices/kachestvst.zip"
+    },
+    {
+      "file": "truby.xls",
+      "title": "Трубы",
+      "publishedAt": "2026-11-02T10:59:00+03:00",
+      "sha256": "889d9d039a91ced97bd6b2c329d5d608541ce3d9fd673a6e1df39ffc1b74f8bf",
+      "minTonnes": null,
+      "sourceUrl": "http://mc.ru:8080/prices/truby.zip"
+    }
+  ]
+}

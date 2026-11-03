@@ -1,0 +1,1703 @@
+{
+  "checkedAt": "2026-11-03T08:35:22Z",
+  "summary": {
+    "ok": 42,
+    "unverified": 60,
+    "total": 102
+  },
+  "results": [
+    {
+      "url": "https://www.rath-group.com/fileadmin/content/Rath-Group/Downloads/Broschueren_Industrien/RATH_GLASS_202209_EN.pdf",
+      "sources": [
+        "materials-data.js",
+        "dist-ru/knowledge/reading/materials.html",
+        "knowledge/reading/materials.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://www.rath-group.com/fileadmin/content/Rath-Group/Downloads/Broschueren_Industrien/RATH_GLASS_202209_EN.pdf",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://vk.ru/engigirling",
+      "sources": [
+        "ai.html",
+        "calculator-atlas.html",
+        "calculator.html",
+        "calendar.html",
+        "dictionary.html",
+        "dist-ru/ai.html",
+        "dist-ru/calculator-atlas.html",
+        "dist-ru/calculator.html",
+        "dist-ru/calendar.html",
+        "dist-ru/dictionary.html",
+        "dist-ru/map.html",
+        "dist-ru/resources.html",
+        "map.html",
+        "resources.html"
+      ],
+      "status": null,
+      "result": "unverified",
+      "attempts": [
+        {
+          "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+        },
+        {
+          "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+        }
+      ]
+    },
+    {
+      "url": "https://doi.org/10.5325/utopianstudies.30.3.0422",
+      "sources": [
+        "articles/utopia-math-analysis.html",
+        "dist-ru/articles/utopia-math-analysis.html"
+      ],
+      "status": 403,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 403,
+          "body": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta http-equiv=\"content-security-policy\" co"
+        }
+      ]
+    },
+    {
+      "url": "https://academic.oup.com/isq/article-abstract/32/4/421/1805484",
+      "sources": [
+        "articles/utopia-math-analysis.html",
+        "dist-ru/articles/utopia-math-analysis.html"
+      ],
+      "status": 403,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 403,
+          "body": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta http-equiv=\"content-security-policy\" co"
+        }
+      ]
+    },
+    {
+      "url": "https://knowledge.ni.com/KnowledgeArticleDetails?id=kA00Z000000PASfSAO",
+      "sources": [
+        "calculator.html",
+        "dist-ru/calculator.html"
+      ],
+      "status": 503,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure, transport failure reason: TLS_error:|268435581:SSL routines:OPENSSL_internal:CERTIFICATE_VERIFY_FAILED:TLS_error_end"
+        },
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure, transport failure reason: TLS_error:|268435581:SSL routines:OPENSSL_internal:CERTIFICATE_VERIFY_FAILED:TLS_error_end"
+        }
+      ]
+    },
+    {
+      "url": "https://mc.ru/",
+      "sources": [
+        "calculator.html",
+        "dist-ru/calculator.html"
+      ],
+      "status": 503,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: connection timeout"
+        },
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: connection timeout"
+        }
+      ]
+    },
+    {
+      "url": "https://pvwatts.nrel.gov/",
+      "sources": [
+        "dist-ru/knowledge/reading/calculators.html",
+        "knowledge/reading/calculators.html"
+      ],
+      "status": null,
+      "result": "unverified",
+      "attempts": [
+        {
+          "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+        },
+        {
+          "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+        }
+      ]
+    },
+    {
+      "url": "https://www.voenmeh.ru/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": null,
+      "result": "unverified",
+      "attempts": [
+        {
+          "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+        },
+        {
+          "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+        }
+      ]
+    },
+    {
+      "url": "https://mauniver.ru/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 503,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: connection timeout"
+        },
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: connection timeout"
+        }
+      ]
+    },
+    {
+      "url": "https://mauniver.ru/info/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 503,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: connection timeout"
+        },
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: connection timeout"
+        }
+      ]
+    },
+    {
+      "url": "https://mauniver.ru/student/education/programs/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 503,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: connection timeout"
+        },
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: connection timeout"
+        }
+      ]
+    },
+    {
+      "url": "https://www.klgtu.ru/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 503,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure, transport failure reason: TLS_error:|268435581:SSL routines:OPENSSL_internal:CERTIFICATE_VERIFY_FAILED:TLS_error_end"
+        },
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure, transport failure reason: TLS_error:|268435581:SSL routines:OPENSSL_internal:CERTIFICATE_VERIFY_FAILED:TLS_error_end"
+        }
+      ]
+    },
+    {
+      "url": "https://abit.petrsu.ru/guest/competition-lists/5",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 502,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 502,
+          "body": "<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n"
+        },
+        {
+          "status": 502,
+          "body": "<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.18.0 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n"
+        }
+      ]
+    },
+    {
+      "url": "https://mai.ru/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 503,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure, transport failure reason: TLS_error:|268435581:SSL routines:OPENSSL_internal:CERTIFICATE_VERIFY_FAILED:TLS_error_end"
+        },
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure, transport failure reason: TLS_error:|268435581:SSL routines:OPENSSL_internal:CERTIFICATE_VERIFY_FAILED:TLS_error_end"
+        }
+      ]
+    },
+    {
+      "url": "https://priem.mai.ru/base/programs/index.php/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 503,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure, transport failure reason: TLS_error:|268435581:SSL routines:OPENSSL_internal:CERTIFICATE_VERIFY_FAILED:TLS_error_end"
+        },
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure, transport failure reason: TLS_error:|268435581:SSL routines:OPENSSL_internal:CERTIFICATE_VERIFY_FAILED:TLS_error_end"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mirea.ru/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 403,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 403,
+          "body": "<!DOCTYPE html><html><head><title>DDoS-Guard</title><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><link rel=\"stylesheet\" href=\"/.well-known/ddos-guard/geoblocked.css\"></head><body data-ddg-origin=\"true\" data-ddg-l10n=\"true\"><div class=\"container\"><div class=\"top\"><h1 id=\"ddg-l10n-title\"><span class=\"ddg-or"
+        }
+      ]
+    },
+    {
+      "url": "https://mgsu.ru/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 502,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: connection timeout"
+        },
+        {
+          "status": 502,
+          "body": "<!DOCTYPE html><html lang=en><meta charset=utf-8><meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\"><title>Error 502</title><style>*{margin:0;padding:0}html{font:15px/22px arial,sans-serif;background: #fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}p{margin:11px"
+        }
+      ]
+    },
+    {
+      "url": "https://iiesm.mgsu.ru/postupayushchim/Bakalavriat-spetsialitet/Napravleniya-podgotovki-spetsialnosti/stroitelstvo_bakalavriat/promyshlennoe-i-grazhdanskoe-stroitelstvo.php",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 502,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 502,
+          "body": "<!DOCTYPE html><html lang=en><meta charset=utf-8><meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\"><title>Error 502</title><style>*{margin:0;padding:0}html{font:15px/22px arial,sans-serif;background: #fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}p{margin:11px"
+        },
+        {
+          "status": 502,
+          "body": "<!DOCTYPE html><html lang=en><meta charset=utf-8><meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\"><title>Error 502</title><style>*{margin:0;padding:0}html{font:15px/22px arial,sans-serif;background: #fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}p{margin:11px"
+        }
+      ]
+    },
+    {
+      "url": "https://madi.ru/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 503,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: connection timeout"
+        },
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: connection timeout"
+        }
+      ]
+    },
+    {
+      "url": "https://pk.madi.ru/59-plan-priema.html",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 503,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: connection timeout"
+        },
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: connection timeout"
+        }
+      ]
+    },
+    {
+      "url": "https://www.gubkin.ru/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 503,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: connection timeout"
+        },
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: connection timeout"
+        }
+      ]
+    },
+    {
+      "url": "https://gubkin.ru/faculty/oil_and_gas_development/informatsiya-dlya-studentov_novaya/bachelor.php",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 503,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: connection timeout"
+        },
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: connection timeout"
+        }
+      ]
+    },
+    {
+      "url": "https://cchgeu.ru/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 403,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 403,
+          "body": "<html>\r\n<head><title>403 Forbidden</title></head>\r\n<body>\r\n<center><h1>403 Forbidden</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"
+        }
+      ]
+    },
+    {
+      "url": "https://www.tstu.tver.ru/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://www.tstu.tver.ru/",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://new.tstu.tver.ru/sveden/vacant/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://new.tstu.tver.ru/sveden/vacant/",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://pkgodovikov.mskobr.ru/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 503,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: connection timeout"
+        },
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: connection timeout"
+        }
+      ]
+    },
+    {
+      "url": "https://pkgodovikov.mskobr.ru/postuplenie-v-kolledzh/specialnosti-professii",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 503,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: connection timeout"
+        },
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: connection timeout"
+        }
+      ]
+    },
+    {
+      "url": "https://itmoscow.mskobr.ru/postuplenie-v-kolledzh/specialnosti-professii",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 503,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: connection timeout"
+        },
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: connection timeout"
+        }
+      ]
+    },
+    {
+      "url": "https://vpt.obrvrn.ru/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 503,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure, transport failure reason: TLS_error:|268435581:SSL routines:OPENSSL_internal:CERTIFICATE_VERIFY_FAILED:TLS_error_end"
+        },
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure, transport failure reason: TLS_error:|268435581:SSL routines:OPENSSL_internal:CERTIFICATE_VERIFY_FAILED:TLS_error_end"
+        }
+      ]
+    },
+    {
+      "url": "https://donstu.ru/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 403,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 403,
+          "body": "<h1>Forbidden</h1><pre>Request ID: 2026-11-03-08-34-39-3BF99C7A0C0CA843</pre>"
+        }
+      ]
+    },
+    {
+      "url": "https://itf.donstu.ru/sveden/education/programs/oborudovanie-i-tehnologiya-svarochnogo-proizvodstva-15.03.01.html",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 403,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 403,
+          "body": "<h1>Forbidden</h1><pre>Request ID: 2026-11-03-08-34-40-47488DE64C84CDC5</pre>"
+        }
+      ]
+    },
+    {
+      "url": "https://kubstu.ru/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 503,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure, transport failure reason: TLS_error:|268435581:SSL routines:OPENSSL_internal:CERTIFICATE_VERIFY_FAILED:TLS_error_end"
+        },
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure, transport failure reason: TLS_error:|268435581:SSL routines:OPENSSL_internal:CERTIFICATE_VERIFY_FAILED:TLS_error_end"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mo_odle.kubstu.ru/sveden/education/9387",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": null,
+      "result": "unverified",
+      "attempts": [
+        {
+          "error": "<urlopen error Tunnel connection failed: 400 Bad Request>"
+        },
+        {
+          "error": "<urlopen error Tunnel connection failed: 400 Bad Request>"
+        }
+      ]
+    },
+    {
+      "url": "https://www.npi-tu.ru/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 503,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: connection timeout"
+        },
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: connection timeout"
+        }
+      ]
+    },
+    {
+      "url": "https://npi-tu.ru/sveden/education/eduaccred",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 503,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: connection timeout"
+        },
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: connection timeout"
+        }
+      ]
+    },
+    {
+      "url": "https://astu.org/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": null,
+      "result": "unverified",
+      "attempts": [
+        {
+          "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+        },
+        {
+          "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+        }
+      ]
+    },
+    {
+      "url": "https://astu.org/Content/abiturent",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": null,
+      "result": "unverified",
+      "attempts": [
+        {
+          "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+        },
+        {
+          "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+        }
+      ]
+    },
+    {
+      "url": "https://www.sevsu.ru/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 403,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 403,
+          "body": "<!DOCTYPE html><html><head><title>DDoS-Guard</title><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><link rel=\"stylesheet\" href=\"/.well-known/ddos-guard/geoblocked.css\"></head><body data-ddg-origin=\"true\" data-ddg-l10n=\"true\"><div class=\"container\"><div class=\"top\"><h1 id=\"ddg-l10n-title\"><span class=\"ddg-or"
+        }
+      ]
+    },
+    {
+      "url": "https://крмт.рф/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": null,
+      "result": "unverified",
+      "attempts": [
+        {
+          "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+        },
+        {
+          "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+        }
+      ]
+    },
+    {
+      "url": "https://krmt-rf.gosuslugi.ru/novosti-i-sobytiya/priemnaya-kampaniya-v-kmt.html",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 403,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 403,
+          "body": "<!DOCTYPE html>\r\n<html>\r\n<head>\r\n    <title>Ошибка</title>\r\n    <meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n    <meta http-equiv=\"cache-control\" content=\"no-cache, must-revalidate\"/>\r\n    <meta http-equiv=\"cache-control\" content=\"no-store, post-check=0, pre-check=0\"/>\r\n    <meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\""
+        }
+      ]
+    },
+    {
+      "url": "https://chgsk.edu95.ru/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 503,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure, transport failure reason: TLS_error:|268435581:SSL routines:OPENSSL_internal:CERTIFICATE_VERIFY_FAILED:TLS_error_end"
+        },
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure, transport failure reason: TLS_error:|268435581:SSL routines:OPENSSL_internal:CERTIFICATE_VERIFY_FAILED:TLS_error_end"
+        }
+      ]
+    },
+    {
+      "url": "https://www.kstu.ru/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 503,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: remote reset"
+        },
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: remote reset"
+        }
+      ]
+    },
+    {
+      "url": "https://pstu.ru/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 403,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 403,
+          "body": "<h1>Forbidden</h1><pre>Request ID: 2026-11-03-08-34-48-061DA1A73362E96C</pre>"
+        }
+      ]
+    },
+    {
+      "url": "https://pstu.ru/sveden/education/?act=discip&key=%7Be9ad059f-f525-4553-8de7-374b701c1c37%7D",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 403,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 403,
+          "body": "<h1>Forbidden</h1><pre>Request ID: 2026-11-03-08-34-49-5C7B931B643442CB</pre>"
+        }
+      ]
+    },
+    {
+      "url": "https://www.chuvsu.ru/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 503,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure, transport failure reason: TLS_error:|268435581:SSL routines:OPENSSL_internal:CERTIFICATE_VERIFY_FAILED:TLS_error_end"
+        },
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure, transport failure reason: TLS_error:|268435581:SSL routines:OPENSSL_internal:CERTIFICATE_VERIFY_FAILED:TLS_error_end"
+        }
+      ]
+    },
+    {
+      "url": "https://www.chuvsu.ru/sveden/education/programs/inghenernoe-konstruirovanie-i-tehnologiya-sozdaniya-elektricheskih-apparatov-13.03.02.html",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 503,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure, transport failure reason: TLS_error:|268435581:SSL routines:OPENSSL_internal:CERTIFICATE_VERIFY_FAILED:TLS_error_end"
+        },
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure, transport failure reason: TLS_error:|268435581:SSL routines:OPENSSL_internal:CERTIFICATE_VERIFY_FAILED:TLS_error_end"
+        }
+      ]
+    },
+    {
+      "url": "https://urfu.ru/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 403,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 403,
+          "body": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <title>Подозрительная активность</title>\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no\">\r\n</head>\r\n<style>\r\n    * {\r\n        margin: 0;\r\n        padding: 0;\r\n        font-f"
+        }
+      ]
+    },
+    {
+      "url": "https://ksu.edu.ru/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": null,
+      "result": "unverified",
+      "attempts": [
+        {
+          "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+        },
+        {
+          "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+        }
+      ]
+    },
+    {
+      "url": "https://abit.kgsu.ru/page/3",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://abit.kgsu.ru/page/3",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://tpu.ru/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://tpu.ru/",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://abiturient.tpu.ru/programmy/upravlenie-obektami-elektroenergeticheskikh-sistem-1873/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://abiturient.tpu.ru/programmy/upravlenie-obektami-elektroenergeticheskikh-sistem-1873/",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://www.istu.edu/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://www.istu.edu/",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://www.istu.edu/abiturientu/ege_2026",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://www.istu.edu/abiturientu/ege_2026",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://omgtu.ru/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 403,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 403,
+          "body": "<!DOCTYPE html><html><head><title>DDoS-Guard</title><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><link rel=\"stylesheet\" href=\"/.well-known/ddos-guard/geoblocked.css\"></head><body data-ddg-origin=\"true\" data-ddg-l10n=\"true\"><div class=\"container\"><div class=\"top\"><h1 id=\"ddg-l10n-title\"><span class=\"ddg-or"
+        }
+      ]
+    },
+    {
+      "url": "https://www.omgtu.ru/general_information/institutes/engineering_institute/department_quot_equipment_and_technology_of_welding_quot/OiTSP/the-applicant.php",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 403,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 403,
+          "body": "<!DOCTYPE html><html><head><title>DDoS-Guard</title><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><link rel=\"stylesheet\" href=\"/.well-known/ddos-guard/geoblocked.css\"></head><body data-ddg-origin=\"true\" data-ddg-l10n=\"true\"><div class=\"container\"><div class=\"top\"><h1 id=\"ddg-l10n-title\"><span class=\"ddg-or"
+        }
+      ]
+    },
+    {
+      "url": "https://sibsutis.ru/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 503,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: connection termination"
+        },
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: connection termination"
+        }
+      ]
+    },
+    {
+      "url": "https://do.sibsutis.ru/kak_postupit/vstupitelnie_ispitaniya",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://do.sibsutis.ru/kak_postupit/vstupitelnie_ispitaniya",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://kuzstu.ru/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 503,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: remote reset"
+        },
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: remote reset"
+        }
+      ]
+    },
+    {
+      "url": "https://kuzstu.ru/abiturientu/priemnaya-kampaniya-2026/tsifri-priema/bakalavriat-spetsialitet-golovnoi-vuz/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://kuzstu.ru/abiturientu/priemnaya-kampaniya-2026/tsifri-priema/bakalavriat-spetsialitet-golovnoi-vuz/",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://sfu.ru/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://sfu.ru/ru",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://sfu.ru/ru/about/sfu-history",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://sfu.ru/ru/about/sfu-history",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://sfu.ru/ru/admission/bachelor/exams-destinations",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://sfu.ru/ru/admission/bachelor/exams-destinations",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://www.stu.ru/abiturient/index.php?page=1237",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://www.stu.ru/abiturient/index.php?page=1237",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://www.ntgt.ru/abiturient/priyemnaya-kampaniya-2026/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://www.ntgt.ru/abiturient/priyemnaya-kampaniya-2026/",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://tomtit.gosuslugi.ru/abiturientam/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 403,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 403,
+          "body": "<!DOCTYPE html>\r\n<html>\r\n<head>\r\n    <title>Ошибка</title>\r\n    <meta http-equiv=\"pragma\" content=\"no-cache\"/>\r\n    <meta http-equiv=\"cache-control\" content=\"no-cache, must-revalidate\"/>\r\n    <meta http-equiv=\"cache-control\" content=\"no-store, post-check=0, pre-check=0\"/>\r\n    <meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\""
+        }
+      ]
+    },
+    {
+      "url": "https://kemgtt.kemobl.ru/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 503,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure, transport failure reason: TLS_error:|268435581:SSL routines:OPENSSL_internal:CERTIFICATE_VERIFY_FAILED:TLS_error_end"
+        },
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure, transport failure reason: TLS_error:|268435581:SSL routines:OPENSSL_internal:CERTIFICATE_VERIFY_FAILED:TLS_error_end"
+        }
+      ]
+    },
+    {
+      "url": "https://krirpo.ru/servisy/spravochnik-poo-s-interaktivnoj-kartoj/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 503,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: connection timeout"
+        },
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: connection timeout"
+        }
+      ]
+    },
+    {
+      "url": "https://kemgtt.kemobl.ru/abiturientu/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 503,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure, transport failure reason: TLS_error:|268435581:SSL routines:OPENSSL_internal:CERTIFICATE_VERIFY_FAILED:TLS_error_end"
+        },
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: remote connection failure, transport failure reason: TLS_error:|268435581:SSL routines:OPENSSL_internal:CERTIFICATE_VERIFY_FAILED:TLS_error_end"
+        }
+      ]
+    },
+    {
+      "url": "https://ktps24.ru/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://ktps24.ru/",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://ktps24.ru/abitur/plan-priema/plan-priema.php",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://ktps24.ru/abitur/plan-priema/plan-priema.php",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://www.dvfu.ru/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://www.dvfu.ru/",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://postupi.dvfu.ru/upload/medialibrary/98f/7eztblkj553n8y8xr9a7xqqhospix2fr/15.03.01%20%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%B8%D0%B5.PDF",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://postupi.dvfu.ru/upload/medialibrary/98f/7eztblkj553n8y8xr9a7xqqhospix2fr/15.03.01%20%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%B8%D0%B5.PDF",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://knastu.ru/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://knastu.ru/",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://abit.knastu.ru/profiles/15.03.01/1838/141/1",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://abit.knastu.ru/profiles/15.03.01/1838/141/1",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://pnu.edu.ru/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": null,
+      "result": "unverified",
+      "attempts": [
+        {
+          "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+        },
+        {
+          "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+        }
+      ]
+    },
+    {
+      "url": "https://togudv.ru/ru/applicant/count-reception-places/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 503,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: connection timeout"
+        },
+        {
+          "status": 503,
+          "body": "upstream connect error or disconnect/reset before headers. reset reason: connection timeout"
+        }
+      ]
+    },
+    {
+      "url": "https://www.s-vfu.ru/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": null,
+      "result": "unverified",
+      "attempts": [
+        {
+          "error": "<urlopen error Tunnel connection failed: 502 Bad Gateway>"
+        },
+        {
+          "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+        }
+      ]
+    },
+    {
+      "url": "https://abit.s-vfu.ru/rating/2396",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": null,
+      "result": "unverified",
+      "attempts": [
+        {
+          "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+        },
+        {
+          "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+        }
+      ]
+    },
+    {
+      "url": "https://vstehn.ru/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://vstehn.ru/",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://vstehn.ru/kontakty/rekvezity/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://vstehn.ru/kontakty/rekvezity/",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://vstehn.ru/priemnaya_komissiya/nashi-specialnosti-2/sudostroenie/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://vstehn.ru/priemnaya_komissiya/nashi-specialnosti-2/sudostroenie/",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://www.py16dv.ru/",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": null,
+      "result": "unverified",
+      "attempts": [
+        {
+          "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+        },
+        {
+          "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+        }
+      ]
+    },
+    {
+      "url": "https://py16dv.ru/abiturientu/pravila-prijoma",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://py16dv.ru/abiturientu/pravila-prijoma",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://py16dv.ru/abiturientu/kontrolnye-tsifry-prijoma",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://py16dv.ru/abiturientu/kontrolnye-tsifry-prijoma",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://obr-khv.ru/prof-education-system/professionalnye-obrazovatelnye-uchrezhdeniya.php",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://obr-khv.ru/prof-education-system/professionalnye-obrazovatelnye-uchrezhdeniya.php",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "http://gaskk-mck.ru/index.php/abiturientu/itemlist/category/24-professii-i-spetsialnosti",
+      "sources": [
+        "dist-ru/knowledge/reading/learning.html",
+        "knowledge/reading/learning.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "http://gaskk-mck.ru/index.php/abiturientu/itemlist/category/24-professii-i-spetsialnosti",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://m.minobrnauki.gov.ru/press-center/news/novosti-ministerstva/100850/",
+      "sources": [
+        "dist-ru/map.html",
+        "map.html"
+      ],
+      "status": 403,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 403,
+          "body": "<h1>Forbidden</h1><pre>Request ID: 2026-11-03-08-37-33-6534621150861E05</pre>"
+        }
+      ]
+    },
+    {
+      "url": "https://openedu.ru/",
+      "sources": [
+        "dist-ru/map.html",
+        "map.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://openedu.ru/",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://edu.itmo.ru/ru/edu_online/",
+      "sources": [
+        "dist-ru/map.html",
+        "map.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://edu.itmo.ru/ru/",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://stepik.org/",
+      "sources": [
+        "dist-ru/map.html",
+        "map.html"
+      ],
+      "status": 403,
+      "result": "unverified",
+      "attempts": [
+        {
+          "status": 403,
+          "body": "<!doctype html>\n<html>\n<head>\n    <meta charset=\"utf-8\">\n    <title>Access Blocked</title>\n</head>\n<body>\n    Access to resource was blocked.<br>\n    Reason or support ID: 01a1a08c-57be-7981-85c6-cfd808eb26cc.<br>\n    Additional information: 94-01 03&#47;Nov&#47;2026:11:35:14 +0300.\n</body>\n</html>\n"
+        }
+      ]
+    },
+    {
+      "url": "https://www.lektorium.tv/",
+      "sources": [
+        "dist-ru/map.html",
+        "map.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://www.lektorium.tv/",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://www.coursera.org/",
+      "sources": [
+        "dist-ru/map.html",
+        "map.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://www.coursera.org/",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://intuit.ru/",
+      "sources": [
+        "dist-ru/map.html",
+        "map.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://intuit.ru/",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://education.yandex.ru/",
+      "sources": [
+        "dist-ru/map.html",
+        "map.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://education.yandex.ru/",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://ru.hexlet.io/",
+      "sources": [
+        "dist-ru/map.html",
+        "map.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://ru.hexlet.io/",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://www.autodesk.com/certification/overview",
+      "sources": [
+        "dist-ru/map.html",
+        "map.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://www.autodesk.com/certification/overview",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://sochisirius.ru/obuchenie/distant",
+      "sources": [
+        "dist-ru/map.html",
+        "map.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://sochisirius.ru/obuchenie/distant",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://robotis.us/pages/faq",
+      "sources": [
+        "dist-ru/robotics.html",
+        "robotics.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://robotis.us/pages/faq",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://www.energy.gov/sites/default/files/2023-09/2_Technology%20Strategy%20Assessment%20-%202%20Lithium-ion_508.pdf",
+      "sources": [
+        "dist-ru/robotics.html",
+        "robotics.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://www.energy.gov/sites/default/files/2023-09/2_Technology%20Strategy%20Assessment%20-%202%20Lithium-ion_508.pdf",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://docs.ros.org/en/ros2_packages/rolling/api/joint_state_publisher/index.html",
+      "sources": [
+        "dist-ru/robotics.html",
+        "robotics.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://docs.ros.org/en/ros2_packages/rolling/api/joint_state_publisher/index.html",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://console.yandex.cloud/folders/b1gb2bfrust2n5nnbk30/functions/functions/d4ed26vrlmb1uk22m3b7/editor",
+      "sources": [
+        "life/index.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://auth.yandex.cloud/tmgrdfrend/showcaptcha?cc=1&form-fb-hint=1.150&mt=ECAA369206359A7DF55F918B12F5AE053B28B14432444A44AA25173A5642859B6B09BA76841BB7C10CA22FD125661E723375D6F5B0764ABEC32035978E6DFD405FCAADE7EE805B0BD99E242A817C55B540BF994B1C68C27628F9A595F406B97EC3B57A38039E872DC94EB789F97CA7C47636DE90551CE9341DDAA6E781AE4834B3A0F5F458F9A8A93CC15AE8D6899E08D0101168231ACF119A382678D37A712D6859AA2739F0FA5329D3E14AD64811695A17AE31990D903B29376BA0997FFF9D8A79B451F2161D45A3B3DF620C068886C4FFFC3B3A3BB46E81B529B7750DBED3D9C7A131B8E3A50CB6FC7FD6B17B4CD18781D9&retpath=aHR0cHM6Ly9hdXRoLnlhbmRleC5jbG91ZC9vYXV0aC9hdXRob3JpemU_cmVzcG9uc2VfdHlwZT1jb2RlJmNsaWVudF9pZD15Yy5vYXV0aC5jb25zb2xlJnNjb3BlPW9wZW5pZCZyZWRpcmVjdF91cmk9aHR0cHMlM0ElMkYlMkZjb25zb2xlLnlhbmRleC5jbG91ZCUyRmF1dGglMkZjYWxsYmFjayZzdGF0ZT05UUQ3cHN0VWRnM0UxYm9BNTdzWnVYd0FVNE05dm5tYmNyWW5VeCZjb2RlX2NoYWxsZW5nZT1XUUVFREkwRFFfSEh1QnVYZF84OTB1eVNOd3ZEdkxGSTExNS0xSnRGVE9ZJmNvZGVfY2hhbGxlbmdlX21ldGhvZD1TMjU2_310997471c478fdd14db54b959fa8a07&t=7%252F1793694919%252Fc47759ae7a70badf211e558bf4091ed4&u=9692363991584216702&s=ac8f6394ef04c209cdd81fb7bd89ca29",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    },
+    {
+      "url": "https://console.yandex.cloud/folders/b1gb2bfrust2n5nnbk30/functions/functions/d4ed26vrlmb1uk22m3b7/overview",
+      "sources": [
+        "life/index.html"
+      ],
+      "status": 200,
+      "result": "ok",
+      "finalUrl": "https://auth.yandex.cloud/tmgrdfrend/showcaptcha?cc=1&form-fb-hint=1.150&mt=BF8C5E0DDA12DF2707FB910A279D7E4F43CF71DD3CCAC41AD024F806554610478C9542644D3AF8A473FC346169DEE75F00FC56948BDB0729974A4397F78089F75F2E66C6BB7451CDD73DC9EECB6D328DDAEA7AD6A75F6F90F1E4C2D07999B72CF6CFD43DFCA7E169F3BDEFF19CF60F56FCEB35B50DE7D0047A32259460C7E0C906A869366232051DFDD76AD59986BD030CF53E7A301C7F6ADFFF3949A794D80F1A5D5106CC262D7BB0EC409A48FB67EA966859AA9C41D413FC4F7C4A05613F6C377645227F4A8518DDF9F8A5EF8CB49592E396FC026B092836214EF687C2FCFCFD6E80C79013F17083348D82569E2A79E3E06D&retpath=aHR0cHM6Ly9hdXRoLnlhbmRleC5jbG91ZC9vYXV0aC9hdXRob3JpemU_cmVzcG9uc2VfdHlwZT1jb2RlJmNsaWVudF9pZD15Yy5vYXV0aC5jb25zb2xlJnNjb3BlPW9wZW5pZCZyZWRpcmVjdF91cmk9aHR0cHMlM0ElMkYlMkZjb25zb2xlLnlhbmRleC5jbG91ZCUyRmF1dGglMkZjYWxsYmFjayZzdGF0ZT04ek9QQWlqZW9mT29aTDNZa21kQ3JBZ1N6NEFMallGbnNNeG5kciZjb2RlX2NoYWxsZW5nZT1RQzhyclFQQ3VwM0ZDczEzaDRFQ3J6Y0ZkRGdtam1Ub0o5d04tNnpraF80JmNvZGVfY2hhbGxlbmdlX21ldGhvZD1TMjU2_78e5a1a93e8df7cfc9fada8428266fac&t=7%252F1793694919%252F4cfc846fd388c2b560c584b653267ae0&u=9692363957023283619&s=19434591c0b9896032120e378fec55e0",
+      "attempts": [
+        {
+          "status": 200
+        }
+      ]
+    }
+  ]
+}
