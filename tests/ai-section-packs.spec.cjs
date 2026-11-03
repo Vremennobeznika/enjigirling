@@ -112,3 +112,34 @@ test('reading editions work offline without JavaScript at 320px and enlarged tex
   expect(external).toEqual([]);
  }finally{await context.close();}
 });
+
+
+test('mobile LLM and QA readers reflow at narrow widths without external assets',async({page,request})=>{
+ for(const name of ['ai-llm-guide','ai-qa-engineering']){
+  const url='/downloads/'+name+'.html';
+  const response=await request.get(url);
+  expect(response.ok(),url).toBeTruthy();
+  const content=await response.text();
+  expect(content).toContain('<article>');
+  expect(content).not.toContain('white-space:pre-wrap');
+  expect(content).not.toMatch(/<(?:script|link)[\\s>]/i);
+  for(const width of [320,375,390,768]){
+   await page.setViewportSize({width,height:760});
+   await page.goto(url);
+   await expect(page.locator('main h1')).toBeVisible();
+   await expect(page.locator('article p').first()).toBeVisible();
+   await expect(page.locator('nav a[href="'+name+'.pdf"]')).toBeVisible();
+   const metrics=await page.evaluate(()=>({
+    overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth,
+    font:parseFloat(getComputedStyle(document.querySelector('article')).fontSize),
+    paragraphs:document.querySelectorAll('article p').length
+   }));
+   expect(metrics.overflow,name+' overflow at '+width).toBeLessThanOrEqual(2);
+   expect(metrics.font,name+' font at '+width).toBeGreaterThanOrEqual(16);
+   expect(metrics.paragraphs,name+' paragraphs').toBeGreaterThan(10);
+  }
+ }
+ await page.goto('/coding.html');
+ await expect(page.locator('a[href="downloads/ai-llm-guide.html"]')).toBeVisible();
+ await expect(page.locator('a[href="downloads/ai-qa-engineering.html"]')).toBeVisible();
+});
