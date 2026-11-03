@@ -103,7 +103,8 @@ jobs:
             echo 'Generated public files are missing from the source. Include the validated output in the pull request.'
             exit 1
           fi
-          gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds"
+          # The normal main push starts the configured legacy Pages build.
+          # This job validates and observes it without additional write rights.
       - name: Stage static site without test dependencies
         run: |
           mkdir -p _site
@@ -181,10 +182,11 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          expected=$(git rev-parse HEAD)
           for attempt in {1..24}; do
-            state=$(gh api "repos/$GITHUB_REPOSITORY/pages/builds/latest" --jq '.status')
-            if [[ "$state" == 'built' ]]; then exit 0; fi
-            if [[ "$state" == 'errored' ]]; then exit 1; fi
+            read -r commit state < <(gh api "repos/$GITHUB_REPOSITORY/pages/builds/latest" --jq '[.commit,.status]|join(" ")')
+            if [[ "$commit" == "$expected" && "$state" == 'built' ]]; then exit 0; fi
+            if [[ "$commit" == "$expected" && "$state" == 'errored' ]]; then exit 1; fi
             sleep 10
           done
           exit 1

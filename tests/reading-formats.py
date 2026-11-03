@@ -35,7 +35,7 @@ for article,item in zip(chapters['calculators'],matrix):
     values = pairs(article.find('dl'))
     assert plain(values['Формула'])==item['formula'], item['id']
     assert plain(values['Допущения и ограничения'])==item['limits'], item['id']
-    assert values['Ссылка'].find('a').get('href')=='https://enjigirling.ru/'+item['href']
+    assert values['Ссылка'].find('a').get('href')=='https://vremennobeznika.github.io/enjigirling/'+item['href']
     inputs = values['Исходные данные'].findall('./ul/li/dl')
     assert len(inputs)==len(item['inputs']), item['id']
     for node,field in zip(inputs,item['inputs']):
