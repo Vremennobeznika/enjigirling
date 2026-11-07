@@ -382,8 +382,8 @@ h2{font-size:23px;letter-spacing:-.025em;line-height:1.2;margin:0 0 4px}
     switchPerson(ids[index]);$('tab-'+selected).focus();
   });
   // Independent household synchronization. Never uses the owner's life/ sync key or data.
-  const SUPABASE_DEFAULT_URL=''; // заполняется после подтверждения проекта
-  const SUPABASE_DEFAULT_PUBLIC_KEY=''; // публичный publishable ключ, НЕ sb_secret_
+  const SUPABASE_DEFAULT_URL='https://dcltykcoobhdermgauud.supabase.co';
+  const SUPABASE_DEFAULT_PUBLIC_KEY='sb_publishable_UXQhW2gGu4YJd3gxAkcewQ_Pq8UhTTm';
   const SYNC_CONFIG_KEY='eva-dima-kasya-sync-config-v1';
   const SYNC_BASE_KEY='eva-dima-kasya-sync-base-v1';
   const SYNC_BACKUP_KEY='eva-dima-kasya-sync-recovery-v1';
@@ -549,7 +549,7 @@ h2{font-size:23px;letter-spacing:-.025em;line-height:1.2;margin:0 0 4px}
       const digest=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(key));
       $('sync-hash').value=Array.from(new Uint8Array(digest),x=>x.toString(16).padStart(2,'0')).join('');
       $('sync-hash-wrap').hidden=false;
-      syncDisplay('Семейный ключ создан. SHA-256 понадобится один раз в SQL-редакторе Supabase. Сам ключ не публикуйте.');
+      syncDisplay('Семейный ключ создан. Для нового ключа потребуется обновить доступ к базе. Не заменяйте действующий ключ без перенастройки базы.');
     };
     $('sync-copy-secret').onclick=async()=>{
       try{await navigator.clipboard.writeText($('sync-secret').value);syncDisplay('Семейный ключ скопирован. Передайте его Диме только лично или в защищённом чате.')}
