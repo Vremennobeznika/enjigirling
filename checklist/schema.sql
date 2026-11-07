@@ -1,6 +1,6 @@
 -- Список дел «Ева · Дима · Кася» — установка базы Supabase.
--- Замените REPLACE_WITH_64_HEX_SHA256 на SHA-256 от длинного семейного ключа.
--- Семейный ключ в репозиторий и SQL вставлять НЕ НУЖНО.
+-- Начальное значение access_hash является заглушкой; после создания базы замените его SHA-256 от семейного ключа.
+-- Действующий семейный ключ в репозиторий НЕ добавлять. Уже развёрнутая база настроена отдельно.
 
 create schema if not exists extensions;
 create extension if not exists pgcrypto with schema extensions;
@@ -18,7 +18,7 @@ revoke all on public.household_checklist_private from public, anon, authenticate
 insert into public.household_checklist_private (id, access_hash, revision, payload)
 values (
   'family-v1',
-  'REPLACE_WITH_64_HEX_SHA256',
+  '0000000000000000000000000000000000000000000000000000000000000000',
   0,
   '{"version":1,"lists":{"eva":[],"dima":[],"kasya":[]}}'::jsonb
 )
