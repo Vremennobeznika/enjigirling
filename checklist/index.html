@@ -129,7 +129,7 @@ h2{font-size:23px;letter-spacing:-.025em;line-height:1.2;margin:0 0 4px}
   <header>
     <div class="kicker">ЛИЧНЫЕ СПИСКИ</div>
     <h1>Список дел</h1>
-    <p class="lead">Общие списки дел с этапами. Изменения можно синхронизировать на разных устройствах.</p>
+    <p class="lead">Общие списки дел с этапами. Изменения синхронизируются между телефонами после подключения общей базы.</p>
   </header>
   <nav class="tabs" aria-label="Чей список дел" role="tablist">
     <button class="tab" type="button" role="tab" aria-selected="true" data-person="eva" id="tab-eva" aria-controls="task-panel"><span>Ева</span><span class="tab-count" data-count="eva"></span></button>
@@ -159,21 +159,23 @@ h2{font-size:23px;letter-spacing:-.025em;line-height:1.2;margin:0 0 4px}
   <div role="status" aria-live="polite" id="status" class="status"></div>
   <section class="sync-panel" aria-label="Синхронизация между устройствами">
     <div class="sync-head"><h2>Общий доступ</h2><span class="sync-pill" id="sync-indicator">Только на устройстве</span></div>
-    <p class="sync-description">На телефонах Евы и Димы откройте одну ссылку и подключите одинаковый адрес сервера и общий секретный ключ. Списки будут обновляться при открытой странице, примерно раз в 8 секунд.</p>
+    <p class="sync-description">Откройте эту страницу на двух телефонах и используйте один семейный ключ. Списки обновляются автоматически, пока страница открыта.</p>
     <div class="sync-fields">
-      <label>Адрес защищённого сервера<input id="sync-url" type="url" inputmode="url" placeholder="https://functions.yandexcloud.net/…" spellcheck="false" autocomplete="off"></label>
-      <label>Общий ключ<input id="sync-secret" type="password" placeholder="Секретный ключ (не короче 32 знаков)" autocomplete="off" spellcheck="false"></label>
+      <label>Адрес проекта Supabase<input id="sync-url" type="url" inputmode="url" placeholder="https://ваш-проект.supabase.co" spellcheck="false" autocomplete="off"></label>
+      <label>Публичный ключ Supabase (publishable)<input id="sync-public-key" type="text" placeholder="sb_publishable_…" spellcheck="false" autocomplete="off"></label>
+      <label>Семейный ключ<input id="sync-secret" type="password" placeholder="Секретный ключ (не короче 32 знаков)" autocomplete="off" spellcheck="false"></label>
     </div>
     <div class="sync-actions">
-      <button type="button" class="secondary" id="sync-generate">Создать случайный ключ</button>
+      <button type="button" class="secondary" id="sync-generate">Создать семейный ключ</button>
       <button type="button" class="primary" id="sync-connect">Подключить</button>
       <button type="button" class="secondary" id="sync-now">Проверить сейчас</button>
       <button type="button" class="secondary" id="sync-disconnect">Отключить</button>
     </div>
-    <div id="sync-hash-wrap" hidden><label>SHA-256 для настройки сервера<input id="sync-hash" readonly spellcheck="false"></label><button type="button" class="secondary" id="sync-copy-hash">Копировать SHA-256</button></div>
+    <button type="button" class="secondary" id="sync-copy-secret" hidden>Скопировать семейный ключ</button>
+    <div id="sync-hash-wrap" hidden><label>SHA-256 для SQL-установки<input id="sync-hash" readonly spellcheck="false"></label><button type="button" class="secondary" id="sync-copy-hash">Копировать SHA-256</button></div>
     <div class="sync-status" id="sync-status" role="status" aria-live="polite">Облачная синхронизация не подключена. Списки остаются локальными.</div>
     <div class="sync-conflict" id="sync-conflict" hidden><p id="sync-conflict-text">На другом устройстве есть несовместимые изменения. Ни одна копия не удалена.</p><button type="button" class="secondary" id="sync-use-remote">Загрузить облачную версию</button><button type="button" class="secondary" id="sync-retry">Попробовать объединить</button></div>
-    <p class="fineprint">Ключ хранится только в браузере текущего устройства. Никому не передавайте ключ от другого личного приложения. Если оба устройства меняют один пункт одновременно, автоматическое объединение остановится до выбора версии.</p>
+    <p class="fineprint">Публиковать можно только ключ проекта sb_publishable_…: это не пароль. Семейный ключ хранится в браузере и не публикуется в GitHub. Не используйте секретные ключи Supabase (sb_secret_…) или service_role. При конфликте одноимённых правок приложение останавливает автоматическую замену.</p>
   </section>
   <p class="fineprint">Нет расписания, календаря или напоминаний. При отключённой сети изменения сохраняются локально и отправятся после восстановления соединения. Если сайт закрыт на двух устройствах, синхронизация возобновится при открытии.</p>
 </div>
@@ -380,6 +382,8 @@ h2{font-size:23px;letter-spacing:-.025em;line-height:1.2;margin:0 0 4px}
     switchPerson(ids[index]);$('tab-'+selected).focus();
   });
   // Independent household synchronization. Never uses the owner's life/ sync key or data.
+  const SUPABASE_DEFAULT_URL=''; // заполняется после подтверждения проекта
+  const SUPABASE_DEFAULT_PUBLIC_KEY=''; // публичный publishable ключ, НЕ sb_secret_
   const SYNC_CONFIG_KEY='eva-dima-kasya-sync-config-v1';
   const SYNC_BASE_KEY='eva-dima-kasya-sync-base-v1';
   const SYNC_BACKUP_KEY='eva-dima-kasya-sync-recovery-v1';
@@ -394,7 +398,7 @@ h2{font-size:23px;letter-spacing:-.025em;line-height:1.2;margin:0 0 4px}
   }
   function loadSyncConfig(){try{
     const o=JSON.parse(localStorage.getItem(SYNC_CONFIG_KEY)||'null');
-    return o&&typeof o.url==='string'&&typeof o.secret==='string'&&o.secret.length>=32&&/^https:\/\/[^\s/]+/.test(o.url)?o:null;
+    return o&&typeof o.url==='string'&&typeof o.secret==='string'&&o.secret.length>=32&&/^https:\/\/[^\s/]+/.test(o.url)&&typeof o.publishableKey==='string'&&/^sb_publishable_[A-Za-z0-9_-]{8,}$/.test(o.publishableKey)?o:null;
   }catch{return null}}
   function loadBase(){try{
     const o=JSON.parse(localStorage.getItem(SYNC_BASE_KEY)||'null');
@@ -414,16 +418,18 @@ h2{font-size:23px;letter-spacing:-.025em;line-height:1.2;margin:0 0 4px}
     syncTimer=setTimeout(()=>{void doSync()},delay);
   }
   async function requestCloud(method,data){
-    const headers={'X-Checklist-Key':syncConfig.secret};
-    const options={method,mode:'cors',credentials:'omit',cache:'no-store',headers};
-    if(method==='PUT'){headers['Content-Type']='application/json';options.body=JSON.stringify(data)}
+    const headers={apikey:syncConfig.publishableKey,'Content-Type':'application/json'};
+    const operation=method==='GET'?'household_checklist_get':'household_checklist_put';
+    const url=syncConfig.url.replace(/\/$/,'')+'/rest/v1/rpc/'+operation;
+    const body=method==='GET'?{p_secret:syncConfig.secret}:{p_secret:syncConfig.secret,p_revision:data.revision,p_data:data.data};
+    const options={method:'POST',mode:'cors',credentials:'omit',cache:'no-store',headers,body:JSON.stringify(body)};
     const controller=new AbortController();options.signal=controller.signal;
     const timeout=setTimeout(()=>controller.abort(),18000);
     try{
-      const response=await fetch(syncConfig.url,options);
+      const response=await fetch(url,options);
       let reply;try{reply=await response.json()}catch{throw Error('Сервер не вернул JSON')}
       if(response.status===409){const err=Error('Версия обновилась на другом телефоне');err.conflict=true;throw err}
-      if(!response.ok)throw Error(reply.error||('HTTP '+response.status));
+      if(!response.ok)throw Error(reply.message||reply.error||('HTTP '+response.status));
       return reply;
     }catch(err){if(err.name==='AbortError')throw Error('Сервер не ответил за 18 секунд');throw err}
     finally{clearTimeout(timeout)}
@@ -530,34 +536,41 @@ h2{font-size:23px;letter-spacing:-.025em;line-height:1.2;margin:0 0 4px}
   }
   function initSync(){
     syncConfig=loadSyncConfig();
-    if(syncConfig){$('sync-url').value=syncConfig.url;$('sync-secret').value=syncConfig.secret;
+    if(SUPABASE_DEFAULT_URL&&!syncConfig)$('sync-url').value=SUPABASE_DEFAULT_URL;
+    if(SUPABASE_DEFAULT_PUBLIC_KEY&&!syncConfig)$('sync-public-key').value=SUPABASE_DEFAULT_PUBLIC_KEY;
+    if(syncConfig){$('sync-url').value=syncConfig.url;$('sync-public-key').value=syncConfig.publishableKey;$('sync-secret').value=syncConfig.secret;
       syncDisplay('Подключение сохранено. Проверяю общую версию…');scheduleSync(400);
     }
     $('sync-generate').onclick=async()=>{
       if(!window.crypto?.getRandomValues||!window.crypto?.subtle){syncDisplay('Для генерации ключа откройте сайт по HTTPS.','error');return}
       const data=crypto.getRandomValues(new Uint8Array(32));
       const key=Array.from(data,x=>x.toString(16).padStart(2,'0')).join('');
-      $('sync-secret').type='text';$('sync-secret').value=key;
+      $('sync-secret').type='text';$('sync-secret').value=key;$('sync-copy-secret').hidden=false;
       const digest=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(key));
       $('sync-hash').value=Array.from(new Uint8Array(digest),x=>x.toString(16).padStart(2,'0')).join('');
       $('sync-hash-wrap').hidden=false;
-      syncDisplay('Ключ создан. Сохраните его отдельно; SHA-256 укажите в настройке сервера. Сам ключ нельзя публиковать в GitHub.');
+      syncDisplay('Семейный ключ создан. SHA-256 понадобится один раз в SQL-редакторе Supabase. Сам ключ не публикуйте.');
+    };
+    $('sync-copy-secret').onclick=async()=>{
+      try{await navigator.clipboard.writeText($('sync-secret').value);syncDisplay('Семейный ключ скопирован. Передайте его Диме только лично или в защищённом чате.')}
+      catch{$('sync-secret').focus();$('sync-secret').select();syncDisplay('Скопируйте выделенный ключ вручную.')}
     };
     $('sync-copy-hash').onclick=async()=>{
       try{await navigator.clipboard.writeText($('sync-hash').value);syncDisplay('SHA-256 скопирован.')}catch{ $('sync-hash').focus();$('sync-hash').select();syncDisplay('Скопируйте выделенный SHA-256 вручную.')}
     };
     $('sync-connect').onclick=()=>{
-      const url=$('sync-url').value.trim(),secret=$('sync-secret').value.trim();
-      try{const u=new URL(url);if(u.protocol!=='https:'||u.username||u.password||u.search||u.hash)throw 0;
-        if(secret.length<32||secret.length>200)throw 0;
-      }catch{syncDisplay('Нужен HTTPS-адрес функции и общий секрет не короче 32 символов.','error');return}
+      const url=$('sync-url').value.trim().replace(/\/$/,''),secret=$('sync-secret').value.trim(),publishableKey=$('sync-public-key').value.trim();
+      try{const u=new URL(url);if(u.protocol!=='https:'||u.username||u.password||u.search||u.hash||u.pathname!=='/'||!u.hostname.endsWith('.supabase.co'))throw 0;
+        if(secret.length<32||secret.length>200||!/^sb_publishable_[A-Za-z0-9_-]{8,}$/.test(publishableKey))throw 0;
+      }catch{syncDisplay('Нужны адрес проекта Supabase, ключ sb_publishable_… и семейный ключ не короче 32 символов.','error');return}
       const former=syncConfig;
-      const next={url,secret};
+      const next={url,secret,publishableKey};
       try{
         localStorage.setItem(SYNC_CONFIG_KEY,JSON.stringify(next));
-        if(!former||former.url!==url||former.secret!==secret)localStorage.removeItem(SYNC_BASE_KEY);
+        if(!former||former.url!==url||former.secret!==secret||former.publishableKey!==publishableKey)localStorage.removeItem(SYNC_BASE_KEY);
       }catch{syncDisplay('Не удалось сохранить настройки.','error');return}
       syncConfig=next;syncConflict=false;syncFailures=0;$('sync-conflict').hidden=true;
+      $('sync-secret').type='password';$('sync-copy-secret').hidden=true;
       syncDisplay('Проверяю связь с общим списком…');scheduleSync(100);
     };
     $('sync-disconnect').onclick=()=>{
@@ -565,7 +578,7 @@ h2{font-size:23px;letter-spacing:-.025em;line-height:1.2;margin:0 0 4px}
       if(!confirm('Отключить обмен данными на этом устройстве? Списки останутся локально.'))return;
       clearTimeout(syncTimer);syncQueued=false;syncConfig=null;syncConflict=false;
       localStorage.removeItem(SYNC_CONFIG_KEY);localStorage.removeItem(SYNC_BASE_KEY);
-      $('sync-secret').value='';$('sync-hash-wrap').hidden=true;
+      $('sync-secret').value='';$('sync-public-key').value='';$('sync-copy-secret').hidden=true;$('sync-hash-wrap').hidden=true;
       syncDisplay('Отключено. Дела не удалены.');
     };
     $('sync-now').onclick=()=>{if(!syncConfig){syncDisplay('Сначала подключите сервер и общий ключ.','error');return}
