@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#101010">
+<meta name="description" content="Три самостоятельных списка дел с галочками: Ева, Дима, Кася. Редактируются и сохраняются в браузере.">
+<title>Список дел — Ева · Дима · Кася</title>
+<style>
+:root{color-scheme:dark;--bg:#101010;--panel:#1b1b1b;--panel2:#202020;--line:#3b3b3b;--soft:#292929;--ink:#f4f4f4;--muted:#b5b5b5;--bright:#f0f0f0;--danger:#efaaa7}
+*{box-sizing:border-box}
+html{min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;min-width:0}
+button,input{font:inherit}
+button{cursor:pointer}
+button:disabled{cursor:not-allowed;opacity:.28}
+button:focus-visible,input:focus-visible{outline:2px solid white;outline-offset:3px}
+[hidden]{display:none!important}
+.shell{width:min(100% - 32px,740px);margin:0 auto;padding:30px 0 calc(48px + env(safe-area-inset-bottom))}
+.kicker{font-size:12px;letter-spacing:.13em;font-weight:700;color:#bcbcbc}
+h1{font-size:clamp(28px,5vw,38px);letter-spacing:-.045em;line-height:1.15;margin:7px 0 7px}
+.lead{color:var(--muted);font-size:14px;margin:0 0 24px;max-width:54ch}
+.tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0 0 20px}
+.tab{min-height:58px;display:flex;align-items:center;justify-content:center;gap:9px;background:var(--panel);color:#e2e2e2;border:1px solid #494949;border-radius:13px;padding:9px 10px;font-size:16px;font-weight:700;min-width:0}
+.tab[aria-selected=true]{background:var(--bright);color:#101010;border-color:var(--bright)}
+.tab-count{font-variant-numeric:tabular-nums;font-size:12px;font-weight:600;opacity:.72;white-space:nowrap}
+.panel{border:1px solid var(--line);background:var(--panel);border-radius:18px;overflow:hidden}
+.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;padding:22px 22px 17px}
+h2{font-size:23px;letter-spacing:-.025em;line-height:1.2;margin:0 0 4px}
+.summary{color:var(--muted);font-size:13px;font-variant-numeric:tabular-nums}
+.percent{font-size:24px;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.track{height:6px;background:#383838;margin:0 22px 19px;border-radius:5px;overflow:hidden}
+.fill{height:100%;width:0;background:#ebebeb;border-radius:5px;transition:width .12s}
+.add-form{display:flex;gap:9px;padding:0 22px 21px}
+.new-task{flex:1;min-width:0;min-height:48px;padding:12px 14px;border:1px solid #676767;border-radius:11px;background:#101010;color:#fff;font-size:16px}
+.new-task::placeholder{color:#999}
+.primary{min-height:48px;padding:10px 17px;border:1px solid #f3f3f3;border-radius:11px;background:#f0f0f0;color:#101010;font-weight:750}
+.primary:hover{background:#d7d7d7}
+.list{list-style:none;margin:0;padding:0}
+.item{display:grid;grid-template-columns:32px minmax(0,1fr) auto;align-items:start;gap:13px;padding:13px 18px 13px 22px;min-height:72px;border-top:1px solid var(--line)}
+.item:nth-child(even){background:#1e1e1e}
+.check{width:27px;height:27px;accent-color:#eeeeee;cursor:pointer;margin:3px 0 0}
+.task-label{overflow-wrap:anywhere;line-height:1.4;cursor:pointer;min-width:0}
+.item.done .task-label{color:#989898;text-decoration:line-through;text-decoration-thickness:1.5px}
+.actions{display:flex;gap:4px;align-items:center;justify-content:flex-end}
+.small-button{background:transparent;border:1px solid transparent;border-radius:8px;color:#bfbfbf;padding:8px 10px;min-width:40px;min-height:42px;font-size:15px}
+.small-button:hover:not(:disabled){background:#393939;border-color:#545454;color:#fff}
+.small-button.remove:hover{color:var(--danger)}
+.item.editor{grid-template-columns:minmax(0,1fr);gap:10px;padding:16px 22px}
+.edit-input{width:100%;min-height:46px;border:1px solid #777;border-radius:9px;padding:10px 13px;background:#101010;color:white}
+.edit-actions{display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap}
+.secondary{min-height:43px;padding:9px 14px;border:1px solid #5e5e5e;background:var(--soft);border-radius:10px;color:#fff}
+.empty{text-align:center;color:var(--muted);padding:48px 20px 56px;border-top:1px solid var(--line);font-size:14px}
+.empty strong{display:block;color:#e8e8e8;font-size:16px;margin:0 0 7px}
+.bottom{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding:13px 22px;min-height:68px}
+.muted-button{border:1px solid #4f4f4f;background:transparent;color:#dadada;border-radius:10px;min-height:42px;padding:8px 12px;font-size:13px}
+.muted-button:hover:not(:disabled){background:#343434}
+.hint{font-size:12px;color:#aaa;line-height:1.5;margin:22px 0 9px}
+.backup{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:7px}
+.backup button,.backup label{display:inline-flex;align-items:center;justify-content:center;min-height:44px;border:1px solid #565656;background:#222;color:#e8e8e8;border-radius:10px;padding:10px 14px;font-size:13px;font-weight:600;cursor:pointer}
+.backup button:hover,.backup label:hover{background:#333}
+.status{font-size:13px;color:#d6d6d6;min-height:20px;margin:12px 0 0}
+.status.error{color:#ffb8b3}
+.fineprint{font-size:12px;line-height:1.6;color:#a8a8a8;margin:14px 0 0}
+@media(max-width:520px){
+ .shell{width:calc(100% - 24px);padding-top:22px}
+ .tabs{gap:6px;margin-bottom:13px}
+ .tab{min-height:54px;gap:4px;flex-direction:column;font-size:15px;padding:7px 3px}
+ .tab-count{font-size:11px}
+ .panel-head{padding:19px 15px 14px}
+ .track{margin-left:15px;margin-right:15px}
+ .add-form{padding:0 15px 17px;gap:6px}
+ .primary{padding:10px 12px}
+ .item{grid-template-columns:30px minmax(0,1fr);gap:9px 11px;padding:13px 15px;min-height:76px}
+ .actions{grid-column:2;justify-content:flex-start;margin-top:-2px;flex-wrap:wrap}
+ .small-button{min-height:44px;min-width:44px;padding:8px}
+ .bottom{padding:12px 15px}
+ .item.editor{padding:15px}
+}
+
+/* Этапы внутри дела. Ограничение ширины защищает мобильную вёрстку. */
+.stage-toggle{border:1px solid #5b5b5b;border-radius:9px;background:#282828;color:#efefef;min-height:40px;padding:7px 11px;font-size:12px;font-weight:700;white-space:nowrap}
+.stage-toggle:hover{background:#383838}
+.stage-toggle[aria-expanded=true]{background:#eee;color:#111;border-color:#eee}
+.stage-section{grid-column:1/-1;min-width:0;width:100%;padding:9px 0 3px;margin-top:2px;border-top:1px solid #363636}
+.stage-heading{font-size:12px;color:#bdbdbd;margin:1px 0 9px;line-height:1.45}
+.stage-list{list-style:none;padding:0;margin:0}
+.stage-row{display:grid;grid-template-columns:27px minmax(0,1fr) auto;gap:10px;align-items:start;padding:10px 3px;border-bottom:1px solid #343434;min-width:0}
+.stage-check{width:24px;height:24px;margin:3px 0 0;accent-color:#eee;cursor:pointer}
+.stage-text{min-width:0;overflow-wrap:anywhere;line-height:1.4;font-size:14px;cursor:pointer}
+.stage-row.completed .stage-text{color:#999;text-decoration:line-through}
+.stage-actions{display:flex;gap:1px;align-items:center;min-width:0}
+.stage-actions .small-button{min-height:38px;min-width:34px;padding:5px 7px;font-size:13px}
+.stage-add{display:flex;gap:7px;margin-top:11px;min-width:0}
+.stage-input{flex:1;min-width:0;min-height:44px;padding:9px 12px;border:1px solid #666;border-radius:10px;background:#101010;color:white;font-size:15px}
+.stage-add .secondary{min-height:44px;font-size:13px;white-space:nowrap}
+.stage-editor{display:flex;gap:7px;align-items:center;flex-wrap:wrap;min-width:0}
+.stage-editor .stage-input{flex:1 1 130px}
+.stage-editor .secondary{min-height:44px}
+.stage-empty{font-size:13px;color:#aaa;margin:0 0 7px}
+@media(max-width:520px){
+ .stage-section{padding-top:11px}
+ .stage-row{grid-template-columns:24px minmax(0,1fr);gap:7px 10px;padding:11px 0}
+ .stage-actions{grid-column:2;justify-content:flex-start}
+ .stage-actions .small-button{min-height:44px;min-width:44px;font-size:16px}
+ .stage-toggle{min-height:40px}
+}
+@media(max-width:330px){.stage-add{flex-wrap:wrap}.stage-add .secondary{flex:1 1 100%}}
+
+.sync-panel{margin:23px 0 0;padding:20px;border:1px solid #484848;border-radius:17px;background:#1b1b1b;overflow:hidden}
+.sync-head{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+.sync-head h2{margin:0}.sync-pill{font-size:12px;border:1px solid #555;background:#272727;padding:6px 10px;border-radius:99px;overflow-wrap:anywhere}
+.sync-description{color:#bbb;font-size:13px;line-height:1.55;margin:0 0 12px}
+.sync-fields{display:grid;gap:10px}.sync-fields label,#sync-hash-wrap label{display:grid;gap:5px;font-size:13px;color:#ccc;min-width:0}
+.sync-fields input,#sync-hash{height:46px;max-width:100%;min-width:0;width:100%;background:#101010;color:#fff;border:1px solid #626262;border-radius:10px;padding:10px 12px;font-size:16px}
+.sync-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}.sync-actions button{flex:1 1 155px;min-width:0}
+.sync-status{font-size:13px;line-height:1.5;color:#d2d2d2;margin:12px 0 0;overflow-wrap:anywhere}
+.sync-status.error{color:#ffb8b3}.sync-status.ok{color:#d6f0da}
+.sync-conflict{margin:12px 0 0;border:1px solid #ab8987;border-radius:10px;padding:12px;background:#241c1c;font-size:13px;line-height:1.5}
+.sync-conflict p{margin:0 0 9px}.sync-conflict button{margin:2px;min-height:44px}
+#sync-hash-wrap{margin-top:10px;display:flex;gap:9px;flex-wrap:wrap;align-items:end}
+#sync-hash-wrap label{flex:1 1 200px}
+@media(max-width:520px){.sync-panel{padding:14px}.sync-actions button{flex:1 1 120px}}
+@media(prefers-reduced-motion:reduce){.fill{transition:none}}
+</style>
+</head>
+<body>
+<div class="shell">
+  <header>
+    <div class="kicker">ЛИЧНЫЕ СПИСКИ</div>
+    <h1>Список дел</h1>
+    <p class="lead">Общие списки дел с этапами. Изменения можно синхронизировать на разных устройствах.</p>
+  </header>
+  <nav class="tabs" aria-label="Чей список дел" role="tablist">
+    <button class="tab" type="button" role="tab" aria-selected="true" data-person="eva" id="tab-eva" aria-controls="task-panel"><span>Ева</span><span class="tab-count" data-count="eva"></span></button>
+    <button class="tab" type="button" role="tab" aria-selected="false" data-person="dima" id="tab-dima" aria-controls="task-panel"><span>Дима</span><span class="tab-count" data-count="dima"></span></button>
+    <button class="tab" type="button" role="tab" aria-selected="false" data-person="kasya" id="tab-kasya" aria-controls="task-panel"><span>Кася</span><span class="tab-count" data-count="kasya"></span></button>
+  </nav>
+  <main class="panel" id="task-panel" role="tabpanel" aria-labelledby="tab-eva">
+    <div class="panel-head">
+      <div><h2 id="person-title">Дела Евы</h2><div class="summary" id="progress-label">0 из 0 выполнено</div></div>
+      <div class="percent" id="progress-percent">0%</div>
+    </div>
+    <div class="track" role="progressbar" aria-label="Выполнено" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress-track"><div class="fill" id="progress-fill"></div></div>
+    <form id="add-form" class="add-form">
+      <input class="new-task" id="new-task" type="text" maxlength="140" placeholder="Новое дело…" aria-label="Название нового дела" required autocomplete="off">
+      <button class="primary" type="submit">Добавить</button>
+    </form>
+    <ul id="task-list" class="list" aria-label="Дела"></ul>
+    <div class="empty" id="empty"><strong>Список пока пуст</strong>Введите первое дело в строке выше.</div>
+    <div class="bottom"><span class="summary" id="total-count">0 пунктов</span><button type="button" class="muted-button" id="clear-completed" disabled>Удалить выполненные</button></div>
+  </main>
+  <p class="hint">Этапы добавляются кнопкой «Этапы» у каждого дела. Выполнение всех этапов автоматически закрывает дело. Изменения сохраняются в браузере и, после подключения, передаются на другие устройства.</p>
+  <section aria-label="Резервные копии" class="backup">
+    <button type="button" id="export-button">Скачать копию (.json)</button>
+    <label for="import-file">Восстановить из копии<input id="import-file" type="file" accept="application/json,.json" hidden></label>
+    <button type="button" id="undo-import" hidden>Отменить последний импорт</button>
+  </section>
+  <div role="status" aria-live="polite" id="status" class="status"></div>
+  <section class="sync-panel" aria-label="Синхронизация между устройствами">
+    <div class="sync-head"><h2>Общий доступ</h2><span class="sync-pill" id="sync-indicator">Только на устройстве</span></div>
+    <p class="sync-description">На телефонах Евы и Димы откройте одну ссылку и подключите одинаковый адрес сервера и общий секретный ключ. Списки будут обновляться при открытой странице, примерно раз в 8 секунд.</p>
+    <div class="sync-fields">
+      <label>Адрес защищённого сервера<input id="sync-url" type="url" inputmode="url" placeholder="https://functions.yandexcloud.net/…" spellcheck="false" autocomplete="off"></label>
+      <label>Общий ключ<input id="sync-secret" type="password" placeholder="Секретный ключ (не короче 32 знаков)" autocomplete="off" spellcheck="false"></label>
+    </div>
+    <div class="sync-actions">
+      <button type="button" class="secondary" id="sync-generate">Создать случайный ключ</button>
+      <button type="button" class="primary" id="sync-connect">Подключить</button>
+      <button type="button" class="secondary" id="sync-now">Проверить сейчас</button>
+      <button type="button" class="secondary" id="sync-disconnect">Отключить</button>
+    </div>
+    <div id="sync-hash-wrap" hidden><label>SHA-256 для настройки сервера<input id="sync-hash" readonly spellcheck="false"></label><button type="button" class="secondary" id="sync-copy-hash">Копировать SHA-256</button></div>
+    <div class="sync-status" id="sync-status" role="status" aria-live="polite">Облачная синхронизация не подключена. Списки остаются локальными.</div>
+    <div class="sync-conflict" id="sync-conflict" hidden><p id="sync-conflict-text">На другом устройстве есть несовместимые изменения. Ни одна копия не удалена.</p><button type="button" class="secondary" id="sync-use-remote">Загрузить облачную версию</button><button type="button" class="secondary" id="sync-retry">Попробовать объединить</button></div>
+    <p class="fineprint">Ключ хранится только в браузере текущего устройства. Никому не передавайте ключ от другого личного приложения. Если оба устройства меняют один пункт одновременно, автоматическое объединение остановится до выбора версии.</p>
+  </section>
+  <p class="fineprint">Нет расписания, календаря или напоминаний. При отключённой сети изменения сохраняются локально и отправятся после восстановления соединения. Если сайт закрыт на двух устройствах, синхронизация возобновится при открытии.</p>
+</div>
+<script>
+'use strict';
+(() => {
+  const STORAGE_KEY = 'eva-dima-kasya-checklist-v1'; // прежние сохранения остаются доступными
+  const PREVIOUS_KEY = 'eva-dima-kasya-checklist-before-import-v1';
+  const people = Object.freeze({eva:'Ева',dima:'Дима',kasya:'Кася'});
+  const cases = {eva:'Евы',dima:'Димы',kasya:'Каси'};
+  const ids = Object.keys(people);
+  const $ = id => document.getElementById(id);
+  const blank = () => ({version:1,lists:{eva:[],dima:[],kasya:[]}});
+  const cleanName = value => typeof value === 'string' ? value.trim().replace(/\s+/g,' ').slice(0,140) : '';
+  const uid = () => `${Date.now().toString(36)}-${Math.random().toString(36).slice(2,11)}`;
+  const status = (message,error=false) => { $('status').textContent=message; $('status').classList.toggle('error',error); };
+  function normalize(input){
+    if(!input || typeof input!=='object' || Array.isArray(input) || input.version!==1 || !input.lists || typeof input.lists!=='object' || Array.isArray(input.lists)) throw new Error('Неверный формат копии');
+    const out=blank();
+    for(const key of ids){
+      const list=input.lists[key];
+      if(!Array.isArray(list) || list.length>300) throw new Error('Неверный список: '+people[key]);
+      const seen=new Set();
+      for(const entry of list){
+        if(!entry || typeof entry!=='object' || Array.isArray(entry) || typeof entry.id!=='string' || entry.id.length>90 || !entry.id || seen.has(entry.id) || typeof entry.text!=='string' || !entry.text.trim() || entry.text.length>500 || typeof entry.done!=='boolean') throw new Error('Повреждённый пункт: '+people[key]);
+        seen.add(entry.id);
+        const stages=entry.stages===undefined?[]:entry.stages;
+        if(!Array.isArray(stages) || stages.length>40) throw new Error('Неверные этапы у дела: '+entry.text);
+        const seenStages=new Set(), cleanedStages=[];
+        for(const stage of stages){
+          if(!stage || typeof stage!=='object' || Array.isArray(stage) || typeof stage.id!=='string' || !stage.id || stage.id.length>90 || seenStages.has(stage.id) || typeof stage.text!=='string' || !stage.text.trim() || stage.text.length>500 || typeof stage.done!=='boolean') throw new Error('Повреждённый этап: '+entry.text);
+          seenStages.add(stage.id);
+          cleanedStages.push({id:stage.id,text:cleanName(stage.text),done:stage.done});
+        }
+        // Для задач с этапами признак выполнения вычисляем по ним.
+        out.lists[key].push({id:entry.id,text:cleanName(entry.text),done:cleanedStages.length?cleanedStages.every(x=>x.done):entry.done,stages:cleanedStages});
+      }
+    }
+    return out;
+  }
+  function read(){
+    try {const raw=localStorage.getItem(STORAGE_KEY);return raw?normalize(JSON.parse(raw)):blank();}
+    catch(e){status('Не удалось прочитать сохранённые списки. Данные на устройстве не изменены.',true);return blank();}
+  }
+  let state=read(),selected='eva',editing=null,stageEditing=null;
+  const drafts={eva:'',dima:'',kasya:''};
+  const expanded=new Set();
+  function save(){
+    try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state));status('Изменения сохранены.');scheduleSync(500);return true;}
+    catch(e){status('Нет доступа к хранилищу браузера. Скачайте копию: изменения могут пропасть.',true);return false;}
+  }
+  function action(callback){callback();save();render();}
+  function button(text,label,fn,css=''){
+    const b=document.createElement('button');b.type='button';b.className='small-button '+css;b.textContent=text;b.setAttribute('aria-label',label);b.title=label;b.addEventListener('click',fn);return b;
+  }
+  function freshId(items){const used=new Set(items.map(x=>x.id));let id=uid();while(used.has(id))id=uid();return id;}
+  const ekey=task=>selected+'-'+task.id;
+  const stageKeyFor=(task,stage)=>JSON.stringify([selected,task.id,stage.id]);
+  function updateUndoImport(){try{$('undo-import').hidden=!localStorage.getItem(PREVIOUS_KEY)}catch{$('undo-import').hidden=true}}
+  function switchPerson(person){drafts[selected]=$('new-task').value;selected=person;editing=null;stageEditing=null;$('new-task').value=drafts[selected];render();}
+  const syncDone=task=>{if(task.stages.length)task.done=task.stages.every(x=>x.done);};
+  function openTaskEditor(task,root){editing=task.id;stageEditing=null;render();const field=root.querySelector('.item.editor .edit-input');if(field){field.focus();field.select();}}
+  function makeStageSection(task,sectionId){
+    const section=document.createElement('div');section.className='stage-section';section.id=sectionId;
+    const heading=document.createElement('p');heading.className='stage-heading';heading.textContent='Этапы дела · '+task.stages.filter(x=>x.done).length+' из '+task.stages.length+' готово';section.append(heading);
+    if(!task.stages.length){const none=document.createElement('p');none.className='stage-empty';none.textContent='Этапов пока нет. Добавьте первый ниже.';section.append(none);}
+    const ul=document.createElement('ul');ul.className='stage-list';ul.setAttribute('aria-label','Этапы: '+task.text);
+    task.stages.forEach((stage,index)=>{
+      const li=document.createElement('li');li.className='stage-row'+(stage.done?' completed':'');
+      const stageKey=stageKeyFor(task,stage);
+      if(stageEditing===stageKey){
+        li.style.gridTemplateColumns='minmax(0,1fr)';
+        const row=document.createElement('div');row.className='stage-editor';
+        const field=document.createElement('input');field.type='text';field.className='stage-input';field.maxLength=140;field.value=stage.text;field.setAttribute('aria-label','Название этапа');
+        const cancel=document.createElement('button');cancel.type='button';cancel.className='secondary';cancel.textContent='Отмена';cancel.onclick=()=>{stageEditing=null;render();};
+        const apply=document.createElement('button');apply.type='button';apply.className='secondary';apply.textContent='Сохранить';
+        const commit=()=>{const value=cleanName(field.value);if(!value){field.focus();status('Название этапа не может быть пустым.',true);return;}stageEditing=null;action(()=>stage.text=value);};
+        apply.onclick=commit;
+        field.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();commit();}else if(e.key==='Escape'){stageEditing=null;render();}});
+        row.append(field,cancel,apply);li.append(row);ul.append(li);return;
+      }
+      const checkbox=document.createElement('input');checkbox.type='checkbox';checkbox.className='stage-check';checkbox.checked=stage.done;
+      checkbox.id='stage-'+selected+'-'+task.id.length+'-'+task.id+'-'+stage.id;checkbox.setAttribute('aria-label','Этап: '+stage.text);
+      checkbox.addEventListener('change',()=>action(()=>{stage.done=checkbox.checked;syncDone(task);}));
+      const label=document.createElement('label');label.className='stage-text';label.htmlFor=checkbox.id;label.textContent=stage.text;
+      const actions=document.createElement('div');actions.className='stage-actions';
+      const up=button('↑','Этап выше: '+stage.text,()=>action(()=>{[task.stages[index-1],task.stages[index]]=[task.stages[index],task.stages[index-1]];}));up.disabled=index===0;
+      const down=button('↓','Этап ниже: '+stage.text,()=>action(()=>{[task.stages[index+1],task.stages[index]]=[task.stages[index],task.stages[index+1]];}));down.disabled=index===task.stages.length-1;
+      const edit=button('✎','Редактировать этап: '+stage.text,()=>{stageEditing=stageKey;editing=null;render();const field=document.querySelector('.stage-editor .stage-input');if(field){field.focus();field.select();}});
+      const remove=button('×','Удалить этап: '+stage.text,()=>{if(confirm('Удалить этап «'+stage.text+'»?'))action(()=>{task.stages.splice(index,1);syncDone(task);});},'remove');
+      actions.append(up,down,edit,remove);li.append(checkbox,label,actions);ul.append(li);
+    });
+    section.append(ul);
+    const form=document.createElement('form');form.className='stage-add';form.setAttribute('aria-label','Добавить этап к делу '+task.text);
+    const input=document.createElement('input');input.type='text';input.maxLength=140;input.className='stage-input';input.required=true;input.placeholder='Новый этап…';input.setAttribute('aria-label','Новый этап для '+task.text);
+    const add=document.createElement('button');add.type='submit';add.className='secondary';add.textContent='Добавить этап';
+    form.append(input,add);
+    form.addEventListener('submit',event=>{
+      event.preventDefault();const text=cleanName(input.value);if(!text){input.focus();return;}
+      if(task.stages.length>=40){status('Для одного дела максимум 40 этапов.',true);return;}
+      expanded.add(ekey(task));
+      action(()=>{task.stages.push({id:freshId(task.stages),text,done:false});task.done=false;});
+      const field=document.getElementById(sectionId)?.querySelector('.stage-add .stage-input');if(field)field.focus();
+    });
+    section.append(form);return section;
+  }
+  function render(){
+    const list=state.lists[selected],total=list.length,done=list.filter(t=>t.done).length;
+    $('task-panel').setAttribute('aria-labelledby','tab-'+selected);
+    $('person-title').textContent='Дела '+cases[selected];
+    $('progress-label').textContent=`${done} из ${total} выполнено`;
+    const percent=total?Math.round(done/total*100):0;
+    $('progress-percent').textContent=percent+'%';$('progress-fill').style.width=percent+'%';
+    $('progress-track').setAttribute('aria-valuenow',String(percent));
+    $('total-count').textContent=total+' '+(total%10===1&&total%100!==11?'пункт':(total%10>=2&&total%10<=4&&(total%100<12||total%100>14))?'пункта':'пунктов');
+    $('clear-completed').disabled=done===0;$('empty').hidden=total!==0;
+    document.querySelectorAll('.tab').forEach(tab=>{const active=tab.dataset.person===selected;tab.setAttribute('aria-selected',String(active));tab.tabIndex=active?0:-1;});
+    for(const id of ids){const arr=state.lists[id];document.querySelector(`[data-count="${id}"]`).textContent=`${arr.filter(t=>t.done).length}/${arr.length}`;}
+    const root=$('task-list');root.replaceChildren();
+    list.forEach((task,i)=>{
+      const li=document.createElement('li');li.className='item'+(task.done?' done':'');li.dataset.id=task.id;
+      if(editing===task.id){
+        li.className='item editor';
+        const input=document.createElement('input');input.className='edit-input';input.type='text';input.maxLength=140;input.value=task.text;input.setAttribute('aria-label','Изменить название дела');
+        const row=document.createElement('div');row.className='edit-actions';
+        const cancel=document.createElement('button');cancel.type='button';cancel.className='secondary';cancel.textContent='Отмена';cancel.onclick=()=>{editing=null;render()};
+        const apply=document.createElement('button');apply.type='button';apply.className='primary';apply.textContent='Сохранить';
+        const commit=()=>{const text=cleanName(input.value);if(!text){input.focus();status('Название дела не может быть пустым.',true);return;}editing=null;action(()=>{task.text=text});};
+        apply.onclick=commit;
+        input.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();commit();}else if(e.key==='Escape'){editing=null;render();}});
+        row.append(cancel,apply);li.append(input,row);root.append(li);return;
+      }
+      const checkbox=document.createElement('input');checkbox.type='checkbox';checkbox.className='check';checkbox.id='task-'+selected+'-'+task.id;checkbox.checked=task.done;
+      checkbox.setAttribute('aria-label',task.text);
+      checkbox.addEventListener('change',()=>action(()=>{task.done=checkbox.checked;task.stages.forEach(x=>x.done=task.done);}));
+      const label=document.createElement('label');label.className='task-label';label.htmlFor=checkbox.id;label.textContent=task.text;
+      const controls=document.createElement('div');controls.className='actions';
+      const stageCount=task.stages.filter(x=>x.done).length;
+      const sectionId='stages-'+selected+'-'+i;
+      const stages=document.createElement('button');stages.type='button';stages.className='stage-toggle';
+      stages.textContent=task.stages.length?'Этапы '+stageCount+'/'+task.stages.length:'+ Этапы';
+      stages.setAttribute('aria-label','Этапы дела: '+task.text);if(expanded.has(ekey(task)))stages.setAttribute('aria-controls',sectionId);
+      stages.setAttribute('aria-expanded',String(expanded.has(ekey(task))));
+      stages.onclick=()=>{const key=ekey(task);expanded.has(key)?expanded.delete(key):expanded.add(key);stageEditing=null;render();};
+      const up=button('↑','Выше: '+task.text,()=>action(()=>{[list[i-1],list[i]]=[list[i],list[i-1]]}));up.disabled=i===0;
+      const down=button('↓','Ниже: '+task.text,()=>action(()=>{[list[i+1],list[i]]=[list[i],list[i+1]]}));down.disabled=i===total-1;
+      const edit=button('✎','Редактировать: '+task.text,()=>openTaskEditor(task,root));
+      const remove=button('×','Удалить: '+task.text,()=>{if(confirm('Удалить дело «'+task.text+'» вместе со всеми этапами?'))action(()=>list.splice(i,1));},'remove');
+      controls.append(stages,up,down,edit,remove);li.append(checkbox,label,controls);
+      if(expanded.has(ekey(task)))li.append(makeStageSection(task,sectionId));
+      root.append(li);
+    });
+  }
+  document.querySelectorAll('.tab').forEach(el=>el.addEventListener('click',()=>switchPerson(el.dataset.person)));
+  $('new-task').addEventListener('input',()=>{drafts[selected]=$('new-task').value});
+  $('add-form').addEventListener('submit',event=>{
+    event.preventDefault();const text=cleanName($('new-task').value);if(!text){$('new-task').focus();return;}
+    if(state.lists[selected].length>=300){status('В одном списке максимум 300 дел.',true);return;}
+    const list=state.lists[selected];editing=null;stageEditing=null;
+    action(()=>list.push({id:freshId(list),text,done:false,stages:[]}));$('new-task').value='';drafts[selected]='';$('new-task').focus();
+  });
+  $('clear-completed').addEventListener('click',()=>{const count=state.lists[selected].filter(t=>t.done).length;if(!count||!confirm(`Удалить ${count} выполненных дел из списка «${people[selected]}» вместе с этапами?`))return;editing=null;stageEditing=null;action(()=>{state.lists[selected]=state.lists[selected].filter(t=>!t.done);});});
+  $('export-button').addEventListener('click',()=>{
+    const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json;charset=utf-8'});
+    const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='spisok-del-eva-dima-kasya.json';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),3000);
+    status('Копия всех трёх списков и этапов подготовлена.');
+  });
+  $('import-file').addEventListener('change',async e=>{
+    const file=e.target.files[0];e.target.value='';if(!file)return;
+    try{
+      if(file.size>5*1024*1024)throw new Error('Размер файла превышает 5 МБ');
+      const restored=normalize(JSON.parse(await file.text()));
+      if(!confirm('Заменить все три списка данными из файла? Текущие списки будут перезаписаны.'))return;
+      // Два сохранения обязательны: не заменять рабочую копию, если нельзя сохранить откат.
+      try{
+        localStorage.setItem(PREVIOUS_KEY,JSON.stringify(state));
+        localStorage.setItem(STORAGE_KEY,JSON.stringify(restored));
+      }catch{status('Импорт отменён: нельзя сохранить резервную и новую копии. Старые списки не заменены.',true);return;}
+      state=restored;selected='eva';editing=null;stageEditing=null;expanded.clear();
+      for(const id of ids)drafts[id]='';$('new-task').value='';
+      render();updateUndoImport();scheduleSync(600);status('Копия восстановлена. При необходимости отмените импорт.');
+    }catch(err){status('Не удалось восстановить: '+err.message,true);}
+  });
+  $('undo-import').addEventListener('click',()=>{
+    try{
+      const raw=localStorage.getItem(PREVIOUS_KEY);if(!raw)throw new Error('Копия перед импортом не найдена');
+      const previous=normalize(JSON.parse(raw));
+      if(!confirm('Отменить последний импорт и вернуть списки, которые были до него?'))return;
+      localStorage.setItem(STORAGE_KEY,JSON.stringify(previous));
+      localStorage.removeItem(PREVIOUS_KEY);
+      state=previous;selected='eva';editing=null;stageEditing=null;expanded.clear();
+      for(const id of ids)drafts[id]='';$('new-task').value='';render();updateUndoImport();
+      scheduleSync(600);status('Списки восстановлены до последнего импорта.');
+    }catch(err){status('Не удалось отменить импорт: '+err.message,true);}
+  });
+  window.addEventListener('storage',e=>{
+    if(e.key===STORAGE_KEY){editing=null;stageEditing=null;state=read();render();scheduleSync(400);status('Данные обновлены из другой вкладки браузера.');}
+    if(e.key===PREVIOUS_KEY)updateUndoImport();
+  });
+  document.querySelector('.tabs').addEventListener('keydown',e=>{
+    if(!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;
+    e.preventDefault();let index=ids.indexOf(selected);
+    index=e.key==='Home'?0:e.key==='End'?ids.length-1:e.key==='ArrowRight'?(index+1)%ids.length:(index+ids.length-1)%ids.length;
+    switchPerson(ids[index]);$('tab-'+selected).focus();
+  });
+  // Independent household synchronization. Never uses the owner's life/ sync key or data.
+  const SYNC_CONFIG_KEY='eva-dima-kasya-sync-config-v1';
+  const SYNC_BASE_KEY='eva-dima-kasya-sync-base-v1';
+  const SYNC_BACKUP_KEY='eva-dima-kasya-sync-recovery-v1';
+  let syncConfig=null, syncBusy=false, syncQueued=false, syncTimer=null, syncPoll=null, syncConflict=false, syncFailures=0;
+  const eq=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
+  const clone=x=>JSON.parse(JSON.stringify(x));
+  const emptyLists=data=>ids.every(k=>data.lists[k].length===0);
+  function syncDisplay(message,kind='info'){
+    $('sync-status').textContent=message;$('sync-status').className='sync-status'+(kind==='error'?' error':kind==='ok'?' ok':'');
+    $('sync-indicator').textContent=kind==='ok'?'Синхронизировано':kind==='error'?'Требуется внимание':syncConfig?'Обмен данными':'Только на устройстве';
+    if(kind==='ok'||kind==='info')$('sync-conflict').hidden=true;
+  }
+  function loadSyncConfig(){try{
+    const o=JSON.parse(localStorage.getItem(SYNC_CONFIG_KEY)||'null');
+    return o&&typeof o.url==='string'&&typeof o.secret==='string'&&o.secret.length>=32&&/^https:\/\/[^\s/]+/.test(o.url)?o:null;
+  }catch{return null}}
+  function loadBase(){try{
+    const o=JSON.parse(localStorage.getItem(SYNC_BASE_KEY)||'null');
+    return o&&o.url===syncConfig?.url&&Number.isSafeInteger(o.revision)&&o.revision>=0?{revision:o.revision,data:normalize(o.data)}:null;
+  }catch{return null}}
+  function storeBase(revision,data){localStorage.setItem(SYNC_BASE_KEY,JSON.stringify({url:syncConfig.url,revision,data}));}
+  function protectOld(data,reason){
+    const old=(()=>{try{return JSON.parse(localStorage.getItem(SYNC_BACKUP_KEY)||'[]')}catch{return []}})();
+    const backups=Array.isArray(old)?old:[];
+    backups.unshift({at:new Date().toISOString(),reason,data});
+    localStorage.setItem(SYNC_BACKUP_KEY,JSON.stringify(backups.slice(0,2)));
+  }
+  function scheduleSync(delay=700){
+    if(!syncConfig||syncConflict)return;
+    syncQueued=true;
+    clearTimeout(syncTimer);
+    syncTimer=setTimeout(()=>{void doSync()},delay);
+  }
+  async function requestCloud(method,data){
+    const headers={'X-Checklist-Key':syncConfig.secret};
+    const options={method,mode:'cors',credentials:'omit',cache:'no-store',headers};
+    if(method==='PUT'){headers['Content-Type']='application/json';options.body=JSON.stringify(data)}
+    const controller=new AbortController();options.signal=controller.signal;
+    const timeout=setTimeout(()=>controller.abort(),18000);
+    try{
+      const response=await fetch(syncConfig.url,options);
+      let reply;try{reply=await response.json()}catch{throw Error('Сервер не вернул JSON')}
+      if(response.status===409){const err=Error('Версия обновилась на другом телефоне');err.conflict=true;throw err}
+      if(!response.ok)throw Error(reply.error||('HTTP '+response.status));
+      return reply;
+    }catch(err){if(err.name==='AbortError')throw Error('Сервер не ответил за 18 секунд');throw err}
+    finally{clearTimeout(timeout)}
+  }
+  function setRemoteData(data,reason){
+    const next=normalize(data),old=clone(state);
+    // Back up before replacing local data; never display remote until local persistence succeeds.
+    if(!eq(old,next)){protectOld(old,reason);localStorage.setItem(STORAGE_KEY,JSON.stringify(next));}
+    state=next;editing=null;stageEditing=null;render();
+  }
+  function sameIdsOrder(a,b){
+    const both=new Set(b.map(x=>x.id));
+    const aIds=a.filter(x=>both.has(x.id)).map(x=>x.id);
+    const aSet=new Set(a.map(x=>x.id));
+    const bIds=b.filter(x=>aSet.has(x.id)).map(x=>x.id);
+    return eq(aIds,bIds);
+  }
+  function mergeValue(base,local,remote){
+    if(eq(local,remote))return {ok:true,value:local};
+    if(eq(local,base))return {ok:true,value:remote};
+    if(eq(remote,base))return {ok:true,value:local};
+    if(Array.isArray(base)&&Array.isArray(local)&&Array.isArray(remote))return mergeEntries(base,local,remote);
+    if(base&&local&&remote&&typeof base==='object'&&typeof local==='object'&&typeof remote==='object'){
+      const out={};
+      for(const k of new Set([...Object.keys(base),...Object.keys(local),...Object.keys(remote)])){
+        const r=mergeValue(base[k],local[k],remote[k]);if(!r.ok)return {ok:false};
+        if(r.value!==undefined)out[k]=r.value;
+      }
+      return {ok:true,value:out};
+    }
+    return {ok:false};
+  }
+  function mergeEntries(base,local,remote){
+    const keys=x=>x.map(o=>o.id);
+    if([base,local,remote].some(xs=>xs.some(x=>!x||typeof x.id!=='string'||!x.id)))return {ok:false};
+    if(eq(local,base))return {ok:true,value:remote};
+    if(eq(remote,base))return {ok:true,value:local};
+    const b=new Map(base.map(x=>[x.id,x])),l=new Map(local.map(x=>[x.id,x])),r=new Map(remote.map(x=>[x.id,x]));
+    const orderChangedLocal=!sameIdsOrder(base,local),orderChangedRemote=!sameIdsOrder(base,remote);
+    if(orderChangedLocal&&orderChangedRemote&&!sameIdsOrder(local,remote))return {ok:false};
+    const merged=new Map();
+    for(const id of new Set([...keys(base),...keys(local),...keys(remote)])){
+      const m=mergeValue(b.get(id),l.get(id),r.get(id));if(!m.ok)return {ok:false};
+      if(m.value!==undefined)merged.set(id,m.value);
+    }
+    const preferred=orderChangedLocal&&!orderChangedRemote?local:remote,other=preferred===local?remote:local;
+    const ordered=[...preferred,...other,...base].map(x=>x.id);
+    return {ok:true,value:[...new Set(ordered)].filter(id=>merged.has(id)).map(id=>merged.get(id))};
+  }
+  function mergeHousehold(base,local,remote){
+    const merged=blank();
+    for(const id of ids){const r=mergeEntries(base.lists[id],local.lists[id],remote.lists[id]);if(!r.ok)return {ok:false,person:id};merged.lists[id]=r.value;}
+    try{return {ok:true,data:normalize(merged)}}catch{return {ok:false,person:'данные'}}
+  }
+  function conflictNotice(message){
+    syncConflict=true;$('sync-conflict').hidden=false;
+    $('sync-conflict-text').textContent=message+' Данные не перезаписаны. Скачайте JSON-копию перед выбором облачной версии.';
+    syncDisplay(message,'error');
+  }
+  async function upload(revision,snapshot){
+    const response=await requestCloud('PUT',{revision,data:snapshot});
+    if(!Number.isSafeInteger(response.revision)||response.revision<=revision)throw Error('Сервер вернул неверную версию');
+    storeBase(response.revision,snapshot);
+    syncDisplay('Сохранено в общем списке. Версия '+response.revision+'.','ok');
+    // Changes made while request was in flight must be uploaded after this one.
+    if(!eq(state,snapshot))syncQueued=true;
+  }
+  async function syncCycle(force=false){
+    if(!syncConfig)return;
+    if(navigator.onLine===false){syncDisplay('Нет сети. Изменения остаются на устройстве.');return}
+    const initial=clone(state),base=loadBase();
+    const response=await requestCloud('GET');
+    if(!Number.isSafeInteger(response.revision)||response.revision<0)throw Error('Неверная версия на сервере');
+    const revision=response.revision,remote=response.data===null?blank():normalize(response.data);
+    if(!eq(state,initial)){syncQueued=true;return}
+    if(!base){
+      if(eq(initial,remote)){storeBase(revision,remote);syncDisplay('Список подключён, версии совпадают.','ok');return}
+      if(emptyLists(initial)){setRemoteData(remote,'Первое подключение');storeBase(revision,remote);syncDisplay('Загружены общие списки.','ok');return}
+      if(emptyLists(remote)&&revision===0){await upload(revision,initial);return}
+      conflictNotice('На этом устройстве и в облаке уже есть разные списки.');return;
+    }
+    if(eq(initial,remote)){storeBase(revision,remote);syncDisplay('Списки синхронизированы.','ok');return}
+    if(eq(initial,base.data)){setRemoteData(remote,'Обновление с другого устройства');storeBase(revision,remote);syncDisplay('Получены изменения с другого устройства.','ok');return}
+    if(eq(remote,base.data)){await upload(revision,initial);return}
+    const merged=mergeHousehold(base.data,initial,remote);
+    if(!merged.ok){conflictNotice('Одновременно изменён один пункт: '+(people[merged.person]||merged.person)+'.');return}
+    if(eq(merged.data,remote)){setRemoteData(remote,'Объединение изменений');storeBase(revision,remote);syncDisplay('Изменения объединены.','ok');return}
+    if(!eq(merged.data,initial))setRemoteData(merged.data,'Объединение изменений');
+    await upload(revision,merged.data);
+  }
+  async function doSync(force=false){
+    clearTimeout(syncTimer);syncTimer=null;
+    if(!syncConfig||syncConflict&&!force)return;
+    if(syncBusy){syncQueued=true;return}
+    syncBusy=true;syncQueued=false;
+    try{await syncCycle(force);syncFailures=0}
+    catch(err){
+      if(err.conflict){syncQueued=true;syncDisplay('На другом устройстве появились новые изменения. Повторяю безопасное объединение.');}
+      else{syncFailures++;syncDisplay('Синхронизация не удалась: '+err.message+'. Локальные изменения сохранены.','error')}
+    }finally{
+      syncBusy=false;
+      if(syncQueued&&!syncConflict&&syncConfig){syncQueued=false;scheduleSync(syncFailures?Math.min(60000,10000*syncFailures):700)}
+    }
+  }
+  function initSync(){
+    syncConfig=loadSyncConfig();
+    if(syncConfig){$('sync-url').value=syncConfig.url;$('sync-secret').value=syncConfig.secret;
+      syncDisplay('Подключение сохранено. Проверяю общую версию…');scheduleSync(400);
+    }
+    $('sync-generate').onclick=async()=>{
+      if(!window.crypto?.getRandomValues||!window.crypto?.subtle){syncDisplay('Для генерации ключа откройте сайт по HTTPS.','error');return}
+      const data=crypto.getRandomValues(new Uint8Array(32));
+      const key=Array.from(data,x=>x.toString(16).padStart(2,'0')).join('');
+      $('sync-secret').type='text';$('sync-secret').value=key;
+      const digest=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(key));
+      $('sync-hash').value=Array.from(new Uint8Array(digest),x=>x.toString(16).padStart(2,'0')).join('');
+      $('sync-hash-wrap').hidden=false;
+      syncDisplay('Ключ создан. Сохраните его отдельно; SHA-256 укажите в настройке сервера. Сам ключ нельзя публиковать в GitHub.');
+    };
+    $('sync-copy-hash').onclick=async()=>{
+      try{await navigator.clipboard.writeText($('sync-hash').value);syncDisplay('SHA-256 скопирован.')}catch{ $('sync-hash').focus();$('sync-hash').select();syncDisplay('Скопируйте выделенный SHA-256 вручную.')}
+    };
+    $('sync-connect').onclick=()=>{
+      const url=$('sync-url').value.trim(),secret=$('sync-secret').value.trim();
+      try{const u=new URL(url);if(u.protocol!=='https:'||u.username||u.password||u.search||u.hash)throw 0;
+        if(secret.length<32||secret.length>200)throw 0;
+      }catch{syncDisplay('Нужен HTTPS-адрес функции и общий секрет не короче 32 символов.','error');return}
+      const former=syncConfig;
+      const next={url,secret};
+      try{
+        localStorage.setItem(SYNC_CONFIG_KEY,JSON.stringify(next));
+        if(!former||former.url!==url||former.secret!==secret)localStorage.removeItem(SYNC_BASE_KEY);
+      }catch{syncDisplay('Не удалось сохранить настройки.','error');return}
+      syncConfig=next;syncConflict=false;syncFailures=0;$('sync-conflict').hidden=true;
+      syncDisplay('Проверяю связь с общим списком…');scheduleSync(100);
+    };
+    $('sync-disconnect').onclick=()=>{
+      if(!syncConfig)return;
+      if(!confirm('Отключить обмен данными на этом устройстве? Списки останутся локально.'))return;
+      clearTimeout(syncTimer);syncQueued=false;syncConfig=null;syncConflict=false;
+      localStorage.removeItem(SYNC_CONFIG_KEY);localStorage.removeItem(SYNC_BASE_KEY);
+      $('sync-secret').value='';$('sync-hash-wrap').hidden=true;
+      syncDisplay('Отключено. Дела не удалены.');
+    };
+    $('sync-now').onclick=()=>{if(!syncConfig){syncDisplay('Сначала подключите сервер и общий ключ.','error');return}
+      syncConflict=false;$('sync-conflict').hidden=true;scheduleSync(10)};
+    $('sync-retry').onclick=()=>{syncConflict=false;$('sync-conflict').hidden=true;scheduleSync(10)};
+    $('sync-use-remote').onclick=async()=>{
+      if(!syncConfig)return;
+      if(!confirm('Заменить локальные списки облачной версией? Локальная версия сохранится в защитной копии браузера. Рекомендуется сначала скачать JSON.'))return;
+      if(syncBusy)return;
+      syncBusy=true;
+      try{const response=await requestCloud('GET');const remote=normalize(response.data===null?blank():response.data);
+        setRemoteData(remote,'Ручной выбор облачной версии');storeBase(response.revision,remote);
+        syncConflict=false;$('sync-conflict').hidden=true;syncDisplay('Облачная версия получена.','ok');
+      }catch(err){syncDisplay('Не удалось получить облачную версию: '+err.message,'error')}
+      finally{syncBusy=false}
+    };
+    window.addEventListener('online',()=>scheduleSync(100));
+    window.addEventListener('focus',()=>scheduleSync(300));
+    document.addEventListener('visibilitychange',()=>{if(!document.hidden)scheduleSync(250)});
+    syncPoll=setInterval(()=>{if(!document.hidden&&syncConfig&&!syncBusy)scheduleSync(200)},8000);
+  }
+
+  render();updateUndoImport();initSync();
+})();
+</script>
+</body>
+</html>
