@@ -225,7 +225,7 @@ h2{font-size:23px;letter-spacing:-.025em;line-height:1.2;margin:0 0 4px}
   const drafts={eva:'',dima:'',kasya:''};
   const expanded=new Set();
   function save(){
-    try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state));status('Изменения сохранены.');scheduleSync(500);return true;}
+    try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state));status(syncConfig?'Сохранено на устройстве. Передаю изменения в общий список…':'Сохранено только на этом устройстве.');if(syncConfig)syncDisplay('Передаю изменения в общий список…');scheduleSync(500);return true;}
     catch(e){status('Нет доступа к хранилищу браузера. Скачайте копию: изменения могут пропасть.',true);return false;}
   }
   function action(callback){callback();save();render();}
