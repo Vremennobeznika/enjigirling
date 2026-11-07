@@ -159,13 +159,14 @@ h2{font-size:23px;letter-spacing:-.025em;line-height:1.2;margin:0 0 4px}
   <div role="status" aria-live="polite" id="status" class="status"></div>
   <section class="sync-panel" aria-label="Синхронизация между устройствами">
     <div class="sync-head"><h2>Общий доступ</h2><span class="sync-pill" id="sync-indicator">Только на устройстве</span></div>
-    <p class="sync-description">Откройте эту страницу на двух телефонах и используйте один семейный ключ. Списки обновляются автоматически, пока страница открыта.</p>
+    <p class="sync-description">На одном устройстве откройте общий список, затем нажмите «Скопировать общую ссылку» и отправьте её второму участнику. Дела и галочки будут общими.</p>
     <div class="sync-fields">
       <label>Адрес проекта Supabase<input id="sync-url" type="url" inputmode="url" placeholder="https://ваш-проект.supabase.co" spellcheck="false" autocomplete="off"></label>
       <label>Публичный ключ Supabase (publishable)<input id="sync-public-key" type="text" placeholder="sb_publishable_…" spellcheck="false" autocomplete="off"></label>
       <label>Семейный ключ<input id="sync-secret" type="password" placeholder="Секретный ключ (не короче 32 знаков)" autocomplete="off" spellcheck="false"></label>
     </div>
     <div class="sync-actions">
+      <button type="button" class="primary" id="sync-share" hidden>Скопировать общую ссылку</button>
       <button type="button" class="secondary" id="sync-generate">Создать семейный ключ</button>
       <button type="button" class="primary" id="sync-connect">Подключить</button>
       <button type="button" class="secondary" id="sync-now">Проверить сейчас</button>
@@ -175,7 +176,7 @@ h2{font-size:23px;letter-spacing:-.025em;line-height:1.2;margin:0 0 4px}
     <div id="sync-hash-wrap" hidden><label>SHA-256 для SQL-установки<input id="sync-hash" readonly spellcheck="false"></label><button type="button" class="secondary" id="sync-copy-hash">Копировать SHA-256</button></div>
     <div class="sync-status" id="sync-status" role="status" aria-live="polite">Облачная синхронизация не подключена. Списки остаются локальными.</div>
     <div class="sync-conflict" id="sync-conflict" hidden><p id="sync-conflict-text">На другом устройстве есть несовместимые изменения. Ни одна копия не удалена.</p><button type="button" class="secondary" id="sync-use-remote">Загрузить облачную версию</button><button type="button" class="secondary" id="sync-retry">Попробовать объединить</button></div>
-    <p class="fineprint">Публиковать можно только ключ проекта sb_publishable_…: это не пароль. Семейный ключ хранится в браузере и не публикуется в GitHub. Не используйте секретные ключи Supabase (sb_secret_…) или service_role. При конфликте одноимённых правок приложение останавливает автоматическую замену.</p>
+    <p class="fineprint">Общая ссылка содержит ключ доступа после знака #. Отправляйте её только тем, кому доверяете: с ней можно читать и менять дела. Пароли или ключи администратора Supabase в сайте не используются.</p>
   </section>
   <p class="fineprint">Нет расписания, календаря или напоминаний. При отключённой сети изменения сохраняются локально и отправятся после восстановления соединения. Если сайт закрыт на двух устройствах, синхронизация возобновится при открытии.</p>
 </div>
@@ -509,7 +510,14 @@ h2{font-size:23px;letter-spacing:-.025em;line-height:1.2;margin:0 0 4px}
       if(eq(initial,remote)){storeBase(revision,remote);syncDisplay('Список подключён, версии совпадают.','ok');return}
       if(emptyLists(initial)){setRemoteData(remote,'Первое подключение');storeBase(revision,remote);syncDisplay('Загружены общие списки.','ok');return}
       if(emptyLists(remote)&&revision===0){await upload(revision,initial);return}
-      conflictNotice('На этом устройстве и в облаке уже есть разные списки.');return;
+      // First connection: merge separately created tasks without erasing either device.
+      const merged=mergeHousehold(blank(),initial,remote);
+      if(merged.ok){
+        if(!eq(merged.data,initial))setRemoteData(merged.data,'Первое подключение');
+        if(eq(merged.data,remote)){storeBase(revision,remote);syncDisplay('Общие дела загружены.','ok');return}
+        await upload(revision,merged.data);return;
+      }
+      conflictNotice('Одно и то же дело изменено по-разному.');return;
     }
     if(eq(initial,remote)){storeBase(revision,remote);syncDisplay('Списки синхронизированы.','ok');return}
     if(eq(initial,base.data)){setRemoteData(remote,'Обновление с другого устройства');storeBase(revision,remote);syncDisplay('Получены изменения с другого устройства.','ok');return}
@@ -534,13 +542,44 @@ h2{font-size:23px;letter-spacing:-.025em;line-height:1.2;margin:0 0 4px}
       if(syncQueued&&!syncConflict&&syncConfig){syncQueued=false;scheduleSync(syncFailures?Math.min(60000,10000*syncFailures):700)}
     }
   }
+  function packInvite(config){
+    const bytes=new TextEncoder().encode(JSON.stringify({v:1,url:config.url,publishableKey:config.publishableKey,secret:config.secret}));
+    const chars=Array.from(bytes,b=>String.fromCharCode(b)).join('');
+    return btoa(chars).split('+').join('-').split('/').join('_').replace(/=+$/,'');
+  }
+  function unpackInvite(token){
+    if(!token||token.length>1800||!/^[A-Za-z0-9_-]+$/.test(token))throw Error('Ссылка повреждена');
+    const chars=atob(token.split('-').join('+').split('_').join('/')+'='.repeat((4-token.length%4)%4));
+    const cfg=JSON.parse(new TextDecoder().decode(Uint8Array.from(chars,c=>c.charCodeAt(0))));
+    const u=new URL(cfg.url);
+    if(cfg.v!==1||u.protocol!=='https:'||u.username||u.password||u.search||u.hash||u.pathname!=='/'||!u.hostname.endsWith('.supabase.co')||typeof cfg.secret!=='string'||cfg.secret.length<32||cfg.secret.length>200||typeof cfg.publishableKey!=='string'||!/^sb_publishable_[A-Za-z0-9_-]{8,}$/.test(cfg.publishableKey))throw Error('Некорректная общая ссылка');
+    return {url:cfg.url,secret:cfg.secret,publishableKey:cfg.publishableKey};
+  }
   function initSync(){
+    const token=new URLSearchParams(location.hash.slice(1)).get('join');
+    let joined=false;
+    if(token){
+      try{
+        const cfg=unpackInvite(token),old=loadSyncConfig();
+        localStorage.setItem(SYNC_CONFIG_KEY,JSON.stringify(cfg));
+        if(!old||!eq(old,cfg))localStorage.removeItem(SYNC_BASE_KEY);
+        history.replaceState(null,'',location.pathname+location.search);
+        joined=true;
+      }catch{syncDisplay('Неверная общая ссылка. Попросите отправить новую.','error')}
+    }
     syncConfig=loadSyncConfig();
     if(SUPABASE_DEFAULT_URL&&!syncConfig)$('sync-url').value=SUPABASE_DEFAULT_URL;
     if(SUPABASE_DEFAULT_PUBLIC_KEY&&!syncConfig)$('sync-public-key').value=SUPABASE_DEFAULT_PUBLIC_KEY;
     if(syncConfig){$('sync-url').value=syncConfig.url;$('sync-public-key').value=syncConfig.publishableKey;$('sync-secret').value=syncConfig.secret;
-      syncDisplay('Подключение сохранено. Проверяю общую версию…');scheduleSync(400);
-    }
+      $('sync-share').hidden=false;
+      syncDisplay(joined?'Общая ссылка открыта. Загружаю дела…':'Подключение сохранено. Проверяю общую версию…');scheduleSync(400);
+    }else if(!token)syncDisplay('Пока только локальные дела. Попросите общую ссылку с подключённого устройства.');
+    $('sync-share').onclick=async()=>{
+      if(!syncConfig){syncDisplay('Сначала подключите общий список.','error');return}
+      const link=location.origin+location.pathname+location.search+'#join='+packInvite(syncConfig);
+      try{await navigator.clipboard.writeText(link);syncDisplay('Общая ссылка скопирована. Отправьте её второму участнику.','ok')}
+      catch{window.prompt('Скопируйте ссылку:',link)}
+    };
     $('sync-generate').onclick=async()=>{
       if(!window.crypto?.getRandomValues||!window.crypto?.subtle){syncDisplay('Для генерации ключа откройте сайт по HTTPS.','error');return}
       const data=crypto.getRandomValues(new Uint8Array(32));
@@ -569,7 +608,7 @@ h2{font-size:23px;letter-spacing:-.025em;line-height:1.2;margin:0 0 4px}
         localStorage.setItem(SYNC_CONFIG_KEY,JSON.stringify(next));
         if(!former||former.url!==url||former.secret!==secret||former.publishableKey!==publishableKey)localStorage.removeItem(SYNC_BASE_KEY);
       }catch{syncDisplay('Не удалось сохранить настройки.','error');return}
-      syncConfig=next;syncConflict=false;syncFailures=0;$('sync-conflict').hidden=true;
+      syncConfig=next;syncConflict=false;syncFailures=0;$('sync-conflict').hidden=true;$('sync-share').hidden=false;
       $('sync-secret').type='password';$('sync-copy-secret').hidden=true;
       syncDisplay('Проверяю связь с общим списком…');scheduleSync(100);
     };
@@ -578,7 +617,7 @@ h2{font-size:23px;letter-spacing:-.025em;line-height:1.2;margin:0 0 4px}
       if(!confirm('Отключить обмен данными на этом устройстве? Списки останутся локально.'))return;
       clearTimeout(syncTimer);syncQueued=false;syncConfig=null;syncConflict=false;
       localStorage.removeItem(SYNC_CONFIG_KEY);localStorage.removeItem(SYNC_BASE_KEY);
-      $('sync-secret').value='';$('sync-public-key').value='';$('sync-copy-secret').hidden=true;$('sync-hash-wrap').hidden=true;
+      $('sync-secret').value='';$('sync-public-key').value='';$('sync-copy-secret').hidden=true;$('sync-hash-wrap').hidden=true;$('sync-share').hidden=true;
       syncDisplay('Отключено. Дела не удалены.');
     };
     $('sync-now').onclick=()=>{if(!syncConfig){syncDisplay('Сначала подключите сервер и общий ключ.','error');return}
