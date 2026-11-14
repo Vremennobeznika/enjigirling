@@ -55,3 +55,14 @@ Android packaging now includes all bilingual/PWA source scripts plus the goal tr
 - The offline service worker and Android asset allowlist/build workflows include `wellness.js`. Android version is 1.6.0 (code 7); no additional permissions or dependencies are introduced.
 
 Additional checks: `node mood-layers/tests/wellness-unit.cjs` and `python3 mood-layers/tests/wellness-browser.py` from the repository root. Browser checks exercise real app scripts with mocked localStorage in headless Chromium; physical Android/iOS and APK builds are separate verification steps.
+
+
+## Version 1.6.1: durability and device QA
+
+On Android, acknowledged journal saves now commit to an atomic app-private file and call `fsync` before returning success. This authoritative snapshot survives immediate process termination; browser localStorage is retained for migration and fallback copies. An existing 1.5 journal is read from its old storage until the first successful native save. New native snapshots take priority over stale browser copies. JSON export/import and purge use the same authoritative snapshot. Data remains unencrypted within the application sandbox; export JSON before uninstalling or downgrading.
+
+Stock Android 6 WebView lacks Array.find/findIndex; small non-enumerable polyfills preserve the supported journal and reflection paths. The owl no longer animates continuously. Reduced-motion mode disables smooth scrolling, and navigation hover contrast is increased.
+
+`tests/browser-integrity.py` uses real Chromium profiles, real localStorage quota, two tabs, Service Worker updates from 1.5, offline restart, 4,000 short synthetic reflections and 1,000 questionnaire results. Optional `--axe /path/to/axe.min.js` audits WCAG A/AA rules in RU/EN and light/dark across six tabs. Automatic checks are not a full accessibility certification.
+
+The Android workflow's manual `device_qa` option builds a legacy 1.5 APK and a current APK with the same ephemeral test signing key, then runs device-side instrumentation on API 23 and API 35 emulators. It exercises upgrade, process termination, reflection/screening storage, the Android system document picker and JSON round trip. API 23's unmodified 1.5 cannot save on its stock WebView, so that migration starts with a documented legacy-format fixture; current-version saves are tested normally. These tests do not establish upgrade compatibility with a differently signed APK already on a user's device, nor do they constitute physical-device testing.

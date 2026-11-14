@@ -1,0 +1,15 @@
+/* Browser/native storage boundary and stock WebView compatibility, using actual app helpers. */
+'use strict';
+const assert=require('node:assert/strict'),vm=require('node:vm'),fs=require('node:fs');
+const app=fs.readFileSync(__dirname+'/../app.js','utf8');let count=0;
+function test(name,fn){fn();count++;console.log('PASS',name);}
+function setup(native=true){const c={window:{},nativeValue:null,failNative:false,failLocal:false,store:{}};c.localStorage={getItem:k=>c.store[k]??null,setItem:(k,v)=>{if(c.failLocal)throw Error('quota');c.store[k]=v;}};if(native)c.window.SLOI_NATIVE={readJournal:()=>c.nativeValue,writeJournal:v=>{if(c.failNative)return false;c.nativeValue=v;return true;}};vm.createContext(c);vm.runInContext("var BASE='sloi-v1-';"+app.match(/var safeGet=.*\n/)[0]+app.match(/var safeSet=.*\n/)[0],c);return c;}
+test('legacy native diary falls back to existing browser HEAD',()=>{const c=setup();c.store['sloi-v1-head']='legacy';assert.equal(c.safeGet('sloi-v1-head'),'legacy');});
+test('durable native HEAD outranks stale localStorage after restart',()=>{const c=setup();c.store['sloi-v1-head']='old';c.nativeValue='new';assert.equal(c.safeGet('sloi-v1-head'),'new');});
+test('successful native commit is retained when browser quota is exhausted',()=>{const c=setup();c.failLocal=true;assert.equal(c.safeSet('sloi-v1-head','saved'),true);assert.equal(c.nativeValue,'saved');assert.equal(c.safeGet('sloi-v1-head'),'saved');});
+test('failed native commit is never acknowledged or mirrored as successful',()=>{const c=setup();c.nativeValue='old';c.store['sloi-v1-head']='old';c.failNative=true;assert.equal(c.safeSet('sloi-v1-head','lost'),false);assert.equal(c.safeGet('sloi-v1-head'),'old');assert.equal(c.store['sloi-v1-head'],'old');});
+test('unreadable native data does not silently resurrect a browser copy',()=>{const c=setup();c.nativeValue='native-storage-unreadable';c.store['sloi-v1-head']='deleted old diary';assert.equal(c.safeGet('sloi-v1-head'),'native-storage-unreadable');});
+test('ordinary browser saves still use actual localStorage path and expose failure',()=>{const c=setup(false);assert.equal(c.safeSet('sloi-v1-head','saved'),true);c.failLocal=true;assert.equal(c.safeSet('sloi-v1-head','lost'),false);assert.equal(c.safeGet('sloi-v1-head'),'saved');});
+test('mirrors are not duplicated into the native atomic file',()=>{const c=setup();assert.equal(c.safeSet('sloi-v1-a','mirror'),true);assert.equal(c.nativeValue,null);});
+test('stock WebView array search polyfills are non-enumerable and correct',()=>{const c={};vm.createContext(c);vm.runInContext('delete Array.prototype.find;delete Array.prototype.findIndex;',c);vm.runInContext(app.split('\n').find(x=>x.startsWith("['find','findIndex']")),c);assert.equal(vm.runInContext('[1,2,3].find(x=>x===2)',c),2);assert.equal(vm.runInContext('[1,2,3].findIndex(x=>x===2)',c),1);assert.equal(vm.runInContext('[1].findIndex(x=>false)',c),-1);assert.equal(vm.runInContext('Object.keys(Array.prototype).includes("find")',c),false);});
+console.log(count+' native boundary tests passed');

@@ -66,14 +66,14 @@ jobs:
             cmp "mood-layers/$filename" <(unzip -p "$APK" "assets/$filename")
           done
           mkdir -p /tmp/sloi-output
-          cp "$APK" /tmp/sloi-output/SLOI_1.6.0_stable_unsigned.apk
+          cp "$APK" /tmp/sloi-output/SLOI_1.6.1_stable_unsigned.apk
           cp "$TOOLS/lib/apksigner.jar" /tmp/sloi-output/apksigner.jar
           cp "$TOOLS/zipalign" /tmp/sloi-output/zipalign-linux
           printf 'Built from commit %s\n' "$GITHUB_SHA" > /tmp/sloi-output/BUILD_INFO.txt
           sha256sum /tmp/sloi-output/* | tee /tmp/sloi-output/SHA256SUMS.txt
       - uses: actions/upload-artifact@v4
         with:
-          name: SLOI-1.6.0-stable-unsigned-and-signing-tool
+          name: SLOI-1.6.1-stable-unsigned-and-signing-tool
           path: /tmp/sloi-output/
           if-no-files-found: error
           retention-days: 14

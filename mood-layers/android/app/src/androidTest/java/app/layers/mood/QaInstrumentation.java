@@ -72,7 +72,7 @@ public final class QaInstrumentation extends Instrumentation {
         Bundle result=new Bundle();
         try{
             Intent intent=new Intent();intent.setClassName(getTargetContext().getPackageName(),"app.layers.mood.MainActivity");intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            activity=startActivitySync(intent);runOnMainSync(()->web=find(activity.getWindow().getDecorView()));if(web==null)throw new AssertionError("Missing WebView");ready();
+            ActivityMonitor monitor=addMonitor("app.layers.mood.MainActivity",null,false);getTargetContext().startActivity(intent);activity=monitor.waitForActivityWithTimeout(20000);removeMonitor(monitor);if(activity==null)throw new AssertionError("Activity launch timed out");runOnMainSync(()->web=find(activity.getWindow().getDecorView()));if(web==null)throw new AssertionError("Missing WebView");ready();
             check("actual WebView initializes offline local shell","return location.origin==='https://appassets.androidplatform.net'&&document.querySelectorAll('.mood').length===7;");
             if("legacy-seed".equals(phase)){
                 if(android.os.Build.VERSION.SDK_INT<=23){
