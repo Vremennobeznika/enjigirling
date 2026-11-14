@@ -42,7 +42,7 @@ public final class MainActivity extends Activity {
     private String readJournal(){
         synchronized(JOURNAL_LOCK){
             AtomicFile file=journalFile();
-            if(!file.getBaseFile().exists()&&!new File(file.getBaseFile().getPath()+".bak").exists())return null;
+            if(!file.getBaseFile().exists()&&!new File(file.getBaseFile().getPath()+".bak").exists())return "";
             try(FileInputStream input=file.openRead();ByteArrayOutputStream output=new ByteArrayOutputStream()){
                 byte[] buffer=new byte[8192];int n;
                 while((n=input.read(buffer))!=-1){if(output.size()+n>MAX_EXPORT_BYTES)return "native-storage-unreadable";output.write(buffer,0,n);}
