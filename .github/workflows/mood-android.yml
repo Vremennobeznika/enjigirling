@@ -95,7 +95,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          git fetch --depth=1 origin 6efd305
+          git fetch --depth=1 origin 6efd3051f0e786ff7b6066058766b86d89cce45f
           mkdir -p /tmp/psho-legacy
           git archive FETCH_HEAD mood-layers | tar -x -C /tmp/psho-legacy
           mkdir -p /tmp/psho-legacy/mood-layers/android/app/src/main/assets/assets
