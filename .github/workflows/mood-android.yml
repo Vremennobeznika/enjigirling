@@ -6,6 +6,11 @@ on:
         description: 'Run device-side QA on Android emulators'
         type: boolean
         default: false
+      device_api:
+        description: 'Android API for device QA'
+        type: choice
+        options: ['both', '23', '35']
+        default: both
   push:
     branches: [main]
     paths:
@@ -81,7 +86,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        api: [23, 35]
+        api: ${{ inputs.device_api == '23' && fromJSON('[23]') || inputs.device_api == '35' && fromJSON('[35]') || fromJSON('[23,35]') }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4

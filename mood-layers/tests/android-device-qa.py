@@ -1,6 +1,6 @@
 """Drive real APK processes on an Android emulator. Device-side runner uses real WebView/storage/SAF."""
 from pathlib import Path
-import subprocess,json,re,hashlib
+import subprocess,json,re,hashlib,shutil
 R=Path(__file__).resolve().parents[1]
 E=Path('/tmp/psho-device-evidence');E.mkdir(exist_ok=True)
 results=[]
@@ -35,6 +35,8 @@ try:
  meta['webview']=adb('shell','dumpsys','webviewupdate',check=False)
  (E/'package.txt').write_text(adb('shell','dumpsys','package','app.layers.mood'))
  assert 'android.permission.INTERNET' not in (E/'package.txt').read_text()
+ shutil.copy2(R/'android/app/build/outputs/apk/debug/app-debug.apk',E/'PSHO-1.6.1-tested.apk')
+ meta['tested_apk_sha256']=hashlib.sha256((E/'PSHO-1.6.1-tested.apk').read_bytes()).hexdigest()
  (E/'summary.json').write_text(json.dumps({'status':'PASS','device':meta,'phases':results,'scope':'Android emulator, same-key 1.5-to-1.6 upgrade, synthetic data; not physical-device certification'},ensure_ascii=False,indent=2))
  print('ANDROID QA PASS',meta,results,flush=True)
 finally:
