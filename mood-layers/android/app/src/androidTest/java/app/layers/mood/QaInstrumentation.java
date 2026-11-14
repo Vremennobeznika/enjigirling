@@ -60,12 +60,16 @@ public final class QaInstrumentation extends Instrumentation {
     }
     private AccessibilityNodeInfo textNode(AccessibilityNodeInfo root,String wanted){
         if(root==null)return null;
-        if(root.getText()!=null&&wanted.equalsIgnoreCase(root.getText().toString()))return root;
+        if(root.getText()!=null&&wanted.equalsIgnoreCase(root.getText().toString())||root.getContentDescription()!=null&&wanted.equalsIgnoreCase(root.getContentDescription().toString()))return root;
         for(int i=0;i<root.getChildCount();i++){AccessibilityNodeInfo found=textNode(root.getChild(i),wanted);if(found!=null)return found;}return null;
     }
     private boolean tapText(String wanted,long timeout){
         long end=SystemClock.elapsedRealtime()+timeout;
         while(SystemClock.elapsedRealtime()<end){AccessibilityNodeInfo n=textNode(getUiAutomation().getRootInActiveWindow(),wanted);if(n!=null){while(n!=null){if(n.isEnabled()&&n.isClickable()&&n.performAction(AccessibilityNodeInfo.ACTION_CLICK))return true;n=n.getParent();}}SystemClock.sleep(200);}return false;
+    }
+    private String uiTree(AccessibilityNodeInfo root){
+        if(root==null)return "<no window>";StringBuilder b=new StringBuilder();b.append(root.getText()).append("[").append(root.getContentDescription()).append("] enabled=").append(root.isEnabled()).append(";");
+        for(int i=0;i<root.getChildCount()&&b.length()<5000;i++)b.append(uiTree(root.getChild(i)));return b.toString();
     }
     private boolean exportPending(){
         boolean[] pending={false};runOnMainSync(()->{try{java.lang.reflect.Field f=activity.getClass().getDeclaredField("pendingData");f.setAccessible(true);pending[0]=f.get(activity)!=null;}catch(Exception e){throw new RuntimeException(e);}});return pending[0];
@@ -97,7 +101,11 @@ public final class QaInstrumentation extends Instrumentation {
                 js("PSHO_I18N.setLanguage('en');document.querySelector('[data-tab=settings]').click();return true;");tapCss("#export-json");
                 // DocumentsUI can expose Save before its asynchronous directory lookup finishes.
                 SystemClock.sleep(1500);
-                if(!tapText("Save",15000))throw new AssertionError("Native document save button not found");
+                if(android.os.Build.VERSION.SDK_INT<=23){
+                    // Old DocumentsUI starts in Recent, which is not a writable directory.
+                    tapText("Show roots",1500);tapText("Downloads",3000);SystemClock.sleep(500);
+                }
+                if(!tapText("Save",15000))throw new AssertionError("Native document save button not found: "+uiTree(getUiAutomation().getRootInActiveWindow()));
                 long exportEnd=SystemClock.elapsedRealtime()+10000;
                 while(exportPending()&&SystemClock.elapsedRealtime()<exportEnd)SystemClock.sleep(200);
                 if(exportPending())throw new AssertionError("Native save dialog did not return a document");
@@ -107,7 +115,7 @@ public final class QaInstrumentation extends Instrumentation {
                 check("purge clears reviews and screening answers",snapshot+"return d.entries.length===0&&d.assessments.length===0;");
                 tapCss(".import-label");
                 String name="psho-backup-"+new java.text.SimpleDateFormat("yyyy-MM-dd",java.util.Locale.US).format(new java.util.Date())+".json";
-                if(!tapText(name,15000))throw new AssertionError("Native JSON import document not found: "+name);
+                if(!tapText(name,15000))throw new AssertionError("Native JSON import document not found: "+name+" "+uiTree(getUiAutomation().getRootInActiveWindow()));
                 long end=SystemClock.elapsedRealtime()+15000;boolean restored=false;
                 while(SystemClock.elapsedRealtime()<end){if(Boolean.TRUE.equals(js(snapshot+"return d.entries.length===1&&d.assessments.length===2;"))){restored=true;break;}SystemClock.sleep(200);}
                 if(!restored)throw new AssertionError("JSON import did not restore data");passed++;
