@@ -65,7 +65,10 @@ public final class QaInstrumentation extends Instrumentation {
     }
     private boolean tapText(String wanted,long timeout){
         long end=SystemClock.elapsedRealtime()+timeout;
-        while(SystemClock.elapsedRealtime()<end){AccessibilityNodeInfo n=textNode(getUiAutomation().getRootInActiveWindow(),wanted);if(n!=null){while(n!=null){if(n.isClickable()&&n.performAction(AccessibilityNodeInfo.ACTION_CLICK))return true;n=n.getParent();}}SystemClock.sleep(200);}return false;
+        while(SystemClock.elapsedRealtime()<end){AccessibilityNodeInfo n=textNode(getUiAutomation().getRootInActiveWindow(),wanted);if(n!=null){while(n!=null){if(n.isEnabled()&&n.isClickable()&&n.performAction(AccessibilityNodeInfo.ACTION_CLICK))return true;n=n.getParent();}}SystemClock.sleep(200);}return false;
+    }
+    private boolean exportPending(){
+        boolean[] pending={false};runOnMainSync(()->{try{java.lang.reflect.Field f=activity.getClass().getDeclaredField("pendingData");f.setAccessible(true);pending[0]=f.get(activity)!=null;}catch(Exception e){throw new RuntimeException(e);}});return pending[0];
     }
     private String snapshot="var raw=(window.SLOI_NATIVE&&typeof SLOI_NATIVE.readJournal==='function'?SLOI_NATIVE.readJournal():null)||localStorage.getItem('sloi-v1-head');var d=JSON.parse(JSON.parse(raw).body);";
     @Override public void onStart(){
@@ -92,8 +95,13 @@ public final class QaInstrumentation extends Instrumentation {
                 check("language and theme preserve records","PSHO_I18N.setLanguage('en');document.getElementById('theme-btn').click();"+snapshot+"return d.entries[0].review.afterEmotion==='спокойнее 🦉'&&document.documentElement.lang==='en';");
             }else if("export".equals(phase)){
                 js("PSHO_I18N.setLanguage('en');document.querySelector('[data-tab=settings]').click();return true;");tapCss("#export-json");
+                // DocumentsUI can expose Save before its asynchronous directory lookup finishes.
+                SystemClock.sleep(1500);
                 if(!tapText("Save",15000))throw new AssertionError("Native document save button not found");
-                SystemClock.sleep(1000);passed++;Bundle b=new Bundle();b.putString("qa_check","PASS native SAF export dialog accepted");sendStatus(0,b);
+                long exportEnd=SystemClock.elapsedRealtime()+10000;
+                while(exportPending()&&SystemClock.elapsedRealtime()<exportEnd)SystemClock.sleep(200);
+                if(exportPending())throw new AssertionError("Native save dialog did not return a document");
+                passed++;Bundle b=new Bundle();b.putString("qa_check","PASS native SAF export dialog accepted");sendStatus(0,b);
             }else if("import".equals(phase)){
                 js("PSHO_I18N.setLanguage('en');window.confirm=function(){return true;};document.querySelector('[data-tab=settings]').click();document.getElementById('purge').click();return true;");
                 check("purge clears reviews and screening answers",snapshot+"return d.entries.length===0&&d.assessments.length===0;");

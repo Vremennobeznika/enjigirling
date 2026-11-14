@@ -24,8 +24,8 @@ try:
  phase('legacy-seed')
  adb('install','-r',str(R/'android/app/build/outputs/apk/debug/app-debug.apk'))
  phase('upgrade');phase('restart');phase('export')
- files=adb('shell','find','/sdcard/Download','-name','psho-backup-*.json').splitlines()
- if not files:raise AssertionError('No exported JSON in Downloads')
+ files=adb('shell','find','/storage/emulated/0','-type','f','-name','psho-backup-*.json').splitlines()
+ if not files:raise AssertionError('No exported JSON in shared storage')
  adb('pull',files[-1],str(E/'device-backup.json'))
  backup=json.loads((E/'device-backup.json').read_text())
  assert backup['data']['entries'][0]['note']=='Android QA запись 🦉'
