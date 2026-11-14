@@ -6,6 +6,7 @@ on:
       - 'mood-layers/index.html'
       - 'mood-layers/app.js'
       - 'mood-layers/goals.js'
+      - 'mood-layers/wellness.js'
       - 'mood-layers/style.css'
       - 'mood-layers/pwa-ui.js'
       - 'mood-layers/pwa-style.css'
@@ -31,6 +32,7 @@ jobs:
       - run: |
           node --check mood-layers/app.js
           node --check mood-layers/goals.js
+          node --check mood-layers/wellness.js
           node --check mood-layers/pwa-ui.js
           node --check mood-layers/sw.js
           node mood-layers/tests/sw_pwa.js

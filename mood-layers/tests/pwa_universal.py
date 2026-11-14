@@ -1,5 +1,6 @@
 """SLOI PWA browser checks: Chromium emulation only; no real Safari/device claim."""
 from pathlib import Path
+import shutil
 import json
 from playwright.sync_api import sync_playwright
 R=Path(__file__).resolve().parents[1]
@@ -7,7 +8,7 @@ h=(R/'index.html').read_text(encoding='utf-8')
 for n in ('style.css','pwa-style.css'):
  h=h.replace('<link rel="stylesheet" href="./'+n+'">','<style>'+(R/n).read_text(encoding='utf-8')+'</style>')
 scripts=''
-for n in ('i18n.js','goals.js','app.js','pwa-ui.js'):
+for n in ('i18n.js','goals.js','wellness.js','app.js','pwa-ui.js'):
  h=h.replace('<script defer src="./'+n+'"></script>','')
  scripts+='<script>'+(R/n).read_text(encoding='utf-8')+'</script>'
 h=h.replace('</body>',scripts+'</body>')
@@ -15,7 +16,7 @@ stub="""<script>(function(){var o={};Object.defineProperty(window,'localStorage'
 h=h.replace('</head>',stub+'</head>')
 checks=[]
 with sync_playwright() as p:
- b=p.chromium.launch(headless=True)
+ b=p.chromium.launch(executable_path=shutil.which("chromium") or None,headless=True)
  pg=b.new_page(viewport={'width':320,'height':568})
  pg.set_content(h,wait_until='domcontentloaded')
  assert pg.locator('#pwa-install').is_visible()
@@ -29,7 +30,7 @@ with sync_playwright() as p:
  assert 'PWA TEST RECORD 143' in pg.locator('.entry').inner_text()
  for w,he in [(280,640),(320,568),(375,667),(568,320)]:
   pg.set_viewport_size({'width':w,'height':he})
-  for tab in ('today','history','goals','insights','settings'):
+  for tab in ('today','history','goals','questionnaires','insights','settings'):
    pg.locator('[data-tab="'+tab+'"]').click()
    assert pg.evaluate('document.documentElement.scrollWidth<=innerWidth+2'),(w,tab)
    checks.append(w+len(tab))

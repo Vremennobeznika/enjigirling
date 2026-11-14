@@ -95,7 +95,7 @@ public final class MainActivity extends Activity {
                 String file=path.substring("/assets/".length());
                 if (file.isEmpty()) file="index.html";
                 // Exact local allowlist; no network or arbitrary WebView file access.
-                if (!(file.equals("index.html") || file.equals("style.css") || file.equals("app.js") || file.equals("goals.js") || file.equals("i18n.js") || file.equals("pwa-ui.js") || file.equals("pwa-style.css") || file.equals("sw.js") || file.equals("manifest.webmanifest") || file.equals("assets/icon.svg") || file.equals("assets/icon-180.png") || file.equals("assets/icon-192.png") || file.equals("assets/icon-512.png"))) return denied();
+                if (!(file.equals("index.html") || file.equals("style.css") || file.equals("app.js") || file.equals("goals.js") || file.equals("wellness.js") || file.equals("i18n.js") || file.equals("pwa-ui.js") || file.equals("pwa-style.css") || file.equals("sw.js") || file.equals("manifest.webmanifest") || file.equals("assets/icon.svg") || file.equals("assets/icon-180.png") || file.equals("assets/icon-192.png") || file.equals("assets/icon-512.png"))) return denied();
                 try {
                     InputStream stream=getAssets().open(file);
                     String mime=file.endsWith(".html")?"text/html":file.endsWith(".css")?"text/css":file.endsWith(".js")?"application/javascript":file.endsWith(".png")?"image/png":file.endsWith(".svg")?"image/svg+xml":"application/manifest+json";

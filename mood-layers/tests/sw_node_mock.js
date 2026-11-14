@@ -7,7 +7,7 @@ const context={URL,Response,Promise,caches,fetch:async()=>{networkCalls++;return
 vm.runInNewContext(fs.readFileSync(require('node:path').join(__dirname,'..','sw.js'),'utf8'),context);
 function wait(type,req){let task;handlers[type]({request:req,waitUntil:p=>task=p,respondWith:p=>task=p});return task;}
 (async()=>{
- await wait('install');assert(adds.includes('./pwa-ui.js'));assert(adds.includes('./i18n.js'),'offline install must include translation dictionary');assert(adds.includes('./pwa-style.css'));assert(adds.includes('./index.html'));assert.equal(skips,0,'do not force update over unsaved drafts');
+ await wait('install');assert(adds.includes('./pwa-ui.js'));assert(adds.includes('./wellness.js'),'offline install must include reflection, screening and companion');assert(adds.includes('./i18n.js'),'offline install must include translation dictionary');assert(adds.includes('./pwa-style.css'));assert(adds.includes('./index.html'));assert.equal(skips,0,'do not force update over unsaved drafts');
  await wait('activate');assert.equal(claims,1);assert.deepEqual(deletes,['sloi-pwa-v1.2.0','psho-pwa-v1.3.0']);
  handlers.message({data:{type:'SKIP_WAITING'}});assert.equal(skips,1);
  await wait('fetch',{method:'GET',url:scope+'index.html',mode:'navigate'});

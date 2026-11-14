@@ -6,8 +6,8 @@ R=Path(__file__).resolve().parents[1]
 html=(R/'index.html').read_text(encoding='utf-8')
 css=(R/'style.css').read_text()+(R/'pwa-style.css').read_text()
 html=html.replace('<link rel="stylesheet" href="./style.css">','<style>'+css+'</style>').replace('<link rel="stylesheet" href="./pwa-style.css">','')
-for n in ['i18n','app','pwa-ui']:html=html.replace('<script defer src="./'+n+'.js"></script>','')
-script=''.join('<script>'+(R/(n+'.js')).read_text()+'</script>' for n in ['i18n','app','pwa-ui'])
+for n in ['i18n','goals','wellness','app','pwa-ui']:html=html.replace('<script defer src="./'+n+'.js"></script>','')
+script=''.join('<script>'+(R/(n+'.js')).read_text()+'</script>' for n in ['i18n','goals','wellness','app','pwa-ui'])
 results=[]
 with sync_playwright() as pw:
  browser=pw.chromium.launch(executable_path='/usr/bin/chromium',headless=True,args=['--no-sandbox','--disable-dev-shm-usage'])

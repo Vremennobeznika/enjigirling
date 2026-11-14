@@ -1,5 +1,6 @@
 """PSHO scripted UX walkthrough, responsive & storage/load regression. No human UX participants or physical-device testing."""
 from pathlib import Path
+import shutil
 from playwright.sync_api import sync_playwright
 import json,time,statistics,sys
 ROOT=Path(__file__).resolve().parents[1]
@@ -7,7 +8,7 @@ html=(ROOT/'index.html').read_text(encoding='utf-8')
 for name in ('style.css','pwa-style.css'):
  html=html.replace('<link rel="stylesheet" href="./'+name+'">','<style>'+(ROOT/name).read_text(encoding='utf-8')+'</style>')
 scripts=''
-for name in ('i18n.js','goals.js','app.js','pwa-ui.js'):
+for name in ('i18n.js','goals.js','wellness.js','app.js','pwa-ui.js'):
  html=html.replace('<script defer src="./'+name+'"></script>','')
  scripts+='<script>'+(ROOT/name).read_text(encoding='utf-8')+'</script>'
 html=html.replace('</body>',scripts+'</body>')
@@ -21,7 +22,7 @@ def check(name,action):
 def require(flag,label):
  if not flag:raise AssertionError(label)
 with sync_playwright() as p:
- b=p.chromium.launch(headless=True,args=['--no-sandbox','--disable-dev-shm-usage'])
+ b=p.chromium.launch(executable_path=shutil.which("chromium") or None,headless=True,args=['--no-sandbox','--disable-dev-shm-usage'])
  page=b.new_page(viewport={'width':390,'height':844},timezone_id='Europe/Berlin',accept_downloads=True)
  errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
  load(page)
@@ -60,7 +61,7 @@ with sync_playwright() as p:
  check('keyboard focus on goal form',keyboard)
  for w,h in ((280,640),(320,568),(360,740),(390,844),(430,932),(568,320),(768,1024),(1024,768)):
   page.set_viewport_size({'width':w,'height':h})
-  for tab in ('today','history','goals','insights','settings'):
+  for tab in ('today','history','goals','questionnaires','insights','settings'):
    def inspect(w=w,tab=tab):
     page.locator('[data-tab='+tab+']').click()
     sizes=page.evaluate('({screen:innerWidth,scroll:document.documentElement.scrollWidth,body:document.body.scrollWidth})')
