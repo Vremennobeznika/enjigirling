@@ -1,6 +1,16 @@
 name: SLOI Android APK and source checks
 on:
   workflow_dispatch:
+    inputs:
+      device_qa:
+        description: 'Run device-side QA on Android emulators'
+        type: boolean
+        default: false
+      device_api:
+        description: 'Android API for device QA'
+        type: choice
+        options: ['both', '23', '35']
+        default: both
   push:
     branches: [main]
     paths:
@@ -68,3 +78,56 @@ jobs:
           path: mood-layers/android/app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
           retention-days: 30
+
+  device-qa:
+    if: github.event_name == 'workflow_dispatch' && inputs.device_qa
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    strategy:
+      fail-fast: false
+      matrix:
+        api: ${{ inputs.device_api == '23' && fromJSON('[23]') || inputs.device_api == '35' && fromJSON('[35]') || fromJSON('[23,35]') }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.13'
+      - name: Prepare old and current Android packages
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch --depth=1 origin 6efd3051f0e786ff7b6066058766b86d89cce45f
+          mkdir -p /tmp/psho-legacy
+          git archive FETCH_HEAD mood-layers | tar -x -C /tmp/psho-legacy
+          mkdir -p /tmp/psho-legacy/mood-layers/android/app/src/main/assets/assets
+          cp /tmp/psho-legacy/mood-layers/*.js /tmp/psho-legacy/mood-layers/*.css /tmp/psho-legacy/mood-layers/index.html /tmp/psho-legacy/mood-layers/manifest.webmanifest /tmp/psho-legacy/mood-layers/android/app/src/main/assets/
+          cp /tmp/psho-legacy/mood-layers/assets/* /tmp/psho-legacy/mood-layers/android/app/src/main/assets/assets/
+          mkdir -p mood-layers/android/app/src/main/assets/assets
+          cp mood-layers/*.js mood-layers/*.css mood-layers/index.html mood-layers/manifest.webmanifest mood-layers/android/app/src/main/assets/
+          cp mood-layers/assets/* mood-layers/android/app/src/main/assets/assets/
+          gradle -p /tmp/psho-legacy/mood-layers/android --no-daemon :app:assembleDebug
+          gradle -p mood-layers/android --no-daemon :app:assembleDebug :app:assembleDebugAndroidTest
+      - name: Enable emulator acceleration
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+      - name: Install, update, restart and native backup on Android
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: ${{ matrix.api }}
+          arch: x86_64
+          target: google_apis
+          disable-animations: true
+          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          script: python3 mood-layers/tests/android-device-qa.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: psho-android-${{ matrix.api }}-evidence
+          path: /tmp/psho-device-evidence/
+          if-no-files-found: warn

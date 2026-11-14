@@ -37,20 +37,30 @@ jobs:
         run: |
           node mood-layers/tests/psho-quality-unit.cjs
           node mood-layers/tests/wellness-unit.cjs
+          node mood-layers/tests/native-storage-unit.cjs
           node --check mood-layers/wellness.js
       - name: Install browser test dependencies
         run: |
           python -m pip install playwright==1.57.0
           python -m playwright install --with-deps chromium
+      - name: Prepare real-storage regression and accessibility tooling
+        run: |
+          git fetch --depth=1 origin 6efd3051f0e786ff7b6066058766b86d89cce45f
+          mkdir -p "$RUNNER_TEMP/psho-legacy-web"
+          git archive FETCH_HEAD mood-layers | tar -x -C "$RUNNER_TEMP/psho-legacy-web"
+          npm install --prefix "$RUNNER_TEMP/psho-a11y" axe-core@4.11.0 --no-audit --no-fund
       - name: Scripted UX, layout and load checks
         run: |
           python mood-layers/tests/psho-quality-browser.py
           python mood-layers/tests/wellness-browser.py
+          python mood-layers/tests/browser-integrity.py --legacy "$RUNNER_TEMP/psho-legacy-web/mood-layers" --axe "$RUNNER_TEMP/psho-a11y/node_modules/axe-core/axe.min.js" --output "$RUNNER_TEMP/psho-browser-evidence"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: psho-quality-evidence
           path: |
+            ${{ runner.temp }}/psho-browser-evidence/summary.json
+            ${{ runner.temp }}/psho-browser-evidence/accessibility.json
             mood-layers/tests/psho-quality-results.json
             mood-layers/tests/psho-280.png
             mood-layers/tests/psho-390.png
