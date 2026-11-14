@@ -1,6 +1,10 @@
 package app.layers.mood;
 
 import android.app.Activity;
+import android.util.AtomicFile;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
@@ -33,6 +37,30 @@ public final class MainActivity extends Activity {
     private static final int IMPORT_REQUEST = 72;
     private ValueCallback<Uri[]> importCallback;
     private WebView web;
+    private static final Object JOURNAL_LOCK = new Object();
+    private AtomicFile journalFile(){return new AtomicFile(new File(getFilesDir(),"journal-head.json"));}
+    private String readJournal(){
+        synchronized(JOURNAL_LOCK){
+            AtomicFile file=journalFile();
+            if(!file.getBaseFile().exists()&&!new File(file.getBaseFile().getPath()+".bak").exists())return null;
+            try(FileInputStream input=file.openRead();ByteArrayOutputStream output=new ByteArrayOutputStream()){
+                byte[] buffer=new byte[8192];int n;
+                while((n=input.read(buffer))!=-1){if(output.size()+n>MAX_EXPORT_BYTES)return "native-storage-unreadable";output.write(buffer,0,n);}
+                return new String(output.toByteArray(),StandardCharsets.UTF_8);
+            }catch(IOException | RuntimeException ex){return "native-storage-unreadable";}
+        }
+    }
+    private boolean writeJournal(String value){
+        synchronized(JOURNAL_LOCK){
+            if(value==null||value.length()>MAX_EXPORT_BYTES)return false;
+            byte[] bytes=value.getBytes(StandardCharsets.UTF_8);if(bytes.length>MAX_EXPORT_BYTES)return false;
+            AtomicFile file=journalFile();FileOutputStream output=null;
+            try{
+                output=file.startWrite();output.write(bytes);output.getFD().sync();file.finishWrite(output);output=null;
+                return value.equals(readJournal());
+            }catch(IOException | RuntimeException ex){if(output!=null)file.failWrite(output);return false;}
+        }
+    }
     private byte[] pendingData;
     private ByteArrayOutputStream streamBuffer;
     private static final int MAX_EXPORT_BYTES = 16000000;
@@ -114,6 +142,10 @@ public final class MainActivity extends Activity {
             }
         });
         web.addJavascriptInterface(new Object(){
+            // Acknowledged saves reach an atomic, fsynced file before JS reports success.
+            // WebView localStorage alone may lose its latest writes on immediate process death.
+            @JavascriptInterface public String readJournal(){return MainActivity.this.readJournal();}
+            @JavascriptInterface public boolean writeJournal(String value){return MainActivity.this.writeJournal(value);}
             @JavascriptInterface public boolean beginSave(String filename){
                 synchronized(MainActivity.this){
                     if(filename==null || filename.length()>90 || !filename.matches("[A-Za-z0-9._-]+") ||
