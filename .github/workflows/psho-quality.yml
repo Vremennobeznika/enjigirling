@@ -5,11 +5,18 @@ on:
     paths:
       - 'mood-layers/app.js'
       - 'mood-layers/goals.js'
+      - 'mood-layers/wellness.js'
       - 'mood-layers/index.html'
       - 'mood-layers/i18n.js'
       - 'mood-layers/style.css'
+      - 'mood-layers/tests/wellness-unit.cjs'
+      - 'mood-layers/tests/wellness-browser.py'
       - 'mood-layers/tests/psho-quality-unit.cjs'
       - 'mood-layers/tests/psho-quality-browser.py'
+      - '.github/workflows/psho-quality.yml'
+  pull_request:
+    paths:
+      - 'mood-layers/**'
       - '.github/workflows/psho-quality.yml'
   workflow_dispatch:
 permissions:
@@ -27,13 +34,18 @@ jobs:
         with:
           python-version: '3.11'
       - name: Unit tests
-        run: node mood-layers/tests/psho-quality-unit.cjs
+        run: |
+          node mood-layers/tests/psho-quality-unit.cjs
+          node mood-layers/tests/wellness-unit.cjs
+          node --check mood-layers/wellness.js
       - name: Install browser test dependencies
         run: |
           python -m pip install playwright==1.57.0
           python -m playwright install --with-deps chromium
       - name: Scripted UX, layout and load checks
-        run: python mood-layers/tests/psho-quality-browser.py
+        run: |
+          python mood-layers/tests/psho-quality-browser.py
+          python mood-layers/tests/wellness-browser.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:

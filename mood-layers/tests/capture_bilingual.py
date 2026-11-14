@@ -5,9 +5,9 @@ R=Path(__file__).resolve().parents[1]
 html=(R/'index.html').read_text(encoding='utf-8')
 css=(R/'style.css').read_text()+(R/'pwa-style.css').read_text()
 html=html.replace('<link rel="stylesheet" href="./style.css">','<style>'+css+'</style>').replace('<link rel="stylesheet" href="./pwa-style.css">','')
-for n in ('i18n','app','pwa-ui'): html=html.replace('<script defer src="./'+n+'.js"></script>','')
+for n in ('i18n','goals','wellness','app','pwa-ui'): html=html.replace('<script defer src="./'+n+'.js"></script>','')
 mock="""<script>window.__store={};Object.defineProperty(window,'localStorage',{configurable:true,value:{getItem(k){return window.__store[k]??null;},setItem(k,v){window.__store[k]=String(v);},removeItem(k){delete window.__store[k];}}});</script>"""
-scripts=''.join('<script>'+(R/(n+'.js')).read_text()+'</script>' for n in ('i18n','app','pwa-ui'))
+scripts=''.join('<script>'+(R/(n+'.js')).read_text()+'</script>' for n in ('i18n','goals','wellness','app','pwa-ui'))
 html=html.replace('</body>',mock+scripts+'</body>')
 with sync_playwright() as pw:
  b=pw.chromium.launch(executable_path='/usr/bin/chromium',headless=True,args=['--no-sandbox'])

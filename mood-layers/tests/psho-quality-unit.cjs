@@ -30,6 +30,6 @@ const d=new Date(),today=[d.getFullYear(),('0'+(d.getMonth()+1)).slice(-2),('0'+
 test('weekly no marks returns 0%',()=>assert.equal(api.summary(goal('Draw','weekly',2,today)).rate,0));
 test('weekly today mark counts',()=>{const a=goal('Draw','weekly',1,today);a.marks[today]='done';assert.equal(api.summary(a).rate,100);});
 test('avoidance unknown without observations',()=>{const a=goal('No smoking','avoid',1,today),s=api.summary(a);assert.equal(s.rate,null);assert.equal(s.target,0);});
-test('avoidance explicit lapse counts',()=>{const a=goal('No smoking','avoid',1,'2026-10-01');a.marks['2026-10-02']='lapse';a.marks['2026-10-03']='done';assert.equal(api.summary(a).rate,50);});
+test('avoidance explicit lapse counts',()=>{const yesterday=new Date(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate()-1)).toISOString().slice(0,10);const a=goal('No smoking','avoid',1,yesterday);a.marks[yesterday]='lapse';a.marks[today]='done';assert.equal(api.summary(a).rate,50);});
 const pass=tasks.filter(x=>x.status==='PASS').length,fail=tasks.length-pass;
 console.log(JSON.stringify({passed:pass,failed:fail,tests:tasks},null,2));if(fail)process.exitCode=1;

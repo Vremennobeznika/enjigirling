@@ -38,12 +38,13 @@ jobs:
           set -euo pipefail
           node --check mood-layers/app.js
           node --check mood-layers/goals.js
+          node --check mood-layers/wellness.js
           node --check mood-layers/i18n.js
           node --check mood-layers/pwa-ui.js
           node --check mood-layers/sw.js
           python3 mood-layers/tests/static_matrix.py
           mkdir -p mood-layers/android/app/src/main/assets/assets
-          cp mood-layers/index.html mood-layers/style.css mood-layers/pwa-style.css mood-layers/app.js mood-layers/goals.js mood-layers/i18n.js mood-layers/pwa-ui.js mood-layers/sw.js mood-layers/manifest.webmanifest mood-layers/android/app/src/main/assets/
+          cp mood-layers/index.html mood-layers/style.css mood-layers/pwa-style.css mood-layers/app.js mood-layers/goals.js mood-layers/wellness.js mood-layers/i18n.js mood-layers/pwa-ui.js mood-layers/sw.js mood-layers/manifest.webmanifest mood-layers/android/app/src/main/assets/
           cp mood-layers/assets/icon.* mood-layers/assets/icon-*.png mood-layers/android/app/src/main/assets/assets/
       - name: Build debug APK
         working-directory: mood-layers/android
@@ -56,7 +57,7 @@ jobs:
           test -s "$APK"
           unzip -t "$APK" > /dev/null
           unzip -Z1 "$APK" | grep -q '^classes.dex$'
-          for name in app.js goals.js i18n.js pwa-ui.js pwa-style.css; do
+          for name in app.js goals.js wellness.js i18n.js pwa-ui.js pwa-style.css; do
             unzip -Z1 "$APK" | grep -q "^assets/$name$"
           done
           "$ANDROID_HOME/build-tools/36.0.0/apksigner" verify "$APK"

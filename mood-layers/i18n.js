@@ -7,7 +7,7 @@ var chosen=null;
 try{chosen=localStorage.getItem(KEY);}catch(_e){}
 var lang=chosen==='ru'||chosen==='en'?chosen:(/^en(?:-|$)/i.test(navigator.language||'')?'en':'ru');
 var originals=[];
-var SKIP=['mood-grid','tags-container','settings-tags','history-list','chart','kpis','contexts','status','toast','analysis-result','mood-caption','version','save-entry','pwa-connection','pwa-howto'];
+var SKIP=['wellness-tab','wellness-mascot','wellness-tests','wellness-review','mood-grid','tags-container','settings-tags','history-list','chart','kpis','contexts','status','toast','analysis-result','mood-caption','version','save-entry','pwa-connection','pwa-howto'];
 function blocked(node){var el=node.nodeType===1?node:node.parentElement;while(el){if(el.id&&SKIP.indexOf(el.id)!==-1)return true;el=el.parentElement;}return false;}
 function t(ru){return lang==='en'&&(Object.prototype.hasOwnProperty.call(D,ru))?D[ru]:ru;}
 function format(ru,values){var msg=t(ru);(values||[]).forEach(function(v,i){msg=msg.replace('{'+i+'}',String(v));});return msg;}

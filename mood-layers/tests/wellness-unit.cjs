@@ -1,0 +1,26 @@
+'use strict';
+const assert=require('node:assert/strict'),vm=require('node:vm'),fs=require('node:fs');
+const context={window:{},document:{getElementById(){throw Error('Unexpected DOM access');}}};vm.createContext(context);vm.runInContext(fs.readFileSync(__dirname+'/../wellness.js','utf8'),context);
+const api=context.window.PSHO_WELLNESS,copy=x=>JSON.parse(JSON.stringify(x));
+const assessment=(kind='gad',v=0)=>({id:'q-example-12345',kind,date:'2026-11-14T10:00:00.000Z',periodDays:14,answers:Array(kind==='gad'?7:9).fill(v),total:(kind==='gad'?7:9)*v});
+const review=()=>({thought:'They must hate me',beforeEmotion:'anxious',beforeIntensity:8,distortions:['mind-reading'],balanced:'I do not know what they think',afterEmotion:'still anxious',afterIntensity:6,updatedAt:'2026-11-14T10:00:00.000Z'});
+let count=0;function test(name,fn){fn();console.log('PASS',name);count++;}
+test('GAD-7 and PHQ-9 minimum and maximum totals',()=>{for(const k of ['gad','phq'])for(const n of [0,3])assert.equal(api.validAssessment(assessment(k,n)),true);});
+test('reject missing, out-of-range, fractional and null answers',()=>{for(const values of [[0],[0,0,0,0,0,0,null],[0,0,0,0,0,0,4],[0,0,0,0,0,0,1.5]]){const a=assessment();a.answers=values;assert.equal(api.validAssessment(a),false);}});
+test('reject forged total and incorrect recall window',()=>{let a=assessment();a.total=9;assert.equal(api.validAssessment(a),false);a=assessment();a.periodDays=7;assert.equal(api.validAssessment(a),false);});
+test('reject inherited questionnaire keys',()=>{for(const k of ['__proto__','constructor','toString'])assert.equal(api.validAssessment({...assessment(),kind:k}),false);});
+test('reject duplicate IDs, invalid date and over-limit history',()=>{const a=assessment();assert.equal(api.validAssessments([a,a]),false);assert.equal(api.validAssessment({...a,date:'bad'}),false);assert.equal(api.validAssessments(Array(1001).fill(a)),false);});
+test('valid review permits emotions to stay intense or increase',()=>{assert.equal(api.validReview(review()),true);const r=review();r.afterIntensity=10;assert.equal(api.validReview(r),true);r.distortions=[];assert.equal(api.validReview(r),true);});
+test('reject malformed reflection and unknown distortion',()=>{for(const k of ['thought','beforeEmotion','balanced','afterEmotion']){const r=review();r[k]='';assert.equal(api.validReview(r),false);}for(const v of [-1,11,null]){const r=review();r.afterIntensity=v;assert.equal(api.validReview(r),false);}const r=review();r.distortions=['made-up'];assert.equal(api.validReview(r),false);});
+test('parallel assessment creation preserves both',()=>{const a=assessment(),b={...assessment('phq'),id:'q-other-12345'};assert.equal(api.mergeAssessments([a],[],[b]).length,2);});
+test('concurrent deletion is not resurrected by stale unrelated save',()=>{const a=assessment();assert.equal(api.mergeAssessments([], [a], [a]).length,0);});
+test('concurrent deletion of changed assessment is blocked',()=>{const a=assessment(),live=assessment('gad',1);assert.throws(()=>api.mergeAssessments([live],[a],[]),/conflict/);});
+test('assessments cannot silently be edited or overwrite another ID',()=>{const a=assessment(),b=assessment('gad',1);assert.throws(()=>api.mergeAssessments([a],[a],[b]),/immutable/);assert.throws(()=>api.mergeAssessments([a],[],[b]),/conflict/);});
+test('unchanged local results preserve new result in another tab',()=>{const a=assessment(),b={...assessment('phq'),id:'q-other-12345'};assert.equal(api.mergeAssessments([a,b],[a],[a]).length,2);});
+const now=Date.parse('2026-11-14T12:00:00Z'),entry=(tags,date='2026-11-14T10:00:00Z')=>({tags,date});
+test('companion ignores future and older-than-seven-day entries',()=>{const d=api.dominant([entry(['sad'],'2026-10-01T10:00:00Z'),entry(['sad'],'2026-11-15T10:00:00Z'),entry(['happy'])],now);assert.equal(d.top.key,'радостно');assert.equal(d.entries,1);});
+test('one vote per label per entry, including RU/EN equivalents',()=>{const d=api.dominant([entry(['sad','sad','грустно']),entry(['happy']),entry(['happy'])],now);assert.equal(d.top.key,'радостно');assert.equal(d.top.count,2);});
+test('ties, no labels and no entries use neutral states',()=>{assert.equal(api.dominant([entry(['sad','happy'])],now).tied,true);assert.equal(api.dominant([entry([])],now).top,null);assert.equal(api.dominant([],now).entries,0);});
+test('custom labels including object property names are safe and retained',()=>{for(const name of ['__proto__','constructor','toString','<img src=x onerror=alert(1)>']){const d=api.dominant([entry([name])],now);assert.equal(d.top.label,name);}});
+test('severity boundaries remain scale-specific',()=>{assert.match(api.severity('gad',4),/Минималь/);assert.match(api.severity('gad',5),/Лёгк/);assert.match(api.severity('gad',10),/Умеренн/);assert.match(api.severity('gad',15),/Выраженн/);assert.match(api.severity('phq',15),/Умеренно тяж/);assert.match(api.severity('phq',20),/^Тяж/);});
+console.log(count+' wellness unit tests passed');
