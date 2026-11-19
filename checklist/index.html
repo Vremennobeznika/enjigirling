@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#101010">
-<meta name="description" content="Три самостоятельных списка дел с галочками: Ева, Дима, Кася. Редактируются и сохраняются в браузере.">
+<meta name="description" content="Три списка дел и общий календарь: Ева, Дима, Кася. Редактируются и сохраняются в браузере.">
 <title>Список дел — Ева · Дима · Кася</title>
 <style>
 :root{color-scheme:dark;--bg:#101010;--panel:#1b1b1b;--panel2:#202020;--line:#3b3b3b;--soft:#292929;--ink:#f4f4f4;--muted:#b5b5b5;--bright:#f0f0f0;--danger:#efaaa7}
@@ -122,6 +122,44 @@ h2{font-size:23px;letter-spacing:-.025em;line-height:1.2;margin:0 0 4px}
 #sync-hash-wrap label{flex:1 1 200px}
 @media(max-width:520px){.sync-panel{padding:14px}.sync-actions button{flex:1 1 120px}}
 @media(prefers-reduced-motion:reduce){.fill{transition:none}}
+
+/* Общий календарь */
+.tabs{grid-template-columns:repeat(4,minmax(0,1fr))}
+.calendar-panel{padding:19px}
+.calendar-toolbar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:13px}
+.calendar-toolbar h2{margin:0;font-size:21px;text-align:center}
+.calendar-nav{min-width:44px;min-height:44px;border:1px solid #555;border-radius:10px;background:#292929;color:#fff;font-size:21px}
+.calendar-weekdays,.calendar-days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
+.calendar-weekdays span{text-align:center;font-size:11px;color:#aaa;padding:6px 0}
+.calendar-day{min-width:0;min-height:57px;border:1px solid #3f3f3f;border-radius:9px;background:#222;color:#f5f5f5;padding:5px 2px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:3px}
+.calendar-day.outside{opacity:.32}
+.calendar-day.today{border-color:#bdbdbd}
+.calendar-day.picked{background:#f0f0f0;color:#151515;border-color:#f0f0f0}
+.calendar-dot{display:block;width:6px;height:6px;background:#b9b9b9;border-radius:50%}
+.calendar-day.picked .calendar-dot{background:#242424}
+.calendar-agenda{border-top:1px solid #3b3b3b;margin-top:17px;padding-top:14px}
+.calendar-agenda h3{font-size:17px;margin:0 0 12px}
+.calendar-event{padding:12px 0;border-bottom:1px solid #3b3b3b;display:flex;justify-content:space-between;gap:9px;align-items:flex-start}
+.calendar-event-content{min-width:0;overflow-wrap:anywhere}
+.calendar-event-title{font-weight:700}
+.calendar-event-note{font-size:13px;color:#bdbdbd;margin-top:4px;white-space:pre-wrap}
+.calendar-event-time{font-size:12px;color:#ccc;margin-right:8px}
+.calendar-event-actions{display:flex;gap:3px;flex-shrink:0}
+.calendar-event-actions button{min-width:40px;min-height:42px;border:1px solid #555;background:#2b2b2b;color:white;border-radius:9px}
+.calendar-empty{color:#aaa;font-size:13px;margin:8px 0 14px}
+.calendar-editor{margin-top:18px;padding-top:17px;border-top:1px solid #444}
+.calendar-editor h3{margin:0 0 9px;font-size:17px}
+.calendar-form{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.calendar-form label{display:grid;gap:4px;font-size:13px;color:#c9c9c9;min-width:0}
+.calendar-form input,.calendar-form textarea,#calendar-editor-key{min-width:0;width:100%;min-height:44px;border:1px solid #676767;border-radius:9px;padding:9px;background:#111;color:#fff;font:inherit}
+.calendar-form textarea{resize:vertical;min-height:72px}
+.calendar-wide{grid-column:1/-1}
+.calendar-form-buttons{grid-column:1/-1;display:flex;gap:9px;flex-wrap:wrap}
+.calendar-lock{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin-top:15px}
+.calendar-lock input{flex:1 1 180px}
+.calendar-help{font-size:12px;color:#aaa;margin:10px 0}
+@media(max-width:520px){.calendar-panel{padding:14px}.tabs{gap:4px}.tab{font-size:13px;padding:7px 1px}.calendar-day{min-height:48px}.calendar-form{grid-template-columns:1fr}}
+@media(max-width:360px){.tab-count{font-size:10px}.calendar-weekdays,.calendar-days{gap:2px}.calendar-day{min-height:44px}}
 </style>
 </head>
 <body>
@@ -129,12 +167,13 @@ h2{font-size:23px;letter-spacing:-.025em;line-height:1.2;margin:0 0 4px}
   <header>
     <div class="kicker">ЛИЧНЫЕ СПИСКИ</div>
     <h1>Список дел</h1>
-    <p class="lead">Общие списки дел с этапами. Изменения синхронизируются между телефонами после подключения общей базы.</p>
+    <p class="lead">Общие списки дел с этапами и общий календарь. Изменения синхронизируются между телефонами после подключения общей базы.</p>
   </header>
   <nav class="tabs" aria-label="Чей список дел" role="tablist">
     <button class="tab" type="button" role="tab" aria-selected="true" data-person="eva" id="tab-eva" aria-controls="task-panel"><span>Ева</span><span class="tab-count" data-count="eva"></span></button>
     <button class="tab" type="button" role="tab" aria-selected="false" data-person="dima" id="tab-dima" aria-controls="task-panel"><span>Дима</span><span class="tab-count" data-count="dima"></span></button>
     <button class="tab" type="button" role="tab" aria-selected="false" data-person="kasya" id="tab-kasya" aria-controls="task-panel"><span>Кася</span><span class="tab-count" data-count="kasya"></span></button>
+    <button class="tab" type="button" role="tab" aria-selected="false" data-person="calendar" id="tab-calendar" aria-controls="calendar-panel"><span>Календарь</span><span class="tab-count">общий</span></button>
   </nav>
   <main class="panel" id="task-panel" role="tabpanel" aria-labelledby="tab-eva">
     <div class="panel-head">
@@ -150,6 +189,34 @@ h2{font-size:23px;letter-spacing:-.025em;line-height:1.2;margin:0 0 4px}
     <div class="empty" id="empty"><strong>Список пока пуст</strong>Введите первое дело в строке выше.</div>
     <div class="bottom"><span class="summary" id="total-count">0 пунктов</span><button type="button" class="muted-button" id="clear-completed" disabled>Удалить выполненные</button></div>
   </main>
+
+  <section class="panel calendar-panel" id="calendar-panel" role="tabpanel" aria-labelledby="tab-calendar" hidden>
+    <div class="calendar-toolbar">
+      <button class="calendar-nav" id="calendar-prev" type="button" aria-label="Предыдущий месяц">‹</button>
+      <h2 id="calendar-month"></h2>
+      <button class="calendar-nav" id="calendar-next" type="button" aria-label="Следующий месяц">›</button>
+    </div>
+    <div class="calendar-weekdays" aria-hidden="true"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div>
+    <div class="calendar-days" id="calendar-days" aria-label="Календарные даты"></div>
+    <div class="calendar-agenda"><h3 id="calendar-selected-title"></h3><div id="calendar-events"></div></div>
+    <p class="sync-status" id="calendar-status" role="status" aria-live="polite">Календарь подключается к общему списку.</p>
+    <div class="calendar-editor" id="calendar-editor" hidden>
+      <h3 id="calendar-form-title">Добавить событие</h3>
+      <form class="calendar-form" id="calendar-form">
+        <label>Дата<input type="date" id="calendar-date" required></label>
+        <label>Время (необязательно)<input type="time" id="calendar-time"></label>
+        <label class="calendar-wide">Событие<input id="calendar-title" type="text" maxlength="140" required placeholder="Что запланировано"></label>
+        <label class="calendar-wide">Примечание<textarea id="calendar-note" maxlength="500" placeholder="Адрес, детали, что подготовить"></textarea></label>
+        <div class="calendar-form-buttons"><button type="submit" class="primary" id="calendar-submit">Сохранить</button><button type="button" class="secondary" id="calendar-cancel">Отмена</button></div>
+      </form>
+    </div>
+    <div class="calendar-lock">
+      <input id="calendar-editor-key" type="password" autocomplete="off" spellcheck="false" placeholder="Личный ключ редактора календаря" aria-label="Ключ редактора календаря">
+      <button id="calendar-activate" class="secondary" type="button">Включить редактирование</button>
+      <button id="calendar-deactivate" class="secondary" type="button" hidden>Выключить редактирование</button>
+    </div>
+    <p class="calendar-help">Все участники общего списка видят события. Добавлять, изменять и удалять события можно только с отдельным ключом редактора. Этот ключ не передаётся в общей ссылке.</p>
+  </section>
   <p class="hint">Этапы добавляются кнопкой «Этапы» у каждого дела. Выполнение всех этапов автоматически закрывает дело. Изменения сохраняются в браузере и, после подключения, передаются на другие устройства.</p>
   <section aria-label="Резервные копии" class="backup">
     <button type="button" id="export-button">Скачать копию (.json)</button>
@@ -178,7 +245,7 @@ h2{font-size:23px;letter-spacing:-.025em;line-height:1.2;margin:0 0 4px}
     <div class="sync-conflict" id="sync-conflict" hidden><p id="sync-conflict-text">На другом устройстве есть несовместимые изменения. Ни одна копия не удалена.</p><button type="button" class="secondary" id="sync-use-remote">Загрузить облачную версию</button><button type="button" class="secondary" id="sync-retry">Попробовать объединить</button></div>
     <p class="fineprint">Общая ссылка содержит ключ доступа после знака #. Отправляйте её только тем, кому доверяете: с ней можно читать и менять дела. Пароли или ключи администратора Supabase в сайте не используются.</p>
   </section>
-  <p class="fineprint">Нет расписания, календаря или напоминаний. При отключённой сети изменения сохраняются локально и отправятся после восстановления соединения. Если сайт закрыт на двух устройствах, синхронизация возобновится при открытии.</p>
+  <p class="fineprint">Нет автоматических напоминаний. При отключённой сети изменения сохраняются локально и отправятся после восстановления соединения. Если сайт закрыт на двух устройствах, синхронизация возобновится при открытии.</p>
 </div>
 <script>
 'use strict';
@@ -221,7 +288,7 @@ h2{font-size:23px;letter-spacing:-.025em;line-height:1.2;margin:0 0 4px}
     try {const raw=localStorage.getItem(STORAGE_KEY);return raw?normalize(JSON.parse(raw)):blank();}
     catch(e){status('Не удалось прочитать сохранённые списки. Данные на устройстве не изменены.',true);return blank();}
   }
-  let state=read(),selected='eva',editing=null,stageEditing=null;
+  let state=read(),selected='eva',editing=null,stageEditing=null,calendarOpen=false;
   const drafts={eva:'',dima:'',kasya:''};
   const expanded=new Set();
   function save(){
@@ -236,7 +303,13 @@ h2{font-size:23px;letter-spacing:-.025em;line-height:1.2;margin:0 0 4px}
   const ekey=task=>selected+'-'+task.id;
   const stageKeyFor=(task,stage)=>JSON.stringify([selected,task.id,stage.id]);
   function updateUndoImport(){try{$('undo-import').hidden=!localStorage.getItem(PREVIOUS_KEY)}catch{$('undo-import').hidden=true}}
-  function switchPerson(person){drafts[selected]=$('new-task').value;selected=person;editing=null;stageEditing=null;$('new-task').value=drafts[selected];render();}
+  function switchPerson(person){
+    if(person==='calendar'){calendarOpen=true;$('task-panel').hidden=true;$('calendar-panel').hidden=false;render();void calendarRefresh();return;}
+    if(!calendarOpen)drafts[selected]=$('new-task').value;
+    calendarOpen=false;selected=person;editing=null;stageEditing=null;
+    $('task-panel').hidden=false;$('calendar-panel').hidden=true;
+    $('new-task').value=drafts[selected];render();
+  }
   const syncDone=task=>{if(task.stages.length)task.done=task.stages.every(x=>x.done);};
   function openTaskEditor(task,root){editing=task.id;stageEditing=null;render();const field=root.querySelector('.item.editor .edit-input');if(field){field.focus();field.select();}}
   function makeStageSection(task,sectionId){
@@ -293,7 +366,7 @@ h2{font-size:23px;letter-spacing:-.025em;line-height:1.2;margin:0 0 4px}
     $('progress-track').setAttribute('aria-valuenow',String(percent));
     $('total-count').textContent=total+' '+(total%10===1&&total%100!==11?'пункт':(total%10>=2&&total%10<=4&&(total%100<12||total%100>14))?'пункта':'пунктов');
     $('clear-completed').disabled=done===0;$('empty').hidden=total!==0;
-    document.querySelectorAll('.tab').forEach(tab=>{const active=tab.dataset.person===selected;tab.setAttribute('aria-selected',String(active));tab.tabIndex=active?0:-1;});
+    document.querySelectorAll('.tab').forEach(tab=>{const active=calendarOpen?tab.dataset.person==='calendar':tab.dataset.person===selected;tab.setAttribute('aria-selected',String(active));tab.tabIndex=active?0:-1;});
     for(const id of ids){const arr=state.lists[id];document.querySelector(`[data-count="${id}"]`).textContent=`${arr.filter(t=>t.done).length}/${arr.length}`;}
     const root=$('task-list');root.replaceChildren();
     list.forEach((task,i)=>{
@@ -378,9 +451,9 @@ h2{font-size:23px;letter-spacing:-.025em;line-height:1.2;margin:0 0 4px}
   });
   document.querySelector('.tabs').addEventListener('keydown',e=>{
     if(!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;
-    e.preventDefault();let index=ids.indexOf(selected);
-    index=e.key==='Home'?0:e.key==='End'?ids.length-1:e.key==='ArrowRight'?(index+1)%ids.length:(index+ids.length-1)%ids.length;
-    switchPerson(ids[index]);$('tab-'+selected).focus();
+    e.preventDefault();const tabIds=[...ids,'calendar'];let index=calendarOpen?3:ids.indexOf(selected);
+    index=e.key==='Home'?0:e.key==='End'?ids.length-1:e.key==='ArrowRight'?(index+1)%tabIds.length:(index+tabIds.length-1)%tabIds.length;
+    switchPerson(tabIds[index]);$('tab-'+tabIds[index]).focus();
   });
   // Independent household synchronization. Never uses the owner's life/ sync key or data.
   const SUPABASE_DEFAULT_URL='https://dcltykcoobhdermgauud.supabase.co';
@@ -639,6 +712,135 @@ h2{font-size:23px;letter-spacing:-.025em;line-height:1.2;margin:0 0 4px}
     document.addEventListener('visibilitychange',()=>{if(!document.hidden)scheduleSync(250)});
     syncPoll=setInterval(()=>{if(!document.hidden&&syncConfig&&!syncBusy)scheduleSync(200)},8000);
   }
+
+
+  // Календарь хранится отдельно от задач. Только семейный ключ позволяет читать;
+  // отдельный ключ редактора нужен для записи и не входит в ссылку-приглашение.
+  const CAL_EDITOR_KEY='eva-dima-kasya-calendar-editor-v1';
+  let calendarEditorKey='';
+  try{calendarEditorKey=localStorage.getItem(CAL_EDITOR_KEY)||'';}catch{}
+  let calendarEvents=[], calendarRevision=null, calendarLoaded=false, calendarBusy=false, calendarEditId=null;
+  const localToday=()=>{const d=new Date();return dateISO(d);};
+  const dateISO=d=>[d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-');
+  let calendarSelected=localToday(), calendarMonth=new Date().getMonth(), calendarYear=new Date().getFullYear();
+  function calendarMessage(t,error=false){$('calendar-status').textContent=t;$('calendar-status').className='sync-status'+(error?' error':'');}
+  function calendarNormalize(data){
+    if(!Array.isArray(data)||data.length>500)throw Error('Повреждены события календаря');
+    const keys=new Set();
+    return data.map(x=>{
+      if(!x||typeof x!=='object'||typeof x.id!=='string'||!x.id||keys.has(x.id)||typeof x.date!=='string'||!/^20\d\d-\d\d-\d\d$/.test(x.date)||typeof x.title!=='string'||!x.title.trim())throw Error('Некорректное событие');
+      keys.add(x.id);return {id:x.id,date:x.date,title:x.title.slice(0,140),time:typeof x.time==='string'?x.time:'',note:typeof x.note==='string'?x.note.slice(0,500):''};
+    });
+  }
+  async function calendarRPC(name,body){
+    if(!syncConfig)throw Error('Сначала подключите семейный список в разделе «Общий доступ»');
+    const r=await fetch(syncConfig.url.replace(/\/$/,'')+'/rest/v1/rpc/'+name,{
+      method:'POST',mode:'cors',credentials:'omit',cache:'no-store',
+      headers:{apikey:syncConfig.publishableKey,'Content-Type':'application/json'},
+      body:JSON.stringify(body)
+    });
+    const data=await r.json().catch(()=>({message:'Неожиданный ответ сервера'}));
+    if(!r.ok)throw Error(data.message||'HTTP '+r.status);
+    return data;
+  }
+  async function calendarRefresh(){
+    if(!calendarOpen||calendarBusy)return;
+    if(!syncConfig){calendarMessage('Подключите семейный список ниже, чтобы видеть календарь.');return;}
+    calendarBusy=true;
+    try{
+      const r=await calendarRPC('household_calendar_get',{p_secret:syncConfig.secret});
+      if(!Number.isSafeInteger(r.revision))throw Error('Некорректная версия календаря');
+      calendarRevision=r.revision;calendarEvents=calendarNormalize(r.events);
+      calendarLoaded=true;calendarRender();calendarMessage('Общий календарь обновлён.');
+    }catch(e){calendarMessage('Не удалось загрузить календарь: '+e.message,true);}
+    finally{calendarBusy=false;}
+  }
+  function calendarRender(){
+    if(!calendarOpen)return;
+    const month=new Date(calendarYear,calendarMonth,1);
+    $('calendar-month').textContent=month.toLocaleDateString('ru-RU',{month:'long',year:'numeric'});
+    const first=(month.getDay()+6)%7;
+    const cells=$('calendar-days');cells.replaceChildren();
+    for(let i=0;i<42;i++){
+      const d=new Date(calendarYear,calendarMonth,i-first+1),day=dateISO(d);
+      const b=document.createElement('button');b.type='button';b.className='calendar-day';
+      if(d.getMonth()!==calendarMonth)b.classList.add('outside');
+      if(day===calendarSelected)b.classList.add('picked');
+      if(day===localToday())b.classList.add('today');
+      b.setAttribute('aria-label',d.toLocaleDateString('ru-RU',{day:'numeric',month:'long',year:'numeric'}));
+      const num=document.createElement('span');num.textContent=d.getDate();b.append(num);
+      if(calendarEvents.some(e=>e.date===day)){const dot=document.createElement('span');dot.className='calendar-dot';dot.setAttribute('aria-label','Есть события');b.append(dot);}
+      b.onclick=()=>{calendarSelected=day;calendarYear=d.getFullYear();calendarMonth=d.getMonth();$('calendar-date').value=day;calendarRender();};
+      cells.append(b);
+    }
+    $('calendar-selected-title').textContent=new Date(calendarSelected+'T12:00:00').toLocaleDateString('ru-RU',{weekday:'long',day:'numeric',month:'long'});
+    const agenda=$('calendar-events');agenda.replaceChildren();
+    const dayEvents=calendarEvents.filter(e=>e.date===calendarSelected).sort((a,b)=>(a.time||'99:99').localeCompare(b.time||'99:99')||a.title.localeCompare(b.title));
+    if(!dayEvents.length){const p=document.createElement('p');p.className='calendar-empty';p.textContent=calendarLoaded?'На эту дату событий нет.':'Загружаю события…';agenda.append(p);}
+    for(const e of dayEvents){
+      const row=document.createElement('div');row.className='calendar-event';
+      const content=document.createElement('div');content.className='calendar-event-content';
+      const label=document.createElement('div');label.className='calendar-event-title';label.textContent=e.title;
+      if(e.time){const tm=document.createElement('span');tm.className='calendar-event-time';tm.textContent=e.time;content.append(tm);}
+      content.append(label);
+      if(e.note){const note=document.createElement('div');note.className='calendar-event-note';note.textContent=e.note;content.append(note);}
+      row.append(content);
+      if(calendarEditorKey){
+        const buttons=document.createElement('div');buttons.className='calendar-event-actions';
+        const edit=document.createElement('button');edit.type='button';edit.textContent='✎';edit.title='Изменить';edit.setAttribute('aria-label','Изменить '+e.title);
+        edit.onclick=()=>{calendarEditId=e.id;$('calendar-date').value=e.date;$('calendar-time').value=e.time||'';$('calendar-title').value=e.title;$('calendar-note').value=e.note||'';$('calendar-form-title').textContent='Изменить событие';$('calendar-title').focus();};
+        const del=document.createElement('button');del.type='button';del.textContent='×';del.title='Удалить';del.setAttribute('aria-label','Удалить '+e.title);
+        del.onclick=async()=>{if(confirm('Удалить событие «'+e.title+'»?'))await calendarSave(calendarEvents.filter(x=>x.id!==e.id));};
+        buttons.append(edit,del);row.append(buttons);
+      }
+      agenda.append(row);
+    }
+    $('calendar-editor').hidden=!calendarEditorKey;
+    $('calendar-deactivate').hidden=!calendarEditorKey;
+    $('calendar-activate').hidden=!!calendarEditorKey;
+    $('calendar-editor-key').hidden=!!calendarEditorKey;
+    if(!calendarEditId)$('calendar-date').value=calendarSelected;
+  }
+  async function calendarSave(proposed){
+    if(calendarBusy){calendarMessage('Дождитесь завершения предыдущей операции.',true);return;}
+    if(!syncConfig||!calendarEditorKey){calendarMessage('Нужен ключ редактора.',true);return;}
+    calendarBusy=true;
+    try{
+      // Перед сохранением проверяем актуальную версию, чтобы не перезаписать чужие изменения.
+      const remote=await calendarRPC('household_calendar_get',{p_secret:syncConfig.secret});
+      if(remote.revision!==calendarRevision)throw Error('События изменились на другом устройстве. Обновите календарь и повторите действие.');
+      const result=await calendarRPC('household_calendar_put',{p_editor_secret:calendarEditorKey,p_revision:calendarRevision,p_events:proposed});
+      calendarRevision=result.revision;calendarEvents=calendarNormalize(proposed);calendarLoaded=true;
+      calendarEditId=null;$('calendar-form').reset();$('calendar-form-title').textContent='Добавить событие';calendarRender();
+      calendarMessage('Событие сохранено в общем календаре.');
+    }catch(e){calendarMessage('Не удалось сохранить: '+e.message,true);}
+    finally{calendarBusy=false;}
+  }
+  $('calendar-prev').onclick=()=>{const d=new Date(calendarYear,calendarMonth-1,1);calendarYear=d.getFullYear();calendarMonth=d.getMonth();calendarRender();};
+  $('calendar-next').onclick=()=>{const d=new Date(calendarYear,calendarMonth+1,1);calendarYear=d.getFullYear();calendarMonth=d.getMonth();calendarRender();};
+  $('calendar-form').onsubmit=async e=>{
+    e.preventDefault();const date=$('calendar-date').value,title=$('calendar-title').value.trim();
+    if(!date||!title)return;
+    const newEvent={id:calendarEditId||uid(),date,title:title.slice(0,140),time:$('calendar-time').value,note:$('calendar-note').value.trim().slice(0,500)};
+    if(calendarEvents.length>=500&&!calendarEditId){calendarMessage('Максимум 500 событий.',true);return;}
+    const proposed=calendarEditId?calendarEvents.map(x=>x.id===calendarEditId?newEvent:x):[...calendarEvents,newEvent];
+    await calendarSave(proposed);
+  };
+  $('calendar-cancel').onclick=()=>{calendarEditId=null;$('calendar-form').reset();$('calendar-form-title').textContent='Добавить событие';$('calendar-date').value=calendarSelected;};
+  $('calendar-activate').onclick=()=>{
+    const key=$('calendar-editor-key').value.trim();
+    if(key.length<32){calendarMessage('Введите личный ключ редактора (не менее 32 символов).',true);return;}
+    calendarEditorKey=key;try{localStorage.setItem(CAL_EDITOR_KEY,key);}catch{}
+    $('calendar-editor-key').value='';calendarEditId=null;calendarRender();
+    calendarMessage('Режим редактирования включён. Правильность ключа проверится при сохранении.');
+  };
+  $('calendar-deactivate').onclick=()=>{
+    calendarEditorKey='';calendarEditId=null;try{localStorage.removeItem(CAL_EDITOR_KEY);}catch{}
+    calendarRender();calendarMessage('Календарь открыт только для просмотра.');
+  };
+  window.addEventListener('focus',()=>{if(calendarOpen)void calendarRefresh();});
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden&&calendarOpen)void calendarRefresh();});
+  setInterval(()=>{if(calendarOpen&&!document.hidden)void calendarRefresh();},15000);
 
   render();updateUndoImport();initSync();
 })();
