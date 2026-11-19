@@ -160,6 +160,11 @@ h2{font-size:23px;letter-spacing:-.025em;line-height:1.2;margin:0 0 4px}
 .calendar-help{font-size:12px;color:#aaa;margin:10px 0}
 @media(max-width:520px){.calendar-panel{padding:14px}.tabs{gap:4px}.tab{font-size:13px;padding:7px 1px}.calendar-day{min-height:48px}.calendar-form{grid-template-columns:1fr}}
 @media(max-width:360px){.tab-count{font-size:10px}.calendar-weekdays,.calendar-days{gap:2px}.calendar-day{min-height:44px}}
+.notify-panel{margin:20px 0 0;padding:19px;border:1px solid #484848;border-radius:17px;background:#1b1b1b}
+.notify-panel h2{margin:0 0 8px}.notify-actions{display:flex;gap:8px;flex-wrap:wrap}
+.notify-history{display:grid;gap:8px;margin-top:10px}
+.notify-history p{font-size:13px;color:#d0d0d0;margin:0;padding:8px 0;border-top:1px solid #3b3b3b;overflow-wrap:anywhere}
+@media(max-width:520px){.notify-panel{padding:14px}}
 </style>
 </head>
 <body>
@@ -224,6 +229,16 @@ h2{font-size:23px;letter-spacing:-.025em;line-height:1.2;margin:0 0 4px}
     <button type="button" id="undo-import" hidden>Отменить последний импорт</button>
   </section>
   <div role="status" aria-live="polite" id="status" class="status"></div>
+  <section class="notify-panel" aria-label="Уведомления об изменениях">
+    <h2>Уведомления</h2>
+    <p class="sync-description">Показывать изменения в списках и календаре, пока сайт открыт. Для уведомлений при закрытом сайте потребуется отдельная настройка push или Telegram.</p>
+    <div class="notify-actions">
+      <button type="button" class="secondary" id="notify-enable">Включить уведомления</button>
+      <button type="button" class="secondary" id="notify-disable" hidden>Отключить</button>
+    </div>
+    <p class="sync-status" id="notify-state" aria-live="polite">Уведомления выключены.</p>
+    <div id="notify-history" class="notify-history" role="log" aria-label="Последние изменения"></div>
+  </section>
   <section class="sync-panel" aria-label="Синхронизация между устройствами">
     <div class="sync-head"><h2>Общий доступ</h2><span class="sync-pill" id="sync-indicator">Только на устройстве</span></div>
     <p class="sync-description">На одном устройстве откройте общий список, затем нажмите «Скопировать общую ссылку» и отправьте её второму участнику. Дела и галочки будут общими.</p>
@@ -593,12 +608,12 @@ h2{font-size:23px;letter-spacing:-.025em;line-height:1.2;margin:0 0 4px}
       conflictNotice('Одно и то же дело изменено по-разному.');return;
     }
     if(eq(initial,remote)){storeBase(revision,remote);syncDisplay('Списки синхронизированы.','ok');return}
-    if(eq(initial,base.data)){setRemoteData(remote,'Обновление с другого устройства');storeBase(revision,remote);syncDisplay('Получены изменения с другого устройства.','ok');return}
+    if(eq(initial,base.data)){const change=listChangeDescription(base.data,remote);setRemoteData(remote,'Обновление с другого устройства');storeBase(revision,remote);if(change)recordNotification(change);syncDisplay('Получены изменения с другого устройства.','ok');return}
     if(eq(remote,base.data)){await upload(revision,initial);return}
     const merged=mergeHousehold(base.data,initial,remote);
     if(!merged.ok){conflictNotice('Одновременно изменён один пункт: '+(people[merged.person]||merged.person)+'.');return}
-    if(eq(merged.data,remote)){setRemoteData(remote,'Объединение изменений');storeBase(revision,remote);syncDisplay('Изменения объединены.','ok');return}
-    if(!eq(merged.data,initial))setRemoteData(merged.data,'Объединение изменений');
+    if(eq(merged.data,remote)){const change=listChangeDescription(base.data,remote);setRemoteData(remote,'Объединение изменений');storeBase(revision,remote);if(change)recordNotification(change);syncDisplay('Изменения объединены.','ok');return}
+    if(!eq(merged.data,initial)){const change=listChangeDescription(base.data,remote);setRemoteData(merged.data,'Объединение изменений');if(change)recordNotification(change);}
     await upload(revision,merged.data);
   }
   async function doSync(force=false){
@@ -714,6 +729,75 @@ h2{font-size:23px;letter-spacing:-.025em;line-height:1.2;margin:0 0 4px}
   }
 
 
+
+  const NOTIFY_OPT_KEY='eva-dima-kasya-notifications-enabled-v1';
+  const NOTIFY_HISTORY_KEY='eva-dima-kasya-notifications-history-v1';
+  let notifyEnabled=false, notifyHistory=[];
+  try{
+    notifyEnabled=localStorage.getItem(NOTIFY_OPT_KEY)==='yes';
+    const previous=JSON.parse(localStorage.getItem(NOTIFY_HISTORY_KEY)||'[]');
+    if(Array.isArray(previous))notifyHistory=previous.filter(x=>x&&typeof x.text==='string').slice(0,12);
+  }catch{}
+  function notifyRender(){
+    $('notify-enable').hidden=notifyEnabled;
+    $('notify-disable').hidden=!notifyEnabled;
+    const supported='Notification' in window;
+    $('notify-state').textContent=!notifyEnabled?'Отключены.':!supported?'Включена история изменений на странице. Системные уведомления недоступны в этом браузере.':
+      Notification.permission==='granted'?'Включены уведомления браузера, пока страница работает.':
+      'Включена история изменений. Системные уведомления не разрешены.';
+    const root=$('notify-history');root.replaceChildren();
+    for(const item of notifyHistory.slice(0,8)){
+      const p=document.createElement('p');p.textContent=new Date(item.at).toLocaleString('ru-RU')+' — '+item.text;root.append(p);
+    }
+  }
+  function recordNotification(message){
+    if(!notifyEnabled)return;
+    notifyHistory.unshift({text:message.slice(0,250),at:new Date().toISOString()});
+    notifyHistory=notifyHistory.slice(0,12);
+    try{localStorage.setItem(NOTIFY_HISTORY_KEY,JSON.stringify(notifyHistory));}catch{}
+    notifyRender();
+    if('Notification' in window&&Notification.permission==='granted'){
+      try{new Notification('Список дел · Ева, Дима, Кася',{body:message,tag:'household-change-'+Date.now()});}catch{}
+    }
+  }
+  function listChangeDescription(before,after){
+    const changed=[];
+    for(const id of ids){
+      if(eq(before.lists[id],after.lists[id]))continue;
+      const old=new Map(before.lists[id].map(x=>[x.id,x])),updated=new Map(after.lists[id].map(x=>[x.id,x]));
+      const newTasks=after.lists[id].filter(x=>!old.has(x.id));
+      const removed=before.lists[id].filter(x=>!updated.has(x.id));
+      const modified=after.lists[id].filter(x=>old.has(x.id)&&!eq(old.get(x.id),x));
+      if(newTasks.length===1&&!removed.length&&!modified.length)changed.push(people[id]+': новое дело «'+newTasks[0].text+'»');
+      else if(removed.length===1&&!newTasks.length&&!modified.length)changed.push(people[id]+': удалено дело «'+removed[0].text+'»');
+      else if(modified.length===1&&!newTasks.length&&!removed.length)changed.push(people[id]+': изменено дело «'+modified[0].text+'»');
+      else changed.push(people[id]+': изменены дела');
+    }
+    return changed.join('; ');
+  }
+  function calendarChangeDescription(before,after){
+    const a=new Map(before.map(x=>[x.id,x])),b=new Map(after.map(x=>[x.id,x]));
+    const created=after.filter(x=>!a.has(x.id)),deleted=before.filter(x=>!b.has(x.id)),updated=after.filter(x=>a.has(x.id)&&!eq(a.get(x.id),x));
+    if(created.length===1&&!deleted.length&&!updated.length)return 'Календарь: новое событие «'+created[0].title+'»';
+    if(deleted.length===1&&!created.length&&!updated.length)return 'Календарь: удалено событие «'+deleted[0].title+'»';
+    if(updated.length===1&&!created.length&&!deleted.length)return 'Календарь: изменено событие «'+updated[0].title+'»';
+    return 'В календаре появились изменения';
+  }
+  $('notify-enable').onclick=async()=>{
+    notifyEnabled=true;
+    try{localStorage.setItem(NOTIFY_OPT_KEY,'yes');}catch{}
+    if('Notification' in window&&Notification.permission==='default'){
+      try{await Notification.requestPermission();}catch{}
+    }
+    notifyRender();
+  };
+  $('notify-disable').onclick=()=>{
+    notifyEnabled=false;
+    try{localStorage.removeItem(NOTIFY_OPT_KEY);}catch{}
+    notifyRender();
+  };
+  notifyRender();
+
   // Календарь хранится отдельно от задач. Только семейный ключ позволяет читать;
   // отдельный ключ редактора нужен для записи и не входит в ссылку-приглашение.
   const CAL_EDITOR_KEY='eva-dima-kasya-calendar-editor-v1';
@@ -750,7 +834,9 @@ h2{font-size:23px;letter-spacing:-.025em;line-height:1.2;margin:0 0 4px}
     try{
       const r=await calendarRPC('household_calendar_get',{p_secret:syncConfig.secret});
       if(!Number.isSafeInteger(r.revision))throw Error('Некорректная версия календаря');
-      calendarRevision=r.revision;calendarEvents=calendarNormalize(r.events);
+      const incoming=calendarNormalize(r.events);
+      if(calendarLoaded&&r.revision!==calendarRevision&&!eq(calendarEvents,incoming))recordNotification(calendarChangeDescription(calendarEvents,incoming));
+      calendarRevision=r.revision;calendarEvents=incoming;
       calendarLoaded=true;calendarRender();calendarMessage('Общий календарь обновлён.');
     }catch(e){calendarMessage('Не удалось загрузить календарь: '+e.message,true);}
     finally{calendarBusy=false;}
