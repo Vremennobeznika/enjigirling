@@ -789,7 +789,7 @@ h2{font-size:23px;letter-spacing:-.025em;line-height:1.2;margin:0 0 4px}
     if('Notification' in window&&Notification.permission==='default'){
       try{await Notification.requestPermission();}catch{}
     }
-    notifyRender();
+    notifyRender();void calendarRefresh();
   };
   $('notify-disable').onclick=()=>{
     notifyEnabled=false;
@@ -828,7 +828,7 @@ h2{font-size:23px;letter-spacing:-.025em;line-height:1.2;margin:0 0 4px}
     return data;
   }
   async function calendarRefresh(){
-    if(!calendarOpen||calendarBusy)return;
+    if(calendarBusy||(!calendarOpen&&!notifyEnabled))return;
     if(!syncConfig){calendarMessage('Подключите семейный список ниже, чтобы видеть календарь.');return;}
     calendarBusy=true;
     try{
@@ -924,9 +924,9 @@ h2{font-size:23px;letter-spacing:-.025em;line-height:1.2;margin:0 0 4px}
     calendarEditorKey='';calendarEditId=null;try{localStorage.removeItem(CAL_EDITOR_KEY);}catch{}
     calendarRender();calendarMessage('Календарь открыт только для просмотра.');
   };
-  window.addEventListener('focus',()=>{if(calendarOpen)void calendarRefresh();});
-  document.addEventListener('visibilitychange',()=>{if(!document.hidden&&calendarOpen)void calendarRefresh();});
-  setInterval(()=>{if(calendarOpen&&!document.hidden)void calendarRefresh();},15000);
+  window.addEventListener('focus',()=>{if(calendarOpen||notifyEnabled)void calendarRefresh();});
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden&&(calendarOpen||notifyEnabled))void calendarRefresh();});
+  setInterval(()=>{if((calendarOpen||notifyEnabled)&&!document.hidden)void calendarRefresh();},15000);
 
   render();updateUndoImport();initSync();
 })();
