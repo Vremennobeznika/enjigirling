@@ -1,1 +1,70 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta http-equiv="refresh" content="0;url=https://dcltykcoobhdermgauud.supabase.co/functions/v1/checklist"><title>checklist</title></head><body><p>Список дел перенесён в закрытый раздел: <a href="https://dcltykcoobhdermgauud.supabase.co/functions/v1/checklist">Открыть checklist</a>.</p></body></html>
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>checklist — вход</title>
+<style>
+:root{color-scheme:dark}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#101010;color:#eee;font:16px/1.5 system-ui;display:grid;place-items:center;padding:16px}
+main{width:min(100%,420px);background:#1b1b1b;border:1px solid #484848;border-radius:17px;padding:25px}
+h1{margin:0 0 7px;font-size:30px}p{color:#bdbdbd;font-size:14px}
+label{display:block;margin:16px 0}input,select{display:block;margin-top:7px;width:100%;padding:13px;border:1px solid #777;border-radius:9px;background:#101010;color:#fff;font:inherit}
+button{width:100%;margin-top:12px;padding:14px;border:0;border-radius:9px;background:#eee;color:#111;font:600 16px system-ui}
+#message{color:#ffb5b5}button:disabled{opacity:.6}
+</style>
+</head>
+<body>
+<main id="login">
+<h1>checklist</h1>
+<p>Закрытые списки дел и календарь. Доступ Еве и Диме.</p>
+<form id="signin">
+<label>Участник<select name="user"><option value="eva">Ева</option><option value="dima">Дима</option></select></label>
+<label>Пароль или личный ключ редактора<input name="password" type="password" autocomplete="current-password" minlength="12" required></label>
+<button type="submit">Войти</button>
+</form>
+<p id="message" role="alert" aria-live="polite"></p>
+<p>Первый вход — по личному ключу редактора календаря. После входа можно создать отдельный пароль в настройках.</p>
+</main>
+<script>
+(function(){
+'use strict';
+const API='https://dcltykcoobhdermgauud.supabase.co/functions/v1/checklist';
+const TOKEN='checklist_session';
+const sign=document.getElementById('signin');
+const msg=document.getElementById('message');
+const view=location.search.includes('settings=1')?'settings':location.search.includes('history=1')?'history':'app';
+if(new URLSearchParams(location.search).has('logout')){
+ localStorage.removeItem(TOKEN);location.replace('./');return;
+}
+function say(t){msg.textContent=t}
+async function request(params,method,data){
+ const token=localStorage.getItem(TOKEN);
+ const resp=await fetch(API+params,{method:method||'GET',mode:'cors',credentials:'omit',cache:'no-store',headers:{...(token?{'Authorization':'Bearer '+token}:{}),...(data?{'Content-Type':'application/json'}:{})},...(data?{body:JSON.stringify(data)}:{})});
+ const json=await resp.json().catch(()=>({message:'Некорректный ответ сервера'}));
+ if(!resp.ok){const err=new Error(json.message||('Ошибка '+resp.status));err.status=resp.status;throw err}
+ return json;
+}
+function render(html){
+ // All application markup is supplied only after verifying the signed server session.
+ const support='<script>document.addEventListener("submit",async function(e){const f=e.target;if(!f.matches("form[action*=settings]"))return;e.preventDefault();const b=f.querySelector("button[type=submit]");if(b)b.disabled=true;const data=Object.fromEntries(new FormData(f));data.kind=data.action;data.action="settings";try{const t=localStorage.getItem("checklist_session");const r=await fetch("https://dcltykcoobhdermgauud.supabase.co/functions/v1/checklist?client=1",{method:"POST",mode:"cors",credentials:"omit",headers:{"Content-Type":"application/json","Authorization":"Bearer "+t},body:JSON.stringify(data)});const v=await r.json();if(!r.ok)throw Error(v.message||"Ошибка сохранения");if(v.token)localStorage.setItem("checklist_session",v.token);alert(v.message||"Сохранено");location.reload()}catch(err){alert(err.message);if(b)b.disabled=false}},true);<\/script>';
+ document.open();document.write(html.replace('</body>',support+'</body>'));document.close();
+}
+async function start(){
+ if(!localStorage.getItem(TOKEN))return;
+ try{const result=await request('?client=1&view='+encodeURIComponent(view));render(result.html)}
+ catch(e){if(e.status===401)localStorage.removeItem(TOKEN);else say(e.message)}
+}
+sign.addEventListener('submit',async e=>{
+ e.preventDefault();const b=sign.querySelector('button');b.disabled=true;say('');
+ const data=Object.fromEntries(new FormData(sign));data.action='login';
+ try{const response=await request('?client=1','POST',data);localStorage.setItem(TOKEN,response.token);await start()}
+ catch(err){say(err.message)}
+ finally{b.disabled=false}
+});
+start();
+})();
+</script>
+</body>
+</html>
