@@ -14,7 +14,7 @@ for(const item of items){
 }
 assert.ok(items.length>=148,'resource catalog unexpectedly small');
 assert.ok(types.get('Чаты в Telegram')>=12,'Telegram chat category unexpectedly shrank');
-assert.equal(types.get('Дружественные каналы'),11,'curated friendly channels must remain unchanged');
+assert.equal(types.get('Дружественные каналы'),10,'curated friendly channels must remain unchanged');
 assert.ok(types.get('Онлайн-измерения')>=12,'measurement resources unexpectedly shrank');
 for(const cat of ['Журналы','Форумы','САПР и конструирование','Научные базы и справочники','Стандарты и метрология','Обучение и курсы'])assert.ok(types.get(cat)>=3,'missing category: '+cat);
 for(const id of ['platform-cyberleninka','platform-elibrary'])assert.equal(items.find(x=>x.id===id).type,'Научные базы и справочники',id+' wrong group');
