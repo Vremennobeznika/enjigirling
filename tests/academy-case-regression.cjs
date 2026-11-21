@@ -27,7 +27,7 @@ assert.equal(6/120*100,5);
 assert.ok(3>=3&&2<=2,'conditional Ac/Re decision');
 
 const intro=fs.readFileSync('academy-draft.html','utf8');
-const e01=intro.match(/<section class="lesson" id="E01">([\\s\\S]*?)<\\/section>/);
+const e01=intro.match(new RegExp('<section class="lesson" id="E01">([\\s\\S]*?)<\\/section>'));
 assert.ok(e01,'E01 lesson exists');
 assert.match(e01[1],/2,5 А перевести в мА/);
 assert.match(e01[1],/4700 Ом перевести в кОм/);
