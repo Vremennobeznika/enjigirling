@@ -16,6 +16,6 @@ jobs:
         with:
           node-version: '22'
       - name: Structural and answer-map checks
-        run: node tests/academy-draft.cjs
+        run: node tests/academy-draft.cjs && node tests/academy-runtime.cjs
       - name: Existing unit tests
         run: npm run test:unit
