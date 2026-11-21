@@ -1,13 +1,13 @@
 /* ENJIGIRLING engineering lessons: deterministic, offline and dependency-free. */
 (function(){
 'use strict';
-const key='enjigirling:engineering-lessons:v1';
-const expected={ohm:20,signal:50,tolerance:25.15};
+const key='enjigirling:engineering-lessons:v2';
+const expected={ohm:20,ohm2:12,signal:50,signal2:16,tolerance:25.15,tolerance2:0.03};
 let done={};
 try{const saved=JSON.parse(localStorage.getItem(key)||'{}');if(saved&&typeof saved==='object'&&!Array.isArray(saved)){for(const id of Object.keys(expected))if(saved[id]===true)done[id]=true;}}catch(_){}
 const progressText=document.getElementById('progressText');
 const progressBar=document.getElementById('progressBar');
-function render(){const n=Object.keys(done).filter(id=>done[id]===true).length;progressText.textContent=n+' из 3';progressBar.value=n;}
+function render(){const n=Object.keys(done).filter(id=>done[id]===true).length;progressText.textContent=n+' из 6';progressBar.value=n;}
 for(const form of document.querySelectorAll('form[data-task]')){
  const id=form.dataset.task,field=form.elements.namedItem('answer'),status=form.querySelector('[role="status"]');
  if(!Object.prototype.hasOwnProperty.call(expected,id))continue;
