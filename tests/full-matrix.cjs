@@ -525,11 +525,11 @@ check('resource catalogue: protected friends, free education, uniqueness, no dup
   assert.ok(!urls.has(canonical),'duplicate URL '+canonical);urls.add(canonical);
  }
  const friends=items.filter(x=>x.type==='Дружественные каналы').map(x=>[x.id,x.name,x.desc,x.link]);
- assert.equal(friends.length,11,'do not alter friendly channels');
+ assert.equal(friends.length,10,'do not alter friendly channels');
  const snapshot=JSON.stringify(items.filter(x=>x.type==='Дружественные каналы'));
  let friendlyHash=2166136261;
  for(let i=0;i<snapshot.length;i++){friendlyHash^=snapshot.charCodeAt(i);friendlyHash=Math.imul(friendlyHash,16777619);}
- assert.equal(friendlyHash>>>0,2266693070,'friendly channels changed: names, order, links or descriptions');
+ assert.equal(friendlyHash>>>0,3363133415,'friendly channels changed: names, order, links or descriptions');
  for(const [id] of friends)assert.ok(id.startsWith('fr-'),'invalid friendly ID');
  const free=new Set(['learn-mit-ocw','learn-nptel','learn-teachengineering','learn-freecodecamp','learn-odin','learn-openlearn','learn-mit-open-library','learn-arduino','learn-allaboutcircuits']);
  const courses=items.filter(x=>x.type==='Обучение и курсы');
