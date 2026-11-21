@@ -1,0 +1,21 @@
+name: Academy draft QA
+on:
+  push:
+    branches:
+      - draft/engineering-academy
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  academy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Structural and answer-map checks
+        run: node tests/academy-draft.cjs
+      - name: Existing unit tests
+        run: npm run test:unit
