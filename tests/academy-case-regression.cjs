@@ -38,4 +38,16 @@ assert.equal(e01Map['E01-1'],2.5*10**3,'E01-1 SI milli conversion');
 assert.equal(e01Map['E01-2'],4700/10**3,'E01-2 SI kilo conversion');
 console.log('PASS: E01 problem statements, solutions and answer map cross-checked against BIPM SI prefixes.');
 
+const e03=intro.split('<section class="lesson" id="E03">')[1]?.split('</section>')[0];
+assert.ok(e03,'E03 lesson exists');
+assert.match(e03,/120 Ом и 330 Ом последовательно/);
+assert.match(e03,/Два резистора по 200 Ом параллельно/);
+assert.match(e03,/120 \+ 330 = 450 Ом/);
+assert.match(e03,/200 × 200 \/ 400 = 100 Ом/);
+assert.match(e03,/openstax.org\/books\/university-physics-volume-2\/pages\/10-2-resistors-in-series-and-parallel/);
+assert.equal(e01Map['E03-1'],120+330,'E03-1 series resistor calculation');
+assert.equal(e01Map['E03-2'],1/(1/200+1/200),'E03-2 parallel resistor calculation');
+assert.ok(e01Map['E03-2']<200,'parallel equivalent must be less than either positive branch');
+console.log('PASS: E03 circuit model, worked examples and answer map.');
+
 console.log('PASS: A12, M10, Q10 example presence and independently evaluated arithmetic; not full source attestation.');
