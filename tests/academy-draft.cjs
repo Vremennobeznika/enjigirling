@@ -48,3 +48,12 @@ for(const link of links){
 }
 assert.match(index,/\[hidden\]\{display:none!important\}/,'filtered cards must actually hide');
 console.log('PASS: 52 indexed lesson links and targets');
+
+
+const welding=fs.readFileSync('academy-draft-part3.html','utf8').match(/<section class="lesson" id="M08">([\\s\\S]*?)<\\/section>/);
+assert.ok(welding,'M08 welding lesson exists');
+assert.ok(!/погонная энергия/i.test(welding[1]),'M08 must not label power or total energy as energy per unit length');
+assert.match(welding[1],/мощность P=UI/,'M08 electrical power definition');
+assert.match(welding[1],/энергия E=Pt/,'M08 electrical energy definition');
+assert.ok(index.includes('Сварка: электрическая мощность и энергия (учебная модель)'),'index must use corrected M08 title');
+console.log('PASS: welding energy and power terminology regression');
