@@ -155,4 +155,17 @@ for(const [id,values,expected] of [
 }
 console.log('PASS: A04 analog scaling, A05 task cycles, A06 TON timer boundaries.');
 
+const a07=html.split('<section class="lesson" id="A07">')[1]?.split('</section>')[0];
+const a08=html.split('<section class="lesson" id="A08">')[1]?.split('</section>')[0];
+assert.ok(a07&&a08,'A07 and A08 lessons exist');
+assert.match(a07,/остальных сочетаний состояния и события переход здесь не определён/);
+assert.match(a07,/не логика аварийного останова/);
+assert.equal(part3Answers['A07-1'],1,'A07 transition on start');
+assert.equal(part3Answers['A07-2'],2,'A07 transition on stop');
+assert.match(a08,/Квитирование не означает исчезновение опасного состояния/);
+assert.match(a08,/без фиксации состояния/);
+assert.equal(part3Answers['A08-1'],5-2,'A08 unacknowledged count');
+assert.equal(part3Answers['A08-2'],8-3,'A08 remaining active conditions');
+console.log('PASS: A07 explicit state transitions and A08 alarm counts with acknowledgement semantics.');
+
 console.log('PASS: A12, M10, Q10 example presence and independently evaluated arithmetic; not full source attestation.');
