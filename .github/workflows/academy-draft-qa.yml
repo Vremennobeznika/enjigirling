@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - draft/engineering-academy
+  pull_request:
+    branches:
+      - main
   workflow_dispatch:
 permissions:
   contents: read
