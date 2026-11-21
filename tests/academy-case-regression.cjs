@@ -50,4 +50,14 @@ assert.equal(e01Map['E03-2'],1/(1/200+1/200),'E03-2 parallel resistor calculatio
 assert.ok(e01Map['E03-2']<200,'parallel equivalent must be less than either positive branch');
 console.log('PASS: E03 circuit model, worked examples and answer map.');
 
+const e04=intro.split('<section class="lesson" id="E04">')[1]?.split('</section>')[0];
+assert.ok(e04,'E04 lesson exists');
+assert.match(e04,/Опорная длина 50 мм, показание 50,2 мм/);
+assert.match(e04,/Опорное значение 100 мм, показание 99 мм/);
+assert.match(e04,/При нулевом опорном значении эта формула не определена/);
+assert.ok(Math.abs(e01Map['E04-1']-Math.abs(50.2-50))<1e-10,'E04-1 absolute deviation');
+assert.equal(e01Map['E04-2'],Math.abs(99-100)/100*100,'E04-2 percent deviation');
+assert.ok(!Number.isFinite(Math.abs(1-0)/Math.abs(0)*100),'zero reference is outside relative deviation domain');
+console.log('PASS: E04 task data, answers and nonzero-reference domain.');
+
 console.log('PASS: A12, M10, Q10 example presence and independently evaluated arithmetic; not full source attestation.');
