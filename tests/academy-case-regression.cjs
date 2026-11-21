@@ -25,4 +25,17 @@ assert.equal(8*40,320);
 assert.equal(3*40,120);
 assert.equal(6/120*100,5);
 assert.ok(3>=3&&2<=2,'conditional Ac/Re decision');
+
+const intro=fs.readFileSync('academy-draft.html','utf8');
+const e01=intro.match(/<section class="lesson" id="E01">([\\s\\S]*?)<\\/section>/);
+assert.ok(e01,'E01 lesson exists');
+assert.match(e01[1],/2,5 А перевести в мА/);
+assert.match(e01[1],/4700 Ом перевести в кОм/);
+assert.match(e01[1],/2,5 × 1000 = 2500 мА/);
+assert.match(e01[1],/4700 \/ 1000 = 4,7 кОм/);
+const e01Map=JSON.parse(fs.readFileSync('academy-draft.js','utf8').match(/const answers=(\\{[^;]+\\});/)[1]);
+assert.equal(e01Map['E01-1'],2.5*10**3,'E01-1 SI milli conversion');
+assert.equal(e01Map['E01-2'],4700/10**3,'E01-2 SI kilo conversion');
+console.log('PASS: E01 problem statements, solutions and answer map cross-checked against BIPM SI prefixes.');
+
 console.log('PASS: A12, M10, Q10 example presence and independently evaluated arithmetic; not full source attestation.');
