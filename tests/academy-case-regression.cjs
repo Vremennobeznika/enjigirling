@@ -20,7 +20,7 @@ assert.match(q,/Re=3/);
 assert.match(q,/отклонить партию по заданному учебному правилу/);
 assert.match(q,/не нормативная таблица/);
 assert.equal((12-4)/(20-4)*100,50);
-assert.equal((3.6-4)/(20-4)*100,-2.5);
+assert.ok(Math.abs((3.6-4)/(20-4)*100-(-2.5))<1e-10,'floating point signal extrapolation');
 assert.equal(8*40,320);
 assert.equal(3*40,120);
 assert.equal(6/120*100,5);
