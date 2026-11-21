@@ -125,4 +125,20 @@ assert.ok(Math.abs(part3Answers['E10-2']-24*(24/120))<1e-10,'E10-2 power');
 assert.ok(Math.abs(part3Answers['E10-2']-24**2/120)<1e-10,'E10-2 alternate power equation');
 console.log('PASS: E10 current, power, model limits and physics reference.');
 
+const a01=intro.split('<section class="lesson" id="A01">')[1]?.split('</section>')[0];
+assert.ok(a01,'A01 lesson exists');
+assert.match(a01,/Задание 80 °C, измерено 74 °C/);
+assert.match(a01,/Задание 40%, измерено 52%/);
+assert.match(a01,/процентных пунктах/);
+assert.equal(e01Map['A01-1'],80-74,'A01-1 temperature control error');
+assert.equal(e01Map['A01-2'],40-52,'A01-2 signed percentage-point error');
+const a02=intro.split('<section class="lesson" id="A02">')[1]?.split('</section>')[0];
+assert.ok(a02,'A02 lesson exists');
+assert.match(a02,/Входы И: 1 и 0/);
+assert.match(a02,/Входы ИЛИ: 0 и 1/);
+assert.match(a02,/не схема безопасности/);
+assert.equal(e01Map['A02-1'],Number(Boolean(1&&0)),'A02-1 AND truth table');
+assert.equal(e01Map['A02-2'],Number(Boolean(0||1)),'A02-2 OR truth table');
+console.log('PASS: A01 signed control error and A02 boolean logic with safety boundary.');
+
 console.log('PASS: A12, M10, Q10 example presence and independently evaluated arithmetic; not full source attestation.');
