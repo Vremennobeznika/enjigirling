@@ -26,7 +26,7 @@ const expected={
 let verified=0;
 for(const [file,lessons] of Object.entries(expected)){
  const source=fs.readFileSync(file,'utf8');
- const match=source.match(/const answers=(\\{[^;]+\\});/);
+ const match=source.match(/const answers=(\{[^;]+\});/);
  assert.ok(match,'answer map missing in '+file);
  const actual=JSON.parse(match[1]);
  const reference={};
