@@ -36,3 +36,15 @@ for(const [htmlFile,jsFile,lessons] of batches){
 }
 assert.equal(total,98);
 console.log('PASS: 49 draft lessons, 98 answers. Structural tests only; browser and subject QA not covered.');
+
+const index=fs.readFileSync('academy-index-draft.html','utf8');
+const links=[...index.matchAll(/class="item" href="([^"]+)"/g)].map(m=>m[1]);
+assert.equal(links.length,52,'academy index must contain all 52 lesson links');
+assert.equal(new Set(links).size,52,'academy index duplicate lesson links');
+for(const link of links){
+ const [file,fragment]=link.split('#');
+ assert.ok(fs.existsSync(file),'missing page: '+file);
+ assert.ok(fs.readFileSync(file,'utf8').includes('id="'+decodeURIComponent(fragment)+'"'),'missing anchor: '+link);
+}
+assert.match(index,/\[hidden\]\{display:none!important\}/,'filtered cards must actually hide');
+console.log('PASS: 52 indexed lesson links and targets');
