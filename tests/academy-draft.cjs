@@ -50,7 +50,7 @@ assert.match(index,/\[hidden\]\{display:none!important\}/,'filtered cards must a
 console.log('PASS: 52 indexed lesson links and targets');
 
 
-const welding=fs.readFileSync('academy-draft-part3.html','utf8').match(/<section class="lesson" id="M08">([\\s\\S]*?)<\\/section>/);
+const welding=fs.readFileSync('academy-draft-part3.html','utf8').match(/<section class="lesson" id="M08">([\s\S]*?)<\/section>/);
 assert.ok(welding,'M08 welding lesson exists');
 assert.ok(!/погонная энергия/i.test(welding[1]),'M08 must not label power or total energy as energy per unit length');
 assert.match(welding[1],/мощность P=UI/,'M08 electrical power definition');
