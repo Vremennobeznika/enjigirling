@@ -73,4 +73,14 @@ assert.equal(part2Answers['E05-1'],1.25*1000,'E05-1 V to mV');
 assert.equal(part2Answers['E05-2'],750/1000,'E05-2 mV to V');
 console.log('PASS: E05 task statements, SI conversions, answer map and safety disclaimer.');
 
+const e08=part2.split('<section class="lesson" id="E08">')[1]?.split('</section>')[0];
+assert.ok(e08,'E08 lesson exists');
+assert.match(e08,/Три показания: 10, 12, 14 мм/);
+assert.match(e08,/условиях повторяемости/);
+assert.match(e08,/выборочное стандартное отклонение/);
+const readings=[10,12,14];
+assert.equal(part2Answers['E08-1'],readings.reduce((a,b)=>a+b,0)/readings.length,'E08-1 mean');
+assert.equal(part2Answers['E08-2'],Math.max(...readings)-Math.min(...readings),'E08-2 range');
+console.log('PASS: E08 numerical statistics and repeatability caveat.');
+
 console.log('PASS: A12, M10, Q10 example presence and independently evaluated arithmetic; not full source attestation.');
