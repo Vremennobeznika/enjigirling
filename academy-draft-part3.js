@@ -27,7 +27,7 @@ for(const form of document.querySelectorAll('form[data-id]')){
   if(!Object.prototype.hasOwnProperty.call(answers,id))return;
   const raw=String(form.elements.namedItem('answer').value).trim().replace(',','.');
   const result=form.querySelector('.result');
-  if(!/^[+-]?(?:\\d+(?:\\.\\d*)?|\\.\\d+)$/.test(raw)||!Number.isFinite(Number(raw))){
+  if(!/^[+-]?(?:\d+(?:\.\d*)?|\.\d+)$/.test(raw)||!Number.isFinite(Number(raw))){
    result.textContent='Введите конечное число.';
    result.className='result bad';
    return;
