@@ -56,6 +56,14 @@ for(const [jsFile,htmlFile] of cases){
   assertions+=2;
  }
  assert.equal(count.textContent,handlers.size+' из '+handlers.size);
+ // Regression: no wrong or near-but-wrong answer may be credited for any of 98 tasks.
+ for(const [id,answer] of Object.entries(answers)){
+  const wrong=answer+Math.max(0.01,Math.abs(answer)*0.01);
+  const res=submit(id,String(wrong));
+  assert.ok(!res.textContent.includes('Верно'),jsFile+' credited incorrect answer '+id);
+  assert.ok(!res.className.includes('ok'),jsFile+' marked incorrect answer as correct '+id);
+  assertions+=2;
+ }
  const first=Object.keys(answers)[0];
  submit(first,String(answers[first]));
  assert.equal(count.textContent,handlers.size+' из '+handlers.size,'double counting');
