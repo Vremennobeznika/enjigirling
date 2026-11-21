@@ -33,7 +33,7 @@ assert.match(e01[1],/2,5 А перевести в мА/);
 assert.match(e01[1],/4700 Ом перевести в кОм/);
 assert.match(e01[1],/2,5 × 1000 = 2500 мА/);
 assert.match(e01[1],/4700 \/ 1000 = 4,7 кОм/);
-const e01Map=JSON.parse(fs.readFileSync('academy-draft.js','utf8').match(/const answers=(\\{[^;]+\\});/)[1]);
+const e01Map=JSON.parse(fs.readFileSync('academy-draft.js','utf8').split('const answers=')[1].split(';')[0]);
 assert.equal(e01Map['E01-1'],2.5*10**3,'E01-1 SI milli conversion');
 assert.equal(e01Map['E01-2'],4700/10**3,'E01-2 SI kilo conversion');
 console.log('PASS: E01 problem statements, solutions and answer map cross-checked against BIPM SI prefixes.');
