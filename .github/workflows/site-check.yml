@@ -50,7 +50,9 @@ jobs:
       - name: Install browser test tooling
         run: npm install --no-audit --no-fund
       - name: Install Chromium and WebKit
-        run: npx playwright install --with-deps chromium webkit
+        run: |
+          cat /etc/os-release
+          npx playwright install --with-deps chromium webkit
       - name: Test site at desktop and mobile widths
         run: npx playwright test
       - name: Save failure screenshots and traces
