@@ -21,15 +21,15 @@
 | E07 | Период и частота | [BIPM](https://www.bipm.org/en/si-brochure-9) | Требует построчной сверки |
 | A01 | Ошибка регулирования | [PLC](https://webstore.iec.ch/en/publication/68533) | Требует построчной сверки |
 | A02 | Дискретная логика | [PLC](https://webstore.iec.ch/en/publication/68533) | Требует построчной сверки |
-| C01 | Масштаб чертежа | [GPS](https://www.iso.org/standard/66777.html) | Требует построчной сверки |
+| C01 | Масштаб чертежа | [ISO 5455:1979](https://www.iso.org/standard/11500.html) | Требует построчной сверки |
 | C05 | Размерная цепь | [GPS](https://www.iso.org/standard/66777.html) | Требует построчной сверки |
 | M02 | Напряжение при растяжении | [BIPM](https://www.bipm.org/en/si-brochure-9) | Требует построчной сверки |
-| M09 | Выход годных изделий | [NIST](https://www.nist.gov/programs-projects/nistsematech-engineering-statistics-handbook) | Требует построчной сверки |
+| M09 | Выход годных изделий | [NIST — доля несоответствующих](https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc332.htm) | Требует построчной сверки |
 | Q01 | Критерий приёмки | [GUM](https://www.bipm.org/en/committees/jc/jcgm/publications) | Требует построчной сверки |
-| Q04 | Доля несоответствий | [NIST](https://www.nist.gov/programs-projects/nistsematech-engineering-statistics-handbook) | Требует построчной сверки |
+| Q04 | Доля несоответствий | [NIST — доля несоответствующих](https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc332.htm) | Требует построчной сверки |
 | E05 | Перевод единиц напряжения и предел измерения | [BIPM](https://www.bipm.org/en/si-brochure-9) | Требует построчной сверки |
 | E08 | Повторяемость измерений | [NIST-M](https://www.nist.gov/publications/nistsematech-engineering-statistics-handbook-chapter-2-measurement-process) | Требует построчной сверки |
-| E09 | Измерение и допуск | [GPS](https://www.iso.org/standard/66777.html) | Требует построчной сверки |
+| E09 | Измерение и допуск | [ISO 286-1:2010](https://www.iso.org/standard/45975.html) | Требует построчной сверки |
 | A04 | Диагностика аналогового сигнала | [PLC](https://webstore.iec.ch/en/publication/68533) | Требует построчной сверки |
 | A05 | Циклическое выполнение логики | [PLC](https://webstore.iec.ch/en/publication/68533) | Требует построчной сверки |
 | A06 | Таймеры и задержки | [PLC](https://webstore.iec.ch/en/publication/68533) | Требует построчной сверки |
@@ -46,8 +46,8 @@
 | A10 | Протокол имитационных испытаний | [ISO-Q](https://www.iso.org/standard/9001) | Требует построчной сверки |
 | A11 | Управление изменениями | [ISO-Q](https://www.iso.org/standard/9001) | Требует построчной сверки |
 | A12 | Сквозной кейс автоматизации | [PLC](https://webstore.iec.ch/en/publication/68533) | Требует построчной сверки |
-| C04 | Зазор и натяг | [GPS](https://www.iso.org/standard/66777.html) | Требует построчной сверки |
-| C07 | Шероховатость: среднее отклонение | [SURFACE](https://www.iso.org/committee/54924/x/catalogue/) | Требует построчной сверки |
+| C04 | Зазор и натяг | [ISO 286-1:2010](https://www.iso.org/standard/45975.html) | Требует построчной сверки |
+| C07 | Шероховатость: среднее отклонение | [ISO 21920-2:2021](https://www.iso.org/standard/72226.html) | Требует построчной сверки |
 | C08 | Проверка читаемости чертежа | [GPS](https://www.iso.org/standard/66777.html) | Требует построчной сверки |
 | C09 | Трассируемость редакций | [ISO-Q](https://www.iso.org/standard/9001) | Требует построчной сверки |
 | C10 | Итоговая проверка детали | [GPS](https://www.iso.org/standard/66777.html), [GUM](https://www.bipm.org/en/committees/jc/jcgm/publications) | Требует построчной сверки |
@@ -58,11 +58,11 @@
 | M08 | Сварка: электрическая мощность и энергия (учебная модель) | [BIPM](https://www.bipm.org/en/si-brochure-9) | Требует построчной сверки |
 | M10 | Выбор материала: масса | [BIPM](https://www.bipm.org/en/si-brochure-9) | Требует построчной сверки |
 | Q03 | Неопределённость: простая модель | [GUM](https://www.bipm.org/en/committees/jc/jcgm/publications) | Требует построчной сверки |
-| Q06 | Несоответствие и дефект | [NIST](https://www.nist.gov/programs-projects/nistsematech-engineering-statistics-handbook) | Требует построчной сверки |
+| Q06 | Несоответствие и дефект | [NIST — несоответствующие единицы](https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc332.htm) | Требует построчной сверки |
 | Q07 | Проверка гипотез причин | [ISO-Q](https://www.iso.org/standard/9001) | Требует построчной сверки |
 | Q08 | Корректирующее действие | [ISO-Q](https://www.iso.org/standard/9001) | Требует построчной сверки |
 | Q09 | Потери процесса | [NIST](https://www.nist.gov/programs-projects/nistsematech-engineering-statistics-handbook) | Требует построчной сверки |
-| Q10 | Итоговый кейс качества | [NIST](https://www.nist.gov/programs-projects/nistsematech-engineering-statistics-handbook) | Требует построчной сверки |
+| Q10 | Итоговый кейс качества | [NIST — доля несоответствующих](https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc332.htm) | Требует построчной сверки |
 
 ## Обязательные поля закрытия каждой строки
 
@@ -106,3 +106,12 @@
 ## Проверка E01 и E05 по полному тексту BIPM
 
 Источник: [BIPM, SI Brochure, 9th edition, version 4.01 (2026), полный PDF](https://www.bipm.org/documents/d/guest/si-brochure-9-en-pdf), §3, таблица 7, стр. 138 PDF (печатная стр. 138; PDF индекс 27): **kilo = 10³**, **milli = 10⁻³**. Примеры: E01 2,5 А × 1000 = 2500 мА; 4700 Ом / 1000 = 4,7 кОм. E05 1,25 В × 1000 = 1250 мВ; 750 мВ / 1000 = 0,75 В. Единицы и арифметика подтверждены. Предупреждения о безопасном выборе мультиметра требуют отдельного руководства изготовителя и не подтверждаются BIPM.
+
+## Точные замены ссылок по первичным карточкам ISO и разделу NIST (2026-11-21)
+
+- C01: [ISO 5455:1979, раздел 2.1](https://www.iso.org/obp/ui?_escaped_fragment_=iso%3Astd%3Aiso%3A5455%3Aed-1%3Av1%3Aen) прямо определяет масштаб как отношение размера изображения к действительному размеру; обе задачи дают 60 и 40 мм. Стандарт подтверждён ISO в 2025 году.
+- E09, C04: [ISO 286-1:2010](https://www.iso.org/standard/45975.html) определяет базовые понятия отклонений и посадок; подтверждён ISO в 2026 году. Карточка подтверждает применимость документа, не все частные утверждения.
+- C07: [ISO 21920-2:2021](https://www.iso.org/standard/72226.html) действующий опубликованный стандарт для параметров профиля. [ISO/CD 21920-2](https://www.iso.org/standard/87865.html) пока проект, не заменяет его.
+- M09, Q04, Q06, Q10: [NIST Engineering Statistics Handbook, §6.3.3.2](https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc332.htm) задаёт долю несоответствующих единиц D/n и различает количество несоответствующих единиц и число характеристик/дефектов.
+
+Ссылки исправлены в HTML уроков. Полная аттестация каждого урока, включая безопасность и ограничения, остаётся отдельной задачей.
