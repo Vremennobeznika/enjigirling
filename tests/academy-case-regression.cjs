@@ -141,4 +141,18 @@ assert.equal(e01Map['A02-1'],Number(Boolean(1&&0)),'A02-1 AND truth table');
 assert.equal(e01Map['A02-2'],Number(Boolean(0||1)),'A02-2 OR truth table');
 console.log('PASS: A01 signed control error and A02 boolean logic with safety boundary.');
 
+for(const [id,values,expected] of [
+ ['A04',[20,4],[(20-4)/16*100,(4-4)/16*100]],
+ ['A05',[10,20],[1/(10/1000),2/(20/1000)]],
+ ['A06',[3,4],[Math.max(0,5-3),Math.max(0,2-4)]]
+]) {
+ const lesson=part2.split('<section class="lesson" id="'+id+'">')[1]?.split('</section>')[0];
+ assert.ok(lesson,id+' lesson exists');
+ for(let i=0;i<2;i++)assert.ok(Math.abs(part2Answers[id+'-'+(i+1)]-expected[i])<1e-10,id+'-'+(i+1)+' arithmetic');
+ if(id==='A04')assert.match(lesson,/нельзя автоматически объявлять конкретным видом отказа/);
+ if(id==='A05')assert.match(lesson,/несколько задач/);
+ if(id==='A06')assert.match(lesson,/неретентивного таймера задержки включения/);
+}
+console.log('PASS: A04 analog scaling, A05 task cycles, A06 TON timer boundaries.');
+
 console.log('PASS: A12, M10, Q10 example presence and independently evaluated arithmetic; not full source attestation.');
