@@ -60,4 +60,17 @@ assert.equal(e01Map['E04-2'],Math.abs(99-100)/100*100,'E04-2 percent deviation')
 assert.ok(!Number.isFinite(Math.abs(1-0)/Math.abs(0)*100),'zero reference is outside relative deviation domain');
 console.log('PASS: E04 task data, answers and nonzero-reference domain.');
 
+const part2=fs.readFileSync('academy-draft-part2.html','utf8');
+const e05=part2.split('<section class="lesson" id="E05">')[1]?.split('</section>')[0];
+assert.ok(e05,'E05 lesson exists');
+assert.match(e05,/1,25 В/);
+assert.match(e05,/750 мВ/);
+assert.match(e05,/1,25 × 1000 = 1250 мВ/);
+assert.match(e05,/750 \/ 1000 = 0,75 В/);
+assert.match(e05,/учебный расчёт не разрешает подключение к действующей электроустановке/);
+const part2Answers=JSON.parse(fs.readFileSync('academy-draft-part2.js','utf8').split('const answers=')[1].split(';')[0]);
+assert.equal(part2Answers['E05-1'],1.25*1000,'E05-1 V to mV');
+assert.equal(part2Answers['E05-2'],750/1000,'E05-2 mV to V');
+console.log('PASS: E05 task statements, SI conversions, answer map and safety disclaimer.');
+
 console.log('PASS: A12, M10, Q10 example presence and independently evaluated arithmetic; not full source attestation.');
