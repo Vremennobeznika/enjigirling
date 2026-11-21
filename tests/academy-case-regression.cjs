@@ -83,4 +83,14 @@ assert.equal(part2Answers['E08-1'],readings.reduce((a,b)=>a+b,0)/readings.length
 assert.equal(part2Answers['E08-2'],Math.max(...readings)-Math.min(...readings),'E08-2 range');
 console.log('PASS: E08 numerical statistics and repeatability caveat.');
 
+const e09=part2.split('<section class="lesson" id="E09">')[1]?.split('</section>')[0];
+assert.ok(e09,'E09 lesson exists');
+assert.match(e09,/Номинал 20 мм, нижнее отклонение −0,1 мм/);
+assert.match(e09,/Номинал 20 мм, верхнее отклонение \+0,2 мм/);
+assert.match(e09,/правила принятия решения/);
+assert.ok(Math.abs(part2Answers['E09-1']-(20-0.1))<1e-10,'E09 lower limit');
+assert.ok(Math.abs(part2Answers['E09-2']-(20+0.2))<1e-10,'E09 upper limit');
+assert.ok(part2Answers['E09-1']<=part2Answers['E09-2'],'E09 interval ordering');
+console.log('PASS: E09 limits, problem statements and conformity qualification.');
+
 console.log('PASS: A12, M10, Q10 example presence and independently evaluated arithmetic; not full source attestation.');
