@@ -121,8 +121,8 @@ assert.match(e10,/Мощность в ваттах/);
 assert.match(e10,/9-4-ohms-law/);
 const part3Answers=JSON.parse(fs.readFileSync('academy-draft-part3.js','utf8').split('const answers=')[1].split(';')[0]);
 assert.equal(part3Answers['E10-1'],24/120,'E10-1 Ohm law');
-assert.equal(part3Answers['E10-2'],24*(24/120),'E10-2 power');
-assert.equal(part3Answers['E10-2'],24**2/120,'E10-2 alternate power equation');
+assert.ok(Math.abs(part3Answers['E10-2']-24*(24/120))<1e-10,'E10-2 power');
+assert.ok(Math.abs(part3Answers['E10-2']-24**2/120)<1e-10,'E10-2 alternate power equation');
 console.log('PASS: E10 current, power, model limits and physics reference.');
 
 console.log('PASS: A12, M10, Q10 example presence and independently evaluated arithmetic; not full source attestation.');
