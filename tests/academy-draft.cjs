@@ -57,3 +57,13 @@ assert.match(welding[1],/мощность P=UI/,'M08 electrical power definition
 assert.match(welding[1],/энергия E=Pt/,'M08 electrical energy definition');
 assert.ok(index.includes('Сварка: электрическая мощность и энергия (учебная модель)'),'index must use corrected M08 title');
 console.log('PASS: welding energy and power terminology regression');
+
+
+for(const [htmlFile,,lessons] of batches){
+ const html=fs.readFileSync(htmlFile,'utf8');
+ const references=[...html.matchAll(/Первоисточник для предметной сверки: <a href="(https:\/\/[^"]+)"/g)].map(m=>m[1]);
+ assert.equal(references.length,lessons,htmlFile+' requires one source candidate per lesson');
+ assert.ok(references.every(url=>/https:\/\/(?:www\.)?(?:bipm\.org|nist\.gov|webstore\.iec\.ch|iso\.org|modbus\.org)\//.test(url)),htmlFile+' unapproved reference host');
+ assert.equal((html.match(/Полная аттестация урока не выполнена\./g)||[]).length,lessons,htmlFile+' must not claim source attestation');
+}
+console.log('PASS: 49 lesson source-candidate links and honest attestation warnings');
