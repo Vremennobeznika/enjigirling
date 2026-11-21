@@ -113,4 +113,16 @@ assert.equal(e01Map['E07-1'],1/0.02,'E07-1 frequency');
 assert.equal(e01Map['E07-2'],1/(4*5*1e-3),'E07-2 timebase frequency');
 console.log('PASS: E07 frequency calculations and oscilloscope timebase conversion.');
 
+const e10=html.split('<section class="lesson" id="E10">')[1]?.split('</section>')[0];
+assert.ok(e10,'E10 lesson exists');
+assert.match(e10,/U=24 В и R=120 Ом/);
+assert.match(e10,/U=24 В и I=0,2 А/);
+assert.match(e10,/Мощность в ваттах/);
+assert.match(e10,/9-4-ohms-law/);
+const part3Answers=JSON.parse(fs.readFileSync('academy-draft-part3.js','utf8').split('const answers=')[1].split(';')[0]);
+assert.equal(part3Answers['E10-1'],24/120,'E10-1 Ohm law');
+assert.equal(part3Answers['E10-2'],24*(24/120),'E10-2 power');
+assert.equal(part3Answers['E10-2'],24**2/120,'E10-2 alternate power equation');
+console.log('PASS: E10 current, power, model limits and physics reference.');
+
 console.log('PASS: A12, M10, Q10 example presence and independently evaluated arithmetic; not full source attestation.');
