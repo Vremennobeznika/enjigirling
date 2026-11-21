@@ -93,4 +93,15 @@ assert.ok(Math.abs(part2Answers['E09-2']-(20+0.2))<1e-10,'E09 upper limit');
 assert.ok(part2Answers['E09-1']<=part2Answers['E09-2'],'E09 interval ordering');
 console.log('PASS: E09 limits, problem statements and conformity qualification.');
 
+const e06=intro.split('<section class="lesson" id="E06">')[1]?.split('</section>')[0];
+assert.ok(e06,'E06 lesson exists');
+assert.match(e06,/R = 1000 Ом, C = 0,001 Ф/);
+assert.match(e06,/R = 2000 Ом, C = 500 мкФ/);
+assert.match(e06,/63,2 %/);
+assert.match(e06,/10-5-rc-circuits/);
+assert.equal(e01Map['E06-1'],1000*0.001,'E06-1 RC seconds');
+assert.equal(e01Map['E06-2'],2000*500*1e-6,'E06-2 RC microfarad conversion');
+assert.ok(Math.abs((1-Math.exp(-1))*100-63.2)<0.02,'RC step response at one tau');
+console.log('PASS: E06 RC tasks and time-constant interpretation.');
+
 console.log('PASS: A12, M10, Q10 example presence and independently evaluated arithmetic; not full source attestation.');
