@@ -104,4 +104,13 @@ assert.equal(e01Map['E06-2'],2000*500*1e-6,'E06-2 RC microfarad conversion');
 assert.ok(Math.abs((1-Math.exp(-1))*100-63.2)<0.02,'RC step response at one tau');
 console.log('PASS: E06 RC tasks and time-constant interpretation.');
 
+const e07=intro.split('<section class="lesson" id="E07">')[1]?.split('</section>')[0];
+assert.ok(e07,'E07 lesson exists');
+assert.match(e07,/Период 0,02 с/);
+assert.match(e07,/4 деления по 5 мс/);
+assert.match(e07,/1 \/ 0,02 = 50 Гц/);
+assert.equal(e01Map['E07-1'],1/0.02,'E07-1 frequency');
+assert.equal(e01Map['E07-2'],1/(4*5*1e-3),'E07-2 timebase frequency');
+console.log('PASS: E07 frequency calculations and oscilloscope timebase conversion.');
+
 console.log('PASS: A12, M10, Q10 example presence and independently evaluated arithmetic; not full source attestation.');
