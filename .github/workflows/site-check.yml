@@ -33,6 +33,8 @@ jobs:
           if-no-files-found: ignore
   browser:
     runs-on: ubuntu-24.04
+    container:
+      image: mcr.microsoft.com/playwright:v1.56.1-noble
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -52,7 +54,7 @@ jobs:
       - name: Install Chromium and WebKit
         run: |
           cat /etc/os-release
-          npx playwright install --with-deps chromium webkit
+          npx playwright install chromium webkit
       - name: Test site at desktop and mobile widths
         run: npx playwright test
       - name: Save failure screenshots and traces
