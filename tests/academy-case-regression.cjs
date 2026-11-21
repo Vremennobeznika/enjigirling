@@ -183,4 +183,22 @@ assert.equal(part3Answers['A10-1'],17/20*100,'A10 pass rate');
 assert.equal(part3Answers['A10-2'],12-3,'A10 passed count');
 console.log('PASS: A09 Modbus PDU addresses and FC03 byte count; A10 test accounting caveats.');
 
+const a11=html.split('<section class="lesson" id="A11">')[1]?.split('</section>')[0];
+const a12=html.split('<section class="lesson" id="A12">')[1]?.split('</section>')[0];
+assert.ok(a11&&a12,'A11 and A12 lessons exist');
+assert.match(a11,/После версии 7 выполнено 3 последовательных выпуска/);
+assert.match(a11,/Из 15 изменений 4 отменены/);
+assert.match(a11,/не правило SemVer/);
+assert.equal(part3Answers['A11-1'],7+3,'A11 integer release sequence');
+assert.equal(part3Answers['A11-2'],15-4,'A11 noncancelled change records');
+assert.match(a12,/Датчик 4–20 мА, шкала 0–100 единиц, сигнал 12 мА/);
+assert.match(a12,/Задание 60, измерено 50/);
+assert.match(a12,/3,6 мА/);
+assert.match(a12,/вне заявленного рабочего диапазона/);
+assert.match(a12,/не является алгоритмом безопасного управления/);
+assert.equal(part3Answers['A12-1'],(12-4)/(20-4)*100,'A12 scaling');
+assert.equal(part3Answers['A12-2'],60-50,'A12 signed error');
+assert.ok((3.6-4)/(20-4)*100<0,'A12 out-of-range reading is not valid process data');
+console.log('PASS: A11 change-count assumptions and A12 4-20mA scaling and safety boundaries.');
+
 console.log('PASS: A12, M10, Q10 example presence and independently evaluated arithmetic; not full source attestation.');
