@@ -6,7 +6,7 @@
 
 Шкала: PASS — адресно проверенная формула/арифметика в ограниченных рамках; UNVERIFIED — не подтверждено в данном проходе; SOURCE/META — сведения о ссылке или статусе, нуждаются в отдельной проверке; QUESTION/CONDITION — вопрос/условие; INSTRUCTION/REVIEW — предписание или процедура, для которых требуется предметная оценка безопасности.
 
-В этой группе: **3 уроков, 64 текстовых единиц, 8 адресно отмеченных PASS**.
+В этой группе: **3 уроков, 64 текстовых единиц, 15 адресно отмеченных PASS**.
 
 ## ohm — Закон Ома: напряжение, ток, сопротивление
 
@@ -41,15 +41,15 @@
 
 ## signal — Аналоговый сигнал 4–20 мА
 
-Файл: `engineering-lessons.html`. Кандидаты источников: не указаны.
+Файл: `engineering-lessons.html`. Кандидаты источников: https://www.ni.com/en/shop/data-acquisition/measurement-fundamentals/current-measurements-how-to-guide.html.
 
 | ID | Статус | Точное утверждение / фрагмент | Проверяемое основание |
 |---|---|---|---|
 | `signal.P01.S01` | UNVERIFIED | УРОК 02 / АВТОМАТИЗАЦИЯ | — |
-| `signal.P02.S01` | UNVERIFIED | В учебной линейной модели ток 4 мА соответствует нижней границе измеряемой величины, а 20 мА — верхней. | — |
-| `signal.P02.S02` | UNVERIFIED | Нормированная доля диапазона: (I − 4) / 16 , где I выражен в мА. | — |
-| `signal.P02.S03` | UNVERIFIED | Для шкалы от 0 до 100 условных единиц значение равно (I − 4) / 16 × 100 . | — |
-| `signal.P03.S01` | UNVERIFIED | Пример: 12 мА — середина диапазона, значит показание равно 50 условным единицам. | — |
+| `signal.P02.S01` | PASS — NI 4–20 мА | В учебной линейной модели ток 4 мА соответствует нижней границе измеряемой величины, а 20 мА — верхней. | https://www.ni.com/en/shop/data-acquisition/measurement-fundamentals/current-measurements-how-to-guide.html |
+| `signal.P02.S02` | PASS — ЛИНЕЙНАЯ АЛГЕБРА | Нормированная доля диапазона: (I − 4) / 16 , где I выражен в мА. | https://www.ni.com/en/shop/data-acquisition/measurement-fundamentals/current-measurements-how-to-guide.html |
+| `signal.P02.S03` | PASS — ЛИНЕЙНАЯ АЛГЕБРА | Для шкалы от 0 до 100 условных единиц значение равно (I − 4) / 16 × 100 . | https://www.ni.com/en/shop/data-acquisition/measurement-fundamentals/current-measurements-how-to-guide.html |
+| `signal.P03.S01` | PASS — ЛИНЕЙНАЯ АЛГЕБРА | Пример: 12 мА — середина диапазона, значит показание равно 50 условным единицам. | https://www.ni.com/en/shop/data-acquisition/measurement-fundamentals/current-measurements-how-to-guide.html |
 | `signal.P03.S02` | UNVERIFIED | Диагностические пороги и поведение вне диапазона зависят от конкретного устройства и его документации. | — |
 | `signal.P04.S01` | UNVERIFIED | Инженерная проверка. | — |
 | `signal.P04.S02` | UNVERIFIED | Масштабирование 4–20 мА применимо при правильной конфигурации датчика и входа ПЛК. | — |
@@ -58,15 +58,16 @@
 | `signal.P05.S02` | UNVERIFIED | Датчик линейно отображает температуру от 0 до 200 °C в сигнал 4–20 мА. | — |
 | `signal.P05.S03` | UNVERIFIED | Ток равен 8 мА. | — |
 | `signal.P05.S04` | UNVERIFIED | Какую температуру показывает идеальная модель? | — |
-| `signal.P07.S01` | UNVERIFIED | (8 − 4) / 16 = 0,25; 0,25 × 200 = 50 °C . | — |
+| `signal.P07.S01` | PASS — ПЕРЕСЧЁТ | (8 − 4) / 16 = 0,25; 0,25 × 200 = 50 °C . | https://www.ni.com/en/shop/data-acquisition/measurement-fundamentals/current-measurements-how-to-guide.html |
 | `signal.P07.S02` | UNVERIFIED | В модели нет погрешности датчика, смещения нуля и нелинейности. | — |
 | `signal.P08.S01` | QUESTION/CONDITION | Задача 2 — обратное масштабирование. | — |
 | `signal.P08.S02` | UNVERIFIED | Линейная шкала датчика — от −50 до +150 °C. | — |
 | `signal.P08.S03` | UNVERIFIED | Какой ток в мА соответствует температуре 100 °C в идеальной модели 4–20 мА? | — |
-| `signal.P10.S01` | UNVERIFIED | Доля диапазона: (100 − (−50)) / 200 = 0,75. | — |
-| `signal.P10.S02` | UNVERIFIED | Ток: 4 + 16 × 0,75 = 16 мА. | — |
-| `signal.P11.S01` | UNVERIFIED | Статус: авторская учебная модель линейного преобразования, не характеристика конкретного датчика. | — |
+| `signal.P10.S01` | PASS — ПЕРЕСЧЁТ | Доля диапазона: (100 − (−50)) / 200 = 0,75. | https://www.ni.com/en/shop/data-acquisition/measurement-fundamentals/current-measurements-how-to-guide.html |
+| `signal.P10.S02` | PASS — ПЕРЕСЧЁТ | Ток: 4 + 16 × 0,75 = 16 мА. | https://www.ni.com/en/shop/data-acquisition/measurement-fundamentals/current-measurements-how-to-guide.html |
+| `signal.P11.S01` | SOURCE/META | Статус: авторская учебная модель линейного преобразования, не характеристика конкретного датчика. | — |
 | `signal.P11.S02` | UNVERIFIED | Для реального устройства необходимы паспорт, пределы диагностики и конфигурация входа. | — |
+| `signal.P11.S03` | SOURCE/META | NI, Measuring Current, раздел «Current Loops/4-20 mA Convention» подтверждает 4 мА = 0% и 20 мА = 100%; формулы и численные ответы получены линейной интерполяцией, без претензии на диагностику конкретного прибора. | — |
 
 **Предметный статус signal: не аттестован целиком.**
 
