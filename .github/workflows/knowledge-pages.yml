@@ -21,7 +21,7 @@ jobs:
     # The supplier snapshot may have been saved successfully even when the
     # independent Yandex upload failed. Always rebuild the public mirror from
     # trusted main; the client continues rejecting stale supplier dates.
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     outputs:
       pages_mode: ${{ steps.pages_mode.outputs.mode }}
     steps:
