@@ -202,3 +202,15 @@ assert.ok((3.6-4)/(20-4)*100<0,'A12 out-of-range reading is not valid process da
 console.log('PASS: A11 change-count assumptions and A12 4-20mA scaling and safety boundaries.');
 
 console.log('PASS: A12, M10, Q10 example presence and independently evaluated arithmetic; not full source attestation.');
+
+// Q03: independent/correlated uncertainty models and explicitly stated assumptions.
+const q03=lesson('Q03');
+assert.match(q03,/коэффициентами чувствительности \+1 и \+1/);
+assert.match(q03,/коэффициентами чувствительности \+1 и −1/);
+assert.match(q03,/коэффициент корреляции/);
+assert.ok(Math.abs(Math.sqrt(3**2+4**2)-5)<1e-12);
+assert.ok(Math.abs(Math.sqrt(6**2+8**2)-10)<1e-12);
+assert.ok(Math.abs(Math.sqrt(3**2+4**2+2*1*1*0.5*3*4)-Math.sqrt(37))<1e-12);
+assert.equal(part3Answers['Q03-1'],5);
+assert.equal(part3Answers['Q03-2'],10);
+console.log('PASS: Q03 independent and correlated standard uncertainty regression.');
