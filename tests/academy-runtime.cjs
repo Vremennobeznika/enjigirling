@@ -64,6 +64,15 @@ for(const [jsFile,htmlFile] of cases){
   assert.ok(!res.className.includes('ok'),jsFile+' marked incorrect answer as correct '+id);
   assertions+=2;
  }
+ // Targeted diagnostic regression: distinguish sign inversion from unit scaling.
+ const diagnosticId=Object.keys(answers).find(id=>answers[id]!==0);
+ assert.ok(diagnosticId);
+ const signError=submit(diagnosticId,String(-answers[diagnosticId]));
+ assert.match(signError.textContent,/знак/i,jsFile+' missing sign hint');
+ assert.ok(!signError.textContent.includes('Верно'));
+ const scaleError=submit(diagnosticId,String(answers[diagnosticId]*1000));
+ assert.match(scaleError.textContent,/единиц/i,jsFile+' missing unit-scale hint');
+ assert.ok(!scaleError.textContent.includes('Верно'));
  const first=Object.keys(answers)[0];
  submit(first,String(answers[first]));
  assert.equal(count.textContent,handlers.size+' из '+handlers.size,'double counting');
