@@ -88,4 +88,16 @@ assert.ok(!html.includes('id="ai-library"')&&!html.includes('ai-llm-guide.pdf'),
 const hub=fs.readFileSync('ai.html','utf8');
 assert.ok(hub.includes('knowledge/sections/all.md'),'complete AI export absent');
 for(const filename of ['knowledge/sections/ai-code-library.md','knowledge/ai-code-library-links.txt'])assert.ok(fs.existsSync(filename),'AI library export missing: '+filename);
+// Regression: compare the canonical source with the regenerated public AI export.
+// A deleted resource must never survive only in a stale 182-record export.
+const publishedResources=JSON.parse(fs.readFileSync('knowledge/sections/resources.json','utf8'));
+const canonicalIds=items.map(item=>item.id);
+const exportedIds=publishedResources.records.map(item=>item.id);
+assert.equal(new Set(canonicalIds).size,canonicalIds.length,'duplicate canonical resource IDs');
+assert.equal(new Set(exportedIds).size,exportedIds.length,'duplicate exported resource IDs');
+assert.equal(publishedResources.recordsCount,canonicalIds.length,'AI export resource count is stale');
+assert.deepEqual([...exportedIds].sort(),[...canonicalIds].sort(),'AI export missing or retaining deleted resource IDs');
+const resourceMarkdown=fs.readFileSync('knowledge/sections/resources.md','utf8');
+assert.ok(resourceMarkdown.includes('Полные записи справочника ('+canonicalIds.length+' записей/групп)'),'Markdown count is stale');
+assert.ok(!canonicalIds.includes('fr-popyachsa'),'previously intentionally removed Popyachechnaya resource was reintroduced');
 console.log('PASS: '+items.length+' engineering resources; 25 standalone coding sources; no duplicate directory entries');
