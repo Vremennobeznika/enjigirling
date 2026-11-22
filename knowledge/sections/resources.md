@@ -19,7 +19,7 @@
 Показать ещё
 Для поиска по каталогу нужен JavaScript. [Список ресурсов в Markdown](https://vremennobeznika.github.io/enjigirling/knowledge/sections/resources.md).
 
-## Полные записи справочника (182 записей/групп)
+## Полные записи справочника (181 записей/групп)
 
 ### CADmaster
 - **id:** mag-cadmaster
@@ -415,7 +415,6 @@
 - **name:** Artur's Channel
 - **desc:** Канал философа-практика, режиссёра и эзотерика.
 - **link:** https://t.me/aiunusov
-
 
 ### Погранично-шизоидные отношения
 - **id:** fr-prlshrlinlove

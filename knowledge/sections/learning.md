@@ -17,6 +17,11 @@
 [Поступление и льготы](#education-benefits)
 [Онлайн-курсы](#education-courses)
 [Практика измерений](#education-practice)
+[Инженерный практикум](#engineering-lessons)
+### Учиться здесь: инженерный практикум
+Три первых занятия с самостоятельными расчётами и проверкой ответов: закон Ома, сигнал 4–20 мА, размер с допуском. Разбор ошибок, прогресс в браузере, без регистрации.
+[Открыть интерактивные уроки →](https://vremennobeznika.github.io/enjigirling/engineering-lessons.html)
+Это вводные учебные модели, а не аттестованная программа. Применимость расчётов к оборудованию проверяйте по документации.
 ### Практика измерений
 Научитесь читать шкалы и проверять отсчёт: 10 учебных тренажёров — штангенциркули, микрометр, глубиномер, индикатор, угломер, линейка, мультиметр и осциллограф.
 [Открыть тренажёры измерительных приборов →](https://vremennobeznika.github.io/enjigirling/measurement-lab.html)
@@ -591,10 +596,12 @@
 - **sourceStatus:** official_source_located
 - **sourceUrl:** https://mtkp.bmstu.ru/
 - **verifiedScope:** Указан источник организации или программы. Он не подтверждает автоматически все условия поступления, стоимость и количество мест; сверяйте конкретные строки документа.
-- **reviewStatus:** program_verified
-- **reviewDate:** 2026-10-22
-- **reviewMethod:** Редакционная проверка ссылки и описания не равнозначна подтверждению всех условий. Количественные сведения приводятся лишь при сверке конкретной программы и документа.
-- **verifiedPrograms:** [{"code":"09.02.11","name":"Разработка и управление программным обеспечением","year":"План приёма на 2026 год","basis":"на базе 9 классов","duration":"3 года 10 месяцев","budgetPlaces":60,"paidPlaces":40,"sourceUrl":"https://mtkp.bmstu.ru/entrant/plan-priema","note":"60 бюджетных и 40 платных мест по плану приёма 2026/27. Продолжительность 3 года 10 месяцев и конкурс аттестатов — по официальной странице правил поступления.","admission":"Конкурс аттестатов","admissionSourceUrl":"https://mtkp.bmstu.ru/entrant/pravila-postupleniya-v-tehnikum"}]
+- **reviewStatus:** program_documents_pending
+- **reviewDate:** 2026-11-22
+- **reviewMethod:** Документы приёмной кампании недоступны (Not Found); исторические цифры исключены из проверенных программ и не должны использоваться для решений.
+- **verifiedPrograms:** []
+- **historicalUnverifiedPrograms:** [{"code":"09.02.11","name":"Разработка и управление программным обеспечением","year":"План приёма на 2026 год","basis":"на базе 9 классов","duration":"3 года 10 месяцев","budgetPlaces":60,"paidPlaces":40,"sourceUrl":"/entrant/plan-priema","note":"60 бюджетных и 40 платных мест по плану приёма 2026/27. Продолжительность 3 года 10 месяцев и конкурс аттестатов — по официальной странице правил поступления.","admission":"Конкурс аттестатов","admissionSourceUrl":"/entrant/pravila-postupleniya-v-tehnikum"}]
+- **admissionEvidenceStatus:** retired_404_do_not_use_for_decisions
 - **sourceFetchStatus:** fetched
 - **sourceFetchCheckedAt:** 2026-10-22
 - **type:** college
