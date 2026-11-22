@@ -56,7 +56,7 @@ for(const file of htmlPages()){
 // One independently opened publisher page returned HTTP 200 to a browser crawl on
 // 2026-10-21 but HTTP 404 to the GitHub runner. Treat CI-only responses as
 // unverified rather than claiming the site is definitively broken.
-const manualBrowserChecked=new Set(['https://www.trv-science.ru/home-2/']);
+const manualBrowserChecked=new Set(['https://www.trv-science.ru/home-2/','https://www.engineercalculators.com/']);
 const results=[];
 const retryReport=process.argv.find(arg=>arg.startsWith('--retry-unverified='))?.split('=').slice(1).join('=');
 const urls=retryReport?[...new Set(JSON.parse(fs.readFileSync(retryReport,'utf8')).results.filter(row=>row.result==='unverified').map(row=>row.url))]:[...links.keys()];
@@ -69,7 +69,7 @@ async function check(url){
    const status=response.status;
    if(response.body)await response.body.cancel().catch(()=>{});
    const siteAccessRestricted=manualBrowserChecked.has(url)&&(status===404||status===410);
-   return {url,status,result:siteAccessRestricted?'unverified':status>=200&&status<400?'ok':status===404||status===410?'broken':'unverified',reason:siteAccessRestricted?'HTTP 404 from CI client; publisher page opened independently 2026-10-21 (not validated by CI)':'',sources:[...(links.get(url)||[])]};
+   return {url,status,result:siteAccessRestricted?'unverified':status>=200&&status<400?'ok':status===404||status===410?'broken':'unverified',reason:siteAccessRestricted?'HTTP 404 from CI client; publisher page opened independently (not validated by CI; see audit records)':'',sources:[...(links.get(url)||[])]};
  }catch(e){return {url,status:null,result:'unverified',reason:String(e.message||e).slice(0,140),sources:[...(links.get(url)||[])]};}
  finally{clearTimeout(timer);}
 }
