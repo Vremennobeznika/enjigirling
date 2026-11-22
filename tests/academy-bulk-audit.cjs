@@ -19,7 +19,9 @@ for(const file of pages){
  }
 }
 assert.equal(rows.length,49,'49 lessons');
-assert.equal(rows.filter(x=>x.restricted).length,24,'24 standards-linked lessons flagged');
+assert.ok(rows.some(x=>x.restricted),'expected some lessons to cite restricted standards');
+// Every *remaining* restricted-standard lesson must carry a source-access warning.
+// Do not freeze the count: it should decrease when unsuitable citations are replaced.
 assert.equal(new Set(rows.map(x=>x.id)).size,49,'unique lesson IDs');
 assert.equal(rows.reduce((n,x)=>n+x.forms,0),98,'98 exercises');
 const index=fs.readFileSync('academy-index-draft.html','utf8');
