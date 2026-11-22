@@ -4,6 +4,17 @@
 const answers={"E01-1":2500,"E01-2":4.7,"E03-1":450,"E03-2":100,"E04-1":0.2,"E04-2":1,"E06-1":1,"E06-2":1,"E07-1":50,"E07-2":50,"A01-1":6,"A01-2":-12,"A02-1":0,"A02-2":1,"C01-1":60,"C01-2":40,"C05-1":65,"C05-2":50.3,"M02-1":10,"M02-2":40,"M09-1":95,"M09-2":92.5,"Q01-1":1,"Q01-2":0,"Q04-1":7,"Q04-2":2};
 const storageKey='enjigirling:academy-draft:v1';
 const taskPrefix=storageKey+':task:';
+function hint(value,expected){
+ if(expected!==0&&Math.abs(value+expected)<=Math.max(1e-8,Math.abs(expected)*1e-9))return 'Проверьте знак: результат имеет противоположное направление.';
+ if(expected!==0&&value!==0){
+  const ratio=Math.abs(value/expected);
+  for(const scale of [10,100,1000,0.1,0.01,0.001]){
+   if(Math.abs(ratio-scale)<=scale*1e-8)return 'Проверьте перевод единиц и порядок величины (приставки, проценты, время).';
+  }
+ }
+ if(expected===0)return 'Проверьте, почему в этой модели результат должен быть нулевым.';
+ return 'Сверьте исходные данные, формулу, единицы и округление с разбором решения.';
+}
 function readProgress(){
  const result={};
  try{
@@ -34,7 +45,7 @@ for(const form of document.querySelectorAll('form[data-id]')){
   }
   const ok=Math.abs(Number(raw)-answers[id])<=Math.max(1e-8,Math.abs(answers[id])*1e-9);
   result.className='result '+(ok?'ok':'error');
-  if(!ok){result.textContent='Неверно. Проверьте единицы и решение.';return;}
+  if(!ok){result.textContent='Неверно. '+hint(Number(raw),answers[id]);return;}
   // Write only this exercise key: two independent tabs never overwrite a shared JSON snapshot.
   done[id]=true;
   let persisted=false;
