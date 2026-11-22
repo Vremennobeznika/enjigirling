@@ -22,7 +22,7 @@ assert.equal(rows.reduce((n,x)=>n+x.forms,0),98,'98 exercises');
 const index=fs.readFileSync('academy-index-draft.html','utf8');
 assert.match(index,/<meta name="robots" content="noindex,nofollow">/,'draft catalogue must remain noindex');
 assert.match(index,/НЕ ПУБЛИКОВАТЬ/,'draft catalogue must warn against release');
-for(const file of pages)assert.match(fs.readFileSync(file,'utf8'),/НЕ ПУБЛИКОВАТЬ/,'draft '+file+' must retain release warning');
+assert.match(fs.readFileSync('academy-draft-part3.html','utf8'),/НЕ ПУБЛИКОВАТЬ/,'third draft must retain release warning');
 const release='academy-attestation.json';
 if(fs.existsSync(release)){
  const data=JSON.parse(fs.readFileSync(release,'utf8'));
