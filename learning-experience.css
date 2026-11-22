@@ -126,3 +126,21 @@
 .site-page .training-calculators .calc-result-value{font-size:clamp(24px,2.7vw,33px);line-height:1.2;margin:0 0 7px;overflow-wrap:anywhere}
 .site-page .training-calculators .calc-result-hint{font-size:12px;line-height:1.55;margin:0;max-width:70ch;overflow-wrap:anywhere}
 @media(max-width:900px){.site-page .training-calculators{grid-template-columns:minmax(0,1fr)}}
+
+
+/* 2026-11-22: calculator layout repair, based on 1366px screenshot.
+   Remove nested frames and oversized black result panels; retain contrast in both themes. */
+.site-page .training-calculators{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}
+.site-page .training-calculators .calc-section-inner{min-width:0;padding:20px;border-radius:16px;overflow:hidden}
+.site-page .training-calculators .calc-layout{padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important}
+.site-page .training-calculators .calc-controls{padding:0!important;margin:0!important;border:0!important;background:transparent!important;box-shadow:none!important}
+.site-page .training-calculators .calc-field{padding:0!important;border:0!important;background:transparent!important}
+.site-page .training-calculators .calc-field label{font-size:12px;font-weight:600;letter-spacing:0;text-transform:none;line-height:1.5;max-width:100%}
+.site-page .training-calculators .calc-field input,
+.site-page .training-calculators .calc-field select{min-width:0;min-height:46px;height:auto;border-radius:10px}
+.site-page .training-calculators .calc-result{background:var(--bg-block)!important;color:var(--text)!important;border:1px solid var(--border)!important;padding:15px!important;border-radius:12px!important;text-align:left!important;box-shadow:none!important}
+.site-page .training-calculators .calc-result-label{color:var(--text-secondary)!important;font-weight:600;text-transform:none;letter-spacing:0;font-size:12px}
+.site-page .training-calculators .calc-result-value{color:var(--text)!important;font-size:clamp(23px,2.5vw,32px);line-height:1.2;font-weight:750}
+.site-page .training-calculators .calc-result-hint{color:var(--text-secondary)!important;font-size:12px;line-height:1.55;text-align:left!important}
+@media(max-width:950px){.site-page .training-calculators{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:500px){.site-page .training-calculators .calc-section-inner{padding:14px}.site-page .training-calculators .calc-result{padding:12px!important}}
