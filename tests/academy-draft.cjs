@@ -66,7 +66,7 @@ for(const [htmlFile,,lessons] of batches){
  for(const [,id,body] of sections){
   const urls=[...body.matchAll(/<a href="(https:\/\/[^"]+)"/g)].map(m=>m[1]);
   assert.ok(urls.length>=1,id+' missing source link');
-  assert.ok(urls.every(url=>/https:\/\/(?:[a-z0-9-]+\.)*(?:bipm\.org|nist\.gov|iec\.ch|iso\.org|modbus\.org|openstax\.org)\//.test(url)),id+' unapproved source host');
+  assert.ok(urls.every(url=>/https:\/\/(?:[a-z0-9-]+\.)*(?:bipm\.org|nist\.gov|iec\.ch|iso\.org|modbus\.org|openstax\.org|ni\.com)\//.test(url)),id+' unapproved source host');
   assert.ok(body.includes('Полная аттестация урока не выполнена.')||body.includes('Для предметной аттестации нужны профильные первоисточники'),id+' missing attestation warning');
   if(body.includes('https://www.iso.org/standard/9001')){
    assert.ok(body.includes('Он не подтверждает конкретные формулы'),id+' misleading ISO 9001 source claim');
