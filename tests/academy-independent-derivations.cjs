@@ -119,8 +119,7 @@ const calculated = {
 
 function readAnswers(file, mapName) {
   const source = fs.readFileSync(file, 'utf8');
-  const escaped = mapName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  const match = source.match(new RegExp('const '+escaped+'=(\\{[^;]+\\});'));
+  const match = source.match(new RegExp('const '+mapName+'=(\\{[^;]+\\});'));
   assert.ok(match, 'answer map not found: '+file);
   if (file === 'engineering-lessons.js') {
     const entries = match[1].replace(/(\w+):/g, '"$1":');
