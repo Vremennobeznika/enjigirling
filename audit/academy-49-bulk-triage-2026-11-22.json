@@ -1,0 +1,447 @@
+{
+  "date": "2026-11-22",
+  "status": "NO_RELEASE",
+  "lessons": [
+    {
+      "id": "E01",
+      "file": "academy-draft.html",
+      "source_candidate": "https://www.bipm.org/en/measurement-units/si-prefixes",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "E03",
+      "file": "academy-draft.html",
+      "source_candidate": "https://openstax.org/books/university-physics-volume-2/pages/10-2-resistors-in-series-and-parallel",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "E04",
+      "file": "academy-draft.html",
+      "source_candidate": "https://www.bipm.org/en/committees/jc/jcgm/publications",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "E06",
+      "file": "academy-draft.html",
+      "source_candidate": "https://openstax.org/books/university-physics-volume-2/pages/10-5-rc-circuits",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "E07",
+      "file": "academy-draft.html",
+      "source_candidate": "https://www.bipm.org/en/si-brochure-9",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "A01",
+      "file": "academy-draft.html",
+      "source_candidate": "https://webstore.iec.ch/en/publication/68533",
+      "source_claim_status": "SOURCE_MISMATCH",
+      "source_issue": "IEC 61131-3 does not establish the control-error sign convention",
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "A02",
+      "file": "academy-draft.html",
+      "source_candidate": "https://webstore.iec.ch/en/publication/68533",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "C01",
+      "file": "academy-draft.html",
+      "source_candidate": "https://www.iso.org/standard/11500.html",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "C05",
+      "file": "academy-draft.html",
+      "source_candidate": "https://www.iso.org/standard/66777.html",
+      "source_claim_status": "SOURCE_MISMATCH",
+      "source_issue": "ISO 1101 geometrical tolerancing is not a direct source for linear dimension-chain algebra",
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "M02",
+      "file": "academy-draft.html",
+      "source_candidate": "https://www.bipm.org/en/si-brochure-9",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "M09",
+      "file": "academy-draft.html",
+      "source_candidate": "https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc332.htm",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "Q01",
+      "file": "academy-draft.html",
+      "source_candidate": "https://www.bipm.org/en/committees/jc/jcgm/publications",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "Q04",
+      "file": "academy-draft.html",
+      "source_candidate": "https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc332.htm",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "E05",
+      "file": "academy-draft-part2.html",
+      "source_candidate": "https://www.bipm.org/en/measurement-units/si-prefixes",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "E08",
+      "file": "academy-draft-part2.html",
+      "source_candidate": "https://www.nist.gov/publications/nistsematech-engineering-statistics-handbook-chapter-2-measurement-process",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "E09",
+      "file": "academy-draft-part2.html",
+      "source_candidate": "https://www.iso.org/standard/45975.html",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "A04",
+      "file": "academy-draft-part2.html",
+      "source_candidate": "https://webstore.iec.ch/en/publication/68533",
+      "source_claim_status": "SOURCE_MISMATCH",
+      "source_issue": "IEC 61131-3 is not a primary source for 4–20 mA signal scaling",
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "A05",
+      "file": "academy-draft-part2.html",
+      "source_candidate": "https://webstore.iec.ch/en/publication/68533",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "A06",
+      "file": "academy-draft-part2.html",
+      "source_candidate": "https://webstore.iec.ch/en/publication/68533",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "C02",
+      "file": "academy-draft-part2.html",
+      "source_candidate": "https://www.iso.org/standard/9001",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "C06",
+      "file": "academy-draft-part2.html",
+      "source_candidate": "https://www.iso.org/standard/66777.html",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "M01",
+      "file": "academy-draft-part2.html",
+      "source_candidate": "https://www.bipm.org/en/si-brochure-9",
+      "source_claim_status": "SOURCE_MISMATCH",
+      "source_issue": "BIPM SI does not establish material-grade properties",
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "M03",
+      "file": "academy-draft-part2.html",
+      "source_candidate": "https://www.iso.org/standard/9001",
+      "source_claim_status": "SOURCE_MISMATCH",
+      "source_issue": "ISO 9001 does not specify heat-treatment process parameters",
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "Q02",
+      "file": "academy-draft-part2.html",
+      "source_candidate": "https://www.bipm.org/en/committees/jc/jcgm/publications",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "Q05",
+      "file": "academy-draft-part2.html",
+      "source_candidate": "https://www.iso.org/standard/9001",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "E10",
+      "file": "academy-draft-part3.html",
+      "source_candidate": "https://openstax.org/books/university-physics-volume-2/pages/9-4-ohms-law",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "A07",
+      "file": "academy-draft-part3.html",
+      "source_candidate": "https://webstore.iec.ch/en/publication/68533",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "A08",
+      "file": "academy-draft-part3.html",
+      "source_candidate": "https://webstore.iec.ch/en/publication/65543",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "A09",
+      "file": "academy-draft-part3.html",
+      "source_candidate": "https://www.modbus.org/file/secure/modbusprotocolspecification.pdf",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "A10",
+      "file": "academy-draft-part3.html",
+      "source_candidate": "https://www.iso.org/standard/9001",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "A11",
+      "file": "academy-draft-part3.html",
+      "source_candidate": "https://www.iso.org/standard/9001",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "A12",
+      "file": "academy-draft-part3.html",
+      "source_candidate": "https://webstore.iec.ch/en/publication/68533",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "C04",
+      "file": "academy-draft-part3.html",
+      "source_candidate": "https://www.iso.org/standard/45975.html",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "C07",
+      "file": "academy-draft-part3.html",
+      "source_candidate": "https://www.iso.org/standard/72226.html",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "C08",
+      "file": "academy-draft-part3.html",
+      "source_candidate": "https://www.iso.org/standard/66777.html",
+      "source_claim_status": "SOURCE_MISMATCH",
+      "source_issue": "ISO 1101 geometrical tolerancing does not establish general drawing legibility",
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "C09",
+      "file": "academy-draft-part3.html",
+      "source_candidate": "https://www.iso.org/standard/9001",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "C10",
+      "file": "academy-draft-part3.html",
+      "source_candidate": "https://www.bipm.org/en/committees/jc/jcgm/publications",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "M04",
+      "file": "academy-draft-part3.html",
+      "source_candidate": "https://www.iso.org/standard/9001",
+      "source_claim_status": "SOURCE_MISMATCH",
+      "source_issue": "ISO 9001 does not specify polymer temperature limits",
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "M05",
+      "file": "academy-draft-part3.html",
+      "source_candidate": "https://www.nist.gov/programs-projects/nistsematech-engineering-statistics-handbook",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "M06",
+      "file": "academy-draft-part3.html",
+      "source_candidate": "https://www.nist.gov/programs-projects/nistsematech-engineering-statistics-handbook",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "M07",
+      "file": "academy-draft-part3.html",
+      "source_candidate": "https://www.bipm.org/en/si-brochure-9",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "M08",
+      "file": "academy-draft-part3.html",
+      "source_candidate": "https://www.bipm.org/en/si-brochure-9",
+      "source_claim_status": "SOURCE_MISMATCH",
+      "source_issue": "BIPM SI does not establish welding process heat input",
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "M10",
+      "file": "academy-draft-part3.html",
+      "source_candidate": "https://www.bipm.org/en/si-brochure-9",
+      "source_claim_status": "SOURCE_MISMATCH",
+      "source_issue": "BIPM SI does not establish material selection criteria",
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "Q03",
+      "file": "academy-draft-part3.html",
+      "source_candidate": "https://www.bipm.org/en/committees/jc/jcgm/publications",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "Q06",
+      "file": "academy-draft-part3.html",
+      "source_candidate": "https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc332.htm",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "Q07",
+      "file": "academy-draft-part3.html",
+      "source_candidate": "https://www.iso.org/standard/9001",
+      "source_claim_status": "SOURCE_MISMATCH",
+      "source_issue": "ISO 9001 product listing does not verify the five-whys causal method",
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "Q08",
+      "file": "academy-draft-part3.html",
+      "source_candidate": "https://www.iso.org/standard/9001",
+      "source_claim_status": "SOURCE_MISMATCH",
+      "source_issue": "ISO 9001 product listing does not establish causal efficacy of a corrective action",
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "Q09",
+      "file": "academy-draft-part3.html",
+      "source_candidate": "https://www.nist.gov/programs-projects/nistsematech-engineering-statistics-handbook",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    },
+    {
+      "id": "Q10",
+      "file": "academy-draft-part3.html",
+      "source_candidate": "https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc332.htm",
+      "source_claim_status": "NOT_ATTESTED",
+      "source_issue": null,
+      "safety_screen": "WARNING_PRESENT_NOT_INDEPENDENTLY_REVIEWED",
+      "exercise_count": 2
+    }
+  ]
+}
