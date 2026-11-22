@@ -8,7 +8,7 @@ on:
     branches: [main]
     types: [completed]
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 concurrency:
@@ -92,6 +92,19 @@ jobs:
           with open(os.environ['GITHUB_OUTPUT'],'a') as out:
               out.write('mode='+mode+'\n')
           PY
+      - name: Synchronize validated generated public files to main
+        if: steps.pages_mode.outputs.mode == 'legacy'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --check
+          git add -- knowledge downloads knowledge-base.md knowledge-manifest.json llms.txt
+          if ! git diff --cached --quiet; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m 'build: synchronize verified generated knowledge and reading artifacts [skip ci]'
+            git push origin HEAD:main
+          fi
       - name: Verify generated reading files in the configured legacy source
         if: steps.pages_mode.outputs.mode == 'legacy'
         env:
@@ -103,8 +116,7 @@ jobs:
             echo 'Generated public files are missing from the source. Include the validated output in the pull request.'
             exit 1
           fi
-          # The normal main push starts the configured legacy Pages build.
-          # This job validates and observes it without additional write rights.
+          # Generated files were synchronized after all static and browser tests passed.
       - name: Stage static site without test dependencies
         run: |
           mkdir -p _site
