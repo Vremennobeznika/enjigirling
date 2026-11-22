@@ -6,7 +6,7 @@
 
 Шкала: PASS — адресно проверенная формула/арифметика в ограниченных рамках; UNVERIFIED — не подтверждено в данном проходе; SOURCE/META — сведения о ссылке или статусе, нуждаются в отдельной проверке; QUESTION/CONDITION — вопрос/условие; INSTRUCTION/REVIEW — предписание или процедура, для которых требуется предметная оценка безопасности.
 
-В этой группе: **9 уроков, 276 текстовых единиц, 35 адресно отмеченных PASS**.
+В этой группе: **9 уроков, 276 текстовых единиц, 28 адресно отмеченных PASS**.
 
 ## E01 — Единицы и размерности
 
@@ -57,12 +57,12 @@
 | `E03.P01.S01` | SOURCE/META | E03 · УЧЕБНАЯ МОДЕЛЬ · ИСТОЧНИКИ НЕ ПРОВЕРЕНЫ | — |
 | `E03.P02.S01` | UNVERIFIED | Источник для проверки модели цепи: OpenStax, University Physics, §10.2 . | — |
 | `E03.P02.S02` | UNVERIFIED | Полная аттестация урока не выполнена. | — |
-| `E03.P03.S01` | PASS — МОДЕЛЬ+РАСЧЁТ | Инженерное решение и границы модели. | https://openstax.org/books/university-physics-volume-2/pages/10-2-resistors-in-series-and-parallel |
-| `E03.P03.S02` | PASS — МОДЕЛЬ+РАСЧЁТ | Перед вычислением эквивалентного сопротивления нарисуйте топологию соединений. | https://openstax.org/books/university-physics-volume-2/pages/10-2-resistors-in-series-and-parallel |
+| `E03.P03.S01` | SOURCE/META | Инженерное решение и границы модели. | — |
+| `E03.P03.S02` | INSTRUCTION/REVIEW | Перед вычислением эквивалентного сопротивления нарисуйте топологию соединений. | — |
 | `E03.P03.S03` | PASS — МОДЕЛЬ+РАСЧЁТ | При параллельном соединении положительных сопротивлений эквивалент меньше минимального из ветвей; нарушение этого условия указывает на ошибку. | https://openstax.org/books/university-physics-volume-2/pages/10-2-resistors-in-series-and-parallel |
 | `E03.P04.S01` | QUESTION/CONDITION | Вопрос на понимание: Какое неравенство позволяет обнаружить ошибку в параллельном соединении сопротивлений? | — |
-| `E03.P05.S01` | PASS — МОДЕЛЬ+РАСЧЁТ | Инженерное решение и границы модели. | https://openstax.org/books/university-physics-volume-2/pages/10-2-resistors-in-series-and-parallel |
-| `E03.P05.S02` | PASS — МОДЕЛЬ+РАСЧЁТ | Перед вычислением эквивалентного сопротивления нарисуйте топологию соединений. | https://openstax.org/books/university-physics-volume-2/pages/10-2-resistors-in-series-and-parallel |
+| `E03.P05.S01` | SOURCE/META | Инженерное решение и границы модели. | — |
+| `E03.P05.S02` | INSTRUCTION/REVIEW | Перед вычислением эквивалентного сопротивления нарисуйте топологию соединений. | — |
 | `E03.P05.S03` | PASS — МОДЕЛЬ+РАСЧЁТ | При параллельном соединении положительных сопротивлений эквивалент меньше минимального из ветвей; нарушение этого условия указывает на ошибку. | https://openstax.org/books/university-physics-volume-2/pages/10-2-resistors-in-series-and-parallel |
 | `E03.P06.S01` | UNVERIFIED | После урока вы сможете: Рассчитывать эквивалентное сопротивление идеальных последовательных и параллельных соединений. | — |
 | `E03.P07.S01` | UNVERIFIED | Предварительные знания: закон Ома и действия с дробями. | — |
@@ -71,7 +71,7 @@
 | `E03.P09.S02` | UNVERIFIED | Затем сопоставьте ответ с разбором. | — |
 | `E03.P10.S01` | PASS — МОДЕЛЬ+РАСЧЁТ | Для идеальных омических резисторов в последовательном соединении через каждый элемент течёт один и тот же ток, поэтому эквивалентное сопротивление R = R1 + R2. | https://openstax.org/books/university-physics-volume-2/pages/10-2-resistors-in-series-and-parallel |
 | `E03.P10.S02` | PASS — МОДЕЛЬ+РАСЧЁТ | В параллельном соединении напряжение на ветвях одинаково, а токи складываются: 1/R = 1/R1 + 1/R2; для двух положительных сопротивлений R = R1 × R2 / (R1 + R2). | https://openstax.org/books/university-physics-volume-2/pages/10-2-resistors-in-series-and-parallel |
-| `E03.P10.S03` | PASS — МОДЕЛЬ+РАСЧЁТ | В реальной цепи учитывают допуски, температурную зависимость и допустимую рассеиваемую мощность компонентов. | https://openstax.org/books/university-physics-volume-2/pages/10-2-resistors-in-series-and-parallel |
+| `E03.P10.S03` | UNVERIFIED | В реальной цепи учитывают допуски, температурную зависимость и допустимую рассеиваемую мощность компонентов. | — |
 | `E03.P11.S01` | PASS — МОДЕЛЬ+РАСЧЁТ | Для двух положительных сопротивлений 100 Ом и 200 Ом последовательно R = 300 Ом. | https://openstax.org/books/university-physics-volume-2/pages/10-2-resistors-in-series-and-parallel |
 | `E03.P11.S02` | PASS — МОДЕЛЬ+РАСЧЁТ | Параллельно R = (100×200)/(100+200) ≈ 66,7 Ом. | https://openstax.org/books/university-physics-volume-2/pages/10-2-resistors-in-series-and-parallel |
 | `E03.P11.S03` | PASS — МОДЕЛЬ+РАСЧЁТ | Проверка здравого смысла: параллельный эквивалент меньше 100 Ом. | https://openstax.org/books/university-physics-volume-2/pages/10-2-resistors-in-series-and-parallel |
@@ -138,11 +138,11 @@
 | `E06.P01.S01` | SOURCE/META | E06 · УЧЕБНАЯ МОДЕЛЬ · ИСТОЧНИКИ НЕ ПРОВЕРЕНЫ | — |
 | `E06.P02.S01` | UNVERIFIED | Источник физической модели: OpenStax, University Physics, §10.5 . | — |
 | `E06.P02.S02` | UNVERIFIED | Полная аттестация урока не выполнена. | — |
-| `E06.P03.S01` | PASS — МОДЕЛЬ+РАСЧЁТ | Инженерное решение и границы модели. | https://openstax.org/books/university-physics-volume-2/pages/10-5-rc-circuits |
+| `E06.P03.S01` | SOURCE/META | Инженерное решение и границы модели. | — |
 | `E06.P03.S02` | PASS — МОДЕЛЬ+РАСЧЁТ | Постоянная времени RC описывает динамику выбранной идеальной модели, а не время полного заряда. | https://openstax.org/books/university-physics-volume-2/pages/10-5-rc-circuits |
 | `E06.P03.S03` | PASS — МОДЕЛЬ+РАСЧЁТ | После одного τ напряжение конденсатора при заряде достигает приблизительно 63,2% конечного изменения. | https://openstax.org/books/university-physics-volume-2/pages/10-5-rc-circuits |
 | `E06.P04.S01` | QUESTION/CONDITION | Вопрос на понимание: Почему одна постоянная времени не означает полного заряда конденсатора? | — |
-| `E06.P05.S01` | PASS — МОДЕЛЬ+РАСЧЁТ | Инженерное решение и границы модели. | https://openstax.org/books/university-physics-volume-2/pages/10-5-rc-circuits |
+| `E06.P05.S01` | SOURCE/META | Инженерное решение и границы модели. | — |
 | `E06.P05.S02` | PASS — МОДЕЛЬ+РАСЧЁТ | Постоянная времени RC описывает динамику выбранной идеальной модели, а не время полного заряда. | https://openstax.org/books/university-physics-volume-2/pages/10-5-rc-circuits |
 | `E06.P05.S03` | PASS — МОДЕЛЬ+РАСЧЁТ | После одного τ напряжение конденсатора при заряде достигает приблизительно 63,2% конечного изменения. | https://openstax.org/books/university-physics-volume-2/pages/10-5-rc-circuits |
 | `E06.P06.S01` | UNVERIFIED | После урока вы сможете: Находить постоянную времени идеальной RC-цепи в секундах. | — |
