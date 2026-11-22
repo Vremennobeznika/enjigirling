@@ -23,6 +23,8 @@ for(const [file,expected,isDraft] of pages){
    assert.match(body,/типичная ошибка:/i,id+' misconception missing');
    assert.ok((body.match(/class="worked-example"/g)||[]).length>=1,id+' no worked example');
    assert.equal((body.match(/class="engineering-decision"/g)||[]).length,1,id+' engineering decision and model limits missing');
+   assert.equal((body.match(/class="concept-check"/g)||[]).length,1,id+' conceptual check missing');
+   assert.ok(body.includes('Вопрос на понимание:'),id+' conceptual question missing');
    examples++;
   }
   forms+=taskIds.length;lessons++;
