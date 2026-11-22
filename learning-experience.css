@@ -110,3 +110,19 @@
 .site-page .education-card-status{font-size:12px;line-height:1.5;font-weight:600;margin:0;color:var(--text-secondary)}
 .site-page .education-card-details .education-site{display:flex;width:fit-content;max-width:100%;margin-top:8px;overflow-wrap:anywhere}
 .learning-practice-link{display:inline-flex;align-items:center;min-height:44px;padding:8px 0;box-sizing:border-box;overflow-wrap:anywhere}
+
+/* Compact calculator cards: independent content height, readable results, no stretched empty columns. */
+.site-page .training-calculators{align-items:start;gap:14px;grid-auto-flow:row}
+.site-page .training-calculators .calc-section-inner{align-self:start;display:flex;flex-direction:column;gap:0;padding:18px;border-radius:14px;min-height:0;height:auto;box-shadow:none}
+.site-page .training-calculators .calc-section-inner>h3{margin:0 0 6px;font-size:18px;line-height:1.35}
+.site-page .training-calculators .calc-subtitle{margin:0 0 12px;font-size:13px;line-height:1.55}
+.site-page .training-calculators .calc-layout{display:block;min-height:0;height:auto;max-height:none;margin:0;padding:0;border:0;background:transparent;box-shadow:none}
+.site-page .training-calculators .calc-controls{display:flex;flex-direction:column;align-items:stretch;gap:12px;min-height:0;height:auto}
+.site-page .training-calculators .calc-field{display:flex;flex-direction:column;gap:5px;min-width:0;margin:0}
+.site-page .training-calculators .calc-field label{display:block;font-size:12px;line-height:1.45;letter-spacing:.01em;margin:0;font-weight:650;overflow-wrap:anywhere}
+.site-page .training-calculators .calc-field input,.site-page .training-calculators .calc-field select{height:44px;min-height:44px;padding:9px 12px;border-radius:9px;font-size:15px;line-height:1.3}
+.site-page .training-calculators .calc-result{box-sizing:border-box;min-height:0;height:auto;margin:4px 0 0;padding:14px 15px;text-align:left;border:1px solid var(--border);border-radius:10px;background:var(--bg)}
+.site-page .training-calculators .calc-result-label{font-size:11px;letter-spacing:.04em;line-height:1.4;margin:0 0 4px}
+.site-page .training-calculators .calc-result-value{font-size:clamp(24px,2.7vw,33px);line-height:1.2;margin:0 0 7px;overflow-wrap:anywhere}
+.site-page .training-calculators .calc-result-hint{font-size:12px;line-height:1.55;margin:0;max-width:70ch;overflow-wrap:anywhere}
+@media(max-width:900px){.site-page .training-calculators{grid-template-columns:minmax(0,1fr)}}
