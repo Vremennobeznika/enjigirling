@@ -61,9 +61,17 @@ console.log('PASS: welding energy and power terminology regression');
 
 for(const [htmlFile,,lessons] of batches){
  const html=fs.readFileSync(htmlFile,'utf8');
- const references=[...html.matchAll(/(?:Первоисточник для предметной сверки|Источник для проверки модели цепи|Источник физической модели): <a href="(https:\/\/[^"]+)"/g)].map(m=>m[1]);
- assert.equal(references.length,lessons,htmlFile+' requires one source candidate per lesson');
- assert.ok(references.every(url=>/https:\/\/(?:[a-z0-9-]+\.)*(?:bipm\.org|nist\.gov|iec\.ch|iso\.org|modbus\.org|openstax\.org)\//.test(url)),htmlFile+' unapproved reference host');
- assert.equal((html.match(/Полная аттестация урока не выполнена\./g)||[]).length,lessons,htmlFile+' must not claim source attestation');
+ const sections=[...html.matchAll(/<section class="lesson" id="([^"]+)">([\s\S]*?)<\/section>/g)];
+ assert.equal(sections.length,lessons,htmlFile+' lesson count');
+ for(const [,id,body] of sections){
+  const urls=[...body.matchAll(/<a href="(https:\/\/[^"]+)"/g)].map(m=>m[1]);
+  assert.ok(urls.length>=1,id+' missing source link');
+  assert.ok(urls.every(url=>/https:\/\/(?:[a-z0-9-]+\.)*(?:bipm\.org|nist\.gov|iec\.ch|iso\.org|modbus\.org|openstax\.org)\//.test(url)),id+' unapproved source host');
+  assert.ok(body.includes('Полная аттестация урока не выполнена.')||body.includes('Для предметной аттестации нужны профильные первоисточники'),id+' missing attestation warning');
+  if(body.includes('https://www.iso.org/standard/9001')){
+   assert.ok(body.includes('Он не подтверждает конкретные формулы'),id+' misleading ISO 9001 source claim');
+   assert.ok(!body.includes('Первоисточник для предметной сверки: <a href="https://www.iso.org/standard/9001"'),id+' generic QMS source misrepresented as subject proof');
+  }
+ }
 }
-console.log('PASS: 49 lesson source-candidate links and honest attestation warnings');
+console.log('PASS: 49 lesson links and scope-appropriate source warnings');
