@@ -13,10 +13,13 @@ for(const file of pages){
   assert.ok(body.includes('class="worked-example"'),id+' worked example');
   assert.ok(body.includes('class="learning-check"'),id+' learning objectives');
   assert.ok(links.length>=1,id+' source candidate');
-  rows.push({id,file,forms:forms.length,sources:links.length});
+  const restricted=links.some(url=>/^https:\/\/(www\.iso\.org\/standard\/|webstore\.iec\.ch\/en\/publication\/)/.test(url));
+  if(restricted)assert.match(body,/class="academy-source-limitation"/,id+' missing ISO IEC source warning');
+  rows.push({id,file,forms:forms.length,sources:links.length,restricted});
  }
 }
 assert.equal(rows.length,49,'49 lessons');
+assert.equal(rows.filter(x=>x.restricted).length,24,'24 standards-linked lessons flagged');
 assert.equal(new Set(rows.map(x=>x.id)).size,49,'unique lesson IDs');
 assert.equal(rows.reduce((n,x)=>n+x.forms,0),98,'98 exercises');
 const index=fs.readFileSync('academy-index-draft.html','utf8');
