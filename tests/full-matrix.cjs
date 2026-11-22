@@ -526,6 +526,7 @@ check('resource catalogue: protected friends, free education, uniqueness, no dup
  }
  const friends=items.filter(x=>x.type==='Дружественные каналы').map(x=>[x.id,x.name,x.desc,x.link]);
  assert.equal(friends.length,10,'do not alter friendly channels');
+ assert.equal(items.filter(x=>x.type==='Дружественные каналы').length,10,'protected channel count');
  const snapshot=JSON.stringify(items.filter(x=>x.type==='Дружественные каналы'));
  let friendlyHash=2166136261;
  for(let i=0;i<snapshot.length;i++){friendlyHash^=snapshot.charCodeAt(i);friendlyHash=Math.imul(friendlyHash,16777619);}
