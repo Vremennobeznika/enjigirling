@@ -19,6 +19,6 @@ jobs:
         with:
           node-version: '22'
       - name: Structural and answer-map checks
-        run: node tests/academy-original-progress.cjs && node tests/academy-content-coverage.cjs && node tests/academy-draft.cjs && node tests/academy-runtime.cjs && node tests/academy-answer-reference.cjs && node tests/academy-concurrency.cjs && node tests/academy-case-regression.cjs
+        run: node tests/academy-original-answer-reference.cjs && node tests/academy-original-progress.cjs && node tests/academy-content-coverage.cjs && node tests/academy-draft.cjs && node tests/academy-runtime.cjs && node tests/academy-answer-reference.cjs && node tests/academy-concurrency.cjs && node tests/academy-case-regression.cjs
       - name: Existing unit tests
         run: npm run test:unit
