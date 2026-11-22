@@ -7,7 +7,7 @@ const ids=new Set();
 let lessons=0,forms=0,examples=0;
 for(const [file,expected,isDraft] of pages){
  const html=fs.readFileSync(file,'utf8');
- const sections=[...html.matchAll(/<section class="lesson" id="([^"]+)">([\s\S]*?)<\/section>/g)];
+ const sections=[...html.matchAll(/<section\b[^>]*\bclass="lesson"[^>]*\bid="([^"]+)"[^>]*>([\s\S]*?)<\/section>/g)];
  assert.equal(sections.length,expected,file+' lesson count');
  for(const [,id,body] of sections){
   assert.ok(!ids.has(id),'duplicate lesson ID '+id);ids.add(id);
