@@ -131,3 +131,24 @@
 - M09, Q04, Q06, Q10: [NIST Engineering Statistics Handbook, §6.3.3.2](https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc332.htm) задаёт долю несоответствующих единиц D/n и различает количество несоответствующих единиц и число характеристик/дефектов.
 
 Ссылки исправлены в HTML уроков. Полная аттестация каждого урока, включая безопасность и ограничения, остаётся отдельной задачей.
+
+
+## 2026-11-22 — claim-by-claim audit, first five electrical lessons
+
+This section distinguishes **verified content claims** from **full release attestation**. Full release status remains BLOCKED pending the other lessons, browser tests and independent safety signoff.
+
+| ID | Textual claim checked against source section | Independent numeric check | Result / remaining limits |
+|---|---|---|---|
+| E01 | BIPM SI Prefixes, table “Decimal multiples and submultiples”: kilo = 10³, milli = 10⁻³. Claims 1 A = 1000 mA and 1000 Ω = 1 kΩ are consistent. | 2.5 A = 2500 mA; 4700 Ω = 4.7 kΩ; 0.025 A = 25 mA. | PASS for these claims and two tasks; broader lesson and release not attested. |
+| E03 | OpenStax University Physics 2, §10.2, “Resistors in Series” and “Resistors in Parallel”: same current in series, same potential difference in parallel; R_series = sum R_i; reciprocal sum for parallel. | 120+330=450 Ω; 200·200/(200+200)=100 Ω; 100·200/300=66.666… Ω. | PASS for model and two tasks, only ideal positive ohmic resistors; full release not attested. |
+| E04 | JCGM VIM source linked in lesson is a publications landing page; exact terms and clauses have NOT yet been read from full VIM. | |50.2−50|=0.2 mm; |99−100|/100×100=1%. | ARITHMETIC PASS; normative terminology NOT VERIFIED. |
+| E06 | OpenStax University Physics 2, §10.5, “Charging a Capacitor”: τ=RC, at t=τ charging reaches 1−e⁻¹ ≈ 0.632 of final charge; RC units seconds. | 1000×0.001=1 s; 2000×500×10⁻⁶=1 s; 10000×100×10⁻⁶=1 s. | PASS for ideal first-order model and two tasks; practical electrical safety not independently attested. |
+| E07 | BIPM SI Brochure 9 (2019, revised June 2026) covers units and hertz; the lesson's cited brochure alone has not been checked for the exact physical model statement f=1/T. | 1/0.02=50 Hz; 4×5 ms=0.020 s, f=50 Hz. | ARITHMETIC PASS; direct source-to-model claim NOT VERIFIED. |
+
+Primary documents actually opened in this review:
+- https://www.bipm.org/en/measurement-units/si-prefixes
+- https://openstax.org/books/university-physics-volume-2/pages/10-2-resistors-in-series-and-parallel
+- https://openstax.org/books/university-physics-volume-2/pages/10-5-rc-circuits
+- https://www.bipm.org/en/si-brochure-9
+
+No other lesson is declared verified by this entry.
