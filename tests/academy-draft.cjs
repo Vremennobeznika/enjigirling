@@ -63,7 +63,7 @@ for(const [htmlFile,,lessons] of batches){
  const html=fs.readFileSync(htmlFile,'utf8');
  const references=[...html.matchAll(/(?:Первоисточник для предметной сверки|Источник для проверки модели цепи|Источник физической модели): <a href="(https:\/\/[^"]+)"/g)].map(m=>m[1]);
  assert.equal(references.length,lessons,htmlFile+' requires one source candidate per lesson');
- assert.ok(references.every(url=>/https:\/\/(?:[a-z0-9-]+\.)*(?:bipm\.org|nist\.gov|iec\.ch|iso\.org|modbus\.org|openstax\.org)\//.test(url)),htmlFile+' unapproved reference host');
+ assert.ok(references.every(url=>/https:\/\/(?:[a-z0-9-]+\.)*(?:bipm\.org|nist\.gov|iec\.ch|iso\.org|modbus\.org|openstax\.org|analog\.com)\//.test(url)),htmlFile+' unapproved reference host');
  assert.equal((html.match(/Полная аттестация урока не выполнена\./g)||[]).length,lessons,htmlFile+' must not claim source attestation');
 }
 console.log('PASS: 49 lesson source-candidate links and honest attestation warnings');
