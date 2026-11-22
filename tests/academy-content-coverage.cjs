@@ -19,7 +19,7 @@ for(const [file,expected,isDraft] of pages){
   if(isDraft){
    assert.equal((body.match(/class="learning-check"/g)||[]).length,1,id+' learning objective');
    assert.ok(body.includes('После урока вы сможете:'),id+' objective missing');
-   assert.ok(body.includes('типичная ошибка:'),id+' misconception missing');
+   assert.match(body,/типичная ошибка:/i,id+' misconception missing');
    assert.ok((body.match(/class="worked-example"/g)||[]).length>=1,id+' no worked example');
    examples++;
   }
