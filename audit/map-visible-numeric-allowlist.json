@@ -59,27 +59,6 @@
       "sourceUrl": "https://isot.bmstu.ru/edu/cost"
     },
     {
-      "organization": "Московский техникум космического приборостроения",
-      "code": "09.02.11",
-      "field": "budgetPlaces",
-      "value": 60,
-      "sourceUrl": "https://mtkp.bmstu.ru/entrant/plan-priema"
-    },
-    {
-      "organization": "Московский техникум космического приборостроения",
-      "code": "09.02.11",
-      "field": "paidPlaces",
-      "value": 40,
-      "sourceUrl": "https://mtkp.bmstu.ru/entrant/plan-priema"
-    },
-    {
-      "organization": "Московский техникум космического приборостроения",
-      "code": "09.02.11",
-      "field": "duration",
-      "value": "3 года 10 месяцев",
-      "sourceUrl": "https://mtkp.bmstu.ru/entrant/plan-priema"
-    },
-    {
       "organization": "Воронежский политехнический техникум (реорганизация 2026)",
       "code": "15.02.16",
       "field": "budgetPlaces",
