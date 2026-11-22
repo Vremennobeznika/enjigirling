@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - draft/engineering-academy
+      - main
   pull_request:
     branches:
       - main
