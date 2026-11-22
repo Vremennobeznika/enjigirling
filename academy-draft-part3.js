@@ -4,6 +4,17 @@
 const answers={"E10-1":0.2,"E10-2":4.8,"A07-1":1,"A07-2":2,"A08-1":3,"A08-2":5,"A09-1":15,"A09-2":10,"A10-1":85,"A10-2":9,"A11-1":10,"A11-2":11,"A12-1":50,"A12-2":10,"C04-1":0.1,"C04-2":-0.1,"C07-1":2,"C07-2":1,"C08-1":3,"C08-2":10,"C09-1":16,"C09-2":25,"C10-1":40.3,"C10-2":39.7,"M04-1":100,"M04-2":20,"M05-1":0.2,"M05-2":0.3,"M06-1":65,"M06-2":20,"M07-1":2,"M07-2":3,"M08-1":2000,"M08-2":10000,"M10-1":120,"M10-2":120,"Q03-1":5,"Q03-2":10,"Q06-1":14,"Q06-2":10,"Q07-1":5,"Q07-2":75,"Q08-1":8,"Q08-2":40,"Q09-1":5,"Q09-2":5,"Q10-1":5,"Q10-2":114};
 const storageKey='enjigirling:academy-draft:part3';
 const taskPrefix=storageKey+':task:';
+function hint(value,expected){
+ if(expected!==0&&Math.abs(value+expected)<=Math.max(1e-8,Math.abs(expected)*1e-9))return 'Проверьте знак: результат имеет противоположное направление.';
+ if(expected!==0&&value!==0){
+  const ratio=Math.abs(value/expected);
+  for(const scale of [10,100,1000,0.1,0.01,0.001]){
+   if(Math.abs(ratio-scale)<=scale*1e-8)return 'Проверьте перевод единиц и порядок величины (приставки, проценты, время).';
+  }
+ }
+ if(expected===0)return 'Проверьте, почему в этой модели результат должен быть нулевым.';
+ return 'Сверьте исходные данные, формулу, единицы и округление с разбором решения.';
+}
 function readProgress(){
  const result={};
  try{
@@ -34,7 +45,7 @@ for(const form of document.querySelectorAll('form[data-id]')){
   }
   const ok=Math.abs(Number(raw)-answers[id])<=Math.max(1e-8,Math.abs(answers[id])*1e-9);
   result.className='result '+(ok?'ok':'bad');
-  if(!ok){result.textContent='Неверно. Проверьте единицы и решение.';return;}
+  if(!ok){result.textContent='Неверно. '+hint(Number(raw),answers[id]);return;}
   // Write only this exercise key: two independent tabs never overwrite a shared JSON snapshot.
   done[id]=true;
   let persisted=false;
