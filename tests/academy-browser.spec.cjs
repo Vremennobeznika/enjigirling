@@ -12,13 +12,13 @@ for(const [pageName,lesson,count,answer] of drafts){
   await expect(forms).toHaveCount(count);
   const form=page.locator('form[data-id="'+lesson+'-1"]');
   await form.locator('[name="answer"]').fill('not-a-number');
-  await form.locator('button[type="submit"]').click();
+  await form.locator('button').click();
   await expect(form.locator('.result')).toContainText('Введите конечное число');
   await form.locator('[name="answer"]').fill('999999');
-  await form.locator('button[type="submit"]').click();
+  await form.locator('button').click();
   await expect(form.locator('.result')).toContainText('Неверно');
   await form.locator('[name="answer"]').fill(answer);
-  await form.locator('button[type="submit"]').click();
+  await form.locator('button').click();
   await expect(form.locator('.result')).toContainText('Верно');
   await expect(page.locator('#count')).toContainText('1 из '+count);
   await page.reload();
@@ -48,9 +48,9 @@ test('two tabs preserve independent original lesson credits',async({context})=>{
  await b.goto('/engineering-lessons.html');
  const fa=a.locator('form[data-task="ohm"]'),fb=b.locator('form[data-task="signal"]');
  await fa.locator('[name="answer"]').fill('20');
- await fa.locator('button[type="submit"]').click();
+ await fa.locator('button').click();
  await fb.locator('[name="answer"]').fill('50');
- await fb.locator('button[type="submit"]').click();
+ await fb.locator('button').click();
  await a.reload();
  await expect(a.locator('#progressText')).toHaveText('2 из 6');
  await b.close();await a.close();
