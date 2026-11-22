@@ -1,6 +1,6 @@
 # Реестр первоисточников и предметной аттестации инженерной академии
 
-Дата: 2026-11-21. Статус: **НЕ АТТЕСТОВАНО**. Все 49 уроков перечислены ниже. Наличие ссылки в строке означает **подобранный релевантный первоисточник**, а не подтверждение всех утверждений урока. Некоторые стандарты платные, и просмотр карточки стандарта не эквивалентен изучению его полного текста.
+Дата первоначального реестра: 2026-11-21; ссылки сверены с текущим HTML 2026-11-22. Статус: **НЕ АТТЕСТОВАНО**. Все 49 уроков перечислены ниже. Наличие ссылки в строке означает **подобранный релевантный первоисточник**, а не подтверждение всех утверждений урока. Некоторые стандарты платные, и просмотр карточки стандарта не эквивалентен изучению его полного текста.
 
 ## Выявленные риски
 
@@ -25,59 +25,59 @@
 
 Остальные строки ниже сохраняют статус без аттестации. Выпускной шлюз остаётся закрыт, пока не проверены все 49 уроков и все критерии релиза.
 
-## Матрица 49 уроков
+## Матрица 49 уроков — актуализирована по HTML 22.11.2026
 
-| ID | Тема | Первичный источник для сверки | Аттестация |
+| ID | Тема | Ссылка в актуальном HTML | Статус источника |
 |---|---|---|---|
-| E01 | Единицы и размерности | [BIPM](https://www.bipm.org/en/si-brochure-9) | Требует построчной сверки |
-| E03 | Последовательные и параллельные резисторы | [BIPM](https://www.bipm.org/en/si-brochure-9) | Требует построчной сверки |
-| E04 | Разрешение и отклонение | [VIM](https://www.bipm.org/en/committees/jc/jcgm/publications), [NIST-M](https://www.nist.gov/publications/nistsematech-engineering-statistics-handbook-chapter-2-measurement-process) | Требует построчной сверки |
-| E06 | Постоянная времени RC | [BIPM](https://www.bipm.org/en/si-brochure-9) | Требует построчной сверки |
-| E07 | Период и частота | [BIPM](https://www.bipm.org/en/si-brochure-9) | Требует построчной сверки |
-| A01 | Ошибка регулирования | [PLC](https://webstore.iec.ch/en/publication/68533) | Требует построчной сверки |
-| A02 | Дискретная логика | [PLC](https://webstore.iec.ch/en/publication/68533) | Требует построчной сверки |
-| C01 | Масштаб чертежа | [ISO 5455:1979](https://www.iso.org/standard/11500.html) | Требует построчной сверки |
-| C05 | Размерная цепь | [GPS](https://www.iso.org/standard/66777.html) | Требует построчной сверки |
-| M02 | Напряжение при растяжении | [BIPM](https://www.bipm.org/en/si-brochure-9) | Требует построчной сверки |
-| M09 | Выход годных изделий | [NIST — доля несоответствующих](https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc332.htm) | Требует построчной сверки |
-| Q01 | Критерий приёмки | [GUM](https://www.bipm.org/en/committees/jc/jcgm/publications) | Требует построчной сверки |
-| Q04 | Доля несоответствий | [NIST — доля несоответствующих](https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc332.htm) | Требует построчной сверки |
-| E05 | Перевод единиц напряжения и предел измерения | [BIPM](https://www.bipm.org/en/si-brochure-9) | Требует построчной сверки |
-| E08 | Повторяемость измерений | [NIST-M](https://www.nist.gov/publications/nistsematech-engineering-statistics-handbook-chapter-2-measurement-process) | Требует построчной сверки |
-| E09 | Измерение и допуск | [ISO 286-1:2010](https://www.iso.org/standard/45975.html) | Требует построчной сверки |
-| A04 | Диагностика аналогового сигнала | [PLC](https://webstore.iec.ch/en/publication/68533) | Требует построчной сверки |
-| A05 | Циклическое выполнение логики | [PLC](https://webstore.iec.ch/en/publication/68533) | Требует построчной сверки |
-| A06 | Таймеры и задержки | [PLC](https://webstore.iec.ch/en/publication/68533) | Требует построчной сверки |
-| C02 | Редакции чертежа | [ISO-Q](https://www.iso.org/standard/9001) | Требует построчной сверки |
-| C06 | Базирование и отклонения | [GPS](https://www.iso.org/standard/66777.html) | Требует построчной сверки |
-| M01 | Марка и свойства материала | [BIPM](https://www.bipm.org/en/si-brochure-9) | Требует построчной сверки |
-| M03 | Термообработка: параметры процесса | [ISO-Q](https://www.iso.org/standard/9001) | Требует построчной сверки |
-| Q02 | Поверка и калибровка | [VIM](https://www.bipm.org/en/committees/jc/jcgm/publications), [NIST-M](https://www.nist.gov/publications/nistsematech-engineering-statistics-handbook-chapter-2-measurement-process) | Требует построчной сверки |
-| Q05 | Протокол контроля | [ISO-Q](https://www.iso.org/standard/9001) | Требует построчной сверки |
-| E10 | Итоговый кейс: цепь и измерение | [BIPM](https://www.bipm.org/en/si-brochure-9) | Требует построчной сверки |
-| A07 | Конечный автомат | [PLC](https://webstore.iec.ch/en/publication/68533) | Требует построчной сверки |
-| A08 | Тревоги и HMI | [ALARMS](https://webstore.iec.ch/en/publication/65543) | Требует построчной сверки |
-| A09 | Адреса PDU и функция 03 Modbus | [MODBUS V1.1b3, PDF](https://www.modbus.org/file/secure/modbusprotocolspecification.pdf) | §4.2/4.4/6.3 проверены для двух задач; карта устройства и полная аттестация остаются |
-| A10 | Протокол имитационных испытаний | [ISO-Q](https://www.iso.org/standard/9001) | Требует построчной сверки |
-| A11 | Управление изменениями | [ISO-Q](https://www.iso.org/standard/9001) | Требует построчной сверки |
-| A12 | Сквозной кейс автоматизации | [PLC](https://webstore.iec.ch/en/publication/68533) | Требует построчной сверки |
-| C04 | Зазор и натяг | [ISO 286-1:2010](https://www.iso.org/standard/45975.html) | Требует построчной сверки |
-| C07 | Шероховатость: среднее отклонение | [ISO 21920-2:2021](https://www.iso.org/standard/72226.html) | Требует построчной сверки |
-| C08 | Проверка читаемости чертежа | [GPS](https://www.iso.org/standard/66777.html) | Требует построчной сверки |
-| C09 | Трассируемость редакций | [ISO-Q](https://www.iso.org/standard/9001) | Требует построчной сверки |
-| C10 | Итоговая проверка детали | [GPS](https://www.iso.org/standard/66777.html), [GUM](https://www.bipm.org/en/committees/jc/jcgm/publications) | Требует построчной сверки |
-| M04 | Полимер и температурный интервал | [ISO-Q](https://www.iso.org/standard/9001) | Требует построчной сверки |
-| M05 | Скорость коррозионной потери | [NIST](https://www.nist.gov/programs-projects/nistsematech-engineering-statistics-handbook) | Требует построчной сверки |
-| M06 | Литьё: материальный баланс | [NIST](https://www.nist.gov/programs-projects/nistsematech-engineering-statistics-handbook) | Требует построчной сверки |
-| M07 | Мехобработка: время операции | [BIPM](https://www.bipm.org/en/si-brochure-9) | Требует построчной сверки |
-| M08 | Сварка: электрическая мощность и энергия (учебная модель) | [BIPM](https://www.bipm.org/en/si-brochure-9) | Требует построчной сверки |
-| M10 | Выбор материала: масса | [BIPM](https://www.bipm.org/en/si-brochure-9) | Требует построчной сверки |
-| Q03 | Неопределённость: простая модель | [GUM](https://www.bipm.org/en/committees/jc/jcgm/publications) | Требует построчной сверки |
-| Q06 | Несоответствие и дефект | [NIST — несоответствующие единицы](https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc332.htm) | Требует построчной сверки |
-| Q07 | Проверка гипотез причин | [ISO-Q](https://www.iso.org/standard/9001) | Требует построчной сверки |
-| Q08 | Корректирующее действие | [ISO-Q](https://www.iso.org/standard/9001) | Требует построчной сверки |
-| Q09 | Потери процесса | [NIST](https://www.nist.gov/programs-projects/nistsematech-engineering-statistics-handbook) | Требует построчной сверки |
-| Q10 | Итоговый кейс качества | [NIST — доля несоответствующих](https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc332.htm) | Требует построчной сверки |
+| E01 | Единицы и размерности | [BIPM](https://www.bipm.org/en/si-brochure-9) | Предметная сверка всех утверждений не завершена |
+| E03 | Последовательные и параллельные резисторы | [OpenStax, University Physics, §10.2](https://openstax.org/books/university-physics-volume-2/pages/10-2-resistors-in-series-and-parallel) | Предметная сверка всех утверждений не завершена |
+| E04 | Разрешение и отклонение | [JCGM VIM](https://www.bipm.org/en/committees/jc/jcgm/publications) | Предметная сверка всех утверждений не завершена |
+| E06 | Постоянная времени RC | [OpenStax, University Physics, §10.5](https://openstax.org/books/university-physics-volume-2/pages/10-5-rc-circuits) | Предметная сверка всех утверждений не завершена |
+| E07 | Период и частота | [OpenStax University Physics 1, глава 15, Key Equations (f = 1/T)](https://openstax.org/books/university-physics-volume-1/pages/15-key-equations) | Профильный источник; границы подтверждения уточнены в уроке |
+| A01 | Ошибка регулирования | [NI, LabVIEW PID VI, Error Calculation](https://www.ni.com/docs/en-US/bundle/labview-pid-and-fuzzy-logic-toolkit-api-ref/page/lvpidmain/pid_vi_algs.html) | Профильный источник; границы подтверждения уточнены в уроке |
+| A02 | Дискретная логика | [IEC 61131-3:2025](https://webstore.iec.ch/en/publication/68533) | Полный текст ISO/IEC не подтверждён; ограничения раскрыты |
+| C01 | Масштаб чертежа | [ISO 5455:1979 (масштабы чертежей)](https://www.iso.org/standard/11500.html) | Полный текст ISO/IEC не подтверждён; ограничения раскрыты |
+| C05 | Размерная цепь | [MIT OpenCourseWare, Design Handbook, Dimensioning / Where To Put Dimensions](https://ocw.mit.edu/courses/2-007-design-and-manufacturing-i-spring-2009/pages/related-resources/drawing_and_sketching/) | Профильный источник; границы подтверждения уточнены в уроке |
+| M02 | Напряжение при растяжении | [OpenStax University Physics 1, §12.3 (tensile stress F/A)](https://openstax.org/books/university-physics-volume-1/pages/12-3-stress-strain-and-elastic-modulus) | Профильный источник; границы подтверждения уточнены в уроке |
+| M09 | Выход годных изделий | [NIST — доля несоответствующих](https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc332.htm) | Предметная сверка всех утверждений не завершена |
+| Q01 | Критерий приёмки | [JCGM](https://www.bipm.org/en/committees/jc/jcgm/publications) | Предметная сверка всех утверждений не завершена |
+| Q04 | Доля несоответствий | [NIST — доля несоответствующих](https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc332.htm) | Предметная сверка всех утверждений не завершена |
+| E05 | Перевод единиц напряжения и предел измерения | [BIPM SI](https://www.bipm.org/en/si-brochure-9) | Предметная сверка всех утверждений не завершена |
+| E08 | Повторяемость измерений | [NIST](https://www.nist.gov/publications/nistsematech-engineering-statistics-handbook-chapter-2-measurement-process) | Предметная сверка всех утверждений не завершена |
+| E09 | Измерение и допуск | [ISO 286-1:2010 (допуски и отклонения)](https://www.iso.org/standard/45975.html) | Полный текст ISO/IEC не подтверждён; ограничения раскрыты |
+| A04 | Диагностика аналогового сигнала | [Analog Devices, MAXREFDES15, Description (физические границы токовой петли 4–20 мА)](https://www.analog.com/en/resources/reference-designs/MAXREFDES15.html) | Профильный источник; границы подтверждения уточнены в уроке |
+| A05 | Циклическое выполнение логики | [IEC 61131-3:2025](https://webstore.iec.ch/en/publication/68533) | Полный текст ISO/IEC не подтверждён; ограничения раскрыты |
+| A06 | Таймеры и задержки | [IEC 61131-3:2025](https://webstore.iec.ch/en/publication/68533) | Полный текст ISO/IEC не подтверждён; ограничения раскрыты |
+| C02 | Редакции чертежа | [NASA Systems Engineering Handbook, §6.5, Configuration Management](https://www.nasa.gov/reference/6-5-configuration-management/) | Профильный источник; границы подтверждения уточнены в уроке |
+| C06 | Базирование и отклонения | [ISO 1101:2017](https://www.iso.org/standard/66777.html) | Полный текст ISO/IEC не подтверждён; ограничения раскрыты |
+| M01 | Марка и свойства материала | [OpenStax, University Physics Vol. 1, §14.1 (плотность и масса)](https://openstax.org/books/university-physics-volume-1/pages/14-1-fluids-density-and-pressure) | Профильный источник; границы подтверждения уточнены в уроке |
+| M03 | Термообработка: параметры процесса | [ASM International, Heat Treating Society, The Basics of Heat Treating](https://www.asminternational.org/hts/about/what-is/) | Профильный источник; границы подтверждения уточнены в уроке |
+| Q02 | Поверка и калибровка | [JCGM VIM](https://www.bipm.org/en/committees/jc/jcgm/publications) | Предметная сверка всех утверждений не завершена |
+| Q05 | Протокол контроля | [NASA Systems Engineering Handbook, §5.3, Product Verification](https://www.nasa.gov/reference/5-3-product-verification/) | Профильный источник; границы подтверждения уточнены в уроке |
+| E10 | Итоговый кейс: цепь и измерение | [OpenStax, University Physics, §9.4](https://openstax.org/books/university-physics-volume-2/pages/9-4-ohms-law) | Предметная сверка всех утверждений не завершена |
+| A07 | Конечный автомат | [IEC 61131-3:2025](https://webstore.iec.ch/en/publication/68533) | Полный текст ISO/IEC не подтверждён; ограничения раскрыты |
+| A08 | Тревоги и HMI | [IEC 62682:2022](https://webstore.iec.ch/en/publication/65543) | Полный текст ISO/IEC не подтверждён; ограничения раскрыты |
+| A09 | Регистры Modbus: адреса в PDU и длина данных | [MODBUS Application Protocol Specification V1.1b3, 26.04.2012, §§ 4.2, 4.4 и 6.3](https://www.modbus.org/file/secure/modbusprotocolspecification.pdf) | Предметная сверка всех утверждений не завершена |
+| A10 | Протокол имитационных испытаний | [NASA Systems Engineering Handbook, §5.3, Product Verification](https://www.nasa.gov/reference/5-3-product-verification/) | Профильный источник; границы подтверждения уточнены в уроке |
+| A11 | Управление изменениями | [NASA Systems Engineering Handbook, §6.5, Configuration Management](https://www.nasa.gov/reference/6-5-configuration-management/) | Профильный источник; границы подтверждения уточнены в уроке |
+| A12 | Сквозной кейс автоматизации | [IEC 61131-3:2025](https://webstore.iec.ch/en/publication/68533) | Полный текст ISO/IEC не подтверждён; ограничения раскрыты |
+| C04 | Зазор и натяг | [ISO 286-1:2010 (посадки)](https://www.iso.org/standard/45975.html) | Полный текст ISO/IEC не подтверждён; ограничения раскрыты |
+| C07 | Шероховатость: среднее отклонение | [ISO 21920-2:2021 (параметры профиля)](https://www.iso.org/standard/72226.html) | Полный текст ISO/IEC не подтверждён; ограничения раскрыты |
+| C08 | Проверка читаемости чертежа | [MIT OpenCourseWare, Design Handbook, Dimensioning](https://ocw.mit.edu/courses/2-007-design-and-manufacturing-i-spring-2009/pages/related-resources/drawing_and_sketching/) | Профильный источник; границы подтверждения уточнены в уроке |
+| C09 | Трассируемость редакций | [NASA Systems Engineering Handbook, §6.2, Requirements Management](https://www.nasa.gov/reference/6-2-requirements-management/) | Профильный источник; границы подтверждения уточнены в уроке |
+| C10 | Итоговая проверка детали | [JCGM](https://www.bipm.org/en/committees/jc/jcgm/publications) | Предметная сверка всех утверждений не завершена |
+| M04 | Полимер и температурный интервал | [Ensinger, High Temperature Resistance, HDT / Continuous Service Temperature](https://www.ensingerplastics.com/en/plastic-material-selection/high-temperature-plastics) | Профильный источник; границы подтверждения уточнены в уроке |
+| M05 | Скорость коррозионной потери | [AMPP, Corrosion Basics, General Attack / Localized Corrosion](https://www.ampp.org/technical-research/impact/corrosion-basics) | Профильный источник; границы подтверждения уточнены в уроке |
+| M06 | Литьё: материальный баланс | [Casting Source, What are the Cost Drivers Owned By the Foundry? (Mold Yield)](https://www.castingsource.com/column/2025/07/16/what-are-cost-drivers-owned-foundry) | Профильный источник; границы подтверждения уточнены в уроке |
+| M07 | Мехобработка: время операции | [Sandvik Coromant, Milling Formulas and Definitions, Machining Time](https://www.sandvik.coromant.com/en-gb/knowledge/machining-formulas-definitions/milling-formulas-definitions?newsarchivetagfilter=Turning) | Профильный источник; границы подтверждения уточнены в уроке |
+| M08 | Сварка: электрическая мощность и энергия (учебная модель) | [OpenStax, University Physics Vol. 2, §9.5 (электрическая мощность и энергия)](https://openstax.org/books/university-physics-volume-2/pages/9-5-electrical-energy-and-power) | Профильный источник; границы подтверждения уточнены в уроке |
+| M10 | Выбор материала: масса | [OpenStax, University Physics Vol. 1, §14.1 (плотность и масса)](https://openstax.org/books/university-physics-volume-1/pages/14-1-fluids-density-and-pressure) | Профильный источник; границы подтверждения уточнены в уроке |
+| Q03 | Неопределённость: простая модель | [JCGM GUM](https://www.bipm.org/en/committees/jc/jcgm/publications) | Предметная сверка всех утверждений не завершена |
+| Q06 | Несоответствие и дефект | [NIST Engineering Statistics Handbook, §6.3.3.1 (дефекты и дефектные единицы)](https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc331.htm) | Предметная сверка всех утверждений не завершена |
+| Q07 | Проверка гипотез причин | [ASQ, Eight Disciplines (8D), D4–D6](https://asq.org/quality-resources/eight-disciplines-8d) | Профильный источник; границы подтверждения уточнены в уроке |
+| Q08 | Корректирующее действие | [ASQ, Eight Disciplines (8D), D4–D6](https://asq.org/quality-resources/eight-disciplines-8d) | Профильный источник; границы подтверждения уточнены в уроке |
+| Q09 | Потери процесса | [American Foundry Society, Metalcasting Terms (Reject Rate / Recovery Rate)](https://www.afsinc.org/metalcasting-terms) | Профильный источник; границы подтверждения уточнены в уроке |
+| Q10 | Итоговый кейс качества | [NIST — доля несоответствующих](https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc332.htm) | Предметная сверка всех утверждений не завершена |
 
 ## Обязательные поля закрытия каждой строки
 
