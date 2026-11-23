@@ -55,6 +55,13 @@ for(const [jsFile,htmlFile] of cases){
   assert.ok(result.className.includes('ok'));
   assertions+=2;
  }
+ // Unicode mathematical minus (U+2212) must work for negative reference answers.
+ const negativeEntry=Object.entries(answers).find(([,value])=>value<0);
+ assert.ok(negativeEntry,jsFile+' needs a negative-answer regression fixture');
+ const unicodeMinus=submit(negativeEntry[0],String(negativeEntry[1]).replace('-', '\u2212'));
+ assert.match(unicodeMinus.textContent,/Верно/,jsFile+' rejected U+2212 mathematical minus');
+ assert.ok(unicodeMinus.className.includes('ok'),jsFile+' failed to credit U+2212 answer');
+ assertions+=2;
  assert.equal(count.textContent,handlers.size+' из '+handlers.size);
  // Regression: no wrong or near-but-wrong answer may be credited for any of 98 tasks.
  for(const [id,answer] of Object.entries(answers)){
