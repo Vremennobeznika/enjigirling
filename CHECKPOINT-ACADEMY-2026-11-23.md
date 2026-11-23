@@ -17,3 +17,8 @@ Branch: `fix/academy-safety-regression-20261123` (based on `main`).
 - Final release gate and production deployment.
 
 Do not merge as an attested release. Preserve the working branch and continue with evidence-based tests. No Wikipedia.
+
+## Subsequent saved fixes
+- Clarified both Q03 exercise statements: independent standard uncertainties and +1/+1 sensitivity coefficients.
+- Added `tests/academy-regression-recovery.cjs` as a regression guard for 49 safety notes, all three U+2212 parsers and Q03 assumptions. **Test added, NOT RUN** in this environment.
+- PR #48 is a draft and is not merged into `main`.
