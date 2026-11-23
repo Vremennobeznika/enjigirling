@@ -36,7 +36,7 @@ for(const form of document.querySelectorAll('form[data-id]')){
   event.preventDefault();
   const id=form.dataset.id;
   if(!Object.prototype.hasOwnProperty.call(answers,id))return;
-  const raw=String(form.elements.namedItem('answer').value).trim().replace(',','.');
+  const raw=String(form.elements.namedItem('answer').value).trim().replace(/\u2212/g,'-').replace(',','.');
   const result=form.querySelector('.result');
   if(!/^[+-]?(?:\d+(?:\.\d*)?|\.\d+)$/.test(raw)||!Number.isFinite(Number(raw))){
    result.textContent='Введите конечное число.';
