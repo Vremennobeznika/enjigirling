@@ -47,6 +47,8 @@ jobs:
           python-version: '3.12'
       - name: Build linked PDF downloads for browser scenarios
         run: |
+          apt-get update -qq
+          apt-get install -y -qq fonts-dejavu-core
           python3 -m pip install --disable-pip-version-check 'reportlab==4.4.4'
           python3 scripts/build-resource-pdfs.py
       - name: Install browser test tooling
