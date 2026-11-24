@@ -345,5 +345,5 @@ footer a:not(.footer-btn):link,footer a:not(.footer-btn):visited{color:inherit}
 @media(min-width:861px) and (max-width:1080px){
  .site-nav-wrap > nav.eng-tabs#site-main-navigation{grid-template-columns:repeat(2,minmax(0,1fr));}
 }
-.site-nav-wrap > nav.eng-tabs#site-main-navigation .eng-tab[href="ai.html#iishnitsa"]{border-color:var(--text-primary);font-weight:750;}
+.site-nav-wrap > nav.eng-tabs#site-main-navigation .eng-tab[href="iishnitsa.html"]{border-color:var(--text-primary);font-weight:750;}
 #iishnitsa{scroll-margin-top:20px;}
