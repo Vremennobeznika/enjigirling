@@ -38,28 +38,11 @@
 <a href="robotics.html" class="eng-tab">Робототехника</a>
 <a href="coding.html" class="eng-tab">Кодинг</a>
 <a href="ai.html" class="eng-tab active" aria-current="page">Для ИИ</a>
-<a href="ai.html#iishnitsa" class="eng-tab">ИИШНИЦА</a>
+<a href="iishnitsa.html" class="eng-tab">ИИШНИЦА</a>
 </div>
 </nav></div>
 <main class="site-page ai-hub" id="main-content">
-<section class="ai-hub-note" id="iishnitsa" aria-labelledby="iishnitsaHeading">
-<h2 id="iishnitsaHeading">ИИШНИЦА: чтобы нейросеть не изображала бурную деятельность</h2>
-<p>Нейросеть опять составила план из двадцати пунктов, назвала его результатом и гордо отчиталась о выполнении? Вот для этого и собран набор рабочих инструкций. Не чтобы компьютер обрёл сознание, а чтобы он перестал путать «написала тест» с «запустила тест», а красивую ссылку — с проверенным источником.</p>
-<p>Внутри — публичный, обезличенный стартовый комплект: правила проверки фактов, порядок доведения технической задачи до результата и матрица QA. Без персональных историй, чужих поручений, контактов и доступов к аккаунтам. Работает как инструкция для поддерживающей её модели, а не как волшебная перепрошивка мозгов.</p>
-<div class="ai-hub-actions" role="group" aria-label="Публичный комплект ИИШНИЦЫ">
-<a href="ai-toolkit/iishnitsa-public-starter.zip" download>Скачать ИИШНИЦУ — ZIP</a>
-<a href="ai-toolkit/iishnitsa-public-starter/00_START_HERE.md">Инструкция по запуску</a>
-<a href="ai-toolkit/iishnitsa-public-starter/01_CORE_RULES.md">Правила для ИИ</a>
-<a href="ai-toolkit/iishnitsa-public-starter/02_QA_AND_HANDOFF.md">QA и передача задачи</a>
-</div>
-<h3>Как пользоваться без шаманства</h3>
-<ol>
-<li>Откройте новый проект или чат в нейросети. Правила из <code>01_CORE_RULES.md</code> добавьте в инструкции проекта или отправьте первым сообщением.</li>
-<li>Для исследования, разработки и проверки результата прикрепите <code>02_QA_AND_HANDOFF.md</code>, затем саму задачу и её исходные материалы.</li>
-<li>Получили отчёт «всё готово»? Спросите о проверках и доказательствах. Нет теста — нет пройденного теста. Совершенно неожиданное требование.</li>
-</ol>
-<p><strong>Что набор не делает:</strong> не переобучает модель, не запускает фоновые процессы, не подключает GitHub, облако или Telegram и не гарантирует безошибочность. Не пересылайте незнакомой модели персональные документы и секреты только ради того, чтобы она выглядела осведомлённой.</p>
-</section>
+
 <section class="ai-hub-header"><h1>Скачать разделы для ИИ</h1>
 <p>Файлы инженерных разделов собраны здесь; учебники по программированию и два PDF вынесены в отдельный раздел «Кодинг». Выберите готовый пакет ниже или сформируйте отраслевую подборку процессов и материалов. Доступные форматы: <strong>Markdown для загрузки в чат</strong> и <strong>JSON для автоматической обработки</strong>. Пакеты содержат тексты страниц и соответствующие записи каталогов, включая данные, которые обычно создаются JavaScript.</p>
 <div class="ai-hub-actions"><a href="knowledge/reading/index.html">Читать базу — HTML</a><a href="knowledge/reading/all.epub" download>Скачать книгу — EPUB</a><a href="knowledge/sections/all.md" download>Все разделы — Markdown</a><a href="knowledge/ai-context.md" download>Обзорная база для ИИ — Markdown</a><a href="knowledge/search-index.json" download>Поисковый индекс — JSON</a><a href="llms.txt">llms.txt</a><a href="knowledge-base.md">Документация</a></div>
@@ -70,18 +53,7 @@
 <div class="ai-hub-actions"><button type="button" id="aiCopyPrompt">Скопировать запрос</button><span id="aiCopyStatus" role="status" aria-live="polite"></span></div>
 </section>
 
-<section class="ai-hub-note" aria-labelledby="aiToolkitHeading">
-<h2 id="aiToolkitHeading">Рабочие шаблоны для ИИ и инженерных проектов</h2>
-<p>Пять открытых, обезличенных Markdown-шаблонов: для расследования, фактчекинга, приёмки результата и передачи работы агенту. Это заполняемые формы, а не подтверждение выполненной проверки. Личные файлы и настройки в библиотеку не входят.</p>
-<div class="ai-hub-actions" role="group" aria-label="Скачать рабочие шаблоны">
-<a href="ai-toolkit/fact-check.md" download title="Матрица утверждений, первоисточников и исправлений.">Проверка фактов · Markdown</a>
-<a href="ai-toolkit/engineering-investigation.md" download title="Гипотезы, схемы, измерения и пределы выводов.">Инженерное расследование · Markdown</a>
-<a href="ai-toolkit/release-gate.md" download title="Проверки, доказательства и решение GO / NO-GO.">Контроль релиза · Markdown</a>
-<a href="ai-toolkit/agent-handoff.md" download title="Состояние проекта без пересылки всей переписки.">Передача задачи агенту · Markdown</a>
-<a href="ai-toolkit/privacy-before-publishing.md" download title="Чеклист обезличивания файлов, репозиториев и архивов.">Приватность перед публикацией · Markdown</a>
-</div>
-<p>Перед использованием укажите модели реальные исходные данные, критерии проверки и доступные инструменты. Не загружайте секреты и документы третьих лиц без оснований и разрешения.</p>
-</section>
+
 <section class="ai-hub atlas-ai-hub" aria-label="Готовые отраслевые файлы для ИИ"><h2>Процессы и материалы: единая пакетная выгрузка</h2><p>Скачайте нужную отрасль целиком либо архив по всем отраслям. Файлы формируются локально из данных сайта.</p><div class="atlas-ai-pack" id="atlasAiPackage" role="group" aria-label="Единые пакеты процессов и материалов для ИИ">
 <div class="atlas-ai-pack__intro"><strong>Пакет для ИИ: процессы + материалы</strong>
 <p>Одна отрасль — один файл с обоими каталогами. Можно скачать весь атлас без повторов или ZIP со всеми 16 отраслевыми пакетами. Источники и пределы проверки сохраняются.</p></div>
