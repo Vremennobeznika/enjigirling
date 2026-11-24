@@ -61,9 +61,16 @@ console.log('PASS: welding energy and power terminology regression');
 
 for(const [htmlFile,,lessons] of batches){
  const html=fs.readFileSync(htmlFile,'utf8');
- const references=[...html.matchAll(/(?:Первоисточник для предметной сверки|Источник для проверки модели цепи|Источник физической модели): <a href="(https:\/\/[^"]+)"/g)].map(m=>m[1]);
- assert.equal(references.length,lessons,htmlFile+' requires one source candidate per lesson');
- assert.ok(references.every(url=>/https:\/\/(?:[a-z0-9-]+\.)*(?:bipm\.org|nist\.gov|iec\.ch|iso\.org|modbus\.org|openstax\.org|analog\.com|asq\.org|ni\.com|mit\.edu|asminternational\.org|ensingerplastics\.com|ampp\.org|sandvik\.coromant\.com|castingsource\.com|afsinc\.org|nasa\.gov)\//.test(url)),htmlFile+' unapproved reference host');
- assert.equal((html.match(/Полная аттестация урока не выполнена\./g)||[]).length,lessons,htmlFile+' must not claim source attestation');
+ const sections=[...html.matchAll(/<section class="lesson" id="([^"]+)">([\s\S]*?)<\/section>/g)];
+ assert.equal(sections.length,lessons,htmlFile+' lesson count for source review');
+ for(const [,id,body] of sections){
+  const links=[...body.matchAll(/<a\s[^>]*href="(https?:\/\/[^"]+)"/g)].map(match=>new URL(match[1]));
+  assert.ok(links.length>0,id+' requires a source candidate');
+  for(const link of links){
+   assert.equal(link.protocol,'https:',id+' requires HTTPS references');
+   assert.match(link.hostname,/(?:^|\.)(?:bipm\.org|nist\.gov|iec\.ch|iso\.org|modbus\.org|openstax\.org|analog\.com|asq\.org|ni\.com|mit\.edu|asminternational\.org|ensingerplastics\.com|ampp\.org|sandvik\.coromant\.com|castingsource\.com|afsinc\.org|nasa\.gov)$/,id+' unapproved reference host');
+  }
+  assert.ok(body.includes('Полная аттестация урока не выполнена.'),id+' must disclose pending attestation');
+ }
 }
 console.log('PASS: 49 lesson source-candidate links and honest attestation warnings');
