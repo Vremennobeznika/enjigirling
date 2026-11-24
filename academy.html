@@ -1,0 +1,807 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Инженерная академия — ENJIGIRLING</title>
+<meta name="description" content="Инженерная академия ENJIGIRLING. 52 темы и 104 задачи с разборами по электротехнике, автоматизации, чертежам, материалам и качеству.">
+<link rel="canonical" href="https://vremennobeznika.github.io/enjigirling/academy.html">
+<link rel="icon" href="favicon.svg"><link rel="stylesheet" href="academy.css"><script defer src="theme.js"></script><script defer src="academy.js"></script></head>
+<body><main><nav class="top" aria-label="Навигация"><a href="index.html">ENJIGIRLING</a><a href="map.html">Обучение</a><a href="calculator.html">Калькуляторы</a><button type="button" class="theme-toggle" aria-label="Сменить тему">☀</button></nav>
+<header><h1>Инженерная академия</h1><p>52 темы и 104 задачи с разборами. Выберите тему, решите задачу и проверьте ответ.</p>
+<p class="scope">Практикум проверяет расчёты в заданных условиях. Для работы с оборудованием, выбора режимов или приёмки деталей нужны документация и проверка специалиста. Предметная аттестация полной программы продолжается.</p></header>
+<section><h2>Вводный практикум</h2><div class="topics"><a href="engineering-lessons.html#ohm">Закон Ома</a><a href="engineering-lessons.html#signal">Сигнал 4–20 мА</a><a href="engineering-lessons.html#tolerance">Двусторонний допуск</a></div></section>
+<section aria-label="Каталог задач"><h2>Задачи по направлениям</h2><nav class="topics" aria-label="Направления"><a href="#group-E">Электротехника и измерения</a><a href="#group-A">Автоматизация</a><a href="#group-C">Чертежи и допуски</a><a href="#group-M">Материалы и производство</a><a href="#group-Q">Контроль качества</a></nav><div id="filters" hidden><label for="search">Поиск по теме или номеру урока</label><input id="search" type="search" placeholder="Например, Modbus или E04"><p id="matches" role="status"></p></div>
+<p id="progress" hidden></p><noscript>Для автоматической проверки ответов включите JavaScript. Все условия и разборы доступны ниже.</noscript></section>
+<section class="group" id="group-E"><h2>Электротехника и измерения</h2>
+<details id="E01" class="lesson">
+<summary><span class="code">E01</span> Единицы и размерности</summary>
+<p>Приставка милли соответствует множителю 10⁻³, кило — 10³. При смене единицы численное значение меняется обратно её масштабу.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> 2,5 А перевести в мА.</p>
+<form data-id="E01-1" data-answer="2500">
+<label for="E01-1">Числовой ответ</label><div class="controls"><input id="E01-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>2,5 × 1000 = 2500 мА.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> 4700 Ом перевести в кОм.</p>
+<form data-id="E01-2" data-answer="4.7">
+<label for="E01-2">Числовой ответ</label><div class="controls"><input id="E01-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>4700 / 1000 = 4,7 кОм.</p></details></div>
+<p class="reference"><a href="https://www.bipm.org/en/measurement-units/si-prefixes">BIPM · Приставки СИ</a></p>
+</details>
+<details id="E03" class="lesson">
+<summary><span class="code">E03</span> Последовательные и параллельные резисторы</summary>
+<p>В идеальной цепи последовательные сопротивления складываются. Для двух положительных сопротивлений в параллельных ветвях R = R₁R₂/(R₁+R₂).</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> 120 Ом и 330 Ом последовательно: общее сопротивление, Ом?</p>
+<form data-id="E03-1" data-answer="450">
+<label for="E03-1">Числовой ответ</label><div class="controls"><input id="E03-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>120 + 330 = 450 Ом.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> Два резистора по 200 Ом параллельно: общее сопротивление, Ом?</p>
+<form data-id="E03-2" data-answer="100">
+<label for="E03-2">Числовой ответ</label><div class="controls"><input id="E03-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>200 × 200 / 400 = 100 Ом.</p></details></div>
+<p class="reference"><a href="https://openstax.org/books/university-physics-volume-2/pages/10-2-resistors-in-series-and-parallel">OpenStax · Последовательное и параллельное соединение, §10.2</a></p>
+</details>
+<details id="E04" class="lesson">
+<summary><span class="code">E04</span> Разрешение и отклонение</summary>
+<p>В этих двух задачах нужен модуль разности. Для относительного отклонения разделите его на модуль ненулевого опорного значения и умножьте на 100 %.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Опорная длина 50 мм, показание 50,2 мм. Модуль отклонения, мм?</p>
+<form data-id="E04-1" data-answer="0.2">
+<label for="E04-1">Числовой ответ</label><div class="controls"><input id="E04-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>|50,2 − 50| = 0,2 мм.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> Опорное значение 100 мм, показание 99 мм. Чему равен модуль относительного отклонения, %?</p>
+<form data-id="E04-2" data-answer="1">
+<label for="E04-2">Числовой ответ</label><div class="controls"><input id="E04-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>|99 − 100| / 100 × 100 % = 1 %.</p></details></div>
+<p class="reference"><a href="https://jcgm.bipm.org/vim/en/2.16.html">JCGM VIM · Погрешность измерения, 2.16</a></p>
+</details>
+<details id="E05" class="lesson">
+<summary><span class="code">E05</span> Перевод единиц напряжения</summary>
+<p>В одном вольте тысяча милливольт. Упражнения проверяют перевод единиц. Для выбора измерительного прибора и его диапазона нужны характеристики оборудования.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Сколько милливольт составляют 1,25 В?</p>
+<form data-id="E05-1" data-answer="1250">
+<label for="E05-1">Числовой ответ</label><div class="controls"><input id="E05-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>1,25 × 1000 = 1250 мВ.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> Сколько вольт составляют 750 мВ?</p>
+<form data-id="E05-2" data-answer="0.75">
+<label for="E05-2">Числовой ответ</label><div class="controls"><input id="E05-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>750 / 1000 = 0,75 В.</p></details></div>
+<p class="reference"><a href="https://www.bipm.org/en/measurement-units/si-prefixes">BIPM · Приставки СИ</a></p>
+</details>
+<details id="E06" class="lesson">
+<summary><span class="code">E06</span> Постоянная времени RC</summary>
+<p>Для идеальной последовательной RC-цепи постоянная времени τ = RC. Подставляйте сопротивление в омах, ёмкость в фарадах, чтобы получить секунды.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> R = 1000 Ом, C = 0,001 Ф. τ, с?</p>
+<form data-id="E06-1" data-answer="1">
+<label for="E06-1">Числовой ответ</label><div class="controls"><input id="E06-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>1000 × 0,001 = 1 с.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> R = 2000 Ом, C = 500 мкФ. τ, с?</p>
+<form data-id="E06-2" data-answer="1">
+<label for="E06-2">Числовой ответ</label><div class="controls"><input id="E06-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>500 мкФ = 0,0005 Ф; τ = 1 с.</p></details></div>
+<p class="reference"><a href="https://openstax.org/books/university-physics-volume-2/pages/10-5-rc-circuits">OpenStax · RC-цепи, §10.5</a></p>
+</details>
+<details id="E07" class="lesson">
+<summary><span class="code">E07</span> Период и частота</summary>
+<p>Период T — время одного повторения. Для периодического сигнала f = 1/T, где T &gt; 0. На осциллограмме умножьте число делений за период на время одного деления.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Период 0,02 с. Частота, Гц?</p>
+<form data-id="E07-1" data-answer="50">
+<label for="E07-1">Числовой ответ</label><div class="controls"><input id="E07-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>1 / 0,02 = 50 Гц.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> Один период занимает 4 деления по 5 мс. Частота, Гц?</p>
+<form data-id="E07-2" data-answer="50">
+<label for="E07-2">Числовой ответ</label><div class="controls"><input id="E07-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>4 × 5 мс = 0,02 с; 1 / 0,02 = 50 Гц.</p></details></div>
+<p class="reference"><a href="https://openstax.org/books/university-physics-volume-1/pages/15-key-equations">OpenStax · Период и частота, гл. 15</a></p>
+</details>
+<details id="E08" class="lesson">
+<summary><span class="code">E08</span> Повторяемость измерений</summary>
+<p>Среднее — сумма показаний, делённая на их число. Размах — разность максимума и минимума. Для вывода о повторяемости нужно также знать условия измерения.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Три показания: 10, 12, 14 мм. Среднее, мм?</p>
+<form data-id="E08-1" data-answer="12">
+<label for="E08-1">Числовой ответ</label><div class="controls"><input id="E08-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>(10 + 12 + 14) / 3 = 12 мм.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> Три показания: 10, 12, 14 мм. Размах, мм?</p>
+<form data-id="E08-2" data-answer="4">
+<label for="E08-2">Числовой ответ</label><div class="controls"><input id="E08-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>14 − 10 = 4 мм.</p></details></div>
+<p class="reference"><a href="https://jcgm.bipm.org/vim/en/2.20.html">JCGM VIM · Условия повторяемости, 2.20</a></p>
+</details>
+<details id="E09" class="lesson">
+<summary><span class="code">E09</span> Измерение и допуск</summary>
+<p>Прибавьте соответствующее отклонение со знаком к номиналу. Здесь вычисляются границы заданного интервала. Для реальной приёмки потребуется правило принятия решения.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Номинал 20 мм, нижнее отклонение −0,1 мм. Нижняя граница, мм?</p>
+<form data-id="E09-1" data-answer="19.9">
+<label for="E09-1">Числовой ответ</label><div class="controls"><input id="E09-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>20 − 0,1 = 19,9 мм.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> Номинал 20 мм, верхнее отклонение +0,2 мм. Верхняя граница, мм?</p>
+<form data-id="E09-2" data-answer="20.2">
+<label for="E09-2">Числовой ответ</label><div class="controls"><input id="E09-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>20 + 0,2 = 20,2 мм.</p></details></div>
+
+</details>
+<details id="E10" class="lesson">
+<summary><span class="code">E10</span> Итоговый кейс: цепь и измерение</summary>
+<p>В модели идеального резистора при постоянном напряжении I = U/R. При этих условиях электрическая мощность P = UI.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> При U=24 В и R=120 Ом ток, А?</p>
+<form data-id="E10-1" data-answer="0.2">
+<label for="E10-1">Числовой ответ</label><div class="controls"><input id="E10-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>24/120=0,2 А.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> При U=24 В и I=0,2 А мощность, Вт?</p>
+<form data-id="E10-2" data-answer="4.8">
+<label for="E10-2">Числовой ответ</label><div class="controls"><input id="E10-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>24×0,2=4,8 Вт.</p></details></div>
+<p class="reference"><a href="https://openstax.org/books/university-physics-volume-2/pages/9-4-ohms-law">OpenStax · Закон Ома, §9.4</a></p>
+</details>
+</section>
+<section class="group" id="group-A"><h2>Автоматизация</h2>
+<details id="A01" class="lesson">
+<summary><span class="code">A01</span> Ошибка регулирования</summary>
+<p>В этих задачах принята ошибка e = задание − измерение. Разность значений, записанных в процентах, выражается в процентных пунктах. Знак ошибки сам по себе не определяет команду приводу.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Задание 80 °C, измерено 74 °C. Ошибка e, °C?</p>
+<form data-id="A01-1" data-answer="6">
+<label for="A01-1">Числовой ответ</label><div class="controls"><input id="A01-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>80 − 74 = 6 °C.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> Задание 40%, измерено 52%. Чему равна ошибка в процентных пунктах?</p>
+<form data-id="A01-2" data-answer="-12">
+<label for="A01-2">Числовой ответ</label><div class="controls"><input id="A01-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>40 − 52 = −12.</p></details></div>
+<p class="reference"><a href="https://www.ni.com/en/shop/labview/pid-theory-explained.html">NI · Обратная связь и ошибка регулирования</a></p>
+</details>
+<details id="A02" class="lesson">
+<summary><span class="code">A02</span> Дискретная логика</summary>
+<p>Операция И даёт 1, когда оба входа равны 1. Для ИЛИ достаточно одного входа со значением 1. Здесь рассматривается только таблица истинности.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Входы И: 1 и 0. Выход?</p>
+<form data-id="A02-1" data-answer="0">
+<label for="A02-1">Числовой ответ</label><div class="controls"><input id="A02-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>1 И 0 = 0.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> Входы ИЛИ: 0 и 1. Выход?</p>
+<form data-id="A02-2" data-answer="1">
+<label for="A02-2">Числовой ответ</label><div class="controls"><input id="A02-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>0 ИЛИ 1 = 1.</p></details></div>
+
+</details>
+<details id="A04" class="lesson">
+<summary><span class="code">A04</span> Диагностика аналогового сигнала</summary>
+<p>Для заданной линейной шкалы от 4 до 20 мА доля диапазона равна (I − 4)/16, где I выражен в миллиамперах. Диагностика реального устройства зависит от его документации.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Ток 20 мА на шкале 0–100%. Показание, %?</p>
+<form data-id="A04-1" data-answer="100">
+<label for="A04-1">Числовой ответ</label><div class="controls"><input id="A04-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>(20 − 4) / 16 × 100 = 100%.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> Ток 4 мА на шкале 0–100%. Показание, %?</p>
+<form data-id="A04-2" data-answer="0">
+<label for="A04-2">Числовой ответ</label><div class="controls"><input id="A04-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>(4 − 4) / 16 × 100 = 0%.</p></details></div>
+<p class="reference"><a href="https://www.analog.com/en/resources/reference-designs/MAXREFDES15.html">Analog Devices · Пример шкалы 4–20 мА, MAXREFDES15</a></p>
+</details>
+<details id="A05" class="lesson">
+<summary><span class="code">A05</span> Циклическое выполнение логики</summary>
+<p>В модели период каждого цикла постоянен. Число полных циклов за интервал, кратный периоду, равно длительности интервала, делённой на период. Время отклика оборудования отдельно не задано.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Период цикла 10 мс. Сколько циклов в секунду?</p>
+<form data-id="A05-1" data-answer="100">
+<label for="A05-1">Числовой ответ</label><div class="controls"><input id="A05-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>1 / 0,010 = 100.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> Период цикла 20 мс. Сколько циклов за 2 секунды?</p>
+<form data-id="A05-2" data-answer="100">
+<label for="A05-2">Числовой ответ</label><div class="controls"><input id="A05-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>2 / 0,020 = 100.</p></details></div>
+<p class="reference"><a href="https://openstax.org/books/university-physics-volume-1/pages/15-key-equations">OpenStax · Период и частота, гл. 15</a></p>
+</details>
+<details id="A06" class="lesson">
+<summary><span class="code">A06</span> Таймеры и задержки</summary>
+<p>В модели таймера выход включается после непрерывной выдержки. При неизменно активном входе начиная с t = 0 время включённого выхода равно max(0, t − задержка).</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Задержка 3 с, вход непрерывно активен 5 с. Сколько секунд выход уже активен?</p>
+<form data-id="A06-1" data-answer="2">
+<label for="A06-1">Числовой ответ</label><div class="controls"><input id="A06-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>5 − 3 = 2 с.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> Задержка 4 с, вход непрерывно активен 2 с. Сколько секунд выход активен?</p>
+<form data-id="A06-2" data-answer="0">
+<label for="A06-2">Числовой ответ</label><div class="controls"><input id="A06-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>Задержка ещё не истекла.</p></details></div>
+<p class="reference"><a href="https://content.helpme-codesys.com/en/libs/Standard/3.5.15.0/Timer/TON.html">CODESYS · Таймер TON, входы и выходы</a></p>
+</details>
+<details id="A07" class="lesson">
+<summary><span class="code">A07</span> Конечный автомат</summary>
+<p>Используйте переход, заданный прямо в условии. Номер состояния служит меткой. Логика производственной установки и её защит здесь не моделируется.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Из состояния 0 по команде пуск переходим в состояние 1. Номер состояния?</p>
+<form data-id="A07-1" data-answer="1">
+<label for="A07-1">Числовой ответ</label><div class="controls"><input id="A07-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>Переход 0→1.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> Из состояния 1 по команде стоп переходим в состояние 2. Номер состояния?</p>
+<form data-id="A07-2" data-answer="2">
+<label for="A07-2">Числовой ответ</label><div class="controls"><input id="A07-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>Переход 1→2.</p></details></div>
+<p class="reference"><a href="https://www.w3.org/TR/scxml/#CoreConstructs">W3C · Состояния и переходы, SCXML §3</a></p>
+</details>
+<details id="A08" class="lesson">
+<summary><span class="code">A08</span> Тревоги и HMI</summary>
+<p>Считайте подтверждение оператором и исчезновение условия тревоги разными событиями. Во второй задаче принято, что фиксация состояния отключена.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Возникли 5 тревог, 2 подтверждены. Сколько неподтверждённых?</p>
+<form data-id="A08-1" data-answer="3">
+<label for="A08-1">Числовой ответ</label><div class="controls"><input id="A08-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>5−2=3.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> В учебной модели без фиксации состояния из 8 активных тревог у 3 условия активации перестали выполняться. Сколько условий остаются активными?</p>
+<form data-id="A08-2" data-answer="5">
+<label for="A08-2">Числовой ответ</label><div class="controls"><input id="A08-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>8−3=5.</p></details></div>
+<p class="reference"><a href="https://literature.rockwellautomation.com/idc/groups/literature/documents/rm/proces-rm001_-en-p.pdf">Rockwell Automation · PlantPAx, гл. 4, состояния тревог</a></p>
+</details>
+<details id="A09" class="lesson">
+<summary><span class="code">A09</span> Регистры Modbus: адреса в PDU и длина данных</summary>
+<p>Для функции 03 адрес первого регистра в PDU равен нулю. Нормальный ответ передаёт два байта данных на регистр. Служебные поля в Byte count не входят.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> В модели Modbus элемент holding-регистров имеет порядковый номер 16 (счёт от 1). Каков его адрес PDU (десятичный)?</p>
+<form data-id="A09-1" data-answer="15">
+<label for="A09-1">Числовой ответ</label><div class="controls"><input id="A09-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>По § 4.4 адрес PDU = 16 − 1 = 15. Это модельная адресация, а не подтверждение маркировки адреса в документации устройства.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> Функция 03 читает пять соседних holding-регистров. Каково значение поля <em>Byte count</em> в ответе, в байтах (без служебных полей)?</p>
+<form data-id="A09-2" data-answer="10">
+<label for="A09-2">Числовой ответ</label><div class="controls"><input id="A09-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>По § 6.3 каждый регистр занимает 2 байта, значит Byte count = 2 × 5 = 10 байт. Служебные поля здесь не включаются.</p></details></div>
+<p class="reference"><a href="https://www.modbus.org/file/secure/modbusprotocolspecification.pdf">Modbus · Application Protocol V1.1b3, §6.3</a></p>
+</details>
+<details id="A10" class="lesson">
+<summary><span class="code">A10</span> Протокол имитационных испытаний</summary>
+<p>Доля пройденных испытаний равна их числу, делённому на общее число. Во второй задаче все испытания завершены с одним из двух исходов. Процент прохождения не измеряет надёжность.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Из 20 тестов 17 пройдены. Доля пройденных, %?</p>
+<form data-id="A10-1" data-answer="85">
+<label for="A10-1">Числовой ответ</label><div class="controls"><input id="A10-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>17/20×100=85%.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> Из 12 тестов 3 не пройдены. Сколько пройдено?</p>
+<form data-id="A10-2" data-answer="9">
+<label for="A10-2">Числовой ответ</label><div class="controls"><input id="A10-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>12−3=9.</p></details></div>
+<p class="reference"><a href="https://www.nasa.gov/reference/5-3-product-verification/">NASA · Проверка изделия, §5.3</a></p>
+</details>
+<details id="A11" class="lesson">
+<summary><span class="code">A11</span> Управление изменениями</summary>
+<p>В первой задаче версии имеют последовательные целые номера. Во второй учитываются изменения, которые остались после отмены. Их фактическое внедрение по этому счёту определить нельзя.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> После версии 7 выполнено 3 последовательных выпуска. Номер последней версии?</p>
+<form data-id="A11-1" data-answer="10">
+<label for="A11-1">Числовой ответ</label><div class="controls"><input id="A11-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>7+3=10.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> Из 15 изменений 4 отменены. Сколько остаётся?</p>
+<form data-id="A11-2" data-answer="11">
+<label for="A11-2">Числовой ответ</label><div class="controls"><input id="A11-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>15−4=11.</p></details></div>
+<p class="reference"><a href="https://www.nasa.gov/reference/6-5-configuration-management/">NASA · Управление конфигурацией, §6.5</a></p>
+</details>
+<details id="A12" class="lesson">
+<summary><span class="code">A12</span> Сквозной кейс автоматизации</summary>
+<p>Для линейного датчика пересчитайте долю диапазона 4–20 мА в долю шкалы. В задаче об ошибке вычтите измеренное значение из задания. Алгоритм управления здесь не задаётся.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Датчик 4–20 мА, шкала 0–100 единиц, сигнал 12 мА. Показание?</p>
+<form data-id="A12-1" data-answer="50">
+<label for="A12-1">Числовой ответ</label><div class="controls"><input id="A12-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>(12−4)/16×100=50.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> Задание 60, измерено 50. Ошибка r−y?</p>
+<form data-id="A12-2" data-answer="10">
+<label for="A12-2">Числовой ответ</label><div class="controls"><input id="A12-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>60−50=10.</p></details></div>
+<p class="reference"><a href="https://www.analog.com/en/resources/reference-designs/MAXREFDES15.html">Analog Devices · Пример шкалы 4–20 мА, MAXREFDES15</a></p>
+</details>
+</section>
+<section class="group" id="group-C"><h2>Чертежи и допуски</h2>
+<details id="C01" class="lesson">
+<summary><span class="code">C01</span> Масштаб чертежа</summary>
+<p>Масштаб задаёт отношение длины изображения к соответствующей длине объекта. Используйте масштаб из условия и приведите обе длины к одной единице.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> При масштабе 1:2 длина на чертеже 30 мм. Реальная длина, мм?</p>
+<form data-id="C01-1" data-answer="60">
+<label for="C01-1">Числовой ответ</label><div class="controls"><input id="C01-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>30 × 2 = 60 мм.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> При масштабе 2:1 реальная длина 20 мм. Длина изображения, мм?</p>
+<form data-id="C01-2" data-answer="40">
+<label for="C01-2">Числовой ответ</label><div class="controls"><input id="C01-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>20 × 2 = 40 мм.</p></details></div>
+
+</details>
+<details id="C02" class="lesson">
+<summary><span class="code">C02</span> Редакции чертежа</summary>
+<p>Редакции в примере нумеруются последовательными целыми числами. Для подсчёта действующих изменений исключите отменённые. Записи об отмене остаются частью истории.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> После редакции 3 выпущены две последовательные редакции. Номер последней?</p>
+<form data-id="C02-1" data-answer="5">
+<label for="C02-1">Числовой ответ</label><div class="controls"><input id="C02-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>3 + 2 = 5.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> В журнале 12 изменений, 3 отменены. Сколько остаётся действующих записей?</p>
+<form data-id="C02-2" data-answer="9">
+<label for="C02-2">Числовой ответ</label><div class="controls"><input id="C02-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>12 − 3 = 9.</p></details></div>
+<p class="reference"><a href="https://www.nasa.gov/reference/6-5-configuration-management/">NASA · Управление конфигурацией, §6.5</a></p>
+</details>
+<details id="C04" class="lesson">
+<summary><span class="code">C04</span> Зазор и натяг</summary>
+<p>В заданной одномерной модели вычислите диаметр отверстия минус диаметр вала. Отрицательный результат означает, что вал больше отверстия.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Отверстие 20,1 мм, вал 20,0 мм. Зазор, мм?</p>
+<form data-id="C04-1" data-answer="0.1">
+<label for="C04-1">Числовой ответ</label><div class="controls"><input id="C04-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>20,1−20,0=0,1 мм.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> Отверстие 19,9 мм, вал 20,0 мм. Разность отверстие−вал, мм?</p>
+<form data-id="C04-2" data-answer="-0.1">
+<label for="C04-2">Числовой ответ</label><div class="controls"><input id="C04-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>19,9−20,0=−0,1 мм.</p></details></div>
+
+</details>
+<details id="C05" class="lesson">
+<summary><span class="code">C05</span> Размерная цепь</summary>
+<p>Для звена A − B верхняя граница достигается при максимальном A и минимальном B, если такие значения могут сочетаться.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Длина A = 100 мм, B = 35 мм. Остаток A − B, мм?</p>
+<form data-id="C05-1" data-answer="65">
+<label for="C05-1">Числовой ответ</label><div class="controls"><input id="C05-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>100 − 35 = 65 мм.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> A = 80 ± 0,2 мм, B = 30 ± 0,1 мм. Наибольшее возможное A − B, мм?</p>
+<form data-id="C05-2" data-answer="50.3">
+<label for="C05-2">Числовой ответ</label><div class="controls"><input id="C05-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>Amax = 80,2; Bmin = 29,9; разность 50,3 мм.</p></details></div>
+
+</details>
+<details id="C06" class="lesson">
+<summary><span class="code">C06</span> Базирование и отклонения</summary>
+<p>Для одной заданной координаты вычислите |факт − номинал|. Это расстояние по выбранной оси. Оценка пространственного положения потребовала бы дополнительных данных.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Номинальная координата 10 мм, фактическая 10,3 мм. Модуль разности, мм?</p>
+<form data-id="C06-1" data-answer="0.3">
+<label for="C06-1">Числовой ответ</label><div class="controls"><input id="C06-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>|10,3 − 10| = 0,3 мм.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> Номинальная координата 15 мм, фактическая 14,8 мм. Модуль разности, мм?</p>
+<form data-id="C06-2" data-answer="0.2">
+<label for="C06-2">Числовой ответ</label><div class="controls"><input id="C06-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>|14,8 − 15| = 0,2 мм.</p></details></div>
+
+</details>
+<details id="C07" class="lesson">
+<summary><span class="code">C07</span> Шероховатость: среднее отклонение</summary>
+<p>Сложите заданные модули отклонений и разделите на их число. Это среднее для перечисленных отсчётов. Для оценки шероховатости поверхности нужен измеренный профиль и условия его обработки.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Модули четырёх отклонений: 1, 2, 3, 2 мкм. Среднее, мкм?</p>
+<form data-id="C07-1" data-answer="2">
+<label for="C07-1">Числовой ответ</label><div class="controls"><input id="C07-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>(1+2+3+2)/4=2 мкм.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> Модули отклонений 0,5 и 1,5 мкм. Среднее, мкм?</p>
+<form data-id="C07-2" data-answer="1">
+<label for="C07-2">Числовой ответ</label><div class="controls"><input id="C07-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>(0,5+1,5)/2=1 мкм.</p></details></div>
+<p class="reference"><a href="https://physics.nist.gov/VSC/Help/SurfaceParameters/Height_Parameters.jsp">NIST · Параметры высоты профиля</a></p>
+</details>
+<details id="C08" class="lesson">
+<summary><span class="code">C08</span> Проверка читаемости чертежа</summary>
+<p>В учебной ведомости известны число обязательных полей и число заполненных. Для доли пропусков используйте общее число проверенных позиций.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Из 12 обязательных полей заполнены 9. Сколько отсутствует?</p>
+<form data-id="C08-1" data-answer="3">
+<label for="C08-1">Числовой ответ</label><div class="controls"><input id="C08-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>12−9=3.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> Из 20 размеров 2 не имеют единицы в учебной ведомости. Доля, %?</p>
+<form data-id="C08-2" data-answer="10">
+<label for="C08-2">Числовой ответ</label><div class="controls"><input id="C08-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>2/20×100=10%.</p></details></div>
+<p class="reference"><a href="https://ocw.mit.edu/courses/2-007-design-and-manufacturing-i-spring-2009/pages/related-resources/drawing_and_sketching/">MIT · Нанесение размеров на чертёж</a></p>
+</details>
+<details id="C09" class="lesson">
+<summary><span class="code">C09</span> Трассируемость редакций</summary>
+<p>Одна запись может иметь несколько связей. Для доли записей без ссылки берите число записей в знаменателе, даже если общее число ссылок другое.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> У 8 изменений по 2 связанных протокола. Всего связей?</p>
+<form data-id="C09-1" data-answer="16">
+<label for="C09-1">Числовой ответ</label><div class="controls"><input id="C09-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>8×2=16.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> В журнале 24 записи, 6 не имеют ссылки. Доля без ссылки, %?</p>
+<form data-id="C09-2" data-answer="25">
+<label for="C09-2">Числовой ответ</label><div class="controls"><input id="C09-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>6/24×100=25%.</p></details></div>
+<p class="reference"><a href="https://www.nasa.gov/reference/6-2-requirements-management/">NASA · Прослеживаемость требований, §6.2</a></p>
+</details>
+<details id="C10" class="lesson">
+<summary><span class="code">C10</span> Итоговая проверка детали</summary>
+<p>Для симметричного интервала N ± t верхняя граница равна N + t, нижняя N − t. Здесь нужно вычислить границы по условию.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Размер 40±0,3 мм. Верхняя граница, мм?</p>
+<form data-id="C10-1" data-answer="40.3">
+<label for="C10-1">Числовой ответ</label><div class="controls"><input id="C10-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>40+0,3=40,3 мм.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> Размер 40±0,3 мм. Нижняя граница, мм?</p>
+<form data-id="C10-2" data-answer="39.7">
+<label for="C10-2">Числовой ответ</label><div class="controls"><input id="C10-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>40−0,3=39,7 мм.</p></details></div>
+
+</details>
+</section>
+<section class="group" id="group-M"><h2>Материалы и производство</h2>
+<details id="M01" class="lesson">
+<summary><span class="code">M01</span> Плотность и масса материала</summary>
+<p>Для однородного материала с заданной плотностью ρ масса m = ρV. При плотности в г/см³ и объёме в см³ результат получают в граммах.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Плотность 2,7 г/см³, объём 10 см³. Масса, г?</p>
+<form data-id="M01-1" data-answer="27">
+<label for="M01-1">Числовой ответ</label><div class="controls"><input id="M01-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>2,7 × 10 = 27 г.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> Плотность 7,8 г/см³, объём 5 см³. Масса, г?</p>
+<form data-id="M01-2" data-answer="39">
+<label for="M01-2">Числовой ответ</label><div class="controls"><input id="M01-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>7,8 × 5 = 39 г.</p></details></div>
+<p class="reference"><a href="https://openstax.org/books/university-physics-volume-1/pages/14-1-fluids-density-and-pressure">OpenStax · Плотность, §14.1</a></p>
+</details>
+<details id="M02" class="lesson">
+<summary><span class="code">M02</span> Напряжение при растяжении</summary>
+<p>Номинальное инженерное напряжение при осевом растяжении равно силе, делённой на исходную площадь поперечного сечения. 1 Н/мм² = 1 МПа. Расчёт прочности детали требует дополнительных данных.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Сила 1000 Н, площадь 100 мм². Напряжение, МПа?</p>
+<form data-id="M02-1" data-answer="10">
+<label for="M02-1">Числовой ответ</label><div class="controls"><input id="M02-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>1000 / 100 = 10 МПа.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> Сила 2 кН, площадь 50 мм². Напряжение, МПа?</p>
+<form data-id="M02-2" data-answer="40">
+<label for="M02-2">Числовой ответ</label><div class="controls"><input id="M02-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>2000 / 50 = 40 МПа.</p></details></div>
+<p class="reference"><a href="https://openstax.org/books/university-physics-volume-1/pages/12-3-stress-strain-and-elastic-modulus">OpenStax · Растягивающее напряжение, §12.3</a></p>
+</details>
+<details id="M03" class="lesson">
+<summary><span class="code">M03</span> Термообработка: параметры процесса</summary>
+<p>Этапы в условии следуют один за другим. Сложите их продолжительности или умножьте длительность одинакового цикла на число циклов. Температуры и производственные режимы здесь не назначаются.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Нагрев длится 15 мин, выдержка 30 мин, охлаждение 45 мин. Полная длительность, мин?</p>
+<form data-id="M03-1" data-answer="90">
+<label for="M03-1">Числовой ответ</label><div class="controls"><input id="M03-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>15 + 30 + 45 = 90 мин.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> Три одинаковых цикла по 40 мин каждый. Общая длительность, мин?</p>
+<form data-id="M03-2" data-answer="120">
+<label for="M03-2">Числовой ответ</label><div class="controls"><input id="M03-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>3 × 40 = 120 мин.</p></details></div>
+<p class="reference"><a href="https://www.asminternational.org/hts/about/what-is/">ASM Heat Treating Society · Этапы термообработки</a></p>
+</details>
+<details id="M04" class="lesson">
+<summary><span class="code">M04</span> Полимер и температурный интервал</summary>
+<p>Ширина интервала равна разности верхней и нижней границ. Запас до верхней границы отсчитывайте от рабочей температуры из условия. Вывод о пригодности марки полимера требует других данных.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Нижняя граница −20 °C, верхняя +80 °C. Ширина интервала, °C?</p>
+<form data-id="M04-1" data-answer="100">
+<label for="M04-1">Числовой ответ</label><div class="controls"><input id="M04-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>80−(−20)=100 °C.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> Рабочая температура 60 °C, верхняя граница модели 80 °C. Запас, °C?</p>
+<form data-id="M04-2" data-answer="20">
+<label for="M04-2">Числовой ответ</label><div class="controls"><input id="M04-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>80−60=20 °C.</p></details></div>
+<p class="reference"><a href="https://www.ensingerplastics.com/en/plastic-material-selection/high-temperature-plastics">Ensinger · Рабочая температура полимеров</a></p>
+</details>
+<details id="M05" class="lesson">
+<summary><span class="code">M05</span> Скорость коррозионной потери</summary>
+<p>Средняя скорость потери толщины равна уменьшению толщины за интервал, делённому на его длительность. Экстраполяция во второй задаче предполагает постоянную скорость. Локальная потеря может отличаться от средней.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Потеря толщины 0,4 мм за 2 года. Средняя скорость, мм/год?</p>
+<form data-id="M05-1" data-answer="0.2">
+<label for="M05-1">Числовой ответ</label><div class="controls"><input id="M05-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>0,4/2=0,2 мм/год.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> При условной постоянной скорости 0,1 мм/год потеря за 3 года, мм?</p>
+<form data-id="M05-2" data-answer="0.3">
+<label for="M05-2">Числовой ответ</label><div class="controls"><input id="M05-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>0,1×3=0,3 мм.</p></details></div>
+<p class="reference"><a href="https://protect-perform.ampp.org/forms-of-corrosion/">AMPP · Локальная коррозия</a></p>
+</details>
+<details id="M06" class="lesson">
+<summary><span class="code">M06</span> Литьё: материальный баланс</summary>
+<p>За базу массового выхода принята масса залитого металла. Разность залитой массы и массы годных отливок сама по себе не показывает массу безвозвратных потерь.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Залито 100 кг, годные отливки 65 кг. Выход, %?</p>
+<form data-id="M06-1" data-answer="65">
+<label for="M06-1">Числовой ответ</label><div class="controls"><input id="M06-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>65/100×100=65%.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> Залито 80 кг, годные отливки 60 кг. Разница масс, кг?</p>
+<form data-id="M06-2" data-answer="20">
+<label for="M06-2">Числовой ответ</label><div class="controls"><input id="M06-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>80−60=20 кг.</p></details></div>
+<p class="reference"><a href="https://www.castingsource.com/column/2025/07/16/what-are-cost-drivers-owned-foundry">Casting Source · Выход годных отливок</a></p>
+</details>
+<details id="M07" class="lesson">
+<summary><span class="code">M07</span> Мехобработка: время операции</summary>
+<p>При постоянной скорости подачи время одного рабочего прохода t = L/v. Если путь дан в миллиметрах, а подача в мм/мин, результат получится в минутах.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Путь 120 мм, подача 60 мм/мин. Время, мин?</p>
+<form data-id="M07-1" data-answer="2">
+<label for="M07-1">Числовой ответ</label><div class="controls"><input id="M07-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>120/60=2 мин.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> Путь 150 мм, подача 50 мм/мин. Время, мин?</p>
+<form data-id="M07-2" data-answer="3">
+<label for="M07-2">Числовой ответ</label><div class="controls"><input id="M07-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>150/50=3 мин.</p></details></div>
+<p class="reference"><a href="https://www.sandvik.coromant.com/en-gb/knowledge/machining-formulas-definitions/milling-formulas-definitions?newsarchivetagfilter=Turning">Sandvik Coromant · Время рабочего прохода</a></p>
+</details>
+<details id="M08" class="lesson">
+<summary><span class="code">M08</span> Сварка: электрическая мощность и энергия (учебная модель)</summary>
+<p>В модели постоянного тока электрическая мощность P = UI. При постоянной мощности энергия E = Pt. Эти числа не задают тепловложение в шов или режим сварки.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Напряжение 20 В, ток 100 А. Электрическая мощность, Вт?</p>
+<form data-id="M08-1" data-answer="2000">
+<label for="M08-1">Числовой ответ</label><div class="controls"><input id="M08-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>20×100=2000 Вт.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> При мощности 2000 Вт за 5 с электрическая энергия, Дж?</p>
+<form data-id="M08-2" data-answer="10000">
+<label for="M08-2">Числовой ответ</label><div class="controls"><input id="M08-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>2000×5=10000 Дж.</p></details></div>
+<p class="reference"><a href="https://openstax.org/books/university-physics-volume-2/pages/9-5-electrical-energy-and-power">OpenStax · Электрическая энергия и мощность, §9.5</a></p>
+</details>
+<details id="M09" class="lesson">
+<summary><span class="code">M09</span> Выход годных изделий</summary>
+<p>Делите число годных деталей на общее число деталей в заданной группе. Во второй задаче остальные после отбраковки считаются годными.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Из 200 деталей 190 годных. Выход, %?</p>
+<form data-id="M09-1" data-answer="95">
+<label for="M09-1">Числовой ответ</label><div class="controls"><input id="M09-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>190 / 200 × 100 = 95%.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> Из 80 деталей 6 забракованы. Выход годных, %?</p>
+<form data-id="M09-2" data-answer="92.5">
+<label for="M09-2">Числовой ответ</label><div class="controls"><input id="M09-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>(80 − 6) / 80 × 100 = 92,5%.</p></details></div>
+<p class="reference"><a href="https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc332.htm">NIST · Выборочная доля несоответствующих, §6.3.3.2</a></p>
+</details>
+<details id="M10" class="lesson">
+<summary><span class="code">M10</span> Выбор материала: масса</summary>
+<p>Сравните массы по формуле m = ρV для заданных плотностей и объёмов. Чтобы выбрать материал для детали, отдельно проверяют требования к её работе.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Плотность 8 г/см³, объём 15 см³. Масса, г?</p>
+<form data-id="M10-1" data-answer="120">
+<label for="M10-1">Числовой ответ</label><div class="controls"><input id="M10-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>8×15=120 г.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> Плотность 3 г/см³, объём 40 см³. Масса, г?</p>
+<form data-id="M10-2" data-answer="120">
+<label for="M10-2">Числовой ответ</label><div class="controls"><input id="M10-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>3×40=120 г.</p></details></div>
+<p class="reference"><a href="https://openstax.org/books/university-physics-volume-1/pages/14-1-fluids-density-and-pressure">OpenStax · Плотность, §14.1</a></p>
+</details>
+</section>
+<section class="group" id="group-Q"><h2>Контроль качества</h2>
+<details id="Q01" class="lesson">
+<summary><span class="code">Q01</span> Критерий приёмки</summary>
+<p>Сравнивайте число с обеими границами заданного замкнутого интервала. Это учебное правило с точными числами. В заданиях 1 означает «да», 0 — «нет».</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Норма от 10 до 12 мм. Измерено 11 мм. Соответствует: 1 — да, 0 — нет?</p>
+<form data-id="Q01-1" data-answer="1">
+<label for="Q01-1">Числовой ответ</label><div class="controls"><input id="Q01-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>11 находится между 10 и 12.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> Норма от 10 до 12 мм. Измерено 12,1 мм. Соответствует: 1 — да, 0 — нет?</p>
+<form data-id="Q01-2" data-answer="0">
+<label for="Q01-2">Числовой ответ</label><div class="controls"><input id="Q01-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>12,1 выше 12.</p></details></div>
+
+</details>
+<details id="Q02" class="lesson">
+<summary><span class="code">Q02</span> Поверка и калибровка</summary>
+<p>В этих задачах нужна аддитивная поправка. Уравнение «показание + поправка = опорное значение» определяет её знак.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Эталон 100 единиц, показание 102. Поправка, которую нужно прибавить к показанию, единиц?</p>
+<form data-id="Q02-1" data-answer="-2">
+<label for="Q02-1">Числовой ответ</label><div class="controls"><input id="Q02-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>100 − 102 = −2.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> Эталон 50 единиц, показание 49,5. Поправка к показанию, единиц?</p>
+<form data-id="Q02-2" data-answer="0.5">
+<label for="Q02-2">Числовой ответ</label><div class="controls"><input id="Q02-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>50 − 49,5 = 0,5.</p></details></div>
+<p class="reference"><a href="https://jcgm.bipm.org/vim/en/2.53.html">JCGM VIM · Поправка, 2.53</a></p>
+</details>
+<details id="Q03" class="lesson">
+<summary><span class="code">Q03</span> Неопределённость: простая модель</summary>
+<p>Для суммы независимых входных величин с коэффициентами чувствительности +1 и +1 комбинированная стандартная неопределённость u = √(u₁² + u₂²). При корреляции в формуле появляется член ковариации.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Для суммы двух входных величин с независимыми стандартными неопределённостями u1=3 единицы и u2=4 единицы и коэффициентами чувствительности +1 и +1 найдите комбинированную стандартную неопределённость u (в тех же единицах).</p>
+<form data-id="Q03-1" data-answer="5">
+<label for="Q03-1">Числовой ответ</label><div class="controls"><input id="Q03-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>sqrt(3²+4²)=5.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> Для суммы двух входных величин с независимыми стандартными неопределённостями u1=6 единиц и u2=8 единиц и коэффициентами чувствительности +1 и +1 найдите комбинированную стандартную неопределённость u (в тех же единицах).</p>
+<form data-id="Q03-2" data-answer="10">
+<label for="Q03-2">Числовой ответ</label><div class="controls"><input id="Q03-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>sqrt(6²+8²)=10.</p></details></div>
+<p>Например, при стандартных неопределённостях 3 и 4 и корреляции 0,5 дисперсия суммы равна 9 + 16 + 12 = 37, а дисперсия разности — 9 + 16 − 12 = 13.</p><p class="reference"><a href="https://physics.nist.gov/cuu/Uncertainty/combination.html">NIST · Распространение неопределённости, уравнение (6)</a></p>
+</details>
+<details id="Q04" class="lesson">
+<summary><span class="code">Q04</span> Доля несоответствий</summary>
+<p>Выборочная доля несоответствующих изделий равна их числу, делённому на общее число проверенных изделий. Каждое изделие считают один раз.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Проверено 100 изделий, 7 несоответствующих. Доля, %?</p>
+<form data-id="Q04-1" data-answer="7">
+<label for="Q04-1">Числовой ответ</label><div class="controls"><input id="Q04-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>7 / 100 × 100 = 7%.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> Проверено 250 изделий, 5 несоответствующих. Доля, %?</p>
+<form data-id="Q04-2" data-answer="2">
+<label for="Q04-2">Числовой ответ</label><div class="controls"><input id="Q04-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>5 / 250 × 100 = 2%.</p></details></div>
+<p class="reference"><a href="https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc332.htm">NIST · Выборочная доля несоответствующих, §6.3.3.2</a></p>
+</details>
+<details id="Q05" class="lesson">
+<summary><span class="code">Q05</span> Протокол контроля</summary>
+<p>Считайте только запрошенную категорию. Количество оставшихся измерений и количество действительных записей находят вычитанием из соответствующего общего числа.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Планируется 20 измерений, выполнено 17. Сколько осталось?</p>
+<form data-id="Q05-1" data-answer="3">
+<label for="Q05-1">Числовой ответ</label><div class="controls"><input id="Q05-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>20 − 17 = 3.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> В протоколе 30 записей, 2 признаны недействительными. Сколько действительных?</p>
+<form data-id="Q05-2" data-answer="28">
+<label for="Q05-2">Числовой ответ</label><div class="controls"><input id="Q05-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>30 − 2 = 28.</p></details></div>
+<p class="reference"><a href="https://www.nasa.gov/reference/5-3-product-verification/">NASA · Проверка изделия, §5.3</a></p>
+</details>
+<details id="Q06" class="lesson">
+<summary><span class="code">Q06</span> Несоответствие и дефект</summary>
+<p>Счёт дефектов и счёт изделий с дефектами различаются. В первой задаче каждый из шести дефектов обнаружен на отдельном изделии.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> В партии из 20 изделий обнаружено 6 дефектов, каждый на отдельном изделии. Сколько изделий без дефектов?</p>
+<form data-id="Q06-1" data-answer="14">
+<label for="Q06-1">Числовой ответ</label><div class="controls"><input id="Q06-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>20−6=14.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> В 50 изделиях 5 несоответствующих. Доля несоответствующих, %?</p>
+<form data-id="Q06-2" data-answer="10">
+<label for="Q06-2">Числовой ответ</label><div class="controls"><input id="Q06-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>5/50×100=10%.</p></details></div>
+<p class="reference"><a href="https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc331.htm">NIST · Счёт дефектов, §6.3.3.1</a></p>
+</details>
+<details id="Q07" class="lesson">
+<summary><span class="code">Q07</span> Проверка гипотез причин</summary>
+<p>Отделяйте число проверенных гипотез от числа испытаний, прошедших критерий. Для доли успешных испытаний используйте число испытаний в знаменателе.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Из 8 гипотез 3 проверены. Сколько не проверены?</p>
+<form data-id="Q07-1" data-answer="5">
+<label for="Q07-1">Числовой ответ</label><div class="controls"><input id="Q07-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>8−3=5.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> Из 12 испытаний 9 подтвердили заданный критерий. Доля, %?</p>
+<form data-id="Q07-2" data-answer="75">
+<label for="Q07-2">Числовой ответ</label><div class="controls"><input id="Q07-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>9/12×100=75%.</p></details></div>
+<p class="reference"><a href="https://asq.org/quality-resources/eight-disciplines-8d">ASQ · Проверка причин и корректирующих действий, D4–D6</a></p>
+</details>
+<details id="Q08" class="lesson">
+<summary><span class="code">Q08</span> Корректирующее действие</summary>
+<p>Абсолютное снижение равно исходному значению минус новое. Для относительного снижения делите разность на исходное значение. Этот расчёт сам по себе не устанавливает причину изменения.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> До изменения 20 событий, после 12. Абсолютное снижение?</p>
+<form data-id="Q08-1" data-answer="8">
+<label for="Q08-1">Числовой ответ</label><div class="controls"><input id="Q08-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>20−12=8.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> До изменения 20 событий, после 12. Относительное снижение к исходному, %?</p>
+<form data-id="Q08-2" data-answer="40">
+<label for="Q08-2">Числовой ответ</label><div class="controls"><input id="Q08-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>8/20×100=40%.</p></details></div>
+<p class="reference"><a href="https://asq.org/quality-resources/eight-disciplines-8d">ASQ · Проверка причин и корректирующих действий, D4–D6</a></p>
+</details>
+<details id="Q09" class="lesson">
+<summary><span class="code">Q09</span> Потери процесса</summary>
+<p>Укажите базу сравнения. Для массовых потерь она задана в килограммах, для списания деталей — в штуках. В каждом случае числитель и знаменатель должны иметь одинаковую единицу.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Из 500 кг сырья 25 кг потерь. Доля, %?</p>
+<form data-id="Q09-1" data-answer="5">
+<label for="Q09-1">Числовой ответ</label><div class="controls"><input id="Q09-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>25/500×100=5%.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> Из 200 деталей 10 списаны. Доля списанных, %?</p>
+<form data-id="Q09-2" data-answer="5">
+<label for="Q09-2">Числовой ответ</label><div class="controls"><input id="Q09-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>10/200×100=5%.</p></details></div>
+
+</details>
+<details id="Q10" class="lesson">
+<summary><span class="code">Q10</span> Итоговый кейс качества</summary>
+<p>В заданной группе каждое изделие относят к одной из двух категорий. По этому условию можно посчитать долю несоответствующих и число соответствующих. Для решения по всей партии нужен план контроля.</p>
+<div class="exercise">
+<p><strong>Задача 1.</strong> Из 120 изделий 6 несоответствующих. Доля, %?</p>
+<form data-id="Q10-1" data-answer="5">
+<label for="Q10-1">Числовой ответ</label><div class="controls"><input id="Q10-1" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>6/120×100=5%.</p></details></div><div class="exercise">
+<p><strong>Задача 2.</strong> Из 120 изделий 6 несоответствующих. Сколько соответствующих?</p>
+<form data-id="Q10-2" data-answer="114">
+<label for="Q10-2">Числовой ответ</label><div class="controls"><input id="Q10-2" name="answer" inputmode="decimal" autocomplete="off" required><button type="submit">Проверить</button></div>
+<p role="status" class="result"></p></form>
+<details class="solution"><summary>Разбор решения</summary><p>120−6=114.</p></details></div>
+<p class="reference"><a href="https://www.itl.nist.gov/div898/handbook/pmc/section2/pmc22.htm">NIST · Выборочный контроль партий, §6.2.2</a></p>
+</details>
+</section>
+</main></body></html>
