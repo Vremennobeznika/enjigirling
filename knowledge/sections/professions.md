@@ -37,7 +37,7 @@
 01 / КАРЬЕРА
 #### Выбрать инженерную профессию
 Изучите задачи, сравните направления и найдите варианты подготовки. Требования к квалификации сверяйте с актуальными программами и документами.
-[54 профессии](https://vremennobeznika.github.io/enjigirling/index.html#categories)[Сравнить](https://vremennobeznika.github.io/enjigirling/compare.html)[Обучение](https://vremennobeznika.github.io/enjigirling/map.html)
+[54 профессии](https://vremennobeznika.github.io/enjigirling/index.html#categories)[Сравнить](https://vremennobeznika.github.io/enjigirling/compare.html)[Академия](https://vremennobeznika.github.io/enjigirling/academy.html)
 02 / ТЕХНОЛОГИИ
 #### Разобраться с производством
 Посмотрите процесс, связанные материалы и профессии. Описания обзорные: параметры и безопасность определяет документация конкретного производства.
