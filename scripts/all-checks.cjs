@@ -15,6 +15,7 @@ const steps=[
  ['NAV standalone labs, coding split, low-end source budgets',()=>[['node',['tests/navigation-promotion.cjs']]]],
  ['THEME prepaint bootstrap across 15 engineering pages',()=>[['node',['tests/theme-bootstrap.cjs']]]],
  ['PAGES all HTML and nested local resource references',()=>[['node',['tests/all-html-assets.cjs']]]],
+ ['IISHNITSA public archive contents and privacy',()=>[['node',['tests/iishnitsa-public.cjs']]]],
  ['S00 JavaScript syntax across application and QA',()=>files.map(file=>['node',['--check',file]])],
  ['PERF start-up payload budgets and deferred home search',()=>[['node',['tests/performance-budget.cjs']]]],
  ['CAREER 51 occupation-specific government standard scopes',()=>[['node',['tests/normative-51.cjs']]]],
