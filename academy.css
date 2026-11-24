@@ -1,0 +1,54 @@
+:root {
+  color-scheme: dark;
+  --paper: #171c20;
+  --panel: #21282d;
+  --ink: #f2f4f5;
+  --muted: #bac8cf;
+  --rule: #65747c;
+  --link: #9edcf7;
+  --good: #a9ecc5;
+  --error: #ffbaa9;
+}
+:root.theme-light {
+  color-scheme: light;
+  --paper: #f6f7f4;
+  --panel: white;
+  --ink: #18272c;
+  --muted: #445961;
+  --rule: #79898f;
+  --link: #005875;
+  --good: #126239;
+  --error: #9a331a;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 1rem/1.6 system-ui, sans-serif; }
+main { max-width: 62rem; margin: auto; padding: 0 clamp(1rem, 4vw, 3rem) 4rem; }
+a { color: var(--link); text-underline-offset: .2em; }
+:focus-visible { outline: 3px solid var(--link); outline-offset: 3px; }
+.top, .topics, .controls { display: flex; flex-wrap: wrap; gap: .6rem 1.2rem; align-items: center; }
+.top { padding-block: 1rem; border-bottom: 1px solid var(--rule); }
+.top a:first-child { color: var(--ink); font-weight: 750; text-decoration: none; }
+.theme-toggle { margin-inline-start: auto; }
+header { padding-block: clamp(1.3rem,4vw,3rem) .3rem; }
+h1 { font-size: clamp(2.15rem,6vw,4.3rem); line-height: 1.05; margin: .4em 0; }
+h2 { line-height: 1.2; margin-top: 1.8em; }
+header p { max-width: 72ch; }
+.scope, .reference, .code, #matches, #progress { color: var(--muted); }
+.scope { border-inline-start: 3px solid var(--rule); padding-inline-start: 1rem; }
+#filters { margin-top: 1.5rem; }
+label { display: block; margin-bottom: .25rem; }
+input, button { font: inherit; color: var(--ink); background: var(--panel); border: 1px solid var(--rule); border-radius: .35rem; padding: .4em .75em; }
+input { max-width: 100%; width: 11rem; }
+#search { width: min(100%,30rem); }
+button, summary { cursor: pointer; }
+.group, .lesson { scroll-margin-top: 1rem; }
+.lesson { background: var(--panel); border: 1px solid var(--rule); border-radius: .55rem; margin: .6rem 0; padding: 0 1rem; }
+.lesson > summary { padding: .85rem 0; font-weight: 650; }
+.code { font: .88rem ui-monospace, monospace; margin-inline: .3rem .65rem; }
+.exercise { border-top: 1px solid var(--rule); padding-bottom: 1rem; }
+.exercise p { max-width: 72ch; }
+.solution { margin-top: .5rem; }
+.result:empty { margin: 0; }
+.ok { color: var(--good); }
+.error { color: var(--error); }
