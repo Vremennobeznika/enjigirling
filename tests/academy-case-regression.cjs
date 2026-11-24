@@ -177,7 +177,7 @@ assert.match(a09,/от 1 до 125/);
 assert.equal(part3Answers['A09-1'],16-1,'A09 one-based model to zero-based PDU');
 assert.equal(part3Answers['A09-2'],5*2,'A09 register data bytes');
 assert.match(a10,/Из 20 тестов 17 пройдены/);
-assert.match(a10,/Из 12 тестов 3 не пройдены/);
+assert.match(a10,/Все 12 тестов завершены, 3 не пройдены/);
 assert.match(a10,/не означает 85 % надёжности/);
 assert.equal(part3Answers['A10-1'],17/20*100,'A10 pass rate');
 assert.equal(part3Answers['A10-2'],12-3,'A10 passed count');
