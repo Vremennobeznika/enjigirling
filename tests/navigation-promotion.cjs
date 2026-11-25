@@ -1,15 +1,15 @@
 const assert=require('node:assert/strict');
 const fs=require('node:fs'),vm=require('node:vm'),path=require('node:path');
 const root=path.resolve(__dirname,'..');
-const pages=['index.html','calendar.html','resources.html','dictionary.html','map.html','calculator.html','compare.html','processes.html','materials.html','ai.html','ai-training.html','measurement-lab.html','calculator-atlas.html','robotics.html','coding.html'];
+const pages=['index.html','calendar.html','resources.html','dictionary.html','map.html','calculator.html','compare.html','processes.html','materials.html','ai.html','ai-training.html','measurement-lab.html','calculator-atlas.html','robotics.html','coding.html','iishnitsa.html'];
 const originalNine=['index.html','calendar.html','resources.html','dictionary.html','map.html','calculator.html','compare.html','processes.html','materials.html'];
-const all=[...originalNine,'robotics.html','coding.html','ai.html'];
+const all=[...originalNine,'robotics.html','coding.html','ai.html','iishnitsa.html'];
 for(const file of pages){
  const html=fs.readFileSync(path.join(root,file),'utf8');
  const shell=html.match(/<nav id="site-main-navigation"[^>]*>([\s\S]*?)<\/nav>/);
  assert.ok(shell,file+' nav missing');
  const hrefs=[...shell[1].matchAll(/<a href="([^"]+)" class="eng-tab(?: active)?"/g)].map(m=>m[1]);
- assert.equal(hrefs.length,12,file+' link count');
+ assert.equal(hrefs.length,13,file+' link count');
  assert.deepEqual(new Set(hrefs),new Set(all),file+' leaked/duplicated nav target');
  const active=[...shell[1].matchAll(/<a href="([^"]+)" class="eng-tab active"/g)].map(m=>m[1]);
  assert.ok(active.length<=1,file+' multiple active navigation tabs');
@@ -44,7 +44,7 @@ assert.ok(fs.readFileSync('scripts/build-ai-packs.cjs','utf8').includes("jsArray
 for(const name of ['coding','robotics']){
  const html=fs.readFileSync(name+'.html','utf8');
  let bytes=Buffer.byteLength(html);
- for(const m of html.matchAll(/(?:src|href)="([^"]+\.(?:js|css))"/g)){
+ for(const m of html.matchAll(/(?:src|href)="([^"]+\.(?:js|css))(?:\?[^"]*)?"/g)){
   const file=m[1];
   const target=path.join(root,file);
   assert.ok(fs.existsSync(target),name+' missing '+file);
@@ -53,4 +53,4 @@ for(const name of ['coding','robotics']){
  assert.ok(bytes<=160*1024,name+' requires too much initial source '+bytes);
  console.log('BUDGET '+name+': '+Math.round(bytes/1024)+' KiB static HTML/CSS/JS');
 }
-console.log('PASS 15 static routes, 12 destinations, 40 coding sources, no duplicates, budget cap');
+console.log('PASS 16 static routes, 13 destinations, 40 coding sources, no duplicates, budget cap');
