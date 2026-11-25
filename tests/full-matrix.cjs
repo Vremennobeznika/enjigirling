@@ -15,7 +15,7 @@ check('all nine HTML pages and shared navigation', () => {
   assert.equal((h.match(/<main\b/gi)||[]).length,1,name+' main');
   assert.ok(h.includes('class="skip-link" href="#main-content"'),name+' missing skip link');
   assert.ok(h.includes('id="main-content"'),name+' missing main target');
-  assert.equal((h.match(/class="eng-tab(?: active)?"/g)||[]).length,12,name+' navigation');
+  assert.equal((h.match(/class="eng-tab(?: active)?"/g)||[]).length,13,name+' navigation');
   const ids = [...h.matchAll(/\bid=["']([^"']+)["']/g)].map(x=>x[1]);
   assert.equal(ids.length,new Set(ids).size,name+' duplicate DOM id');
  }
@@ -236,9 +236,9 @@ check('five navigation groups preserve all nine original page routes', () => {
   const groups=[...match[1].matchAll(/class="nav-cluster" role="group" aria-label="([^"]+)"/g)].map(x=>x[1]);
   assert.deepEqual(groups,expectedGroups,page+' incorrect navigation groups');
   const hrefs=[...match[1].matchAll(/<a href="([^"]+)" class="eng-tab(?: active)?"/g)].map(x=>x[1]);
-  assert.equal(hrefs.length,12,page+' must expose the nine original routes and three standalone destinations');
-  assert.equal(new Set(hrefs).size,12,page+' repeated nav destinations');
-  assert.deepEqual(new Set(hrefs),new Set([...pages,'robotics.html','coding.html','ai.html']),page+' missing route');
+  assert.equal(hrefs.length,13,page+' must expose the nine original routes and four standalone destinations');
+  assert.equal(new Set(hrefs).size,13,page+' repeated nav destinations');
+  assert.deepEqual(new Set(hrefs),new Set([...pages,'robotics.html','coding.html','ai.html','iishnitsa.html']),page+' missing route');
  }
  const home=fs.readFileSync('index.html','utf8');
  assert.ok(home.includes('class="learning-paths"'),'landing task routes missing');
