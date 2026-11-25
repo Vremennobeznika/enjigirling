@@ -8,9 +8,11 @@ for(const width of [320,390,768,1024,1280,1920]) for(const theme of ['light','da
   let reference;
   for(const route of routes){
    await page.goto(route+'.html',{waitUntil:'domcontentloaded'});
+   if(route==='calculator-atlas') await page.waitForURL('**/calculator.html#calculatorCatalog');
+   await page.evaluate(()=>window.scrollTo({top:0,left:0,behavior:'instant'}));
    await expect(page.locator('html')).toHaveClass(new RegExp('theme-'+theme));
    const geometry=await page.evaluate(()=>{
-    const rect=el=>{const r=el.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height}};
+    const rect=el=>{const r=el.getBoundingClientRect();return {x:r.x+window.scrollX,y:r.y+window.scrollY,width:r.width,height:r.height}};
     const top=document.querySelector('.site-topbar'),nav=document.querySelector('.site-nav-wrap');
     return {top:rect(top),nav:rect(nav),overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth};
    });
