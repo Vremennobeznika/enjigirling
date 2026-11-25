@@ -341,7 +341,7 @@ for (const file of ['index.html','calendar.html','resources.html','dictionary.ht
   assert.match(html, /<main\b/i, file + ': missing main landmark');
   assert.match(html, /src="site-shell\.js"/, file + ': missing common shell');
   assert.match(html, /src="navigation\.js"/, file + ': missing common navigation');
-  assert.match(html, /href="section-ui\.css"/, file + ': missing shared responsive styles');
+  assert.match(html, /href="section-ui\.css(?:\?[^"]*)?"/, file + ': missing shared responsive styles');
   const navItems = (html.match(/class="eng-tab(?: active)?"/g) || []).length;
   assert.equal(navItems, 13, file + ': expected nine core tabs and four standalone tabs');
 }
