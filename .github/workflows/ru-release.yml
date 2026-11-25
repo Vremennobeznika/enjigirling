@@ -5,6 +5,7 @@ on:
     paths:
       - '*'
       - 'articles/**'
+      - 'ai-toolkit/**'
       - 'knowledge/**'
       - 'templates/**'
       - 'scripts/**'
@@ -93,7 +94,7 @@ jobs:
           test -s dist-ru/downloads/ai-llm-guide.pdf
           test -s dist-ru/downloads/ai-qa-engineering.pdf
           test -s dist-ru/downloads/ai-library-documents.zip
-          for asset in coding.html coding.js coding-data.js coding.css robotics.html robotics.js robotics.css mc-prices.js mc-prices.json; do
+          for asset in coding.html coding.js coding-data.js coding.css robotics.html robotics.js robotics.css mc-prices.js mc-prices.json iishnitsa.html iishnitsa-builders.js header-stable.css ai-toolkit/iishnitsa-public-starter.zip; do
             test -s "dist-ru/$asset"
           done
           test "$(find dist-ru -type f | wc -l)" -ge 50
@@ -130,11 +131,11 @@ jobs:
             --only-show-errors
           cmp dist-ru/index.html /tmp/enjigirling-deployed-index.html
           # Check the two newly promoted labs as deployed objects, not just the index.
-          for asset in coding.html coding.js coding-data.js robotics.html robotics.js; do
+          for asset in coding.html coding.js coding-data.js robotics.html robotics.js iishnitsa.html iishnitsa-builders.js header-stable.css; do
             aws --endpoint-url=https://storage.yandexcloud.net \
               s3 cp "s3://enjigirling.ru/$asset" "/tmp/enjigirling-${asset}" --only-show-errors
             cmp "dist-ru/$asset" "/tmp/enjigirling-${asset}"
           done
           echo "Published to Yandex and verified index.html matches the build."
       - name: Verify anonymous visitor access after publishing
-        run: python3 scripts/check-public-access.py
+        run: python3 scripts/check-public-access.py '' index.html calculator.html mc-prices.json iishnitsa.html
