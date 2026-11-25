@@ -47,6 +47,19 @@ jobs:
           python3 scripts/build-resource-pdfs.py
           node scripts/build-quality.cjs
           node scripts/all-checks.cjs
+      - name: Install browser QA dependencies
+        run: |
+          npm install --no-audit --no-fund
+          npx playwright install --with-deps chromium
+      - name: Verify unified typography before Russian publication
+        run: npx playwright test tests/typography.spec.cjs --project=chromium-desktop
+      - name: Archive browser failures
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru-browser-test-results
+          path: test-results/
+          if-no-files-found: ignore
       - name: Build Russian public distribution
         run: python3 scripts/prepare_ru_site.py --url https://enjigirling.ru/
       - name: Print deploy audit
