@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 const fs=require('node:fs'),assert=require('node:assert/strict');
-const paths=['index.html','calendar.html','resources.html','dictionary.html','map.html','calculator.html','compare.html','processes.html','materials.html','ai.html','ai-training.html','calculator-atlas.html','measurement-lab.html','coding.html','robotics.html'];
+const paths=['index.html','calendar.html','resources.html','dictionary.html','map.html','calculator.html','compare.html','processes.html','materials.html','ai.html','ai-training.html','calculator-atlas.html','measurement-lab.html','coding.html','robotics.html','iishnitsa.html'];
 for(const path of paths){
  const s=fs.readFileSync(path,'utf8');
  const pre=s.indexOf('data-theme-bootstrap');
