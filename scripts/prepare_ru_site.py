@@ -20,7 +20,7 @@ PAGES = (
     "coding.html", "robotics.html",
     "robotics.html",
     "map.html", "calculator.html", "compare.html", "processes.html",
-    "materials.html", "ai.html", "ai-training.html",
+    "materials.html", "ai.html", "ai-training.html", "iishnitsa.html",
     "calculator-atlas.html", "measurement-lab.html",
 )
 ROOT_ASSET_EXT = {
@@ -91,6 +91,21 @@ def main():
                 sys.exit("ERROR: build knowledge exports first")
             continue
         shutil.copytree(src, out / name, ignore=shutil.ignore_patterns(".*"))
+    # Explicitly stage only the reviewed public toolkit files, never the entire directory.
+    for filename in (
+        "iishnitsa-public-starter.zip",
+        "iishnitsa-public-starter/00_START_HERE.md",
+        "iishnitsa-public-starter/01_CORE_RULES.md",
+        "iishnitsa-public-starter/02_QA_AND_HANDOFF.md",
+        "fact-check.md", "engineering-investigation.md", "release-gate.md",
+        "agent-handoff.md", "privacy-before-publishing.md",
+    ):
+        source = ROOT / "ai-toolkit" / filename
+        if not source.is_file():
+            sys.exit("ERROR: missing public toolkit file: " + filename)
+        target = out / "ai-toolkit" / filename
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(source, target)
     # Three publicly linked blank engineering forms; do not copy template folders wholesale.
     for filename in ("README.md", "material-evidence-register.csv", "production-defect-review.csv"):
         source = ROOT / "templates" / filename
