@@ -60,7 +60,7 @@ jobs:
           npm install --no-audit --no-fund
           npx playwright install --with-deps chromium
       - name: Verify unified typography before Russian publication
-        run: npx playwright test tests/typography.spec.cjs --project=chromium-desktop
+        run: npx playwright test tests/typography.spec.cjs tests/layout-contract.spec.cjs --project=chromium-desktop
       - name: Archive browser failures
         if: failure()
         uses: actions/upload-artifact@v4
