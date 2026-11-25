@@ -6,11 +6,12 @@ const root=path.resolve(__dirname,'..');
 const dir=path.join(root,'ai-toolkit','iishnitsa-public-starter');
 const archive=path.join(root,'ai-toolkit','iishnitsa-public-starter.zip');
 const names=['00_START_HERE.md','01_CORE_RULES.md','02_QA_AND_HANDOFF.md'];
-const page=fs.readFileSync(path.join(root,'ai.html'),'utf8');
-const section=page.match(/<section class="ai-hub-note" id="iishnitsa"[^>]*>([\s\S]*?)<\/section>/);
+const page=fs.readFileSync(path.join(root,'iishnitsa.html'),'utf8');
+const section=page.match(/<section class="ai-hub-header" id="iishnitsa"[^>]*>([\s\S]*?)<\/section>/);
 assert(section,'IISHNITSA section absent');
+assert(!fs.readFileSync(path.join(root,'ai.html'),'utf8').includes('id="iishnitsa"'),'duplicate toolkit in AI hub');
 assert(section[1].includes('iishnitsa-public-starter.zip'),'download link missing');
-const links=[...section[1].matchAll(/href="([^"]+)"/g)].map(x=>x[1]);
+const links=[...section[1].matchAll(/href="([^"]+)"/g)].map(x=>x[1]).filter(x=>!x.startsWith("#"));
 assert.deepEqual(links.sort(),[
  'ai-toolkit/iishnitsa-public-starter.zip',
  ...names.map(n=>'ai-toolkit/iishnitsa-public-starter/'+n)
