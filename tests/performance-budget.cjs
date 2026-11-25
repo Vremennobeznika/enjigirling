@@ -3,14 +3,14 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const root=path.resolve(__dirname,'..');
 const read=p=>fs.readFileSync(path.join(root,p),'utf8');
-const pages=['index','calendar','resources','dictionary','map','calculator','compare','processes','materials','ai','ai-training','measurement-lab','calculator-atlas','coding','robotics'];
+const pages=['index','calendar','resources','dictionary','map','calculator','compare','processes','materials','ai','ai-training','measurement-lab','calculator-atlas','coding','robotics','iishnitsa'];
 let routes=0;
 for(const name of pages){
  const file=name+'.html'; if(!fs.existsSync(path.join(root,file)))continue;
  const html=read(file);
  const scripts=[...html.matchAll(/<script\b[^>]*\bsrc=["']([^"']+)["'][^>]*>/gi)].map(m=>m[1].split(/[?#]/)[0]);
  const styles=[...html.matchAll(/<link\b[^>]*rel=["']stylesheet["'][^>]*>/gi)].map(m=>(m[0].match(/\bhref=["']([^"']+)["']/i)||[])[1]).filter(Boolean);
- const local=[...scripts,...styles].filter(x=>!/^https?:|^\/\//i.test(x));
+ const local=[...scripts,...styles].map(x=>x.split(/[?#]/)[0]).filter(x=>!/^https?:|^\/\//i.test(x));
  assert.equal(new Set(local).size,local.length,file+': duplicate initial asset request');
  let bytes=Buffer.byteLength(html);
  for(const asset of local){
