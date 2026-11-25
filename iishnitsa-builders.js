@@ -9,29 +9,31 @@ function buildRows(domain,custom){
  return [...base,...custom.split("\n").map(x=>x.trim()).filter(Boolean).map(x=>["Дополнительное требование",x,"Установить проверяемый метод и выполнить проверку","Согласованный критерий выполнен"])].map((x,i)=>({id:`QA-${String(i+1).padStart(2,"0")}`,area:x[0],item:x[1],method:x[2],criterion:x[3],priority:"Критический",status:"Не проверено",evidence:""}));
 }
 function asMarkdown(rows,task){
- const esc=x=>String(x).replace(/\|/g,"\\|").replace(/\r?\n/g," ");
+ const esc=x=>String(x).replace(/\\/g,"\\\\").replace(/\|/g,"\\|").replace(/\r?\n/g," ");
  return `# Матрица QA\n\nЗадача: ${task||"Не указана"}\n\n| ID | Область | Проверка | Метод | Критерий | Приоритет | Статус | Доказательство |\n|---|---|---|---|---|---|---|---|\n`+rows.map(r=>"| "+Object.values(r).map(esc).join(" | ")+" |").join("\n")+"\n\nРешение о готовности: "+decision(rows)+"\n";
 }
 function decision(rows){
  if(!rows.length)return "Не определено";
  if(rows.some(r=>r.status==="Не пройдено"||r.status==="Заблокировано"))return "NO-GO: есть непройденные или заблокированные проверки";
- if(rows.some(r=>r.status!=="Пройдено"||!r.evidence.trim()))return "Не подтверждено: не все проверки пройдены с доказательствами";
+ if(rows.some(r=>r.status!=="Пройдено"||!["area","item","method","criterion","evidence"].every(k=>String(r[k]||"").trim())))return "Не подтверждено: не все проверки заполнены и пройдены с доказательствами";
  return "Все строки отмечены как пройденные с доказательствами; требуется ответственная приёмка.";
 }
-function csv(rows){const q=x=>'"'+String(x).replace(/^[=+\-@\t\r]/,"'$&").replace(/"/g,'""')+'"';return "\ufeff"+["ID","Область","Проверка","Метод","Критерий","Приоритет","Статус","Доказательство"].map(q).join(";")+"\r\n"+rows.map(r=>Object.values(r).map(q).join(";")).join("\r\n");}
+function csv(rows){const q=x=>'"'+String(x).replace(/^(?:\s*[=+\-@]|[\t\r\n])/,"'$&").replace(/"/g,'""')+'"';return "\ufeff"+["ID","Область","Проверка","Метод","Критерий","Приоритет","Статус","Доказательство"].map(q).join(";")+"\r\n"+rows.map(r=>Object.values(r).map(q).join(";")).join("\r\n");}
 (function(){
  const $=id=>document.getElementById(id);
  function download(name,data,type){const url=URL.createObjectURL(new Blob([data],{type}));const a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);}
  async function copy(value,status){try{await navigator.clipboard.writeText(value);status.textContent='Скопировано.';}catch(e){status.textContent='Не удалось скопировать автоматически. Выделите текст и скопируйте вручную.';}}
  const pf=$('promptBuilder'),out=$('promptResult'),ps=$('promptStatus');
- pf.addEventListener('submit',e=>{e.preventDefault();const v=Object.fromEntries(new FormData(pf));out.value=buildPrompt(v);ps.textContent='Промпт сформирован. Его можно редактировать.';});
+ pf.addEventListener('submit',e=>{e.preventDefault();const v=Object.fromEntries(new FormData(pf));if(!v.task.trim()){ps.textContent='Введите содержательную задачу.';return;}out.value=buildPrompt(v);ps.textContent='Промпт сформирован. Его можно редактировать.';});
+ pf.addEventListener('reset',()=>{out.value='';ps.textContent='';});
  $('promptCopy').addEventListener('click',()=>out.value?copy(out.value,ps):ps.textContent='Сначала сформируйте промпт.');
  $('promptDownload').addEventListener('click',()=>out.value?download('prompt.md',out.value,'text/markdown;charset=utf-8'):ps.textContent='Сначала сформируйте промпт.');
  let rows=[],task='';const body=$('qaRows'),status=$('qaStatus'),result=$('qaResult');
  function refresh(){result.value=asMarkdown(rows,task);status.textContent=decision(rows);}
  function render(){body.replaceChildren();for(const r of rows){const tr=document.createElement('tr');for(const k of ['id','area','item','method','criterion','priority','status','evidence']){const td=document.createElement('td');if(k==='id'){td.textContent=r[k];}else{let el;if(k==='status'||k==='priority'){el=document.createElement('select');for(const v of (k==='status'?['Не проверено','Пройдено','Не пройдено','Заблокировано']:['Критический','Высокий','Средний','Низкий'])){const o=document.createElement('option');o.value=v;o.textContent=v;el.append(o);}}else{el=document.createElement('textarea');el.rows=3;}el.value=r[k];el.setAttribute('aria-label',r.id+' '+({area:'Область',item:'Проверка',method:'Метод',criterion:'Критерий',priority:'Приоритет',status:'Статус',evidence:'Доказательство'}[k]));el.addEventListener('input',()=>{r[k]=el.value;refresh();});td.append(el);}tr.append(td);}const td=document.createElement('td'),b=document.createElement('button');b.type='button';b.textContent='Удалить';b.setAttribute('aria-label','Удалить '+r.id);b.addEventListener('click',()=>{rows=rows.filter(x=>x!==r);render();});td.append(b);tr.append(td);body.append(tr);}refresh();}
- $('qaBuilder').addEventListener('submit',e=>{e.preventDefault();if(rows.length&&!confirm('Заменить текущую матрицу? Несохранённые изменения будут потеряны.'))return;task=$('qaTask').value;rows=buildRows($('qaDomain').value,$('qaCustom').value);render();});
- $('qaAdd').addEventListener('click',()=>{task=$('qaTask').value;let n=1;while(rows.some(r=>r.id==='QA-'+String(n).padStart(2,'0')))n++;rows.push({id:'QA-'+String(n).padStart(2,'0'),area:'',item:'',method:'',criterion:'',priority:'Критический',status:'Не проверено',evidence:''});render();});
+ $('qaTask').addEventListener('input',()=>{task=$('qaTask').value.trim();if(rows.length)refresh();});
+ $('qaBuilder').addEventListener('submit',e=>{e.preventDefault();if(!$('qaTask').value.trim()){status.textContent='Введите содержательную задачу.';return;}if(rows.length&&!confirm('Заменить текущую матрицу? Несохранённые изменения будут потеряны.'))return;task=$('qaTask').value;rows=buildRows($('qaDomain').value,$('qaCustom').value);render();});
+ $('qaAdd').addEventListener('click',()=>{task=$('qaTask').value.trim();if(!task){status.textContent='Введите задачу перед добавлением проверки.';return;}let n=1;while(rows.some(r=>r.id==='QA-'+String(n).padStart(2,'0')))n++;rows.push({id:'QA-'+String(n).padStart(2,'0'),area:'',item:'',method:'',criterion:'',priority:'Критический',status:'Не проверено',evidence:''});render();});
  $('qaCopy').addEventListener('click',()=>rows.length?copy(result.value,status):status.textContent='Сначала создайте матрицу.');
  $('qaMd').addEventListener('click',()=>rows.length?download('qa-matrix.md',result.value,'text/markdown;charset=utf-8'):status.textContent='Сначала создайте матрицу.');
  $('qaCsv').addEventListener('click',()=>rows.length?download('qa-matrix.csv',csv(rows),'text/csv;charset=utf-8'):status.textContent='Сначала создайте матрицу.');
