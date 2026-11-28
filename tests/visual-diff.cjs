@@ -22,7 +22,7 @@ const pages=['index.html','dictionary.html','map.html','compare.html','processes
    };
    const base=await capture(8766),current=await capture(8765);
    let changed=0,total=0;
-   if(base.width!==current.width||base.height!==current.height){failures.push(name+' '+theme+' '+width+': dimension mismatch '+base.width+'x'+base.height+' vs '+current.width+'x'+current.height);continue;}
+   if(base.width!==current.width||base.height!==current.height){const stem='visual-diff/'+name.replace('.html','')+'-'+theme+'-'+width;fs.writeFileSync(stem+'-baseline.png',PNG.sync.write(base));fs.writeFileSync(stem+'-candidate.png',PNG.sync.write(current));failures.push(name+' '+theme+' '+width+': dimension mismatch '+base.width+'x'+base.height+' vs '+current.width+'x'+current.height);continue;}
    const diff=new PNG({width:base.width,height:base.height});
    for(let i=0;i<base.data.length;i+=4){
     const delta=Math.max(Math.abs(base.data[i]-current.data[i]),Math.abs(base.data[i+1]-current.data[i+1]),Math.abs(base.data[i+2]-current.data[i+2]));

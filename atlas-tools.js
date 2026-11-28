@@ -44,6 +44,7 @@ function parse(raw,f){
  const text=String(raw??'').trim().replace(',','.');
  if(typeof raw==='boolean'||!/^[-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[+-]?\d+)?$/i.test(text))throw Error('Проверьте поле «'+f.label+'».');
  const n=Number(text);
+ if(n===0 && /[1-9]/.test(text.split(/e/i)[0]))throw Error('Число слишком мало для представления: «'+f.label+'».');
  if(!Number.isFinite(n)||n<(f.min??(f.signed?-1e12:0))||(f.positive&&n===0)||n>(f.max??1e12)||(f.integer&&!Number.isSafeInteger(n))||(f.choices&&!f.choices.includes(n)))throw Error('Недопустимое значение: «'+f.label+'».');
  return n;
 }
@@ -64,7 +65,7 @@ if(typeof document==='undefined')return;
 const form=document.getElementById('atlasToolForm');if(!form)return;
 const select=document.getElementById('atlasToolSelect'),fields=document.getElementById('atlasToolFields'),output=document.getElementById('atlasToolResult');
 for(const d of definitions){const o=document.createElement('option');o.value=d.id;o.textContent=d.topic;select.append(o);}
-function update(){form.querySelector('[data-atlas-plot]')?.remove();try{const raw=Object.fromEntries(Array.from(fields.querySelectorAll('input,select,textarea'),e=>[e.name,e.value]));const r=calculate(select.value,raw);output.textContent=new Intl.NumberFormat('ru-RU',{maximumSignificantDigits:10}).format(r.value)+' '+r.unit+(r.details?' · '+r.details.map(([label,value])=>label+': '+(typeof value==='number'?new Intl.NumberFormat('ru-RU',{maximumSignificantDigits:10}).format(value):String(value))).join(' · '):'');output.dataset.valid='true';if(r.plot)drawPlot(r.plot);}catch(error){output.textContent=error.message;output.dataset.valid='false';}}
+function update(){form.querySelector('[data-atlas-plot]')?.remove();if(!select.value||select.disabled){output.textContent='По запросу ничего не найдено.';output.dataset.valid='false';return;}try{const raw=Object.fromEntries(Array.from(fields.querySelectorAll('input,select,textarea'),e=>[e.name,e.value]));const r=calculate(select.value,raw);output.textContent=new Intl.NumberFormat('ru-RU',{maximumSignificantDigits:10}).format(r.value)+' '+r.unit+(r.details?' · '+r.details.map(([label,value])=>label+': '+(typeof value==='number'?new Intl.NumberFormat('ru-RU',{maximumSignificantDigits:10}).format(value):String(value))).join(' · '):'');output.dataset.valid='true';if(r.plot)drawPlot(r.plot);}catch(error){output.textContent=error.message;output.dataset.valid='false';}}
 function drawPlot(plot){
  const n=Math.min(plot.x.length,plot.y.length);if(!n)return;
  const x=plot.x.slice(0,Math.min(n,200)),y=plot.y.slice(0,Math.min(n,200));
@@ -86,6 +87,7 @@ function drawPlot(plot){
 }
 function choose(){
  const d=definitions.find(d=>d.id===select.value);fields.replaceChildren();
+ if(!d){output.textContent='Выберите доступный расчёт.';output.dataset.valid='false';return;}
  document.querySelector('#labAtlasTools > summary strong').textContent=d.topic;
  for(const f of d.fields){
   const wrap=document.createElement('div');wrap.className='calc-lab-field';

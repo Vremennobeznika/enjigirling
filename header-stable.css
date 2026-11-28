@@ -43,3 +43,23 @@ body main#main-content :is(label,button,select,input,textarea,summary){font-fami
 body main#main-content :is(input,select,textarea){font-size:var(--eng-type-body)!important}
 body main#main-content :is(small,figcaption){font-size:var(--eng-type-small)!important;line-height:1.45!important}
 body main#main-content :is(code,pre,kbd,samp,textarea.builder-output){font-family:ui-monospace,Consolas,monospace!important}
+
+/* LAYOUT CONTRACT: shared shell and semantic component spacing. */
+:root{--eng-shell-width:1280px;--eng-shell-gutter:clamp(16px,3vw,32px);--eng-gap:16px;--eng-section-gap:24px;--eng-card-pad:clamp(16px,2vw,24px);--eng-radius:12px}
+body{margin:0!important;padding:0!important;min-width:0}
+body > main.site-page,body > .eng-calendar-root{max-width:var(--eng-shell-width)!important;padding:0 var(--eng-shell-gutter) 48px!important}
+body > .eng-calendar-root > main#main-content{box-sizing:border-box!important;width:100%!important;max-width:none!important;min-width:0!important;margin:0!important;padding:0!important}
+body .site-topbar{max-width:100%!important}
+body .site-topbar .site-brand{min-width:0;overflow-wrap:anywhere}
+body main#main-content :is(.page-header,.ai-hub-header,.robotics-hero){box-sizing:border-box;max-width:100%;min-width:0;margin:0 0 var(--eng-section-gap)!important;padding:var(--eng-card-pad)!important;border-radius:var(--eng-radius)!important}
+body main#main-content :is(h1,h2,h3,h4){max-width:100%;overflow-wrap:anywhere}
+body main#main-content :is(.eng-grid,.atlas-grid,.learning-path-grid,.ai-grid,.builder-fields){min-width:0;max-width:100%;gap:var(--eng-gap)!important}
+body main#main-content :is(.eng-card,.atlas-card,.learning-path-card,.ai-card,.field-guide,.technology-hub,.resource-controls,.builder){box-sizing:border-box;min-width:0;max-width:100%;padding:var(--eng-card-pad)!important;border-radius:var(--eng-radius)!important}
+body main#main-content :is(.filter-reset,.eng-filter-btn,.resource-chip,.builder-actions button){box-sizing:border-box;min-height:44px!important;max-width:100%;white-space:normal;border-radius:8px!important}
+body main#main-content :is(input:not([type=checkbox]):not([type=radio]):not([type=range]),select,textarea){box-sizing:border-box;max-width:100%;min-width:0}
+body main#main-content :is(img,video,svg,canvas){max-width:100%}
+body main#main-content :is(pre,.builder-table,.table-scroll,.table-wrap){max-width:100%;min-width:0;overflow-x:auto}
+@media(max-width:600px){
+ body .site-topbar .site-brand span{display:none}
+ body main#main-content :is(.eng-grid,.atlas-grid,.learning-path-grid,.ai-grid,.builder-fields){grid-template-columns:minmax(0,1fr)!important}
+}

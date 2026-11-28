@@ -3,7 +3,7 @@
   "method": "Manual inspection of formulas, run expressions, unit conventions and scoped applicability; this record is invalidated by source changes.",
   "sourceHashes": {
     "atlas-extended.js": "167b555d704192cad9b14645392838ea7016b7a4e3ceabc1255b8ead4e2b8dd3",
-    "atlas-tools.js": "fd832eb2fecc4406c33fd865a14adfd4f8c7db97ee8232a615e34de3c652db10",
+    "atlas-tools.js": "26cfb9a2e86f55dfab867eeb706aa0ed46bfbb7aca154bc3cb2f689c26548b92",
     "calculator-atlas-data.js": "95cedcdcfd266d88cf7757db28302d192a4d437de9a923e5cbcde76a23662d38"
   },
   "reviewedIds": [
@@ -741,5 +741,11 @@
     "g24-17",
     "g24-18",
     "g33-15"
-  ]
+  ],
+  "deltaReview": {
+    "date": "2026-11-25",
+    "previousSourceHash": "fd832eb2fecc4406c33fd865a14adfd4f8c7db97ee8232a615e34de3c652db10",
+    "scope": "Exact comparison against inspected main version: only numeric input underflow rejection and two UI guards for absent selection. No formula, model definition, unit or applicability changes. Existing inspection date retained.",
+    "evidence": "CI run 45524018204: 21539/21539 exhaustive checks; existing independent numerical and boundary tests passed before stale hash gate."
+  }
 }

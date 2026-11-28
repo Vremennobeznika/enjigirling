@@ -26,3 +26,9 @@ for(const [id,spread] of [['g5-10','Cp'],['g12-21','Cp'],['g12-22','Pp'],['g24-6
  const r=calculate(id,{low:0,high:10,average:7,sigma:1});close(r.value,1);assert.equal(r.details[0][0],spread);close(r.details[0][1],5/3);
 }
 console.log('PASS domain boundaries: symmetric LMTD, exact counts, applicability limits, simple-polygon topology, signed subgroup means, paired capability indices and auxiliary overflow');
+
+// Nonzero decimal input must never silently become zero at the parser boundary.
+for(const mass of ['1e-999','-1e-999','0.0001e-999'])assert.throws(()=>calculate('gsm',{mass,width:10,length:10}),/слишком мало/);
+for(const mass of ['0','0e-999','0.000e-999'])assert.equal(calculate('gsm',{mass,width:10,length:10}).value,0);
+close(calculate('gsm',{mass:'0,25',width:10,length:10}).value,25);
+console.log('PASS decimal underflow and Russian decimal separator');

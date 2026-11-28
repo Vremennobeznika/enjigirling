@@ -1,9 +1,9 @@
 /* Live results for the practical calculator panels. */
 (()=>{'use strict';const M=window.PracticalMath;if(!M)return;const $=id=>document.getElementById(id);
-const fmt=(v,d=4)=>new Intl.NumberFormat('ru-RU',{maximumFractionDigits:d}).format(v);
+const fmt=(v,d=4)=>new Intl.NumberFormat('ru-RU',v!==0&&Math.abs(v)<10**(-d)?{notation:'scientific',maximumSignificantDigits:6}:{maximumFractionDigits:d}).format(v);
 function number(id){const el=$(id),raw=el.value.trim().replace(/[\s\u00a0]/g,'').replace(',','.');
  if(!/^[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[+-]?\d+)?$/i.test(raw))throw Error('Проверьте поле «'+(el.getAttribute('aria-label')||el.previousElementSibling?.textContent||id)+'».');
- const n=Number(raw);if(!Number.isFinite(n))throw Error('Число вне диапазона: '+id);return n;
+ const n=Number(raw);if(n===0&&/[1-9]/.test(raw.split(/e/i)[0]))throw Error('Число слишком мало для представления: '+id);if(!Number.isFinite(n))throw Error('Число вне диапазона: '+id);return n;
 }
 function bind(ids,output,make){const result=$(output);if(!result)return;let plain='';
  const update=()=>{try{plain=make();result.textContent=plain;result.dataset.valid='true'}catch(e){plain='';result.dataset.valid='false';result.textContent=e.message}};
